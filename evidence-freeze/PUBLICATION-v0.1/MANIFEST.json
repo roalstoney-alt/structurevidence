@@ -1,232 +1,232 @@
 {
-  "created_at": "2026-09-08T12:14:00Z",
+  "created_at": "2026-09-08T12:16:00Z",
   "custom_domain": "PENDING_DNS",
   "dns_changed": "NO",
   "domain": "structurevidence.org",
   "files": [
     {
       "artifact_role": "publication_site_or_audit",
-      "generated_at": "2026-09-08T12:14:00Z",
+      "generated_at": "2026-09-08T12:16:00Z",
       "path": "README.md",
       "sha256": "ff383b5bef7c72e9fb72f2845d65331f4da67df7b48575e01d39fe95a2a3edf9",
       "size_bytes": 659
     },
     {
       "artifact_role": "publication_site_or_audit",
-      "generated_at": "2026-09-08T12:14:00Z",
+      "generated_at": "2026-09-08T12:16:00Z",
       "path": ".gitignore",
       "sha256": "33c37ab1b59770e2db35fc6df7ce85ee01387b10b67ab10a7e9abd8b8bad7a3f",
       "size_bytes": 53
     },
     {
       "artifact_role": "publication_site_or_audit",
-      "generated_at": "2026-09-08T12:14:00Z",
+      "generated_at": "2026-09-08T12:16:00Z",
       "path": "LICENSE_PENDING.md",
       "sha256": "29ae0ce409892d83b54a570f3330a51d9b7f9b464cc33958594cb0cb9272a56c",
       "size_bytes": 206
     },
     {
       "artifact_role": "publication_site_or_audit",
-      "generated_at": "2026-09-08T12:14:00Z",
+      "generated_at": "2026-09-08T12:16:00Z",
       "path": "methodology/README.md",
       "sha256": "18705d5364b9c32e342bc276fd72fe932a46b3ef56c3b9a11b8c4afbf260e796",
       "size_bytes": 158
     },
     {
       "artifact_role": "publication_site_or_audit",
-      "generated_at": "2026-09-08T12:14:00Z",
+      "generated_at": "2026-09-08T12:16:00Z",
       "path": "methodology/principles.md",
       "sha256": "05e8a56d4aaa12b2c6dc7c17d89457d924261454a60475fbb45d70250835008c",
       "size_bytes": 317
     },
     {
       "artifact_role": "publication_site_or_audit",
-      "generated_at": "2026-09-08T12:14:00Z",
+      "generated_at": "2026-09-08T12:16:00Z",
       "path": "evidence/README.md",
       "sha256": "5517ce503dfb92c2f39f8fdbace581a55aa4bd40447fe0e17d74f8e93cd28d1b",
       "size_bytes": 236
     },
     {
       "artifact_role": "publication_site_or_audit",
-      "generated_at": "2026-09-08T12:14:00Z",
+      "generated_at": "2026-09-08T12:16:00Z",
       "path": "reports/README.md",
       "sha256": "0615d615605c1cea5308aba42be90a33378e74e417b8efeba51205ef6d63c853",
       "size_bytes": 116
     },
     {
       "artifact_role": "publication_site_or_audit",
-      "generated_at": "2026-09-08T12:14:00Z",
+      "generated_at": "2026-09-08T12:16:00Z",
       "path": "research/2026-09-08/Structural_Dynamics_Evidence_Dynamics_Method_Paper_v0.1_CN.md",
       "sha256": "fe7c8f696cf14c3f5b3b470bc21d116c304b78d7bf60f949f043bfd335b4da8b",
       "size_bytes": 18068
     },
     {
       "artifact_role": "publication_site_or_audit",
-      "generated_at": "2026-09-08T12:14:00Z",
+      "generated_at": "2026-09-08T12:16:00Z",
       "path": "research/2026-09-08/Strategy_2026_Structural_Dynamics_Report_v0.1_CN.md",
       "sha256": "75dfb5cd4eab564bf4c3989662ede851ceac16a6ed34c85587366760566697f7",
       "size_bytes": 8872
     },
     {
       "artifact_role": "publication_site_or_audit",
-      "generated_at": "2026-09-08T12:14:00Z",
+      "generated_at": "2026-09-08T12:16:00Z",
       "path": "research/2026-09-08/Strategy_2026_Public_Evidence_Research_Report_v0.1_CN.md",
       "sha256": "81f9c8810b7cabd86426f6fc115f62ee20cc953494259a878c7a4a1f5c044fc0",
       "size_bytes": 14455
     },
     {
       "artifact_role": "publication_site_or_audit",
-      "generated_at": "2026-09-08T12:14:00Z",
+      "generated_at": "2026-09-08T12:16:00Z",
       "path": "research/2026-09-08/PUBLICATION_PACKAGE_MANIFEST.json",
       "sha256": "272036c9da4075b44241cbb9473798d7b9ce5cb098b81bdbd98d6acdc26a4554",
       "size_bytes": 526
     },
     {
       "artifact_role": "publication_site_or_audit",
-      "generated_at": "2026-09-08T12:14:00Z",
+      "generated_at": "2026-09-08T12:16:00Z",
       "path": "docs/index.html",
       "sha256": "c6467c771e02659b4bf988e552a9cca8e08379dacdc52f05436a32cb641e942b",
       "size_bytes": 4426
     },
     {
       "artifact_role": "publication_site_or_audit",
-      "generated_at": "2026-09-08T12:14:00Z",
+      "generated_at": "2026-09-08T12:16:00Z",
       "path": "docs/method.html",
       "sha256": "dccc8a356c7affa1c6c9ee82627764377657d4756b0f1b09b3d109a860654fba",
       "size_bytes": 2643
     },
     {
       "artifact_role": "publication_site_or_audit",
-      "generated_at": "2026-09-08T12:14:00Z",
+      "generated_at": "2026-09-08T12:16:00Z",
       "path": "docs/research.html",
       "sha256": "c0d5d158f5479e21e83df46c553807fb40547e9be03b242d0acce9c1c986d2cf",
       "size_bytes": 1793
     },
     {
       "artifact_role": "publication_site_or_audit",
-      "generated_at": "2026-09-08T12:14:00Z",
+      "generated_at": "2026-09-08T12:16:00Z",
       "path": "docs/strategy-2026.html",
       "sha256": "6c87dff89ff5fbecca27a8f55ec03fb791c642bf0bd731ca5caebd4bc7fb4488",
       "size_bytes": 2885
     },
     {
       "artifact_role": "publication_site_or_audit",
-      "generated_at": "2026-09-08T12:14:00Z",
+      "generated_at": "2026-09-08T12:16:00Z",
       "path": "docs/evidence.html",
       "sha256": "bb6b11559637bbdc03e0df18594b814f6394d30fe1e413972829e2fa0ff1daf3",
       "size_bytes": 2068
     },
     {
       "artifact_role": "publication_site_or_audit",
-      "generated_at": "2026-09-08T12:14:00Z",
+      "generated_at": "2026-09-08T12:16:00Z",
       "path": "docs/about.html",
       "sha256": "f8b639b0808256cd27c0571aaf07ada22c4f83c322e8dd05179023504014221f",
       "size_bytes": 1415
     },
     {
       "artifact_role": "publication_site_or_audit",
-      "generated_at": "2026-09-08T12:14:00Z",
+      "generated_at": "2026-09-08T12:16:00Z",
       "path": "docs/CNAME",
       "sha256": "cb2a0dc09f8ad63937ed181fce90cc29dde8cfa5be2a52a60104494381c54ef6",
       "size_bytes": 21
     },
     {
       "artifact_role": "publication_site_or_audit",
-      "generated_at": "2026-09-08T12:14:00Z",
+      "generated_at": "2026-09-08T12:16:00Z",
       "path": "docs/assets/style.css",
       "sha256": "5f436bab2a023070259fff317d40f62519af87139204369e85577b4ecb8a4205",
       "size_bytes": 3322
     },
     {
       "artifact_role": "publication_site_or_audit",
-      "generated_at": "2026-09-08T12:14:00Z",
+      "generated_at": "2026-09-08T12:16:00Z",
       "path": "docs/assets/site.js",
       "sha256": "9f288a96d24217911c15a34deaf65be94c65a11646a6043a68a4036bce8eb5be",
       "size_bytes": 359
     },
     {
       "artifact_role": "publication_site_or_audit",
-      "generated_at": "2026-09-08T12:14:00Z",
+      "generated_at": "2026-09-08T12:16:00Z",
       "path": "docs/research/Structural_Dynamics_Evidence_Dynamics_Method_Paper_v0.1_CN.md",
       "sha256": "fe7c8f696cf14c3f5b3b470bc21d116c304b78d7bf60f949f043bfd335b4da8b",
       "size_bytes": 18068
     },
     {
       "artifact_role": "publication_site_or_audit",
-      "generated_at": "2026-09-08T12:14:00Z",
+      "generated_at": "2026-09-08T12:16:00Z",
       "path": "docs/research/Strategy_2026_Structural_Dynamics_Report_v0.1_CN.md",
       "sha256": "75dfb5cd4eab564bf4c3989662ede851ceac16a6ed34c85587366760566697f7",
       "size_bytes": 8872
     },
     {
       "artifact_role": "publication_site_or_audit",
-      "generated_at": "2026-09-08T12:14:00Z",
+      "generated_at": "2026-09-08T12:16:00Z",
       "path": "docs/research/Strategy_2026_Public_Evidence_Research_Report_v0.1_CN.md",
       "sha256": "81f9c8810b7cabd86426f6fc115f62ee20cc953494259a878c7a4a1f5c044fc0",
       "size_bytes": 14455
     },
     {
       "artifact_role": "publication_site_or_audit",
-      "generated_at": "2026-09-08T12:14:00Z",
+      "generated_at": "2026-09-08T12:16:00Z",
       "path": "docs/research/PUBLICATION_PACKAGE_MANIFEST.json",
       "sha256": "272036c9da4075b44241cbb9473798d7b9ce5cb098b81bdbd98d6acdc26a4554",
       "size_bytes": 526
     },
     {
       "artifact_role": "publication_site_or_audit",
-      "generated_at": "2026-09-08T12:14:00Z",
+      "generated_at": "2026-09-08T12:16:00Z",
       "path": "docs/execution/GITHUB_PAGES_SETUP.md",
       "sha256": "7a285b63fa6961f5a85a72cc9655e1ce2da211f520307913b13198fe179c40f4",
       "size_bytes": 487
     },
     {
       "artifact_role": "publication_site_or_audit",
-      "generated_at": "2026-09-08T12:14:00Z",
+      "generated_at": "2026-09-08T12:16:00Z",
       "path": "docs/execution/DNS_SETUP.md",
       "sha256": "b8171767e9aea9eab129293f47c89a335ecbdf3304841640a79827f605b36f4e",
       "size_bytes": 367
     },
     {
       "artifact_role": "publication_site_or_audit",
-      "generated_at": "2026-09-08T12:14:00Z",
+      "generated_at": "2026-09-08T12:16:00Z",
       "path": "docs/execution/RESEARCH_HASH_VERIFICATION.md",
       "sha256": "02f4fbe7aafadcc06fc3926bd6c3ba0d2ef59803d21231bd3158f4a5f8d8c58b",
       "size_bytes": 1080
     },
     {
       "artifact_role": "publication_site_or_audit",
-      "generated_at": "2026-09-08T12:14:00Z",
+      "generated_at": "2026-09-08T12:16:00Z",
       "path": "docs/execution/PUBLICATION_AUDIT.md",
       "sha256": "7a501f17d6a8a0d57a9c9710704277a0a67cbed849121d738cc4d163199c31fb",
       "size_bytes": 319
     },
     {
       "artifact_role": "publication_site_or_audit",
-      "generated_at": "2026-09-08T12:14:00Z",
+      "generated_at": "2026-09-08T12:16:00Z",
       "path": "docs/execution/STRUCTEVIDENCE_GITHUB_PUBLICATION_REPORT.md",
-      "sha256": "9bdf3fa4674f98eb4e033cd302f995d88130c8945e73a23ede588a239d830ea4",
-      "size_bytes": 2139
+      "sha256": "ad6dce4916d73890d49adf2f97580aa3d6b79a9d4fb994373f218eaba5b83fb9",
+      "size_bytes": 2252
     },
     {
       "artifact_role": "publication_site_or_audit",
-      "generated_at": "2026-09-08T12:14:00Z",
+      "generated_at": "2026-09-08T12:16:00Z",
       "path": "evidence-freeze/PUBLICATION-v0.1/PUBLICATION_AUDIT.md",
       "sha256": "8c853127e0cfe4b16cfc6759f7c907af76a81d66c9d4f7f8f3ca7928db97565f",
       "size_bytes": 302
     },
     {
       "artifact_role": "publication_site_or_audit",
-      "generated_at": "2026-09-08T12:14:00Z",
+      "generated_at": "2026-09-08T12:16:00Z",
       "path": "evidence-freeze/PUBLICATION-v0.1/RESEARCH_HASH_VERIFICATION.md",
       "sha256": "23c69fb47ca3f5a282e0d51b7658f1df1f0a7b8d1cd3d16586bb939aa55f1083",
       "size_bytes": 133
     },
     {
       "artifact_role": "publication_site_or_audit",
-      "generated_at": "2026-09-08T12:14:00Z",
+      "generated_at": "2026-09-08T12:16:00Z",
       "path": "evidence-freeze/PUBLICATION-v0.1/REMOTE_PUSH_VERIFICATION.txt",
-      "sha256": "45fc7ab706e6fb509993b6fcae9d4d423c96f8e840c8f64c1a61f5c817c8a870",
-      "size_bytes": 8
+      "sha256": "a94fbf6a67f9f49b218bab996421f50da2960d4198caf1ed3b9decd33217ec88",
+      "size_bytes": 292
     }
   ],
   "github_pages": "NOT_CONFIGURED",
@@ -235,7 +235,7 @@
   "paths": "repository_relative",
   "project": "StructEvidence",
   "publication_audit": "PASS",
-  "publication_status": "READY_TO_COMMIT",
+  "publication_status": "PUSH_VERIFIED",
   "repository": "roalstoney-alt/structurevidence",
   "snapshot_id": "PUB-v0.1-20260908-0001",
   "source_hash_gate": "PASS"
