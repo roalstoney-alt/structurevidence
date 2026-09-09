@@ -1,0 +1,32 @@
+{
+  "payment_status": "CONFIG_REQUIRED",
+  "payment_enabled": false,
+  "seller_jurisdiction": "Singapore",
+  "invoice_currency": "USD",
+  "primary_payment_method": "BANK_TRANSFER_PLANNED",
+  "usdt": {
+    "enabled": false,
+    "role": "OPTIONAL_SETTLEMENT_ONLY",
+    "network": null,
+    "official_token_contract": null,
+    "recipient_address": null,
+    "confirmation_policy": null,
+    "private_key_required": false
+  },
+  "prohibited_activities": [
+    "CUSTODY_FOR_CUSTOMERS",
+    "TOKEN_EXCHANGE_FOR_CUSTOMERS",
+    "THIRD_PARTY_MONEY_TRANSMISSION",
+    "TRADING_EXECUTION"
+  ],
+  "activation_requirements": [
+    "EXACT_LEGAL_SELLER_NAME",
+    "PUBLIC_SALES_CONTACT",
+    "LAUNCH_PRICE",
+    "USDT_NETWORK_IF_ENABLED",
+    "OFFICIAL_USDT_CONTRACT_IF_ENABLED",
+    "CORPORATE_RECEIVING_ADDRESS_IF_ENABLED",
+    "ON_CHAIN_VERIFICATION_RULE",
+    "FULFILLMENT_TEST"
+  ]
+}
