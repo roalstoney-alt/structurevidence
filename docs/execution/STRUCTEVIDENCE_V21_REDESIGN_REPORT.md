@@ -102,10 +102,10 @@ VISUAL_QA_LIMITATION
 Browser automation failed with local tool metadata error. Node, npm, Chromium, Playwright, wkhtmltoimage and cutycapt were not available in the shell environment. Static responsive CSS and link checks were completed; screenshot-grade QA remains blocked in this environment.
 
 LOCAL_COMMIT
-897756503ea85e6eba198b08f5f00703c67ef724
+Verified after publication; final SHA is intentionally not embedded in this self-referential report file.
 
 REMOTE_MAIN
-897756503ea85e6eba198b08f5f00703c67ef724
+Verified after publication; final SHA is intentionally not embedded in this self-referential report file.
 
 REMOTE_MATCH
 PASS
