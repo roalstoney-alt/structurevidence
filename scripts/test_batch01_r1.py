@@ -120,7 +120,7 @@ def check_search_and_pages() -> None:
         if item.get("research_status") != "R1 RESEARCH SUPPORT":
             fail(f"search card not r1 {asset}")
         for key in ["result_url", "structural_report_url", "evidence_report_url", "research_chain_url"]:
-            target = ROOT / "docs" / item[key]
+            target = ROOT / "docs" / item[key].split("#", 1)[0]
             if not target.exists():
                 fail(f"missing linked target {asset}: {item[key]}")
 
