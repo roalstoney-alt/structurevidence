@@ -2,19 +2,24 @@
   "custom_audit": {
     "cta_when_unpriced": "Request Scope",
     "enabled": true,
+    "invoice_currency": "USD",
     "price": null,
-    "price_status": "SCOPE_REQUIRED"
+    "price_status": "SCOPE_REQUIRED",
+    "settlement_methods_planned": ["BANK_TRANSFER", "USDT"]
   },
   "enterprise_evidence_review": {
     "enabled": true,
+    "invoice_currency": "USD",
     "price_status": "CUSTOM_SCOPE_REQUIRED",
     "self_serve": false
   },
   "verified_report": {
-    "cta_when_unpriced": "Request Early Access",
+    "cta_when_unpriced": "Request Paid Pilot Access",
     "currency": "USD",
     "enabled": true,
+    "invoice_currency": "USD",
     "price": null,
-    "price_status": "CONFIG_REQUIRED"
+    "price_status": "CONFIG_REQUIRED",
+    "settlement_methods_planned": ["BANK_TRANSFER", "USDT"]
   }
 }
