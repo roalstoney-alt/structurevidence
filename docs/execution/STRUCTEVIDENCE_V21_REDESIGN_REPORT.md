@@ -95,8 +95,17 @@ V21_WHITEPAPER_AUDIT PASS
 V21_LINK_CHECK PASS
 V21_VISUAL_QA BLOCKED
 V21_MOBILE_QA BLOCKED
-V21_GIT_PUSH PENDING
-V21_REMOTE_MATCH PENDING
+V21_GIT_PUSH PASS
+V21_REMOTE_MATCH PASS
 
 VISUAL_QA_LIMITATION
 Browser automation failed with local tool metadata error. Node, npm, Chromium, Playwright, wkhtmltoimage and cutycapt were not available in the shell environment. Static responsive CSS and link checks were completed; screenshot-grade QA remains blocked in this environment.
+
+LOCAL_COMMIT
+897756503ea85e6eba198b08f5f00703c67ef724
+
+REMOTE_MAIN
+897756503ea85e6eba198b08f5f00703c67ef724
+
+REMOTE_MATCH
+PASS
