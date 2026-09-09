@@ -1,8 +1,11 @@
 {
   "company_name": null,
-  "contact_status": "CONFIG_REQUIRED",
-  "country": null,
+  "contact_status": "SINGAPORE_ENTITY_SELECTED_LEGAL_NAME_AND_CONTACT_REQUIRED",
+  "country": "Singapore",
+  "jurisdiction": "Singapore",
+  "entity_type": "Private Limited Company",
   "legal_email": null,
   "sales_email": null,
-  "support_email": null
+  "support_email": null,
+  "seller_activation_rule": "Paid checkout remains disabled until the exact legal seller name and public contact channels are configured."
 }
