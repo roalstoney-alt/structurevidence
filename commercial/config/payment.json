@@ -1,5 +1,5 @@
 {
-  "payment_status": "CONFIG_REQUIRED",
+  "payment_status": "FINAL_OPERATOR_CONFIG_REQUIRED",
   "payment_enabled": false,
   "seller_jurisdiction": "Singapore",
   "invoice_currency": "USD",
@@ -7,10 +7,13 @@
   "usdt": {
     "enabled": false,
     "role": "OPTIONAL_SETTLEMENT_ONLY",
-    "network": null,
-    "official_token_contract": null,
+    "network": "TRON",
+    "token_standard": "TRC20",
+    "official_token_contract": "TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t",
+    "contract_source": "https://tether.to/en/supported-protocols/",
     "recipient_address": null,
     "confirmation_policy": null,
+    "verification_mode": "READ_ONLY_ON_CHAIN",
     "private_key_required": false
   },
   "prohibited_activities": [
@@ -23,9 +26,8 @@
     "EXACT_LEGAL_SELLER_NAME",
     "PUBLIC_SALES_CONTACT",
     "LAUNCH_PRICE",
-    "USDT_NETWORK_IF_ENABLED",
-    "OFFICIAL_USDT_CONTRACT_IF_ENABLED",
-    "CORPORATE_RECEIVING_ADDRESS_IF_ENABLED",
+    "CORPORATE_RECEIVING_ADDRESS",
+    "CONFIRMATION_POLICY",
     "ON_CHAIN_VERIFICATION_RULE",
     "FULFILLMENT_TEST"
   ]
