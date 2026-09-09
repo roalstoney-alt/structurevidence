@@ -10,8 +10,8 @@ Official website: https://structurevidence.org
 
 First case: Strategy Inc. 2026.
 
-- [Method Paper](docs/research/Structural_Dynamics_Evidence_Dynamics_Method_Paper_v0.1_CN.md)
-- [Strategy Structural Dynamics Report](docs/research/Strategy_2026_Structural_Dynamics_Report_v0.1_CN.md)
-- [Strategy Public Evidence Research Report](docs/research/Strategy_2026_Public_Evidence_Research_Report_v0.1_CN.md)
+- [Method Paper](docs/research/Structural_Dynamics_Evidence_Dynamics_Method_Paper_v0.1_EN.md)
+- [Strategy Structural Dynamics Report](docs/research/Strategy_2026_Structural_Dynamics_Report_v0.1_EN.md)
+- [Strategy Public Evidence Research Report](docs/research/Strategy_2026_Public_Evidence_Research_Report_v0.1_EN.md)
 
 This project does not provide investment recommendations or automated accusations.

@@ -9,7 +9,7 @@
     "category": "Corporate Digital Asset Treasury",
     "covered": true,
     "entity_id": "ECL.COMPANY.STRATEGY_INC",
-    "evidence_report_url": "research/Strategy_2026_Public_Evidence_Research_Report_v0.1_CN.md",
+    "evidence_report_url": "research/Strategy_2026_Public_Evidence_Research_Report_v0.1_EN.md",
     "evidence_state": "SEMANTIC_TENSION_BUT_RECONCILABLE",
     "free_scan": {
       "key_limitation": "Independent-source triangulation remains partial in the approved public record.",
@@ -29,7 +29,7 @@
     "research_chain_url": "verify.html",
     "result_url": "strategy-2026.html",
     "source_coverage": "PARTIAL",
-    "structural_report_url": "research/Strategy_2026_Structural_Dynamics_Report_v0.1_CN.md",
+    "structural_report_url": "research/Strategy_2026_Structural_Dynamics_Report_v0.1_EN.md",
     "structural_state": "HYBRID_ACCUMULATION_MONETIZATION",
     "summary": "Strategy's capital architecture combines Bitcoin accumulation, monetization, USD liquidity reserves and multi-layer financing. Current public evidence contains semantic tension but no material inconsistency after normalization.",
     "ticker": "MSTR"

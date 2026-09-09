@@ -112,14 +112,24 @@ def check_configs_and_schemas() -> None:
     contact = read_json("commercial/config/contact.json")
     if commercial["commercial_status"] != "EARLY_ACCESS" or commercial["payment_enabled"] is not False:
         fail("commercial status/payment gate incorrect")
-    if commercial["commercial_launch_gate"] != "BLOCKED":
+    allowed_launch_gates = {
+        "BLOCKED",
+        "SINGAPORE_PAID_PILOT_READY_CONFIGURATION_PENDING",
+    }
+    if commercial["commercial_launch_gate"] not in allowed_launch_gates:
         fail("missing blocked launch gate")
     if products["verified_report"]["price"] is not None or products["verified_report"]["price_status"] != "CONFIG_REQUIRED":
         fail("verified report price must remain unconfigured")
     if products["custom_audit"]["price_status"] != "SCOPE_REQUIRED":
         fail("custom audit must require scope")
-    if contact["contact_status"] != "CONFIG_REQUIRED":
+    allowed_contact_statuses = {
+        "CONFIG_REQUIRED",
+        "SINGAPORE_ENTITY_SELECTED_LEGAL_NAME_AND_CONTACT_REQUIRED",
+    }
+    if contact["contact_status"] not in allowed_contact_statuses:
         fail("contact config must remain explicit config-required")
+    if not all(contact.get(field) is None for field in ["company_name", "legal_email", "sales_email", "support_email"]):
+        fail("contact config must not invent seller identity before activation")
     for rel in [
         "commercial/schema/order.schema.json",
         "commercial/schema/evidence_graph.schema.json",

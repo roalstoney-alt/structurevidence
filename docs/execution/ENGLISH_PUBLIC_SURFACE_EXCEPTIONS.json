@@ -1,0 +1,23 @@
+[
+  {
+    "approved": true,
+    "path": "research/Structural_Dynamics_Evidence_Dynamics_Method_Paper_v0.1_CN.md",
+    "publicly_visible": false,
+    "reason": "Frozen original Chinese artifact retained for provenance only; canonical public link migrated to EN.",
+    "scope": "HISTORICAL_ORIGINAL_ARTIFACT"
+  },
+  {
+    "approved": true,
+    "path": "research/Strategy_2026_Structural_Dynamics_Report_v0.1_CN.md",
+    "publicly_visible": false,
+    "reason": "Frozen original Chinese artifact retained for provenance only; canonical public link migrated to EN.",
+    "scope": "HISTORICAL_ORIGINAL_ARTIFACT"
+  },
+  {
+    "approved": true,
+    "path": "research/Strategy_2026_Public_Evidence_Research_Report_v0.1_CN.md",
+    "publicly_visible": false,
+    "reason": "Frozen original Chinese artifact retained for provenance only; canonical public link migrated to EN.",
+    "scope": "HISTORICAL_ORIGINAL_ARTIFACT"
+  }
+]

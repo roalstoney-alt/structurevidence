@@ -1,0 +1,1937 @@
+[
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "README.md",
+    "status": "UNREFERENCED",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "about.html",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": null,
+    "type": "html"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "architecture.html",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": null,
+    "type": "html"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "assets/entities.json",
+    "status": "UNREFERENCED",
+    "translation_source": null,
+    "type": "json"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "audits.html",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": null,
+    "type": "html"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "bnb.html",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": null,
+    "type": "html"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "commercial/VERIFICATION_RECORD.json",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "json"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "commercial/config/commercial.json",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "json"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "commercial/config/contact.json",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "json"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "commercial/config/payment.json",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "json"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "commercial/config/products.json",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "json"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "commercial/docs/PAYMENT_INTEGRATION.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "commercial/docs/REPORT_FULFILLMENT.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "commercial/docs/SEARCH_DEMAND_LOGGING.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "commercial/docs/TOOL_INTEGRATION_BOUNDARY.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "commercial/intelligence/ENGINE_REGISTRY.json",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "json"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "commercial/schema/evidence_graph.schema.json",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "json"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "commercial/schema/order.schema.json",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "json"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "commercial/schema/structural_delta.schema.json",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "json"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "commercial/schema/verification_record.schema.json",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "json"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "data.html",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": null,
+    "type": "html"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "digital-assets.html",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": null,
+    "type": "html"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "docs/about.html",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": null,
+    "type": "html"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "docs/architecture/ecl.html",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": null,
+    "type": "html"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "docs/architecture/ecn.html",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": null,
+    "type": "html"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "docs/architecture/evidence-dynamics.html",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": null,
+    "type": "html"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "docs/architecture/mdl.html",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": null,
+    "type": "html"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "docs/architecture/rdl.html",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": null,
+    "type": "html"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "docs/architecture/rtp.html",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": null,
+    "type": "html"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "docs/architecture/structural-dynamics.html",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": null,
+    "type": "html"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "docs/architecture.html",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": null,
+    "type": "html"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "docs/assets/entities.json",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": null,
+    "type": "json"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "docs/audits.html",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": null,
+    "type": "html"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "docs/bnb.html",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": null,
+    "type": "html"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "docs/data.html",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": null,
+    "type": "html"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "docs/digital-assets.html",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": null,
+    "type": "html"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "docs/enterprise.html",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": null,
+    "type": "html"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "docs/entities.html",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": null,
+    "type": "html"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "docs/evidence.html",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": null,
+    "type": "html"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "docs/index.html",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": null,
+    "type": "html"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "docs/markets.html",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": null,
+    "type": "html"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "docs/method.html",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": null,
+    "type": "html"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "docs/paid-pilot.html",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": null,
+    "type": "html"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "docs/privacy.html",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": null,
+    "type": "html"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "docs/refund-policy.html",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": null,
+    "type": "html"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "docs/reports.html",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": null,
+    "type": "html"
+  },
+  {
+    "canonical": false,
+    "language": "MIXED",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "docs/research/Strategy_2026_Public_Evidence_Research_Report_v0.1_CN.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "docs/research/Strategy_2026_Public_Evidence_Research_Report_v0.1_EN.md",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": "docs/research/Strategy_2026_Public_Evidence_Research_Report_v0.1_CN.md",
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "MIXED",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "docs/research/Strategy_2026_Structural_Dynamics_Report_v0.1_CN.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "docs/research/Strategy_2026_Structural_Dynamics_Report_v0.1_EN.md",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": "docs/research/Strategy_2026_Structural_Dynamics_Report_v0.1_CN.md",
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "MIXED",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "docs/research/Structural_Dynamics_Evidence_Dynamics_Method_Paper_v0.1_CN.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "docs/research/Structural_Dynamics_Evidence_Dynamics_Method_Paper_v0.1_EN.md",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": "docs/research/Structural_Dynamics_Evidence_Dynamics_Method_Paper_v0.1_CN.md",
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "docs/research/digital-assets/BNB/BNB_PUBLIC_EVIDENCE_RESEARCH_REPORT_v0.1.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "docs/research/digital-assets/BNB/BNB_STRUCTURAL_DYNAMICS_REPORT_v0.1.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "docs/research/digital-assets/SOL/SOL_PUBLIC_EVIDENCE_RESEARCH_REPORT_v0.1.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "docs/research/digital-assets/SOL/SOL_STRUCTURAL_DYNAMICS_REPORT_v0.1.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "docs/research/digital-assets/TRX/TRX_PUBLIC_EVIDENCE_RESEARCH_REPORT_v0.1.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "docs/research/digital-assets/TRX/TRX_STRUCTURAL_DYNAMICS_REPORT_v0.1.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "docs/research/digital-assets/XLM/XLM_PUBLIC_EVIDENCE_RESEARCH_REPORT_v0.1.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "docs/research/digital-assets/XLM/XLM_STRUCTURAL_DYNAMICS_REPORT_v0.1.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "docs/research/digital-assets/batch-01-r1/BNB/AGREEMENT_DIVERGENCE_AUDIT.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "docs/research/digital-assets/batch-01-r1/BNB/BLIND_REVIEW_OUTPUT.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "docs/research/digital-assets/batch-01-r1/BNB/ECL_AXIS_ANALYSIS.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "docs/research/digital-assets/batch-01-r1/BNB/ECL_FINAL_SYNTHESIS.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "docs/research/digital-assets/batch-01-r1/BNB/PUBLIC_EVIDENCE_RESEARCH_REPORT_R1.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "docs/research/digital-assets/batch-01-r1/BNB/STRUCTURAL_DIMENSION_ANALYSIS.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "docs/research/digital-assets/batch-01-r1/BNB/STRUCTURAL_DYNAMICS_REPORT_R1.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "docs/research/digital-assets/batch-01-r1/BNB/STRUCTURAL_STATE_DERIVATION.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "docs/research/digital-assets/batch-01-r1/BNB/SUPERSESSION_NOTICE.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "docs/research/digital-assets/batch-01-r1/REFINEMENT_TABLE.html",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": null,
+    "type": "html"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "docs/research/digital-assets/batch-01-r1/SOL/AGREEMENT_DIVERGENCE_AUDIT.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "docs/research/digital-assets/batch-01-r1/SOL/BLIND_REVIEW_OUTPUT.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "docs/research/digital-assets/batch-01-r1/SOL/ECL_AXIS_ANALYSIS.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "docs/research/digital-assets/batch-01-r1/SOL/ECL_FINAL_SYNTHESIS.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "docs/research/digital-assets/batch-01-r1/SOL/PUBLIC_EVIDENCE_RESEARCH_REPORT_R1.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "docs/research/digital-assets/batch-01-r1/SOL/STRUCTURAL_DIMENSION_ANALYSIS.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "docs/research/digital-assets/batch-01-r1/SOL/STRUCTURAL_DYNAMICS_REPORT_R1.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "docs/research/digital-assets/batch-01-r1/SOL/STRUCTURAL_STATE_DERIVATION.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "docs/research/digital-assets/batch-01-r1/SOL/SUPERSESSION_NOTICE.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "docs/research/digital-assets/batch-01-r1/TRX/AGREEMENT_DIVERGENCE_AUDIT.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "docs/research/digital-assets/batch-01-r1/TRX/BLIND_REVIEW_OUTPUT.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "docs/research/digital-assets/batch-01-r1/TRX/ECL_AXIS_ANALYSIS.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "docs/research/digital-assets/batch-01-r1/TRX/ECL_FINAL_SYNTHESIS.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "docs/research/digital-assets/batch-01-r1/TRX/PUBLIC_EVIDENCE_RESEARCH_REPORT_R1.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "docs/research/digital-assets/batch-01-r1/TRX/STRUCTURAL_DIMENSION_ANALYSIS.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "docs/research/digital-assets/batch-01-r1/TRX/STRUCTURAL_DYNAMICS_REPORT_R1.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "docs/research/digital-assets/batch-01-r1/TRX/STRUCTURAL_STATE_DERIVATION.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "docs/research/digital-assets/batch-01-r1/TRX/SUPERSESSION_NOTICE.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "docs/research/digital-assets/batch-01-r1/XLM/AGREEMENT_DIVERGENCE_AUDIT.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "docs/research/digital-assets/batch-01-r1/XLM/BLIND_REVIEW_OUTPUT.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "docs/research/digital-assets/batch-01-r1/XLM/ECL_AXIS_ANALYSIS.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "docs/research/digital-assets/batch-01-r1/XLM/ECL_FINAL_SYNTHESIS.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "docs/research/digital-assets/batch-01-r1/XLM/PUBLIC_EVIDENCE_RESEARCH_REPORT_R1.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "docs/research/digital-assets/batch-01-r1/XLM/STRUCTURAL_DIMENSION_ANALYSIS.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "docs/research/digital-assets/batch-01-r1/XLM/STRUCTURAL_DYNAMICS_REPORT_R1.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "docs/research/digital-assets/batch-01-r1/XLM/STRUCTURAL_STATE_DERIVATION.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "docs/research/digital-assets/batch-01-r1/XLM/SUPERSESSION_NOTICE.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "docs/research-scope.html",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": null,
+    "type": "html"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "docs/research.html",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": null,
+    "type": "html"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "docs/sample-report.html",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": null,
+    "type": "html"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "docs/sol.html",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": null,
+    "type": "html"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "docs/standard.html",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": null,
+    "type": "html"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "docs/strategy-2026.html",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": null,
+    "type": "html"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "docs/terms-of-sale.html",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": null,
+    "type": "html"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "docs/terms.html",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": null,
+    "type": "html"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "docs/trust.html",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": null,
+    "type": "html"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "docs/trx.html",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": null,
+    "type": "html"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "docs/verify-r1.html",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": null,
+    "type": "html"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "docs/verify.html",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": null,
+    "type": "html"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "docs/version-history.html",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": null,
+    "type": "html"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "docs/whitepapers.html",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": null,
+    "type": "html"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "docs/xlm.html",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": null,
+    "type": "html"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "enterprise.html",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": null,
+    "type": "html"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "entities.html",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": null,
+    "type": "html"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "evidence.html",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": null,
+    "type": "html"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "index.html",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": null,
+    "type": "html"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "markets.html",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": null,
+    "type": "html"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "method.html",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": null,
+    "type": "html"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "paid-pilot.html",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": null,
+    "type": "html"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "privacy.html",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": null,
+    "type": "html"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "refund-policy.html",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": null,
+    "type": "html"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "reports.html",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": null,
+    "type": "html"
+  },
+  {
+    "canonical": false,
+    "language": "MIXED",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "research/2026-09-08/Strategy_2026_Public_Evidence_Research_Report_v0.1_CN.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "research/2026-09-08/Strategy_2026_Public_Evidence_Research_Report_v0.1_EN.md",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": "research/2026-09-08/Strategy_2026_Public_Evidence_Research_Report_v0.1_CN.md",
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "MIXED",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "research/2026-09-08/Strategy_2026_Structural_Dynamics_Report_v0.1_CN.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "research/2026-09-08/Strategy_2026_Structural_Dynamics_Report_v0.1_EN.md",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": "research/2026-09-08/Strategy_2026_Structural_Dynamics_Report_v0.1_CN.md",
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "MIXED",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "research/2026-09-08/Structural_Dynamics_Evidence_Dynamics_Method_Paper_v0.1_CN.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "research/2026-09-08/Structural_Dynamics_Evidence_Dynamics_Method_Paper_v0.1_EN.md",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": "research/2026-09-08/Structural_Dynamics_Evidence_Dynamics_Method_Paper_v0.1_CN.md",
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "MIXED",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "research/Strategy_2026_Public_Evidence_Research_Report_v0.1_CN.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "research/Strategy_2026_Public_Evidence_Research_Report_v0.1_EN.md",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": "research/Strategy_2026_Public_Evidence_Research_Report_v0.1_CN.md",
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "MIXED",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "research/Strategy_2026_Structural_Dynamics_Report_v0.1_CN.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "research/Strategy_2026_Structural_Dynamics_Report_v0.1_EN.md",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": "research/Strategy_2026_Structural_Dynamics_Report_v0.1_CN.md",
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "MIXED",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "research/Structural_Dynamics_Evidence_Dynamics_Method_Paper_v0.1_CN.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "research/Structural_Dynamics_Evidence_Dynamics_Method_Paper_v0.1_EN.md",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": "research/Structural_Dynamics_Evidence_Dynamics_Method_Paper_v0.1_CN.md",
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "research/digital-assets/BNB/BNB_PUBLIC_EVIDENCE_RESEARCH_REPORT_v0.1.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "research/digital-assets/BNB/BNB_STRUCTURAL_DYNAMICS_REPORT_v0.1.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "research/digital-assets/SOL/SOL_PUBLIC_EVIDENCE_RESEARCH_REPORT_v0.1.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "research/digital-assets/SOL/SOL_STRUCTURAL_DYNAMICS_REPORT_v0.1.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "research/digital-assets/TRX/TRX_PUBLIC_EVIDENCE_RESEARCH_REPORT_v0.1.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "research/digital-assets/TRX/TRX_STRUCTURAL_DYNAMICS_REPORT_v0.1.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "research/digital-assets/XLM/XLM_PUBLIC_EVIDENCE_RESEARCH_REPORT_v0.1.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "research/digital-assets/XLM/XLM_STRUCTURAL_DYNAMICS_REPORT_v0.1.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "research/digital-assets/batch-01/BNB/BNB_PUBLIC_EVIDENCE_RESEARCH_REPORT_v0.1.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "research/digital-assets/batch-01/BNB/BNB_STRUCTURAL_DYNAMICS_REPORT_v0.1.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "research/digital-assets/batch-01/SOL/SOL_PUBLIC_EVIDENCE_RESEARCH_REPORT_v0.1.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "research/digital-assets/batch-01/SOL/SOL_STRUCTURAL_DYNAMICS_REPORT_v0.1.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "research/digital-assets/batch-01/TRX/TRX_PUBLIC_EVIDENCE_RESEARCH_REPORT_v0.1.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "research/digital-assets/batch-01/TRX/TRX_STRUCTURAL_DYNAMICS_REPORT_v0.1.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "research/digital-assets/batch-01/XLM/XLM_PUBLIC_EVIDENCE_RESEARCH_REPORT_v0.1.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "research/digital-assets/batch-01/XLM/XLM_STRUCTURAL_DYNAMICS_REPORT_v0.1.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "research/digital-assets/batch-01-r1/BNB/AGREEMENT_DIVERGENCE_AUDIT.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "research/digital-assets/batch-01-r1/BNB/BLIND_REVIEW_OUTPUT.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "research/digital-assets/batch-01-r1/BNB/ECL_AXIS_ANALYSIS.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "research/digital-assets/batch-01-r1/BNB/ECL_FINAL_SYNTHESIS.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "research/digital-assets/batch-01-r1/BNB/PUBLIC_EVIDENCE_RESEARCH_REPORT_R1.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "research/digital-assets/batch-01-r1/BNB/STRUCTURAL_DIMENSION_ANALYSIS.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "research/digital-assets/batch-01-r1/BNB/STRUCTURAL_DYNAMICS_REPORT_R1.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "research/digital-assets/batch-01-r1/BNB/STRUCTURAL_STATE_DERIVATION.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "research/digital-assets/batch-01-r1/BNB/SUPERSESSION_NOTICE.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "research/digital-assets/batch-01-r1/SOL/AGREEMENT_DIVERGENCE_AUDIT.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "research/digital-assets/batch-01-r1/SOL/BLIND_REVIEW_OUTPUT.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "research/digital-assets/batch-01-r1/SOL/ECL_AXIS_ANALYSIS.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "research/digital-assets/batch-01-r1/SOL/ECL_FINAL_SYNTHESIS.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "research/digital-assets/batch-01-r1/SOL/PUBLIC_EVIDENCE_RESEARCH_REPORT_R1.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "research/digital-assets/batch-01-r1/SOL/STRUCTURAL_DIMENSION_ANALYSIS.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "research/digital-assets/batch-01-r1/SOL/STRUCTURAL_DYNAMICS_REPORT_R1.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "research/digital-assets/batch-01-r1/SOL/STRUCTURAL_STATE_DERIVATION.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "research/digital-assets/batch-01-r1/SOL/SUPERSESSION_NOTICE.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "research/digital-assets/batch-01-r1/TRX/AGREEMENT_DIVERGENCE_AUDIT.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "research/digital-assets/batch-01-r1/TRX/BLIND_REVIEW_OUTPUT.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "research/digital-assets/batch-01-r1/TRX/ECL_AXIS_ANALYSIS.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "research/digital-assets/batch-01-r1/TRX/ECL_FINAL_SYNTHESIS.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "research/digital-assets/batch-01-r1/TRX/PUBLIC_EVIDENCE_RESEARCH_REPORT_R1.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "research/digital-assets/batch-01-r1/TRX/STRUCTURAL_DIMENSION_ANALYSIS.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "research/digital-assets/batch-01-r1/TRX/STRUCTURAL_DYNAMICS_REPORT_R1.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "research/digital-assets/batch-01-r1/TRX/STRUCTURAL_STATE_DERIVATION.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "research/digital-assets/batch-01-r1/TRX/SUPERSESSION_NOTICE.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "research/digital-assets/batch-01-r1/XLM/AGREEMENT_DIVERGENCE_AUDIT.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "research/digital-assets/batch-01-r1/XLM/BLIND_REVIEW_OUTPUT.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "research/digital-assets/batch-01-r1/XLM/ECL_AXIS_ANALYSIS.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "research/digital-assets/batch-01-r1/XLM/ECL_FINAL_SYNTHESIS.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "research/digital-assets/batch-01-r1/XLM/PUBLIC_EVIDENCE_RESEARCH_REPORT_R1.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "research/digital-assets/batch-01-r1/XLM/STRUCTURAL_DIMENSION_ANALYSIS.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "research/digital-assets/batch-01-r1/XLM/STRUCTURAL_DYNAMICS_REPORT_R1.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "research/digital-assets/batch-01-r1/XLM/STRUCTURAL_STATE_DERIVATION.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "research/digital-assets/batch-01-r1/XLM/SUPERSESSION_NOTICE.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "research-scope.html",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": null,
+    "type": "html"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "research.html",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": null,
+    "type": "html"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "sample-report.html",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": null,
+    "type": "html"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "sol.html",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": null,
+    "type": "html"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "standard.html",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": null,
+    "type": "html"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "strategy-2026.html",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": null,
+    "type": "html"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "terms-of-sale.html",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": null,
+    "type": "html"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "terms.html",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": null,
+    "type": "html"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "NOT_LINKED_FROM_MAIN_SURFACE",
+    "path": "trust.html",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": null,
+    "type": "html"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "trx.html",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": null,
+    "type": "html"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "verify-r1.html",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": null,
+    "type": "html"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "verify.html",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": null,
+    "type": "html"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "version-history.html",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": null,
+    "type": "html"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "whitepapers/ECL/ECL_Methodology_v0.1.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "whitepapers/ECL/ECL_Technical_Whitepaper_v0.1.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "whitepapers/ECN/ECN_Protocol_v0.1.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "whitepapers/ECN/ECN_Technical_Whitepaper_v0.1.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "whitepapers/Evidence_Dynamics/Evidence_Dynamics_Framework_v0.1.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "whitepapers/Evidence_Dynamics/Evidence_Dynamics_Technical_Whitepaper_v0.1.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "whitepapers/MDL/MDL_Charter_Edition_I.1_2026.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "whitepapers/MDL/MDL_Technical_Whitepaper_v0.1.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "whitepapers/RDL/RDL_Charter_Edition_I_2026.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "whitepapers/RDL/RDL_Technical_Whitepaper_v0.1.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "whitepapers/RTP/RTP_Protocol_Spec_v0.1.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "whitepapers/RTP/RTP_Technical_Whitepaper_v0.1.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "whitepapers/Structural_Dynamics/Structural_Dynamics_Framework_v0.1.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": false,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "whitepapers/Structural_Dynamics/Structural_Dynamics_Technical_Whitepaper_v0.1.md",
+    "status": "PUBLIC_HISTORICAL",
+    "translation_source": null,
+    "type": "md"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "whitepapers.html",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": null,
+    "type": "html"
+  },
+  {
+    "canonical": true,
+    "language": "ENGLISH",
+    "linked_from": "PUBLIC_LINK_GRAPH",
+    "path": "xlm.html",
+    "status": "PUBLIC_CANONICAL",
+    "translation_source": null,
+    "type": "html"
+  }
+]
