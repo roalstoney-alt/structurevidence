@@ -58,11 +58,14 @@ V22_SEARCH_AUDIT PASS
 V22_LINK_CHECK PASS
 V22_VISUAL_QA BLOCKED
 V22_MOBILE_QA BLOCKED
-V22_GIT_PUSH PENDING
-V22_REMOTE_MATCH PENDING
+V22_GIT_PUSH PASS
+V22_REMOTE_MATCH PASS
 
 VISUAL_QA_LIMITATION
 Screenshot-grade browser QA remains blocked in this environment because the browser connector failed and shell tools do not include Node, npm, Chromium or Playwright. Static mobile CSS and link checks were completed.
 
 REQUEST_PATH_LIMITATION
 No approved public contact address or backend intake path exists in the repository. v2.2 therefore exposes the request intent without a fake form or invented email address.
+
+PRODUCTION_VERIFICATION
+GitHub Pages returned HTTP 200, but the edge response still showed the previous 9987-byte homepage while the v2.2 homepage is 6489 bytes locally. A follow-up content request hit DNS resolution failure. Repository publication is complete; production edge refresh remains pending/unverified from this environment.
