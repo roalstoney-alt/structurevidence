@@ -71,7 +71,7 @@ function renderCoveredEntity(region, entity) {
   const reviewed = escapeText(entity.last_reviewed || "UNRESOLVED");
   region.innerHTML = `
     <article class="health-card">
-      <div class="result-topline"><span>Structural & Evidence Health Card</span><span>HEALTH CARD != HEALTH SCORE</span></div>
+      <div class="result-topline"><span>Structural & Evidence Research Record</span><span>NOT A SCORE OR RANKING</span></div>
       <div class="result-heading"><div><h2>${escapeText(entity.name)}</h2><p>${escapeText(entity.ticker || entity.name)} / ${escapeText(entity.category)}</p></div><button class="button subtle" type="button" data-reset-search>New Search</button></div>
       <div class="health-fields">
         <div><span>STRUCTURAL STATE</span><strong><code>${structuralState}</code></strong></div>
@@ -82,7 +82,7 @@ function renderCoveredEntity(region, entity) {
         <div><span>RESEARCH STATUS</span><strong>${escapeText(entity.research_status || "METHOD PILOT")}</strong></div>
       </div>
       <p>${escapeText(entity.summary)}</p>
-      <div class="actions compact"><a class="button primary" href="${escapeText(entity.result_url)}">View Full Audit</a><a class="button" href="${escapeText(entity.structural_report_url || "research.html")}">Read Structural Report</a><a class="button" href="${escapeText(entity.evidence_report_url || "research.html")}">Read Evidence Report</a><a class="button" href="${escapeText(entity.research_chain_url || "verify.html")}">Inspect Research Chain</a></div>
+      <div class="actions compact"><a class="button primary" href="${escapeText(entity.result_url)}">View Research Record</a><a class="button" href="${escapeText(entity.structural_report_url || "research.html")}">Read Structural Report</a><a class="button" href="${escapeText(entity.evidence_report_url || "research.html")}">Read Evidence Report</a><a class="button" href="${escapeText(entity.research_chain_url || "verify.html")}">Inspect Research Chain</a></div>
     </article>
   `;
   wireReset(region);

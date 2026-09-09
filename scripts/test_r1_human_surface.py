@@ -73,12 +73,19 @@ def check_pages_and_labels() -> None:
     for asset in ASSETS:
         can = read_json(ROOT / "research" / "digital-assets" / "batch-01-r1" / asset / "CANONICAL_RESEARCH_R1.json")
         html = (ROOT / f"{asset.lower()}.html").read_text(encoding="utf-8")
+        docs_html = (ROOT / "docs" / f"{asset.lower()}.html").read_text(encoding="utf-8")
         last = -1
         for heading in headings:
             pos = html.find(heading)
             if pos <= last:
                 fail(f"missing or unordered block {asset}: {heading}")
             last = pos
+            if heading not in docs_html:
+                fail(f"docs mirror missing block {asset}: {heading}")
+        root_contract = html[html.find(headings[0]):html.find("<h2>Links</h2>")]
+        docs_contract = docs_html[docs_html.find(headings[0]):docs_html.find("<h2>Links</h2>")]
+        if root_contract != docs_contract:
+            fail(f"root/docs six-block divergence {asset}")
         entity = entities[asset]
         for value in [
             can["research_id"],
@@ -148,6 +155,31 @@ def check_verify_and_refinement() -> None:
             fail("front office links missing")
     if "Five covered entities" not in digital or "Decision usefulness is not established" not in digital:
         fail("coverage count or decision boundary missing")
+    if "EXPECTED_SELF_HASH_EXCLUSION" not in verify or ">GAP<" in verify:
+        fail("verify self-hash exclusion not labeled")
+    for phrase in ["producer_source", "reviewer_artifact", "SEPARATION: FILENAME_ONLY"]:
+        if phrase not in verify:
+            fail(f"verify separation copy missing: {phrase}")
+
+
+def check_homepage_contract() -> None:
+    index = (ROOT / "index.html").read_text(encoding="utf-8")
+    docs_index = (ROOT / "docs" / "index.html").read_text(encoding="utf-8")
+    for text in [index, docs_index]:
+        for entity in ["Strategy", "BNB", "SOL", "TRX", "XLM"]:
+            if entity not in text:
+                fail(f"homepage missing entity {entity}")
+        for required in ["Coverage is 5 entities", "decision usefulness is not established", "SOL is featured as the conflict demonstration case", "digital-assets.html", "verify-r1.html", "REFINEMENT_TABLE.html"]:
+            if required not in text:
+                fail(f"homepage missing required text/link: {required}")
+        for forbidden in ["Health Score", "HEALTH SCORE", "Health Card", "HEALTH CARD"]:
+            if forbidden in text:
+                fail(f"homepage old score/rating copy remains: {forbidden}")
+    for path in [ROOT / "assets" / "site.js", ROOT / "docs" / "assets" / "site.js"]:
+        text = path.read_text(encoding="utf-8")
+        for forbidden in ["Health Score", "HEALTH SCORE", "Health Card", "HEALTH CARD", "View Full Audit"]:
+            if forbidden in text:
+                fail(f"search renderer old score/rating copy remains in {path}: {forbidden}")
 
 
 def check_strategy_and_old_batch_unchanged() -> None:
@@ -177,6 +209,7 @@ def main() -> None:
     check_reports_conclusion_distinct()
     check_vocab()
     check_verify_and_refinement()
+    check_homepage_contract()
     check_strategy_and_old_batch_unchanged()
     print("R1_HUMAN_SURFACE_TESTS_PASS")
 

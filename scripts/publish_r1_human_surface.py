@@ -167,8 +167,9 @@ def verify_page() -> str:
             gate_rows.append(f"<tr><td>{esc(name)}</td><td>{'PASS' if exists else 'FAIL'}</td><td><a href=\"evidence-freeze/{R1}/{asset}/{esc(name)}\">evidence-freeze/{R1}/{asset}/{esc(name)}</a></td><td>{esc(hashes.get(name, 'GAP'))}</td></tr>")
         file_rows = []
         for name in manifest.get("files", []):
-            file_rows.append(f"<tr><td>{esc(name)}</td><td><a href=\"evidence-freeze/{R1}/{asset}/{esc(name)}\">artifact</a></td><td>{esc(hashes.get(name, 'GAP'))}</td></tr>")
-        blocks.append(f"""<section id="{asset.lower()}"><h2>{asset}</h2><p><span class="status">Producer: R1 derivation artifacts</span><span class="status">Reviewer: BLIND_REVIEW_OUTPUT.md</span><span class="status">Research Status: {esc(can['publication_status'])}</span><span class="status">Decision usefulness: NOT_ESTABLISHED</span></p><h3>Required Artifact Gates</h3><div class="table-wrap"><table><thead><tr><th>Artifact</th><th>Gate</th><th>Path</th><th>Hash</th></tr></thead><tbody>{''.join(gate_rows)}</tbody></table></div><h3>Manifest Artifact List</h3><div class="table-wrap"><table><thead><tr><th>Artifact</th><th>Path</th><th>Hash</th></tr></thead><tbody>{''.join(file_rows)}</tbody></table></div></section>""")
+            digest = "EXPECTED_SELF_HASH_EXCLUSION" if name == "SHA256SUMS.txt" else hashes.get(name, "GAP")
+            file_rows.append(f"<tr><td>{esc(name)}</td><td><a href=\"evidence-freeze/{R1}/{asset}/{esc(name)}\">artifact</a></td><td>{esc(digest)}</td></tr>")
+        blocks.append(f"""<section id="{asset.lower()}"><h2>{asset}</h2><p><span class="status">producer_source: R1 derivation artifacts</span><span class="status">reviewer_artifact: BLIND_REVIEW_OUTPUT.md</span><span class="status">SEPARATION: FILENAME_ONLY</span><span class="status">Research Status: {esc(can['publication_status'])}</span><span class="status">Decision usefulness: NOT_ESTABLISHED</span></p><h3>Required Artifact Gates</h3><div class="table-wrap"><table><thead><tr><th>Artifact</th><th>Gate</th><th>Path</th><th>Hash</th></tr></thead><tbody>{''.join(gate_rows)}</tbody></table></div><h3>Manifest Artifact List</h3><div class="table-wrap"><table><thead><tr><th>Artifact</th><th>Path</th><th>Hash</th></tr></thead><tbody>{''.join(file_rows)}</tbody></table></div></section>""")
     return f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Batch01 R1 Verify - StructEvidence</title><link rel="stylesheet" href="assets/style.css"></head><body>{nav()}<main><section class="hero"><div class="hero-copy"><p class="eyebrow">Human Verify</p><h1>Batch01 R1 Research Chain</h1><p class="lead">Artifact gates rendered from R1 manifests and canonical JSON. Missing required artifacts render as FAIL.</p></div></section>{''.join(blocks)}</main>{footer()}</body></html>"""
 
 
@@ -216,13 +217,25 @@ def update_entities() -> None:
 
 
 def update_front_office() -> None:
-    cards = "".join(f'<tr><td><a href="{a.lower()}.html">{a}</a></td><td>{esc(asset_data(a)["canonical"]["structural_state_final"])}</td><td>{esc(asset_data(a)["canonical"]["evidence_state_final"])}</td><td>{esc(asset_data(a)["canonical"]["publication_status"])}</td><td>{esc(asset_data(a)["canonical"]["decision_usefulness"])}</td></tr>' for a in ASSETS)
+    cards = '<tr><td><a href="strategy-2026.html">Strategy</a></td><td>HYBRID_ACCUMULATION_MONETIZATION</td><td>SEMANTIC_TENSION_BUT_RECONCILABLE</td><td>Existing publication</td><td>NOT_ESTABLISHED</td></tr>'
+    cards += "".join(f'<tr><td><a href="{a.lower()}.html">{a}</a></td><td>{esc(asset_data(a)["canonical"]["structural_state_final"])}</td><td>{esc(asset_data(a)["canonical"]["evidence_state_final"])}</td><td>{esc(asset_data(a)["canonical"]["publication_status"])}</td><td>{esc(asset_data(a)["canonical"]["decision_usefulness"])}</td></tr>' for a in ASSETS)
     digital = f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Digital Assets - StructEvidence</title><link rel="stylesheet" href="assets/style.css"></head><body>{nav()}<main><section class="hero"><div class="hero-copy"><p class="eyebrow">Digital Assets</p><h1>Batch01 R1 Coverage Monitor</h1><p class="lead">Five covered entities are published: Strategy, BNB, SOL, TRX and XLM. The list is alphabetical by asset section and is not a ranking. Decision usefulness is not established.</p></div></section><section><h2>Demonstration Case</h2><p>SOL is the demonstration case for visible POTENTIAL_CONFLICT handling because execution-scale evidence and production client-diversity evidence remain distinct claims.</p></section><section><p><a href="research/digital-assets/batch-01-r1/REFINEMENT_TABLE.html">Open R1 Refinement Table</a> | <a href="verify-r1.html">Open Human Verify</a></p><div class="table-wrap"><table><thead><tr><th>Asset</th><th>Structural State</th><th>Evidence State</th><th>Research Status</th><th>Decision Usefulness</th></tr></thead><tbody>{cards}</tbody></table></div></section></main>{footer()}</body></html>"""
     for root in [ROOT, DOCS]:
         write(root / "digital-assets.html", digital)
         idx = root / "index.html"
         text = idx.read_text(encoding="utf-8")
         text = re.sub(r'(<p id="search-note" class="microcopy">).*?(</p>)', r'\1Coverage count: 5 covered entities. Decision usefulness not established. SOL demonstrates visible POTENTIAL_CONFLICT handling.\2', text)
+        text = text.replace("Structural & Evidence Health Card", "Structural & Evidence Research Record")
+        text = text.replace("HEALTH CARD != HEALTH SCORE", "NOT A SCORE OR RANKING")
+        text = text.replace("View Full Audit", "View Research Record")
+        coverage_section = f"""<section class="coverage-index">
+  <h2>Covered Entities</h2>
+  <p>Coverage is 5 entities; decision usefulness is not established. SOL is featured as the conflict demonstration case.</p>
+  <p><a href="digital-assets.html">Digital Assets</a> | <a href="verify-r1.html">Human Verify</a> | <a href="research/digital-assets/batch-01-r1/REFINEMENT_TABLE.html">R1 Refinement Table</a></p>
+  <div class="table-wrap"><table><thead><tr><th>Entity</th><th>Structural State</th><th>Evidence State</th><th>Research Status</th><th>Decision Usefulness</th></tr></thead><tbody>{cards}</tbody></table></div>
+</section>"""
+        if "coverage-index" not in text:
+            text = text.replace('<section class="deliverables">', coverage_section + '\n<section class="deliverables">')
         idx.write_text(text, encoding="utf-8")
         research = root / "research.html"
         text = research.read_text(encoding="utf-8")
@@ -238,13 +251,13 @@ def main() -> None:
     for asset in ASSETS:
         html = asset_page(asset)
         write(ROOT / f"{asset.lower()}.html", html)
-        write(DOCS / f"{asset.lower()}.html", html)
+        shutil.copy2(ROOT / f"{asset.lower()}.html", DOCS / f"{asset.lower()}.html")
     table = refinement_table()
     write(ROOT / "research" / "digital-assets" / "batch-01-r1" / "REFINEMENT_TABLE.html", table)
     write(DOCS / "research" / "digital-assets" / "batch-01-r1" / "REFINEMENT_TABLE.html", table)
     verify = verify_page()
     write(ROOT / "verify-r1.html", verify)
-    write(DOCS / "verify-r1.html", verify)
+    shutil.copy2(ROOT / "verify-r1.html", DOCS / "verify-r1.html")
     update_entities()
     update_front_office()
 
