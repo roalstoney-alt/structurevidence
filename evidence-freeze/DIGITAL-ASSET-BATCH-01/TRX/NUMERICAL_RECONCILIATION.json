@@ -1,0 +1,18 @@
+[
+  {
+    "computed_value": "23.22%",
+    "formula": "3,576,771,837 USDT transfers / 15,399,885,378 cumulative transactions",
+    "inputs": [
+      "3,576,771,837",
+      "15,399,885,378"
+    ],
+    "notes": "This is transaction-count composition, not dollar settlement volume.",
+    "reconciliation_id": "TRX-REC-001",
+    "reported_value": "USDT Transfers 23.22%",
+    "result": "RECONCILED",
+    "source_ids": [
+      "TRX-S4"
+    ],
+    "tolerance": "0.01 percentage point"
+  }
+]

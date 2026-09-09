@@ -1,0 +1,51 @@
+{
+  "asset": "TRX",
+  "batch": "DIGITAL_ASSET_STRUCTURAL_COVERAGE_BATCH_01",
+  "files": [
+    {
+      "path": "ARTIFACT_CAPTURE_CLASSIFICATION.json",
+      "sha256": "68490b8aa0bac2390c92716ca582c8f0988d9bf3c83ee0779f2444e623ae5af7"
+    },
+    {
+      "path": "CANONICAL_RESEARCH.json",
+      "sha256": "5678e39a97e036a24a0563c275f440185a75b5fa39acb2fa0ae1f96937bae3d1"
+    },
+    {
+      "path": "CLAIM_REGISTRY.json",
+      "sha256": "17a95487da7fdb4cc046f8e0c5ea913a3000915c9f6251cbb14f50e4743083ec"
+    },
+    {
+      "path": "COUNTER_EVIDENCE_SEARCH_LOG.json",
+      "sha256": "ea50fd916c1886626e8c872b8845b9e3c005634f04ca7105dc3f16deb9f973c9"
+    },
+    {
+      "path": "GATE_TABLE.json",
+      "sha256": "9338f74344c24d3217c8b82191d7b07dc681e6b8b204b819ec61e9a09cf9aa93"
+    },
+    {
+      "path": "HYPOTHESIS_ASSESSMENTS.json",
+      "sha256": "eab66e12d497896617ee85d0de04c054ea11c7f8b00acdb533adc8d2dc2a1360"
+    },
+    {
+      "path": "NUMERICAL_RECONCILIATION.json",
+      "sha256": "ee3eee3aad81a95b6472735e7b1af5272dfd7ca0cfb388f69d6c485757de8764"
+    },
+    {
+      "path": "OBSERVATION_REGISTRY.json",
+      "sha256": "0b58ce8d2637cc0cff05225707a39f7dd4b19a363bc2b6e68be162a642454611"
+    },
+    {
+      "path": "SOURCE_DEPENDENCY_GRAPH.json",
+      "sha256": "ce1d1faba59615d560c3030847bcb120efa512612b53cefe2bf0f7a70b8a53a8"
+    },
+    {
+      "path": "SOURCE_INVENTORY.json",
+      "sha256": "7b0bbc40d1c44e11b80319760a9fa903482116927584d32c6bb62815dde784e7"
+    },
+    {
+      "path": "TEST_SUMMARY.json",
+      "sha256": "abf91b7447ac275f2265dfa15121a874a8edecd7cbffb501b9522b8eeb3d766a"
+    }
+  ],
+  "research_id": "SE.ASSET.TRX.2026.001"
+}

@@ -1,0 +1,9 @@
+{
+  "asset": "TRX",
+  "dependency_groups": [
+    "TRON Developers",
+    "TRONSCAN",
+    "TRONSCAN Docs"
+  ],
+  "rule": "MULTIPLE_URLS_DO_NOT_EQUAL_INDEPENDENT_SOURCES"
+}

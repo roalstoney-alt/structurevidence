@@ -1,0 +1,10 @@
+{
+  "asset": "SOL",
+  "dependency_groups": [
+    "Firedancer Report",
+    "Solana",
+    "Solana Docs",
+    "Solana Foundation"
+  ],
+  "rule": "MULTIPLE_URLS_DO_NOT_EQUAL_INDEPENDENT_SOURCES"
+}

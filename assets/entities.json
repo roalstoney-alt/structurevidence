@@ -1,7 +1,5 @@
 [
   {
-    "entity_id": "ECL.COMPANY.STRATEGY_INC",
-    "name": "Strategy Inc.",
     "aliases": [
       "MSTR",
       "Strategy",
@@ -10,6 +8,105 @@
     ],
     "category": "Corporate Digital Asset Treasury",
     "covered": true,
-    "result_url": "strategy-2026.html"
+    "entity_id": "ECL.COMPANY.STRATEGY_INC",
+    "evidence_report_url": "research/Strategy_2026_Public_Evidence_Research_Report_v0.1_CN.md",
+    "evidence_state": "SEMANTIC_TENSION_BUT_RECONCILABLE",
+    "last_reviewed": "2026-09-08",
+    "material_inconsistency": "NO",
+    "name": "Strategy Inc.",
+    "research_chain_url": "verify.html",
+    "result_url": "strategy-2026.html",
+    "source_coverage": "PARTIAL",
+    "structural_report_url": "research/Strategy_2026_Structural_Dynamics_Report_v0.1_CN.md",
+    "structural_state": "HYBRID_ACCUMULATION_MONETIZATION",
+    "summary": "Strategy's capital architecture combines Bitcoin accumulation, monetization, USD liquidity reserves and multi-layer financing. Current public evidence contains semantic tension but no material inconsistency after normalization.",
+    "ticker": "MSTR"
+  },
+  {
+    "aliases": [
+      "BNB",
+      "BNB Chain",
+      "BSC",
+      "BNB Smart Chain"
+    ],
+    "category": "Digital Asset",
+    "covered": true,
+    "entity_id": "SE.ASSET.BNB.2026.001",
+    "evidence_report_url": "research/digital-assets/BNB/BNB_PUBLIC_EVIDENCE_RESEARCH_REPORT_v0.1.md",
+    "evidence_state": "COMPLEMENTARY",
+    "last_reviewed": "2026-09-09",
+    "material_inconsistency": "NO",
+    "name": "BNB",
+    "research_chain_url": "evidence-freeze/DIGITAL-ASSET-BATCH-01/BNB/MANIFEST.json",
+    "result_url": "bnb.html",
+    "source_coverage": "PARTIAL_INDEPENDENT",
+    "structural_report_url": "research/digital-assets/BNB/BNB_STRUCTURAL_DYNAMICS_REPORT_v0.1.md",
+    "structural_state": "SUPPLY_CONTRACTION_WITH_ECOSYSTEM_UTILITY",
+    "summary": "BNB combines programmed supply contraction with gas, staking, validator governance and multi-chain ecosystem utility. Current public evidence supports a supply-contraction-with-utility structure, while source independence remains partial because several material claims are official-source dependent.",
+    "ticker": "BNB"
+  },
+  {
+    "aliases": [
+      "SOL",
+      "Solana"
+    ],
+    "category": "Digital Asset",
+    "covered": true,
+    "entity_id": "SE.ASSET.SOL.2026.001",
+    "evidence_report_url": "research/digital-assets/SOL/SOL_PUBLIC_EVIDENCE_RESEARCH_REPORT_v0.1.md",
+    "evidence_state": "COMPLEMENTARY",
+    "last_reviewed": "2026-09-09",
+    "material_inconsistency": "NO",
+    "name": "SOL",
+    "research_chain_url": "evidence-freeze/DIGITAL-ASSET-BATCH-01/SOL/MANIFEST.json",
+    "result_url": "sol.html",
+    "source_coverage": "PARTIAL_INDEPENDENT",
+    "structural_report_url": "research/digital-assets/SOL/SOL_STRUCTURAL_DYNAMICS_REPORT_v0.1.md",
+    "structural_state": "PERFORMANCE_EXPANSION_WITH_CLIENT_DIVERSIFICATION",
+    "summary": "SOL's current structure is best described as performance expansion with active validator economics and emerging client-diversification work. Evidence around fees, staking, foundation delegation and Firedancer/Frankendancer development is complementary, but production client diversity remains an implementation-status constraint.",
+    "ticker": "SOL"
+  },
+  {
+    "aliases": [
+      "TRX",
+      "TRON"
+    ],
+    "category": "Digital Asset",
+    "covered": true,
+    "entity_id": "SE.ASSET.TRX.2026.001",
+    "evidence_report_url": "research/digital-assets/TRX/TRX_PUBLIC_EVIDENCE_RESEARCH_REPORT_v0.1.md",
+    "evidence_state": "CONSISTENT",
+    "last_reviewed": "2026-09-09",
+    "material_inconsistency": "NO",
+    "name": "TRX",
+    "research_chain_url": "evidence-freeze/DIGITAL-ASSET-BATCH-01/TRX/MANIFEST.json",
+    "result_url": "trx.html",
+    "source_coverage": "PARTIAL_INDEPENDENT",
+    "structural_report_url": "research/digital-assets/TRX/TRX_STRUCTURAL_DYNAMICS_REPORT_v0.1.md",
+    "structural_state": "STABLECOIN_SETTLEMENT_RESOURCE_REGIME",
+    "summary": "TRX operates as the native resource, staking and governance asset underneath a network with substantial stablecoin transfer activity. Public evidence is consistent with a stablecoin-settlement resource regime, with source coverage partial because TRON docs and TRONSCAN dominate the current evidence base.",
+    "ticker": "TRX"
+  },
+  {
+    "aliases": [
+      "XLM",
+      "Stellar",
+      "Lumens"
+    ],
+    "category": "Digital Asset",
+    "covered": true,
+    "entity_id": "SE.ASSET.XLM.2026.001",
+    "evidence_report_url": "research/digital-assets/XLM/XLM_PUBLIC_EVIDENCE_RESEARCH_REPORT_v0.1.md",
+    "evidence_state": "SEMANTIC_TENSION_BUT_RECONCILABLE",
+    "last_reviewed": "2026-09-09",
+    "material_inconsistency": "NO",
+    "name": "XLM",
+    "research_chain_url": "evidence-freeze/DIGITAL-ASSET-BATCH-01/XLM/MANIFEST.json",
+    "result_url": "xlm.html",
+    "source_coverage": "PRIMARY_ONLY",
+    "structural_report_url": "research/digital-assets/XLM/XLM_STRUCTURAL_DYNAMICS_REPORT_v0.1.md",
+    "structural_state": "FOUNDATION_FUNDED_PAYMENT_NETWORK",
+    "summary": "XLM's public structure remains closely tied to SDF treasury deployment, payment-network development and ecosystem funding. SDF sales create semantic tension with decentralization expectations, but current official disclosures reconcile those sales with published mandate funding purposes.",
+    "ticker": "XLM"
   }
 ]

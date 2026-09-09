@@ -1,0 +1,32 @@
+[
+  {
+    "capture_type": "HASH_METADATA_ONLY",
+    "rights_status": "PUBLIC_REFERENCE_ONLY",
+    "source_id": "SOL-S1",
+    "verification_method": "URL and extracted public text recorded"
+  },
+  {
+    "capture_type": "HASH_METADATA_ONLY",
+    "rights_status": "PUBLIC_REFERENCE_ONLY",
+    "source_id": "SOL-S2",
+    "verification_method": "URL and extracted public text recorded"
+  },
+  {
+    "capture_type": "HASH_METADATA_ONLY",
+    "rights_status": "PUBLIC_REFERENCE_ONLY",
+    "source_id": "SOL-S3",
+    "verification_method": "URL and extracted public text recorded"
+  },
+  {
+    "capture_type": "HASH_METADATA_ONLY",
+    "rights_status": "PUBLIC_REFERENCE_ONLY",
+    "source_id": "SOL-S4",
+    "verification_method": "URL and extracted public text recorded"
+  },
+  {
+    "capture_type": "HASH_METADATA_ONLY",
+    "rights_status": "PUBLIC_REFERENCE_ONLY",
+    "source_id": "SOL-S5",
+    "verification_method": "URL and extracted public text recorded"
+  }
+]

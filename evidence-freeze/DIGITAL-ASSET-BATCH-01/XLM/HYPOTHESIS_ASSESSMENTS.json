@@ -1,0 +1,84 @@
+[
+  {
+    "critical_assumptions": [
+      "Official documentation remains applicable to the public network."
+    ],
+    "current_status": "VIABLE",
+    "description": "The structural state is driven by protocol and network design rather than a short-term narrative.",
+    "discriminating_evidence_needed": [
+      "Longitudinal independent network data."
+    ],
+    "hypothesis_id": "XLM-H1",
+    "observed_contradicting_evidence": [],
+    "observed_contradicting_evidence_status": "NO_MATERIAL_COUNTER_EVIDENCE_FOUND",
+    "potential_falsifiers": [
+      "Independent data showing the cited mechanism is no longer active or material."
+    ],
+    "status_reason": "No material contradiction was observed within the bounded source set.",
+    "supporting_evidence": [
+      "Official protocol documentation and current public data support the core structural description."
+    ]
+  },
+  {
+    "critical_assumptions": [
+      "Source metrics use stable definitions."
+    ],
+    "current_status": "VIABLE",
+    "description": "The asset's public role is better explained by usage composition than token-price narratives.",
+    "discriminating_evidence_needed": [
+      "Replicable third-party usage breakdowns."
+    ],
+    "hypothesis_id": "XLM-H2",
+    "observed_contradicting_evidence": [],
+    "observed_contradicting_evidence_status": "NO_MATERIAL_COUNTER_EVIDENCE_FOUND",
+    "potential_falsifiers": [
+      "Evidence that usage metrics are misclassified or economically irrelevant."
+    ],
+    "status_reason": "The current report avoids price-derived interpretation.",
+    "supporting_evidence": [
+      "Research uses usage, governance, supply and resource evidence rather than market price."
+    ]
+  },
+  {
+    "critical_assumptions": [
+      "Public-source snapshots are adequate for a method pilot."
+    ],
+    "current_status": "VIABLE",
+    "description": "Source coverage is sufficient for a pilot publication but not final scientific acceptance.",
+    "discriminating_evidence_needed": [
+      "Independent raw datasets with stable rights status."
+    ],
+    "hypothesis_id": "XLM-H3",
+    "observed_contradicting_evidence": [
+      "Independent replication coverage remains incomplete."
+    ],
+    "observed_contradicting_evidence_status": "LIMITATION_OBSERVED",
+    "potential_falsifiers": [
+      "Material conflict from independent datasets."
+    ],
+    "status_reason": "The limitation is preserved in source coverage rather than hidden.",
+    "supporting_evidence": [
+      "Official sources and selected primary-data surfaces are available."
+    ]
+  },
+  {
+    "critical_assumptions": [
+      "Retrieved public pages accurately represent the current public evidence set."
+    ],
+    "current_status": "VIABLE",
+    "description": "No material inconsistency is visible within the scoped public evidence set.",
+    "discriminating_evidence_needed": [
+      "Entity responses or independently captured raw datasets."
+    ],
+    "hypothesis_id": "XLM-H4",
+    "observed_contradicting_evidence": [],
+    "observed_contradicting_evidence_status": "NO_MATERIAL_COUNTER_EVIDENCE_FOUND",
+    "potential_falsifiers": [
+      "Contradictory primary records or source corrections."
+    ],
+    "status_reason": "Material inconsistency was not observed; this does not imply truth certification.",
+    "supporting_evidence": [
+      "Claims, mechanisms and numerical checks reconcile within the bounded source set."
+    ]
+  }
+]

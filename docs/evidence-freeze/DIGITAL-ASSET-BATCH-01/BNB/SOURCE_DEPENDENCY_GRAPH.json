@@ -1,0 +1,9 @@
+{
+  "asset": "BNB",
+  "dependency_groups": [
+    "BNB Chain",
+    "BNB Chain Blog",
+    "BNB Chain Docs"
+  ],
+  "rule": "MULTIPLE_URLS_DO_NOT_EQUAL_INDEPENDENT_SOURCES"
+}

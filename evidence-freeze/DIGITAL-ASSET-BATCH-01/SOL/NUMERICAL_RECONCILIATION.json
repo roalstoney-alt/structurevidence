@@ -1,0 +1,19 @@
+[
+  {
+    "computed_value": "2,500 lamports burned and 2,500 lamports to validator per base-fee signature",
+    "formula": "5,000 lamports base fee x 50% burn / 50% validator",
+    "inputs": [
+      "5,000 lamports",
+      "50%",
+      "50%"
+    ],
+    "notes": "Priority fees are separate and not converted into a score.",
+    "reconciliation_id": "SOL-REC-001",
+    "reported_value": "Base fee split 50% burned / 50% validator",
+    "result": "RECONCILED",
+    "source_ids": [
+      "SOL-S1"
+    ],
+    "tolerance": "integer arithmetic"
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "date": "2026-09-04",
+    "dependency_group": "Stellar Development Foundation",
+    "publisher": "Stellar Development Foundation",
+    "query": "XLM",
+    "reason_used": "SDF mandate and treasury balances",
+    "retrieval_date": "2026-09-09",
+    "rights_status": "PUBLIC_REFERENCE_ONLY",
+    "source_id": "XLM-S1",
+    "source_type": "OFFICIAL",
+    "source_url": "https://stellar.org/foundation/mandate/2019"
+  },
+  {
+    "date": "2026-07-21",
+    "dependency_group": "Stellar Docs",
+    "publisher": "Stellar Docs",
+    "query": "XLM",
+    "reason_used": "lumen supply metrics",
+    "retrieval_date": "2026-09-09",
+    "rights_status": "PUBLIC_REFERENCE_ONLY",
+    "source_id": "XLM-S2",
+    "source_type": "OFFICIAL",
+    "source_url": "https://developers.stellar.org/docs/learn/fundamentals/lumens"
+  },
+  {
+    "date": "2026-09-08",
+    "dependency_group": "Stellar Docs",
+    "publisher": "Stellar Docs",
+    "query": "XLM",
+    "reason_used": "validator roles",
+    "retrieval_date": "2026-09-09",
+    "rights_status": "PUBLIC_REFERENCE_ONLY",
+    "source_id": "XLM-S3",
+    "source_type": "OFFICIAL",
+    "source_url": "https://developers.stellar.org/docs/validators"
+  },
+  {
+    "date": "2025-12-03",
+    "dependency_group": "Stellar Docs",
+    "publisher": "Stellar Docs",
+    "query": "XLM",
+    "reason_used": "SCP consensus",
+    "retrieval_date": "2026-09-09",
+    "rights_status": "PUBLIC_REFERENCE_ONLY",
+    "source_id": "XLM-S4",
+    "source_type": "OFFICIAL",
+    "source_url": "https://developers.stellar.org/docs/learn/fundamentals/stellar-consensus-protocol"
+  },
+  {
+    "date": null,
+    "dependency_group": "Stellar Development Foundation",
+    "publisher": "Stellar Development Foundation",
+    "query": "XLM",
+    "reason_used": "network usage context",
+    "retrieval_date": "2026-09-09",
+    "rights_status": "PUBLIC_REFERENCE_ONLY",
+    "source_id": "XLM-S5",
+    "source_type": "OFFICIAL",
+    "source_url": "https://stellar.org/blog/foundation-news/q2-2026-what-stellar-was-built-for-has-arrived"
+  }
+]

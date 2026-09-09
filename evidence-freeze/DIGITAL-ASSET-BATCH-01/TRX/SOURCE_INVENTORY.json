@@ -1,0 +1,62 @@
+[
+  {
+    "date": null,
+    "dependency_group": "TRON Developers",
+    "publisher": "TRON Developers",
+    "query": "TRX",
+    "reason_used": "resource model",
+    "retrieval_date": "2026-09-09",
+    "rights_status": "PUBLIC_REFERENCE_ONLY",
+    "source_id": "TRX-S1",
+    "source_type": "OFFICIAL",
+    "source_url": "https://developers.tron.network/docs/resource-model"
+  },
+  {
+    "date": null,
+    "dependency_group": "TRON Developers",
+    "publisher": "TRON Developers",
+    "query": "TRX",
+    "reason_used": "super representative governance",
+    "retrieval_date": "2026-09-09",
+    "rights_status": "PUBLIC_REFERENCE_ONLY",
+    "source_id": "TRX-S2",
+    "source_type": "OFFICIAL",
+    "source_url": "https://developers.tron.network/docs/super-representatives"
+  },
+  {
+    "date": null,
+    "dependency_group": "TRON Developers",
+    "publisher": "TRON Developers",
+    "query": "TRX",
+    "reason_used": "voting and TRON Power",
+    "retrieval_date": "2026-09-09",
+    "rights_status": "PUBLIC_REFERENCE_ONLY",
+    "source_id": "TRX-S3",
+    "source_type": "OFFICIAL",
+    "source_url": "https://developers.tron.network/docs/voting-for-srs"
+  },
+  {
+    "date": null,
+    "dependency_group": "TRONSCAN",
+    "publisher": "TRONSCAN",
+    "query": "TRX",
+    "reason_used": "transaction composition",
+    "retrieval_date": "2026-09-09",
+    "rights_status": "PUBLIC_REFERENCE_ONLY",
+    "source_id": "TRX-S4",
+    "source_type": "PRIMARY_DATA_PROVIDER",
+    "source_url": "https://tronscan.org/data/charts/txn/cumulative-txn"
+  },
+  {
+    "date": "2026-06-04",
+    "dependency_group": "TRONSCAN Docs",
+    "publisher": "TRONSCAN Docs",
+    "query": "TRX",
+    "reason_used": "stablecoin supply API",
+    "retrieval_date": "2026-09-09",
+    "rights_status": "PUBLIC_REFERENCE_ONLY",
+    "source_id": "TRX-S5",
+    "source_type": "OFFICIAL",
+    "source_url": "https://docs.tronscan.org/zh/api/deep-analysis/total-supply"
+  }
+]

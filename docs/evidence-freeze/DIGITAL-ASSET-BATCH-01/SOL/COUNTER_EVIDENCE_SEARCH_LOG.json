@@ -1,0 +1,26 @@
+[
+  {
+    "hypothesis_id": "SOL-H1",
+    "question": "What evidence would make this interpretation less plausible?",
+    "scope": "Official and selected primary-data sources retrieved on 2026-09-09.",
+    "status": "NO_MATERIAL_COUNTER_EVIDENCE_FOUND"
+  },
+  {
+    "hypothesis_id": "SOL-H2",
+    "question": "What evidence would make this interpretation less plausible?",
+    "scope": "Official and selected primary-data sources retrieved on 2026-09-09.",
+    "status": "NO_MATERIAL_COUNTER_EVIDENCE_FOUND"
+  },
+  {
+    "hypothesis_id": "SOL-H3",
+    "question": "What evidence would make this interpretation less plausible?",
+    "scope": "Official and selected primary-data sources retrieved on 2026-09-09.",
+    "status": "LIMITATION_OBSERVED"
+  },
+  {
+    "hypothesis_id": "SOL-H4",
+    "question": "What evidence would make this interpretation less plausible?",
+    "scope": "Official and selected primary-data sources retrieved on 2026-09-09.",
+    "status": "NO_MATERIAL_COUNTER_EVIDENCE_FOUND"
+  }
+]

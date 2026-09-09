@@ -1,0 +1,62 @@
+[
+  {
+    "date": "2026-07-15",
+    "dependency_group": "BNB Chain Blog",
+    "publisher": "BNB Chain Blog",
+    "query": "BNB",
+    "reason_used": "official burn announcement",
+    "retrieval_date": "2026-09-09",
+    "rights_status": "PUBLIC_REFERENCE_ONLY",
+    "source_id": "BNB-S1",
+    "source_type": "OFFICIAL",
+    "source_url": "https://www.bnbchain.org/en/blog/36th-bnb-burn"
+  },
+  {
+    "date": "2024-07-02",
+    "dependency_group": "BNB Chain Docs",
+    "publisher": "BNB Chain Docs",
+    "query": "BNB",
+    "reason_used": "staking and validator structure",
+    "retrieval_date": "2026-09-09",
+    "rights_status": "PUBLIC_REFERENCE_ONLY",
+    "source_id": "BNB-S2",
+    "source_type": "OFFICIAL",
+    "source_url": "https://docs.bnbchain.org/bnb-smart-chain/staking/overview/"
+  },
+  {
+    "date": "2025-07-17",
+    "dependency_group": "BNB Chain Docs",
+    "publisher": "BNB Chain Docs",
+    "query": "BNB",
+    "reason_used": "validator set and slashing",
+    "retrieval_date": "2026-09-09",
+    "rights_status": "PUBLIC_REFERENCE_ONLY",
+    "source_id": "BNB-S3",
+    "source_type": "OFFICIAL",
+    "source_url": "https://docs.bnbchain.org/bnb-smart-chain/validator/overview/"
+  },
+  {
+    "date": "2024-07-02",
+    "dependency_group": "BNB Chain Docs",
+    "publisher": "BNB Chain Docs",
+    "query": "BNB",
+    "reason_used": "opBNB ecosystem component",
+    "retrieval_date": "2026-09-09",
+    "rights_status": "PUBLIC_REFERENCE_ONLY",
+    "source_id": "BNB-S4",
+    "source_type": "OFFICIAL",
+    "source_url": "https://docs.bnbchain.org/bnb-opbnb/"
+  },
+  {
+    "date": null,
+    "dependency_group": "BNB Chain",
+    "publisher": "BNB Chain",
+    "query": "BNB",
+    "reason_used": "official ecosystem metrics",
+    "retrieval_date": "2026-09-09",
+    "rights_status": "PUBLIC_REFERENCE_ONLY",
+    "source_id": "BNB-S5",
+    "source_type": "OFFICIAL",
+    "source_url": "https://www.bnbchain.org/en"
+  }
+]

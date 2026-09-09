@@ -1,0 +1,7 @@
+{
+  "asset": "TRX",
+  "claims": [
+    "TRX operates as the native resource, staking and governance asset underneath a network with substantial stablecoin transfer activity. Public evidence is consistent with a stablecoin-settlement resource regime, with source coverage partial because TRON docs and TRONSCAN dominate the current evidence base."
+  ],
+  "research_question": "Has TRON structurally evolved into stablecoin settlement infrastructure, and what role does TRX play as the underlying resource and staking asset?"
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "date": null,
+    "dependency_group": "Solana Docs",
+    "publisher": "Solana Docs",
+    "query": "SOL",
+    "reason_used": "fee structure",
+    "retrieval_date": "2026-09-09",
+    "rights_status": "PUBLIC_REFERENCE_ONLY",
+    "source_id": "SOL-S1",
+    "source_type": "OFFICIAL",
+    "source_url": "https://solana.com/docs/core/fees"
+  },
+  {
+    "date": null,
+    "dependency_group": "Solana",
+    "publisher": "Solana",
+    "query": "SOL",
+    "reason_used": "staking and inflation",
+    "retrieval_date": "2026-09-09",
+    "rights_status": "PUBLIC_REFERENCE_ONLY",
+    "source_id": "SOL-S2",
+    "source_type": "OFFICIAL",
+    "source_url": "https://solana.com/staking"
+  },
+  {
+    "date": null,
+    "dependency_group": "Solana",
+    "publisher": "Solana",
+    "query": "SOL",
+    "reason_used": "validator role",
+    "retrieval_date": "2026-09-09",
+    "rights_status": "PUBLIC_REFERENCE_ONLY",
+    "source_id": "SOL-S3",
+    "source_type": "OFFICIAL",
+    "source_url": "https://solana.com/validators"
+  },
+  {
+    "date": null,
+    "dependency_group": "Solana Foundation",
+    "publisher": "Solana Foundation",
+    "query": "SOL",
+    "reason_used": "foundation delegation data",
+    "retrieval_date": "2026-09-09",
+    "rights_status": "PUBLIC_REFERENCE_ONLY",
+    "source_id": "SOL-S4",
+    "source_type": "OFFICIAL",
+    "source_url": "https://solana.org/delegation-dashboard"
+  },
+  {
+    "date": "2026-08-24",
+    "dependency_group": "Firedancer Report",
+    "publisher": "Firedancer Report",
+    "query": "SOL",
+    "reason_used": "client diversity data",
+    "retrieval_date": "2026-09-09",
+    "rights_status": "PUBLIC_REFERENCE_ONLY",
+    "source_id": "SOL-S5",
+    "source_type": "PRIMARY_DATA_PROVIDER",
+    "source_url": "https://reports.firedancer.io/"
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "computed_value": "33,166,127.91 BNB above long-run target at cited burn date",
+    "formula": "133,166,127.91 BNB remaining total supply - 100,000,000 BNB target",
+    "inputs": [
+      "133,166,127.91",
+      "100,000,000"
+    ],
+    "notes": "This is not a valuation or directional supply signal.",
+    "reconciliation_id": "BNB-REC-001",
+    "reported_value": "Remaining total supply 133,166,127.91 BNB; target 100,000,000 BNB",
+    "result": "RECONCILED",
+    "source_ids": [
+      "BNB-S1"
+    ],
+    "tolerance": "exact decimal subtraction"
+  }
+]

@@ -1,0 +1,8 @@
+{
+  "asset": "XLM",
+  "dependency_groups": [
+    "Stellar Development Foundation",
+    "Stellar Docs"
+  ],
+  "rule": "MULTIPLE_URLS_DO_NOT_EQUAL_INDEPENDENT_SOURCES"
+}

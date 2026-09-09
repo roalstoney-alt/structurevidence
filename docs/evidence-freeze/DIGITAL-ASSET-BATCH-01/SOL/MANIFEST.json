@@ -1,0 +1,51 @@
+{
+  "asset": "SOL",
+  "batch": "DIGITAL_ASSET_STRUCTURAL_COVERAGE_BATCH_01",
+  "files": [
+    {
+      "path": "ARTIFACT_CAPTURE_CLASSIFICATION.json",
+      "sha256": "dc301ca7a0a1b5d3498cfdbc3e174dbf17822771c14b51bcb34fbf318dce401b"
+    },
+    {
+      "path": "CANONICAL_RESEARCH.json",
+      "sha256": "615cc81da3f4c3239c1bba48c45cea5126c9f57542b427a5c773aebd83fd3219"
+    },
+    {
+      "path": "CLAIM_REGISTRY.json",
+      "sha256": "51af669a5f23ed8016e2090050b564724449dfd7246eb3cc70b7932bc5ed73fb"
+    },
+    {
+      "path": "COUNTER_EVIDENCE_SEARCH_LOG.json",
+      "sha256": "c1b4c9b5e1a3159cbe5736b6ecd91dd3b19965a6f2e58e0bc3ea87bcdfc8691e"
+    },
+    {
+      "path": "GATE_TABLE.json",
+      "sha256": "9338f74344c24d3217c8b82191d7b07dc681e6b8b204b819ec61e9a09cf9aa93"
+    },
+    {
+      "path": "HYPOTHESIS_ASSESSMENTS.json",
+      "sha256": "31abb9b3ba5a8defad9791de83e627550293a29f09e96120af66cc212fcd838a"
+    },
+    {
+      "path": "NUMERICAL_RECONCILIATION.json",
+      "sha256": "9956eb7a031685ac42b973b29cc520a9c21fde4639401d6ca364cfc18b33169b"
+    },
+    {
+      "path": "OBSERVATION_REGISTRY.json",
+      "sha256": "a5b3e6170fb2a86788ec7110faefd4c83f3e7910b542c6025be7c495c946f217"
+    },
+    {
+      "path": "SOURCE_DEPENDENCY_GRAPH.json",
+      "sha256": "be163cfdc3c12fe6bcceaaa41ab4e36afc23657b97d05da4303a72571c88fd43"
+    },
+    {
+      "path": "SOURCE_INVENTORY.json",
+      "sha256": "c0c6deb6943ba1a6a70be95cd067cb12eebabb10117f6ff1beb38b8a1619c698"
+    },
+    {
+      "path": "TEST_SUMMARY.json",
+      "sha256": "0843c9cfa0124ad452d855c09bc5a0f7c3592fb50e1c3f32ff1aed09fa9c32cc"
+    }
+  ],
+  "research_id": "SE.ASSET.SOL.2026.001"
+}
