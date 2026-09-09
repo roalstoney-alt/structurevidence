@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Structural &amp; Evidence Intelligence for Digital Assets - StructEvidence</title>
-  <meta name="description" content="StructEvidence publishes auditable Structural Dynamics and Evidence Dynamics research for digital assets, crypto treasuries and public entities.">
+  <title>StructEvidence - Structural &amp; Evidence Intelligence - StructEvidence</title>
+  <meta name="description" content="Search digital assets, treasuries, protocols and institutions to inspect published structural states and public-evidence findings.">
   <link rel="canonical" href="https://structurevidence.org/">
-  <meta property="og:title" content="Structural &amp; Evidence Intelligence for Digital Assets - StructEvidence">
-  <meta property="og:description" content="StructEvidence publishes auditable Structural Dynamics and Evidence Dynamics research for digital assets, crypto treasuries and public entities.">
+  <meta property="og:title" content="StructEvidence - Structural &amp; Evidence Intelligence - StructEvidence">
+  <meta property="og:description" content="Search digital assets, treasuries, protocols and institutions to inspect published structural states and public-evidence findings.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://structurevidence.org/">
   <meta name="twitter:card" content="summary_large_image">
@@ -21,95 +21,72 @@
       <span class="brand-mark">SE</span><span>StructEvidence</span>
     </a>
     <button class="nav-toggle" data-nav-toggle aria-controls="nav" aria-expanded="false">Menu</button>
-    <nav class="nav" id="nav" aria-label="Main navigation"><a href="index.html">OVERVIEW</a><a href="entities.html">ENTITIES</a><a href="audits.html">AUDITS</a><a href="markets.html">MARKETS</a><a href="research.html">RESEARCH</a><a href="architecture.html">ARCHITECTURE</a><a href="whitepapers.html">WHITEPAPERS</a><a href="method.html">METHODOLOGY</a><a href="verify.html">VERIFY</a><a href="data.html">DATA</a><a href="about.html">ABOUT</a></nav>
+    <nav class="nav" id="nav" aria-label="Main navigation"><a href="index.html#search">Search</a><a href="research.html">Research</a><a href="standard.html">Standard</a><a href="about.html">About</a><a href="enterprise.html" class="enterprise-link">Enterprise Access</a></nav>
   </div>
 </header>
 
   <main>
-<section class="hero home-hero">
+<section class="search-hero" id="search">
   <div class="hero-copy">
-    <p class="eyebrow">Institutional Research Terminal</p>
-    <h1>Structural & Evidence Intelligence for Digital Assets</h1>
-    <p class="lead">Track structural regime changes, reconcile public claims and observations, and inspect the research chain behind every published finding.</p>
-    <p class="lead zh" lang="zh-Hans">观测资产与实体结构如何变化，并验证其公开证据是否仍能相互协调。</p>
-    <p class="disclaimer">"Health" refers to structural and evidence-state diagnostics within the published StructEvidence methodology. It is not a credit rating, investment rating, solvency opinion, statutory audit, compliance certification or legal assurance.</p>
-    <div class="actions">
-      <a class="button primary" href="audits.html">Explore Audits</a>
-      <a class="button" href="architecture.html">Inspect Research Architecture</a>
-      <a class="button" href="method.html">Read Methodology</a>
+    <p class="eyebrow">StructEvidence</p>
+    <h1>Verifiable Structural & Evidence Intelligence for Digital Assets.</h1>
+    <p class="lead">Search an asset, protocol, treasury or institution to inspect its latest structural state and public-evidence status.</p>
+  </div>
+  <form class="search-box" data-entity-search role="search">
+    <label for="entity-search">Search entity coverage</label>
+    <div class="search-row">
+      <input id="entity-search" name="q" type="search" autocomplete="off" placeholder="Search MSTR, Strategy Inc., Tether, USDT, Uniswap..." aria-describedby="search-note">
+      <button class="button primary" type="submit">Search</button>
     </div>
+    <p id="search-note" class="microcopy">Current audited coverage: Strategy Inc. (MSTR)</p>
+  </form>
+  <div class="search-result-region" data-search-results aria-live="polite"></div>
+  <template id="covered-result-template">
+    <article class="health-card">
+      <div class="result-topline"><span>Structural & Evidence Health Card</span><span>HEALTH CARD != HEALTH SCORE</span></div>
+      <div class="result-heading"><div><h2>Strategy Inc.</h2><p>NASDAQ: MSTR / Corporate Digital Asset Treasury</p></div><button class="button subtle" type="button" data-reset-search>New Search</button></div>
+      <div class="health-fields">
+        <div><span>STRUCTURAL STATE</span><strong><code>HYBRID_ACCUMULATION_MONETIZATION</code></strong></div>
+        <div><span>EVIDENCE STATE</span><strong><code>SEMANTIC_TENSION_BUT_RECONCILABLE</code></strong></div>
+        <div><span>MATERIAL INCONSISTENCY</span><strong class="ok">NO</strong></div>
+        <div><span>SOURCE COVERAGE</span><strong class="partial">PARTIAL</strong></div>
+        <div><span>LAST REVIEWED</span><strong>2026-09-08</strong></div>
+      </div>
+      <p>Strategy's capital architecture combines Bitcoin accumulation, monetization, USD liquidity reserves and multi-layer financing. Current public evidence contains semantic tension but no material inconsistency after normalization.</p>
+      <div class="actions compact"><a class="button primary" href="strategy-2026.html">View Full Audit</a><a class="button" href="research.html">Read Research</a><a class="button" href="evidence.html">Inspect Evidence</a><a class="button" href="research/PUBLICATION_PACKAGE_MANIFEST.json">Download Source</a></div>
+    </article>
+  </template>
+  <template id="uncovered-result-template">
+    <article class="health-card uncovered">
+      <div class="result-heading"><div><h2>Not Yet Covered</h2><p>No current StructEvidence research record exists for this entity.</p></div><button class="button subtle" type="button" data-reset-search>New Search</button></div>
+      <p>Request a scoped Structural & Evidence Audit. We confirm evidence availability, scope and expected delivery before work begins.</p>
+      <div class="actions compact"><a class="button primary" href="enterprise.html">Request Custom Audit</a><a class="button" href="standard.html">Inspect Standard</a></div>
+    </article>
+  </template>
+  <template id="blank-result-template">
+    <article class="health-card uncovered">
+      <div class="result-heading"><div><h2>Enter an asset, protocol, treasury or institution.</h2><p>Search supports tickers, entity names, protocol names, asset names and known aliases.</p></div></div>
+    </article>
+  </template>
+</section>
+<section class="deliverables">
+  <div class="compact-card"><h2>Structural State</h2><p>What is changing in the underlying system?</p></div>
+  <div class="compact-card"><h2>Evidence State</h2><p>Do the public claims and observations reconcile?</p></div>
+  <div class="compact-card"><h2>Research Chain</h2><p>Can the finding be inspected back to method, evidence and provenance?</p></div>
+</section>
+<section class="enterprise-cta">
+  <div>
+    <p class="eyebrow">Enterprise / Custom Audit</p>
+    <h2>Need coverage for an entity we do not currently monitor?</h2>
+    <p>Request a scoped Structural & Evidence Audit. We confirm evidence availability, scope and expected delivery before work begins.</p>
   </div>
-  <aside class="terminal-panel" aria-label="Strategy terminal preview">
-    <div class="terminal-title">FIRST PUBLIC AUDIT</div>
-    <dl class="kv">
-      <dt>ENTITY</dt><dd>Strategy Inc.</dd>
-      <dt>STRUCTURAL REGIME</dt><dd><code>HYBRID_ACCUMULATION_MONETIZATION</code></dd>
-      <dt>EVIDENCE STATE</dt><dd><code>SEMANTIC_TENSION_BUT_RECONCILABLE</code></dd>
-      <dt>MATERIAL INCONSISTENCY</dt><dd><code>NO</code></dd>
-      <dt>SOURCE COVERAGE</dt><dd><code>PARTIAL</code></dd>
-      <dt>RESEARCH ID</dt><dd><code>ECL.COMPANY.STRATEGY_INC.2026.001</code></dd>
-    </dl>
-  </aside>
+  <div class="actions"><a class="button primary" href="enterprise.html">Request Custom Audit</a><a class="button" href="enterprise.html">Enterprise Research</a><a class="button" href="data.html">Data Partnership</a></div>
 </section>
-<section class="cred-strip"><span class="status">AUDITABLE METHOD</span><span class="status">FROZEN ARTIFACTS</span><span class="status">COMPETING HYPOTHESES</span><span class="status">COUNTER-EVIDENCE SEARCH</span><span class="status">APPEND-ONLY CORRECTIONS</span><span class="status">PUBLIC WHITEPAPERS</span></section>
-<section>
-  <div class="section-head"><p class="eyebrow">First Audit Terminal</p><h2>Strategy Inc. - 2026 Pilot</h2><p>NASDAQ: MSTR</p></div>
-  <div class="result-grid">
-    <article class="card structural"><h3>CURRENT STRUCTURAL REGIME</h3><p class="code big">HYBRID_ACCUMULATION_MONETIZATION</p></article>
-    <article class="card evidence"><h3>CURRENT EVIDENCE STATE</h3><p class="code big">SEMANTIC_TENSION_BUT_RECONCILABLE</p></article>
-  </div>
-  <p class="status-row"><span class="status">Material Inconsistency: NO</span><span class="status">Independent Source Coverage: PARTIAL</span><span class="status">Counter-Evidence Search: COMPLETE</span><span class="status">ACH: H1/H2/H4/H5/H6 VIABLE; H3 WEAKENED</span></p>
-  <p><a href="strategy-2026.html">Open institutional audit terminal</a></p>
-</section>
-<div class="grid"><article class="card structural"><h2>Structural Dynamics</h2><p>Studies how real systems change in structure, state, flow and constraint. MDL is the first domain lab under this track.</p></article><article class="card evidence"><h2>Evidence Dynamics</h2><p>Studies how claims, observations, revisions and source relationships evolve around the same entity or system. ECL is the core consistency layer.</p></article></div>
-<section>
-  <div class="section-head"><p class="eyebrow">How It Works</p><h2>Finding to research chain</h2></div>
-  <ol class="process">
-    <li>Finding</li><li>Method</li><li>Calculation / Claim</li><li>Source / Artifact</li><li>RTP provenance</li><li>RDL publication gate</li>
-  </ol>
-</section>
-<section class="architecture-preview">
-  <div><p class="eyebrow">Research Architecture</p><h2>The Research Stack Behind Every Finding</h2><p>StructEvidence findings are not generated by a single model score. Each result is governed, traced, tested and published through explicit research layers.</p><p><a class="button" href="architecture.html">Inspect the Architecture</a></p></div>
-
-<div class="stack-diagram" aria-label="StructEvidence research architecture">
-  <a class="node method" href="architecture/rdl.html"><strong>RDL</strong><span>Research Governance</span></a>
-  <span class="arrow">down</span>
-  <a class="node method" href="architecture/rtp.html"><strong>RTP</strong><span>Traceability / Provenance</span></a>
-  <div class="split">
-    <a class="node structural" href="architecture/structural-dynamics.html"><strong>Structural Dynamics</strong><span>System structure and state</span></a>
-    <a class="node evidence" href="architecture/evidence-dynamics.html"><strong>Evidence Dynamics</strong><span>Claims and observations</span></a>
-  </div>
-  <div class="split">
-    <a class="node structural" href="architecture/mdl.html"><strong>MDL</strong><span>Market Dynamics Lab</span></a>
-    <a class="node evidence" href="architecture/ecl.html"><strong>ECL</strong><span>Evidence Consistency Layer</span></a>
-  </div>
-  <span class="arrow">down</span>
-  <a class="node method" href="architecture/ecn.html"><strong>ECN</strong><span>Future contribution layer</span></a>
-</div>
-
-</section>
-<section>
-  <div class="section-head"><p class="eyebrow">Research Intelligence Feed</p><h2>Published research</h2></div>
-  <div class="table-wrap"><table><thead><tr><th>DATE</th><th>ENTITY / DOMAIN</th><th>RESEARCH TYPE</th><th>STRUCTURAL STATE</th><th>EVIDENCE STATE</th><th>METHOD</th><th>READ</th></tr></thead><tbody><tr><td>2026-09-08</td><td>Strategy Inc.</td><td>Public paired audit</td><td><code>HYBRID_ACCUMULATION_MONETIZATION</code></td><td><code>SEMANTIC_TENSION_BUT_RECONCILABLE</code></td><td>ECL / Structural Dynamics v0.1</td><td><a href="strategy-2026.html">Terminal</a></td></tr><tr><td>2026-09-08</td><td>Method</td><td>Method paper</td><td><code>NOT_APPLICABLE</code></td><td><code>NOT_APPLICABLE</code></td><td>Method pilot v0.1</td><td><a href="research/Structural_Dynamics_Evidence_Dynamics_Method_Paper_v0.1_CN.md">Markdown</a></td></tr></tbody></table></div>
-</section>
-<section>
-  <h2>Method Principles</h2>
-  <div class="law-grid"><p class="law">PUBLIC CLAIM != REALITY</p><p class="law">ARTIFACT INTEGRITY != CONTENT TRUTH</p><p class="law">MULTIPLE URLs != INDEPENDENT SOURCES</p><p class="law">HOSTING INDEPENDENCE != EVIDENCE INDEPENDENCE</p><p class="law">CHANGE != CONTRADICTION</p><p class="law">INCONSISTENCY != FALSEHOOD</p><p class="law">OBSERVED CONTRADICTION != POTENTIAL FALSIFIER</p><p class="law">APPARENT CONFLICT != MATERIAL INCONSISTENCY</p><p class="law">STRUCTURAL STATE != CREDIT RATING</p><p class="law">EVIDENCE CONSISTENCY != TRUTH SCORE</p><p class="law">NO MATERIAL INCONSISTENCY != ENTITY IS HEALTHY</p></div>
-</section>
-<section>
-  <h2>Designed For</h2>
-  <div class="grid"><article class="card "><h2>General / Institutional Reader</h2><p>Entity to structural state to evidence state to key findings.</p></article><article class="card "><h2>Professional Analyst</h2><p>Dimensions, timeline, reconciliation, ACH, counter-evidence and source coverage.</p></article><article class="card "><h2>Researcher / Data Provider</h2><p>Protocol versions, artifacts, hashes, corrections, whitepapers and replication paths.</p></article></div>
-</section>
-<section class="band">
-  <h2>Data Partnership</h2>
-  <p>StructEvidence is actively seeking licensed market, on-chain, treasury, entity and regulatory data partnerships for future higher-grade Structural Dynamics research.</p>
-  <p><span class="status">No fake partners</span><span class="status">Licensed-data roadmap</span><span class="status">Provenance requirements</span></p>
-</section>
-<section class="cta-band"><h2>Whitepapers and Protocol Library</h2><p>Public method documents are separated into governance charters and technical specifications. Missing papers are marked as draft scaffolds, not finalized papers.</p><a class="button primary" href="whitepapers.html">Open Whitepapers</a></section>
 </main>
   <footer class="site-footer">
     <div class="footer-inner">
-      <strong>Research only.</strong> No investment advice. No credit rating, solvency opinion, statutory audit, compliance certification, legal assurance, trading signal or accusation output. Findings remain subject to correction and supersession.
+      <div class="footer-links"><strong>StructEvidence</strong><a href="research.html">Research</a><a href="standard.html">Standard</a><a href="about.html">About</a><a href="enterprise.html">Enterprise</a></div>
+      <p>Research only. No investment advice. Evidence inconsistency does not imply falsehood, misconduct or fraud. Findings may be corrected or superseded.</p>
     </div>
   </footer>
   <script src="assets/site.js"></script>

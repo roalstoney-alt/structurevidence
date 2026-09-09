@@ -51,7 +51,6 @@ NONE
 KNOWN_LIMITATIONS
 Interactive verification, ECN submissions, member features, API and live monitoring remain planned. Whitepapers are draft scaffolds until finalized source documents exist.
 
-
 EXIT_GATES
 V21_PRODUCT_POSITIONING PASS
 V21_INSTITUTIONAL_HOMEPAGE PASS

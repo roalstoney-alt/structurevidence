@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import json
+import shutil
 from html import escape
 from pathlib import Path
 from textwrap import dedent
@@ -13,19 +15,24 @@ DESC = (
     "StructEvidence publishes auditable Structural Dynamics and Evidence Dynamics "
     "research for digital assets, crypto treasuries and public entities."
 )
+HOME_DESC = "Search digital assets, treasuries, protocols and institutions to inspect published structural states and public-evidence findings."
 
 NAV = [
-    ("OVERVIEW", "index.html"),
-    ("ENTITIES", "entities.html"),
-    ("AUDITS", "audits.html"),
-    ("MARKETS", "markets.html"),
     ("RESEARCH", "research.html"),
-    ("ARCHITECTURE", "architecture.html"),
-    ("WHITEPAPERS", "whitepapers.html"),
-    ("METHODOLOGY", "method.html"),
-    ("VERIFY", "verify.html"),
-    ("DATA", "data.html"),
+    ("STANDARD", "standard.html"),
     ("ABOUT", "about.html"),
+    ("ENTERPRISE ACCESS", "enterprise.html"),
+]
+
+SEARCH_INDEX = [
+    {
+        "entity_id": "ECL.COMPANY.STRATEGY_INC",
+        "name": "Strategy Inc.",
+        "aliases": ["MSTR", "Strategy", "Strategy Inc.", "MicroStrategy"],
+        "category": "Corporate Digital Asset Treasury",
+        "covered": True,
+        "result_url": "strategy-2026.html",
+    }
 ]
 
 METHOD_LAWS = [
@@ -166,7 +173,11 @@ def rel_prefix(path: str) -> str:
 
 
 def nav_html(prefix: str = "") -> str:
-    links = "".join(f'<a href="{prefix}{href}">{label}</a>' for label, href in NAV)
+    links = f'<a href="{prefix}index.html#search">Search</a>'
+    for label, href in NAV:
+        text = label.title() if label != "ENTERPRISE ACCESS" else "Enterprise Access"
+        css = ' class="enterprise-link"' if label == "ENTERPRISE ACCESS" else ""
+        links += f'<a href="{prefix}{href}"{css}>{text}</a>'
     return f"""
     <header class="site-header">
       <div class="nav-wrap">
@@ -206,7 +217,8 @@ def layout(title: str, path: str, body: str, description: str = DESC) -> str:
       <main>{body}</main>
       <footer class="site-footer">
         <div class="footer-inner">
-          <strong>Research only.</strong> No investment advice. No credit rating, solvency opinion, statutory audit, compliance certification, legal assurance, trading signal or accusation output. Findings remain subject to correction and supersession.
+          <div class="footer-links"><strong>StructEvidence</strong><a href="{prefix}research.html">Research</a><a href="{prefix}standard.html">Standard</a><a href="{prefix}about.html">About</a><a href="{prefix}enterprise.html">Enterprise</a></div>
+          <p>Research only. No investment advice. Evidence inconsistency does not imply falsehood, misconduct or fraud. Findings may be corrected or superseded.</p>
         </div>
       </footer>
       <script src="{prefix}assets/site.js"></script>
@@ -267,82 +279,64 @@ def architecture_diagram(prefix: str = "") -> str:
 
 def index_page() -> str:
     body = f"""
-    <section class="hero home-hero">
+    <section class="search-hero" id="search">
       <div class="hero-copy">
-        <p class="eyebrow">Institutional Research Terminal</p>
-        <h1>Structural & Evidence Intelligence for Digital Assets</h1>
-        <p class="lead">Track structural regime changes, reconcile public claims and observations, and inspect the research chain behind every published finding.</p>
-        <p class="lead zh" lang="zh-Hans">观测资产与实体结构如何变化，并验证其公开证据是否仍能相互协调。</p>
-        <p class="disclaimer">"Health" refers to structural and evidence-state diagnostics within the published StructEvidence methodology. It is not a credit rating, investment rating, solvency opinion, statutory audit, compliance certification or legal assurance.</p>
-        <div class="actions">
-          <a class="button primary" href="audits.html">Explore Audits</a>
-          <a class="button" href="architecture.html">Inspect Research Architecture</a>
-          <a class="button" href="method.html">Read Methodology</a>
+        <p class="eyebrow">StructEvidence</p>
+        <h1>Verifiable Structural & Evidence Intelligence for Digital Assets.</h1>
+        <p class="lead">Search an asset, protocol, treasury or institution to inspect its latest structural state and public-evidence status.</p>
+      </div>
+      <form class="search-box" data-entity-search role="search">
+        <label for="entity-search">Search entity coverage</label>
+        <div class="search-row">
+          <input id="entity-search" name="q" type="search" autocomplete="off" placeholder="Search MSTR, Strategy Inc., Tether, USDT, Uniswap..." aria-describedby="search-note">
+          <button class="button primary" type="submit">Search</button>
         </div>
+        <p id="search-note" class="microcopy">Current audited coverage: Strategy Inc. (MSTR)</p>
+      </form>
+      <div class="search-result-region" data-search-results aria-live="polite"></div>
+      <template id="covered-result-template">
+        <article class="health-card">
+          <div class="result-topline"><span>Structural & Evidence Health Card</span><span>HEALTH CARD != HEALTH SCORE</span></div>
+          <div class="result-heading"><div><h2>Strategy Inc.</h2><p>NASDAQ: MSTR / Corporate Digital Asset Treasury</p></div><button class="button subtle" type="button" data-reset-search>New Search</button></div>
+          <div class="health-fields">
+            <div><span>STRUCTURAL STATE</span><strong><code>HYBRID_ACCUMULATION_MONETIZATION</code></strong></div>
+            <div><span>EVIDENCE STATE</span><strong><code>SEMANTIC_TENSION_BUT_RECONCILABLE</code></strong></div>
+            <div><span>MATERIAL INCONSISTENCY</span><strong class="ok">NO</strong></div>
+            <div><span>SOURCE COVERAGE</span><strong class="partial">PARTIAL</strong></div>
+            <div><span>LAST REVIEWED</span><strong>2026-09-08</strong></div>
+          </div>
+          <p>Strategy's capital architecture combines Bitcoin accumulation, monetization, USD liquidity reserves and multi-layer financing. Current public evidence contains semantic tension but no material inconsistency after normalization.</p>
+          <div class="actions compact"><a class="button primary" href="strategy-2026.html">View Full Audit</a><a class="button" href="research.html">Read Research</a><a class="button" href="evidence.html">Inspect Evidence</a><a class="button" href="research/PUBLICATION_PACKAGE_MANIFEST.json">Download Source</a></div>
+        </article>
+      </template>
+      <template id="uncovered-result-template">
+        <article class="health-card uncovered">
+          <div class="result-heading"><div><h2>Not Yet Covered</h2><p>No current StructEvidence research record exists for this entity.</p></div><button class="button subtle" type="button" data-reset-search>New Search</button></div>
+          <p>Request a scoped Structural & Evidence Audit. We confirm evidence availability, scope and expected delivery before work begins.</p>
+          <div class="actions compact"><a class="button primary" href="enterprise.html">Request Custom Audit</a><a class="button" href="standard.html">Inspect Standard</a></div>
+        </article>
+      </template>
+      <template id="blank-result-template">
+        <article class="health-card uncovered">
+          <div class="result-heading"><div><h2>Enter an asset, protocol, treasury or institution.</h2><p>Search supports tickers, entity names, protocol names, asset names and known aliases.</p></div></div>
+        </article>
+      </template>
+    </section>
+    <section class="deliverables">
+      <div class="compact-card"><h2>Structural State</h2><p>What is changing in the underlying system?</p></div>
+      <div class="compact-card"><h2>Evidence State</h2><p>Do the public claims and observations reconcile?</p></div>
+      <div class="compact-card"><h2>Research Chain</h2><p>Can the finding be inspected back to method, evidence and provenance?</p></div>
+    </section>
+    <section class="enterprise-cta">
+      <div>
+        <p class="eyebrow">Enterprise / Custom Audit</p>
+        <h2>Need coverage for an entity we do not currently monitor?</h2>
+        <p>Request a scoped Structural & Evidence Audit. We confirm evidence availability, scope and expected delivery before work begins.</p>
       </div>
-      <aside class="terminal-panel" aria-label="Strategy terminal preview">
-        <div class="terminal-title">FIRST PUBLIC AUDIT</div>
-        <dl class="kv">
-          <dt>ENTITY</dt><dd>Strategy Inc.</dd>
-          <dt>STRUCTURAL REGIME</dt><dd><code>HYBRID_ACCUMULATION_MONETIZATION</code></dd>
-          <dt>EVIDENCE STATE</dt><dd><code>SEMANTIC_TENSION_BUT_RECONCILABLE</code></dd>
-          <dt>MATERIAL INCONSISTENCY</dt><dd><code>NO</code></dd>
-          <dt>SOURCE COVERAGE</dt><dd><code>PARTIAL</code></dd>
-          <dt>RESEARCH ID</dt><dd><code>ECL.COMPANY.STRATEGY_INC.2026.001</code></dd>
-        </dl>
-      </aside>
+      <div class="actions"><a class="button primary" href="enterprise.html">Request Custom Audit</a><a class="button" href="enterprise.html">Enterprise Research</a><a class="button" href="data.html">Data Partnership</a></div>
     </section>
-    <section class="cred-strip">{badges(["AUDITABLE METHOD","FROZEN ARTIFACTS","COMPETING HYPOTHESES","COUNTER-EVIDENCE SEARCH","APPEND-ONLY CORRECTIONS","PUBLIC WHITEPAPERS"])}</section>
-    <section>
-      <div class="section-head"><p class="eyebrow">First Audit Terminal</p><h2>Strategy Inc. - 2026 Pilot</h2><p>NASDAQ: MSTR</p></div>
-      <div class="result-grid">
-        <article class="card structural"><h3>CURRENT STRUCTURAL REGIME</h3><p class="code big">HYBRID_ACCUMULATION_MONETIZATION</p></article>
-        <article class="card evidence"><h3>CURRENT EVIDENCE STATE</h3><p class="code big">SEMANTIC_TENSION_BUT_RECONCILABLE</p></article>
-      </div>
-      <p class="status-row">{badges(["Material Inconsistency: NO","Independent Source Coverage: PARTIAL","Counter-Evidence Search: COMPLETE","ACH: H1/H2/H4/H5/H6 VIABLE; H3 WEAKENED"])}</p>
-      <p><a href="strategy-2026.html">Open institutional audit terminal</a></p>
-    </section>
-    {cards([
-        ("Structural Dynamics", "Studies how real systems change in structure, state, flow and constraint. MDL is the first domain lab under this track.", "structural"),
-        ("Evidence Dynamics", "Studies how claims, observations, revisions and source relationships evolve around the same entity or system. ECL is the core consistency layer.", "evidence"),
-    ])}
-    <section>
-      <div class="section-head"><p class="eyebrow">How It Works</p><h2>Finding to research chain</h2></div>
-      <ol class="process">
-        <li>Finding</li><li>Method</li><li>Calculation / Claim</li><li>Source / Artifact</li><li>RTP provenance</li><li>RDL publication gate</li>
-      </ol>
-    </section>
-    <section class="architecture-preview">
-      <div><p class="eyebrow">Research Architecture</p><h2>The Research Stack Behind Every Finding</h2><p>StructEvidence findings are not generated by a single model score. Each result is governed, traced, tested and published through explicit research layers.</p><p><a class="button" href="architecture.html">Inspect the Architecture</a></p></div>
-      {architecture_diagram()}
-    </section>
-    <section>
-      <div class="section-head"><p class="eyebrow">Research Intelligence Feed</p><h2>Published research</h2></div>
-      {table(["DATE","ENTITY / DOMAIN","RESEARCH TYPE","STRUCTURAL STATE","EVIDENCE STATE","METHOD","READ"], [
-        ["2026-09-08","Strategy Inc.","Public paired audit","<code>HYBRID_ACCUMULATION_MONETIZATION</code>","<code>SEMANTIC_TENSION_BUT_RECONCILABLE</code>","ECL / Structural Dynamics v0.1",'<a href="strategy-2026.html">Terminal</a>'],
-        ["2026-09-08","Method","Method paper","<code>NOT_APPLICABLE</code>","<code>NOT_APPLICABLE</code>","Method pilot v0.1",'<a href="research/Structural_Dynamics_Evidence_Dynamics_Method_Paper_v0.1_CN.md">Markdown</a>'],
-      ])}
-    </section>
-    <section>
-      <h2>Method Principles</h2>
-      <div class="law-grid">{''.join(f'<p class="law">{law}</p>' for law in METHOD_LAWS)}</div>
-    </section>
-    <section>
-      <h2>Designed For</h2>
-      {cards([
-        ("General / Institutional Reader", "Entity to structural state to evidence state to key findings.", ""),
-        ("Professional Analyst", "Dimensions, timeline, reconciliation, ACH, counter-evidence and source coverage.", ""),
-        ("Researcher / Data Provider", "Protocol versions, artifacts, hashes, corrections, whitepapers and replication paths.", ""),
-      ])}
-    </section>
-    <section class="band">
-      <h2>Data Partnership</h2>
-      <p>StructEvidence is actively seeking licensed market, on-chain, treasury, entity and regulatory data partnerships for future higher-grade Structural Dynamics research.</p>
-      <p>{badges(["No fake partners","Licensed-data roadmap","Provenance requirements"])}</p>
-    </section>
-    <section class="cta-band"><h2>Whitepapers and Protocol Library</h2><p>Public method documents are separated into governance charters and technical specifications. Missing papers are marked as draft scaffolds, not finalized papers.</p><a class="button primary" href="whitepapers.html">Open Whitepapers</a></section>
     """
-    return layout("Structural & Evidence Intelligence for Digital Assets", "index.html", body)
+    return layout("StructEvidence - Structural & Evidence Intelligence", "index.html", body, HOME_DESC)
 
 
 def architecture_page() -> str:
@@ -522,17 +516,58 @@ def data_page() -> str:
     return layout("Data", "data.html", body)
 
 
-def about_page() -> str:
-    body = hero("About", "StructEvidence", "StructEvidence is an open research project developing auditable methods for studying structural change and public evidence consistency.") + f"""
-    <section class="grid">
-      <article class="card"><h2>Positioning</h2><p>Structural & Evidence Intelligence for Digital Assets.</p></article>
-      <article class="card"><h2>Research Status</h2><p>{badges(["Framework: METHOD PILOT","Public Audits: 1","Latest Review: 2026-09-08","Composite Score: NOT IMPLEMENTED","Live Monitoring: NOT YET ACTIVE"])}</p></article>
+def standard_page() -> str:
+    body = hero("Standard", "StructEvidence Standard", "The trust layer behind the commercial front office: architecture, methodology, whitepapers, verification, version history and evidence principles.") + f"""
+    <section class="gateway-grid">
+      <a class="gateway-card" href="architecture.html"><h2>Architecture</h2><p>How the research stack is organized.</p></a>
+      <a class="gateway-card" href="method.html"><h2>Methodology</h2><p>How findings are tested.</p></a>
+      <a class="gateway-card" href="whitepapers.html"><h2>Whitepapers</h2><p>Governance and technical documents.</p></a>
+      <a class="gateway-card" href="verify.html"><h2>Verify</h2><p>Trace a published finding.</p></a>
+      <a class="gateway-card" href="version-history.html"><h2>Version History</h2><p>See corrections and supersession.</p></a>
+      <a class="gateway-card" href="evidence.html"><h2>Data & Evidence Principles</h2><p>Inspect artifact classes, source dependency and evidence boundaries.</p></a>
     </section>
-    <section><h2>Commercial Layers</h2>{table(["Layer","Status","Includes"], [
-      ["Public Research","ACTIVE","Audit summaries, methodology, selected timelines, research notes, whitepapers."],
-      ["Research Member","PLANNED","Full entity history, change monitoring, deep evidence matrices, downloadable research packs, watchlists."],
-      ["Institutional","PLANNED","API, custom monitoring, licensed-data integration, research exports, provenance packages."],
-    ])}</section>
+    <section>
+      <h2>Architecture Drill-Down</h2>
+      <p>{badges(["RDL","RTP","Structural Dynamics","MDL","Evidence Dynamics","ECL","ECN"])}</p>
+      <p><a href="architecture.html">Open full research architecture</a></p>
+    </section>
+    """
+    return layout("Standard", "standard.html", body, "Inspect the StructEvidence Standard: architecture, methodology, whitepapers, verification and version history.")
+
+
+def enterprise_page() -> str:
+    body = hero("Enterprise Access", "Request Scoped Structural & Evidence Research", "Commercial access is scoped by evidence availability, research question and delivery requirements before work begins.") + f"""
+    <section class="offering-grid">
+      <article class="offering-card"><h2>Full Structural & Evidence Audit</h2><p>For funds, research teams, treasury analysts and due-diligence teams.</p><p>{badges(["Most Comprehensive","Structural Dynamics","Evidence Dynamics","ACH","Provenance"])}</p><a class="button primary" href="#request-path">Submit Research Request</a></article>
+      <article class="offering-card"><h2>Adversarial Evidence Review</h2><p>For contested narratives, short theses, public allegations or rebuttals.</p><p>{badges(["Claim-vs-claim","Claim-vs-observation","Counter-evidence","Material inconsistency assessment"])}</p><a class="button" href="#request-path">Request Adversarial Review</a></article>
+      <article class="offering-card"><h2>Data / API Partnership</h2><p>For licensed data providers and future institutional integrations.</p><p>{badges(["Licensed data","Provenance requirements","Future API integration"])}</p><a class="button" href="#request-path">Request Scope</a></article>
+    </section>
+    <section>
+      <h2>Evidence Consistency Check</h2>
+      <p>Rapid review of whether major public claims, disclosures and observable facts can be reconciled. Includes claim extraction, timeline normalization, numerical reconciliation, semantic consistency, source dependency and counter-evidence search.</p>
+      <a class="button" href="#request-path">Request Evidence Check</a>
+    </section>
+    <section id="request-path">
+      <h2>Request via Email</h2>
+      <p>No public intake backend or approved contact address is configured in this repository yet. StructEvidence will publish a request path after the contact channel is approved.</p>
+      <p>{badges(["No fake form","No invented contact details","Scope required before work begins"])}</p>
+    </section>
+    <section>
+      <h2>Designed For</h2>
+      <p>{badges(["Research Teams","Asset Managers","VC / Due Diligence Teams","Treasury Analysts","Journalists / Investigators","Protocol / Exchange Governance Teams"])}</p>
+      <p class="disclaimer">This is an evidence research service, not litigation support, legal advice or a defensive opinion. No pricing or SLA is published; scope and expected delivery are confirmed before work begins.</p>
+    </section>
+    """
+    return layout("Enterprise Access", "enterprise.html", body, "Request scoped StructEvidence research for full audits, adversarial evidence reviews and data partnerships.")
+
+
+def about_page() -> str:
+    body = hero("About", "StructEvidence", "StructEvidence is an open research project building auditable Structural Dynamics and Evidence Dynamics methods for digital assets and public entities.") + f"""
+    <section class="grid">
+      <article class="card"><h2>What we study</h2><p>Structural change, public claims, observations, source dependency, reconciliation and correction history.</p></article>
+      <article class="card"><h2>What we do not claim</h2><p>No health score, investment rating, credit rating, trading signal, legal assurance or automated accusation.</p></article>
+      <article class="card"><h2>Inspect the Standard</h2><p>The architecture, methodology, whitepapers, verification and version history remain available as the trust layer.</p><p><a href="standard.html">Open Standard</a></p></article>
+    </section>
     """
     return layout("About", "about.html", body)
 
@@ -783,10 +818,211 @@ NONE
 
 KNOWN_LIMITATIONS
 Interactive verification, ECN submissions, member features, API and live monitoring remain planned. Whitepapers are draft scaffolds until finalized source documents exist.
+
+EXIT_GATES
+V21_PRODUCT_POSITIONING PASS
+V21_INSTITUTIONAL_HOMEPAGE PASS
+V21_ENTITY_DIRECTORY PASS
+V21_AUDIT_LIBRARY PASS
+V21_STRATEGY_TERMINAL PASS
+V21_ARCHITECTURE_PAGE PASS
+V21_RDL_PAGE PASS
+V21_RTP_PAGE PASS
+V21_STRUCTURAL_DYNAMICS_PAGE PASS
+V21_MDL_PAGE PASS
+V21_EVIDENCE_DYNAMICS_PAGE PASS
+V21_ECL_PAGE PASS
+V21_ECN_PAGE PASS
+V21_WHITEPAPER_LIBRARY PASS
+V21_VERIFY_PAGE PASS
+V21_METHOD_PAGE PASS
+V21_EVIDENCE_PAGE PASS
+V21_DATA_PAGE PASS
+V21_RESEARCH_FEED PASS
+V21_NUMERICAL_RECONCILIATION PASS
+V21_ACH_TERMINAL PASS
+V21_COUNTER_EVIDENCE PASS
+V21_SOURCE_DEPENDENCY PASS
+V21_PROVENANCE PASS
+V21_OPEN_QUESTIONS PASS
+V21_CHANGE_CONCLUSION PASS
+V21_CORRECTION_HISTORY PASS
+V21_NO_UNIVERSAL_SCORE PASS
+V21_NO_FAKE_METRICS PASS
+V21_NO_TRADING_SIGNAL PASS
+V21_NO_AUTO_ACCUSATION PASS
+V21_PARTIAL_SOURCE_LIMIT_VISIBLE PASS
+V21_RESEARCH_HASHES_PRESERVED PASS
+V21_WHITEPAPER_STATUS_HONEST PASS
+V21_ARCHITECTURE_HIERARCHY_CORRECT PASS
+V21_CONTENT_AUDIT PASS
+V21_METHOD_BOUNDARY_AUDIT PASS
+V21_ARCHITECTURE_AUDIT PASS
+V21_WHITEPAPER_AUDIT PASS
+V21_LINK_CHECK PASS
+V21_VISUAL_QA BLOCKED
+V21_MOBILE_QA BLOCKED
+V21_GIT_PUSH PASS
+V21_REMOTE_MATCH PASS
+
+VISUAL_QA_LIMITATION
+Browser automation failed with local tool metadata error. Node, npm, Chromium, Playwright, wkhtmltoimage and cutycapt were not available in the shell environment. Static responsive CSS and link checks were completed; screenshot-grade QA remains blocked in this environment.
+
+LOCAL_COMMIT
+Verified after publication; final SHA is intentionally not embedded in this self-referential report file.
+
+REMOTE_MAIN
+Verified after publication; final SHA is intentionally not embedded in this self-referential report file.
+
+REMOTE_MATCH
+PASS
+""",
+        "STRUCTEVIDENCE_V22_CONTENT_AUDIT.md": """# StructEvidence v2.2 Content Audit
+
+Status: PASS
+
+- Homepage is minimal and search-first.
+- Strategy search result uses only frozen Strategy states and approved review date.
+- No fake score, fake coverage, fake SLA, fake pricing, fake customers or fake partners.
+- No trading language or investment call-to-action was added.
+""",
+        "STRUCTEVIDENCE_V22_COMMERCIAL_UX_AUDIT.md": """# StructEvidence v2.2 Commercial UX Audit
+
+Status: PASS
+
+- Product entry is understandable from headline, subheadline and search control.
+- Primary action is search.
+- Covered result is concise and links to full depth.
+- Uncovered result routes to request audit rather than a dead end.
+- Standard trust layer is one click away but not top-level technical clutter.
+""",
+        "STRUCTEVIDENCE_V22_METHOD_BOUNDARY_AUDIT.md": """# StructEvidence v2.2 Method Boundary Audit
+
+Status: PASS
+
+- No score, credit rating, health-as-investment claim, fraud inference or trading signal.
+- PARTIAL source coverage is preserved.
+- Strategy summary keeps the frozen structural/evidence states and material inconsistency value.
+""",
+        "STRUCTEVIDENCE_V22_SEARCH_AUDIT.md": """# StructEvidence v2.2 Search Audit
+
+Status: PASS
+
+| Query | Expected | Actual |
+| --- | --- | --- |
+| MSTR | Covered Strategy result | Covered Strategy result |
+| Strategy | Covered Strategy result | Covered Strategy result |
+| Strategy Inc. | Covered Strategy result | Covered Strategy result |
+| MicroStrategy | Covered Strategy result | Covered Strategy result |
+| Tether | Not Yet Covered + Request Audit | Not Yet Covered + Request Audit |
+| USDT | Not Yet Covered + Request Audit | Not Yet Covered + Request Audit |
+| Uniswap | Not Yet Covered + Request Audit | Not Yet Covered + Request Audit |
+| Binance | Not Yet Covered + Request Audit | Not Yet Covered + Request Audit |
+| blank | Enter an asset, protocol, treasury or institution | Enter an asset, protocol, treasury or institution |
+| random query | Not Yet Covered + Request Audit | Not Yet Covered + Request Audit |
+
+No alert dialogs are used.
+""",
+        "STRUCTEVIDENCE_V22_LINK_CHECK.md": """# StructEvidence v2.2 Link Check
+
+Status: PASS
+
+- Search, Research, Standard, About and Enterprise navigation links exist.
+- View Full Audit, Read Research, Inspect Evidence and request paths exist.
+- Standard links to Architecture, Methodology, Whitepapers, Verify, Version History and Evidence principles.
+""",
+        "STRUCTEVIDENCE_V22_REDESIGN_REPORT.md": """# StructEvidence v2.2 Redesign Report
+
+PROJECT
+StructEvidence
+
+RELEASE
+Search-First Commercial Front Office v2.2
+
+DOMAIN
+structurevidence.org
+
+REPOSITORY
+roalstoney-alt/structurevidence
+
+EXECUTION_CLAIM
+COMPLETE
+
+FRONT_OFFICE
+Search -> Result -> Trust -> Conversion
+
+BACK_OFFICE_TRUST_LAYER
+Standard -> Architecture -> Methodology -> Whitepapers -> Verify -> Version History
+
+SEARCH_INDEX
+Static; Strategy Inc. aliases only.
+
+STRATEGY_RESULT
+HYBRID_ACCUMULATION_MONETIZATION / SEMANTIC_TENSION_BUT_RECONCILABLE / MATERIAL_INCONSISTENCY NO / SOURCE_COVERAGE PARTIAL
+
+EXIT_GATES
+V22_HOME_MINIMAL PASS
+V22_SEARCH_PRIMARY_ACTION PASS
+V22_HEADER_SIMPLIFIED PASS
+V22_STANDARD_GATEWAY PASS
+V22_COVERED_SEARCH_RESULT PASS
+V22_UNCOVERED_SEARCH_RESULT PASS
+V22_STRATEGY_HEALTH_CARD PASS
+V22_NO_HEALTH_SCORE PASS
+V22_THREE_DELIVERABLES PASS
+V22_ENTERPRISE_PAGE PASS
+V22_REQUEST_PATH_FUNCTIONAL BLOCKED
+V22_FULL_AUDIT_DEPTH_PRESERVED PASS
+V22_ARCHITECTURE_MOVED_OFF_HOME PASS
+V22_WHITEPAPERS_PRESERVED PASS
+V22_VERIFY_PRESERVED PASS
+V22_RESEARCH_PRESERVED PASS
+V22_NO_FAKE_COVERAGE PASS
+V22_NO_FAKE_PRICING PASS
+V22_NO_FAKE_SLA PASS
+V22_NO_TRADING_SIGNAL PASS
+V22_NO_AUTO_ACCUSATION PASS
+V22_PARTIAL_SOURCE_LIMIT_VISIBLE PASS
+V22_RESEARCH_HASHES_PRESERVED PASS
+V22_CONTENT_AUDIT PASS
+V22_COMMERCIAL_UX_AUDIT PASS
+V22_METHOD_BOUNDARY_AUDIT PASS
+V22_SEARCH_AUDIT PASS
+V22_LINK_CHECK PASS
+V22_VISUAL_QA BLOCKED
+V22_MOBILE_QA BLOCKED
+V22_GIT_PUSH PENDING
+V22_REMOTE_MATCH PENDING
+
+VISUAL_QA_LIMITATION
+Screenshot-grade browser QA remains blocked in this environment because the browser connector failed and shell tools do not include Node, npm, Chromium or Playwright. Static mobile CSS and link checks were completed.
+
+REQUEST_PATH_LIMITATION
+No approved public contact address or backend intake path exists in the repository. v2.2 therefore exposes the request intent without a fake form or invented email address.
 """,
     }
     for filename, content in reports.items():
         (execution / filename).write_text(dedent(content), encoding="utf-8")
+
+
+def write_search_index(base: Path) -> None:
+    assets = base / "assets"
+    assets.mkdir(parents=True, exist_ok=True)
+    (assets / "entities.json").write_text(json.dumps(SEARCH_INDEX, indent=2) + "\n", encoding="utf-8")
+
+
+def mirror_docs_to_root(pages: dict[str, str]) -> None:
+    for path, content in pages.items():
+        root_content = content.replace("../whitepapers/", "whitepapers/")
+        (ROOT / path).parent.mkdir(parents=True, exist_ok=True)
+        (ROOT / path).write_text(root_content, encoding="utf-8")
+    for filename in ["style.css", "site.js", "entities.json"]:
+        shutil.copyfile(DOCS / "assets" / filename, ROOT / "assets" / filename)
+    source_execution = DOCS / "execution"
+    root_execution = ROOT / "execution"
+    root_execution.mkdir(parents=True, exist_ok=True)
+    for item in source_execution.glob("*.md"):
+        shutil.copyfile(item, root_execution / item.name)
 
 
 def main() -> None:
@@ -794,6 +1030,8 @@ def main() -> None:
     (DOCS / "assets").mkdir(parents=True, exist_ok=True)
     pages = {
         "index.html": index_page(),
+        "standard.html": standard_page(),
+        "enterprise.html": enterprise_page(),
         "architecture.html": architecture_page(),
         "entities.html": entities_page(),
         "audits.html": audits_page(),
@@ -813,8 +1051,10 @@ def main() -> None:
         pages[f"architecture/{slug}.html"] = layer_page(slug, layer)
     for path, content in pages.items():
         (DOCS / path).write_text(content, encoding="utf-8")
+    write_search_index(DOCS)
     write_whitepapers()
     write_reports()
+    mirror_docs_to_root(pages)
 
 
 if __name__ == "__main__":

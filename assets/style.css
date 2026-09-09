@@ -109,6 +109,12 @@ main,
   color: var(--ink);
 }
 
+.enterprise-link {
+  border: 1px solid #43576d;
+  color: var(--ink) !important;
+  padding: 7px 10px;
+}
+
 .nav-toggle {
   display: none;
   border: 1px solid var(--line);
@@ -124,6 +130,194 @@ main {
 section {
   padding: 52px 0;
   border-bottom: 1px solid rgba(39, 56, 75, 0.72);
+}
+
+.search-hero {
+  min-height: 690px;
+  display: grid;
+  align-content: center;
+  gap: 28px;
+  padding: 84px 0 60px;
+}
+
+.search-hero .hero-copy {
+  max-width: 960px;
+}
+
+.search-hero h1 {
+  max-width: 980px;
+}
+
+.search-box {
+  display: grid;
+  gap: 10px;
+  width: min(980px, 100%);
+  margin-top: 10px;
+}
+
+.search-box label {
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 720;
+}
+
+.search-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 10px;
+  border: 1px solid #3a5066;
+  background: #edf7fb;
+  padding: 8px;
+  box-shadow: var(--shadow);
+}
+
+.search-row input {
+  width: 100%;
+  min-height: 58px;
+  border: 0;
+  background: transparent;
+  color: #07101a;
+  padding: 0 14px;
+  font: inherit;
+  font-size: clamp(1rem, 2vw, 1.18rem);
+  outline: 0;
+}
+
+.search-row:focus-within {
+  outline: 3px solid rgba(215, 168, 74, 0.72);
+  outline-offset: 4px;
+}
+
+.microcopy {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.search-result-region {
+  width: min(980px, 100%);
+}
+
+.health-card {
+  border: 1px solid #3f566b;
+  background: #111d2a;
+  padding: 24px;
+  box-shadow: var(--shadow);
+}
+
+.health-card.uncovered {
+  background: #101821;
+}
+
+.result-topline,
+.result-heading,
+.health-fields,
+.deliverables,
+.enterprise-cta,
+.offering-grid,
+.gateway-grid {
+  display: grid;
+  gap: 14px;
+}
+
+.result-topline {
+  grid-template-columns: 1fr auto;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 740;
+  text-transform: uppercase;
+}
+
+.result-heading {
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
+  margin: 14px 0 18px;
+}
+
+.result-heading h2 {
+  margin-bottom: 5px;
+}
+
+.health-fields {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  margin: 18px 0;
+}
+
+.health-fields div {
+  min-width: 0;
+  border-top: 1px solid var(--line);
+  padding-top: 12px;
+}
+
+.health-fields span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 740;
+}
+
+.health-fields strong {
+  display: block;
+  margin-top: 7px;
+  overflow-wrap: anywhere;
+  font-size: 0.92rem;
+}
+
+.ok {
+  color: var(--green);
+}
+
+.partial {
+  color: var(--evidence);
+}
+
+.button.subtle {
+  background: transparent;
+  color: var(--muted);
+}
+
+.actions.compact {
+  margin-top: 18px;
+}
+
+.deliverables {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  padding-top: 32px;
+}
+
+.compact-card,
+.gateway-card,
+.offering-card {
+  border: 1px solid var(--line);
+  background: var(--panel);
+  padding: 20px;
+}
+
+.compact-card p {
+  color: var(--muted);
+}
+
+.enterprise-cta {
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  padding: 34px;
+  margin-top: 20px;
+}
+
+.gateway-grid,
+.offering-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.gateway-card {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.gateway-card p,
+.offering-card p {
+  color: var(--muted);
 }
 
 .hero {
@@ -465,11 +659,24 @@ tr:last-child td {
   padding: 30px 0;
 }
 
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 10px;
+}
+
 @media (max-width: 980px) {
   .hero,
+  .search-hero,
   .architecture-preview,
   .grid,
   .result-grid,
+  .health-fields,
+  .deliverables,
+  .enterprise-cta,
+  .offering-grid,
+  .gateway-grid,
   .process,
   .timeline,
   .law-grid,
@@ -512,6 +719,18 @@ tr:last-child td {
 
   .split {
     grid-template-columns: 1fr;
+  }
+
+  .search-row,
+  .result-topline,
+  .result-heading {
+    grid-template-columns: 1fr;
+  }
+
+  .search-row .button,
+  .enterprise-cta .button,
+  .actions.compact .button {
+    width: 100%;
   }
 
   section {
