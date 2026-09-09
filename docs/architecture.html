@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Architecture - StructEvidence</title>
+  <meta name="description" content="StructEvidence publishes auditable Structural Dynamics and Evidence Dynamics research for digital assets, crypto treasuries and public entities.">
+  <link rel="canonical" href="https://structurevidence.org/architecture.html">
+  <meta property="og:title" content="Architecture - StructEvidence">
+  <meta property="og:description" content="StructEvidence publishes auditable Structural Dynamics and Evidence Dynamics research for digital assets, crypto treasuries and public entities.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://structurevidence.org/architecture.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a class="brand" href="index.html" aria-label="StructEvidence home">
+      <span class="brand-mark">SE</span><span>StructEvidence</span>
+    </a>
+    <button class="nav-toggle" data-nav-toggle aria-controls="nav" aria-expanded="false">Menu</button>
+    <nav class="nav" id="nav" aria-label="Main navigation"><a href="index.html">OVERVIEW</a><a href="entities.html">ENTITIES</a><a href="audits.html">AUDITS</a><a href="markets.html">MARKETS</a><a href="research.html">RESEARCH</a><a href="architecture.html">ARCHITECTURE</a><a href="whitepapers.html">WHITEPAPERS</a><a href="method.html">METHODOLOGY</a><a href="verify.html">VERIFY</a><a href="data.html">DATA</a><a href="about.html">ABOUT</a></nav>
+  </div>
+</header>
+
+  <main>
+<section class="hero">
+  <div class="hero-copy">
+    <p class="eyebrow">Architecture</p>
+    <h1>The Research Stack Behind StructEvidence</h1>
+    <p class="lead">RDL governs research. RTP preserves traceability. Structural Dynamics and Evidence Dynamics run as parallel research tracks, with MDL and ECL as their current specialized layers. ECN is a future contribution interface.</p>
+
+  </div>
+</section>
+
+<section class="architecture-preview">
+<div class="stack-diagram" aria-label="StructEvidence research architecture">
+  <a class="node method" href="architecture/rdl.html"><strong>RDL</strong><span>Research Governance</span></a>
+  <span class="arrow">down</span>
+  <a class="node method" href="architecture/rtp.html"><strong>RTP</strong><span>Traceability / Provenance</span></a>
+  <div class="split">
+    <a class="node structural" href="architecture/structural-dynamics.html"><strong>Structural Dynamics</strong><span>System structure and state</span></a>
+    <a class="node evidence" href="architecture/evidence-dynamics.html"><strong>Evidence Dynamics</strong><span>Claims and observations</span></a>
+  </div>
+  <div class="split">
+    <a class="node structural" href="architecture/mdl.html"><strong>MDL</strong><span>Market Dynamics Lab</span></a>
+    <a class="node evidence" href="architecture/ecl.html"><strong>ECL</strong><span>Evidence Consistency Layer</span></a>
+  </div>
+  <span class="arrow">down</span>
+  <a class="node method" href="architecture/ecn.html"><strong>ECN</strong><span>Future contribution layer</span></a>
+</div>
+</section>
+<section>
+  <h2>Layer Inventory</h2>
+  <div class="table-wrap"><table><thead><tr><th>Layer</th><th>Purpose</th><th>What it controls</th><th>What it does NOT claim</th><th>Current version</th></tr></thead><tbody><tr><td><a href="architecture/rdl.html">RDL</a></td><td>Defines how research questions, evidence, experiments, negative results, publication gates, corrections and supersession are governed.</td><td>Questions, evidence levels, publication gates, corrections, negative result preservation, human review.</td><td>Does not determine market state, entity truth, solvency, fraud, credit quality or investment merit.</td><td><code>RDL_METHOD_PILOT_v0.1</code></td></tr><tr><td><a href="architecture/rtp.html">RTP</a></td><td>Records who acted, what artifact was used, where a result came from, what transformation occurred and whether the chain can be reproduced.</td><td>Actor identity, source identity, artifact identity, SHA-256, timestamps, transformation history.</td><td>Does not certify that artifact contents are true or independently authored.</td><td><code>RTP_METHOD_PILOT_v0.1</code></td></tr><tr><td><a href="architecture/structural-dynamics.html">Structural Dynamics</a></td><td>Studies how real systems change in structure, state, flow and constraint.</td><td>State framing, transition language, structural dimension boundaries.</td><td>Does not predict price, issue trading signals or assign risk grades.</td><td><code>STRUCTURAL_DYNAMICS_METHOD_PILOT_v0.1</code></td></tr><tr><td><a href="architecture/mdl.html">MDL</a></td><td>The first Structural Dynamics domain lab, focused on evolving market structure rather than price prediction.</td><td>Capital, liquidity, behavior, consensus, time, risk and information domain boundaries.</td><td>Does not produce buy, sell, hold, timing, liquidation or return forecasts.</td><td><code>MDL_METHOD_PILOT_v0.1</code></td></tr><tr><td><a href="architecture/evidence-dynamics.html">Evidence Dynamics</a></td><td>Studies how claims, observations, revisions and source relationships evolve around the same entity or system.</td><td>Claim normalization, observation alignment, source dependency, semantic and temporal boundaries.</td><td>Does not turn consistency into truth and does not infer misconduct from inconsistency.</td><td><code>EVIDENCE_DYNAMICS_METHOD_PILOT_v0.1</code></td></tr><tr><td><a href="architecture/ecl.html">ECL</a></td><td>Tests whether public claims and observations remain mutually reconcilable after time, scope, numerical, semantic and source-dependency normalization.</td><td>Temporal consistency, numerical reconciliation, semantic consistency, cross-source consistency, ACH and counter-evidence search.</td><td>Does not determine truth, legal liability, fraud, solvency or universal entity health.</td><td><code>ECL_METHOD_PILOT_v0.1</code></td></tr><tr><td><a href="architecture/ecn.html">ECN</a></td><td>Defines how external users may later contribute observations, datasets, replications, contradictions, corrections and method challenges.</td><td>Contribution taxonomy, provenance requirements, review readiness and future submission boundaries.</td><td>Does not operate as a conclusion engine and does not currently accept public submissions.</td><td><code>ECN_PLANNED_v0.1</code></td></tr></tbody></table></div>
+</section>
+<section class="grid">
+  <article class="card"><h2>Governance Document / Charter</h2><p>Answers what is allowed, what is prohibited, how research is governed, what qualifies as evidence, what may be published and how corrections are handled.</p></article>
+  <article class="card"><h2>Technical Whitepaper / Specification</h2><p>Answers how the system is implemented, which data models and states exist, what gates apply, what can fail and what reproduction requires.</p></article>
+</section>
+</main>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <strong>Research only.</strong> No investment advice. No credit rating, solvency opinion, statutory audit, compliance certification, legal assurance, trading signal or accusation output. Findings remain subject to correction and supersession.
+    </div>
+  </footer>
+  <script src="assets/site.js"></script>
+</body>
+</html>
