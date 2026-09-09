@@ -1,7 +1,10 @@
 {
-  "blocked_reason": "Seller identity, public contact addresses, price configuration and payment provider are not configured.",
-  "commercial_launch_gate": "BLOCKED",
+  "blocked_reason": "Singapore operating jurisdiction is selected, but exact legal seller name, public contact channels, launch price, receiving wallet/network and payment verification are not yet configured.",
+  "commercial_launch_gate": "SINGAPORE_PAID_PILOT_READY_CONFIGURATION_PENDING",
   "commercial_status": "EARLY_ACCESS",
+  "operating_jurisdiction": "Singapore",
+  "invoice_currency": "USD",
+  "usdt_settlement_planned": true,
   "custom_audit_enabled": true,
   "gdr_gate_enabled": false,
   "mos_context_enabled": false,
