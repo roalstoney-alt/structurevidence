@@ -1,0 +1,40 @@
+[
+  {
+    "computed_value": "50001786839.9124767 XLM",
+    "formula": "original plus inflation minus burned supply",
+    "inputs": [
+      "100000000000",
+      "5443902087.3472865",
+      "55442115247.4348098"
+    ],
+    "notes": "Calculation is structural evidence only; no market or investment inference is made.",
+    "reconciliation_id": "XLM-R1-N1",
+    "result": "RECONCILED",
+    "source_id": "XLM-R1-S2"
+  },
+  {
+    "computed_value": "15832609102.461119 XLM",
+    "formula": "non-circulating gap from total minus circulating",
+    "inputs": [
+      "50001786839.9124767",
+      "34169177737.4513581"
+    ],
+    "notes": "Calculation is structural evidence only; no market or investment inference is made.",
+    "reconciliation_id": "XLM-R1-N2",
+    "result": "RECONCILED",
+    "source_id": "XLM-R1-S2"
+  },
+  {
+    "computed_value": "9077145405 XLM across three disclosed mandate buckets",
+    "formula": "selected mandate account subtotal",
+    "inputs": [
+      "2004236533",
+      "3657737252",
+      "3415171620"
+    ],
+    "notes": "Calculation is structural evidence only; no market or investment inference is made.",
+    "reconciliation_id": "XLM-R1-N3",
+    "result": "RECONCILED",
+    "source_id": "XLM-R1-S1"
+  }
+]

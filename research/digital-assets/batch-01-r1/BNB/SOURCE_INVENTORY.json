@@ -1,0 +1,72 @@
+[
+  {
+    "artifact_id": "BNB-R1-A1",
+    "capture_classification": "VERIFIED_EXTRACT",
+    "dependency_group": "BNB Chain Blog",
+    "note": "Burn quantity, remaining supply, target supply, burn mechanism and BEP95 context.",
+    "public_reference_status": "PUBLIC_URL",
+    "publisher": "BNB Chain Blog",
+    "redistribution_status": "NO_FULL_COPY",
+    "retrieval_date": "2026-09-09",
+    "rights_status": "PUBLIC_REFERENCE_ONLY",
+    "source_id": "BNB-R1-S1",
+    "source_type": "OFFICIAL",
+    "source_url": "https://www.bnbchain.org/en/blog/36th-bnb-burn"
+  },
+  {
+    "artifact_id": "BNB-R1-A2",
+    "capture_classification": "VERIFIED_EXTRACT",
+    "dependency_group": "BNB Chain Docs",
+    "note": "PoSA validator selection, cabinets/candidates, consensus set and slashing.",
+    "public_reference_status": "PUBLIC_URL",
+    "publisher": "BNB Chain Docs",
+    "redistribution_status": "NO_FULL_COPY",
+    "retrieval_date": "2026-09-09",
+    "rights_status": "PUBLIC_REFERENCE_ONLY",
+    "source_id": "BNB-R1-S2",
+    "source_type": "OFFICIAL",
+    "source_url": "https://docs.bnbchain.org/bnb-smart-chain/validator/overview/"
+  },
+  {
+    "artifact_id": "BNB-R1-A3",
+    "capture_classification": "VERIFIED_EXTRACT",
+    "dependency_group": "BNB Chain Docs",
+    "note": "Native staking and validator roles.",
+    "public_reference_status": "PUBLIC_URL",
+    "publisher": "BNB Chain Docs",
+    "redistribution_status": "NO_FULL_COPY",
+    "retrieval_date": "2026-09-09",
+    "rights_status": "PUBLIC_REFERENCE_ONLY",
+    "source_id": "BNB-R1-S3",
+    "source_type": "OFFICIAL",
+    "source_url": "https://docs.bnbchain.org/bnb-smart-chain/staking/overview/"
+  },
+  {
+    "artifact_id": "BNB-R1-A4",
+    "capture_classification": "VERIFIED_EXTRACT",
+    "dependency_group": "BNB Chain Docs",
+    "note": "opBNB as a multi-chain ecosystem dependency.",
+    "public_reference_status": "PUBLIC_URL",
+    "publisher": "BNB Chain Docs",
+    "redistribution_status": "NO_FULL_COPY",
+    "retrieval_date": "2026-09-09",
+    "rights_status": "PUBLIC_REFERENCE_ONLY",
+    "source_id": "BNB-R1-S4",
+    "source_type": "OFFICIAL",
+    "source_url": "https://docs.bnbchain.org/bnb-opbnb/"
+  },
+  {
+    "artifact_id": "BNB-R1-A5",
+    "capture_classification": "HASH_METADATA_ONLY",
+    "dependency_group": "BNB Chain",
+    "note": "Current ecosystem metrics; raw redistribution limited by site rendering.",
+    "public_reference_status": "PUBLIC_URL",
+    "publisher": "BNB Chain",
+    "redistribution_status": "NO_FULL_COPY",
+    "retrieval_date": "2026-09-09",
+    "rights_status": "PUBLIC_REFERENCE_ONLY",
+    "source_id": "BNB-R1-S5",
+    "source_type": "OFFICIAL",
+    "source_url": "https://www.bnbchain.org/en"
+  }
+]

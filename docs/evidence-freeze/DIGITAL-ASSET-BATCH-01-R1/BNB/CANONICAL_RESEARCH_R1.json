@@ -1,0 +1,255 @@
+{
+  "artifact_coverage": {
+    "critical_evidence_metadata_only_rate": "20%",
+    "reproducibility_limitation": "LIMITED"
+  },
+  "asset": "BNB",
+  "counter_evidence": [
+    {
+      "counter_evidence_found": [],
+      "hypothesis_id": "BNB-R1-H1",
+      "impact": "Limits confidence but does not create an accusatory finding.",
+      "queries": [
+        "BNB Burn mechanics and network utility jointly explain the current BNB structure. counter evidence",
+        "BNB governance concentration implementation status current",
+        "BNB source definition change historical contradiction"
+      ],
+      "remaining_uncertainty": "A chain-level usage collapse while burns continue mechanically would weaken this.",
+      "search_question": "What evidence would make this false: Burn mechanics and network utility jointly explain the current BNB structure.",
+      "sources_checked": [
+        "BNB-R1-S1",
+        "BNB-R1-S2",
+        "BNB-R1-S3",
+        "BNB-R1-S4",
+        "BNB-R1-S5"
+      ]
+    },
+    {
+      "counter_evidence_found": [
+        "Evidence is insufficient to treat the stronger version of this hypothesis as established."
+      ],
+      "hypothesis_id": "BNB-R1-H2",
+      "impact": "Limits confidence but does not create an accusatory finding.",
+      "queries": [
+        "BNB Supply engineering dominates, while utility evidence is secondary. counter evidence",
+        "BNB governance concentration implementation status current",
+        "BNB source definition change historical contradiction"
+      ],
+      "remaining_uncertainty": "Independent usage evidence showing broad fee and staking demand would weaken this.",
+      "search_question": "What evidence would make this false: Supply engineering dominates, while utility evidence is secondary.",
+      "sources_checked": [
+        "BNB-R1-S1",
+        "BNB-R1-S2",
+        "BNB-R1-S3",
+        "BNB-R1-S4",
+        "BNB-R1-S5"
+      ]
+    },
+    {
+      "counter_evidence_found": [],
+      "hypothesis_id": "BNB-R1-H3",
+      "impact": "Limits confidence but does not create an accusatory finding.",
+      "queries": [
+        "BNB Validator and governance concentration are the dominant constraint. counter evidence",
+        "BNB governance concentration implementation status current",
+        "BNB source definition change historical contradiction"
+      ],
+      "remaining_uncertainty": "Demonstrably dispersed validator control and stake source diversity would weaken this.",
+      "search_question": "What evidence would make this false: Validator and governance concentration are the dominant constraint.",
+      "sources_checked": [
+        "BNB-R1-S1",
+        "BNB-R1-S2",
+        "BNB-R1-S3",
+        "BNB-R1-S4",
+        "BNB-R1-S5"
+      ]
+    },
+    {
+      "counter_evidence_found": [],
+      "hypothesis_id": "BNB-R1-H4",
+      "impact": "Limits confidence but does not create an accusatory finding.",
+      "queries": [
+        "BNB Multi-chain diversification reduces dependence on BSC-only activity. counter evidence",
+        "BNB governance concentration implementation status current",
+        "BNB source definition change historical contradiction"
+      ],
+      "remaining_uncertainty": "Evidence that usage and capital remain concentrated on one execution environment would weaken this.",
+      "search_question": "What evidence would make this false: Multi-chain diversification reduces dependence on BSC-only activity.",
+      "sources_checked": [
+        "BNB-R1-S1",
+        "BNB-R1-S2",
+        "BNB-R1-S3",
+        "BNB-R1-S4",
+        "BNB-R1-S5"
+      ]
+    },
+    {
+      "counter_evidence_found": [],
+      "hypothesis_id": "BNB-R1-H5",
+      "impact": "Limits confidence but does not create an accusatory finding.",
+      "queries": [
+        "BNB Ecosystem capital participation is asserted but not sufficiently observable from public sources. counter evidence",
+        "BNB governance concentration implementation status current",
+        "BNB source definition change historical contradiction"
+      ],
+      "remaining_uncertainty": "Independent capital-flow datasets could resolve this interpretation.",
+      "search_question": "What evidence would make this false: Ecosystem capital participation is asserted but not sufficiently observable from public sources.",
+      "sources_checked": [
+        "BNB-R1-S1",
+        "BNB-R1-S2",
+        "BNB-R1-S3",
+        "BNB-R1-S4",
+        "BNB-R1-S5"
+      ]
+    }
+  ],
+  "decision_usefulness": "NOT_ESTABLISHED",
+  "evidence_agreement": "STRONG_AGREEMENT",
+  "evidence_state_final": "TEMPORAL_CHANGE",
+  "evidence_state_primary": "TEMPORAL_CHANGE",
+  "evidence_state_reviewer": "TEMPORAL_CHANGE",
+  "hypotheses": [
+    {
+      "critical_assumption": "Public source definitions remain applicable during the observation window.",
+      "description": "Burn mechanics and network utility jointly explain the current BNB structure.",
+      "discriminating_evidence_needed": "Independent longitudinal evidence for the specific disputed mechanism.",
+      "hypothesis_id": "BNB-R1-H1",
+      "observed_contradicting_evidence": [],
+      "potential_falsifier": "A chain-level usage collapse while burns continue mechanically would weaken this.",
+      "source_dependency": "Official and primary data sources dominate; independence is not inflated.",
+      "status": "VIABLE",
+      "status_reason": "Status derived from observation fit and targeted counter-evidence limits.",
+      "supporting_evidence": [
+        "BNB-R1-O1",
+        "BNB-R1-O4",
+        "BNB-R1-O5"
+      ]
+    },
+    {
+      "critical_assumption": "Public source definitions remain applicable during the observation window.",
+      "description": "Supply engineering dominates, while utility evidence is secondary.",
+      "discriminating_evidence_needed": "Independent longitudinal evidence for the specific disputed mechanism.",
+      "hypothesis_id": "BNB-R1-H2",
+      "observed_contradicting_evidence": [],
+      "potential_falsifier": "Independent usage evidence showing broad fee and staking demand would weaken this.",
+      "source_dependency": "Official and primary data sources dominate; independence is not inflated.",
+      "status": "WEAKENED",
+      "status_reason": "Status derived from observation fit and targeted counter-evidence limits.",
+      "supporting_evidence": [
+        "BNB-R1-O1",
+        "BNB-R1-O2",
+        "BNB-R1-O3"
+      ]
+    },
+    {
+      "critical_assumption": "Public source definitions remain applicable during the observation window.",
+      "description": "Validator and governance concentration are the dominant constraint.",
+      "discriminating_evidence_needed": "Independent longitudinal evidence for the specific disputed mechanism.",
+      "hypothesis_id": "BNB-R1-H3",
+      "observed_contradicting_evidence": [],
+      "potential_falsifier": "Demonstrably dispersed validator control and stake source diversity would weaken this.",
+      "source_dependency": "Official and primary data sources dominate; independence is not inflated.",
+      "status": "VIABLE",
+      "status_reason": "Status derived from observation fit and targeted counter-evidence limits.",
+      "supporting_evidence": [
+        "BNB-R1-O5",
+        "BNB-R1-O6",
+        "BNB-R1-O7"
+      ]
+    },
+    {
+      "critical_assumption": "Public source definitions remain applicable during the observation window.",
+      "description": "Multi-chain diversification reduces dependence on BSC-only activity.",
+      "discriminating_evidence_needed": "Independent longitudinal evidence for the specific disputed mechanism.",
+      "hypothesis_id": "BNB-R1-H4",
+      "observed_contradicting_evidence": [],
+      "potential_falsifier": "Evidence that usage and capital remain concentrated on one execution environment would weaken this.",
+      "source_dependency": "Official and primary data sources dominate; independence is not inflated.",
+      "status": "UNRESOLVED",
+      "status_reason": "Status derived from observation fit and targeted counter-evidence limits.",
+      "supporting_evidence": [
+        "BNB-R1-O4",
+        "BNB-R1-O9"
+      ]
+    },
+    {
+      "critical_assumption": "Public source definitions remain applicable during the observation window.",
+      "description": "Ecosystem capital participation is asserted but not sufficiently observable from public sources.",
+      "discriminating_evidence_needed": "Independent longitudinal evidence for the specific disputed mechanism.",
+      "hypothesis_id": "BNB-R1-H5",
+      "observed_contradicting_evidence": [],
+      "potential_falsifier": "Independent capital-flow datasets could resolve this interpretation.",
+      "source_dependency": "Official and primary data sources dominate; independence is not inflated.",
+      "status": "VIABLE",
+      "status_reason": "Status derived from observation fit and targeted counter-evidence limits.",
+      "supporting_evidence": [
+        "BNB-R1-O8"
+      ]
+    }
+  ],
+  "last_reviewed": "2026-09-09",
+  "material_inconsistency": "NO",
+  "method_version": "BATCH01_R1_v1.0",
+  "numerical_reconciliations": [
+    {
+      "computed_value": "33166127.91 BNB gap to target",
+      "formula": "remaining supply minus burn target",
+      "inputs": [
+        "133166127.91",
+        "100000000"
+      ],
+      "notes": "Calculation is structural evidence only; no market or investment inference is made.",
+      "reconciliation_id": "BNB-R1-N1",
+      "result": "RECONCILED",
+      "source_id": "BNB-R1-S1"
+    },
+    {
+      "computed_value": "45 active validators",
+      "formula": "cabinet validators plus candidate validators",
+      "inputs": [
+        "21",
+        "24"
+      ],
+      "notes": "Calculation is structural evidence only; no market or investment inference is made.",
+      "reconciliation_id": "BNB-R1-N2",
+      "result": "RECONCILED",
+      "source_id": "BNB-R1-S2"
+    },
+    {
+      "computed_value": "21 consensus validators",
+      "formula": "epoch consensus cabinet plus candidate selection",
+      "inputs": [
+        "18",
+        "3"
+      ],
+      "notes": "Calculation is structural evidence only; no market or investment inference is made.",
+      "reconciliation_id": "BNB-R1-N3",
+      "result": "RECONCILED",
+      "source_id": "BNB-R1-S2"
+    }
+  ],
+  "observation_window": {
+    "basis": "current public evidence plus dated historical artifacts",
+    "retrieved": "2026-09-09"
+  },
+  "open_questions": [
+    "independent replication",
+    "longitudinal durability",
+    "definition stability"
+  ],
+  "publication_status": "R1 RESEARCH SUPPORT",
+  "research_id": "SE.ASSET.BNB.2026.001-R1",
+  "scientific_derivation_support": "PASS",
+  "source_coverage": "PARTIAL",
+  "structural_agreement": "PARTIAL_AGREEMENT",
+  "structural_state_final": "BURN_LINKED_ECOSYSTEM_UTILITY_REGIME",
+  "structural_state_primary": "BURN_LINKED_ECOSYSTEM_UTILITY_REGIME",
+  "structural_state_reviewer": "BURN_AND_VALIDATOR_CONSTRAINED_UTILITY_REGIME",
+  "summary": "R1 supports BNB as a burn-linked utility regime, but the derivation gives explicit weight to validator selection and source dependence rather than treating ecosystem utility as self-proving.",
+  "supersession_status": "REFINED",
+  "what_would_change_conclusion": [
+    "independent contradictory data",
+    "failed arithmetic reconciliation",
+    "material source definition change"
+  ]
+}

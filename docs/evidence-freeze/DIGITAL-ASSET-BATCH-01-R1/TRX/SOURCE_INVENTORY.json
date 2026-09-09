@@ -1,0 +1,72 @@
+[
+  {
+    "artifact_id": "TRX-R1-A1",
+    "capture_classification": "VERIFIED_EXTRACT",
+    "dependency_group": "TRON Developers",
+    "note": "Bandwidth, Energy, TRON Power and resource acquisition mechanisms.",
+    "public_reference_status": "PUBLIC_URL",
+    "publisher": "TRON Developers",
+    "redistribution_status": "NO_FULL_COPY",
+    "retrieval_date": "2026-09-09",
+    "rights_status": "PUBLIC_REFERENCE_ONLY",
+    "source_id": "TRX-R1-S1",
+    "source_type": "OFFICIAL",
+    "source_url": "https://developers.tron.network/docs/resource-model"
+  },
+  {
+    "artifact_id": "TRX-R1-A2",
+    "capture_classification": "VERIFIED_EXTRACT",
+    "dependency_group": "TRON Developers",
+    "note": "27 active SRs, top-127 rewards, reward parameters and six-hour maintenance.",
+    "public_reference_status": "PUBLIC_URL",
+    "publisher": "TRON Developers",
+    "redistribution_status": "NO_FULL_COPY",
+    "retrieval_date": "2026-09-09",
+    "rights_status": "PUBLIC_REFERENCE_ONLY",
+    "source_id": "TRX-R1-S2",
+    "source_type": "OFFICIAL",
+    "source_url": "https://developers.tron.network/docs/super-representatives"
+  },
+  {
+    "artifact_id": "TRX-R1-A3",
+    "capture_classification": "VERIFIED_EXTRACT",
+    "dependency_group": "TRON Developers",
+    "note": "Vote overwrite behavior and SR/SRP distinction.",
+    "public_reference_status": "PUBLIC_URL",
+    "publisher": "TRON Developers",
+    "redistribution_status": "NO_FULL_COPY",
+    "retrieval_date": "2026-09-09",
+    "rights_status": "PUBLIC_REFERENCE_ONLY",
+    "source_id": "TRX-R1-S3",
+    "source_type": "OFFICIAL",
+    "source_url": "https://developers.tron.network/docs/voting-for-srs"
+  },
+  {
+    "artifact_id": "TRX-R1-A4",
+    "capture_classification": "STRUCTURED_API_RESPONSE",
+    "dependency_group": "TRONSCAN",
+    "note": "Cumulative transaction composition and transfer category shares.",
+    "public_reference_status": "PUBLIC_URL",
+    "publisher": "TRONSCAN",
+    "redistribution_status": "NO_FULL_COPY",
+    "retrieval_date": "2026-09-09",
+    "rights_status": "PUBLIC_REFERENCE_ONLY",
+    "source_id": "TRX-R1-S4",
+    "source_type": "PRIMARY_DATA_PROVIDER",
+    "source_url": "https://tronscan.org/data/charts/txn/cumulative-txn"
+  },
+  {
+    "artifact_id": "TRX-R1-A5",
+    "capture_classification": "VERIFIED_EXTRACT",
+    "dependency_group": "TRONSCAN Docs",
+    "note": "Transaction-number API fields and data model.",
+    "public_reference_status": "PUBLIC_URL",
+    "publisher": "TRONSCAN Docs",
+    "redistribution_status": "NO_FULL_COPY",
+    "retrieval_date": "2026-09-09",
+    "rights_status": "PUBLIC_REFERENCE_ONLY",
+    "source_id": "TRX-R1-S5",
+    "source_type": "PRIMARY_DATA_PROVIDER",
+    "source_url": "https://docs.tronscan.org/en/api/statistics/transactionnum"
+  }
+]

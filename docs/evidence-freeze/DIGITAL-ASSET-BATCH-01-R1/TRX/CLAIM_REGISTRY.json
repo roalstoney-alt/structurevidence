@@ -1,0 +1,41 @@
+[
+  {
+    "artifact_id": "TRX-R1-A4",
+    "claim_date": "2026-09-07",
+    "claim_id": "TRX-R1-C1",
+    "claim_text_normalized": "USDT transfers represented 23.22% of cumulative TRON transactions on 2026-09-07.",
+    "scope": "usage composition",
+    "semantic_tags": [
+      "stablecoin",
+      "transaction_composition"
+    ],
+    "source_id": "TRX-R1-S4",
+    "speaker": "TRONSCAN"
+  },
+  {
+    "artifact_id": "TRX-R1-A2",
+    "claim_date": "2026-09-09",
+    "claim_id": "TRX-R1-C2",
+    "claim_text_normalized": "The top 27 candidates by votes produce blocks as Super Representatives.",
+    "scope": "governance",
+    "semantic_tags": [
+      "governance",
+      "validator"
+    ],
+    "source_id": "TRX-R1-S2",
+    "speaker": "TRON Developers"
+  },
+  {
+    "artifact_id": "TRX-R1-A1",
+    "claim_date": "2026-09-09",
+    "claim_id": "TRX-R1-C3",
+    "claim_text_normalized": "TRX staking is tied to Bandwidth, Energy and TRON Power.",
+    "scope": "resource economy",
+    "semantic_tags": [
+      "resource",
+      "staking"
+    ],
+    "source_id": "TRX-R1-S1",
+    "speaker": "TRON Developers"
+  }
+]

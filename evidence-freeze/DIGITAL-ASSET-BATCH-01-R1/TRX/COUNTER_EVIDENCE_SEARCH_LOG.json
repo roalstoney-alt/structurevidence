@@ -1,0 +1,97 @@
+[
+  {
+    "counter_evidence_found": [],
+    "hypothesis_id": "TRX-R1-H1",
+    "impact": "Limits confidence but does not create an accusatory finding.",
+    "queries": [
+      "TRX Stablecoin transfer activity is structurally material to TRON's network usage. counter evidence",
+      "TRX governance concentration implementation status current",
+      "TRX source definition change historical contradiction"
+    ],
+    "remaining_uncertainty": "Dollar settlement volume diverging sharply from transaction count would weaken this.",
+    "search_question": "What evidence would make this false: Stablecoin transfer activity is structurally material to TRON's network usage.",
+    "sources_checked": [
+      "TRX-R1-S1",
+      "TRX-R1-S2",
+      "TRX-R1-S3",
+      "TRX-R1-S4",
+      "TRX-R1-S5"
+    ]
+  },
+  {
+    "counter_evidence_found": [],
+    "hypothesis_id": "TRX-R1-H2",
+    "impact": "Limits confidence but does not create an accusatory finding.",
+    "queries": [
+      "TRX Resource delegation is the main TRX demand mechanism, with stablecoin activity as a user of that resource layer. counter evidence",
+      "TRX governance concentration implementation status current",
+      "TRX source definition change historical contradiction"
+    ],
+    "remaining_uncertainty": "Evidence that resource delegation is mostly unrelated to transfers would weaken this.",
+    "search_question": "What evidence would make this false: Resource delegation is the main TRX demand mechanism, with stablecoin activity as a user of that resource layer.",
+    "sources_checked": [
+      "TRX-R1-S1",
+      "TRX-R1-S2",
+      "TRX-R1-S3",
+      "TRX-R1-S4",
+      "TRX-R1-S5"
+    ]
+  },
+  {
+    "counter_evidence_found": [],
+    "hypothesis_id": "TRX-R1-H3",
+    "impact": "Limits confidence but does not create an accusatory finding.",
+    "queries": [
+      "TRX Stablecoin activity is large but not dominant enough by transaction count to define the whole structure. counter evidence",
+      "TRX governance concentration implementation status current",
+      "TRX source definition change historical contradiction"
+    ],
+    "remaining_uncertainty": "If independent value-settlement data showed overwhelming dominance, this would weaken.",
+    "search_question": "What evidence would make this false: Stablecoin activity is large but not dominant enough by transaction count to define the whole structure.",
+    "sources_checked": [
+      "TRX-R1-S1",
+      "TRX-R1-S2",
+      "TRX-R1-S3",
+      "TRX-R1-S4",
+      "TRX-R1-S5"
+    ]
+  },
+  {
+    "counter_evidence_found": [],
+    "hypothesis_id": "TRX-R1-H4",
+    "impact": "Limits confidence but does not create an accusatory finding.",
+    "queries": [
+      "TRX SR governance concentration is the primary structural constraint. counter evidence",
+      "TRX governance concentration implementation status current",
+      "TRX source definition change historical contradiction"
+    ],
+    "remaining_uncertainty": "Fresh vote dispersion showing low concentration would weaken this.",
+    "search_question": "What evidence would make this false: SR governance concentration is the primary structural constraint.",
+    "sources_checked": [
+      "TRX-R1-S1",
+      "TRX-R1-S2",
+      "TRX-R1-S3",
+      "TRX-R1-S4",
+      "TRX-R1-S5"
+    ]
+  },
+  {
+    "counter_evidence_found": [],
+    "hypothesis_id": "TRX-R1-H5",
+    "impact": "Limits confidence but does not create an accusatory finding.",
+    "queries": [
+      "TRX Settlement concentration creates dependency on stablecoin routing decisions. counter evidence",
+      "TRX governance concentration implementation status current",
+      "TRX source definition change historical contradiction"
+    ],
+    "remaining_uncertainty": "Diversification across assets and transfer categories would weaken this.",
+    "search_question": "What evidence would make this false: Settlement concentration creates dependency on stablecoin routing decisions.",
+    "sources_checked": [
+      "TRX-R1-S1",
+      "TRX-R1-S2",
+      "TRX-R1-S3",
+      "TRX-R1-S4",
+      "TRX-R1-S5"
+    ]
+  }
+]

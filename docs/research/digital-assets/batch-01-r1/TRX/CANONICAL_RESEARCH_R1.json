@@ -1,0 +1,253 @@
+{
+  "artifact_coverage": {
+    "critical_evidence_metadata_only_rate": "0%",
+    "reproducibility_limitation": "LOW"
+  },
+  "asset": "TRX",
+  "counter_evidence": [
+    {
+      "counter_evidence_found": [],
+      "hypothesis_id": "TRX-R1-H1",
+      "impact": "Limits confidence but does not create an accusatory finding.",
+      "queries": [
+        "TRX Stablecoin transfer activity is structurally material to TRON's network usage. counter evidence",
+        "TRX governance concentration implementation status current",
+        "TRX source definition change historical contradiction"
+      ],
+      "remaining_uncertainty": "Dollar settlement volume diverging sharply from transaction count would weaken this.",
+      "search_question": "What evidence would make this false: Stablecoin transfer activity is structurally material to TRON's network usage.",
+      "sources_checked": [
+        "TRX-R1-S1",
+        "TRX-R1-S2",
+        "TRX-R1-S3",
+        "TRX-R1-S4",
+        "TRX-R1-S5"
+      ]
+    },
+    {
+      "counter_evidence_found": [],
+      "hypothesis_id": "TRX-R1-H2",
+      "impact": "Limits confidence but does not create an accusatory finding.",
+      "queries": [
+        "TRX Resource delegation is the main TRX demand mechanism, with stablecoin activity as a user of that resource layer. counter evidence",
+        "TRX governance concentration implementation status current",
+        "TRX source definition change historical contradiction"
+      ],
+      "remaining_uncertainty": "Evidence that resource delegation is mostly unrelated to transfers would weaken this.",
+      "search_question": "What evidence would make this false: Resource delegation is the main TRX demand mechanism, with stablecoin activity as a user of that resource layer.",
+      "sources_checked": [
+        "TRX-R1-S1",
+        "TRX-R1-S2",
+        "TRX-R1-S3",
+        "TRX-R1-S4",
+        "TRX-R1-S5"
+      ]
+    },
+    {
+      "counter_evidence_found": [],
+      "hypothesis_id": "TRX-R1-H3",
+      "impact": "Limits confidence but does not create an accusatory finding.",
+      "queries": [
+        "TRX Stablecoin activity is large but not dominant enough by transaction count to define the whole structure. counter evidence",
+        "TRX governance concentration implementation status current",
+        "TRX source definition change historical contradiction"
+      ],
+      "remaining_uncertainty": "If independent value-settlement data showed overwhelming dominance, this would weaken.",
+      "search_question": "What evidence would make this false: Stablecoin activity is large but not dominant enough by transaction count to define the whole structure.",
+      "sources_checked": [
+        "TRX-R1-S1",
+        "TRX-R1-S2",
+        "TRX-R1-S3",
+        "TRX-R1-S4",
+        "TRX-R1-S5"
+      ]
+    },
+    {
+      "counter_evidence_found": [],
+      "hypothesis_id": "TRX-R1-H4",
+      "impact": "Limits confidence but does not create an accusatory finding.",
+      "queries": [
+        "TRX SR governance concentration is the primary structural constraint. counter evidence",
+        "TRX governance concentration implementation status current",
+        "TRX source definition change historical contradiction"
+      ],
+      "remaining_uncertainty": "Fresh vote dispersion showing low concentration would weaken this.",
+      "search_question": "What evidence would make this false: SR governance concentration is the primary structural constraint.",
+      "sources_checked": [
+        "TRX-R1-S1",
+        "TRX-R1-S2",
+        "TRX-R1-S3",
+        "TRX-R1-S4",
+        "TRX-R1-S5"
+      ]
+    },
+    {
+      "counter_evidence_found": [],
+      "hypothesis_id": "TRX-R1-H5",
+      "impact": "Limits confidence but does not create an accusatory finding.",
+      "queries": [
+        "TRX Settlement concentration creates dependency on stablecoin routing decisions. counter evidence",
+        "TRX governance concentration implementation status current",
+        "TRX source definition change historical contradiction"
+      ],
+      "remaining_uncertainty": "Diversification across assets and transfer categories would weaken this.",
+      "search_question": "What evidence would make this false: Settlement concentration creates dependency on stablecoin routing decisions.",
+      "sources_checked": [
+        "TRX-R1-S1",
+        "TRX-R1-S2",
+        "TRX-R1-S3",
+        "TRX-R1-S4",
+        "TRX-R1-S5"
+      ]
+    }
+  ],
+  "decision_usefulness": "NOT_ESTABLISHED",
+  "evidence_agreement": "STRONG_AGREEMENT",
+  "evidence_state_final": "TEMPORAL_CHANGE",
+  "evidence_state_primary": "TEMPORAL_CHANGE",
+  "evidence_state_reviewer": "TEMPORAL_CHANGE",
+  "hypotheses": [
+    {
+      "critical_assumption": "Public source definitions remain applicable during the observation window.",
+      "description": "Stablecoin transfer activity is structurally material to TRON's network usage.",
+      "discriminating_evidence_needed": "Independent longitudinal evidence for the specific disputed mechanism.",
+      "hypothesis_id": "TRX-R1-H1",
+      "observed_contradicting_evidence": [],
+      "potential_falsifier": "Dollar settlement volume diverging sharply from transaction count would weaken this.",
+      "source_dependency": "Official and primary data sources dominate; independence is not inflated.",
+      "status": "VIABLE",
+      "status_reason": "Status derived from observation fit and targeted counter-evidence limits.",
+      "supporting_evidence": [
+        "TRX-R1-O1",
+        "TRX-R1-O2"
+      ]
+    },
+    {
+      "critical_assumption": "Public source definitions remain applicable during the observation window.",
+      "description": "Resource delegation is the main TRX demand mechanism, with stablecoin activity as a user of that resource layer.",
+      "discriminating_evidence_needed": "Independent longitudinal evidence for the specific disputed mechanism.",
+      "hypothesis_id": "TRX-R1-H2",
+      "observed_contradicting_evidence": [],
+      "potential_falsifier": "Evidence that resource delegation is mostly unrelated to transfers would weaken this.",
+      "source_dependency": "Official and primary data sources dominate; independence is not inflated.",
+      "status": "VIABLE",
+      "status_reason": "Status derived from observation fit and targeted counter-evidence limits.",
+      "supporting_evidence": [
+        "TRX-R1-O3",
+        "TRX-R1-O4",
+        "TRX-R1-O7"
+      ]
+    },
+    {
+      "critical_assumption": "Public source definitions remain applicable during the observation window.",
+      "description": "Stablecoin activity is large but not dominant enough by transaction count to define the whole structure.",
+      "discriminating_evidence_needed": "Independent longitudinal evidence for the specific disputed mechanism.",
+      "hypothesis_id": "TRX-R1-H3",
+      "observed_contradicting_evidence": [],
+      "potential_falsifier": "If independent value-settlement data showed overwhelming dominance, this would weaken.",
+      "source_dependency": "Official and primary data sources dominate; independence is not inflated.",
+      "status": "VIABLE",
+      "status_reason": "Status derived from observation fit and targeted counter-evidence limits.",
+      "supporting_evidence": [
+        "TRX-R1-O1",
+        "TRX-R1-O2",
+        "TRX-R1-O3"
+      ]
+    },
+    {
+      "critical_assumption": "Public source definitions remain applicable during the observation window.",
+      "description": "SR governance concentration is the primary structural constraint.",
+      "discriminating_evidence_needed": "Independent longitudinal evidence for the specific disputed mechanism.",
+      "hypothesis_id": "TRX-R1-H4",
+      "observed_contradicting_evidence": [],
+      "potential_falsifier": "Fresh vote dispersion showing low concentration would weaken this.",
+      "source_dependency": "Official and primary data sources dominate; independence is not inflated.",
+      "status": "UNRESOLVED",
+      "status_reason": "Status derived from observation fit and targeted counter-evidence limits.",
+      "supporting_evidence": [
+        "TRX-R1-O5",
+        "TRX-R1-O6",
+        "TRX-R1-O8"
+      ]
+    },
+    {
+      "critical_assumption": "Public source definitions remain applicable during the observation window.",
+      "description": "Settlement concentration creates dependency on stablecoin routing decisions.",
+      "discriminating_evidence_needed": "Independent longitudinal evidence for the specific disputed mechanism.",
+      "hypothesis_id": "TRX-R1-H5",
+      "observed_contradicting_evidence": [],
+      "potential_falsifier": "Diversification across assets and transfer categories would weaken this.",
+      "source_dependency": "Official and primary data sources dominate; independence is not inflated.",
+      "status": "VIABLE",
+      "status_reason": "Status derived from observation fit and targeted counter-evidence limits.",
+      "supporting_evidence": [
+        "TRX-R1-O2"
+      ]
+    }
+  ],
+  "last_reviewed": "2026-09-09",
+  "material_inconsistency": "NO",
+  "method_version": "BATCH01_R1_v1.0",
+  "numerical_reconciliations": [
+    {
+      "computed_value": "23.22%",
+      "formula": "USDT transfers divided by cumulative transactions",
+      "inputs": [
+        "3576771837",
+        "15399885378"
+      ],
+      "notes": "Calculation is structural evidence only; no market or investment inference is made.",
+      "reconciliation_id": "TRX-R1-N1",
+      "result": "RECONCILED",
+      "source_id": "TRX-R1-S4"
+    },
+    {
+      "computed_value": "16.10%",
+      "formula": "resource delegation transactions divided by cumulative transactions",
+      "inputs": [
+        "2479810874",
+        "15399885378"
+      ],
+      "notes": "Calculation is structural evidence only; no market or investment inference is made.",
+      "reconciliation_id": "TRX-R1-N2",
+      "result": "RECONCILED",
+      "source_id": "TRX-R1-S4"
+    },
+    {
+      "computed_value": "127 ranked candidates",
+      "formula": "SR plus SRP reward-eligible set",
+      "inputs": [
+        "27",
+        "100"
+      ],
+      "notes": "Calculation is structural evidence only; no market or investment inference is made.",
+      "reconciliation_id": "TRX-R1-N3",
+      "result": "RECONCILED",
+      "source_id": "TRX-R1-S2"
+    }
+  ],
+  "observation_window": {
+    "basis": "current public evidence plus dated historical artifacts",
+    "retrieved": "2026-09-09"
+  },
+  "open_questions": [
+    "independent replication",
+    "longitudinal durability",
+    "definition stability"
+  ],
+  "publication_status": "R1 RESEARCH SUPPORT",
+  "research_id": "SE.ASSET.TRX.2026.001-R1",
+  "scientific_derivation_support": "PASS",
+  "source_coverage": "PARTIAL",
+  "structural_agreement": "PARTIAL_AGREEMENT",
+  "structural_state_final": "STABLECOIN_RESOURCE_SETTLEMENT_REGIME",
+  "structural_state_primary": "STABLECOIN_RESOURCE_SETTLEMENT_REGIME",
+  "structural_state_reviewer": "RESOURCE_ECONOMY_WITH_STABLECOIN_DEPENDENCY",
+  "summary": "R1 preserves stablecoin settlement as material but avoids overclaiming dominance because transaction count, resource use and governance constraints point to a broader resource-settlement regime.",
+  "supersession_status": "REFINED",
+  "what_would_change_conclusion": [
+    "independent contradictory data",
+    "failed arithmetic reconciliation",
+    "material source definition change"
+  ]
+}

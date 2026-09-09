@@ -1,0 +1,378 @@
+{
+  "artifact_classifications": [
+    {
+      "artifact_id": "XLM-R1-A1",
+      "capture_scope": "VERIFIED_EXTRACT",
+      "critical_evidence": true,
+      "metadata_only_reason": null,
+      "public_reference_status": "PUBLIC_URL",
+      "redistribution_status": "NO_FULL_COPY",
+      "rights_status": "PUBLIC_REFERENCE_ONLY",
+      "source_id": "XLM-R1-S1"
+    },
+    {
+      "artifact_id": "XLM-R1-A2",
+      "capture_scope": "STRUCTURED_API_RESPONSE",
+      "critical_evidence": true,
+      "metadata_only_reason": null,
+      "public_reference_status": "PUBLIC_URL",
+      "redistribution_status": "NO_FULL_COPY",
+      "rights_status": "PUBLIC_REFERENCE_ONLY",
+      "source_id": "XLM-R1-S2"
+    },
+    {
+      "artifact_id": "XLM-R1-A3",
+      "capture_scope": "VERIFIED_EXTRACT",
+      "critical_evidence": true,
+      "metadata_only_reason": null,
+      "public_reference_status": "PUBLIC_URL",
+      "redistribution_status": "NO_FULL_COPY",
+      "rights_status": "PUBLIC_REFERENCE_ONLY",
+      "source_id": "XLM-R1-S3"
+    },
+    {
+      "artifact_id": "XLM-R1-A4",
+      "capture_scope": "VERIFIED_EXTRACT",
+      "critical_evidence": true,
+      "metadata_only_reason": null,
+      "public_reference_status": "PUBLIC_URL",
+      "redistribution_status": "NO_FULL_COPY",
+      "rights_status": "PUBLIC_REFERENCE_ONLY",
+      "source_id": "XLM-R1-S4"
+    },
+    {
+      "artifact_id": "XLM-R1-A5",
+      "capture_scope": "VERIFIED_EXTRACT",
+      "critical_evidence": true,
+      "metadata_only_reason": null,
+      "public_reference_status": "PUBLIC_URL",
+      "redistribution_status": "NO_FULL_COPY",
+      "rights_status": "PUBLIC_REFERENCE_ONLY",
+      "source_id": "XLM-R1-S5"
+    }
+  ],
+  "asset": "XLM",
+  "claim_registry": [
+    {
+      "artifact_id": "XLM-R1-A1",
+      "claim_date": "2026-09-04",
+      "claim_id": "XLM-R1-C1",
+      "claim_text_normalized": "SDF sells XLM to pay operational expenses and support mandate work.",
+      "scope": "treasury funding",
+      "semantic_tags": [
+        "treasury",
+        "sales"
+      ],
+      "source_id": "XLM-R1-S1",
+      "speaker": "SDF"
+    },
+    {
+      "artifact_id": "XLM-R1-A2",
+      "claim_date": "2026-07-21",
+      "claim_id": "XLM-R1-C2",
+      "claim_text_normalized": "The Dashboard API gives live totals for supply metrics.",
+      "scope": "supply",
+      "semantic_tags": [
+        "supply",
+        "api"
+      ],
+      "source_id": "XLM-R1-S2",
+      "speaker": "Stellar Docs"
+    },
+    {
+      "artifact_id": "XLM-R1-A3",
+      "claim_date": "2026-09-08",
+      "claim_id": "XLM-R1-C3",
+      "claim_text_normalized": "Validators in Stellar participate through SCP quorum sets.",
+      "scope": "consensus",
+      "semantic_tags": [
+        "validator",
+        "quorum"
+      ],
+      "source_id": "XLM-R1-S3",
+      "speaker": "Stellar Docs"
+    }
+  ],
+  "counter_evidence_search_log": [
+    {
+      "counter_evidence_found": [],
+      "hypothesis_id": "XLM-R1-H1",
+      "impact": "Limits confidence but does not create an accusatory finding.",
+      "queries": [
+        "XLM SDF treasury deployment remains the dominant economic dependency. counter evidence",
+        "XLM governance concentration implementation status current",
+        "XLM source definition change historical contradiction"
+      ],
+      "remaining_uncertainty": "Independent network revenue or usage replacing treasury funding would weaken this.",
+      "search_question": "What evidence would make this false: SDF treasury deployment remains the dominant economic dependency.",
+      "sources_checked": [
+        "XLM-R1-S1",
+        "XLM-R1-S2",
+        "XLM-R1-S3",
+        "XLM-R1-S4",
+        "XLM-R1-S5"
+      ]
+    },
+    {
+      "counter_evidence_found": [],
+      "hypothesis_id": "XLM-R1-H2",
+      "impact": "Limits confidence but does not create an accusatory finding.",
+      "queries": [
+        "XLM Network activity is becoming less dependent on SDF treasury flows. counter evidence",
+        "XLM governance concentration implementation status current",
+        "XLM source definition change historical contradiction"
+      ],
+      "remaining_uncertainty": "Attribution showing usage depends on SDF incentives would weaken this.",
+      "search_question": "What evidence would make this false: Network activity is becoming less dependent on SDF treasury flows.",
+      "sources_checked": [
+        "XLM-R1-S1",
+        "XLM-R1-S2",
+        "XLM-R1-S3",
+        "XLM-R1-S4",
+        "XLM-R1-S5"
+      ]
+    },
+    {
+      "counter_evidence_found": [
+        "Evidence is insufficient to treat the stronger version of this hypothesis as established."
+      ],
+      "hypothesis_id": "XLM-R1-H3",
+      "impact": "Limits confidence but does not create an accusatory finding.",
+      "queries": [
+        "XLM Payments and RWA adoption dominate the structure more than treasury mechanics. counter evidence",
+        "XLM governance concentration implementation status current",
+        "XLM source definition change historical contradiction"
+      ],
+      "remaining_uncertainty": "Treasury-flow magnitudes remaining material relative to adoption would weaken this.",
+      "search_question": "What evidence would make this false: Payments and RWA adoption dominate the structure more than treasury mechanics.",
+      "sources_checked": [
+        "XLM-R1-S1",
+        "XLM-R1-S2",
+        "XLM-R1-S3",
+        "XLM-R1-S4",
+        "XLM-R1-S5"
+      ]
+    },
+    {
+      "counter_evidence_found": [],
+      "hypothesis_id": "XLM-R1-H4",
+      "impact": "Limits confidence but does not create an accusatory finding.",
+      "queries": [
+        "XLM Validator quorum composition is the primary structural constraint. counter evidence",
+        "XLM governance concentration implementation status current",
+        "XLM source definition change historical contradiction"
+      ],
+      "remaining_uncertainty": "Detailed independent quorum-set concentration data would be needed to resolve this.",
+      "search_question": "What evidence would make this false: Validator quorum composition is the primary structural constraint.",
+      "sources_checked": [
+        "XLM-R1-S1",
+        "XLM-R1-S2",
+        "XLM-R1-S3",
+        "XLM-R1-S4",
+        "XLM-R1-S5"
+      ]
+    },
+    {
+      "counter_evidence_found": [],
+      "hypothesis_id": "XLM-R1-H5",
+      "impact": "Limits confidence but does not create an accusatory finding.",
+      "queries": [
+        "XLM Foundation funding and payment-network mission jointly explain current structure. counter evidence",
+        "XLM governance concentration implementation status current",
+        "XLM source definition change historical contradiction"
+      ],
+      "remaining_uncertainty": "Self-sustaining network activity detached from SDF mandate funding would weaken this.",
+      "search_question": "What evidence would make this false: Foundation funding and payment-network mission jointly explain current structure.",
+      "sources_checked": [
+        "XLM-R1-S1",
+        "XLM-R1-S2",
+        "XLM-R1-S3",
+        "XLM-R1-S4",
+        "XLM-R1-S5"
+      ]
+    }
+  ],
+  "numerical_reconciliation": [
+    {
+      "computed_value": "50001786839.9124767 XLM",
+      "formula": "original plus inflation minus burned supply",
+      "inputs": [
+        "100000000000",
+        "5443902087.3472865",
+        "55442115247.4348098"
+      ],
+      "notes": "Calculation is structural evidence only; no market or investment inference is made.",
+      "reconciliation_id": "XLM-R1-N1",
+      "result": "RECONCILED",
+      "source_id": "XLM-R1-S2"
+    },
+    {
+      "computed_value": "15832609102.461119 XLM",
+      "formula": "non-circulating gap from total minus circulating",
+      "inputs": [
+        "50001786839.9124767",
+        "34169177737.4513581"
+      ],
+      "notes": "Calculation is structural evidence only; no market or investment inference is made.",
+      "reconciliation_id": "XLM-R1-N2",
+      "result": "RECONCILED",
+      "source_id": "XLM-R1-S2"
+    },
+    {
+      "computed_value": "9077145405 XLM across three disclosed mandate buckets",
+      "formula": "selected mandate account subtotal",
+      "inputs": [
+        "2004236533",
+        "3657737252",
+        "3415171620"
+      ],
+      "notes": "Calculation is structural evidence only; no market or investment inference is made.",
+      "reconciliation_id": "XLM-R1-N3",
+      "result": "RECONCILED",
+      "source_id": "XLM-R1-S1"
+    }
+  ],
+  "observation_registry": [
+    {
+      "artifact_id": "XLM-R1-A1",
+      "asset": "XLM",
+      "confidence": "MEDIUM_HIGH",
+      "dimension": "SDF_TREASURY",
+      "effective_date": "2026-09-04",
+      "notes": "Observation text excludes final structural labels.",
+      "observation_id": "XLM-R1-O1",
+      "observation_type": "PUBLIC_FACT",
+      "source_id": "XLM-R1-S1",
+      "statement": "SDF mandate disclosures list Direct Development current balance of 2,004,236,533 XLM as of September 4, 2026.",
+      "unit": "XLM",
+      "value": 2004236533
+    },
+    {
+      "artifact_id": "XLM-R1-A1",
+      "asset": "XLM",
+      "confidence": "MEDIUM_HIGH",
+      "dimension": "SDF_TREASURY",
+      "effective_date": "2026-09-04",
+      "notes": "Observation text excludes final structural labels.",
+      "observation_id": "XLM-R1-O2",
+      "observation_type": "PUBLIC_FACT",
+      "source_id": "XLM-R1-S1",
+      "statement": "SDF mandate disclosures list Product and Innovation current balance of 3,657,737,252 XLM.",
+      "unit": "XLM",
+      "value": 3657737252
+    },
+    {
+      "artifact_id": "XLM-R1-A1",
+      "asset": "XLM",
+      "confidence": "MEDIUM_HIGH",
+      "dimension": "SDF_TREASURY",
+      "effective_date": "2026-09-04",
+      "notes": "Observation text excludes final structural labels.",
+      "observation_id": "XLM-R1-O3",
+      "observation_type": "PUBLIC_FACT",
+      "source_id": "XLM-R1-S1",
+      "statement": "SDF mandate disclosures list Assets and Liquidity current balance of 3,415,171,620 XLM.",
+      "unit": "XLM",
+      "value": 3415171620
+    },
+    {
+      "artifact_id": "XLM-R1-A1",
+      "asset": "XLM",
+      "confidence": "MEDIUM",
+      "dimension": "TREASURY_SALES",
+      "effective_date": "2026-09-04",
+      "notes": "Observation text excludes final structural labels.",
+      "observation_id": "XLM-R1-O4",
+      "observation_type": "PUBLIC_FACT",
+      "source_id": "XLM-R1-S1",
+      "statement": "SDF states it sells XLM on public exchanges and through direct sales to fund operations and mandate work.",
+      "unit": null,
+      "value": null
+    },
+    {
+      "artifact_id": "XLM-R1-A2",
+      "asset": "XLM",
+      "confidence": "MEDIUM_HIGH",
+      "dimension": "SUPPLY_DISTRIBUTION",
+      "effective_date": "2026-07-21",
+      "notes": "Observation text excludes final structural labels.",
+      "observation_id": "XLM-R1-O5",
+      "observation_type": "PUBLIC_FACT",
+      "source_id": "XLM-R1-S2",
+      "statement": "Stellar docs report total supply of 50,001,786,839.9124767 XLM and circulating supply of 34,169,177,737.4513581 XLM in the example response.",
+      "unit": "XLM",
+      "value": 50001786839.912476
+    },
+    {
+      "artifact_id": "XLM-R1-A2",
+      "asset": "XLM",
+      "confidence": "MEDIUM_HIGH",
+      "dimension": "SUPPLY_DISTRIBUTION",
+      "effective_date": "2026-07-21",
+      "notes": "Observation text excludes final structural labels.",
+      "observation_id": "XLM-R1-O6",
+      "observation_type": "PUBLIC_FACT",
+      "source_id": "XLM-R1-S2",
+      "statement": "The same supply example reports SDF mandate balance of 15,563,517,195.789479 XLM.",
+      "unit": "XLM",
+      "value": 15563517195.789478
+    },
+    {
+      "artifact_id": "XLM-R1-A3",
+      "asset": "XLM",
+      "confidence": "MEDIUM",
+      "dimension": "VALIDATOR_QUORUM",
+      "effective_date": "2026-09-08",
+      "notes": "Observation text excludes final structural labels.",
+      "observation_id": "XLM-R1-O7",
+      "observation_type": "PUBLIC_FACT",
+      "source_id": "XLM-R1-S3",
+      "statement": "Stellar validators use quorum sets under SCP rather than a fixed block-producer election set.",
+      "unit": null,
+      "value": null
+    },
+    {
+      "artifact_id": "XLM-R1-A5",
+      "asset": "XLM",
+      "confidence": "MEDIUM",
+      "dimension": "RWA_ACTIVITY",
+      "effective_date": "2026-09-09",
+      "notes": "Observation text excludes final structural labels.",
+      "observation_id": "XLM-R1-O8",
+      "observation_type": "PUBLIC_FACT",
+      "source_id": "XLM-R1-S5",
+      "statement": "SDF public materials describe real-world assets and payment activity as current strategic usage areas.",
+      "unit": null,
+      "value": null
+    }
+  ],
+  "research_question": "Is Stellar structurally foundation-funded, or is network activity increasingly independent of SDF treasury deployment?",
+  "source_dependency": {
+    "asset": "XLM",
+    "groups": [
+      {
+        "dependency_group": "Stellar Development Foundation",
+        "source_ids": [
+          "XLM-R1-S1",
+          "XLM-R1-S5"
+        ]
+      },
+      {
+        "dependency_group": "Stellar Docs",
+        "source_ids": [
+          "XLM-R1-S2",
+          "XLM-R1-S3",
+          "XLM-R1-S4"
+        ]
+      }
+    ],
+    "rule": "MULTIPLE_URLS_NOT_INDEPENDENT_SOURCES",
+    "source_coverage": "PRIMARY_DOMINANT"
+  },
+  "withheld_from_reviewer": [
+    "primary structural state",
+    "primary evidence state",
+    "historical pilot state",
+    "website card"
+  ]
+}

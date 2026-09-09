@@ -1,0 +1,38 @@
+[
+  {
+    "computed_value": "23.22%",
+    "formula": "USDT transfers divided by cumulative transactions",
+    "inputs": [
+      "3576771837",
+      "15399885378"
+    ],
+    "notes": "Calculation is structural evidence only; no market or investment inference is made.",
+    "reconciliation_id": "TRX-R1-N1",
+    "result": "RECONCILED",
+    "source_id": "TRX-R1-S4"
+  },
+  {
+    "computed_value": "16.10%",
+    "formula": "resource delegation transactions divided by cumulative transactions",
+    "inputs": [
+      "2479810874",
+      "15399885378"
+    ],
+    "notes": "Calculation is structural evidence only; no market or investment inference is made.",
+    "reconciliation_id": "TRX-R1-N2",
+    "result": "RECONCILED",
+    "source_id": "TRX-R1-S4"
+  },
+  {
+    "computed_value": "127 ranked candidates",
+    "formula": "SR plus SRP reward-eligible set",
+    "inputs": [
+      "27",
+      "100"
+    ],
+    "notes": "Calculation is structural evidence only; no market or investment inference is made.",
+    "reconciliation_id": "TRX-R1-N3",
+    "result": "RECONCILED",
+    "source_id": "TRX-R1-S2"
+  }
+]

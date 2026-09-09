@@ -1,0 +1,41 @@
+[
+  {
+    "artifact_id": "SOL-R1-A1",
+    "claim_date": "2026-09-09",
+    "claim_id": "SOL-R1-C1",
+    "claim_text_normalized": "Base fees are split between burning and validator payment.",
+    "scope": "fee economics",
+    "semantic_tags": [
+      "fees",
+      "validator"
+    ],
+    "source_id": "SOL-R1-S1",
+    "speaker": "Solana Docs"
+  },
+  {
+    "artifact_id": "SOL-R1-A3",
+    "claim_date": "2026-09-09",
+    "claim_id": "SOL-R1-C2",
+    "claim_text_normalized": "SFDP had 349 validators and 23.6 million SOL delegation program stake at epoch 1029.",
+    "scope": "stake distribution",
+    "semantic_tags": [
+      "validator",
+      "stake"
+    ],
+    "source_id": "SOL-R1-S3",
+    "speaker": "Solana Foundation"
+  },
+  {
+    "artifact_id": "SOL-R1-A2",
+    "claim_date": "2026-09-09",
+    "claim_id": "SOL-R1-C3",
+    "claim_text_normalized": "Inflation declines from 8% toward 1.5% long term.",
+    "scope": "monetary schedule",
+    "semantic_tags": [
+      "staking",
+      "inflation"
+    ],
+    "source_id": "SOL-R1-S2",
+    "speaker": "Solana Staking Docs"
+  }
+]

@@ -1,0 +1,386 @@
+{
+  "artifact_classifications": [
+    {
+      "artifact_id": "SOL-R1-A1",
+      "capture_scope": "VERIFIED_EXTRACT",
+      "critical_evidence": true,
+      "metadata_only_reason": null,
+      "public_reference_status": "PUBLIC_URL",
+      "redistribution_status": "NO_FULL_COPY",
+      "rights_status": "PUBLIC_REFERENCE_ONLY",
+      "source_id": "SOL-R1-S1"
+    },
+    {
+      "artifact_id": "SOL-R1-A2",
+      "capture_scope": "VERIFIED_EXTRACT",
+      "critical_evidence": true,
+      "metadata_only_reason": null,
+      "public_reference_status": "PUBLIC_URL",
+      "redistribution_status": "NO_FULL_COPY",
+      "rights_status": "PUBLIC_REFERENCE_ONLY",
+      "source_id": "SOL-R1-S2"
+    },
+    {
+      "artifact_id": "SOL-R1-A3",
+      "capture_scope": "VERIFIED_EXTRACT",
+      "critical_evidence": true,
+      "metadata_only_reason": null,
+      "public_reference_status": "PUBLIC_URL",
+      "redistribution_status": "NO_FULL_COPY",
+      "rights_status": "PUBLIC_REFERENCE_ONLY",
+      "source_id": "SOL-R1-S3"
+    },
+    {
+      "artifact_id": "SOL-R1-A4",
+      "capture_scope": "VERIFIED_EXTRACT",
+      "critical_evidence": true,
+      "metadata_only_reason": null,
+      "public_reference_status": "PUBLIC_URL",
+      "redistribution_status": "NO_FULL_COPY",
+      "rights_status": "PUBLIC_REFERENCE_ONLY",
+      "source_id": "SOL-R1-S4"
+    },
+    {
+      "artifact_id": "SOL-R1-A5",
+      "capture_scope": "VERIFIED_EXTRACT",
+      "critical_evidence": true,
+      "metadata_only_reason": null,
+      "public_reference_status": "PUBLIC_URL",
+      "redistribution_status": "NO_FULL_COPY",
+      "rights_status": "PUBLIC_REFERENCE_ONLY",
+      "source_id": "SOL-R1-S5"
+    }
+  ],
+  "asset": "SOL",
+  "claim_registry": [
+    {
+      "artifact_id": "SOL-R1-A1",
+      "claim_date": "2026-09-09",
+      "claim_id": "SOL-R1-C1",
+      "claim_text_normalized": "Base fees are split between burning and validator payment.",
+      "scope": "fee economics",
+      "semantic_tags": [
+        "fees",
+        "validator"
+      ],
+      "source_id": "SOL-R1-S1",
+      "speaker": "Solana Docs"
+    },
+    {
+      "artifact_id": "SOL-R1-A3",
+      "claim_date": "2026-09-09",
+      "claim_id": "SOL-R1-C2",
+      "claim_text_normalized": "SFDP had 349 validators and 23.6 million SOL delegation program stake at epoch 1029.",
+      "scope": "stake distribution",
+      "semantic_tags": [
+        "validator",
+        "stake"
+      ],
+      "source_id": "SOL-R1-S3",
+      "speaker": "Solana Foundation"
+    },
+    {
+      "artifact_id": "SOL-R1-A2",
+      "claim_date": "2026-09-09",
+      "claim_id": "SOL-R1-C3",
+      "claim_text_normalized": "Inflation declines from 8% toward 1.5% long term.",
+      "scope": "monetary schedule",
+      "semantic_tags": [
+        "staking",
+        "inflation"
+      ],
+      "source_id": "SOL-R1-S2",
+      "speaker": "Solana Staking Docs"
+    }
+  ],
+  "counter_evidence_search_log": [
+    {
+      "counter_evidence_found": [
+        "Evidence is insufficient to treat the stronger version of this hypothesis as established."
+      ],
+      "hypothesis_id": "SOL-R1-H1",
+      "impact": "Limits confidence but does not create an accusatory finding.",
+      "queries": [
+        "SOL Execution scale and client-diversity work jointly define the current structure. counter evidence",
+        "SOL governance concentration implementation status current",
+        "SOL source definition change historical contradiction"
+      ],
+      "remaining_uncertainty": "Production client shares remaining concentrated would weaken this.",
+      "search_question": "What evidence would make this false: Execution scale and client-diversity work jointly define the current structure.",
+      "sources_checked": [
+        "SOL-R1-S1",
+        "SOL-R1-S2",
+        "SOL-R1-S3",
+        "SOL-R1-S4",
+        "SOL-R1-S5"
+      ]
+    },
+    {
+      "counter_evidence_found": [],
+      "hypothesis_id": "SOL-R1-H2",
+      "impact": "Limits confidence but does not create an accusatory finding.",
+      "queries": [
+        "SOL Throughput and fee architecture are primary; resilience improvement is not yet established. counter evidence",
+        "SOL governance concentration implementation status current",
+        "SOL source definition change historical contradiction"
+      ],
+      "remaining_uncertainty": "Independent production data showing meaningful non-Agave voting stake would weaken this.",
+      "search_question": "What evidence would make this false: Throughput and fee architecture are primary; resilience improvement is not yet established.",
+      "sources_checked": [
+        "SOL-R1-S1",
+        "SOL-R1-S2",
+        "SOL-R1-S3",
+        "SOL-R1-S4",
+        "SOL-R1-S5"
+      ]
+    },
+    {
+      "counter_evidence_found": [],
+      "hypothesis_id": "SOL-R1-H3",
+      "impact": "Limits confidence but does not create an accusatory finding.",
+      "queries": [
+        "SOL Validator and stake distribution constraints dominate the structural reading. counter evidence",
+        "SOL governance concentration implementation status current",
+        "SOL source definition change historical contradiction"
+      ],
+      "remaining_uncertainty": "Sustained geographic and stake-source dispersion could weaken this.",
+      "search_question": "What evidence would make this false: Validator and stake distribution constraints dominate the structural reading.",
+      "sources_checked": [
+        "SOL-R1-S1",
+        "SOL-R1-S2",
+        "SOL-R1-S3",
+        "SOL-R1-S4",
+        "SOL-R1-S5"
+      ]
+    },
+    {
+      "counter_evidence_found": [],
+      "hypothesis_id": "SOL-R1-H4",
+      "impact": "Limits confidence but does not create an accusatory finding.",
+      "queries": [
+        "SOL Client diversity is mostly implementation-transition evidence, not completed structural reality. counter evidence",
+        "SOL governance concentration implementation status current",
+        "SOL source definition change historical contradiction"
+      ],
+      "remaining_uncertainty": "Multiple production clients with material voting stake would falsify this.",
+      "search_question": "What evidence would make this false: Client diversity is mostly implementation-transition evidence, not completed structural reality.",
+      "sources_checked": [
+        "SOL-R1-S1",
+        "SOL-R1-S2",
+        "SOL-R1-S3",
+        "SOL-R1-S4",
+        "SOL-R1-S5"
+      ]
+    },
+    {
+      "counter_evidence_found": [],
+      "hypothesis_id": "SOL-R1-H5",
+      "impact": "Limits confidence but does not create an accusatory finding.",
+      "queries": [
+        "SOL Capital and application usage growth matter more than execution architecture. counter evidence",
+        "SOL governance concentration implementation status current",
+        "SOL source definition change historical contradiction"
+      ],
+      "remaining_uncertainty": "Evidence that client failures dominate application outcomes would weaken this.",
+      "search_question": "What evidence would make this false: Capital and application usage growth matter more than execution architecture.",
+      "sources_checked": [
+        "SOL-R1-S1",
+        "SOL-R1-S2",
+        "SOL-R1-S3",
+        "SOL-R1-S4",
+        "SOL-R1-S5"
+      ]
+    }
+  ],
+  "numerical_reconciliation": [
+    {
+      "computed_value": "2500 lamports burned",
+      "formula": "base fee burned share",
+      "inputs": [
+        "5000",
+        "0.5"
+      ],
+      "notes": "Calculation is structural evidence only; no market or investment inference is made.",
+      "reconciliation_id": "SOL-R1-N1",
+      "result": "RECONCILED",
+      "source_id": "SOL-R1-S1"
+    },
+    {
+      "computed_value": "2500 lamports paid to validator",
+      "formula": "base fee validator share",
+      "inputs": [
+        "5000",
+        "0.5"
+      ],
+      "notes": "Calculation is structural evidence only; no market or investment inference is made.",
+      "reconciliation_id": "SOL-R1-N2",
+      "result": "RECONCILED",
+      "source_id": "SOL-R1-S1"
+    },
+    {
+      "computed_value": "472000000 SOL implied total staked",
+      "formula": "implied total staked SOL from SFDP share",
+      "inputs": [
+        "23600000",
+        "0.05"
+      ],
+      "notes": "Calculation is structural evidence only; no market or investment inference is made.",
+      "reconciliation_id": "SOL-R1-N3",
+      "result": "RECONCILED",
+      "source_id": "SOL-R1-S3"
+    }
+  ],
+  "observation_registry": [
+    {
+      "artifact_id": "SOL-R1-A1",
+      "asset": "SOL",
+      "confidence": "MEDIUM_HIGH",
+      "dimension": "FEE_ECONOMICS",
+      "effective_date": "2026-09-09",
+      "notes": "Observation text excludes final structural labels.",
+      "observation_id": "SOL-R1-O1",
+      "observation_type": "PUBLIC_FACT",
+      "source_id": "SOL-R1-S1",
+      "statement": "The base fee is 5,000 lamports per signature, with half burned and half paid to the validator.",
+      "unit": "lamports",
+      "value": 5000
+    },
+    {
+      "artifact_id": "SOL-R1-A2",
+      "asset": "SOL",
+      "confidence": "MEDIUM",
+      "dimension": "VALIDATOR_ECONOMICS",
+      "effective_date": "2026-09-09",
+      "notes": "Observation text excludes final structural labels.",
+      "observation_id": "SOL-R1-O2",
+      "observation_type": "PUBLIC_FACT",
+      "source_id": "SOL-R1-S2",
+      "statement": "Solana staking rewards are based on current inflation, total staked SOL, validator uptime and commission.",
+      "unit": null,
+      "value": null
+    },
+    {
+      "artifact_id": "SOL-R1-A2",
+      "asset": "SOL",
+      "confidence": "MEDIUM",
+      "dimension": "VALIDATOR_ECONOMICS",
+      "effective_date": "2026-09-09",
+      "notes": "Observation text excludes final structural labels.",
+      "observation_id": "SOL-R1-O3",
+      "observation_type": "PUBLIC_FACT",
+      "source_id": "SOL-R1-S2",
+      "statement": "The documented inflation schedule starts at 8%, declines by 15% annually and targets 1.5% long term.",
+      "unit": null,
+      "value": null
+    },
+    {
+      "artifact_id": "SOL-R1-A3",
+      "asset": "SOL",
+      "confidence": "MEDIUM_HIGH",
+      "dimension": "STAKE_DISTRIBUTION",
+      "effective_date": "2026-09-09",
+      "notes": "Observation text excludes final structural labels.",
+      "observation_id": "SOL-R1-O4",
+      "observation_type": "PUBLIC_FACT",
+      "source_id": "SOL-R1-S3",
+      "statement": "SFDP reported 349 validators receiving foundation stake at epoch 1029.",
+      "unit": "validators",
+      "value": 349
+    },
+    {
+      "artifact_id": "SOL-R1-A3",
+      "asset": "SOL",
+      "confidence": "MEDIUM_HIGH",
+      "dimension": "STAKE_DISTRIBUTION",
+      "effective_date": "2026-09-09",
+      "notes": "Observation text excludes final structural labels.",
+      "observation_id": "SOL-R1-O5",
+      "observation_type": "PUBLIC_FACT",
+      "source_id": "SOL-R1-S3",
+      "statement": "SFDP stake was 23.6 million SOL, described as 5% of total staked SOL.",
+      "unit": "SOL",
+      "value": 23600000
+    },
+    {
+      "artifact_id": "SOL-R1-A3",
+      "asset": "SOL",
+      "confidence": "MEDIUM",
+      "dimension": "STAKE_DISTRIBUTION",
+      "effective_date": "2026-09-09",
+      "notes": "Observation text excludes final structural labels.",
+      "observation_id": "SOL-R1-O6",
+      "observation_type": "PUBLIC_FACT",
+      "source_id": "SOL-R1-S3",
+      "statement": "SFDP validators were spread across 58 locations and 25 countries.",
+      "unit": null,
+      "value": null
+    },
+    {
+      "artifact_id": "SOL-R1-A4",
+      "asset": "SOL",
+      "confidence": "MEDIUM",
+      "dimension": "CLIENT_PRODUCTION_STATUS",
+      "effective_date": "2026-09-09",
+      "notes": "Observation text excludes final structural labels.",
+      "observation_id": "SOL-R1-O7",
+      "observation_type": "PUBLIC_FACT",
+      "source_id": "SOL-R1-S4",
+      "statement": "Delegation criteria list required Agave and Frankendancer versions for upcoming epochs.",
+      "unit": null,
+      "value": null
+    },
+    {
+      "artifact_id": "SOL-R1-A5",
+      "asset": "SOL",
+      "confidence": "MEDIUM",
+      "dimension": "CLIENT_DIVERSITY",
+      "effective_date": "2026-09-09",
+      "notes": "Observation text excludes final structural labels.",
+      "observation_id": "SOL-R1-O8",
+      "observation_type": "PUBLIC_FACT",
+      "source_id": "SOL-R1-S5",
+      "statement": "Firedancer reporting provides a separate client-status evidence surface, but production status must be distinguished from roadmap status.",
+      "unit": null,
+      "value": null
+    }
+  ],
+  "research_question": "Does performance expansion correspond to genuine resilience/client diversification, or primarily execution-scale growth?",
+  "source_dependency": {
+    "asset": "SOL",
+    "groups": [
+      {
+        "dependency_group": "Solana Docs",
+        "source_ids": [
+          "SOL-R1-S1"
+        ]
+      },
+      {
+        "dependency_group": "Solana",
+        "source_ids": [
+          "SOL-R1-S2"
+        ]
+      },
+      {
+        "dependency_group": "Solana Foundation",
+        "source_ids": [
+          "SOL-R1-S3",
+          "SOL-R1-S4"
+        ]
+      },
+      {
+        "dependency_group": "Firedancer Report",
+        "source_ids": [
+          "SOL-R1-S5"
+        ]
+      }
+    ],
+    "rule": "MULTIPLE_URLS_NOT_INDEPENDENT_SOURCES",
+    "source_coverage": "PARTIAL"
+  },
+  "withheld_from_reviewer": [
+    "primary structural state",
+    "primary evidence state",
+    "historical pilot state",
+    "website card"
+  ]
+}

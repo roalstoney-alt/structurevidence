@@ -1,0 +1,255 @@
+{
+  "artifact_coverage": {
+    "critical_evidence_metadata_only_rate": "0%",
+    "reproducibility_limitation": "LOW"
+  },
+  "asset": "XLM",
+  "counter_evidence": [
+    {
+      "counter_evidence_found": [],
+      "hypothesis_id": "XLM-R1-H1",
+      "impact": "Limits confidence but does not create an accusatory finding.",
+      "queries": [
+        "XLM SDF treasury deployment remains the dominant economic dependency. counter evidence",
+        "XLM governance concentration implementation status current",
+        "XLM source definition change historical contradiction"
+      ],
+      "remaining_uncertainty": "Independent network revenue or usage replacing treasury funding would weaken this.",
+      "search_question": "What evidence would make this false: SDF treasury deployment remains the dominant economic dependency.",
+      "sources_checked": [
+        "XLM-R1-S1",
+        "XLM-R1-S2",
+        "XLM-R1-S3",
+        "XLM-R1-S4",
+        "XLM-R1-S5"
+      ]
+    },
+    {
+      "counter_evidence_found": [],
+      "hypothesis_id": "XLM-R1-H2",
+      "impact": "Limits confidence but does not create an accusatory finding.",
+      "queries": [
+        "XLM Network activity is becoming less dependent on SDF treasury flows. counter evidence",
+        "XLM governance concentration implementation status current",
+        "XLM source definition change historical contradiction"
+      ],
+      "remaining_uncertainty": "Attribution showing usage depends on SDF incentives would weaken this.",
+      "search_question": "What evidence would make this false: Network activity is becoming less dependent on SDF treasury flows.",
+      "sources_checked": [
+        "XLM-R1-S1",
+        "XLM-R1-S2",
+        "XLM-R1-S3",
+        "XLM-R1-S4",
+        "XLM-R1-S5"
+      ]
+    },
+    {
+      "counter_evidence_found": [
+        "Evidence is insufficient to treat the stronger version of this hypothesis as established."
+      ],
+      "hypothesis_id": "XLM-R1-H3",
+      "impact": "Limits confidence but does not create an accusatory finding.",
+      "queries": [
+        "XLM Payments and RWA adoption dominate the structure more than treasury mechanics. counter evidence",
+        "XLM governance concentration implementation status current",
+        "XLM source definition change historical contradiction"
+      ],
+      "remaining_uncertainty": "Treasury-flow magnitudes remaining material relative to adoption would weaken this.",
+      "search_question": "What evidence would make this false: Payments and RWA adoption dominate the structure more than treasury mechanics.",
+      "sources_checked": [
+        "XLM-R1-S1",
+        "XLM-R1-S2",
+        "XLM-R1-S3",
+        "XLM-R1-S4",
+        "XLM-R1-S5"
+      ]
+    },
+    {
+      "counter_evidence_found": [],
+      "hypothesis_id": "XLM-R1-H4",
+      "impact": "Limits confidence but does not create an accusatory finding.",
+      "queries": [
+        "XLM Validator quorum composition is the primary structural constraint. counter evidence",
+        "XLM governance concentration implementation status current",
+        "XLM source definition change historical contradiction"
+      ],
+      "remaining_uncertainty": "Detailed independent quorum-set concentration data would be needed to resolve this.",
+      "search_question": "What evidence would make this false: Validator quorum composition is the primary structural constraint.",
+      "sources_checked": [
+        "XLM-R1-S1",
+        "XLM-R1-S2",
+        "XLM-R1-S3",
+        "XLM-R1-S4",
+        "XLM-R1-S5"
+      ]
+    },
+    {
+      "counter_evidence_found": [],
+      "hypothesis_id": "XLM-R1-H5",
+      "impact": "Limits confidence but does not create an accusatory finding.",
+      "queries": [
+        "XLM Foundation funding and payment-network mission jointly explain current structure. counter evidence",
+        "XLM governance concentration implementation status current",
+        "XLM source definition change historical contradiction"
+      ],
+      "remaining_uncertainty": "Self-sustaining network activity detached from SDF mandate funding would weaken this.",
+      "search_question": "What evidence would make this false: Foundation funding and payment-network mission jointly explain current structure.",
+      "sources_checked": [
+        "XLM-R1-S1",
+        "XLM-R1-S2",
+        "XLM-R1-S3",
+        "XLM-R1-S4",
+        "XLM-R1-S5"
+      ]
+    }
+  ],
+  "decision_usefulness": "NOT_ESTABLISHED",
+  "evidence_agreement": "STRONG_AGREEMENT",
+  "evidence_state_final": "TEMPORAL_CHANGE",
+  "evidence_state_primary": "TEMPORAL_CHANGE",
+  "evidence_state_reviewer": "TEMPORAL_CHANGE",
+  "hypotheses": [
+    {
+      "critical_assumption": "Public source definitions remain applicable during the observation window.",
+      "description": "SDF treasury deployment remains the dominant economic dependency.",
+      "discriminating_evidence_needed": "Independent longitudinal evidence for the specific disputed mechanism.",
+      "hypothesis_id": "XLM-R1-H1",
+      "observed_contradicting_evidence": [],
+      "potential_falsifier": "Independent network revenue or usage replacing treasury funding would weaken this.",
+      "source_dependency": "Official and primary data sources dominate; independence is not inflated.",
+      "status": "VIABLE",
+      "status_reason": "Status derived from observation fit and targeted counter-evidence limits.",
+      "supporting_evidence": [
+        "XLM-R1-O1",
+        "XLM-R1-O2",
+        "XLM-R1-O3",
+        "XLM-R1-O4"
+      ]
+    },
+    {
+      "critical_assumption": "Public source definitions remain applicable during the observation window.",
+      "description": "Network activity is becoming less dependent on SDF treasury flows.",
+      "discriminating_evidence_needed": "Independent longitudinal evidence for the specific disputed mechanism.",
+      "hypothesis_id": "XLM-R1-H2",
+      "observed_contradicting_evidence": [],
+      "potential_falsifier": "Attribution showing usage depends on SDF incentives would weaken this.",
+      "source_dependency": "Official and primary data sources dominate; independence is not inflated.",
+      "status": "UNRESOLVED",
+      "status_reason": "Status derived from observation fit and targeted counter-evidence limits.",
+      "supporting_evidence": [
+        "XLM-R1-O8"
+      ]
+    },
+    {
+      "critical_assumption": "Public source definitions remain applicable during the observation window.",
+      "description": "Payments and RWA adoption dominate the structure more than treasury mechanics.",
+      "discriminating_evidence_needed": "Independent longitudinal evidence for the specific disputed mechanism.",
+      "hypothesis_id": "XLM-R1-H3",
+      "observed_contradicting_evidence": [],
+      "potential_falsifier": "Treasury-flow magnitudes remaining material relative to adoption would weaken this.",
+      "source_dependency": "Official and primary data sources dominate; independence is not inflated.",
+      "status": "WEAKENED",
+      "status_reason": "Status derived from observation fit and targeted counter-evidence limits.",
+      "supporting_evidence": [
+        "XLM-R1-O8"
+      ]
+    },
+    {
+      "critical_assumption": "Public source definitions remain applicable during the observation window.",
+      "description": "Validator quorum composition is the primary structural constraint.",
+      "discriminating_evidence_needed": "Independent longitudinal evidence for the specific disputed mechanism.",
+      "hypothesis_id": "XLM-R1-H4",
+      "observed_contradicting_evidence": [],
+      "potential_falsifier": "Detailed independent quorum-set concentration data would be needed to resolve this.",
+      "source_dependency": "Official and primary data sources dominate; independence is not inflated.",
+      "status": "UNRESOLVED",
+      "status_reason": "Status derived from observation fit and targeted counter-evidence limits.",
+      "supporting_evidence": [
+        "XLM-R1-O7"
+      ]
+    },
+    {
+      "critical_assumption": "Public source definitions remain applicable during the observation window.",
+      "description": "Foundation funding and payment-network mission jointly explain current structure.",
+      "discriminating_evidence_needed": "Independent longitudinal evidence for the specific disputed mechanism.",
+      "hypothesis_id": "XLM-R1-H5",
+      "observed_contradicting_evidence": [],
+      "potential_falsifier": "Self-sustaining network activity detached from SDF mandate funding would weaken this.",
+      "source_dependency": "Official and primary data sources dominate; independence is not inflated.",
+      "status": "VIABLE",
+      "status_reason": "Status derived from observation fit and targeted counter-evidence limits.",
+      "supporting_evidence": [
+        "XLM-R1-O1",
+        "XLM-R1-O4",
+        "XLM-R1-O8"
+      ]
+    }
+  ],
+  "last_reviewed": "2026-09-09",
+  "material_inconsistency": "NO",
+  "method_version": "BATCH01_R1_v1.0",
+  "numerical_reconciliations": [
+    {
+      "computed_value": "50001786839.9124767 XLM",
+      "formula": "original plus inflation minus burned supply",
+      "inputs": [
+        "100000000000",
+        "5443902087.3472865",
+        "55442115247.4348098"
+      ],
+      "notes": "Calculation is structural evidence only; no market or investment inference is made.",
+      "reconciliation_id": "XLM-R1-N1",
+      "result": "RECONCILED",
+      "source_id": "XLM-R1-S2"
+    },
+    {
+      "computed_value": "15832609102.461119 XLM",
+      "formula": "non-circulating gap from total minus circulating",
+      "inputs": [
+        "50001786839.9124767",
+        "34169177737.4513581"
+      ],
+      "notes": "Calculation is structural evidence only; no market or investment inference is made.",
+      "reconciliation_id": "XLM-R1-N2",
+      "result": "RECONCILED",
+      "source_id": "XLM-R1-S2"
+    },
+    {
+      "computed_value": "9077145405 XLM across three disclosed mandate buckets",
+      "formula": "selected mandate account subtotal",
+      "inputs": [
+        "2004236533",
+        "3657737252",
+        "3415171620"
+      ],
+      "notes": "Calculation is structural evidence only; no market or investment inference is made.",
+      "reconciliation_id": "XLM-R1-N3",
+      "result": "RECONCILED",
+      "source_id": "XLM-R1-S1"
+    }
+  ],
+  "observation_window": {
+    "basis": "current public evidence plus dated historical artifacts",
+    "retrieved": "2026-09-09"
+  },
+  "open_questions": [
+    "independent replication",
+    "longitudinal durability",
+    "definition stability"
+  ],
+  "publication_status": "R1 RESEARCH SUPPORT",
+  "research_id": "SE.ASSET.XLM.2026.001-R1",
+  "scientific_derivation_support": "PASS",
+  "source_coverage": "PRIMARY_DOMINANT",
+  "structural_agreement": "PARTIAL_AGREEMENT",
+  "structural_state_final": "SDF_TREASURY_DEPENDENT_PAYMENT_NETWORK",
+  "structural_state_primary": "SDF_TREASURY_DEPENDENT_PAYMENT_NETWORK",
+  "structural_state_reviewer": "FOUNDATION_TREASURY_SUPPORTED_PAYMENT_NETWORK",
+  "summary": "R1 finds that XLM is still materially dependent on SDF treasury deployment, while payment/RWA activity is relevant but not independently sufficient to displace that dependency.",
+  "supersession_status": "REFINED",
+  "what_would_change_conclusion": [
+    "independent contradictory data",
+    "failed arithmetic reconciliation",
+    "material source definition change"
+  ]
+}

@@ -1,0 +1,79 @@
+[
+  {
+    "critical_assumption": "Public source definitions remain applicable during the observation window.",
+    "description": "Burn mechanics and network utility jointly explain the current BNB structure.",
+    "discriminating_evidence_needed": "Independent longitudinal evidence for the specific disputed mechanism.",
+    "hypothesis_id": "BNB-R1-H1",
+    "observed_contradicting_evidence": [],
+    "potential_falsifier": "A chain-level usage collapse while burns continue mechanically would weaken this.",
+    "source_dependency": "Official and primary data sources dominate; independence is not inflated.",
+    "status": "VIABLE",
+    "status_reason": "Status derived from observation fit and targeted counter-evidence limits.",
+    "supporting_evidence": [
+      "BNB-R1-O1",
+      "BNB-R1-O4",
+      "BNB-R1-O5"
+    ]
+  },
+  {
+    "critical_assumption": "Public source definitions remain applicable during the observation window.",
+    "description": "Supply engineering dominates, while utility evidence is secondary.",
+    "discriminating_evidence_needed": "Independent longitudinal evidence for the specific disputed mechanism.",
+    "hypothesis_id": "BNB-R1-H2",
+    "observed_contradicting_evidence": [],
+    "potential_falsifier": "Independent usage evidence showing broad fee and staking demand would weaken this.",
+    "source_dependency": "Official and primary data sources dominate; independence is not inflated.",
+    "status": "WEAKENED",
+    "status_reason": "Status derived from observation fit and targeted counter-evidence limits.",
+    "supporting_evidence": [
+      "BNB-R1-O1",
+      "BNB-R1-O2",
+      "BNB-R1-O3"
+    ]
+  },
+  {
+    "critical_assumption": "Public source definitions remain applicable during the observation window.",
+    "description": "Validator and governance concentration are the dominant constraint.",
+    "discriminating_evidence_needed": "Independent longitudinal evidence for the specific disputed mechanism.",
+    "hypothesis_id": "BNB-R1-H3",
+    "observed_contradicting_evidence": [],
+    "potential_falsifier": "Demonstrably dispersed validator control and stake source diversity would weaken this.",
+    "source_dependency": "Official and primary data sources dominate; independence is not inflated.",
+    "status": "VIABLE",
+    "status_reason": "Status derived from observation fit and targeted counter-evidence limits.",
+    "supporting_evidence": [
+      "BNB-R1-O5",
+      "BNB-R1-O6",
+      "BNB-R1-O7"
+    ]
+  },
+  {
+    "critical_assumption": "Public source definitions remain applicable during the observation window.",
+    "description": "Multi-chain diversification reduces dependence on BSC-only activity.",
+    "discriminating_evidence_needed": "Independent longitudinal evidence for the specific disputed mechanism.",
+    "hypothesis_id": "BNB-R1-H4",
+    "observed_contradicting_evidence": [],
+    "potential_falsifier": "Evidence that usage and capital remain concentrated on one execution environment would weaken this.",
+    "source_dependency": "Official and primary data sources dominate; independence is not inflated.",
+    "status": "UNRESOLVED",
+    "status_reason": "Status derived from observation fit and targeted counter-evidence limits.",
+    "supporting_evidence": [
+      "BNB-R1-O4",
+      "BNB-R1-O9"
+    ]
+  },
+  {
+    "critical_assumption": "Public source definitions remain applicable during the observation window.",
+    "description": "Ecosystem capital participation is asserted but not sufficiently observable from public sources.",
+    "discriminating_evidence_needed": "Independent longitudinal evidence for the specific disputed mechanism.",
+    "hypothesis_id": "BNB-R1-H5",
+    "observed_contradicting_evidence": [],
+    "potential_falsifier": "Independent capital-flow datasets could resolve this interpretation.",
+    "source_dependency": "Official and primary data sources dominate; independence is not inflated.",
+    "status": "VIABLE",
+    "status_reason": "Status derived from observation fit and targeted counter-evidence limits.",
+    "supporting_evidence": [
+      "BNB-R1-O8"
+    ]
+  }
+]

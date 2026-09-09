@@ -1,0 +1,72 @@
+[
+  {
+    "artifact_id": "SOL-R1-A1",
+    "capture_classification": "VERIFIED_EXTRACT",
+    "dependency_group": "Solana Docs",
+    "note": "Base fee, fee split and priority fee mechanics.",
+    "public_reference_status": "PUBLIC_URL",
+    "publisher": "Solana Docs",
+    "redistribution_status": "NO_FULL_COPY",
+    "retrieval_date": "2026-09-09",
+    "rights_status": "PUBLIC_REFERENCE_ONLY",
+    "source_id": "SOL-R1-S1",
+    "source_type": "OFFICIAL",
+    "source_url": "https://solana.com/docs/core/fees"
+  },
+  {
+    "artifact_id": "SOL-R1-A2",
+    "capture_classification": "VERIFIED_EXTRACT",
+    "dependency_group": "Solana",
+    "note": "Staking, validator rewards and inflation schedule.",
+    "public_reference_status": "PUBLIC_URL",
+    "publisher": "Solana",
+    "redistribution_status": "NO_FULL_COPY",
+    "retrieval_date": "2026-09-09",
+    "rights_status": "PUBLIC_REFERENCE_ONLY",
+    "source_id": "SOL-R1-S2",
+    "source_type": "OFFICIAL",
+    "source_url": "https://solana.com/staking"
+  },
+  {
+    "artifact_id": "SOL-R1-A3",
+    "capture_classification": "VERIFIED_EXTRACT",
+    "dependency_group": "Solana Foundation",
+    "note": "SFDP validator count, stake amount, stake share, location and country dispersion.",
+    "public_reference_status": "PUBLIC_URL",
+    "publisher": "Solana Foundation",
+    "redistribution_status": "NO_FULL_COPY",
+    "retrieval_date": "2026-09-09",
+    "rights_status": "PUBLIC_REFERENCE_ONLY",
+    "source_id": "SOL-R1-S3",
+    "source_type": "PRIMARY_STRUCTURED",
+    "source_url": "https://solana.org/delegation-dashboard"
+  },
+  {
+    "artifact_id": "SOL-R1-A4",
+    "capture_classification": "VERIFIED_EXTRACT",
+    "dependency_group": "Solana Foundation",
+    "note": "Validator eligibility thresholds and required software versions.",
+    "public_reference_status": "PUBLIC_URL",
+    "publisher": "Solana Foundation",
+    "redistribution_status": "NO_FULL_COPY",
+    "retrieval_date": "2026-09-09",
+    "rights_status": "PUBLIC_REFERENCE_ONLY",
+    "source_id": "SOL-R1-S4",
+    "source_type": "PRIMARY_STRUCTURED",
+    "source_url": "https://solana.org/delegation-criteria"
+  },
+  {
+    "artifact_id": "SOL-R1-A5",
+    "capture_classification": "VERIFIED_EXTRACT",
+    "dependency_group": "Firedancer Report",
+    "note": "Client implementation status and production-status caveats.",
+    "public_reference_status": "PUBLIC_URL",
+    "publisher": "Firedancer Report",
+    "redistribution_status": "NO_FULL_COPY",
+    "retrieval_date": "2026-09-09",
+    "rights_status": "PUBLIC_REFERENCE_ONLY",
+    "source_id": "SOL-R1-S5",
+    "source_type": "INDEPENDENT_PROJECT",
+    "source_url": "https://reports.firedancer.io/"
+  }
+]

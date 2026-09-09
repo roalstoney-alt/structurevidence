@@ -1,0 +1,379 @@
+{
+  "artifact_classifications": [
+    {
+      "artifact_id": "TRX-R1-A1",
+      "capture_scope": "VERIFIED_EXTRACT",
+      "critical_evidence": true,
+      "metadata_only_reason": null,
+      "public_reference_status": "PUBLIC_URL",
+      "redistribution_status": "NO_FULL_COPY",
+      "rights_status": "PUBLIC_REFERENCE_ONLY",
+      "source_id": "TRX-R1-S1"
+    },
+    {
+      "artifact_id": "TRX-R1-A2",
+      "capture_scope": "VERIFIED_EXTRACT",
+      "critical_evidence": true,
+      "metadata_only_reason": null,
+      "public_reference_status": "PUBLIC_URL",
+      "redistribution_status": "NO_FULL_COPY",
+      "rights_status": "PUBLIC_REFERENCE_ONLY",
+      "source_id": "TRX-R1-S2"
+    },
+    {
+      "artifact_id": "TRX-R1-A3",
+      "capture_scope": "VERIFIED_EXTRACT",
+      "critical_evidence": true,
+      "metadata_only_reason": null,
+      "public_reference_status": "PUBLIC_URL",
+      "redistribution_status": "NO_FULL_COPY",
+      "rights_status": "PUBLIC_REFERENCE_ONLY",
+      "source_id": "TRX-R1-S3"
+    },
+    {
+      "artifact_id": "TRX-R1-A4",
+      "capture_scope": "STRUCTURED_API_RESPONSE",
+      "critical_evidence": true,
+      "metadata_only_reason": null,
+      "public_reference_status": "PUBLIC_URL",
+      "redistribution_status": "NO_FULL_COPY",
+      "rights_status": "PUBLIC_REFERENCE_ONLY",
+      "source_id": "TRX-R1-S4"
+    },
+    {
+      "artifact_id": "TRX-R1-A5",
+      "capture_scope": "VERIFIED_EXTRACT",
+      "critical_evidence": true,
+      "metadata_only_reason": null,
+      "public_reference_status": "PUBLIC_URL",
+      "redistribution_status": "NO_FULL_COPY",
+      "rights_status": "PUBLIC_REFERENCE_ONLY",
+      "source_id": "TRX-R1-S5"
+    }
+  ],
+  "asset": "TRX",
+  "claim_registry": [
+    {
+      "artifact_id": "TRX-R1-A4",
+      "claim_date": "2026-09-07",
+      "claim_id": "TRX-R1-C1",
+      "claim_text_normalized": "USDT transfers represented 23.22% of cumulative TRON transactions on 2026-09-07.",
+      "scope": "usage composition",
+      "semantic_tags": [
+        "stablecoin",
+        "transaction_composition"
+      ],
+      "source_id": "TRX-R1-S4",
+      "speaker": "TRONSCAN"
+    },
+    {
+      "artifact_id": "TRX-R1-A2",
+      "claim_date": "2026-09-09",
+      "claim_id": "TRX-R1-C2",
+      "claim_text_normalized": "The top 27 candidates by votes produce blocks as Super Representatives.",
+      "scope": "governance",
+      "semantic_tags": [
+        "governance",
+        "validator"
+      ],
+      "source_id": "TRX-R1-S2",
+      "speaker": "TRON Developers"
+    },
+    {
+      "artifact_id": "TRX-R1-A1",
+      "claim_date": "2026-09-09",
+      "claim_id": "TRX-R1-C3",
+      "claim_text_normalized": "TRX staking is tied to Bandwidth, Energy and TRON Power.",
+      "scope": "resource economy",
+      "semantic_tags": [
+        "resource",
+        "staking"
+      ],
+      "source_id": "TRX-R1-S1",
+      "speaker": "TRON Developers"
+    }
+  ],
+  "counter_evidence_search_log": [
+    {
+      "counter_evidence_found": [],
+      "hypothesis_id": "TRX-R1-H1",
+      "impact": "Limits confidence but does not create an accusatory finding.",
+      "queries": [
+        "TRX Stablecoin transfer activity is structurally material to TRON's network usage. counter evidence",
+        "TRX governance concentration implementation status current",
+        "TRX source definition change historical contradiction"
+      ],
+      "remaining_uncertainty": "Dollar settlement volume diverging sharply from transaction count would weaken this.",
+      "search_question": "What evidence would make this false: Stablecoin transfer activity is structurally material to TRON's network usage.",
+      "sources_checked": [
+        "TRX-R1-S1",
+        "TRX-R1-S2",
+        "TRX-R1-S3",
+        "TRX-R1-S4",
+        "TRX-R1-S5"
+      ]
+    },
+    {
+      "counter_evidence_found": [],
+      "hypothesis_id": "TRX-R1-H2",
+      "impact": "Limits confidence but does not create an accusatory finding.",
+      "queries": [
+        "TRX Resource delegation is the main TRX demand mechanism, with stablecoin activity as a user of that resource layer. counter evidence",
+        "TRX governance concentration implementation status current",
+        "TRX source definition change historical contradiction"
+      ],
+      "remaining_uncertainty": "Evidence that resource delegation is mostly unrelated to transfers would weaken this.",
+      "search_question": "What evidence would make this false: Resource delegation is the main TRX demand mechanism, with stablecoin activity as a user of that resource layer.",
+      "sources_checked": [
+        "TRX-R1-S1",
+        "TRX-R1-S2",
+        "TRX-R1-S3",
+        "TRX-R1-S4",
+        "TRX-R1-S5"
+      ]
+    },
+    {
+      "counter_evidence_found": [],
+      "hypothesis_id": "TRX-R1-H3",
+      "impact": "Limits confidence but does not create an accusatory finding.",
+      "queries": [
+        "TRX Stablecoin activity is large but not dominant enough by transaction count to define the whole structure. counter evidence",
+        "TRX governance concentration implementation status current",
+        "TRX source definition change historical contradiction"
+      ],
+      "remaining_uncertainty": "If independent value-settlement data showed overwhelming dominance, this would weaken.",
+      "search_question": "What evidence would make this false: Stablecoin activity is large but not dominant enough by transaction count to define the whole structure.",
+      "sources_checked": [
+        "TRX-R1-S1",
+        "TRX-R1-S2",
+        "TRX-R1-S3",
+        "TRX-R1-S4",
+        "TRX-R1-S5"
+      ]
+    },
+    {
+      "counter_evidence_found": [],
+      "hypothesis_id": "TRX-R1-H4",
+      "impact": "Limits confidence but does not create an accusatory finding.",
+      "queries": [
+        "TRX SR governance concentration is the primary structural constraint. counter evidence",
+        "TRX governance concentration implementation status current",
+        "TRX source definition change historical contradiction"
+      ],
+      "remaining_uncertainty": "Fresh vote dispersion showing low concentration would weaken this.",
+      "search_question": "What evidence would make this false: SR governance concentration is the primary structural constraint.",
+      "sources_checked": [
+        "TRX-R1-S1",
+        "TRX-R1-S2",
+        "TRX-R1-S3",
+        "TRX-R1-S4",
+        "TRX-R1-S5"
+      ]
+    },
+    {
+      "counter_evidence_found": [],
+      "hypothesis_id": "TRX-R1-H5",
+      "impact": "Limits confidence but does not create an accusatory finding.",
+      "queries": [
+        "TRX Settlement concentration creates dependency on stablecoin routing decisions. counter evidence",
+        "TRX governance concentration implementation status current",
+        "TRX source definition change historical contradiction"
+      ],
+      "remaining_uncertainty": "Diversification across assets and transfer categories would weaken this.",
+      "search_question": "What evidence would make this false: Settlement concentration creates dependency on stablecoin routing decisions.",
+      "sources_checked": [
+        "TRX-R1-S1",
+        "TRX-R1-S2",
+        "TRX-R1-S3",
+        "TRX-R1-S4",
+        "TRX-R1-S5"
+      ]
+    }
+  ],
+  "numerical_reconciliation": [
+    {
+      "computed_value": "23.22%",
+      "formula": "USDT transfers divided by cumulative transactions",
+      "inputs": [
+        "3576771837",
+        "15399885378"
+      ],
+      "notes": "Calculation is structural evidence only; no market or investment inference is made.",
+      "reconciliation_id": "TRX-R1-N1",
+      "result": "RECONCILED",
+      "source_id": "TRX-R1-S4"
+    },
+    {
+      "computed_value": "16.10%",
+      "formula": "resource delegation transactions divided by cumulative transactions",
+      "inputs": [
+        "2479810874",
+        "15399885378"
+      ],
+      "notes": "Calculation is structural evidence only; no market or investment inference is made.",
+      "reconciliation_id": "TRX-R1-N2",
+      "result": "RECONCILED",
+      "source_id": "TRX-R1-S4"
+    },
+    {
+      "computed_value": "127 ranked candidates",
+      "formula": "SR plus SRP reward-eligible set",
+      "inputs": [
+        "27",
+        "100"
+      ],
+      "notes": "Calculation is structural evidence only; no market or investment inference is made.",
+      "reconciliation_id": "TRX-R1-N3",
+      "result": "RECONCILED",
+      "source_id": "TRX-R1-S2"
+    }
+  ],
+  "observation_registry": [
+    {
+      "artifact_id": "TRX-R1-A4",
+      "asset": "TRX",
+      "confidence": "MEDIUM_HIGH",
+      "dimension": "NETWORK_USAGE_COMPOSITION",
+      "effective_date": "2026-09-07",
+      "notes": "Observation text excludes final structural labels.",
+      "observation_id": "TRX-R1-O1",
+      "observation_type": "PUBLIC_FACT",
+      "source_id": "TRX-R1-S4",
+      "statement": "TRONSCAN reported 15,399,885,378 cumulative transactions on 2026-09-07.",
+      "unit": "transactions",
+      "value": 15399885378
+    },
+    {
+      "artifact_id": "TRX-R1-A4",
+      "asset": "TRX",
+      "confidence": "MEDIUM_HIGH",
+      "dimension": "STABLECOIN_TRANSFER_ACTIVITY",
+      "effective_date": "2026-09-07",
+      "notes": "Observation text excludes final structural labels.",
+      "observation_id": "TRX-R1-O2",
+      "observation_type": "PUBLIC_FACT",
+      "source_id": "TRX-R1-S4",
+      "statement": "USDT transfers were 3,576,771,837, reported as 23.22% of cumulative transactions.",
+      "unit": "transactions",
+      "value": 3576771837
+    },
+    {
+      "artifact_id": "TRX-R1-A4",
+      "asset": "TRX",
+      "confidence": "MEDIUM_HIGH",
+      "dimension": "RESOURCE_DELEGATION",
+      "effective_date": "2026-09-07",
+      "notes": "Observation text excludes final structural labels.",
+      "observation_id": "TRX-R1-O3",
+      "observation_type": "PUBLIC_FACT",
+      "source_id": "TRX-R1-S4",
+      "statement": "Delegate and reclaim resource transactions were 2,479,810,874, reported as 16.10% of cumulative transactions.",
+      "unit": "transactions",
+      "value": 2479810874
+    },
+    {
+      "artifact_id": "TRX-R1-A1",
+      "asset": "TRX",
+      "confidence": "MEDIUM",
+      "dimension": "RESOURCE_ECONOMY",
+      "effective_date": "2026-09-09",
+      "notes": "Observation text excludes final structural labels.",
+      "observation_id": "TRX-R1-O4",
+      "observation_type": "PUBLIC_FACT",
+      "source_id": "TRX-R1-S1",
+      "statement": "TRON uses Bandwidth and Energy resources; TRX can be staked to obtain TRON Power and resources.",
+      "unit": null,
+      "value": null
+    },
+    {
+      "artifact_id": "TRX-R1-A2",
+      "asset": "TRX",
+      "confidence": "MEDIUM_HIGH",
+      "dimension": "SUPER_REPRESENTATIVE_STRUCTURE",
+      "effective_date": "2026-09-09",
+      "notes": "Observation text excludes final structural labels.",
+      "observation_id": "TRX-R1-O5",
+      "observation_type": "PUBLIC_FACT",
+      "source_id": "TRX-R1-S2",
+      "statement": "TRON elects 27 active Super Representatives to produce blocks.",
+      "unit": "SRs",
+      "value": 27
+    },
+    {
+      "artifact_id": "TRX-R1-A2",
+      "asset": "TRX",
+      "confidence": "MEDIUM_HIGH",
+      "dimension": "SUPER_REPRESENTATIVE_STRUCTURE",
+      "effective_date": "2026-09-09",
+      "notes": "Observation text excludes final structural labels.",
+      "observation_id": "TRX-R1-O6",
+      "observation_type": "PUBLIC_FACT",
+      "source_id": "TRX-R1-S2",
+      "statement": "The top 127 ranked candidates share voter rewards; top 27 produce blocks.",
+      "unit": "candidates",
+      "value": 127
+    },
+    {
+      "artifact_id": "TRX-R1-A1",
+      "asset": "TRX",
+      "confidence": "MEDIUM_HIGH",
+      "dimension": "STAKING",
+      "effective_date": "2026-09-09",
+      "notes": "Observation text excludes final structural labels.",
+      "observation_id": "TRX-R1-O7",
+      "observation_type": "PUBLIC_FACT",
+      "source_id": "TRX-R1-S1",
+      "statement": "One staked TRX gives one TRON Power for governance voting.",
+      "unit": "TP per TRX",
+      "value": 1
+    },
+    {
+      "artifact_id": "TRX-R1-A2",
+      "asset": "TRX",
+      "confidence": "MEDIUM",
+      "dimension": "VOTE_CONCENTRATION",
+      "effective_date": "2026-09-09",
+      "notes": "Observation text excludes final structural labels.",
+      "observation_id": "TRX-R1-O8",
+      "observation_type": "PUBLIC_FACT",
+      "source_id": "TRX-R1-S2",
+      "statement": "The current source set identifies the SR count and reward tiers but does not include a fresh full vote concentration table.",
+      "unit": null,
+      "value": null
+    }
+  ],
+  "research_question": "Is stablecoin settlement the dominant structural regime, or is it one component of a broader TRX resource economy?",
+  "source_dependency": {
+    "asset": "TRX",
+    "groups": [
+      {
+        "dependency_group": "TRON Developers",
+        "source_ids": [
+          "TRX-R1-S1",
+          "TRX-R1-S2",
+          "TRX-R1-S3"
+        ]
+      },
+      {
+        "dependency_group": "TRONSCAN",
+        "source_ids": [
+          "TRX-R1-S4"
+        ]
+      },
+      {
+        "dependency_group": "TRONSCAN Docs",
+        "source_ids": [
+          "TRX-R1-S5"
+        ]
+      }
+    ],
+    "rule": "MULTIPLE_URLS_NOT_INDEPENDENT_SOURCES",
+    "source_coverage": "PARTIAL"
+  },
+  "withheld_from_reviewer": [
+    "primary structural state",
+    "primary evidence state",
+    "historical pilot state",
+    "website card"
+  ]
+}

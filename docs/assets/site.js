@@ -79,6 +79,7 @@ function renderCoveredEntity(region, entity) {
         <div><span>MATERIAL INCONSISTENCY</span><strong class="${inconsistency === "NO" ? "ok" : ""}">${inconsistency}</strong></div>
         <div><span>SOURCE COVERAGE</span><strong class="${coverage.includes("PARTIAL") ? "partial" : ""}">${coverage}</strong></div>
         <div><span>LAST REVIEWED</span><strong>${reviewed}</strong></div>
+        <div><span>RESEARCH STATUS</span><strong>${escapeText(entity.research_status || "METHOD PILOT")}</strong></div>
       </div>
       <p>${escapeText(entity.summary)}</p>
       <div class="actions compact"><a class="button primary" href="${escapeText(entity.result_url)}">View Full Audit</a><a class="button" href="${escapeText(entity.structural_report_url || "research.html")}">Read Structural Report</a><a class="button" href="${escapeText(entity.evidence_report_url || "research.html")}">Read Evidence Report</a><a class="button" href="${escapeText(entity.research_chain_url || "verify.html")}">Inspect Research Chain</a></div>

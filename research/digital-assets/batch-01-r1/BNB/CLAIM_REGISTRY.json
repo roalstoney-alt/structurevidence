@@ -1,0 +1,41 @@
+[
+  {
+    "artifact_id": "BNB-R1-A1",
+    "claim_date": "2026-07-15",
+    "claim_id": "BNB-R1-C1",
+    "claim_text_normalized": "The 36th quarterly BNB token burn completed with 1,615,827.795 BNB burned.",
+    "scope": "burn event",
+    "semantic_tags": [
+      "supply",
+      "burn"
+    ],
+    "source_id": "BNB-R1-S1",
+    "speaker": "BNB Foundation"
+  },
+  {
+    "artifact_id": "BNB-R1-A2",
+    "claim_date": "2026-09-09",
+    "claim_id": "BNB-R1-C2",
+    "claim_text_normalized": "BSC relies on PoSA and daily election of 45 active validators.",
+    "scope": "network security",
+    "semantic_tags": [
+      "validator",
+      "governance"
+    ],
+    "source_id": "BNB-R1-S2",
+    "speaker": "BNB Chain Docs"
+  },
+  {
+    "artifact_id": "BNB-R1-A1",
+    "claim_date": "2026-07-15",
+    "claim_id": "BNB-R1-C3",
+    "claim_text_normalized": "BNB supports transactions on BSC, opBNB and BNB Greenfield.",
+    "scope": "utility",
+    "semantic_tags": [
+      "network_usage",
+      "ecosystem"
+    ],
+    "source_id": "BNB-R1-S1",
+    "speaker": "BNB Chain Blog"
+  }
+]

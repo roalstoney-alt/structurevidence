@@ -1,0 +1,99 @@
+[
+  {
+    "counter_evidence_found": [
+      "Evidence is insufficient to treat the stronger version of this hypothesis as established."
+    ],
+    "hypothesis_id": "SOL-R1-H1",
+    "impact": "Limits confidence but does not create an accusatory finding.",
+    "queries": [
+      "SOL Execution scale and client-diversity work jointly define the current structure. counter evidence",
+      "SOL governance concentration implementation status current",
+      "SOL source definition change historical contradiction"
+    ],
+    "remaining_uncertainty": "Production client shares remaining concentrated would weaken this.",
+    "search_question": "What evidence would make this false: Execution scale and client-diversity work jointly define the current structure.",
+    "sources_checked": [
+      "SOL-R1-S1",
+      "SOL-R1-S2",
+      "SOL-R1-S3",
+      "SOL-R1-S4",
+      "SOL-R1-S5"
+    ]
+  },
+  {
+    "counter_evidence_found": [],
+    "hypothesis_id": "SOL-R1-H2",
+    "impact": "Limits confidence but does not create an accusatory finding.",
+    "queries": [
+      "SOL Throughput and fee architecture are primary; resilience improvement is not yet established. counter evidence",
+      "SOL governance concentration implementation status current",
+      "SOL source definition change historical contradiction"
+    ],
+    "remaining_uncertainty": "Independent production data showing meaningful non-Agave voting stake would weaken this.",
+    "search_question": "What evidence would make this false: Throughput and fee architecture are primary; resilience improvement is not yet established.",
+    "sources_checked": [
+      "SOL-R1-S1",
+      "SOL-R1-S2",
+      "SOL-R1-S3",
+      "SOL-R1-S4",
+      "SOL-R1-S5"
+    ]
+  },
+  {
+    "counter_evidence_found": [],
+    "hypothesis_id": "SOL-R1-H3",
+    "impact": "Limits confidence but does not create an accusatory finding.",
+    "queries": [
+      "SOL Validator and stake distribution constraints dominate the structural reading. counter evidence",
+      "SOL governance concentration implementation status current",
+      "SOL source definition change historical contradiction"
+    ],
+    "remaining_uncertainty": "Sustained geographic and stake-source dispersion could weaken this.",
+    "search_question": "What evidence would make this false: Validator and stake distribution constraints dominate the structural reading.",
+    "sources_checked": [
+      "SOL-R1-S1",
+      "SOL-R1-S2",
+      "SOL-R1-S3",
+      "SOL-R1-S4",
+      "SOL-R1-S5"
+    ]
+  },
+  {
+    "counter_evidence_found": [],
+    "hypothesis_id": "SOL-R1-H4",
+    "impact": "Limits confidence but does not create an accusatory finding.",
+    "queries": [
+      "SOL Client diversity is mostly implementation-transition evidence, not completed structural reality. counter evidence",
+      "SOL governance concentration implementation status current",
+      "SOL source definition change historical contradiction"
+    ],
+    "remaining_uncertainty": "Multiple production clients with material voting stake would falsify this.",
+    "search_question": "What evidence would make this false: Client diversity is mostly implementation-transition evidence, not completed structural reality.",
+    "sources_checked": [
+      "SOL-R1-S1",
+      "SOL-R1-S2",
+      "SOL-R1-S3",
+      "SOL-R1-S4",
+      "SOL-R1-S5"
+    ]
+  },
+  {
+    "counter_evidence_found": [],
+    "hypothesis_id": "SOL-R1-H5",
+    "impact": "Limits confidence but does not create an accusatory finding.",
+    "queries": [
+      "SOL Capital and application usage growth matter more than execution architecture. counter evidence",
+      "SOL governance concentration implementation status current",
+      "SOL source definition change historical contradiction"
+    ],
+    "remaining_uncertainty": "Evidence that client failures dominate application outcomes would weaken this.",
+    "search_question": "What evidence would make this false: Capital and application usage growth matter more than execution architecture.",
+    "sources_checked": [
+      "SOL-R1-S1",
+      "SOL-R1-S2",
+      "SOL-R1-S3",
+      "SOL-R1-S4",
+      "SOL-R1-S5"
+    ]
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "computed_value": "33166127.91 BNB gap to target",
+    "formula": "remaining supply minus burn target",
+    "inputs": [
+      "133166127.91",
+      "100000000"
+    ],
+    "notes": "Calculation is structural evidence only; no market or investment inference is made.",
+    "reconciliation_id": "BNB-R1-N1",
+    "result": "RECONCILED",
+    "source_id": "BNB-R1-S1"
+  },
+  {
+    "computed_value": "45 active validators",
+    "formula": "cabinet validators plus candidate validators",
+    "inputs": [
+      "21",
+      "24"
+    ],
+    "notes": "Calculation is structural evidence only; no market or investment inference is made.",
+    "reconciliation_id": "BNB-R1-N2",
+    "result": "RECONCILED",
+    "source_id": "BNB-R1-S2"
+  },
+  {
+    "computed_value": "21 consensus validators",
+    "formula": "epoch consensus cabinet plus candidate selection",
+    "inputs": [
+      "18",
+      "3"
+    ],
+    "notes": "Calculation is structural evidence only; no market or investment inference is made.",
+    "reconciliation_id": "BNB-R1-N3",
+    "result": "RECONCILED",
+    "source_id": "BNB-R1-S2"
+  }
+]

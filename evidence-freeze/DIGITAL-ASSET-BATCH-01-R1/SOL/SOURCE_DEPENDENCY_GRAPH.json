@@ -1,0 +1,32 @@
+{
+  "asset": "SOL",
+  "groups": [
+    {
+      "dependency_group": "Solana Docs",
+      "source_ids": [
+        "SOL-R1-S1"
+      ]
+    },
+    {
+      "dependency_group": "Solana",
+      "source_ids": [
+        "SOL-R1-S2"
+      ]
+    },
+    {
+      "dependency_group": "Solana Foundation",
+      "source_ids": [
+        "SOL-R1-S3",
+        "SOL-R1-S4"
+      ]
+    },
+    {
+      "dependency_group": "Firedancer Report",
+      "source_ids": [
+        "SOL-R1-S5"
+      ]
+    }
+  ],
+  "rule": "MULTIPLE_URLS_NOT_INDEPENDENT_SOURCES",
+  "source_coverage": "PARTIAL"
+}

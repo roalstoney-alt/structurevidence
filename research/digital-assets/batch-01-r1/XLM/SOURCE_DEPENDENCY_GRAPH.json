@@ -1,0 +1,22 @@
+{
+  "asset": "XLM",
+  "groups": [
+    {
+      "dependency_group": "Stellar Development Foundation",
+      "source_ids": [
+        "XLM-R1-S1",
+        "XLM-R1-S5"
+      ]
+    },
+    {
+      "dependency_group": "Stellar Docs",
+      "source_ids": [
+        "XLM-R1-S2",
+        "XLM-R1-S3",
+        "XLM-R1-S4"
+      ]
+    }
+  ],
+  "rule": "MULTIPLE_URLS_NOT_INDEPENDENT_SOURCES",
+  "source_coverage": "PRIMARY_DOMINANT"
+}

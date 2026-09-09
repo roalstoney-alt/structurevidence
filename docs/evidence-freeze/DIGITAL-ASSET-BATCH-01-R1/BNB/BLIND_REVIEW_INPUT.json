@@ -1,0 +1,395 @@
+{
+  "artifact_classifications": [
+    {
+      "artifact_id": "BNB-R1-A1",
+      "capture_scope": "VERIFIED_EXTRACT",
+      "critical_evidence": true,
+      "metadata_only_reason": null,
+      "public_reference_status": "PUBLIC_URL",
+      "redistribution_status": "NO_FULL_COPY",
+      "rights_status": "PUBLIC_REFERENCE_ONLY",
+      "source_id": "BNB-R1-S1"
+    },
+    {
+      "artifact_id": "BNB-R1-A2",
+      "capture_scope": "VERIFIED_EXTRACT",
+      "critical_evidence": true,
+      "metadata_only_reason": null,
+      "public_reference_status": "PUBLIC_URL",
+      "redistribution_status": "NO_FULL_COPY",
+      "rights_status": "PUBLIC_REFERENCE_ONLY",
+      "source_id": "BNB-R1-S2"
+    },
+    {
+      "artifact_id": "BNB-R1-A3",
+      "capture_scope": "VERIFIED_EXTRACT",
+      "critical_evidence": true,
+      "metadata_only_reason": null,
+      "public_reference_status": "PUBLIC_URL",
+      "redistribution_status": "NO_FULL_COPY",
+      "rights_status": "PUBLIC_REFERENCE_ONLY",
+      "source_id": "BNB-R1-S3"
+    },
+    {
+      "artifact_id": "BNB-R1-A4",
+      "capture_scope": "VERIFIED_EXTRACT",
+      "critical_evidence": true,
+      "metadata_only_reason": null,
+      "public_reference_status": "PUBLIC_URL",
+      "redistribution_status": "NO_FULL_COPY",
+      "rights_status": "PUBLIC_REFERENCE_ONLY",
+      "source_id": "BNB-R1-S4"
+    },
+    {
+      "artifact_id": "BNB-R1-A5",
+      "capture_scope": "HASH_METADATA_ONLY",
+      "critical_evidence": true,
+      "metadata_only_reason": "Dynamic public page or redistribution boundary.",
+      "public_reference_status": "PUBLIC_URL",
+      "redistribution_status": "NO_FULL_COPY",
+      "rights_status": "PUBLIC_REFERENCE_ONLY",
+      "source_id": "BNB-R1-S5"
+    }
+  ],
+  "asset": "BNB",
+  "claim_registry": [
+    {
+      "artifact_id": "BNB-R1-A1",
+      "claim_date": "2026-07-15",
+      "claim_id": "BNB-R1-C1",
+      "claim_text_normalized": "The 36th quarterly BNB token burn completed with 1,615,827.795 BNB burned.",
+      "scope": "burn event",
+      "semantic_tags": [
+        "supply",
+        "burn"
+      ],
+      "source_id": "BNB-R1-S1",
+      "speaker": "BNB Foundation"
+    },
+    {
+      "artifact_id": "BNB-R1-A2",
+      "claim_date": "2026-09-09",
+      "claim_id": "BNB-R1-C2",
+      "claim_text_normalized": "BSC relies on PoSA and daily election of 45 active validators.",
+      "scope": "network security",
+      "semantic_tags": [
+        "validator",
+        "governance"
+      ],
+      "source_id": "BNB-R1-S2",
+      "speaker": "BNB Chain Docs"
+    },
+    {
+      "artifact_id": "BNB-R1-A1",
+      "claim_date": "2026-07-15",
+      "claim_id": "BNB-R1-C3",
+      "claim_text_normalized": "BNB supports transactions on BSC, opBNB and BNB Greenfield.",
+      "scope": "utility",
+      "semantic_tags": [
+        "network_usage",
+        "ecosystem"
+      ],
+      "source_id": "BNB-R1-S1",
+      "speaker": "BNB Chain Blog"
+    }
+  ],
+  "counter_evidence_search_log": [
+    {
+      "counter_evidence_found": [],
+      "hypothesis_id": "BNB-R1-H1",
+      "impact": "Limits confidence but does not create an accusatory finding.",
+      "queries": [
+        "BNB Burn mechanics and network utility jointly explain the current BNB structure. counter evidence",
+        "BNB governance concentration implementation status current",
+        "BNB source definition change historical contradiction"
+      ],
+      "remaining_uncertainty": "A chain-level usage collapse while burns continue mechanically would weaken this.",
+      "search_question": "What evidence would make this false: Burn mechanics and network utility jointly explain the current BNB structure.",
+      "sources_checked": [
+        "BNB-R1-S1",
+        "BNB-R1-S2",
+        "BNB-R1-S3",
+        "BNB-R1-S4",
+        "BNB-R1-S5"
+      ]
+    },
+    {
+      "counter_evidence_found": [
+        "Evidence is insufficient to treat the stronger version of this hypothesis as established."
+      ],
+      "hypothesis_id": "BNB-R1-H2",
+      "impact": "Limits confidence but does not create an accusatory finding.",
+      "queries": [
+        "BNB Supply engineering dominates, while utility evidence is secondary. counter evidence",
+        "BNB governance concentration implementation status current",
+        "BNB source definition change historical contradiction"
+      ],
+      "remaining_uncertainty": "Independent usage evidence showing broad fee and staking demand would weaken this.",
+      "search_question": "What evidence would make this false: Supply engineering dominates, while utility evidence is secondary.",
+      "sources_checked": [
+        "BNB-R1-S1",
+        "BNB-R1-S2",
+        "BNB-R1-S3",
+        "BNB-R1-S4",
+        "BNB-R1-S5"
+      ]
+    },
+    {
+      "counter_evidence_found": [],
+      "hypothesis_id": "BNB-R1-H3",
+      "impact": "Limits confidence but does not create an accusatory finding.",
+      "queries": [
+        "BNB Validator and governance concentration are the dominant constraint. counter evidence",
+        "BNB governance concentration implementation status current",
+        "BNB source definition change historical contradiction"
+      ],
+      "remaining_uncertainty": "Demonstrably dispersed validator control and stake source diversity would weaken this.",
+      "search_question": "What evidence would make this false: Validator and governance concentration are the dominant constraint.",
+      "sources_checked": [
+        "BNB-R1-S1",
+        "BNB-R1-S2",
+        "BNB-R1-S3",
+        "BNB-R1-S4",
+        "BNB-R1-S5"
+      ]
+    },
+    {
+      "counter_evidence_found": [],
+      "hypothesis_id": "BNB-R1-H4",
+      "impact": "Limits confidence but does not create an accusatory finding.",
+      "queries": [
+        "BNB Multi-chain diversification reduces dependence on BSC-only activity. counter evidence",
+        "BNB governance concentration implementation status current",
+        "BNB source definition change historical contradiction"
+      ],
+      "remaining_uncertainty": "Evidence that usage and capital remain concentrated on one execution environment would weaken this.",
+      "search_question": "What evidence would make this false: Multi-chain diversification reduces dependence on BSC-only activity.",
+      "sources_checked": [
+        "BNB-R1-S1",
+        "BNB-R1-S2",
+        "BNB-R1-S3",
+        "BNB-R1-S4",
+        "BNB-R1-S5"
+      ]
+    },
+    {
+      "counter_evidence_found": [],
+      "hypothesis_id": "BNB-R1-H5",
+      "impact": "Limits confidence but does not create an accusatory finding.",
+      "queries": [
+        "BNB Ecosystem capital participation is asserted but not sufficiently observable from public sources. counter evidence",
+        "BNB governance concentration implementation status current",
+        "BNB source definition change historical contradiction"
+      ],
+      "remaining_uncertainty": "Independent capital-flow datasets could resolve this interpretation.",
+      "search_question": "What evidence would make this false: Ecosystem capital participation is asserted but not sufficiently observable from public sources.",
+      "sources_checked": [
+        "BNB-R1-S1",
+        "BNB-R1-S2",
+        "BNB-R1-S3",
+        "BNB-R1-S4",
+        "BNB-R1-S5"
+      ]
+    }
+  ],
+  "numerical_reconciliation": [
+    {
+      "computed_value": "33166127.91 BNB gap to target",
+      "formula": "remaining supply minus burn target",
+      "inputs": [
+        "133166127.91",
+        "100000000"
+      ],
+      "notes": "Calculation is structural evidence only; no market or investment inference is made.",
+      "reconciliation_id": "BNB-R1-N1",
+      "result": "RECONCILED",
+      "source_id": "BNB-R1-S1"
+    },
+    {
+      "computed_value": "45 active validators",
+      "formula": "cabinet validators plus candidate validators",
+      "inputs": [
+        "21",
+        "24"
+      ],
+      "notes": "Calculation is structural evidence only; no market or investment inference is made.",
+      "reconciliation_id": "BNB-R1-N2",
+      "result": "RECONCILED",
+      "source_id": "BNB-R1-S2"
+    },
+    {
+      "computed_value": "21 consensus validators",
+      "formula": "epoch consensus cabinet plus candidate selection",
+      "inputs": [
+        "18",
+        "3"
+      ],
+      "notes": "Calculation is structural evidence only; no market or investment inference is made.",
+      "reconciliation_id": "BNB-R1-N3",
+      "result": "RECONCILED",
+      "source_id": "BNB-R1-S2"
+    }
+  ],
+  "observation_registry": [
+    {
+      "artifact_id": "BNB-R1-A1",
+      "asset": "BNB",
+      "confidence": "MEDIUM_HIGH",
+      "dimension": "SUPPLY",
+      "effective_date": "2026-07-15",
+      "notes": "Observation text excludes final structural labels.",
+      "observation_id": "BNB-R1-O1",
+      "observation_type": "PUBLIC_FACT",
+      "source_id": "BNB-R1-S1",
+      "statement": "The 36th quarterly burn removed 1,615,827.795 BNB and reported remaining total supply of 133,166,127.91 BNB.",
+      "unit": "BNB",
+      "value": 1615827.795
+    },
+    {
+      "artifact_id": "BNB-R1-A1",
+      "asset": "BNB",
+      "confidence": "MEDIUM_HIGH",
+      "dimension": "SUPPLY",
+      "effective_date": "2026-07-15",
+      "notes": "Observation text excludes final structural labels.",
+      "observation_id": "BNB-R1-O2",
+      "observation_type": "PUBLIC_FACT",
+      "source_id": "BNB-R1-S1",
+      "statement": "The announced long-run burn target remains 100,000,000 BNB.",
+      "unit": "BNB",
+      "value": 100000000
+    },
+    {
+      "artifact_id": "BNB-R1-A1",
+      "asset": "BNB",
+      "confidence": "MEDIUM_HIGH",
+      "dimension": "SUPPLY",
+      "effective_date": "2026-07-15",
+      "notes": "Observation text excludes final structural labels.",
+      "observation_id": "BNB-R1-O3",
+      "observation_type": "PUBLIC_FACT",
+      "source_id": "BNB-R1-S1",
+      "statement": "BEP95 real-time gas-fee burning had removed roughly 291,000 BNB since introduction.",
+      "unit": "BNB",
+      "value": 291000
+    },
+    {
+      "artifact_id": "BNB-R1-A1",
+      "asset": "BNB",
+      "confidence": "MEDIUM",
+      "dimension": "NETWORK_USAGE",
+      "effective_date": "2026-07-15",
+      "notes": "Observation text excludes final structural labels.",
+      "observation_id": "BNB-R1-O4",
+      "observation_type": "PUBLIC_FACT",
+      "source_id": "BNB-R1-S1",
+      "statement": "BNB is described as the native coin for transaction fees across BSC, opBNB and BNB Greenfield contexts.",
+      "unit": null,
+      "value": null
+    },
+    {
+      "artifact_id": "BNB-R1-A2",
+      "asset": "BNB",
+      "confidence": "MEDIUM_HIGH",
+      "dimension": "VALIDATOR_STRUCTURE",
+      "effective_date": "2026-09-09",
+      "notes": "Observation text excludes final structural labels.",
+      "observation_id": "BNB-R1-O5",
+      "observation_type": "PUBLIC_FACT",
+      "source_id": "BNB-R1-S2",
+      "statement": "BSC selects the top 45 active validators by staking rank each daily election.",
+      "unit": "validators",
+      "value": 45
+    },
+    {
+      "artifact_id": "BNB-R1-A2",
+      "asset": "BNB",
+      "confidence": "MEDIUM",
+      "dimension": "VALIDATOR_STRUCTURE",
+      "effective_date": "2026-09-09",
+      "notes": "Observation text excludes final structural labels.",
+      "observation_id": "BNB-R1-O6",
+      "observation_type": "PUBLIC_FACT",
+      "source_id": "BNB-R1-S2",
+      "statement": "Within the 45 active validators, 21 are Cabinets and 24 are Candidates.",
+      "unit": null,
+      "value": null
+    },
+    {
+      "artifact_id": "BNB-R1-A2",
+      "asset": "BNB",
+      "confidence": "MEDIUM_HIGH",
+      "dimension": "VALIDATOR_STRUCTURE",
+      "effective_date": "2026-09-09",
+      "notes": "Observation text excludes final structural labels.",
+      "observation_id": "BNB-R1-O7",
+      "observation_type": "PUBLIC_FACT",
+      "source_id": "BNB-R1-S2",
+      "statement": "Each epoch selects 18 Cabinet validators and 3 Candidate validators into a 21-validator consensus set.",
+      "unit": "validators",
+      "value": 21
+    },
+    {
+      "artifact_id": "BNB-R1-A1",
+      "asset": "BNB",
+      "confidence": "MEDIUM",
+      "dimension": "GOVERNANCE_CONTROL",
+      "effective_date": "2026-07-15",
+      "notes": "Observation text excludes final structural labels.",
+      "observation_id": "BNB-R1-O8",
+      "observation_type": "PUBLIC_FACT",
+      "source_id": "BNB-R1-S1",
+      "statement": "BNB is described as participating in decentralized on-chain governance.",
+      "unit": null,
+      "value": null
+    },
+    {
+      "artifact_id": "BNB-R1-A4",
+      "asset": "BNB",
+      "confidence": "MEDIUM",
+      "dimension": "MULTICHAIN_DIVERSIFICATION",
+      "effective_date": "2026-09-09",
+      "notes": "Observation text excludes final structural labels.",
+      "observation_id": "BNB-R1-O9",
+      "observation_type": "PUBLIC_FACT",
+      "source_id": "BNB-R1-S4",
+      "statement": "opBNB is documented as a separate ecosystem component, creating a multi-chain dependence surface.",
+      "unit": null,
+      "value": null
+    }
+  ],
+  "research_question": "Is BNB structurally characterized by supply contraction with ecosystem utility, or is another mechanism more dominant?",
+  "source_dependency": {
+    "asset": "BNB",
+    "groups": [
+      {
+        "dependency_group": "BNB Chain Blog",
+        "source_ids": [
+          "BNB-R1-S1"
+        ]
+      },
+      {
+        "dependency_group": "BNB Chain Docs",
+        "source_ids": [
+          "BNB-R1-S2",
+          "BNB-R1-S3",
+          "BNB-R1-S4"
+        ]
+      },
+      {
+        "dependency_group": "BNB Chain",
+        "source_ids": [
+          "BNB-R1-S5"
+        ]
+      }
+    ],
+    "rule": "MULTIPLE_URLS_NOT_INDEPENDENT_SOURCES",
+    "source_coverage": "PARTIAL"
+  },
+  "withheld_from_reviewer": [
+    "primary structural state",
+    "primary evidence state",
+    "historical pilot state",
+    "website card"
+  ]
+}

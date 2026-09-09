@@ -1,0 +1,99 @@
+[
+  {
+    "counter_evidence_found": [],
+    "hypothesis_id": "XLM-R1-H1",
+    "impact": "Limits confidence but does not create an accusatory finding.",
+    "queries": [
+      "XLM SDF treasury deployment remains the dominant economic dependency. counter evidence",
+      "XLM governance concentration implementation status current",
+      "XLM source definition change historical contradiction"
+    ],
+    "remaining_uncertainty": "Independent network revenue or usage replacing treasury funding would weaken this.",
+    "search_question": "What evidence would make this false: SDF treasury deployment remains the dominant economic dependency.",
+    "sources_checked": [
+      "XLM-R1-S1",
+      "XLM-R1-S2",
+      "XLM-R1-S3",
+      "XLM-R1-S4",
+      "XLM-R1-S5"
+    ]
+  },
+  {
+    "counter_evidence_found": [],
+    "hypothesis_id": "XLM-R1-H2",
+    "impact": "Limits confidence but does not create an accusatory finding.",
+    "queries": [
+      "XLM Network activity is becoming less dependent on SDF treasury flows. counter evidence",
+      "XLM governance concentration implementation status current",
+      "XLM source definition change historical contradiction"
+    ],
+    "remaining_uncertainty": "Attribution showing usage depends on SDF incentives would weaken this.",
+    "search_question": "What evidence would make this false: Network activity is becoming less dependent on SDF treasury flows.",
+    "sources_checked": [
+      "XLM-R1-S1",
+      "XLM-R1-S2",
+      "XLM-R1-S3",
+      "XLM-R1-S4",
+      "XLM-R1-S5"
+    ]
+  },
+  {
+    "counter_evidence_found": [
+      "Evidence is insufficient to treat the stronger version of this hypothesis as established."
+    ],
+    "hypothesis_id": "XLM-R1-H3",
+    "impact": "Limits confidence but does not create an accusatory finding.",
+    "queries": [
+      "XLM Payments and RWA adoption dominate the structure more than treasury mechanics. counter evidence",
+      "XLM governance concentration implementation status current",
+      "XLM source definition change historical contradiction"
+    ],
+    "remaining_uncertainty": "Treasury-flow magnitudes remaining material relative to adoption would weaken this.",
+    "search_question": "What evidence would make this false: Payments and RWA adoption dominate the structure more than treasury mechanics.",
+    "sources_checked": [
+      "XLM-R1-S1",
+      "XLM-R1-S2",
+      "XLM-R1-S3",
+      "XLM-R1-S4",
+      "XLM-R1-S5"
+    ]
+  },
+  {
+    "counter_evidence_found": [],
+    "hypothesis_id": "XLM-R1-H4",
+    "impact": "Limits confidence but does not create an accusatory finding.",
+    "queries": [
+      "XLM Validator quorum composition is the primary structural constraint. counter evidence",
+      "XLM governance concentration implementation status current",
+      "XLM source definition change historical contradiction"
+    ],
+    "remaining_uncertainty": "Detailed independent quorum-set concentration data would be needed to resolve this.",
+    "search_question": "What evidence would make this false: Validator quorum composition is the primary structural constraint.",
+    "sources_checked": [
+      "XLM-R1-S1",
+      "XLM-R1-S2",
+      "XLM-R1-S3",
+      "XLM-R1-S4",
+      "XLM-R1-S5"
+    ]
+  },
+  {
+    "counter_evidence_found": [],
+    "hypothesis_id": "XLM-R1-H5",
+    "impact": "Limits confidence but does not create an accusatory finding.",
+    "queries": [
+      "XLM Foundation funding and payment-network mission jointly explain current structure. counter evidence",
+      "XLM governance concentration implementation status current",
+      "XLM source definition change historical contradiction"
+    ],
+    "remaining_uncertainty": "Self-sustaining network activity detached from SDF mandate funding would weaken this.",
+    "search_question": "What evidence would make this false: Foundation funding and payment-network mission jointly explain current structure.",
+    "sources_checked": [
+      "XLM-R1-S1",
+      "XLM-R1-S2",
+      "XLM-R1-S3",
+      "XLM-R1-S4",
+      "XLM-R1-S5"
+    ]
+  }
+]

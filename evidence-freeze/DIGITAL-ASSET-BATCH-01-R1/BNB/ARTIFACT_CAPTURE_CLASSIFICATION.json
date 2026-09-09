@@ -1,0 +1,52 @@
+[
+  {
+    "artifact_id": "BNB-R1-A1",
+    "capture_scope": "VERIFIED_EXTRACT",
+    "critical_evidence": true,
+    "metadata_only_reason": null,
+    "public_reference_status": "PUBLIC_URL",
+    "redistribution_status": "NO_FULL_COPY",
+    "rights_status": "PUBLIC_REFERENCE_ONLY",
+    "source_id": "BNB-R1-S1"
+  },
+  {
+    "artifact_id": "BNB-R1-A2",
+    "capture_scope": "VERIFIED_EXTRACT",
+    "critical_evidence": true,
+    "metadata_only_reason": null,
+    "public_reference_status": "PUBLIC_URL",
+    "redistribution_status": "NO_FULL_COPY",
+    "rights_status": "PUBLIC_REFERENCE_ONLY",
+    "source_id": "BNB-R1-S2"
+  },
+  {
+    "artifact_id": "BNB-R1-A3",
+    "capture_scope": "VERIFIED_EXTRACT",
+    "critical_evidence": true,
+    "metadata_only_reason": null,
+    "public_reference_status": "PUBLIC_URL",
+    "redistribution_status": "NO_FULL_COPY",
+    "rights_status": "PUBLIC_REFERENCE_ONLY",
+    "source_id": "BNB-R1-S3"
+  },
+  {
+    "artifact_id": "BNB-R1-A4",
+    "capture_scope": "VERIFIED_EXTRACT",
+    "critical_evidence": true,
+    "metadata_only_reason": null,
+    "public_reference_status": "PUBLIC_URL",
+    "redistribution_status": "NO_FULL_COPY",
+    "rights_status": "PUBLIC_REFERENCE_ONLY",
+    "source_id": "BNB-R1-S4"
+  },
+  {
+    "artifact_id": "BNB-R1-A5",
+    "capture_scope": "HASH_METADATA_ONLY",
+    "critical_evidence": true,
+    "metadata_only_reason": "Dynamic public page or redistribution boundary.",
+    "public_reference_status": "PUBLIC_URL",
+    "redistribution_status": "NO_FULL_COPY",
+    "rights_status": "PUBLIC_REFERENCE_ONLY",
+    "source_id": "BNB-R1-S5"
+  }
+]

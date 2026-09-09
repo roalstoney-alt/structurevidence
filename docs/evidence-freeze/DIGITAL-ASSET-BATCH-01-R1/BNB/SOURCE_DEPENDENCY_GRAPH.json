@@ -1,0 +1,27 @@
+{
+  "asset": "BNB",
+  "groups": [
+    {
+      "dependency_group": "BNB Chain Blog",
+      "source_ids": [
+        "BNB-R1-S1"
+      ]
+    },
+    {
+      "dependency_group": "BNB Chain Docs",
+      "source_ids": [
+        "BNB-R1-S2",
+        "BNB-R1-S3",
+        "BNB-R1-S4"
+      ]
+    },
+    {
+      "dependency_group": "BNB Chain",
+      "source_ids": [
+        "BNB-R1-S5"
+      ]
+    }
+  ],
+  "rule": "MULTIPLE_URLS_NOT_INDEPENDENT_SOURCES",
+  "source_coverage": "PARTIAL"
+}

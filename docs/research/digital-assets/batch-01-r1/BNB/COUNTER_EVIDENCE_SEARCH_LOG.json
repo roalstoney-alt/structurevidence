@@ -1,0 +1,99 @@
+[
+  {
+    "counter_evidence_found": [],
+    "hypothesis_id": "BNB-R1-H1",
+    "impact": "Limits confidence but does not create an accusatory finding.",
+    "queries": [
+      "BNB Burn mechanics and network utility jointly explain the current BNB structure. counter evidence",
+      "BNB governance concentration implementation status current",
+      "BNB source definition change historical contradiction"
+    ],
+    "remaining_uncertainty": "A chain-level usage collapse while burns continue mechanically would weaken this.",
+    "search_question": "What evidence would make this false: Burn mechanics and network utility jointly explain the current BNB structure.",
+    "sources_checked": [
+      "BNB-R1-S1",
+      "BNB-R1-S2",
+      "BNB-R1-S3",
+      "BNB-R1-S4",
+      "BNB-R1-S5"
+    ]
+  },
+  {
+    "counter_evidence_found": [
+      "Evidence is insufficient to treat the stronger version of this hypothesis as established."
+    ],
+    "hypothesis_id": "BNB-R1-H2",
+    "impact": "Limits confidence but does not create an accusatory finding.",
+    "queries": [
+      "BNB Supply engineering dominates, while utility evidence is secondary. counter evidence",
+      "BNB governance concentration implementation status current",
+      "BNB source definition change historical contradiction"
+    ],
+    "remaining_uncertainty": "Independent usage evidence showing broad fee and staking demand would weaken this.",
+    "search_question": "What evidence would make this false: Supply engineering dominates, while utility evidence is secondary.",
+    "sources_checked": [
+      "BNB-R1-S1",
+      "BNB-R1-S2",
+      "BNB-R1-S3",
+      "BNB-R1-S4",
+      "BNB-R1-S5"
+    ]
+  },
+  {
+    "counter_evidence_found": [],
+    "hypothesis_id": "BNB-R1-H3",
+    "impact": "Limits confidence but does not create an accusatory finding.",
+    "queries": [
+      "BNB Validator and governance concentration are the dominant constraint. counter evidence",
+      "BNB governance concentration implementation status current",
+      "BNB source definition change historical contradiction"
+    ],
+    "remaining_uncertainty": "Demonstrably dispersed validator control and stake source diversity would weaken this.",
+    "search_question": "What evidence would make this false: Validator and governance concentration are the dominant constraint.",
+    "sources_checked": [
+      "BNB-R1-S1",
+      "BNB-R1-S2",
+      "BNB-R1-S3",
+      "BNB-R1-S4",
+      "BNB-R1-S5"
+    ]
+  },
+  {
+    "counter_evidence_found": [],
+    "hypothesis_id": "BNB-R1-H4",
+    "impact": "Limits confidence but does not create an accusatory finding.",
+    "queries": [
+      "BNB Multi-chain diversification reduces dependence on BSC-only activity. counter evidence",
+      "BNB governance concentration implementation status current",
+      "BNB source definition change historical contradiction"
+    ],
+    "remaining_uncertainty": "Evidence that usage and capital remain concentrated on one execution environment would weaken this.",
+    "search_question": "What evidence would make this false: Multi-chain diversification reduces dependence on BSC-only activity.",
+    "sources_checked": [
+      "BNB-R1-S1",
+      "BNB-R1-S2",
+      "BNB-R1-S3",
+      "BNB-R1-S4",
+      "BNB-R1-S5"
+    ]
+  },
+  {
+    "counter_evidence_found": [],
+    "hypothesis_id": "BNB-R1-H5",
+    "impact": "Limits confidence but does not create an accusatory finding.",
+    "queries": [
+      "BNB Ecosystem capital participation is asserted but not sufficiently observable from public sources. counter evidence",
+      "BNB governance concentration implementation status current",
+      "BNB source definition change historical contradiction"
+    ],
+    "remaining_uncertainty": "Independent capital-flow datasets could resolve this interpretation.",
+    "search_question": "What evidence would make this false: Ecosystem capital participation is asserted but not sufficiently observable from public sources.",
+    "sources_checked": [
+      "BNB-R1-S1",
+      "BNB-R1-S2",
+      "BNB-R1-S3",
+      "BNB-R1-S4",
+      "BNB-R1-S5"
+    ]
+  }
+]

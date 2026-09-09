@@ -1,0 +1,256 @@
+{
+  "artifact_coverage": {
+    "critical_evidence_metadata_only_rate": "0%",
+    "reproducibility_limitation": "LOW"
+  },
+  "asset": "SOL",
+  "counter_evidence": [
+    {
+      "counter_evidence_found": [
+        "Evidence is insufficient to treat the stronger version of this hypothesis as established."
+      ],
+      "hypothesis_id": "SOL-R1-H1",
+      "impact": "Limits confidence but does not create an accusatory finding.",
+      "queries": [
+        "SOL Execution scale and client-diversity work jointly define the current structure. counter evidence",
+        "SOL governance concentration implementation status current",
+        "SOL source definition change historical contradiction"
+      ],
+      "remaining_uncertainty": "Production client shares remaining concentrated would weaken this.",
+      "search_question": "What evidence would make this false: Execution scale and client-diversity work jointly define the current structure.",
+      "sources_checked": [
+        "SOL-R1-S1",
+        "SOL-R1-S2",
+        "SOL-R1-S3",
+        "SOL-R1-S4",
+        "SOL-R1-S5"
+      ]
+    },
+    {
+      "counter_evidence_found": [],
+      "hypothesis_id": "SOL-R1-H2",
+      "impact": "Limits confidence but does not create an accusatory finding.",
+      "queries": [
+        "SOL Throughput and fee architecture are primary; resilience improvement is not yet established. counter evidence",
+        "SOL governance concentration implementation status current",
+        "SOL source definition change historical contradiction"
+      ],
+      "remaining_uncertainty": "Independent production data showing meaningful non-Agave voting stake would weaken this.",
+      "search_question": "What evidence would make this false: Throughput and fee architecture are primary; resilience improvement is not yet established.",
+      "sources_checked": [
+        "SOL-R1-S1",
+        "SOL-R1-S2",
+        "SOL-R1-S3",
+        "SOL-R1-S4",
+        "SOL-R1-S5"
+      ]
+    },
+    {
+      "counter_evidence_found": [],
+      "hypothesis_id": "SOL-R1-H3",
+      "impact": "Limits confidence but does not create an accusatory finding.",
+      "queries": [
+        "SOL Validator and stake distribution constraints dominate the structural reading. counter evidence",
+        "SOL governance concentration implementation status current",
+        "SOL source definition change historical contradiction"
+      ],
+      "remaining_uncertainty": "Sustained geographic and stake-source dispersion could weaken this.",
+      "search_question": "What evidence would make this false: Validator and stake distribution constraints dominate the structural reading.",
+      "sources_checked": [
+        "SOL-R1-S1",
+        "SOL-R1-S2",
+        "SOL-R1-S3",
+        "SOL-R1-S4",
+        "SOL-R1-S5"
+      ]
+    },
+    {
+      "counter_evidence_found": [],
+      "hypothesis_id": "SOL-R1-H4",
+      "impact": "Limits confidence but does not create an accusatory finding.",
+      "queries": [
+        "SOL Client diversity is mostly implementation-transition evidence, not completed structural reality. counter evidence",
+        "SOL governance concentration implementation status current",
+        "SOL source definition change historical contradiction"
+      ],
+      "remaining_uncertainty": "Multiple production clients with material voting stake would falsify this.",
+      "search_question": "What evidence would make this false: Client diversity is mostly implementation-transition evidence, not completed structural reality.",
+      "sources_checked": [
+        "SOL-R1-S1",
+        "SOL-R1-S2",
+        "SOL-R1-S3",
+        "SOL-R1-S4",
+        "SOL-R1-S5"
+      ]
+    },
+    {
+      "counter_evidence_found": [],
+      "hypothesis_id": "SOL-R1-H5",
+      "impact": "Limits confidence but does not create an accusatory finding.",
+      "queries": [
+        "SOL Capital and application usage growth matter more than execution architecture. counter evidence",
+        "SOL governance concentration implementation status current",
+        "SOL source definition change historical contradiction"
+      ],
+      "remaining_uncertainty": "Evidence that client failures dominate application outcomes would weaken this.",
+      "search_question": "What evidence would make this false: Capital and application usage growth matter more than execution architecture.",
+      "sources_checked": [
+        "SOL-R1-S1",
+        "SOL-R1-S2",
+        "SOL-R1-S3",
+        "SOL-R1-S4",
+        "SOL-R1-S5"
+      ]
+    }
+  ],
+  "decision_usefulness": "NOT_ESTABLISHED",
+  "evidence_agreement": "STRONG_AGREEMENT",
+  "evidence_state_final": "POTENTIAL_CONFLICT",
+  "evidence_state_primary": "POTENTIAL_CONFLICT",
+  "evidence_state_reviewer": "POTENTIAL_CONFLICT",
+  "hypotheses": [
+    {
+      "critical_assumption": "Public source definitions remain applicable during the observation window.",
+      "description": "Execution scale and client-diversity work jointly define the current structure.",
+      "discriminating_evidence_needed": "Independent longitudinal evidence for the specific disputed mechanism.",
+      "hypothesis_id": "SOL-R1-H1",
+      "observed_contradicting_evidence": [],
+      "potential_falsifier": "Production client shares remaining concentrated would weaken this.",
+      "source_dependency": "Official and primary data sources dominate; independence is not inflated.",
+      "status": "WEAKENED",
+      "status_reason": "Status derived from observation fit and targeted counter-evidence limits.",
+      "supporting_evidence": [
+        "SOL-R1-O1",
+        "SOL-R1-O7",
+        "SOL-R1-O8"
+      ]
+    },
+    {
+      "critical_assumption": "Public source definitions remain applicable during the observation window.",
+      "description": "Throughput and fee architecture are primary; resilience improvement is not yet established.",
+      "discriminating_evidence_needed": "Independent longitudinal evidence for the specific disputed mechanism.",
+      "hypothesis_id": "SOL-R1-H2",
+      "observed_contradicting_evidence": [],
+      "potential_falsifier": "Independent production data showing meaningful non-Agave voting stake would weaken this.",
+      "source_dependency": "Official and primary data sources dominate; independence is not inflated.",
+      "status": "VIABLE",
+      "status_reason": "Status derived from observation fit and targeted counter-evidence limits.",
+      "supporting_evidence": [
+        "SOL-R1-O1",
+        "SOL-R1-O7",
+        "SOL-R1-O8"
+      ]
+    },
+    {
+      "critical_assumption": "Public source definitions remain applicable during the observation window.",
+      "description": "Validator and stake distribution constraints dominate the structural reading.",
+      "discriminating_evidence_needed": "Independent longitudinal evidence for the specific disputed mechanism.",
+      "hypothesis_id": "SOL-R1-H3",
+      "observed_contradicting_evidence": [],
+      "potential_falsifier": "Sustained geographic and stake-source dispersion could weaken this.",
+      "source_dependency": "Official and primary data sources dominate; independence is not inflated.",
+      "status": "VIABLE",
+      "status_reason": "Status derived from observation fit and targeted counter-evidence limits.",
+      "supporting_evidence": [
+        "SOL-R1-O4",
+        "SOL-R1-O5",
+        "SOL-R1-O6"
+      ]
+    },
+    {
+      "critical_assumption": "Public source definitions remain applicable during the observation window.",
+      "description": "Client diversity is mostly implementation-transition evidence, not completed structural reality.",
+      "discriminating_evidence_needed": "Independent longitudinal evidence for the specific disputed mechanism.",
+      "hypothesis_id": "SOL-R1-H4",
+      "observed_contradicting_evidence": [],
+      "potential_falsifier": "Multiple production clients with material voting stake would falsify this.",
+      "source_dependency": "Official and primary data sources dominate; independence is not inflated.",
+      "status": "VIABLE",
+      "status_reason": "Status derived from observation fit and targeted counter-evidence limits.",
+      "supporting_evidence": [
+        "SOL-R1-O7",
+        "SOL-R1-O8"
+      ]
+    },
+    {
+      "critical_assumption": "Public source definitions remain applicable during the observation window.",
+      "description": "Capital and application usage growth matter more than execution architecture.",
+      "discriminating_evidence_needed": "Independent longitudinal evidence for the specific disputed mechanism.",
+      "hypothesis_id": "SOL-R1-H5",
+      "observed_contradicting_evidence": [],
+      "potential_falsifier": "Evidence that client failures dominate application outcomes would weaken this.",
+      "source_dependency": "Official and primary data sources dominate; independence is not inflated.",
+      "status": "UNRESOLVED",
+      "status_reason": "Status derived from observation fit and targeted counter-evidence limits.",
+      "supporting_evidence": [
+        "SOL-R1-O2",
+        "SOL-R1-O5"
+      ]
+    }
+  ],
+  "last_reviewed": "2026-09-09",
+  "material_inconsistency": "NO",
+  "method_version": "BATCH01_R1_v1.0",
+  "numerical_reconciliations": [
+    {
+      "computed_value": "2500 lamports burned",
+      "formula": "base fee burned share",
+      "inputs": [
+        "5000",
+        "0.5"
+      ],
+      "notes": "Calculation is structural evidence only; no market or investment inference is made.",
+      "reconciliation_id": "SOL-R1-N1",
+      "result": "RECONCILED",
+      "source_id": "SOL-R1-S1"
+    },
+    {
+      "computed_value": "2500 lamports paid to validator",
+      "formula": "base fee validator share",
+      "inputs": [
+        "5000",
+        "0.5"
+      ],
+      "notes": "Calculation is structural evidence only; no market or investment inference is made.",
+      "reconciliation_id": "SOL-R1-N2",
+      "result": "RECONCILED",
+      "source_id": "SOL-R1-S1"
+    },
+    {
+      "computed_value": "472000000 SOL implied total staked",
+      "formula": "implied total staked SOL from SFDP share",
+      "inputs": [
+        "23600000",
+        "0.05"
+      ],
+      "notes": "Calculation is structural evidence only; no market or investment inference is made.",
+      "reconciliation_id": "SOL-R1-N3",
+      "result": "RECONCILED",
+      "source_id": "SOL-R1-S3"
+    }
+  ],
+  "observation_window": {
+    "basis": "current public evidence plus dated historical artifacts",
+    "retrieved": "2026-09-09"
+  },
+  "open_questions": [
+    "independent replication",
+    "longitudinal durability",
+    "definition stability"
+  ],
+  "publication_status": "R1 RESEARCH SUPPORT",
+  "research_id": "SE.ASSET.SOL.2026.001-R1",
+  "scientific_derivation_support": "PASS",
+  "source_coverage": "PARTIAL",
+  "structural_agreement": "PARTIAL_AGREEMENT",
+  "structural_state_final": "EXECUTION_SCALE_WITH_PARTIAL_CLIENT_DIVERSITY",
+  "structural_state_primary": "EXECUTION_SCALE_WITH_PARTIAL_CLIENT_DIVERSITY",
+  "structural_state_reviewer": "EXECUTION_SCALE_WITH_UNPROVEN_CLIENT_DIVERSITY",
+  "summary": "R1 narrows SOL from a broad performance-plus-diversification claim to an execution-scale regime where client diversification is visible but not fully established as production resilience.",
+  "supersession_status": "REFINED",
+  "what_would_change_conclusion": [
+    "independent contradictory data",
+    "failed arithmetic reconciliation",
+    "material source definition change"
+  ]
+}

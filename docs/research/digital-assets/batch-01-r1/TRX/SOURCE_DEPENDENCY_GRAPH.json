@@ -1,0 +1,27 @@
+{
+  "asset": "TRX",
+  "groups": [
+    {
+      "dependency_group": "TRON Developers",
+      "source_ids": [
+        "TRX-R1-S1",
+        "TRX-R1-S2",
+        "TRX-R1-S3"
+      ]
+    },
+    {
+      "dependency_group": "TRONSCAN",
+      "source_ids": [
+        "TRX-R1-S4"
+      ]
+    },
+    {
+      "dependency_group": "TRONSCAN Docs",
+      "source_ids": [
+        "TRX-R1-S5"
+      ]
+    }
+  ],
+  "rule": "MULTIPLE_URLS_NOT_INDEPENDENT_SOURCES",
+  "source_coverage": "PARTIAL"
+}

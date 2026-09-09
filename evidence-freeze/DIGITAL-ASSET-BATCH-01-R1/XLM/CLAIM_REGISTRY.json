@@ -1,0 +1,41 @@
+[
+  {
+    "artifact_id": "XLM-R1-A1",
+    "claim_date": "2026-09-04",
+    "claim_id": "XLM-R1-C1",
+    "claim_text_normalized": "SDF sells XLM to pay operational expenses and support mandate work.",
+    "scope": "treasury funding",
+    "semantic_tags": [
+      "treasury",
+      "sales"
+    ],
+    "source_id": "XLM-R1-S1",
+    "speaker": "SDF"
+  },
+  {
+    "artifact_id": "XLM-R1-A2",
+    "claim_date": "2026-07-21",
+    "claim_id": "XLM-R1-C2",
+    "claim_text_normalized": "The Dashboard API gives live totals for supply metrics.",
+    "scope": "supply",
+    "semantic_tags": [
+      "supply",
+      "api"
+    ],
+    "source_id": "XLM-R1-S2",
+    "speaker": "Stellar Docs"
+  },
+  {
+    "artifact_id": "XLM-R1-A3",
+    "claim_date": "2026-09-08",
+    "claim_id": "XLM-R1-C3",
+    "claim_text_normalized": "Validators in Stellar participate through SCP quorum sets.",
+    "scope": "consensus",
+    "semantic_tags": [
+      "validator",
+      "quorum"
+    ],
+    "source_id": "XLM-R1-S3",
+    "speaker": "Stellar Docs"
+  }
+]

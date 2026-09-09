@@ -1,0 +1,72 @@
+[
+  {
+    "artifact_id": "XLM-R1-A1",
+    "capture_classification": "VERIFIED_EXTRACT",
+    "dependency_group": "Stellar Development Foundation",
+    "note": "SDF mandate balances, treasury sales and use-of-funds disclosures.",
+    "public_reference_status": "PUBLIC_URL",
+    "publisher": "Stellar Development Foundation",
+    "redistribution_status": "NO_FULL_COPY",
+    "retrieval_date": "2026-09-09",
+    "rights_status": "PUBLIC_REFERENCE_ONLY",
+    "source_id": "XLM-R1-S1",
+    "source_type": "OFFICIAL",
+    "source_url": "https://stellar.org/foundation/mandate"
+  },
+  {
+    "artifact_id": "XLM-R1-A2",
+    "capture_classification": "STRUCTURED_API_RESPONSE",
+    "dependency_group": "Stellar Docs",
+    "note": "Supply metrics and dashboard API values.",
+    "public_reference_status": "PUBLIC_URL",
+    "publisher": "Stellar Docs",
+    "redistribution_status": "NO_FULL_COPY",
+    "retrieval_date": "2026-09-09",
+    "rights_status": "PUBLIC_REFERENCE_ONLY",
+    "source_id": "XLM-R1-S2",
+    "source_type": "OFFICIAL",
+    "source_url": "https://developers.stellar.org/docs/learn/fundamentals/lumens"
+  },
+  {
+    "artifact_id": "XLM-R1-A3",
+    "capture_classification": "VERIFIED_EXTRACT",
+    "dependency_group": "Stellar Docs",
+    "note": "Validator role and participation model.",
+    "public_reference_status": "PUBLIC_URL",
+    "publisher": "Stellar Docs",
+    "redistribution_status": "NO_FULL_COPY",
+    "retrieval_date": "2026-09-09",
+    "rights_status": "PUBLIC_REFERENCE_ONLY",
+    "source_id": "XLM-R1-S3",
+    "source_type": "OFFICIAL",
+    "source_url": "https://developers.stellar.org/docs/validators"
+  },
+  {
+    "artifact_id": "XLM-R1-A4",
+    "capture_classification": "VERIFIED_EXTRACT",
+    "dependency_group": "Stellar Docs",
+    "note": "SCP and quorum-set dependency model.",
+    "public_reference_status": "PUBLIC_URL",
+    "publisher": "Stellar Docs",
+    "redistribution_status": "NO_FULL_COPY",
+    "retrieval_date": "2026-09-09",
+    "rights_status": "PUBLIC_REFERENCE_ONLY",
+    "source_id": "XLM-R1-S4",
+    "source_type": "OFFICIAL",
+    "source_url": "https://developers.stellar.org/docs/learn/fundamentals/stellar-consensus-protocol"
+  },
+  {
+    "artifact_id": "XLM-R1-A5",
+    "capture_classification": "VERIFIED_EXTRACT",
+    "dependency_group": "Stellar Development Foundation",
+    "note": "Payments/RWA activity context.",
+    "public_reference_status": "PUBLIC_URL",
+    "publisher": "Stellar Development Foundation",
+    "redistribution_status": "NO_FULL_COPY",
+    "retrieval_date": "2026-09-09",
+    "rights_status": "PUBLIC_REFERENCE_ONLY",
+    "source_id": "XLM-R1-S5",
+    "source_type": "OFFICIAL_CONTEXT",
+    "source_url": "https://stellar.org/blog/foundation-news/q2-2026-what-stellar-was-built-for-has-arrived"
+  }
+]
