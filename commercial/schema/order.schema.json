@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "created_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "customer_email": {
+      "format": "email",
+      "type": "string"
+    },
+    "entity_id": {
+      "type": "string"
+    },
+    "fulfillment_status": {
+      "enum": [
+        "NOT_STARTED",
+        "QUEUED",
+        "DELIVERED",
+        "CANCELED",
+        "FAILED"
+      ]
+    },
+    "order_id": {
+      "type": "string"
+    },
+    "payment_status": {
+      "enum": [
+        "PENDING",
+        "PAID",
+        "FAILED",
+        "REFUNDED",
+        "CANCELED"
+      ]
+    },
+    "product_id": {
+      "type": "string"
+    },
+    "report_version": {
+      "type": "string"
+    },
+    "verification_id": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "order_id",
+    "created_at",
+    "product_id",
+    "entity_id",
+    "customer_email",
+    "payment_status",
+    "fulfillment_status",
+    "report_version",
+    "verification_id"
+  ],
+  "title": "StructEvidence Order",
+  "type": "object"
+}

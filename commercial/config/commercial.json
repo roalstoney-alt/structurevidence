@@ -1,0 +1,12 @@
+{
+  "blocked_reason": "Seller identity, public contact addresses, price configuration and payment provider are not configured.",
+  "commercial_launch_gate": "BLOCKED",
+  "commercial_status": "EARLY_ACCESS",
+  "custom_audit_enabled": true,
+  "gdr_gate_enabled": false,
+  "mos_context_enabled": false,
+  "paid_report_enabled": false,
+  "payment_enabled": false,
+  "search_demand_logging": false,
+  "structural_delta_enabled": false
+}

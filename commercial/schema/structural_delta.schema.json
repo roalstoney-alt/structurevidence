@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "as_of": {
+      "type": "string"
+    },
+    "change_magnitude": {
+      "enum": [
+        "NONE",
+        "LOW",
+        "MODERATE",
+        "MATERIAL",
+        "UNRESOLVED"
+      ]
+    },
+    "changed_dimensions": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "current_state": {
+      "type": "string"
+    },
+    "entity_id": {
+      "type": "string"
+    },
+    "evidence_change": {
+      "type": "string"
+    },
+    "new_evidence": {
+      "type": "array"
+    },
+    "previous_state": {
+      "type": "string"
+    },
+    "removed_evidence": {
+      "type": "array"
+    },
+    "revised_evidence": {
+      "type": "array"
+    },
+    "what_could_reverse": {
+      "type": "string"
+    },
+    "why_changed": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "entity_id",
+    "previous_state",
+    "current_state",
+    "changed_dimensions",
+    "new_evidence",
+    "revised_evidence",
+    "removed_evidence",
+    "change_magnitude",
+    "evidence_change",
+    "why_changed",
+    "what_could_reverse",
+    "as_of"
+  ],
+  "title": "StructEvidence Structural Delta",
+  "type": "object"
+}

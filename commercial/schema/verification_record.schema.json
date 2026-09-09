@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "artifact_classes": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "correction_status": {
+      "type": "string"
+    },
+    "last_reviewed": {
+      "type": "string"
+    },
+    "manifest_hash": {
+      "type": "string"
+    },
+    "method_version": {
+      "type": "string"
+    },
+    "observation_window": {
+      "type": "string"
+    },
+    "publication_timestamp": {
+      "type": "string"
+    },
+    "report_id": {
+      "type": "string"
+    },
+    "report_version": {
+      "type": "string"
+    },
+    "research_id": {
+      "type": "string"
+    },
+    "source_count": {
+      "type": "integer"
+    },
+    "source_dependency_groups": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "supersession_status": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "research_id",
+    "report_id",
+    "report_version",
+    "method_version",
+    "observation_window",
+    "last_reviewed",
+    "source_count",
+    "source_dependency_groups",
+    "artifact_classes",
+    "manifest_hash",
+    "publication_timestamp",
+    "correction_status",
+    "supersession_status"
+  ],
+  "title": "StructEvidence Verification Record",
+  "type": "object"
+}

@@ -1,0 +1,33 @@
+{
+  "ECL": {
+    "commercial_role": "EVIDENCE_ANALYSIS_INPUT",
+    "public_claim": true,
+    "status": "VALIDATED_FOR_RESEARCH"
+  },
+  "GDR": {
+    "commercial_role": "RESERVED_NOT_CONNECTED",
+    "public_claim": false,
+    "status": "UNKNOWN"
+  },
+  "MDL": {
+    "commercial_role": "STRUCTURAL_ANALYSIS_INPUT",
+    "public_claim": true,
+    "status": "VALIDATED_FOR_RESEARCH"
+  },
+  "MOS": {
+    "commercial_role": "MARKET_CONTEXT_ONLY",
+    "public_claim": false,
+    "status": "UNKNOWN"
+  },
+  "PFR": {
+    "commercial_role": "RESERVED_NOT_CONNECTED",
+    "public_claim": false,
+    "status": "UNKNOWN"
+  },
+  "RTP": {
+    "commercial_role": "PROVENANCE_RECORD",
+    "public_claim": true,
+    "status": "VALIDATED_FOR_RESEARCH"
+  },
+  "law": "TOOL OUTPUT != PUBLISHED FINDING"
+}

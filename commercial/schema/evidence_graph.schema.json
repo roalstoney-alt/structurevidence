@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "edges": {
+      "items": {
+        "properties": {
+          "from": {
+            "type": "string"
+          },
+          "to": {
+            "type": "string"
+          },
+          "type": {
+            "enum": [
+              "SUPPORTS",
+              "CONTRADICTS",
+              "DERIVED_FROM",
+              "RECONCILES_WITH",
+              "DEPENDS_ON",
+              "FALSIFIES",
+              "SUPERSEDES"
+            ]
+          }
+        },
+        "required": [
+          "from",
+          "to",
+          "type"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "graph_id": {
+      "type": "string"
+    },
+    "nodes": {
+      "items": {
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "type": {
+            "enum": [
+              "SOURCE",
+              "ARTIFACT",
+              "CLAIM",
+              "OBSERVATION",
+              "CALCULATION",
+              "HYPOTHESIS",
+              "COUNTER_EVIDENCE",
+              "FALSIFIER",
+              "STRUCTURAL_FINDING",
+              "EVIDENCE_FINDING"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "type"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "graph_id",
+    "nodes",
+    "edges"
+  ],
+  "title": "StructEvidence Evidence Graph",
+  "type": "object"
+}

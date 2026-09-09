@@ -3,98 +3,62 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>StructEvidence - Structural &amp; Evidence Intelligence - StructEvidence</title>
-  <meta name="description" content="Search digital assets, treasuries, protocols and institutions to inspect published structural states and public-evidence findings.">
+  <title>StructEvidence - StructEvidence</title>
+  <meta name="description" content="Search covered entities and request deeper verified structural and evidence research.">
   <link rel="canonical" href="https://structurevidence.org/">
-  <meta property="og:title" content="StructEvidence - Structural &amp; Evidence Intelligence - StructEvidence">
-  <meta property="og:description" content="Search digital assets, treasuries, protocols and institutions to inspect published structural states and public-evidence findings.">
+  <meta property="og:title" content="StructEvidence - StructEvidence">
+  <meta property="og:description" content="Search covered entities and request deeper verified structural and evidence research.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://structurevidence.org/">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-
 <header class="site-header">
   <div class="nav-wrap">
-    <a class="brand" href="index.html" aria-label="StructEvidence home">
-      <span class="brand-mark">SE</span><span>StructEvidence</span>
-    </a>
+    <a class="brand" href="index.html" aria-label="StructEvidence home"><span class="brand-mark">SE</span><span>StructEvidence</span></a>
     <button class="nav-toggle" data-nav-toggle aria-controls="nav" aria-expanded="false">Menu</button>
-    <nav class="nav" id="nav" aria-label="Main navigation"><a href="index.html#search">Search</a><a href="research.html">Research</a><a href="standard.html">Standard</a><a href="about.html">About</a><a href="enterprise.html" class="enterprise-link">Enterprise Access</a></nav>
+    <nav class="nav" id="nav" aria-label="Main navigation"><a href="index.html#search">Search</a><a href="reports.html">Reports</a><a href="research.html">Research</a><a href="standard.html">Standard</a><a href="verify.html">Verify</a><a href="enterprise.html" class="enterprise-link">Enterprise</a></nav>
   </div>
 </header>
+<main>
 
-  <main>
 <section class="search-hero" id="search">
   <div class="hero-copy">
     <p class="eyebrow">StructEvidence</p>
-    <h1>Verifiable Structural & Evidence Intelligence for Digital Assets.</h1>
-    <p class="lead">Search an asset, protocol, treasury or institution to inspect its latest structural state and public-evidence status.</p>
+    <h1>Verifiable Structural &amp; Evidence Intelligence for Digital Assets.</h1>
+    <p class="lead">Search an asset or entity to see its current structural and evidence state. Unlock the full research chain when deeper verification is required.</p>
+    <p class="microcopy">Current public coverage: MSTR · BNB · SOL · TRX · XLM</p>
   </div>
   <form class="search-box" data-entity-search role="search">
     <label for="entity-search">Search entity coverage</label>
     <div class="search-row">
-      <input id="entity-search" name="q" type="search" autocomplete="off" placeholder="Search MSTR, BNB, SOL, TRX, XLM, Tether, USDT..." aria-describedby="search-note">
+      <input id="entity-search" name="q" type="search" autocomplete="off" placeholder="Search MSTR, BNB, SOL, TRX, XLM..." aria-describedby="search-note">
       <button class="button primary" type="submit">Search</button>
     </div>
-    <p id="search-note" class="microcopy">Coverage count: 5 covered entities. Decision usefulness not established. SOL demonstrates visible POTENTIAL_CONFLICT handling.</p>
+    <p id="search-note" class="microcopy">Free Scan shows a limited public summary. Verified Reports are available by early-access request while checkout is not enabled.</p>
   </form>
   <div class="search-result-region" data-search-results aria-live="polite"></div>
-  <template id="covered-result-template" data-legacy-template>
-    <article class="health-card">
-      <div class="result-topline"><span>Structural & Evidence Research Record</span><span>NOT A SCORE OR RANKING</span></div>
-      <div class="result-heading"><div><h2>Strategy Inc.</h2><p>NASDAQ: MSTR / Corporate Digital Asset Treasury</p></div><button class="button subtle" type="button" data-reset-search>New Search</button></div>
-      <div class="health-fields">
-        <div><span>STRUCTURAL STATE</span><strong><code>HYBRID_ACCUMULATION_MONETIZATION</code></strong></div>
-        <div><span>EVIDENCE STATE</span><strong><code>SEMANTIC_TENSION_BUT_RECONCILABLE</code></strong></div>
-        <div><span>MATERIAL INCONSISTENCY</span><strong class="ok">NO</strong></div>
-        <div><span>SOURCE COVERAGE</span><strong class="partial">PARTIAL</strong></div>
-        <div><span>LAST REVIEWED</span><strong>2026-09-08</strong></div>
-      </div>
-      <p>Strategy's capital architecture combines Bitcoin accumulation, monetization, USD liquidity reserves and multi-layer financing. Current public evidence contains semantic tension but no material inconsistency after normalization.</p>
-      <div class="actions compact"><a class="button primary" href="strategy-2026.html">View Research Record</a><a class="button" href="research.html">Read Research</a><a class="button" href="evidence.html">Inspect Evidence</a><a class="button" href="research/PUBLICATION_PACKAGE_MANIFEST.json">Download Source</a></div>
-    </article>
-  </template>
-  <template id="uncovered-result-template">
-    <article class="health-card uncovered">
-      <div class="result-heading"><div><h2>Not Yet Covered</h2><p>No current StructEvidence research record exists for this entity.</p></div><button class="button subtle" type="button" data-reset-search>New Search</button></div>
-      <p>Request a scoped Structural & Evidence Audit. We confirm evidence availability, scope and expected delivery before work begins.</p>
-      <div class="actions compact"><a class="button primary" href="enterprise.html">Request Custom Audit</a><a class="button" href="standard.html">Inspect Standard</a></div>
-    </article>
-  </template>
-  <template id="blank-result-template">
-    <article class="health-card uncovered">
-      <div class="result-heading"><div><h2>Enter an asset, protocol, treasury or institution.</h2><p>Search supports tickers, entity names, protocol names, asset names and known aliases.</p></div></div>
-    </article>
-  </template>
+  <template id="blank-result-template"><article class="health-card uncovered"><div class="result-heading"><div><h2>Enter an asset, protocol, treasury or institution.</h2><p>Search supports covered tickers and known aliases.</p></div></div></article></template>
+  <template id="uncovered-result-template"><article class="health-card uncovered"><div class="result-heading"><div><h2>Not Yet Covered</h2><p>No current StructEvidence research record exists for this entity.</p></div><button class="button subtle" type="button" data-reset-search>New Search</button></div><p>Request a scoped Structural &amp; Evidence Audit. Evidence availability and delivery scope are confirmed before work begins.</p><div class="actions compact"><a class="button primary" href="enterprise.html">Request Scope</a><a class="button" href="research-scope.html">Research Scope</a></div></article></template>
 </section>
-<section class="coverage-index">
-  <h2>Covered Entities</h2>
-  <p>Coverage is 5 entities; decision usefulness is not established. SOL is featured as the conflict demonstration case.</p>
-  <p><a href="digital-assets.html">Digital Assets</a> | <a href="verify-r1.html">Human Verify</a> | <a href="research/digital-assets/batch-01-r1/REFINEMENT_TABLE.html">R1 Refinement Table</a></p>
-  <div class="table-wrap"><table><thead><tr><th>Entity</th><th>Structural State</th><th>Evidence State</th><th>Research Status</th><th>Decision Usefulness</th></tr></thead><tbody><tr><td><a href="strategy-2026.html">Strategy</a></td><td>HYBRID_ACCUMULATION_MONETIZATION</td><td>SEMANTIC_TENSION_BUT_RECONCILABLE</td><td>Existing publication</td><td>NOT_ESTABLISHED</td></tr><tr><td><a href="bnb.html">BNB</a></td><td>BURN_LINKED_ECOSYSTEM_UTILITY_REGIME</td><td>TEMPORAL_CHANGE</td><td>R1 RESEARCH SUPPORT</td><td>NOT_ESTABLISHED</td></tr><tr><td><a href="sol.html">SOL</a></td><td>EXECUTION_SCALE_WITH_PARTIAL_CLIENT_DIVERSITY</td><td>POTENTIAL_CONFLICT</td><td>R1 RESEARCH SUPPORT</td><td>NOT_ESTABLISHED</td></tr><tr><td><a href="trx.html">TRX</a></td><td>STABLECOIN_RESOURCE_SETTLEMENT_REGIME</td><td>TEMPORAL_CHANGE</td><td>R1 RESEARCH SUPPORT</td><td>NOT_ESTABLISHED</td></tr><tr><td><a href="xlm.html">XLM</a></td><td>SDF_TREASURY_DEPENDENT_PAYMENT_NETWORK</td><td>TEMPORAL_CHANGE</td><td>R1 RESEARCH SUPPORT</td><td>NOT_ESTABLISHED</td></tr></tbody></table></div>
-</section>
-<section class="deliverables">
-  <div class="compact-card"><h2>Structural State</h2><p>What is changing in the underlying system?</p></div>
-  <div class="compact-card"><h2>Evidence State</h2><p>Do the public claims and observations reconcile?</p></div>
-  <div class="compact-card"><h2>Research Chain</h2><p>Can the finding be inspected back to method, evidence and provenance?</p></div>
-</section>
-<section class="enterprise-cta">
-  <div>
-    <p class="eyebrow">Enterprise / Custom Audit</p>
-    <h2>Need coverage for an entity we do not currently monitor?</h2>
-    <p>Request a scoped Structural & Evidence Audit. We confirm evidence availability, scope and expected delivery before work begins.</p>
+<section>
+  <h2>What You Get</h2>
+  <div class="offering-grid">
+    <article class="offering-card"><h3>Free Scan</h3><p>Structural state, evidence state, source coverage, last review, three key observations, one limitation and one open question.</p></article>
+    <article class="offering-card"><h3>Verified Research Report</h3><p>Full structural analysis, evidence analysis, source dependency, ACH, counter-evidence, evidence gaps, provenance and verification record.</p></article>
+    <article class="offering-card"><h3>Custom Audit</h3><p>Scoped research for uncovered entities or custom questions, subject to evidence availability and manual acceptance.</p></article>
   </div>
-  <div class="actions"><a class="button primary" href="enterprise.html">Request Custom Audit</a><a class="button" href="enterprise.html">Enterprise Research</a><a class="button" href="data.html">Data Partnership</a></div>
 </section>
+<section class="enterprise-cta"><div><p class="eyebrow">Reports</p><h2>Need the complete research chain?</h2><p>Commercial V0.9 is early access. Pricing and checkout are configured only after seller, contact and payment gates are complete.</p></div><div class="actions"><a class="button primary" href="reports.html">Request Early Access</a><a class="button" href="sample-report.html">Open Sample</a></div></section>
+<section class="enterprise-cta"><div><p class="eyebrow">Enterprise</p><h2>Need research for an uncovered entity?</h2><p>Custom audits start with scope confirmation and evidence availability review.</p></div><div class="actions"><a class="button primary" href="enterprise.html">Request Custom Audit</a><a class="button" href="research-scope.html">Research Scope</a></div></section>
+
 </main>
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <div class="footer-links"><strong>StructEvidence</strong><a href="research.html">Research</a><a href="standard.html">Standard</a><a href="about.html">About</a><a href="enterprise.html">Enterprise</a></div>
-      <p>Research only. No investment advice. Evidence inconsistency does not imply falsehood, misconduct or fraud. Findings may be corrected or superseded.</p>
-    </div>
-  </footer>
-  <script src="assets/site.js"></script>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-links"><strong>StructEvidence</strong><a href="reports.html">Reports</a><a href="research.html">Research</a><a href="standard.html">Standard</a><a href="verify.html">Verify</a><a href="enterprise.html">Enterprise</a></div>
+    <p>Research only. No investment advice. Evidence inconsistency does not imply falsehood, misconduct or fraud. Findings may be corrected or superseded.</p>
+  </div>
+</footer><script src="assets/site.js"></script>
 </body>
 </html>

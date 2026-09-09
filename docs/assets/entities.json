@@ -11,6 +11,18 @@
     "entity_id": "ECL.COMPANY.STRATEGY_INC",
     "evidence_report_url": "research/Strategy_2026_Public_Evidence_Research_Report_v0.1_CN.md",
     "evidence_state": "SEMANTIC_TENSION_BUT_RECONCILABLE",
+    "free_scan": {
+      "key_limitation": "Independent-source triangulation remains partial in the approved public record.",
+      "key_observations": [
+        "Bitcoin remains the primary treasury reserve asset in the approved public record.",
+        "A BTC monetization program and actual BTC sales are visible in the approved public record.",
+        "ATM funding, reserve funding and preferred dividends appear together in the disclosure chain."
+      ],
+      "market_context": null,
+      "observation_window": "2025-12-31 to 2026-08-31",
+      "open_question": "Whether BTC monetization becomes a recurring structural tool or remains period-specific requires later evidence.",
+      "report_version": "Free Scan V0.9"
+    },
     "last_reviewed": "2026-09-08",
     "material_inconsistency": "NO",
     "name": "Strategy Inc.",
@@ -34,6 +46,18 @@
     "entity_id": "SE.ASSET.BNB.2026.001-R1",
     "evidence_report_url": "research/digital-assets/batch-01-r1/BNB/PUBLIC_EVIDENCE_RESEARCH_REPORT_R1.md",
     "evidence_state": "TEMPORAL_CHANGE",
+    "free_scan": {
+      "key_limitation": "Source coverage is PARTIAL; the free scan does not expose the full source inventory or ACH.",
+      "key_observations": [
+        "The 36th quarterly burn removed 1,615,827.795 BNB and reported remaining total supply of 133,166,127.91 BNB.",
+        "The announced long-run burn target remains 100,000,000 BNB.",
+        "BEP95 real-time gas-fee burning had removed roughly 291,000 BNB since introduction."
+      ],
+      "market_context": null,
+      "observation_window": "See R1 canonical research record",
+      "open_question": "What new independent evidence would narrow or reverse the current structural classification?",
+      "report_version": "Free Scan V0.9"
+    },
     "human_verify_url": "verify-r1.html#bnb",
     "last_reviewed": "2026-09-09",
     "material_inconsistency": "NO",
@@ -57,6 +81,18 @@
     "entity_id": "SE.ASSET.SOL.2026.001-R1",
     "evidence_report_url": "research/digital-assets/batch-01-r1/SOL/PUBLIC_EVIDENCE_RESEARCH_REPORT_R1.md",
     "evidence_state": "POTENTIAL_CONFLICT",
+    "free_scan": {
+      "key_limitation": "Source coverage is PARTIAL; the free scan does not expose the full source inventory or ACH.",
+      "key_observations": [
+        "The base fee is 5,000 lamports per signature, with half burned and half paid to the validator.",
+        "Solana staking rewards are based on current inflation, total staked SOL, validator uptime and commission.",
+        "The documented inflation schedule starts at 8%, declines by 15% annually and targets 1.5% long term."
+      ],
+      "market_context": null,
+      "observation_window": "See R1 canonical research record",
+      "open_question": "What new independent evidence would narrow or reverse the current structural classification?",
+      "report_version": "Free Scan V0.9"
+    },
     "human_verify_url": "verify-r1.html#sol",
     "last_reviewed": "2026-09-09",
     "material_inconsistency": "NO",
@@ -80,6 +116,18 @@
     "entity_id": "SE.ASSET.TRX.2026.001-R1",
     "evidence_report_url": "research/digital-assets/batch-01-r1/TRX/PUBLIC_EVIDENCE_RESEARCH_REPORT_R1.md",
     "evidence_state": "TEMPORAL_CHANGE",
+    "free_scan": {
+      "key_limitation": "Source coverage is PARTIAL; the free scan does not expose the full source inventory or ACH.",
+      "key_observations": [
+        "TRONSCAN reported 15,399,885,378 cumulative transactions on 2026-09-07.",
+        "USDT transfers were 3,576,771,837, reported as 23.22% of cumulative transactions.",
+        "Delegate and reclaim resource transactions were 2,479,810,874, reported as 16.10% of cumulative transactions."
+      ],
+      "market_context": null,
+      "observation_window": "See R1 canonical research record",
+      "open_question": "What new independent evidence would narrow or reverse the current structural classification?",
+      "report_version": "Free Scan V0.9"
+    },
     "human_verify_url": "verify-r1.html#trx",
     "last_reviewed": "2026-09-09",
     "material_inconsistency": "NO",
@@ -104,6 +152,18 @@
     "entity_id": "SE.ASSET.XLM.2026.001-R1",
     "evidence_report_url": "research/digital-assets/batch-01-r1/XLM/PUBLIC_EVIDENCE_RESEARCH_REPORT_R1.md",
     "evidence_state": "TEMPORAL_CHANGE",
+    "free_scan": {
+      "key_limitation": "Source coverage is PRIMARY_DOMINANT; the free scan does not expose the full source inventory or ACH.",
+      "key_observations": [
+        "SDF mandate disclosures list Direct Development current balance of 2,004,236,533 XLM as of September 4, 2026.",
+        "SDF mandate disclosures list Product and Innovation current balance of 3,657,737,252 XLM.",
+        "SDF mandate disclosures list Assets and Liquidity current balance of 3,415,171,620 XLM."
+      ],
+      "market_context": null,
+      "observation_window": "See R1 canonical research record",
+      "open_question": "What new independent evidence would narrow or reverse the current structural classification?",
+      "report_version": "Free Scan V0.9"
+    },
     "human_verify_url": "verify-r1.html#xlm",
     "last_reviewed": "2026-09-09",
     "material_inconsistency": "NO",

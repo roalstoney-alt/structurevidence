@@ -1,0 +1,20 @@
+{
+  "custom_audit": {
+    "cta_when_unpriced": "Request Scope",
+    "enabled": true,
+    "price": null,
+    "price_status": "SCOPE_REQUIRED"
+  },
+  "enterprise_evidence_review": {
+    "enabled": true,
+    "price_status": "CUSTOM_SCOPE_REQUIRED",
+    "self_serve": false
+  },
+  "verified_report": {
+    "cta_when_unpriced": "Request Early Access",
+    "currency": "USD",
+    "enabled": true,
+    "price": null,
+    "price_status": "CONFIG_REQUIRED"
+  }
+}

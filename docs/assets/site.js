@@ -66,23 +66,36 @@ function escapeText(value) {
 function renderCoveredEntity(region, entity) {
   const structuralState = escapeText(entity.structural_state || "INSUFFICIENT_DATA");
   const evidenceState = escapeText(entity.evidence_state || "INSUFFICIENT_DATA");
-  const inconsistency = escapeText(entity.material_inconsistency || "UNRESOLVED");
   const coverage = escapeText(entity.source_coverage || "UNRESOLVED");
   const reviewed = escapeText(entity.last_reviewed || "UNRESOLVED");
+  const freeScan = entity.free_scan || {};
+  const observations = (freeScan.key_observations || []).slice(0, 3);
+  const observationItems = observations.map((item) => `<li>${escapeText(item)}</li>`).join("");
+  const observationWindow = escapeText(freeScan.observation_window || "See public research record");
+  const reportVersion = escapeText(freeScan.report_version || "Free Scan V0.9");
+  const marketContext = freeScan.market_context;
+  const marketContextBlock = marketContext ? `<div><span>MARKET CONTEXT</span><strong>${escapeText(marketContext.regime || "UNAVAILABLE")}</strong></div>` : "";
   region.innerHTML = `
     <article class="health-card">
-      <div class="result-topline"><span>Structural & Evidence Research Record</span><span>NOT A SCORE OR RANKING</span></div>
+      <div class="result-topline"><span>Free Scan</span><span>NOT A SCORE OR RANKING</span></div>
       <div class="result-heading"><div><h2>${escapeText(entity.name)}</h2><p>${escapeText(entity.ticker || entity.name)} / ${escapeText(entity.category)}</p></div><button class="button subtle" type="button" data-reset-search>New Search</button></div>
       <div class="health-fields">
         <div><span>STRUCTURAL STATE</span><strong><code>${structuralState}</code></strong></div>
         <div><span>EVIDENCE STATE</span><strong><code>${evidenceState}</code></strong></div>
-        <div><span>MATERIAL INCONSISTENCY</span><strong class="${inconsistency === "NO" ? "ok" : ""}">${inconsistency}</strong></div>
         <div><span>SOURCE COVERAGE</span><strong class="${coverage.includes("PARTIAL") ? "partial" : ""}">${coverage}</strong></div>
         <div><span>LAST REVIEWED</span><strong>${reviewed}</strong></div>
         <div><span>RESEARCH STATUS</span><strong>${escapeText(entity.research_status || "METHOD PILOT")}</strong></div>
+        <div><span>OBSERVATION WINDOW</span><strong>${observationWindow}</strong></div>
+        <div><span>REPORT VERSION</span><strong>${reportVersion}</strong></div>
+        ${marketContextBlock}
       </div>
-      <p>${escapeText(entity.summary)}</p>
-      <div class="actions compact"><a class="button primary" href="${escapeText(entity.result_url)}">View Research Record</a><a class="button" href="${escapeText(entity.structural_report_url || "research.html")}">Read Structural Report</a><a class="button" href="${escapeText(entity.evidence_report_url || "research.html")}">Read Evidence Report</a><a class="button" href="${escapeText(entity.research_chain_url || "verify.html")}">Inspect Research Chain</a></div>
+      <h3>Key Observations</h3>
+      <ul>${observationItems}</ul>
+      <h3>Key Limitation</h3>
+      <p>${escapeText(freeScan.key_limitation || "GAP")}</p>
+      <h3>Open Question</h3>
+      <p>${escapeText(freeScan.open_question || "GAP")}</p>
+      <div class="actions compact"><a class="button primary" href="reports.html">Request Early Access</a><a class="button" href="${escapeText(entity.result_url)}">View Public Detail</a><a class="button" href="${escapeText(entity.research_chain_url || "verify.html")}">Verify Public Record</a></div>
     </article>
   `;
   wireReset(region);
