@@ -1,0 +1,357 @@
+{
+  "default_resolution": "WEEK",
+  "display_boundary": "Freshness statuses are display statuses. RDL production thresholds are not configured in this sprint.",
+  "evidence_families": [
+    {
+      "family_id": "PRIMARY_SOURCE_COVERAGE",
+      "label": "Primary Source Coverage",
+      "series": [
+        {
+          "artifact_refs": [
+            "research/digital-assets/batch-01-r1/BNB/gdr-se/GDR_SE_AUTHORIZATION_RECORD_R1_1.json"
+          ],
+          "last_update_at": "2026-09-09T00:00:00Z",
+          "notes": [
+            "No production freshness threshold is applied."
+          ],
+          "observation_mode": "RECONSTRUCTED",
+          "resolution": "DAY",
+          "status": "PARTIAL",
+          "t_end": "2026-09-09",
+          "t_start": "2026-09-09"
+        },
+        {
+          "artifact_refs": [
+            "research/digital-assets/batch-01-r1/BNB/gdr-se/GDR_SE_AUTHORIZATION_RECORD_R1_1.json"
+          ],
+          "last_update_at": "2026-09-09T00:00:00Z",
+          "notes": [
+            "No production freshness threshold is applied."
+          ],
+          "observation_mode": "RECONSTRUCTED",
+          "resolution": "WEEK",
+          "status": "PARTIAL",
+          "t_end": "2026-09-09",
+          "t_start": "2026-09-09"
+        },
+        {
+          "artifact_refs": [
+            "research/digital-assets/batch-01-r1/BNB/gdr-se/GDR_SE_AUTHORIZATION_RECORD_R1_1.json"
+          ],
+          "last_update_at": "2026-09-09T00:00:00Z",
+          "notes": [
+            "No production freshness threshold is applied."
+          ],
+          "observation_mode": "RECONSTRUCTED",
+          "resolution": "MONTH",
+          "status": "PARTIAL",
+          "t_end": "2026-09-09",
+          "t_start": "2026-09-09"
+        }
+      ],
+      "taxonomy_note": "Primary source availability and source package capture."
+    },
+    {
+      "family_id": "COUNTER_EVIDENCE_COVERAGE",
+      "label": "Counter Evidence Coverage",
+      "series": [
+        {
+          "artifact_refs": [
+            "research/digital-assets/batch-01-r1/BNB/gdr-se/GDR_SE_AUTHORIZATION_RECORD_R1_1.json"
+          ],
+          "last_update_at": "2026-09-09T00:00:00Z",
+          "notes": [
+            "No production freshness threshold is applied."
+          ],
+          "observation_mode": "RECONSTRUCTED",
+          "resolution": "DAY",
+          "status": "PARTIAL",
+          "t_end": "2026-09-09",
+          "t_start": "2026-09-09"
+        },
+        {
+          "artifact_refs": [
+            "research/digital-assets/batch-01-r1/BNB/gdr-se/GDR_SE_AUTHORIZATION_RECORD_R1_1.json"
+          ],
+          "last_update_at": "2026-09-09T00:00:00Z",
+          "notes": [
+            "No production freshness threshold is applied."
+          ],
+          "observation_mode": "RECONSTRUCTED",
+          "resolution": "WEEK",
+          "status": "PARTIAL",
+          "t_end": "2026-09-09",
+          "t_start": "2026-09-09"
+        },
+        {
+          "artifact_refs": [
+            "research/digital-assets/batch-01-r1/BNB/gdr-se/GDR_SE_AUTHORIZATION_RECORD_R1_1.json"
+          ],
+          "last_update_at": "2026-09-09T00:00:00Z",
+          "notes": [
+            "No production freshness threshold is applied."
+          ],
+          "observation_mode": "RECONSTRUCTED",
+          "resolution": "MONTH",
+          "status": "PARTIAL",
+          "t_end": "2026-09-09",
+          "t_start": "2026-09-09"
+        }
+      ],
+      "taxonomy_note": "Targeted counter-evidence coverage."
+    },
+    {
+      "family_id": "NUMERICAL_RECONCILIATION",
+      "label": "Numerical Reconciliation",
+      "series": [
+        {
+          "artifact_refs": [
+            "research/digital-assets/batch-01-r1/BNB/gdr-se/GDR_SE_AUTHORIZATION_RECORD_R1_1.json"
+          ],
+          "last_update_at": "2026-09-09T00:00:00Z",
+          "notes": [
+            "No production freshness threshold is applied."
+          ],
+          "observation_mode": "RECONSTRUCTED",
+          "resolution": "DAY",
+          "status": "FRESH",
+          "t_end": "2026-09-09",
+          "t_start": "2026-09-09"
+        },
+        {
+          "artifact_refs": [
+            "research/digital-assets/batch-01-r1/BNB/gdr-se/GDR_SE_AUTHORIZATION_RECORD_R1_1.json"
+          ],
+          "last_update_at": "2026-09-09T00:00:00Z",
+          "notes": [
+            "No production freshness threshold is applied."
+          ],
+          "observation_mode": "RECONSTRUCTED",
+          "resolution": "WEEK",
+          "status": "FRESH",
+          "t_end": "2026-09-09",
+          "t_start": "2026-09-09"
+        },
+        {
+          "artifact_refs": [
+            "research/digital-assets/batch-01-r1/BNB/gdr-se/GDR_SE_AUTHORIZATION_RECORD_R1_1.json"
+          ],
+          "last_update_at": "2026-09-09T00:00:00Z",
+          "notes": [
+            "No production freshness threshold is applied."
+          ],
+          "observation_mode": "RECONSTRUCTED",
+          "resolution": "MONTH",
+          "status": "FRESH",
+          "t_end": "2026-09-09",
+          "t_start": "2026-09-09"
+        }
+      ],
+      "taxonomy_note": "Arithmetic or quantitative reconciliation status."
+    },
+    {
+      "family_id": "SOURCE_DEPENDENCY",
+      "label": "Source Dependency",
+      "series": [
+        {
+          "artifact_refs": [
+            "research/digital-assets/batch-01-r1/BNB/gdr-se/GDR_SE_AUTHORIZATION_RECORD_R1_1.json"
+          ],
+          "last_update_at": "2026-09-09T00:00:00Z",
+          "notes": [
+            "No production freshness threshold is applied."
+          ],
+          "observation_mode": "RECONSTRUCTED",
+          "resolution": "DAY",
+          "status": "PARTIAL",
+          "t_end": "2026-09-09",
+          "t_start": "2026-09-09"
+        },
+        {
+          "artifact_refs": [
+            "research/digital-assets/batch-01-r1/BNB/gdr-se/GDR_SE_AUTHORIZATION_RECORD_R1_1.json"
+          ],
+          "last_update_at": "2026-09-09T00:00:00Z",
+          "notes": [
+            "No production freshness threshold is applied."
+          ],
+          "observation_mode": "RECONSTRUCTED",
+          "resolution": "WEEK",
+          "status": "PARTIAL",
+          "t_end": "2026-09-09",
+          "t_start": "2026-09-09"
+        },
+        {
+          "artifact_refs": [
+            "research/digital-assets/batch-01-r1/BNB/gdr-se/GDR_SE_AUTHORIZATION_RECORD_R1_1.json"
+          ],
+          "last_update_at": "2026-09-09T00:00:00Z",
+          "notes": [
+            "No production freshness threshold is applied."
+          ],
+          "observation_mode": "RECONSTRUCTED",
+          "resolution": "MONTH",
+          "status": "PARTIAL",
+          "t_end": "2026-09-09",
+          "t_start": "2026-09-09"
+        }
+      ],
+      "taxonomy_note": "Independence and dependency boundaries of source families."
+    },
+    {
+      "family_id": "INDEPENDENT_REVIEW",
+      "label": "Independent Review",
+      "series": [
+        {
+          "artifact_refs": [
+            "research/digital-assets/batch-01-r1/BNB/gdr-se/GDR_SE_AUTHORIZATION_RECORD_R1_1.json"
+          ],
+          "last_update_at": "2026-09-09T00:00:00Z",
+          "notes": [
+            "No production freshness threshold is applied."
+          ],
+          "observation_mode": "RECONSTRUCTED",
+          "resolution": "DAY",
+          "status": "PARTIAL",
+          "t_end": "2026-09-09",
+          "t_start": "2026-09-09"
+        },
+        {
+          "artifact_refs": [
+            "research/digital-assets/batch-01-r1/BNB/gdr-se/GDR_SE_AUTHORIZATION_RECORD_R1_1.json"
+          ],
+          "last_update_at": "2026-09-09T00:00:00Z",
+          "notes": [
+            "No production freshness threshold is applied."
+          ],
+          "observation_mode": "RECONSTRUCTED",
+          "resolution": "WEEK",
+          "status": "PARTIAL",
+          "t_end": "2026-09-09",
+          "t_start": "2026-09-09"
+        },
+        {
+          "artifact_refs": [
+            "research/digital-assets/batch-01-r1/BNB/gdr-se/GDR_SE_AUTHORIZATION_RECORD_R1_1.json"
+          ],
+          "last_update_at": "2026-09-09T00:00:00Z",
+          "notes": [
+            "No production freshness threshold is applied."
+          ],
+          "observation_mode": "RECONSTRUCTED",
+          "resolution": "MONTH",
+          "status": "PARTIAL",
+          "t_end": "2026-09-09",
+          "t_start": "2026-09-09"
+        }
+      ],
+      "taxonomy_note": "Independent or blind-review availability."
+    },
+    {
+      "family_id": "SUPERSESSION_STATUS",
+      "label": "Supersession Status",
+      "series": [
+        {
+          "artifact_refs": [
+            "research/digital-assets/batch-01-r1/BNB/gdr-se/GDR_SE_AUTHORIZATION_RECORD_R1_1.json"
+          ],
+          "last_update_at": "2026-09-09T00:00:00Z",
+          "notes": [
+            "No production freshness threshold is applied."
+          ],
+          "observation_mode": "DIRECT",
+          "resolution": "DAY",
+          "status": "FRESH",
+          "t_end": "2026-09-09",
+          "t_start": "2026-09-09"
+        },
+        {
+          "artifact_refs": [
+            "research/digital-assets/batch-01-r1/BNB/gdr-se/GDR_SE_AUTHORIZATION_RECORD_R1_1.json"
+          ],
+          "last_update_at": "2026-09-09T00:00:00Z",
+          "notes": [
+            "No production freshness threshold is applied."
+          ],
+          "observation_mode": "DIRECT",
+          "resolution": "WEEK",
+          "status": "FRESH",
+          "t_end": "2026-09-09",
+          "t_start": "2026-09-09"
+        },
+        {
+          "artifact_refs": [
+            "research/digital-assets/batch-01-r1/BNB/gdr-se/GDR_SE_AUTHORIZATION_RECORD_R1_1.json"
+          ],
+          "last_update_at": "2026-09-09T00:00:00Z",
+          "notes": [
+            "No production freshness threshold is applied."
+          ],
+          "observation_mode": "DIRECT",
+          "resolution": "MONTH",
+          "status": "FRESH",
+          "t_end": "2026-09-09",
+          "t_start": "2026-09-09"
+        }
+      ],
+      "taxonomy_note": "Supersession or version status."
+    },
+    {
+      "family_id": "AUTHORIZATION_STATUS",
+      "label": "Authorization Status",
+      "series": [
+        {
+          "artifact_refs": [
+            "research/digital-assets/batch-01-r1/BNB/gdr-se/GDR_SE_AUTHORIZATION_RECORD_R1_1.json"
+          ],
+          "last_update_at": "2026-09-09T00:00:00Z",
+          "notes": [
+            "No production freshness threshold is applied."
+          ],
+          "observation_mode": "DIRECT",
+          "resolution": "DAY",
+          "status": "UNRESOLVED",
+          "t_end": "2026-09-09",
+          "t_start": "2026-09-09"
+        },
+        {
+          "artifact_refs": [
+            "research/digital-assets/batch-01-r1/BNB/gdr-se/GDR_SE_AUTHORIZATION_RECORD_R1_1.json"
+          ],
+          "last_update_at": "2026-09-09T00:00:00Z",
+          "notes": [
+            "No production freshness threshold is applied."
+          ],
+          "observation_mode": "DIRECT",
+          "resolution": "WEEK",
+          "status": "UNRESOLVED",
+          "t_end": "2026-09-09",
+          "t_start": "2026-09-09"
+        },
+        {
+          "artifact_refs": [
+            "research/digital-assets/batch-01-r1/BNB/gdr-se/GDR_SE_AUTHORIZATION_RECORD_R1_1.json"
+          ],
+          "last_update_at": "2026-09-09T00:00:00Z",
+          "notes": [
+            "No production freshness threshold is applied."
+          ],
+          "observation_mode": "DIRECT",
+          "resolution": "MONTH",
+          "status": "UNRESOLVED",
+          "t_end": "2026-09-09",
+          "t_start": "2026-09-09"
+        }
+      ],
+      "taxonomy_note": "GDR-SE runtime authorization status."
+    }
+  ],
+  "model_version": "TIMELINE_MODEL_v0.1",
+  "subject_id": "BNB",
+  "subject_label": "BNB",
+  "supported_resolutions": [
+    "DAY",
+    "WEEK",
+    "MONTH"
+  ]
+}

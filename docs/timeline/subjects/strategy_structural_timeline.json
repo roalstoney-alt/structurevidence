@@ -1,0 +1,620 @@
+{
+  "construction_method": "SPARSE_EVENT_STATE",
+  "current_structural_state": "HYBRID_ACCUMULATION_MONETIZATION",
+  "default_resolution": "MONTH",
+  "dimensions": [
+    {
+      "dimension_id": "TREASURY_STRUCTURE",
+      "label": "Treasury Structure",
+      "series": [
+        {
+          "band": "SPARSE",
+          "notes": [
+            "Issuer filing and treasury baseline.",
+            "Display-layer ordinal band; not a score or new scientific claim."
+          ],
+          "observation_mode": "SPARSE_EVENT_STATE",
+          "resolution": "DAY",
+          "source_refs": [
+            "evidence-freeze/S6.1a/SOURCE_DEPENDENCY_GRAPH_v2.json"
+          ],
+          "state_label": "HYBRID_ACCUMULATION_MONETIZATION",
+          "t_end": "2026-06-28",
+          "t_start": "2026-02-01"
+        },
+        {
+          "band": "MIXED",
+          "notes": [
+            "Treasury disclosure and BTC monetization events are visible.",
+            "Display-layer ordinal band; not a score or new scientific claim."
+          ],
+          "observation_mode": "SPARSE_EVENT_STATE",
+          "resolution": "DAY",
+          "source_refs": [
+            "evidence-freeze/S6.1a/SOURCE_DEPENDENCY_GRAPH_v2.json"
+          ],
+          "state_label": "HYBRID_ACCUMULATION_MONETIZATION",
+          "t_end": "2026-07-31",
+          "t_start": "2026-06-29"
+        },
+        {
+          "band": "PARTIAL",
+          "notes": [
+            "S6.1a correction and partial source-independence boundary preserved.",
+            "Display-layer ordinal band; not a score or new scientific claim."
+          ],
+          "observation_mode": "SPARSE_EVENT_STATE",
+          "resolution": "DAY",
+          "source_refs": [
+            "evidence-freeze/S6.1a/SOURCE_DEPENDENCY_GRAPH_v2.json"
+          ],
+          "state_label": "HYBRID_ACCUMULATION_MONETIZATION",
+          "t_end": "2026-09-10",
+          "t_start": "2026-08-01"
+        },
+        {
+          "band": "SPARSE",
+          "notes": [
+            "Issuer filing and treasury baseline.",
+            "Display-layer ordinal band; not a score or new scientific claim."
+          ],
+          "observation_mode": "SPARSE_EVENT_STATE",
+          "resolution": "WEEK",
+          "source_refs": [
+            "evidence-freeze/S6.1a/SOURCE_DEPENDENCY_GRAPH_v2.json"
+          ],
+          "state_label": "HYBRID_ACCUMULATION_MONETIZATION",
+          "t_end": "2026-06-28",
+          "t_start": "2026-02-01"
+        },
+        {
+          "band": "MIXED",
+          "notes": [
+            "Treasury disclosure and BTC monetization events are visible.",
+            "Display-layer ordinal band; not a score or new scientific claim."
+          ],
+          "observation_mode": "SPARSE_EVENT_STATE",
+          "resolution": "WEEK",
+          "source_refs": [
+            "evidence-freeze/S6.1a/SOURCE_DEPENDENCY_GRAPH_v2.json"
+          ],
+          "state_label": "HYBRID_ACCUMULATION_MONETIZATION",
+          "t_end": "2026-07-31",
+          "t_start": "2026-06-29"
+        },
+        {
+          "band": "PARTIAL",
+          "notes": [
+            "S6.1a correction and partial source-independence boundary preserved.",
+            "Display-layer ordinal band; not a score or new scientific claim."
+          ],
+          "observation_mode": "SPARSE_EVENT_STATE",
+          "resolution": "WEEK",
+          "source_refs": [
+            "evidence-freeze/S6.1a/SOURCE_DEPENDENCY_GRAPH_v2.json"
+          ],
+          "state_label": "HYBRID_ACCUMULATION_MONETIZATION",
+          "t_end": "2026-09-10",
+          "t_start": "2026-08-01"
+        },
+        {
+          "band": "SPARSE",
+          "notes": [
+            "Issuer filing and treasury baseline.",
+            "Display-layer ordinal band; not a score or new scientific claim."
+          ],
+          "observation_mode": "SPARSE_EVENT_STATE",
+          "resolution": "MONTH",
+          "source_refs": [
+            "evidence-freeze/S6.1a/SOURCE_DEPENDENCY_GRAPH_v2.json"
+          ],
+          "state_label": "HYBRID_ACCUMULATION_MONETIZATION",
+          "t_end": "2026-06-28",
+          "t_start": "2026-02-01"
+        },
+        {
+          "band": "MIXED",
+          "notes": [
+            "Treasury disclosure and BTC monetization events are visible.",
+            "Display-layer ordinal band; not a score or new scientific claim."
+          ],
+          "observation_mode": "SPARSE_EVENT_STATE",
+          "resolution": "MONTH",
+          "source_refs": [
+            "evidence-freeze/S6.1a/SOURCE_DEPENDENCY_GRAPH_v2.json"
+          ],
+          "state_label": "HYBRID_ACCUMULATION_MONETIZATION",
+          "t_end": "2026-07-31",
+          "t_start": "2026-06-29"
+        },
+        {
+          "band": "PARTIAL",
+          "notes": [
+            "S6.1a correction and partial source-independence boundary preserved.",
+            "Display-layer ordinal band; not a score or new scientific claim."
+          ],
+          "observation_mode": "SPARSE_EVENT_STATE",
+          "resolution": "MONTH",
+          "source_refs": [
+            "evidence-freeze/S6.1a/SOURCE_DEPENDENCY_GRAPH_v2.json"
+          ],
+          "state_label": "HYBRID_ACCUMULATION_MONETIZATION",
+          "t_end": "2026-09-10",
+          "t_start": "2026-08-01"
+        }
+      ],
+      "taxonomy_note": "Treasury, reserve or funding architecture."
+    },
+    {
+      "dimension_id": "RESOURCE_PRESSURE",
+      "label": "Resource Pressure",
+      "series": [
+        {
+          "band": "SPARSE",
+          "notes": [
+            "Issuer filing and treasury baseline.",
+            "Display-layer ordinal band; not a score or new scientific claim."
+          ],
+          "observation_mode": "SPARSE_EVENT_STATE",
+          "resolution": "DAY",
+          "source_refs": [
+            "evidence-freeze/S6.1a/SOURCE_DEPENDENCY_GRAPH_v2.json"
+          ],
+          "state_label": "HYBRID_ACCUMULATION_MONETIZATION",
+          "t_end": "2026-06-28",
+          "t_start": "2026-02-01"
+        },
+        {
+          "band": "MIXED",
+          "notes": [
+            "Treasury disclosure and BTC monetization events are visible.",
+            "Display-layer ordinal band; not a score or new scientific claim."
+          ],
+          "observation_mode": "SPARSE_EVENT_STATE",
+          "resolution": "DAY",
+          "source_refs": [
+            "evidence-freeze/S6.1a/SOURCE_DEPENDENCY_GRAPH_v2.json"
+          ],
+          "state_label": "HYBRID_ACCUMULATION_MONETIZATION",
+          "t_end": "2026-07-31",
+          "t_start": "2026-06-29"
+        },
+        {
+          "band": "PARTIAL",
+          "notes": [
+            "S6.1a correction and partial source-independence boundary preserved.",
+            "Display-layer ordinal band; not a score or new scientific claim."
+          ],
+          "observation_mode": "SPARSE_EVENT_STATE",
+          "resolution": "DAY",
+          "source_refs": [
+            "evidence-freeze/S6.1a/SOURCE_DEPENDENCY_GRAPH_v2.json"
+          ],
+          "state_label": "HYBRID_ACCUMULATION_MONETIZATION",
+          "t_end": "2026-09-10",
+          "t_start": "2026-08-01"
+        },
+        {
+          "band": "SPARSE",
+          "notes": [
+            "Issuer filing and treasury baseline.",
+            "Display-layer ordinal band; not a score or new scientific claim."
+          ],
+          "observation_mode": "SPARSE_EVENT_STATE",
+          "resolution": "WEEK",
+          "source_refs": [
+            "evidence-freeze/S6.1a/SOURCE_DEPENDENCY_GRAPH_v2.json"
+          ],
+          "state_label": "HYBRID_ACCUMULATION_MONETIZATION",
+          "t_end": "2026-06-28",
+          "t_start": "2026-02-01"
+        },
+        {
+          "band": "MIXED",
+          "notes": [
+            "Treasury disclosure and BTC monetization events are visible.",
+            "Display-layer ordinal band; not a score or new scientific claim."
+          ],
+          "observation_mode": "SPARSE_EVENT_STATE",
+          "resolution": "WEEK",
+          "source_refs": [
+            "evidence-freeze/S6.1a/SOURCE_DEPENDENCY_GRAPH_v2.json"
+          ],
+          "state_label": "HYBRID_ACCUMULATION_MONETIZATION",
+          "t_end": "2026-07-31",
+          "t_start": "2026-06-29"
+        },
+        {
+          "band": "PARTIAL",
+          "notes": [
+            "S6.1a correction and partial source-independence boundary preserved.",
+            "Display-layer ordinal band; not a score or new scientific claim."
+          ],
+          "observation_mode": "SPARSE_EVENT_STATE",
+          "resolution": "WEEK",
+          "source_refs": [
+            "evidence-freeze/S6.1a/SOURCE_DEPENDENCY_GRAPH_v2.json"
+          ],
+          "state_label": "HYBRID_ACCUMULATION_MONETIZATION",
+          "t_end": "2026-09-10",
+          "t_start": "2026-08-01"
+        },
+        {
+          "band": "SPARSE",
+          "notes": [
+            "Issuer filing and treasury baseline.",
+            "Display-layer ordinal band; not a score or new scientific claim."
+          ],
+          "observation_mode": "SPARSE_EVENT_STATE",
+          "resolution": "MONTH",
+          "source_refs": [
+            "evidence-freeze/S6.1a/SOURCE_DEPENDENCY_GRAPH_v2.json"
+          ],
+          "state_label": "HYBRID_ACCUMULATION_MONETIZATION",
+          "t_end": "2026-06-28",
+          "t_start": "2026-02-01"
+        },
+        {
+          "band": "MIXED",
+          "notes": [
+            "Treasury disclosure and BTC monetization events are visible.",
+            "Display-layer ordinal band; not a score or new scientific claim."
+          ],
+          "observation_mode": "SPARSE_EVENT_STATE",
+          "resolution": "MONTH",
+          "source_refs": [
+            "evidence-freeze/S6.1a/SOURCE_DEPENDENCY_GRAPH_v2.json"
+          ],
+          "state_label": "HYBRID_ACCUMULATION_MONETIZATION",
+          "t_end": "2026-07-31",
+          "t_start": "2026-06-29"
+        },
+        {
+          "band": "PARTIAL",
+          "notes": [
+            "S6.1a correction and partial source-independence boundary preserved.",
+            "Display-layer ordinal band; not a score or new scientific claim."
+          ],
+          "observation_mode": "SPARSE_EVENT_STATE",
+          "resolution": "MONTH",
+          "source_refs": [
+            "evidence-freeze/S6.1a/SOURCE_DEPENDENCY_GRAPH_v2.json"
+          ],
+          "state_label": "HYBRID_ACCUMULATION_MONETIZATION",
+          "t_end": "2026-09-10",
+          "t_start": "2026-08-01"
+        }
+      ],
+      "taxonomy_note": "Resource, fee, liquidity or capacity pressure."
+    },
+    {
+      "dimension_id": "NARRATIVE_DEPENDENCE",
+      "label": "Narrative Dependence",
+      "series": [
+        {
+          "band": "SPARSE",
+          "notes": [
+            "Issuer filing and treasury baseline.",
+            "Display-layer ordinal band; not a score or new scientific claim."
+          ],
+          "observation_mode": "SPARSE_EVENT_STATE",
+          "resolution": "DAY",
+          "source_refs": [
+            "evidence-freeze/S6.1a/SOURCE_DEPENDENCY_GRAPH_v2.json"
+          ],
+          "state_label": "HYBRID_ACCUMULATION_MONETIZATION",
+          "t_end": "2026-06-28",
+          "t_start": "2026-02-01"
+        },
+        {
+          "band": "MIXED",
+          "notes": [
+            "Treasury disclosure and BTC monetization events are visible.",
+            "Display-layer ordinal band; not a score or new scientific claim."
+          ],
+          "observation_mode": "SPARSE_EVENT_STATE",
+          "resolution": "DAY",
+          "source_refs": [
+            "evidence-freeze/S6.1a/SOURCE_DEPENDENCY_GRAPH_v2.json"
+          ],
+          "state_label": "HYBRID_ACCUMULATION_MONETIZATION",
+          "t_end": "2026-07-31",
+          "t_start": "2026-06-29"
+        },
+        {
+          "band": "PARTIAL",
+          "notes": [
+            "S6.1a correction and partial source-independence boundary preserved.",
+            "Display-layer ordinal band; not a score or new scientific claim."
+          ],
+          "observation_mode": "SPARSE_EVENT_STATE",
+          "resolution": "DAY",
+          "source_refs": [
+            "evidence-freeze/S6.1a/SOURCE_DEPENDENCY_GRAPH_v2.json"
+          ],
+          "state_label": "HYBRID_ACCUMULATION_MONETIZATION",
+          "t_end": "2026-09-10",
+          "t_start": "2026-08-01"
+        },
+        {
+          "band": "SPARSE",
+          "notes": [
+            "Issuer filing and treasury baseline.",
+            "Display-layer ordinal band; not a score or new scientific claim."
+          ],
+          "observation_mode": "SPARSE_EVENT_STATE",
+          "resolution": "WEEK",
+          "source_refs": [
+            "evidence-freeze/S6.1a/SOURCE_DEPENDENCY_GRAPH_v2.json"
+          ],
+          "state_label": "HYBRID_ACCUMULATION_MONETIZATION",
+          "t_end": "2026-06-28",
+          "t_start": "2026-02-01"
+        },
+        {
+          "band": "MIXED",
+          "notes": [
+            "Treasury disclosure and BTC monetization events are visible.",
+            "Display-layer ordinal band; not a score or new scientific claim."
+          ],
+          "observation_mode": "SPARSE_EVENT_STATE",
+          "resolution": "WEEK",
+          "source_refs": [
+            "evidence-freeze/S6.1a/SOURCE_DEPENDENCY_GRAPH_v2.json"
+          ],
+          "state_label": "HYBRID_ACCUMULATION_MONETIZATION",
+          "t_end": "2026-07-31",
+          "t_start": "2026-06-29"
+        },
+        {
+          "band": "PARTIAL",
+          "notes": [
+            "S6.1a correction and partial source-independence boundary preserved.",
+            "Display-layer ordinal band; not a score or new scientific claim."
+          ],
+          "observation_mode": "SPARSE_EVENT_STATE",
+          "resolution": "WEEK",
+          "source_refs": [
+            "evidence-freeze/S6.1a/SOURCE_DEPENDENCY_GRAPH_v2.json"
+          ],
+          "state_label": "HYBRID_ACCUMULATION_MONETIZATION",
+          "t_end": "2026-09-10",
+          "t_start": "2026-08-01"
+        },
+        {
+          "band": "SPARSE",
+          "notes": [
+            "Issuer filing and treasury baseline.",
+            "Display-layer ordinal band; not a score or new scientific claim."
+          ],
+          "observation_mode": "SPARSE_EVENT_STATE",
+          "resolution": "MONTH",
+          "source_refs": [
+            "evidence-freeze/S6.1a/SOURCE_DEPENDENCY_GRAPH_v2.json"
+          ],
+          "state_label": "HYBRID_ACCUMULATION_MONETIZATION",
+          "t_end": "2026-06-28",
+          "t_start": "2026-02-01"
+        },
+        {
+          "band": "MIXED",
+          "notes": [
+            "Treasury disclosure and BTC monetization events are visible.",
+            "Display-layer ordinal band; not a score or new scientific claim."
+          ],
+          "observation_mode": "SPARSE_EVENT_STATE",
+          "resolution": "MONTH",
+          "source_refs": [
+            "evidence-freeze/S6.1a/SOURCE_DEPENDENCY_GRAPH_v2.json"
+          ],
+          "state_label": "HYBRID_ACCUMULATION_MONETIZATION",
+          "t_end": "2026-07-31",
+          "t_start": "2026-06-29"
+        },
+        {
+          "band": "PARTIAL",
+          "notes": [
+            "S6.1a correction and partial source-independence boundary preserved.",
+            "Display-layer ordinal band; not a score or new scientific claim."
+          ],
+          "observation_mode": "SPARSE_EVENT_STATE",
+          "resolution": "MONTH",
+          "source_refs": [
+            "evidence-freeze/S6.1a/SOURCE_DEPENDENCY_GRAPH_v2.json"
+          ],
+          "state_label": "HYBRID_ACCUMULATION_MONETIZATION",
+          "t_end": "2026-09-10",
+          "t_start": "2026-08-01"
+        }
+      ],
+      "taxonomy_note": "Dependence on claims, framing or issuer narrative."
+    },
+    {
+      "dimension_id": "SOURCE_DEPENDENCY",
+      "label": "Source Dependency",
+      "series": [
+        {
+          "band": "SPARSE",
+          "notes": [
+            "Issuer filing and treasury baseline.",
+            "Display-layer ordinal band; not a score or new scientific claim."
+          ],
+          "observation_mode": "SPARSE_EVENT_STATE",
+          "resolution": "DAY",
+          "source_refs": [
+            "evidence-freeze/S6.1a/SOURCE_DEPENDENCY_GRAPH_v2.json"
+          ],
+          "state_label": "HYBRID_ACCUMULATION_MONETIZATION",
+          "t_end": "2026-06-28",
+          "t_start": "2026-02-01"
+        },
+        {
+          "band": "MIXED",
+          "notes": [
+            "Treasury disclosure and BTC monetization events are visible.",
+            "Display-layer ordinal band; not a score or new scientific claim."
+          ],
+          "observation_mode": "SPARSE_EVENT_STATE",
+          "resolution": "DAY",
+          "source_refs": [
+            "evidence-freeze/S6.1a/SOURCE_DEPENDENCY_GRAPH_v2.json"
+          ],
+          "state_label": "HYBRID_ACCUMULATION_MONETIZATION",
+          "t_end": "2026-07-31",
+          "t_start": "2026-06-29"
+        },
+        {
+          "band": "PARTIAL",
+          "notes": [
+            "S6.1a correction and partial source-independence boundary preserved.",
+            "Display-layer ordinal band; not a score or new scientific claim."
+          ],
+          "observation_mode": "SPARSE_EVENT_STATE",
+          "resolution": "DAY",
+          "source_refs": [
+            "evidence-freeze/S6.1a/SOURCE_DEPENDENCY_GRAPH_v2.json"
+          ],
+          "state_label": "HYBRID_ACCUMULATION_MONETIZATION",
+          "t_end": "2026-09-10",
+          "t_start": "2026-08-01"
+        },
+        {
+          "band": "SPARSE",
+          "notes": [
+            "Issuer filing and treasury baseline.",
+            "Display-layer ordinal band; not a score or new scientific claim."
+          ],
+          "observation_mode": "SPARSE_EVENT_STATE",
+          "resolution": "WEEK",
+          "source_refs": [
+            "evidence-freeze/S6.1a/SOURCE_DEPENDENCY_GRAPH_v2.json"
+          ],
+          "state_label": "HYBRID_ACCUMULATION_MONETIZATION",
+          "t_end": "2026-06-28",
+          "t_start": "2026-02-01"
+        },
+        {
+          "band": "MIXED",
+          "notes": [
+            "Treasury disclosure and BTC monetization events are visible.",
+            "Display-layer ordinal band; not a score or new scientific claim."
+          ],
+          "observation_mode": "SPARSE_EVENT_STATE",
+          "resolution": "WEEK",
+          "source_refs": [
+            "evidence-freeze/S6.1a/SOURCE_DEPENDENCY_GRAPH_v2.json"
+          ],
+          "state_label": "HYBRID_ACCUMULATION_MONETIZATION",
+          "t_end": "2026-07-31",
+          "t_start": "2026-06-29"
+        },
+        {
+          "band": "PARTIAL",
+          "notes": [
+            "S6.1a correction and partial source-independence boundary preserved.",
+            "Display-layer ordinal band; not a score or new scientific claim."
+          ],
+          "observation_mode": "SPARSE_EVENT_STATE",
+          "resolution": "WEEK",
+          "source_refs": [
+            "evidence-freeze/S6.1a/SOURCE_DEPENDENCY_GRAPH_v2.json"
+          ],
+          "state_label": "HYBRID_ACCUMULATION_MONETIZATION",
+          "t_end": "2026-09-10",
+          "t_start": "2026-08-01"
+        },
+        {
+          "band": "SPARSE",
+          "notes": [
+            "Issuer filing and treasury baseline.",
+            "Display-layer ordinal band; not a score or new scientific claim."
+          ],
+          "observation_mode": "SPARSE_EVENT_STATE",
+          "resolution": "MONTH",
+          "source_refs": [
+            "evidence-freeze/S6.1a/SOURCE_DEPENDENCY_GRAPH_v2.json"
+          ],
+          "state_label": "HYBRID_ACCUMULATION_MONETIZATION",
+          "t_end": "2026-06-28",
+          "t_start": "2026-02-01"
+        },
+        {
+          "band": "MIXED",
+          "notes": [
+            "Treasury disclosure and BTC monetization events are visible.",
+            "Display-layer ordinal band; not a score or new scientific claim."
+          ],
+          "observation_mode": "SPARSE_EVENT_STATE",
+          "resolution": "MONTH",
+          "source_refs": [
+            "evidence-freeze/S6.1a/SOURCE_DEPENDENCY_GRAPH_v2.json"
+          ],
+          "state_label": "HYBRID_ACCUMULATION_MONETIZATION",
+          "t_end": "2026-07-31",
+          "t_start": "2026-06-29"
+        },
+        {
+          "band": "PARTIAL",
+          "notes": [
+            "S6.1a correction and partial source-independence boundary preserved.",
+            "Display-layer ordinal band; not a score or new scientific claim."
+          ],
+          "observation_mode": "SPARSE_EVENT_STATE",
+          "resolution": "MONTH",
+          "source_refs": [
+            "evidence-freeze/S6.1a/SOURCE_DEPENDENCY_GRAPH_v2.json"
+          ],
+          "state_label": "HYBRID_ACCUMULATION_MONETIZATION",
+          "t_end": "2026-09-10",
+          "t_start": "2026-08-01"
+        }
+      ],
+      "taxonomy_note": "Bridge dimension showing source-independence constraints where they shape structural interpretation."
+    }
+  ],
+  "display_boundary": "Presentation timeline derived from frozen artifacts. No new scientific conclusion or score.",
+  "model_version": "TIMELINE_MODEL_v0.1",
+  "phase_ribbon": [
+    {
+      "confidence": "DISPLAY_ONLY",
+      "notes": [
+        "Derived from existing subject state and event anchors. No monitoring threshold is implied."
+      ],
+      "observation_mode": "SPARSE_EVENT_STATE",
+      "phase": "HYBRID_ACCUMULATION_MONETIZATION",
+      "resolution": "DAY",
+      "t_end": "2026-09-08",
+      "t_start": "2026-02-13"
+    },
+    {
+      "confidence": "DISPLAY_ONLY",
+      "notes": [
+        "Derived from existing subject state and event anchors. No monitoring threshold is implied."
+      ],
+      "observation_mode": "SPARSE_EVENT_STATE",
+      "phase": "HYBRID_ACCUMULATION_MONETIZATION",
+      "resolution": "WEEK",
+      "t_end": "2026-09-08",
+      "t_start": "2026-02-13"
+    },
+    {
+      "confidence": "DISPLAY_ONLY",
+      "notes": [
+        "Derived from existing subject state and event anchors. No monitoring threshold is implied."
+      ],
+      "observation_mode": "SPARSE_EVENT_STATE",
+      "phase": "HYBRID_ACCUMULATION_MONETIZATION",
+      "resolution": "MONTH",
+      "t_end": "2026-09-08",
+      "t_start": "2026-02-13"
+    }
+  ],
+  "subject_id": "strategy",
+  "subject_label": "Strategy 2026",
+  "subject_type": "PUBLIC_COMPANY_TREASURY",
+  "supported_resolutions": [
+    "DAY",
+    "WEEK",
+    "MONTH"
+  ]
+}

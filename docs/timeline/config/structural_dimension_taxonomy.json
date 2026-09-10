@@ -1,0 +1,16 @@
+{
+  "dimensions": {
+    "FOUNDATION_DEPENDENCE": "Foundation or sponsoring-entity dependence.",
+    "GOVERNANCE_STRUCTURE": "Control, voting, validator or decision structure.",
+    "MARKET_DEPENDENCE": "Dependence on market structure or external liquidity context.",
+    "NARRATIVE_DEPENDENCE": "Dependence on claims, framing or issuer narrative.",
+    "RESOURCE_PRESSURE": "Resource, fee, liquidity or capacity pressure.",
+    "SETTLEMENT_ROLE": "Settlement, payments or transfer-function role.",
+    "SOURCE_DEPENDENCY": "Bridge dimension showing source-independence constraints where they shape structural interpretation.",
+    "SUPPLY_STRUCTURE": "Supply mechanics, issuance, burn or distribution structure.",
+    "TREASURY_STRUCTURE": "Treasury, reserve or funding architecture.",
+    "UTILITY_STRUCTURE": "Documented functional demand or use context.",
+    "VALIDATOR_DISTRIBUTION": "Validator, quorum or block-producer distribution."
+  },
+  "model_version": "TIMELINE_MODEL_v0.1"
+}

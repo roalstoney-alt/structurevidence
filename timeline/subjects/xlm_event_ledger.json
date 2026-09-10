@@ -1,0 +1,91 @@
+{
+  "event_type_enum": [
+    "ARTIFACT_FROZEN",
+    "REPORT_PUBLISHED",
+    "CORRECTION_ADDED",
+    "SUPERSESSION",
+    "SOURCE_PACKAGE_ADDED",
+    "GOVERNANCE_EVENT",
+    "TREASURY_DISCLOSURE",
+    "PROTOCOL_EVENT",
+    "MARKET_STRUCTURE_EVENT",
+    "COUNTER_EVIDENCE_UPDATE",
+    "REVIEW_EVENT"
+  ],
+  "events": [
+    {
+      "event_id": "EVT-XLM-SUPPLY",
+      "event_type": "SOURCE_PACKAGE_ADDED",
+      "impact_hint": "Supply marker",
+      "label": "Supply metrics and dashboard API evidence captured.",
+      "observation_mode": "SPARSE_EVENT_STATE",
+      "refs": [
+        "research/digital-assets/batch-01-r1/XLM/OBSERVATION_REGISTRY.json"
+      ],
+      "timestamp": "2026-07-21T00:00:00Z"
+    },
+    {
+      "event_id": "EVT-XLM-MANDATE",
+      "event_type": "TREASURY_DISCLOSURE",
+      "impact_hint": "Treasury marker",
+      "label": "SDF mandate balances and sales language captured.",
+      "observation_mode": "SPARSE_EVENT_STATE",
+      "refs": [
+        "research/digital-assets/batch-01-r1/XLM/OBSERVATION_REGISTRY.json"
+      ],
+      "timestamp": "2026-09-04T00:00:00Z"
+    },
+    {
+      "event_id": "EVT-XLM-QUORUM",
+      "event_type": "GOVERNANCE_EVENT",
+      "impact_hint": "Governance marker",
+      "label": "Validator quorum-set evidence captured.",
+      "observation_mode": "SPARSE_EVENT_STATE",
+      "refs": [
+        "research/digital-assets/batch-01-r1/XLM/SOURCE_DEPENDENCY_GRAPH.json"
+      ],
+      "timestamp": "2026-09-08T00:00:00Z"
+    },
+    {
+      "event_id": "EVT-XLM-FREEZE",
+      "event_type": "ARTIFACT_FROZEN",
+      "impact_hint": "Freeze ledger",
+      "label": "XLM R1 artifact package frozen.",
+      "observation_mode": "DIRECT",
+      "refs": [
+        "research/digital-assets/batch-01-r1/XLM/SHA256SUMS.txt"
+      ],
+      "timestamp": "2026-09-09T00:00:00Z"
+    },
+    {
+      "event_id": "EVT-XLM-REPORT",
+      "event_type": "REPORT_PUBLISHED",
+      "impact_hint": "Publication marker",
+      "label": "XLM R1 public evidence and structural reports published.",
+      "observation_mode": "DIRECT",
+      "refs": [
+        "research/digital-assets/batch-01-r1/XLM/PUBLIC_EVIDENCE_RESEARCH_REPORT_R1.md"
+      ],
+      "timestamp": "2026-09-09T00:00:00Z"
+    },
+    {
+      "event_id": "EVT-XLM-GDR",
+      "event_type": "REVIEW_EVENT",
+      "impact_hint": "Authorization history",
+      "label": "XLM GDR-SE R1.1 runtime authorization recorded.",
+      "observation_mode": "DIRECT",
+      "refs": [
+        "research/digital-assets/batch-01-r1/XLM/gdr-se/GDR_SE_AUTHORIZATION_RECORD_R1_1.json"
+      ],
+      "timestamp": "2026-09-10T00:00:00Z"
+    }
+  ],
+  "model_version": "TIMELINE_MODEL_v0.1",
+  "subject_id": "XLM",
+  "subject_label": "XLM",
+  "supported_resolutions": [
+    "DAY",
+    "WEEK",
+    "MONTH"
+  ]
+}

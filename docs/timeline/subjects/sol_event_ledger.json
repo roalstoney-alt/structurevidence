@@ -1,0 +1,80 @@
+{
+  "event_type_enum": [
+    "ARTIFACT_FROZEN",
+    "REPORT_PUBLISHED",
+    "CORRECTION_ADDED",
+    "SUPERSESSION",
+    "SOURCE_PACKAGE_ADDED",
+    "GOVERNANCE_EVENT",
+    "TREASURY_DISCLOSURE",
+    "PROTOCOL_EVENT",
+    "MARKET_STRUCTURE_EVENT",
+    "COUNTER_EVIDENCE_UPDATE",
+    "REVIEW_EVENT"
+  ],
+  "events": [
+    {
+      "event_id": "EVT-SOL-CLIENTS",
+      "event_type": "REVIEW_EVENT",
+      "impact_hint": "Evidence boundary",
+      "label": "Client diversity caveat preserved in R1 evidence.",
+      "observation_mode": "DIRECT",
+      "refs": [
+        "research/digital-assets/batch-01-r1/SOL/PUBLIC_EVIDENCE_RESEARCH_REPORT_R1.md"
+      ],
+      "timestamp": "2026-09-09T00:00:00Z"
+    },
+    {
+      "event_id": "EVT-SOL-FEES",
+      "event_type": "PROTOCOL_EVENT",
+      "impact_hint": "Resource-pressure marker",
+      "label": "Fee mechanics and validator economics captured.",
+      "observation_mode": "SPARSE_EVENT_STATE",
+      "refs": [
+        "research/digital-assets/batch-01-r1/SOL/OBSERVATION_REGISTRY.json"
+      ],
+      "timestamp": "2026-09-09T00:00:00Z"
+    },
+    {
+      "event_id": "EVT-SOL-FREEZE",
+      "event_type": "ARTIFACT_FROZEN",
+      "impact_hint": "Freeze ledger",
+      "label": "SOL R1 artifact package frozen.",
+      "observation_mode": "DIRECT",
+      "refs": [
+        "research/digital-assets/batch-01-r1/SOL/SHA256SUMS.txt"
+      ],
+      "timestamp": "2026-09-09T00:00:00Z"
+    },
+    {
+      "event_id": "EVT-SOL-REPORT",
+      "event_type": "REPORT_PUBLISHED",
+      "impact_hint": "Publication marker",
+      "label": "SOL R1 public evidence and structural reports published.",
+      "observation_mode": "DIRECT",
+      "refs": [
+        "research/digital-assets/batch-01-r1/SOL/PUBLIC_EVIDENCE_RESEARCH_REPORT_R1.md"
+      ],
+      "timestamp": "2026-09-09T00:00:00Z"
+    },
+    {
+      "event_id": "EVT-SOL-GDR",
+      "event_type": "REVIEW_EVENT",
+      "impact_hint": "Authorization history",
+      "label": "SOL GDR-SE R1.1 runtime authorization recorded.",
+      "observation_mode": "DIRECT",
+      "refs": [
+        "research/digital-assets/batch-01-r1/SOL/gdr-se/GDR_SE_AUTHORIZATION_RECORD_R1_1.json"
+      ],
+      "timestamp": "2026-09-10T00:00:00Z"
+    }
+  ],
+  "model_version": "TIMELINE_MODEL_v0.1",
+  "subject_id": "SOL",
+  "subject_label": "SOL",
+  "supported_resolutions": [
+    "DAY",
+    "WEEK",
+    "MONTH"
+  ]
+}

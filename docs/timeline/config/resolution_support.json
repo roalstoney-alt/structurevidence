@@ -1,0 +1,13 @@
+{
+  "boundary": "Resolution changes aggregate display intervals only; they do not change research conclusions or authorization logic.",
+  "defaults": {
+    "public_subject_pages": "WEEK",
+    "strategy": "MONTH"
+  },
+  "model_version": "TIMELINE_MODEL_v0.1",
+  "supported_resolutions": [
+    "DAY",
+    "WEEK",
+    "MONTH"
+  ]
+}

@@ -1,0 +1,440 @@
+{
+  "construction_method": "SEMI_STRUCTURED_RECONSTRUCTION",
+  "current_structural_state": "SDF_TREASURY_DEPENDENT_PAYMENT_NETWORK",
+  "default_resolution": "MONTH",
+  "dimensions": [
+    {
+      "dimension_id": "TREASURY_STRUCTURE",
+      "label": "Treasury Structure",
+      "series": [
+        {
+          "band": "OBSERVED",
+          "notes": [
+            "R1 observations are reconstructed as sparse display bands.",
+            "Display-layer ordinal band; not a score or new scientific claim."
+          ],
+          "observation_mode": "RECONSTRUCTED",
+          "resolution": "DAY",
+          "source_refs": [
+            "research/digital-assets/batch-01-r1/XLM/OBSERVATION_REGISTRY.json"
+          ],
+          "state_label": "SDF_TREASURY_DEPENDENT_PAYMENT_NETWORK",
+          "t_end": "2026-09-09",
+          "t_start": "2026-09-09"
+        },
+        {
+          "band": "CURRENT_REVIEW",
+          "notes": [
+            "Current R1 state anchor.",
+            "Display-layer ordinal band; not a score or new scientific claim."
+          ],
+          "observation_mode": "DIRECT",
+          "resolution": "DAY",
+          "source_refs": [
+            "research/digital-assets/batch-01-r1/XLM/OBSERVATION_REGISTRY.json"
+          ],
+          "state_label": "SDF_TREASURY_DEPENDENT_PAYMENT_NETWORK",
+          "t_end": "2026-09-09",
+          "t_start": "2026-09-09"
+        },
+        {
+          "band": "OBSERVED",
+          "notes": [
+            "R1 observations are reconstructed as sparse display bands.",
+            "Display-layer ordinal band; not a score or new scientific claim."
+          ],
+          "observation_mode": "RECONSTRUCTED",
+          "resolution": "WEEK",
+          "source_refs": [
+            "research/digital-assets/batch-01-r1/XLM/OBSERVATION_REGISTRY.json"
+          ],
+          "state_label": "SDF_TREASURY_DEPENDENT_PAYMENT_NETWORK",
+          "t_end": "2026-09-09",
+          "t_start": "2026-09-09"
+        },
+        {
+          "band": "CURRENT_REVIEW",
+          "notes": [
+            "Current R1 state anchor.",
+            "Display-layer ordinal band; not a score or new scientific claim."
+          ],
+          "observation_mode": "DIRECT",
+          "resolution": "WEEK",
+          "source_refs": [
+            "research/digital-assets/batch-01-r1/XLM/OBSERVATION_REGISTRY.json"
+          ],
+          "state_label": "SDF_TREASURY_DEPENDENT_PAYMENT_NETWORK",
+          "t_end": "2026-09-09",
+          "t_start": "2026-09-09"
+        },
+        {
+          "band": "OBSERVED",
+          "notes": [
+            "R1 observations are reconstructed as sparse display bands.",
+            "Display-layer ordinal band; not a score or new scientific claim."
+          ],
+          "observation_mode": "RECONSTRUCTED",
+          "resolution": "MONTH",
+          "source_refs": [
+            "research/digital-assets/batch-01-r1/XLM/OBSERVATION_REGISTRY.json"
+          ],
+          "state_label": "SDF_TREASURY_DEPENDENT_PAYMENT_NETWORK",
+          "t_end": "2026-09-09",
+          "t_start": "2026-09-09"
+        },
+        {
+          "band": "CURRENT_REVIEW",
+          "notes": [
+            "Current R1 state anchor.",
+            "Display-layer ordinal band; not a score or new scientific claim."
+          ],
+          "observation_mode": "DIRECT",
+          "resolution": "MONTH",
+          "source_refs": [
+            "research/digital-assets/batch-01-r1/XLM/OBSERVATION_REGISTRY.json"
+          ],
+          "state_label": "SDF_TREASURY_DEPENDENT_PAYMENT_NETWORK",
+          "t_end": "2026-09-09",
+          "t_start": "2026-09-09"
+        }
+      ],
+      "taxonomy_note": "Treasury, reserve or funding architecture."
+    },
+    {
+      "dimension_id": "FOUNDATION_DEPENDENCE",
+      "label": "Foundation Dependence",
+      "series": [
+        {
+          "band": "OBSERVED",
+          "notes": [
+            "R1 observations are reconstructed as sparse display bands.",
+            "Display-layer ordinal band; not a score or new scientific claim."
+          ],
+          "observation_mode": "RECONSTRUCTED",
+          "resolution": "DAY",
+          "source_refs": [
+            "research/digital-assets/batch-01-r1/XLM/OBSERVATION_REGISTRY.json"
+          ],
+          "state_label": "SDF_TREASURY_DEPENDENT_PAYMENT_NETWORK",
+          "t_end": "2026-09-09",
+          "t_start": "2026-09-09"
+        },
+        {
+          "band": "CURRENT_REVIEW",
+          "notes": [
+            "Current R1 state anchor.",
+            "Display-layer ordinal band; not a score or new scientific claim."
+          ],
+          "observation_mode": "DIRECT",
+          "resolution": "DAY",
+          "source_refs": [
+            "research/digital-assets/batch-01-r1/XLM/OBSERVATION_REGISTRY.json"
+          ],
+          "state_label": "SDF_TREASURY_DEPENDENT_PAYMENT_NETWORK",
+          "t_end": "2026-09-09",
+          "t_start": "2026-09-09"
+        },
+        {
+          "band": "OBSERVED",
+          "notes": [
+            "R1 observations are reconstructed as sparse display bands.",
+            "Display-layer ordinal band; not a score or new scientific claim."
+          ],
+          "observation_mode": "RECONSTRUCTED",
+          "resolution": "WEEK",
+          "source_refs": [
+            "research/digital-assets/batch-01-r1/XLM/OBSERVATION_REGISTRY.json"
+          ],
+          "state_label": "SDF_TREASURY_DEPENDENT_PAYMENT_NETWORK",
+          "t_end": "2026-09-09",
+          "t_start": "2026-09-09"
+        },
+        {
+          "band": "CURRENT_REVIEW",
+          "notes": [
+            "Current R1 state anchor.",
+            "Display-layer ordinal band; not a score or new scientific claim."
+          ],
+          "observation_mode": "DIRECT",
+          "resolution": "WEEK",
+          "source_refs": [
+            "research/digital-assets/batch-01-r1/XLM/OBSERVATION_REGISTRY.json"
+          ],
+          "state_label": "SDF_TREASURY_DEPENDENT_PAYMENT_NETWORK",
+          "t_end": "2026-09-09",
+          "t_start": "2026-09-09"
+        },
+        {
+          "band": "OBSERVED",
+          "notes": [
+            "R1 observations are reconstructed as sparse display bands.",
+            "Display-layer ordinal band; not a score or new scientific claim."
+          ],
+          "observation_mode": "RECONSTRUCTED",
+          "resolution": "MONTH",
+          "source_refs": [
+            "research/digital-assets/batch-01-r1/XLM/OBSERVATION_REGISTRY.json"
+          ],
+          "state_label": "SDF_TREASURY_DEPENDENT_PAYMENT_NETWORK",
+          "t_end": "2026-09-09",
+          "t_start": "2026-09-09"
+        },
+        {
+          "band": "CURRENT_REVIEW",
+          "notes": [
+            "Current R1 state anchor.",
+            "Display-layer ordinal band; not a score or new scientific claim."
+          ],
+          "observation_mode": "DIRECT",
+          "resolution": "MONTH",
+          "source_refs": [
+            "research/digital-assets/batch-01-r1/XLM/OBSERVATION_REGISTRY.json"
+          ],
+          "state_label": "SDF_TREASURY_DEPENDENT_PAYMENT_NETWORK",
+          "t_end": "2026-09-09",
+          "t_start": "2026-09-09"
+        }
+      ],
+      "taxonomy_note": "Foundation or sponsoring-entity dependence."
+    },
+    {
+      "dimension_id": "SETTLEMENT_ROLE",
+      "label": "Settlement Role",
+      "series": [
+        {
+          "band": "OBSERVED",
+          "notes": [
+            "R1 observations are reconstructed as sparse display bands.",
+            "Display-layer ordinal band; not a score or new scientific claim."
+          ],
+          "observation_mode": "RECONSTRUCTED",
+          "resolution": "DAY",
+          "source_refs": [
+            "research/digital-assets/batch-01-r1/XLM/OBSERVATION_REGISTRY.json"
+          ],
+          "state_label": "SDF_TREASURY_DEPENDENT_PAYMENT_NETWORK",
+          "t_end": "2026-09-09",
+          "t_start": "2026-09-09"
+        },
+        {
+          "band": "CURRENT_REVIEW",
+          "notes": [
+            "Current R1 state anchor.",
+            "Display-layer ordinal band; not a score or new scientific claim."
+          ],
+          "observation_mode": "DIRECT",
+          "resolution": "DAY",
+          "source_refs": [
+            "research/digital-assets/batch-01-r1/XLM/OBSERVATION_REGISTRY.json"
+          ],
+          "state_label": "SDF_TREASURY_DEPENDENT_PAYMENT_NETWORK",
+          "t_end": "2026-09-09",
+          "t_start": "2026-09-09"
+        },
+        {
+          "band": "OBSERVED",
+          "notes": [
+            "R1 observations are reconstructed as sparse display bands.",
+            "Display-layer ordinal band; not a score or new scientific claim."
+          ],
+          "observation_mode": "RECONSTRUCTED",
+          "resolution": "WEEK",
+          "source_refs": [
+            "research/digital-assets/batch-01-r1/XLM/OBSERVATION_REGISTRY.json"
+          ],
+          "state_label": "SDF_TREASURY_DEPENDENT_PAYMENT_NETWORK",
+          "t_end": "2026-09-09",
+          "t_start": "2026-09-09"
+        },
+        {
+          "band": "CURRENT_REVIEW",
+          "notes": [
+            "Current R1 state anchor.",
+            "Display-layer ordinal band; not a score or new scientific claim."
+          ],
+          "observation_mode": "DIRECT",
+          "resolution": "WEEK",
+          "source_refs": [
+            "research/digital-assets/batch-01-r1/XLM/OBSERVATION_REGISTRY.json"
+          ],
+          "state_label": "SDF_TREASURY_DEPENDENT_PAYMENT_NETWORK",
+          "t_end": "2026-09-09",
+          "t_start": "2026-09-09"
+        },
+        {
+          "band": "OBSERVED",
+          "notes": [
+            "R1 observations are reconstructed as sparse display bands.",
+            "Display-layer ordinal band; not a score or new scientific claim."
+          ],
+          "observation_mode": "RECONSTRUCTED",
+          "resolution": "MONTH",
+          "source_refs": [
+            "research/digital-assets/batch-01-r1/XLM/OBSERVATION_REGISTRY.json"
+          ],
+          "state_label": "SDF_TREASURY_DEPENDENT_PAYMENT_NETWORK",
+          "t_end": "2026-09-09",
+          "t_start": "2026-09-09"
+        },
+        {
+          "band": "CURRENT_REVIEW",
+          "notes": [
+            "Current R1 state anchor.",
+            "Display-layer ordinal band; not a score or new scientific claim."
+          ],
+          "observation_mode": "DIRECT",
+          "resolution": "MONTH",
+          "source_refs": [
+            "research/digital-assets/batch-01-r1/XLM/OBSERVATION_REGISTRY.json"
+          ],
+          "state_label": "SDF_TREASURY_DEPENDENT_PAYMENT_NETWORK",
+          "t_end": "2026-09-09",
+          "t_start": "2026-09-09"
+        }
+      ],
+      "taxonomy_note": "Settlement, payments or transfer-function role."
+    },
+    {
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "label": "Validator Distribution",
+      "series": [
+        {
+          "band": "OBSERVED",
+          "notes": [
+            "R1 observations are reconstructed as sparse display bands.",
+            "Display-layer ordinal band; not a score or new scientific claim."
+          ],
+          "observation_mode": "RECONSTRUCTED",
+          "resolution": "DAY",
+          "source_refs": [
+            "research/digital-assets/batch-01-r1/XLM/OBSERVATION_REGISTRY.json"
+          ],
+          "state_label": "SDF_TREASURY_DEPENDENT_PAYMENT_NETWORK",
+          "t_end": "2026-09-09",
+          "t_start": "2026-09-09"
+        },
+        {
+          "band": "CURRENT_REVIEW",
+          "notes": [
+            "Current R1 state anchor.",
+            "Display-layer ordinal band; not a score or new scientific claim."
+          ],
+          "observation_mode": "DIRECT",
+          "resolution": "DAY",
+          "source_refs": [
+            "research/digital-assets/batch-01-r1/XLM/OBSERVATION_REGISTRY.json"
+          ],
+          "state_label": "SDF_TREASURY_DEPENDENT_PAYMENT_NETWORK",
+          "t_end": "2026-09-09",
+          "t_start": "2026-09-09"
+        },
+        {
+          "band": "OBSERVED",
+          "notes": [
+            "R1 observations are reconstructed as sparse display bands.",
+            "Display-layer ordinal band; not a score or new scientific claim."
+          ],
+          "observation_mode": "RECONSTRUCTED",
+          "resolution": "WEEK",
+          "source_refs": [
+            "research/digital-assets/batch-01-r1/XLM/OBSERVATION_REGISTRY.json"
+          ],
+          "state_label": "SDF_TREASURY_DEPENDENT_PAYMENT_NETWORK",
+          "t_end": "2026-09-09",
+          "t_start": "2026-09-09"
+        },
+        {
+          "band": "CURRENT_REVIEW",
+          "notes": [
+            "Current R1 state anchor.",
+            "Display-layer ordinal band; not a score or new scientific claim."
+          ],
+          "observation_mode": "DIRECT",
+          "resolution": "WEEK",
+          "source_refs": [
+            "research/digital-assets/batch-01-r1/XLM/OBSERVATION_REGISTRY.json"
+          ],
+          "state_label": "SDF_TREASURY_DEPENDENT_PAYMENT_NETWORK",
+          "t_end": "2026-09-09",
+          "t_start": "2026-09-09"
+        },
+        {
+          "band": "OBSERVED",
+          "notes": [
+            "R1 observations are reconstructed as sparse display bands.",
+            "Display-layer ordinal band; not a score or new scientific claim."
+          ],
+          "observation_mode": "RECONSTRUCTED",
+          "resolution": "MONTH",
+          "source_refs": [
+            "research/digital-assets/batch-01-r1/XLM/OBSERVATION_REGISTRY.json"
+          ],
+          "state_label": "SDF_TREASURY_DEPENDENT_PAYMENT_NETWORK",
+          "t_end": "2026-09-09",
+          "t_start": "2026-09-09"
+        },
+        {
+          "band": "CURRENT_REVIEW",
+          "notes": [
+            "Current R1 state anchor.",
+            "Display-layer ordinal band; not a score or new scientific claim."
+          ],
+          "observation_mode": "DIRECT",
+          "resolution": "MONTH",
+          "source_refs": [
+            "research/digital-assets/batch-01-r1/XLM/OBSERVATION_REGISTRY.json"
+          ],
+          "state_label": "SDF_TREASURY_DEPENDENT_PAYMENT_NETWORK",
+          "t_end": "2026-09-09",
+          "t_start": "2026-09-09"
+        }
+      ],
+      "taxonomy_note": "Validator, quorum or block-producer distribution."
+    }
+  ],
+  "display_boundary": "Presentation timeline derived from frozen artifacts. No new scientific conclusion or score.",
+  "model_version": "TIMELINE_MODEL_v0.1",
+  "phase_ribbon": [
+    {
+      "confidence": "DISPLAY_ONLY",
+      "notes": [
+        "Derived from existing subject state and event anchors. No monitoring threshold is implied."
+      ],
+      "observation_mode": "RECONSTRUCTED",
+      "phase": "SDF_TREASURY_DEPENDENT_PAYMENT_NETWORK",
+      "resolution": "DAY",
+      "t_end": "2026-09-09",
+      "t_start": "2026-07-21"
+    },
+    {
+      "confidence": "DISPLAY_ONLY",
+      "notes": [
+        "Derived from existing subject state and event anchors. No monitoring threshold is implied."
+      ],
+      "observation_mode": "RECONSTRUCTED",
+      "phase": "SDF_TREASURY_DEPENDENT_PAYMENT_NETWORK",
+      "resolution": "WEEK",
+      "t_end": "2026-09-09",
+      "t_start": "2026-07-21"
+    },
+    {
+      "confidence": "DISPLAY_ONLY",
+      "notes": [
+        "Derived from existing subject state and event anchors. No monitoring threshold is implied."
+      ],
+      "observation_mode": "RECONSTRUCTED",
+      "phase": "SDF_TREASURY_DEPENDENT_PAYMENT_NETWORK",
+      "resolution": "MONTH",
+      "t_end": "2026-09-09",
+      "t_start": "2026-07-21"
+    }
+  ],
+  "subject_id": "XLM",
+  "subject_label": "XLM",
+  "subject_type": "DIGITAL_ASSET",
+  "supported_resolutions": [
+    "DAY",
+    "WEEK",
+    "MONTH"
+  ]
+}

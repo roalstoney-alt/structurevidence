@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "events": {
+      "type": "array"
+    },
+    "model_version": {
+      "const": "TIMELINE_MODEL_v0.1"
+    },
+    "supported_resolutions": {
+      "items": {
+        "enum": [
+          "DAY",
+          "WEEK",
+          "MONTH"
+        ]
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "model_version",
+    "subject_id",
+    "supported_resolutions",
+    "events"
+  ],
+  "type": "object"
+}

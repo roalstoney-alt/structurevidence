@@ -1,0 +1,18 @@
+{
+  "evidence_status_precedence": [
+    "SUPERSEDED",
+    "UNRESOLVED",
+    "NOT_CONFIGURED",
+    "PARTIAL",
+    "AGING",
+    "FRESH",
+    "NOT_APPLICABLE"
+  ],
+  "model_version": "TIMELINE_MODEL_v0.1",
+  "rules": {
+    "DAY_TO_MONTH": "Aggregate through WEEK first; do not synthesize missing intervals.",
+    "DAY_TO_WEEK": "Preserve events; aggregate ordinal bands by dominant state with explicit tie as MIXED.",
+    "EVENTS": "Events are preserved and grouped by period; they are never averaged.",
+    "WEEK_TO_MONTH": "Preserve events; aggregate evidence display statuses by conservative display precedence."
+  }
+}

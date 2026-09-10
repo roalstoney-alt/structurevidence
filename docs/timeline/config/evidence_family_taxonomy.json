@@ -1,0 +1,14 @@
+{
+  "families": {
+    "AUTHORIZATION_STATUS": "GDR-SE runtime authorization status.",
+    "CORRECTION_STATUS": "Correction record status.",
+    "COUNTER_EVIDENCE_COVERAGE": "Targeted counter-evidence coverage.",
+    "INDEPENDENT_REVIEW": "Independent or blind-review availability.",
+    "NUMERICAL_RECONCILIATION": "Arithmetic or quantitative reconciliation status.",
+    "PRIMARY_SOURCE_COVERAGE": "Primary source availability and source package capture.",
+    "SECONDARY_SUPPORT": "Secondary corroboration where available.",
+    "SOURCE_DEPENDENCY": "Independence and dependency boundaries of source families.",
+    "SUPERSESSION_STATUS": "Supersession or version status."
+  },
+  "model_version": "TIMELINE_MODEL_v0.1"
+}

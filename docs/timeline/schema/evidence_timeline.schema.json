@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "default_resolution": {
+      "enum": [
+        "DAY",
+        "WEEK",
+        "MONTH"
+      ]
+    },
+    "evidence_families": {
+      "type": "array"
+    },
+    "model_version": {
+      "const": "TIMELINE_MODEL_v0.1"
+    },
+    "supported_resolutions": {
+      "items": {
+        "enum": [
+          "DAY",
+          "WEEK",
+          "MONTH"
+        ]
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "model_version",
+    "subject_id",
+    "default_resolution",
+    "supported_resolutions",
+    "evidence_families"
+  ],
+  "type": "object"
+}

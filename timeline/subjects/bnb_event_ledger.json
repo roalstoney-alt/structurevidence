@@ -1,0 +1,80 @@
+{
+  "event_type_enum": [
+    "ARTIFACT_FROZEN",
+    "REPORT_PUBLISHED",
+    "CORRECTION_ADDED",
+    "SUPERSESSION",
+    "SOURCE_PACKAGE_ADDED",
+    "GOVERNANCE_EVENT",
+    "TREASURY_DISCLOSURE",
+    "PROTOCOL_EVENT",
+    "MARKET_STRUCTURE_EVENT",
+    "COUNTER_EVIDENCE_UPDATE",
+    "REVIEW_EVENT"
+  ],
+  "events": [
+    {
+      "event_id": "EVT-BNB-BURN",
+      "event_type": "PROTOCOL_EVENT",
+      "impact_hint": "Supply-structure marker",
+      "label": "36th quarterly burn recorded.",
+      "observation_mode": "SPARSE_EVENT_STATE",
+      "refs": [
+        "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
+      ],
+      "timestamp": "2026-07-15T00:00:00Z"
+    },
+    {
+      "event_id": "EVT-BNB-FREEZE",
+      "event_type": "ARTIFACT_FROZEN",
+      "impact_hint": "Freeze ledger",
+      "label": "BNB R1 artifact package frozen.",
+      "observation_mode": "DIRECT",
+      "refs": [
+        "research/digital-assets/batch-01-r1/BNB/SHA256SUMS.txt"
+      ],
+      "timestamp": "2026-09-09T00:00:00Z"
+    },
+    {
+      "event_id": "EVT-BNB-REPORT",
+      "event_type": "REPORT_PUBLISHED",
+      "impact_hint": "Publication marker",
+      "label": "BNB R1 public evidence and structural reports published.",
+      "observation_mode": "DIRECT",
+      "refs": [
+        "research/digital-assets/batch-01-r1/BNB/PUBLIC_EVIDENCE_RESEARCH_REPORT_R1.md"
+      ],
+      "timestamp": "2026-09-09T00:00:00Z"
+    },
+    {
+      "event_id": "EVT-BNB-VALIDATORS",
+      "event_type": "GOVERNANCE_EVENT",
+      "impact_hint": "Governance marker",
+      "label": "Validator selection and consensus-set evidence captured.",
+      "observation_mode": "SPARSE_EVENT_STATE",
+      "refs": [
+        "research/digital-assets/batch-01-r1/BNB/SOURCE_DEPENDENCY_GRAPH.json"
+      ],
+      "timestamp": "2026-09-09T00:00:00Z"
+    },
+    {
+      "event_id": "EVT-BNB-GDR",
+      "event_type": "REVIEW_EVENT",
+      "impact_hint": "Authorization history",
+      "label": "BNB GDR-SE R1.1 runtime authorization recorded.",
+      "observation_mode": "DIRECT",
+      "refs": [
+        "research/digital-assets/batch-01-r1/BNB/gdr-se/GDR_SE_AUTHORIZATION_RECORD_R1_1.json"
+      ],
+      "timestamp": "2026-09-10T00:00:00Z"
+    }
+  ],
+  "model_version": "TIMELINE_MODEL_v0.1",
+  "subject_id": "BNB",
+  "subject_label": "BNB",
+  "supported_resolutions": [
+    "DAY",
+    "WEEK",
+    "MONTH"
+  ]
+}
