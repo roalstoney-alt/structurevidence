@@ -1,0 +1,35 @@
+{
+  "aggregation_precedence": [
+    "VETO",
+    "HUMAN_REVIEW_REQUIRED",
+    "REFRESH_REQUIRED",
+    "ABSTAIN",
+    "ALLOW_WITH_LIMITATIONS",
+    "ALLOW_PUBLICATION"
+  ],
+  "gates": [
+    "G1_SCHEMA_INTEGRITY",
+    "G2_RTP_PROVENANCE",
+    "G3_EVIDENCE_FRESHNESS",
+    "G4_SOURCE_DEPENDENCY",
+    "G5_NUMERICAL_RECONCILIATION",
+    "G6_ECL_CONSISTENCY",
+    "G7_COUNTER_EVIDENCE_COMPLETENESS",
+    "G8_INDEPENDENT_REVIEW",
+    "G9_SENSITIVITY_RIGHT_OF_REPLY",
+    "G10_EXPIRY_SUPERSESSION"
+  ],
+  "gdr_se_version": "GDR_SE_v0.1",
+  "no_score": true,
+  "no_trading_authorization": true,
+  "no_upgrade_invariant": true,
+  "outcomes": [
+    "ALLOW_PUBLICATION",
+    "ALLOW_WITH_LIMITATIONS",
+    "ALLOW_PAID_DELIVERY",
+    "REFRESH_REQUIRED",
+    "HUMAN_REVIEW_REQUIRED",
+    "ABSTAIN",
+    "VETO"
+  ]
+}

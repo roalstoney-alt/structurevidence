@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "status": {
+      "enum": [
+        "PASS",
+        "PARTIAL",
+        "FAIL",
+        "BLOCKED",
+        "NOT_APPLICABLE",
+        "UNRESOLVED",
+        "STALE",
+        "ARCHIVED",
+        "LIMITED",
+        "INSUFFICIENT_DATA"
+      ]
+    }
+  },
+  "required": [
+    "gate_id",
+    "status",
+    "severity",
+    "reason",
+    "evidence_refs",
+    "limitations",
+    "evaluated_at"
+  ],
+  "title": "gate_result",
+  "type": "object"
+}

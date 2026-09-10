@@ -1,0 +1,50 @@
+{
+  "authorization": "ALLOW_WITH_LIMITATIONS",
+  "authorization_id": "GDR-SE-AUTH-SOL-2026-001",
+  "created_at": "2026-09-10T00:00:00Z",
+  "gate_summary": [
+    {
+      "gate_id": "G1_SCHEMA_INTEGRITY",
+      "status": "PASS"
+    },
+    {
+      "gate_id": "G2_RTP_PROVENANCE",
+      "status": "PASS"
+    },
+    {
+      "gate_id": "G3_EVIDENCE_FRESHNESS",
+      "status": "PASS"
+    },
+    {
+      "gate_id": "G4_SOURCE_DEPENDENCY",
+      "status": "PARTIAL"
+    },
+    {
+      "gate_id": "G5_NUMERICAL_RECONCILIATION",
+      "status": "PASS"
+    },
+    {
+      "gate_id": "G6_ECL_CONSISTENCY",
+      "status": "PARTIAL"
+    },
+    {
+      "gate_id": "G7_COUNTER_EVIDENCE_COMPLETENESS",
+      "status": "PASS"
+    },
+    {
+      "gate_id": "G8_INDEPENDENT_REVIEW",
+      "status": "PASS"
+    },
+    {
+      "gate_id": "G9_SENSITIVITY_RIGHT_OF_REPLY",
+      "status": "NOT_APPLICABLE"
+    },
+    {
+      "gate_id": "G10_EXPIRY_SUPERSESSION",
+      "status": "PASS"
+    }
+  ],
+  "gdr_se_version": "GDR_SE_v0.1",
+  "original_canonical_sha256": "3fd4dfd93611706c94c658a969f0797f07dee59eb177fb0a73633ee232eb70c0",
+  "research_id": "SE.ASSET.SOL.2026.001-R1"
+}

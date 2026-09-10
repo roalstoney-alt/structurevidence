@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "authorization": {
+      "const": "ALLOW_PAID_DELIVERY"
+    },
+    "authorization_id": {
+      "type": "string"
+    },
+    "order_id": {
+      "type": "string"
+    },
+    "report_id": {
+      "type": "string"
+    },
+    "research_id": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "order_id",
+    "report_id",
+    "research_id",
+    "authorization_id",
+    "authorization"
+  ],
+  "title": "GDR-SE Paid Delivery Authorization Link",
+  "type": "object"
+}

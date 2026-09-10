@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "authorization": {
+      "enum": [
+        "REFRESH_REQUIRED",
+        "HUMAN_REVIEW_REQUIRED",
+        "ABSTAIN",
+        "VETO"
+      ]
+    }
+  },
+  "required": [
+    "candidate_delta_id",
+    "provenance_status",
+    "evidence_freshness",
+    "conflict_status",
+    "authorization"
+  ],
+  "title": "monitor_authorization",
+  "type": "object"
+}

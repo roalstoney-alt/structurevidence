@@ -1,0 +1,50 @@
+{
+  "authorization": "ALLOW_PUBLICATION",
+  "authorization_id": "GDR-SE-AUTH-XLM-2026-001",
+  "created_at": "2026-09-10T00:00:00Z",
+  "gate_summary": [
+    {
+      "gate_id": "G1_SCHEMA_INTEGRITY",
+      "status": "PASS"
+    },
+    {
+      "gate_id": "G2_RTP_PROVENANCE",
+      "status": "PASS"
+    },
+    {
+      "gate_id": "G3_EVIDENCE_FRESHNESS",
+      "status": "PASS"
+    },
+    {
+      "gate_id": "G4_SOURCE_DEPENDENCY",
+      "status": "PASS"
+    },
+    {
+      "gate_id": "G5_NUMERICAL_RECONCILIATION",
+      "status": "PASS"
+    },
+    {
+      "gate_id": "G6_ECL_CONSISTENCY",
+      "status": "PASS"
+    },
+    {
+      "gate_id": "G7_COUNTER_EVIDENCE_COMPLETENESS",
+      "status": "PASS"
+    },
+    {
+      "gate_id": "G8_INDEPENDENT_REVIEW",
+      "status": "PASS"
+    },
+    {
+      "gate_id": "G9_SENSITIVITY_RIGHT_OF_REPLY",
+      "status": "NOT_APPLICABLE"
+    },
+    {
+      "gate_id": "G10_EXPIRY_SUPERSESSION",
+      "status": "PASS"
+    }
+  ],
+  "gdr_se_version": "GDR_SE_v0.1",
+  "original_canonical_sha256": "51232c5c1eb9b3218f66848feddc6c4734f8f2ae47e68443221802eae6153fca",
+  "research_id": "SE.ASSET.XLM.2026.001-R1"
+}

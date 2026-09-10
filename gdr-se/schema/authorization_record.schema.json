@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "authorization": {
+      "enum": [
+        "ALLOW_PUBLICATION",
+        "ALLOW_WITH_LIMITATIONS",
+        "ALLOW_PAID_DELIVERY",
+        "REFRESH_REQUIRED",
+        "HUMAN_REVIEW_REQUIRED",
+        "ABSTAIN",
+        "VETO"
+      ]
+    }
+  },
+  "required": [
+    "authorization_id",
+    "research_id",
+    "report_id",
+    "report_version",
+    "gdr_se_version",
+    "authorization",
+    "gate_results",
+    "limitations",
+    "counterfactual",
+    "created_at",
+    "valid_until",
+    "supersedes_authorization_id"
+  ],
+  "title": "authorization_record",
+  "type": "object"
+}

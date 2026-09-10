@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "immutable": {
+      "const": true
+    }
+  },
+  "required": [
+    "envelope_id",
+    "research_id",
+    "rtp_manifest_sha256",
+    "canonical_research_sha256",
+    "report_sha256",
+    "source_inventory_sha256",
+    "observation_registry_sha256",
+    "claim_registry_sha256",
+    "counter_evidence_sha256",
+    "created_at",
+    "immutable"
+  ],
+  "title": "evidence_envelope",
+  "type": "object"
+}

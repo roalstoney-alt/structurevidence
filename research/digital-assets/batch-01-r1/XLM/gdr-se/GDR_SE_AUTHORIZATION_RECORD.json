@@ -1,0 +1,141 @@
+{
+  "authorization": "ALLOW_PUBLICATION",
+  "authorization_id": "GDR-SE-AUTH-XLM-2026-001",
+  "counterfactual": {
+    "discriminating_evidence": [
+      "Independently captured primary artifacts with stable hashes.",
+      "Targeted counter-evidence addressing the leading alternative hypotheses."
+    ],
+    "falsifiers": [
+      "New primary records contradict the current xlm finding.",
+      "A correction or supersession record invalidates a material source or calculation."
+    ],
+    "no_action_consequence": "The research remains withheld from stronger release claims until provenance, freshness and review gates are satisfied.",
+    "rejected_alternative": "The alternative that TEMPORAL_CHANGE should be treated as a truth score or release authorization was rejected."
+  },
+  "created_at": "2026-09-10T00:00:00Z",
+  "evidence_envelope": {
+    "canonical_research_sha256": "51232c5c1eb9b3218f66848feddc6c4734f8f2ae47e68443221802eae6153fca",
+    "claim_registry_sha256": "1fc1016a4983e509b547e9b02be2aeab3c88b03b3ac1c39d9bf0b3e1a31f4161",
+    "counter_evidence_sha256": "7cd9cfb4ad6bffc0e9c6b04d2e4ae7af042798939e63b90011197a3cc671f235",
+    "created_at": "2026-09-10T00:00:00Z",
+    "envelope_id": "GDR-SE-ENV-XLM-2026-001",
+    "immutable": true,
+    "observation_registry_sha256": "9d1170c43c33a7b9c573f4c0f5d2937fced38589c3479407f7fc7b4d15fb61ed",
+    "report_sha256": "2a0d60e5cf0f321adfa88eca5d8a6ca275ebaed2f12ad210830cab333b21c668",
+    "research_id": "SE.ASSET.XLM.2026.001-R1",
+    "rtp_manifest_sha256": "3c8ea872a4eb29c41ba046eca5abd2c5f6b9355579efe26426dfed36edae3f5c",
+    "source_inventory_sha256": "5f6df97578f4d6a902b5228d16430ca6cf0943edaf03de9dba68788534535303"
+  },
+  "evidence_state_reference": "TEMPORAL_CHANGE",
+  "gate_results": [
+    {
+      "evaluated_at": "2026-09-10T00:00:00Z",
+      "evidence_refs": [
+        "evidence-freeze/DIGITAL-ASSET-BATCH-01-R1/XLM/CANONICAL_RESEARCH_R1.json"
+      ],
+      "gate_id": "G1_SCHEMA_INTEGRITY",
+      "limitations": [],
+      "reason": "Required IDs, versions and report metadata are present.",
+      "severity": "HARD",
+      "status": "PASS"
+    },
+    {
+      "evaluated_at": "2026-09-10T00:00:00Z",
+      "evidence_refs": [
+        "evidence-freeze/DIGITAL-ASSET-BATCH-01-R1/XLM/MANIFEST.json"
+      ],
+      "gate_id": "G2_RTP_PROVENANCE",
+      "limitations": [],
+      "reason": "GDR-SE references RTP-style manifests and registries instead of creating a second provenance system.",
+      "severity": "HARD",
+      "status": "PASS"
+    },
+    {
+      "evaluated_at": "2026-09-10T00:00:00Z",
+      "evidence_refs": [],
+      "gate_id": "G3_EVIDENCE_FRESHNESS",
+      "limitations": [],
+      "reason": "Freshness category L1_NETWORK is configured without a universal threshold.",
+      "severity": "SOFT",
+      "status": "PASS"
+    },
+    {
+      "evaluated_at": "2026-09-10T00:00:00Z",
+      "evidence_refs": [
+        "evidence-freeze/DIGITAL-ASSET-BATCH-01-R1/XLM/SOURCE_INVENTORY.json"
+      ],
+      "gate_id": "G4_SOURCE_DEPENDENCY",
+      "limitations": [],
+      "reason": "Source dependency gate passed.",
+      "severity": "SOFT",
+      "status": "PASS"
+    },
+    {
+      "evaluated_at": "2026-09-10T00:00:00Z",
+      "evidence_refs": [],
+      "gate_id": "G5_NUMERICAL_RECONCILIATION",
+      "limitations": [],
+      "reason": "Material arithmetic is traceable or not used as a release upgrade.",
+      "severity": "SOFT",
+      "status": "PASS"
+    },
+    {
+      "evaluated_at": "2026-09-10T00:00:00Z",
+      "evidence_refs": [],
+      "gate_id": "G6_ECL_CONSISTENCY",
+      "limitations": [],
+      "reason": "Evidence state is reconcilable and is not treated as a truth score.",
+      "severity": "SOFT",
+      "status": "PASS"
+    },
+    {
+      "evaluated_at": "2026-09-10T00:00:00Z",
+      "evidence_refs": [
+        "evidence-freeze/DIGITAL-ASSET-BATCH-01-R1/XLM/COUNTER_EVIDENCE_SEARCH_LOG.json"
+      ],
+      "gate_id": "G7_COUNTER_EVIDENCE_COMPLETENESS",
+      "limitations": [],
+      "reason": "Counter-evidence log exists; paid delivery cannot proceed without it.",
+      "severity": "HARD",
+      "status": "PASS"
+    },
+    {
+      "evaluated_at": "2026-09-10T00:00:00Z",
+      "evidence_refs": [],
+      "gate_id": "G8_INDEPENDENT_REVIEW",
+      "limitations": [],
+      "reason": "Independent review artifact is frozen for R1.",
+      "severity": "SOFT",
+      "status": "PASS"
+    },
+    {
+      "evaluated_at": "2026-09-10T00:00:00Z",
+      "evidence_refs": [],
+      "gate_id": "G9_SENSITIVITY_RIGHT_OF_REPLY",
+      "limitations": [],
+      "reason": "No material inconsistency or specific allegation is authorized by GDR-SE.",
+      "severity": "SOFT",
+      "status": "NOT_APPLICABLE"
+    },
+    {
+      "evaluated_at": "2026-09-10T00:00:00Z",
+      "evidence_refs": [],
+      "gate_id": "G10_EXPIRY_SUPERSESSION",
+      "limitations": [],
+      "reason": "No GDR-SE supersession or correction blocks this overlay.",
+      "severity": "HARD",
+      "status": "PASS"
+    }
+  ],
+  "gdr_se_version": "GDR_SE_v0.1",
+  "limitations": [],
+  "public_status": "CURRENT",
+  "report_id": "XLM_PUBLIC_EVIDENCE_RESEARCH_REPORT_R1",
+  "report_version": "R1",
+  "research_id": "SE.ASSET.XLM.2026.001-R1",
+  "research_status": "R1 RESEARCH SUPPORT",
+  "structural_state_reference": "SDF_TREASURY_DEPENDENT_PAYMENT_NETWORK",
+  "supersedes_authorization_id": null,
+  "valid_until": null
+}

@@ -1,0 +1,18 @@
+{
+  "categories": {
+    "CORPORATE_TREASURY": {
+      "status": "UNCONFIGURED"
+    },
+    "L1_NETWORK": {
+      "status": "UNCONFIGURED"
+    },
+    "MARKET_CONTEXT": {
+      "status": "UNCONFIGURED"
+    },
+    "PROTOCOL_GOVERNANCE": {
+      "status": "UNCONFIGURED"
+    }
+  },
+  "gdr_se_version": "GDR_SE_v0.1",
+  "rule": "Do not use a universal freshness threshold. Use UNCONFIGURED until RDL approves category thresholds."
+}
