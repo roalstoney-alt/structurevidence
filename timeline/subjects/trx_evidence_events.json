@@ -1,0 +1,125 @@
+{
+  "events": [
+    {
+      "artifact_refs": [
+        "research/digital-assets/batch-01-r1/TRX/COUNTER_EVIDENCE_SEARCH_LOG.json"
+      ],
+      "capture_lag_days": null,
+      "event_type": "COUNTER_EVIDENCE_SEARCH_COMPLETED",
+      "evidence_event_id": "TL-TRX-EE-COUNTER_EVIDENCE_COVERAGE",
+      "family_id": "COUNTER_EVIDENCE_COVERAGE",
+      "known_at": "2026-09-09T00:00:00Z",
+      "observation_mode": "DIRECT",
+      "source_refs": [
+        "research/digital-assets/batch-01-r1/TRX/COUNTER_EVIDENCE_SEARCH_LOG.json"
+      ],
+      "state_after": "PARTIAL",
+      "subject_id": "TRX"
+    },
+    {
+      "artifact_refs": [
+        "research/digital-assets/batch-01-r1/TRX/BLIND_REVIEW_OUTPUT.md"
+      ],
+      "capture_lag_days": null,
+      "event_type": "INDEPENDENT_REVIEW_COMPLETED",
+      "evidence_event_id": "TL-TRX-EE-INDEPENDENT_REVIEW",
+      "family_id": "INDEPENDENT_REVIEW",
+      "known_at": "2026-09-09T00:00:00Z",
+      "observation_mode": "DIRECT",
+      "source_refs": [
+        "research/digital-assets/batch-01-r1/TRX/BLIND_REVIEW_OUTPUT.md"
+      ],
+      "state_after": "COMPLETE",
+      "subject_id": "TRX"
+    },
+    {
+      "artifact_refs": [
+        "research/digital-assets/batch-01-r1/TRX/NUMERICAL_RECONCILIATION.json"
+      ],
+      "capture_lag_days": null,
+      "event_type": "NUMERICAL_RECONCILIATION_COMPLETED",
+      "evidence_event_id": "TL-TRX-EE-NUMERICAL_RECONCILIATION",
+      "family_id": "NUMERICAL_RECONCILIATION",
+      "known_at": "2026-09-09T00:00:00Z",
+      "observation_mode": "DIRECT",
+      "source_refs": [
+        "research/digital-assets/batch-01-r1/TRX/NUMERICAL_RECONCILIATION.json"
+      ],
+      "state_after": "COMPLETE",
+      "subject_id": "TRX"
+    },
+    {
+      "artifact_refs": [
+        "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
+      ],
+      "capture_lag_days": 2,
+      "effective_at_refs": [
+        "2026-09-07T00:00:00Z",
+        "2026-09-09T00:00:00Z"
+      ],
+      "event_type": "SOURCE_CAPTURED",
+      "evidence_event_id": "TL-TRX-EE001",
+      "family_id": "PRIMARY_SOURCE_COVERAGE",
+      "known_at": "2026-09-09T00:00:00Z",
+      "observation_mode": "DIRECT",
+      "source_refs": [
+        "https://developers.tron.network/docs/resource-model",
+        "https://developers.tron.network/docs/super-representatives",
+        "https://tronscan.org/data/charts/txn/cumulative-txn"
+      ],
+      "state_after": "OBSERVED",
+      "subject_id": "TRX"
+    },
+    {
+      "artifact_refs": [
+        "research/digital-assets/batch-01-r1/TRX/SOURCE_DEPENDENCY_GRAPH.json"
+      ],
+      "capture_lag_days": null,
+      "event_type": "ARTIFACT_FROZEN",
+      "evidence_event_id": "TL-TRX-EE-SOURCE_DEPENDENCY",
+      "family_id": "SOURCE_DEPENDENCY",
+      "known_at": "2026-09-09T00:00:00Z",
+      "observation_mode": "DIRECT",
+      "source_refs": [
+        "research/digital-assets/batch-01-r1/TRX/SOURCE_DEPENDENCY_GRAPH.json"
+      ],
+      "state_after": "PARTIAL",
+      "subject_id": "TRX"
+    },
+    {
+      "artifact_refs": [
+        "research/digital-assets/batch-01-r1/TRX/SUPERSESSION_NOTICE.md"
+      ],
+      "capture_lag_days": null,
+      "event_type": "SUPERSESSION_ADDED",
+      "evidence_event_id": "TL-TRX-EE-SUPERSESSION_STATUS",
+      "family_id": "SUPERSESSION_STATUS",
+      "known_at": "2026-09-09T00:00:00Z",
+      "observation_mode": "DIRECT",
+      "source_refs": [
+        "research/digital-assets/batch-01-r1/TRX/SUPERSESSION_NOTICE.md"
+      ],
+      "state_after": "COMPLETE",
+      "subject_id": "TRX"
+    },
+    {
+      "artifact_refs": [
+        "research/digital-assets/batch-01-r1/TRX/gdr-se/GDR_SE_AUTHORIZATION_RECORD_R1_1.json"
+      ],
+      "capture_lag_days": 0,
+      "evaluation_as_of": "2026-09-10T14:18:35.507637Z",
+      "event_type": "GDR_SE_AUTHORIZATION_EVALUATED",
+      "evidence_event_id": "TL-TRX-EE-AUTH",
+      "family_id": "AUTHORIZATION_STATUS",
+      "known_at": "2026-09-10T14:18:35.542590Z",
+      "observation_mode": "DIRECT",
+      "source_refs": [
+        "research/digital-assets/batch-01-r1/TRX/gdr-se/GDR_SE_AUTHORIZATION_RECORD_R1_1.json"
+      ],
+      "state_after": "UNDER_REVIEW",
+      "subject_id": "TRX"
+    }
+  ],
+  "model_version": "TIMELINE_MODEL_R1",
+  "subject_id": "TRX"
+}

@@ -1,357 +1,71 @@
 {
+  "datasets": {
+    "DAY": "timeline/subjects/trx_evidence_day.json",
+    "MONTH": "timeline/subjects/trx_evidence_month.json",
+    "WEEK": "timeline/subjects/trx_evidence_week.json"
+  },
   "default_resolution": "WEEK",
-  "display_boundary": "Freshness statuses are display statuses. RDL production thresholds are not configured in this sprint.",
+  "density": {
+    "active_days": 2,
+    "evidence_events": 7,
+    "monthly_cells": 9,
+    "weekly_cells": 9
+  },
+  "display_boundary": "Evidence process states are pre-policy process metadata. RDL freshness policy is NOT_CONFIGURED.",
   "evidence_families": [
     {
       "family_id": "PRIMARY_SOURCE_COVERAGE",
       "label": "Primary Source Coverage",
-      "series": [
-        {
-          "artifact_refs": [
-            "research/digital-assets/batch-01-r1/TRX/gdr-se/GDR_SE_AUTHORIZATION_RECORD_R1_1.json"
-          ],
-          "last_update_at": "2026-09-09T00:00:00Z",
-          "notes": [
-            "No production freshness threshold is applied."
-          ],
-          "observation_mode": "RECONSTRUCTED",
-          "resolution": "DAY",
-          "status": "PARTIAL",
-          "t_end": "2026-09-09",
-          "t_start": "2026-09-09"
-        },
-        {
-          "artifact_refs": [
-            "research/digital-assets/batch-01-r1/TRX/gdr-se/GDR_SE_AUTHORIZATION_RECORD_R1_1.json"
-          ],
-          "last_update_at": "2026-09-09T00:00:00Z",
-          "notes": [
-            "No production freshness threshold is applied."
-          ],
-          "observation_mode": "RECONSTRUCTED",
-          "resolution": "WEEK",
-          "status": "PARTIAL",
-          "t_end": "2026-09-09",
-          "t_start": "2026-09-09"
-        },
-        {
-          "artifact_refs": [
-            "research/digital-assets/batch-01-r1/TRX/gdr-se/GDR_SE_AUTHORIZATION_RECORD_R1_1.json"
-          ],
-          "last_update_at": "2026-09-09T00:00:00Z",
-          "notes": [
-            "No production freshness threshold is applied."
-          ],
-          "observation_mode": "RECONSTRUCTED",
-          "resolution": "MONTH",
-          "status": "PARTIAL",
-          "t_end": "2026-09-09",
-          "t_start": "2026-09-09"
-        }
-      ],
       "taxonomy_note": "Primary source availability and source package capture."
+    },
+    {
+      "family_id": "SECONDARY_SUPPORT",
+      "label": "Secondary Support",
+      "taxonomy_note": "Secondary corroboration where available."
     },
     {
       "family_id": "COUNTER_EVIDENCE_COVERAGE",
       "label": "Counter Evidence Coverage",
-      "series": [
-        {
-          "artifact_refs": [
-            "research/digital-assets/batch-01-r1/TRX/gdr-se/GDR_SE_AUTHORIZATION_RECORD_R1_1.json"
-          ],
-          "last_update_at": "2026-09-09T00:00:00Z",
-          "notes": [
-            "No production freshness threshold is applied."
-          ],
-          "observation_mode": "RECONSTRUCTED",
-          "resolution": "DAY",
-          "status": "PARTIAL",
-          "t_end": "2026-09-09",
-          "t_start": "2026-09-09"
-        },
-        {
-          "artifact_refs": [
-            "research/digital-assets/batch-01-r1/TRX/gdr-se/GDR_SE_AUTHORIZATION_RECORD_R1_1.json"
-          ],
-          "last_update_at": "2026-09-09T00:00:00Z",
-          "notes": [
-            "No production freshness threshold is applied."
-          ],
-          "observation_mode": "RECONSTRUCTED",
-          "resolution": "WEEK",
-          "status": "PARTIAL",
-          "t_end": "2026-09-09",
-          "t_start": "2026-09-09"
-        },
-        {
-          "artifact_refs": [
-            "research/digital-assets/batch-01-r1/TRX/gdr-se/GDR_SE_AUTHORIZATION_RECORD_R1_1.json"
-          ],
-          "last_update_at": "2026-09-09T00:00:00Z",
-          "notes": [
-            "No production freshness threshold is applied."
-          ],
-          "observation_mode": "RECONSTRUCTED",
-          "resolution": "MONTH",
-          "status": "PARTIAL",
-          "t_end": "2026-09-09",
-          "t_start": "2026-09-09"
-        }
-      ],
       "taxonomy_note": "Targeted counter-evidence coverage."
     },
     {
       "family_id": "NUMERICAL_RECONCILIATION",
       "label": "Numerical Reconciliation",
-      "series": [
-        {
-          "artifact_refs": [
-            "research/digital-assets/batch-01-r1/TRX/gdr-se/GDR_SE_AUTHORIZATION_RECORD_R1_1.json"
-          ],
-          "last_update_at": "2026-09-09T00:00:00Z",
-          "notes": [
-            "No production freshness threshold is applied."
-          ],
-          "observation_mode": "RECONSTRUCTED",
-          "resolution": "DAY",
-          "status": "FRESH",
-          "t_end": "2026-09-09",
-          "t_start": "2026-09-09"
-        },
-        {
-          "artifact_refs": [
-            "research/digital-assets/batch-01-r1/TRX/gdr-se/GDR_SE_AUTHORIZATION_RECORD_R1_1.json"
-          ],
-          "last_update_at": "2026-09-09T00:00:00Z",
-          "notes": [
-            "No production freshness threshold is applied."
-          ],
-          "observation_mode": "RECONSTRUCTED",
-          "resolution": "WEEK",
-          "status": "FRESH",
-          "t_end": "2026-09-09",
-          "t_start": "2026-09-09"
-        },
-        {
-          "artifact_refs": [
-            "research/digital-assets/batch-01-r1/TRX/gdr-se/GDR_SE_AUTHORIZATION_RECORD_R1_1.json"
-          ],
-          "last_update_at": "2026-09-09T00:00:00Z",
-          "notes": [
-            "No production freshness threshold is applied."
-          ],
-          "observation_mode": "RECONSTRUCTED",
-          "resolution": "MONTH",
-          "status": "FRESH",
-          "t_end": "2026-09-09",
-          "t_start": "2026-09-09"
-        }
-      ],
       "taxonomy_note": "Arithmetic or quantitative reconciliation status."
     },
     {
       "family_id": "SOURCE_DEPENDENCY",
       "label": "Source Dependency",
-      "series": [
-        {
-          "artifact_refs": [
-            "research/digital-assets/batch-01-r1/TRX/gdr-se/GDR_SE_AUTHORIZATION_RECORD_R1_1.json"
-          ],
-          "last_update_at": "2026-09-09T00:00:00Z",
-          "notes": [
-            "No production freshness threshold is applied."
-          ],
-          "observation_mode": "RECONSTRUCTED",
-          "resolution": "DAY",
-          "status": "PARTIAL",
-          "t_end": "2026-09-09",
-          "t_start": "2026-09-09"
-        },
-        {
-          "artifact_refs": [
-            "research/digital-assets/batch-01-r1/TRX/gdr-se/GDR_SE_AUTHORIZATION_RECORD_R1_1.json"
-          ],
-          "last_update_at": "2026-09-09T00:00:00Z",
-          "notes": [
-            "No production freshness threshold is applied."
-          ],
-          "observation_mode": "RECONSTRUCTED",
-          "resolution": "WEEK",
-          "status": "PARTIAL",
-          "t_end": "2026-09-09",
-          "t_start": "2026-09-09"
-        },
-        {
-          "artifact_refs": [
-            "research/digital-assets/batch-01-r1/TRX/gdr-se/GDR_SE_AUTHORIZATION_RECORD_R1_1.json"
-          ],
-          "last_update_at": "2026-09-09T00:00:00Z",
-          "notes": [
-            "No production freshness threshold is applied."
-          ],
-          "observation_mode": "RECONSTRUCTED",
-          "resolution": "MONTH",
-          "status": "PARTIAL",
-          "t_end": "2026-09-09",
-          "t_start": "2026-09-09"
-        }
-      ],
       "taxonomy_note": "Independence and dependency boundaries of source families."
     },
     {
       "family_id": "INDEPENDENT_REVIEW",
       "label": "Independent Review",
-      "series": [
-        {
-          "artifact_refs": [
-            "research/digital-assets/batch-01-r1/TRX/gdr-se/GDR_SE_AUTHORIZATION_RECORD_R1_1.json"
-          ],
-          "last_update_at": "2026-09-09T00:00:00Z",
-          "notes": [
-            "No production freshness threshold is applied."
-          ],
-          "observation_mode": "RECONSTRUCTED",
-          "resolution": "DAY",
-          "status": "PARTIAL",
-          "t_end": "2026-09-09",
-          "t_start": "2026-09-09"
-        },
-        {
-          "artifact_refs": [
-            "research/digital-assets/batch-01-r1/TRX/gdr-se/GDR_SE_AUTHORIZATION_RECORD_R1_1.json"
-          ],
-          "last_update_at": "2026-09-09T00:00:00Z",
-          "notes": [
-            "No production freshness threshold is applied."
-          ],
-          "observation_mode": "RECONSTRUCTED",
-          "resolution": "WEEK",
-          "status": "PARTIAL",
-          "t_end": "2026-09-09",
-          "t_start": "2026-09-09"
-        },
-        {
-          "artifact_refs": [
-            "research/digital-assets/batch-01-r1/TRX/gdr-se/GDR_SE_AUTHORIZATION_RECORD_R1_1.json"
-          ],
-          "last_update_at": "2026-09-09T00:00:00Z",
-          "notes": [
-            "No production freshness threshold is applied."
-          ],
-          "observation_mode": "RECONSTRUCTED",
-          "resolution": "MONTH",
-          "status": "PARTIAL",
-          "t_end": "2026-09-09",
-          "t_start": "2026-09-09"
-        }
-      ],
       "taxonomy_note": "Independent or blind-review availability."
+    },
+    {
+      "family_id": "CORRECTION_STATUS",
+      "label": "Correction Status",
+      "taxonomy_note": "Correction record status."
     },
     {
       "family_id": "SUPERSESSION_STATUS",
       "label": "Supersession Status",
-      "series": [
-        {
-          "artifact_refs": [
-            "research/digital-assets/batch-01-r1/TRX/gdr-se/GDR_SE_AUTHORIZATION_RECORD_R1_1.json"
-          ],
-          "last_update_at": "2026-09-09T00:00:00Z",
-          "notes": [
-            "No production freshness threshold is applied."
-          ],
-          "observation_mode": "DIRECT",
-          "resolution": "DAY",
-          "status": "FRESH",
-          "t_end": "2026-09-09",
-          "t_start": "2026-09-09"
-        },
-        {
-          "artifact_refs": [
-            "research/digital-assets/batch-01-r1/TRX/gdr-se/GDR_SE_AUTHORIZATION_RECORD_R1_1.json"
-          ],
-          "last_update_at": "2026-09-09T00:00:00Z",
-          "notes": [
-            "No production freshness threshold is applied."
-          ],
-          "observation_mode": "DIRECT",
-          "resolution": "WEEK",
-          "status": "FRESH",
-          "t_end": "2026-09-09",
-          "t_start": "2026-09-09"
-        },
-        {
-          "artifact_refs": [
-            "research/digital-assets/batch-01-r1/TRX/gdr-se/GDR_SE_AUTHORIZATION_RECORD_R1_1.json"
-          ],
-          "last_update_at": "2026-09-09T00:00:00Z",
-          "notes": [
-            "No production freshness threshold is applied."
-          ],
-          "observation_mode": "DIRECT",
-          "resolution": "MONTH",
-          "status": "FRESH",
-          "t_end": "2026-09-09",
-          "t_start": "2026-09-09"
-        }
-      ],
       "taxonomy_note": "Supersession or version status."
     },
     {
       "family_id": "AUTHORIZATION_STATUS",
       "label": "Authorization Status",
-      "series": [
-        {
-          "artifact_refs": [
-            "research/digital-assets/batch-01-r1/TRX/gdr-se/GDR_SE_AUTHORIZATION_RECORD_R1_1.json"
-          ],
-          "last_update_at": "2026-09-09T00:00:00Z",
-          "notes": [
-            "No production freshness threshold is applied."
-          ],
-          "observation_mode": "DIRECT",
-          "resolution": "DAY",
-          "status": "UNRESOLVED",
-          "t_end": "2026-09-09",
-          "t_start": "2026-09-09"
-        },
-        {
-          "artifact_refs": [
-            "research/digital-assets/batch-01-r1/TRX/gdr-se/GDR_SE_AUTHORIZATION_RECORD_R1_1.json"
-          ],
-          "last_update_at": "2026-09-09T00:00:00Z",
-          "notes": [
-            "No production freshness threshold is applied."
-          ],
-          "observation_mode": "DIRECT",
-          "resolution": "WEEK",
-          "status": "UNRESOLVED",
-          "t_end": "2026-09-09",
-          "t_start": "2026-09-09"
-        },
-        {
-          "artifact_refs": [
-            "research/digital-assets/batch-01-r1/TRX/gdr-se/GDR_SE_AUTHORIZATION_RECORD_R1_1.json"
-          ],
-          "last_update_at": "2026-09-09T00:00:00Z",
-          "notes": [
-            "No production freshness threshold is applied."
-          ],
-          "observation_mode": "DIRECT",
-          "resolution": "MONTH",
-          "status": "UNRESOLVED",
-          "t_end": "2026-09-09",
-          "t_start": "2026-09-09"
-        }
-      ],
       "taxonomy_note": "GDR-SE runtime authorization status."
     }
   ],
-  "model_version": "TIMELINE_MODEL_v0.1",
+  "model_version": "TIMELINE_MODEL_R1",
   "subject_id": "TRX",
   "subject_label": "TRX",
   "supported_resolutions": [
     "DAY",
     "WEEK",
     "MONTH"
-  ]
+  ],
+  "ui_version": "TIMELINE_UI_R1"
 }

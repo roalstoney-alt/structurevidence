@@ -1,432 +1,176 @@
 {
-  "construction_method": "SEMI_STRUCTURED_RECONSTRUCTION",
+  "construction_method": "REAL_TIME_INDEXED_RECONSTRUCTION",
   "current_structural_state": "BURN_LINKED_ECOSYSTEM_UTILITY_REGIME",
+  "datasets": {
+    "DAY": "timeline/subjects/bnb_structural_day.json",
+    "MONTH": "timeline/subjects/bnb_structural_month.json",
+    "WEEK": "timeline/subjects/bnb_structural_week.json"
+  },
   "default_resolution": "WEEK",
+  "density": {
+    "active_days": 2,
+    "atomic_observations": 9,
+    "monthly_buckets": 12,
+    "weekly_buckets": 36
+  },
   "dimensions": [
     {
+      "coverage_end": "2026-07-15",
+      "coverage_start": "2026-07-15",
       "dimension_id": "SUPPLY_STRUCTURE",
+      "distinct_dates": 1,
       "label": "Supply Structure",
-      "series": [
-        {
-          "band": "OBSERVED",
-          "notes": [
-            "R1 observations are reconstructed as sparse display bands.",
-            "Display-layer ordinal band; not a score or new scientific claim."
-          ],
-          "observation_mode": "RECONSTRUCTED",
-          "resolution": "DAY",
-          "source_refs": [
-            "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
-          ],
-          "state_label": "BURN_LINKED_ECOSYSTEM_UTILITY_REGIME",
-          "t_end": "2026-09-09",
-          "t_start": "2026-09-09"
-        },
-        {
-          "band": "CURRENT_REVIEW",
-          "notes": [
-            "Current R1 state anchor.",
-            "Display-layer ordinal band; not a score or new scientific claim."
-          ],
-          "observation_mode": "DIRECT",
-          "resolution": "DAY",
-          "source_refs": [
-            "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
-          ],
-          "state_label": "BURN_LINKED_ECOSYSTEM_UTILITY_REGIME",
-          "t_end": "2026-09-09",
-          "t_start": "2026-09-09"
-        },
-        {
-          "band": "OBSERVED",
-          "notes": [
-            "R1 observations are reconstructed as sparse display bands.",
-            "Display-layer ordinal band; not a score or new scientific claim."
-          ],
-          "observation_mode": "RECONSTRUCTED",
-          "resolution": "WEEK",
-          "source_refs": [
-            "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
-          ],
-          "state_label": "BURN_LINKED_ECOSYSTEM_UTILITY_REGIME",
-          "t_end": "2026-09-09",
-          "t_start": "2026-09-09"
-        },
-        {
-          "band": "CURRENT_REVIEW",
-          "notes": [
-            "Current R1 state anchor.",
-            "Display-layer ordinal band; not a score or new scientific claim."
-          ],
-          "observation_mode": "DIRECT",
-          "resolution": "WEEK",
-          "source_refs": [
-            "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
-          ],
-          "state_label": "BURN_LINKED_ECOSYSTEM_UTILITY_REGIME",
-          "t_end": "2026-09-09",
-          "t_start": "2026-09-09"
-        },
-        {
-          "band": "OBSERVED",
-          "notes": [
-            "R1 observations are reconstructed as sparse display bands.",
-            "Display-layer ordinal band; not a score or new scientific claim."
-          ],
-          "observation_mode": "RECONSTRUCTED",
-          "resolution": "MONTH",
-          "source_refs": [
-            "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
-          ],
-          "state_label": "BURN_LINKED_ECOSYSTEM_UTILITY_REGIME",
-          "t_end": "2026-09-09",
-          "t_start": "2026-09-09"
-        },
-        {
-          "band": "CURRENT_REVIEW",
-          "notes": [
-            "Current R1 state anchor.",
-            "Display-layer ordinal band; not a score or new scientific claim."
-          ],
-          "observation_mode": "DIRECT",
-          "resolution": "MONTH",
-          "source_refs": [
-            "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
-          ],
-          "state_label": "BURN_LINKED_ECOSYSTEM_UTILITY_REGIME",
-          "t_end": "2026-09-09",
-          "t_start": "2026-09-09"
-        }
-      ],
+      "observation_count": 3,
+      "render_mode": "SPARSE_POINTS",
       "taxonomy_note": "Supply mechanics, issuance, burn or distribution structure."
     },
     {
+      "coverage_end": "2026-09-09",
+      "coverage_start": "2026-07-15",
       "dimension_id": "UTILITY_STRUCTURE",
+      "distinct_dates": 2,
       "label": "Utility Structure",
-      "series": [
-        {
-          "band": "OBSERVED",
-          "notes": [
-            "R1 observations are reconstructed as sparse display bands.",
-            "Display-layer ordinal band; not a score or new scientific claim."
-          ],
-          "observation_mode": "RECONSTRUCTED",
-          "resolution": "DAY",
-          "source_refs": [
-            "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
-          ],
-          "state_label": "BURN_LINKED_ECOSYSTEM_UTILITY_REGIME",
-          "t_end": "2026-09-09",
-          "t_start": "2026-09-09"
-        },
-        {
-          "band": "CURRENT_REVIEW",
-          "notes": [
-            "Current R1 state anchor.",
-            "Display-layer ordinal band; not a score or new scientific claim."
-          ],
-          "observation_mode": "DIRECT",
-          "resolution": "DAY",
-          "source_refs": [
-            "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
-          ],
-          "state_label": "BURN_LINKED_ECOSYSTEM_UTILITY_REGIME",
-          "t_end": "2026-09-09",
-          "t_start": "2026-09-09"
-        },
-        {
-          "band": "OBSERVED",
-          "notes": [
-            "R1 observations are reconstructed as sparse display bands.",
-            "Display-layer ordinal band; not a score or new scientific claim."
-          ],
-          "observation_mode": "RECONSTRUCTED",
-          "resolution": "WEEK",
-          "source_refs": [
-            "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
-          ],
-          "state_label": "BURN_LINKED_ECOSYSTEM_UTILITY_REGIME",
-          "t_end": "2026-09-09",
-          "t_start": "2026-09-09"
-        },
-        {
-          "band": "CURRENT_REVIEW",
-          "notes": [
-            "Current R1 state anchor.",
-            "Display-layer ordinal band; not a score or new scientific claim."
-          ],
-          "observation_mode": "DIRECT",
-          "resolution": "WEEK",
-          "source_refs": [
-            "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
-          ],
-          "state_label": "BURN_LINKED_ECOSYSTEM_UTILITY_REGIME",
-          "t_end": "2026-09-09",
-          "t_start": "2026-09-09"
-        },
-        {
-          "band": "OBSERVED",
-          "notes": [
-            "R1 observations are reconstructed as sparse display bands.",
-            "Display-layer ordinal band; not a score or new scientific claim."
-          ],
-          "observation_mode": "RECONSTRUCTED",
-          "resolution": "MONTH",
-          "source_refs": [
-            "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
-          ],
-          "state_label": "BURN_LINKED_ECOSYSTEM_UTILITY_REGIME",
-          "t_end": "2026-09-09",
-          "t_start": "2026-09-09"
-        },
-        {
-          "band": "CURRENT_REVIEW",
-          "notes": [
-            "Current R1 state anchor.",
-            "Display-layer ordinal band; not a score or new scientific claim."
-          ],
-          "observation_mode": "DIRECT",
-          "resolution": "MONTH",
-          "source_refs": [
-            "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
-          ],
-          "state_label": "BURN_LINKED_ECOSYSTEM_UTILITY_REGIME",
-          "t_end": "2026-09-09",
-          "t_start": "2026-09-09"
-        }
-      ],
+      "observation_count": 2,
+      "render_mode": "STEP_WAVEFORM",
       "taxonomy_note": "Documented functional demand or use context."
     },
     {
+      "coverage_end": "2026-09-09",
+      "coverage_start": "2026-09-09",
       "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "distinct_dates": 1,
       "label": "Validator Distribution",
-      "series": [
-        {
-          "band": "OBSERVED",
-          "notes": [
-            "R1 observations are reconstructed as sparse display bands.",
-            "Display-layer ordinal band; not a score or new scientific claim."
-          ],
-          "observation_mode": "RECONSTRUCTED",
-          "resolution": "DAY",
-          "source_refs": [
-            "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
-          ],
-          "state_label": "BURN_LINKED_ECOSYSTEM_UTILITY_REGIME",
-          "t_end": "2026-09-09",
-          "t_start": "2026-09-09"
-        },
-        {
-          "band": "CURRENT_REVIEW",
-          "notes": [
-            "Current R1 state anchor.",
-            "Display-layer ordinal band; not a score or new scientific claim."
-          ],
-          "observation_mode": "DIRECT",
-          "resolution": "DAY",
-          "source_refs": [
-            "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
-          ],
-          "state_label": "BURN_LINKED_ECOSYSTEM_UTILITY_REGIME",
-          "t_end": "2026-09-09",
-          "t_start": "2026-09-09"
-        },
-        {
-          "band": "OBSERVED",
-          "notes": [
-            "R1 observations are reconstructed as sparse display bands.",
-            "Display-layer ordinal band; not a score or new scientific claim."
-          ],
-          "observation_mode": "RECONSTRUCTED",
-          "resolution": "WEEK",
-          "source_refs": [
-            "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
-          ],
-          "state_label": "BURN_LINKED_ECOSYSTEM_UTILITY_REGIME",
-          "t_end": "2026-09-09",
-          "t_start": "2026-09-09"
-        },
-        {
-          "band": "CURRENT_REVIEW",
-          "notes": [
-            "Current R1 state anchor.",
-            "Display-layer ordinal band; not a score or new scientific claim."
-          ],
-          "observation_mode": "DIRECT",
-          "resolution": "WEEK",
-          "source_refs": [
-            "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
-          ],
-          "state_label": "BURN_LINKED_ECOSYSTEM_UTILITY_REGIME",
-          "t_end": "2026-09-09",
-          "t_start": "2026-09-09"
-        },
-        {
-          "band": "OBSERVED",
-          "notes": [
-            "R1 observations are reconstructed as sparse display bands.",
-            "Display-layer ordinal band; not a score or new scientific claim."
-          ],
-          "observation_mode": "RECONSTRUCTED",
-          "resolution": "MONTH",
-          "source_refs": [
-            "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
-          ],
-          "state_label": "BURN_LINKED_ECOSYSTEM_UTILITY_REGIME",
-          "t_end": "2026-09-09",
-          "t_start": "2026-09-09"
-        },
-        {
-          "band": "CURRENT_REVIEW",
-          "notes": [
-            "Current R1 state anchor.",
-            "Display-layer ordinal band; not a score or new scientific claim."
-          ],
-          "observation_mode": "DIRECT",
-          "resolution": "MONTH",
-          "source_refs": [
-            "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
-          ],
-          "state_label": "BURN_LINKED_ECOSYSTEM_UTILITY_REGIME",
-          "t_end": "2026-09-09",
-          "t_start": "2026-09-09"
-        }
-      ],
+      "observation_count": 2,
+      "render_mode": "SPARSE_POINTS",
       "taxonomy_note": "Validator, quorum or block-producer distribution."
     },
     {
+      "coverage_end": "2026-09-09",
+      "coverage_start": "2026-07-15",
       "dimension_id": "GOVERNANCE_STRUCTURE",
+      "distinct_dates": 2,
       "label": "Governance Structure",
-      "series": [
-        {
-          "band": "OBSERVED",
-          "notes": [
-            "R1 observations are reconstructed as sparse display bands.",
-            "Display-layer ordinal band; not a score or new scientific claim."
-          ],
-          "observation_mode": "RECONSTRUCTED",
-          "resolution": "DAY",
-          "source_refs": [
-            "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
-          ],
-          "state_label": "BURN_LINKED_ECOSYSTEM_UTILITY_REGIME",
-          "t_end": "2026-09-09",
-          "t_start": "2026-09-09"
-        },
-        {
-          "band": "CURRENT_REVIEW",
-          "notes": [
-            "Current R1 state anchor.",
-            "Display-layer ordinal band; not a score or new scientific claim."
-          ],
-          "observation_mode": "DIRECT",
-          "resolution": "DAY",
-          "source_refs": [
-            "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
-          ],
-          "state_label": "BURN_LINKED_ECOSYSTEM_UTILITY_REGIME",
-          "t_end": "2026-09-09",
-          "t_start": "2026-09-09"
-        },
-        {
-          "band": "OBSERVED",
-          "notes": [
-            "R1 observations are reconstructed as sparse display bands.",
-            "Display-layer ordinal band; not a score or new scientific claim."
-          ],
-          "observation_mode": "RECONSTRUCTED",
-          "resolution": "WEEK",
-          "source_refs": [
-            "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
-          ],
-          "state_label": "BURN_LINKED_ECOSYSTEM_UTILITY_REGIME",
-          "t_end": "2026-09-09",
-          "t_start": "2026-09-09"
-        },
-        {
-          "band": "CURRENT_REVIEW",
-          "notes": [
-            "Current R1 state anchor.",
-            "Display-layer ordinal band; not a score or new scientific claim."
-          ],
-          "observation_mode": "DIRECT",
-          "resolution": "WEEK",
-          "source_refs": [
-            "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
-          ],
-          "state_label": "BURN_LINKED_ECOSYSTEM_UTILITY_REGIME",
-          "t_end": "2026-09-09",
-          "t_start": "2026-09-09"
-        },
-        {
-          "band": "OBSERVED",
-          "notes": [
-            "R1 observations are reconstructed as sparse display bands.",
-            "Display-layer ordinal band; not a score or new scientific claim."
-          ],
-          "observation_mode": "RECONSTRUCTED",
-          "resolution": "MONTH",
-          "source_refs": [
-            "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
-          ],
-          "state_label": "BURN_LINKED_ECOSYSTEM_UTILITY_REGIME",
-          "t_end": "2026-09-09",
-          "t_start": "2026-09-09"
-        },
-        {
-          "band": "CURRENT_REVIEW",
-          "notes": [
-            "Current R1 state anchor.",
-            "Display-layer ordinal band; not a score or new scientific claim."
-          ],
-          "observation_mode": "DIRECT",
-          "resolution": "MONTH",
-          "source_refs": [
-            "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
-          ],
-          "state_label": "BURN_LINKED_ECOSYSTEM_UTILITY_REGIME",
-          "t_end": "2026-09-09",
-          "t_start": "2026-09-09"
-        }
-      ],
+      "observation_count": 2,
+      "render_mode": "STEP_WAVEFORM",
       "taxonomy_note": "Control, voting, validator or decision structure."
     }
   ],
-  "display_boundary": "Presentation timeline derived from frozen artifacts. No new scientific conclusion or score.",
-  "model_version": "TIMELINE_MODEL_v0.1",
+  "display_boundary": "Categorical presentation derived from frozen artifacts. No score, ranking, trading signal, or RDL policy classifier.",
+  "model_version": "TIMELINE_MODEL_R1",
   "phase_ribbon": [
     {
-      "confidence": "DISPLAY_ONLY",
-      "notes": [
-        "Derived from existing subject state and event anchors. No monitoring threshold is implied."
+      "aggregation_rule": "MONTH_FROM_WEEK",
+      "bucket_end": "2026-07-31",
+      "bucket_start": "2026-07-01",
+      "dimension_bucket_refs": [
+        "BNB-STRUCT-MONTH-2026-07-GOVERNANCE_STRUCTURE"
       ],
-      "observation_mode": "RECONSTRUCTED",
-      "phase": "BURN_LINKED_ECOSYSTEM_UTILITY_REGIME",
-      "resolution": "DAY",
-      "t_end": "2026-09-09",
-      "t_start": "2026-07-15"
-    },
-    {
-      "confidence": "DISPLAY_ONLY",
       "notes": [
-        "Derived from existing subject state and event anchors. No monitoring threshold is implied."
+        "Current Structural State is not copied backward."
       ],
-      "observation_mode": "RECONSTRUCTED",
-      "phase": "BURN_LINKED_ECOSYSTEM_UTILITY_REGIME",
-      "resolution": "WEEK",
-      "t_end": "2026-09-09",
-      "t_start": "2026-07-15"
-    },
-    {
-      "confidence": "DISPLAY_ONLY",
-      "notes": [
-        "Derived from existing subject state and event anchors. No monitoring threshold is implied."
-      ],
-      "observation_mode": "RECONSTRUCTED",
-      "phase": "BURN_LINKED_ECOSYSTEM_UTILITY_REGIME",
+      "period": "2026-07",
+      "phase": "RECONSTRUCTED_DIMENSION_EVENT",
+      "phase_id": "BNB-STRUCT-MONTH-2026-07-GOVERNANCE_STRUCTURE-PHASE",
+      "phase_mode": "RECONSTRUCTED",
       "resolution": "MONTH",
-      "t_end": "2026-09-09",
-      "t_start": "2026-07-15"
+      "source_refs": [
+        "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
+      ]
+    },
+    {
+      "aggregation_rule": "MONTH_FROM_WEEK",
+      "bucket_end": "2026-07-31",
+      "bucket_start": "2026-07-01",
+      "dimension_bucket_refs": [
+        "BNB-STRUCT-MONTH-2026-07-SUPPLY_STRUCTURE"
+      ],
+      "notes": [
+        "Current Structural State is not copied backward."
+      ],
+      "period": "2026-07",
+      "phase": "RECONSTRUCTED_DIMENSION_EVENT",
+      "phase_id": "BNB-STRUCT-MONTH-2026-07-SUPPLY_STRUCTURE-PHASE",
+      "phase_mode": "RECONSTRUCTED",
+      "resolution": "MONTH",
+      "source_refs": [
+        "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
+      ]
+    },
+    {
+      "aggregation_rule": "MONTH_FROM_WEEK",
+      "bucket_end": "2026-07-31",
+      "bucket_start": "2026-07-01",
+      "dimension_bucket_refs": [
+        "BNB-STRUCT-MONTH-2026-07-UTILITY_STRUCTURE"
+      ],
+      "notes": [
+        "Current Structural State is not copied backward."
+      ],
+      "period": "2026-07",
+      "phase": "RECONSTRUCTED_DIMENSION_EVENT",
+      "phase_id": "BNB-STRUCT-MONTH-2026-07-UTILITY_STRUCTURE-PHASE",
+      "phase_mode": "RECONSTRUCTED",
+      "resolution": "MONTH",
+      "source_refs": [
+        "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
+      ]
+    },
+    {
+      "aggregation_rule": "MONTH_FROM_WEEK",
+      "bucket_end": "2026-09-30",
+      "bucket_start": "2026-09-01",
+      "dimension_bucket_refs": [
+        "BNB-STRUCT-MONTH-2026-09-GOVERNANCE_STRUCTURE"
+      ],
+      "notes": [
+        "Current Structural State is not copied backward."
+      ],
+      "period": "2026-09",
+      "phase": "RECONSTRUCTED_DIMENSION_EVENT",
+      "phase_id": "BNB-STRUCT-MONTH-2026-09-GOVERNANCE_STRUCTURE-PHASE",
+      "phase_mode": "RECONSTRUCTED",
+      "resolution": "MONTH",
+      "source_refs": [
+        "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
+      ]
+    },
+    {
+      "aggregation_rule": "MONTH_FROM_WEEK",
+      "bucket_end": "2026-09-30",
+      "bucket_start": "2026-09-01",
+      "dimension_bucket_refs": [
+        "BNB-STRUCT-MONTH-2026-09-UTILITY_STRUCTURE"
+      ],
+      "notes": [
+        "Current Structural State is not copied backward."
+      ],
+      "period": "2026-09",
+      "phase": "RECONSTRUCTED_DIMENSION_EVENT",
+      "phase_id": "BNB-STRUCT-MONTH-2026-09-UTILITY_STRUCTURE-PHASE",
+      "phase_mode": "RECONSTRUCTED",
+      "resolution": "MONTH",
+      "source_refs": [
+        "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
+      ]
+    },
+    {
+      "aggregation_rule": "MONTH_FROM_WEEK",
+      "bucket_end": "2026-09-30",
+      "bucket_start": "2026-09-01",
+      "dimension_bucket_refs": [
+        "BNB-STRUCT-MONTH-2026-09-VALIDATOR_DISTRIBUTION"
+      ],
+      "notes": [
+        "Current Structural State is not copied backward."
+      ],
+      "period": "2026-09",
+      "phase": "RECONSTRUCTED_DIMENSION_EVENT",
+      "phase_id": "BNB-STRUCT-MONTH-2026-09-VALIDATOR_DISTRIBUTION-PHASE",
+      "phase_mode": "RECONSTRUCTED",
+      "resolution": "MONTH",
+      "source_refs": [
+        "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
+      ]
     }
   ],
   "subject_id": "BNB",
@@ -436,5 +180,6 @@
     "DAY",
     "WEEK",
     "MONTH"
-  ]
+  ],
+  "ui_version": "TIMELINE_UI_R1"
 }

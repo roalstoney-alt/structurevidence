@@ -1,0 +1,20 @@
+{
+  "aggregation_version": "TIMELINE_AGGREGATION_v0.1",
+  "policy_state": "POLICY_NOT_CONFIGURED",
+  "rules": {
+    "EVIDENCE_DAY_STREAM": "Evidence events apply in known_at order.",
+    "EVIDENCE_MONTH_FROM_WEEK": "Month summarizes WEEK cells.",
+    "EVIDENCE_WEEK_FROM_DAY": "Week summarizes DAY stream."
+  },
+  "state_precedence": [
+    "UNDER_REVIEW",
+    "UNRESOLVED",
+    "PARTIAL",
+    "COMPLETE",
+    "OBSERVED",
+    "SUPERSEDED",
+    "NOT_APPLICABLE",
+    "POLICY_NOT_CONFIGURED",
+    "NOT_OBSERVED"
+  ]
+}

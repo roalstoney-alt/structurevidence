@@ -1,0 +1,282 @@
+{
+  "buckets": [
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-07",
+      "bucket_id": "TRX-STRUCT-DAY-2026-09-07-SETTLEMENT_ROLE",
+      "bucket_start": "2026-09-07",
+      "date": "2026-09-07",
+      "dimension_id": "SETTLEMENT_ROLE",
+      "lineage": {
+        "artifact_refs": [
+          "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
+        ],
+        "atomic_observation_ids": [
+          "TL-TRX-O001",
+          "TL-TRX-O002"
+        ]
+      },
+      "observation_count": 2,
+      "observations": [
+        "TL-TRX-O001",
+        "TL-TRX-O002"
+      ],
+      "period": "2026-09-07",
+      "resolution": "DAY",
+      "source_refs": [
+        "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
+      ],
+      "state": "STRENGTHENING",
+      "subject_id": "TRX"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-07",
+      "bucket_id": "TRX-STRUCT-DAY-2026-09-07-RESOURCE_PRESSURE",
+      "bucket_start": "2026-09-07",
+      "date": "2026-09-07",
+      "dimension_id": "RESOURCE_PRESSURE",
+      "lineage": {
+        "artifact_refs": [
+          "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
+        ],
+        "atomic_observation_ids": [
+          "TL-TRX-O003"
+        ]
+      },
+      "observation_count": 1,
+      "observations": [
+        "TL-TRX-O003"
+      ],
+      "period": "2026-09-07",
+      "resolution": "DAY",
+      "source_refs": [
+        "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
+      ],
+      "state": "STRENGTHENING",
+      "subject_id": "TRX"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-07",
+      "bucket_id": "TRX-STRUCT-DAY-2026-09-07-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-09-07",
+      "date": "2026-09-07",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09-07",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "TRX"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-07",
+      "bucket_id": "TRX-STRUCT-DAY-2026-09-07-GOVERNANCE_STRUCTURE",
+      "bucket_start": "2026-09-07",
+      "date": "2026-09-07",
+      "dimension_id": "GOVERNANCE_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09-07",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "TRX"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-08",
+      "bucket_id": "TRX-STRUCT-DAY-2026-09-08-SETTLEMENT_ROLE",
+      "bucket_start": "2026-09-08",
+      "date": "2026-09-08",
+      "dimension_id": "SETTLEMENT_ROLE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09-08",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "TRX"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-08",
+      "bucket_id": "TRX-STRUCT-DAY-2026-09-08-RESOURCE_PRESSURE",
+      "bucket_start": "2026-09-08",
+      "date": "2026-09-08",
+      "dimension_id": "RESOURCE_PRESSURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09-08",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "TRX"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-08",
+      "bucket_id": "TRX-STRUCT-DAY-2026-09-08-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-09-08",
+      "date": "2026-09-08",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09-08",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "TRX"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-08",
+      "bucket_id": "TRX-STRUCT-DAY-2026-09-08-GOVERNANCE_STRUCTURE",
+      "bucket_start": "2026-09-08",
+      "date": "2026-09-08",
+      "dimension_id": "GOVERNANCE_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09-08",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "TRX"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-09",
+      "bucket_id": "TRX-STRUCT-DAY-2026-09-09-SETTLEMENT_ROLE",
+      "bucket_start": "2026-09-09",
+      "date": "2026-09-09",
+      "dimension_id": "SETTLEMENT_ROLE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09-09",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "TRX"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-09",
+      "bucket_id": "TRX-STRUCT-DAY-2026-09-09-RESOURCE_PRESSURE",
+      "bucket_start": "2026-09-09",
+      "date": "2026-09-09",
+      "dimension_id": "RESOURCE_PRESSURE",
+      "lineage": {
+        "artifact_refs": [
+          "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
+        ],
+        "atomic_observation_ids": [
+          "TL-TRX-O004"
+        ]
+      },
+      "observation_count": 1,
+      "observations": [
+        "TL-TRX-O004"
+      ],
+      "period": "2026-09-09",
+      "resolution": "DAY",
+      "source_refs": [
+        "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
+      ],
+      "state": "STRENGTHENING",
+      "subject_id": "TRX"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-09",
+      "bucket_id": "TRX-STRUCT-DAY-2026-09-09-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-09-09",
+      "date": "2026-09-09",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [
+          "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
+        ],
+        "atomic_observation_ids": [
+          "TL-TRX-O005"
+        ]
+      },
+      "observation_count": 1,
+      "observations": [
+        "TL-TRX-O005"
+      ],
+      "period": "2026-09-09",
+      "resolution": "DAY",
+      "source_refs": [
+        "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
+      ],
+      "state": "STRUCTURAL_SHIFT",
+      "subject_id": "TRX"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-09",
+      "bucket_id": "TRX-STRUCT-DAY-2026-09-09-GOVERNANCE_STRUCTURE",
+      "bucket_start": "2026-09-09",
+      "date": "2026-09-09",
+      "dimension_id": "GOVERNANCE_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [
+          "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
+        ],
+        "atomic_observation_ids": [
+          "TL-TRX-O006",
+          "TL-TRX-O007",
+          "TL-TRX-O008"
+        ]
+      },
+      "observation_count": 3,
+      "observations": [
+        "TL-TRX-O006",
+        "TL-TRX-O007",
+        "TL-TRX-O008"
+      ],
+      "period": "2026-09-09",
+      "resolution": "DAY",
+      "source_refs": [
+        "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
+      ],
+      "state": "TENSION",
+      "subject_id": "TRX"
+    }
+  ],
+  "layer": "STRUCTURAL",
+  "model_version": "TIMELINE_MODEL_R1",
+  "resolution": "DAY",
+  "subject_id": "TRX"
+}

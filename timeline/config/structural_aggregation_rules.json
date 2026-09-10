@@ -1,0 +1,27 @@
+{
+  "aggregation_version": "TIMELINE_AGGREGATION_v0.1",
+  "conflict_pairs": [
+    {
+      "result": "MIXED",
+      "states": [
+        "STRENGTHENING",
+        "WEAKENING"
+      ]
+    }
+  ],
+  "rules": {
+    "DAY_ATOMIC": "Missing observations remain NO_OBSERVATION.",
+    "MONTH_FROM_WEEK": "Aggregate calendar-month buckets from WEEK only.",
+    "WEEK_FROM_DAY": "Aggregate ISO-week buckets from DAY only."
+  },
+  "state_precedence": [
+    "STRUCTURAL_SHIFT",
+    "MIXED",
+    "TENSION",
+    "WEAKENING",
+    "STRENGTHENING",
+    "STABLE",
+    "INSUFFICIENT_DATA",
+    "NO_OBSERVATION"
+  ]
+}

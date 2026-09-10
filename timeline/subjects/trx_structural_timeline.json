@@ -1,432 +1,138 @@
 {
-  "construction_method": "SEMI_STRUCTURED_RECONSTRUCTION",
+  "construction_method": "REAL_TIME_INDEXED_RECONSTRUCTION",
   "current_structural_state": "STABLECOIN_RESOURCE_SETTLEMENT_REGIME",
+  "datasets": {
+    "DAY": "timeline/subjects/trx_structural_day.json",
+    "MONTH": "timeline/subjects/trx_structural_month.json",
+    "WEEK": "timeline/subjects/trx_structural_week.json"
+  },
   "default_resolution": "WEEK",
+  "density": {
+    "active_days": 2,
+    "atomic_observations": 8,
+    "monthly_buckets": 4,
+    "weekly_buckets": 4
+  },
   "dimensions": [
     {
+      "coverage_end": "2026-09-07",
+      "coverage_start": "2026-09-07",
       "dimension_id": "SETTLEMENT_ROLE",
+      "distinct_dates": 1,
       "label": "Settlement Role",
-      "series": [
-        {
-          "band": "OBSERVED",
-          "notes": [
-            "R1 observations are reconstructed as sparse display bands.",
-            "Display-layer ordinal band; not a score or new scientific claim."
-          ],
-          "observation_mode": "RECONSTRUCTED",
-          "resolution": "DAY",
-          "source_refs": [
-            "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
-          ],
-          "state_label": "STABLECOIN_RESOURCE_SETTLEMENT_REGIME",
-          "t_end": "2026-09-09",
-          "t_start": "2026-09-09"
-        },
-        {
-          "band": "CURRENT_REVIEW",
-          "notes": [
-            "Current R1 state anchor.",
-            "Display-layer ordinal band; not a score or new scientific claim."
-          ],
-          "observation_mode": "DIRECT",
-          "resolution": "DAY",
-          "source_refs": [
-            "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
-          ],
-          "state_label": "STABLECOIN_RESOURCE_SETTLEMENT_REGIME",
-          "t_end": "2026-09-09",
-          "t_start": "2026-09-09"
-        },
-        {
-          "band": "OBSERVED",
-          "notes": [
-            "R1 observations are reconstructed as sparse display bands.",
-            "Display-layer ordinal band; not a score or new scientific claim."
-          ],
-          "observation_mode": "RECONSTRUCTED",
-          "resolution": "WEEK",
-          "source_refs": [
-            "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
-          ],
-          "state_label": "STABLECOIN_RESOURCE_SETTLEMENT_REGIME",
-          "t_end": "2026-09-09",
-          "t_start": "2026-09-09"
-        },
-        {
-          "band": "CURRENT_REVIEW",
-          "notes": [
-            "Current R1 state anchor.",
-            "Display-layer ordinal band; not a score or new scientific claim."
-          ],
-          "observation_mode": "DIRECT",
-          "resolution": "WEEK",
-          "source_refs": [
-            "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
-          ],
-          "state_label": "STABLECOIN_RESOURCE_SETTLEMENT_REGIME",
-          "t_end": "2026-09-09",
-          "t_start": "2026-09-09"
-        },
-        {
-          "band": "OBSERVED",
-          "notes": [
-            "R1 observations are reconstructed as sparse display bands.",
-            "Display-layer ordinal band; not a score or new scientific claim."
-          ],
-          "observation_mode": "RECONSTRUCTED",
-          "resolution": "MONTH",
-          "source_refs": [
-            "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
-          ],
-          "state_label": "STABLECOIN_RESOURCE_SETTLEMENT_REGIME",
-          "t_end": "2026-09-09",
-          "t_start": "2026-09-09"
-        },
-        {
-          "band": "CURRENT_REVIEW",
-          "notes": [
-            "Current R1 state anchor.",
-            "Display-layer ordinal band; not a score or new scientific claim."
-          ],
-          "observation_mode": "DIRECT",
-          "resolution": "MONTH",
-          "source_refs": [
-            "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
-          ],
-          "state_label": "STABLECOIN_RESOURCE_SETTLEMENT_REGIME",
-          "t_end": "2026-09-09",
-          "t_start": "2026-09-09"
-        }
-      ],
+      "observation_count": 2,
+      "render_mode": "SPARSE_POINTS",
       "taxonomy_note": "Settlement, payments or transfer-function role."
     },
     {
+      "coverage_end": "2026-09-09",
+      "coverage_start": "2026-09-07",
       "dimension_id": "RESOURCE_PRESSURE",
+      "distinct_dates": 2,
       "label": "Resource Pressure",
-      "series": [
-        {
-          "band": "OBSERVED",
-          "notes": [
-            "R1 observations are reconstructed as sparse display bands.",
-            "Display-layer ordinal band; not a score or new scientific claim."
-          ],
-          "observation_mode": "RECONSTRUCTED",
-          "resolution": "DAY",
-          "source_refs": [
-            "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
-          ],
-          "state_label": "STABLECOIN_RESOURCE_SETTLEMENT_REGIME",
-          "t_end": "2026-09-09",
-          "t_start": "2026-09-09"
-        },
-        {
-          "band": "CURRENT_REVIEW",
-          "notes": [
-            "Current R1 state anchor.",
-            "Display-layer ordinal band; not a score or new scientific claim."
-          ],
-          "observation_mode": "DIRECT",
-          "resolution": "DAY",
-          "source_refs": [
-            "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
-          ],
-          "state_label": "STABLECOIN_RESOURCE_SETTLEMENT_REGIME",
-          "t_end": "2026-09-09",
-          "t_start": "2026-09-09"
-        },
-        {
-          "band": "OBSERVED",
-          "notes": [
-            "R1 observations are reconstructed as sparse display bands.",
-            "Display-layer ordinal band; not a score or new scientific claim."
-          ],
-          "observation_mode": "RECONSTRUCTED",
-          "resolution": "WEEK",
-          "source_refs": [
-            "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
-          ],
-          "state_label": "STABLECOIN_RESOURCE_SETTLEMENT_REGIME",
-          "t_end": "2026-09-09",
-          "t_start": "2026-09-09"
-        },
-        {
-          "band": "CURRENT_REVIEW",
-          "notes": [
-            "Current R1 state anchor.",
-            "Display-layer ordinal band; not a score or new scientific claim."
-          ],
-          "observation_mode": "DIRECT",
-          "resolution": "WEEK",
-          "source_refs": [
-            "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
-          ],
-          "state_label": "STABLECOIN_RESOURCE_SETTLEMENT_REGIME",
-          "t_end": "2026-09-09",
-          "t_start": "2026-09-09"
-        },
-        {
-          "band": "OBSERVED",
-          "notes": [
-            "R1 observations are reconstructed as sparse display bands.",
-            "Display-layer ordinal band; not a score or new scientific claim."
-          ],
-          "observation_mode": "RECONSTRUCTED",
-          "resolution": "MONTH",
-          "source_refs": [
-            "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
-          ],
-          "state_label": "STABLECOIN_RESOURCE_SETTLEMENT_REGIME",
-          "t_end": "2026-09-09",
-          "t_start": "2026-09-09"
-        },
-        {
-          "band": "CURRENT_REVIEW",
-          "notes": [
-            "Current R1 state anchor.",
-            "Display-layer ordinal band; not a score or new scientific claim."
-          ],
-          "observation_mode": "DIRECT",
-          "resolution": "MONTH",
-          "source_refs": [
-            "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
-          ],
-          "state_label": "STABLECOIN_RESOURCE_SETTLEMENT_REGIME",
-          "t_end": "2026-09-09",
-          "t_start": "2026-09-09"
-        }
-      ],
+      "observation_count": 2,
+      "render_mode": "STEP_WAVEFORM",
       "taxonomy_note": "Resource, fee, liquidity or capacity pressure."
     },
     {
+      "coverage_end": "2026-09-09",
+      "coverage_start": "2026-09-09",
       "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "distinct_dates": 1,
       "label": "Validator Distribution",
-      "series": [
-        {
-          "band": "OBSERVED",
-          "notes": [
-            "R1 observations are reconstructed as sparse display bands.",
-            "Display-layer ordinal band; not a score or new scientific claim."
-          ],
-          "observation_mode": "RECONSTRUCTED",
-          "resolution": "DAY",
-          "source_refs": [
-            "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
-          ],
-          "state_label": "STABLECOIN_RESOURCE_SETTLEMENT_REGIME",
-          "t_end": "2026-09-09",
-          "t_start": "2026-09-09"
-        },
-        {
-          "band": "CURRENT_REVIEW",
-          "notes": [
-            "Current R1 state anchor.",
-            "Display-layer ordinal band; not a score or new scientific claim."
-          ],
-          "observation_mode": "DIRECT",
-          "resolution": "DAY",
-          "source_refs": [
-            "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
-          ],
-          "state_label": "STABLECOIN_RESOURCE_SETTLEMENT_REGIME",
-          "t_end": "2026-09-09",
-          "t_start": "2026-09-09"
-        },
-        {
-          "band": "OBSERVED",
-          "notes": [
-            "R1 observations are reconstructed as sparse display bands.",
-            "Display-layer ordinal band; not a score or new scientific claim."
-          ],
-          "observation_mode": "RECONSTRUCTED",
-          "resolution": "WEEK",
-          "source_refs": [
-            "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
-          ],
-          "state_label": "STABLECOIN_RESOURCE_SETTLEMENT_REGIME",
-          "t_end": "2026-09-09",
-          "t_start": "2026-09-09"
-        },
-        {
-          "band": "CURRENT_REVIEW",
-          "notes": [
-            "Current R1 state anchor.",
-            "Display-layer ordinal band; not a score or new scientific claim."
-          ],
-          "observation_mode": "DIRECT",
-          "resolution": "WEEK",
-          "source_refs": [
-            "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
-          ],
-          "state_label": "STABLECOIN_RESOURCE_SETTLEMENT_REGIME",
-          "t_end": "2026-09-09",
-          "t_start": "2026-09-09"
-        },
-        {
-          "band": "OBSERVED",
-          "notes": [
-            "R1 observations are reconstructed as sparse display bands.",
-            "Display-layer ordinal band; not a score or new scientific claim."
-          ],
-          "observation_mode": "RECONSTRUCTED",
-          "resolution": "MONTH",
-          "source_refs": [
-            "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
-          ],
-          "state_label": "STABLECOIN_RESOURCE_SETTLEMENT_REGIME",
-          "t_end": "2026-09-09",
-          "t_start": "2026-09-09"
-        },
-        {
-          "band": "CURRENT_REVIEW",
-          "notes": [
-            "Current R1 state anchor.",
-            "Display-layer ordinal band; not a score or new scientific claim."
-          ],
-          "observation_mode": "DIRECT",
-          "resolution": "MONTH",
-          "source_refs": [
-            "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
-          ],
-          "state_label": "STABLECOIN_RESOURCE_SETTLEMENT_REGIME",
-          "t_end": "2026-09-09",
-          "t_start": "2026-09-09"
-        }
-      ],
+      "observation_count": 1,
+      "render_mode": "SPARSE_POINTS",
       "taxonomy_note": "Validator, quorum or block-producer distribution."
     },
     {
+      "coverage_end": "2026-09-09",
+      "coverage_start": "2026-09-09",
       "dimension_id": "GOVERNANCE_STRUCTURE",
+      "distinct_dates": 1,
       "label": "Governance Structure",
-      "series": [
-        {
-          "band": "OBSERVED",
-          "notes": [
-            "R1 observations are reconstructed as sparse display bands.",
-            "Display-layer ordinal band; not a score or new scientific claim."
-          ],
-          "observation_mode": "RECONSTRUCTED",
-          "resolution": "DAY",
-          "source_refs": [
-            "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
-          ],
-          "state_label": "STABLECOIN_RESOURCE_SETTLEMENT_REGIME",
-          "t_end": "2026-09-09",
-          "t_start": "2026-09-09"
-        },
-        {
-          "band": "CURRENT_REVIEW",
-          "notes": [
-            "Current R1 state anchor.",
-            "Display-layer ordinal band; not a score or new scientific claim."
-          ],
-          "observation_mode": "DIRECT",
-          "resolution": "DAY",
-          "source_refs": [
-            "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
-          ],
-          "state_label": "STABLECOIN_RESOURCE_SETTLEMENT_REGIME",
-          "t_end": "2026-09-09",
-          "t_start": "2026-09-09"
-        },
-        {
-          "band": "OBSERVED",
-          "notes": [
-            "R1 observations are reconstructed as sparse display bands.",
-            "Display-layer ordinal band; not a score or new scientific claim."
-          ],
-          "observation_mode": "RECONSTRUCTED",
-          "resolution": "WEEK",
-          "source_refs": [
-            "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
-          ],
-          "state_label": "STABLECOIN_RESOURCE_SETTLEMENT_REGIME",
-          "t_end": "2026-09-09",
-          "t_start": "2026-09-09"
-        },
-        {
-          "band": "CURRENT_REVIEW",
-          "notes": [
-            "Current R1 state anchor.",
-            "Display-layer ordinal band; not a score or new scientific claim."
-          ],
-          "observation_mode": "DIRECT",
-          "resolution": "WEEK",
-          "source_refs": [
-            "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
-          ],
-          "state_label": "STABLECOIN_RESOURCE_SETTLEMENT_REGIME",
-          "t_end": "2026-09-09",
-          "t_start": "2026-09-09"
-        },
-        {
-          "band": "OBSERVED",
-          "notes": [
-            "R1 observations are reconstructed as sparse display bands.",
-            "Display-layer ordinal band; not a score or new scientific claim."
-          ],
-          "observation_mode": "RECONSTRUCTED",
-          "resolution": "MONTH",
-          "source_refs": [
-            "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
-          ],
-          "state_label": "STABLECOIN_RESOURCE_SETTLEMENT_REGIME",
-          "t_end": "2026-09-09",
-          "t_start": "2026-09-09"
-        },
-        {
-          "band": "CURRENT_REVIEW",
-          "notes": [
-            "Current R1 state anchor.",
-            "Display-layer ordinal band; not a score or new scientific claim."
-          ],
-          "observation_mode": "DIRECT",
-          "resolution": "MONTH",
-          "source_refs": [
-            "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
-          ],
-          "state_label": "STABLECOIN_RESOURCE_SETTLEMENT_REGIME",
-          "t_end": "2026-09-09",
-          "t_start": "2026-09-09"
-        }
-      ],
+      "observation_count": 3,
+      "render_mode": "SPARSE_POINTS",
       "taxonomy_note": "Control, voting, validator or decision structure."
     }
   ],
-  "display_boundary": "Presentation timeline derived from frozen artifacts. No new scientific conclusion or score.",
-  "model_version": "TIMELINE_MODEL_v0.1",
+  "display_boundary": "Categorical presentation derived from frozen artifacts. No score, ranking, trading signal, or RDL policy classifier.",
+  "model_version": "TIMELINE_MODEL_R1",
   "phase_ribbon": [
     {
-      "confidence": "DISPLAY_ONLY",
-      "notes": [
-        "Derived from existing subject state and event anchors. No monitoring threshold is implied."
+      "aggregation_rule": "MONTH_FROM_WEEK",
+      "bucket_end": "2026-09-30",
+      "bucket_start": "2026-09-01",
+      "dimension_bucket_refs": [
+        "TRX-STRUCT-MONTH-2026-09-GOVERNANCE_STRUCTURE"
       ],
-      "observation_mode": "RECONSTRUCTED",
-      "phase": "STABLECOIN_RESOURCE_SETTLEMENT_REGIME",
-      "resolution": "DAY",
-      "t_end": "2026-09-09",
-      "t_start": "2026-09-07"
-    },
-    {
-      "confidence": "DISPLAY_ONLY",
       "notes": [
-        "Derived from existing subject state and event anchors. No monitoring threshold is implied."
+        "Current Structural State is not copied backward."
       ],
-      "observation_mode": "RECONSTRUCTED",
-      "phase": "STABLECOIN_RESOURCE_SETTLEMENT_REGIME",
-      "resolution": "WEEK",
-      "t_end": "2026-09-09",
-      "t_start": "2026-09-07"
-    },
-    {
-      "confidence": "DISPLAY_ONLY",
-      "notes": [
-        "Derived from existing subject state and event anchors. No monitoring threshold is implied."
-      ],
-      "observation_mode": "RECONSTRUCTED",
-      "phase": "STABLECOIN_RESOURCE_SETTLEMENT_REGIME",
+      "period": "2026-09",
+      "phase": "RECONSTRUCTED_DIMENSION_EVENT",
+      "phase_id": "TRX-STRUCT-MONTH-2026-09-GOVERNANCE_STRUCTURE-PHASE",
+      "phase_mode": "RECONSTRUCTED",
       "resolution": "MONTH",
-      "t_end": "2026-09-09",
-      "t_start": "2026-09-07"
+      "source_refs": [
+        "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
+      ]
+    },
+    {
+      "aggregation_rule": "MONTH_FROM_WEEK",
+      "bucket_end": "2026-09-30",
+      "bucket_start": "2026-09-01",
+      "dimension_bucket_refs": [
+        "TRX-STRUCT-MONTH-2026-09-RESOURCE_PRESSURE"
+      ],
+      "notes": [
+        "Current Structural State is not copied backward."
+      ],
+      "period": "2026-09",
+      "phase": "RECONSTRUCTED_DIMENSION_EVENT",
+      "phase_id": "TRX-STRUCT-MONTH-2026-09-RESOURCE_PRESSURE-PHASE",
+      "phase_mode": "RECONSTRUCTED",
+      "resolution": "MONTH",
+      "source_refs": [
+        "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
+      ]
+    },
+    {
+      "aggregation_rule": "MONTH_FROM_WEEK",
+      "bucket_end": "2026-09-30",
+      "bucket_start": "2026-09-01",
+      "dimension_bucket_refs": [
+        "TRX-STRUCT-MONTH-2026-09-SETTLEMENT_ROLE"
+      ],
+      "notes": [
+        "Current Structural State is not copied backward."
+      ],
+      "period": "2026-09",
+      "phase": "RECONSTRUCTED_DIMENSION_EVENT",
+      "phase_id": "TRX-STRUCT-MONTH-2026-09-SETTLEMENT_ROLE-PHASE",
+      "phase_mode": "RECONSTRUCTED",
+      "resolution": "MONTH",
+      "source_refs": [
+        "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
+      ]
+    },
+    {
+      "aggregation_rule": "MONTH_FROM_WEEK",
+      "bucket_end": "2026-09-30",
+      "bucket_start": "2026-09-01",
+      "dimension_bucket_refs": [
+        "TRX-STRUCT-MONTH-2026-09-VALIDATOR_DISTRIBUTION"
+      ],
+      "notes": [
+        "Current Structural State is not copied backward."
+      ],
+      "period": "2026-09",
+      "phase": "RECONSTRUCTED_DIMENSION_EVENT",
+      "phase_id": "TRX-STRUCT-MONTH-2026-09-VALIDATOR_DISTRIBUTION-PHASE",
+      "phase_mode": "RECONSTRUCTED",
+      "resolution": "MONTH",
+      "source_refs": [
+        "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
+      ]
     }
   ],
   "subject_id": "TRX",
@@ -436,5 +142,6 @@
     "DAY",
     "WEEK",
     "MONTH"
-  ]
+  ],
+  "ui_version": "TIMELINE_UI_R1"
 }

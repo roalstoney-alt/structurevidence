@@ -1,0 +1,3936 @@
+{
+  "buckets": [
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-21",
+      "bucket_id": "XLM-STRUCT-DAY-2026-07-21-TREASURY_STRUCTURE",
+      "bucket_start": "2026-07-21",
+      "date": "2026-07-21",
+      "dimension_id": "TREASURY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [
+          "research/digital-assets/batch-01-r1/XLM/OBSERVATION_REGISTRY.json"
+        ],
+        "atomic_observation_ids": [
+          "TL-XLM-O005"
+        ]
+      },
+      "observation_count": 1,
+      "observations": [
+        "TL-XLM-O005"
+      ],
+      "period": "2026-07-21",
+      "resolution": "DAY",
+      "source_refs": [
+        "research/digital-assets/batch-01-r1/XLM/OBSERVATION_REGISTRY.json"
+      ],
+      "state": "STRENGTHENING",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-21",
+      "bucket_id": "XLM-STRUCT-DAY-2026-07-21-FOUNDATION_DEPENDENCE",
+      "bucket_start": "2026-07-21",
+      "date": "2026-07-21",
+      "dimension_id": "FOUNDATION_DEPENDENCE",
+      "lineage": {
+        "artifact_refs": [
+          "research/digital-assets/batch-01-r1/XLM/OBSERVATION_REGISTRY.json"
+        ],
+        "atomic_observation_ids": [
+          "TL-XLM-O006"
+        ]
+      },
+      "observation_count": 1,
+      "observations": [
+        "TL-XLM-O006"
+      ],
+      "period": "2026-07-21",
+      "resolution": "DAY",
+      "source_refs": [
+        "research/digital-assets/batch-01-r1/XLM/OBSERVATION_REGISTRY.json"
+      ],
+      "state": "STRENGTHENING",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-21",
+      "bucket_id": "XLM-STRUCT-DAY-2026-07-21-SETTLEMENT_ROLE",
+      "bucket_start": "2026-07-21",
+      "date": "2026-07-21",
+      "dimension_id": "SETTLEMENT_ROLE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-21",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-21",
+      "bucket_id": "XLM-STRUCT-DAY-2026-07-21-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-07-21",
+      "date": "2026-07-21",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-21",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-22",
+      "bucket_id": "XLM-STRUCT-DAY-2026-07-22-TREASURY_STRUCTURE",
+      "bucket_start": "2026-07-22",
+      "date": "2026-07-22",
+      "dimension_id": "TREASURY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-22",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-22",
+      "bucket_id": "XLM-STRUCT-DAY-2026-07-22-FOUNDATION_DEPENDENCE",
+      "bucket_start": "2026-07-22",
+      "date": "2026-07-22",
+      "dimension_id": "FOUNDATION_DEPENDENCE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-22",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-22",
+      "bucket_id": "XLM-STRUCT-DAY-2026-07-22-SETTLEMENT_ROLE",
+      "bucket_start": "2026-07-22",
+      "date": "2026-07-22",
+      "dimension_id": "SETTLEMENT_ROLE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-22",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-22",
+      "bucket_id": "XLM-STRUCT-DAY-2026-07-22-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-07-22",
+      "date": "2026-07-22",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-22",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-23",
+      "bucket_id": "XLM-STRUCT-DAY-2026-07-23-TREASURY_STRUCTURE",
+      "bucket_start": "2026-07-23",
+      "date": "2026-07-23",
+      "dimension_id": "TREASURY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-23",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-23",
+      "bucket_id": "XLM-STRUCT-DAY-2026-07-23-FOUNDATION_DEPENDENCE",
+      "bucket_start": "2026-07-23",
+      "date": "2026-07-23",
+      "dimension_id": "FOUNDATION_DEPENDENCE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-23",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-23",
+      "bucket_id": "XLM-STRUCT-DAY-2026-07-23-SETTLEMENT_ROLE",
+      "bucket_start": "2026-07-23",
+      "date": "2026-07-23",
+      "dimension_id": "SETTLEMENT_ROLE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-23",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-23",
+      "bucket_id": "XLM-STRUCT-DAY-2026-07-23-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-07-23",
+      "date": "2026-07-23",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-23",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-24",
+      "bucket_id": "XLM-STRUCT-DAY-2026-07-24-TREASURY_STRUCTURE",
+      "bucket_start": "2026-07-24",
+      "date": "2026-07-24",
+      "dimension_id": "TREASURY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-24",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-24",
+      "bucket_id": "XLM-STRUCT-DAY-2026-07-24-FOUNDATION_DEPENDENCE",
+      "bucket_start": "2026-07-24",
+      "date": "2026-07-24",
+      "dimension_id": "FOUNDATION_DEPENDENCE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-24",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-24",
+      "bucket_id": "XLM-STRUCT-DAY-2026-07-24-SETTLEMENT_ROLE",
+      "bucket_start": "2026-07-24",
+      "date": "2026-07-24",
+      "dimension_id": "SETTLEMENT_ROLE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-24",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-24",
+      "bucket_id": "XLM-STRUCT-DAY-2026-07-24-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-07-24",
+      "date": "2026-07-24",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-24",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-25",
+      "bucket_id": "XLM-STRUCT-DAY-2026-07-25-TREASURY_STRUCTURE",
+      "bucket_start": "2026-07-25",
+      "date": "2026-07-25",
+      "dimension_id": "TREASURY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-25",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-25",
+      "bucket_id": "XLM-STRUCT-DAY-2026-07-25-FOUNDATION_DEPENDENCE",
+      "bucket_start": "2026-07-25",
+      "date": "2026-07-25",
+      "dimension_id": "FOUNDATION_DEPENDENCE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-25",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-25",
+      "bucket_id": "XLM-STRUCT-DAY-2026-07-25-SETTLEMENT_ROLE",
+      "bucket_start": "2026-07-25",
+      "date": "2026-07-25",
+      "dimension_id": "SETTLEMENT_ROLE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-25",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-25",
+      "bucket_id": "XLM-STRUCT-DAY-2026-07-25-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-07-25",
+      "date": "2026-07-25",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-25",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-26",
+      "bucket_id": "XLM-STRUCT-DAY-2026-07-26-TREASURY_STRUCTURE",
+      "bucket_start": "2026-07-26",
+      "date": "2026-07-26",
+      "dimension_id": "TREASURY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-26",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-26",
+      "bucket_id": "XLM-STRUCT-DAY-2026-07-26-FOUNDATION_DEPENDENCE",
+      "bucket_start": "2026-07-26",
+      "date": "2026-07-26",
+      "dimension_id": "FOUNDATION_DEPENDENCE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-26",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-26",
+      "bucket_id": "XLM-STRUCT-DAY-2026-07-26-SETTLEMENT_ROLE",
+      "bucket_start": "2026-07-26",
+      "date": "2026-07-26",
+      "dimension_id": "SETTLEMENT_ROLE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-26",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-26",
+      "bucket_id": "XLM-STRUCT-DAY-2026-07-26-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-07-26",
+      "date": "2026-07-26",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-26",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-27",
+      "bucket_id": "XLM-STRUCT-DAY-2026-07-27-TREASURY_STRUCTURE",
+      "bucket_start": "2026-07-27",
+      "date": "2026-07-27",
+      "dimension_id": "TREASURY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-27",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-27",
+      "bucket_id": "XLM-STRUCT-DAY-2026-07-27-FOUNDATION_DEPENDENCE",
+      "bucket_start": "2026-07-27",
+      "date": "2026-07-27",
+      "dimension_id": "FOUNDATION_DEPENDENCE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-27",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-27",
+      "bucket_id": "XLM-STRUCT-DAY-2026-07-27-SETTLEMENT_ROLE",
+      "bucket_start": "2026-07-27",
+      "date": "2026-07-27",
+      "dimension_id": "SETTLEMENT_ROLE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-27",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-27",
+      "bucket_id": "XLM-STRUCT-DAY-2026-07-27-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-07-27",
+      "date": "2026-07-27",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-27",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-28",
+      "bucket_id": "XLM-STRUCT-DAY-2026-07-28-TREASURY_STRUCTURE",
+      "bucket_start": "2026-07-28",
+      "date": "2026-07-28",
+      "dimension_id": "TREASURY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-28",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-28",
+      "bucket_id": "XLM-STRUCT-DAY-2026-07-28-FOUNDATION_DEPENDENCE",
+      "bucket_start": "2026-07-28",
+      "date": "2026-07-28",
+      "dimension_id": "FOUNDATION_DEPENDENCE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-28",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-28",
+      "bucket_id": "XLM-STRUCT-DAY-2026-07-28-SETTLEMENT_ROLE",
+      "bucket_start": "2026-07-28",
+      "date": "2026-07-28",
+      "dimension_id": "SETTLEMENT_ROLE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-28",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-28",
+      "bucket_id": "XLM-STRUCT-DAY-2026-07-28-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-07-28",
+      "date": "2026-07-28",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-28",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-29",
+      "bucket_id": "XLM-STRUCT-DAY-2026-07-29-TREASURY_STRUCTURE",
+      "bucket_start": "2026-07-29",
+      "date": "2026-07-29",
+      "dimension_id": "TREASURY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-29",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-29",
+      "bucket_id": "XLM-STRUCT-DAY-2026-07-29-FOUNDATION_DEPENDENCE",
+      "bucket_start": "2026-07-29",
+      "date": "2026-07-29",
+      "dimension_id": "FOUNDATION_DEPENDENCE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-29",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-29",
+      "bucket_id": "XLM-STRUCT-DAY-2026-07-29-SETTLEMENT_ROLE",
+      "bucket_start": "2026-07-29",
+      "date": "2026-07-29",
+      "dimension_id": "SETTLEMENT_ROLE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-29",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-29",
+      "bucket_id": "XLM-STRUCT-DAY-2026-07-29-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-07-29",
+      "date": "2026-07-29",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-29",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-30",
+      "bucket_id": "XLM-STRUCT-DAY-2026-07-30-TREASURY_STRUCTURE",
+      "bucket_start": "2026-07-30",
+      "date": "2026-07-30",
+      "dimension_id": "TREASURY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-30",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-30",
+      "bucket_id": "XLM-STRUCT-DAY-2026-07-30-FOUNDATION_DEPENDENCE",
+      "bucket_start": "2026-07-30",
+      "date": "2026-07-30",
+      "dimension_id": "FOUNDATION_DEPENDENCE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-30",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-30",
+      "bucket_id": "XLM-STRUCT-DAY-2026-07-30-SETTLEMENT_ROLE",
+      "bucket_start": "2026-07-30",
+      "date": "2026-07-30",
+      "dimension_id": "SETTLEMENT_ROLE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-30",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-30",
+      "bucket_id": "XLM-STRUCT-DAY-2026-07-30-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-07-30",
+      "date": "2026-07-30",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-30",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-31",
+      "bucket_id": "XLM-STRUCT-DAY-2026-07-31-TREASURY_STRUCTURE",
+      "bucket_start": "2026-07-31",
+      "date": "2026-07-31",
+      "dimension_id": "TREASURY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-31",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-31",
+      "bucket_id": "XLM-STRUCT-DAY-2026-07-31-FOUNDATION_DEPENDENCE",
+      "bucket_start": "2026-07-31",
+      "date": "2026-07-31",
+      "dimension_id": "FOUNDATION_DEPENDENCE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-31",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-31",
+      "bucket_id": "XLM-STRUCT-DAY-2026-07-31-SETTLEMENT_ROLE",
+      "bucket_start": "2026-07-31",
+      "date": "2026-07-31",
+      "dimension_id": "SETTLEMENT_ROLE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-31",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-31",
+      "bucket_id": "XLM-STRUCT-DAY-2026-07-31-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-07-31",
+      "date": "2026-07-31",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-31",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-01",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-01-TREASURY_STRUCTURE",
+      "bucket_start": "2026-08-01",
+      "date": "2026-08-01",
+      "dimension_id": "TREASURY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-01",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-01",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-01-FOUNDATION_DEPENDENCE",
+      "bucket_start": "2026-08-01",
+      "date": "2026-08-01",
+      "dimension_id": "FOUNDATION_DEPENDENCE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-01",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-01",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-01-SETTLEMENT_ROLE",
+      "bucket_start": "2026-08-01",
+      "date": "2026-08-01",
+      "dimension_id": "SETTLEMENT_ROLE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-01",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-01",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-01-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-08-01",
+      "date": "2026-08-01",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-01",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-02",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-02-TREASURY_STRUCTURE",
+      "bucket_start": "2026-08-02",
+      "date": "2026-08-02",
+      "dimension_id": "TREASURY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-02",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-02",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-02-FOUNDATION_DEPENDENCE",
+      "bucket_start": "2026-08-02",
+      "date": "2026-08-02",
+      "dimension_id": "FOUNDATION_DEPENDENCE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-02",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-02",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-02-SETTLEMENT_ROLE",
+      "bucket_start": "2026-08-02",
+      "date": "2026-08-02",
+      "dimension_id": "SETTLEMENT_ROLE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-02",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-02",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-02-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-08-02",
+      "date": "2026-08-02",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-02",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-03",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-03-TREASURY_STRUCTURE",
+      "bucket_start": "2026-08-03",
+      "date": "2026-08-03",
+      "dimension_id": "TREASURY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-03",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-03",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-03-FOUNDATION_DEPENDENCE",
+      "bucket_start": "2026-08-03",
+      "date": "2026-08-03",
+      "dimension_id": "FOUNDATION_DEPENDENCE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-03",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-03",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-03-SETTLEMENT_ROLE",
+      "bucket_start": "2026-08-03",
+      "date": "2026-08-03",
+      "dimension_id": "SETTLEMENT_ROLE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-03",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-03",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-03-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-08-03",
+      "date": "2026-08-03",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-03",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-04",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-04-TREASURY_STRUCTURE",
+      "bucket_start": "2026-08-04",
+      "date": "2026-08-04",
+      "dimension_id": "TREASURY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-04",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-04",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-04-FOUNDATION_DEPENDENCE",
+      "bucket_start": "2026-08-04",
+      "date": "2026-08-04",
+      "dimension_id": "FOUNDATION_DEPENDENCE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-04",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-04",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-04-SETTLEMENT_ROLE",
+      "bucket_start": "2026-08-04",
+      "date": "2026-08-04",
+      "dimension_id": "SETTLEMENT_ROLE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-04",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-04",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-04-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-08-04",
+      "date": "2026-08-04",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-04",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-05",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-05-TREASURY_STRUCTURE",
+      "bucket_start": "2026-08-05",
+      "date": "2026-08-05",
+      "dimension_id": "TREASURY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-05",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-05",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-05-FOUNDATION_DEPENDENCE",
+      "bucket_start": "2026-08-05",
+      "date": "2026-08-05",
+      "dimension_id": "FOUNDATION_DEPENDENCE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-05",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-05",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-05-SETTLEMENT_ROLE",
+      "bucket_start": "2026-08-05",
+      "date": "2026-08-05",
+      "dimension_id": "SETTLEMENT_ROLE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-05",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-05",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-05-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-08-05",
+      "date": "2026-08-05",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-05",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-06",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-06-TREASURY_STRUCTURE",
+      "bucket_start": "2026-08-06",
+      "date": "2026-08-06",
+      "dimension_id": "TREASURY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-06",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-06",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-06-FOUNDATION_DEPENDENCE",
+      "bucket_start": "2026-08-06",
+      "date": "2026-08-06",
+      "dimension_id": "FOUNDATION_DEPENDENCE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-06",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-06",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-06-SETTLEMENT_ROLE",
+      "bucket_start": "2026-08-06",
+      "date": "2026-08-06",
+      "dimension_id": "SETTLEMENT_ROLE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-06",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-06",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-06-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-08-06",
+      "date": "2026-08-06",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-06",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-07",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-07-TREASURY_STRUCTURE",
+      "bucket_start": "2026-08-07",
+      "date": "2026-08-07",
+      "dimension_id": "TREASURY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-07",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-07",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-07-FOUNDATION_DEPENDENCE",
+      "bucket_start": "2026-08-07",
+      "date": "2026-08-07",
+      "dimension_id": "FOUNDATION_DEPENDENCE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-07",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-07",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-07-SETTLEMENT_ROLE",
+      "bucket_start": "2026-08-07",
+      "date": "2026-08-07",
+      "dimension_id": "SETTLEMENT_ROLE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-07",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-07",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-07-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-08-07",
+      "date": "2026-08-07",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-07",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-08",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-08-TREASURY_STRUCTURE",
+      "bucket_start": "2026-08-08",
+      "date": "2026-08-08",
+      "dimension_id": "TREASURY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-08",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-08",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-08-FOUNDATION_DEPENDENCE",
+      "bucket_start": "2026-08-08",
+      "date": "2026-08-08",
+      "dimension_id": "FOUNDATION_DEPENDENCE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-08",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-08",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-08-SETTLEMENT_ROLE",
+      "bucket_start": "2026-08-08",
+      "date": "2026-08-08",
+      "dimension_id": "SETTLEMENT_ROLE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-08",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-08",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-08-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-08-08",
+      "date": "2026-08-08",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-08",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-09",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-09-TREASURY_STRUCTURE",
+      "bucket_start": "2026-08-09",
+      "date": "2026-08-09",
+      "dimension_id": "TREASURY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-09",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-09",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-09-FOUNDATION_DEPENDENCE",
+      "bucket_start": "2026-08-09",
+      "date": "2026-08-09",
+      "dimension_id": "FOUNDATION_DEPENDENCE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-09",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-09",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-09-SETTLEMENT_ROLE",
+      "bucket_start": "2026-08-09",
+      "date": "2026-08-09",
+      "dimension_id": "SETTLEMENT_ROLE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-09",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-09",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-09-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-08-09",
+      "date": "2026-08-09",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-09",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-10",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-10-TREASURY_STRUCTURE",
+      "bucket_start": "2026-08-10",
+      "date": "2026-08-10",
+      "dimension_id": "TREASURY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-10",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-10",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-10-FOUNDATION_DEPENDENCE",
+      "bucket_start": "2026-08-10",
+      "date": "2026-08-10",
+      "dimension_id": "FOUNDATION_DEPENDENCE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-10",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-10",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-10-SETTLEMENT_ROLE",
+      "bucket_start": "2026-08-10",
+      "date": "2026-08-10",
+      "dimension_id": "SETTLEMENT_ROLE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-10",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-10",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-10-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-08-10",
+      "date": "2026-08-10",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-10",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-11",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-11-TREASURY_STRUCTURE",
+      "bucket_start": "2026-08-11",
+      "date": "2026-08-11",
+      "dimension_id": "TREASURY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-11",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-11",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-11-FOUNDATION_DEPENDENCE",
+      "bucket_start": "2026-08-11",
+      "date": "2026-08-11",
+      "dimension_id": "FOUNDATION_DEPENDENCE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-11",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-11",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-11-SETTLEMENT_ROLE",
+      "bucket_start": "2026-08-11",
+      "date": "2026-08-11",
+      "dimension_id": "SETTLEMENT_ROLE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-11",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-11",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-11-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-08-11",
+      "date": "2026-08-11",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-11",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-12",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-12-TREASURY_STRUCTURE",
+      "bucket_start": "2026-08-12",
+      "date": "2026-08-12",
+      "dimension_id": "TREASURY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-12",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-12",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-12-FOUNDATION_DEPENDENCE",
+      "bucket_start": "2026-08-12",
+      "date": "2026-08-12",
+      "dimension_id": "FOUNDATION_DEPENDENCE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-12",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-12",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-12-SETTLEMENT_ROLE",
+      "bucket_start": "2026-08-12",
+      "date": "2026-08-12",
+      "dimension_id": "SETTLEMENT_ROLE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-12",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-12",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-12-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-08-12",
+      "date": "2026-08-12",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-12",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-13",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-13-TREASURY_STRUCTURE",
+      "bucket_start": "2026-08-13",
+      "date": "2026-08-13",
+      "dimension_id": "TREASURY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-13",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-13",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-13-FOUNDATION_DEPENDENCE",
+      "bucket_start": "2026-08-13",
+      "date": "2026-08-13",
+      "dimension_id": "FOUNDATION_DEPENDENCE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-13",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-13",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-13-SETTLEMENT_ROLE",
+      "bucket_start": "2026-08-13",
+      "date": "2026-08-13",
+      "dimension_id": "SETTLEMENT_ROLE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-13",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-13",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-13-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-08-13",
+      "date": "2026-08-13",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-13",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-14",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-14-TREASURY_STRUCTURE",
+      "bucket_start": "2026-08-14",
+      "date": "2026-08-14",
+      "dimension_id": "TREASURY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-14",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-14",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-14-FOUNDATION_DEPENDENCE",
+      "bucket_start": "2026-08-14",
+      "date": "2026-08-14",
+      "dimension_id": "FOUNDATION_DEPENDENCE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-14",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-14",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-14-SETTLEMENT_ROLE",
+      "bucket_start": "2026-08-14",
+      "date": "2026-08-14",
+      "dimension_id": "SETTLEMENT_ROLE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-14",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-14",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-14-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-08-14",
+      "date": "2026-08-14",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-14",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-15",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-15-TREASURY_STRUCTURE",
+      "bucket_start": "2026-08-15",
+      "date": "2026-08-15",
+      "dimension_id": "TREASURY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-15",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-15",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-15-FOUNDATION_DEPENDENCE",
+      "bucket_start": "2026-08-15",
+      "date": "2026-08-15",
+      "dimension_id": "FOUNDATION_DEPENDENCE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-15",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-15",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-15-SETTLEMENT_ROLE",
+      "bucket_start": "2026-08-15",
+      "date": "2026-08-15",
+      "dimension_id": "SETTLEMENT_ROLE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-15",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-15",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-15-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-08-15",
+      "date": "2026-08-15",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-15",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-16",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-16-TREASURY_STRUCTURE",
+      "bucket_start": "2026-08-16",
+      "date": "2026-08-16",
+      "dimension_id": "TREASURY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-16",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-16",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-16-FOUNDATION_DEPENDENCE",
+      "bucket_start": "2026-08-16",
+      "date": "2026-08-16",
+      "dimension_id": "FOUNDATION_DEPENDENCE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-16",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-16",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-16-SETTLEMENT_ROLE",
+      "bucket_start": "2026-08-16",
+      "date": "2026-08-16",
+      "dimension_id": "SETTLEMENT_ROLE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-16",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-16",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-16-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-08-16",
+      "date": "2026-08-16",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-16",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-17",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-17-TREASURY_STRUCTURE",
+      "bucket_start": "2026-08-17",
+      "date": "2026-08-17",
+      "dimension_id": "TREASURY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-17",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-17",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-17-FOUNDATION_DEPENDENCE",
+      "bucket_start": "2026-08-17",
+      "date": "2026-08-17",
+      "dimension_id": "FOUNDATION_DEPENDENCE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-17",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-17",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-17-SETTLEMENT_ROLE",
+      "bucket_start": "2026-08-17",
+      "date": "2026-08-17",
+      "dimension_id": "SETTLEMENT_ROLE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-17",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-17",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-17-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-08-17",
+      "date": "2026-08-17",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-17",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-18",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-18-TREASURY_STRUCTURE",
+      "bucket_start": "2026-08-18",
+      "date": "2026-08-18",
+      "dimension_id": "TREASURY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-18",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-18",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-18-FOUNDATION_DEPENDENCE",
+      "bucket_start": "2026-08-18",
+      "date": "2026-08-18",
+      "dimension_id": "FOUNDATION_DEPENDENCE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-18",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-18",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-18-SETTLEMENT_ROLE",
+      "bucket_start": "2026-08-18",
+      "date": "2026-08-18",
+      "dimension_id": "SETTLEMENT_ROLE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-18",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-18",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-18-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-08-18",
+      "date": "2026-08-18",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-18",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-19",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-19-TREASURY_STRUCTURE",
+      "bucket_start": "2026-08-19",
+      "date": "2026-08-19",
+      "dimension_id": "TREASURY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-19",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-19",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-19-FOUNDATION_DEPENDENCE",
+      "bucket_start": "2026-08-19",
+      "date": "2026-08-19",
+      "dimension_id": "FOUNDATION_DEPENDENCE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-19",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-19",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-19-SETTLEMENT_ROLE",
+      "bucket_start": "2026-08-19",
+      "date": "2026-08-19",
+      "dimension_id": "SETTLEMENT_ROLE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-19",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-19",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-19-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-08-19",
+      "date": "2026-08-19",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-19",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-20",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-20-TREASURY_STRUCTURE",
+      "bucket_start": "2026-08-20",
+      "date": "2026-08-20",
+      "dimension_id": "TREASURY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-20",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-20",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-20-FOUNDATION_DEPENDENCE",
+      "bucket_start": "2026-08-20",
+      "date": "2026-08-20",
+      "dimension_id": "FOUNDATION_DEPENDENCE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-20",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-20",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-20-SETTLEMENT_ROLE",
+      "bucket_start": "2026-08-20",
+      "date": "2026-08-20",
+      "dimension_id": "SETTLEMENT_ROLE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-20",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-20",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-20-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-08-20",
+      "date": "2026-08-20",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-20",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-21",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-21-TREASURY_STRUCTURE",
+      "bucket_start": "2026-08-21",
+      "date": "2026-08-21",
+      "dimension_id": "TREASURY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-21",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-21",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-21-FOUNDATION_DEPENDENCE",
+      "bucket_start": "2026-08-21",
+      "date": "2026-08-21",
+      "dimension_id": "FOUNDATION_DEPENDENCE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-21",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-21",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-21-SETTLEMENT_ROLE",
+      "bucket_start": "2026-08-21",
+      "date": "2026-08-21",
+      "dimension_id": "SETTLEMENT_ROLE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-21",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-21",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-21-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-08-21",
+      "date": "2026-08-21",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-21",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-22",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-22-TREASURY_STRUCTURE",
+      "bucket_start": "2026-08-22",
+      "date": "2026-08-22",
+      "dimension_id": "TREASURY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-22",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-22",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-22-FOUNDATION_DEPENDENCE",
+      "bucket_start": "2026-08-22",
+      "date": "2026-08-22",
+      "dimension_id": "FOUNDATION_DEPENDENCE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-22",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-22",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-22-SETTLEMENT_ROLE",
+      "bucket_start": "2026-08-22",
+      "date": "2026-08-22",
+      "dimension_id": "SETTLEMENT_ROLE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-22",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-22",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-22-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-08-22",
+      "date": "2026-08-22",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-22",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-23",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-23-TREASURY_STRUCTURE",
+      "bucket_start": "2026-08-23",
+      "date": "2026-08-23",
+      "dimension_id": "TREASURY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-23",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-23",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-23-FOUNDATION_DEPENDENCE",
+      "bucket_start": "2026-08-23",
+      "date": "2026-08-23",
+      "dimension_id": "FOUNDATION_DEPENDENCE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-23",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-23",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-23-SETTLEMENT_ROLE",
+      "bucket_start": "2026-08-23",
+      "date": "2026-08-23",
+      "dimension_id": "SETTLEMENT_ROLE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-23",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-23",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-23-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-08-23",
+      "date": "2026-08-23",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-23",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-24",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-24-TREASURY_STRUCTURE",
+      "bucket_start": "2026-08-24",
+      "date": "2026-08-24",
+      "dimension_id": "TREASURY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-24",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-24",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-24-FOUNDATION_DEPENDENCE",
+      "bucket_start": "2026-08-24",
+      "date": "2026-08-24",
+      "dimension_id": "FOUNDATION_DEPENDENCE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-24",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-24",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-24-SETTLEMENT_ROLE",
+      "bucket_start": "2026-08-24",
+      "date": "2026-08-24",
+      "dimension_id": "SETTLEMENT_ROLE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-24",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-24",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-24-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-08-24",
+      "date": "2026-08-24",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-24",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-25",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-25-TREASURY_STRUCTURE",
+      "bucket_start": "2026-08-25",
+      "date": "2026-08-25",
+      "dimension_id": "TREASURY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-25",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-25",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-25-FOUNDATION_DEPENDENCE",
+      "bucket_start": "2026-08-25",
+      "date": "2026-08-25",
+      "dimension_id": "FOUNDATION_DEPENDENCE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-25",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-25",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-25-SETTLEMENT_ROLE",
+      "bucket_start": "2026-08-25",
+      "date": "2026-08-25",
+      "dimension_id": "SETTLEMENT_ROLE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-25",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-25",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-25-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-08-25",
+      "date": "2026-08-25",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-25",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-26",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-26-TREASURY_STRUCTURE",
+      "bucket_start": "2026-08-26",
+      "date": "2026-08-26",
+      "dimension_id": "TREASURY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-26",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-26",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-26-FOUNDATION_DEPENDENCE",
+      "bucket_start": "2026-08-26",
+      "date": "2026-08-26",
+      "dimension_id": "FOUNDATION_DEPENDENCE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-26",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-26",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-26-SETTLEMENT_ROLE",
+      "bucket_start": "2026-08-26",
+      "date": "2026-08-26",
+      "dimension_id": "SETTLEMENT_ROLE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-26",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-26",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-26-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-08-26",
+      "date": "2026-08-26",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-26",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-27",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-27-TREASURY_STRUCTURE",
+      "bucket_start": "2026-08-27",
+      "date": "2026-08-27",
+      "dimension_id": "TREASURY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-27",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-27",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-27-FOUNDATION_DEPENDENCE",
+      "bucket_start": "2026-08-27",
+      "date": "2026-08-27",
+      "dimension_id": "FOUNDATION_DEPENDENCE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-27",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-27",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-27-SETTLEMENT_ROLE",
+      "bucket_start": "2026-08-27",
+      "date": "2026-08-27",
+      "dimension_id": "SETTLEMENT_ROLE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-27",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-27",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-27-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-08-27",
+      "date": "2026-08-27",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-27",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-28",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-28-TREASURY_STRUCTURE",
+      "bucket_start": "2026-08-28",
+      "date": "2026-08-28",
+      "dimension_id": "TREASURY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-28",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-28",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-28-FOUNDATION_DEPENDENCE",
+      "bucket_start": "2026-08-28",
+      "date": "2026-08-28",
+      "dimension_id": "FOUNDATION_DEPENDENCE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-28",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-28",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-28-SETTLEMENT_ROLE",
+      "bucket_start": "2026-08-28",
+      "date": "2026-08-28",
+      "dimension_id": "SETTLEMENT_ROLE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-28",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-28",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-28-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-08-28",
+      "date": "2026-08-28",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-28",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-29",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-29-TREASURY_STRUCTURE",
+      "bucket_start": "2026-08-29",
+      "date": "2026-08-29",
+      "dimension_id": "TREASURY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-29",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-29",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-29-FOUNDATION_DEPENDENCE",
+      "bucket_start": "2026-08-29",
+      "date": "2026-08-29",
+      "dimension_id": "FOUNDATION_DEPENDENCE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-29",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-29",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-29-SETTLEMENT_ROLE",
+      "bucket_start": "2026-08-29",
+      "date": "2026-08-29",
+      "dimension_id": "SETTLEMENT_ROLE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-29",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-29",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-29-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-08-29",
+      "date": "2026-08-29",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-29",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-30",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-30-TREASURY_STRUCTURE",
+      "bucket_start": "2026-08-30",
+      "date": "2026-08-30",
+      "dimension_id": "TREASURY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-30",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-30",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-30-FOUNDATION_DEPENDENCE",
+      "bucket_start": "2026-08-30",
+      "date": "2026-08-30",
+      "dimension_id": "FOUNDATION_DEPENDENCE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-30",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-30",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-30-SETTLEMENT_ROLE",
+      "bucket_start": "2026-08-30",
+      "date": "2026-08-30",
+      "dimension_id": "SETTLEMENT_ROLE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-30",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-30",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-30-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-08-30",
+      "date": "2026-08-30",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-30",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-31",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-31-TREASURY_STRUCTURE",
+      "bucket_start": "2026-08-31",
+      "date": "2026-08-31",
+      "dimension_id": "TREASURY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-31",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-31",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-31-FOUNDATION_DEPENDENCE",
+      "bucket_start": "2026-08-31",
+      "date": "2026-08-31",
+      "dimension_id": "FOUNDATION_DEPENDENCE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-31",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-31",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-31-SETTLEMENT_ROLE",
+      "bucket_start": "2026-08-31",
+      "date": "2026-08-31",
+      "dimension_id": "SETTLEMENT_ROLE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-31",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-31",
+      "bucket_id": "XLM-STRUCT-DAY-2026-08-31-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-08-31",
+      "date": "2026-08-31",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-31",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-01",
+      "bucket_id": "XLM-STRUCT-DAY-2026-09-01-TREASURY_STRUCTURE",
+      "bucket_start": "2026-09-01",
+      "date": "2026-09-01",
+      "dimension_id": "TREASURY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09-01",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-01",
+      "bucket_id": "XLM-STRUCT-DAY-2026-09-01-FOUNDATION_DEPENDENCE",
+      "bucket_start": "2026-09-01",
+      "date": "2026-09-01",
+      "dimension_id": "FOUNDATION_DEPENDENCE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09-01",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-01",
+      "bucket_id": "XLM-STRUCT-DAY-2026-09-01-SETTLEMENT_ROLE",
+      "bucket_start": "2026-09-01",
+      "date": "2026-09-01",
+      "dimension_id": "SETTLEMENT_ROLE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09-01",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-01",
+      "bucket_id": "XLM-STRUCT-DAY-2026-09-01-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-09-01",
+      "date": "2026-09-01",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09-01",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-02",
+      "bucket_id": "XLM-STRUCT-DAY-2026-09-02-TREASURY_STRUCTURE",
+      "bucket_start": "2026-09-02",
+      "date": "2026-09-02",
+      "dimension_id": "TREASURY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09-02",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-02",
+      "bucket_id": "XLM-STRUCT-DAY-2026-09-02-FOUNDATION_DEPENDENCE",
+      "bucket_start": "2026-09-02",
+      "date": "2026-09-02",
+      "dimension_id": "FOUNDATION_DEPENDENCE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09-02",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-02",
+      "bucket_id": "XLM-STRUCT-DAY-2026-09-02-SETTLEMENT_ROLE",
+      "bucket_start": "2026-09-02",
+      "date": "2026-09-02",
+      "dimension_id": "SETTLEMENT_ROLE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09-02",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-02",
+      "bucket_id": "XLM-STRUCT-DAY-2026-09-02-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-09-02",
+      "date": "2026-09-02",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09-02",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-03",
+      "bucket_id": "XLM-STRUCT-DAY-2026-09-03-TREASURY_STRUCTURE",
+      "bucket_start": "2026-09-03",
+      "date": "2026-09-03",
+      "dimension_id": "TREASURY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09-03",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-03",
+      "bucket_id": "XLM-STRUCT-DAY-2026-09-03-FOUNDATION_DEPENDENCE",
+      "bucket_start": "2026-09-03",
+      "date": "2026-09-03",
+      "dimension_id": "FOUNDATION_DEPENDENCE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09-03",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-03",
+      "bucket_id": "XLM-STRUCT-DAY-2026-09-03-SETTLEMENT_ROLE",
+      "bucket_start": "2026-09-03",
+      "date": "2026-09-03",
+      "dimension_id": "SETTLEMENT_ROLE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09-03",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-03",
+      "bucket_id": "XLM-STRUCT-DAY-2026-09-03-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-09-03",
+      "date": "2026-09-03",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09-03",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-04",
+      "bucket_id": "XLM-STRUCT-DAY-2026-09-04-TREASURY_STRUCTURE",
+      "bucket_start": "2026-09-04",
+      "date": "2026-09-04",
+      "dimension_id": "TREASURY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [
+          "research/digital-assets/batch-01-r1/XLM/OBSERVATION_REGISTRY.json"
+        ],
+        "atomic_observation_ids": [
+          "TL-XLM-O001",
+          "TL-XLM-O002",
+          "TL-XLM-O003"
+        ]
+      },
+      "observation_count": 3,
+      "observations": [
+        "TL-XLM-O001",
+        "TL-XLM-O002",
+        "TL-XLM-O003"
+      ],
+      "period": "2026-09-04",
+      "resolution": "DAY",
+      "source_refs": [
+        "research/digital-assets/batch-01-r1/XLM/OBSERVATION_REGISTRY.json"
+      ],
+      "state": "STRENGTHENING",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-04",
+      "bucket_id": "XLM-STRUCT-DAY-2026-09-04-FOUNDATION_DEPENDENCE",
+      "bucket_start": "2026-09-04",
+      "date": "2026-09-04",
+      "dimension_id": "FOUNDATION_DEPENDENCE",
+      "lineage": {
+        "artifact_refs": [
+          "research/digital-assets/batch-01-r1/XLM/OBSERVATION_REGISTRY.json"
+        ],
+        "atomic_observation_ids": [
+          "TL-XLM-O004"
+        ]
+      },
+      "observation_count": 1,
+      "observations": [
+        "TL-XLM-O004"
+      ],
+      "period": "2026-09-04",
+      "resolution": "DAY",
+      "source_refs": [
+        "research/digital-assets/batch-01-r1/XLM/OBSERVATION_REGISTRY.json"
+      ],
+      "state": "STRENGTHENING",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-04",
+      "bucket_id": "XLM-STRUCT-DAY-2026-09-04-SETTLEMENT_ROLE",
+      "bucket_start": "2026-09-04",
+      "date": "2026-09-04",
+      "dimension_id": "SETTLEMENT_ROLE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09-04",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-04",
+      "bucket_id": "XLM-STRUCT-DAY-2026-09-04-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-09-04",
+      "date": "2026-09-04",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09-04",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-05",
+      "bucket_id": "XLM-STRUCT-DAY-2026-09-05-TREASURY_STRUCTURE",
+      "bucket_start": "2026-09-05",
+      "date": "2026-09-05",
+      "dimension_id": "TREASURY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09-05",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-05",
+      "bucket_id": "XLM-STRUCT-DAY-2026-09-05-FOUNDATION_DEPENDENCE",
+      "bucket_start": "2026-09-05",
+      "date": "2026-09-05",
+      "dimension_id": "FOUNDATION_DEPENDENCE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09-05",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-05",
+      "bucket_id": "XLM-STRUCT-DAY-2026-09-05-SETTLEMENT_ROLE",
+      "bucket_start": "2026-09-05",
+      "date": "2026-09-05",
+      "dimension_id": "SETTLEMENT_ROLE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09-05",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-05",
+      "bucket_id": "XLM-STRUCT-DAY-2026-09-05-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-09-05",
+      "date": "2026-09-05",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09-05",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-06",
+      "bucket_id": "XLM-STRUCT-DAY-2026-09-06-TREASURY_STRUCTURE",
+      "bucket_start": "2026-09-06",
+      "date": "2026-09-06",
+      "dimension_id": "TREASURY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09-06",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-06",
+      "bucket_id": "XLM-STRUCT-DAY-2026-09-06-FOUNDATION_DEPENDENCE",
+      "bucket_start": "2026-09-06",
+      "date": "2026-09-06",
+      "dimension_id": "FOUNDATION_DEPENDENCE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09-06",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-06",
+      "bucket_id": "XLM-STRUCT-DAY-2026-09-06-SETTLEMENT_ROLE",
+      "bucket_start": "2026-09-06",
+      "date": "2026-09-06",
+      "dimension_id": "SETTLEMENT_ROLE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09-06",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-06",
+      "bucket_id": "XLM-STRUCT-DAY-2026-09-06-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-09-06",
+      "date": "2026-09-06",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09-06",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-07",
+      "bucket_id": "XLM-STRUCT-DAY-2026-09-07-TREASURY_STRUCTURE",
+      "bucket_start": "2026-09-07",
+      "date": "2026-09-07",
+      "dimension_id": "TREASURY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09-07",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-07",
+      "bucket_id": "XLM-STRUCT-DAY-2026-09-07-FOUNDATION_DEPENDENCE",
+      "bucket_start": "2026-09-07",
+      "date": "2026-09-07",
+      "dimension_id": "FOUNDATION_DEPENDENCE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09-07",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-07",
+      "bucket_id": "XLM-STRUCT-DAY-2026-09-07-SETTLEMENT_ROLE",
+      "bucket_start": "2026-09-07",
+      "date": "2026-09-07",
+      "dimension_id": "SETTLEMENT_ROLE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09-07",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-07",
+      "bucket_id": "XLM-STRUCT-DAY-2026-09-07-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-09-07",
+      "date": "2026-09-07",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09-07",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-08",
+      "bucket_id": "XLM-STRUCT-DAY-2026-09-08-TREASURY_STRUCTURE",
+      "bucket_start": "2026-09-08",
+      "date": "2026-09-08",
+      "dimension_id": "TREASURY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09-08",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-08",
+      "bucket_id": "XLM-STRUCT-DAY-2026-09-08-FOUNDATION_DEPENDENCE",
+      "bucket_start": "2026-09-08",
+      "date": "2026-09-08",
+      "dimension_id": "FOUNDATION_DEPENDENCE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09-08",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-08",
+      "bucket_id": "XLM-STRUCT-DAY-2026-09-08-SETTLEMENT_ROLE",
+      "bucket_start": "2026-09-08",
+      "date": "2026-09-08",
+      "dimension_id": "SETTLEMENT_ROLE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09-08",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-08",
+      "bucket_id": "XLM-STRUCT-DAY-2026-09-08-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-09-08",
+      "date": "2026-09-08",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [
+          "research/digital-assets/batch-01-r1/XLM/OBSERVATION_REGISTRY.json"
+        ],
+        "atomic_observation_ids": [
+          "TL-XLM-O007"
+        ]
+      },
+      "observation_count": 1,
+      "observations": [
+        "TL-XLM-O007"
+      ],
+      "period": "2026-09-08",
+      "resolution": "DAY",
+      "source_refs": [
+        "research/digital-assets/batch-01-r1/XLM/OBSERVATION_REGISTRY.json"
+      ],
+      "state": "TENSION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-09",
+      "bucket_id": "XLM-STRUCT-DAY-2026-09-09-TREASURY_STRUCTURE",
+      "bucket_start": "2026-09-09",
+      "date": "2026-09-09",
+      "dimension_id": "TREASURY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09-09",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-09",
+      "bucket_id": "XLM-STRUCT-DAY-2026-09-09-FOUNDATION_DEPENDENCE",
+      "bucket_start": "2026-09-09",
+      "date": "2026-09-09",
+      "dimension_id": "FOUNDATION_DEPENDENCE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09-09",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-09",
+      "bucket_id": "XLM-STRUCT-DAY-2026-09-09-SETTLEMENT_ROLE",
+      "bucket_start": "2026-09-09",
+      "date": "2026-09-09",
+      "dimension_id": "SETTLEMENT_ROLE",
+      "lineage": {
+        "artifact_refs": [
+          "research/digital-assets/batch-01-r1/XLM/OBSERVATION_REGISTRY.json"
+        ],
+        "atomic_observation_ids": [
+          "TL-XLM-O008"
+        ]
+      },
+      "observation_count": 1,
+      "observations": [
+        "TL-XLM-O008"
+      ],
+      "period": "2026-09-09",
+      "resolution": "DAY",
+      "source_refs": [
+        "research/digital-assets/batch-01-r1/XLM/OBSERVATION_REGISTRY.json"
+      ],
+      "state": "STRENGTHENING",
+      "subject_id": "XLM"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-09",
+      "bucket_id": "XLM-STRUCT-DAY-2026-09-09-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-09-09",
+      "date": "2026-09-09",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09-09",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "XLM"
+    }
+  ],
+  "layer": "STRUCTURAL",
+  "model_version": "TIMELINE_MODEL_R1",
+  "resolution": "DAY",
+  "subject_id": "XLM"
+}

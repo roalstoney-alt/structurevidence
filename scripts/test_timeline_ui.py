@@ -51,14 +51,14 @@ def fail(message: str) -> None:
 def main() -> None:
     js = (ROOT / "assets" / "site.js").read_text(encoding="utf-8")
     css = (ROOT / "assets" / "style.css").read_text(encoding="utf-8")
-    for marker in ["renderTimelinePanel", "data-resolution", "timeline-heatmap", "timeline-events"]:
+    for marker in ["renderTimelinePanel", "data-resolution", "timeline-heatmap", "timeline-events", "loadResolution", "datasets"]:
         if marker not in js + css:
             fail(f"missing UI component marker {marker}")
     for page in SUBJECT_PAGES:
         text = (ROOT / page).read_text(encoding="utf-8")
         if 'class="dynamics-panel"' not in text or "data-timeline-subject" not in text:
             fail(f"missing dynamics panel in {page}")
-        if "No production freshness threshold" not in text:
+        if "RDL freshness policy is not configured" not in text:
             fail(f"missing freshness boundary in {page}")
     if 'class="dynamics-panel"' in (ROOT / "index.html").read_text(encoding="utf-8"):
         fail("homepage was overloaded with timeline panel")

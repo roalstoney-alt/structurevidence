@@ -1,0 +1,56 @@
+{
+  "as_of": "2026-09-10T14:18:35.507637Z",
+  "atomic_observation_count": 8,
+  "builder_version": "TIMELINE_MODEL_R1",
+  "day_bucket_count": 12,
+  "dimension_mapping_sha256": "9562f645da388f2add268e6424f3ebf17d22325447c2810c986c1dc9ab263f86",
+  "dimension_observation_counts": {
+    "GOVERNANCE_STRUCTURE": 3,
+    "RESOURCE_PRESSURE": 2,
+    "SETTLEMENT_ROLE": 2,
+    "VALIDATOR_DISTRIBUTION": 1
+  },
+  "evidence_aggregation_rules_sha256": "bc921c7b76b424cd98b822b14f92c193cef9472c77dd1bf95111e1c0ea2e3732",
+  "evidence_event_count": 7,
+  "evidence_mapping_config_hash": "11f2bdf2eafdd659ee0b753dbb85d10ff3d1306e547c180127ee2d30f565d737",
+  "input_artifacts": [
+    "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json",
+    "research/digital-assets/batch-01-r1/TRX/SOURCE_INVENTORY.json",
+    "research/digital-assets/batch-01-r1/TRX/CLAIM_REGISTRY.json",
+    "research/digital-assets/batch-01-r1/TRX/COUNTER_EVIDENCE_SEARCH_LOG.json",
+    "research/digital-assets/batch-01-r1/TRX/NUMERICAL_RECONCILIATION.json",
+    "research/digital-assets/batch-01-r1/TRX/CANONICAL_RESEARCH_R1.json",
+    "research/digital-assets/batch-01-r1/TRX/gdr-se/GDR_SE_AUTHORIZATION_RECORD_R1_1.json"
+  ],
+  "input_hashes": {
+    "research/digital-assets/batch-01-r1/TRX/CANONICAL_RESEARCH_R1.json": "c02cccfd716fdbf06dd969505c23bf00663c347ea953aa2bf523fe088744de5b",
+    "research/digital-assets/batch-01-r1/TRX/CLAIM_REGISTRY.json": "3cb1ef006a411f6739303c38b715f646434645c6bed4d028e742c98ddd61ebac",
+    "research/digital-assets/batch-01-r1/TRX/COUNTER_EVIDENCE_SEARCH_LOG.json": "5e927f1cf54f04a0674e7c7f40c77062fbc13b11ddb041e1345d9749861dc26f",
+    "research/digital-assets/batch-01-r1/TRX/NUMERICAL_RECONCILIATION.json": "5084bf0366417030a6463b8b0f0b9e916c495889a29847828e311b43c5a1569f",
+    "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json": "b7f50d956c227022a9197646d662b0b5b2d2739d95b4ae3c27ba771303c34de8",
+    "research/digital-assets/batch-01-r1/TRX/SOURCE_INVENTORY.json": "593435951a60b41a53575d965be4e2a1bb144c5b26040f1adfb0b4a9c3b6c936",
+    "research/digital-assets/batch-01-r1/TRX/gdr-se/GDR_SE_AUTHORIZATION_RECORD_R1_1.json": "592212337e3f16cb619fbe9fd51da9fe5a5482dad5a2f9e8f2df99411b0b6df3"
+  },
+  "mapping_config_hash": "9562f645da388f2add268e6424f3ebf17d22325447c2810c986c1dc9ab263f86",
+  "model_version": "TIMELINE_MODEL_R1",
+  "month_bucket_count": 4,
+  "output_hashes": {
+    "timeline/atomic/trx_atomic_observations.json": "70f13f4450b7765aa36a933e68c2fd84d2cd9577ef3de9e46f80dcfd425dc806",
+    "timeline/subjects/trx_event_ledger.json": "45d46f80654e29ce0349b61a575a5be1e1788a759804ccc681712f32b961251e",
+    "timeline/subjects/trx_evidence_day.json": "ae3fbd571ce3b485fda507e7d51d098eb2e906528ddfe3c27da1900529bd1cc9",
+    "timeline/subjects/trx_evidence_events.json": "a468e7be526475b0e9cfdf3f907e791824f882833c2f3f434ff70a86aa4f22d8",
+    "timeline/subjects/trx_evidence_month.json": "4643b2b706e8a09dccc0ae0f14944af8ab2abefa2f5f6b8e3fc83fd179134ed6",
+    "timeline/subjects/trx_evidence_timeline.json": "91713f1591d943caebe88b78f3e4950554a057a64262342d20b86ce80b9433cf",
+    "timeline/subjects/trx_evidence_week.json": "e0b6062511bc64014b7bb2c32cf7643471d4f733d54e4113e063830ee8bbf2bb",
+    "timeline/subjects/trx_structural_day.json": "79bc3adf8de59180953a1e0c9705f0c2a4d54ef7019d2ac243a3dea76f509b4d",
+    "timeline/subjects/trx_structural_month.json": "add061fd5cfa57c237177c334092f676e41de1b488e9e44b156dd5cd4ead5149",
+    "timeline/subjects/trx_structural_timeline.json": "ceda8b7790ac5e2a3eaa660c0c0d8454811cb1aad9618d322dc216ab5c038a55",
+    "timeline/subjects/trx_structural_week.json": "411670ea2996f1997412495f85e19d285925b9384292cc3d0737c6562c50558b"
+  },
+  "structural_aggregation_rules_sha256": "4c3c7969559b91c8753028547b731c697378bfa247bac0f3529538d314083de5",
+  "subject_id": "TRX",
+  "taxonomy_sha256": "c5511ea94b31305b1dde9461fdbe0fe9602f20fcd33f212c5c64fc773c2dfc6c",
+  "timeline_input_bundle_sha256": "c53bfbb38b116cde3b9c1c0636392eab103180dad8bf940d818be8b834c3239b",
+  "unresolved_timestamp_count": 0,
+  "week_bucket_count": 4
+}

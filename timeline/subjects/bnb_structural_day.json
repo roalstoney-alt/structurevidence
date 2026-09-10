@@ -1,0 +1,4394 @@
+{
+  "buckets": [
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-15",
+      "bucket_id": "BNB-STRUCT-DAY-2026-07-15-SUPPLY_STRUCTURE",
+      "bucket_start": "2026-07-15",
+      "date": "2026-07-15",
+      "dimension_id": "SUPPLY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [
+          "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
+        ],
+        "atomic_observation_ids": [
+          "TL-BNB-O001",
+          "TL-BNB-O002",
+          "TL-BNB-O003"
+        ]
+      },
+      "observation_count": 3,
+      "observations": [
+        "TL-BNB-O001",
+        "TL-BNB-O002",
+        "TL-BNB-O003"
+      ],
+      "period": "2026-07-15",
+      "resolution": "DAY",
+      "source_refs": [
+        "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
+      ],
+      "state": "STRUCTURAL_SHIFT",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-15",
+      "bucket_id": "BNB-STRUCT-DAY-2026-07-15-UTILITY_STRUCTURE",
+      "bucket_start": "2026-07-15",
+      "date": "2026-07-15",
+      "dimension_id": "UTILITY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [
+          "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
+        ],
+        "atomic_observation_ids": [
+          "TL-BNB-O004"
+        ]
+      },
+      "observation_count": 1,
+      "observations": [
+        "TL-BNB-O004"
+      ],
+      "period": "2026-07-15",
+      "resolution": "DAY",
+      "source_refs": [
+        "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
+      ],
+      "state": "STRENGTHENING",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-15",
+      "bucket_id": "BNB-STRUCT-DAY-2026-07-15-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-07-15",
+      "date": "2026-07-15",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-15",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-15",
+      "bucket_id": "BNB-STRUCT-DAY-2026-07-15-GOVERNANCE_STRUCTURE",
+      "bucket_start": "2026-07-15",
+      "date": "2026-07-15",
+      "dimension_id": "GOVERNANCE_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [
+          "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
+        ],
+        "atomic_observation_ids": [
+          "TL-BNB-O008"
+        ]
+      },
+      "observation_count": 1,
+      "observations": [
+        "TL-BNB-O008"
+      ],
+      "period": "2026-07-15",
+      "resolution": "DAY",
+      "source_refs": [
+        "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
+      ],
+      "state": "STRENGTHENING",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-16",
+      "bucket_id": "BNB-STRUCT-DAY-2026-07-16-SUPPLY_STRUCTURE",
+      "bucket_start": "2026-07-16",
+      "date": "2026-07-16",
+      "dimension_id": "SUPPLY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-16",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-16",
+      "bucket_id": "BNB-STRUCT-DAY-2026-07-16-UTILITY_STRUCTURE",
+      "bucket_start": "2026-07-16",
+      "date": "2026-07-16",
+      "dimension_id": "UTILITY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-16",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-16",
+      "bucket_id": "BNB-STRUCT-DAY-2026-07-16-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-07-16",
+      "date": "2026-07-16",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-16",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-16",
+      "bucket_id": "BNB-STRUCT-DAY-2026-07-16-GOVERNANCE_STRUCTURE",
+      "bucket_start": "2026-07-16",
+      "date": "2026-07-16",
+      "dimension_id": "GOVERNANCE_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-16",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-17",
+      "bucket_id": "BNB-STRUCT-DAY-2026-07-17-SUPPLY_STRUCTURE",
+      "bucket_start": "2026-07-17",
+      "date": "2026-07-17",
+      "dimension_id": "SUPPLY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-17",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-17",
+      "bucket_id": "BNB-STRUCT-DAY-2026-07-17-UTILITY_STRUCTURE",
+      "bucket_start": "2026-07-17",
+      "date": "2026-07-17",
+      "dimension_id": "UTILITY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-17",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-17",
+      "bucket_id": "BNB-STRUCT-DAY-2026-07-17-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-07-17",
+      "date": "2026-07-17",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-17",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-17",
+      "bucket_id": "BNB-STRUCT-DAY-2026-07-17-GOVERNANCE_STRUCTURE",
+      "bucket_start": "2026-07-17",
+      "date": "2026-07-17",
+      "dimension_id": "GOVERNANCE_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-17",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-18",
+      "bucket_id": "BNB-STRUCT-DAY-2026-07-18-SUPPLY_STRUCTURE",
+      "bucket_start": "2026-07-18",
+      "date": "2026-07-18",
+      "dimension_id": "SUPPLY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-18",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-18",
+      "bucket_id": "BNB-STRUCT-DAY-2026-07-18-UTILITY_STRUCTURE",
+      "bucket_start": "2026-07-18",
+      "date": "2026-07-18",
+      "dimension_id": "UTILITY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-18",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-18",
+      "bucket_id": "BNB-STRUCT-DAY-2026-07-18-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-07-18",
+      "date": "2026-07-18",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-18",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-18",
+      "bucket_id": "BNB-STRUCT-DAY-2026-07-18-GOVERNANCE_STRUCTURE",
+      "bucket_start": "2026-07-18",
+      "date": "2026-07-18",
+      "dimension_id": "GOVERNANCE_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-18",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-19",
+      "bucket_id": "BNB-STRUCT-DAY-2026-07-19-SUPPLY_STRUCTURE",
+      "bucket_start": "2026-07-19",
+      "date": "2026-07-19",
+      "dimension_id": "SUPPLY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-19",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-19",
+      "bucket_id": "BNB-STRUCT-DAY-2026-07-19-UTILITY_STRUCTURE",
+      "bucket_start": "2026-07-19",
+      "date": "2026-07-19",
+      "dimension_id": "UTILITY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-19",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-19",
+      "bucket_id": "BNB-STRUCT-DAY-2026-07-19-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-07-19",
+      "date": "2026-07-19",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-19",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-19",
+      "bucket_id": "BNB-STRUCT-DAY-2026-07-19-GOVERNANCE_STRUCTURE",
+      "bucket_start": "2026-07-19",
+      "date": "2026-07-19",
+      "dimension_id": "GOVERNANCE_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-19",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-20",
+      "bucket_id": "BNB-STRUCT-DAY-2026-07-20-SUPPLY_STRUCTURE",
+      "bucket_start": "2026-07-20",
+      "date": "2026-07-20",
+      "dimension_id": "SUPPLY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-20",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-20",
+      "bucket_id": "BNB-STRUCT-DAY-2026-07-20-UTILITY_STRUCTURE",
+      "bucket_start": "2026-07-20",
+      "date": "2026-07-20",
+      "dimension_id": "UTILITY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-20",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-20",
+      "bucket_id": "BNB-STRUCT-DAY-2026-07-20-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-07-20",
+      "date": "2026-07-20",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-20",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-20",
+      "bucket_id": "BNB-STRUCT-DAY-2026-07-20-GOVERNANCE_STRUCTURE",
+      "bucket_start": "2026-07-20",
+      "date": "2026-07-20",
+      "dimension_id": "GOVERNANCE_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-20",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-21",
+      "bucket_id": "BNB-STRUCT-DAY-2026-07-21-SUPPLY_STRUCTURE",
+      "bucket_start": "2026-07-21",
+      "date": "2026-07-21",
+      "dimension_id": "SUPPLY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-21",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-21",
+      "bucket_id": "BNB-STRUCT-DAY-2026-07-21-UTILITY_STRUCTURE",
+      "bucket_start": "2026-07-21",
+      "date": "2026-07-21",
+      "dimension_id": "UTILITY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-21",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-21",
+      "bucket_id": "BNB-STRUCT-DAY-2026-07-21-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-07-21",
+      "date": "2026-07-21",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-21",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-21",
+      "bucket_id": "BNB-STRUCT-DAY-2026-07-21-GOVERNANCE_STRUCTURE",
+      "bucket_start": "2026-07-21",
+      "date": "2026-07-21",
+      "dimension_id": "GOVERNANCE_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-21",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-22",
+      "bucket_id": "BNB-STRUCT-DAY-2026-07-22-SUPPLY_STRUCTURE",
+      "bucket_start": "2026-07-22",
+      "date": "2026-07-22",
+      "dimension_id": "SUPPLY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-22",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-22",
+      "bucket_id": "BNB-STRUCT-DAY-2026-07-22-UTILITY_STRUCTURE",
+      "bucket_start": "2026-07-22",
+      "date": "2026-07-22",
+      "dimension_id": "UTILITY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-22",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-22",
+      "bucket_id": "BNB-STRUCT-DAY-2026-07-22-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-07-22",
+      "date": "2026-07-22",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-22",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-22",
+      "bucket_id": "BNB-STRUCT-DAY-2026-07-22-GOVERNANCE_STRUCTURE",
+      "bucket_start": "2026-07-22",
+      "date": "2026-07-22",
+      "dimension_id": "GOVERNANCE_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-22",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-23",
+      "bucket_id": "BNB-STRUCT-DAY-2026-07-23-SUPPLY_STRUCTURE",
+      "bucket_start": "2026-07-23",
+      "date": "2026-07-23",
+      "dimension_id": "SUPPLY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-23",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-23",
+      "bucket_id": "BNB-STRUCT-DAY-2026-07-23-UTILITY_STRUCTURE",
+      "bucket_start": "2026-07-23",
+      "date": "2026-07-23",
+      "dimension_id": "UTILITY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-23",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-23",
+      "bucket_id": "BNB-STRUCT-DAY-2026-07-23-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-07-23",
+      "date": "2026-07-23",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-23",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-23",
+      "bucket_id": "BNB-STRUCT-DAY-2026-07-23-GOVERNANCE_STRUCTURE",
+      "bucket_start": "2026-07-23",
+      "date": "2026-07-23",
+      "dimension_id": "GOVERNANCE_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-23",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-24",
+      "bucket_id": "BNB-STRUCT-DAY-2026-07-24-SUPPLY_STRUCTURE",
+      "bucket_start": "2026-07-24",
+      "date": "2026-07-24",
+      "dimension_id": "SUPPLY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-24",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-24",
+      "bucket_id": "BNB-STRUCT-DAY-2026-07-24-UTILITY_STRUCTURE",
+      "bucket_start": "2026-07-24",
+      "date": "2026-07-24",
+      "dimension_id": "UTILITY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-24",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-24",
+      "bucket_id": "BNB-STRUCT-DAY-2026-07-24-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-07-24",
+      "date": "2026-07-24",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-24",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-24",
+      "bucket_id": "BNB-STRUCT-DAY-2026-07-24-GOVERNANCE_STRUCTURE",
+      "bucket_start": "2026-07-24",
+      "date": "2026-07-24",
+      "dimension_id": "GOVERNANCE_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-24",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-25",
+      "bucket_id": "BNB-STRUCT-DAY-2026-07-25-SUPPLY_STRUCTURE",
+      "bucket_start": "2026-07-25",
+      "date": "2026-07-25",
+      "dimension_id": "SUPPLY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-25",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-25",
+      "bucket_id": "BNB-STRUCT-DAY-2026-07-25-UTILITY_STRUCTURE",
+      "bucket_start": "2026-07-25",
+      "date": "2026-07-25",
+      "dimension_id": "UTILITY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-25",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-25",
+      "bucket_id": "BNB-STRUCT-DAY-2026-07-25-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-07-25",
+      "date": "2026-07-25",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-25",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-25",
+      "bucket_id": "BNB-STRUCT-DAY-2026-07-25-GOVERNANCE_STRUCTURE",
+      "bucket_start": "2026-07-25",
+      "date": "2026-07-25",
+      "dimension_id": "GOVERNANCE_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-25",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-26",
+      "bucket_id": "BNB-STRUCT-DAY-2026-07-26-SUPPLY_STRUCTURE",
+      "bucket_start": "2026-07-26",
+      "date": "2026-07-26",
+      "dimension_id": "SUPPLY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-26",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-26",
+      "bucket_id": "BNB-STRUCT-DAY-2026-07-26-UTILITY_STRUCTURE",
+      "bucket_start": "2026-07-26",
+      "date": "2026-07-26",
+      "dimension_id": "UTILITY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-26",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-26",
+      "bucket_id": "BNB-STRUCT-DAY-2026-07-26-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-07-26",
+      "date": "2026-07-26",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-26",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-26",
+      "bucket_id": "BNB-STRUCT-DAY-2026-07-26-GOVERNANCE_STRUCTURE",
+      "bucket_start": "2026-07-26",
+      "date": "2026-07-26",
+      "dimension_id": "GOVERNANCE_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-26",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-27",
+      "bucket_id": "BNB-STRUCT-DAY-2026-07-27-SUPPLY_STRUCTURE",
+      "bucket_start": "2026-07-27",
+      "date": "2026-07-27",
+      "dimension_id": "SUPPLY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-27",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-27",
+      "bucket_id": "BNB-STRUCT-DAY-2026-07-27-UTILITY_STRUCTURE",
+      "bucket_start": "2026-07-27",
+      "date": "2026-07-27",
+      "dimension_id": "UTILITY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-27",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-27",
+      "bucket_id": "BNB-STRUCT-DAY-2026-07-27-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-07-27",
+      "date": "2026-07-27",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-27",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-27",
+      "bucket_id": "BNB-STRUCT-DAY-2026-07-27-GOVERNANCE_STRUCTURE",
+      "bucket_start": "2026-07-27",
+      "date": "2026-07-27",
+      "dimension_id": "GOVERNANCE_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-27",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-28",
+      "bucket_id": "BNB-STRUCT-DAY-2026-07-28-SUPPLY_STRUCTURE",
+      "bucket_start": "2026-07-28",
+      "date": "2026-07-28",
+      "dimension_id": "SUPPLY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-28",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-28",
+      "bucket_id": "BNB-STRUCT-DAY-2026-07-28-UTILITY_STRUCTURE",
+      "bucket_start": "2026-07-28",
+      "date": "2026-07-28",
+      "dimension_id": "UTILITY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-28",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-28",
+      "bucket_id": "BNB-STRUCT-DAY-2026-07-28-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-07-28",
+      "date": "2026-07-28",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-28",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-28",
+      "bucket_id": "BNB-STRUCT-DAY-2026-07-28-GOVERNANCE_STRUCTURE",
+      "bucket_start": "2026-07-28",
+      "date": "2026-07-28",
+      "dimension_id": "GOVERNANCE_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-28",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-29",
+      "bucket_id": "BNB-STRUCT-DAY-2026-07-29-SUPPLY_STRUCTURE",
+      "bucket_start": "2026-07-29",
+      "date": "2026-07-29",
+      "dimension_id": "SUPPLY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-29",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-29",
+      "bucket_id": "BNB-STRUCT-DAY-2026-07-29-UTILITY_STRUCTURE",
+      "bucket_start": "2026-07-29",
+      "date": "2026-07-29",
+      "dimension_id": "UTILITY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-29",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-29",
+      "bucket_id": "BNB-STRUCT-DAY-2026-07-29-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-07-29",
+      "date": "2026-07-29",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-29",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-29",
+      "bucket_id": "BNB-STRUCT-DAY-2026-07-29-GOVERNANCE_STRUCTURE",
+      "bucket_start": "2026-07-29",
+      "date": "2026-07-29",
+      "dimension_id": "GOVERNANCE_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-29",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-30",
+      "bucket_id": "BNB-STRUCT-DAY-2026-07-30-SUPPLY_STRUCTURE",
+      "bucket_start": "2026-07-30",
+      "date": "2026-07-30",
+      "dimension_id": "SUPPLY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-30",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-30",
+      "bucket_id": "BNB-STRUCT-DAY-2026-07-30-UTILITY_STRUCTURE",
+      "bucket_start": "2026-07-30",
+      "date": "2026-07-30",
+      "dimension_id": "UTILITY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-30",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-30",
+      "bucket_id": "BNB-STRUCT-DAY-2026-07-30-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-07-30",
+      "date": "2026-07-30",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-30",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-30",
+      "bucket_id": "BNB-STRUCT-DAY-2026-07-30-GOVERNANCE_STRUCTURE",
+      "bucket_start": "2026-07-30",
+      "date": "2026-07-30",
+      "dimension_id": "GOVERNANCE_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-30",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-31",
+      "bucket_id": "BNB-STRUCT-DAY-2026-07-31-SUPPLY_STRUCTURE",
+      "bucket_start": "2026-07-31",
+      "date": "2026-07-31",
+      "dimension_id": "SUPPLY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-31",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-31",
+      "bucket_id": "BNB-STRUCT-DAY-2026-07-31-UTILITY_STRUCTURE",
+      "bucket_start": "2026-07-31",
+      "date": "2026-07-31",
+      "dimension_id": "UTILITY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-31",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-31",
+      "bucket_id": "BNB-STRUCT-DAY-2026-07-31-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-07-31",
+      "date": "2026-07-31",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-31",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-07-31",
+      "bucket_id": "BNB-STRUCT-DAY-2026-07-31-GOVERNANCE_STRUCTURE",
+      "bucket_start": "2026-07-31",
+      "date": "2026-07-31",
+      "dimension_id": "GOVERNANCE_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07-31",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-01",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-01-SUPPLY_STRUCTURE",
+      "bucket_start": "2026-08-01",
+      "date": "2026-08-01",
+      "dimension_id": "SUPPLY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-01",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-01",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-01-UTILITY_STRUCTURE",
+      "bucket_start": "2026-08-01",
+      "date": "2026-08-01",
+      "dimension_id": "UTILITY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-01",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-01",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-01-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-08-01",
+      "date": "2026-08-01",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-01",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-01",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-01-GOVERNANCE_STRUCTURE",
+      "bucket_start": "2026-08-01",
+      "date": "2026-08-01",
+      "dimension_id": "GOVERNANCE_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-01",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-02",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-02-SUPPLY_STRUCTURE",
+      "bucket_start": "2026-08-02",
+      "date": "2026-08-02",
+      "dimension_id": "SUPPLY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-02",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-02",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-02-UTILITY_STRUCTURE",
+      "bucket_start": "2026-08-02",
+      "date": "2026-08-02",
+      "dimension_id": "UTILITY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-02",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-02",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-02-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-08-02",
+      "date": "2026-08-02",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-02",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-02",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-02-GOVERNANCE_STRUCTURE",
+      "bucket_start": "2026-08-02",
+      "date": "2026-08-02",
+      "dimension_id": "GOVERNANCE_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-02",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-03",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-03-SUPPLY_STRUCTURE",
+      "bucket_start": "2026-08-03",
+      "date": "2026-08-03",
+      "dimension_id": "SUPPLY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-03",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-03",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-03-UTILITY_STRUCTURE",
+      "bucket_start": "2026-08-03",
+      "date": "2026-08-03",
+      "dimension_id": "UTILITY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-03",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-03",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-03-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-08-03",
+      "date": "2026-08-03",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-03",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-03",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-03-GOVERNANCE_STRUCTURE",
+      "bucket_start": "2026-08-03",
+      "date": "2026-08-03",
+      "dimension_id": "GOVERNANCE_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-03",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-04",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-04-SUPPLY_STRUCTURE",
+      "bucket_start": "2026-08-04",
+      "date": "2026-08-04",
+      "dimension_id": "SUPPLY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-04",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-04",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-04-UTILITY_STRUCTURE",
+      "bucket_start": "2026-08-04",
+      "date": "2026-08-04",
+      "dimension_id": "UTILITY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-04",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-04",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-04-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-08-04",
+      "date": "2026-08-04",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-04",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-04",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-04-GOVERNANCE_STRUCTURE",
+      "bucket_start": "2026-08-04",
+      "date": "2026-08-04",
+      "dimension_id": "GOVERNANCE_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-04",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-05",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-05-SUPPLY_STRUCTURE",
+      "bucket_start": "2026-08-05",
+      "date": "2026-08-05",
+      "dimension_id": "SUPPLY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-05",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-05",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-05-UTILITY_STRUCTURE",
+      "bucket_start": "2026-08-05",
+      "date": "2026-08-05",
+      "dimension_id": "UTILITY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-05",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-05",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-05-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-08-05",
+      "date": "2026-08-05",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-05",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-05",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-05-GOVERNANCE_STRUCTURE",
+      "bucket_start": "2026-08-05",
+      "date": "2026-08-05",
+      "dimension_id": "GOVERNANCE_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-05",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-06",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-06-SUPPLY_STRUCTURE",
+      "bucket_start": "2026-08-06",
+      "date": "2026-08-06",
+      "dimension_id": "SUPPLY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-06",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-06",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-06-UTILITY_STRUCTURE",
+      "bucket_start": "2026-08-06",
+      "date": "2026-08-06",
+      "dimension_id": "UTILITY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-06",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-06",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-06-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-08-06",
+      "date": "2026-08-06",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-06",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-06",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-06-GOVERNANCE_STRUCTURE",
+      "bucket_start": "2026-08-06",
+      "date": "2026-08-06",
+      "dimension_id": "GOVERNANCE_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-06",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-07",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-07-SUPPLY_STRUCTURE",
+      "bucket_start": "2026-08-07",
+      "date": "2026-08-07",
+      "dimension_id": "SUPPLY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-07",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-07",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-07-UTILITY_STRUCTURE",
+      "bucket_start": "2026-08-07",
+      "date": "2026-08-07",
+      "dimension_id": "UTILITY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-07",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-07",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-07-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-08-07",
+      "date": "2026-08-07",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-07",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-07",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-07-GOVERNANCE_STRUCTURE",
+      "bucket_start": "2026-08-07",
+      "date": "2026-08-07",
+      "dimension_id": "GOVERNANCE_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-07",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-08",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-08-SUPPLY_STRUCTURE",
+      "bucket_start": "2026-08-08",
+      "date": "2026-08-08",
+      "dimension_id": "SUPPLY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-08",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-08",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-08-UTILITY_STRUCTURE",
+      "bucket_start": "2026-08-08",
+      "date": "2026-08-08",
+      "dimension_id": "UTILITY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-08",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-08",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-08-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-08-08",
+      "date": "2026-08-08",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-08",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-08",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-08-GOVERNANCE_STRUCTURE",
+      "bucket_start": "2026-08-08",
+      "date": "2026-08-08",
+      "dimension_id": "GOVERNANCE_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-08",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-09",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-09-SUPPLY_STRUCTURE",
+      "bucket_start": "2026-08-09",
+      "date": "2026-08-09",
+      "dimension_id": "SUPPLY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-09",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-09",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-09-UTILITY_STRUCTURE",
+      "bucket_start": "2026-08-09",
+      "date": "2026-08-09",
+      "dimension_id": "UTILITY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-09",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-09",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-09-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-08-09",
+      "date": "2026-08-09",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-09",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-09",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-09-GOVERNANCE_STRUCTURE",
+      "bucket_start": "2026-08-09",
+      "date": "2026-08-09",
+      "dimension_id": "GOVERNANCE_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-09",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-10",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-10-SUPPLY_STRUCTURE",
+      "bucket_start": "2026-08-10",
+      "date": "2026-08-10",
+      "dimension_id": "SUPPLY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-10",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-10",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-10-UTILITY_STRUCTURE",
+      "bucket_start": "2026-08-10",
+      "date": "2026-08-10",
+      "dimension_id": "UTILITY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-10",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-10",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-10-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-08-10",
+      "date": "2026-08-10",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-10",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-10",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-10-GOVERNANCE_STRUCTURE",
+      "bucket_start": "2026-08-10",
+      "date": "2026-08-10",
+      "dimension_id": "GOVERNANCE_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-10",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-11",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-11-SUPPLY_STRUCTURE",
+      "bucket_start": "2026-08-11",
+      "date": "2026-08-11",
+      "dimension_id": "SUPPLY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-11",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-11",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-11-UTILITY_STRUCTURE",
+      "bucket_start": "2026-08-11",
+      "date": "2026-08-11",
+      "dimension_id": "UTILITY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-11",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-11",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-11-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-08-11",
+      "date": "2026-08-11",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-11",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-11",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-11-GOVERNANCE_STRUCTURE",
+      "bucket_start": "2026-08-11",
+      "date": "2026-08-11",
+      "dimension_id": "GOVERNANCE_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-11",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-12",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-12-SUPPLY_STRUCTURE",
+      "bucket_start": "2026-08-12",
+      "date": "2026-08-12",
+      "dimension_id": "SUPPLY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-12",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-12",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-12-UTILITY_STRUCTURE",
+      "bucket_start": "2026-08-12",
+      "date": "2026-08-12",
+      "dimension_id": "UTILITY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-12",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-12",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-12-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-08-12",
+      "date": "2026-08-12",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-12",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-12",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-12-GOVERNANCE_STRUCTURE",
+      "bucket_start": "2026-08-12",
+      "date": "2026-08-12",
+      "dimension_id": "GOVERNANCE_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-12",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-13",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-13-SUPPLY_STRUCTURE",
+      "bucket_start": "2026-08-13",
+      "date": "2026-08-13",
+      "dimension_id": "SUPPLY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-13",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-13",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-13-UTILITY_STRUCTURE",
+      "bucket_start": "2026-08-13",
+      "date": "2026-08-13",
+      "dimension_id": "UTILITY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-13",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-13",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-13-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-08-13",
+      "date": "2026-08-13",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-13",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-13",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-13-GOVERNANCE_STRUCTURE",
+      "bucket_start": "2026-08-13",
+      "date": "2026-08-13",
+      "dimension_id": "GOVERNANCE_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-13",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-14",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-14-SUPPLY_STRUCTURE",
+      "bucket_start": "2026-08-14",
+      "date": "2026-08-14",
+      "dimension_id": "SUPPLY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-14",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-14",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-14-UTILITY_STRUCTURE",
+      "bucket_start": "2026-08-14",
+      "date": "2026-08-14",
+      "dimension_id": "UTILITY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-14",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-14",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-14-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-08-14",
+      "date": "2026-08-14",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-14",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-14",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-14-GOVERNANCE_STRUCTURE",
+      "bucket_start": "2026-08-14",
+      "date": "2026-08-14",
+      "dimension_id": "GOVERNANCE_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-14",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-15",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-15-SUPPLY_STRUCTURE",
+      "bucket_start": "2026-08-15",
+      "date": "2026-08-15",
+      "dimension_id": "SUPPLY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-15",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-15",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-15-UTILITY_STRUCTURE",
+      "bucket_start": "2026-08-15",
+      "date": "2026-08-15",
+      "dimension_id": "UTILITY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-15",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-15",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-15-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-08-15",
+      "date": "2026-08-15",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-15",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-15",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-15-GOVERNANCE_STRUCTURE",
+      "bucket_start": "2026-08-15",
+      "date": "2026-08-15",
+      "dimension_id": "GOVERNANCE_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-15",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-16",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-16-SUPPLY_STRUCTURE",
+      "bucket_start": "2026-08-16",
+      "date": "2026-08-16",
+      "dimension_id": "SUPPLY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-16",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-16",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-16-UTILITY_STRUCTURE",
+      "bucket_start": "2026-08-16",
+      "date": "2026-08-16",
+      "dimension_id": "UTILITY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-16",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-16",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-16-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-08-16",
+      "date": "2026-08-16",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-16",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-16",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-16-GOVERNANCE_STRUCTURE",
+      "bucket_start": "2026-08-16",
+      "date": "2026-08-16",
+      "dimension_id": "GOVERNANCE_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-16",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-17",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-17-SUPPLY_STRUCTURE",
+      "bucket_start": "2026-08-17",
+      "date": "2026-08-17",
+      "dimension_id": "SUPPLY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-17",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-17",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-17-UTILITY_STRUCTURE",
+      "bucket_start": "2026-08-17",
+      "date": "2026-08-17",
+      "dimension_id": "UTILITY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-17",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-17",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-17-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-08-17",
+      "date": "2026-08-17",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-17",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-17",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-17-GOVERNANCE_STRUCTURE",
+      "bucket_start": "2026-08-17",
+      "date": "2026-08-17",
+      "dimension_id": "GOVERNANCE_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-17",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-18",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-18-SUPPLY_STRUCTURE",
+      "bucket_start": "2026-08-18",
+      "date": "2026-08-18",
+      "dimension_id": "SUPPLY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-18",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-18",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-18-UTILITY_STRUCTURE",
+      "bucket_start": "2026-08-18",
+      "date": "2026-08-18",
+      "dimension_id": "UTILITY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-18",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-18",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-18-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-08-18",
+      "date": "2026-08-18",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-18",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-18",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-18-GOVERNANCE_STRUCTURE",
+      "bucket_start": "2026-08-18",
+      "date": "2026-08-18",
+      "dimension_id": "GOVERNANCE_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-18",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-19",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-19-SUPPLY_STRUCTURE",
+      "bucket_start": "2026-08-19",
+      "date": "2026-08-19",
+      "dimension_id": "SUPPLY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-19",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-19",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-19-UTILITY_STRUCTURE",
+      "bucket_start": "2026-08-19",
+      "date": "2026-08-19",
+      "dimension_id": "UTILITY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-19",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-19",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-19-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-08-19",
+      "date": "2026-08-19",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-19",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-19",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-19-GOVERNANCE_STRUCTURE",
+      "bucket_start": "2026-08-19",
+      "date": "2026-08-19",
+      "dimension_id": "GOVERNANCE_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-19",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-20",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-20-SUPPLY_STRUCTURE",
+      "bucket_start": "2026-08-20",
+      "date": "2026-08-20",
+      "dimension_id": "SUPPLY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-20",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-20",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-20-UTILITY_STRUCTURE",
+      "bucket_start": "2026-08-20",
+      "date": "2026-08-20",
+      "dimension_id": "UTILITY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-20",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-20",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-20-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-08-20",
+      "date": "2026-08-20",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-20",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-20",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-20-GOVERNANCE_STRUCTURE",
+      "bucket_start": "2026-08-20",
+      "date": "2026-08-20",
+      "dimension_id": "GOVERNANCE_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-20",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-21",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-21-SUPPLY_STRUCTURE",
+      "bucket_start": "2026-08-21",
+      "date": "2026-08-21",
+      "dimension_id": "SUPPLY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-21",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-21",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-21-UTILITY_STRUCTURE",
+      "bucket_start": "2026-08-21",
+      "date": "2026-08-21",
+      "dimension_id": "UTILITY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-21",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-21",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-21-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-08-21",
+      "date": "2026-08-21",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-21",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-21",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-21-GOVERNANCE_STRUCTURE",
+      "bucket_start": "2026-08-21",
+      "date": "2026-08-21",
+      "dimension_id": "GOVERNANCE_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-21",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-22",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-22-SUPPLY_STRUCTURE",
+      "bucket_start": "2026-08-22",
+      "date": "2026-08-22",
+      "dimension_id": "SUPPLY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-22",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-22",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-22-UTILITY_STRUCTURE",
+      "bucket_start": "2026-08-22",
+      "date": "2026-08-22",
+      "dimension_id": "UTILITY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-22",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-22",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-22-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-08-22",
+      "date": "2026-08-22",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-22",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-22",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-22-GOVERNANCE_STRUCTURE",
+      "bucket_start": "2026-08-22",
+      "date": "2026-08-22",
+      "dimension_id": "GOVERNANCE_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-22",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-23",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-23-SUPPLY_STRUCTURE",
+      "bucket_start": "2026-08-23",
+      "date": "2026-08-23",
+      "dimension_id": "SUPPLY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-23",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-23",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-23-UTILITY_STRUCTURE",
+      "bucket_start": "2026-08-23",
+      "date": "2026-08-23",
+      "dimension_id": "UTILITY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-23",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-23",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-23-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-08-23",
+      "date": "2026-08-23",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-23",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-23",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-23-GOVERNANCE_STRUCTURE",
+      "bucket_start": "2026-08-23",
+      "date": "2026-08-23",
+      "dimension_id": "GOVERNANCE_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-23",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-24",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-24-SUPPLY_STRUCTURE",
+      "bucket_start": "2026-08-24",
+      "date": "2026-08-24",
+      "dimension_id": "SUPPLY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-24",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-24",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-24-UTILITY_STRUCTURE",
+      "bucket_start": "2026-08-24",
+      "date": "2026-08-24",
+      "dimension_id": "UTILITY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-24",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-24",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-24-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-08-24",
+      "date": "2026-08-24",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-24",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-24",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-24-GOVERNANCE_STRUCTURE",
+      "bucket_start": "2026-08-24",
+      "date": "2026-08-24",
+      "dimension_id": "GOVERNANCE_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-24",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-25",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-25-SUPPLY_STRUCTURE",
+      "bucket_start": "2026-08-25",
+      "date": "2026-08-25",
+      "dimension_id": "SUPPLY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-25",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-25",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-25-UTILITY_STRUCTURE",
+      "bucket_start": "2026-08-25",
+      "date": "2026-08-25",
+      "dimension_id": "UTILITY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-25",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-25",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-25-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-08-25",
+      "date": "2026-08-25",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-25",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-25",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-25-GOVERNANCE_STRUCTURE",
+      "bucket_start": "2026-08-25",
+      "date": "2026-08-25",
+      "dimension_id": "GOVERNANCE_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-25",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-26",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-26-SUPPLY_STRUCTURE",
+      "bucket_start": "2026-08-26",
+      "date": "2026-08-26",
+      "dimension_id": "SUPPLY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-26",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-26",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-26-UTILITY_STRUCTURE",
+      "bucket_start": "2026-08-26",
+      "date": "2026-08-26",
+      "dimension_id": "UTILITY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-26",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-26",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-26-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-08-26",
+      "date": "2026-08-26",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-26",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-26",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-26-GOVERNANCE_STRUCTURE",
+      "bucket_start": "2026-08-26",
+      "date": "2026-08-26",
+      "dimension_id": "GOVERNANCE_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-26",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-27",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-27-SUPPLY_STRUCTURE",
+      "bucket_start": "2026-08-27",
+      "date": "2026-08-27",
+      "dimension_id": "SUPPLY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-27",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-27",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-27-UTILITY_STRUCTURE",
+      "bucket_start": "2026-08-27",
+      "date": "2026-08-27",
+      "dimension_id": "UTILITY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-27",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-27",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-27-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-08-27",
+      "date": "2026-08-27",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-27",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-27",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-27-GOVERNANCE_STRUCTURE",
+      "bucket_start": "2026-08-27",
+      "date": "2026-08-27",
+      "dimension_id": "GOVERNANCE_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-27",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-28",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-28-SUPPLY_STRUCTURE",
+      "bucket_start": "2026-08-28",
+      "date": "2026-08-28",
+      "dimension_id": "SUPPLY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-28",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-28",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-28-UTILITY_STRUCTURE",
+      "bucket_start": "2026-08-28",
+      "date": "2026-08-28",
+      "dimension_id": "UTILITY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-28",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-28",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-28-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-08-28",
+      "date": "2026-08-28",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-28",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-28",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-28-GOVERNANCE_STRUCTURE",
+      "bucket_start": "2026-08-28",
+      "date": "2026-08-28",
+      "dimension_id": "GOVERNANCE_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-28",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-29",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-29-SUPPLY_STRUCTURE",
+      "bucket_start": "2026-08-29",
+      "date": "2026-08-29",
+      "dimension_id": "SUPPLY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-29",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-29",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-29-UTILITY_STRUCTURE",
+      "bucket_start": "2026-08-29",
+      "date": "2026-08-29",
+      "dimension_id": "UTILITY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-29",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-29",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-29-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-08-29",
+      "date": "2026-08-29",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-29",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-29",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-29-GOVERNANCE_STRUCTURE",
+      "bucket_start": "2026-08-29",
+      "date": "2026-08-29",
+      "dimension_id": "GOVERNANCE_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-29",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-30",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-30-SUPPLY_STRUCTURE",
+      "bucket_start": "2026-08-30",
+      "date": "2026-08-30",
+      "dimension_id": "SUPPLY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-30",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-30",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-30-UTILITY_STRUCTURE",
+      "bucket_start": "2026-08-30",
+      "date": "2026-08-30",
+      "dimension_id": "UTILITY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-30",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-30",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-30-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-08-30",
+      "date": "2026-08-30",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-30",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-30",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-30-GOVERNANCE_STRUCTURE",
+      "bucket_start": "2026-08-30",
+      "date": "2026-08-30",
+      "dimension_id": "GOVERNANCE_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-30",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-31",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-31-SUPPLY_STRUCTURE",
+      "bucket_start": "2026-08-31",
+      "date": "2026-08-31",
+      "dimension_id": "SUPPLY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-31",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-31",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-31-UTILITY_STRUCTURE",
+      "bucket_start": "2026-08-31",
+      "date": "2026-08-31",
+      "dimension_id": "UTILITY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-31",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-31",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-31-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-08-31",
+      "date": "2026-08-31",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-31",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-08-31",
+      "bucket_id": "BNB-STRUCT-DAY-2026-08-31-GOVERNANCE_STRUCTURE",
+      "bucket_start": "2026-08-31",
+      "date": "2026-08-31",
+      "dimension_id": "GOVERNANCE_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08-31",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-01",
+      "bucket_id": "BNB-STRUCT-DAY-2026-09-01-SUPPLY_STRUCTURE",
+      "bucket_start": "2026-09-01",
+      "date": "2026-09-01",
+      "dimension_id": "SUPPLY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09-01",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-01",
+      "bucket_id": "BNB-STRUCT-DAY-2026-09-01-UTILITY_STRUCTURE",
+      "bucket_start": "2026-09-01",
+      "date": "2026-09-01",
+      "dimension_id": "UTILITY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09-01",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-01",
+      "bucket_id": "BNB-STRUCT-DAY-2026-09-01-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-09-01",
+      "date": "2026-09-01",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09-01",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-01",
+      "bucket_id": "BNB-STRUCT-DAY-2026-09-01-GOVERNANCE_STRUCTURE",
+      "bucket_start": "2026-09-01",
+      "date": "2026-09-01",
+      "dimension_id": "GOVERNANCE_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09-01",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-02",
+      "bucket_id": "BNB-STRUCT-DAY-2026-09-02-SUPPLY_STRUCTURE",
+      "bucket_start": "2026-09-02",
+      "date": "2026-09-02",
+      "dimension_id": "SUPPLY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09-02",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-02",
+      "bucket_id": "BNB-STRUCT-DAY-2026-09-02-UTILITY_STRUCTURE",
+      "bucket_start": "2026-09-02",
+      "date": "2026-09-02",
+      "dimension_id": "UTILITY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09-02",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-02",
+      "bucket_id": "BNB-STRUCT-DAY-2026-09-02-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-09-02",
+      "date": "2026-09-02",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09-02",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-02",
+      "bucket_id": "BNB-STRUCT-DAY-2026-09-02-GOVERNANCE_STRUCTURE",
+      "bucket_start": "2026-09-02",
+      "date": "2026-09-02",
+      "dimension_id": "GOVERNANCE_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09-02",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-03",
+      "bucket_id": "BNB-STRUCT-DAY-2026-09-03-SUPPLY_STRUCTURE",
+      "bucket_start": "2026-09-03",
+      "date": "2026-09-03",
+      "dimension_id": "SUPPLY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09-03",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-03",
+      "bucket_id": "BNB-STRUCT-DAY-2026-09-03-UTILITY_STRUCTURE",
+      "bucket_start": "2026-09-03",
+      "date": "2026-09-03",
+      "dimension_id": "UTILITY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09-03",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-03",
+      "bucket_id": "BNB-STRUCT-DAY-2026-09-03-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-09-03",
+      "date": "2026-09-03",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09-03",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-03",
+      "bucket_id": "BNB-STRUCT-DAY-2026-09-03-GOVERNANCE_STRUCTURE",
+      "bucket_start": "2026-09-03",
+      "date": "2026-09-03",
+      "dimension_id": "GOVERNANCE_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09-03",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-04",
+      "bucket_id": "BNB-STRUCT-DAY-2026-09-04-SUPPLY_STRUCTURE",
+      "bucket_start": "2026-09-04",
+      "date": "2026-09-04",
+      "dimension_id": "SUPPLY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09-04",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-04",
+      "bucket_id": "BNB-STRUCT-DAY-2026-09-04-UTILITY_STRUCTURE",
+      "bucket_start": "2026-09-04",
+      "date": "2026-09-04",
+      "dimension_id": "UTILITY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09-04",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-04",
+      "bucket_id": "BNB-STRUCT-DAY-2026-09-04-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-09-04",
+      "date": "2026-09-04",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09-04",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-04",
+      "bucket_id": "BNB-STRUCT-DAY-2026-09-04-GOVERNANCE_STRUCTURE",
+      "bucket_start": "2026-09-04",
+      "date": "2026-09-04",
+      "dimension_id": "GOVERNANCE_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09-04",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-05",
+      "bucket_id": "BNB-STRUCT-DAY-2026-09-05-SUPPLY_STRUCTURE",
+      "bucket_start": "2026-09-05",
+      "date": "2026-09-05",
+      "dimension_id": "SUPPLY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09-05",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-05",
+      "bucket_id": "BNB-STRUCT-DAY-2026-09-05-UTILITY_STRUCTURE",
+      "bucket_start": "2026-09-05",
+      "date": "2026-09-05",
+      "dimension_id": "UTILITY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09-05",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-05",
+      "bucket_id": "BNB-STRUCT-DAY-2026-09-05-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-09-05",
+      "date": "2026-09-05",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09-05",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-05",
+      "bucket_id": "BNB-STRUCT-DAY-2026-09-05-GOVERNANCE_STRUCTURE",
+      "bucket_start": "2026-09-05",
+      "date": "2026-09-05",
+      "dimension_id": "GOVERNANCE_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09-05",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-06",
+      "bucket_id": "BNB-STRUCT-DAY-2026-09-06-SUPPLY_STRUCTURE",
+      "bucket_start": "2026-09-06",
+      "date": "2026-09-06",
+      "dimension_id": "SUPPLY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09-06",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-06",
+      "bucket_id": "BNB-STRUCT-DAY-2026-09-06-UTILITY_STRUCTURE",
+      "bucket_start": "2026-09-06",
+      "date": "2026-09-06",
+      "dimension_id": "UTILITY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09-06",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-06",
+      "bucket_id": "BNB-STRUCT-DAY-2026-09-06-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-09-06",
+      "date": "2026-09-06",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09-06",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-06",
+      "bucket_id": "BNB-STRUCT-DAY-2026-09-06-GOVERNANCE_STRUCTURE",
+      "bucket_start": "2026-09-06",
+      "date": "2026-09-06",
+      "dimension_id": "GOVERNANCE_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09-06",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-07",
+      "bucket_id": "BNB-STRUCT-DAY-2026-09-07-SUPPLY_STRUCTURE",
+      "bucket_start": "2026-09-07",
+      "date": "2026-09-07",
+      "dimension_id": "SUPPLY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09-07",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-07",
+      "bucket_id": "BNB-STRUCT-DAY-2026-09-07-UTILITY_STRUCTURE",
+      "bucket_start": "2026-09-07",
+      "date": "2026-09-07",
+      "dimension_id": "UTILITY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09-07",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-07",
+      "bucket_id": "BNB-STRUCT-DAY-2026-09-07-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-09-07",
+      "date": "2026-09-07",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09-07",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-07",
+      "bucket_id": "BNB-STRUCT-DAY-2026-09-07-GOVERNANCE_STRUCTURE",
+      "bucket_start": "2026-09-07",
+      "date": "2026-09-07",
+      "dimension_id": "GOVERNANCE_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09-07",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-08",
+      "bucket_id": "BNB-STRUCT-DAY-2026-09-08-SUPPLY_STRUCTURE",
+      "bucket_start": "2026-09-08",
+      "date": "2026-09-08",
+      "dimension_id": "SUPPLY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09-08",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-08",
+      "bucket_id": "BNB-STRUCT-DAY-2026-09-08-UTILITY_STRUCTURE",
+      "bucket_start": "2026-09-08",
+      "date": "2026-09-08",
+      "dimension_id": "UTILITY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09-08",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-08",
+      "bucket_id": "BNB-STRUCT-DAY-2026-09-08-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-09-08",
+      "date": "2026-09-08",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09-08",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-08",
+      "bucket_id": "BNB-STRUCT-DAY-2026-09-08-GOVERNANCE_STRUCTURE",
+      "bucket_start": "2026-09-08",
+      "date": "2026-09-08",
+      "dimension_id": "GOVERNANCE_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09-08",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-09",
+      "bucket_id": "BNB-STRUCT-DAY-2026-09-09-SUPPLY_STRUCTURE",
+      "bucket_start": "2026-09-09",
+      "date": "2026-09-09",
+      "dimension_id": "SUPPLY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": []
+      },
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09-09",
+      "resolution": "DAY",
+      "source_refs": [],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-09",
+      "bucket_id": "BNB-STRUCT-DAY-2026-09-09-UTILITY_STRUCTURE",
+      "bucket_start": "2026-09-09",
+      "date": "2026-09-09",
+      "dimension_id": "UTILITY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [
+          "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
+        ],
+        "atomic_observation_ids": [
+          "TL-BNB-O009"
+        ]
+      },
+      "observation_count": 1,
+      "observations": [
+        "TL-BNB-O009"
+      ],
+      "period": "2026-09-09",
+      "resolution": "DAY",
+      "source_refs": [
+        "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
+      ],
+      "state": "MIXED",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-09",
+      "bucket_id": "BNB-STRUCT-DAY-2026-09-09-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-09-09",
+      "date": "2026-09-09",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [
+          "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
+        ],
+        "atomic_observation_ids": [
+          "TL-BNB-O005",
+          "TL-BNB-O006"
+        ]
+      },
+      "observation_count": 2,
+      "observations": [
+        "TL-BNB-O005",
+        "TL-BNB-O006"
+      ],
+      "period": "2026-09-09",
+      "resolution": "DAY",
+      "source_refs": [
+        "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
+      ],
+      "state": "TENSION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-09",
+      "bucket_id": "BNB-STRUCT-DAY-2026-09-09-GOVERNANCE_STRUCTURE",
+      "bucket_start": "2026-09-09",
+      "date": "2026-09-09",
+      "dimension_id": "GOVERNANCE_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [
+          "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
+        ],
+        "atomic_observation_ids": [
+          "TL-BNB-O007"
+        ]
+      },
+      "observation_count": 1,
+      "observations": [
+        "TL-BNB-O007"
+      ],
+      "period": "2026-09-09",
+      "resolution": "DAY",
+      "source_refs": [
+        "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
+      ],
+      "state": "TENSION",
+      "subject_id": "BNB"
+    }
+  ],
+  "layer": "STRUCTURAL",
+  "model_version": "TIMELINE_MODEL_R1",
+  "resolution": "DAY",
+  "subject_id": "BNB"
+}

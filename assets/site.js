@@ -157,14 +157,27 @@ fetch("assets/entities.json")
     }
   });
 
-const statusLabels = {
-  FRESH: "Fresh display update",
-  AGING: "Aging display update",
-  PARTIAL: "Partial evidence",
-  UNRESOLVED: "Unresolved review",
+const structuralLabels = {
+  STRUCTURAL_SHIFT: "Structural shift",
+  STRENGTHENING: "Dimension became more pronounced",
+  STABLE: "Observed persistence",
+  TENSION: "Internal tension",
+  MIXED: "Mixed observations",
+  WEAKENING: "Dimension became less pronounced",
+  INSUFFICIENT_DATA: "Insufficient data",
+  NO_OBSERVATION: "No time-indexed observation",
+};
+
+const evidenceLabels = {
+  NOT_OBSERVED: "Not observed",
+  OBSERVED: "Observed",
+  PARTIAL: "Partial",
+  COMPLETE: "Complete",
+  UNRESOLVED: "Unresolved",
+  UNDER_REVIEW: "Under review",
   SUPERSEDED: "Superseded",
-  NOT_CONFIGURED: "Not configured",
   NOT_APPLICABLE: "Not applicable",
+  POLICY_NOT_CONFIGURED: "Policy not configured",
 };
 
 function timelinePath(prefix, subject, kind) {
@@ -175,35 +188,76 @@ function eventPath(prefix, subject) {
   return `${prefix || ""}timeline/subjects/${subject}_event_ledger.json`;
 }
 
-function rowsForResolution(rows, resolution) {
-  return rows.filter((row) => row.resolution === resolution);
+function dataPath(prefix, path) {
+  return `${prefix || ""}${path}`;
+}
+
+function periodLabel(bucket) {
+  return bucket.period || bucket.date || bucket.week_start || bucket.month_start || bucket.bucket_start || "";
+}
+
+function bucketTitle(bucket) {
+  const ids = bucket.observations || bucket.events || [];
+  const refs = bucket.source_refs || bucket.lineage?.artifact_refs || [];
+  return [`${periodLabel(bucket)} ${bucket.state || bucket.closing_state || ""}`, `${ids.length} linked record(s)`, refs[0] || ""].filter(Boolean).join(" | ");
+}
+
+function renderLegend(labels, className) {
+  return Object.entries(labels).map(([key, label]) => `<span><i class="${className} ${key.toLowerCase()}"></i>${escapeText(key)} - ${escapeText(label)}</span>`).join("");
+}
+
+function bucketsByDimension(buckets) {
+  return buckets.reduce((acc, bucket) => {
+    (acc[bucket.dimension_id] ||= []).push(bucket);
+    return acc;
+  }, {});
+}
+
+function bucketsByFamily(buckets) {
+  return buckets.reduce((acc, bucket) => {
+    (acc[bucket.family_id] ||= []).push(bucket);
+    return acc;
+  }, {});
 }
 
 function renderTimelinePanel(panel, data, resolution) {
   const structural = data.structural;
   const evidence = data.evidence;
   const ledger = data.ledger;
-  const ribbon = rowsForResolution(structural.phase_ribbon, resolution);
+  const structuralBuckets = data.structuralBuckets.buckets || [];
+  const evidenceBuckets = data.evidenceBuckets.buckets || [];
+  const byDimension = bucketsByDimension(structuralBuckets);
+  const byFamily = bucketsByFamily(evidenceBuckets);
   const dimensionHtml = structural.dimensions.map((dimension) => {
-    const rows = rowsForResolution(dimension.series, resolution);
-    const blocks = rows.map((row) => `<span class="wave-point ${escapeText(row.band).toLowerCase()}" tabindex="0" title="${escapeText(row.notes.join(" "))}" aria-label="${escapeText(dimension.label)} ${escapeText(row.band)} from ${escapeText(row.t_start)} to ${escapeText(row.t_end)}">${escapeText(row.band)}</span>`).join("");
-    return `<div class="timeline-track"><div><strong>${escapeText(dimension.label)}</strong><span>${escapeText(dimension.taxonomy_note)}</span></div><div class="wave-row">${blocks}</div></div>`;
+    const rows = byDimension[dimension.dimension_id] || [];
+    const blocks = rows.map((row) => `<span class="wave-point ${escapeText(row.state).toLowerCase()}" tabindex="0" title="${escapeText(bucketTitle(row))}" aria-label="${escapeText(dimension.label)} ${escapeText(row.state)} ${escapeText(periodLabel(row))}">${escapeText(periodLabel(row))}<strong>${escapeText(row.state)}</strong><small>${escapeText(String(row.observation_count))} obs</small></span>`).join("");
+    return `<div class="timeline-track ${escapeText(dimension.render_mode || "SPARSE_POINTS").toLowerCase()}"><div><strong>${escapeText(dimension.label)}</strong><span>${escapeText(dimension.render_mode)} / ${escapeText(String(dimension.observation_count))} observations</span></div><div class="wave-row">${blocks || '<span class="microcopy">No time-indexed observation available.</span>'}</div></div>`;
   }).join("");
   const heatRows = evidence.evidence_families.map((family) => {
-    const cells = rowsForResolution(family.series, resolution).map((row) => `<span class="heat-cell ${escapeText(row.status).toLowerCase()}" tabindex="0" title="${escapeText(row.notes.join(" "))}" aria-label="${escapeText(family.label)} ${escapeText(row.status)}">${escapeText(row.status.replaceAll("_", " "))}</span>`).join("");
+    const cells = (byFamily[family.family_id] || []).map((row) => {
+      const age = row.age_days ?? row.age_days_at_period_end;
+      return `<span class="heat-cell ${escapeText(row.closing_state).toLowerCase()}" tabindex="0" title="${escapeText(bucketTitle(row))}" aria-label="${escapeText(family.label)} ${escapeText(row.closing_state)} ${escapeText(periodLabel(row))}">${escapeText(periodLabel(row))}<strong>${escapeText(row.closing_state)}</strong><small>${escapeText(String(row.events_count))} events${age === null || age === undefined ? "" : ` / ${escapeText(String(age))}d`}</small></span>`;
+    }).join("");
     return `<div class="timeline-track"><div><strong>${escapeText(family.label)}</strong><span>${escapeText(family.taxonomy_note)}</span></div><div class="timeline-heatmap">${cells}</div></div>`;
   }).join("");
-  const events = ledger.events.map((event) => `<li><time>${escapeText(event.timestamp.slice(0, 10))}</time><strong>${escapeText(event.event_type.replaceAll("_", " "))}</strong><span>${escapeText(event.label)}</span><a href="${escapeText(event.refs[0])}">Source</a></li>`).join("");
-  const ribbonHtml = ribbon.map((row) => `<span class="phase-segment" tabindex="0" title="${escapeText(row.notes.join(" "))}" aria-label="${escapeText(row.phase)} ${escapeText(row.t_start)} to ${escapeText(row.t_end)}"><strong>${escapeText(row.phase)}</strong><small>${escapeText(row.observation_mode.replaceAll("_", " "))}</small></span>`).join("");
-  const legend = Object.entries(statusLabels).map(([key, label]) => `<span><i class="${key.toLowerCase()}"></i>${escapeText(label)}</span>`).join("");
+  const eventsByDomain = ledger.events.reduce((acc, event) => {
+    (acc[event.event_domain] ||= []).push(event);
+    return acc;
+  }, {});
+  const events = Object.entries(eventsByDomain).map(([domain, rows]) => `<div class="event-lane"><h4>${escapeText(domain.replaceAll("_", " "))}</h4><ol>${rows.map((event) => `<li><time>${escapeText((event.timestamp || "").slice(0, 10))}</time><strong>${escapeText(event.event_type.replaceAll("_", " "))}</strong><span>${escapeText(event.label)}</span><a href="${escapeText(event.refs[0])}">Source</a></li>`).join("")}</ol></div>`).join("");
+  const ribbonHtml = (structural.phase_ribbon || []).map((row) => `<span class="phase-segment" tabindex="0" title="${escapeText((row.notes || []).join(" "))}" aria-label="${escapeText(row.phase)} ${escapeText(row.period)}"><strong>${escapeText(row.period)}</strong><small>${escapeText(row.phase_mode || row.phase)}</small></span>`).join("");
+  const density = `${escapeText(String(structural.density?.atomic_observations || 0))} atomic observations / ${escapeText(String(structural.density?.active_days || 0))} active days / ${escapeText(String(evidence.density?.evidence_events || 0))} evidence events`;
+  const structuralRows = structuralBuckets.map((row) => `<tr><td>${escapeText(periodLabel(row))}</td><td>${escapeText(row.dimension_id)}</td><td>${escapeText(row.state)}</td><td>${escapeText((row.observations || []).join(", "))}</td><td>${escapeText((row.source_refs || []).join(", "))}</td><td>${escapeText(row.aggregation_rule)}</td></tr>`).join("");
+  const evidenceRows = evidenceBuckets.map((row) => `<tr><td>${escapeText(periodLabel(row))}</td><td>${escapeText(row.family_id)}</td><td>${escapeText(row.opening_state)}</td><td>${escapeText(row.closing_state)}</td><td>${escapeText(String(row.events_count))}</td><td>${escapeText(row.latest_update_at || "")}</td><td>${escapeText(String(row.age_days ?? row.age_days_at_period_end ?? ""))}</td></tr>`).join("");
   panel.innerHTML = `
-    <div class="timeline-meta"><span>${escapeText(structural.model_version)}</span><span>${escapeText(resolution)}</span><span>${escapeText(structural.construction_method)}</span><span>${escapeText(evidence.display_boundary)}</span></div>
-    <div class="timeline-legend" aria-label="Timeline legend">${legend}</div>
-    <div class="timeline-block"><h3>Structural Phase Ribbon</h3><div class="phase-ribbon">${ribbonHtml}</div></div>
-    <div class="timeline-block"><h3>Structural Dimension Waveforms</h3>${dimensionHtml}</div>
-    <div class="timeline-block"><h3>Evidence Dynamics / Freshness Heatmap</h3>${heatRows}</div>
-    <div class="timeline-block"><h3>Event / Freeze Ledger</h3><ol class="timeline-events">${events}</ol></div>
-    <details class="timeline-fallback"><summary>Table fallback</summary><table><thead><tr><th>Layer</th><th>Name</th><th>Status</th><th>Mode</th></tr></thead><tbody>${structural.dimensions.map((dimension) => `<tr><td>Structural</td><td>${escapeText(dimension.label)}</td><td>${escapeText(structural.current_structural_state)}</td><td>${escapeText(structural.construction_method)}</td></tr>`).join("")}${evidence.evidence_families.map((family) => `<tr><td>Evidence</td><td>${escapeText(family.label)}</td><td>${escapeText(rowsForResolution(family.series, resolution)[0]?.status || "NOT_APPLICABLE")}</td><td>${escapeText(rowsForResolution(family.series, resolution)[0]?.observation_mode || "RECONSTRUCTED")}</td></tr>`).join("")}</tbody></table></details>
+    <div class="timeline-meta"><span>${escapeText(structural.model_version)}</span><span>${escapeText(resolution)}</span><span>${escapeText(structural.construction_method)}</span><span>${density}</span><span>${escapeText(evidence.display_boundary)}</span></div>
+    <div class="timeline-legend" aria-label="Structural legend">${renderLegend(structuralLabels, "structural-key")}</div>
+    <div class="timeline-block"><h3>Research / Phase Markers</h3><div class="phase-ribbon">${ribbonHtml}</div></div>
+    <div class="timeline-block"><h3>Structural Dimension Trajectories</h3>${dimensionHtml}</div>
+    <div class="timeline-block"><h3>Evidence Dynamics / Update Age</h3><div class="timeline-legend" aria-label="Evidence legend">${renderLegend(evidenceLabels, "evidence-key")}</div>${heatRows}</div>
+    <div class="timeline-block"><h3>Event / Freeze Ledger</h3><div class="timeline-events">${events}</div></div>
+    <details class="timeline-fallback"><summary>Structural table fallback</summary><table><thead><tr><th>Period</th><th>Dimension</th><th>State</th><th>Observation IDs</th><th>Source refs</th><th>Aggregation</th></tr></thead><tbody>${structuralRows}</tbody></table></details>
+    <details class="timeline-fallback"><summary>Evidence table fallback</summary><table><thead><tr><th>Period</th><th>Family</th><th>Opening</th><th>Closing</th><th>Events</th><th>Last update</th><th>Age days</th></tr></thead><tbody>${evidenceRows}</tbody></table></details>
   `;
 }
 
@@ -216,8 +270,13 @@ document.querySelectorAll("[data-timeline-subject]").forEach((section) => {
     fetch(timelinePath(prefix, subject, "evidence")).then((response) => response.json()),
     fetch(eventPath(prefix, subject)).then((response) => response.json()),
   ]).then(([structural, evidence, ledger]) => {
-    const data = { structural, evidence, ledger };
     let active = structural.default_resolution || "WEEK";
+    const loadResolution = (resolution) => Promise.all([
+      fetch(dataPath(prefix, structural.datasets[resolution])).then((response) => response.json()),
+      fetch(dataPath(prefix, evidence.datasets[resolution])).then((response) => response.json()),
+    ]).then(([structuralBuckets, evidenceBuckets]) => {
+      renderTimelinePanel(renderRegion, { structural, evidence, ledger, structuralBuckets, evidenceBuckets }, resolution);
+    });
     section.querySelectorAll("[data-resolution]").forEach((button) => {
       const resolution = button.getAttribute("data-resolution");
       button.setAttribute("role", "tab");
@@ -225,10 +284,10 @@ document.querySelectorAll("[data-timeline-subject]").forEach((section) => {
       button.addEventListener("click", () => {
         active = resolution;
         section.querySelectorAll("[data-resolution]").forEach((item) => item.setAttribute("aria-selected", String(item === button)));
-        renderTimelinePanel(renderRegion, data, active);
+        loadResolution(active);
       });
     });
-    renderTimelinePanel(renderRegion, data, active);
+    loadResolution(active);
   }).catch(() => {
     if (renderRegion) renderRegion.innerHTML = '<p class="microcopy">Timeline data is unavailable for this static view.</p>';
   });

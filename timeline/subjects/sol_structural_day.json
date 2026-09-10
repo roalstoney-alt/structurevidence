@@ -1,0 +1,124 @@
+{
+  "buckets": [
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-09",
+      "bucket_id": "SOL-STRUCT-DAY-2026-09-09-UTILITY_STRUCTURE",
+      "bucket_start": "2026-09-09",
+      "date": "2026-09-09",
+      "dimension_id": "UTILITY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [
+          "research/digital-assets/batch-01-r1/SOL/OBSERVATION_REGISTRY.json"
+        ],
+        "atomic_observation_ids": [
+          "TL-SOL-O008"
+        ]
+      },
+      "observation_count": 1,
+      "observations": [
+        "TL-SOL-O008"
+      ],
+      "period": "2026-09-09",
+      "resolution": "DAY",
+      "source_refs": [
+        "research/digital-assets/batch-01-r1/SOL/OBSERVATION_REGISTRY.json"
+      ],
+      "state": "TENSION",
+      "subject_id": "SOL"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-09",
+      "bucket_id": "SOL-STRUCT-DAY-2026-09-09-RESOURCE_PRESSURE",
+      "bucket_start": "2026-09-09",
+      "date": "2026-09-09",
+      "dimension_id": "RESOURCE_PRESSURE",
+      "lineage": {
+        "artifact_refs": [
+          "research/digital-assets/batch-01-r1/SOL/OBSERVATION_REGISTRY.json"
+        ],
+        "atomic_observation_ids": [
+          "TL-SOL-O001",
+          "TL-SOL-O002",
+          "TL-SOL-O003"
+        ]
+      },
+      "observation_count": 3,
+      "observations": [
+        "TL-SOL-O001",
+        "TL-SOL-O002",
+        "TL-SOL-O003"
+      ],
+      "period": "2026-09-09",
+      "resolution": "DAY",
+      "source_refs": [
+        "research/digital-assets/batch-01-r1/SOL/OBSERVATION_REGISTRY.json"
+      ],
+      "state": "STRENGTHENING",
+      "subject_id": "SOL"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-09",
+      "bucket_id": "SOL-STRUCT-DAY-2026-09-09-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-09-09",
+      "date": "2026-09-09",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [
+          "research/digital-assets/batch-01-r1/SOL/OBSERVATION_REGISTRY.json"
+        ],
+        "atomic_observation_ids": [
+          "TL-SOL-O004",
+          "TL-SOL-O005",
+          "TL-SOL-O006"
+        ]
+      },
+      "observation_count": 3,
+      "observations": [
+        "TL-SOL-O004",
+        "TL-SOL-O005",
+        "TL-SOL-O006"
+      ],
+      "period": "2026-09-09",
+      "resolution": "DAY",
+      "source_refs": [
+        "research/digital-assets/batch-01-r1/SOL/OBSERVATION_REGISTRY.json"
+      ],
+      "state": "STRENGTHENING",
+      "subject_id": "SOL"
+    },
+    {
+      "aggregation_rule": "DAY_ATOMIC",
+      "bucket_end": "2026-09-09",
+      "bucket_id": "SOL-STRUCT-DAY-2026-09-09-GOVERNANCE_STRUCTURE",
+      "bucket_start": "2026-09-09",
+      "date": "2026-09-09",
+      "dimension_id": "GOVERNANCE_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [
+          "research/digital-assets/batch-01-r1/SOL/OBSERVATION_REGISTRY.json"
+        ],
+        "atomic_observation_ids": [
+          "TL-SOL-O007"
+        ]
+      },
+      "observation_count": 1,
+      "observations": [
+        "TL-SOL-O007"
+      ],
+      "period": "2026-09-09",
+      "resolution": "DAY",
+      "source_refs": [
+        "research/digital-assets/batch-01-r1/SOL/OBSERVATION_REGISTRY.json"
+      ],
+      "state": "TENSION",
+      "subject_id": "SOL"
+    }
+  ],
+  "layer": "STRUCTURAL",
+  "model_version": "TIMELINE_MODEL_R1",
+  "resolution": "DAY",
+  "subject_id": "SOL"
+}

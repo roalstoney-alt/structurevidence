@@ -1,0 +1,238 @@
+{
+  "model_version": "TIMELINE_MODEL_R1",
+  "observations": [
+    {
+      "artifact_refs": [
+        "research/digital-assets/batch-01-r1/XLM/OBSERVATION_REGISTRY.json"
+      ],
+      "capture_lag_days": 5,
+      "dimension_ids": [
+        "TREASURY_STRUCTURE"
+      ],
+      "effect_strength": "MATERIAL",
+      "effective_at": "2026-09-04T00:00:00Z",
+      "evidence_family_ids": [
+        "PRIMARY_SOURCE_COVERAGE"
+      ],
+      "freshness_trigger_candidate": false,
+      "knowledge_mode": "RETROSPECTIVE",
+      "known_at": "2026-09-09T00:00:00Z",
+      "mapping_rationale": "SDF mandate balance maps to treasury structure.",
+      "mapping_rule_id": "XLM_XLM_R1_O1_TO_TREASURY_STRUCTURE",
+      "observation_id": "TL-XLM-O001",
+      "observation_mode": "DIRECT",
+      "observation_type": "PUBLIC_FACT",
+      "source_observation_id": "XLM-R1-O1",
+      "source_refs": [
+        "https://stellar.org/foundation/mandate"
+      ],
+      "structural_effect": "STRENGTHENING",
+      "subject_id": "XLM",
+      "trigger_type": "TREASURY_POLICY_CHANGE"
+    },
+    {
+      "artifact_refs": [
+        "research/digital-assets/batch-01-r1/XLM/OBSERVATION_REGISTRY.json"
+      ],
+      "capture_lag_days": 5,
+      "dimension_ids": [
+        "TREASURY_STRUCTURE"
+      ],
+      "effect_strength": "MATERIAL",
+      "effective_at": "2026-09-04T00:00:00Z",
+      "evidence_family_ids": [
+        "PRIMARY_SOURCE_COVERAGE"
+      ],
+      "freshness_trigger_candidate": false,
+      "knowledge_mode": "RETROSPECTIVE",
+      "known_at": "2026-09-09T00:00:00Z",
+      "mapping_rationale": "Product and Innovation balance maps to treasury structure.",
+      "mapping_rule_id": "XLM_XLM_R1_O2_TO_TREASURY_STRUCTURE",
+      "observation_id": "TL-XLM-O002",
+      "observation_mode": "DIRECT",
+      "observation_type": "PUBLIC_FACT",
+      "source_observation_id": "XLM-R1-O2",
+      "source_refs": [
+        "https://stellar.org/foundation/mandate"
+      ],
+      "structural_effect": "STRENGTHENING",
+      "subject_id": "XLM",
+      "trigger_type": "TREASURY_POLICY_CHANGE"
+    },
+    {
+      "artifact_refs": [
+        "research/digital-assets/batch-01-r1/XLM/OBSERVATION_REGISTRY.json"
+      ],
+      "capture_lag_days": 5,
+      "dimension_ids": [
+        "TREASURY_STRUCTURE"
+      ],
+      "effect_strength": "MATERIAL",
+      "effective_at": "2026-09-04T00:00:00Z",
+      "evidence_family_ids": [
+        "PRIMARY_SOURCE_COVERAGE"
+      ],
+      "freshness_trigger_candidate": false,
+      "knowledge_mode": "RETROSPECTIVE",
+      "known_at": "2026-09-09T00:00:00Z",
+      "mapping_rationale": "Assets and Liquidity balance maps to treasury structure.",
+      "mapping_rule_id": "XLM_XLM_R1_O3_TO_TREASURY_STRUCTURE",
+      "observation_id": "TL-XLM-O003",
+      "observation_mode": "DIRECT",
+      "observation_type": "PUBLIC_FACT",
+      "source_observation_id": "XLM-R1-O3",
+      "source_refs": [
+        "https://stellar.org/foundation/mandate"
+      ],
+      "structural_effect": "STRENGTHENING",
+      "subject_id": "XLM",
+      "trigger_type": "TREASURY_POLICY_CHANGE"
+    },
+    {
+      "artifact_refs": [
+        "research/digital-assets/batch-01-r1/XLM/OBSERVATION_REGISTRY.json"
+      ],
+      "capture_lag_days": 5,
+      "dimension_ids": [
+        "FOUNDATION_DEPENDENCE"
+      ],
+      "effect_strength": "MODERATE",
+      "effective_at": "2026-09-04T00:00:00Z",
+      "evidence_family_ids": [
+        "PRIMARY_SOURCE_COVERAGE"
+      ],
+      "freshness_trigger_candidate": false,
+      "knowledge_mode": "RETROSPECTIVE",
+      "known_at": "2026-09-09T00:00:00Z",
+      "mapping_rationale": "Operational funding sales map to foundation dependence.",
+      "mapping_rule_id": "XLM_XLM_R1_O4_TO_FOUNDATION_DEPENDENCE",
+      "observation_id": "TL-XLM-O004",
+      "observation_mode": "DIRECT",
+      "observation_type": "PUBLIC_FACT",
+      "source_observation_id": "XLM-R1-O4",
+      "source_refs": [
+        "https://stellar.org/foundation/mandate"
+      ],
+      "structural_effect": "STRENGTHENING",
+      "subject_id": "XLM",
+      "trigger_type": "GOVERNANCE_CHANGE"
+    },
+    {
+      "artifact_refs": [
+        "research/digital-assets/batch-01-r1/XLM/OBSERVATION_REGISTRY.json"
+      ],
+      "capture_lag_days": 50,
+      "dimension_ids": [
+        "TREASURY_STRUCTURE"
+      ],
+      "effect_strength": "MODERATE",
+      "effective_at": "2026-07-21T00:00:00Z",
+      "evidence_family_ids": [
+        "PRIMARY_SOURCE_COVERAGE"
+      ],
+      "freshness_trigger_candidate": false,
+      "knowledge_mode": "RETROSPECTIVE",
+      "known_at": "2026-09-09T00:00:00Z",
+      "mapping_rationale": "Supply distribution example maps to treasury/supply structure.",
+      "mapping_rule_id": "XLM_XLM_R1_O5_TO_TREASURY_STRUCTURE",
+      "observation_id": "TL-XLM-O005",
+      "observation_mode": "DIRECT",
+      "observation_type": "PUBLIC_FACT",
+      "source_observation_id": "XLM-R1-O5",
+      "source_refs": [
+        "https://developers.stellar.org/docs/learn/fundamentals/lumens"
+      ],
+      "structural_effect": "STRENGTHENING",
+      "subject_id": "XLM",
+      "trigger_type": "TREASURY_POLICY_CHANGE"
+    },
+    {
+      "artifact_refs": [
+        "research/digital-assets/batch-01-r1/XLM/OBSERVATION_REGISTRY.json"
+      ],
+      "capture_lag_days": 50,
+      "dimension_ids": [
+        "FOUNDATION_DEPENDENCE"
+      ],
+      "effect_strength": "MODERATE",
+      "effective_at": "2026-07-21T00:00:00Z",
+      "evidence_family_ids": [
+        "PRIMARY_SOURCE_COVERAGE"
+      ],
+      "freshness_trigger_candidate": false,
+      "knowledge_mode": "RETROSPECTIVE",
+      "known_at": "2026-09-09T00:00:00Z",
+      "mapping_rationale": "SDF mandate balance in supply example maps to foundation dependence.",
+      "mapping_rule_id": "XLM_XLM_R1_O6_TO_FOUNDATION_DEPENDENCE",
+      "observation_id": "TL-XLM-O006",
+      "observation_mode": "DIRECT",
+      "observation_type": "PUBLIC_FACT",
+      "source_observation_id": "XLM-R1-O6",
+      "source_refs": [
+        "https://developers.stellar.org/docs/learn/fundamentals/lumens"
+      ],
+      "structural_effect": "STRENGTHENING",
+      "subject_id": "XLM",
+      "trigger_type": "GOVERNANCE_CHANGE"
+    },
+    {
+      "artifact_refs": [
+        "research/digital-assets/batch-01-r1/XLM/OBSERVATION_REGISTRY.json"
+      ],
+      "capture_lag_days": 1,
+      "dimension_ids": [
+        "VALIDATOR_DISTRIBUTION"
+      ],
+      "effect_strength": "MODERATE",
+      "effective_at": "2026-09-08T00:00:00Z",
+      "evidence_family_ids": [
+        "PRIMARY_SOURCE_COVERAGE"
+      ],
+      "freshness_trigger_candidate": true,
+      "knowledge_mode": "RETROSPECTIVE",
+      "known_at": "2026-09-09T00:00:00Z",
+      "mapping_rationale": "Quorum-set structure maps to validator distribution.",
+      "mapping_rule_id": "XLM_XLM_R1_O7_TO_VALIDATOR_DISTRIBUTION",
+      "observation_id": "TL-XLM-O007",
+      "observation_mode": "DIRECT",
+      "observation_type": "PUBLIC_FACT",
+      "source_observation_id": "XLM-R1-O7",
+      "source_refs": [
+        "https://developers.stellar.org/docs/validators"
+      ],
+      "structural_effect": "TENSION",
+      "subject_id": "XLM",
+      "trigger_type": "GOVERNANCE_CHANGE"
+    },
+    {
+      "artifact_refs": [
+        "research/digital-assets/batch-01-r1/XLM/OBSERVATION_REGISTRY.json"
+      ],
+      "capture_lag_days": 0,
+      "dimension_ids": [
+        "SETTLEMENT_ROLE"
+      ],
+      "effect_strength": "LOW",
+      "effective_at": "2026-09-09T00:00:00Z",
+      "evidence_family_ids": [
+        "PRIMARY_SOURCE_COVERAGE"
+      ],
+      "freshness_trigger_candidate": false,
+      "knowledge_mode": "CONTEMPORANEOUS",
+      "known_at": "2026-09-09T00:00:00Z",
+      "mapping_rationale": "RWA/payment activity maps to settlement role.",
+      "mapping_rule_id": "XLM_XLM_R1_O8_TO_SETTLEMENT_ROLE",
+      "observation_id": "TL-XLM-O008",
+      "observation_mode": "DIRECT",
+      "observation_type": "PUBLIC_FACT",
+      "source_observation_id": "XLM-R1-O8",
+      "source_refs": [
+        "https://stellar.org/blog/foundation-news/q2-2026-what-stellar-was-built-for-has-arrived"
+      ],
+      "structural_effect": "STRENGTHENING",
+      "subject_id": "XLM",
+      "trigger_type": "PROTOCOL_UPGRADE"
+    }
+  ],
+  "subject_id": "XLM"
+}

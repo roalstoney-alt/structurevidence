@@ -1,0 +1,238 @@
+{
+  "model_version": "TIMELINE_MODEL_R1",
+  "observations": [
+    {
+      "artifact_refs": [
+        "research/digital-assets/batch-01-r1/SOL/OBSERVATION_REGISTRY.json"
+      ],
+      "capture_lag_days": 0,
+      "dimension_ids": [
+        "RESOURCE_PRESSURE"
+      ],
+      "effect_strength": "MODERATE",
+      "effective_at": "2026-09-09T00:00:00Z",
+      "evidence_family_ids": [
+        "PRIMARY_SOURCE_COVERAGE"
+      ],
+      "freshness_trigger_candidate": false,
+      "knowledge_mode": "CONTEMPORANEOUS",
+      "known_at": "2026-09-09T00:00:00Z",
+      "mapping_rationale": "Fee split belongs to resource economics.",
+      "mapping_rule_id": "SOL_SOL_R1_O1_TO_RESOURCE_PRESSURE",
+      "observation_id": "TL-SOL-O001",
+      "observation_mode": "DIRECT",
+      "observation_type": "PUBLIC_FACT",
+      "source_observation_id": "SOL-R1-O1",
+      "source_refs": [
+        "https://solana.com/docs/core/fees"
+      ],
+      "structural_effect": "STRENGTHENING",
+      "subject_id": "SOL",
+      "trigger_type": "PROTOCOL_UPGRADE"
+    },
+    {
+      "artifact_refs": [
+        "research/digital-assets/batch-01-r1/SOL/OBSERVATION_REGISTRY.json"
+      ],
+      "capture_lag_days": 0,
+      "dimension_ids": [
+        "RESOURCE_PRESSURE"
+      ],
+      "effect_strength": "LOW",
+      "effective_at": "2026-09-09T00:00:00Z",
+      "evidence_family_ids": [
+        "PRIMARY_SOURCE_COVERAGE"
+      ],
+      "freshness_trigger_candidate": false,
+      "knowledge_mode": "CONTEMPORANEOUS",
+      "known_at": "2026-09-09T00:00:00Z",
+      "mapping_rationale": "Staking rewards belong to validator/resource economics.",
+      "mapping_rule_id": "SOL_SOL_R1_O2_TO_RESOURCE_PRESSURE",
+      "observation_id": "TL-SOL-O002",
+      "observation_mode": "DIRECT",
+      "observation_type": "PUBLIC_FACT",
+      "source_observation_id": "SOL-R1-O2",
+      "source_refs": [
+        "https://solana.com/staking"
+      ],
+      "structural_effect": "STRENGTHENING",
+      "subject_id": "SOL",
+      "trigger_type": "PROTOCOL_UPGRADE"
+    },
+    {
+      "artifact_refs": [
+        "research/digital-assets/batch-01-r1/SOL/OBSERVATION_REGISTRY.json"
+      ],
+      "capture_lag_days": 0,
+      "dimension_ids": [
+        "RESOURCE_PRESSURE"
+      ],
+      "effect_strength": "LOW",
+      "effective_at": "2026-09-09T00:00:00Z",
+      "evidence_family_ids": [
+        "PRIMARY_SOURCE_COVERAGE"
+      ],
+      "freshness_trigger_candidate": false,
+      "knowledge_mode": "CONTEMPORANEOUS",
+      "known_at": "2026-09-09T00:00:00Z",
+      "mapping_rationale": "Inflation schedule belongs to resource economics.",
+      "mapping_rule_id": "SOL_SOL_R1_O3_TO_RESOURCE_PRESSURE",
+      "observation_id": "TL-SOL-O003",
+      "observation_mode": "DIRECT",
+      "observation_type": "PUBLIC_FACT",
+      "source_observation_id": "SOL-R1-O3",
+      "source_refs": [
+        "https://solana.com/staking"
+      ],
+      "structural_effect": "STRENGTHENING",
+      "subject_id": "SOL",
+      "trigger_type": "PROTOCOL_UPGRADE"
+    },
+    {
+      "artifact_refs": [
+        "research/digital-assets/batch-01-r1/SOL/OBSERVATION_REGISTRY.json"
+      ],
+      "capture_lag_days": 0,
+      "dimension_ids": [
+        "VALIDATOR_DISTRIBUTION"
+      ],
+      "effect_strength": "MODERATE",
+      "effective_at": "2026-09-09T00:00:00Z",
+      "evidence_family_ids": [
+        "PRIMARY_SOURCE_COVERAGE"
+      ],
+      "freshness_trigger_candidate": false,
+      "knowledge_mode": "CONTEMPORANEOUS",
+      "known_at": "2026-09-09T00:00:00Z",
+      "mapping_rationale": "Foundation stake recipient count maps to validator distribution.",
+      "mapping_rule_id": "SOL_SOL_R1_O4_TO_VALIDATOR_DISTRIBUTION",
+      "observation_id": "TL-SOL-O004",
+      "observation_mode": "DIRECT",
+      "observation_type": "PUBLIC_FACT",
+      "source_observation_id": "SOL-R1-O4",
+      "source_refs": [
+        "https://solana.org/delegation-dashboard"
+      ],
+      "structural_effect": "STRENGTHENING",
+      "subject_id": "SOL",
+      "trigger_type": "GOVERNANCE_CHANGE"
+    },
+    {
+      "artifact_refs": [
+        "research/digital-assets/batch-01-r1/SOL/OBSERVATION_REGISTRY.json"
+      ],
+      "capture_lag_days": 0,
+      "dimension_ids": [
+        "VALIDATOR_DISTRIBUTION"
+      ],
+      "effect_strength": "MODERATE",
+      "effective_at": "2026-09-09T00:00:00Z",
+      "evidence_family_ids": [
+        "PRIMARY_SOURCE_COVERAGE"
+      ],
+      "freshness_trigger_candidate": false,
+      "knowledge_mode": "CONTEMPORANEOUS",
+      "known_at": "2026-09-09T00:00:00Z",
+      "mapping_rationale": "SFDP stake share maps to validator distribution.",
+      "mapping_rule_id": "SOL_SOL_R1_O5_TO_VALIDATOR_DISTRIBUTION",
+      "observation_id": "TL-SOL-O005",
+      "observation_mode": "DIRECT",
+      "observation_type": "PUBLIC_FACT",
+      "source_observation_id": "SOL-R1-O5",
+      "source_refs": [
+        "https://solana.org/delegation-dashboard"
+      ],
+      "structural_effect": "STRENGTHENING",
+      "subject_id": "SOL",
+      "trigger_type": "GOVERNANCE_CHANGE"
+    },
+    {
+      "artifact_refs": [
+        "research/digital-assets/batch-01-r1/SOL/OBSERVATION_REGISTRY.json"
+      ],
+      "capture_lag_days": 0,
+      "dimension_ids": [
+        "VALIDATOR_DISTRIBUTION"
+      ],
+      "effect_strength": "LOW",
+      "effective_at": "2026-09-09T00:00:00Z",
+      "evidence_family_ids": [
+        "PRIMARY_SOURCE_COVERAGE"
+      ],
+      "freshness_trigger_candidate": false,
+      "knowledge_mode": "CONTEMPORANEOUS",
+      "known_at": "2026-09-09T00:00:00Z",
+      "mapping_rationale": "Location/country spread maps to validator distribution.",
+      "mapping_rule_id": "SOL_SOL_R1_O6_TO_VALIDATOR_DISTRIBUTION",
+      "observation_id": "TL-SOL-O006",
+      "observation_mode": "DIRECT",
+      "observation_type": "PUBLIC_FACT",
+      "source_observation_id": "SOL-R1-O6",
+      "source_refs": [
+        "https://solana.org/delegation-dashboard"
+      ],
+      "structural_effect": "STRENGTHENING",
+      "subject_id": "SOL",
+      "trigger_type": "GOVERNANCE_CHANGE"
+    },
+    {
+      "artifact_refs": [
+        "research/digital-assets/batch-01-r1/SOL/OBSERVATION_REGISTRY.json"
+      ],
+      "capture_lag_days": 0,
+      "dimension_ids": [
+        "GOVERNANCE_STRUCTURE"
+      ],
+      "effect_strength": "MODERATE",
+      "effective_at": "2026-09-09T00:00:00Z",
+      "evidence_family_ids": [
+        "PRIMARY_SOURCE_COVERAGE"
+      ],
+      "freshness_trigger_candidate": true,
+      "knowledge_mode": "CONTEMPORANEOUS",
+      "known_at": "2026-09-09T00:00:00Z",
+      "mapping_rationale": "Client criteria belong to control/client diversity structure.",
+      "mapping_rule_id": "SOL_SOL_R1_O7_TO_GOVERNANCE_STRUCTURE",
+      "observation_id": "TL-SOL-O007",
+      "observation_mode": "DIRECT",
+      "observation_type": "PUBLIC_FACT",
+      "source_observation_id": "SOL-R1-O7",
+      "source_refs": [
+        "https://solana.org/delegation-criteria"
+      ],
+      "structural_effect": "TENSION",
+      "subject_id": "SOL",
+      "trigger_type": "GOVERNANCE_CHANGE"
+    },
+    {
+      "artifact_refs": [
+        "research/digital-assets/batch-01-r1/SOL/OBSERVATION_REGISTRY.json"
+      ],
+      "capture_lag_days": 0,
+      "dimension_ids": [
+        "UTILITY_STRUCTURE"
+      ],
+      "effect_strength": "LOW",
+      "effective_at": "2026-09-09T00:00:00Z",
+      "evidence_family_ids": [
+        "PRIMARY_SOURCE_COVERAGE"
+      ],
+      "freshness_trigger_candidate": true,
+      "knowledge_mode": "CONTEMPORANEOUS",
+      "known_at": "2026-09-09T00:00:00Z",
+      "mapping_rationale": "Client-status evidence is preserved as potential-conflict utility/control context.",
+      "mapping_rule_id": "SOL_SOL_R1_O8_TO_UTILITY_STRUCTURE",
+      "observation_id": "TL-SOL-O008",
+      "observation_mode": "DIRECT",
+      "observation_type": "PUBLIC_FACT",
+      "source_observation_id": "SOL-R1-O8",
+      "source_refs": [
+        "https://reports.firedancer.io/"
+      ],
+      "structural_effect": "TENSION",
+      "subject_id": "SOL",
+      "trigger_type": "PROTOCOL_UPGRADE"
+    }
+  ],
+  "subject_id": "SOL"
+}

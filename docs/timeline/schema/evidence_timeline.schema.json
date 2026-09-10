@@ -8,11 +8,8 @@
         "MONTH"
       ]
     },
-    "evidence_families": {
-      "type": "array"
-    },
     "model_version": {
-      "const": "TIMELINE_MODEL_v0.1"
+      "const": "TIMELINE_MODEL_R1"
     },
     "supported_resolutions": {
       "items": {
@@ -30,7 +27,8 @@
     "subject_id",
     "default_resolution",
     "supported_resolutions",
-    "evidence_families"
+    "evidence_families",
+    "datasets"
   ],
   "type": "object"
 }

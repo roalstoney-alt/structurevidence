@@ -1,0 +1,267 @@
+{
+  "model_version": "TIMELINE_MODEL_R1",
+  "observations": [
+    {
+      "artifact_refs": [
+        "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
+      ],
+      "capture_lag_days": 56,
+      "dimension_ids": [
+        "SUPPLY_STRUCTURE"
+      ],
+      "effect_strength": "MATERIAL",
+      "effective_at": "2026-07-15T00:00:00Z",
+      "evidence_family_ids": [
+        "PRIMARY_SOURCE_COVERAGE"
+      ],
+      "freshness_trigger_candidate": true,
+      "knowledge_mode": "RETROSPECTIVE",
+      "known_at": "2026-09-09T00:00:00Z",
+      "mapping_rationale": "Quarterly burn directly changes circulating supply structure.",
+      "mapping_rule_id": "BNB_BNB_R1_O1_TO_SUPPLY_STRUCTURE",
+      "observation_id": "TL-BNB-O001",
+      "observation_mode": "DIRECT",
+      "observation_type": "PUBLIC_FACT",
+      "source_observation_id": "BNB-R1-O1",
+      "source_refs": [
+        "https://www.bnbchain.org/en/blog/36th-bnb-burn"
+      ],
+      "structural_effect": "STRUCTURAL_SHIFT",
+      "subject_id": "BNB",
+      "trigger_type": "SUPPLY_MECHANISM_CHANGE"
+    },
+    {
+      "artifact_refs": [
+        "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
+      ],
+      "capture_lag_days": 56,
+      "dimension_ids": [
+        "SUPPLY_STRUCTURE"
+      ],
+      "effect_strength": "MODERATE",
+      "effective_at": "2026-07-15T00:00:00Z",
+      "evidence_family_ids": [
+        "PRIMARY_SOURCE_COVERAGE"
+      ],
+      "freshness_trigger_candidate": false,
+      "knowledge_mode": "RETROSPECTIVE",
+      "known_at": "2026-09-09T00:00:00Z",
+      "mapping_rationale": "Long-run burn target belongs to supply mechanics.",
+      "mapping_rule_id": "BNB_BNB_R1_O2_TO_SUPPLY_STRUCTURE",
+      "observation_id": "TL-BNB-O002",
+      "observation_mode": "DIRECT",
+      "observation_type": "PUBLIC_FACT",
+      "source_observation_id": "BNB-R1-O2",
+      "source_refs": [
+        "https://www.bnbchain.org/en/blog/36th-bnb-burn"
+      ],
+      "structural_effect": "STRENGTHENING",
+      "subject_id": "BNB",
+      "trigger_type": "SUPPLY_MECHANISM_CHANGE"
+    },
+    {
+      "artifact_refs": [
+        "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
+      ],
+      "capture_lag_days": 56,
+      "dimension_ids": [
+        "SUPPLY_STRUCTURE"
+      ],
+      "effect_strength": "MODERATE",
+      "effective_at": "2026-07-15T00:00:00Z",
+      "evidence_family_ids": [
+        "PRIMARY_SOURCE_COVERAGE"
+      ],
+      "freshness_trigger_candidate": false,
+      "knowledge_mode": "RETROSPECTIVE",
+      "known_at": "2026-09-09T00:00:00Z",
+      "mapping_rationale": "BEP95 burn mechanic belongs to supply mechanics.",
+      "mapping_rule_id": "BNB_BNB_R1_O3_TO_SUPPLY_STRUCTURE",
+      "observation_id": "TL-BNB-O003",
+      "observation_mode": "DIRECT",
+      "observation_type": "PUBLIC_FACT",
+      "source_observation_id": "BNB-R1-O3",
+      "source_refs": [
+        "https://www.bnbchain.org/en/blog/36th-bnb-burn"
+      ],
+      "structural_effect": "STRENGTHENING",
+      "subject_id": "BNB",
+      "trigger_type": "SUPPLY_MECHANISM_CHANGE"
+    },
+    {
+      "artifact_refs": [
+        "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
+      ],
+      "capture_lag_days": 56,
+      "dimension_ids": [
+        "UTILITY_STRUCTURE"
+      ],
+      "effect_strength": "MODERATE",
+      "effective_at": "2026-07-15T00:00:00Z",
+      "evidence_family_ids": [
+        "PRIMARY_SOURCE_COVERAGE"
+      ],
+      "freshness_trigger_candidate": false,
+      "knowledge_mode": "RETROSPECTIVE",
+      "known_at": "2026-09-09T00:00:00Z",
+      "mapping_rationale": "Fee-utility claim maps to network utility structure.",
+      "mapping_rule_id": "BNB_BNB_R1_O4_TO_UTILITY_STRUCTURE",
+      "observation_id": "TL-BNB-O004",
+      "observation_mode": "DIRECT",
+      "observation_type": "PUBLIC_FACT",
+      "source_observation_id": "BNB-R1-O4",
+      "source_refs": [
+        "https://www.bnbchain.org/en/blog/36th-bnb-burn"
+      ],
+      "structural_effect": "STRENGTHENING",
+      "subject_id": "BNB",
+      "trigger_type": "PROTOCOL_UPGRADE"
+    },
+    {
+      "artifact_refs": [
+        "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
+      ],
+      "capture_lag_days": 0,
+      "dimension_ids": [
+        "VALIDATOR_DISTRIBUTION"
+      ],
+      "effect_strength": "MODERATE",
+      "effective_at": "2026-09-09T00:00:00Z",
+      "evidence_family_ids": [
+        "PRIMARY_SOURCE_COVERAGE"
+      ],
+      "freshness_trigger_candidate": true,
+      "knowledge_mode": "CONTEMPORANEOUS",
+      "known_at": "2026-09-09T00:00:00Z",
+      "mapping_rationale": "Validator election set constrains validator distribution.",
+      "mapping_rule_id": "BNB_BNB_R1_O5_TO_VALIDATOR_DISTRIBUTION",
+      "observation_id": "TL-BNB-O005",
+      "observation_mode": "DIRECT",
+      "observation_type": "PUBLIC_FACT",
+      "source_observation_id": "BNB-R1-O5",
+      "source_refs": [
+        "https://docs.bnbchain.org/bnb-smart-chain/validator/overview/"
+      ],
+      "structural_effect": "TENSION",
+      "subject_id": "BNB",
+      "trigger_type": "GOVERNANCE_CHANGE"
+    },
+    {
+      "artifact_refs": [
+        "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
+      ],
+      "capture_lag_days": 0,
+      "dimension_ids": [
+        "VALIDATOR_DISTRIBUTION"
+      ],
+      "effect_strength": "MODERATE",
+      "effective_at": "2026-09-09T00:00:00Z",
+      "evidence_family_ids": [
+        "PRIMARY_SOURCE_COVERAGE"
+      ],
+      "freshness_trigger_candidate": true,
+      "knowledge_mode": "CONTEMPORANEOUS",
+      "known_at": "2026-09-09T00:00:00Z",
+      "mapping_rationale": "Cabinet/candidate split maps to validator distribution.",
+      "mapping_rule_id": "BNB_BNB_R1_O6_TO_VALIDATOR_DISTRIBUTION",
+      "observation_id": "TL-BNB-O006",
+      "observation_mode": "DIRECT",
+      "observation_type": "PUBLIC_FACT",
+      "source_observation_id": "BNB-R1-O6",
+      "source_refs": [
+        "https://docs.bnbchain.org/bnb-smart-chain/validator/overview/"
+      ],
+      "structural_effect": "TENSION",
+      "subject_id": "BNB",
+      "trigger_type": "GOVERNANCE_CHANGE"
+    },
+    {
+      "artifact_refs": [
+        "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
+      ],
+      "capture_lag_days": 0,
+      "dimension_ids": [
+        "GOVERNANCE_STRUCTURE"
+      ],
+      "effect_strength": "MODERATE",
+      "effective_at": "2026-09-09T00:00:00Z",
+      "evidence_family_ids": [
+        "PRIMARY_SOURCE_COVERAGE"
+      ],
+      "freshness_trigger_candidate": true,
+      "knowledge_mode": "CONTEMPORANEOUS",
+      "known_at": "2026-09-09T00:00:00Z",
+      "mapping_rationale": "Consensus-set selection maps to governance/control structure.",
+      "mapping_rule_id": "BNB_BNB_R1_O7_TO_GOVERNANCE_STRUCTURE",
+      "observation_id": "TL-BNB-O007",
+      "observation_mode": "DIRECT",
+      "observation_type": "PUBLIC_FACT",
+      "source_observation_id": "BNB-R1-O7",
+      "source_refs": [
+        "https://docs.bnbchain.org/bnb-smart-chain/validator/overview/"
+      ],
+      "structural_effect": "TENSION",
+      "subject_id": "BNB",
+      "trigger_type": "GOVERNANCE_CHANGE"
+    },
+    {
+      "artifact_refs": [
+        "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
+      ],
+      "capture_lag_days": 56,
+      "dimension_ids": [
+        "GOVERNANCE_STRUCTURE"
+      ],
+      "effect_strength": "LOW",
+      "effective_at": "2026-07-15T00:00:00Z",
+      "evidence_family_ids": [
+        "PRIMARY_SOURCE_COVERAGE"
+      ],
+      "freshness_trigger_candidate": false,
+      "knowledge_mode": "RETROSPECTIVE",
+      "known_at": "2026-09-09T00:00:00Z",
+      "mapping_rationale": "On-chain governance description maps to governance structure.",
+      "mapping_rule_id": "BNB_BNB_R1_O8_TO_GOVERNANCE_STRUCTURE",
+      "observation_id": "TL-BNB-O008",
+      "observation_mode": "DIRECT",
+      "observation_type": "PUBLIC_FACT",
+      "source_observation_id": "BNB-R1-O8",
+      "source_refs": [
+        "https://www.bnbchain.org/en/blog/36th-bnb-burn"
+      ],
+      "structural_effect": "STRENGTHENING",
+      "subject_id": "BNB",
+      "trigger_type": "GOVERNANCE_CHANGE"
+    },
+    {
+      "artifact_refs": [
+        "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
+      ],
+      "capture_lag_days": 0,
+      "dimension_ids": [
+        "UTILITY_STRUCTURE"
+      ],
+      "effect_strength": "LOW",
+      "effective_at": "2026-09-09T00:00:00Z",
+      "evidence_family_ids": [
+        "PRIMARY_SOURCE_COVERAGE"
+      ],
+      "freshness_trigger_candidate": false,
+      "knowledge_mode": "CONTEMPORANEOUS",
+      "known_at": "2026-09-09T00:00:00Z",
+      "mapping_rationale": "Multichain ecosystem component maps to utility dependence.",
+      "mapping_rule_id": "BNB_BNB_R1_O9_TO_UTILITY_STRUCTURE",
+      "observation_id": "TL-BNB-O009",
+      "observation_mode": "DIRECT",
+      "observation_type": "PUBLIC_FACT",
+      "source_observation_id": "BNB-R1-O9",
+      "source_refs": [
+        "https://docs.bnbchain.org/bnb-opbnb/"
+      ],
+      "structural_effect": "MIXED",
+      "subject_id": "BNB",
+      "trigger_type": "PROTOCOL_UPGRADE"
+    }
+  ],
+  "subject_id": "BNB"
+}

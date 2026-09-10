@@ -1,0 +1,56 @@
+{
+  "as_of": "2026-09-10T14:18:35.507637Z",
+  "atomic_observation_count": 9,
+  "builder_version": "TIMELINE_MODEL_R1",
+  "day_bucket_count": 228,
+  "dimension_mapping_sha256": "9562f645da388f2add268e6424f3ebf17d22325447c2810c986c1dc9ab263f86",
+  "dimension_observation_counts": {
+    "GOVERNANCE_STRUCTURE": 2,
+    "SUPPLY_STRUCTURE": 3,
+    "UTILITY_STRUCTURE": 2,
+    "VALIDATOR_DISTRIBUTION": 2
+  },
+  "evidence_aggregation_rules_sha256": "bc921c7b76b424cd98b822b14f92c193cef9472c77dd1bf95111e1c0ea2e3732",
+  "evidence_event_count": 7,
+  "evidence_mapping_config_hash": "11f2bdf2eafdd659ee0b753dbb85d10ff3d1306e547c180127ee2d30f565d737",
+  "input_artifacts": [
+    "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json",
+    "research/digital-assets/batch-01-r1/BNB/SOURCE_INVENTORY.json",
+    "research/digital-assets/batch-01-r1/BNB/CLAIM_REGISTRY.json",
+    "research/digital-assets/batch-01-r1/BNB/COUNTER_EVIDENCE_SEARCH_LOG.json",
+    "research/digital-assets/batch-01-r1/BNB/NUMERICAL_RECONCILIATION.json",
+    "research/digital-assets/batch-01-r1/BNB/CANONICAL_RESEARCH_R1.json",
+    "research/digital-assets/batch-01-r1/BNB/gdr-se/GDR_SE_AUTHORIZATION_RECORD_R1_1.json"
+  ],
+  "input_hashes": {
+    "research/digital-assets/batch-01-r1/BNB/CANONICAL_RESEARCH_R1.json": "76e04e5a9be907d9fb825c6e7b25e75e056a4aa646672253c88acb2ef76ecf22",
+    "research/digital-assets/batch-01-r1/BNB/CLAIM_REGISTRY.json": "f4ad0ea8d70e10065b037ac6137a5c266b76e6f462427803cfae878e2106a362",
+    "research/digital-assets/batch-01-r1/BNB/COUNTER_EVIDENCE_SEARCH_LOG.json": "be43f2b58b011fad8f35579206634fd3e1b7eaebfa1c1f085a32fd110c59bbc9",
+    "research/digital-assets/batch-01-r1/BNB/NUMERICAL_RECONCILIATION.json": "861e5b14be4c98555aaf3d8eb444b1f655ccb12be5b58b6baf7e66edc039f09d",
+    "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json": "48057428087ac84b316d56b17814ff5a7377c0c1132872716e99863c5616bece",
+    "research/digital-assets/batch-01-r1/BNB/SOURCE_INVENTORY.json": "20f68e9d9871616b2790739d20f358e00c57cc4c0f98b6ea33dbb3581babab9e",
+    "research/digital-assets/batch-01-r1/BNB/gdr-se/GDR_SE_AUTHORIZATION_RECORD_R1_1.json": "9944709064984602652b0bb567f31a3ba3ceb00dd0ab405ccaa6fe2ab9ff5bae"
+  },
+  "mapping_config_hash": "9562f645da388f2add268e6424f3ebf17d22325447c2810c986c1dc9ab263f86",
+  "model_version": "TIMELINE_MODEL_R1",
+  "month_bucket_count": 12,
+  "output_hashes": {
+    "timeline/atomic/bnb_atomic_observations.json": "587482e99cf5488a9c8ed7d2bdaa0616ad75efb6d9b9d67d7c0a9b7c0b8672ca",
+    "timeline/subjects/bnb_event_ledger.json": "6bc94528a5ae2457983d4f72b25616848e2d04677357773f8d1e132536d03d59",
+    "timeline/subjects/bnb_evidence_day.json": "bc663c2403f4b425fa80ccaf3faf3693978ea52135644fc1bf56621febf9edf5",
+    "timeline/subjects/bnb_evidence_events.json": "8afce40ab51b5872fe44c28f90a4eb3ec5a6008a5db25c811ea7729b7bd49c19",
+    "timeline/subjects/bnb_evidence_month.json": "15eea8378c35bda9a9e8b4051f667bda67b4a69ae483bb918b30b5c872647e95",
+    "timeline/subjects/bnb_evidence_timeline.json": "ba7021802bdbd5018feced4a074cee5e47f67814060009ea973d27bf0482d94e",
+    "timeline/subjects/bnb_evidence_week.json": "b2a50adb6ecbfc18371c53e625a61839f2af7015834cde36ff2cc5195a3f6417",
+    "timeline/subjects/bnb_structural_day.json": "b8b76da3ee00e20a44264c547923efb60ca6407293105265cd176d168ece867d",
+    "timeline/subjects/bnb_structural_month.json": "456ee88dd705e37a71f0e13467a6af8b36551c4dcec491f53ea2387a4fd260ad",
+    "timeline/subjects/bnb_structural_timeline.json": "a7f30743d3dbface954d8da4f5fd0c35ebc33008691077f5a0d6bec97a52df42",
+    "timeline/subjects/bnb_structural_week.json": "c9d21026d61476f1c21d19f6060eb50dd33b5726bf20fa8888977de42f3bc2cd"
+  },
+  "structural_aggregation_rules_sha256": "4c3c7969559b91c8753028547b731c697378bfa247bac0f3529538d314083de5",
+  "subject_id": "BNB",
+  "taxonomy_sha256": "c5511ea94b31305b1dde9461fdbe0fe9602f20fcd33f212c5c64fc773c2dfc6c",
+  "timeline_input_bundle_sha256": "22d676832bed55352a6c101193f5efed9c4eb4750c56517ce5ab48ba845bb5a0",
+  "unresolved_timestamp_count": 0,
+  "week_bucket_count": 36
+}

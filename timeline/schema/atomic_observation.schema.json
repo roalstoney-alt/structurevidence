@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "required": [
+    "observation_id",
+    "subject_id",
+    "source_observation_id",
+    "dimension_ids",
+    "effective_at",
+    "known_at",
+    "knowledge_mode",
+    "structural_effect",
+    "evidence_family_ids",
+    "source_refs",
+    "artifact_refs",
+    "mapping_rule_id",
+    "mapping_rationale",
+    "observation_mode"
+  ],
+  "type": "object"
+}

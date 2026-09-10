@@ -816,8 +816,11 @@ tr:last-child td {
 .wave-row,
 .timeline-heatmap {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(128px, 164px);
   gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 4px;
 }
 
 .phase-segment,
@@ -828,14 +831,21 @@ tr:last-child td {
   background: #142235;
   padding: 9px;
   font-size: 0.72rem;
+  overflow-wrap: anywhere;
 }
 
 .phase-segment strong,
-.phase-segment small {
+.phase-segment small,
+.wave-point strong,
+.wave-point small,
+.heat-cell strong,
+.heat-cell small {
   display: block;
 }
 
-.phase-segment small {
+.phase-segment small,
+.wave-point small,
+.heat-cell small {
   color: var(--muted);
   margin-top: 5px;
 }
@@ -857,35 +867,50 @@ tr:last-child td {
   font-size: 0.78rem;
 }
 
-.wave-point.observed,
-.wave-point.current_review,
-.wave-point.mixed {
+.wave-point.structural_shift,
+.timeline-legend .structural_shift {
   border-color: #4fb4d8;
+  background: #142b38;
 }
 
-.wave-point.partial,
+.wave-point.strengthening,
+.heat-cell.observed,
+.heat-cell.complete,
+.timeline-legend .strengthening,
+.timeline-legend .observed,
+.timeline-legend .complete {
+  background: #163021;
+  border-color: #7fb68b;
+}
+
+.wave-point.tension,
+.wave-point.mixed,
 .heat-cell.partial,
+.timeline-legend .tension,
+.timeline-legend .mixed,
 .timeline-legend .partial {
   background: #2a2535;
   border-color: #9f8cff;
 }
 
-.heat-cell.fresh,
-.timeline-legend .fresh {
-  background: #163021;
-  border-color: #7fb68b;
-}
-
-.heat-cell.aging,
-.timeline-legend .aging {
+.wave-point.weakening,
+.timeline-legend .weakening {
   background: #332b17;
   border-color: #d7a84a;
 }
 
+.wave-point.no_observation,
+.wave-point.insufficient_data,
+.heat-cell.not_observed,
 .heat-cell.unresolved,
-.heat-cell.not_configured,
+.heat-cell.under_review,
+.heat-cell.policy_not_configured,
+.timeline-legend .no_observation,
+.timeline-legend .insufficient_data,
+.timeline-legend .not_observed,
 .timeline-legend .unresolved,
-.timeline-legend .not_configured {
+.timeline-legend .under_review,
+.timeline-legend .policy_not_configured {
   background: #332023;
   border-color: #d06b6b;
 }
@@ -905,9 +930,21 @@ tr:last-child td {
 
 .timeline-events {
   display: grid;
-  gap: 8px;
+  gap: 14px;
   padding-left: 0;
   list-style: none;
+}
+
+.event-lane {
+  border: 1px solid var(--line);
+  background: #101b29;
+  padding: 12px;
+}
+
+.event-lane h4 {
+  margin: 0 0 8px;
+  font-size: 0.82rem;
+  color: var(--muted);
 }
 
 .timeline-events li {

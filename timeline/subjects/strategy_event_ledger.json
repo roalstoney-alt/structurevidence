@@ -1,80 +1,279 @@
 {
-  "event_type_enum": [
-    "ARTIFACT_FROZEN",
-    "REPORT_PUBLISHED",
-    "CORRECTION_ADDED",
-    "SUPERSESSION",
-    "SOURCE_PACKAGE_ADDED",
-    "GOVERNANCE_EVENT",
-    "TREASURY_DISCLOSURE",
-    "PROTOCOL_EVENT",
-    "MARKET_STRUCTURE_EVENT",
-    "COUNTER_EVIDENCE_UPDATE",
-    "REVIEW_EVENT"
+  "event_domain_enum": [
+    "SUBJECT_EVENT",
+    "EVIDENCE_EVENT",
+    "RESEARCH_EVENT",
+    "AUTHORIZATION_EVENT"
   ],
   "events": [
     {
-      "event_id": "EVT-STRATEGY-2025-10K",
+      "effective_at": null,
+      "event_domain": "EVIDENCE_EVENT",
+      "event_id": "TL-STRATEGY-EE001",
+      "event_type": "SOURCE_CAPTURED",
+      "family_id": "PRIMARY_SOURCE_COVERAGE",
+      "freshness_trigger_candidate": false,
+      "knowledge_mode": "CONTEMPORANEOUS",
+      "known_at": "2026-02-13T00:00:00Z",
+      "label": "PRIMARY_SOURCE_COVERAGE -> OBSERVED",
+      "observation_mode": "DIRECT",
+      "refs": [
+        "evidence-freeze/S6.1a/SOURCE_DEPENDENCY_GRAPH_v2.json"
+      ],
+      "timestamp": "2026-02-13T00:00:00Z",
+      "trigger_type": null
+    },
+    {
+      "dimension_ids": [
+        "TREASURY_STRUCTURE"
+      ],
+      "effective_at": "2026-02-13T00:00:00Z",
+      "event_domain": "SUBJECT_EVENT",
+      "event_id": "TL-STRATEGY-SE001",
       "event_type": "SOURCE_PACKAGE_ADDED",
-      "impact_hint": "Primary filing anchor",
-      "label": "SEC 2025 10-K entered the evidence chain.",
+      "freshness_trigger_candidate": false,
+      "knowledge_mode": "CONTEMPORANEOUS",
+      "known_at": "2026-02-13T00:00:00Z",
+      "label": "SEC filing period anchors treasury baseline.",
       "observation_mode": "SPARSE_EVENT_STATE",
       "refs": [
         "evidence-freeze/S6.1a/SOURCE_DEPENDENCY_GRAPH_v2.json"
       ],
-      "timestamp": "2026-02-13T00:00:00Z"
+      "timestamp": "2026-02-13T00:00:00Z",
+      "trigger_type": "TREASURY_POLICY_CHANGE"
     },
     {
-      "event_id": "EVT-STRATEGY-FRAMEWORK",
+      "effective_at": null,
+      "event_domain": "EVIDENCE_EVENT",
+      "event_id": "TL-STRATEGY-EE002",
+      "event_type": "SOURCE_CAPTURED",
+      "family_id": "PRIMARY_SOURCE_COVERAGE",
+      "freshness_trigger_candidate": false,
+      "knowledge_mode": "CONTEMPORANEOUS",
+      "known_at": "2026-06-29T00:00:00Z",
+      "label": "PRIMARY_SOURCE_COVERAGE -> OBSERVED",
+      "observation_mode": "DIRECT",
+      "refs": [
+        "evidence-freeze/S6.1a/SOURCE_DEPENDENCY_GRAPH_v2.json"
+      ],
+      "timestamp": "2026-06-29T00:00:00Z",
+      "trigger_type": null
+    },
+    {
+      "dimension_ids": [
+        "TREASURY_STRUCTURE"
+      ],
+      "effective_at": "2026-06-29T00:00:00Z",
+      "event_domain": "SUBJECT_EVENT",
+      "event_id": "TL-STRATEGY-SE002",
       "event_type": "TREASURY_DISCLOSURE",
-      "impact_hint": "Treasury structure marker",
-      "label": "Digital credit framework disclosure captured.",
+      "freshness_trigger_candidate": true,
+      "knowledge_mode": "CONTEMPORANEOUS",
+      "known_at": "2026-06-29T00:00:00Z",
+      "label": "Digital credit framework disclosure changes the treasury structure record.",
       "observation_mode": "SPARSE_EVENT_STATE",
       "refs": [
         "evidence-freeze/S6.1a/SOURCE_DEPENDENCY_GRAPH_v2.json"
       ],
-      "timestamp": "2026-06-29T00:00:00Z"
+      "timestamp": "2026-06-29T00:00:00Z",
+      "trigger_type": "TREASURY_POLICY_CHANGE"
     },
     {
-      "event_id": "EVT-STRATEGY-SALES",
+      "effective_at": null,
+      "event_domain": "EVIDENCE_EVENT",
+      "event_id": "TL-STRATEGY-EE003",
+      "event_type": "SOURCE_CAPTURED",
+      "family_id": "PRIMARY_SOURCE_COVERAGE",
+      "freshness_trigger_candidate": false,
+      "knowledge_mode": "CONTEMPORANEOUS",
+      "known_at": "2026-07-06T00:00:00Z",
+      "label": "PRIMARY_SOURCE_COVERAGE -> OBSERVED",
+      "observation_mode": "DIRECT",
+      "refs": [
+        "evidence-freeze/S6.1a/TRIANGULATION_MATRIX_v2.json"
+      ],
+      "timestamp": "2026-07-06T00:00:00Z",
+      "trigger_type": null
+    },
+    {
+      "dimension_ids": [
+        "RESOURCE_PRESSURE"
+      ],
+      "effective_at": "2026-07-06T00:00:00Z",
+      "event_domain": "SUBJECT_EVENT",
+      "event_id": "TL-STRATEGY-SE003",
       "event_type": "TREASURY_DISCLOSURE",
-      "impact_hint": "Structural tension marker",
-      "label": "BTC monetization disclosure entered the record.",
+      "freshness_trigger_candidate": true,
+      "knowledge_mode": "CONTEMPORANEOUS",
+      "known_at": "2026-07-06T00:00:00Z",
+      "label": "BTC monetization disclosure creates resource-pressure evidence.",
       "observation_mode": "SPARSE_EVENT_STATE",
       "refs": [
         "evidence-freeze/S6.1a/TRIANGULATION_MATRIX_v2.json"
       ],
-      "timestamp": "2026-07-06T00:00:00Z"
+      "timestamp": "2026-07-06T00:00:00Z",
+      "trigger_type": "PROTOCOL_UPGRADE"
     },
     {
-      "event_id": "EVT-STRATEGY-S6FREEZE",
-      "event_type": "ARTIFACT_FROZEN",
-      "impact_hint": "Freeze ledger",
-      "label": "S6.1a artifacts frozen and hashed.",
+      "dimension_ids": [
+        "NARRATIVE_DEPENDENCE"
+      ],
+      "effective_at": "2026-07-06T00:00:00Z",
+      "event_domain": "SUBJECT_EVENT",
+      "event_id": "TL-STRATEGY-SE004",
+      "event_type": "TREASURY_DISCLOSURE",
+      "freshness_trigger_candidate": true,
+      "knowledge_mode": "RETROSPECTIVE",
+      "known_at": "2026-09-08T00:00:00Z",
+      "label": "BTC monetization disclosure changes the narrative-dependence record.",
+      "observation_mode": "SPARSE_EVENT_STATE",
+      "refs": [
+        "evidence-freeze/S6.1a/HYPOTHESIS_ASSESSMENTS_v2.json"
+      ],
+      "timestamp": "2026-07-06T00:00:00Z",
+      "trigger_type": "PROTOCOL_UPGRADE"
+    },
+    {
+      "effective_at": null,
+      "event_domain": "EVIDENCE_EVENT",
+      "event_id": "TL-STRATEGY-EE-COUNTER_EVIDENCE_COVERAGE",
+      "event_type": "COUNTER_EVIDENCE_SEARCH_COMPLETED",
+      "family_id": "COUNTER_EVIDENCE_COVERAGE",
+      "freshness_trigger_candidate": false,
+      "knowledge_mode": "CONTEMPORANEOUS",
+      "known_at": "2026-09-08T00:00:00Z",
+      "label": "COUNTER_EVIDENCE_COVERAGE -> PARTIAL",
       "observation_mode": "DIRECT",
       "refs": [
-        "evidence-freeze/S6.1a/SHA256SUMS.txt"
+        "evidence-freeze/S6.1a/COUNTER_EVIDENCE_SEARCH_LOG_v3.json"
       ],
-      "timestamp": "2026-09-08T00:00:00Z"
+      "timestamp": "2026-09-08T00:00:00Z",
+      "trigger_type": null
     },
     {
-      "event_id": "EVT-STRATEGY-GDR",
-      "event_type": "REVIEW_EVENT",
-      "impact_hint": "Authorization history",
-      "label": "GDR-SE R1.1 runtime authorization recorded.",
+      "effective_at": null,
+      "event_domain": "EVIDENCE_EVENT",
+      "event_id": "TL-STRATEGY-EE-INDEPENDENT_REVIEW",
+      "event_type": "INDEPENDENT_REVIEW_COMPLETED",
+      "family_id": "INDEPENDENT_REVIEW",
+      "freshness_trigger_candidate": false,
+      "knowledge_mode": "CONTEMPORANEOUS",
+      "known_at": "2026-09-08T00:00:00Z",
+      "label": "INDEPENDENT_REVIEW -> NOT_APPLICABLE",
+      "observation_mode": "DIRECT",
+      "refs": [
+        "evidence-freeze/S6.1a/REPORT_VERSION_MAP.json"
+      ],
+      "timestamp": "2026-09-08T00:00:00Z",
+      "trigger_type": null
+    },
+    {
+      "effective_at": null,
+      "event_domain": "EVIDENCE_EVENT",
+      "event_id": "TL-STRATEGY-EE-NUMERICAL_RECONCILIATION",
+      "event_type": "NUMERICAL_RECONCILIATION_COMPLETED",
+      "family_id": "NUMERICAL_RECONCILIATION",
+      "freshness_trigger_candidate": false,
+      "knowledge_mode": "CONTEMPORANEOUS",
+      "known_at": "2026-09-08T00:00:00Z",
+      "label": "NUMERICAL_RECONCILIATION -> NOT_APPLICABLE",
+      "observation_mode": "DIRECT",
+      "refs": [
+        "evidence-freeze/S6.1a/TRIANGULATION_MATRIX_v2.json"
+      ],
+      "timestamp": "2026-09-08T00:00:00Z",
+      "trigger_type": null
+    },
+    {
+      "effective_at": null,
+      "event_domain": "EVIDENCE_EVENT",
+      "event_id": "TL-STRATEGY-EE-SOURCE_DEPENDENCY",
+      "event_type": "ARTIFACT_FROZEN",
+      "family_id": "SOURCE_DEPENDENCY",
+      "freshness_trigger_candidate": false,
+      "knowledge_mode": "CONTEMPORANEOUS",
+      "known_at": "2026-09-08T00:00:00Z",
+      "label": "SOURCE_DEPENDENCY -> PARTIAL",
+      "observation_mode": "DIRECT",
+      "refs": [
+        "evidence-freeze/S6.1a/SOURCE_DEPENDENCY_GRAPH_v2.json"
+      ],
+      "timestamp": "2026-09-08T00:00:00Z",
+      "trigger_type": null
+    },
+    {
+      "effective_at": null,
+      "event_domain": "EVIDENCE_EVENT",
+      "event_id": "TL-STRATEGY-EE004",
+      "event_type": "SOURCE_CAPTURED",
+      "family_id": "PRIMARY_SOURCE_COVERAGE",
+      "freshness_trigger_candidate": false,
+      "knowledge_mode": "CONTEMPORANEOUS",
+      "known_at": "2026-09-08T00:00:00Z",
+      "label": "PRIMARY_SOURCE_COVERAGE -> OBSERVED",
+      "observation_mode": "DIRECT",
+      "refs": [
+        "evidence-freeze/S6.1a/HYPOTHESIS_ASSESSMENTS_v2.json",
+        "evidence-freeze/S6.1a/SOURCE_DEPENDENCY_GRAPH_v2.json"
+      ],
+      "timestamp": "2026-09-08T00:00:00Z",
+      "trigger_type": null
+    },
+    {
+      "effective_at": null,
+      "event_domain": "RESEARCH_EVENT",
+      "event_id": "TL-STRATEGY-EE-SUPERSESSION_STATUS",
+      "event_type": "SUPERSESSION_ADDED",
+      "family_id": "SUPERSESSION_STATUS",
+      "freshness_trigger_candidate": true,
+      "knowledge_mode": "CONTEMPORANEOUS",
+      "known_at": "2026-09-08T00:00:00Z",
+      "label": "SUPERSESSION_STATUS -> COMPLETE",
+      "observation_mode": "DIRECT",
+      "refs": [
+        "evidence-freeze/S6.1a/REPORT_VERSION_MAP.json"
+      ],
+      "timestamp": "2026-09-08T00:00:00Z",
+      "trigger_type": "SUPERSESSION"
+    },
+    {
+      "dimension_ids": [
+        "SOURCE_DEPENDENCY"
+      ],
+      "effective_at": "2026-09-08T00:00:00Z",
+      "event_domain": "SUBJECT_EVENT",
+      "event_id": "TL-STRATEGY-SE005",
+      "event_type": "SOURCE_DEPENDENCY",
+      "freshness_trigger_candidate": true,
+      "knowledge_mode": "CONTEMPORANEOUS",
+      "known_at": "2026-09-08T00:00:00Z",
+      "label": "S6.1a source-dependency graph records partial independence boundaries.",
+      "observation_mode": "SPARSE_EVENT_STATE",
+      "refs": [
+        "evidence-freeze/S6.1a/SOURCE_DEPENDENCY_GRAPH_v2.json"
+      ],
+      "timestamp": "2026-09-08T00:00:00Z",
+      "trigger_type": "PROTOCOL_UPGRADE"
+    },
+    {
+      "effective_at": null,
+      "event_domain": "AUTHORIZATION_EVENT",
+      "event_id": "TL-STRATEGY-EE-AUTH",
+      "event_type": "GDR_SE_AUTHORIZATION_EVALUATED",
+      "family_id": "AUTHORIZATION_STATUS",
+      "freshness_trigger_candidate": true,
+      "knowledge_mode": "CONTEMPORANEOUS",
+      "known_at": "2026-09-10T14:18:35.508863Z",
+      "label": "AUTHORIZATION_STATUS -> UNDER_REVIEW",
       "observation_mode": "DIRECT",
       "refs": [
         "research/gdr-se/strategy-2026/GDR_SE_AUTHORIZATION_RECORD_R1_1.json"
       ],
-      "timestamp": "2026-09-10T00:00:00Z"
+      "timestamp": "2026-09-10T14:18:35.508863Z",
+      "trigger_type": null
     }
   ],
-  "model_version": "TIMELINE_MODEL_v0.1",
+  "model_version": "TIMELINE_MODEL_R1",
   "subject_id": "strategy",
-  "subject_label": "Strategy 2026",
-  "supported_resolutions": [
-    "DAY",
-    "WEEK",
-    "MONTH"
-  ]
+  "subject_label": "Strategy 2026"
 }

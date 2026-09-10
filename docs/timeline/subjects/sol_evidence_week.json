@@ -1,0 +1,329 @@
+{
+  "buckets": [
+    {
+      "age_days_at_period_end": 3,
+      "bucket_end": "2026-09-13",
+      "bucket_id": "SOL-EVID-WEEK-2026-W37-AUTHORIZATION_STATUS",
+      "bucket_start": "2026-09-07",
+      "closing_state": "UNDER_REVIEW",
+      "events": [
+        "TL-SOL-EE-AUTH"
+      ],
+      "events_count": 1,
+      "family_id": "AUTHORIZATION_STATUS",
+      "latest_update_at": "2026-09-10T14:18:35.531446Z",
+      "lineage": {
+        "artifact_refs": [
+          "research/digital-assets/batch-01-r1/SOL/gdr-se/GDR_SE_AUTHORIZATION_RECORD_R1_1.json"
+        ],
+        "day_bucket_ids": [
+          "SOL-EVID-DAY-2026-09-09-AUTHORIZATION_STATUS",
+          "SOL-EVID-DAY-2026-09-10-AUTHORIZATION_STATUS"
+        ],
+        "evidence_event_ids": [
+          "TL-SOL-EE-AUTH"
+        ]
+      },
+      "opening_state": "NOT_OBSERVED",
+      "period": "2026-W37",
+      "policy_state": "POLICY_NOT_CONFIGURED",
+      "resolution": "WEEK",
+      "source_day_bucket_ids": [
+        "SOL-EVID-DAY-2026-09-09-AUTHORIZATION_STATUS",
+        "SOL-EVID-DAY-2026-09-10-AUTHORIZATION_STATUS"
+      ],
+      "subject_id": "SOL",
+      "transition_count": 1,
+      "week_end": "2026-09-13",
+      "week_start": "2026-09-07"
+    },
+    {
+      "age_days_at_period_end": null,
+      "bucket_end": "2026-09-13",
+      "bucket_id": "SOL-EVID-WEEK-2026-W37-CORRECTION_STATUS",
+      "bucket_start": "2026-09-07",
+      "closing_state": "NOT_OBSERVED",
+      "events": [],
+      "events_count": 0,
+      "family_id": "CORRECTION_STATUS",
+      "latest_update_at": null,
+      "lineage": {
+        "artifact_refs": [],
+        "day_bucket_ids": [
+          "SOL-EVID-DAY-2026-09-09-CORRECTION_STATUS",
+          "SOL-EVID-DAY-2026-09-10-CORRECTION_STATUS"
+        ],
+        "evidence_event_ids": []
+      },
+      "opening_state": "NOT_OBSERVED",
+      "period": "2026-W37",
+      "policy_state": "POLICY_NOT_CONFIGURED",
+      "resolution": "WEEK",
+      "source_day_bucket_ids": [
+        "SOL-EVID-DAY-2026-09-09-CORRECTION_STATUS",
+        "SOL-EVID-DAY-2026-09-10-CORRECTION_STATUS"
+      ],
+      "subject_id": "SOL",
+      "transition_count": 0,
+      "week_end": "2026-09-13",
+      "week_start": "2026-09-07"
+    },
+    {
+      "age_days_at_period_end": 4,
+      "bucket_end": "2026-09-13",
+      "bucket_id": "SOL-EVID-WEEK-2026-W37-COUNTER_EVIDENCE_COVERAGE",
+      "bucket_start": "2026-09-07",
+      "closing_state": "PARTIAL",
+      "events": [
+        "TL-SOL-EE-COUNTER_EVIDENCE_COVERAGE"
+      ],
+      "events_count": 1,
+      "family_id": "COUNTER_EVIDENCE_COVERAGE",
+      "latest_update_at": "2026-09-09T00:00:00Z",
+      "lineage": {
+        "artifact_refs": [
+          "research/digital-assets/batch-01-r1/SOL/COUNTER_EVIDENCE_SEARCH_LOG.json"
+        ],
+        "day_bucket_ids": [
+          "SOL-EVID-DAY-2026-09-09-COUNTER_EVIDENCE_COVERAGE",
+          "SOL-EVID-DAY-2026-09-10-COUNTER_EVIDENCE_COVERAGE"
+        ],
+        "evidence_event_ids": [
+          "TL-SOL-EE-COUNTER_EVIDENCE_COVERAGE"
+        ]
+      },
+      "opening_state": "NOT_OBSERVED",
+      "period": "2026-W37",
+      "policy_state": "POLICY_NOT_CONFIGURED",
+      "resolution": "WEEK",
+      "source_day_bucket_ids": [
+        "SOL-EVID-DAY-2026-09-09-COUNTER_EVIDENCE_COVERAGE",
+        "SOL-EVID-DAY-2026-09-10-COUNTER_EVIDENCE_COVERAGE"
+      ],
+      "subject_id": "SOL",
+      "transition_count": 1,
+      "week_end": "2026-09-13",
+      "week_start": "2026-09-07"
+    },
+    {
+      "age_days_at_period_end": 4,
+      "bucket_end": "2026-09-13",
+      "bucket_id": "SOL-EVID-WEEK-2026-W37-INDEPENDENT_REVIEW",
+      "bucket_start": "2026-09-07",
+      "closing_state": "COMPLETE",
+      "events": [
+        "TL-SOL-EE-INDEPENDENT_REVIEW"
+      ],
+      "events_count": 1,
+      "family_id": "INDEPENDENT_REVIEW",
+      "latest_update_at": "2026-09-09T00:00:00Z",
+      "lineage": {
+        "artifact_refs": [
+          "research/digital-assets/batch-01-r1/SOL/BLIND_REVIEW_OUTPUT.md"
+        ],
+        "day_bucket_ids": [
+          "SOL-EVID-DAY-2026-09-09-INDEPENDENT_REVIEW",
+          "SOL-EVID-DAY-2026-09-10-INDEPENDENT_REVIEW"
+        ],
+        "evidence_event_ids": [
+          "TL-SOL-EE-INDEPENDENT_REVIEW"
+        ]
+      },
+      "opening_state": "NOT_OBSERVED",
+      "period": "2026-W37",
+      "policy_state": "POLICY_NOT_CONFIGURED",
+      "resolution": "WEEK",
+      "source_day_bucket_ids": [
+        "SOL-EVID-DAY-2026-09-09-INDEPENDENT_REVIEW",
+        "SOL-EVID-DAY-2026-09-10-INDEPENDENT_REVIEW"
+      ],
+      "subject_id": "SOL",
+      "transition_count": 1,
+      "week_end": "2026-09-13",
+      "week_start": "2026-09-07"
+    },
+    {
+      "age_days_at_period_end": 4,
+      "bucket_end": "2026-09-13",
+      "bucket_id": "SOL-EVID-WEEK-2026-W37-NUMERICAL_RECONCILIATION",
+      "bucket_start": "2026-09-07",
+      "closing_state": "COMPLETE",
+      "events": [
+        "TL-SOL-EE-NUMERICAL_RECONCILIATION"
+      ],
+      "events_count": 1,
+      "family_id": "NUMERICAL_RECONCILIATION",
+      "latest_update_at": "2026-09-09T00:00:00Z",
+      "lineage": {
+        "artifact_refs": [
+          "research/digital-assets/batch-01-r1/SOL/NUMERICAL_RECONCILIATION.json"
+        ],
+        "day_bucket_ids": [
+          "SOL-EVID-DAY-2026-09-09-NUMERICAL_RECONCILIATION",
+          "SOL-EVID-DAY-2026-09-10-NUMERICAL_RECONCILIATION"
+        ],
+        "evidence_event_ids": [
+          "TL-SOL-EE-NUMERICAL_RECONCILIATION"
+        ]
+      },
+      "opening_state": "NOT_OBSERVED",
+      "period": "2026-W37",
+      "policy_state": "POLICY_NOT_CONFIGURED",
+      "resolution": "WEEK",
+      "source_day_bucket_ids": [
+        "SOL-EVID-DAY-2026-09-09-NUMERICAL_RECONCILIATION",
+        "SOL-EVID-DAY-2026-09-10-NUMERICAL_RECONCILIATION"
+      ],
+      "subject_id": "SOL",
+      "transition_count": 1,
+      "week_end": "2026-09-13",
+      "week_start": "2026-09-07"
+    },
+    {
+      "age_days_at_period_end": 4,
+      "bucket_end": "2026-09-13",
+      "bucket_id": "SOL-EVID-WEEK-2026-W37-PRIMARY_SOURCE_COVERAGE",
+      "bucket_start": "2026-09-07",
+      "closing_state": "OBSERVED",
+      "events": [
+        "TL-SOL-EE001"
+      ],
+      "events_count": 1,
+      "family_id": "PRIMARY_SOURCE_COVERAGE",
+      "latest_update_at": "2026-09-09T00:00:00Z",
+      "lineage": {
+        "artifact_refs": [
+          "research/digital-assets/batch-01-r1/SOL/OBSERVATION_REGISTRY.json"
+        ],
+        "day_bucket_ids": [
+          "SOL-EVID-DAY-2026-09-09-PRIMARY_SOURCE_COVERAGE",
+          "SOL-EVID-DAY-2026-09-10-PRIMARY_SOURCE_COVERAGE"
+        ],
+        "evidence_event_ids": [
+          "TL-SOL-EE001"
+        ]
+      },
+      "opening_state": "NOT_OBSERVED",
+      "period": "2026-W37",
+      "policy_state": "POLICY_NOT_CONFIGURED",
+      "resolution": "WEEK",
+      "source_day_bucket_ids": [
+        "SOL-EVID-DAY-2026-09-09-PRIMARY_SOURCE_COVERAGE",
+        "SOL-EVID-DAY-2026-09-10-PRIMARY_SOURCE_COVERAGE"
+      ],
+      "subject_id": "SOL",
+      "transition_count": 1,
+      "week_end": "2026-09-13",
+      "week_start": "2026-09-07"
+    },
+    {
+      "age_days_at_period_end": null,
+      "bucket_end": "2026-09-13",
+      "bucket_id": "SOL-EVID-WEEK-2026-W37-SECONDARY_SUPPORT",
+      "bucket_start": "2026-09-07",
+      "closing_state": "NOT_OBSERVED",
+      "events": [],
+      "events_count": 0,
+      "family_id": "SECONDARY_SUPPORT",
+      "latest_update_at": null,
+      "lineage": {
+        "artifact_refs": [],
+        "day_bucket_ids": [
+          "SOL-EVID-DAY-2026-09-09-SECONDARY_SUPPORT",
+          "SOL-EVID-DAY-2026-09-10-SECONDARY_SUPPORT"
+        ],
+        "evidence_event_ids": []
+      },
+      "opening_state": "NOT_OBSERVED",
+      "period": "2026-W37",
+      "policy_state": "POLICY_NOT_CONFIGURED",
+      "resolution": "WEEK",
+      "source_day_bucket_ids": [
+        "SOL-EVID-DAY-2026-09-09-SECONDARY_SUPPORT",
+        "SOL-EVID-DAY-2026-09-10-SECONDARY_SUPPORT"
+      ],
+      "subject_id": "SOL",
+      "transition_count": 0,
+      "week_end": "2026-09-13",
+      "week_start": "2026-09-07"
+    },
+    {
+      "age_days_at_period_end": 4,
+      "bucket_end": "2026-09-13",
+      "bucket_id": "SOL-EVID-WEEK-2026-W37-SOURCE_DEPENDENCY",
+      "bucket_start": "2026-09-07",
+      "closing_state": "PARTIAL",
+      "events": [
+        "TL-SOL-EE-SOURCE_DEPENDENCY"
+      ],
+      "events_count": 1,
+      "family_id": "SOURCE_DEPENDENCY",
+      "latest_update_at": "2026-09-09T00:00:00Z",
+      "lineage": {
+        "artifact_refs": [
+          "research/digital-assets/batch-01-r1/SOL/SOURCE_DEPENDENCY_GRAPH.json"
+        ],
+        "day_bucket_ids": [
+          "SOL-EVID-DAY-2026-09-09-SOURCE_DEPENDENCY",
+          "SOL-EVID-DAY-2026-09-10-SOURCE_DEPENDENCY"
+        ],
+        "evidence_event_ids": [
+          "TL-SOL-EE-SOURCE_DEPENDENCY"
+        ]
+      },
+      "opening_state": "NOT_OBSERVED",
+      "period": "2026-W37",
+      "policy_state": "POLICY_NOT_CONFIGURED",
+      "resolution": "WEEK",
+      "source_day_bucket_ids": [
+        "SOL-EVID-DAY-2026-09-09-SOURCE_DEPENDENCY",
+        "SOL-EVID-DAY-2026-09-10-SOURCE_DEPENDENCY"
+      ],
+      "subject_id": "SOL",
+      "transition_count": 1,
+      "week_end": "2026-09-13",
+      "week_start": "2026-09-07"
+    },
+    {
+      "age_days_at_period_end": 4,
+      "bucket_end": "2026-09-13",
+      "bucket_id": "SOL-EVID-WEEK-2026-W37-SUPERSESSION_STATUS",
+      "bucket_start": "2026-09-07",
+      "closing_state": "COMPLETE",
+      "events": [
+        "TL-SOL-EE-SUPERSESSION_STATUS"
+      ],
+      "events_count": 1,
+      "family_id": "SUPERSESSION_STATUS",
+      "latest_update_at": "2026-09-09T00:00:00Z",
+      "lineage": {
+        "artifact_refs": [
+          "research/digital-assets/batch-01-r1/SOL/SUPERSESSION_NOTICE.md"
+        ],
+        "day_bucket_ids": [
+          "SOL-EVID-DAY-2026-09-09-SUPERSESSION_STATUS",
+          "SOL-EVID-DAY-2026-09-10-SUPERSESSION_STATUS"
+        ],
+        "evidence_event_ids": [
+          "TL-SOL-EE-SUPERSESSION_STATUS"
+        ]
+      },
+      "opening_state": "NOT_OBSERVED",
+      "period": "2026-W37",
+      "policy_state": "POLICY_NOT_CONFIGURED",
+      "resolution": "WEEK",
+      "source_day_bucket_ids": [
+        "SOL-EVID-DAY-2026-09-09-SUPERSESSION_STATUS",
+        "SOL-EVID-DAY-2026-09-10-SUPERSESSION_STATUS"
+      ],
+      "subject_id": "SOL",
+      "transition_count": 1,
+      "week_end": "2026-09-13",
+      "week_start": "2026-09-07"
+    }
+  ],
+  "layer": "EVIDENCE",
+  "model_version": "TIMELINE_MODEL_R1",
+  "resolution": "WEEK",
+  "subject_id": "SOL"
+}

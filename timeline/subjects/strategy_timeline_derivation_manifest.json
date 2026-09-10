@@ -1,0 +1,52 @@
+{
+  "as_of": "2026-09-10T14:18:35.507637Z",
+  "atomic_observation_count": 5,
+  "builder_version": "TIMELINE_MODEL_R1",
+  "day_bucket_count": 832,
+  "dimension_mapping_sha256": "9562f645da388f2add268e6424f3ebf17d22325447c2810c986c1dc9ab263f86",
+  "dimension_observation_counts": {
+    "NARRATIVE_DEPENDENCE": 1,
+    "RESOURCE_PRESSURE": 1,
+    "SOURCE_DEPENDENCY": 1,
+    "TREASURY_STRUCTURE": 2
+  },
+  "evidence_aggregation_rules_sha256": "bc921c7b76b424cd98b822b14f92c193cef9472c77dd1bf95111e1c0ea2e3732",
+  "evidence_event_count": 10,
+  "evidence_mapping_config_hash": "11f2bdf2eafdd659ee0b753dbb85d10ff3d1306e547c180127ee2d30f565d737",
+  "input_artifacts": [
+    "research/Strategy_2026_Public_Evidence_Research_Report_v0.1_EN.md",
+    "research/Strategy_2026_Structural_Dynamics_Report_v0.1_EN.md",
+    "evidence-freeze/S6.1a/SOURCE_DEPENDENCY_GRAPH_v2.json",
+    "evidence-freeze/S6.1a/TRIANGULATION_MATRIX_v2.json",
+    "research/gdr-se/strategy-2026/GDR_SE_AUTHORIZATION_RECORD_R1_1.json"
+  ],
+  "input_hashes": {
+    "evidence-freeze/S6.1a/SOURCE_DEPENDENCY_GRAPH_v2.json": "62270e7cb8e2c40234a6552a10e26c452ec7fd871acfafebb744e907e08b2e1c",
+    "evidence-freeze/S6.1a/TRIANGULATION_MATRIX_v2.json": "a35913db6e0b9640218db80651aa6063ea7c14e430a09265258ccb91303258f3",
+    "research/Strategy_2026_Public_Evidence_Research_Report_v0.1_EN.md": "416af04d120a0ee87046dee426ae0404c0fb3ca47cbe7f83e4d986ced3179e68",
+    "research/Strategy_2026_Structural_Dynamics_Report_v0.1_EN.md": "e84a97409e69bcfcfa901d1f5281ec88802ae0e44eb91af6eaca14906a63edf9",
+    "research/gdr-se/strategy-2026/GDR_SE_AUTHORIZATION_RECORD_R1_1.json": "d8fcdf6c55edcfdd4222c48b35cfd2b2b581ff0db958aaa2c323f3f645f7daa1"
+  },
+  "mapping_config_hash": "9562f645da388f2add268e6424f3ebf17d22325447c2810c986c1dc9ab263f86",
+  "model_version": "TIMELINE_MODEL_R1",
+  "month_bucket_count": 32,
+  "output_hashes": {
+    "timeline/atomic/strategy_atomic_observations.json": "db2bb15d178b4b50de4ddd83b12739c148dd005ce643e8900a0e8c945be45d11",
+    "timeline/subjects/strategy_event_ledger.json": "cd380fb04da277dbe86e3c2c2620994fdaffc80655bf12d8c1ada02fb819dab6",
+    "timeline/subjects/strategy_evidence_day.json": "7167658afa0dfd19c479d21e06423596065d1772f85ad3aba1d1708f2b72ce12",
+    "timeline/subjects/strategy_evidence_events.json": "91c6ef4831c9ddeb56a272a169ecff58ae2e749b00f3f889b8d7c35f308ceb47",
+    "timeline/subjects/strategy_evidence_month.json": "7dabe83dad48d67b10a6f65edd4426148d09f27302e272e106fb39c57cc06438",
+    "timeline/subjects/strategy_evidence_timeline.json": "33016bf3ce686cddb25f39209bac11e2c26190af7a66e42c3ca30ed6c10ab639",
+    "timeline/subjects/strategy_evidence_week.json": "9f5bbef17ac35bf40ef26d8c652000f5f34b9b1e75af5b0774cda035b7a0ff64",
+    "timeline/subjects/strategy_structural_day.json": "9e9eb0a70f1e79868510d724fd9112ab7ca8932db3058f2fde86f81e613d56dc",
+    "timeline/subjects/strategy_structural_month.json": "7daf15f57f7df347947d0da7d08c29b099996938be4a8bb9f2e364113c21d373",
+    "timeline/subjects/strategy_structural_timeline.json": "7c68c7a1597186256ebce9ff233aa063de5de049ba183dcdd6c75baf4dc55fa6",
+    "timeline/subjects/strategy_structural_week.json": "7c7956b747ec3558390d844bef1e5b42bb28b2d5cf493f5591cba79e8342f891"
+  },
+  "structural_aggregation_rules_sha256": "4c3c7969559b91c8753028547b731c697378bfa247bac0f3529538d314083de5",
+  "subject_id": "strategy",
+  "taxonomy_sha256": "c5511ea94b31305b1dde9461fdbe0fe9602f20fcd33f212c5c64fc773c2dfc6c",
+  "timeline_input_bundle_sha256": "840b3579d1aeafef7e5ccdd8393d1eef544cbd0ec76242a5096556fee6b65cdc",
+  "unresolved_timestamp_count": 0,
+  "week_bucket_count": 124
+}

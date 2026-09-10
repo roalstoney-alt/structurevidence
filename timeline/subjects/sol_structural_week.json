@@ -1,0 +1,152 @@
+{
+  "buckets": [
+    {
+      "aggregation_rule": "WEEK_FROM_DAY",
+      "bucket_end": "2026-09-13",
+      "bucket_id": "SOL-STRUCT-WEEK-2026-W37-GOVERNANCE_STRUCTURE",
+      "bucket_start": "2026-09-07",
+      "dimension_id": "GOVERNANCE_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [
+          "research/digital-assets/batch-01-r1/SOL/OBSERVATION_REGISTRY.json"
+        ],
+        "atomic_observation_ids": [
+          "TL-SOL-O007"
+        ],
+        "day_bucket_ids": [
+          "SOL-STRUCT-DAY-2026-09-09-GOVERNANCE_STRUCTURE"
+        ]
+      },
+      "observation_count": 1,
+      "observations": [
+        "TL-SOL-O007"
+      ],
+      "period": "2026-W37",
+      "resolution": "WEEK",
+      "source_day_bucket_ids": [
+        "SOL-STRUCT-DAY-2026-09-09-GOVERNANCE_STRUCTURE"
+      ],
+      "source_refs": [
+        "research/digital-assets/batch-01-r1/SOL/OBSERVATION_REGISTRY.json"
+      ],
+      "state": "TENSION",
+      "subject_id": "SOL",
+      "week_end": "2026-09-13",
+      "week_start": "2026-09-07"
+    },
+    {
+      "aggregation_rule": "WEEK_FROM_DAY",
+      "bucket_end": "2026-09-13",
+      "bucket_id": "SOL-STRUCT-WEEK-2026-W37-RESOURCE_PRESSURE",
+      "bucket_start": "2026-09-07",
+      "dimension_id": "RESOURCE_PRESSURE",
+      "lineage": {
+        "artifact_refs": [
+          "research/digital-assets/batch-01-r1/SOL/OBSERVATION_REGISTRY.json"
+        ],
+        "atomic_observation_ids": [
+          "TL-SOL-O001",
+          "TL-SOL-O002",
+          "TL-SOL-O003"
+        ],
+        "day_bucket_ids": [
+          "SOL-STRUCT-DAY-2026-09-09-RESOURCE_PRESSURE"
+        ]
+      },
+      "observation_count": 3,
+      "observations": [
+        "TL-SOL-O001",
+        "TL-SOL-O002",
+        "TL-SOL-O003"
+      ],
+      "period": "2026-W37",
+      "resolution": "WEEK",
+      "source_day_bucket_ids": [
+        "SOL-STRUCT-DAY-2026-09-09-RESOURCE_PRESSURE"
+      ],
+      "source_refs": [
+        "research/digital-assets/batch-01-r1/SOL/OBSERVATION_REGISTRY.json"
+      ],
+      "state": "STRENGTHENING",
+      "subject_id": "SOL",
+      "week_end": "2026-09-13",
+      "week_start": "2026-09-07"
+    },
+    {
+      "aggregation_rule": "WEEK_FROM_DAY",
+      "bucket_end": "2026-09-13",
+      "bucket_id": "SOL-STRUCT-WEEK-2026-W37-UTILITY_STRUCTURE",
+      "bucket_start": "2026-09-07",
+      "dimension_id": "UTILITY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [
+          "research/digital-assets/batch-01-r1/SOL/OBSERVATION_REGISTRY.json"
+        ],
+        "atomic_observation_ids": [
+          "TL-SOL-O008"
+        ],
+        "day_bucket_ids": [
+          "SOL-STRUCT-DAY-2026-09-09-UTILITY_STRUCTURE"
+        ]
+      },
+      "observation_count": 1,
+      "observations": [
+        "TL-SOL-O008"
+      ],
+      "period": "2026-W37",
+      "resolution": "WEEK",
+      "source_day_bucket_ids": [
+        "SOL-STRUCT-DAY-2026-09-09-UTILITY_STRUCTURE"
+      ],
+      "source_refs": [
+        "research/digital-assets/batch-01-r1/SOL/OBSERVATION_REGISTRY.json"
+      ],
+      "state": "TENSION",
+      "subject_id": "SOL",
+      "week_end": "2026-09-13",
+      "week_start": "2026-09-07"
+    },
+    {
+      "aggregation_rule": "WEEK_FROM_DAY",
+      "bucket_end": "2026-09-13",
+      "bucket_id": "SOL-STRUCT-WEEK-2026-W37-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-09-07",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [
+          "research/digital-assets/batch-01-r1/SOL/OBSERVATION_REGISTRY.json"
+        ],
+        "atomic_observation_ids": [
+          "TL-SOL-O004",
+          "TL-SOL-O005",
+          "TL-SOL-O006"
+        ],
+        "day_bucket_ids": [
+          "SOL-STRUCT-DAY-2026-09-09-VALIDATOR_DISTRIBUTION"
+        ]
+      },
+      "observation_count": 3,
+      "observations": [
+        "TL-SOL-O004",
+        "TL-SOL-O005",
+        "TL-SOL-O006"
+      ],
+      "period": "2026-W37",
+      "resolution": "WEEK",
+      "source_day_bucket_ids": [
+        "SOL-STRUCT-DAY-2026-09-09-VALIDATOR_DISTRIBUTION"
+      ],
+      "source_refs": [
+        "research/digital-assets/batch-01-r1/SOL/OBSERVATION_REGISTRY.json"
+      ],
+      "state": "STRENGTHENING",
+      "subject_id": "SOL",
+      "week_end": "2026-09-13",
+      "week_start": "2026-09-07"
+    }
+  ],
+  "layer": "STRUCTURAL",
+  "model_version": "TIMELINE_MODEL_R1",
+  "resolution": "WEEK",
+  "subject_id": "SOL"
+}

@@ -1,0 +1,347 @@
+{
+  "buckets": [
+    {
+      "age_days_at_period_end": 20,
+      "bucket_end": "2026-09-30",
+      "bucket_id": "TRX-EVID-MONTH-2026-09-AUTHORIZATION_STATUS",
+      "bucket_start": "2026-09-01",
+      "closing_state": "UNDER_REVIEW",
+      "events": [
+        "TL-TRX-EE-AUTH"
+      ],
+      "events_count": 1,
+      "family_id": "AUTHORIZATION_STATUS",
+      "latest_update_at": "2026-09-10T14:18:35.542590Z",
+      "lineage": {
+        "artifact_refs": [
+          "research/digital-assets/batch-01-r1/TRX/gdr-se/GDR_SE_AUTHORIZATION_RECORD_R1_1.json"
+        ],
+        "day_bucket_ids": [
+          "TRX-EVID-DAY-2026-09-09-AUTHORIZATION_STATUS",
+          "TRX-EVID-DAY-2026-09-10-AUTHORIZATION_STATUS"
+        ],
+        "evidence_event_ids": [
+          "TL-TRX-EE-AUTH"
+        ],
+        "week_bucket_ids": [
+          "TRX-EVID-WEEK-2026-W37-AUTHORIZATION_STATUS"
+        ]
+      },
+      "month_end": "2026-09-30",
+      "month_start": "2026-09-01",
+      "opening_state": "NOT_OBSERVED",
+      "period": "2026-09",
+      "policy_state": "POLICY_NOT_CONFIGURED",
+      "resolution": "MONTH",
+      "source_week_bucket_ids": [
+        "TRX-EVID-WEEK-2026-W37-AUTHORIZATION_STATUS"
+      ],
+      "subject_id": "TRX",
+      "transition_count": 1
+    },
+    {
+      "age_days_at_period_end": null,
+      "bucket_end": "2026-09-30",
+      "bucket_id": "TRX-EVID-MONTH-2026-09-CORRECTION_STATUS",
+      "bucket_start": "2026-09-01",
+      "closing_state": "NOT_OBSERVED",
+      "events": [],
+      "events_count": 0,
+      "family_id": "CORRECTION_STATUS",
+      "latest_update_at": null,
+      "lineage": {
+        "artifact_refs": [],
+        "day_bucket_ids": [
+          "TRX-EVID-DAY-2026-09-09-CORRECTION_STATUS",
+          "TRX-EVID-DAY-2026-09-10-CORRECTION_STATUS"
+        ],
+        "evidence_event_ids": [],
+        "week_bucket_ids": [
+          "TRX-EVID-WEEK-2026-W37-CORRECTION_STATUS"
+        ]
+      },
+      "month_end": "2026-09-30",
+      "month_start": "2026-09-01",
+      "opening_state": "NOT_OBSERVED",
+      "period": "2026-09",
+      "policy_state": "POLICY_NOT_CONFIGURED",
+      "resolution": "MONTH",
+      "source_week_bucket_ids": [
+        "TRX-EVID-WEEK-2026-W37-CORRECTION_STATUS"
+      ],
+      "subject_id": "TRX",
+      "transition_count": 0
+    },
+    {
+      "age_days_at_period_end": 21,
+      "bucket_end": "2026-09-30",
+      "bucket_id": "TRX-EVID-MONTH-2026-09-COUNTER_EVIDENCE_COVERAGE",
+      "bucket_start": "2026-09-01",
+      "closing_state": "PARTIAL",
+      "events": [
+        "TL-TRX-EE-COUNTER_EVIDENCE_COVERAGE"
+      ],
+      "events_count": 1,
+      "family_id": "COUNTER_EVIDENCE_COVERAGE",
+      "latest_update_at": "2026-09-09T00:00:00Z",
+      "lineage": {
+        "artifact_refs": [
+          "research/digital-assets/batch-01-r1/TRX/COUNTER_EVIDENCE_SEARCH_LOG.json"
+        ],
+        "day_bucket_ids": [
+          "TRX-EVID-DAY-2026-09-09-COUNTER_EVIDENCE_COVERAGE",
+          "TRX-EVID-DAY-2026-09-10-COUNTER_EVIDENCE_COVERAGE"
+        ],
+        "evidence_event_ids": [
+          "TL-TRX-EE-COUNTER_EVIDENCE_COVERAGE"
+        ],
+        "week_bucket_ids": [
+          "TRX-EVID-WEEK-2026-W37-COUNTER_EVIDENCE_COVERAGE"
+        ]
+      },
+      "month_end": "2026-09-30",
+      "month_start": "2026-09-01",
+      "opening_state": "NOT_OBSERVED",
+      "period": "2026-09",
+      "policy_state": "POLICY_NOT_CONFIGURED",
+      "resolution": "MONTH",
+      "source_week_bucket_ids": [
+        "TRX-EVID-WEEK-2026-W37-COUNTER_EVIDENCE_COVERAGE"
+      ],
+      "subject_id": "TRX",
+      "transition_count": 1
+    },
+    {
+      "age_days_at_period_end": 21,
+      "bucket_end": "2026-09-30",
+      "bucket_id": "TRX-EVID-MONTH-2026-09-INDEPENDENT_REVIEW",
+      "bucket_start": "2026-09-01",
+      "closing_state": "COMPLETE",
+      "events": [
+        "TL-TRX-EE-INDEPENDENT_REVIEW"
+      ],
+      "events_count": 1,
+      "family_id": "INDEPENDENT_REVIEW",
+      "latest_update_at": "2026-09-09T00:00:00Z",
+      "lineage": {
+        "artifact_refs": [
+          "research/digital-assets/batch-01-r1/TRX/BLIND_REVIEW_OUTPUT.md"
+        ],
+        "day_bucket_ids": [
+          "TRX-EVID-DAY-2026-09-09-INDEPENDENT_REVIEW",
+          "TRX-EVID-DAY-2026-09-10-INDEPENDENT_REVIEW"
+        ],
+        "evidence_event_ids": [
+          "TL-TRX-EE-INDEPENDENT_REVIEW"
+        ],
+        "week_bucket_ids": [
+          "TRX-EVID-WEEK-2026-W37-INDEPENDENT_REVIEW"
+        ]
+      },
+      "month_end": "2026-09-30",
+      "month_start": "2026-09-01",
+      "opening_state": "NOT_OBSERVED",
+      "period": "2026-09",
+      "policy_state": "POLICY_NOT_CONFIGURED",
+      "resolution": "MONTH",
+      "source_week_bucket_ids": [
+        "TRX-EVID-WEEK-2026-W37-INDEPENDENT_REVIEW"
+      ],
+      "subject_id": "TRX",
+      "transition_count": 1
+    },
+    {
+      "age_days_at_period_end": 21,
+      "bucket_end": "2026-09-30",
+      "bucket_id": "TRX-EVID-MONTH-2026-09-NUMERICAL_RECONCILIATION",
+      "bucket_start": "2026-09-01",
+      "closing_state": "COMPLETE",
+      "events": [
+        "TL-TRX-EE-NUMERICAL_RECONCILIATION"
+      ],
+      "events_count": 1,
+      "family_id": "NUMERICAL_RECONCILIATION",
+      "latest_update_at": "2026-09-09T00:00:00Z",
+      "lineage": {
+        "artifact_refs": [
+          "research/digital-assets/batch-01-r1/TRX/NUMERICAL_RECONCILIATION.json"
+        ],
+        "day_bucket_ids": [
+          "TRX-EVID-DAY-2026-09-09-NUMERICAL_RECONCILIATION",
+          "TRX-EVID-DAY-2026-09-10-NUMERICAL_RECONCILIATION"
+        ],
+        "evidence_event_ids": [
+          "TL-TRX-EE-NUMERICAL_RECONCILIATION"
+        ],
+        "week_bucket_ids": [
+          "TRX-EVID-WEEK-2026-W37-NUMERICAL_RECONCILIATION"
+        ]
+      },
+      "month_end": "2026-09-30",
+      "month_start": "2026-09-01",
+      "opening_state": "NOT_OBSERVED",
+      "period": "2026-09",
+      "policy_state": "POLICY_NOT_CONFIGURED",
+      "resolution": "MONTH",
+      "source_week_bucket_ids": [
+        "TRX-EVID-WEEK-2026-W37-NUMERICAL_RECONCILIATION"
+      ],
+      "subject_id": "TRX",
+      "transition_count": 1
+    },
+    {
+      "age_days_at_period_end": 21,
+      "bucket_end": "2026-09-30",
+      "bucket_id": "TRX-EVID-MONTH-2026-09-PRIMARY_SOURCE_COVERAGE",
+      "bucket_start": "2026-09-01",
+      "closing_state": "OBSERVED",
+      "events": [
+        "TL-TRX-EE001"
+      ],
+      "events_count": 1,
+      "family_id": "PRIMARY_SOURCE_COVERAGE",
+      "latest_update_at": "2026-09-09T00:00:00Z",
+      "lineage": {
+        "artifact_refs": [
+          "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
+        ],
+        "day_bucket_ids": [
+          "TRX-EVID-DAY-2026-09-09-PRIMARY_SOURCE_COVERAGE",
+          "TRX-EVID-DAY-2026-09-10-PRIMARY_SOURCE_COVERAGE"
+        ],
+        "evidence_event_ids": [
+          "TL-TRX-EE001"
+        ],
+        "week_bucket_ids": [
+          "TRX-EVID-WEEK-2026-W37-PRIMARY_SOURCE_COVERAGE"
+        ]
+      },
+      "month_end": "2026-09-30",
+      "month_start": "2026-09-01",
+      "opening_state": "NOT_OBSERVED",
+      "period": "2026-09",
+      "policy_state": "POLICY_NOT_CONFIGURED",
+      "resolution": "MONTH",
+      "source_week_bucket_ids": [
+        "TRX-EVID-WEEK-2026-W37-PRIMARY_SOURCE_COVERAGE"
+      ],
+      "subject_id": "TRX",
+      "transition_count": 1
+    },
+    {
+      "age_days_at_period_end": null,
+      "bucket_end": "2026-09-30",
+      "bucket_id": "TRX-EVID-MONTH-2026-09-SECONDARY_SUPPORT",
+      "bucket_start": "2026-09-01",
+      "closing_state": "NOT_OBSERVED",
+      "events": [],
+      "events_count": 0,
+      "family_id": "SECONDARY_SUPPORT",
+      "latest_update_at": null,
+      "lineage": {
+        "artifact_refs": [],
+        "day_bucket_ids": [
+          "TRX-EVID-DAY-2026-09-09-SECONDARY_SUPPORT",
+          "TRX-EVID-DAY-2026-09-10-SECONDARY_SUPPORT"
+        ],
+        "evidence_event_ids": [],
+        "week_bucket_ids": [
+          "TRX-EVID-WEEK-2026-W37-SECONDARY_SUPPORT"
+        ]
+      },
+      "month_end": "2026-09-30",
+      "month_start": "2026-09-01",
+      "opening_state": "NOT_OBSERVED",
+      "period": "2026-09",
+      "policy_state": "POLICY_NOT_CONFIGURED",
+      "resolution": "MONTH",
+      "source_week_bucket_ids": [
+        "TRX-EVID-WEEK-2026-W37-SECONDARY_SUPPORT"
+      ],
+      "subject_id": "TRX",
+      "transition_count": 0
+    },
+    {
+      "age_days_at_period_end": 21,
+      "bucket_end": "2026-09-30",
+      "bucket_id": "TRX-EVID-MONTH-2026-09-SOURCE_DEPENDENCY",
+      "bucket_start": "2026-09-01",
+      "closing_state": "PARTIAL",
+      "events": [
+        "TL-TRX-EE-SOURCE_DEPENDENCY"
+      ],
+      "events_count": 1,
+      "family_id": "SOURCE_DEPENDENCY",
+      "latest_update_at": "2026-09-09T00:00:00Z",
+      "lineage": {
+        "artifact_refs": [
+          "research/digital-assets/batch-01-r1/TRX/SOURCE_DEPENDENCY_GRAPH.json"
+        ],
+        "day_bucket_ids": [
+          "TRX-EVID-DAY-2026-09-09-SOURCE_DEPENDENCY",
+          "TRX-EVID-DAY-2026-09-10-SOURCE_DEPENDENCY"
+        ],
+        "evidence_event_ids": [
+          "TL-TRX-EE-SOURCE_DEPENDENCY"
+        ],
+        "week_bucket_ids": [
+          "TRX-EVID-WEEK-2026-W37-SOURCE_DEPENDENCY"
+        ]
+      },
+      "month_end": "2026-09-30",
+      "month_start": "2026-09-01",
+      "opening_state": "NOT_OBSERVED",
+      "period": "2026-09",
+      "policy_state": "POLICY_NOT_CONFIGURED",
+      "resolution": "MONTH",
+      "source_week_bucket_ids": [
+        "TRX-EVID-WEEK-2026-W37-SOURCE_DEPENDENCY"
+      ],
+      "subject_id": "TRX",
+      "transition_count": 1
+    },
+    {
+      "age_days_at_period_end": 21,
+      "bucket_end": "2026-09-30",
+      "bucket_id": "TRX-EVID-MONTH-2026-09-SUPERSESSION_STATUS",
+      "bucket_start": "2026-09-01",
+      "closing_state": "COMPLETE",
+      "events": [
+        "TL-TRX-EE-SUPERSESSION_STATUS"
+      ],
+      "events_count": 1,
+      "family_id": "SUPERSESSION_STATUS",
+      "latest_update_at": "2026-09-09T00:00:00Z",
+      "lineage": {
+        "artifact_refs": [
+          "research/digital-assets/batch-01-r1/TRX/SUPERSESSION_NOTICE.md"
+        ],
+        "day_bucket_ids": [
+          "TRX-EVID-DAY-2026-09-09-SUPERSESSION_STATUS",
+          "TRX-EVID-DAY-2026-09-10-SUPERSESSION_STATUS"
+        ],
+        "evidence_event_ids": [
+          "TL-TRX-EE-SUPERSESSION_STATUS"
+        ],
+        "week_bucket_ids": [
+          "TRX-EVID-WEEK-2026-W37-SUPERSESSION_STATUS"
+        ]
+      },
+      "month_end": "2026-09-30",
+      "month_start": "2026-09-01",
+      "opening_state": "NOT_OBSERVED",
+      "period": "2026-09",
+      "policy_state": "POLICY_NOT_CONFIGURED",
+      "resolution": "MONTH",
+      "source_week_bucket_ids": [
+        "TRX-EVID-WEEK-2026-W37-SUPERSESSION_STATUS"
+      ],
+      "subject_id": "TRX",
+      "transition_count": 1
+    }
+  ],
+  "layer": "EVIDENCE",
+  "model_version": "TIMELINE_MODEL_R1",
+  "resolution": "MONTH",
+  "subject_id": "TRX"
+}

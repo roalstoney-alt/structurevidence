@@ -1,8 +1,8 @@
 {
-  "model_version": "TIMELINE_MODEL_v0.1",
-  "modes": {
-    "DIRECT": "Displayed directly from a frozen artifact field or event.",
-    "RECONSTRUCTED": "Presentation reconstruction from frozen observations or claims.",
-    "SPARSE_EVENT_STATE": "Sparse event-state anchor. No continuous series is implied."
-  }
+  "model_version": "TIMELINE_MODEL_R1",
+  "modes": [
+    "DIRECT",
+    "RECONSTRUCTED",
+    "SPARSE_EVENT_STATE"
+  ]
 }

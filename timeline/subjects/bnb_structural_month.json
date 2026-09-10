@@ -1,0 +1,674 @@
+{
+  "buckets": [
+    {
+      "aggregation_rule": "MONTH_FROM_WEEK",
+      "bucket_end": "2026-07-31",
+      "bucket_id": "BNB-STRUCT-MONTH-2026-07-GOVERNANCE_STRUCTURE",
+      "bucket_start": "2026-07-01",
+      "dimension_id": "GOVERNANCE_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [
+          "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
+        ],
+        "atomic_observation_ids": [
+          "TL-BNB-O008"
+        ],
+        "day_bucket_ids": [
+          "BNB-STRUCT-DAY-2026-07-15-GOVERNANCE_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-07-16-GOVERNANCE_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-07-17-GOVERNANCE_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-07-18-GOVERNANCE_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-07-19-GOVERNANCE_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-07-20-GOVERNANCE_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-07-21-GOVERNANCE_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-07-22-GOVERNANCE_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-07-23-GOVERNANCE_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-07-24-GOVERNANCE_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-07-25-GOVERNANCE_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-07-26-GOVERNANCE_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-07-27-GOVERNANCE_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-07-28-GOVERNANCE_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-07-29-GOVERNANCE_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-07-30-GOVERNANCE_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-07-31-GOVERNANCE_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-01-GOVERNANCE_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-02-GOVERNANCE_STRUCTURE"
+        ],
+        "week_bucket_ids": [
+          "BNB-STRUCT-WEEK-2026-W29-GOVERNANCE_STRUCTURE",
+          "BNB-STRUCT-WEEK-2026-W30-GOVERNANCE_STRUCTURE",
+          "BNB-STRUCT-WEEK-2026-W31-GOVERNANCE_STRUCTURE"
+        ]
+      },
+      "month_end": "2026-07-31",
+      "month_start": "2026-07-01",
+      "observation_count": 1,
+      "observations": [
+        "TL-BNB-O008"
+      ],
+      "period": "2026-07",
+      "resolution": "MONTH",
+      "source_refs": [
+        "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
+      ],
+      "source_week_bucket_ids": [
+        "BNB-STRUCT-WEEK-2026-W29-GOVERNANCE_STRUCTURE",
+        "BNB-STRUCT-WEEK-2026-W30-GOVERNANCE_STRUCTURE",
+        "BNB-STRUCT-WEEK-2026-W31-GOVERNANCE_STRUCTURE"
+      ],
+      "state": "STRENGTHENING",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "MONTH_FROM_WEEK",
+      "bucket_end": "2026-07-31",
+      "bucket_id": "BNB-STRUCT-MONTH-2026-07-SUPPLY_STRUCTURE",
+      "bucket_start": "2026-07-01",
+      "dimension_id": "SUPPLY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [
+          "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
+        ],
+        "atomic_observation_ids": [
+          "TL-BNB-O001",
+          "TL-BNB-O002",
+          "TL-BNB-O003"
+        ],
+        "day_bucket_ids": [
+          "BNB-STRUCT-DAY-2026-07-15-SUPPLY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-07-16-SUPPLY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-07-17-SUPPLY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-07-18-SUPPLY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-07-19-SUPPLY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-07-20-SUPPLY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-07-21-SUPPLY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-07-22-SUPPLY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-07-23-SUPPLY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-07-24-SUPPLY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-07-25-SUPPLY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-07-26-SUPPLY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-07-27-SUPPLY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-07-28-SUPPLY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-07-29-SUPPLY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-07-30-SUPPLY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-07-31-SUPPLY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-01-SUPPLY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-02-SUPPLY_STRUCTURE"
+        ],
+        "week_bucket_ids": [
+          "BNB-STRUCT-WEEK-2026-W29-SUPPLY_STRUCTURE",
+          "BNB-STRUCT-WEEK-2026-W30-SUPPLY_STRUCTURE",
+          "BNB-STRUCT-WEEK-2026-W31-SUPPLY_STRUCTURE"
+        ]
+      },
+      "month_end": "2026-07-31",
+      "month_start": "2026-07-01",
+      "observation_count": 3,
+      "observations": [
+        "TL-BNB-O001",
+        "TL-BNB-O002",
+        "TL-BNB-O003"
+      ],
+      "period": "2026-07",
+      "resolution": "MONTH",
+      "source_refs": [
+        "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
+      ],
+      "source_week_bucket_ids": [
+        "BNB-STRUCT-WEEK-2026-W29-SUPPLY_STRUCTURE",
+        "BNB-STRUCT-WEEK-2026-W30-SUPPLY_STRUCTURE",
+        "BNB-STRUCT-WEEK-2026-W31-SUPPLY_STRUCTURE"
+      ],
+      "state": "STRUCTURAL_SHIFT",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "MONTH_FROM_WEEK",
+      "bucket_end": "2026-07-31",
+      "bucket_id": "BNB-STRUCT-MONTH-2026-07-UTILITY_STRUCTURE",
+      "bucket_start": "2026-07-01",
+      "dimension_id": "UTILITY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [
+          "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
+        ],
+        "atomic_observation_ids": [
+          "TL-BNB-O004"
+        ],
+        "day_bucket_ids": [
+          "BNB-STRUCT-DAY-2026-07-15-UTILITY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-07-16-UTILITY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-07-17-UTILITY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-07-18-UTILITY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-07-19-UTILITY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-07-20-UTILITY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-07-21-UTILITY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-07-22-UTILITY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-07-23-UTILITY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-07-24-UTILITY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-07-25-UTILITY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-07-26-UTILITY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-07-27-UTILITY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-07-28-UTILITY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-07-29-UTILITY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-07-30-UTILITY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-07-31-UTILITY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-01-UTILITY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-02-UTILITY_STRUCTURE"
+        ],
+        "week_bucket_ids": [
+          "BNB-STRUCT-WEEK-2026-W29-UTILITY_STRUCTURE",
+          "BNB-STRUCT-WEEK-2026-W30-UTILITY_STRUCTURE",
+          "BNB-STRUCT-WEEK-2026-W31-UTILITY_STRUCTURE"
+        ]
+      },
+      "month_end": "2026-07-31",
+      "month_start": "2026-07-01",
+      "observation_count": 1,
+      "observations": [
+        "TL-BNB-O004"
+      ],
+      "period": "2026-07",
+      "resolution": "MONTH",
+      "source_refs": [
+        "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
+      ],
+      "source_week_bucket_ids": [
+        "BNB-STRUCT-WEEK-2026-W29-UTILITY_STRUCTURE",
+        "BNB-STRUCT-WEEK-2026-W30-UTILITY_STRUCTURE",
+        "BNB-STRUCT-WEEK-2026-W31-UTILITY_STRUCTURE"
+      ],
+      "state": "STRENGTHENING",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "MONTH_FROM_WEEK",
+      "bucket_end": "2026-07-31",
+      "bucket_id": "BNB-STRUCT-MONTH-2026-07-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-07-01",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": [],
+        "day_bucket_ids": [
+          "BNB-STRUCT-DAY-2026-07-15-VALIDATOR_DISTRIBUTION",
+          "BNB-STRUCT-DAY-2026-07-16-VALIDATOR_DISTRIBUTION",
+          "BNB-STRUCT-DAY-2026-07-17-VALIDATOR_DISTRIBUTION",
+          "BNB-STRUCT-DAY-2026-07-18-VALIDATOR_DISTRIBUTION",
+          "BNB-STRUCT-DAY-2026-07-19-VALIDATOR_DISTRIBUTION",
+          "BNB-STRUCT-DAY-2026-07-20-VALIDATOR_DISTRIBUTION",
+          "BNB-STRUCT-DAY-2026-07-21-VALIDATOR_DISTRIBUTION",
+          "BNB-STRUCT-DAY-2026-07-22-VALIDATOR_DISTRIBUTION",
+          "BNB-STRUCT-DAY-2026-07-23-VALIDATOR_DISTRIBUTION",
+          "BNB-STRUCT-DAY-2026-07-24-VALIDATOR_DISTRIBUTION",
+          "BNB-STRUCT-DAY-2026-07-25-VALIDATOR_DISTRIBUTION",
+          "BNB-STRUCT-DAY-2026-07-26-VALIDATOR_DISTRIBUTION",
+          "BNB-STRUCT-DAY-2026-07-27-VALIDATOR_DISTRIBUTION",
+          "BNB-STRUCT-DAY-2026-07-28-VALIDATOR_DISTRIBUTION",
+          "BNB-STRUCT-DAY-2026-07-29-VALIDATOR_DISTRIBUTION",
+          "BNB-STRUCT-DAY-2026-07-30-VALIDATOR_DISTRIBUTION",
+          "BNB-STRUCT-DAY-2026-07-31-VALIDATOR_DISTRIBUTION",
+          "BNB-STRUCT-DAY-2026-08-01-VALIDATOR_DISTRIBUTION",
+          "BNB-STRUCT-DAY-2026-08-02-VALIDATOR_DISTRIBUTION"
+        ],
+        "week_bucket_ids": [
+          "BNB-STRUCT-WEEK-2026-W29-VALIDATOR_DISTRIBUTION",
+          "BNB-STRUCT-WEEK-2026-W30-VALIDATOR_DISTRIBUTION",
+          "BNB-STRUCT-WEEK-2026-W31-VALIDATOR_DISTRIBUTION"
+        ]
+      },
+      "month_end": "2026-07-31",
+      "month_start": "2026-07-01",
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-07",
+      "resolution": "MONTH",
+      "source_refs": [],
+      "source_week_bucket_ids": [
+        "BNB-STRUCT-WEEK-2026-W29-VALIDATOR_DISTRIBUTION",
+        "BNB-STRUCT-WEEK-2026-W30-VALIDATOR_DISTRIBUTION",
+        "BNB-STRUCT-WEEK-2026-W31-VALIDATOR_DISTRIBUTION"
+      ],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "MONTH_FROM_WEEK",
+      "bucket_end": "2026-08-31",
+      "bucket_id": "BNB-STRUCT-MONTH-2026-08-GOVERNANCE_STRUCTURE",
+      "bucket_start": "2026-08-01",
+      "dimension_id": "GOVERNANCE_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": [],
+        "day_bucket_ids": [
+          "BNB-STRUCT-DAY-2026-08-03-GOVERNANCE_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-04-GOVERNANCE_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-05-GOVERNANCE_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-06-GOVERNANCE_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-07-GOVERNANCE_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-08-GOVERNANCE_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-09-GOVERNANCE_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-10-GOVERNANCE_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-11-GOVERNANCE_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-12-GOVERNANCE_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-13-GOVERNANCE_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-14-GOVERNANCE_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-15-GOVERNANCE_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-16-GOVERNANCE_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-17-GOVERNANCE_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-18-GOVERNANCE_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-19-GOVERNANCE_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-20-GOVERNANCE_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-21-GOVERNANCE_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-22-GOVERNANCE_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-23-GOVERNANCE_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-24-GOVERNANCE_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-25-GOVERNANCE_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-26-GOVERNANCE_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-27-GOVERNANCE_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-28-GOVERNANCE_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-29-GOVERNANCE_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-30-GOVERNANCE_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-31-GOVERNANCE_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-09-01-GOVERNANCE_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-09-02-GOVERNANCE_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-09-03-GOVERNANCE_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-09-04-GOVERNANCE_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-09-05-GOVERNANCE_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-09-06-GOVERNANCE_STRUCTURE"
+        ],
+        "week_bucket_ids": [
+          "BNB-STRUCT-WEEK-2026-W32-GOVERNANCE_STRUCTURE",
+          "BNB-STRUCT-WEEK-2026-W33-GOVERNANCE_STRUCTURE",
+          "BNB-STRUCT-WEEK-2026-W34-GOVERNANCE_STRUCTURE",
+          "BNB-STRUCT-WEEK-2026-W35-GOVERNANCE_STRUCTURE",
+          "BNB-STRUCT-WEEK-2026-W36-GOVERNANCE_STRUCTURE"
+        ]
+      },
+      "month_end": "2026-08-31",
+      "month_start": "2026-08-01",
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08",
+      "resolution": "MONTH",
+      "source_refs": [],
+      "source_week_bucket_ids": [
+        "BNB-STRUCT-WEEK-2026-W32-GOVERNANCE_STRUCTURE",
+        "BNB-STRUCT-WEEK-2026-W33-GOVERNANCE_STRUCTURE",
+        "BNB-STRUCT-WEEK-2026-W34-GOVERNANCE_STRUCTURE",
+        "BNB-STRUCT-WEEK-2026-W35-GOVERNANCE_STRUCTURE",
+        "BNB-STRUCT-WEEK-2026-W36-GOVERNANCE_STRUCTURE"
+      ],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "MONTH_FROM_WEEK",
+      "bucket_end": "2026-08-31",
+      "bucket_id": "BNB-STRUCT-MONTH-2026-08-SUPPLY_STRUCTURE",
+      "bucket_start": "2026-08-01",
+      "dimension_id": "SUPPLY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": [],
+        "day_bucket_ids": [
+          "BNB-STRUCT-DAY-2026-08-03-SUPPLY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-04-SUPPLY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-05-SUPPLY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-06-SUPPLY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-07-SUPPLY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-08-SUPPLY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-09-SUPPLY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-10-SUPPLY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-11-SUPPLY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-12-SUPPLY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-13-SUPPLY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-14-SUPPLY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-15-SUPPLY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-16-SUPPLY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-17-SUPPLY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-18-SUPPLY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-19-SUPPLY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-20-SUPPLY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-21-SUPPLY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-22-SUPPLY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-23-SUPPLY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-24-SUPPLY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-25-SUPPLY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-26-SUPPLY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-27-SUPPLY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-28-SUPPLY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-29-SUPPLY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-30-SUPPLY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-31-SUPPLY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-09-01-SUPPLY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-09-02-SUPPLY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-09-03-SUPPLY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-09-04-SUPPLY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-09-05-SUPPLY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-09-06-SUPPLY_STRUCTURE"
+        ],
+        "week_bucket_ids": [
+          "BNB-STRUCT-WEEK-2026-W32-SUPPLY_STRUCTURE",
+          "BNB-STRUCT-WEEK-2026-W33-SUPPLY_STRUCTURE",
+          "BNB-STRUCT-WEEK-2026-W34-SUPPLY_STRUCTURE",
+          "BNB-STRUCT-WEEK-2026-W35-SUPPLY_STRUCTURE",
+          "BNB-STRUCT-WEEK-2026-W36-SUPPLY_STRUCTURE"
+        ]
+      },
+      "month_end": "2026-08-31",
+      "month_start": "2026-08-01",
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08",
+      "resolution": "MONTH",
+      "source_refs": [],
+      "source_week_bucket_ids": [
+        "BNB-STRUCT-WEEK-2026-W32-SUPPLY_STRUCTURE",
+        "BNB-STRUCT-WEEK-2026-W33-SUPPLY_STRUCTURE",
+        "BNB-STRUCT-WEEK-2026-W34-SUPPLY_STRUCTURE",
+        "BNB-STRUCT-WEEK-2026-W35-SUPPLY_STRUCTURE",
+        "BNB-STRUCT-WEEK-2026-W36-SUPPLY_STRUCTURE"
+      ],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "MONTH_FROM_WEEK",
+      "bucket_end": "2026-08-31",
+      "bucket_id": "BNB-STRUCT-MONTH-2026-08-UTILITY_STRUCTURE",
+      "bucket_start": "2026-08-01",
+      "dimension_id": "UTILITY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": [],
+        "day_bucket_ids": [
+          "BNB-STRUCT-DAY-2026-08-03-UTILITY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-04-UTILITY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-05-UTILITY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-06-UTILITY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-07-UTILITY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-08-UTILITY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-09-UTILITY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-10-UTILITY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-11-UTILITY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-12-UTILITY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-13-UTILITY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-14-UTILITY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-15-UTILITY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-16-UTILITY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-17-UTILITY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-18-UTILITY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-19-UTILITY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-20-UTILITY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-21-UTILITY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-22-UTILITY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-23-UTILITY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-24-UTILITY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-25-UTILITY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-26-UTILITY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-27-UTILITY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-28-UTILITY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-29-UTILITY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-30-UTILITY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-08-31-UTILITY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-09-01-UTILITY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-09-02-UTILITY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-09-03-UTILITY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-09-04-UTILITY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-09-05-UTILITY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-09-06-UTILITY_STRUCTURE"
+        ],
+        "week_bucket_ids": [
+          "BNB-STRUCT-WEEK-2026-W32-UTILITY_STRUCTURE",
+          "BNB-STRUCT-WEEK-2026-W33-UTILITY_STRUCTURE",
+          "BNB-STRUCT-WEEK-2026-W34-UTILITY_STRUCTURE",
+          "BNB-STRUCT-WEEK-2026-W35-UTILITY_STRUCTURE",
+          "BNB-STRUCT-WEEK-2026-W36-UTILITY_STRUCTURE"
+        ]
+      },
+      "month_end": "2026-08-31",
+      "month_start": "2026-08-01",
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08",
+      "resolution": "MONTH",
+      "source_refs": [],
+      "source_week_bucket_ids": [
+        "BNB-STRUCT-WEEK-2026-W32-UTILITY_STRUCTURE",
+        "BNB-STRUCT-WEEK-2026-W33-UTILITY_STRUCTURE",
+        "BNB-STRUCT-WEEK-2026-W34-UTILITY_STRUCTURE",
+        "BNB-STRUCT-WEEK-2026-W35-UTILITY_STRUCTURE",
+        "BNB-STRUCT-WEEK-2026-W36-UTILITY_STRUCTURE"
+      ],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "MONTH_FROM_WEEK",
+      "bucket_end": "2026-08-31",
+      "bucket_id": "BNB-STRUCT-MONTH-2026-08-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-08-01",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": [],
+        "day_bucket_ids": [
+          "BNB-STRUCT-DAY-2026-08-03-VALIDATOR_DISTRIBUTION",
+          "BNB-STRUCT-DAY-2026-08-04-VALIDATOR_DISTRIBUTION",
+          "BNB-STRUCT-DAY-2026-08-05-VALIDATOR_DISTRIBUTION",
+          "BNB-STRUCT-DAY-2026-08-06-VALIDATOR_DISTRIBUTION",
+          "BNB-STRUCT-DAY-2026-08-07-VALIDATOR_DISTRIBUTION",
+          "BNB-STRUCT-DAY-2026-08-08-VALIDATOR_DISTRIBUTION",
+          "BNB-STRUCT-DAY-2026-08-09-VALIDATOR_DISTRIBUTION",
+          "BNB-STRUCT-DAY-2026-08-10-VALIDATOR_DISTRIBUTION",
+          "BNB-STRUCT-DAY-2026-08-11-VALIDATOR_DISTRIBUTION",
+          "BNB-STRUCT-DAY-2026-08-12-VALIDATOR_DISTRIBUTION",
+          "BNB-STRUCT-DAY-2026-08-13-VALIDATOR_DISTRIBUTION",
+          "BNB-STRUCT-DAY-2026-08-14-VALIDATOR_DISTRIBUTION",
+          "BNB-STRUCT-DAY-2026-08-15-VALIDATOR_DISTRIBUTION",
+          "BNB-STRUCT-DAY-2026-08-16-VALIDATOR_DISTRIBUTION",
+          "BNB-STRUCT-DAY-2026-08-17-VALIDATOR_DISTRIBUTION",
+          "BNB-STRUCT-DAY-2026-08-18-VALIDATOR_DISTRIBUTION",
+          "BNB-STRUCT-DAY-2026-08-19-VALIDATOR_DISTRIBUTION",
+          "BNB-STRUCT-DAY-2026-08-20-VALIDATOR_DISTRIBUTION",
+          "BNB-STRUCT-DAY-2026-08-21-VALIDATOR_DISTRIBUTION",
+          "BNB-STRUCT-DAY-2026-08-22-VALIDATOR_DISTRIBUTION",
+          "BNB-STRUCT-DAY-2026-08-23-VALIDATOR_DISTRIBUTION",
+          "BNB-STRUCT-DAY-2026-08-24-VALIDATOR_DISTRIBUTION",
+          "BNB-STRUCT-DAY-2026-08-25-VALIDATOR_DISTRIBUTION",
+          "BNB-STRUCT-DAY-2026-08-26-VALIDATOR_DISTRIBUTION",
+          "BNB-STRUCT-DAY-2026-08-27-VALIDATOR_DISTRIBUTION",
+          "BNB-STRUCT-DAY-2026-08-28-VALIDATOR_DISTRIBUTION",
+          "BNB-STRUCT-DAY-2026-08-29-VALIDATOR_DISTRIBUTION",
+          "BNB-STRUCT-DAY-2026-08-30-VALIDATOR_DISTRIBUTION",
+          "BNB-STRUCT-DAY-2026-08-31-VALIDATOR_DISTRIBUTION",
+          "BNB-STRUCT-DAY-2026-09-01-VALIDATOR_DISTRIBUTION",
+          "BNB-STRUCT-DAY-2026-09-02-VALIDATOR_DISTRIBUTION",
+          "BNB-STRUCT-DAY-2026-09-03-VALIDATOR_DISTRIBUTION",
+          "BNB-STRUCT-DAY-2026-09-04-VALIDATOR_DISTRIBUTION",
+          "BNB-STRUCT-DAY-2026-09-05-VALIDATOR_DISTRIBUTION",
+          "BNB-STRUCT-DAY-2026-09-06-VALIDATOR_DISTRIBUTION"
+        ],
+        "week_bucket_ids": [
+          "BNB-STRUCT-WEEK-2026-W32-VALIDATOR_DISTRIBUTION",
+          "BNB-STRUCT-WEEK-2026-W33-VALIDATOR_DISTRIBUTION",
+          "BNB-STRUCT-WEEK-2026-W34-VALIDATOR_DISTRIBUTION",
+          "BNB-STRUCT-WEEK-2026-W35-VALIDATOR_DISTRIBUTION",
+          "BNB-STRUCT-WEEK-2026-W36-VALIDATOR_DISTRIBUTION"
+        ]
+      },
+      "month_end": "2026-08-31",
+      "month_start": "2026-08-01",
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-08",
+      "resolution": "MONTH",
+      "source_refs": [],
+      "source_week_bucket_ids": [
+        "BNB-STRUCT-WEEK-2026-W32-VALIDATOR_DISTRIBUTION",
+        "BNB-STRUCT-WEEK-2026-W33-VALIDATOR_DISTRIBUTION",
+        "BNB-STRUCT-WEEK-2026-W34-VALIDATOR_DISTRIBUTION",
+        "BNB-STRUCT-WEEK-2026-W35-VALIDATOR_DISTRIBUTION",
+        "BNB-STRUCT-WEEK-2026-W36-VALIDATOR_DISTRIBUTION"
+      ],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "MONTH_FROM_WEEK",
+      "bucket_end": "2026-09-30",
+      "bucket_id": "BNB-STRUCT-MONTH-2026-09-GOVERNANCE_STRUCTURE",
+      "bucket_start": "2026-09-01",
+      "dimension_id": "GOVERNANCE_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [
+          "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
+        ],
+        "atomic_observation_ids": [
+          "TL-BNB-O007"
+        ],
+        "day_bucket_ids": [
+          "BNB-STRUCT-DAY-2026-09-07-GOVERNANCE_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-09-08-GOVERNANCE_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-09-09-GOVERNANCE_STRUCTURE"
+        ],
+        "week_bucket_ids": [
+          "BNB-STRUCT-WEEK-2026-W37-GOVERNANCE_STRUCTURE"
+        ]
+      },
+      "month_end": "2026-09-30",
+      "month_start": "2026-09-01",
+      "observation_count": 1,
+      "observations": [
+        "TL-BNB-O007"
+      ],
+      "period": "2026-09",
+      "resolution": "MONTH",
+      "source_refs": [
+        "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
+      ],
+      "source_week_bucket_ids": [
+        "BNB-STRUCT-WEEK-2026-W37-GOVERNANCE_STRUCTURE"
+      ],
+      "state": "TENSION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "MONTH_FROM_WEEK",
+      "bucket_end": "2026-09-30",
+      "bucket_id": "BNB-STRUCT-MONTH-2026-09-SUPPLY_STRUCTURE",
+      "bucket_start": "2026-09-01",
+      "dimension_id": "SUPPLY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [],
+        "atomic_observation_ids": [],
+        "day_bucket_ids": [
+          "BNB-STRUCT-DAY-2026-09-07-SUPPLY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-09-08-SUPPLY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-09-09-SUPPLY_STRUCTURE"
+        ],
+        "week_bucket_ids": [
+          "BNB-STRUCT-WEEK-2026-W37-SUPPLY_STRUCTURE"
+        ]
+      },
+      "month_end": "2026-09-30",
+      "month_start": "2026-09-01",
+      "observation_count": 0,
+      "observations": [],
+      "period": "2026-09",
+      "resolution": "MONTH",
+      "source_refs": [],
+      "source_week_bucket_ids": [
+        "BNB-STRUCT-WEEK-2026-W37-SUPPLY_STRUCTURE"
+      ],
+      "state": "NO_OBSERVATION",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "MONTH_FROM_WEEK",
+      "bucket_end": "2026-09-30",
+      "bucket_id": "BNB-STRUCT-MONTH-2026-09-UTILITY_STRUCTURE",
+      "bucket_start": "2026-09-01",
+      "dimension_id": "UTILITY_STRUCTURE",
+      "lineage": {
+        "artifact_refs": [
+          "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
+        ],
+        "atomic_observation_ids": [
+          "TL-BNB-O009"
+        ],
+        "day_bucket_ids": [
+          "BNB-STRUCT-DAY-2026-09-07-UTILITY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-09-08-UTILITY_STRUCTURE",
+          "BNB-STRUCT-DAY-2026-09-09-UTILITY_STRUCTURE"
+        ],
+        "week_bucket_ids": [
+          "BNB-STRUCT-WEEK-2026-W37-UTILITY_STRUCTURE"
+        ]
+      },
+      "month_end": "2026-09-30",
+      "month_start": "2026-09-01",
+      "observation_count": 1,
+      "observations": [
+        "TL-BNB-O009"
+      ],
+      "period": "2026-09",
+      "resolution": "MONTH",
+      "source_refs": [
+        "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
+      ],
+      "source_week_bucket_ids": [
+        "BNB-STRUCT-WEEK-2026-W37-UTILITY_STRUCTURE"
+      ],
+      "state": "MIXED",
+      "subject_id": "BNB"
+    },
+    {
+      "aggregation_rule": "MONTH_FROM_WEEK",
+      "bucket_end": "2026-09-30",
+      "bucket_id": "BNB-STRUCT-MONTH-2026-09-VALIDATOR_DISTRIBUTION",
+      "bucket_start": "2026-09-01",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "lineage": {
+        "artifact_refs": [
+          "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
+        ],
+        "atomic_observation_ids": [
+          "TL-BNB-O005",
+          "TL-BNB-O006"
+        ],
+        "day_bucket_ids": [
+          "BNB-STRUCT-DAY-2026-09-07-VALIDATOR_DISTRIBUTION",
+          "BNB-STRUCT-DAY-2026-09-08-VALIDATOR_DISTRIBUTION",
+          "BNB-STRUCT-DAY-2026-09-09-VALIDATOR_DISTRIBUTION"
+        ],
+        "week_bucket_ids": [
+          "BNB-STRUCT-WEEK-2026-W37-VALIDATOR_DISTRIBUTION"
+        ]
+      },
+      "month_end": "2026-09-30",
+      "month_start": "2026-09-01",
+      "observation_count": 2,
+      "observations": [
+        "TL-BNB-O005",
+        "TL-BNB-O006"
+      ],
+      "period": "2026-09",
+      "resolution": "MONTH",
+      "source_refs": [
+        "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
+      ],
+      "source_week_bucket_ids": [
+        "BNB-STRUCT-WEEK-2026-W37-VALIDATOR_DISTRIBUTION"
+      ],
+      "state": "TENSION",
+      "subject_id": "BNB"
+    }
+  ],
+  "layer": "STRUCTURAL",
+  "model_version": "TIMELINE_MODEL_R1",
+  "resolution": "MONTH",
+  "subject_id": "BNB"
+}
