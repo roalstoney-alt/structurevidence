@@ -1,7 +1,7 @@
 {
   "metadata": {
     "active_fixed_as_of_count": 0,
-    "current_head_parent": "0f7762b31dcf85754468a81b884665e717050e79",
+    "current_head_parent": "57ead80bd9720c4f352d4023b60026bfb7a4541d",
     "current_subject_comparison_deltas": {
       "bnb": 0,
       "sol": 0,
@@ -9,11 +9,11 @@
       "trx": 0,
       "xlm": 0
     },
-    "origin_main": "57ead80bd9720c4f352d4023b60026bfb7a4541d",
+    "origin_main": "7e67005184754775571b9191b5b858804b86fdbe",
     "r1_1a_base_commit": "57ead80bd9720c4f352d4023b60026bfb7a4541d",
     "r1_1a_final_audit_commit": "not self-recorded by design; final SHA is verified after push",
-    "r1_1a_implementation_commit": "57ead80bd9720c4f352d4023b60026bfb7a4541d",
-    "remote_main": "57ead80bd9720c4f352d4023b60026bfb7a4541d",
+    "r1_1a_implementation_commit": "7e67005184754775571b9191b5b858804b86fdbe",
+    "remote_main": "7e67005184754775571b9191b5b858804b86fdbe",
     "test_commands": {},
     "timeline_r1_1_commit": "57ead80bd9720c4f352d4023b60026bfb7a4541d",
     "timeline_r1_commit": "0f7762b31dcf85754468a81b884665e717050e79",
@@ -28,7 +28,7 @@
         "delta_state": "TOWARD_CONCENTRATION",
         "prior_observation_id": "TL-FIXTURE-O001"
       },
-      "evaluated_at": "2026-09-10T22:55:45.707036Z",
+      "evaluated_at": "2026-09-10T22:58:01.993283Z",
       "evidence_refs": [
         "timeline/validation/validators.py",
         "scripts/build_timeline_model.py"
@@ -45,7 +45,7 @@
         "t1_delta": "NOT_ESTABLISHED",
         "t2_delta_basis": "COMPARISON_TO_PRIOR_OBSERVATION"
       },
-      "evaluated_at": "2026-09-10T22:55:45.707036Z",
+      "evaluated_at": "2026-09-10T22:58:01.993283Z",
       "evidence_refs": [
         "timeline/validation/validators.py",
         "scripts/build_timeline_model.py"
@@ -75,7 +75,7 @@
           "transition_rule_id": "LTR_VALIDATOR_DISTRIBUTION_COUNT"
         }
       },
-      "evaluated_at": "2026-09-10T22:55:45.707036Z",
+      "evaluated_at": "2026-09-10T22:58:01.993283Z",
       "evidence_refs": [
         "timeline/validation/validators.py",
         "timeline/schema/atomic_observation.schema.json"
@@ -91,7 +91,7 @@
         "comparability_rule_id": null,
         "current_delta_state": "NOT_ESTABLISHED"
       },
-      "evaluated_at": "2026-09-10T22:55:45.707036Z",
+      "evaluated_at": "2026-09-10T22:58:01.993283Z",
       "evidence_refs": [
         "timeline/config/comparability_rules.json",
         "scripts/build_timeline_model.py"
@@ -107,7 +107,7 @@
         "delta_basis": "EXPLICIT_CHANGE_EVENT",
         "prior_observation_id": null
       },
-      "evaluated_at": "2026-09-10T22:55:45.707036Z",
+      "evaluated_at": "2026-09-10T22:58:01.993283Z",
       "evidence_refs": [
         "scripts/build_timeline_model.py"
       ],
@@ -121,7 +121,7 @@
       "computed_facts": {
         "evaluation_as_of": "2026-12-01T00:00:00Z"
       },
-      "evaluated_at": "2026-09-10T22:55:45.707036Z",
+      "evaluated_at": "2026-09-10T22:58:01.993283Z",
       "evidence_refs": [
         "timeline/engine/clock.py",
         "timeline/subjects/sol_timeline_derivation_manifest.json"
@@ -138,7 +138,7 @@
         "input_hash_equal": true,
         "semantic_digest_equal": true
       },
-      "evaluated_at": "2026-09-10T22:55:45.707036Z",
+      "evaluated_at": "2026-09-10T22:58:01.993283Z",
       "evidence_refs": [
         "scripts/build_timeline_model.py"
       ],
@@ -152,7 +152,7 @@
       "computed_facts": {
         "naive_rejected": true
       },
-      "evaluated_at": "2026-09-10T22:55:45.707036Z",
+      "evaluated_at": "2026-09-10T22:58:01.993283Z",
       "evidence_refs": [
         "timeline/engine/clock.py"
       ],
@@ -167,7 +167,7 @@
         "age_2026_09_10": 1,
         "age_2026_10_10": 31
       },
-      "evaluated_at": "2026-09-10T22:55:45.707036Z",
+      "evaluated_at": "2026-09-10T22:58:01.993283Z",
       "evidence_refs": [
         "timeline/subjects/sol_evidence_day.json"
       ],
@@ -181,7 +181,7 @@
       "computed_facts": {
         "active_fixed_as_of_count": 0
       },
-      "evaluated_at": "2026-09-10T22:55:45.707036Z",
+      "evaluated_at": "2026-09-10T22:58:01.993283Z",
       "evidence_refs": [
         "scripts/build_timeline_model.py",
         "timeline/engine/clock.py"
@@ -196,7 +196,7 @@
       "computed_facts": {
         "registry_exists": true
       },
-      "evaluated_at": "2026-09-10T22:55:45.783460Z",
+      "evaluated_at": "2026-09-10T22:58:02.115005Z",
       "evidence_refs": [
         "timeline/validation/TIMELINE_R1_1A_GATE_RESULTS.json"
       ],
@@ -210,7 +210,7 @@
       "computed_facts": {
         "missing_gate_status": "NOT_EVALUATED"
       },
-      "evaluated_at": "2026-09-10T22:55:45.783460Z",
+      "evaluated_at": "2026-09-10T22:58:02.115005Z",
       "evidence_refs": [
         "timeline/validation/gate_registry.py"
       ],
@@ -225,7 +225,7 @@
         "mutation_changes_report": true,
         "report_from_registry": true
       },
-      "evaluated_at": "2026-09-10T22:55:45.783460Z",
+      "evaluated_at": "2026-09-10T22:58:02.115005Z",
       "evidence_refs": [
         "timeline/validation/reporter.py",
         "docs/execution/TIMELINE_R1_1A_FINAL_EXECUTION_REPORT.md"
@@ -240,7 +240,7 @@
       "computed_facts": {
         "evidence_refs_present": true
       },
-      "evaluated_at": "2026-09-10T22:55:45.783460Z",
+      "evaluated_at": "2026-09-10T22:58:02.115005Z",
       "evidence_refs": [
         "timeline/validation/TIMELINE_R1_1A_GATE_RESULTS.json"
       ],
@@ -252,11 +252,11 @@
     },
     {
       "computed_facts": {
-        "head": "57ead80bd9720c4f352d4023b60026bfb7a4541d",
-        "parent": "0f7762b31dcf85754468a81b884665e717050e79",
+        "head": "7e67005184754775571b9191b5b858804b86fdbe",
+        "parent": "57ead80bd9720c4f352d4023b60026bfb7a4541d",
         "r1_1a_base": "57ead80bd9720c4f352d4023b60026bfb7a4541d"
       },
-      "evaluated_at": "2026-09-10T22:55:45.707036Z",
+      "evaluated_at": "2026-09-10T22:58:01.993283Z",
       "evidence_refs": [
         ".git"
       ],
@@ -276,7 +276,7 @@
           "xlm": 0
         }
       },
-      "evaluated_at": "2026-09-10T22:55:45.707036Z",
+      "evaluated_at": "2026-09-10T22:58:01.993283Z",
       "evidence_refs": [
         "scripts/test_timeline_model.py"
       ],
@@ -290,7 +290,7 @@
       "computed_facts": {
         "freshness_ok": true
       },
-      "evaluated_at": "2026-09-10T22:55:45.707036Z",
+      "evaluated_at": "2026-09-10T22:58:01.993283Z",
       "evidence_refs": [
         "timeline/subjects/*_evidence_*.json"
       ],
@@ -302,7 +302,7 @@
     },
     {
       "computed_facts": {},
-      "evaluated_at": "2026-09-10T22:55:45.707036Z",
+      "evaluated_at": "2026-09-10T22:58:01.993283Z",
       "evidence_refs": [
         "scripts/test_gdr_se_runtime.py"
       ],
@@ -316,7 +316,7 @@
       "computed_facts": {
         "policy_state": "POLICY_NOT_CONFIGURED"
       },
-      "evaluated_at": "2026-09-10T22:55:45.707036Z",
+      "evaluated_at": "2026-09-10T22:58:01.993283Z",
       "evidence_refs": [
         "timeline/config/evidence_aggregation_rules.json"
       ],
@@ -330,7 +330,7 @@
       "computed_facts": {
         "hash_count": 143
       },
-      "evaluated_at": "2026-09-10T22:55:45.707036Z",
+      "evaluated_at": "2026-09-10T22:58:01.993283Z",
       "evidence_refs": [
         "docs/execution/PRE_R1_1A_RESEARCH_HASHES.json",
         "docs/execution/POST_R1_1A_RESEARCH_HASHES.json"
@@ -343,7 +343,7 @@
     },
     {
       "computed_facts": {},
-      "evaluated_at": "2026-09-10T22:55:45.707036Z",
+      "evaluated_at": "2026-09-10T22:58:01.993283Z",
       "evidence_refs": [
         "scripts/test_english_public_surface.py"
       ],
@@ -357,7 +357,7 @@
       "computed_facts": {
         "root_docs_sync": true
       },
-      "evaluated_at": "2026-09-10T22:55:45.707036Z",
+      "evaluated_at": "2026-09-10T22:58:01.993283Z",
       "evidence_refs": [
         "timeline",
         "docs/timeline"
@@ -370,7 +370,7 @@
     },
     {
       "computed_facts": {},
-      "evaluated_at": "2026-09-10T22:55:45.707036Z",
+      "evaluated_at": "2026-09-10T22:58:01.993283Z",
       "evidence_refs": [
         "scripts/test_timeline_ui.py"
       ],
@@ -384,7 +384,7 @@
       "computed_facts": {
         "test_commands": {}
       },
-      "evaluated_at": "2026-09-10T22:55:45.707036Z",
+      "evaluated_at": "2026-09-10T22:58:01.993283Z",
       "evidence_refs": [
         "scripts/test_timeline_r1_1a_prior_runtime.py",
         "scripts/test_timeline_r1_1a_clock.py",
@@ -398,11 +398,11 @@
     },
     {
       "computed_facts": {
-        "head": "57ead80bd9720c4f352d4023b60026bfb7a4541d",
-        "origin_main": "57ead80bd9720c4f352d4023b60026bfb7a4541d",
-        "remote_main": "57ead80bd9720c4f352d4023b60026bfb7a4541d"
+        "head": "7e67005184754775571b9191b5b858804b86fdbe",
+        "origin_main": "7e67005184754775571b9191b5b858804b86fdbe",
+        "remote_main": "7e67005184754775571b9191b5b858804b86fdbe"
       },
-      "evaluated_at": "2026-09-10T22:55:45.707036Z",
+      "evaluated_at": "2026-09-10T22:58:01.993283Z",
       "evidence_refs": [
         ".git"
       ],
@@ -414,11 +414,11 @@
     },
     {
       "computed_facts": {
-        "head": "57ead80bd9720c4f352d4023b60026bfb7a4541d",
-        "origin_main": "57ead80bd9720c4f352d4023b60026bfb7a4541d",
-        "remote_main": "57ead80bd9720c4f352d4023b60026bfb7a4541d"
+        "head": "7e67005184754775571b9191b5b858804b86fdbe",
+        "origin_main": "7e67005184754775571b9191b5b858804b86fdbe",
+        "remote_main": "7e67005184754775571b9191b5b858804b86fdbe"
       },
-      "evaluated_at": "2026-09-10T22:55:45.707036Z",
+      "evaluated_at": "2026-09-10T22:58:01.993283Z",
       "evidence_refs": [
         ".git"
       ],

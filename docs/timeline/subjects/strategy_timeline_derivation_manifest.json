@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-09-10T22:55:45.064354Z",
+  "as_of": "2026-09-10T22:58:01.260181Z",
   "atomic_observation_count": 5,
   "builder_version": "TIMELINE_MODEL_R1_1A",
   "comparability_rules_sha256": "5892c61ab7a336b6ea9630f42925df4389eb5412a902763de89c784ee98b05fa",
@@ -13,7 +13,7 @@
     "SOURCE_DEPENDENCY": 1,
     "TREASURY_STRUCTURE": 2
   },
-  "evaluation_as_of": "2026-09-10T22:55:45.064354Z",
+  "evaluation_as_of": "2026-09-10T22:58:01.260181Z",
   "evidence_aggregation_rules_sha256": "bc921c7b76b424cd98b822b14f92c193cef9472c77dd1bf95111e1c0ea2e3732",
   "evidence_event_count": 10,
   "evidence_mapping_config_hash": "11f2bdf2eafdd659ee0b753dbb85d10ff3d1306e547c180127ee2d30f565d737",
@@ -50,11 +50,11 @@
     "timeline/subjects/strategy_structural_timeline.json": "14fdf571e9c8c484e1e4aa0c9084f3efdc355a0f30c8489fed0d8306c6293ef3",
     "timeline/subjects/strategy_structural_week.json": "9892f3c9c856d9a90e95bcaefc48ec767c28ca80a2f68262b584ee78acf331f4"
   },
-  "record_created_at": "2026-09-10T22:55:45.064447Z",
+  "record_created_at": "2026-09-10T22:58:01.260477Z",
   "structural_aggregation_rules_sha256": "2ab5c40cf90a732a9ae6682a4057a308efd89145f9030b6d4363e5d8cb1b84f4",
   "subject_id": "strategy",
   "taxonomy_sha256": "758319435d114d93571d0b0e6e8f56b496c9afd1e096b87fe1ee3db735198ff5",
-  "timeline_input_bundle_sha256": "35adee9d440bb050ad2d78c7da863c71bb08a4481c667090cae633d923ab21a2",
+  "timeline_input_bundle_sha256": "4f76bb21a57f68201c40f3d010d921a7d4acf41932769978cd74de404fb02d5e",
   "unresolved_timestamp_count": 0,
   "week_bucket_count": 124
 }

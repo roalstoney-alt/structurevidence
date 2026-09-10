@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-09-10T22:55:45.064354Z",
+  "as_of": "2026-09-10T22:58:01.260181Z",
   "atomic_observation_count": 9,
   "builder_version": "TIMELINE_MODEL_R1_1A",
   "comparability_rules_sha256": "5892c61ab7a336b6ea9630f42925df4389eb5412a902763de89c784ee98b05fa",
@@ -13,7 +13,7 @@
     "UTILITY_STRUCTURE": 2,
     "VALIDATOR_DISTRIBUTION": 2
   },
-  "evaluation_as_of": "2026-09-10T22:55:45.064354Z",
+  "evaluation_as_of": "2026-09-10T22:58:01.260181Z",
   "evidence_aggregation_rules_sha256": "bc921c7b76b424cd98b822b14f92c193cef9472c77dd1bf95111e1c0ea2e3732",
   "evidence_event_count": 7,
   "evidence_mapping_config_hash": "11f2bdf2eafdd659ee0b753dbb85d10ff3d1306e547c180127ee2d30f565d737",
@@ -54,11 +54,11 @@
     "timeline/subjects/bnb_structural_timeline.json": "ad8402e3927d1a1e3660fc841047f985a7e80e234ff9e9849a3d8d4f3a251f73",
     "timeline/subjects/bnb_structural_week.json": "9ef56e5a6012891c34732dab8058996cb2e2793dc7d03ddaf5abfe4c30936021"
   },
-  "record_created_at": "2026-09-10T22:55:45.064447Z",
+  "record_created_at": "2026-09-10T22:58:01.260477Z",
   "structural_aggregation_rules_sha256": "2ab5c40cf90a732a9ae6682a4057a308efd89145f9030b6d4363e5d8cb1b84f4",
   "subject_id": "BNB",
   "taxonomy_sha256": "758319435d114d93571d0b0e6e8f56b496c9afd1e096b87fe1ee3db735198ff5",
-  "timeline_input_bundle_sha256": "95257768ee13433cf1e432fe00579faba6019f8d751746fa4f2d8e5c91a58469",
+  "timeline_input_bundle_sha256": "8dca72fb1697f4fe75ae44c3fc4caeb19108cff31d99f4d7668374aa81dadd87",
   "unresolved_timestamp_count": 0,
   "week_bucket_count": 36
 }
