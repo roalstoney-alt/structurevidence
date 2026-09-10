@@ -1,0 +1,15 @@
+{
+  "model_version": "TIMELINE_MODEL_R1_1",
+  "rules": [
+    {
+      "requirements": [
+        "same subject_id",
+        "same dimension_ids",
+        "same measurement_concept",
+        "effective_at earlier than current",
+        "same or compatible methodology"
+      ],
+      "rule_id": "SAME_SUBJECT_DIMENSION_CONCEPT_EARLIER_TIME"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "required": [
+    "model_version",
+    "subject_id",
+    "level_mapping_sha256",
+    "delta_mapping_sha256",
+    "comparability_rules_sha256",
+    "level_aggregation_rules_sha256",
+    "delta_aggregation_rules_sha256",
+    "timeline_input_bundle_sha256"
+  ],
+  "type": "object"
+}

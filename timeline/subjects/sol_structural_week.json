@@ -1,11 +1,25 @@
 {
   "buckets": [
     {
-      "aggregation_rule": "WEEK_FROM_DAY",
+      "aggregation_rule": "WEEK_LEVEL_DELTA_FROM_DAY",
       "bucket_end": "2026-09-13",
       "bucket_id": "SOL-STRUCT-WEEK-2026-W37-GOVERNANCE_STRUCTURE",
       "bucket_start": "2026-09-07",
+      "closing_level_state": "MECHANISM_DEFINED",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "GOVERNANCE_STRUCTURE",
+      "level_age_days": 1,
+      "level_last_observed_at": "2026-09-09T00:00:00Z",
+      "level_observation_ids": [
+        "TL-SOL-O007"
+      ],
+      "level_state": "MECHANISM_DEFINED",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [
           "research/digital-assets/batch-01-r1/SOL/OBSERVATION_REGISTRY.json"
@@ -15,13 +29,35 @@
         ],
         "day_bucket_ids": [
           "SOL-STRUCT-DAY-2026-09-09-GOVERNANCE_STRUCTURE"
-        ]
+        ],
+        "delta": {
+          "artifact_refs": [
+            "research/digital-assets/batch-01-r1/SOL/OBSERVATION_REGISTRY.json"
+          ],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [
+            "research/digital-assets/batch-01-r1/SOL/OBSERVATION_REGISTRY.json"
+          ],
+          "atomic_observation_ids": [
+            "TL-SOL-O007"
+          ],
+          "day_bucket_ids": [
+            "SOL-STRUCT-DAY-2026-09-09-GOVERNANCE_STRUCTURE"
+          ]
+        }
       },
       "observation_count": 1,
       "observations": [
         "TL-SOL-O007"
       ],
+      "opening_level_state": "MECHANISM_DEFINED",
       "period": "2026-W37",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "WEEK",
       "source_day_bucket_ids": [
         "SOL-STRUCT-DAY-2026-09-09-GOVERNANCE_STRUCTURE"
@@ -29,17 +65,33 @@
       "source_refs": [
         "research/digital-assets/batch-01-r1/SOL/OBSERVATION_REGISTRY.json"
       ],
-      "state": "TENSION",
+      "state": "MECHANISM_DEFINED",
       "subject_id": "SOL",
       "week_end": "2026-09-13",
       "week_start": "2026-09-07"
     },
     {
-      "aggregation_rule": "WEEK_FROM_DAY",
+      "aggregation_rule": "WEEK_LEVEL_DELTA_FROM_DAY",
       "bucket_end": "2026-09-13",
       "bucket_id": "SOL-STRUCT-WEEK-2026-W37-RESOURCE_PRESSURE",
       "bucket_start": "2026-09-07",
+      "closing_level_state": "MECHANISM_DEFINED",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "RESOURCE_PRESSURE",
+      "level_age_days": 1,
+      "level_last_observed_at": "2026-09-09T00:00:00Z",
+      "level_observation_ids": [
+        "TL-SOL-O001",
+        "TL-SOL-O002",
+        "TL-SOL-O003"
+      ],
+      "level_state": "MECHANISM_DEFINED",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [
           "research/digital-assets/batch-01-r1/SOL/OBSERVATION_REGISTRY.json"
@@ -51,7 +103,28 @@
         ],
         "day_bucket_ids": [
           "SOL-STRUCT-DAY-2026-09-09-RESOURCE_PRESSURE"
-        ]
+        ],
+        "delta": {
+          "artifact_refs": [
+            "research/digital-assets/batch-01-r1/SOL/OBSERVATION_REGISTRY.json"
+          ],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [
+            "research/digital-assets/batch-01-r1/SOL/OBSERVATION_REGISTRY.json"
+          ],
+          "atomic_observation_ids": [
+            "TL-SOL-O001",
+            "TL-SOL-O002",
+            "TL-SOL-O003"
+          ],
+          "day_bucket_ids": [
+            "SOL-STRUCT-DAY-2026-09-09-RESOURCE_PRESSURE"
+          ]
+        }
       },
       "observation_count": 3,
       "observations": [
@@ -59,7 +132,10 @@
         "TL-SOL-O002",
         "TL-SOL-O003"
       ],
+      "opening_level_state": "MECHANISM_DEFINED",
       "period": "2026-W37",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "WEEK",
       "source_day_bucket_ids": [
         "SOL-STRUCT-DAY-2026-09-09-RESOURCE_PRESSURE"
@@ -67,17 +143,31 @@
       "source_refs": [
         "research/digital-assets/batch-01-r1/SOL/OBSERVATION_REGISTRY.json"
       ],
-      "state": "STRENGTHENING",
+      "state": "MECHANISM_DEFINED",
       "subject_id": "SOL",
       "week_end": "2026-09-13",
       "week_start": "2026-09-07"
     },
     {
-      "aggregation_rule": "WEEK_FROM_DAY",
+      "aggregation_rule": "WEEK_LEVEL_DELTA_FROM_DAY",
       "bucket_end": "2026-09-13",
       "bucket_id": "SOL-STRUCT-WEEK-2026-W37-UTILITY_STRUCTURE",
       "bucket_start": "2026-09-07",
+      "closing_level_state": "MIXED_ROLE",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "UTILITY_STRUCTURE",
+      "level_age_days": 1,
+      "level_last_observed_at": "2026-09-09T00:00:00Z",
+      "level_observation_ids": [
+        "TL-SOL-O008"
+      ],
+      "level_state": "MIXED_ROLE",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [
           "research/digital-assets/batch-01-r1/SOL/OBSERVATION_REGISTRY.json"
@@ -87,13 +177,35 @@
         ],
         "day_bucket_ids": [
           "SOL-STRUCT-DAY-2026-09-09-UTILITY_STRUCTURE"
-        ]
+        ],
+        "delta": {
+          "artifact_refs": [
+            "research/digital-assets/batch-01-r1/SOL/OBSERVATION_REGISTRY.json"
+          ],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [
+            "research/digital-assets/batch-01-r1/SOL/OBSERVATION_REGISTRY.json"
+          ],
+          "atomic_observation_ids": [
+            "TL-SOL-O008"
+          ],
+          "day_bucket_ids": [
+            "SOL-STRUCT-DAY-2026-09-09-UTILITY_STRUCTURE"
+          ]
+        }
       },
       "observation_count": 1,
       "observations": [
         "TL-SOL-O008"
       ],
+      "opening_level_state": "MIXED_ROLE",
       "period": "2026-W37",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "WEEK",
       "source_day_bucket_ids": [
         "SOL-STRUCT-DAY-2026-09-09-UTILITY_STRUCTURE"
@@ -101,17 +213,33 @@
       "source_refs": [
         "research/digital-assets/batch-01-r1/SOL/OBSERVATION_REGISTRY.json"
       ],
-      "state": "TENSION",
+      "state": "MIXED_ROLE",
       "subject_id": "SOL",
       "week_end": "2026-09-13",
       "week_start": "2026-09-07"
     },
     {
-      "aggregation_rule": "WEEK_FROM_DAY",
+      "aggregation_rule": "WEEK_LEVEL_DELTA_FROM_DAY",
       "bucket_end": "2026-09-13",
       "bucket_id": "SOL-STRUCT-WEEK-2026-W37-VALIDATOR_DISTRIBUTION",
       "bucket_start": "2026-09-07",
+      "closing_level_state": "MIXED_LEVEL",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "level_age_days": 1,
+      "level_last_observed_at": "2026-09-09T00:00:00Z",
+      "level_observation_ids": [
+        "TL-SOL-O004",
+        "TL-SOL-O005",
+        "TL-SOL-O006"
+      ],
+      "level_state": "MIXED_LEVEL",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [
           "research/digital-assets/batch-01-r1/SOL/OBSERVATION_REGISTRY.json"
@@ -123,7 +251,28 @@
         ],
         "day_bucket_ids": [
           "SOL-STRUCT-DAY-2026-09-09-VALIDATOR_DISTRIBUTION"
-        ]
+        ],
+        "delta": {
+          "artifact_refs": [
+            "research/digital-assets/batch-01-r1/SOL/OBSERVATION_REGISTRY.json"
+          ],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [
+            "research/digital-assets/batch-01-r1/SOL/OBSERVATION_REGISTRY.json"
+          ],
+          "atomic_observation_ids": [
+            "TL-SOL-O004",
+            "TL-SOL-O005",
+            "TL-SOL-O006"
+          ],
+          "day_bucket_ids": [
+            "SOL-STRUCT-DAY-2026-09-09-VALIDATOR_DISTRIBUTION"
+          ]
+        }
       },
       "observation_count": 3,
       "observations": [
@@ -131,7 +280,10 @@
         "TL-SOL-O005",
         "TL-SOL-O006"
       ],
+      "opening_level_state": "MIXED_LEVEL",
       "period": "2026-W37",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "WEEK",
       "source_day_bucket_ids": [
         "SOL-STRUCT-DAY-2026-09-09-VALIDATOR_DISTRIBUTION"
@@ -139,14 +291,14 @@
       "source_refs": [
         "research/digital-assets/batch-01-r1/SOL/OBSERVATION_REGISTRY.json"
       ],
-      "state": "STRENGTHENING",
+      "state": "MIXED_LEVEL",
       "subject_id": "SOL",
       "week_end": "2026-09-13",
       "week_start": "2026-09-07"
     }
   ],
   "layer": "STRUCTURAL",
-  "model_version": "TIMELINE_MODEL_R1",
+  "model_version": "TIMELINE_MODEL_R1_1",
   "resolution": "WEEK",
   "subject_id": "SOL"
 }

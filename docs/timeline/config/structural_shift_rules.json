@@ -1,0 +1,16 @@
+{
+  "model_version": "TIMELINE_MODEL_R1_1",
+  "rules": [
+    {
+      "importance_alone_is_sufficient": false,
+      "requires": [
+        "explicit mechanism change",
+        "regime change",
+        "category transition",
+        "formal architecture change",
+        "or valid comparable prior showing discontinuity"
+      ],
+      "rule_id": "EXPLICIT_MECHANISM_OR_REGIME_CHANGE_REQUIRED"
+    }
+  ]
+}

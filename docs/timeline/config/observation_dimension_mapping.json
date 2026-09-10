@@ -2,573 +2,877 @@
   "mapping_version": "TIMELINE_MAPPING_v0.1",
   "rules": [
     {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_mapping_rule_id": null,
+      "delta_state": "NOT_ESTABLISHED",
       "dimension_ids": [
         "TREASURY_STRUCTURE"
       ],
       "effect_strength": "MATERIAL",
+      "legacy_structural_effect": "STRENGTHENING",
+      "level_mapping_rationale": "Filing establishes a treasury-structure level without directional change.",
+      "level_mapping_rule_id": "LEVEL_STRATEGY_STRATEGY_R1_O1",
+      "level_state": "HYBRID_DEPENDENCE",
       "mapping_rationale": "SEC filing period anchors treasury baseline.",
+      "measurement_concept": "treasury_disclosure",
       "observation_match": {
         "observation_ids": [
           "STRATEGY-R1-O1"
         ]
       },
       "rule_id": "STRATEGY_STRATEGY_R1_O1_TO_TREASURY_STRUCTURE",
-      "structural_effect": "STRENGTHENING",
       "subject_profile": "strategy"
     },
     {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_mapping_rule_id": null,
+      "delta_state": "NOT_ESTABLISHED",
       "dimension_ids": [
         "TREASURY_STRUCTURE"
       ],
       "effect_strength": "MATERIAL",
+      "legacy_structural_effect": "STRUCTURAL_SHIFT",
+      "level_mapping_rationale": "Digital credit framework establishes current treasury architecture level.",
+      "level_mapping_rule_id": "LEVEL_STRATEGY_STRATEGY_R1_O2",
+      "level_state": "HYBRID_DEPENDENCE",
       "mapping_rationale": "Digital credit framework disclosure changes the treasury structure record.",
+      "measurement_concept": "treasury_policy",
       "observation_match": {
         "observation_ids": [
           "STRATEGY-R1-O2"
         ]
       },
       "rule_id": "STRATEGY_STRATEGY_R1_O2_TO_TREASURY_STRUCTURE",
-      "structural_effect": "STRUCTURAL_SHIFT",
       "subject_profile": "strategy"
     },
     {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_mapping_rule_id": null,
+      "delta_state": "NOT_ESTABLISHED",
       "dimension_ids": [
         "RESOURCE_PRESSURE"
       ],
       "effect_strength": "MATERIAL",
+      "legacy_structural_effect": "TENSION",
+      "level_mapping_rationale": "BTC monetization disclosure establishes resource-pressure level.",
+      "level_mapping_rule_id": "LEVEL_STRATEGY_STRATEGY_R1_O3",
+      "level_state": "MATERIAL_DEPENDENCE",
       "mapping_rationale": "BTC monetization disclosure creates resource-pressure evidence.",
+      "measurement_concept": "resource_pressure",
       "observation_match": {
         "observation_ids": [
           "STRATEGY-R1-O3"
         ]
       },
       "rule_id": "STRATEGY_STRATEGY_R1_O3_TO_RESOURCE_PRESSURE",
-      "structural_effect": "TENSION",
       "subject_profile": "strategy"
     },
     {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_mapping_rule_id": null,
+      "delta_state": "NOT_ESTABLISHED",
       "dimension_ids": [
         "NARRATIVE_DEPENDENCE"
       ],
       "effect_strength": "MODERATE",
+      "legacy_structural_effect": "TENSION",
+      "level_mapping_rationale": "Narrative-dependence review establishes condition level, not trend.",
+      "level_mapping_rule_id": "LEVEL_STRATEGY_STRATEGY_R1_O4",
+      "level_state": "MATERIAL_DEPENDENCE",
       "mapping_rationale": "BTC monetization disclosure changes the narrative-dependence record.",
+      "measurement_concept": "narrative_dependency",
       "observation_match": {
         "observation_ids": [
           "STRATEGY-R1-O4"
         ]
       },
       "rule_id": "STRATEGY_STRATEGY_R1_O4_TO_NARRATIVE_DEPENDENCE",
-      "structural_effect": "TENSION",
       "subject_profile": "strategy"
     },
     {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_mapping_rule_id": null,
+      "delta_state": "NOT_ESTABLISHED",
       "dimension_ids": [
         "SOURCE_DEPENDENCY"
       ],
       "effect_strength": "MODERATE",
+      "legacy_structural_effect": "TENSION",
+      "level_mapping_rationale": "Source dependency is retained as hybrid boundary metadata.",
+      "level_mapping_rule_id": "LEVEL_STRATEGY_STRATEGY_R1_O5",
+      "level_state": "SOURCE_DEPENDENT",
       "mapping_rationale": "S6.1a source-dependency graph records partial independence boundaries.",
+      "measurement_concept": "source_architecture",
       "observation_match": {
         "observation_ids": [
           "STRATEGY-R1-O5"
         ]
       },
       "rule_id": "STRATEGY_STRATEGY_R1_O5_TO_SOURCE_DEPENDENCY",
-      "structural_effect": "TENSION",
       "subject_profile": "strategy"
     },
     {
+      "delta_basis": "EXPLICIT_CHANGE_EVENT",
+      "delta_mapping_rationale": "Burn observation explicitly reports tokens removed.",
+      "delta_mapping_rule_id": "DELTA_BNB_R1_O1",
+      "delta_state": "TOWARD_CONTRACTION",
       "dimension_ids": [
         "SUPPLY_STRUCTURE"
       ],
       "effect_strength": "MATERIAL",
+      "legacy_structural_effect": "STRUCTURAL_SHIFT",
+      "level_mapping_rationale": "Burn amount establishes contractionary supply level.",
+      "level_mapping_rule_id": "LEVEL_BNB_BNB_R1_O1",
+      "level_state": "CONTRACTIONARY",
       "mapping_rationale": "Quarterly burn directly changes circulating supply structure.",
+      "measurement_concept": "burn_quantity",
       "observation_match": {
         "observation_ids": [
           "BNB-R1-O1"
         ]
       },
       "rule_id": "BNB_BNB_R1_O1_TO_SUPPLY_STRUCTURE",
-      "structural_effect": "STRUCTURAL_SHIFT",
       "subject_profile": "BNB"
     },
     {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_mapping_rule_id": null,
+      "delta_state": "NOT_ESTABLISHED",
       "dimension_ids": [
         "SUPPLY_STRUCTURE"
       ],
       "effect_strength": "MODERATE",
+      "legacy_structural_effect": "STRENGTHENING",
+      "level_mapping_rationale": "Burn target establishes contractionary supply-mechanism level.",
+      "level_mapping_rule_id": "LEVEL_BNB_BNB_R1_O2",
+      "level_state": "CONTRACTIONARY",
       "mapping_rationale": "Long-run burn target belongs to supply mechanics.",
+      "measurement_concept": "burn_target",
       "observation_match": {
         "observation_ids": [
           "BNB-R1-O2"
         ]
       },
       "rule_id": "BNB_BNB_R1_O2_TO_SUPPLY_STRUCTURE",
-      "structural_effect": "STRENGTHENING",
       "subject_profile": "BNB"
     },
     {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_mapping_rule_id": null,
+      "delta_state": "NOT_ESTABLISHED",
       "dimension_ids": [
         "SUPPLY_STRUCTURE"
       ],
       "effect_strength": "MODERATE",
+      "legacy_structural_effect": "STRENGTHENING",
+      "level_mapping_rationale": "BEP95 establishes contractionary mechanism level.",
+      "level_mapping_rule_id": "LEVEL_BNB_BNB_R1_O3",
+      "level_state": "CONTRACTIONARY",
       "mapping_rationale": "BEP95 burn mechanic belongs to supply mechanics.",
+      "measurement_concept": "gas_fee_burn",
       "observation_match": {
         "observation_ids": [
           "BNB-R1-O3"
         ]
       },
       "rule_id": "BNB_BNB_R1_O3_TO_SUPPLY_STRUCTURE",
-      "structural_effect": "STRENGTHENING",
       "subject_profile": "BNB"
     },
     {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_mapping_rule_id": null,
+      "delta_state": "NOT_ESTABLISHED",
       "dimension_ids": [
         "UTILITY_STRUCTURE"
       ],
       "effect_strength": "MODERATE",
+      "legacy_structural_effect": "STRENGTHENING",
+      "level_mapping_rationale": "Native fee role establishes utility level.",
+      "level_mapping_rule_id": "LEVEL_BNB_BNB_R1_O4",
+      "level_state": "ESTABLISHED_ROLE",
       "mapping_rationale": "Fee-utility claim maps to network utility structure.",
+      "measurement_concept": "fee_utility_role",
       "observation_match": {
         "observation_ids": [
           "BNB-R1-O4"
         ]
       },
       "rule_id": "BNB_BNB_R1_O4_TO_UTILITY_STRUCTURE",
-      "structural_effect": "STRENGTHENING",
       "subject_profile": "BNB"
     },
     {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_mapping_rule_id": null,
+      "delta_state": "NOT_ESTABLISHED",
       "dimension_ids": [
         "VALIDATOR_DISTRIBUTION"
       ],
       "effect_strength": "MODERATE",
+      "legacy_structural_effect": "TENSION",
+      "level_mapping_rationale": "Active validator election count establishes validator-distribution level.",
+      "level_mapping_rule_id": "LEVEL_BNB_BNB_R1_O5",
+      "level_state": "FIXED_OR_RESTRICTED_SET",
       "mapping_rationale": "Validator election set constrains validator distribution.",
+      "measurement_concept": "validator_count",
       "observation_match": {
         "observation_ids": [
           "BNB-R1-O5"
         ]
       },
       "rule_id": "BNB_BNB_R1_O5_TO_VALIDATOR_DISTRIBUTION",
-      "structural_effect": "TENSION",
       "subject_profile": "BNB"
     },
     {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_mapping_rule_id": null,
+      "delta_state": "NOT_ESTABLISHED",
       "dimension_ids": [
         "VALIDATOR_DISTRIBUTION"
       ],
       "effect_strength": "MODERATE",
+      "legacy_structural_effect": "TENSION",
+      "level_mapping_rationale": "Cabinet/candidate split establishes validator-distribution level.",
+      "level_mapping_rule_id": "LEVEL_BNB_BNB_R1_O6",
+      "level_state": "FIXED_OR_RESTRICTED_SET",
       "mapping_rationale": "Cabinet/candidate split maps to validator distribution.",
+      "measurement_concept": "validator_tier_split",
       "observation_match": {
         "observation_ids": [
           "BNB-R1-O6"
         ]
       },
       "rule_id": "BNB_BNB_R1_O6_TO_VALIDATOR_DISTRIBUTION",
-      "structural_effect": "TENSION",
       "subject_profile": "BNB"
     },
     {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_mapping_rule_id": null,
+      "delta_state": "NOT_ESTABLISHED",
       "dimension_ids": [
         "GOVERNANCE_STRUCTURE"
       ],
       "effect_strength": "MODERATE",
+      "legacy_structural_effect": "TENSION",
+      "level_mapping_rationale": "Consensus-set selection establishes governance level.",
+      "level_mapping_rule_id": "LEVEL_BNB_BNB_R1_O7",
+      "level_state": "FIXED_OR_RESTRICTED_SET",
       "mapping_rationale": "Consensus-set selection maps to governance/control structure.",
+      "measurement_concept": "consensus_set_count",
       "observation_match": {
         "observation_ids": [
           "BNB-R1-O7"
         ]
       },
       "rule_id": "BNB_BNB_R1_O7_TO_GOVERNANCE_STRUCTURE",
-      "structural_effect": "TENSION",
       "subject_profile": "BNB"
     },
     {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_mapping_rule_id": null,
+      "delta_state": "NOT_ESTABLISHED",
       "dimension_ids": [
         "GOVERNANCE_STRUCTURE"
       ],
       "effect_strength": "LOW",
+      "legacy_structural_effect": "STRENGTHENING",
+      "level_mapping_rationale": "On-chain governance description establishes governance mechanism level.",
+      "level_mapping_rule_id": "LEVEL_BNB_BNB_R1_O8",
+      "level_state": "MECHANISM_DEFINED",
       "mapping_rationale": "On-chain governance description maps to governance structure.",
+      "measurement_concept": "governance_mechanism",
       "observation_match": {
         "observation_ids": [
           "BNB-R1-O8"
         ]
       },
       "rule_id": "BNB_BNB_R1_O8_TO_GOVERNANCE_STRUCTURE",
-      "structural_effect": "STRENGTHENING",
       "subject_profile": "BNB"
     },
     {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_mapping_rule_id": null,
+      "delta_state": "NOT_ESTABLISHED",
       "dimension_ids": [
         "UTILITY_STRUCTURE"
       ],
       "effect_strength": "LOW",
+      "legacy_structural_effect": "MIXED",
+      "level_mapping_rationale": "Multichain component establishes mixed utility role level.",
+      "level_mapping_rule_id": "LEVEL_BNB_BNB_R1_O9",
+      "level_state": "MIXED_ROLE",
       "mapping_rationale": "Multichain ecosystem component maps to utility dependence.",
+      "measurement_concept": "multichain_utility",
       "observation_match": {
         "observation_ids": [
           "BNB-R1-O9"
         ]
       },
       "rule_id": "BNB_BNB_R1_O9_TO_UTILITY_STRUCTURE",
-      "structural_effect": "MIXED",
       "subject_profile": "BNB"
     },
     {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_mapping_rule_id": null,
+      "delta_state": "NOT_ESTABLISHED",
       "dimension_ids": [
         "RESOURCE_PRESSURE"
       ],
       "effect_strength": "MODERATE",
+      "legacy_structural_effect": "STRENGTHENING",
+      "level_mapping_rationale": "Base-fee split establishes resource-economics level.",
+      "level_mapping_rule_id": "LEVEL_SOL_SOL_R1_O1",
+      "level_state": "MECHANISM_DEFINED",
       "mapping_rationale": "Fee split belongs to resource economics.",
+      "measurement_concept": "fee_split",
       "observation_match": {
         "observation_ids": [
           "SOL-R1-O1"
         ]
       },
       "rule_id": "SOL_SOL_R1_O1_TO_RESOURCE_PRESSURE",
-      "structural_effect": "STRENGTHENING",
       "subject_profile": "SOL"
     },
     {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_mapping_rule_id": null,
+      "delta_state": "NOT_ESTABLISHED",
       "dimension_ids": [
         "RESOURCE_PRESSURE"
       ],
       "effect_strength": "LOW",
+      "legacy_structural_effect": "STRENGTHENING",
+      "level_mapping_rationale": "Staking reward formula establishes resource-economics level.",
+      "level_mapping_rule_id": "LEVEL_SOL_SOL_R1_O2",
+      "level_state": "MECHANISM_DEFINED",
       "mapping_rationale": "Staking rewards belong to validator/resource economics.",
+      "measurement_concept": "validator_rewards",
       "observation_match": {
         "observation_ids": [
           "SOL-R1-O2"
         ]
       },
       "rule_id": "SOL_SOL_R1_O2_TO_RESOURCE_PRESSURE",
-      "structural_effect": "STRENGTHENING",
       "subject_profile": "SOL"
     },
     {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_mapping_rule_id": null,
+      "delta_state": "NOT_ESTABLISHED",
       "dimension_ids": [
         "RESOURCE_PRESSURE"
       ],
       "effect_strength": "LOW",
+      "legacy_structural_effect": "STRENGTHENING",
+      "level_mapping_rationale": "Inflation schedule establishes resource-economics level.",
+      "level_mapping_rule_id": "LEVEL_SOL_SOL_R1_O3",
+      "level_state": "MECHANISM_DEFINED",
       "mapping_rationale": "Inflation schedule belongs to resource economics.",
+      "measurement_concept": "inflation_schedule",
       "observation_match": {
         "observation_ids": [
           "SOL-R1-O3"
         ]
       },
       "rule_id": "SOL_SOL_R1_O3_TO_RESOURCE_PRESSURE",
-      "structural_effect": "STRENGTHENING",
       "subject_profile": "SOL"
     },
     {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_mapping_rule_id": null,
+      "delta_state": "NOT_ESTABLISHED",
       "dimension_ids": [
         "VALIDATOR_DISTRIBUTION"
       ],
       "effect_strength": "MODERATE",
+      "legacy_structural_effect": "STRENGTHENING",
+      "level_mapping_rationale": "Foundation stake recipient count establishes validator-distribution level.",
+      "level_mapping_rule_id": "LEVEL_SOL_SOL_R1_O4",
+      "level_state": "MODERATELY_CONCENTRATED",
       "mapping_rationale": "Foundation stake recipient count maps to validator distribution.",
+      "measurement_concept": "foundation_stake_recipients",
       "observation_match": {
         "observation_ids": [
           "SOL-R1-O4"
         ]
       },
       "rule_id": "SOL_SOL_R1_O4_TO_VALIDATOR_DISTRIBUTION",
-      "structural_effect": "STRENGTHENING",
       "subject_profile": "SOL"
     },
     {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_mapping_rule_id": null,
+      "delta_state": "NOT_ESTABLISHED",
       "dimension_ids": [
         "VALIDATOR_DISTRIBUTION"
       ],
       "effect_strength": "MODERATE",
+      "legacy_structural_effect": "STRENGTHENING",
+      "level_mapping_rationale": "SFDP stake share establishes validator-distribution level.",
+      "level_mapping_rule_id": "LEVEL_SOL_SOL_R1_O5",
+      "level_state": "MODERATELY_CONCENTRATED",
       "mapping_rationale": "SFDP stake share maps to validator distribution.",
+      "measurement_concept": "foundation_stake_share",
       "observation_match": {
         "observation_ids": [
           "SOL-R1-O5"
         ]
       },
       "rule_id": "SOL_SOL_R1_O5_TO_VALIDATOR_DISTRIBUTION",
-      "structural_effect": "STRENGTHENING",
       "subject_profile": "SOL"
     },
     {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_mapping_rule_id": null,
+      "delta_state": "NOT_ESTABLISHED",
       "dimension_ids": [
         "VALIDATOR_DISTRIBUTION"
       ],
       "effect_strength": "LOW",
+      "legacy_structural_effect": "STRENGTHENING",
+      "level_mapping_rationale": "Location/country spread establishes geography-distribution level.",
+      "level_mapping_rule_id": "LEVEL_SOL_SOL_R1_O6",
+      "level_state": "DISTRIBUTED",
       "mapping_rationale": "Location/country spread maps to validator distribution.",
+      "measurement_concept": "validator_geography",
       "observation_match": {
         "observation_ids": [
           "SOL-R1-O6"
         ]
       },
       "rule_id": "SOL_SOL_R1_O6_TO_VALIDATOR_DISTRIBUTION",
-      "structural_effect": "STRENGTHENING",
       "subject_profile": "SOL"
     },
     {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_mapping_rule_id": null,
+      "delta_state": "NOT_ESTABLISHED",
       "dimension_ids": [
         "GOVERNANCE_STRUCTURE"
       ],
       "effect_strength": "MODERATE",
+      "legacy_structural_effect": "TENSION",
+      "level_mapping_rationale": "Client criteria establish governance/control level.",
+      "level_mapping_rule_id": "LEVEL_SOL_SOL_R1_O7",
+      "level_state": "MECHANISM_DEFINED",
       "mapping_rationale": "Client criteria belong to control/client diversity structure.",
+      "measurement_concept": "client_version_criteria",
       "observation_match": {
         "observation_ids": [
           "SOL-R1-O7"
         ]
       },
       "rule_id": "SOL_SOL_R1_O7_TO_GOVERNANCE_STRUCTURE",
-      "structural_effect": "TENSION",
       "subject_profile": "SOL"
     },
     {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_mapping_rule_id": null,
+      "delta_state": "NOT_ESTABLISHED",
       "dimension_ids": [
         "UTILITY_STRUCTURE"
       ],
       "effect_strength": "LOW",
+      "legacy_structural_effect": "TENSION",
+      "level_mapping_rationale": "Client diversity caveat establishes mixed utility/control level.",
+      "level_mapping_rule_id": "LEVEL_SOL_SOL_R1_O8",
+      "level_state": "MIXED_ROLE",
       "mapping_rationale": "Client-status evidence is preserved as potential-conflict utility/control context.",
+      "measurement_concept": "client_diversity_status",
       "observation_match": {
         "observation_ids": [
           "SOL-R1-O8"
         ]
       },
       "rule_id": "SOL_SOL_R1_O8_TO_UTILITY_STRUCTURE",
-      "structural_effect": "TENSION",
       "subject_profile": "SOL"
     },
     {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_mapping_rule_id": null,
+      "delta_state": "NOT_ESTABLISHED",
       "dimension_ids": [
         "SETTLEMENT_ROLE"
       ],
       "effect_strength": "MATERIAL",
+      "legacy_structural_effect": "STRENGTHENING",
+      "level_mapping_rationale": "Transaction count establishes settlement-role level.",
+      "level_mapping_rule_id": "LEVEL_TRX_TRX_R1_O1",
+      "level_state": "MATERIAL_ROLE",
       "mapping_rationale": "Transaction count maps to settlement role context.",
+      "measurement_concept": "transaction_count",
       "observation_match": {
         "observation_ids": [
           "TRX-R1-O1"
         ]
       },
       "rule_id": "TRX_TRX_R1_O1_TO_SETTLEMENT_ROLE",
-      "structural_effect": "STRENGTHENING",
       "subject_profile": "TRX"
     },
     {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_mapping_rule_id": null,
+      "delta_state": "NOT_ESTABLISHED",
       "dimension_ids": [
         "SETTLEMENT_ROLE"
       ],
       "effect_strength": "MATERIAL",
+      "legacy_structural_effect": "STRENGTHENING",
+      "level_mapping_rationale": "USDT transfer share establishes settlement-role level.",
+      "level_mapping_rule_id": "LEVEL_TRX_TRX_R1_O2",
+      "level_state": "MATERIAL_ROLE",
       "mapping_rationale": "USDT transfer share maps directly to stablecoin settlement role.",
+      "measurement_concept": "stablecoin_transfer_share",
       "observation_match": {
         "observation_ids": [
           "TRX-R1-O2"
         ]
       },
       "rule_id": "TRX_TRX_R1_O2_TO_SETTLEMENT_ROLE",
-      "structural_effect": "STRENGTHENING",
       "subject_profile": "TRX"
     },
     {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_mapping_rule_id": null,
+      "delta_state": "NOT_ESTABLISHED",
       "dimension_ids": [
         "RESOURCE_PRESSURE"
       ],
       "effect_strength": "MATERIAL",
+      "legacy_structural_effect": "STRENGTHENING",
+      "level_mapping_rationale": "Resource delegation share establishes resource-pressure level.",
+      "level_mapping_rule_id": "LEVEL_TRX_TRX_R1_O3",
+      "level_state": "MATERIAL_ROLE",
       "mapping_rationale": "Resource delegation share maps to resource pressure.",
+      "measurement_concept": "resource_delegation_share",
       "observation_match": {
         "observation_ids": [
           "TRX-R1-O3"
         ]
       },
       "rule_id": "TRX_TRX_R1_O3_TO_RESOURCE_PRESSURE",
-      "structural_effect": "STRENGTHENING",
       "subject_profile": "TRX"
     },
     {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_mapping_rule_id": null,
+      "delta_state": "NOT_ESTABLISHED",
       "dimension_ids": [
         "RESOURCE_PRESSURE"
       ],
       "effect_strength": "MODERATE",
+      "legacy_structural_effect": "STRENGTHENING",
+      "level_mapping_rationale": "Bandwidth/Energy model establishes resource-economy level.",
+      "level_mapping_rule_id": "LEVEL_TRX_TRX_R1_O4",
+      "level_state": "MECHANISM_DEFINED",
       "mapping_rationale": "Bandwidth/Energy mechanism maps to resource economy.",
+      "measurement_concept": "resource_model",
       "observation_match": {
         "observation_ids": [
           "TRX-R1-O4"
         ]
       },
       "rule_id": "TRX_TRX_R1_O4_TO_RESOURCE_PRESSURE",
-      "structural_effect": "STRENGTHENING",
       "subject_profile": "TRX"
     },
     {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_mapping_rule_id": null,
+      "delta_state": "NOT_ESTABLISHED",
       "dimension_ids": [
         "VALIDATOR_DISTRIBUTION"
       ],
       "effect_strength": "MATERIAL",
+      "legacy_structural_effect": "STRUCTURAL_SHIFT",
+      "level_mapping_rationale": "27-SR producer structure establishes validator-distribution level.",
+      "level_mapping_rule_id": "LEVEL_TRX_TRX_R1_O5",
+      "level_state": "FIXED_OR_RESTRICTED_SET",
       "mapping_rationale": "27 SR producer structure maps to validator distribution.",
+      "measurement_concept": "validator_count",
       "observation_match": {
         "observation_ids": [
           "TRX-R1-O5"
         ]
       },
       "rule_id": "TRX_TRX_R1_O5_TO_VALIDATOR_DISTRIBUTION",
-      "structural_effect": "STRUCTURAL_SHIFT",
       "subject_profile": "TRX"
     },
     {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_mapping_rule_id": null,
+      "delta_state": "NOT_ESTABLISHED",
       "dimension_ids": [
         "GOVERNANCE_STRUCTURE"
       ],
       "effect_strength": "MODERATE",
+      "legacy_structural_effect": "TENSION",
+      "level_mapping_rationale": "Top-127 reward tiers establish governance-structure level.",
+      "level_mapping_rule_id": "LEVEL_TRX_TRX_R1_O6",
+      "level_state": "FIXED_OR_RESTRICTED_SET",
       "mapping_rationale": "Top-127 reward structure maps to governance control.",
+      "measurement_concept": "candidate_reward_tiers",
       "observation_match": {
         "observation_ids": [
           "TRX-R1-O6"
         ]
       },
       "rule_id": "TRX_TRX_R1_O6_TO_GOVERNANCE_STRUCTURE",
-      "structural_effect": "TENSION",
       "subject_profile": "TRX"
     },
     {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_mapping_rule_id": null,
+      "delta_state": "NOT_ESTABLISHED",
       "dimension_ids": [
         "GOVERNANCE_STRUCTURE"
       ],
       "effect_strength": "LOW",
+      "legacy_structural_effect": "STRENGTHENING",
+      "level_mapping_rationale": "TRON Power establishes governance mechanism level.",
+      "level_mapping_rule_id": "LEVEL_TRX_TRX_R1_O7",
+      "level_state": "MECHANISM_DEFINED",
       "mapping_rationale": "TRON Power voting maps to governance structure.",
+      "measurement_concept": "voting_power_mechanism",
       "observation_match": {
         "observation_ids": [
           "TRX-R1-O7"
         ]
       },
       "rule_id": "TRX_TRX_R1_O7_TO_GOVERNANCE_STRUCTURE",
-      "structural_effect": "STRENGTHENING",
       "subject_profile": "TRX"
     },
     {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_mapping_rule_id": null,
+      "delta_state": "NOT_ESTABLISHED",
       "dimension_ids": [
         "GOVERNANCE_STRUCTURE"
       ],
       "effect_strength": "LOW",
+      "legacy_structural_effect": "TENSION",
+      "level_mapping_rationale": "Missing full concentration table establishes insufficient-data level.",
+      "level_mapping_rule_id": "LEVEL_TRX_TRX_R1_O8",
+      "level_state": "INSUFFICIENT_DATA",
       "mapping_rationale": "Missing concentration evidence is mapped as governance tension, not stability.",
+      "measurement_concept": "vote_concentration_table",
       "observation_match": {
         "observation_ids": [
           "TRX-R1-O8"
         ]
       },
       "rule_id": "TRX_TRX_R1_O8_TO_GOVERNANCE_STRUCTURE",
-      "structural_effect": "TENSION",
       "subject_profile": "TRX"
     },
     {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_mapping_rule_id": null,
+      "delta_state": "NOT_ESTABLISHED",
       "dimension_ids": [
         "TREASURY_STRUCTURE"
       ],
       "effect_strength": "MATERIAL",
+      "legacy_structural_effect": "STRENGTHENING",
+      "level_mapping_rationale": "SDF mandate balance establishes treasury-dependence level.",
+      "level_mapping_rule_id": "LEVEL_XLM_XLM_R1_O1",
+      "level_state": "HIGH_DEPENDENCE",
       "mapping_rationale": "SDF mandate balance maps to treasury structure.",
+      "measurement_concept": "sdf_treasury_balance",
       "observation_match": {
         "observation_ids": [
           "XLM-R1-O1"
         ]
       },
       "rule_id": "XLM_XLM_R1_O1_TO_TREASURY_STRUCTURE",
-      "structural_effect": "STRENGTHENING",
       "subject_profile": "XLM"
     },
     {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_mapping_rule_id": null,
+      "delta_state": "NOT_ESTABLISHED",
       "dimension_ids": [
         "TREASURY_STRUCTURE"
       ],
       "effect_strength": "MATERIAL",
+      "legacy_structural_effect": "STRENGTHENING",
+      "level_mapping_rationale": "Product and Innovation balance establishes treasury-dependence level.",
+      "level_mapping_rule_id": "LEVEL_XLM_XLM_R1_O2",
+      "level_state": "HIGH_DEPENDENCE",
       "mapping_rationale": "Product and Innovation balance maps to treasury structure.",
+      "measurement_concept": "sdf_treasury_balance",
       "observation_match": {
         "observation_ids": [
           "XLM-R1-O2"
         ]
       },
       "rule_id": "XLM_XLM_R1_O2_TO_TREASURY_STRUCTURE",
-      "structural_effect": "STRENGTHENING",
       "subject_profile": "XLM"
     },
     {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_mapping_rule_id": null,
+      "delta_state": "NOT_ESTABLISHED",
       "dimension_ids": [
         "TREASURY_STRUCTURE"
       ],
       "effect_strength": "MATERIAL",
+      "legacy_structural_effect": "STRENGTHENING",
+      "level_mapping_rationale": "Assets and Liquidity balance establishes treasury-dependence level.",
+      "level_mapping_rule_id": "LEVEL_XLM_XLM_R1_O3",
+      "level_state": "HIGH_DEPENDENCE",
       "mapping_rationale": "Assets and Liquidity balance maps to treasury structure.",
+      "measurement_concept": "sdf_treasury_balance",
       "observation_match": {
         "observation_ids": [
           "XLM-R1-O3"
         ]
       },
       "rule_id": "XLM_XLM_R1_O3_TO_TREASURY_STRUCTURE",
-      "structural_effect": "STRENGTHENING",
       "subject_profile": "XLM"
     },
     {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_mapping_rule_id": null,
+      "delta_state": "NOT_ESTABLISHED",
       "dimension_ids": [
         "FOUNDATION_DEPENDENCE"
       ],
       "effect_strength": "MODERATE",
+      "legacy_structural_effect": "STRENGTHENING",
+      "level_mapping_rationale": "Operational funding sales establish foundation-dependence level.",
+      "level_mapping_rule_id": "LEVEL_XLM_XLM_R1_O4",
+      "level_state": "MATERIAL_DEPENDENCE",
       "mapping_rationale": "Operational funding sales map to foundation dependence.",
+      "measurement_concept": "foundation_sales_funding",
       "observation_match": {
         "observation_ids": [
           "XLM-R1-O4"
         ]
       },
       "rule_id": "XLM_XLM_R1_O4_TO_FOUNDATION_DEPENDENCE",
-      "structural_effect": "STRENGTHENING",
       "subject_profile": "XLM"
     },
     {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_mapping_rule_id": null,
+      "delta_state": "NOT_ESTABLISHED",
       "dimension_ids": [
         "TREASURY_STRUCTURE"
       ],
       "effect_strength": "MODERATE",
+      "legacy_structural_effect": "STRENGTHENING",
+      "level_mapping_rationale": "Supply example establishes treasury/supply level.",
+      "level_mapping_rule_id": "LEVEL_XLM_XLM_R1_O5",
+      "level_state": "HIGH_DEPENDENCE",
       "mapping_rationale": "Supply distribution example maps to treasury/supply structure.",
+      "measurement_concept": "supply_distribution",
       "observation_match": {
         "observation_ids": [
           "XLM-R1-O5"
         ]
       },
       "rule_id": "XLM_XLM_R1_O5_TO_TREASURY_STRUCTURE",
-      "structural_effect": "STRENGTHENING",
       "subject_profile": "XLM"
     },
     {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_mapping_rule_id": null,
+      "delta_state": "NOT_ESTABLISHED",
       "dimension_ids": [
         "FOUNDATION_DEPENDENCE"
       ],
       "effect_strength": "MODERATE",
+      "legacy_structural_effect": "STRENGTHENING",
+      "level_mapping_rationale": "Mandate balance establishes foundation-dependence level.",
+      "level_mapping_rule_id": "LEVEL_XLM_XLM_R1_O6",
+      "level_state": "HIGH_DEPENDENCE",
       "mapping_rationale": "SDF mandate balance in supply example maps to foundation dependence.",
+      "measurement_concept": "sdf_mandate_balance",
       "observation_match": {
         "observation_ids": [
           "XLM-R1-O6"
         ]
       },
       "rule_id": "XLM_XLM_R1_O6_TO_FOUNDATION_DEPENDENCE",
-      "structural_effect": "STRENGTHENING",
       "subject_profile": "XLM"
     },
     {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_mapping_rule_id": null,
+      "delta_state": "NOT_ESTABLISHED",
       "dimension_ids": [
         "VALIDATOR_DISTRIBUTION"
       ],
       "effect_strength": "MODERATE",
+      "legacy_structural_effect": "TENSION",
+      "level_mapping_rationale": "Quorum-set structure establishes validator-distribution level.",
+      "level_mapping_rule_id": "LEVEL_XLM_XLM_R1_O7",
+      "level_state": "MECHANISM_DEFINED",
       "mapping_rationale": "Quorum-set structure maps to validator distribution.",
+      "measurement_concept": "quorum_structure",
       "observation_match": {
         "observation_ids": [
           "XLM-R1-O7"
         ]
       },
       "rule_id": "XLM_XLM_R1_O7_TO_VALIDATOR_DISTRIBUTION",
-      "structural_effect": "TENSION",
       "subject_profile": "XLM"
     },
     {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_mapping_rule_id": null,
+      "delta_state": "NOT_ESTABLISHED",
       "dimension_ids": [
         "SETTLEMENT_ROLE"
       ],
       "effect_strength": "LOW",
+      "legacy_structural_effect": "STRENGTHENING",
+      "level_mapping_rationale": "RWA/payment activity establishes settlement-role level.",
+      "level_mapping_rule_id": "LEVEL_XLM_XLM_R1_O8",
+      "level_state": "ESTABLISHED_ROLE",
       "mapping_rationale": "RWA/payment activity maps to settlement role.",
+      "measurement_concept": "rwa_payment_activity",
       "observation_match": {
         "observation_ids": [
           "XLM-R1-O8"
         ]
       },
       "rule_id": "XLM_XLM_R1_O8_TO_SETTLEMENT_ROLE",
-      "structural_effect": "STRENGTHENING",
       "subject_profile": "XLM"
     }
   ]

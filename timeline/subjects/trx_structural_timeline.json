@@ -56,10 +56,10 @@
     }
   ],
   "display_boundary": "Categorical presentation derived from frozen artifacts. No score, ranking, trading signal, or RDL policy classifier.",
-  "model_version": "TIMELINE_MODEL_R1",
+  "model_version": "TIMELINE_MODEL_R1_1",
   "phase_ribbon": [
     {
-      "aggregation_rule": "MONTH_FROM_WEEK",
+      "aggregation_rule": "MONTH_LEVEL_DELTA_FROM_WEEK",
       "bucket_end": "2026-09-30",
       "bucket_start": "2026-09-01",
       "dimension_bucket_refs": [
@@ -78,7 +78,7 @@
       ]
     },
     {
-      "aggregation_rule": "MONTH_FROM_WEEK",
+      "aggregation_rule": "MONTH_LEVEL_DELTA_FROM_WEEK",
       "bucket_end": "2026-09-30",
       "bucket_start": "2026-09-01",
       "dimension_bucket_refs": [
@@ -97,7 +97,7 @@
       ]
     },
     {
-      "aggregation_rule": "MONTH_FROM_WEEK",
+      "aggregation_rule": "MONTH_LEVEL_DELTA_FROM_WEEK",
       "bucket_end": "2026-09-30",
       "bucket_start": "2026-09-01",
       "dimension_bucket_refs": [
@@ -116,7 +116,7 @@
       ]
     },
     {
-      "aggregation_rule": "MONTH_FROM_WEEK",
+      "aggregation_rule": "MONTH_LEVEL_DELTA_FROM_WEEK",
       "bucket_end": "2026-09-30",
       "bucket_start": "2026-09-01",
       "dimension_bucket_refs": [
@@ -143,5 +143,5 @@
     "WEEK",
     "MONTH"
   ],
-  "ui_version": "TIMELINE_UI_R1"
+  "ui_version": "TIMELINE_UI_R1_1"
 }

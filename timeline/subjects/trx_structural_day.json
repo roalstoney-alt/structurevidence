@@ -1,12 +1,25 @@
 {
   "buckets": [
     {
-      "aggregation_rule": "DAY_ATOMIC",
+      "aggregation_rule": "DAY_LEVEL_DELTA",
       "bucket_end": "2026-09-07",
       "bucket_id": "TRX-STRUCT-DAY-2026-09-07-SETTLEMENT_ROLE",
       "bucket_start": "2026-09-07",
+      "comparison_lineage": [],
       "date": "2026-09-07",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
       "dimension_id": "SETTLEMENT_ROLE",
+      "level_age_days": 3,
+      "level_last_observed_at": "2026-09-07T00:00:00Z",
+      "level_observation_ids": [
+        "TL-TRX-O001",
+        "TL-TRX-O002"
+      ],
+      "level_state": "MATERIAL_ROLE",
       "lineage": {
         "artifact_refs": [
           "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
@@ -14,7 +27,22 @@
         "atomic_observation_ids": [
           "TL-TRX-O001",
           "TL-TRX-O002"
-        ]
+        ],
+        "delta": {
+          "artifact_refs": [
+            "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
+          ],
+          "comparison_lineage": []
+        },
+        "level": {
+          "artifact_refs": [
+            "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
+          ],
+          "atomic_observation_ids": [
+            "TL-TRX-O001",
+            "TL-TRX-O002"
+          ]
+        }
       },
       "observation_count": 2,
       "observations": [
@@ -22,234 +50,463 @@
         "TL-TRX-O002"
       ],
       "period": "2026-09-07",
+      "prior_reference_ids": [],
       "resolution": "DAY",
       "source_refs": [
         "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
       ],
-      "state": "STRENGTHENING",
+      "state": "MATERIAL_ROLE",
       "subject_id": "TRX"
     },
     {
-      "aggregation_rule": "DAY_ATOMIC",
+      "aggregation_rule": "DAY_LEVEL_DELTA",
       "bucket_end": "2026-09-07",
       "bucket_id": "TRX-STRUCT-DAY-2026-09-07-RESOURCE_PRESSURE",
       "bucket_start": "2026-09-07",
+      "comparison_lineage": [],
       "date": "2026-09-07",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
       "dimension_id": "RESOURCE_PRESSURE",
+      "level_age_days": 3,
+      "level_last_observed_at": "2026-09-07T00:00:00Z",
+      "level_observation_ids": [
+        "TL-TRX-O003"
+      ],
+      "level_state": "MATERIAL_ROLE",
       "lineage": {
         "artifact_refs": [
           "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
         ],
         "atomic_observation_ids": [
           "TL-TRX-O003"
-        ]
+        ],
+        "delta": {
+          "artifact_refs": [
+            "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
+          ],
+          "comparison_lineage": []
+        },
+        "level": {
+          "artifact_refs": [
+            "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
+          ],
+          "atomic_observation_ids": [
+            "TL-TRX-O003"
+          ]
+        }
       },
       "observation_count": 1,
       "observations": [
         "TL-TRX-O003"
       ],
       "period": "2026-09-07",
+      "prior_reference_ids": [],
       "resolution": "DAY",
       "source_refs": [
         "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
       ],
-      "state": "STRENGTHENING",
+      "state": "MATERIAL_ROLE",
       "subject_id": "TRX"
     },
     {
-      "aggregation_rule": "DAY_ATOMIC",
+      "aggregation_rule": "DAY_LEVEL_DELTA",
       "bucket_end": "2026-09-07",
       "bucket_id": "TRX-STRUCT-DAY-2026-09-07-VALIDATOR_DISTRIBUTION",
       "bucket_start": "2026-09-07",
+      "comparison_lineage": [],
       "date": "2026-09-07",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
       "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "level_age_days": null,
+      "level_last_observed_at": null,
+      "level_observation_ids": [],
+      "level_state": "NO_OBSERVATION",
       "lineage": {
         "artifact_refs": [],
-        "atomic_observation_ids": []
+        "atomic_observation_ids": [],
+        "delta": {
+          "artifact_refs": [],
+          "comparison_lineage": []
+        },
+        "level": {
+          "artifact_refs": [],
+          "atomic_observation_ids": []
+        }
       },
       "observation_count": 0,
       "observations": [],
       "period": "2026-09-07",
+      "prior_reference_ids": [],
       "resolution": "DAY",
       "source_refs": [],
       "state": "NO_OBSERVATION",
       "subject_id": "TRX"
     },
     {
-      "aggregation_rule": "DAY_ATOMIC",
+      "aggregation_rule": "DAY_LEVEL_DELTA",
       "bucket_end": "2026-09-07",
       "bucket_id": "TRX-STRUCT-DAY-2026-09-07-GOVERNANCE_STRUCTURE",
       "bucket_start": "2026-09-07",
+      "comparison_lineage": [],
       "date": "2026-09-07",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
       "dimension_id": "GOVERNANCE_STRUCTURE",
+      "level_age_days": null,
+      "level_last_observed_at": null,
+      "level_observation_ids": [],
+      "level_state": "NO_OBSERVATION",
       "lineage": {
         "artifact_refs": [],
-        "atomic_observation_ids": []
+        "atomic_observation_ids": [],
+        "delta": {
+          "artifact_refs": [],
+          "comparison_lineage": []
+        },
+        "level": {
+          "artifact_refs": [],
+          "atomic_observation_ids": []
+        }
       },
       "observation_count": 0,
       "observations": [],
       "period": "2026-09-07",
+      "prior_reference_ids": [],
       "resolution": "DAY",
       "source_refs": [],
       "state": "NO_OBSERVATION",
       "subject_id": "TRX"
     },
     {
-      "aggregation_rule": "DAY_ATOMIC",
+      "aggregation_rule": "DAY_LEVEL_DELTA",
       "bucket_end": "2026-09-08",
       "bucket_id": "TRX-STRUCT-DAY-2026-09-08-SETTLEMENT_ROLE",
       "bucket_start": "2026-09-08",
+      "comparison_lineage": [],
       "date": "2026-09-08",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
       "dimension_id": "SETTLEMENT_ROLE",
+      "level_age_days": null,
+      "level_last_observed_at": null,
+      "level_observation_ids": [],
+      "level_state": "NO_OBSERVATION",
       "lineage": {
         "artifact_refs": [],
-        "atomic_observation_ids": []
+        "atomic_observation_ids": [],
+        "delta": {
+          "artifact_refs": [],
+          "comparison_lineage": []
+        },
+        "level": {
+          "artifact_refs": [],
+          "atomic_observation_ids": []
+        }
       },
       "observation_count": 0,
       "observations": [],
       "period": "2026-09-08",
+      "prior_reference_ids": [],
       "resolution": "DAY",
       "source_refs": [],
       "state": "NO_OBSERVATION",
       "subject_id": "TRX"
     },
     {
-      "aggregation_rule": "DAY_ATOMIC",
+      "aggregation_rule": "DAY_LEVEL_DELTA",
       "bucket_end": "2026-09-08",
       "bucket_id": "TRX-STRUCT-DAY-2026-09-08-RESOURCE_PRESSURE",
       "bucket_start": "2026-09-08",
+      "comparison_lineage": [],
       "date": "2026-09-08",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
       "dimension_id": "RESOURCE_PRESSURE",
+      "level_age_days": null,
+      "level_last_observed_at": null,
+      "level_observation_ids": [],
+      "level_state": "NO_OBSERVATION",
       "lineage": {
         "artifact_refs": [],
-        "atomic_observation_ids": []
+        "atomic_observation_ids": [],
+        "delta": {
+          "artifact_refs": [],
+          "comparison_lineage": []
+        },
+        "level": {
+          "artifact_refs": [],
+          "atomic_observation_ids": []
+        }
       },
       "observation_count": 0,
       "observations": [],
       "period": "2026-09-08",
+      "prior_reference_ids": [],
       "resolution": "DAY",
       "source_refs": [],
       "state": "NO_OBSERVATION",
       "subject_id": "TRX"
     },
     {
-      "aggregation_rule": "DAY_ATOMIC",
+      "aggregation_rule": "DAY_LEVEL_DELTA",
       "bucket_end": "2026-09-08",
       "bucket_id": "TRX-STRUCT-DAY-2026-09-08-VALIDATOR_DISTRIBUTION",
       "bucket_start": "2026-09-08",
+      "comparison_lineage": [],
       "date": "2026-09-08",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
       "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "level_age_days": null,
+      "level_last_observed_at": null,
+      "level_observation_ids": [],
+      "level_state": "NO_OBSERVATION",
       "lineage": {
         "artifact_refs": [],
-        "atomic_observation_ids": []
+        "atomic_observation_ids": [],
+        "delta": {
+          "artifact_refs": [],
+          "comparison_lineage": []
+        },
+        "level": {
+          "artifact_refs": [],
+          "atomic_observation_ids": []
+        }
       },
       "observation_count": 0,
       "observations": [],
       "period": "2026-09-08",
+      "prior_reference_ids": [],
       "resolution": "DAY",
       "source_refs": [],
       "state": "NO_OBSERVATION",
       "subject_id": "TRX"
     },
     {
-      "aggregation_rule": "DAY_ATOMIC",
+      "aggregation_rule": "DAY_LEVEL_DELTA",
       "bucket_end": "2026-09-08",
       "bucket_id": "TRX-STRUCT-DAY-2026-09-08-GOVERNANCE_STRUCTURE",
       "bucket_start": "2026-09-08",
+      "comparison_lineage": [],
       "date": "2026-09-08",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
       "dimension_id": "GOVERNANCE_STRUCTURE",
+      "level_age_days": null,
+      "level_last_observed_at": null,
+      "level_observation_ids": [],
+      "level_state": "NO_OBSERVATION",
       "lineage": {
         "artifact_refs": [],
-        "atomic_observation_ids": []
+        "atomic_observation_ids": [],
+        "delta": {
+          "artifact_refs": [],
+          "comparison_lineage": []
+        },
+        "level": {
+          "artifact_refs": [],
+          "atomic_observation_ids": []
+        }
       },
       "observation_count": 0,
       "observations": [],
       "period": "2026-09-08",
+      "prior_reference_ids": [],
       "resolution": "DAY",
       "source_refs": [],
       "state": "NO_OBSERVATION",
       "subject_id": "TRX"
     },
     {
-      "aggregation_rule": "DAY_ATOMIC",
+      "aggregation_rule": "DAY_LEVEL_DELTA",
       "bucket_end": "2026-09-09",
       "bucket_id": "TRX-STRUCT-DAY-2026-09-09-SETTLEMENT_ROLE",
       "bucket_start": "2026-09-09",
+      "comparison_lineage": [],
       "date": "2026-09-09",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
       "dimension_id": "SETTLEMENT_ROLE",
+      "level_age_days": null,
+      "level_last_observed_at": null,
+      "level_observation_ids": [],
+      "level_state": "NO_OBSERVATION",
       "lineage": {
         "artifact_refs": [],
-        "atomic_observation_ids": []
+        "atomic_observation_ids": [],
+        "delta": {
+          "artifact_refs": [],
+          "comparison_lineage": []
+        },
+        "level": {
+          "artifact_refs": [],
+          "atomic_observation_ids": []
+        }
       },
       "observation_count": 0,
       "observations": [],
       "period": "2026-09-09",
+      "prior_reference_ids": [],
       "resolution": "DAY",
       "source_refs": [],
       "state": "NO_OBSERVATION",
       "subject_id": "TRX"
     },
     {
-      "aggregation_rule": "DAY_ATOMIC",
+      "aggregation_rule": "DAY_LEVEL_DELTA",
       "bucket_end": "2026-09-09",
       "bucket_id": "TRX-STRUCT-DAY-2026-09-09-RESOURCE_PRESSURE",
       "bucket_start": "2026-09-09",
+      "comparison_lineage": [],
       "date": "2026-09-09",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
       "dimension_id": "RESOURCE_PRESSURE",
+      "level_age_days": 1,
+      "level_last_observed_at": "2026-09-09T00:00:00Z",
+      "level_observation_ids": [
+        "TL-TRX-O004"
+      ],
+      "level_state": "MECHANISM_DEFINED",
       "lineage": {
         "artifact_refs": [
           "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
         ],
         "atomic_observation_ids": [
           "TL-TRX-O004"
-        ]
+        ],
+        "delta": {
+          "artifact_refs": [
+            "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
+          ],
+          "comparison_lineage": []
+        },
+        "level": {
+          "artifact_refs": [
+            "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
+          ],
+          "atomic_observation_ids": [
+            "TL-TRX-O004"
+          ]
+        }
       },
       "observation_count": 1,
       "observations": [
         "TL-TRX-O004"
       ],
       "period": "2026-09-09",
+      "prior_reference_ids": [],
       "resolution": "DAY",
       "source_refs": [
         "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
       ],
-      "state": "STRENGTHENING",
+      "state": "MECHANISM_DEFINED",
       "subject_id": "TRX"
     },
     {
-      "aggregation_rule": "DAY_ATOMIC",
+      "aggregation_rule": "DAY_LEVEL_DELTA",
       "bucket_end": "2026-09-09",
       "bucket_id": "TRX-STRUCT-DAY-2026-09-09-VALIDATOR_DISTRIBUTION",
       "bucket_start": "2026-09-09",
+      "comparison_lineage": [],
       "date": "2026-09-09",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
       "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "level_age_days": 1,
+      "level_last_observed_at": "2026-09-09T00:00:00Z",
+      "level_observation_ids": [
+        "TL-TRX-O005"
+      ],
+      "level_state": "FIXED_OR_RESTRICTED_SET",
       "lineage": {
         "artifact_refs": [
           "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
         ],
         "atomic_observation_ids": [
           "TL-TRX-O005"
-        ]
+        ],
+        "delta": {
+          "artifact_refs": [
+            "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
+          ],
+          "comparison_lineage": []
+        },
+        "level": {
+          "artifact_refs": [
+            "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
+          ],
+          "atomic_observation_ids": [
+            "TL-TRX-O005"
+          ]
+        }
       },
       "observation_count": 1,
       "observations": [
         "TL-TRX-O005"
       ],
       "period": "2026-09-09",
+      "prior_reference_ids": [],
       "resolution": "DAY",
       "source_refs": [
         "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
       ],
-      "state": "STRUCTURAL_SHIFT",
+      "state": "FIXED_OR_RESTRICTED_SET",
       "subject_id": "TRX"
     },
     {
-      "aggregation_rule": "DAY_ATOMIC",
+      "aggregation_rule": "DAY_LEVEL_DELTA",
       "bucket_end": "2026-09-09",
       "bucket_id": "TRX-STRUCT-DAY-2026-09-09-GOVERNANCE_STRUCTURE",
       "bucket_start": "2026-09-09",
+      "comparison_lineage": [],
       "date": "2026-09-09",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
       "dimension_id": "GOVERNANCE_STRUCTURE",
+      "level_age_days": 1,
+      "level_last_observed_at": "2026-09-09T00:00:00Z",
+      "level_observation_ids": [
+        "TL-TRX-O006",
+        "TL-TRX-O007",
+        "TL-TRX-O008"
+      ],
+      "level_state": "MIXED_LEVEL",
       "lineage": {
         "artifact_refs": [
           "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
@@ -258,7 +515,23 @@
           "TL-TRX-O006",
           "TL-TRX-O007",
           "TL-TRX-O008"
-        ]
+        ],
+        "delta": {
+          "artifact_refs": [
+            "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
+          ],
+          "comparison_lineage": []
+        },
+        "level": {
+          "artifact_refs": [
+            "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
+          ],
+          "atomic_observation_ids": [
+            "TL-TRX-O006",
+            "TL-TRX-O007",
+            "TL-TRX-O008"
+          ]
+        }
       },
       "observation_count": 3,
       "observations": [
@@ -267,16 +540,17 @@
         "TL-TRX-O008"
       ],
       "period": "2026-09-09",
+      "prior_reference_ids": [],
       "resolution": "DAY",
       "source_refs": [
         "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
       ],
-      "state": "TENSION",
+      "state": "MIXED_LEVEL",
       "subject_id": "TRX"
     }
   ],
   "layer": "STRUCTURAL",
-  "model_version": "TIMELINE_MODEL_R1",
+  "model_version": "TIMELINE_MODEL_R1_1",
   "resolution": "DAY",
   "subject_id": "TRX"
 }

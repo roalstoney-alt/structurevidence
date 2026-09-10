@@ -128,7 +128,7 @@
       "event_domain": "SUBJECT_EVENT",
       "event_id": "TL-XLM-SE007",
       "event_type": "PUBLIC_FACT",
-      "freshness_trigger_candidate": true,
+      "freshness_trigger_candidate": false,
       "knowledge_mode": "RETROSPECTIVE",
       "known_at": "2026-09-09T00:00:00Z",
       "label": "Quorum-set structure maps to validator distribution.",
@@ -278,7 +278,7 @@
       "trigger_type": null
     }
   ],
-  "model_version": "TIMELINE_MODEL_R1",
+  "model_version": "TIMELINE_MODEL_R1_1",
   "subject_id": "XLM",
   "subject_label": "XLM"
 }

@@ -323,7 +323,7 @@
     }
   ],
   "layer": "EVIDENCE",
-  "model_version": "TIMELINE_MODEL_R1",
+  "model_version": "TIMELINE_MODEL_R1_1",
   "resolution": "WEEK",
   "subject_id": "XLM"
 }

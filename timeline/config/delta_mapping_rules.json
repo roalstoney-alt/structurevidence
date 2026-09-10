@@ -1,0 +1,575 @@
+{
+  "mapping_version": "TIMELINE_MAPPING_v0.1",
+  "rules": [
+    {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_state": "NOT_ESTABLISHED",
+      "dimension_ids": [
+        "TREASURY_STRUCTURE"
+      ],
+      "observation_match": {
+        "observation_ids": [
+          "STRATEGY-R1-O1"
+        ]
+      },
+      "rule_id": "STRATEGY_STRATEGY_R1_O1_TO_TREASURY_STRUCTURE",
+      "subject_profile": "strategy"
+    },
+    {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_state": "NOT_ESTABLISHED",
+      "dimension_ids": [
+        "TREASURY_STRUCTURE"
+      ],
+      "observation_match": {
+        "observation_ids": [
+          "STRATEGY-R1-O2"
+        ]
+      },
+      "rule_id": "STRATEGY_STRATEGY_R1_O2_TO_TREASURY_STRUCTURE",
+      "subject_profile": "strategy"
+    },
+    {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_state": "NOT_ESTABLISHED",
+      "dimension_ids": [
+        "RESOURCE_PRESSURE"
+      ],
+      "observation_match": {
+        "observation_ids": [
+          "STRATEGY-R1-O3"
+        ]
+      },
+      "rule_id": "STRATEGY_STRATEGY_R1_O3_TO_RESOURCE_PRESSURE",
+      "subject_profile": "strategy"
+    },
+    {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_state": "NOT_ESTABLISHED",
+      "dimension_ids": [
+        "NARRATIVE_DEPENDENCE"
+      ],
+      "observation_match": {
+        "observation_ids": [
+          "STRATEGY-R1-O4"
+        ]
+      },
+      "rule_id": "STRATEGY_STRATEGY_R1_O4_TO_NARRATIVE_DEPENDENCE",
+      "subject_profile": "strategy"
+    },
+    {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_state": "NOT_ESTABLISHED",
+      "dimension_ids": [
+        "SOURCE_DEPENDENCY"
+      ],
+      "observation_match": {
+        "observation_ids": [
+          "STRATEGY-R1-O5"
+        ]
+      },
+      "rule_id": "STRATEGY_STRATEGY_R1_O5_TO_SOURCE_DEPENDENCY",
+      "subject_profile": "strategy"
+    },
+    {
+      "delta_basis": "EXPLICIT_CHANGE_EVENT",
+      "delta_mapping_rationale": "Burn observation explicitly reports tokens removed.",
+      "delta_state": "TOWARD_CONTRACTION",
+      "dimension_ids": [
+        "SUPPLY_STRUCTURE"
+      ],
+      "observation_match": {
+        "observation_ids": [
+          "BNB-R1-O1"
+        ]
+      },
+      "rule_id": "BNB_BNB_R1_O1_TO_SUPPLY_STRUCTURE",
+      "subject_profile": "BNB"
+    },
+    {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_state": "NOT_ESTABLISHED",
+      "dimension_ids": [
+        "SUPPLY_STRUCTURE"
+      ],
+      "observation_match": {
+        "observation_ids": [
+          "BNB-R1-O2"
+        ]
+      },
+      "rule_id": "BNB_BNB_R1_O2_TO_SUPPLY_STRUCTURE",
+      "subject_profile": "BNB"
+    },
+    {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_state": "NOT_ESTABLISHED",
+      "dimension_ids": [
+        "SUPPLY_STRUCTURE"
+      ],
+      "observation_match": {
+        "observation_ids": [
+          "BNB-R1-O3"
+        ]
+      },
+      "rule_id": "BNB_BNB_R1_O3_TO_SUPPLY_STRUCTURE",
+      "subject_profile": "BNB"
+    },
+    {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_state": "NOT_ESTABLISHED",
+      "dimension_ids": [
+        "UTILITY_STRUCTURE"
+      ],
+      "observation_match": {
+        "observation_ids": [
+          "BNB-R1-O4"
+        ]
+      },
+      "rule_id": "BNB_BNB_R1_O4_TO_UTILITY_STRUCTURE",
+      "subject_profile": "BNB"
+    },
+    {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_state": "NOT_ESTABLISHED",
+      "dimension_ids": [
+        "VALIDATOR_DISTRIBUTION"
+      ],
+      "observation_match": {
+        "observation_ids": [
+          "BNB-R1-O5"
+        ]
+      },
+      "rule_id": "BNB_BNB_R1_O5_TO_VALIDATOR_DISTRIBUTION",
+      "subject_profile": "BNB"
+    },
+    {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_state": "NOT_ESTABLISHED",
+      "dimension_ids": [
+        "VALIDATOR_DISTRIBUTION"
+      ],
+      "observation_match": {
+        "observation_ids": [
+          "BNB-R1-O6"
+        ]
+      },
+      "rule_id": "BNB_BNB_R1_O6_TO_VALIDATOR_DISTRIBUTION",
+      "subject_profile": "BNB"
+    },
+    {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_state": "NOT_ESTABLISHED",
+      "dimension_ids": [
+        "GOVERNANCE_STRUCTURE"
+      ],
+      "observation_match": {
+        "observation_ids": [
+          "BNB-R1-O7"
+        ]
+      },
+      "rule_id": "BNB_BNB_R1_O7_TO_GOVERNANCE_STRUCTURE",
+      "subject_profile": "BNB"
+    },
+    {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_state": "NOT_ESTABLISHED",
+      "dimension_ids": [
+        "GOVERNANCE_STRUCTURE"
+      ],
+      "observation_match": {
+        "observation_ids": [
+          "BNB-R1-O8"
+        ]
+      },
+      "rule_id": "BNB_BNB_R1_O8_TO_GOVERNANCE_STRUCTURE",
+      "subject_profile": "BNB"
+    },
+    {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_state": "NOT_ESTABLISHED",
+      "dimension_ids": [
+        "UTILITY_STRUCTURE"
+      ],
+      "observation_match": {
+        "observation_ids": [
+          "BNB-R1-O9"
+        ]
+      },
+      "rule_id": "BNB_BNB_R1_O9_TO_UTILITY_STRUCTURE",
+      "subject_profile": "BNB"
+    },
+    {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_state": "NOT_ESTABLISHED",
+      "dimension_ids": [
+        "RESOURCE_PRESSURE"
+      ],
+      "observation_match": {
+        "observation_ids": [
+          "SOL-R1-O1"
+        ]
+      },
+      "rule_id": "SOL_SOL_R1_O1_TO_RESOURCE_PRESSURE",
+      "subject_profile": "SOL"
+    },
+    {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_state": "NOT_ESTABLISHED",
+      "dimension_ids": [
+        "RESOURCE_PRESSURE"
+      ],
+      "observation_match": {
+        "observation_ids": [
+          "SOL-R1-O2"
+        ]
+      },
+      "rule_id": "SOL_SOL_R1_O2_TO_RESOURCE_PRESSURE",
+      "subject_profile": "SOL"
+    },
+    {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_state": "NOT_ESTABLISHED",
+      "dimension_ids": [
+        "RESOURCE_PRESSURE"
+      ],
+      "observation_match": {
+        "observation_ids": [
+          "SOL-R1-O3"
+        ]
+      },
+      "rule_id": "SOL_SOL_R1_O3_TO_RESOURCE_PRESSURE",
+      "subject_profile": "SOL"
+    },
+    {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_state": "NOT_ESTABLISHED",
+      "dimension_ids": [
+        "VALIDATOR_DISTRIBUTION"
+      ],
+      "observation_match": {
+        "observation_ids": [
+          "SOL-R1-O4"
+        ]
+      },
+      "rule_id": "SOL_SOL_R1_O4_TO_VALIDATOR_DISTRIBUTION",
+      "subject_profile": "SOL"
+    },
+    {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_state": "NOT_ESTABLISHED",
+      "dimension_ids": [
+        "VALIDATOR_DISTRIBUTION"
+      ],
+      "observation_match": {
+        "observation_ids": [
+          "SOL-R1-O5"
+        ]
+      },
+      "rule_id": "SOL_SOL_R1_O5_TO_VALIDATOR_DISTRIBUTION",
+      "subject_profile": "SOL"
+    },
+    {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_state": "NOT_ESTABLISHED",
+      "dimension_ids": [
+        "VALIDATOR_DISTRIBUTION"
+      ],
+      "observation_match": {
+        "observation_ids": [
+          "SOL-R1-O6"
+        ]
+      },
+      "rule_id": "SOL_SOL_R1_O6_TO_VALIDATOR_DISTRIBUTION",
+      "subject_profile": "SOL"
+    },
+    {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_state": "NOT_ESTABLISHED",
+      "dimension_ids": [
+        "GOVERNANCE_STRUCTURE"
+      ],
+      "observation_match": {
+        "observation_ids": [
+          "SOL-R1-O7"
+        ]
+      },
+      "rule_id": "SOL_SOL_R1_O7_TO_GOVERNANCE_STRUCTURE",
+      "subject_profile": "SOL"
+    },
+    {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_state": "NOT_ESTABLISHED",
+      "dimension_ids": [
+        "UTILITY_STRUCTURE"
+      ],
+      "observation_match": {
+        "observation_ids": [
+          "SOL-R1-O8"
+        ]
+      },
+      "rule_id": "SOL_SOL_R1_O8_TO_UTILITY_STRUCTURE",
+      "subject_profile": "SOL"
+    },
+    {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_state": "NOT_ESTABLISHED",
+      "dimension_ids": [
+        "SETTLEMENT_ROLE"
+      ],
+      "observation_match": {
+        "observation_ids": [
+          "TRX-R1-O1"
+        ]
+      },
+      "rule_id": "TRX_TRX_R1_O1_TO_SETTLEMENT_ROLE",
+      "subject_profile": "TRX"
+    },
+    {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_state": "NOT_ESTABLISHED",
+      "dimension_ids": [
+        "SETTLEMENT_ROLE"
+      ],
+      "observation_match": {
+        "observation_ids": [
+          "TRX-R1-O2"
+        ]
+      },
+      "rule_id": "TRX_TRX_R1_O2_TO_SETTLEMENT_ROLE",
+      "subject_profile": "TRX"
+    },
+    {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_state": "NOT_ESTABLISHED",
+      "dimension_ids": [
+        "RESOURCE_PRESSURE"
+      ],
+      "observation_match": {
+        "observation_ids": [
+          "TRX-R1-O3"
+        ]
+      },
+      "rule_id": "TRX_TRX_R1_O3_TO_RESOURCE_PRESSURE",
+      "subject_profile": "TRX"
+    },
+    {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_state": "NOT_ESTABLISHED",
+      "dimension_ids": [
+        "RESOURCE_PRESSURE"
+      ],
+      "observation_match": {
+        "observation_ids": [
+          "TRX-R1-O4"
+        ]
+      },
+      "rule_id": "TRX_TRX_R1_O4_TO_RESOURCE_PRESSURE",
+      "subject_profile": "TRX"
+    },
+    {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_state": "NOT_ESTABLISHED",
+      "dimension_ids": [
+        "VALIDATOR_DISTRIBUTION"
+      ],
+      "observation_match": {
+        "observation_ids": [
+          "TRX-R1-O5"
+        ]
+      },
+      "rule_id": "TRX_TRX_R1_O5_TO_VALIDATOR_DISTRIBUTION",
+      "subject_profile": "TRX"
+    },
+    {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_state": "NOT_ESTABLISHED",
+      "dimension_ids": [
+        "GOVERNANCE_STRUCTURE"
+      ],
+      "observation_match": {
+        "observation_ids": [
+          "TRX-R1-O6"
+        ]
+      },
+      "rule_id": "TRX_TRX_R1_O6_TO_GOVERNANCE_STRUCTURE",
+      "subject_profile": "TRX"
+    },
+    {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_state": "NOT_ESTABLISHED",
+      "dimension_ids": [
+        "GOVERNANCE_STRUCTURE"
+      ],
+      "observation_match": {
+        "observation_ids": [
+          "TRX-R1-O7"
+        ]
+      },
+      "rule_id": "TRX_TRX_R1_O7_TO_GOVERNANCE_STRUCTURE",
+      "subject_profile": "TRX"
+    },
+    {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_state": "NOT_ESTABLISHED",
+      "dimension_ids": [
+        "GOVERNANCE_STRUCTURE"
+      ],
+      "observation_match": {
+        "observation_ids": [
+          "TRX-R1-O8"
+        ]
+      },
+      "rule_id": "TRX_TRX_R1_O8_TO_GOVERNANCE_STRUCTURE",
+      "subject_profile": "TRX"
+    },
+    {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_state": "NOT_ESTABLISHED",
+      "dimension_ids": [
+        "TREASURY_STRUCTURE"
+      ],
+      "observation_match": {
+        "observation_ids": [
+          "XLM-R1-O1"
+        ]
+      },
+      "rule_id": "XLM_XLM_R1_O1_TO_TREASURY_STRUCTURE",
+      "subject_profile": "XLM"
+    },
+    {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_state": "NOT_ESTABLISHED",
+      "dimension_ids": [
+        "TREASURY_STRUCTURE"
+      ],
+      "observation_match": {
+        "observation_ids": [
+          "XLM-R1-O2"
+        ]
+      },
+      "rule_id": "XLM_XLM_R1_O2_TO_TREASURY_STRUCTURE",
+      "subject_profile": "XLM"
+    },
+    {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_state": "NOT_ESTABLISHED",
+      "dimension_ids": [
+        "TREASURY_STRUCTURE"
+      ],
+      "observation_match": {
+        "observation_ids": [
+          "XLM-R1-O3"
+        ]
+      },
+      "rule_id": "XLM_XLM_R1_O3_TO_TREASURY_STRUCTURE",
+      "subject_profile": "XLM"
+    },
+    {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_state": "NOT_ESTABLISHED",
+      "dimension_ids": [
+        "FOUNDATION_DEPENDENCE"
+      ],
+      "observation_match": {
+        "observation_ids": [
+          "XLM-R1-O4"
+        ]
+      },
+      "rule_id": "XLM_XLM_R1_O4_TO_FOUNDATION_DEPENDENCE",
+      "subject_profile": "XLM"
+    },
+    {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_state": "NOT_ESTABLISHED",
+      "dimension_ids": [
+        "TREASURY_STRUCTURE"
+      ],
+      "observation_match": {
+        "observation_ids": [
+          "XLM-R1-O5"
+        ]
+      },
+      "rule_id": "XLM_XLM_R1_O5_TO_TREASURY_STRUCTURE",
+      "subject_profile": "XLM"
+    },
+    {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_state": "NOT_ESTABLISHED",
+      "dimension_ids": [
+        "FOUNDATION_DEPENDENCE"
+      ],
+      "observation_match": {
+        "observation_ids": [
+          "XLM-R1-O6"
+        ]
+      },
+      "rule_id": "XLM_XLM_R1_O6_TO_FOUNDATION_DEPENDENCE",
+      "subject_profile": "XLM"
+    },
+    {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_state": "NOT_ESTABLISHED",
+      "dimension_ids": [
+        "VALIDATOR_DISTRIBUTION"
+      ],
+      "observation_match": {
+        "observation_ids": [
+          "XLM-R1-O7"
+        ]
+      },
+      "rule_id": "XLM_XLM_R1_O7_TO_VALIDATOR_DISTRIBUTION",
+      "subject_profile": "XLM"
+    },
+    {
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_state": "NOT_ESTABLISHED",
+      "dimension_ids": [
+        "SETTLEMENT_ROLE"
+      ],
+      "observation_match": {
+        "observation_ids": [
+          "XLM-R1-O8"
+        ]
+      },
+      "rule_id": "XLM_XLM_R1_O8_TO_SETTLEMENT_ROLE",
+      "subject_profile": "XLM"
+    }
+  ]
+}

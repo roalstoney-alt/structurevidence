@@ -11,5 +11,5 @@
     "UTILITY_STRUCTURE": "Documented functional demand or use context.",
     "VALIDATOR_DISTRIBUTION": "Validator, quorum or block-producer distribution."
   },
-  "model_version": "TIMELINE_MODEL_R1"
+  "model_version": "TIMELINE_MODEL_R1_1"
 }

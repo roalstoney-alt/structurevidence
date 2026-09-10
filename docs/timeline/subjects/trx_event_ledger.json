@@ -192,7 +192,7 @@
       "event_domain": "SUBJECT_EVENT",
       "event_id": "TL-TRX-SE005",
       "event_type": "PUBLIC_FACT",
-      "freshness_trigger_candidate": true,
+      "freshness_trigger_candidate": false,
       "knowledge_mode": "CONTEMPORANEOUS",
       "known_at": "2026-09-09T00:00:00Z",
       "label": "27 SR producer structure maps to validator distribution.",
@@ -211,7 +211,7 @@
       "event_domain": "SUBJECT_EVENT",
       "event_id": "TL-TRX-SE006",
       "event_type": "PUBLIC_FACT",
-      "freshness_trigger_candidate": true,
+      "freshness_trigger_candidate": false,
       "knowledge_mode": "CONTEMPORANEOUS",
       "known_at": "2026-09-09T00:00:00Z",
       "label": "Top-127 reward structure maps to governance control.",
@@ -249,7 +249,7 @@
       "event_domain": "SUBJECT_EVENT",
       "event_id": "TL-TRX-SE008",
       "event_type": "PUBLIC_FACT",
-      "freshness_trigger_candidate": true,
+      "freshness_trigger_candidate": false,
       "knowledge_mode": "CONTEMPORANEOUS",
       "known_at": "2026-09-09T00:00:00Z",
       "label": "Missing concentration evidence is mapped as governance tension, not stability.",
@@ -278,7 +278,7 @@
       "trigger_type": null
     }
   ],
-  "model_version": "TIMELINE_MODEL_R1",
+  "model_version": "TIMELINE_MODEL_R1_1",
   "subject_id": "TRX",
   "subject_label": "TRX"
 }

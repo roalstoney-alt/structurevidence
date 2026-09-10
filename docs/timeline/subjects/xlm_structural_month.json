@@ -1,11 +1,25 @@
 {
   "buckets": [
     {
-      "aggregation_rule": "MONTH_FROM_WEEK",
+      "aggregation_rule": "MONTH_LEVEL_DELTA_FROM_WEEK",
       "bucket_end": "2026-07-31",
       "bucket_id": "XLM-STRUCT-MONTH-2026-07-FOUNDATION_DEPENDENCE",
       "bucket_start": "2026-07-01",
+      "closing_level_state": "HIGH_DEPENDENCE",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "FOUNDATION_DEPENDENCE",
+      "level_age_days": 51,
+      "level_last_observed_at": "2026-07-21T00:00:00Z",
+      "level_observation_ids": [
+        "TL-XLM-O006"
+      ],
+      "level_state": "HIGH_DEPENDENCE",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [
           "research/digital-assets/batch-01-r1/XLM/OBSERVATION_REGISTRY.json"
@@ -28,6 +42,34 @@
           "XLM-STRUCT-DAY-2026-08-01-FOUNDATION_DEPENDENCE",
           "XLM-STRUCT-DAY-2026-08-02-FOUNDATION_DEPENDENCE"
         ],
+        "delta": {
+          "artifact_refs": [
+            "research/digital-assets/batch-01-r1/XLM/OBSERVATION_REGISTRY.json"
+          ],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [
+            "research/digital-assets/batch-01-r1/XLM/OBSERVATION_REGISTRY.json"
+          ],
+          "atomic_observation_ids": [
+            "TL-XLM-O006"
+          ],
+          "day_bucket_ids": [
+            "XLM-STRUCT-DAY-2026-07-21-FOUNDATION_DEPENDENCE",
+            "XLM-STRUCT-DAY-2026-07-22-FOUNDATION_DEPENDENCE",
+            "XLM-STRUCT-DAY-2026-07-23-FOUNDATION_DEPENDENCE",
+            "XLM-STRUCT-DAY-2026-07-24-FOUNDATION_DEPENDENCE",
+            "XLM-STRUCT-DAY-2026-07-25-FOUNDATION_DEPENDENCE",
+            "XLM-STRUCT-DAY-2026-07-26-FOUNDATION_DEPENDENCE"
+          ],
+          "week_bucket_ids": [
+            "XLM-STRUCT-WEEK-2026-W30-FOUNDATION_DEPENDENCE"
+          ]
+        },
         "week_bucket_ids": [
           "XLM-STRUCT-WEEK-2026-W30-FOUNDATION_DEPENDENCE",
           "XLM-STRUCT-WEEK-2026-W31-FOUNDATION_DEPENDENCE"
@@ -39,7 +81,10 @@
       "observations": [
         "TL-XLM-O006"
       ],
+      "opening_level_state": "HIGH_DEPENDENCE",
       "period": "2026-07",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "MONTH",
       "source_refs": [
         "research/digital-assets/batch-01-r1/XLM/OBSERVATION_REGISTRY.json"
@@ -48,15 +93,27 @@
         "XLM-STRUCT-WEEK-2026-W30-FOUNDATION_DEPENDENCE",
         "XLM-STRUCT-WEEK-2026-W31-FOUNDATION_DEPENDENCE"
       ],
-      "state": "STRENGTHENING",
+      "state": "HIGH_DEPENDENCE",
       "subject_id": "XLM"
     },
     {
-      "aggregation_rule": "MONTH_FROM_WEEK",
+      "aggregation_rule": "MONTH_LEVEL_DELTA_FROM_WEEK",
       "bucket_end": "2026-07-31",
       "bucket_id": "XLM-STRUCT-MONTH-2026-07-SETTLEMENT_ROLE",
       "bucket_start": "2026-07-01",
+      "closing_level_state": "NO_OBSERVATION",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "SETTLEMENT_ROLE",
+      "level_age_days": null,
+      "level_last_observed_at": null,
+      "level_observation_ids": [],
+      "level_state": "NO_OBSERVATION",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [],
         "atomic_observation_ids": [],
@@ -75,6 +132,19 @@
           "XLM-STRUCT-DAY-2026-08-01-SETTLEMENT_ROLE",
           "XLM-STRUCT-DAY-2026-08-02-SETTLEMENT_ROLE"
         ],
+        "delta": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
         "week_bucket_ids": [
           "XLM-STRUCT-WEEK-2026-W30-SETTLEMENT_ROLE",
           "XLM-STRUCT-WEEK-2026-W31-SETTLEMENT_ROLE"
@@ -84,7 +154,10 @@
       "month_start": "2026-07-01",
       "observation_count": 0,
       "observations": [],
+      "opening_level_state": "NO_OBSERVATION",
       "period": "2026-07",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "MONTH",
       "source_refs": [],
       "source_week_bucket_ids": [
@@ -95,11 +168,25 @@
       "subject_id": "XLM"
     },
     {
-      "aggregation_rule": "MONTH_FROM_WEEK",
+      "aggregation_rule": "MONTH_LEVEL_DELTA_FROM_WEEK",
       "bucket_end": "2026-07-31",
       "bucket_id": "XLM-STRUCT-MONTH-2026-07-TREASURY_STRUCTURE",
       "bucket_start": "2026-07-01",
+      "closing_level_state": "HIGH_DEPENDENCE",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "TREASURY_STRUCTURE",
+      "level_age_days": 51,
+      "level_last_observed_at": "2026-07-21T00:00:00Z",
+      "level_observation_ids": [
+        "TL-XLM-O005"
+      ],
+      "level_state": "HIGH_DEPENDENCE",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [
           "research/digital-assets/batch-01-r1/XLM/OBSERVATION_REGISTRY.json"
@@ -122,6 +209,34 @@
           "XLM-STRUCT-DAY-2026-08-01-TREASURY_STRUCTURE",
           "XLM-STRUCT-DAY-2026-08-02-TREASURY_STRUCTURE"
         ],
+        "delta": {
+          "artifact_refs": [
+            "research/digital-assets/batch-01-r1/XLM/OBSERVATION_REGISTRY.json"
+          ],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [
+            "research/digital-assets/batch-01-r1/XLM/OBSERVATION_REGISTRY.json"
+          ],
+          "atomic_observation_ids": [
+            "TL-XLM-O005"
+          ],
+          "day_bucket_ids": [
+            "XLM-STRUCT-DAY-2026-07-21-TREASURY_STRUCTURE",
+            "XLM-STRUCT-DAY-2026-07-22-TREASURY_STRUCTURE",
+            "XLM-STRUCT-DAY-2026-07-23-TREASURY_STRUCTURE",
+            "XLM-STRUCT-DAY-2026-07-24-TREASURY_STRUCTURE",
+            "XLM-STRUCT-DAY-2026-07-25-TREASURY_STRUCTURE",
+            "XLM-STRUCT-DAY-2026-07-26-TREASURY_STRUCTURE"
+          ],
+          "week_bucket_ids": [
+            "XLM-STRUCT-WEEK-2026-W30-TREASURY_STRUCTURE"
+          ]
+        },
         "week_bucket_ids": [
           "XLM-STRUCT-WEEK-2026-W30-TREASURY_STRUCTURE",
           "XLM-STRUCT-WEEK-2026-W31-TREASURY_STRUCTURE"
@@ -133,7 +248,10 @@
       "observations": [
         "TL-XLM-O005"
       ],
+      "opening_level_state": "HIGH_DEPENDENCE",
       "period": "2026-07",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "MONTH",
       "source_refs": [
         "research/digital-assets/batch-01-r1/XLM/OBSERVATION_REGISTRY.json"
@@ -142,15 +260,27 @@
         "XLM-STRUCT-WEEK-2026-W30-TREASURY_STRUCTURE",
         "XLM-STRUCT-WEEK-2026-W31-TREASURY_STRUCTURE"
       ],
-      "state": "STRENGTHENING",
+      "state": "HIGH_DEPENDENCE",
       "subject_id": "XLM"
     },
     {
-      "aggregation_rule": "MONTH_FROM_WEEK",
+      "aggregation_rule": "MONTH_LEVEL_DELTA_FROM_WEEK",
       "bucket_end": "2026-07-31",
       "bucket_id": "XLM-STRUCT-MONTH-2026-07-VALIDATOR_DISTRIBUTION",
       "bucket_start": "2026-07-01",
+      "closing_level_state": "NO_OBSERVATION",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "level_age_days": null,
+      "level_last_observed_at": null,
+      "level_observation_ids": [],
+      "level_state": "NO_OBSERVATION",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [],
         "atomic_observation_ids": [],
@@ -169,6 +299,19 @@
           "XLM-STRUCT-DAY-2026-08-01-VALIDATOR_DISTRIBUTION",
           "XLM-STRUCT-DAY-2026-08-02-VALIDATOR_DISTRIBUTION"
         ],
+        "delta": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
         "week_bucket_ids": [
           "XLM-STRUCT-WEEK-2026-W30-VALIDATOR_DISTRIBUTION",
           "XLM-STRUCT-WEEK-2026-W31-VALIDATOR_DISTRIBUTION"
@@ -178,7 +321,10 @@
       "month_start": "2026-07-01",
       "observation_count": 0,
       "observations": [],
+      "opening_level_state": "NO_OBSERVATION",
       "period": "2026-07",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "MONTH",
       "source_refs": [],
       "source_week_bucket_ids": [
@@ -189,11 +335,25 @@
       "subject_id": "XLM"
     },
     {
-      "aggregation_rule": "MONTH_FROM_WEEK",
+      "aggregation_rule": "MONTH_LEVEL_DELTA_FROM_WEEK",
       "bucket_end": "2026-08-31",
       "bucket_id": "XLM-STRUCT-MONTH-2026-08-FOUNDATION_DEPENDENCE",
       "bucket_start": "2026-08-01",
+      "closing_level_state": "MATERIAL_DEPENDENCE",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "FOUNDATION_DEPENDENCE",
+      "level_age_days": 6,
+      "level_last_observed_at": "2026-09-04T00:00:00Z",
+      "level_observation_ids": [
+        "TL-XLM-O004"
+      ],
+      "level_state": "MATERIAL_DEPENDENCE",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [
           "research/digital-assets/batch-01-r1/XLM/OBSERVATION_REGISTRY.json"
@@ -238,6 +398,35 @@
           "XLM-STRUCT-DAY-2026-09-05-FOUNDATION_DEPENDENCE",
           "XLM-STRUCT-DAY-2026-09-06-FOUNDATION_DEPENDENCE"
         ],
+        "delta": {
+          "artifact_refs": [
+            "research/digital-assets/batch-01-r1/XLM/OBSERVATION_REGISTRY.json"
+          ],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [
+            "research/digital-assets/batch-01-r1/XLM/OBSERVATION_REGISTRY.json"
+          ],
+          "atomic_observation_ids": [
+            "TL-XLM-O004"
+          ],
+          "day_bucket_ids": [
+            "XLM-STRUCT-DAY-2026-08-31-FOUNDATION_DEPENDENCE",
+            "XLM-STRUCT-DAY-2026-09-01-FOUNDATION_DEPENDENCE",
+            "XLM-STRUCT-DAY-2026-09-02-FOUNDATION_DEPENDENCE",
+            "XLM-STRUCT-DAY-2026-09-03-FOUNDATION_DEPENDENCE",
+            "XLM-STRUCT-DAY-2026-09-04-FOUNDATION_DEPENDENCE",
+            "XLM-STRUCT-DAY-2026-09-05-FOUNDATION_DEPENDENCE",
+            "XLM-STRUCT-DAY-2026-09-06-FOUNDATION_DEPENDENCE"
+          ],
+          "week_bucket_ids": [
+            "XLM-STRUCT-WEEK-2026-W36-FOUNDATION_DEPENDENCE"
+          ]
+        },
         "week_bucket_ids": [
           "XLM-STRUCT-WEEK-2026-W32-FOUNDATION_DEPENDENCE",
           "XLM-STRUCT-WEEK-2026-W33-FOUNDATION_DEPENDENCE",
@@ -252,7 +441,10 @@
       "observations": [
         "TL-XLM-O004"
       ],
+      "opening_level_state": "MATERIAL_DEPENDENCE",
       "period": "2026-08",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "MONTH",
       "source_refs": [
         "research/digital-assets/batch-01-r1/XLM/OBSERVATION_REGISTRY.json"
@@ -264,15 +456,27 @@
         "XLM-STRUCT-WEEK-2026-W35-FOUNDATION_DEPENDENCE",
         "XLM-STRUCT-WEEK-2026-W36-FOUNDATION_DEPENDENCE"
       ],
-      "state": "STRENGTHENING",
+      "state": "MATERIAL_DEPENDENCE",
       "subject_id": "XLM"
     },
     {
-      "aggregation_rule": "MONTH_FROM_WEEK",
+      "aggregation_rule": "MONTH_LEVEL_DELTA_FROM_WEEK",
       "bucket_end": "2026-08-31",
       "bucket_id": "XLM-STRUCT-MONTH-2026-08-SETTLEMENT_ROLE",
       "bucket_start": "2026-08-01",
+      "closing_level_state": "NO_OBSERVATION",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "SETTLEMENT_ROLE",
+      "level_age_days": null,
+      "level_last_observed_at": null,
+      "level_observation_ids": [],
+      "level_state": "NO_OBSERVATION",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [],
         "atomic_observation_ids": [],
@@ -313,6 +517,19 @@
           "XLM-STRUCT-DAY-2026-09-05-SETTLEMENT_ROLE",
           "XLM-STRUCT-DAY-2026-09-06-SETTLEMENT_ROLE"
         ],
+        "delta": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
         "week_bucket_ids": [
           "XLM-STRUCT-WEEK-2026-W32-SETTLEMENT_ROLE",
           "XLM-STRUCT-WEEK-2026-W33-SETTLEMENT_ROLE",
@@ -325,7 +542,10 @@
       "month_start": "2026-08-01",
       "observation_count": 0,
       "observations": [],
+      "opening_level_state": "NO_OBSERVATION",
       "period": "2026-08",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "MONTH",
       "source_refs": [],
       "source_week_bucket_ids": [
@@ -339,11 +559,27 @@
       "subject_id": "XLM"
     },
     {
-      "aggregation_rule": "MONTH_FROM_WEEK",
+      "aggregation_rule": "MONTH_LEVEL_DELTA_FROM_WEEK",
       "bucket_end": "2026-08-31",
       "bucket_id": "XLM-STRUCT-MONTH-2026-08-TREASURY_STRUCTURE",
       "bucket_start": "2026-08-01",
+      "closing_level_state": "HIGH_DEPENDENCE",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "TREASURY_STRUCTURE",
+      "level_age_days": 6,
+      "level_last_observed_at": "2026-09-04T00:00:00Z",
+      "level_observation_ids": [
+        "TL-XLM-O001",
+        "TL-XLM-O002",
+        "TL-XLM-O003"
+      ],
+      "level_state": "HIGH_DEPENDENCE",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [
           "research/digital-assets/batch-01-r1/XLM/OBSERVATION_REGISTRY.json"
@@ -390,6 +626,37 @@
           "XLM-STRUCT-DAY-2026-09-05-TREASURY_STRUCTURE",
           "XLM-STRUCT-DAY-2026-09-06-TREASURY_STRUCTURE"
         ],
+        "delta": {
+          "artifact_refs": [
+            "research/digital-assets/batch-01-r1/XLM/OBSERVATION_REGISTRY.json"
+          ],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [
+            "research/digital-assets/batch-01-r1/XLM/OBSERVATION_REGISTRY.json"
+          ],
+          "atomic_observation_ids": [
+            "TL-XLM-O001",
+            "TL-XLM-O002",
+            "TL-XLM-O003"
+          ],
+          "day_bucket_ids": [
+            "XLM-STRUCT-DAY-2026-08-31-TREASURY_STRUCTURE",
+            "XLM-STRUCT-DAY-2026-09-01-TREASURY_STRUCTURE",
+            "XLM-STRUCT-DAY-2026-09-02-TREASURY_STRUCTURE",
+            "XLM-STRUCT-DAY-2026-09-03-TREASURY_STRUCTURE",
+            "XLM-STRUCT-DAY-2026-09-04-TREASURY_STRUCTURE",
+            "XLM-STRUCT-DAY-2026-09-05-TREASURY_STRUCTURE",
+            "XLM-STRUCT-DAY-2026-09-06-TREASURY_STRUCTURE"
+          ],
+          "week_bucket_ids": [
+            "XLM-STRUCT-WEEK-2026-W36-TREASURY_STRUCTURE"
+          ]
+        },
         "week_bucket_ids": [
           "XLM-STRUCT-WEEK-2026-W32-TREASURY_STRUCTURE",
           "XLM-STRUCT-WEEK-2026-W33-TREASURY_STRUCTURE",
@@ -406,7 +673,10 @@
         "TL-XLM-O002",
         "TL-XLM-O003"
       ],
+      "opening_level_state": "HIGH_DEPENDENCE",
       "period": "2026-08",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "MONTH",
       "source_refs": [
         "research/digital-assets/batch-01-r1/XLM/OBSERVATION_REGISTRY.json"
@@ -418,15 +688,27 @@
         "XLM-STRUCT-WEEK-2026-W35-TREASURY_STRUCTURE",
         "XLM-STRUCT-WEEK-2026-W36-TREASURY_STRUCTURE"
       ],
-      "state": "STRENGTHENING",
+      "state": "HIGH_DEPENDENCE",
       "subject_id": "XLM"
     },
     {
-      "aggregation_rule": "MONTH_FROM_WEEK",
+      "aggregation_rule": "MONTH_LEVEL_DELTA_FROM_WEEK",
       "bucket_end": "2026-08-31",
       "bucket_id": "XLM-STRUCT-MONTH-2026-08-VALIDATOR_DISTRIBUTION",
       "bucket_start": "2026-08-01",
+      "closing_level_state": "NO_OBSERVATION",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "level_age_days": null,
+      "level_last_observed_at": null,
+      "level_observation_ids": [],
+      "level_state": "NO_OBSERVATION",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [],
         "atomic_observation_ids": [],
@@ -467,6 +749,19 @@
           "XLM-STRUCT-DAY-2026-09-05-VALIDATOR_DISTRIBUTION",
           "XLM-STRUCT-DAY-2026-09-06-VALIDATOR_DISTRIBUTION"
         ],
+        "delta": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
         "week_bucket_ids": [
           "XLM-STRUCT-WEEK-2026-W32-VALIDATOR_DISTRIBUTION",
           "XLM-STRUCT-WEEK-2026-W33-VALIDATOR_DISTRIBUTION",
@@ -479,7 +774,10 @@
       "month_start": "2026-08-01",
       "observation_count": 0,
       "observations": [],
+      "opening_level_state": "NO_OBSERVATION",
       "period": "2026-08",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "MONTH",
       "source_refs": [],
       "source_week_bucket_ids": [
@@ -493,11 +791,23 @@
       "subject_id": "XLM"
     },
     {
-      "aggregation_rule": "MONTH_FROM_WEEK",
+      "aggregation_rule": "MONTH_LEVEL_DELTA_FROM_WEEK",
       "bucket_end": "2026-09-30",
       "bucket_id": "XLM-STRUCT-MONTH-2026-09-FOUNDATION_DEPENDENCE",
       "bucket_start": "2026-09-01",
+      "closing_level_state": "NO_OBSERVATION",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "FOUNDATION_DEPENDENCE",
+      "level_age_days": null,
+      "level_last_observed_at": null,
+      "level_observation_ids": [],
+      "level_state": "NO_OBSERVATION",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [],
         "atomic_observation_ids": [],
@@ -506,6 +816,19 @@
           "XLM-STRUCT-DAY-2026-09-08-FOUNDATION_DEPENDENCE",
           "XLM-STRUCT-DAY-2026-09-09-FOUNDATION_DEPENDENCE"
         ],
+        "delta": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
         "week_bucket_ids": [
           "XLM-STRUCT-WEEK-2026-W37-FOUNDATION_DEPENDENCE"
         ]
@@ -514,7 +837,10 @@
       "month_start": "2026-09-01",
       "observation_count": 0,
       "observations": [],
+      "opening_level_state": "NO_OBSERVATION",
       "period": "2026-09",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "MONTH",
       "source_refs": [],
       "source_week_bucket_ids": [
@@ -524,11 +850,25 @@
       "subject_id": "XLM"
     },
     {
-      "aggregation_rule": "MONTH_FROM_WEEK",
+      "aggregation_rule": "MONTH_LEVEL_DELTA_FROM_WEEK",
       "bucket_end": "2026-09-30",
       "bucket_id": "XLM-STRUCT-MONTH-2026-09-SETTLEMENT_ROLE",
       "bucket_start": "2026-09-01",
+      "closing_level_state": "ESTABLISHED_ROLE",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "SETTLEMENT_ROLE",
+      "level_age_days": 1,
+      "level_last_observed_at": "2026-09-09T00:00:00Z",
+      "level_observation_ids": [
+        "TL-XLM-O008"
+      ],
+      "level_state": "ESTABLISHED_ROLE",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [
           "research/digital-assets/batch-01-r1/XLM/OBSERVATION_REGISTRY.json"
@@ -541,6 +881,31 @@
           "XLM-STRUCT-DAY-2026-09-08-SETTLEMENT_ROLE",
           "XLM-STRUCT-DAY-2026-09-09-SETTLEMENT_ROLE"
         ],
+        "delta": {
+          "artifact_refs": [
+            "research/digital-assets/batch-01-r1/XLM/OBSERVATION_REGISTRY.json"
+          ],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [
+            "research/digital-assets/batch-01-r1/XLM/OBSERVATION_REGISTRY.json"
+          ],
+          "atomic_observation_ids": [
+            "TL-XLM-O008"
+          ],
+          "day_bucket_ids": [
+            "XLM-STRUCT-DAY-2026-09-07-SETTLEMENT_ROLE",
+            "XLM-STRUCT-DAY-2026-09-08-SETTLEMENT_ROLE",
+            "XLM-STRUCT-DAY-2026-09-09-SETTLEMENT_ROLE"
+          ],
+          "week_bucket_ids": [
+            "XLM-STRUCT-WEEK-2026-W37-SETTLEMENT_ROLE"
+          ]
+        },
         "week_bucket_ids": [
           "XLM-STRUCT-WEEK-2026-W37-SETTLEMENT_ROLE"
         ]
@@ -551,7 +916,10 @@
       "observations": [
         "TL-XLM-O008"
       ],
+      "opening_level_state": "ESTABLISHED_ROLE",
       "period": "2026-09",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "MONTH",
       "source_refs": [
         "research/digital-assets/batch-01-r1/XLM/OBSERVATION_REGISTRY.json"
@@ -559,15 +927,27 @@
       "source_week_bucket_ids": [
         "XLM-STRUCT-WEEK-2026-W37-SETTLEMENT_ROLE"
       ],
-      "state": "STRENGTHENING",
+      "state": "ESTABLISHED_ROLE",
       "subject_id": "XLM"
     },
     {
-      "aggregation_rule": "MONTH_FROM_WEEK",
+      "aggregation_rule": "MONTH_LEVEL_DELTA_FROM_WEEK",
       "bucket_end": "2026-09-30",
       "bucket_id": "XLM-STRUCT-MONTH-2026-09-TREASURY_STRUCTURE",
       "bucket_start": "2026-09-01",
+      "closing_level_state": "NO_OBSERVATION",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "TREASURY_STRUCTURE",
+      "level_age_days": null,
+      "level_last_observed_at": null,
+      "level_observation_ids": [],
+      "level_state": "NO_OBSERVATION",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [],
         "atomic_observation_ids": [],
@@ -576,6 +956,19 @@
           "XLM-STRUCT-DAY-2026-09-08-TREASURY_STRUCTURE",
           "XLM-STRUCT-DAY-2026-09-09-TREASURY_STRUCTURE"
         ],
+        "delta": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
         "week_bucket_ids": [
           "XLM-STRUCT-WEEK-2026-W37-TREASURY_STRUCTURE"
         ]
@@ -584,7 +977,10 @@
       "month_start": "2026-09-01",
       "observation_count": 0,
       "observations": [],
+      "opening_level_state": "NO_OBSERVATION",
       "period": "2026-09",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "MONTH",
       "source_refs": [],
       "source_week_bucket_ids": [
@@ -594,11 +990,25 @@
       "subject_id": "XLM"
     },
     {
-      "aggregation_rule": "MONTH_FROM_WEEK",
+      "aggregation_rule": "MONTH_LEVEL_DELTA_FROM_WEEK",
       "bucket_end": "2026-09-30",
       "bucket_id": "XLM-STRUCT-MONTH-2026-09-VALIDATOR_DISTRIBUTION",
       "bucket_start": "2026-09-01",
+      "closing_level_state": "MECHANISM_DEFINED",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "level_age_days": 2,
+      "level_last_observed_at": "2026-09-08T00:00:00Z",
+      "level_observation_ids": [
+        "TL-XLM-O007"
+      ],
+      "level_state": "MECHANISM_DEFINED",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [
           "research/digital-assets/batch-01-r1/XLM/OBSERVATION_REGISTRY.json"
@@ -611,6 +1021,31 @@
           "XLM-STRUCT-DAY-2026-09-08-VALIDATOR_DISTRIBUTION",
           "XLM-STRUCT-DAY-2026-09-09-VALIDATOR_DISTRIBUTION"
         ],
+        "delta": {
+          "artifact_refs": [
+            "research/digital-assets/batch-01-r1/XLM/OBSERVATION_REGISTRY.json"
+          ],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [
+            "research/digital-assets/batch-01-r1/XLM/OBSERVATION_REGISTRY.json"
+          ],
+          "atomic_observation_ids": [
+            "TL-XLM-O007"
+          ],
+          "day_bucket_ids": [
+            "XLM-STRUCT-DAY-2026-09-07-VALIDATOR_DISTRIBUTION",
+            "XLM-STRUCT-DAY-2026-09-08-VALIDATOR_DISTRIBUTION",
+            "XLM-STRUCT-DAY-2026-09-09-VALIDATOR_DISTRIBUTION"
+          ],
+          "week_bucket_ids": [
+            "XLM-STRUCT-WEEK-2026-W37-VALIDATOR_DISTRIBUTION"
+          ]
+        },
         "week_bucket_ids": [
           "XLM-STRUCT-WEEK-2026-W37-VALIDATOR_DISTRIBUTION"
         ]
@@ -621,7 +1056,10 @@
       "observations": [
         "TL-XLM-O007"
       ],
+      "opening_level_state": "MECHANISM_DEFINED",
       "period": "2026-09",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "MONTH",
       "source_refs": [
         "research/digital-assets/batch-01-r1/XLM/OBSERVATION_REGISTRY.json"
@@ -629,12 +1067,12 @@
       "source_week_bucket_ids": [
         "XLM-STRUCT-WEEK-2026-W37-VALIDATOR_DISTRIBUTION"
       ],
-      "state": "TENSION",
+      "state": "MECHANISM_DEFINED",
       "subject_id": "XLM"
     }
   ],
   "layer": "STRUCTURAL",
-  "model_version": "TIMELINE_MODEL_R1",
+  "model_version": "TIMELINE_MODEL_R1_1",
   "resolution": "MONTH",
   "subject_id": "XLM"
 }

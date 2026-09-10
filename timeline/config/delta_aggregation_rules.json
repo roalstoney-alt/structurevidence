@@ -1,0 +1,11 @@
+{
+  "aggregation_version": "TIMELINE_AGGREGATION_v0.1",
+  "mixed": "MIXED_CHANGE",
+  "no_delta": "NOT_ESTABLISHED",
+  "rules": {
+    "DAY_DELTA": "All NOT_ESTABLISHED remains NOT_ESTABLISHED; explicit structural shift may remain STRUCTURAL_SHIFT.",
+    "MONTH_DELTA": "MONTH derives period_delta_state from WEEK only.",
+    "WEEK_DELTA": "Summarize established deltas during the week."
+  },
+  "shift": "STRUCTURAL_SHIFT"
+}

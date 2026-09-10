@@ -1,11 +1,17 @@
 {
-  "model_version": "TIMELINE_MODEL_R1",
+  "model_version": "TIMELINE_MODEL_R1_1",
   "observations": [
     {
+      "applies_to_state_type": "LEVEL",
       "artifact_refs": [
         "evidence-freeze/S6.1a/SOURCE_DEPENDENCY_GRAPH_v2.json"
       ],
       "capture_lag_days": 0,
+      "comparability_rule_id": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_mapping_rule_id": null,
+      "delta_state": "NOT_ESTABLISHED",
       "dimension_ids": [
         "TREASURY_STRUCTURE"
       ],
@@ -17,24 +23,35 @@
       "freshness_trigger_candidate": false,
       "knowledge_mode": "CONTEMPORANEOUS",
       "known_at": "2026-02-13T00:00:00Z",
+      "legacy_structural_effect": "STRENGTHENING",
+      "level_mapping_rationale": "Filing establishes a treasury-structure level without directional change.",
+      "level_mapping_rule_id": "LEVEL_STRATEGY_STRATEGY_R1_O1",
+      "level_state": "HYBRID_DEPENDENCE",
       "mapping_rationale": "SEC filing period anchors treasury baseline.",
       "mapping_rule_id": "STRATEGY_STRATEGY_R1_O1_TO_TREASURY_STRUCTURE",
+      "measurement_concept": "treasury_disclosure",
       "observation_id": "TL-STRATEGY-O001",
       "observation_mode": "SPARSE_EVENT_STATE",
       "observation_type": "SOURCE_PACKAGE_ADDED",
+      "prior_observation_id": null,
       "source_observation_id": "STRATEGY-R1-O1",
       "source_refs": [
         "https://www.sec.gov/"
       ],
-      "structural_effect": "STRENGTHENING",
       "subject_id": "strategy",
       "trigger_type": "TREASURY_POLICY_CHANGE"
     },
     {
+      "applies_to_state_type": "LEVEL",
       "artifact_refs": [
         "evidence-freeze/S6.1a/SOURCE_DEPENDENCY_GRAPH_v2.json"
       ],
       "capture_lag_days": 0,
+      "comparability_rule_id": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_mapping_rule_id": null,
+      "delta_state": "NOT_ESTABLISHED",
       "dimension_ids": [
         "TREASURY_STRUCTURE"
       ],
@@ -43,27 +60,38 @@
       "evidence_family_ids": [
         "PRIMARY_SOURCE_COVERAGE"
       ],
-      "freshness_trigger_candidate": true,
+      "freshness_trigger_candidate": false,
       "knowledge_mode": "CONTEMPORANEOUS",
       "known_at": "2026-06-29T00:00:00Z",
+      "legacy_structural_effect": "STRUCTURAL_SHIFT",
+      "level_mapping_rationale": "Digital credit framework establishes current treasury architecture level.",
+      "level_mapping_rule_id": "LEVEL_STRATEGY_STRATEGY_R1_O2",
+      "level_state": "HYBRID_DEPENDENCE",
       "mapping_rationale": "Digital credit framework disclosure changes the treasury structure record.",
       "mapping_rule_id": "STRATEGY_STRATEGY_R1_O2_TO_TREASURY_STRUCTURE",
+      "measurement_concept": "treasury_policy",
       "observation_id": "TL-STRATEGY-O002",
       "observation_mode": "SPARSE_EVENT_STATE",
       "observation_type": "TREASURY_DISCLOSURE",
+      "prior_observation_id": null,
       "source_observation_id": "STRATEGY-R1-O2",
       "source_refs": [
         "https://www.strategy.com/"
       ],
-      "structural_effect": "STRUCTURAL_SHIFT",
       "subject_id": "strategy",
       "trigger_type": "TREASURY_POLICY_CHANGE"
     },
     {
+      "applies_to_state_type": "LEVEL",
       "artifact_refs": [
         "evidence-freeze/S6.1a/TRIANGULATION_MATRIX_v2.json"
       ],
       "capture_lag_days": 0,
+      "comparability_rule_id": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_mapping_rule_id": null,
+      "delta_state": "NOT_ESTABLISHED",
       "dimension_ids": [
         "RESOURCE_PRESSURE"
       ],
@@ -72,27 +100,38 @@
       "evidence_family_ids": [
         "PRIMARY_SOURCE_COVERAGE"
       ],
-      "freshness_trigger_candidate": true,
+      "freshness_trigger_candidate": false,
       "knowledge_mode": "CONTEMPORANEOUS",
       "known_at": "2026-07-06T00:00:00Z",
+      "legacy_structural_effect": "TENSION",
+      "level_mapping_rationale": "BTC monetization disclosure establishes resource-pressure level.",
+      "level_mapping_rule_id": "LEVEL_STRATEGY_STRATEGY_R1_O3",
+      "level_state": "MATERIAL_DEPENDENCE",
       "mapping_rationale": "BTC monetization disclosure creates resource-pressure evidence.",
       "mapping_rule_id": "STRATEGY_STRATEGY_R1_O3_TO_RESOURCE_PRESSURE",
+      "measurement_concept": "resource_pressure",
       "observation_id": "TL-STRATEGY-O003",
       "observation_mode": "SPARSE_EVENT_STATE",
       "observation_type": "TREASURY_DISCLOSURE",
+      "prior_observation_id": null,
       "source_observation_id": "STRATEGY-R1-O3",
       "source_refs": [
         "https://www.strategy.com/"
       ],
-      "structural_effect": "TENSION",
       "subject_id": "strategy",
       "trigger_type": "PROTOCOL_UPGRADE"
     },
     {
+      "applies_to_state_type": "LEVEL",
       "artifact_refs": [
         "evidence-freeze/S6.1a/HYPOTHESIS_ASSESSMENTS_v2.json"
       ],
       "capture_lag_days": 64,
+      "comparability_rule_id": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_mapping_rule_id": null,
+      "delta_state": "NOT_ESTABLISHED",
       "dimension_ids": [
         "NARRATIVE_DEPENDENCE"
       ],
@@ -101,27 +140,38 @@
       "evidence_family_ids": [
         "PRIMARY_SOURCE_COVERAGE"
       ],
-      "freshness_trigger_candidate": true,
+      "freshness_trigger_candidate": false,
       "knowledge_mode": "RETROSPECTIVE",
       "known_at": "2026-09-08T00:00:00Z",
+      "legacy_structural_effect": "TENSION",
+      "level_mapping_rationale": "Narrative-dependence review establishes condition level, not trend.",
+      "level_mapping_rule_id": "LEVEL_STRATEGY_STRATEGY_R1_O4",
+      "level_state": "MATERIAL_DEPENDENCE",
       "mapping_rationale": "BTC monetization disclosure changes the narrative-dependence record.",
       "mapping_rule_id": "STRATEGY_STRATEGY_R1_O4_TO_NARRATIVE_DEPENDENCE",
+      "measurement_concept": "narrative_dependency",
       "observation_id": "TL-STRATEGY-O004",
       "observation_mode": "SPARSE_EVENT_STATE",
       "observation_type": "TREASURY_DISCLOSURE",
+      "prior_observation_id": null,
       "source_observation_id": "STRATEGY-R1-O4",
       "source_refs": [
         "evidence-freeze/S6.1a"
       ],
-      "structural_effect": "TENSION",
       "subject_id": "strategy",
       "trigger_type": "PROTOCOL_UPGRADE"
     },
     {
+      "applies_to_state_type": "LEVEL",
       "artifact_refs": [
         "evidence-freeze/S6.1a/SOURCE_DEPENDENCY_GRAPH_v2.json"
       ],
       "capture_lag_days": 0,
+      "comparability_rule_id": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_mapping_rule_id": null,
+      "delta_state": "NOT_ESTABLISHED",
       "dimension_ids": [
         "SOURCE_DEPENDENCY"
       ],
@@ -130,19 +180,24 @@
       "evidence_family_ids": [
         "PRIMARY_SOURCE_COVERAGE"
       ],
-      "freshness_trigger_candidate": true,
+      "freshness_trigger_candidate": false,
       "knowledge_mode": "CONTEMPORANEOUS",
       "known_at": "2026-09-08T00:00:00Z",
+      "legacy_structural_effect": "TENSION",
+      "level_mapping_rationale": "Source dependency is retained as hybrid boundary metadata.",
+      "level_mapping_rule_id": "LEVEL_STRATEGY_STRATEGY_R1_O5",
+      "level_state": "SOURCE_DEPENDENT",
       "mapping_rationale": "S6.1a source-dependency graph records partial independence boundaries.",
       "mapping_rule_id": "STRATEGY_STRATEGY_R1_O5_TO_SOURCE_DEPENDENCY",
+      "measurement_concept": "source_architecture",
       "observation_id": "TL-STRATEGY-O005",
       "observation_mode": "SPARSE_EVENT_STATE",
       "observation_type": "SOURCE_DEPENDENCY",
+      "prior_observation_id": null,
       "source_observation_id": "STRATEGY-R1-O5",
       "source_refs": [
         "evidence-freeze/S6.1a"
       ],
-      "structural_effect": "TENSION",
       "subject_id": "strategy",
       "trigger_type": "PROTOCOL_UPGRADE"
     }

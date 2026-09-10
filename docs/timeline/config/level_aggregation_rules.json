@@ -1,0 +1,11 @@
+{
+  "aggregation_version": "TIMELINE_AGGREGATION_v0.1",
+  "fallback": "INSUFFICIENT_DATA",
+  "mixed": "MIXED_LEVEL",
+  "no_observation": "NO_OBSERVATION",
+  "rules": {
+    "DAY_LEVEL": "Same level remains same; incompatible levels become MIXED_LEVEL.",
+    "MONTH_LEVEL": "MONTH derives opening and closing Level from WEEK only.",
+    "WEEK_LEVEL": "Latest valid observed Level within the week becomes closing_level_state."
+  }
+}

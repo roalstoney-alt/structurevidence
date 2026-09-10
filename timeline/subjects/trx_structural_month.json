@@ -1,11 +1,27 @@
 {
   "buckets": [
     {
-      "aggregation_rule": "MONTH_FROM_WEEK",
+      "aggregation_rule": "MONTH_LEVEL_DELTA_FROM_WEEK",
       "bucket_end": "2026-09-30",
       "bucket_id": "TRX-STRUCT-MONTH-2026-09-GOVERNANCE_STRUCTURE",
       "bucket_start": "2026-09-01",
+      "closing_level_state": "MIXED_LEVEL",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "GOVERNANCE_STRUCTURE",
+      "level_age_days": 1,
+      "level_last_observed_at": "2026-09-09T00:00:00Z",
+      "level_observation_ids": [
+        "TL-TRX-O006",
+        "TL-TRX-O007",
+        "TL-TRX-O008"
+      ],
+      "level_state": "MIXED_LEVEL",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [
           "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
@@ -20,6 +36,33 @@
           "TRX-STRUCT-DAY-2026-09-08-GOVERNANCE_STRUCTURE",
           "TRX-STRUCT-DAY-2026-09-09-GOVERNANCE_STRUCTURE"
         ],
+        "delta": {
+          "artifact_refs": [
+            "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
+          ],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [
+            "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
+          ],
+          "atomic_observation_ids": [
+            "TL-TRX-O006",
+            "TL-TRX-O007",
+            "TL-TRX-O008"
+          ],
+          "day_bucket_ids": [
+            "TRX-STRUCT-DAY-2026-09-07-GOVERNANCE_STRUCTURE",
+            "TRX-STRUCT-DAY-2026-09-08-GOVERNANCE_STRUCTURE",
+            "TRX-STRUCT-DAY-2026-09-09-GOVERNANCE_STRUCTURE"
+          ],
+          "week_bucket_ids": [
+            "TRX-STRUCT-WEEK-2026-W37-GOVERNANCE_STRUCTURE"
+          ]
+        },
         "week_bucket_ids": [
           "TRX-STRUCT-WEEK-2026-W37-GOVERNANCE_STRUCTURE"
         ]
@@ -32,7 +75,10 @@
         "TL-TRX-O007",
         "TL-TRX-O008"
       ],
+      "opening_level_state": "MIXED_LEVEL",
       "period": "2026-09",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "MONTH",
       "source_refs": [
         "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
@@ -40,15 +86,30 @@
       "source_week_bucket_ids": [
         "TRX-STRUCT-WEEK-2026-W37-GOVERNANCE_STRUCTURE"
       ],
-      "state": "TENSION",
+      "state": "MIXED_LEVEL",
       "subject_id": "TRX"
     },
     {
-      "aggregation_rule": "MONTH_FROM_WEEK",
+      "aggregation_rule": "MONTH_LEVEL_DELTA_FROM_WEEK",
       "bucket_end": "2026-09-30",
       "bucket_id": "TRX-STRUCT-MONTH-2026-09-RESOURCE_PRESSURE",
       "bucket_start": "2026-09-01",
+      "closing_level_state": "MECHANISM_DEFINED",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "RESOURCE_PRESSURE",
+      "level_age_days": 1,
+      "level_last_observed_at": "2026-09-09T00:00:00Z",
+      "level_observation_ids": [
+        "TL-TRX-O003",
+        "TL-TRX-O004"
+      ],
+      "level_state": "MECHANISM_DEFINED",
+      "level_transition_count": 1,
       "lineage": {
         "artifact_refs": [
           "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
@@ -62,6 +123,32 @@
           "TRX-STRUCT-DAY-2026-09-08-RESOURCE_PRESSURE",
           "TRX-STRUCT-DAY-2026-09-09-RESOURCE_PRESSURE"
         ],
+        "delta": {
+          "artifact_refs": [
+            "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
+          ],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [
+            "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
+          ],
+          "atomic_observation_ids": [
+            "TL-TRX-O003",
+            "TL-TRX-O004"
+          ],
+          "day_bucket_ids": [
+            "TRX-STRUCT-DAY-2026-09-07-RESOURCE_PRESSURE",
+            "TRX-STRUCT-DAY-2026-09-08-RESOURCE_PRESSURE",
+            "TRX-STRUCT-DAY-2026-09-09-RESOURCE_PRESSURE"
+          ],
+          "week_bucket_ids": [
+            "TRX-STRUCT-WEEK-2026-W37-RESOURCE_PRESSURE"
+          ]
+        },
         "week_bucket_ids": [
           "TRX-STRUCT-WEEK-2026-W37-RESOURCE_PRESSURE"
         ]
@@ -73,7 +160,10 @@
         "TL-TRX-O003",
         "TL-TRX-O004"
       ],
+      "opening_level_state": "MATERIAL_ROLE",
       "period": "2026-09",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "MONTH",
       "source_refs": [
         "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
@@ -81,15 +171,30 @@
       "source_week_bucket_ids": [
         "TRX-STRUCT-WEEK-2026-W37-RESOURCE_PRESSURE"
       ],
-      "state": "STRENGTHENING",
+      "state": "MECHANISM_DEFINED",
       "subject_id": "TRX"
     },
     {
-      "aggregation_rule": "MONTH_FROM_WEEK",
+      "aggregation_rule": "MONTH_LEVEL_DELTA_FROM_WEEK",
       "bucket_end": "2026-09-30",
       "bucket_id": "TRX-STRUCT-MONTH-2026-09-SETTLEMENT_ROLE",
       "bucket_start": "2026-09-01",
+      "closing_level_state": "MATERIAL_ROLE",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "SETTLEMENT_ROLE",
+      "level_age_days": 3,
+      "level_last_observed_at": "2026-09-07T00:00:00Z",
+      "level_observation_ids": [
+        "TL-TRX-O001",
+        "TL-TRX-O002"
+      ],
+      "level_state": "MATERIAL_ROLE",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [
           "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
@@ -103,6 +208,32 @@
           "TRX-STRUCT-DAY-2026-09-08-SETTLEMENT_ROLE",
           "TRX-STRUCT-DAY-2026-09-09-SETTLEMENT_ROLE"
         ],
+        "delta": {
+          "artifact_refs": [
+            "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
+          ],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [
+            "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
+          ],
+          "atomic_observation_ids": [
+            "TL-TRX-O001",
+            "TL-TRX-O002"
+          ],
+          "day_bucket_ids": [
+            "TRX-STRUCT-DAY-2026-09-07-SETTLEMENT_ROLE",
+            "TRX-STRUCT-DAY-2026-09-08-SETTLEMENT_ROLE",
+            "TRX-STRUCT-DAY-2026-09-09-SETTLEMENT_ROLE"
+          ],
+          "week_bucket_ids": [
+            "TRX-STRUCT-WEEK-2026-W37-SETTLEMENT_ROLE"
+          ]
+        },
         "week_bucket_ids": [
           "TRX-STRUCT-WEEK-2026-W37-SETTLEMENT_ROLE"
         ]
@@ -114,7 +245,10 @@
         "TL-TRX-O001",
         "TL-TRX-O002"
       ],
+      "opening_level_state": "MATERIAL_ROLE",
       "period": "2026-09",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "MONTH",
       "source_refs": [
         "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
@@ -122,15 +256,29 @@
       "source_week_bucket_ids": [
         "TRX-STRUCT-WEEK-2026-W37-SETTLEMENT_ROLE"
       ],
-      "state": "STRENGTHENING",
+      "state": "MATERIAL_ROLE",
       "subject_id": "TRX"
     },
     {
-      "aggregation_rule": "MONTH_FROM_WEEK",
+      "aggregation_rule": "MONTH_LEVEL_DELTA_FROM_WEEK",
       "bucket_end": "2026-09-30",
       "bucket_id": "TRX-STRUCT-MONTH-2026-09-VALIDATOR_DISTRIBUTION",
       "bucket_start": "2026-09-01",
+      "closing_level_state": "FIXED_OR_RESTRICTED_SET",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "level_age_days": 1,
+      "level_last_observed_at": "2026-09-09T00:00:00Z",
+      "level_observation_ids": [
+        "TL-TRX-O005"
+      ],
+      "level_state": "FIXED_OR_RESTRICTED_SET",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [
           "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
@@ -143,6 +291,31 @@
           "TRX-STRUCT-DAY-2026-09-08-VALIDATOR_DISTRIBUTION",
           "TRX-STRUCT-DAY-2026-09-09-VALIDATOR_DISTRIBUTION"
         ],
+        "delta": {
+          "artifact_refs": [
+            "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
+          ],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [
+            "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
+          ],
+          "atomic_observation_ids": [
+            "TL-TRX-O005"
+          ],
+          "day_bucket_ids": [
+            "TRX-STRUCT-DAY-2026-09-07-VALIDATOR_DISTRIBUTION",
+            "TRX-STRUCT-DAY-2026-09-08-VALIDATOR_DISTRIBUTION",
+            "TRX-STRUCT-DAY-2026-09-09-VALIDATOR_DISTRIBUTION"
+          ],
+          "week_bucket_ids": [
+            "TRX-STRUCT-WEEK-2026-W37-VALIDATOR_DISTRIBUTION"
+          ]
+        },
         "week_bucket_ids": [
           "TRX-STRUCT-WEEK-2026-W37-VALIDATOR_DISTRIBUTION"
         ]
@@ -153,7 +326,10 @@
       "observations": [
         "TL-TRX-O005"
       ],
+      "opening_level_state": "FIXED_OR_RESTRICTED_SET",
       "period": "2026-09",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "MONTH",
       "source_refs": [
         "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
@@ -161,12 +337,12 @@
       "source_week_bucket_ids": [
         "TRX-STRUCT-WEEK-2026-W37-VALIDATOR_DISTRIBUTION"
       ],
-      "state": "STRUCTURAL_SHIFT",
+      "state": "FIXED_OR_RESTRICTED_SET",
       "subject_id": "TRX"
     }
   ],
   "layer": "STRUCTURAL",
-  "model_version": "TIMELINE_MODEL_R1",
+  "model_version": "TIMELINE_MODEL_R1_1",
   "resolution": "MONTH",
   "subject_id": "TRX"
 }

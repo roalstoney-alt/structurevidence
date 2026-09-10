@@ -1,11 +1,23 @@
 {
   "buckets": [
     {
-      "aggregation_rule": "MONTH_FROM_WEEK",
+      "aggregation_rule": "MONTH_LEVEL_DELTA_FROM_WEEK",
       "bucket_end": "2026-02-28",
       "bucket_id": "STRATEGY-STRUCT-MONTH-2026-02-NARRATIVE_DEPENDENCE",
       "bucket_start": "2026-02-01",
+      "closing_level_state": "NO_OBSERVATION",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "NARRATIVE_DEPENDENCE",
+      "level_age_days": null,
+      "level_last_observed_at": null,
+      "level_observation_ids": [],
+      "level_state": "NO_OBSERVATION",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [],
         "atomic_observation_ids": [],
@@ -28,6 +40,19 @@
           "STRATEGY-STRUCT-DAY-2026-02-28-NARRATIVE_DEPENDENCE",
           "STRATEGY-STRUCT-DAY-2026-03-01-NARRATIVE_DEPENDENCE"
         ],
+        "delta": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
         "week_bucket_ids": [
           "STRATEGY-STRUCT-WEEK-2026-W07-NARRATIVE_DEPENDENCE",
           "STRATEGY-STRUCT-WEEK-2026-W08-NARRATIVE_DEPENDENCE",
@@ -38,7 +63,10 @@
       "month_start": "2026-02-01",
       "observation_count": 0,
       "observations": [],
+      "opening_level_state": "NO_OBSERVATION",
       "period": "2026-02",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "MONTH",
       "source_refs": [],
       "source_week_bucket_ids": [
@@ -50,11 +78,23 @@
       "subject_id": "strategy"
     },
     {
-      "aggregation_rule": "MONTH_FROM_WEEK",
+      "aggregation_rule": "MONTH_LEVEL_DELTA_FROM_WEEK",
       "bucket_end": "2026-02-28",
       "bucket_id": "STRATEGY-STRUCT-MONTH-2026-02-RESOURCE_PRESSURE",
       "bucket_start": "2026-02-01",
+      "closing_level_state": "NO_OBSERVATION",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "RESOURCE_PRESSURE",
+      "level_age_days": null,
+      "level_last_observed_at": null,
+      "level_observation_ids": [],
+      "level_state": "NO_OBSERVATION",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [],
         "atomic_observation_ids": [],
@@ -77,6 +117,19 @@
           "STRATEGY-STRUCT-DAY-2026-02-28-RESOURCE_PRESSURE",
           "STRATEGY-STRUCT-DAY-2026-03-01-RESOURCE_PRESSURE"
         ],
+        "delta": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
         "week_bucket_ids": [
           "STRATEGY-STRUCT-WEEK-2026-W07-RESOURCE_PRESSURE",
           "STRATEGY-STRUCT-WEEK-2026-W08-RESOURCE_PRESSURE",
@@ -87,7 +140,10 @@
       "month_start": "2026-02-01",
       "observation_count": 0,
       "observations": [],
+      "opening_level_state": "NO_OBSERVATION",
       "period": "2026-02",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "MONTH",
       "source_refs": [],
       "source_week_bucket_ids": [
@@ -99,11 +155,23 @@
       "subject_id": "strategy"
     },
     {
-      "aggregation_rule": "MONTH_FROM_WEEK",
+      "aggregation_rule": "MONTH_LEVEL_DELTA_FROM_WEEK",
       "bucket_end": "2026-02-28",
       "bucket_id": "STRATEGY-STRUCT-MONTH-2026-02-SOURCE_DEPENDENCY",
       "bucket_start": "2026-02-01",
+      "closing_level_state": "NO_OBSERVATION",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "SOURCE_DEPENDENCY",
+      "level_age_days": null,
+      "level_last_observed_at": null,
+      "level_observation_ids": [],
+      "level_state": "NO_OBSERVATION",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [],
         "atomic_observation_ids": [],
@@ -126,6 +194,19 @@
           "STRATEGY-STRUCT-DAY-2026-02-28-SOURCE_DEPENDENCY",
           "STRATEGY-STRUCT-DAY-2026-03-01-SOURCE_DEPENDENCY"
         ],
+        "delta": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
         "week_bucket_ids": [
           "STRATEGY-STRUCT-WEEK-2026-W07-SOURCE_DEPENDENCY",
           "STRATEGY-STRUCT-WEEK-2026-W08-SOURCE_DEPENDENCY",
@@ -136,7 +217,10 @@
       "month_start": "2026-02-01",
       "observation_count": 0,
       "observations": [],
+      "opening_level_state": "NO_OBSERVATION",
       "period": "2026-02",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "MONTH",
       "source_refs": [],
       "source_week_bucket_ids": [
@@ -148,11 +232,25 @@
       "subject_id": "strategy"
     },
     {
-      "aggregation_rule": "MONTH_FROM_WEEK",
+      "aggregation_rule": "MONTH_LEVEL_DELTA_FROM_WEEK",
       "bucket_end": "2026-02-28",
       "bucket_id": "STRATEGY-STRUCT-MONTH-2026-02-TREASURY_STRUCTURE",
       "bucket_start": "2026-02-01",
+      "closing_level_state": "HYBRID_DEPENDENCE",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "TREASURY_STRUCTURE",
+      "level_age_days": 209,
+      "level_last_observed_at": "2026-02-13T00:00:00Z",
+      "level_observation_ids": [
+        "TL-STRATEGY-O001"
+      ],
+      "level_state": "HYBRID_DEPENDENCE",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [
           "evidence-freeze/S6.1a/SOURCE_DEPENDENCY_GRAPH_v2.json"
@@ -179,6 +277,31 @@
           "STRATEGY-STRUCT-DAY-2026-02-28-TREASURY_STRUCTURE",
           "STRATEGY-STRUCT-DAY-2026-03-01-TREASURY_STRUCTURE"
         ],
+        "delta": {
+          "artifact_refs": [
+            "evidence-freeze/S6.1a/SOURCE_DEPENDENCY_GRAPH_v2.json"
+          ],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [
+            "evidence-freeze/S6.1a/SOURCE_DEPENDENCY_GRAPH_v2.json"
+          ],
+          "atomic_observation_ids": [
+            "TL-STRATEGY-O001"
+          ],
+          "day_bucket_ids": [
+            "STRATEGY-STRUCT-DAY-2026-02-13-TREASURY_STRUCTURE",
+            "STRATEGY-STRUCT-DAY-2026-02-14-TREASURY_STRUCTURE",
+            "STRATEGY-STRUCT-DAY-2026-02-15-TREASURY_STRUCTURE"
+          ],
+          "week_bucket_ids": [
+            "STRATEGY-STRUCT-WEEK-2026-W07-TREASURY_STRUCTURE"
+          ]
+        },
         "week_bucket_ids": [
           "STRATEGY-STRUCT-WEEK-2026-W07-TREASURY_STRUCTURE",
           "STRATEGY-STRUCT-WEEK-2026-W08-TREASURY_STRUCTURE",
@@ -191,7 +314,10 @@
       "observations": [
         "TL-STRATEGY-O001"
       ],
+      "opening_level_state": "HYBRID_DEPENDENCE",
       "period": "2026-02",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "MONTH",
       "source_refs": [
         "evidence-freeze/S6.1a/SOURCE_DEPENDENCY_GRAPH_v2.json"
@@ -201,15 +327,27 @@
         "STRATEGY-STRUCT-WEEK-2026-W08-TREASURY_STRUCTURE",
         "STRATEGY-STRUCT-WEEK-2026-W09-TREASURY_STRUCTURE"
       ],
-      "state": "STRENGTHENING",
+      "state": "HYBRID_DEPENDENCE",
       "subject_id": "strategy"
     },
     {
-      "aggregation_rule": "MONTH_FROM_WEEK",
+      "aggregation_rule": "MONTH_LEVEL_DELTA_FROM_WEEK",
       "bucket_end": "2026-03-31",
       "bucket_id": "STRATEGY-STRUCT-MONTH-2026-03-NARRATIVE_DEPENDENCE",
       "bucket_start": "2026-03-01",
+      "closing_level_state": "NO_OBSERVATION",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "NARRATIVE_DEPENDENCE",
+      "level_age_days": null,
+      "level_last_observed_at": null,
+      "level_observation_ids": [],
+      "level_state": "NO_OBSERVATION",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [],
         "atomic_observation_ids": [],
@@ -250,6 +388,19 @@
           "STRATEGY-STRUCT-DAY-2026-04-04-NARRATIVE_DEPENDENCE",
           "STRATEGY-STRUCT-DAY-2026-04-05-NARRATIVE_DEPENDENCE"
         ],
+        "delta": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
         "week_bucket_ids": [
           "STRATEGY-STRUCT-WEEK-2026-W10-NARRATIVE_DEPENDENCE",
           "STRATEGY-STRUCT-WEEK-2026-W11-NARRATIVE_DEPENDENCE",
@@ -262,7 +413,10 @@
       "month_start": "2026-03-01",
       "observation_count": 0,
       "observations": [],
+      "opening_level_state": "NO_OBSERVATION",
       "period": "2026-03",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "MONTH",
       "source_refs": [],
       "source_week_bucket_ids": [
@@ -276,11 +430,23 @@
       "subject_id": "strategy"
     },
     {
-      "aggregation_rule": "MONTH_FROM_WEEK",
+      "aggregation_rule": "MONTH_LEVEL_DELTA_FROM_WEEK",
       "bucket_end": "2026-03-31",
       "bucket_id": "STRATEGY-STRUCT-MONTH-2026-03-RESOURCE_PRESSURE",
       "bucket_start": "2026-03-01",
+      "closing_level_state": "NO_OBSERVATION",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "RESOURCE_PRESSURE",
+      "level_age_days": null,
+      "level_last_observed_at": null,
+      "level_observation_ids": [],
+      "level_state": "NO_OBSERVATION",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [],
         "atomic_observation_ids": [],
@@ -321,6 +487,19 @@
           "STRATEGY-STRUCT-DAY-2026-04-04-RESOURCE_PRESSURE",
           "STRATEGY-STRUCT-DAY-2026-04-05-RESOURCE_PRESSURE"
         ],
+        "delta": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
         "week_bucket_ids": [
           "STRATEGY-STRUCT-WEEK-2026-W10-RESOURCE_PRESSURE",
           "STRATEGY-STRUCT-WEEK-2026-W11-RESOURCE_PRESSURE",
@@ -333,7 +512,10 @@
       "month_start": "2026-03-01",
       "observation_count": 0,
       "observations": [],
+      "opening_level_state": "NO_OBSERVATION",
       "period": "2026-03",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "MONTH",
       "source_refs": [],
       "source_week_bucket_ids": [
@@ -347,11 +529,23 @@
       "subject_id": "strategy"
     },
     {
-      "aggregation_rule": "MONTH_FROM_WEEK",
+      "aggregation_rule": "MONTH_LEVEL_DELTA_FROM_WEEK",
       "bucket_end": "2026-03-31",
       "bucket_id": "STRATEGY-STRUCT-MONTH-2026-03-SOURCE_DEPENDENCY",
       "bucket_start": "2026-03-01",
+      "closing_level_state": "NO_OBSERVATION",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "SOURCE_DEPENDENCY",
+      "level_age_days": null,
+      "level_last_observed_at": null,
+      "level_observation_ids": [],
+      "level_state": "NO_OBSERVATION",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [],
         "atomic_observation_ids": [],
@@ -392,6 +586,19 @@
           "STRATEGY-STRUCT-DAY-2026-04-04-SOURCE_DEPENDENCY",
           "STRATEGY-STRUCT-DAY-2026-04-05-SOURCE_DEPENDENCY"
         ],
+        "delta": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
         "week_bucket_ids": [
           "STRATEGY-STRUCT-WEEK-2026-W10-SOURCE_DEPENDENCY",
           "STRATEGY-STRUCT-WEEK-2026-W11-SOURCE_DEPENDENCY",
@@ -404,7 +611,10 @@
       "month_start": "2026-03-01",
       "observation_count": 0,
       "observations": [],
+      "opening_level_state": "NO_OBSERVATION",
       "period": "2026-03",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "MONTH",
       "source_refs": [],
       "source_week_bucket_ids": [
@@ -418,11 +628,23 @@
       "subject_id": "strategy"
     },
     {
-      "aggregation_rule": "MONTH_FROM_WEEK",
+      "aggregation_rule": "MONTH_LEVEL_DELTA_FROM_WEEK",
       "bucket_end": "2026-03-31",
       "bucket_id": "STRATEGY-STRUCT-MONTH-2026-03-TREASURY_STRUCTURE",
       "bucket_start": "2026-03-01",
+      "closing_level_state": "NO_OBSERVATION",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "TREASURY_STRUCTURE",
+      "level_age_days": null,
+      "level_last_observed_at": null,
+      "level_observation_ids": [],
+      "level_state": "NO_OBSERVATION",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [],
         "atomic_observation_ids": [],
@@ -463,6 +685,19 @@
           "STRATEGY-STRUCT-DAY-2026-04-04-TREASURY_STRUCTURE",
           "STRATEGY-STRUCT-DAY-2026-04-05-TREASURY_STRUCTURE"
         ],
+        "delta": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
         "week_bucket_ids": [
           "STRATEGY-STRUCT-WEEK-2026-W10-TREASURY_STRUCTURE",
           "STRATEGY-STRUCT-WEEK-2026-W11-TREASURY_STRUCTURE",
@@ -475,7 +710,10 @@
       "month_start": "2026-03-01",
       "observation_count": 0,
       "observations": [],
+      "opening_level_state": "NO_OBSERVATION",
       "period": "2026-03",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "MONTH",
       "source_refs": [],
       "source_week_bucket_ids": [
@@ -489,11 +727,23 @@
       "subject_id": "strategy"
     },
     {
-      "aggregation_rule": "MONTH_FROM_WEEK",
+      "aggregation_rule": "MONTH_LEVEL_DELTA_FROM_WEEK",
       "bucket_end": "2026-04-30",
       "bucket_id": "STRATEGY-STRUCT-MONTH-2026-04-NARRATIVE_DEPENDENCE",
       "bucket_start": "2026-04-01",
+      "closing_level_state": "NO_OBSERVATION",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "NARRATIVE_DEPENDENCE",
+      "level_age_days": null,
+      "level_last_observed_at": null,
+      "level_observation_ids": [],
+      "level_state": "NO_OBSERVATION",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [],
         "atomic_observation_ids": [],
@@ -527,6 +777,19 @@
           "STRATEGY-STRUCT-DAY-2026-05-02-NARRATIVE_DEPENDENCE",
           "STRATEGY-STRUCT-DAY-2026-05-03-NARRATIVE_DEPENDENCE"
         ],
+        "delta": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
         "week_bucket_ids": [
           "STRATEGY-STRUCT-WEEK-2026-W15-NARRATIVE_DEPENDENCE",
           "STRATEGY-STRUCT-WEEK-2026-W16-NARRATIVE_DEPENDENCE",
@@ -538,7 +801,10 @@
       "month_start": "2026-04-01",
       "observation_count": 0,
       "observations": [],
+      "opening_level_state": "NO_OBSERVATION",
       "period": "2026-04",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "MONTH",
       "source_refs": [],
       "source_week_bucket_ids": [
@@ -551,11 +817,23 @@
       "subject_id": "strategy"
     },
     {
-      "aggregation_rule": "MONTH_FROM_WEEK",
+      "aggregation_rule": "MONTH_LEVEL_DELTA_FROM_WEEK",
       "bucket_end": "2026-04-30",
       "bucket_id": "STRATEGY-STRUCT-MONTH-2026-04-RESOURCE_PRESSURE",
       "bucket_start": "2026-04-01",
+      "closing_level_state": "NO_OBSERVATION",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "RESOURCE_PRESSURE",
+      "level_age_days": null,
+      "level_last_observed_at": null,
+      "level_observation_ids": [],
+      "level_state": "NO_OBSERVATION",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [],
         "atomic_observation_ids": [],
@@ -589,6 +867,19 @@
           "STRATEGY-STRUCT-DAY-2026-05-02-RESOURCE_PRESSURE",
           "STRATEGY-STRUCT-DAY-2026-05-03-RESOURCE_PRESSURE"
         ],
+        "delta": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
         "week_bucket_ids": [
           "STRATEGY-STRUCT-WEEK-2026-W15-RESOURCE_PRESSURE",
           "STRATEGY-STRUCT-WEEK-2026-W16-RESOURCE_PRESSURE",
@@ -600,7 +891,10 @@
       "month_start": "2026-04-01",
       "observation_count": 0,
       "observations": [],
+      "opening_level_state": "NO_OBSERVATION",
       "period": "2026-04",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "MONTH",
       "source_refs": [],
       "source_week_bucket_ids": [
@@ -613,11 +907,23 @@
       "subject_id": "strategy"
     },
     {
-      "aggregation_rule": "MONTH_FROM_WEEK",
+      "aggregation_rule": "MONTH_LEVEL_DELTA_FROM_WEEK",
       "bucket_end": "2026-04-30",
       "bucket_id": "STRATEGY-STRUCT-MONTH-2026-04-SOURCE_DEPENDENCY",
       "bucket_start": "2026-04-01",
+      "closing_level_state": "NO_OBSERVATION",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "SOURCE_DEPENDENCY",
+      "level_age_days": null,
+      "level_last_observed_at": null,
+      "level_observation_ids": [],
+      "level_state": "NO_OBSERVATION",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [],
         "atomic_observation_ids": [],
@@ -651,6 +957,19 @@
           "STRATEGY-STRUCT-DAY-2026-05-02-SOURCE_DEPENDENCY",
           "STRATEGY-STRUCT-DAY-2026-05-03-SOURCE_DEPENDENCY"
         ],
+        "delta": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
         "week_bucket_ids": [
           "STRATEGY-STRUCT-WEEK-2026-W15-SOURCE_DEPENDENCY",
           "STRATEGY-STRUCT-WEEK-2026-W16-SOURCE_DEPENDENCY",
@@ -662,7 +981,10 @@
       "month_start": "2026-04-01",
       "observation_count": 0,
       "observations": [],
+      "opening_level_state": "NO_OBSERVATION",
       "period": "2026-04",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "MONTH",
       "source_refs": [],
       "source_week_bucket_ids": [
@@ -675,11 +997,23 @@
       "subject_id": "strategy"
     },
     {
-      "aggregation_rule": "MONTH_FROM_WEEK",
+      "aggregation_rule": "MONTH_LEVEL_DELTA_FROM_WEEK",
       "bucket_end": "2026-04-30",
       "bucket_id": "STRATEGY-STRUCT-MONTH-2026-04-TREASURY_STRUCTURE",
       "bucket_start": "2026-04-01",
+      "closing_level_state": "NO_OBSERVATION",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "TREASURY_STRUCTURE",
+      "level_age_days": null,
+      "level_last_observed_at": null,
+      "level_observation_ids": [],
+      "level_state": "NO_OBSERVATION",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [],
         "atomic_observation_ids": [],
@@ -713,6 +1047,19 @@
           "STRATEGY-STRUCT-DAY-2026-05-02-TREASURY_STRUCTURE",
           "STRATEGY-STRUCT-DAY-2026-05-03-TREASURY_STRUCTURE"
         ],
+        "delta": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
         "week_bucket_ids": [
           "STRATEGY-STRUCT-WEEK-2026-W15-TREASURY_STRUCTURE",
           "STRATEGY-STRUCT-WEEK-2026-W16-TREASURY_STRUCTURE",
@@ -724,7 +1071,10 @@
       "month_start": "2026-04-01",
       "observation_count": 0,
       "observations": [],
+      "opening_level_state": "NO_OBSERVATION",
       "period": "2026-04",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "MONTH",
       "source_refs": [],
       "source_week_bucket_ids": [
@@ -737,11 +1087,23 @@
       "subject_id": "strategy"
     },
     {
-      "aggregation_rule": "MONTH_FROM_WEEK",
+      "aggregation_rule": "MONTH_LEVEL_DELTA_FROM_WEEK",
       "bucket_end": "2026-05-31",
       "bucket_id": "STRATEGY-STRUCT-MONTH-2026-05-NARRATIVE_DEPENDENCE",
       "bucket_start": "2026-05-01",
+      "closing_level_state": "NO_OBSERVATION",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "NARRATIVE_DEPENDENCE",
+      "level_age_days": null,
+      "level_last_observed_at": null,
+      "level_observation_ids": [],
+      "level_state": "NO_OBSERVATION",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [],
         "atomic_observation_ids": [],
@@ -775,6 +1137,19 @@
           "STRATEGY-STRUCT-DAY-2026-05-30-NARRATIVE_DEPENDENCE",
           "STRATEGY-STRUCT-DAY-2026-05-31-NARRATIVE_DEPENDENCE"
         ],
+        "delta": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
         "week_bucket_ids": [
           "STRATEGY-STRUCT-WEEK-2026-W19-NARRATIVE_DEPENDENCE",
           "STRATEGY-STRUCT-WEEK-2026-W20-NARRATIVE_DEPENDENCE",
@@ -786,7 +1161,10 @@
       "month_start": "2026-05-01",
       "observation_count": 0,
       "observations": [],
+      "opening_level_state": "NO_OBSERVATION",
       "period": "2026-05",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "MONTH",
       "source_refs": [],
       "source_week_bucket_ids": [
@@ -799,11 +1177,23 @@
       "subject_id": "strategy"
     },
     {
-      "aggregation_rule": "MONTH_FROM_WEEK",
+      "aggregation_rule": "MONTH_LEVEL_DELTA_FROM_WEEK",
       "bucket_end": "2026-05-31",
       "bucket_id": "STRATEGY-STRUCT-MONTH-2026-05-RESOURCE_PRESSURE",
       "bucket_start": "2026-05-01",
+      "closing_level_state": "NO_OBSERVATION",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "RESOURCE_PRESSURE",
+      "level_age_days": null,
+      "level_last_observed_at": null,
+      "level_observation_ids": [],
+      "level_state": "NO_OBSERVATION",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [],
         "atomic_observation_ids": [],
@@ -837,6 +1227,19 @@
           "STRATEGY-STRUCT-DAY-2026-05-30-RESOURCE_PRESSURE",
           "STRATEGY-STRUCT-DAY-2026-05-31-RESOURCE_PRESSURE"
         ],
+        "delta": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
         "week_bucket_ids": [
           "STRATEGY-STRUCT-WEEK-2026-W19-RESOURCE_PRESSURE",
           "STRATEGY-STRUCT-WEEK-2026-W20-RESOURCE_PRESSURE",
@@ -848,7 +1251,10 @@
       "month_start": "2026-05-01",
       "observation_count": 0,
       "observations": [],
+      "opening_level_state": "NO_OBSERVATION",
       "period": "2026-05",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "MONTH",
       "source_refs": [],
       "source_week_bucket_ids": [
@@ -861,11 +1267,23 @@
       "subject_id": "strategy"
     },
     {
-      "aggregation_rule": "MONTH_FROM_WEEK",
+      "aggregation_rule": "MONTH_LEVEL_DELTA_FROM_WEEK",
       "bucket_end": "2026-05-31",
       "bucket_id": "STRATEGY-STRUCT-MONTH-2026-05-SOURCE_DEPENDENCY",
       "bucket_start": "2026-05-01",
+      "closing_level_state": "NO_OBSERVATION",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "SOURCE_DEPENDENCY",
+      "level_age_days": null,
+      "level_last_observed_at": null,
+      "level_observation_ids": [],
+      "level_state": "NO_OBSERVATION",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [],
         "atomic_observation_ids": [],
@@ -899,6 +1317,19 @@
           "STRATEGY-STRUCT-DAY-2026-05-30-SOURCE_DEPENDENCY",
           "STRATEGY-STRUCT-DAY-2026-05-31-SOURCE_DEPENDENCY"
         ],
+        "delta": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
         "week_bucket_ids": [
           "STRATEGY-STRUCT-WEEK-2026-W19-SOURCE_DEPENDENCY",
           "STRATEGY-STRUCT-WEEK-2026-W20-SOURCE_DEPENDENCY",
@@ -910,7 +1341,10 @@
       "month_start": "2026-05-01",
       "observation_count": 0,
       "observations": [],
+      "opening_level_state": "NO_OBSERVATION",
       "period": "2026-05",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "MONTH",
       "source_refs": [],
       "source_week_bucket_ids": [
@@ -923,11 +1357,23 @@
       "subject_id": "strategy"
     },
     {
-      "aggregation_rule": "MONTH_FROM_WEEK",
+      "aggregation_rule": "MONTH_LEVEL_DELTA_FROM_WEEK",
       "bucket_end": "2026-05-31",
       "bucket_id": "STRATEGY-STRUCT-MONTH-2026-05-TREASURY_STRUCTURE",
       "bucket_start": "2026-05-01",
+      "closing_level_state": "NO_OBSERVATION",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "TREASURY_STRUCTURE",
+      "level_age_days": null,
+      "level_last_observed_at": null,
+      "level_observation_ids": [],
+      "level_state": "NO_OBSERVATION",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [],
         "atomic_observation_ids": [],
@@ -961,6 +1407,19 @@
           "STRATEGY-STRUCT-DAY-2026-05-30-TREASURY_STRUCTURE",
           "STRATEGY-STRUCT-DAY-2026-05-31-TREASURY_STRUCTURE"
         ],
+        "delta": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
         "week_bucket_ids": [
           "STRATEGY-STRUCT-WEEK-2026-W19-TREASURY_STRUCTURE",
           "STRATEGY-STRUCT-WEEK-2026-W20-TREASURY_STRUCTURE",
@@ -972,7 +1431,10 @@
       "month_start": "2026-05-01",
       "observation_count": 0,
       "observations": [],
+      "opening_level_state": "NO_OBSERVATION",
       "period": "2026-05",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "MONTH",
       "source_refs": [],
       "source_week_bucket_ids": [
@@ -985,11 +1447,23 @@
       "subject_id": "strategy"
     },
     {
-      "aggregation_rule": "MONTH_FROM_WEEK",
+      "aggregation_rule": "MONTH_LEVEL_DELTA_FROM_WEEK",
       "bucket_end": "2026-06-30",
       "bucket_id": "STRATEGY-STRUCT-MONTH-2026-06-NARRATIVE_DEPENDENCE",
       "bucket_start": "2026-06-01",
+      "closing_level_state": "NO_OBSERVATION",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "NARRATIVE_DEPENDENCE",
+      "level_age_days": null,
+      "level_last_observed_at": null,
+      "level_observation_ids": [],
+      "level_state": "NO_OBSERVATION",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [],
         "atomic_observation_ids": [],
@@ -1030,6 +1504,19 @@
           "STRATEGY-STRUCT-DAY-2026-07-04-NARRATIVE_DEPENDENCE",
           "STRATEGY-STRUCT-DAY-2026-07-05-NARRATIVE_DEPENDENCE"
         ],
+        "delta": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
         "week_bucket_ids": [
           "STRATEGY-STRUCT-WEEK-2026-W23-NARRATIVE_DEPENDENCE",
           "STRATEGY-STRUCT-WEEK-2026-W24-NARRATIVE_DEPENDENCE",
@@ -1042,7 +1529,10 @@
       "month_start": "2026-06-01",
       "observation_count": 0,
       "observations": [],
+      "opening_level_state": "NO_OBSERVATION",
       "period": "2026-06",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "MONTH",
       "source_refs": [],
       "source_week_bucket_ids": [
@@ -1056,11 +1546,23 @@
       "subject_id": "strategy"
     },
     {
-      "aggregation_rule": "MONTH_FROM_WEEK",
+      "aggregation_rule": "MONTH_LEVEL_DELTA_FROM_WEEK",
       "bucket_end": "2026-06-30",
       "bucket_id": "STRATEGY-STRUCT-MONTH-2026-06-RESOURCE_PRESSURE",
       "bucket_start": "2026-06-01",
+      "closing_level_state": "NO_OBSERVATION",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "RESOURCE_PRESSURE",
+      "level_age_days": null,
+      "level_last_observed_at": null,
+      "level_observation_ids": [],
+      "level_state": "NO_OBSERVATION",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [],
         "atomic_observation_ids": [],
@@ -1101,6 +1603,19 @@
           "STRATEGY-STRUCT-DAY-2026-07-04-RESOURCE_PRESSURE",
           "STRATEGY-STRUCT-DAY-2026-07-05-RESOURCE_PRESSURE"
         ],
+        "delta": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
         "week_bucket_ids": [
           "STRATEGY-STRUCT-WEEK-2026-W23-RESOURCE_PRESSURE",
           "STRATEGY-STRUCT-WEEK-2026-W24-RESOURCE_PRESSURE",
@@ -1113,7 +1628,10 @@
       "month_start": "2026-06-01",
       "observation_count": 0,
       "observations": [],
+      "opening_level_state": "NO_OBSERVATION",
       "period": "2026-06",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "MONTH",
       "source_refs": [],
       "source_week_bucket_ids": [
@@ -1127,11 +1645,23 @@
       "subject_id": "strategy"
     },
     {
-      "aggregation_rule": "MONTH_FROM_WEEK",
+      "aggregation_rule": "MONTH_LEVEL_DELTA_FROM_WEEK",
       "bucket_end": "2026-06-30",
       "bucket_id": "STRATEGY-STRUCT-MONTH-2026-06-SOURCE_DEPENDENCY",
       "bucket_start": "2026-06-01",
+      "closing_level_state": "NO_OBSERVATION",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "SOURCE_DEPENDENCY",
+      "level_age_days": null,
+      "level_last_observed_at": null,
+      "level_observation_ids": [],
+      "level_state": "NO_OBSERVATION",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [],
         "atomic_observation_ids": [],
@@ -1172,6 +1702,19 @@
           "STRATEGY-STRUCT-DAY-2026-07-04-SOURCE_DEPENDENCY",
           "STRATEGY-STRUCT-DAY-2026-07-05-SOURCE_DEPENDENCY"
         ],
+        "delta": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
         "week_bucket_ids": [
           "STRATEGY-STRUCT-WEEK-2026-W23-SOURCE_DEPENDENCY",
           "STRATEGY-STRUCT-WEEK-2026-W24-SOURCE_DEPENDENCY",
@@ -1184,7 +1727,10 @@
       "month_start": "2026-06-01",
       "observation_count": 0,
       "observations": [],
+      "opening_level_state": "NO_OBSERVATION",
       "period": "2026-06",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "MONTH",
       "source_refs": [],
       "source_week_bucket_ids": [
@@ -1198,11 +1744,25 @@
       "subject_id": "strategy"
     },
     {
-      "aggregation_rule": "MONTH_FROM_WEEK",
+      "aggregation_rule": "MONTH_LEVEL_DELTA_FROM_WEEK",
       "bucket_end": "2026-06-30",
       "bucket_id": "STRATEGY-STRUCT-MONTH-2026-06-TREASURY_STRUCTURE",
       "bucket_start": "2026-06-01",
+      "closing_level_state": "HYBRID_DEPENDENCE",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "TREASURY_STRUCTURE",
+      "level_age_days": 73,
+      "level_last_observed_at": "2026-06-29T00:00:00Z",
+      "level_observation_ids": [
+        "TL-STRATEGY-O002"
+      ],
+      "level_state": "HYBRID_DEPENDENCE",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [
           "evidence-freeze/S6.1a/SOURCE_DEPENDENCY_GRAPH_v2.json"
@@ -1247,6 +1807,35 @@
           "STRATEGY-STRUCT-DAY-2026-07-04-TREASURY_STRUCTURE",
           "STRATEGY-STRUCT-DAY-2026-07-05-TREASURY_STRUCTURE"
         ],
+        "delta": {
+          "artifact_refs": [
+            "evidence-freeze/S6.1a/SOURCE_DEPENDENCY_GRAPH_v2.json"
+          ],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [
+            "evidence-freeze/S6.1a/SOURCE_DEPENDENCY_GRAPH_v2.json"
+          ],
+          "atomic_observation_ids": [
+            "TL-STRATEGY-O002"
+          ],
+          "day_bucket_ids": [
+            "STRATEGY-STRUCT-DAY-2026-06-29-TREASURY_STRUCTURE",
+            "STRATEGY-STRUCT-DAY-2026-06-30-TREASURY_STRUCTURE",
+            "STRATEGY-STRUCT-DAY-2026-07-01-TREASURY_STRUCTURE",
+            "STRATEGY-STRUCT-DAY-2026-07-02-TREASURY_STRUCTURE",
+            "STRATEGY-STRUCT-DAY-2026-07-03-TREASURY_STRUCTURE",
+            "STRATEGY-STRUCT-DAY-2026-07-04-TREASURY_STRUCTURE",
+            "STRATEGY-STRUCT-DAY-2026-07-05-TREASURY_STRUCTURE"
+          ],
+          "week_bucket_ids": [
+            "STRATEGY-STRUCT-WEEK-2026-W27-TREASURY_STRUCTURE"
+          ]
+        },
         "week_bucket_ids": [
           "STRATEGY-STRUCT-WEEK-2026-W23-TREASURY_STRUCTURE",
           "STRATEGY-STRUCT-WEEK-2026-W24-TREASURY_STRUCTURE",
@@ -1261,7 +1850,10 @@
       "observations": [
         "TL-STRATEGY-O002"
       ],
+      "opening_level_state": "HYBRID_DEPENDENCE",
       "period": "2026-06",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "MONTH",
       "source_refs": [
         "evidence-freeze/S6.1a/SOURCE_DEPENDENCY_GRAPH_v2.json"
@@ -1273,15 +1865,29 @@
         "STRATEGY-STRUCT-WEEK-2026-W26-TREASURY_STRUCTURE",
         "STRATEGY-STRUCT-WEEK-2026-W27-TREASURY_STRUCTURE"
       ],
-      "state": "STRUCTURAL_SHIFT",
+      "state": "HYBRID_DEPENDENCE",
       "subject_id": "strategy"
     },
     {
-      "aggregation_rule": "MONTH_FROM_WEEK",
+      "aggregation_rule": "MONTH_LEVEL_DELTA_FROM_WEEK",
       "bucket_end": "2026-07-31",
       "bucket_id": "STRATEGY-STRUCT-MONTH-2026-07-NARRATIVE_DEPENDENCE",
       "bucket_start": "2026-07-01",
+      "closing_level_state": "MATERIAL_DEPENDENCE",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "NARRATIVE_DEPENDENCE",
+      "level_age_days": 66,
+      "level_last_observed_at": "2026-07-06T00:00:00Z",
+      "level_observation_ids": [
+        "TL-STRATEGY-O004"
+      ],
+      "level_state": "MATERIAL_DEPENDENCE",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [
           "evidence-freeze/S6.1a/HYPOTHESIS_ASSESSMENTS_v2.json"
@@ -1319,6 +1925,35 @@
           "STRATEGY-STRUCT-DAY-2026-08-01-NARRATIVE_DEPENDENCE",
           "STRATEGY-STRUCT-DAY-2026-08-02-NARRATIVE_DEPENDENCE"
         ],
+        "delta": {
+          "artifact_refs": [
+            "evidence-freeze/S6.1a/HYPOTHESIS_ASSESSMENTS_v2.json"
+          ],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [
+            "evidence-freeze/S6.1a/HYPOTHESIS_ASSESSMENTS_v2.json"
+          ],
+          "atomic_observation_ids": [
+            "TL-STRATEGY-O004"
+          ],
+          "day_bucket_ids": [
+            "STRATEGY-STRUCT-DAY-2026-07-06-NARRATIVE_DEPENDENCE",
+            "STRATEGY-STRUCT-DAY-2026-07-07-NARRATIVE_DEPENDENCE",
+            "STRATEGY-STRUCT-DAY-2026-07-08-NARRATIVE_DEPENDENCE",
+            "STRATEGY-STRUCT-DAY-2026-07-09-NARRATIVE_DEPENDENCE",
+            "STRATEGY-STRUCT-DAY-2026-07-10-NARRATIVE_DEPENDENCE",
+            "STRATEGY-STRUCT-DAY-2026-07-11-NARRATIVE_DEPENDENCE",
+            "STRATEGY-STRUCT-DAY-2026-07-12-NARRATIVE_DEPENDENCE"
+          ],
+          "week_bucket_ids": [
+            "STRATEGY-STRUCT-WEEK-2026-W28-NARRATIVE_DEPENDENCE"
+          ]
+        },
         "week_bucket_ids": [
           "STRATEGY-STRUCT-WEEK-2026-W28-NARRATIVE_DEPENDENCE",
           "STRATEGY-STRUCT-WEEK-2026-W29-NARRATIVE_DEPENDENCE",
@@ -1332,7 +1967,10 @@
       "observations": [
         "TL-STRATEGY-O004"
       ],
+      "opening_level_state": "MATERIAL_DEPENDENCE",
       "period": "2026-07",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "MONTH",
       "source_refs": [
         "evidence-freeze/S6.1a/HYPOTHESIS_ASSESSMENTS_v2.json"
@@ -1343,15 +1981,29 @@
         "STRATEGY-STRUCT-WEEK-2026-W30-NARRATIVE_DEPENDENCE",
         "STRATEGY-STRUCT-WEEK-2026-W31-NARRATIVE_DEPENDENCE"
       ],
-      "state": "TENSION",
+      "state": "MATERIAL_DEPENDENCE",
       "subject_id": "strategy"
     },
     {
-      "aggregation_rule": "MONTH_FROM_WEEK",
+      "aggregation_rule": "MONTH_LEVEL_DELTA_FROM_WEEK",
       "bucket_end": "2026-07-31",
       "bucket_id": "STRATEGY-STRUCT-MONTH-2026-07-RESOURCE_PRESSURE",
       "bucket_start": "2026-07-01",
+      "closing_level_state": "MATERIAL_DEPENDENCE",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "RESOURCE_PRESSURE",
+      "level_age_days": 66,
+      "level_last_observed_at": "2026-07-06T00:00:00Z",
+      "level_observation_ids": [
+        "TL-STRATEGY-O003"
+      ],
+      "level_state": "MATERIAL_DEPENDENCE",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [
           "evidence-freeze/S6.1a/TRIANGULATION_MATRIX_v2.json"
@@ -1389,6 +2041,35 @@
           "STRATEGY-STRUCT-DAY-2026-08-01-RESOURCE_PRESSURE",
           "STRATEGY-STRUCT-DAY-2026-08-02-RESOURCE_PRESSURE"
         ],
+        "delta": {
+          "artifact_refs": [
+            "evidence-freeze/S6.1a/TRIANGULATION_MATRIX_v2.json"
+          ],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [
+            "evidence-freeze/S6.1a/TRIANGULATION_MATRIX_v2.json"
+          ],
+          "atomic_observation_ids": [
+            "TL-STRATEGY-O003"
+          ],
+          "day_bucket_ids": [
+            "STRATEGY-STRUCT-DAY-2026-07-06-RESOURCE_PRESSURE",
+            "STRATEGY-STRUCT-DAY-2026-07-07-RESOURCE_PRESSURE",
+            "STRATEGY-STRUCT-DAY-2026-07-08-RESOURCE_PRESSURE",
+            "STRATEGY-STRUCT-DAY-2026-07-09-RESOURCE_PRESSURE",
+            "STRATEGY-STRUCT-DAY-2026-07-10-RESOURCE_PRESSURE",
+            "STRATEGY-STRUCT-DAY-2026-07-11-RESOURCE_PRESSURE",
+            "STRATEGY-STRUCT-DAY-2026-07-12-RESOURCE_PRESSURE"
+          ],
+          "week_bucket_ids": [
+            "STRATEGY-STRUCT-WEEK-2026-W28-RESOURCE_PRESSURE"
+          ]
+        },
         "week_bucket_ids": [
           "STRATEGY-STRUCT-WEEK-2026-W28-RESOURCE_PRESSURE",
           "STRATEGY-STRUCT-WEEK-2026-W29-RESOURCE_PRESSURE",
@@ -1402,7 +2083,10 @@
       "observations": [
         "TL-STRATEGY-O003"
       ],
+      "opening_level_state": "MATERIAL_DEPENDENCE",
       "period": "2026-07",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "MONTH",
       "source_refs": [
         "evidence-freeze/S6.1a/TRIANGULATION_MATRIX_v2.json"
@@ -1413,15 +2097,27 @@
         "STRATEGY-STRUCT-WEEK-2026-W30-RESOURCE_PRESSURE",
         "STRATEGY-STRUCT-WEEK-2026-W31-RESOURCE_PRESSURE"
       ],
-      "state": "TENSION",
+      "state": "MATERIAL_DEPENDENCE",
       "subject_id": "strategy"
     },
     {
-      "aggregation_rule": "MONTH_FROM_WEEK",
+      "aggregation_rule": "MONTH_LEVEL_DELTA_FROM_WEEK",
       "bucket_end": "2026-07-31",
       "bucket_id": "STRATEGY-STRUCT-MONTH-2026-07-SOURCE_DEPENDENCY",
       "bucket_start": "2026-07-01",
+      "closing_level_state": "NO_OBSERVATION",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "SOURCE_DEPENDENCY",
+      "level_age_days": null,
+      "level_last_observed_at": null,
+      "level_observation_ids": [],
+      "level_state": "NO_OBSERVATION",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [],
         "atomic_observation_ids": [],
@@ -1455,6 +2151,19 @@
           "STRATEGY-STRUCT-DAY-2026-08-01-SOURCE_DEPENDENCY",
           "STRATEGY-STRUCT-DAY-2026-08-02-SOURCE_DEPENDENCY"
         ],
+        "delta": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
         "week_bucket_ids": [
           "STRATEGY-STRUCT-WEEK-2026-W28-SOURCE_DEPENDENCY",
           "STRATEGY-STRUCT-WEEK-2026-W29-SOURCE_DEPENDENCY",
@@ -1466,7 +2175,10 @@
       "month_start": "2026-07-01",
       "observation_count": 0,
       "observations": [],
+      "opening_level_state": "NO_OBSERVATION",
       "period": "2026-07",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "MONTH",
       "source_refs": [],
       "source_week_bucket_ids": [
@@ -1479,11 +2191,23 @@
       "subject_id": "strategy"
     },
     {
-      "aggregation_rule": "MONTH_FROM_WEEK",
+      "aggregation_rule": "MONTH_LEVEL_DELTA_FROM_WEEK",
       "bucket_end": "2026-07-31",
       "bucket_id": "STRATEGY-STRUCT-MONTH-2026-07-TREASURY_STRUCTURE",
       "bucket_start": "2026-07-01",
+      "closing_level_state": "NO_OBSERVATION",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "TREASURY_STRUCTURE",
+      "level_age_days": null,
+      "level_last_observed_at": null,
+      "level_observation_ids": [],
+      "level_state": "NO_OBSERVATION",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [],
         "atomic_observation_ids": [],
@@ -1517,6 +2241,19 @@
           "STRATEGY-STRUCT-DAY-2026-08-01-TREASURY_STRUCTURE",
           "STRATEGY-STRUCT-DAY-2026-08-02-TREASURY_STRUCTURE"
         ],
+        "delta": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
         "week_bucket_ids": [
           "STRATEGY-STRUCT-WEEK-2026-W28-TREASURY_STRUCTURE",
           "STRATEGY-STRUCT-WEEK-2026-W29-TREASURY_STRUCTURE",
@@ -1528,7 +2265,10 @@
       "month_start": "2026-07-01",
       "observation_count": 0,
       "observations": [],
+      "opening_level_state": "NO_OBSERVATION",
       "period": "2026-07",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "MONTH",
       "source_refs": [],
       "source_week_bucket_ids": [
@@ -1541,11 +2281,23 @@
       "subject_id": "strategy"
     },
     {
-      "aggregation_rule": "MONTH_FROM_WEEK",
+      "aggregation_rule": "MONTH_LEVEL_DELTA_FROM_WEEK",
       "bucket_end": "2026-08-31",
       "bucket_id": "STRATEGY-STRUCT-MONTH-2026-08-NARRATIVE_DEPENDENCE",
       "bucket_start": "2026-08-01",
+      "closing_level_state": "NO_OBSERVATION",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "NARRATIVE_DEPENDENCE",
+      "level_age_days": null,
+      "level_last_observed_at": null,
+      "level_observation_ids": [],
+      "level_state": "NO_OBSERVATION",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [],
         "atomic_observation_ids": [],
@@ -1586,6 +2338,19 @@
           "STRATEGY-STRUCT-DAY-2026-09-05-NARRATIVE_DEPENDENCE",
           "STRATEGY-STRUCT-DAY-2026-09-06-NARRATIVE_DEPENDENCE"
         ],
+        "delta": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
         "week_bucket_ids": [
           "STRATEGY-STRUCT-WEEK-2026-W32-NARRATIVE_DEPENDENCE",
           "STRATEGY-STRUCT-WEEK-2026-W33-NARRATIVE_DEPENDENCE",
@@ -1598,7 +2363,10 @@
       "month_start": "2026-08-01",
       "observation_count": 0,
       "observations": [],
+      "opening_level_state": "NO_OBSERVATION",
       "period": "2026-08",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "MONTH",
       "source_refs": [],
       "source_week_bucket_ids": [
@@ -1612,11 +2380,23 @@
       "subject_id": "strategy"
     },
     {
-      "aggregation_rule": "MONTH_FROM_WEEK",
+      "aggregation_rule": "MONTH_LEVEL_DELTA_FROM_WEEK",
       "bucket_end": "2026-08-31",
       "bucket_id": "STRATEGY-STRUCT-MONTH-2026-08-RESOURCE_PRESSURE",
       "bucket_start": "2026-08-01",
+      "closing_level_state": "NO_OBSERVATION",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "RESOURCE_PRESSURE",
+      "level_age_days": null,
+      "level_last_observed_at": null,
+      "level_observation_ids": [],
+      "level_state": "NO_OBSERVATION",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [],
         "atomic_observation_ids": [],
@@ -1657,6 +2437,19 @@
           "STRATEGY-STRUCT-DAY-2026-09-05-RESOURCE_PRESSURE",
           "STRATEGY-STRUCT-DAY-2026-09-06-RESOURCE_PRESSURE"
         ],
+        "delta": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
         "week_bucket_ids": [
           "STRATEGY-STRUCT-WEEK-2026-W32-RESOURCE_PRESSURE",
           "STRATEGY-STRUCT-WEEK-2026-W33-RESOURCE_PRESSURE",
@@ -1669,7 +2462,10 @@
       "month_start": "2026-08-01",
       "observation_count": 0,
       "observations": [],
+      "opening_level_state": "NO_OBSERVATION",
       "period": "2026-08",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "MONTH",
       "source_refs": [],
       "source_week_bucket_ids": [
@@ -1683,11 +2479,23 @@
       "subject_id": "strategy"
     },
     {
-      "aggregation_rule": "MONTH_FROM_WEEK",
+      "aggregation_rule": "MONTH_LEVEL_DELTA_FROM_WEEK",
       "bucket_end": "2026-08-31",
       "bucket_id": "STRATEGY-STRUCT-MONTH-2026-08-SOURCE_DEPENDENCY",
       "bucket_start": "2026-08-01",
+      "closing_level_state": "NO_OBSERVATION",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "SOURCE_DEPENDENCY",
+      "level_age_days": null,
+      "level_last_observed_at": null,
+      "level_observation_ids": [],
+      "level_state": "NO_OBSERVATION",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [],
         "atomic_observation_ids": [],
@@ -1728,6 +2536,19 @@
           "STRATEGY-STRUCT-DAY-2026-09-05-SOURCE_DEPENDENCY",
           "STRATEGY-STRUCT-DAY-2026-09-06-SOURCE_DEPENDENCY"
         ],
+        "delta": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
         "week_bucket_ids": [
           "STRATEGY-STRUCT-WEEK-2026-W32-SOURCE_DEPENDENCY",
           "STRATEGY-STRUCT-WEEK-2026-W33-SOURCE_DEPENDENCY",
@@ -1740,7 +2561,10 @@
       "month_start": "2026-08-01",
       "observation_count": 0,
       "observations": [],
+      "opening_level_state": "NO_OBSERVATION",
       "period": "2026-08",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "MONTH",
       "source_refs": [],
       "source_week_bucket_ids": [
@@ -1754,11 +2578,23 @@
       "subject_id": "strategy"
     },
     {
-      "aggregation_rule": "MONTH_FROM_WEEK",
+      "aggregation_rule": "MONTH_LEVEL_DELTA_FROM_WEEK",
       "bucket_end": "2026-08-31",
       "bucket_id": "STRATEGY-STRUCT-MONTH-2026-08-TREASURY_STRUCTURE",
       "bucket_start": "2026-08-01",
+      "closing_level_state": "NO_OBSERVATION",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "TREASURY_STRUCTURE",
+      "level_age_days": null,
+      "level_last_observed_at": null,
+      "level_observation_ids": [],
+      "level_state": "NO_OBSERVATION",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [],
         "atomic_observation_ids": [],
@@ -1799,6 +2635,19 @@
           "STRATEGY-STRUCT-DAY-2026-09-05-TREASURY_STRUCTURE",
           "STRATEGY-STRUCT-DAY-2026-09-06-TREASURY_STRUCTURE"
         ],
+        "delta": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
         "week_bucket_ids": [
           "STRATEGY-STRUCT-WEEK-2026-W32-TREASURY_STRUCTURE",
           "STRATEGY-STRUCT-WEEK-2026-W33-TREASURY_STRUCTURE",
@@ -1811,7 +2660,10 @@
       "month_start": "2026-08-01",
       "observation_count": 0,
       "observations": [],
+      "opening_level_state": "NO_OBSERVATION",
       "period": "2026-08",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "MONTH",
       "source_refs": [],
       "source_week_bucket_ids": [
@@ -1825,11 +2677,23 @@
       "subject_id": "strategy"
     },
     {
-      "aggregation_rule": "MONTH_FROM_WEEK",
+      "aggregation_rule": "MONTH_LEVEL_DELTA_FROM_WEEK",
       "bucket_end": "2026-09-30",
       "bucket_id": "STRATEGY-STRUCT-MONTH-2026-09-NARRATIVE_DEPENDENCE",
       "bucket_start": "2026-09-01",
+      "closing_level_state": "NO_OBSERVATION",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "NARRATIVE_DEPENDENCE",
+      "level_age_days": null,
+      "level_last_observed_at": null,
+      "level_observation_ids": [],
+      "level_state": "NO_OBSERVATION",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [],
         "atomic_observation_ids": [],
@@ -1837,6 +2701,19 @@
           "STRATEGY-STRUCT-DAY-2026-09-07-NARRATIVE_DEPENDENCE",
           "STRATEGY-STRUCT-DAY-2026-09-08-NARRATIVE_DEPENDENCE"
         ],
+        "delta": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
         "week_bucket_ids": [
           "STRATEGY-STRUCT-WEEK-2026-W37-NARRATIVE_DEPENDENCE"
         ]
@@ -1845,7 +2722,10 @@
       "month_start": "2026-09-01",
       "observation_count": 0,
       "observations": [],
+      "opening_level_state": "NO_OBSERVATION",
       "period": "2026-09",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "MONTH",
       "source_refs": [],
       "source_week_bucket_ids": [
@@ -1855,11 +2735,23 @@
       "subject_id": "strategy"
     },
     {
-      "aggregation_rule": "MONTH_FROM_WEEK",
+      "aggregation_rule": "MONTH_LEVEL_DELTA_FROM_WEEK",
       "bucket_end": "2026-09-30",
       "bucket_id": "STRATEGY-STRUCT-MONTH-2026-09-RESOURCE_PRESSURE",
       "bucket_start": "2026-09-01",
+      "closing_level_state": "NO_OBSERVATION",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "RESOURCE_PRESSURE",
+      "level_age_days": null,
+      "level_last_observed_at": null,
+      "level_observation_ids": [],
+      "level_state": "NO_OBSERVATION",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [],
         "atomic_observation_ids": [],
@@ -1867,6 +2759,19 @@
           "STRATEGY-STRUCT-DAY-2026-09-07-RESOURCE_PRESSURE",
           "STRATEGY-STRUCT-DAY-2026-09-08-RESOURCE_PRESSURE"
         ],
+        "delta": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
         "week_bucket_ids": [
           "STRATEGY-STRUCT-WEEK-2026-W37-RESOURCE_PRESSURE"
         ]
@@ -1875,7 +2780,10 @@
       "month_start": "2026-09-01",
       "observation_count": 0,
       "observations": [],
+      "opening_level_state": "NO_OBSERVATION",
       "period": "2026-09",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "MONTH",
       "source_refs": [],
       "source_week_bucket_ids": [
@@ -1885,11 +2793,25 @@
       "subject_id": "strategy"
     },
     {
-      "aggregation_rule": "MONTH_FROM_WEEK",
+      "aggregation_rule": "MONTH_LEVEL_DELTA_FROM_WEEK",
       "bucket_end": "2026-09-30",
       "bucket_id": "STRATEGY-STRUCT-MONTH-2026-09-SOURCE_DEPENDENCY",
       "bucket_start": "2026-09-01",
+      "closing_level_state": "SOURCE_DEPENDENT",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "SOURCE_DEPENDENCY",
+      "level_age_days": 2,
+      "level_last_observed_at": "2026-09-08T00:00:00Z",
+      "level_observation_ids": [
+        "TL-STRATEGY-O005"
+      ],
+      "level_state": "SOURCE_DEPENDENT",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [
           "evidence-freeze/S6.1a/SOURCE_DEPENDENCY_GRAPH_v2.json"
@@ -1901,6 +2823,30 @@
           "STRATEGY-STRUCT-DAY-2026-09-07-SOURCE_DEPENDENCY",
           "STRATEGY-STRUCT-DAY-2026-09-08-SOURCE_DEPENDENCY"
         ],
+        "delta": {
+          "artifact_refs": [
+            "evidence-freeze/S6.1a/SOURCE_DEPENDENCY_GRAPH_v2.json"
+          ],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [
+            "evidence-freeze/S6.1a/SOURCE_DEPENDENCY_GRAPH_v2.json"
+          ],
+          "atomic_observation_ids": [
+            "TL-STRATEGY-O005"
+          ],
+          "day_bucket_ids": [
+            "STRATEGY-STRUCT-DAY-2026-09-07-SOURCE_DEPENDENCY",
+            "STRATEGY-STRUCT-DAY-2026-09-08-SOURCE_DEPENDENCY"
+          ],
+          "week_bucket_ids": [
+            "STRATEGY-STRUCT-WEEK-2026-W37-SOURCE_DEPENDENCY"
+          ]
+        },
         "week_bucket_ids": [
           "STRATEGY-STRUCT-WEEK-2026-W37-SOURCE_DEPENDENCY"
         ]
@@ -1911,7 +2857,10 @@
       "observations": [
         "TL-STRATEGY-O005"
       ],
+      "opening_level_state": "SOURCE_DEPENDENT",
       "period": "2026-09",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "MONTH",
       "source_refs": [
         "evidence-freeze/S6.1a/SOURCE_DEPENDENCY_GRAPH_v2.json"
@@ -1919,15 +2868,27 @@
       "source_week_bucket_ids": [
         "STRATEGY-STRUCT-WEEK-2026-W37-SOURCE_DEPENDENCY"
       ],
-      "state": "TENSION",
+      "state": "SOURCE_DEPENDENT",
       "subject_id": "strategy"
     },
     {
-      "aggregation_rule": "MONTH_FROM_WEEK",
+      "aggregation_rule": "MONTH_LEVEL_DELTA_FROM_WEEK",
       "bucket_end": "2026-09-30",
       "bucket_id": "STRATEGY-STRUCT-MONTH-2026-09-TREASURY_STRUCTURE",
       "bucket_start": "2026-09-01",
+      "closing_level_state": "NO_OBSERVATION",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "TREASURY_STRUCTURE",
+      "level_age_days": null,
+      "level_last_observed_at": null,
+      "level_observation_ids": [],
+      "level_state": "NO_OBSERVATION",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [],
         "atomic_observation_ids": [],
@@ -1935,6 +2896,19 @@
           "STRATEGY-STRUCT-DAY-2026-09-07-TREASURY_STRUCTURE",
           "STRATEGY-STRUCT-DAY-2026-09-08-TREASURY_STRUCTURE"
         ],
+        "delta": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "day_bucket_ids": [],
+          "week_bucket_ids": []
+        },
         "week_bucket_ids": [
           "STRATEGY-STRUCT-WEEK-2026-W37-TREASURY_STRUCTURE"
         ]
@@ -1943,7 +2917,10 @@
       "month_start": "2026-09-01",
       "observation_count": 0,
       "observations": [],
+      "opening_level_state": "NO_OBSERVATION",
       "period": "2026-09",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "MONTH",
       "source_refs": [],
       "source_week_bucket_ids": [
@@ -1954,7 +2931,7 @@
     }
   ],
   "layer": "STRUCTURAL",
-  "model_version": "TIMELINE_MODEL_R1",
+  "model_version": "TIMELINE_MODEL_R1_1",
   "resolution": "MONTH",
   "subject_id": "strategy"
 }

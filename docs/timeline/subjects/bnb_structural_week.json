@@ -1,11 +1,25 @@
 {
   "buckets": [
     {
-      "aggregation_rule": "WEEK_FROM_DAY",
+      "aggregation_rule": "WEEK_LEVEL_DELTA_FROM_DAY",
       "bucket_end": "2026-07-19",
       "bucket_id": "BNB-STRUCT-WEEK-2026-W29-GOVERNANCE_STRUCTURE",
       "bucket_start": "2026-07-13",
+      "closing_level_state": "MECHANISM_DEFINED",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "GOVERNANCE_STRUCTURE",
+      "level_age_days": 57,
+      "level_last_observed_at": "2026-07-15T00:00:00Z",
+      "level_observation_ids": [
+        "TL-BNB-O008"
+      ],
+      "level_state": "MECHANISM_DEFINED",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [
           "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
@@ -19,13 +33,35 @@
           "BNB-STRUCT-DAY-2026-07-17-GOVERNANCE_STRUCTURE",
           "BNB-STRUCT-DAY-2026-07-18-GOVERNANCE_STRUCTURE",
           "BNB-STRUCT-DAY-2026-07-19-GOVERNANCE_STRUCTURE"
-        ]
+        ],
+        "delta": {
+          "artifact_refs": [
+            "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
+          ],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [
+            "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
+          ],
+          "atomic_observation_ids": [
+            "TL-BNB-O008"
+          ],
+          "day_bucket_ids": [
+            "BNB-STRUCT-DAY-2026-07-15-GOVERNANCE_STRUCTURE"
+          ]
+        }
       },
       "observation_count": 1,
       "observations": [
         "TL-BNB-O008"
       ],
+      "opening_level_state": "MECHANISM_DEFINED",
       "period": "2026-W29",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "WEEK",
       "source_day_bucket_ids": [
         "BNB-STRUCT-DAY-2026-07-15-GOVERNANCE_STRUCTURE",
@@ -37,17 +73,35 @@
       "source_refs": [
         "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
       ],
-      "state": "STRENGTHENING",
+      "state": "MECHANISM_DEFINED",
       "subject_id": "BNB",
       "week_end": "2026-07-19",
       "week_start": "2026-07-13"
     },
     {
-      "aggregation_rule": "WEEK_FROM_DAY",
+      "aggregation_rule": "WEEK_LEVEL_DELTA_FROM_DAY",
       "bucket_end": "2026-07-19",
       "bucket_id": "BNB-STRUCT-WEEK-2026-W29-SUPPLY_STRUCTURE",
       "bucket_start": "2026-07-13",
+      "closing_level_state": "CONTRACTIONARY",
+      "delta_age_days": 57,
+      "delta_basis": "EXPLICIT_CHANGE_EVENT",
+      "delta_last_established_at": "2026-07-15T00:00:00Z",
+      "delta_observation_ids": [
+        "TL-BNB-O001"
+      ],
+      "delta_state": "TOWARD_CONTRACTION",
+      "delta_transition_count": 1,
       "dimension_id": "SUPPLY_STRUCTURE",
+      "level_age_days": 57,
+      "level_last_observed_at": "2026-07-15T00:00:00Z",
+      "level_observation_ids": [
+        "TL-BNB-O001",
+        "TL-BNB-O002",
+        "TL-BNB-O003"
+      ],
+      "level_state": "CONTRACTIONARY",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [
           "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
@@ -63,7 +117,39 @@
           "BNB-STRUCT-DAY-2026-07-17-SUPPLY_STRUCTURE",
           "BNB-STRUCT-DAY-2026-07-18-SUPPLY_STRUCTURE",
           "BNB-STRUCT-DAY-2026-07-19-SUPPLY_STRUCTURE"
-        ]
+        ],
+        "delta": {
+          "artifact_refs": [
+            "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
+          ],
+          "atomic_observation_ids": [
+            "TL-BNB-O001"
+          ],
+          "comparison_lineage": [
+            {
+              "basis": "EXPLICIT_CHANGE_EVENT",
+              "comparison_rule_id": null,
+              "current_observation_id": "TL-BNB-O001",
+              "prior_observation_id": null
+            }
+          ],
+          "day_bucket_ids": [
+            "BNB-STRUCT-DAY-2026-07-15-SUPPLY_STRUCTURE"
+          ]
+        },
+        "level": {
+          "artifact_refs": [
+            "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
+          ],
+          "atomic_observation_ids": [
+            "TL-BNB-O001",
+            "TL-BNB-O002",
+            "TL-BNB-O003"
+          ],
+          "day_bucket_ids": [
+            "BNB-STRUCT-DAY-2026-07-15-SUPPLY_STRUCTURE"
+          ]
+        }
       },
       "observation_count": 3,
       "observations": [
@@ -71,7 +157,10 @@
         "TL-BNB-O002",
         "TL-BNB-O003"
       ],
+      "opening_level_state": "CONTRACTIONARY",
       "period": "2026-W29",
+      "period_delta_state": "TOWARD_CONTRACTION",
+      "prior_reference_ids": [],
       "resolution": "WEEK",
       "source_day_bucket_ids": [
         "BNB-STRUCT-DAY-2026-07-15-SUPPLY_STRUCTURE",
@@ -83,17 +172,31 @@
       "source_refs": [
         "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
       ],
-      "state": "STRUCTURAL_SHIFT",
+      "state": "CONTRACTIONARY",
       "subject_id": "BNB",
       "week_end": "2026-07-19",
       "week_start": "2026-07-13"
     },
     {
-      "aggregation_rule": "WEEK_FROM_DAY",
+      "aggregation_rule": "WEEK_LEVEL_DELTA_FROM_DAY",
       "bucket_end": "2026-07-19",
       "bucket_id": "BNB-STRUCT-WEEK-2026-W29-UTILITY_STRUCTURE",
       "bucket_start": "2026-07-13",
+      "closing_level_state": "ESTABLISHED_ROLE",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "UTILITY_STRUCTURE",
+      "level_age_days": 57,
+      "level_last_observed_at": "2026-07-15T00:00:00Z",
+      "level_observation_ids": [
+        "TL-BNB-O004"
+      ],
+      "level_state": "ESTABLISHED_ROLE",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [
           "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
@@ -107,13 +210,35 @@
           "BNB-STRUCT-DAY-2026-07-17-UTILITY_STRUCTURE",
           "BNB-STRUCT-DAY-2026-07-18-UTILITY_STRUCTURE",
           "BNB-STRUCT-DAY-2026-07-19-UTILITY_STRUCTURE"
-        ]
+        ],
+        "delta": {
+          "artifact_refs": [
+            "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
+          ],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [
+            "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
+          ],
+          "atomic_observation_ids": [
+            "TL-BNB-O004"
+          ],
+          "day_bucket_ids": [
+            "BNB-STRUCT-DAY-2026-07-15-UTILITY_STRUCTURE"
+          ]
+        }
       },
       "observation_count": 1,
       "observations": [
         "TL-BNB-O004"
       ],
+      "opening_level_state": "ESTABLISHED_ROLE",
       "period": "2026-W29",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "WEEK",
       "source_day_bucket_ids": [
         "BNB-STRUCT-DAY-2026-07-15-UTILITY_STRUCTURE",
@@ -125,17 +250,29 @@
       "source_refs": [
         "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
       ],
-      "state": "STRENGTHENING",
+      "state": "ESTABLISHED_ROLE",
       "subject_id": "BNB",
       "week_end": "2026-07-19",
       "week_start": "2026-07-13"
     },
     {
-      "aggregation_rule": "WEEK_FROM_DAY",
+      "aggregation_rule": "WEEK_LEVEL_DELTA_FROM_DAY",
       "bucket_end": "2026-07-19",
       "bucket_id": "BNB-STRUCT-WEEK-2026-W29-VALIDATOR_DISTRIBUTION",
       "bucket_start": "2026-07-13",
+      "closing_level_state": "NO_OBSERVATION",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "level_age_days": null,
+      "level_last_observed_at": null,
+      "level_observation_ids": [],
+      "level_state": "NO_OBSERVATION",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [],
         "atomic_observation_ids": [],
@@ -145,11 +282,25 @@
           "BNB-STRUCT-DAY-2026-07-17-VALIDATOR_DISTRIBUTION",
           "BNB-STRUCT-DAY-2026-07-18-VALIDATOR_DISTRIBUTION",
           "BNB-STRUCT-DAY-2026-07-19-VALIDATOR_DISTRIBUTION"
-        ]
+        ],
+        "delta": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "day_bucket_ids": []
+        }
       },
       "observation_count": 0,
       "observations": [],
+      "opening_level_state": "NO_OBSERVATION",
       "period": "2026-W29",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "WEEK",
       "source_day_bucket_ids": [
         "BNB-STRUCT-DAY-2026-07-15-VALIDATOR_DISTRIBUTION",
@@ -165,11 +316,23 @@
       "week_start": "2026-07-13"
     },
     {
-      "aggregation_rule": "WEEK_FROM_DAY",
+      "aggregation_rule": "WEEK_LEVEL_DELTA_FROM_DAY",
       "bucket_end": "2026-07-26",
       "bucket_id": "BNB-STRUCT-WEEK-2026-W30-GOVERNANCE_STRUCTURE",
       "bucket_start": "2026-07-20",
+      "closing_level_state": "NO_OBSERVATION",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "GOVERNANCE_STRUCTURE",
+      "level_age_days": null,
+      "level_last_observed_at": null,
+      "level_observation_ids": [],
+      "level_state": "NO_OBSERVATION",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [],
         "atomic_observation_ids": [],
@@ -181,11 +344,25 @@
           "BNB-STRUCT-DAY-2026-07-24-GOVERNANCE_STRUCTURE",
           "BNB-STRUCT-DAY-2026-07-25-GOVERNANCE_STRUCTURE",
           "BNB-STRUCT-DAY-2026-07-26-GOVERNANCE_STRUCTURE"
-        ]
+        ],
+        "delta": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "day_bucket_ids": []
+        }
       },
       "observation_count": 0,
       "observations": [],
+      "opening_level_state": "NO_OBSERVATION",
       "period": "2026-W30",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "WEEK",
       "source_day_bucket_ids": [
         "BNB-STRUCT-DAY-2026-07-20-GOVERNANCE_STRUCTURE",
@@ -203,11 +380,23 @@
       "week_start": "2026-07-20"
     },
     {
-      "aggregation_rule": "WEEK_FROM_DAY",
+      "aggregation_rule": "WEEK_LEVEL_DELTA_FROM_DAY",
       "bucket_end": "2026-07-26",
       "bucket_id": "BNB-STRUCT-WEEK-2026-W30-SUPPLY_STRUCTURE",
       "bucket_start": "2026-07-20",
+      "closing_level_state": "NO_OBSERVATION",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "SUPPLY_STRUCTURE",
+      "level_age_days": null,
+      "level_last_observed_at": null,
+      "level_observation_ids": [],
+      "level_state": "NO_OBSERVATION",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [],
         "atomic_observation_ids": [],
@@ -219,11 +408,25 @@
           "BNB-STRUCT-DAY-2026-07-24-SUPPLY_STRUCTURE",
           "BNB-STRUCT-DAY-2026-07-25-SUPPLY_STRUCTURE",
           "BNB-STRUCT-DAY-2026-07-26-SUPPLY_STRUCTURE"
-        ]
+        ],
+        "delta": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "day_bucket_ids": []
+        }
       },
       "observation_count": 0,
       "observations": [],
+      "opening_level_state": "NO_OBSERVATION",
       "period": "2026-W30",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "WEEK",
       "source_day_bucket_ids": [
         "BNB-STRUCT-DAY-2026-07-20-SUPPLY_STRUCTURE",
@@ -241,11 +444,23 @@
       "week_start": "2026-07-20"
     },
     {
-      "aggregation_rule": "WEEK_FROM_DAY",
+      "aggregation_rule": "WEEK_LEVEL_DELTA_FROM_DAY",
       "bucket_end": "2026-07-26",
       "bucket_id": "BNB-STRUCT-WEEK-2026-W30-UTILITY_STRUCTURE",
       "bucket_start": "2026-07-20",
+      "closing_level_state": "NO_OBSERVATION",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "UTILITY_STRUCTURE",
+      "level_age_days": null,
+      "level_last_observed_at": null,
+      "level_observation_ids": [],
+      "level_state": "NO_OBSERVATION",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [],
         "atomic_observation_ids": [],
@@ -257,11 +472,25 @@
           "BNB-STRUCT-DAY-2026-07-24-UTILITY_STRUCTURE",
           "BNB-STRUCT-DAY-2026-07-25-UTILITY_STRUCTURE",
           "BNB-STRUCT-DAY-2026-07-26-UTILITY_STRUCTURE"
-        ]
+        ],
+        "delta": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "day_bucket_ids": []
+        }
       },
       "observation_count": 0,
       "observations": [],
+      "opening_level_state": "NO_OBSERVATION",
       "period": "2026-W30",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "WEEK",
       "source_day_bucket_ids": [
         "BNB-STRUCT-DAY-2026-07-20-UTILITY_STRUCTURE",
@@ -279,11 +508,23 @@
       "week_start": "2026-07-20"
     },
     {
-      "aggregation_rule": "WEEK_FROM_DAY",
+      "aggregation_rule": "WEEK_LEVEL_DELTA_FROM_DAY",
       "bucket_end": "2026-07-26",
       "bucket_id": "BNB-STRUCT-WEEK-2026-W30-VALIDATOR_DISTRIBUTION",
       "bucket_start": "2026-07-20",
+      "closing_level_state": "NO_OBSERVATION",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "level_age_days": null,
+      "level_last_observed_at": null,
+      "level_observation_ids": [],
+      "level_state": "NO_OBSERVATION",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [],
         "atomic_observation_ids": [],
@@ -295,11 +536,25 @@
           "BNB-STRUCT-DAY-2026-07-24-VALIDATOR_DISTRIBUTION",
           "BNB-STRUCT-DAY-2026-07-25-VALIDATOR_DISTRIBUTION",
           "BNB-STRUCT-DAY-2026-07-26-VALIDATOR_DISTRIBUTION"
-        ]
+        ],
+        "delta": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "day_bucket_ids": []
+        }
       },
       "observation_count": 0,
       "observations": [],
+      "opening_level_state": "NO_OBSERVATION",
       "period": "2026-W30",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "WEEK",
       "source_day_bucket_ids": [
         "BNB-STRUCT-DAY-2026-07-20-VALIDATOR_DISTRIBUTION",
@@ -317,11 +572,23 @@
       "week_start": "2026-07-20"
     },
     {
-      "aggregation_rule": "WEEK_FROM_DAY",
+      "aggregation_rule": "WEEK_LEVEL_DELTA_FROM_DAY",
       "bucket_end": "2026-08-02",
       "bucket_id": "BNB-STRUCT-WEEK-2026-W31-GOVERNANCE_STRUCTURE",
       "bucket_start": "2026-07-27",
+      "closing_level_state": "NO_OBSERVATION",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "GOVERNANCE_STRUCTURE",
+      "level_age_days": null,
+      "level_last_observed_at": null,
+      "level_observation_ids": [],
+      "level_state": "NO_OBSERVATION",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [],
         "atomic_observation_ids": [],
@@ -333,11 +600,25 @@
           "BNB-STRUCT-DAY-2026-07-31-GOVERNANCE_STRUCTURE",
           "BNB-STRUCT-DAY-2026-08-01-GOVERNANCE_STRUCTURE",
           "BNB-STRUCT-DAY-2026-08-02-GOVERNANCE_STRUCTURE"
-        ]
+        ],
+        "delta": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "day_bucket_ids": []
+        }
       },
       "observation_count": 0,
       "observations": [],
+      "opening_level_state": "NO_OBSERVATION",
       "period": "2026-W31",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "WEEK",
       "source_day_bucket_ids": [
         "BNB-STRUCT-DAY-2026-07-27-GOVERNANCE_STRUCTURE",
@@ -355,11 +636,23 @@
       "week_start": "2026-07-27"
     },
     {
-      "aggregation_rule": "WEEK_FROM_DAY",
+      "aggregation_rule": "WEEK_LEVEL_DELTA_FROM_DAY",
       "bucket_end": "2026-08-02",
       "bucket_id": "BNB-STRUCT-WEEK-2026-W31-SUPPLY_STRUCTURE",
       "bucket_start": "2026-07-27",
+      "closing_level_state": "NO_OBSERVATION",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "SUPPLY_STRUCTURE",
+      "level_age_days": null,
+      "level_last_observed_at": null,
+      "level_observation_ids": [],
+      "level_state": "NO_OBSERVATION",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [],
         "atomic_observation_ids": [],
@@ -371,11 +664,25 @@
           "BNB-STRUCT-DAY-2026-07-31-SUPPLY_STRUCTURE",
           "BNB-STRUCT-DAY-2026-08-01-SUPPLY_STRUCTURE",
           "BNB-STRUCT-DAY-2026-08-02-SUPPLY_STRUCTURE"
-        ]
+        ],
+        "delta": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "day_bucket_ids": []
+        }
       },
       "observation_count": 0,
       "observations": [],
+      "opening_level_state": "NO_OBSERVATION",
       "period": "2026-W31",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "WEEK",
       "source_day_bucket_ids": [
         "BNB-STRUCT-DAY-2026-07-27-SUPPLY_STRUCTURE",
@@ -393,11 +700,23 @@
       "week_start": "2026-07-27"
     },
     {
-      "aggregation_rule": "WEEK_FROM_DAY",
+      "aggregation_rule": "WEEK_LEVEL_DELTA_FROM_DAY",
       "bucket_end": "2026-08-02",
       "bucket_id": "BNB-STRUCT-WEEK-2026-W31-UTILITY_STRUCTURE",
       "bucket_start": "2026-07-27",
+      "closing_level_state": "NO_OBSERVATION",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "UTILITY_STRUCTURE",
+      "level_age_days": null,
+      "level_last_observed_at": null,
+      "level_observation_ids": [],
+      "level_state": "NO_OBSERVATION",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [],
         "atomic_observation_ids": [],
@@ -409,11 +728,25 @@
           "BNB-STRUCT-DAY-2026-07-31-UTILITY_STRUCTURE",
           "BNB-STRUCT-DAY-2026-08-01-UTILITY_STRUCTURE",
           "BNB-STRUCT-DAY-2026-08-02-UTILITY_STRUCTURE"
-        ]
+        ],
+        "delta": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "day_bucket_ids": []
+        }
       },
       "observation_count": 0,
       "observations": [],
+      "opening_level_state": "NO_OBSERVATION",
       "period": "2026-W31",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "WEEK",
       "source_day_bucket_ids": [
         "BNB-STRUCT-DAY-2026-07-27-UTILITY_STRUCTURE",
@@ -431,11 +764,23 @@
       "week_start": "2026-07-27"
     },
     {
-      "aggregation_rule": "WEEK_FROM_DAY",
+      "aggregation_rule": "WEEK_LEVEL_DELTA_FROM_DAY",
       "bucket_end": "2026-08-02",
       "bucket_id": "BNB-STRUCT-WEEK-2026-W31-VALIDATOR_DISTRIBUTION",
       "bucket_start": "2026-07-27",
+      "closing_level_state": "NO_OBSERVATION",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "level_age_days": null,
+      "level_last_observed_at": null,
+      "level_observation_ids": [],
+      "level_state": "NO_OBSERVATION",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [],
         "atomic_observation_ids": [],
@@ -447,11 +792,25 @@
           "BNB-STRUCT-DAY-2026-07-31-VALIDATOR_DISTRIBUTION",
           "BNB-STRUCT-DAY-2026-08-01-VALIDATOR_DISTRIBUTION",
           "BNB-STRUCT-DAY-2026-08-02-VALIDATOR_DISTRIBUTION"
-        ]
+        ],
+        "delta": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "day_bucket_ids": []
+        }
       },
       "observation_count": 0,
       "observations": [],
+      "opening_level_state": "NO_OBSERVATION",
       "period": "2026-W31",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "WEEK",
       "source_day_bucket_ids": [
         "BNB-STRUCT-DAY-2026-07-27-VALIDATOR_DISTRIBUTION",
@@ -469,11 +828,23 @@
       "week_start": "2026-07-27"
     },
     {
-      "aggregation_rule": "WEEK_FROM_DAY",
+      "aggregation_rule": "WEEK_LEVEL_DELTA_FROM_DAY",
       "bucket_end": "2026-08-09",
       "bucket_id": "BNB-STRUCT-WEEK-2026-W32-GOVERNANCE_STRUCTURE",
       "bucket_start": "2026-08-03",
+      "closing_level_state": "NO_OBSERVATION",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "GOVERNANCE_STRUCTURE",
+      "level_age_days": null,
+      "level_last_observed_at": null,
+      "level_observation_ids": [],
+      "level_state": "NO_OBSERVATION",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [],
         "atomic_observation_ids": [],
@@ -485,11 +856,25 @@
           "BNB-STRUCT-DAY-2026-08-07-GOVERNANCE_STRUCTURE",
           "BNB-STRUCT-DAY-2026-08-08-GOVERNANCE_STRUCTURE",
           "BNB-STRUCT-DAY-2026-08-09-GOVERNANCE_STRUCTURE"
-        ]
+        ],
+        "delta": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "day_bucket_ids": []
+        }
       },
       "observation_count": 0,
       "observations": [],
+      "opening_level_state": "NO_OBSERVATION",
       "period": "2026-W32",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "WEEK",
       "source_day_bucket_ids": [
         "BNB-STRUCT-DAY-2026-08-03-GOVERNANCE_STRUCTURE",
@@ -507,11 +892,23 @@
       "week_start": "2026-08-03"
     },
     {
-      "aggregation_rule": "WEEK_FROM_DAY",
+      "aggregation_rule": "WEEK_LEVEL_DELTA_FROM_DAY",
       "bucket_end": "2026-08-09",
       "bucket_id": "BNB-STRUCT-WEEK-2026-W32-SUPPLY_STRUCTURE",
       "bucket_start": "2026-08-03",
+      "closing_level_state": "NO_OBSERVATION",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "SUPPLY_STRUCTURE",
+      "level_age_days": null,
+      "level_last_observed_at": null,
+      "level_observation_ids": [],
+      "level_state": "NO_OBSERVATION",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [],
         "atomic_observation_ids": [],
@@ -523,11 +920,25 @@
           "BNB-STRUCT-DAY-2026-08-07-SUPPLY_STRUCTURE",
           "BNB-STRUCT-DAY-2026-08-08-SUPPLY_STRUCTURE",
           "BNB-STRUCT-DAY-2026-08-09-SUPPLY_STRUCTURE"
-        ]
+        ],
+        "delta": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "day_bucket_ids": []
+        }
       },
       "observation_count": 0,
       "observations": [],
+      "opening_level_state": "NO_OBSERVATION",
       "period": "2026-W32",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "WEEK",
       "source_day_bucket_ids": [
         "BNB-STRUCT-DAY-2026-08-03-SUPPLY_STRUCTURE",
@@ -545,11 +956,23 @@
       "week_start": "2026-08-03"
     },
     {
-      "aggregation_rule": "WEEK_FROM_DAY",
+      "aggregation_rule": "WEEK_LEVEL_DELTA_FROM_DAY",
       "bucket_end": "2026-08-09",
       "bucket_id": "BNB-STRUCT-WEEK-2026-W32-UTILITY_STRUCTURE",
       "bucket_start": "2026-08-03",
+      "closing_level_state": "NO_OBSERVATION",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "UTILITY_STRUCTURE",
+      "level_age_days": null,
+      "level_last_observed_at": null,
+      "level_observation_ids": [],
+      "level_state": "NO_OBSERVATION",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [],
         "atomic_observation_ids": [],
@@ -561,11 +984,25 @@
           "BNB-STRUCT-DAY-2026-08-07-UTILITY_STRUCTURE",
           "BNB-STRUCT-DAY-2026-08-08-UTILITY_STRUCTURE",
           "BNB-STRUCT-DAY-2026-08-09-UTILITY_STRUCTURE"
-        ]
+        ],
+        "delta": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "day_bucket_ids": []
+        }
       },
       "observation_count": 0,
       "observations": [],
+      "opening_level_state": "NO_OBSERVATION",
       "period": "2026-W32",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "WEEK",
       "source_day_bucket_ids": [
         "BNB-STRUCT-DAY-2026-08-03-UTILITY_STRUCTURE",
@@ -583,11 +1020,23 @@
       "week_start": "2026-08-03"
     },
     {
-      "aggregation_rule": "WEEK_FROM_DAY",
+      "aggregation_rule": "WEEK_LEVEL_DELTA_FROM_DAY",
       "bucket_end": "2026-08-09",
       "bucket_id": "BNB-STRUCT-WEEK-2026-W32-VALIDATOR_DISTRIBUTION",
       "bucket_start": "2026-08-03",
+      "closing_level_state": "NO_OBSERVATION",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "level_age_days": null,
+      "level_last_observed_at": null,
+      "level_observation_ids": [],
+      "level_state": "NO_OBSERVATION",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [],
         "atomic_observation_ids": [],
@@ -599,11 +1048,25 @@
           "BNB-STRUCT-DAY-2026-08-07-VALIDATOR_DISTRIBUTION",
           "BNB-STRUCT-DAY-2026-08-08-VALIDATOR_DISTRIBUTION",
           "BNB-STRUCT-DAY-2026-08-09-VALIDATOR_DISTRIBUTION"
-        ]
+        ],
+        "delta": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "day_bucket_ids": []
+        }
       },
       "observation_count": 0,
       "observations": [],
+      "opening_level_state": "NO_OBSERVATION",
       "period": "2026-W32",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "WEEK",
       "source_day_bucket_ids": [
         "BNB-STRUCT-DAY-2026-08-03-VALIDATOR_DISTRIBUTION",
@@ -621,11 +1084,23 @@
       "week_start": "2026-08-03"
     },
     {
-      "aggregation_rule": "WEEK_FROM_DAY",
+      "aggregation_rule": "WEEK_LEVEL_DELTA_FROM_DAY",
       "bucket_end": "2026-08-16",
       "bucket_id": "BNB-STRUCT-WEEK-2026-W33-GOVERNANCE_STRUCTURE",
       "bucket_start": "2026-08-10",
+      "closing_level_state": "NO_OBSERVATION",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "GOVERNANCE_STRUCTURE",
+      "level_age_days": null,
+      "level_last_observed_at": null,
+      "level_observation_ids": [],
+      "level_state": "NO_OBSERVATION",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [],
         "atomic_observation_ids": [],
@@ -637,11 +1112,25 @@
           "BNB-STRUCT-DAY-2026-08-14-GOVERNANCE_STRUCTURE",
           "BNB-STRUCT-DAY-2026-08-15-GOVERNANCE_STRUCTURE",
           "BNB-STRUCT-DAY-2026-08-16-GOVERNANCE_STRUCTURE"
-        ]
+        ],
+        "delta": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "day_bucket_ids": []
+        }
       },
       "observation_count": 0,
       "observations": [],
+      "opening_level_state": "NO_OBSERVATION",
       "period": "2026-W33",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "WEEK",
       "source_day_bucket_ids": [
         "BNB-STRUCT-DAY-2026-08-10-GOVERNANCE_STRUCTURE",
@@ -659,11 +1148,23 @@
       "week_start": "2026-08-10"
     },
     {
-      "aggregation_rule": "WEEK_FROM_DAY",
+      "aggregation_rule": "WEEK_LEVEL_DELTA_FROM_DAY",
       "bucket_end": "2026-08-16",
       "bucket_id": "BNB-STRUCT-WEEK-2026-W33-SUPPLY_STRUCTURE",
       "bucket_start": "2026-08-10",
+      "closing_level_state": "NO_OBSERVATION",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "SUPPLY_STRUCTURE",
+      "level_age_days": null,
+      "level_last_observed_at": null,
+      "level_observation_ids": [],
+      "level_state": "NO_OBSERVATION",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [],
         "atomic_observation_ids": [],
@@ -675,11 +1176,25 @@
           "BNB-STRUCT-DAY-2026-08-14-SUPPLY_STRUCTURE",
           "BNB-STRUCT-DAY-2026-08-15-SUPPLY_STRUCTURE",
           "BNB-STRUCT-DAY-2026-08-16-SUPPLY_STRUCTURE"
-        ]
+        ],
+        "delta": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "day_bucket_ids": []
+        }
       },
       "observation_count": 0,
       "observations": [],
+      "opening_level_state": "NO_OBSERVATION",
       "period": "2026-W33",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "WEEK",
       "source_day_bucket_ids": [
         "BNB-STRUCT-DAY-2026-08-10-SUPPLY_STRUCTURE",
@@ -697,11 +1212,23 @@
       "week_start": "2026-08-10"
     },
     {
-      "aggregation_rule": "WEEK_FROM_DAY",
+      "aggregation_rule": "WEEK_LEVEL_DELTA_FROM_DAY",
       "bucket_end": "2026-08-16",
       "bucket_id": "BNB-STRUCT-WEEK-2026-W33-UTILITY_STRUCTURE",
       "bucket_start": "2026-08-10",
+      "closing_level_state": "NO_OBSERVATION",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "UTILITY_STRUCTURE",
+      "level_age_days": null,
+      "level_last_observed_at": null,
+      "level_observation_ids": [],
+      "level_state": "NO_OBSERVATION",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [],
         "atomic_observation_ids": [],
@@ -713,11 +1240,25 @@
           "BNB-STRUCT-DAY-2026-08-14-UTILITY_STRUCTURE",
           "BNB-STRUCT-DAY-2026-08-15-UTILITY_STRUCTURE",
           "BNB-STRUCT-DAY-2026-08-16-UTILITY_STRUCTURE"
-        ]
+        ],
+        "delta": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "day_bucket_ids": []
+        }
       },
       "observation_count": 0,
       "observations": [],
+      "opening_level_state": "NO_OBSERVATION",
       "period": "2026-W33",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "WEEK",
       "source_day_bucket_ids": [
         "BNB-STRUCT-DAY-2026-08-10-UTILITY_STRUCTURE",
@@ -735,11 +1276,23 @@
       "week_start": "2026-08-10"
     },
     {
-      "aggregation_rule": "WEEK_FROM_DAY",
+      "aggregation_rule": "WEEK_LEVEL_DELTA_FROM_DAY",
       "bucket_end": "2026-08-16",
       "bucket_id": "BNB-STRUCT-WEEK-2026-W33-VALIDATOR_DISTRIBUTION",
       "bucket_start": "2026-08-10",
+      "closing_level_state": "NO_OBSERVATION",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "level_age_days": null,
+      "level_last_observed_at": null,
+      "level_observation_ids": [],
+      "level_state": "NO_OBSERVATION",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [],
         "atomic_observation_ids": [],
@@ -751,11 +1304,25 @@
           "BNB-STRUCT-DAY-2026-08-14-VALIDATOR_DISTRIBUTION",
           "BNB-STRUCT-DAY-2026-08-15-VALIDATOR_DISTRIBUTION",
           "BNB-STRUCT-DAY-2026-08-16-VALIDATOR_DISTRIBUTION"
-        ]
+        ],
+        "delta": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "day_bucket_ids": []
+        }
       },
       "observation_count": 0,
       "observations": [],
+      "opening_level_state": "NO_OBSERVATION",
       "period": "2026-W33",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "WEEK",
       "source_day_bucket_ids": [
         "BNB-STRUCT-DAY-2026-08-10-VALIDATOR_DISTRIBUTION",
@@ -773,11 +1340,23 @@
       "week_start": "2026-08-10"
     },
     {
-      "aggregation_rule": "WEEK_FROM_DAY",
+      "aggregation_rule": "WEEK_LEVEL_DELTA_FROM_DAY",
       "bucket_end": "2026-08-23",
       "bucket_id": "BNB-STRUCT-WEEK-2026-W34-GOVERNANCE_STRUCTURE",
       "bucket_start": "2026-08-17",
+      "closing_level_state": "NO_OBSERVATION",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "GOVERNANCE_STRUCTURE",
+      "level_age_days": null,
+      "level_last_observed_at": null,
+      "level_observation_ids": [],
+      "level_state": "NO_OBSERVATION",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [],
         "atomic_observation_ids": [],
@@ -789,11 +1368,25 @@
           "BNB-STRUCT-DAY-2026-08-21-GOVERNANCE_STRUCTURE",
           "BNB-STRUCT-DAY-2026-08-22-GOVERNANCE_STRUCTURE",
           "BNB-STRUCT-DAY-2026-08-23-GOVERNANCE_STRUCTURE"
-        ]
+        ],
+        "delta": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "day_bucket_ids": []
+        }
       },
       "observation_count": 0,
       "observations": [],
+      "opening_level_state": "NO_OBSERVATION",
       "period": "2026-W34",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "WEEK",
       "source_day_bucket_ids": [
         "BNB-STRUCT-DAY-2026-08-17-GOVERNANCE_STRUCTURE",
@@ -811,11 +1404,23 @@
       "week_start": "2026-08-17"
     },
     {
-      "aggregation_rule": "WEEK_FROM_DAY",
+      "aggregation_rule": "WEEK_LEVEL_DELTA_FROM_DAY",
       "bucket_end": "2026-08-23",
       "bucket_id": "BNB-STRUCT-WEEK-2026-W34-SUPPLY_STRUCTURE",
       "bucket_start": "2026-08-17",
+      "closing_level_state": "NO_OBSERVATION",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "SUPPLY_STRUCTURE",
+      "level_age_days": null,
+      "level_last_observed_at": null,
+      "level_observation_ids": [],
+      "level_state": "NO_OBSERVATION",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [],
         "atomic_observation_ids": [],
@@ -827,11 +1432,25 @@
           "BNB-STRUCT-DAY-2026-08-21-SUPPLY_STRUCTURE",
           "BNB-STRUCT-DAY-2026-08-22-SUPPLY_STRUCTURE",
           "BNB-STRUCT-DAY-2026-08-23-SUPPLY_STRUCTURE"
-        ]
+        ],
+        "delta": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "day_bucket_ids": []
+        }
       },
       "observation_count": 0,
       "observations": [],
+      "opening_level_state": "NO_OBSERVATION",
       "period": "2026-W34",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "WEEK",
       "source_day_bucket_ids": [
         "BNB-STRUCT-DAY-2026-08-17-SUPPLY_STRUCTURE",
@@ -849,11 +1468,23 @@
       "week_start": "2026-08-17"
     },
     {
-      "aggregation_rule": "WEEK_FROM_DAY",
+      "aggregation_rule": "WEEK_LEVEL_DELTA_FROM_DAY",
       "bucket_end": "2026-08-23",
       "bucket_id": "BNB-STRUCT-WEEK-2026-W34-UTILITY_STRUCTURE",
       "bucket_start": "2026-08-17",
+      "closing_level_state": "NO_OBSERVATION",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "UTILITY_STRUCTURE",
+      "level_age_days": null,
+      "level_last_observed_at": null,
+      "level_observation_ids": [],
+      "level_state": "NO_OBSERVATION",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [],
         "atomic_observation_ids": [],
@@ -865,11 +1496,25 @@
           "BNB-STRUCT-DAY-2026-08-21-UTILITY_STRUCTURE",
           "BNB-STRUCT-DAY-2026-08-22-UTILITY_STRUCTURE",
           "BNB-STRUCT-DAY-2026-08-23-UTILITY_STRUCTURE"
-        ]
+        ],
+        "delta": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "day_bucket_ids": []
+        }
       },
       "observation_count": 0,
       "observations": [],
+      "opening_level_state": "NO_OBSERVATION",
       "period": "2026-W34",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "WEEK",
       "source_day_bucket_ids": [
         "BNB-STRUCT-DAY-2026-08-17-UTILITY_STRUCTURE",
@@ -887,11 +1532,23 @@
       "week_start": "2026-08-17"
     },
     {
-      "aggregation_rule": "WEEK_FROM_DAY",
+      "aggregation_rule": "WEEK_LEVEL_DELTA_FROM_DAY",
       "bucket_end": "2026-08-23",
       "bucket_id": "BNB-STRUCT-WEEK-2026-W34-VALIDATOR_DISTRIBUTION",
       "bucket_start": "2026-08-17",
+      "closing_level_state": "NO_OBSERVATION",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "level_age_days": null,
+      "level_last_observed_at": null,
+      "level_observation_ids": [],
+      "level_state": "NO_OBSERVATION",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [],
         "atomic_observation_ids": [],
@@ -903,11 +1560,25 @@
           "BNB-STRUCT-DAY-2026-08-21-VALIDATOR_DISTRIBUTION",
           "BNB-STRUCT-DAY-2026-08-22-VALIDATOR_DISTRIBUTION",
           "BNB-STRUCT-DAY-2026-08-23-VALIDATOR_DISTRIBUTION"
-        ]
+        ],
+        "delta": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "day_bucket_ids": []
+        }
       },
       "observation_count": 0,
       "observations": [],
+      "opening_level_state": "NO_OBSERVATION",
       "period": "2026-W34",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "WEEK",
       "source_day_bucket_ids": [
         "BNB-STRUCT-DAY-2026-08-17-VALIDATOR_DISTRIBUTION",
@@ -925,11 +1596,23 @@
       "week_start": "2026-08-17"
     },
     {
-      "aggregation_rule": "WEEK_FROM_DAY",
+      "aggregation_rule": "WEEK_LEVEL_DELTA_FROM_DAY",
       "bucket_end": "2026-08-30",
       "bucket_id": "BNB-STRUCT-WEEK-2026-W35-GOVERNANCE_STRUCTURE",
       "bucket_start": "2026-08-24",
+      "closing_level_state": "NO_OBSERVATION",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "GOVERNANCE_STRUCTURE",
+      "level_age_days": null,
+      "level_last_observed_at": null,
+      "level_observation_ids": [],
+      "level_state": "NO_OBSERVATION",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [],
         "atomic_observation_ids": [],
@@ -941,11 +1624,25 @@
           "BNB-STRUCT-DAY-2026-08-28-GOVERNANCE_STRUCTURE",
           "BNB-STRUCT-DAY-2026-08-29-GOVERNANCE_STRUCTURE",
           "BNB-STRUCT-DAY-2026-08-30-GOVERNANCE_STRUCTURE"
-        ]
+        ],
+        "delta": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "day_bucket_ids": []
+        }
       },
       "observation_count": 0,
       "observations": [],
+      "opening_level_state": "NO_OBSERVATION",
       "period": "2026-W35",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "WEEK",
       "source_day_bucket_ids": [
         "BNB-STRUCT-DAY-2026-08-24-GOVERNANCE_STRUCTURE",
@@ -963,11 +1660,23 @@
       "week_start": "2026-08-24"
     },
     {
-      "aggregation_rule": "WEEK_FROM_DAY",
+      "aggregation_rule": "WEEK_LEVEL_DELTA_FROM_DAY",
       "bucket_end": "2026-08-30",
       "bucket_id": "BNB-STRUCT-WEEK-2026-W35-SUPPLY_STRUCTURE",
       "bucket_start": "2026-08-24",
+      "closing_level_state": "NO_OBSERVATION",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "SUPPLY_STRUCTURE",
+      "level_age_days": null,
+      "level_last_observed_at": null,
+      "level_observation_ids": [],
+      "level_state": "NO_OBSERVATION",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [],
         "atomic_observation_ids": [],
@@ -979,11 +1688,25 @@
           "BNB-STRUCT-DAY-2026-08-28-SUPPLY_STRUCTURE",
           "BNB-STRUCT-DAY-2026-08-29-SUPPLY_STRUCTURE",
           "BNB-STRUCT-DAY-2026-08-30-SUPPLY_STRUCTURE"
-        ]
+        ],
+        "delta": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "day_bucket_ids": []
+        }
       },
       "observation_count": 0,
       "observations": [],
+      "opening_level_state": "NO_OBSERVATION",
       "period": "2026-W35",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "WEEK",
       "source_day_bucket_ids": [
         "BNB-STRUCT-DAY-2026-08-24-SUPPLY_STRUCTURE",
@@ -1001,11 +1724,23 @@
       "week_start": "2026-08-24"
     },
     {
-      "aggregation_rule": "WEEK_FROM_DAY",
+      "aggregation_rule": "WEEK_LEVEL_DELTA_FROM_DAY",
       "bucket_end": "2026-08-30",
       "bucket_id": "BNB-STRUCT-WEEK-2026-W35-UTILITY_STRUCTURE",
       "bucket_start": "2026-08-24",
+      "closing_level_state": "NO_OBSERVATION",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "UTILITY_STRUCTURE",
+      "level_age_days": null,
+      "level_last_observed_at": null,
+      "level_observation_ids": [],
+      "level_state": "NO_OBSERVATION",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [],
         "atomic_observation_ids": [],
@@ -1017,11 +1752,25 @@
           "BNB-STRUCT-DAY-2026-08-28-UTILITY_STRUCTURE",
           "BNB-STRUCT-DAY-2026-08-29-UTILITY_STRUCTURE",
           "BNB-STRUCT-DAY-2026-08-30-UTILITY_STRUCTURE"
-        ]
+        ],
+        "delta": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "day_bucket_ids": []
+        }
       },
       "observation_count": 0,
       "observations": [],
+      "opening_level_state": "NO_OBSERVATION",
       "period": "2026-W35",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "WEEK",
       "source_day_bucket_ids": [
         "BNB-STRUCT-DAY-2026-08-24-UTILITY_STRUCTURE",
@@ -1039,11 +1788,23 @@
       "week_start": "2026-08-24"
     },
     {
-      "aggregation_rule": "WEEK_FROM_DAY",
+      "aggregation_rule": "WEEK_LEVEL_DELTA_FROM_DAY",
       "bucket_end": "2026-08-30",
       "bucket_id": "BNB-STRUCT-WEEK-2026-W35-VALIDATOR_DISTRIBUTION",
       "bucket_start": "2026-08-24",
+      "closing_level_state": "NO_OBSERVATION",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "level_age_days": null,
+      "level_last_observed_at": null,
+      "level_observation_ids": [],
+      "level_state": "NO_OBSERVATION",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [],
         "atomic_observation_ids": [],
@@ -1055,11 +1816,25 @@
           "BNB-STRUCT-DAY-2026-08-28-VALIDATOR_DISTRIBUTION",
           "BNB-STRUCT-DAY-2026-08-29-VALIDATOR_DISTRIBUTION",
           "BNB-STRUCT-DAY-2026-08-30-VALIDATOR_DISTRIBUTION"
-        ]
+        ],
+        "delta": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "day_bucket_ids": []
+        }
       },
       "observation_count": 0,
       "observations": [],
+      "opening_level_state": "NO_OBSERVATION",
       "period": "2026-W35",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "WEEK",
       "source_day_bucket_ids": [
         "BNB-STRUCT-DAY-2026-08-24-VALIDATOR_DISTRIBUTION",
@@ -1077,11 +1852,23 @@
       "week_start": "2026-08-24"
     },
     {
-      "aggregation_rule": "WEEK_FROM_DAY",
+      "aggregation_rule": "WEEK_LEVEL_DELTA_FROM_DAY",
       "bucket_end": "2026-09-06",
       "bucket_id": "BNB-STRUCT-WEEK-2026-W36-GOVERNANCE_STRUCTURE",
       "bucket_start": "2026-08-31",
+      "closing_level_state": "NO_OBSERVATION",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "GOVERNANCE_STRUCTURE",
+      "level_age_days": null,
+      "level_last_observed_at": null,
+      "level_observation_ids": [],
+      "level_state": "NO_OBSERVATION",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [],
         "atomic_observation_ids": [],
@@ -1093,11 +1880,25 @@
           "BNB-STRUCT-DAY-2026-09-04-GOVERNANCE_STRUCTURE",
           "BNB-STRUCT-DAY-2026-09-05-GOVERNANCE_STRUCTURE",
           "BNB-STRUCT-DAY-2026-09-06-GOVERNANCE_STRUCTURE"
-        ]
+        ],
+        "delta": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "day_bucket_ids": []
+        }
       },
       "observation_count": 0,
       "observations": [],
+      "opening_level_state": "NO_OBSERVATION",
       "period": "2026-W36",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "WEEK",
       "source_day_bucket_ids": [
         "BNB-STRUCT-DAY-2026-08-31-GOVERNANCE_STRUCTURE",
@@ -1115,11 +1916,23 @@
       "week_start": "2026-08-31"
     },
     {
-      "aggregation_rule": "WEEK_FROM_DAY",
+      "aggregation_rule": "WEEK_LEVEL_DELTA_FROM_DAY",
       "bucket_end": "2026-09-06",
       "bucket_id": "BNB-STRUCT-WEEK-2026-W36-SUPPLY_STRUCTURE",
       "bucket_start": "2026-08-31",
+      "closing_level_state": "NO_OBSERVATION",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "SUPPLY_STRUCTURE",
+      "level_age_days": null,
+      "level_last_observed_at": null,
+      "level_observation_ids": [],
+      "level_state": "NO_OBSERVATION",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [],
         "atomic_observation_ids": [],
@@ -1131,11 +1944,25 @@
           "BNB-STRUCT-DAY-2026-09-04-SUPPLY_STRUCTURE",
           "BNB-STRUCT-DAY-2026-09-05-SUPPLY_STRUCTURE",
           "BNB-STRUCT-DAY-2026-09-06-SUPPLY_STRUCTURE"
-        ]
+        ],
+        "delta": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "day_bucket_ids": []
+        }
       },
       "observation_count": 0,
       "observations": [],
+      "opening_level_state": "NO_OBSERVATION",
       "period": "2026-W36",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "WEEK",
       "source_day_bucket_ids": [
         "BNB-STRUCT-DAY-2026-08-31-SUPPLY_STRUCTURE",
@@ -1153,11 +1980,23 @@
       "week_start": "2026-08-31"
     },
     {
-      "aggregation_rule": "WEEK_FROM_DAY",
+      "aggregation_rule": "WEEK_LEVEL_DELTA_FROM_DAY",
       "bucket_end": "2026-09-06",
       "bucket_id": "BNB-STRUCT-WEEK-2026-W36-UTILITY_STRUCTURE",
       "bucket_start": "2026-08-31",
+      "closing_level_state": "NO_OBSERVATION",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "UTILITY_STRUCTURE",
+      "level_age_days": null,
+      "level_last_observed_at": null,
+      "level_observation_ids": [],
+      "level_state": "NO_OBSERVATION",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [],
         "atomic_observation_ids": [],
@@ -1169,11 +2008,25 @@
           "BNB-STRUCT-DAY-2026-09-04-UTILITY_STRUCTURE",
           "BNB-STRUCT-DAY-2026-09-05-UTILITY_STRUCTURE",
           "BNB-STRUCT-DAY-2026-09-06-UTILITY_STRUCTURE"
-        ]
+        ],
+        "delta": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "day_bucket_ids": []
+        }
       },
       "observation_count": 0,
       "observations": [],
+      "opening_level_state": "NO_OBSERVATION",
       "period": "2026-W36",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "WEEK",
       "source_day_bucket_ids": [
         "BNB-STRUCT-DAY-2026-08-31-UTILITY_STRUCTURE",
@@ -1191,11 +2044,23 @@
       "week_start": "2026-08-31"
     },
     {
-      "aggregation_rule": "WEEK_FROM_DAY",
+      "aggregation_rule": "WEEK_LEVEL_DELTA_FROM_DAY",
       "bucket_end": "2026-09-06",
       "bucket_id": "BNB-STRUCT-WEEK-2026-W36-VALIDATOR_DISTRIBUTION",
       "bucket_start": "2026-08-31",
+      "closing_level_state": "NO_OBSERVATION",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "level_age_days": null,
+      "level_last_observed_at": null,
+      "level_observation_ids": [],
+      "level_state": "NO_OBSERVATION",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [],
         "atomic_observation_ids": [],
@@ -1207,11 +2072,25 @@
           "BNB-STRUCT-DAY-2026-09-04-VALIDATOR_DISTRIBUTION",
           "BNB-STRUCT-DAY-2026-09-05-VALIDATOR_DISTRIBUTION",
           "BNB-STRUCT-DAY-2026-09-06-VALIDATOR_DISTRIBUTION"
-        ]
+        ],
+        "delta": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "day_bucket_ids": []
+        }
       },
       "observation_count": 0,
       "observations": [],
+      "opening_level_state": "NO_OBSERVATION",
       "period": "2026-W36",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "WEEK",
       "source_day_bucket_ids": [
         "BNB-STRUCT-DAY-2026-08-31-VALIDATOR_DISTRIBUTION",
@@ -1229,11 +2108,25 @@
       "week_start": "2026-08-31"
     },
     {
-      "aggregation_rule": "WEEK_FROM_DAY",
+      "aggregation_rule": "WEEK_LEVEL_DELTA_FROM_DAY",
       "bucket_end": "2026-09-13",
       "bucket_id": "BNB-STRUCT-WEEK-2026-W37-GOVERNANCE_STRUCTURE",
       "bucket_start": "2026-09-07",
+      "closing_level_state": "FIXED_OR_RESTRICTED_SET",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "GOVERNANCE_STRUCTURE",
+      "level_age_days": 1,
+      "level_last_observed_at": "2026-09-09T00:00:00Z",
+      "level_observation_ids": [
+        "TL-BNB-O007"
+      ],
+      "level_state": "FIXED_OR_RESTRICTED_SET",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [
           "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
@@ -1245,13 +2138,35 @@
           "BNB-STRUCT-DAY-2026-09-07-GOVERNANCE_STRUCTURE",
           "BNB-STRUCT-DAY-2026-09-08-GOVERNANCE_STRUCTURE",
           "BNB-STRUCT-DAY-2026-09-09-GOVERNANCE_STRUCTURE"
-        ]
+        ],
+        "delta": {
+          "artifact_refs": [
+            "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
+          ],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [
+            "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
+          ],
+          "atomic_observation_ids": [
+            "TL-BNB-O007"
+          ],
+          "day_bucket_ids": [
+            "BNB-STRUCT-DAY-2026-09-09-GOVERNANCE_STRUCTURE"
+          ]
+        }
       },
       "observation_count": 1,
       "observations": [
         "TL-BNB-O007"
       ],
+      "opening_level_state": "FIXED_OR_RESTRICTED_SET",
       "period": "2026-W37",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "WEEK",
       "source_day_bucket_ids": [
         "BNB-STRUCT-DAY-2026-09-07-GOVERNANCE_STRUCTURE",
@@ -1261,17 +2176,29 @@
       "source_refs": [
         "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
       ],
-      "state": "TENSION",
+      "state": "FIXED_OR_RESTRICTED_SET",
       "subject_id": "BNB",
       "week_end": "2026-09-13",
       "week_start": "2026-09-07"
     },
     {
-      "aggregation_rule": "WEEK_FROM_DAY",
+      "aggregation_rule": "WEEK_LEVEL_DELTA_FROM_DAY",
       "bucket_end": "2026-09-13",
       "bucket_id": "BNB-STRUCT-WEEK-2026-W37-SUPPLY_STRUCTURE",
       "bucket_start": "2026-09-07",
+      "closing_level_state": "NO_OBSERVATION",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "SUPPLY_STRUCTURE",
+      "level_age_days": null,
+      "level_last_observed_at": null,
+      "level_observation_ids": [],
+      "level_state": "NO_OBSERVATION",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [],
         "atomic_observation_ids": [],
@@ -1279,11 +2206,25 @@
           "BNB-STRUCT-DAY-2026-09-07-SUPPLY_STRUCTURE",
           "BNB-STRUCT-DAY-2026-09-08-SUPPLY_STRUCTURE",
           "BNB-STRUCT-DAY-2026-09-09-SUPPLY_STRUCTURE"
-        ]
+        ],
+        "delta": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [],
+          "atomic_observation_ids": [],
+          "day_bucket_ids": []
+        }
       },
       "observation_count": 0,
       "observations": [],
+      "opening_level_state": "NO_OBSERVATION",
       "period": "2026-W37",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "WEEK",
       "source_day_bucket_ids": [
         "BNB-STRUCT-DAY-2026-09-07-SUPPLY_STRUCTURE",
@@ -1297,11 +2238,25 @@
       "week_start": "2026-09-07"
     },
     {
-      "aggregation_rule": "WEEK_FROM_DAY",
+      "aggregation_rule": "WEEK_LEVEL_DELTA_FROM_DAY",
       "bucket_end": "2026-09-13",
       "bucket_id": "BNB-STRUCT-WEEK-2026-W37-UTILITY_STRUCTURE",
       "bucket_start": "2026-09-07",
+      "closing_level_state": "MIXED_ROLE",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "UTILITY_STRUCTURE",
+      "level_age_days": 1,
+      "level_last_observed_at": "2026-09-09T00:00:00Z",
+      "level_observation_ids": [
+        "TL-BNB-O009"
+      ],
+      "level_state": "MIXED_ROLE",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [
           "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
@@ -1313,13 +2268,35 @@
           "BNB-STRUCT-DAY-2026-09-07-UTILITY_STRUCTURE",
           "BNB-STRUCT-DAY-2026-09-08-UTILITY_STRUCTURE",
           "BNB-STRUCT-DAY-2026-09-09-UTILITY_STRUCTURE"
-        ]
+        ],
+        "delta": {
+          "artifact_refs": [
+            "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
+          ],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [
+            "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
+          ],
+          "atomic_observation_ids": [
+            "TL-BNB-O009"
+          ],
+          "day_bucket_ids": [
+            "BNB-STRUCT-DAY-2026-09-09-UTILITY_STRUCTURE"
+          ]
+        }
       },
       "observation_count": 1,
       "observations": [
         "TL-BNB-O009"
       ],
+      "opening_level_state": "MIXED_ROLE",
       "period": "2026-W37",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "WEEK",
       "source_day_bucket_ids": [
         "BNB-STRUCT-DAY-2026-09-07-UTILITY_STRUCTURE",
@@ -1329,17 +2306,32 @@
       "source_refs": [
         "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
       ],
-      "state": "MIXED",
+      "state": "MIXED_ROLE",
       "subject_id": "BNB",
       "week_end": "2026-09-13",
       "week_start": "2026-09-07"
     },
     {
-      "aggregation_rule": "WEEK_FROM_DAY",
+      "aggregation_rule": "WEEK_LEVEL_DELTA_FROM_DAY",
       "bucket_end": "2026-09-13",
       "bucket_id": "BNB-STRUCT-WEEK-2026-W37-VALIDATOR_DISTRIBUTION",
       "bucket_start": "2026-09-07",
+      "closing_level_state": "FIXED_OR_RESTRICTED_SET",
+      "delta_age_days": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_last_established_at": null,
+      "delta_observation_ids": [],
+      "delta_state": "NOT_ESTABLISHED",
+      "delta_transition_count": 0,
       "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "level_age_days": 1,
+      "level_last_observed_at": "2026-09-09T00:00:00Z",
+      "level_observation_ids": [
+        "TL-BNB-O005",
+        "TL-BNB-O006"
+      ],
+      "level_state": "FIXED_OR_RESTRICTED_SET",
+      "level_transition_count": 0,
       "lineage": {
         "artifact_refs": [
           "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
@@ -1352,14 +2344,37 @@
           "BNB-STRUCT-DAY-2026-09-07-VALIDATOR_DISTRIBUTION",
           "BNB-STRUCT-DAY-2026-09-08-VALIDATOR_DISTRIBUTION",
           "BNB-STRUCT-DAY-2026-09-09-VALIDATOR_DISTRIBUTION"
-        ]
+        ],
+        "delta": {
+          "artifact_refs": [
+            "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
+          ],
+          "atomic_observation_ids": [],
+          "comparison_lineage": [],
+          "day_bucket_ids": []
+        },
+        "level": {
+          "artifact_refs": [
+            "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
+          ],
+          "atomic_observation_ids": [
+            "TL-BNB-O005",
+            "TL-BNB-O006"
+          ],
+          "day_bucket_ids": [
+            "BNB-STRUCT-DAY-2026-09-09-VALIDATOR_DISTRIBUTION"
+          ]
+        }
       },
       "observation_count": 2,
       "observations": [
         "TL-BNB-O005",
         "TL-BNB-O006"
       ],
+      "opening_level_state": "FIXED_OR_RESTRICTED_SET",
       "period": "2026-W37",
+      "period_delta_state": "NOT_ESTABLISHED",
+      "prior_reference_ids": [],
       "resolution": "WEEK",
       "source_day_bucket_ids": [
         "BNB-STRUCT-DAY-2026-09-07-VALIDATOR_DISTRIBUTION",
@@ -1369,14 +2384,14 @@
       "source_refs": [
         "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
       ],
-      "state": "TENSION",
+      "state": "FIXED_OR_RESTRICTED_SET",
       "subject_id": "BNB",
       "week_end": "2026-09-13",
       "week_start": "2026-09-07"
     }
   ],
   "layer": "STRUCTURAL",
-  "model_version": "TIMELINE_MODEL_R1",
+  "model_version": "TIMELINE_MODEL_R1_1",
   "resolution": "WEEK",
   "subject_id": "BNB"
 }

@@ -67,7 +67,7 @@
       "event_domain": "SUBJECT_EVENT",
       "event_id": "TL-STRATEGY-SE002",
       "event_type": "TREASURY_DISCLOSURE",
-      "freshness_trigger_candidate": true,
+      "freshness_trigger_candidate": false,
       "knowledge_mode": "CONTEMPORANEOUS",
       "known_at": "2026-06-29T00:00:00Z",
       "label": "Digital credit framework disclosure changes the treasury structure record.",
@@ -103,7 +103,7 @@
       "event_domain": "SUBJECT_EVENT",
       "event_id": "TL-STRATEGY-SE003",
       "event_type": "TREASURY_DISCLOSURE",
-      "freshness_trigger_candidate": true,
+      "freshness_trigger_candidate": false,
       "knowledge_mode": "CONTEMPORANEOUS",
       "known_at": "2026-07-06T00:00:00Z",
       "label": "BTC monetization disclosure creates resource-pressure evidence.",
@@ -122,7 +122,7 @@
       "event_domain": "SUBJECT_EVENT",
       "event_id": "TL-STRATEGY-SE004",
       "event_type": "TREASURY_DISCLOSURE",
-      "freshness_trigger_candidate": true,
+      "freshness_trigger_candidate": false,
       "knowledge_mode": "RETROSPECTIVE",
       "known_at": "2026-09-08T00:00:00Z",
       "label": "BTC monetization disclosure changes the narrative-dependence record.",
@@ -244,7 +244,7 @@
       "event_domain": "SUBJECT_EVENT",
       "event_id": "TL-STRATEGY-SE005",
       "event_type": "SOURCE_DEPENDENCY",
-      "freshness_trigger_candidate": true,
+      "freshness_trigger_candidate": false,
       "knowledge_mode": "CONTEMPORANEOUS",
       "known_at": "2026-09-08T00:00:00Z",
       "label": "S6.1a source-dependency graph records partial independence boundaries.",
@@ -273,7 +273,7 @@
       "trigger_type": null
     }
   ],
-  "model_version": "TIMELINE_MODEL_R1",
+  "model_version": "TIMELINE_MODEL_R1_1",
   "subject_id": "strategy",
   "subject_label": "Strategy 2026"
 }

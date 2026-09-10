@@ -1,11 +1,17 @@
 {
-  "model_version": "TIMELINE_MODEL_R1",
+  "model_version": "TIMELINE_MODEL_R1_1",
   "observations": [
     {
+      "applies_to_state_type": "LEVEL",
       "artifact_refs": [
         "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
       ],
       "capture_lag_days": 2,
+      "comparability_rule_id": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_mapping_rule_id": null,
+      "delta_state": "NOT_ESTABLISHED",
       "dimension_ids": [
         "SETTLEMENT_ROLE"
       ],
@@ -17,24 +23,35 @@
       "freshness_trigger_candidate": false,
       "knowledge_mode": "RETROSPECTIVE",
       "known_at": "2026-09-09T00:00:00Z",
+      "legacy_structural_effect": "STRENGTHENING",
+      "level_mapping_rationale": "Transaction count establishes settlement-role level.",
+      "level_mapping_rule_id": "LEVEL_TRX_TRX_R1_O1",
+      "level_state": "MATERIAL_ROLE",
       "mapping_rationale": "Transaction count maps to settlement role context.",
       "mapping_rule_id": "TRX_TRX_R1_O1_TO_SETTLEMENT_ROLE",
+      "measurement_concept": "transaction_count",
       "observation_id": "TL-TRX-O001",
       "observation_mode": "DIRECT",
       "observation_type": "PUBLIC_FACT",
+      "prior_observation_id": null,
       "source_observation_id": "TRX-R1-O1",
       "source_refs": [
         "https://tronscan.org/data/charts/txn/cumulative-txn"
       ],
-      "structural_effect": "STRENGTHENING",
       "subject_id": "TRX",
       "trigger_type": "PROTOCOL_UPGRADE"
     },
     {
+      "applies_to_state_type": "LEVEL",
       "artifact_refs": [
         "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
       ],
       "capture_lag_days": 2,
+      "comparability_rule_id": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_mapping_rule_id": null,
+      "delta_state": "NOT_ESTABLISHED",
       "dimension_ids": [
         "SETTLEMENT_ROLE"
       ],
@@ -46,24 +63,35 @@
       "freshness_trigger_candidate": false,
       "knowledge_mode": "RETROSPECTIVE",
       "known_at": "2026-09-09T00:00:00Z",
+      "legacy_structural_effect": "STRENGTHENING",
+      "level_mapping_rationale": "USDT transfer share establishes settlement-role level.",
+      "level_mapping_rule_id": "LEVEL_TRX_TRX_R1_O2",
+      "level_state": "MATERIAL_ROLE",
       "mapping_rationale": "USDT transfer share maps directly to stablecoin settlement role.",
       "mapping_rule_id": "TRX_TRX_R1_O2_TO_SETTLEMENT_ROLE",
+      "measurement_concept": "stablecoin_transfer_share",
       "observation_id": "TL-TRX-O002",
       "observation_mode": "DIRECT",
       "observation_type": "PUBLIC_FACT",
+      "prior_observation_id": null,
       "source_observation_id": "TRX-R1-O2",
       "source_refs": [
         "https://tronscan.org/data/charts/txn/cumulative-txn"
       ],
-      "structural_effect": "STRENGTHENING",
       "subject_id": "TRX",
       "trigger_type": "PROTOCOL_UPGRADE"
     },
     {
+      "applies_to_state_type": "LEVEL",
       "artifact_refs": [
         "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
       ],
       "capture_lag_days": 2,
+      "comparability_rule_id": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_mapping_rule_id": null,
+      "delta_state": "NOT_ESTABLISHED",
       "dimension_ids": [
         "RESOURCE_PRESSURE"
       ],
@@ -75,24 +103,35 @@
       "freshness_trigger_candidate": false,
       "knowledge_mode": "RETROSPECTIVE",
       "known_at": "2026-09-09T00:00:00Z",
+      "legacy_structural_effect": "STRENGTHENING",
+      "level_mapping_rationale": "Resource delegation share establishes resource-pressure level.",
+      "level_mapping_rule_id": "LEVEL_TRX_TRX_R1_O3",
+      "level_state": "MATERIAL_ROLE",
       "mapping_rationale": "Resource delegation share maps to resource pressure.",
       "mapping_rule_id": "TRX_TRX_R1_O3_TO_RESOURCE_PRESSURE",
+      "measurement_concept": "resource_delegation_share",
       "observation_id": "TL-TRX-O003",
       "observation_mode": "DIRECT",
       "observation_type": "PUBLIC_FACT",
+      "prior_observation_id": null,
       "source_observation_id": "TRX-R1-O3",
       "source_refs": [
         "https://tronscan.org/data/charts/txn/cumulative-txn"
       ],
-      "structural_effect": "STRENGTHENING",
       "subject_id": "TRX",
       "trigger_type": "PROTOCOL_UPGRADE"
     },
     {
+      "applies_to_state_type": "LEVEL",
       "artifact_refs": [
         "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
       ],
       "capture_lag_days": 0,
+      "comparability_rule_id": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_mapping_rule_id": null,
+      "delta_state": "NOT_ESTABLISHED",
       "dimension_ids": [
         "RESOURCE_PRESSURE"
       ],
@@ -104,24 +143,35 @@
       "freshness_trigger_candidate": false,
       "knowledge_mode": "CONTEMPORANEOUS",
       "known_at": "2026-09-09T00:00:00Z",
+      "legacy_structural_effect": "STRENGTHENING",
+      "level_mapping_rationale": "Bandwidth/Energy model establishes resource-economy level.",
+      "level_mapping_rule_id": "LEVEL_TRX_TRX_R1_O4",
+      "level_state": "MECHANISM_DEFINED",
       "mapping_rationale": "Bandwidth/Energy mechanism maps to resource economy.",
       "mapping_rule_id": "TRX_TRX_R1_O4_TO_RESOURCE_PRESSURE",
+      "measurement_concept": "resource_model",
       "observation_id": "TL-TRX-O004",
       "observation_mode": "DIRECT",
       "observation_type": "PUBLIC_FACT",
+      "prior_observation_id": null,
       "source_observation_id": "TRX-R1-O4",
       "source_refs": [
         "https://developers.tron.network/docs/resource-model"
       ],
-      "structural_effect": "STRENGTHENING",
       "subject_id": "TRX",
       "trigger_type": "PROTOCOL_UPGRADE"
     },
     {
+      "applies_to_state_type": "LEVEL",
       "artifact_refs": [
         "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
       ],
       "capture_lag_days": 0,
+      "comparability_rule_id": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_mapping_rule_id": null,
+      "delta_state": "NOT_ESTABLISHED",
       "dimension_ids": [
         "VALIDATOR_DISTRIBUTION"
       ],
@@ -130,27 +180,38 @@
       "evidence_family_ids": [
         "PRIMARY_SOURCE_COVERAGE"
       ],
-      "freshness_trigger_candidate": true,
+      "freshness_trigger_candidate": false,
       "knowledge_mode": "CONTEMPORANEOUS",
       "known_at": "2026-09-09T00:00:00Z",
+      "legacy_structural_effect": "STRUCTURAL_SHIFT",
+      "level_mapping_rationale": "27-SR producer structure establishes validator-distribution level.",
+      "level_mapping_rule_id": "LEVEL_TRX_TRX_R1_O5",
+      "level_state": "FIXED_OR_RESTRICTED_SET",
       "mapping_rationale": "27 SR producer structure maps to validator distribution.",
       "mapping_rule_id": "TRX_TRX_R1_O5_TO_VALIDATOR_DISTRIBUTION",
+      "measurement_concept": "validator_count",
       "observation_id": "TL-TRX-O005",
       "observation_mode": "DIRECT",
       "observation_type": "PUBLIC_FACT",
+      "prior_observation_id": null,
       "source_observation_id": "TRX-R1-O5",
       "source_refs": [
         "https://developers.tron.network/docs/super-representatives"
       ],
-      "structural_effect": "STRUCTURAL_SHIFT",
       "subject_id": "TRX",
       "trigger_type": "GOVERNANCE_CHANGE"
     },
     {
+      "applies_to_state_type": "LEVEL",
       "artifact_refs": [
         "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
       ],
       "capture_lag_days": 0,
+      "comparability_rule_id": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_mapping_rule_id": null,
+      "delta_state": "NOT_ESTABLISHED",
       "dimension_ids": [
         "GOVERNANCE_STRUCTURE"
       ],
@@ -159,27 +220,38 @@
       "evidence_family_ids": [
         "PRIMARY_SOURCE_COVERAGE"
       ],
-      "freshness_trigger_candidate": true,
+      "freshness_trigger_candidate": false,
       "knowledge_mode": "CONTEMPORANEOUS",
       "known_at": "2026-09-09T00:00:00Z",
+      "legacy_structural_effect": "TENSION",
+      "level_mapping_rationale": "Top-127 reward tiers establish governance-structure level.",
+      "level_mapping_rule_id": "LEVEL_TRX_TRX_R1_O6",
+      "level_state": "FIXED_OR_RESTRICTED_SET",
       "mapping_rationale": "Top-127 reward structure maps to governance control.",
       "mapping_rule_id": "TRX_TRX_R1_O6_TO_GOVERNANCE_STRUCTURE",
+      "measurement_concept": "candidate_reward_tiers",
       "observation_id": "TL-TRX-O006",
       "observation_mode": "DIRECT",
       "observation_type": "PUBLIC_FACT",
+      "prior_observation_id": null,
       "source_observation_id": "TRX-R1-O6",
       "source_refs": [
         "https://developers.tron.network/docs/super-representatives"
       ],
-      "structural_effect": "TENSION",
       "subject_id": "TRX",
       "trigger_type": "GOVERNANCE_CHANGE"
     },
     {
+      "applies_to_state_type": "LEVEL",
       "artifact_refs": [
         "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
       ],
       "capture_lag_days": 0,
+      "comparability_rule_id": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_mapping_rule_id": null,
+      "delta_state": "NOT_ESTABLISHED",
       "dimension_ids": [
         "GOVERNANCE_STRUCTURE"
       ],
@@ -191,24 +263,35 @@
       "freshness_trigger_candidate": false,
       "knowledge_mode": "CONTEMPORANEOUS",
       "known_at": "2026-09-09T00:00:00Z",
+      "legacy_structural_effect": "STRENGTHENING",
+      "level_mapping_rationale": "TRON Power establishes governance mechanism level.",
+      "level_mapping_rule_id": "LEVEL_TRX_TRX_R1_O7",
+      "level_state": "MECHANISM_DEFINED",
       "mapping_rationale": "TRON Power voting maps to governance structure.",
       "mapping_rule_id": "TRX_TRX_R1_O7_TO_GOVERNANCE_STRUCTURE",
+      "measurement_concept": "voting_power_mechanism",
       "observation_id": "TL-TRX-O007",
       "observation_mode": "DIRECT",
       "observation_type": "PUBLIC_FACT",
+      "prior_observation_id": null,
       "source_observation_id": "TRX-R1-O7",
       "source_refs": [
         "https://developers.tron.network/docs/resource-model"
       ],
-      "structural_effect": "STRENGTHENING",
       "subject_id": "TRX",
       "trigger_type": "GOVERNANCE_CHANGE"
     },
     {
+      "applies_to_state_type": "LEVEL",
       "artifact_refs": [
         "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json"
       ],
       "capture_lag_days": 0,
+      "comparability_rule_id": null,
+      "delta_basis": "NOT_ESTABLISHED",
+      "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
+      "delta_mapping_rule_id": null,
+      "delta_state": "NOT_ESTABLISHED",
       "dimension_ids": [
         "GOVERNANCE_STRUCTURE"
       ],
@@ -217,19 +300,24 @@
       "evidence_family_ids": [
         "PRIMARY_SOURCE_COVERAGE"
       ],
-      "freshness_trigger_candidate": true,
+      "freshness_trigger_candidate": false,
       "knowledge_mode": "CONTEMPORANEOUS",
       "known_at": "2026-09-09T00:00:00Z",
+      "legacy_structural_effect": "TENSION",
+      "level_mapping_rationale": "Missing full concentration table establishes insufficient-data level.",
+      "level_mapping_rule_id": "LEVEL_TRX_TRX_R1_O8",
+      "level_state": "INSUFFICIENT_DATA",
       "mapping_rationale": "Missing concentration evidence is mapped as governance tension, not stability.",
       "mapping_rule_id": "TRX_TRX_R1_O8_TO_GOVERNANCE_STRUCTURE",
+      "measurement_concept": "vote_concentration_table",
       "observation_id": "TL-TRX-O008",
       "observation_mode": "DIRECT",
       "observation_type": "PUBLIC_FACT",
+      "prior_observation_id": null,
       "source_observation_id": "TRX-R1-O8",
       "source_refs": [
         "https://developers.tron.network/docs/super-representatives"
       ],
-      "structural_effect": "TENSION",
       "subject_id": "TRX",
       "trigger_type": "GOVERNANCE_CHANGE"
     }

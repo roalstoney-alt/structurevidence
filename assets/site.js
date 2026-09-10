@@ -157,15 +157,34 @@ fetch("assets/entities.json")
     }
   });
 
-const structuralLabels = {
-  STRUCTURAL_SHIFT: "Structural shift",
-  STRENGTHENING: "Dimension became more pronounced",
-  STABLE: "Observed persistence",
-  TENSION: "Internal tension",
-  MIXED: "Mixed observations",
-  WEAKENING: "Dimension became less pronounced",
+const levelLabels = {
+  CONTRACTIONARY: "Contractionary condition",
+  MECHANISM_DEFINED: "Mechanism defined",
+  FIXED_OR_RESTRICTED_SET: "Fixed or restricted set",
+  MATERIAL_ROLE: "Material role",
+  ESTABLISHED_ROLE: "Established role",
+  HIGH_DEPENDENCE: "High dependence",
+  MATERIAL_DEPENDENCE: "Material dependence",
+  HYBRID_DEPENDENCE: "Hybrid dependence",
+  MIXED_ROLE: "Mixed role",
+  SOURCE_DEPENDENT: "Source dependent",
   INSUFFICIENT_DATA: "Insufficient data",
   NO_OBSERVATION: "No time-indexed observation",
+  MIXED_LEVEL: "Mixed level",
+};
+
+const deltaLabels = {
+  TOWARD_CONTRACTION: "Toward contraction",
+  TOWARD_EXPANSION: "Toward expansion",
+  TOWARD_CONCENTRATION: "Toward concentration",
+  TOWARD_DISTRIBUTION: "Toward distribution",
+  ROLE_STRENGTHENING: "Role strengthening",
+  ROLE_WEAKENING: "Role weakening",
+  STRUCTURAL_SHIFT: "Structural shift",
+  MIXED_CHANGE: "Mixed change",
+  UNCHANGED: "Unchanged",
+  NOT_ESTABLISHED: "Not established",
+  INSUFFICIENT_DATA: "Insufficient data",
 };
 
 const evidenceLabels = {
@@ -199,7 +218,7 @@ function periodLabel(bucket) {
 function bucketTitle(bucket) {
   const ids = bucket.observations || bucket.events || [];
   const refs = bucket.source_refs || bucket.lineage?.artifact_refs || [];
-  return [`${periodLabel(bucket)} ${bucket.state || bucket.closing_state || ""}`, `${ids.length} linked record(s)`, refs[0] || ""].filter(Boolean).join(" | ");
+  return [`${periodLabel(bucket)} ${bucket.level_state || bucket.closing_level_state || bucket.closing_state || ""} ${bucket.delta_state || bucket.period_delta_state || ""}`, `${ids.length} linked record(s)`, refs[0] || ""].filter(Boolean).join(" | ");
 }
 
 function renderLegend(labels, className) {
@@ -230,7 +249,7 @@ function renderTimelinePanel(panel, data, resolution) {
   const byFamily = bucketsByFamily(evidenceBuckets);
   const dimensionHtml = structural.dimensions.map((dimension) => {
     const rows = byDimension[dimension.dimension_id] || [];
-    const blocks = rows.map((row) => `<span class="wave-point ${escapeText(row.state).toLowerCase()}" tabindex="0" title="${escapeText(bucketTitle(row))}" aria-label="${escapeText(dimension.label)} ${escapeText(row.state)} ${escapeText(periodLabel(row))}">${escapeText(periodLabel(row))}<strong>${escapeText(row.state)}</strong><small>${escapeText(String(row.observation_count))} obs</small></span>`).join("");
+    const blocks = rows.map((row) => `<span class="wave-point level-${escapeText(row.level_state || row.closing_level_state).toLowerCase()} delta-${escapeText(row.delta_state || row.period_delta_state).toLowerCase()}" tabindex="0" title="${escapeText(bucketTitle(row))}" aria-label="${escapeText(dimension.label)} level ${escapeText(row.level_state || row.closing_level_state)} delta ${escapeText(row.delta_state || row.period_delta_state)} ${escapeText(periodLabel(row))}">${escapeText(periodLabel(row))}<strong>LEVEL ${escapeText(row.level_state || row.closing_level_state)}</strong><strong>DELTA ${escapeText(row.delta_state || row.period_delta_state)}</strong><small>${escapeText(String(row.observation_count))} obs / ${escapeText(row.delta_basis || "NOT_ESTABLISHED")}</small></span>`).join("");
     return `<div class="timeline-track ${escapeText(dimension.render_mode || "SPARSE_POINTS").toLowerCase()}"><div><strong>${escapeText(dimension.label)}</strong><span>${escapeText(dimension.render_mode)} / ${escapeText(String(dimension.observation_count))} observations</span></div><div class="wave-row">${blocks || '<span class="microcopy">No time-indexed observation available.</span>'}</div></div>`;
   }).join("");
   const heatRows = evidence.evidence_families.map((family) => {
@@ -247,16 +266,17 @@ function renderTimelinePanel(panel, data, resolution) {
   const events = Object.entries(eventsByDomain).map(([domain, rows]) => `<div class="event-lane"><h4>${escapeText(domain.replaceAll("_", " "))}</h4><ol>${rows.map((event) => `<li><time>${escapeText((event.timestamp || "").slice(0, 10))}</time><strong>${escapeText(event.event_type.replaceAll("_", " "))}</strong><span>${escapeText(event.label)}</span><a href="${escapeText(event.refs[0])}">Source</a></li>`).join("")}</ol></div>`).join("");
   const ribbonHtml = (structural.phase_ribbon || []).map((row) => `<span class="phase-segment" tabindex="0" title="${escapeText((row.notes || []).join(" "))}" aria-label="${escapeText(row.phase)} ${escapeText(row.period)}"><strong>${escapeText(row.period)}</strong><small>${escapeText(row.phase_mode || row.phase)}</small></span>`).join("");
   const density = `${escapeText(String(structural.density?.atomic_observations || 0))} atomic observations / ${escapeText(String(structural.density?.active_days || 0))} active days / ${escapeText(String(evidence.density?.evidence_events || 0))} evidence events`;
-  const structuralRows = structuralBuckets.map((row) => `<tr><td>${escapeText(periodLabel(row))}</td><td>${escapeText(row.dimension_id)}</td><td>${escapeText(row.state)}</td><td>${escapeText((row.observations || []).join(", "))}</td><td>${escapeText((row.source_refs || []).join(", "))}</td><td>${escapeText(row.aggregation_rule)}</td></tr>`).join("");
+  const structuralRows = structuralBuckets.map((row) => `<tr><td>${escapeText(periodLabel(row))}</td><td>${escapeText(row.dimension_id)}</td><td>${escapeText(row.level_state || row.closing_level_state)}</td><td>${escapeText(row.delta_state || row.period_delta_state)}</td><td>${escapeText((row.observations || []).join(", "))}</td><td>${escapeText((row.source_refs || []).join(", "))}</td><td>${escapeText(row.aggregation_rule)}</td></tr>`).join("");
   const evidenceRows = evidenceBuckets.map((row) => `<tr><td>${escapeText(periodLabel(row))}</td><td>${escapeText(row.family_id)}</td><td>${escapeText(row.opening_state)}</td><td>${escapeText(row.closing_state)}</td><td>${escapeText(String(row.events_count))}</td><td>${escapeText(row.latest_update_at || "")}</td><td>${escapeText(String(row.age_days ?? row.age_days_at_period_end ?? ""))}</td></tr>`).join("");
   panel.innerHTML = `
     <div class="timeline-meta"><span>${escapeText(structural.model_version)}</span><span>${escapeText(resolution)}</span><span>${escapeText(structural.construction_method)}</span><span>${density}</span><span>${escapeText(evidence.display_boundary)}</span></div>
-    <div class="timeline-legend" aria-label="Structural legend">${renderLegend(structuralLabels, "structural-key")}</div>
+    <div class="timeline-legend" aria-label="Level legend">${renderLegend(levelLabels, "level-key")}</div>
+    <div class="timeline-legend" aria-label="Delta legend">${renderLegend(deltaLabels, "delta-key")}</div>
     <div class="timeline-block"><h3>Research / Phase Markers</h3><div class="phase-ribbon">${ribbonHtml}</div></div>
     <div class="timeline-block"><h3>Structural Dimension Trajectories</h3>${dimensionHtml}</div>
     <div class="timeline-block"><h3>Evidence Dynamics / Update Age</h3><div class="timeline-legend" aria-label="Evidence legend">${renderLegend(evidenceLabels, "evidence-key")}</div>${heatRows}</div>
     <div class="timeline-block"><h3>Event / Freeze Ledger</h3><div class="timeline-events">${events}</div></div>
-    <details class="timeline-fallback"><summary>Structural table fallback</summary><table><thead><tr><th>Period</th><th>Dimension</th><th>State</th><th>Observation IDs</th><th>Source refs</th><th>Aggregation</th></tr></thead><tbody>${structuralRows}</tbody></table></details>
+    <details class="timeline-fallback"><summary>Structural table fallback</summary><table><thead><tr><th>Period</th><th>Dimension</th><th>Level</th><th>Delta</th><th>Observation IDs</th><th>Source refs</th><th>Aggregation</th></tr></thead><tbody>${structuralRows}</tbody></table></details>
     <details class="timeline-fallback"><summary>Evidence table fallback</summary><table><thead><tr><th>Period</th><th>Family</th><th>Opening</th><th>Closing</th><th>Events</th><th>Last update</th><th>Age days</th></tr></thead><tbody>${evidenceRows}</tbody></table></details>
   `;
 }

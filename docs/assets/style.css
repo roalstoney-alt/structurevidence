@@ -867,40 +867,66 @@ tr:last-child td {
   font-size: 0.78rem;
 }
 
-.wave-point.structural_shift,
-.timeline-legend .structural_shift {
+.wave-point.level-mechanism_transition,
+.wave-point.delta-structural_shift,
+.timeline-legend .structural_shift,
+.timeline-legend .mechanism_transition {
   border-color: #4fb4d8;
   background: #142b38;
 }
 
-.wave-point.strengthening,
+.wave-point.level-contractionary,
+.wave-point.level-mechanism_defined,
+.wave-point.level-established_role,
+.wave-point.level-material_role,
+.wave-point.level-high_dependence,
+.wave-point.level-material_dependence,
+.wave-point.level-hybrid_dependence,
+.wave-point.delta-toward_contraction,
+.wave-point.delta-role_strengthening,
 .heat-cell.observed,
 .heat-cell.complete,
-.timeline-legend .strengthening,
+.timeline-legend .contractionary,
+.timeline-legend .mechanism_defined,
+.timeline-legend .established_role,
+.timeline-legend .material_role,
+.timeline-legend .high_dependence,
+.timeline-legend .material_dependence,
+.timeline-legend .hybrid_dependence,
+.timeline-legend .toward_contraction,
+.timeline-legend .role_strengthening,
 .timeline-legend .observed,
 .timeline-legend .complete {
   background: #163021;
   border-color: #7fb68b;
 }
 
-.wave-point.tension,
-.wave-point.mixed,
+.wave-point.level-fixed_or_restricted_set,
+.wave-point.level-mixed_role,
+.wave-point.level-mixed_level,
+.wave-point.delta-mixed_change,
 .heat-cell.partial,
-.timeline-legend .tension,
-.timeline-legend .mixed,
+.timeline-legend .fixed_or_restricted_set,
+.timeline-legend .mixed_role,
+.timeline-legend .mixed_level,
+.timeline-legend .mixed_change,
 .timeline-legend .partial {
   background: #2a2535;
   border-color: #9f8cff;
 }
 
-.wave-point.weakening,
-.timeline-legend .weakening {
+.wave-point.delta-toward_expansion,
+.wave-point.delta-role_weakening,
+.timeline-legend .toward_expansion,
+.timeline-legend .role_weakening {
   background: #332b17;
   border-color: #d7a84a;
 }
 
-.wave-point.no_observation,
-.wave-point.insufficient_data,
+.wave-point.level-no_observation,
+.wave-point.level-insufficient_data,
+.wave-point.delta-not_established,
+.wave-point.delta-insufficient_data,
 .heat-cell.not_observed,
 .heat-cell.unresolved,
 .heat-cell.under_review,
