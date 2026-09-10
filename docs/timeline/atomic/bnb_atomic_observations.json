@@ -1,5 +1,5 @@
 {
-  "model_version": "TIMELINE_MODEL_R1_1",
+  "model_version": "TIMELINE_MODEL_R1_1A",
   "observations": [
     {
       "applies_to_state_type": "DELTA",
@@ -8,6 +8,7 @@
       ],
       "capture_lag_days": 56,
       "comparability_rule_id": null,
+      "comparison_lineage": {},
       "delta_basis": "EXPLICIT_CHANGE_EVENT",
       "delta_mapping_rationale": "Burn observation explicitly reports tokens removed.",
       "delta_mapping_rule_id": "DELTA_BNB_R1_O1",
@@ -39,6 +40,7 @@
         "https://www.bnbchain.org/en/blog/36th-bnb-burn"
       ],
       "subject_id": "BNB",
+      "transition_rule_id": null,
       "trigger_type": "SUPPLY_MECHANISM_CHANGE"
     },
     {
@@ -48,6 +50,7 @@
       ],
       "capture_lag_days": 56,
       "comparability_rule_id": null,
+      "comparison_lineage": {},
       "delta_basis": "NOT_ESTABLISHED",
       "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
       "delta_mapping_rule_id": null,
@@ -79,6 +82,7 @@
         "https://www.bnbchain.org/en/blog/36th-bnb-burn"
       ],
       "subject_id": "BNB",
+      "transition_rule_id": null,
       "trigger_type": "SUPPLY_MECHANISM_CHANGE"
     },
     {
@@ -88,6 +92,7 @@
       ],
       "capture_lag_days": 56,
       "comparability_rule_id": null,
+      "comparison_lineage": {},
       "delta_basis": "NOT_ESTABLISHED",
       "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
       "delta_mapping_rule_id": null,
@@ -119,6 +124,7 @@
         "https://www.bnbchain.org/en/blog/36th-bnb-burn"
       ],
       "subject_id": "BNB",
+      "transition_rule_id": null,
       "trigger_type": "SUPPLY_MECHANISM_CHANGE"
     },
     {
@@ -128,6 +134,7 @@
       ],
       "capture_lag_days": 56,
       "comparability_rule_id": null,
+      "comparison_lineage": {},
       "delta_basis": "NOT_ESTABLISHED",
       "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
       "delta_mapping_rule_id": null,
@@ -159,6 +166,7 @@
         "https://www.bnbchain.org/en/blog/36th-bnb-burn"
       ],
       "subject_id": "BNB",
+      "transition_rule_id": null,
       "trigger_type": "PROTOCOL_UPGRADE"
     },
     {
@@ -168,6 +176,7 @@
       ],
       "capture_lag_days": 0,
       "comparability_rule_id": null,
+      "comparison_lineage": {},
       "delta_basis": "NOT_ESTABLISHED",
       "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
       "delta_mapping_rule_id": null,
@@ -199,6 +208,7 @@
         "https://docs.bnbchain.org/bnb-smart-chain/validator/overview/"
       ],
       "subject_id": "BNB",
+      "transition_rule_id": null,
       "trigger_type": "GOVERNANCE_CHANGE"
     },
     {
@@ -208,6 +218,7 @@
       ],
       "capture_lag_days": 0,
       "comparability_rule_id": null,
+      "comparison_lineage": {},
       "delta_basis": "NOT_ESTABLISHED",
       "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
       "delta_mapping_rule_id": null,
@@ -239,6 +250,7 @@
         "https://docs.bnbchain.org/bnb-smart-chain/validator/overview/"
       ],
       "subject_id": "BNB",
+      "transition_rule_id": null,
       "trigger_type": "GOVERNANCE_CHANGE"
     },
     {
@@ -248,6 +260,7 @@
       ],
       "capture_lag_days": 0,
       "comparability_rule_id": null,
+      "comparison_lineage": {},
       "delta_basis": "NOT_ESTABLISHED",
       "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
       "delta_mapping_rule_id": null,
@@ -279,6 +292,7 @@
         "https://docs.bnbchain.org/bnb-smart-chain/validator/overview/"
       ],
       "subject_id": "BNB",
+      "transition_rule_id": null,
       "trigger_type": "GOVERNANCE_CHANGE"
     },
     {
@@ -288,6 +302,7 @@
       ],
       "capture_lag_days": 56,
       "comparability_rule_id": null,
+      "comparison_lineage": {},
       "delta_basis": "NOT_ESTABLISHED",
       "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
       "delta_mapping_rule_id": null,
@@ -319,6 +334,7 @@
         "https://www.bnbchain.org/en/blog/36th-bnb-burn"
       ],
       "subject_id": "BNB",
+      "transition_rule_id": null,
       "trigger_type": "GOVERNANCE_CHANGE"
     },
     {
@@ -328,6 +344,7 @@
       ],
       "capture_lag_days": 0,
       "comparability_rule_id": null,
+      "comparison_lineage": {},
       "delta_basis": "NOT_ESTABLISHED",
       "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
       "delta_mapping_rule_id": null,
@@ -359,6 +376,7 @@
         "https://docs.bnbchain.org/bnb-opbnb/"
       ],
       "subject_id": "BNB",
+      "transition_rule_id": null,
       "trigger_type": "PROTOCOL_UPGRADE"
     }
   ],

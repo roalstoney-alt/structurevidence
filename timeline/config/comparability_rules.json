@@ -1,15 +1,19 @@
 {
-  "model_version": "TIMELINE_MODEL_R1_1",
+  "model_version": "TIMELINE_MODEL_R1_1A",
   "rules": [
     {
+      "comparison_function": "ORDERED_LEVEL_TRANSITION",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "measurement_concept": "validator_count",
+      "method_compatibility": "EXACT_CONCEPT",
       "requirements": [
         "same subject_id",
         "same dimension_ids",
         "same measurement_concept",
-        "effective_at earlier than current",
-        "same or compatible methodology"
+        "effective_at earlier than current"
       ],
-      "rule_id": "SAME_SUBJECT_DIMENSION_CONCEPT_EARLIER_TIME"
+      "rule_id": "CMP_VALIDATOR_COUNT"
     }
-  ]
+  ],
+  "version": "TIMELINE_COMPARABILITY_v0.2"
 }

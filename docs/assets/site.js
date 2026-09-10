@@ -218,7 +218,11 @@ function periodLabel(bucket) {
 function bucketTitle(bucket) {
   const ids = bucket.observations || bucket.events || [];
   const refs = bucket.source_refs || bucket.lineage?.artifact_refs || [];
-  return [`${periodLabel(bucket)} ${bucket.level_state || bucket.closing_level_state || bucket.closing_state || ""} ${bucket.delta_state || bucket.period_delta_state || ""}`, `${ids.length} linked record(s)`, refs[0] || ""].filter(Boolean).join(" | ");
+  const comparison = bucket.comparison_lineage?.[0] || bucket.lineage?.delta?.comparison_lineage?.[0] || {};
+  const comparisonText = comparison.prior_observation_id
+    ? `Compared with: ${comparison.prior_effective_at || ""} ${comparison.prior_observation_id} / Rule: ${comparison.comparability_rule_id || ""} / Delta: ${bucket.delta_state || bucket.period_delta_state || ""}`
+    : "";
+  return [`${periodLabel(bucket)} ${bucket.level_state || bucket.closing_level_state || bucket.closing_state || ""} ${bucket.delta_state || bucket.period_delta_state || ""}`, `${ids.length} linked record(s)`, comparisonText, refs[0] || ""].filter(Boolean).join(" | ");
 }
 
 function renderLegend(labels, className) {

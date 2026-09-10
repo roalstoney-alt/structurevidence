@@ -1,5 +1,5 @@
 {
-  "model_version": "TIMELINE_MODEL_R1_1",
+  "model_version": "TIMELINE_MODEL_R1_1A",
   "observations": [
     {
       "applies_to_state_type": "LEVEL",
@@ -8,6 +8,7 @@
       ],
       "capture_lag_days": 0,
       "comparability_rule_id": null,
+      "comparison_lineage": {},
       "delta_basis": "NOT_ESTABLISHED",
       "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
       "delta_mapping_rule_id": null,
@@ -39,6 +40,7 @@
         "https://www.sec.gov/"
       ],
       "subject_id": "strategy",
+      "transition_rule_id": null,
       "trigger_type": "TREASURY_POLICY_CHANGE"
     },
     {
@@ -48,6 +50,7 @@
       ],
       "capture_lag_days": 0,
       "comparability_rule_id": null,
+      "comparison_lineage": {},
       "delta_basis": "NOT_ESTABLISHED",
       "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
       "delta_mapping_rule_id": null,
@@ -79,6 +82,7 @@
         "https://www.strategy.com/"
       ],
       "subject_id": "strategy",
+      "transition_rule_id": null,
       "trigger_type": "TREASURY_POLICY_CHANGE"
     },
     {
@@ -88,6 +92,7 @@
       ],
       "capture_lag_days": 0,
       "comparability_rule_id": null,
+      "comparison_lineage": {},
       "delta_basis": "NOT_ESTABLISHED",
       "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
       "delta_mapping_rule_id": null,
@@ -119,6 +124,7 @@
         "https://www.strategy.com/"
       ],
       "subject_id": "strategy",
+      "transition_rule_id": null,
       "trigger_type": "PROTOCOL_UPGRADE"
     },
     {
@@ -128,6 +134,7 @@
       ],
       "capture_lag_days": 64,
       "comparability_rule_id": null,
+      "comparison_lineage": {},
       "delta_basis": "NOT_ESTABLISHED",
       "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
       "delta_mapping_rule_id": null,
@@ -159,6 +166,7 @@
         "evidence-freeze/S6.1a"
       ],
       "subject_id": "strategy",
+      "transition_rule_id": null,
       "trigger_type": "PROTOCOL_UPGRADE"
     },
     {
@@ -168,6 +176,7 @@
       ],
       "capture_lag_days": 0,
       "comparability_rule_id": null,
+      "comparison_lineage": {},
       "delta_basis": "NOT_ESTABLISHED",
       "delta_mapping_rationale": "No valid prior comparable observation and no explicit change event.",
       "delta_mapping_rule_id": null,
@@ -199,6 +208,7 @@
         "evidence-freeze/S6.1a"
       ],
       "subject_id": "strategy",
+      "transition_rule_id": null,
       "trigger_type": "PROTOCOL_UPGRADE"
     }
   ],

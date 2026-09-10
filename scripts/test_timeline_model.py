@@ -86,7 +86,7 @@ def main() -> None:
         ledger = read(ROOT / "timeline" / "subjects" / f"{subject}_event_ledger.json")
         manifest = read(ROOT / "timeline" / "subjects" / f"{subject}_timeline_derivation_manifest.json")
 
-        if structural["model_version"] != "TIMELINE_MODEL_R1_1" or evidence["model_version"] != "TIMELINE_MODEL_R1_1":
+        if structural["model_version"] != "TIMELINE_MODEL_R1_1A" or evidence["model_version"] != "TIMELINE_MODEL_R1_1A":
             fail(f"wrong model version for {subject}")
         if set(structural["supported_resolutions"]) != RESOLUTIONS or set(evidence["supported_resolutions"]) != RESOLUTIONS:
             fail(f"missing resolutions for {subject}")
@@ -121,14 +121,15 @@ def main() -> None:
                 fail(f"broken Level lineage for {subject}")
             if row["delta_state"] != "NOT_ESTABLISHED" and not (row["lineage"]["delta"]["week_bucket_ids"] and row["lineage"]["delta"]["day_bucket_ids"] and row["lineage"]["delta"]["comparison_lineage"]):
                 fail(f"broken Delta lineage for {subject}")
-        if manifest["atomic_observation_count"] != len(atomic) or not manifest["level_mapping_sha256"] or not manifest["delta_mapping_sha256"]:
+        if manifest["atomic_observation_count"] != len(atomic) or not manifest["level_mapping_sha256"] or not manifest["delta_mapping_sha256"] or not manifest["level_transition_rules_sha256"]:
             fail(f"bad derivation manifest for {subject}")
+    subprocess.run([sys.executable, "-B", "scripts/build_timeline_model.py", "--as-of", "2026-09-10T14:18:35.507637Z"], cwd=ROOT, check=True, stdout=subprocess.DEVNULL)
     before = digest()
-    subprocess.run([sys.executable, "-B", "scripts/build_timeline_model.py"], cwd=ROOT, check=True, stdout=subprocess.DEVNULL)
+    subprocess.run([sys.executable, "-B", "scripts/build_timeline_model.py", "--as-of", "2026-09-10T14:18:35.507637Z"], cwd=ROOT, check=True, stdout=subprocess.DEVNULL)
     after = digest()
     if before != after:
-        fail("timeline generation is not deterministic")
-    print("TIMELINE_R1_1_MODEL_TESTS_PASS")
+        fail("timeline generation with explicit as_of is not deterministic")
+    print("TIMELINE_R1_1A_MODEL_TESTS_PASS")
 
 
 if __name__ == "__main__":

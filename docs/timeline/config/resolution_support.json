@@ -1,6 +1,6 @@
 {
   "boundary": "DAY is atomic. WEEK is derived from DAY. MONTH is derived from WEEK.",
-  "model_version": "TIMELINE_MODEL_R1_1",
+  "model_version": "TIMELINE_MODEL_R1_1A",
   "supported_resolutions": [
     "DAY",
     "WEEK",

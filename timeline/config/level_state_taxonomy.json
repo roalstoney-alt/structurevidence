@@ -1,6 +1,6 @@
 {
   "boundary": "Level describes condition, not quality.",
-  "model_version": "TIMELINE_MODEL_R1_1",
+  "model_version": "TIMELINE_MODEL_R1_1A",
   "states": [
     "EXPANSIONARY",
     "CONTRACTIONARY",

@@ -1072,7 +1072,7 @@
     }
   ],
   "layer": "STRUCTURAL",
-  "model_version": "TIMELINE_MODEL_R1_1",
+  "model_version": "TIMELINE_MODEL_R1_1A",
   "resolution": "MONTH",
   "subject_id": "XLM"
 }

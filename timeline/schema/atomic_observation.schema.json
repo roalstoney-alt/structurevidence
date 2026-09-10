@@ -13,6 +13,7 @@
     "delta_basis",
     "prior_observation_id",
     "comparability_rule_id",
+    "transition_rule_id",
     "level_mapping_rule_id",
     "delta_mapping_rule_id",
     "legacy_structural_effect",
@@ -21,6 +22,7 @@
     "artifact_refs",
     "mapping_rule_id",
     "mapping_rationale",
+    "comparison_lineage",
     "observation_mode"
   ],
   "type": "object"

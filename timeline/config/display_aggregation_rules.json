@@ -1,5 +1,5 @@
 {
   "boundary": "Retained for v0.1 compatibility; R1 builder executes the two R1 aggregation configs.",
   "deprecated_by": "structural_aggregation_rules.json and evidence_aggregation_rules.json",
-  "model_version": "TIMELINE_MODEL_R1_1"
+  "model_version": "TIMELINE_MODEL_R1_1A"
 }

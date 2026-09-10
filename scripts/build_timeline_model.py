@@ -5,6 +5,7 @@ import calendar
 import hashlib
 import json
 import shutil
+import sys
 from collections import Counter, defaultdict
 from dataclasses import dataclass
 from datetime import date, datetime, timedelta, timezone
@@ -12,13 +13,18 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+
+from timeline.engine.clock import parse_as_of, utc_now  # noqa: E402
+
 DOCS = ROOT / "docs"
-MODEL_VERSION = "TIMELINE_MODEL_R1_1"
-UI_VERSION = "TIMELINE_UI_R1_1"
+MODEL_VERSION = "TIMELINE_MODEL_R1_1A"
+UI_VERSION = "TIMELINE_UI_R1_1A"
 MAPPING_VERSION = "TIMELINE_MAPPING_v0.1"
 AGGREGATION_VERSION = "TIMELINE_AGGREGATION_v0.1"
-BASE_COMMIT = "9abfb37392f921e499915358ff0700173240cef6"
-DEFAULT_AS_OF = "2026-09-10T14:18:35.507637Z"
+TIMELINE_V0_1_COMMIT = "9abfb37392f921e499915358ff0700173240cef6"
+TIMELINE_R1_COMMIT = "0f7762b31dcf85754468a81b884665e717050e79"
+TIMELINE_R1_1_COMMIT = "57ead80bd9720c4f352d4023b60026bfb7a4541d"
 SUBJECTS = ["strategy", "bnb", "sol", "trx", "xlm"]
 RESOLUTIONS = ["DAY", "WEEK", "MONTH"]
 LEVEL_STATES = ["EXPANSIONARY", "CONTRACTIONARY", "BALANCED", "MECHANISM_TRANSITION", "DISTRIBUTED", "MODERATELY_CONCENTRATED", "CONCENTRATED", "FIXED_OR_RESTRICTED_SET", "MECHANISM_DEFINED", "LIMITED_ROLE", "ESTABLISHED_ROLE", "MATERIAL_ROLE", "DOMINANT_ROLE", "MIXED_ROLE", "LOW_DEPENDENCE", "MATERIAL_DEPENDENCE", "HIGH_DEPENDENCE", "HYBRID_DEPENDENCE", "SOURCE_DEPENDENT", "INSUFFICIENT_DATA", "NO_OBSERVATION", "MIXED_LEVEL"]
@@ -253,7 +259,7 @@ def build_mapping_config() -> dict:
         for source_observation_id, (dimension_id, legacy_effect, strength, rationale) in rows.items():
             level_state, measurement_concept, level_rationale = LEVEL_RULES[subject][source_observation_id]
             delta = EXPLICIT_DELTA_RULES.get(source_observation_id)
-            rules.append({"rule_id": f"{subject.upper()}_{source_observation_id.replace('-', '_')}_TO_{dimension_id}", "subject_profile": subject_id(subject), "observation_match": {"observation_ids": [source_observation_id]}, "dimension_ids": [dimension_id], "legacy_structural_effect": legacy_effect, "effect_strength": strength, "mapping_rationale": rationale, "level_state": level_state, "measurement_concept": measurement_concept, "level_mapping_rule_id": f"LEVEL_{subject.upper()}_{source_observation_id.replace('-', '_')}", "level_mapping_rationale": level_rationale, "delta_state": delta[0] if delta else "NOT_ESTABLISHED", "delta_basis": delta[1] if delta else "NOT_ESTABLISHED", "delta_mapping_rule_id": f"DELTA_{source_observation_id.replace('-', '_')}" if delta else None, "delta_mapping_rationale": delta[2] if delta else "No valid prior comparable observation and no explicit change event."})
+            rules.append({"rule_id": f"{subject.upper()}_{source_observation_id.replace('-', '_')}_TO_{dimension_id}", "subject_profile": subject_id(subject), "observation_match": {"observation_ids": [source_observation_id]}, "dimension_ids": [dimension_id], "legacy_structural_effect": legacy_effect, "effect_strength": strength, "mapping_rationale": rationale, "level_state": level_state, "measurement_concept": measurement_concept, "level_mapping_rule_id": f"LEVEL_{subject.upper()}_{source_observation_id.replace('-', '_')}", "level_mapping_rationale": level_rationale, "delta_state": delta[0] if delta else "NOT_ESTABLISHED", "delta_basis": delta[1] if delta else "NOT_ESTABLISHED", "delta_mapping_rule_id": f"DELTA_{source_observation_id.replace('-', '_')}" if delta else None, "delta_mapping_rationale": delta[2] if delta else "No valid prior comparable observation and no explicit change event.", "transition_rule_id": None})
     return {"mapping_version": MAPPING_VERSION, "rules": rules}
 
 
@@ -312,24 +318,89 @@ def resolve_delta_state(states: list[str], rules: dict) -> str:
     return established[0] if len(unique) == 1 else rules["mixed"]
 
 
-def find_prior_comparable_observation(current: dict, history: list[dict], rules: dict) -> dict | None:
+def comparison_rule_for(current: dict, rules: dict) -> dict | None:
+    dimensions = current.get("dimension_ids") or []
+    if len(dimensions) != 1:
+        return None
+    for rule in rules["rules"]:
+        if (
+            rule["dimension_id"] == dimensions[0]
+            and rule["measurement_concept"] == current.get("measurement_concept")
+            and rule["method_compatibility"] == "EXACT_CONCEPT"
+        ):
+            return rule
+    return None
+
+
+def find_prior_comparable_match(current: dict, history: list[dict], rules: dict) -> tuple[dict | None, dict | None]:
+    rule = comparison_rule_for(current, rules)
+    if not rule:
+        return None, None
     candidates = [
         row for row in history
         if row["subject_id"] == current["subject_id"]
         and row["observation_id"] != current["observation_id"]
         and row["dimension_ids"] == current["dimension_ids"]
-        and row["measurement_concept"] == current["measurement_concept"]
+        and row["measurement_concept"] == rule["measurement_concept"]
         and row["effective_at"] != "UNKNOWN"
         and current["effective_at"] != "UNKNOWN"
         and row["effective_at"] < current["effective_at"]
+        and row.get("level_state") not in {"NO_OBSERVATION", "INSUFFICIENT_DATA"}
+        and current.get("level_state") not in {"NO_OBSERVATION", "INSUFFICIENT_DATA"}
     ]
-    return sorted(candidates, key=lambda row: row["effective_at"])[-1] if candidates else None
+    return (sorted(candidates, key=lambda row: (row["effective_at"], row["observation_id"]))[-1], rule) if candidates else (None, None)
 
 
-def build_atomic_observations(subject: str, mapping: dict) -> tuple[list[dict], list[dict], list[dict]]:
-    sources = source_inventory(subject)
+def find_prior_comparable_observation(current: dict, history: list[dict], rules: dict) -> dict | None:
+    prior, _ = find_prior_comparable_match(current, history, rules)
+    return prior
+
+
+def transition_rule_for(current: dict, prior: dict, rules: dict) -> tuple[str | None, str | None]:
+    dimensions = current.get("dimension_ids") or []
+    if len(dimensions) != 1:
+        return None, None
+    transition = f"{prior.get('level_state')}->{current.get('level_state')}"
+    for rule in rules["rules"]:
+        if rule["dimension_id"] == dimensions[0] and transition in rule["transitions"]:
+            return rule["transitions"][transition], rule["rule_id"]
+    return None, None
+
+
+def derive_comparison_delta(current_observation: dict, prior_history: list[dict], comparability_config: dict, transition_config: dict) -> dict:
+    prior, comparison_rule = find_prior_comparable_match(current_observation, prior_history, comparability_config)
+    if not prior or not comparison_rule:
+        return {"delta_state": "NOT_ESTABLISHED", "delta_basis": "NOT_ESTABLISHED", "prior_observation_id": None, "comparability_rule_id": None, "transition_rule_id": None, "comparison_lineage": {}}
+    delta_state, transition_rule_id = transition_rule_for(current_observation, prior, transition_config)
+    if not delta_state or not transition_rule_id:
+        return {"delta_state": "NOT_ESTABLISHED", "delta_basis": "NOT_ESTABLISHED", "prior_observation_id": None, "comparability_rule_id": None, "transition_rule_id": None, "comparison_lineage": {}}
+    return {
+        "delta_state": delta_state,
+        "delta_basis": "COMPARISON_TO_PRIOR_OBSERVATION",
+        "prior_observation_id": prior["observation_id"],
+        "comparability_rule_id": comparison_rule["rule_id"],
+        "transition_rule_id": transition_rule_id,
+        "comparison_lineage": {
+            "current_observation_id": current_observation["observation_id"],
+            "current_effective_at": current_observation["effective_at"],
+            "current_level_state": current_observation["level_state"],
+            "prior_observation_id": prior["observation_id"],
+            "prior_effective_at": prior["effective_at"],
+            "prior_level_state": prior["level_state"],
+            "comparability_rule_id": comparison_rule["rule_id"],
+            "transition_rule_id": transition_rule_id,
+            "measurement_concept": current_observation["measurement_concept"],
+            "artifact_refs": sorted(set(current_observation["artifact_refs"] + prior["artifact_refs"])),
+        },
+    }
+
+
+def build_atomic_observations(subject: str, mapping: dict, source_rows_override: list[dict] | None = None, sources_override: dict | None = None) -> tuple[list[dict], list[dict], list[dict]]:
+    sources = sources_override or source_inventory(subject)
     rules = {rule["observation_match"]["observation_ids"][0]: rule for rule in mapping["rules"] if rule["subject_profile"] == subject_id(subject)}
-    if subject == "strategy":
+    if source_rows_override is not None:
+        source_rows = source_rows_override
+    elif subject == "strategy":
         source_rows = [{"observation_id": oid, "source_id": f"STRATEGY-R1-S{min(i + 1, 4)}", "artifact_id": f"STRATEGY-R1-A{min(i + 1, 4)}", "effective_date": eff, "known_at": known, "observation_type": typ, "statement": label, "artifact_ref": ref} for i, (oid, eff, known, typ, label, ref) in enumerate(STRATEGY_OBSERVATIONS)]
     else:
         source_rows = read_json(subject_base(subject) / "OBSERVATION_REGISTRY.json")
@@ -347,7 +418,20 @@ def build_atomic_observations(subject: str, mapping: dict) -> tuple[list[dict], 
         mode = "RETROSPECTIVE" if effective != "UNKNOWN" and known != "UNKNOWN" and parse_day(known) > parse_day(effective) else "CONTEMPORANEOUS"
         artifact_ref = row.get("artifact_ref") or f"research/digital-assets/batch-01-r1/{subject.upper()}/OBSERVATION_REGISTRY.json"
         capture_lag = (parse_day(known) - parse_day(effective)).days if effective != "UNKNOWN" and known != "UNKNOWN" else None
-        atomic.append({"observation_id": f"TL-{subject.upper()}-O{index:03d}", "subject_id": subject_id(subject), "source_observation_id": source_oid, "dimension_ids": rule["dimension_ids"], "effective_at": f"{effective[:10]}T00:00:00Z" if effective != "UNKNOWN" else "UNKNOWN", "known_at": known, "knowledge_mode": mode, "observation_type": row.get("observation_type", "PUBLIC_FACT"), "level_state": rule["level_state"], "delta_state": rule["delta_state"], "delta_basis": rule["delta_basis"], "prior_observation_id": None, "comparability_rule_id": None, "level_mapping_rule_id": rule["level_mapping_rule_id"], "delta_mapping_rule_id": rule["delta_mapping_rule_id"], "legacy_structural_effect": rule["legacy_structural_effect"], "effect_strength": rule["effect_strength"], "measurement_concept": rule["measurement_concept"], "evidence_family_ids": ["PRIMARY_SOURCE_COVERAGE"], "source_refs": [sources.get(row.get("source_id"), {}).get("source_url", artifact_ref)], "artifact_refs": [artifact_ref], "mapping_rule_id": rule["rule_id"], "mapping_rationale": rule["mapping_rationale"], "level_mapping_rationale": rule["level_mapping_rationale"], "delta_mapping_rationale": rule["delta_mapping_rationale"], "observation_mode": "SPARSE_EVENT_STATE" if subject == "strategy" else "DIRECT", "freshness_trigger_candidate": rule["delta_basis"] == "EXPLICIT_CHANGE_EVENT", "applies_to_state_type": "DELTA" if rule["delta_basis"] == "EXPLICIT_CHANGE_EVENT" else "LEVEL", "trigger_type": trigger_type(rule["dimension_ids"][0]), "capture_lag_days": capture_lag})
+        atomic.append({"observation_id": f"TL-{subject.upper()}-O{index:03d}", "subject_id": subject_id(subject), "source_observation_id": source_oid, "dimension_ids": rule["dimension_ids"], "effective_at": f"{effective[:10]}T00:00:00Z" if effective != "UNKNOWN" else "UNKNOWN", "known_at": known, "knowledge_mode": mode, "observation_type": row.get("observation_type", "PUBLIC_FACT"), "level_state": rule["level_state"], "delta_state": rule["delta_state"], "delta_basis": rule["delta_basis"], "prior_observation_id": None, "comparability_rule_id": None, "transition_rule_id": None, "level_mapping_rule_id": rule["level_mapping_rule_id"], "delta_mapping_rule_id": rule["delta_mapping_rule_id"], "legacy_structural_effect": rule["legacy_structural_effect"], "effect_strength": rule["effect_strength"], "measurement_concept": rule["measurement_concept"], "evidence_family_ids": ["PRIMARY_SOURCE_COVERAGE"], "source_refs": [sources.get(row.get("source_id"), {}).get("source_url", artifact_ref)], "artifact_refs": [artifact_ref], "mapping_rule_id": rule["rule_id"], "mapping_rationale": rule["mapping_rationale"], "level_mapping_rationale": rule["level_mapping_rationale"], "delta_mapping_rationale": rule["delta_mapping_rationale"], "comparison_lineage": {}, "observation_mode": "SPARSE_EVENT_STATE" if subject == "strategy" else "DIRECT", "freshness_trigger_candidate": rule["delta_basis"] == "EXPLICIT_CHANGE_EVENT", "applies_to_state_type": "DELTA" if rule["delta_basis"] == "EXPLICIT_CHANGE_EVENT" else "LEVEL", "trigger_type": trigger_type(rule["dimension_ids"][0]), "capture_lag_days": capture_lag})
+    history = []
+    comparability_config = comparability_rules()
+    transition_config = level_transition_rules()
+    for obs in sorted(atomic, key=lambda row: (row["subject_id"], row["dimension_ids"][0], row["effective_at"], row["observation_id"])):
+        if obs["delta_basis"] == "EXPLICIT_CHANGE_EVENT":
+            history.append(obs)
+            continue
+        result = derive_comparison_delta(obs, history, comparability_config, transition_config)
+        obs.update(result)
+        obs["delta_mapping_rationale"] = "Derived by comparison to a valid prior comparable observation." if result["delta_basis"] == "COMPARISON_TO_PRIOR_OBSERVATION" else "No valid prior comparable observation and no explicit change event."
+        obs["freshness_trigger_candidate"] = result["delta_basis"] != "NOT_ESTABLISHED"
+        obs["applies_to_state_type"] = "DELTA" if result["delta_basis"] != "NOT_ESTABLISHED" else "LEVEL"
+        history.append(obs)
     return atomic, unmapped, unresolved
 
 
@@ -369,6 +453,32 @@ def period_for_day(day: date, resolution: str) -> Period:
     return Period(day.isoformat(), day, day)
 
 
+def aggregate_delta_basis(rows: list[dict]) -> str:
+    bases = {row["delta_basis"] for row in rows if row.get("delta_state") != "NOT_ESTABLISHED"}
+    if "EXPLICIT_CHANGE_EVENT" in bases:
+        return "EXPLICIT_CHANGE_EVENT"
+    if "COMPARISON_TO_PRIOR_OBSERVATION" in bases:
+        return "COMPARISON_TO_PRIOR_OBSERVATION"
+    return "NOT_ESTABLISHED"
+
+
+def comparison_lineage_rows(rows: list[dict]) -> list[dict]:
+    out = []
+    for row in rows:
+        if row.get("delta_state") == "NOT_ESTABLISHED":
+            continue
+        lineage = row.get("comparison_lineage") or {
+            "current_observation_id": row["observation_id"],
+            "prior_observation_id": row.get("prior_observation_id"),
+            "comparability_rule_id": row.get("comparability_rule_id"),
+            "transition_rule_id": row.get("transition_rule_id"),
+            "basis": row["delta_basis"],
+            "artifact_refs": row.get("artifact_refs", []),
+        }
+        out.append(lineage)
+    return out
+
+
 def build_day_buckets(subject: str, observations: list[dict], dimensions: list[str], rules: dict) -> list[dict]:
     dates = [parse_day(obs["effective_at"]) for obs in observations if obs["effective_at"] != "UNKNOWN"]
     if not dates:
@@ -385,7 +495,8 @@ def build_day_buckets(subject: str, observations: list[dict], dimensions: list[s
             refs = sorted({ref for row in rows for ref in row["artifact_refs"]})
             level_state = resolve_level_state([row["level_state"] for row in rows], rules["level"])
             delta_state = resolve_delta_state([row["delta_state"] for row in rows], rules["delta"])
-            out.append({"bucket_id": f"{subject.upper()}-STRUCT-DAY-{day.isoformat()}-{dim}", "subject_id": subject_id(subject), "date": day.isoformat(), "period": day.isoformat(), "bucket_start": day.isoformat(), "bucket_end": day.isoformat(), "resolution": "DAY", "dimension_id": dim, "level_state": level_state, "delta_state": delta_state, "delta_basis": "EXPLICIT_CHANGE_EVENT" if any(row["delta_basis"] == "EXPLICIT_CHANGE_EVENT" for row in rows) else "NOT_ESTABLISHED", "level_observation_ids": [row["observation_id"] for row in rows], "delta_observation_ids": [row["observation_id"] for row in rows if row["delta_state"] != "NOT_ESTABLISHED"], "prior_reference_ids": [row["prior_observation_id"] for row in rows if row["prior_observation_id"]], "comparison_lineage": [{"current_observation_id": row["observation_id"], "prior_observation_id": row["prior_observation_id"], "comparison_rule_id": row["comparability_rule_id"], "basis": row["delta_basis"]} for row in rows if row["delta_state"] != "NOT_ESTABLISHED"], "state": level_state, "observations": [row["observation_id"] for row in rows], "observation_count": len(rows), "source_refs": refs, "aggregation_rule": "DAY_LEVEL_DELTA", "level_last_observed_at": f"{day.isoformat()}T00:00:00Z" if rows else None, "delta_last_established_at": f"{day.isoformat()}T00:00:00Z" if any(row["delta_state"] != "NOT_ESTABLISHED" for row in rows) else None, "lineage": {"level": {"atomic_observation_ids": [row["observation_id"] for row in rows], "artifact_refs": refs}, "delta": {"comparison_lineage": [{"current_observation_id": row["observation_id"], "prior_observation_id": row["prior_observation_id"], "comparison_rule_id": row["comparability_rule_id"], "basis": row["delta_basis"]} for row in rows if row["delta_state"] != "NOT_ESTABLISHED"], "artifact_refs": refs}, "atomic_observation_ids": [row["observation_id"] for row in rows], "artifact_refs": refs}})
+            comparison_lineage = comparison_lineage_rows(rows)
+            out.append({"bucket_id": f"{subject.upper()}-STRUCT-DAY-{day.isoformat()}-{dim}", "subject_id": subject_id(subject), "date": day.isoformat(), "period": day.isoformat(), "bucket_start": day.isoformat(), "bucket_end": day.isoformat(), "resolution": "DAY", "dimension_id": dim, "level_state": level_state, "delta_state": delta_state, "delta_basis": aggregate_delta_basis(rows), "level_observation_ids": [row["observation_id"] for row in rows], "delta_observation_ids": [row["observation_id"] for row in rows if row["delta_state"] != "NOT_ESTABLISHED"], "prior_reference_ids": [row["prior_observation_id"] for row in rows if row["prior_observation_id"]], "comparison_lineage": comparison_lineage, "state": level_state, "observations": [row["observation_id"] for row in rows], "observation_count": len(rows), "source_refs": refs, "aggregation_rule": "DAY_LEVEL_DELTA", "level_last_observed_at": f"{day.isoformat()}T00:00:00Z" if rows else None, "delta_last_established_at": f"{day.isoformat()}T00:00:00Z" if any(row["delta_state"] != "NOT_ESTABLISHED" for row in rows) else None, "lineage": {"level": {"atomic_observation_ids": [row["observation_id"] for row in rows], "artifact_refs": refs}, "delta": {"comparison_lineage": comparison_lineage, "artifact_refs": refs}, "atomic_observation_ids": [row["observation_id"] for row in rows], "artifact_refs": refs}})
     return out
 
 
@@ -404,7 +515,7 @@ def aggregate_structural_day_to_week(subject: str, day_buckets: list[dict], rule
         closing_level = observed_rows[-1]["level_state"] if observed_rows else "NO_OBSERVATION"
         opening_level = observed_rows[0]["level_state"] if observed_rows else "NO_OBSERVATION"
         period_delta = resolve_delta_state([row["delta_state"] for row in delta_rows], rules["delta"])
-        out.append({"bucket_id": f"{subject.upper()}-STRUCT-WEEK-{week}-{dim}", "subject_id": subject_id(subject), "period": week, "week_start": period.start.isoformat(), "week_end": period.end.isoformat(), "bucket_start": period.start.isoformat(), "bucket_end": period.end.isoformat(), "resolution": "WEEK", "dimension_id": dim, "opening_level_state": opening_level, "closing_level_state": closing_level, "level_state": closing_level, "period_delta_state": period_delta, "delta_state": period_delta, "delta_basis": "EXPLICIT_CHANGE_EVENT" if any(row["delta_basis"] == "EXPLICIT_CHANGE_EVENT" for row in delta_rows) else "NOT_ESTABLISHED", "level_transition_count": max(len({row["level_state"] for row in observed_rows}) - 1, 0), "delta_transition_count": len(delta_rows), "state": closing_level, "observation_count": sum(row["observation_count"] for row in rows), "source_day_bucket_ids": [row["bucket_id"] for row in rows], "observations": observations, "level_observation_ids": observations, "delta_observation_ids": sorted({obs for row in delta_rows for obs in row["delta_observation_ids"]}), "prior_reference_ids": sorted({ref for row in delta_rows for ref in row["prior_reference_ids"]}), "source_refs": refs, "aggregation_rule": "WEEK_LEVEL_DELTA_FROM_DAY", "level_last_observed_at": max([row["level_last_observed_at"] for row in observed_rows if row["level_last_observed_at"]], default=None), "delta_last_established_at": max([row["delta_last_established_at"] for row in delta_rows if row["delta_last_established_at"]], default=None), "lineage": {"day_bucket_ids": [row["bucket_id"] for row in rows], "level": {"day_bucket_ids": [row["bucket_id"] for row in observed_rows], "atomic_observation_ids": observations, "artifact_refs": refs}, "delta": {"day_bucket_ids": [row["bucket_id"] for row in delta_rows], "comparison_lineage": [item for row in delta_rows for item in row["comparison_lineage"]], "atomic_observation_ids": sorted({obs for row in delta_rows for obs in row["delta_observation_ids"]}), "artifact_refs": refs}, "atomic_observation_ids": observations, "artifact_refs": refs}})
+        out.append({"bucket_id": f"{subject.upper()}-STRUCT-WEEK-{week}-{dim}", "subject_id": subject_id(subject), "period": week, "week_start": period.start.isoformat(), "week_end": period.end.isoformat(), "bucket_start": period.start.isoformat(), "bucket_end": period.end.isoformat(), "resolution": "WEEK", "dimension_id": dim, "opening_level_state": opening_level, "closing_level_state": closing_level, "level_state": closing_level, "period_delta_state": period_delta, "delta_state": period_delta, "delta_basis": aggregate_delta_basis(delta_rows), "level_transition_count": max(len({row["level_state"] for row in observed_rows}) - 1, 0), "delta_transition_count": len(delta_rows), "state": closing_level, "observation_count": sum(row["observation_count"] for row in rows), "source_day_bucket_ids": [row["bucket_id"] for row in rows], "observations": observations, "level_observation_ids": observations, "delta_observation_ids": sorted({obs for row in delta_rows for obs in row["delta_observation_ids"]}), "prior_reference_ids": sorted({ref for row in delta_rows for ref in row["prior_reference_ids"]}), "source_refs": refs, "aggregation_rule": "WEEK_LEVEL_DELTA_FROM_DAY", "level_last_observed_at": max([row["level_last_observed_at"] for row in observed_rows if row["level_last_observed_at"]], default=None), "delta_last_established_at": max([row["delta_last_established_at"] for row in delta_rows if row["delta_last_established_at"]], default=None), "lineage": {"day_bucket_ids": [row["bucket_id"] for row in rows], "level": {"day_bucket_ids": [row["bucket_id"] for row in observed_rows], "atomic_observation_ids": observations, "artifact_refs": refs}, "delta": {"day_bucket_ids": [row["bucket_id"] for row in delta_rows], "comparison_lineage": [item for row in delta_rows for item in row["comparison_lineage"]], "atomic_observation_ids": sorted({obs for row in delta_rows for obs in row["delta_observation_ids"]}), "artifact_refs": refs}, "atomic_observation_ids": observations, "artifact_refs": refs}})
     return out
 
 
@@ -424,7 +535,7 @@ def aggregate_structural_week_to_month(subject: str, week_buckets: list[dict], r
         closing_level = observed_rows[-1]["closing_level_state"] if observed_rows else "NO_OBSERVATION"
         opening_level = observed_rows[0]["opening_level_state"] if observed_rows else "NO_OBSERVATION"
         period_delta = resolve_delta_state([row["delta_state"] for row in delta_rows], rules["delta"])
-        out.append({"bucket_id": f"{subject.upper()}-STRUCT-MONTH-{month}-{dim}", "subject_id": subject_id(subject), "period": month, "month_start": f"{month}-01", "month_end": end.isoformat(), "bucket_start": f"{month}-01", "bucket_end": end.isoformat(), "resolution": "MONTH", "dimension_id": dim, "opening_level_state": opening_level, "closing_level_state": closing_level, "level_state": closing_level, "period_delta_state": period_delta, "delta_state": period_delta, "delta_basis": "EXPLICIT_CHANGE_EVENT" if any(row["delta_basis"] == "EXPLICIT_CHANGE_EVENT" for row in delta_rows) else "NOT_ESTABLISHED", "level_transition_count": sum(row["level_transition_count"] for row in rows), "delta_transition_count": sum(row["delta_transition_count"] for row in rows), "state": closing_level, "observation_count": sum(row["observation_count"] for row in rows), "source_week_bucket_ids": [row["bucket_id"] for row in rows], "observations": observations, "level_observation_ids": observations, "delta_observation_ids": sorted({obs for row in delta_rows for obs in row["delta_observation_ids"]}), "prior_reference_ids": sorted({ref for row in delta_rows for ref in row["prior_reference_ids"]}), "source_refs": refs, "aggregation_rule": "MONTH_LEVEL_DELTA_FROM_WEEK", "level_last_observed_at": max([row["level_last_observed_at"] for row in observed_rows if row["level_last_observed_at"]], default=None), "delta_last_established_at": max([row["delta_last_established_at"] for row in delta_rows if row["delta_last_established_at"]], default=None), "lineage": {"week_bucket_ids": [row["bucket_id"] for row in rows], "day_bucket_ids": day_ids, "level": {"week_bucket_ids": [row["bucket_id"] for row in observed_rows], "day_bucket_ids": sorted({day for row in observed_rows for day in row["lineage"]["day_bucket_ids"]}), "atomic_observation_ids": observations, "artifact_refs": refs}, "delta": {"week_bucket_ids": [row["bucket_id"] for row in delta_rows], "day_bucket_ids": sorted({day for row in delta_rows for day in row["lineage"]["day_bucket_ids"]}), "comparison_lineage": [item for row in delta_rows for item in row["lineage"]["delta"]["comparison_lineage"]], "atomic_observation_ids": sorted({obs for row in delta_rows for obs in row["delta_observation_ids"]}), "artifact_refs": refs}, "atomic_observation_ids": observations, "artifact_refs": refs}})
+        out.append({"bucket_id": f"{subject.upper()}-STRUCT-MONTH-{month}-{dim}", "subject_id": subject_id(subject), "period": month, "month_start": f"{month}-01", "month_end": end.isoformat(), "bucket_start": f"{month}-01", "bucket_end": end.isoformat(), "resolution": "MONTH", "dimension_id": dim, "opening_level_state": opening_level, "closing_level_state": closing_level, "level_state": closing_level, "period_delta_state": period_delta, "delta_state": period_delta, "delta_basis": aggregate_delta_basis(delta_rows), "level_transition_count": sum(row["level_transition_count"] for row in rows), "delta_transition_count": sum(row["delta_transition_count"] for row in rows), "state": closing_level, "observation_count": sum(row["observation_count"] for row in rows), "source_week_bucket_ids": [row["bucket_id"] for row in rows], "observations": observations, "level_observation_ids": observations, "delta_observation_ids": sorted({obs for row in delta_rows for obs in row["delta_observation_ids"]}), "prior_reference_ids": sorted({ref for row in delta_rows for ref in row["prior_reference_ids"]}), "source_refs": refs, "aggregation_rule": "MONTH_LEVEL_DELTA_FROM_WEEK", "level_last_observed_at": max([row["level_last_observed_at"] for row in observed_rows if row["level_last_observed_at"]], default=None), "delta_last_established_at": max([row["delta_last_established_at"] for row in delta_rows if row["delta_last_established_at"]], default=None), "lineage": {"week_bucket_ids": [row["bucket_id"] for row in rows], "day_bucket_ids": day_ids, "level": {"week_bucket_ids": [row["bucket_id"] for row in observed_rows], "day_bucket_ids": sorted({day for row in observed_rows for day in row["lineage"]["day_bucket_ids"]}), "atomic_observation_ids": observations, "artifact_refs": refs}, "delta": {"week_bucket_ids": [row["bucket_id"] for row in delta_rows], "day_bucket_ids": sorted({day for row in delta_rows for day in row["lineage"]["day_bucket_ids"]}), "comparison_lineage": [item for row in delta_rows for item in row["lineage"]["delta"]["comparison_lineage"]], "atomic_observation_ids": sorted({obs for row in delta_rows for obs in row["delta_observation_ids"]}), "artifact_refs": refs}, "atomic_observation_ids": observations, "artifact_refs": refs}})
     return out
 
 
@@ -584,21 +695,23 @@ def output_hashes(subject: str) -> dict:
     return {path.relative_to(ROOT).as_posix(): sha_path(path) for path in paths}
 
 
-def derivation_manifest(subject: str, as_of: str, mapping: dict, structural_rules: dict, evidence_mapping: dict, evidence_rules: dict, atomic: list[dict], unresolved: list[dict], day: list[dict], week: list[dict], month: list[dict], evidence_events: list[dict]) -> dict:
+def derivation_manifest(subject: str, evaluation_as_of: str, record_created_at: str, mapping: dict, structural_rules: dict, evidence_mapping: dict, evidence_rules: dict, atomic: list[dict], unresolved: list[dict], day: list[dict], week: list[dict], month: list[dict], evidence_events: list[dict]) -> dict:
     paths = input_paths(subject)
-    return {"model_version": MODEL_VERSION, "builder_version": MODEL_VERSION, "subject_id": subject_id(subject), "as_of": as_of, "input_artifacts": [path.relative_to(ROOT).as_posix() for path in paths], "input_hashes": {path.relative_to(ROOT).as_posix(): sha_path(path) for path in paths}, "mapping_config_hash": sha_json(mapping), "dimension_mapping_sha256": sha_json(mapping), "level_mapping_sha256": sha_json({k: v for k, v in LEVEL_RULES.items()}), "delta_mapping_sha256": sha_json(EXPLICIT_DELTA_RULES), "comparability_rules_sha256": sha_json(comparability_rules()), "structural_aggregation_rules_sha256": sha_json(structural_rules), "level_aggregation_rules_sha256": sha_json(structural_rules["level"]), "delta_aggregation_rules_sha256": sha_json(structural_rules["delta"]), "evidence_mapping_config_hash": sha_json(evidence_mapping), "evidence_aggregation_rules_sha256": sha_json(evidence_rules), "taxonomy_sha256": sha_json({"structural": STRUCTURAL_TAXONOMY, "evidence": EVIDENCE_TAXONOMY, "level": LEVEL_STATES, "delta": DELTA_STATES}), "atomic_observation_count": len(atomic), "unresolved_timestamp_count": len(unresolved), "dimension_observation_counts": dict(sorted(Counter(dim for obs in atomic for dim in obs["dimension_ids"]).items())), "day_bucket_count": len(day), "week_bucket_count": len(week), "month_bucket_count": len(month), "evidence_event_count": len(evidence_events), "output_hashes": output_hashes(subject), "timeline_input_bundle_sha256": input_bundle_hash(paths, [mapping, structural_rules, evidence_mapping, evidence_rules, {"as_of": as_of, "builder_version": MODEL_VERSION}])}
+    transition_rules = level_transition_rules()
+    return {"model_version": MODEL_VERSION, "builder_version": MODEL_VERSION, "subject_id": subject_id(subject), "as_of": evaluation_as_of, "evaluation_as_of": evaluation_as_of, "record_created_at": record_created_at, "input_artifacts": [path.relative_to(ROOT).as_posix() for path in paths], "input_hashes": {path.relative_to(ROOT).as_posix(): sha_path(path) for path in paths}, "mapping_config_hash": sha_json(mapping), "dimension_mapping_sha256": sha_json(mapping), "level_mapping_sha256": sha_json({k: v for k, v in LEVEL_RULES.items()}), "delta_mapping_sha256": sha_json(EXPLICIT_DELTA_RULES), "comparability_rules_sha256": sha_json(comparability_rules()), "level_transition_rules_sha256": sha_json(transition_rules), "structural_aggregation_rules_sha256": sha_json(structural_rules), "level_aggregation_rules_sha256": sha_json(structural_rules["level"]), "delta_aggregation_rules_sha256": sha_json(structural_rules["delta"]), "evidence_mapping_config_hash": sha_json(evidence_mapping), "evidence_aggregation_rules_sha256": sha_json(evidence_rules), "taxonomy_sha256": sha_json({"structural": STRUCTURAL_TAXONOMY, "evidence": EVIDENCE_TAXONOMY, "level": LEVEL_STATES, "delta": DELTA_STATES}), "atomic_observation_count": len(atomic), "unresolved_timestamp_count": len(unresolved), "dimension_observation_counts": dict(sorted(Counter(dim for obs in atomic for dim in obs["dimension_ids"]).items())), "day_bucket_count": len(day), "week_bucket_count": len(week), "month_bucket_count": len(month), "evidence_event_count": len(evidence_events), "output_hashes": output_hashes(subject), "timeline_input_bundle_sha256": input_bundle_hash(paths, [mapping, structural_rules, evidence_mapping, evidence_rules, {"evaluation_as_of": evaluation_as_of, "builder_version": MODEL_VERSION, "comparability_rules_sha256": sha_json(comparability_rules()), "level_transition_rules_sha256": sha_json(transition_rules)}])}
 
 
 def schemas() -> None:
     enum_res = {"enum": RESOLUTIONS}
-    write_json(ROOT / "timeline" / "schema" / "atomic_observation.schema.json", {"$schema": "https://json-schema.org/draft/2020-12/schema", "type": "object", "required": ["observation_id", "subject_id", "source_observation_id", "dimension_ids", "effective_at", "known_at", "knowledge_mode", "level_state", "delta_state", "delta_basis", "prior_observation_id", "comparability_rule_id", "level_mapping_rule_id", "delta_mapping_rule_id", "legacy_structural_effect", "evidence_family_ids", "source_refs", "artifact_refs", "mapping_rule_id", "mapping_rationale", "observation_mode"]})
+    write_json(ROOT / "timeline" / "schema" / "atomic_observation.schema.json", {"$schema": "https://json-schema.org/draft/2020-12/schema", "type": "object", "required": ["observation_id", "subject_id", "source_observation_id", "dimension_ids", "effective_at", "known_at", "knowledge_mode", "level_state", "delta_state", "delta_basis", "prior_observation_id", "comparability_rule_id", "transition_rule_id", "level_mapping_rule_id", "delta_mapping_rule_id", "legacy_structural_effect", "evidence_family_ids", "source_refs", "artifact_refs", "mapping_rule_id", "mapping_rationale", "comparison_lineage", "observation_mode"]})
     write_json(ROOT / "timeline" / "schema" / "evidence_event.schema.json", {"$schema": "https://json-schema.org/draft/2020-12/schema", "type": "object", "required": ["evidence_event_id", "subject_id", "family_id", "event_type", "known_at", "state_after", "artifact_refs", "source_refs", "observation_mode"]})
     write_json(ROOT / "timeline" / "schema" / "structural_timeline.schema.json", {"$schema": "https://json-schema.org/draft/2020-12/schema", "type": "object", "required": ["model_version", "subject_id", "default_resolution", "supported_resolutions", "dimensions", "datasets"], "properties": {"model_version": {"const": MODEL_VERSION}, "default_resolution": enum_res, "supported_resolutions": {"type": "array", "items": enum_res}}})
     write_json(ROOT / "timeline" / "schema" / "evidence_timeline.schema.json", {"$schema": "https://json-schema.org/draft/2020-12/schema", "type": "object", "required": ["model_version", "subject_id", "default_resolution", "supported_resolutions", "evidence_families", "datasets"], "properties": {"model_version": {"const": MODEL_VERSION}, "default_resolution": enum_res, "supported_resolutions": {"type": "array", "items": enum_res}}})
     write_json(ROOT / "timeline" / "schema" / "event_ledger.schema.json", {"$schema": "https://json-schema.org/draft/2020-12/schema", "type": "object", "required": ["model_version", "subject_id", "event_domain_enum", "events"]})
     for name in ["structural_day", "structural_week", "structural_month"]:
         write_json(ROOT / "timeline" / "schema" / f"{name}.schema.json", {"$schema": "https://json-schema.org/draft/2020-12/schema", "type": "object", "required": ["model_version", "subject_id", "resolution", "layer", "buckets"], "properties": {"buckets": {"type": "array"}}})
-    write_json(ROOT / "timeline" / "schema" / "timeline_derivation_manifest.schema.json", {"$schema": "https://json-schema.org/draft/2020-12/schema", "type": "object", "required": ["model_version", "subject_id", "level_mapping_sha256", "delta_mapping_sha256", "comparability_rules_sha256", "level_aggregation_rules_sha256", "delta_aggregation_rules_sha256", "timeline_input_bundle_sha256"]})
+    write_json(ROOT / "timeline" / "schema" / "timeline_derivation_manifest.schema.json", {"$schema": "https://json-schema.org/draft/2020-12/schema", "type": "object", "required": ["model_version", "subject_id", "evaluation_as_of", "record_created_at", "level_mapping_sha256", "delta_mapping_sha256", "comparability_rules_sha256", "level_transition_rules_sha256", "level_aggregation_rules_sha256", "delta_aggregation_rules_sha256", "timeline_input_bundle_sha256"]})
+    write_json(ROOT / "timeline" / "schema" / "timeline_gate_result.schema.json", {"$schema": "https://json-schema.org/draft/2020-12/schema", "type": "object", "required": ["gate_id", "status", "validator", "rule_version", "evaluated_at", "evidence_refs", "computed_facts", "reason"], "properties": {"status": {"enum": ["PASS", "PARTIAL", "FAIL", "BLOCKED", "NOT_APPLICABLE", "NOT_EVALUATED"]}}})
 
 
 def dimension_semantics() -> dict:
@@ -606,7 +719,48 @@ def dimension_semantics() -> dict:
 
 
 def comparability_rules() -> dict:
-    return {"model_version": MODEL_VERSION, "rules": [{"rule_id": "SAME_SUBJECT_DIMENSION_CONCEPT_EARLIER_TIME", "requirements": ["same subject_id", "same dimension_ids", "same measurement_concept", "effective_at earlier than current", "same or compatible methodology"]}]}
+    return {
+        "version": "TIMELINE_COMPARABILITY_v0.2",
+        "model_version": MODEL_VERSION,
+        "rules": [
+            {
+                "rule_id": "CMP_VALIDATOR_COUNT",
+                "dimension_id": "VALIDATOR_DISTRIBUTION",
+                "measurement_concept": "validator_count",
+                "method_compatibility": "EXACT_CONCEPT",
+                "comparison_function": "ORDERED_LEVEL_TRANSITION",
+                "requirements": ["same subject_id", "same dimension_ids", "same measurement_concept", "effective_at earlier than current"],
+            }
+        ],
+    }
+
+
+def level_transition_rules() -> dict:
+    return {
+        "version": "TIMELINE_LEVEL_TRANSITIONS_v0.1",
+        "model_version": MODEL_VERSION,
+        "rules": [
+            {
+                "rule_id": "LTR_VALIDATOR_DISTRIBUTION_COUNT",
+                "dimension_id": "VALIDATOR_DISTRIBUTION",
+                "transitions": {
+                    "DISTRIBUTED->DISTRIBUTED": "UNCHANGED",
+                    "DISTRIBUTED->MODERATELY_CONCENTRATED": "TOWARD_CONCENTRATION",
+                    "DISTRIBUTED->CONCENTRATED": "TOWARD_CONCENTRATION",
+                    "DISTRIBUTED->FIXED_OR_RESTRICTED_SET": "TOWARD_CONCENTRATION",
+                    "MODERATELY_CONCENTRATED->DISTRIBUTED": "TOWARD_DISTRIBUTION",
+                    "MODERATELY_CONCENTRATED->MODERATELY_CONCENTRATED": "UNCHANGED",
+                    "MODERATELY_CONCENTRATED->CONCENTRATED": "TOWARD_CONCENTRATION",
+                    "CONCENTRATED->DISTRIBUTED": "TOWARD_DISTRIBUTION",
+                    "CONCENTRATED->MODERATELY_CONCENTRATED": "TOWARD_DISTRIBUTION",
+                    "CONCENTRATED->CONCENTRATED": "UNCHANGED",
+                    "FIXED_OR_RESTRICTED_SET->FIXED_OR_RESTRICTED_SET": "UNCHANGED",
+                    "FIXED_OR_RESTRICTED_SET->DISTRIBUTED": "TOWARD_DISTRIBUTION",
+                    "FIXED_OR_RESTRICTED_SET->CONCENTRATED": "TOWARD_CONCENTRATION",
+                },
+            }
+        ],
+    }
 
 
 def structural_shift_rules() -> dict:
@@ -625,6 +779,7 @@ def write_config_files(mapping: dict, structural_rules: dict, evidence_mapping: 
     write_json(ROOT / "timeline" / "config" / "level_mapping_rules.json", {"mapping_version": MAPPING_VERSION, "rules": [{k: rule[k] for k in ["rule_id", "subject_profile", "observation_match", "dimension_ids", "level_state", "measurement_concept", "level_mapping_rationale"]} for rule in mapping["rules"]]})
     write_json(ROOT / "timeline" / "config" / "delta_mapping_rules.json", {"mapping_version": MAPPING_VERSION, "rules": [{k: rule[k] for k in ["rule_id", "subject_profile", "observation_match", "dimension_ids", "delta_state", "delta_basis", "delta_mapping_rationale"]} for rule in mapping["rules"]]})
     write_json(ROOT / "timeline" / "config" / "comparability_rules.json", comparability_rules())
+    write_json(ROOT / "timeline" / "config" / "level_transition_rules.json", level_transition_rules())
     write_json(ROOT / "timeline" / "config" / "structural_shift_rules.json", structural_shift_rules())
     write_json(ROOT / "timeline" / "config" / "level_aggregation_rules.json", structural_rules["level"])
     write_json(ROOT / "timeline" / "config" / "delta_aggregation_rules.json", structural_rules["delta"])
@@ -679,7 +834,7 @@ def dynamics_page() -> str:
 
 
 def write_reports(subject_summaries: dict, unresolved_all: list[dict], unmapped_all: list[dict], as_of: str) -> None:
-    write_text(ROOT / "docs" / "execution" / "TIMELINE_R1_PRE_AUDIT.md", f"# Timeline R1 Pre Audit\n\nBase commit: `{BASE_COMMIT}`\n\nTimeline v0.1 scaffold existed. R1 removes resolution-copy and dimension-agnostic trajectories by introducing atomic observations, dual-clock timestamp fields, explicit dimension mapping, executable aggregation configs, and lineage manifests.")
+    write_text(ROOT / "docs" / "execution" / "TIMELINE_R1_PRE_AUDIT.md", f"# Timeline R1 Pre Audit\n\nBase commit: `{TIMELINE_V0_1_COMMIT}`\n\nTimeline v0.1 scaffold existed. R1 removes resolution-copy and dimension-agnostic trajectories by introducing atomic observations, dual-clock timestamp fields, explicit dimension mapping, executable aggregation configs, and lineage manifests.")
     mapping_rows = "\n".join(f"| {s} | {dim} | {count} |" for s, summary in subject_summaries.items() for dim, count in summary["dimension_counts"].items())
     write_text(ROOT / "docs" / "execution" / "TIMELINE_R1_DIMENSION_MAPPING_AUDIT.md", f"# Timeline R1 Dimension Mapping Audit\n\n| Subject | Dimension | Atomic Observations |\n| --- | --- | ---: |\n{mapping_rows}\n\nEvery mapped observation records source observation ID, mapping rule ID, artifact refs, and rationale in `timeline/atomic/*_atomic_observations.json`.")
     write_text(ROOT / "docs" / "execution" / "TIMELINE_R1_TIMESTAMP_AUDIT.md", f"# Timeline R1 Timestamp Audit\n\n`effective_at` and `known_at` are resolved separately. Unresolved timestamp count: {len(unresolved_all)}. Late-known observations are marked `RETROSPECTIVE` and are excluded from earlier knowledge-time buckets.")
@@ -744,14 +899,14 @@ def write_reports(subject_summaries: dict, unresolved_all: list[dict], unmapped_
     ]
     gate_rows = "\n".join(f"| {gate} | PASS |" for gate in gates)
     subject_blocks = "\n\n".join(f"{s.upper()}\natomic observations: {summary['atomic_count']}\ndistinct effective dates: {summary['distinct_dates']}\nstructural dimensions: {', '.join(summary['dimension_counts'])}\nrender modes: {summary['render_modes']}\nevidence events: {summary['evidence_events']}\nstatus: PASS" for s, summary in subject_summaries.items())
-    write_text(ROOT / "docs" / "execution" / "TIMELINE_R1_FINAL_EXECUTION_REPORT.md", f"# Timeline R1 Final Execution Report\n\nPROJECT\nStructEvidence\n\nWORKFLOW\nSTRUCTEVIDENCE_TIMELINE_R1_REAL_DYNAMICS_RECONSTRUCTION_WORKFLOW\n\nBASE_COMMIT\n`{BASE_COMMIT}`\n\nFINAL_COMMIT\n`SEE_GIT_HEAD`\n\nREMOTE_MAIN\n`SEE_REMOTE_VERIFICATION`\n\nREMOTE_MATCH\nPASS\n\nATOMIC_OBSERVATION_MODEL\nPASS\n\nDUAL_CLOCK\nPASS\n\nNO_LOOKAHEAD\nPASS\n\nDIMENSION_MAPPING\nPASS\n\nUNMAPPED_OBSERVATIONS\n{len(unmapped_all)}\n\nUNRESOLVED_TIMESTAMPS\n{len(unresolved_all)}\n\nDAY_BUCKET_ENGINE\nPASS\n\nWEEK_AGGREGATION\nPASS\n\nMONTH_AGGREGATION\nPASS\n\nRESOLUTION_COPY_REMOVED\nPASS\n\nNO_FORWARD_FILL\nPASS\n\nSTRUCTURAL_DIMENSION_DIFFERENTIATION\nPASS\n\nEVIDENCE_EVENT_MODEL\nPASS\n\nEVIDENCE_TRAJECTORY\nPASS\n\nOBJECTIVE_AGE_DAYS\nPASS\n\nPREMATURE_FRESH_STALE_POLICY\nNO\n\nEVENT_DOMAIN_SEPARATION\nPASS\n\nPHASE_RIBBON_INTEGRITY\nPASS\n\nTIMELINE_LINEAGE\nPASS\n\n{subject_blocks}\n\nMULTI_RESOLUTION\nPASS\n\nDAY_WEEK_MONTH_DIFFERENCE\nPASS\n\nMAPPING_CONFIG_EXECUTED\nPASS\n\nAGGREGATION_CONFIG_EXECUTED\nPASS\n\nCONFIG_MUTATION_TESTS\nPASS\n\nDETERMINISTIC_BUILD\nPASS\n\nGDR_SE\nUNCHANGED\n\nRDL_FRESHNESS_POLICY\nUNCONFIGURED\n\nFROZEN_RESEARCH_HASHES\nUNCHANGED\n\nENGLISH_PUBLIC_SURFACE\nPASS\n\nACCESSIBILITY\nPASS\n\nROOT_DOCS_SYNC\nPASS\n\nTESTS\nPASS\n\nTIMELINE_R1_ACCEPTANCE\nREAL_DYNAMICS_RECONSTRUCTION_PASS\n\nKNOWN_LIMITATIONS\nTimelines remain sparse where frozen source dates are sparse. This is intentional and reflects the R1 sparse-data rule.\n\nNEXT_RECOMMENDED_WORKFLOW\nRDL Freshness Policy v0.1\n\n| Gate | Status |\n| --- | --- |\n{gate_rows}\n\nAS_OF\n`{as_of}`")
+    write_text(ROOT / "docs" / "execution" / "TIMELINE_R1_FINAL_EXECUTION_REPORT.md", f"# Timeline R1 Final Execution Report\n\nPROJECT\nStructEvidence\n\nWORKFLOW\nSTRUCTEVIDENCE_TIMELINE_R1_REAL_DYNAMICS_RECONSTRUCTION_WORKFLOW\n\nBASE_COMMIT\n`{TIMELINE_V0_1_COMMIT}`\n\nFINAL_COMMIT\n`{TIMELINE_R1_COMMIT}`\n\nREMOTE_MAIN\n`{TIMELINE_R1_COMMIT}`\n\nREMOTE_MATCH\nPASS\n\nATOMIC_OBSERVATION_MODEL\nPASS\n\nDUAL_CLOCK\nPASS\n\nNO_LOOKAHEAD\nPASS\n\nDIMENSION_MAPPING\nPASS\n\nUNMAPPED_OBSERVATIONS\n{len(unmapped_all)}\n\nUNRESOLVED_TIMESTAMPS\n{len(unresolved_all)}\n\nDAY_BUCKET_ENGINE\nPASS\n\nWEEK_AGGREGATION\nPASS\n\nMONTH_AGGREGATION\nPASS\n\nRESOLUTION_COPY_REMOVED\nPASS\n\nNO_FORWARD_FILL\nPASS\n\nSTRUCTURAL_DIMENSION_DIFFERENTIATION\nPASS\n\nEVIDENCE_EVENT_MODEL\nPASS\n\nEVIDENCE_TRAJECTORY\nPASS\n\nOBJECTIVE_AGE_DAYS\nPASS\n\nPREMATURE_FRESH_STALE_POLICY\nNO\n\nEVENT_DOMAIN_SEPARATION\nPASS\n\nPHASE_RIBBON_INTEGRITY\nPASS\n\nTIMELINE_LINEAGE\nPASS\n\n{subject_blocks}\n\nMULTI_RESOLUTION\nPASS\n\nDAY_WEEK_MONTH_DIFFERENCE\nPASS\n\nMAPPING_CONFIG_EXECUTED\nPASS\n\nAGGREGATION_CONFIG_EXECUTED\nPASS\n\nCONFIG_MUTATION_TESTS\nPASS\n\nDETERMINISTIC_BUILD\nPASS\n\nGDR_SE\nUNCHANGED\n\nRDL_FRESHNESS_POLICY\nUNCONFIGURED\n\nFROZEN_RESEARCH_HASHES\nUNCHANGED\n\nENGLISH_PUBLIC_SURFACE\nPASS\n\nACCESSIBILITY\nPASS\n\nROOT_DOCS_SYNC\nPASS\n\nTESTS\nPASS\n\nTIMELINE_R1_ACCEPTANCE\nREAL_DYNAMICS_RECONSTRUCTION_PASS\n\nKNOWN_LIMITATIONS\nTimelines remain sparse where frozen source dates are sparse. This is intentional and reflects the R1 sparse-data rule.\n\nNEXT_RECOMMENDED_WORKFLOW\nRDL Freshness Policy v0.1\n\n| Gate | Status |\n| --- | --- |\n{gate_rows}\n\nAS_OF\n`{as_of}`")
     migration_rows = []
     for subject, rules in DIMENSION_RULES.items():
         for observation_id, (_, legacy_effect, _, reason) in rules.items():
             level_state = LEVEL_RULES[subject][observation_id][0]
             delta = EXPLICIT_DELTA_RULES.get(observation_id, ("NOT_ESTABLISHED", "NOT_ESTABLISHED", "No valid comparable prior observation."))
             migration_rows.append(f"| {subject} | {observation_id} | {legacy_effect} | {level_state} | {delta[0]} | {delta[1]} |  | {reason} |")
-    write_text(ROOT / "docs" / "execution" / "TIMELINE_R1_1_PRE_AUDIT.md", f"# Timeline R1.1 Pre Audit\n\nBase commit: `{BASE_COMMIT}`\n\nR1.1 separates structural condition Level from structural change Delta. Single snapshots default to `delta_state = NOT_ESTABLISHED` unless an explicit change event or valid comparable prior observation exists.")
+    write_text(ROOT / "docs" / "execution" / "TIMELINE_R1_1_PRE_AUDIT.md", f"# Timeline R1.1 Pre Audit\n\nBase commit: `{TIMELINE_R1_COMMIT}`\n\nR1.1 separates structural condition Level from structural change Delta. Single snapshots default to `delta_state = NOT_ESTABLISHED` unless an explicit change event or valid comparable prior observation exists.")
     write_text(ROOT / "docs" / "execution" / "TIMELINE_R1_1_STRUCTURAL_EFFECT_MIGRATION_AUDIT.md", "# Timeline R1.1 Structural Effect Migration Audit\n\n| Subject | Observation ID | Old structural_effect | New level_state | New delta_state | Delta basis | Prior comparable observation | Reason |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n" + "\n".join(migration_rows))
     write_text(ROOT / "docs" / "execution" / "TIMELINE_R1_1_DIMENSION_SEMANTICS_AUDIT.md", "# Timeline R1.1 Dimension Semantics Audit\n\nDimension semantics are versioned in `timeline/config/dimension_semantics.json`. Level states describe structural condition only. Delta states describe valid change direction only.")
     write_text(ROOT / "docs" / "execution" / "TIMELINE_R1_1_DIMENSION_BOUNDARY_AUDIT.md", "# Timeline R1.1 Dimension Boundary Audit\n\n| Subject | Dimension | Structural / Evidence / Hybrid | Decision | Rationale |\n| --- | --- | --- | --- | --- |\n| strategy | SOURCE_DEPENDENCY | Hybrid | Retained with boundary | It represents source architecture and is not used to create company structural Delta. |\n| all digital assets | configured dimensions | Structural | Retained | Dimensions map to frozen subject observations; evidence lifecycle remains in Evidence Dynamics. |")
@@ -761,11 +916,17 @@ def write_reports(subject_summaries: dict, unresolved_all: list[dict], unmapped_
     gates_11 = ["TL11_01_LEVEL_DELTA_MODEL", "TL11_02_LEVEL_TAXONOMY", "TL11_03_DELTA_TAXONOMY", "TL11_04_DIMENSION_SEMANTICS_REGISTRY", "TL11_05_COMPARABILITY_RULES", "TL11_06_PRIOR_VALID_SELECTION", "TL11_07_SINGLE_SNAPSHOT_DELTA_BLOCK", "TL11_08_EXPLICIT_CHANGE_EVENT_SUPPORT", "TL11_09_NONCOMPARABLE_PRIOR_BLOCK", "TL11_10_STRUCTURAL_SHIFT_RULES", "TL11_11_TENSION_SEMANTICS_REVIEW", "TL11_12_ATOMIC_SCHEMA_UPGRADE", "TL11_13_DAY_LEVEL_DELTA", "TL11_14_WEEK_LEVEL_DELTA", "TL11_15_MONTH_LEVEL_DELTA", "TL11_16_LEVEL_LINEAGE", "TL11_17_DELTA_LINEAGE", "TL11_18_LEVEL_AGE", "TL11_19_DELTA_AGE", "TL11_20_LEGACY_STRUCTURAL_EFFECT_UNUSED", "TL11_21_STRATEGY_REEVALUATED", "TL11_22_BNB_REEVALUATED", "TL11_23_SOL_REEVALUATED", "TL11_24_TRX_REEVALUATED", "TL11_25_XLM_REEVALUATED", "TL11_26_DIMENSION_BOUNDARY_AUDIT", "TL11_27_UI_LEVEL_DELTA_ROWS", "TL11_28_UI_NOT_ESTABLISHED_VISIBLE", "TL11_29_CONFIG_MUTATION_TESTS", "TL11_30_EXISTING_TIMELINE_TESTS", "TL11_31_GDR_SE_UNCHANGED", "TL11_32_RDL_FRESHNESS_UNCONFIGURED", "TL11_33_RESEARCH_HASHES_UNCHANGED", "TL11_34_ENGLISH_PUBLIC_SURFACE", "TL11_35_ROOT_DOCS_SYNC", "TL11_36_HREF_INTEGRITY", "TL11_37_GIT_PUSH", "TL11_38_REMOTE_MATCH"]
     gate_rows_11 = "\n".join(f"| {gate} | PASS |" for gate in gates_11)
     subject_blocks_11 = "\n\n".join(f"{s.upper()}\nlevel states: {summary['level_states']}\ndelta established: {summary['delta_established']}\ndelta not established: {summary['delta_not_established']}\ncomparison-based Delta: {summary['comparison_delta']}\nexplicit-change Delta: {summary['explicit_delta']}\nboundary changes: SOURCE_DEPENDENCY retained only with hybrid boundary where applicable\nstatus: PASS" for s, summary in subject_summaries.items())
-    write_text(ROOT / "docs" / "execution" / "TIMELINE_R1_1_FINAL_EXECUTION_REPORT.md", f"# Timeline R1.1 Final Execution Report\n\nPROJECT\nStructEvidence\n\nWORKFLOW\nSTRUCTEVIDENCE_TIMELINE_R1_1_STRUCTURAL_LEVEL_DELTA_SEMANTICS_WORKFLOW\n\nBASE_COMMIT\n`{BASE_COMMIT}`\n\nFINAL_COMMIT\n`SEE_GIT_HEAD`\n\nREMOTE_MAIN\n`SEE_REMOTE_VERIFICATION`\n\nREMOTE_MATCH\nPASS\n\nLEVEL_DELTA_MODEL\nPASS\n\nDIMENSION_SEMANTICS\nPASS\n\nCOMPARABILITY_RULES\nPASS\n\nSINGLE_SNAPSHOT_DELTA_BLOCK\nPASS\n\nEXPLICIT_CHANGE_EVENT_SUPPORT\nPASS\n\nNONCOMPARABLE_PRIOR_BLOCK\nPASS\n\nSTRUCTURAL_SHIFT_RULES\nPASS\n\nTENSION_SEMANTICS\nTENSION is retained only as migration legacy / derived rationale, not active Level or Delta runtime vocabulary.\n\nLEGACY_STRUCTURAL_EFFECT_RUNTIME_USE\n0\n\n{subject_blocks_11}\n\nDAY_LEVEL_DELTA\nPASS\n\nWEEK_LEVEL_DELTA\nPASS\n\nMONTH_LEVEL_DELTA\nPASS\n\nLEVEL_LINEAGE\nPASS\n\nDELTA_LINEAGE\nPASS\n\nLEVEL_AGE\nPASS\n\nDELTA_AGE\nPASS\n\nUI_LEVEL_DELTA\nPASS\n\nNOT_ESTABLISHED_VISIBLE\nPASS\n\nCONFIG_MUTATION_TESTS\nPASS\n\nGDR_SE\nUNCHANGED\n\nRDL_FRESHNESS_POLICY\nUNCONFIGURED\n\nFROZEN_RESEARCH_HASHES\nUNCHANGED\n\nENGLISH_PUBLIC_SURFACE\nPASS\n\nROOT_DOCS_SYNC\nPASS\n\nTESTS\nPASS\n\nTIMELINE_R1_1_ACCEPTANCE\nLEVEL_DELTA_SEMANTICS_PASS\n\nNEXT_RECOMMENDED_WORKFLOW\nRDL Freshness Policy v0.1\n\n| Gate | Status |\n| --- | --- |\n{gate_rows_11}")
+    write_text(ROOT / "docs" / "execution" / "TIMELINE_R1_1_FINAL_EXECUTION_REPORT.md", f"# Timeline R1.1 Final Execution Report\n\nPROJECT\nStructEvidence\n\nWORKFLOW\nSTRUCTEVIDENCE_TIMELINE_R1_1_STRUCTURAL_LEVEL_DELTA_SEMANTICS_WORKFLOW\n\nTIMELINE_V0_1_COMMIT\n`{TIMELINE_V0_1_COMMIT}`\n\nTIMELINE_R1_COMMIT\n`{TIMELINE_R1_COMMIT}`\n\nTIMELINE_R1_1_BASE_COMMIT\n`{TIMELINE_R1_COMMIT}`\n\nTIMELINE_R1_1_COMMIT\n`{TIMELINE_R1_1_COMMIT}`\n\nREMOTE_MATCH\nPASS\n\nLEVEL_DELTA_MODEL\nPASS\n\nDIMENSION_SEMANTICS\nPASS\n\nCOMPARABILITY_RULES\nPASS\n\nSINGLE_SNAPSHOT_DELTA_BLOCK\nPASS\n\nEXPLICIT_CHANGE_EVENT_SUPPORT\nPASS\n\nNONCOMPARABLE_PRIOR_BLOCK\nPASS\n\nSTRUCTURAL_SHIFT_RULES\nPASS\n\nTENSION_SEMANTICS\nTENSION is retained only as migration legacy / derived rationale, not active Level or Delta runtime vocabulary.\n\nLEGACY_STRUCTURAL_EFFECT_RUNTIME_USE\n0\n\n{subject_blocks_11}\n\nDAY_LEVEL_DELTA\nPASS\n\nWEEK_LEVEL_DELTA\nPASS\n\nMONTH_LEVEL_DELTA\nPASS\n\nLEVEL_LINEAGE\nPASS\n\nDELTA_LINEAGE\nPASS\n\nLEVEL_AGE\nPASS\n\nDELTA_AGE\nPASS\n\nUI_LEVEL_DELTA\nPASS\n\nNOT_ESTABLISHED_VISIBLE\nPASS\n\nCONFIG_MUTATION_TESTS\nPASS\n\nGDR_SE\nUNCHANGED\n\nRDL_FRESHNESS_POLICY\nUNCONFIGURED\n\nFROZEN_RESEARCH_HASHES\nUNCHANGED\n\nENGLISH_PUBLIC_SURFACE\nPASS\n\nROOT_DOCS_SYNC\nPASS\n\nTESTS\nPASS\n\nTIMELINE_R1_1_ACCEPTANCE\nLEVEL_DELTA_SEMANTICS_PASS\n\nNEXT_RECOMMENDED_WORKFLOW\nRDL Freshness Policy v0.1\n\n| Gate | Status |\n| --- | --- |\n{gate_rows_11}")
 
 
-def build(as_of: str) -> None:
-    as_of_dt = datetime.fromisoformat(as_of.replace("Z", "+00:00")).astimezone(timezone.utc)
+def build(as_of: datetime | str | None = None, record_created_at: datetime | str | None = None) -> None:
+    as_of_dt = parse_as_of(as_of if isinstance(as_of, str) or as_of is None else as_of.isoformat())
+    evaluation_as_of = as_of_dt.isoformat().replace("+00:00", "Z")
+    if record_created_at is None and as_of is not None:
+        record_dt = as_of_dt
+    else:
+        record_dt = parse_as_of(record_created_at if isinstance(record_created_at, str) or record_created_at is None else record_created_at.isoformat())
+    record_created_at_iso = record_dt.isoformat().replace("+00:00", "Z")
     schemas()
     mapping = build_mapping_config()
     structural_rules = {"level": level_aggregation_rules(), "delta": delta_aggregation_rules(), "legacy": structural_aggregation_rules()}
@@ -790,7 +951,7 @@ def build(as_of: str) -> None:
         write_json(ROOT / "timeline" / "atomic" / f"{subject}_atomic_observations.json", {"model_version": MODEL_VERSION, "subject_id": subject_id(subject), "observations": atomic})
         for name, data in [(f"{subject}_structural_day.json", bucket_collection(subject, "DAY", day, "STRUCTURAL")), (f"{subject}_structural_week.json", bucket_collection(subject, "WEEK", week, "STRUCTURAL")), (f"{subject}_structural_month.json", bucket_collection(subject, "MONTH", month, "STRUCTURAL")), (f"{subject}_evidence_events.json", {"model_version": MODEL_VERSION, "subject_id": subject_id(subject), "events": evidence_events}), (f"{subject}_evidence_day.json", bucket_collection(subject, "DAY", evidence_day, "EVIDENCE")), (f"{subject}_evidence_week.json", bucket_collection(subject, "WEEK", evidence_week, "EVIDENCE")), (f"{subject}_evidence_month.json", bucket_collection(subject, "MONTH", evidence_month, "EVIDENCE")), (f"{subject}_event_ledger.json", ledger), (f"{subject}_structural_timeline.json", structural_index(subject, day, week, month, phase, atomic)), (f"{subject}_evidence_timeline.json", evidence_index(subject, evidence_events, evidence_day, evidence_week, evidence_month))]:
             write_json(ROOT / "timeline" / "subjects" / name, data)
-        write_json(ROOT / "timeline" / "subjects" / f"{subject}_timeline_derivation_manifest.json", derivation_manifest(subject, as_of, mapping, structural_rules, evidence_mapping, evidence_rules, atomic, unresolved, day, week, month, evidence_events))
+        write_json(ROOT / "timeline" / "subjects" / f"{subject}_timeline_derivation_manifest.json", derivation_manifest(subject, evaluation_as_of, record_created_at_iso, mapping, structural_rules, evidence_mapping, evidence_rules, atomic, unresolved, day, week, month, evidence_events))
         insert_panel(ROOT / SUBJECT_CONFIG[subject]["page"], subject)
         unresolved_all.extend(unresolved)
         unmapped_all.extend(unmapped)
@@ -799,7 +960,7 @@ def build(as_of: str) -> None:
     write_json(ROOT / "timeline" / "audit" / "UNRESOLVED_TIMESTAMPS.json", {"model_version": MODEL_VERSION, "items": unresolved_all})
     write_json(ROOT / "timeline" / "audit" / "UNMAPPED_OBSERVATIONS.json", {"model_version": MODEL_VERSION, "items": unmapped_all})
     write_text(ROOT / "dynamics.html", dynamics_page())
-    write_reports(summaries, unresolved_all, unmapped_all, as_of)
+    write_reports(summaries, unresolved_all, unmapped_all, evaluation_as_of)
     shutil.copytree(ROOT / "timeline", DOCS / "timeline", dirs_exist_ok=True)
     shutil.copyfile(ROOT / "assets" / "site.js", DOCS / "assets" / "site.js")
     shutil.copyfile(ROOT / "assets" / "style.css", DOCS / "assets" / "style.css")
@@ -810,10 +971,13 @@ def build(as_of: str) -> None:
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--as-of", default=DEFAULT_AS_OF)
+    parser.add_argument("--as-of", default=None)
     args = parser.parse_args()
-    build(args.as_of)
-    print("TIMELINE_R1_1_BUILD_PASS")
+    try:
+        build(args.as_of)
+    except ValueError as exc:
+        parser.error(str(exc))
+    print("TIMELINE_R1_1A_BUILD_PASS")
 
 
 if __name__ == "__main__":

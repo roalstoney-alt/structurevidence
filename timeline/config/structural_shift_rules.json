@@ -1,5 +1,5 @@
 {
-  "model_version": "TIMELINE_MODEL_R1_1",
+  "model_version": "TIMELINE_MODEL_R1_1A",
   "rules": [
     {
       "importance_alone_is_sufficient": false,

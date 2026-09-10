@@ -22,7 +22,8 @@
         ]
       },
       "rule_id": "STRATEGY_STRATEGY_R1_O1_TO_TREASURY_STRUCTURE",
-      "subject_profile": "strategy"
+      "subject_profile": "strategy",
+      "transition_rule_id": null
     },
     {
       "delta_basis": "NOT_ESTABLISHED",
@@ -45,7 +46,8 @@
         ]
       },
       "rule_id": "STRATEGY_STRATEGY_R1_O2_TO_TREASURY_STRUCTURE",
-      "subject_profile": "strategy"
+      "subject_profile": "strategy",
+      "transition_rule_id": null
     },
     {
       "delta_basis": "NOT_ESTABLISHED",
@@ -68,7 +70,8 @@
         ]
       },
       "rule_id": "STRATEGY_STRATEGY_R1_O3_TO_RESOURCE_PRESSURE",
-      "subject_profile": "strategy"
+      "subject_profile": "strategy",
+      "transition_rule_id": null
     },
     {
       "delta_basis": "NOT_ESTABLISHED",
@@ -91,7 +94,8 @@
         ]
       },
       "rule_id": "STRATEGY_STRATEGY_R1_O4_TO_NARRATIVE_DEPENDENCE",
-      "subject_profile": "strategy"
+      "subject_profile": "strategy",
+      "transition_rule_id": null
     },
     {
       "delta_basis": "NOT_ESTABLISHED",
@@ -114,7 +118,8 @@
         ]
       },
       "rule_id": "STRATEGY_STRATEGY_R1_O5_TO_SOURCE_DEPENDENCY",
-      "subject_profile": "strategy"
+      "subject_profile": "strategy",
+      "transition_rule_id": null
     },
     {
       "delta_basis": "EXPLICIT_CHANGE_EVENT",
@@ -137,7 +142,8 @@
         ]
       },
       "rule_id": "BNB_BNB_R1_O1_TO_SUPPLY_STRUCTURE",
-      "subject_profile": "BNB"
+      "subject_profile": "BNB",
+      "transition_rule_id": null
     },
     {
       "delta_basis": "NOT_ESTABLISHED",
@@ -160,7 +166,8 @@
         ]
       },
       "rule_id": "BNB_BNB_R1_O2_TO_SUPPLY_STRUCTURE",
-      "subject_profile": "BNB"
+      "subject_profile": "BNB",
+      "transition_rule_id": null
     },
     {
       "delta_basis": "NOT_ESTABLISHED",
@@ -183,7 +190,8 @@
         ]
       },
       "rule_id": "BNB_BNB_R1_O3_TO_SUPPLY_STRUCTURE",
-      "subject_profile": "BNB"
+      "subject_profile": "BNB",
+      "transition_rule_id": null
     },
     {
       "delta_basis": "NOT_ESTABLISHED",
@@ -206,7 +214,8 @@
         ]
       },
       "rule_id": "BNB_BNB_R1_O4_TO_UTILITY_STRUCTURE",
-      "subject_profile": "BNB"
+      "subject_profile": "BNB",
+      "transition_rule_id": null
     },
     {
       "delta_basis": "NOT_ESTABLISHED",
@@ -229,7 +238,8 @@
         ]
       },
       "rule_id": "BNB_BNB_R1_O5_TO_VALIDATOR_DISTRIBUTION",
-      "subject_profile": "BNB"
+      "subject_profile": "BNB",
+      "transition_rule_id": null
     },
     {
       "delta_basis": "NOT_ESTABLISHED",
@@ -252,7 +262,8 @@
         ]
       },
       "rule_id": "BNB_BNB_R1_O6_TO_VALIDATOR_DISTRIBUTION",
-      "subject_profile": "BNB"
+      "subject_profile": "BNB",
+      "transition_rule_id": null
     },
     {
       "delta_basis": "NOT_ESTABLISHED",
@@ -275,7 +286,8 @@
         ]
       },
       "rule_id": "BNB_BNB_R1_O7_TO_GOVERNANCE_STRUCTURE",
-      "subject_profile": "BNB"
+      "subject_profile": "BNB",
+      "transition_rule_id": null
     },
     {
       "delta_basis": "NOT_ESTABLISHED",
@@ -298,7 +310,8 @@
         ]
       },
       "rule_id": "BNB_BNB_R1_O8_TO_GOVERNANCE_STRUCTURE",
-      "subject_profile": "BNB"
+      "subject_profile": "BNB",
+      "transition_rule_id": null
     },
     {
       "delta_basis": "NOT_ESTABLISHED",
@@ -321,7 +334,8 @@
         ]
       },
       "rule_id": "BNB_BNB_R1_O9_TO_UTILITY_STRUCTURE",
-      "subject_profile": "BNB"
+      "subject_profile": "BNB",
+      "transition_rule_id": null
     },
     {
       "delta_basis": "NOT_ESTABLISHED",
@@ -344,7 +358,8 @@
         ]
       },
       "rule_id": "SOL_SOL_R1_O1_TO_RESOURCE_PRESSURE",
-      "subject_profile": "SOL"
+      "subject_profile": "SOL",
+      "transition_rule_id": null
     },
     {
       "delta_basis": "NOT_ESTABLISHED",
@@ -367,7 +382,8 @@
         ]
       },
       "rule_id": "SOL_SOL_R1_O2_TO_RESOURCE_PRESSURE",
-      "subject_profile": "SOL"
+      "subject_profile": "SOL",
+      "transition_rule_id": null
     },
     {
       "delta_basis": "NOT_ESTABLISHED",
@@ -390,7 +406,8 @@
         ]
       },
       "rule_id": "SOL_SOL_R1_O3_TO_RESOURCE_PRESSURE",
-      "subject_profile": "SOL"
+      "subject_profile": "SOL",
+      "transition_rule_id": null
     },
     {
       "delta_basis": "NOT_ESTABLISHED",
@@ -413,7 +430,8 @@
         ]
       },
       "rule_id": "SOL_SOL_R1_O4_TO_VALIDATOR_DISTRIBUTION",
-      "subject_profile": "SOL"
+      "subject_profile": "SOL",
+      "transition_rule_id": null
     },
     {
       "delta_basis": "NOT_ESTABLISHED",
@@ -436,7 +454,8 @@
         ]
       },
       "rule_id": "SOL_SOL_R1_O5_TO_VALIDATOR_DISTRIBUTION",
-      "subject_profile": "SOL"
+      "subject_profile": "SOL",
+      "transition_rule_id": null
     },
     {
       "delta_basis": "NOT_ESTABLISHED",
@@ -459,7 +478,8 @@
         ]
       },
       "rule_id": "SOL_SOL_R1_O6_TO_VALIDATOR_DISTRIBUTION",
-      "subject_profile": "SOL"
+      "subject_profile": "SOL",
+      "transition_rule_id": null
     },
     {
       "delta_basis": "NOT_ESTABLISHED",
@@ -482,7 +502,8 @@
         ]
       },
       "rule_id": "SOL_SOL_R1_O7_TO_GOVERNANCE_STRUCTURE",
-      "subject_profile": "SOL"
+      "subject_profile": "SOL",
+      "transition_rule_id": null
     },
     {
       "delta_basis": "NOT_ESTABLISHED",
@@ -505,7 +526,8 @@
         ]
       },
       "rule_id": "SOL_SOL_R1_O8_TO_UTILITY_STRUCTURE",
-      "subject_profile": "SOL"
+      "subject_profile": "SOL",
+      "transition_rule_id": null
     },
     {
       "delta_basis": "NOT_ESTABLISHED",
@@ -528,7 +550,8 @@
         ]
       },
       "rule_id": "TRX_TRX_R1_O1_TO_SETTLEMENT_ROLE",
-      "subject_profile": "TRX"
+      "subject_profile": "TRX",
+      "transition_rule_id": null
     },
     {
       "delta_basis": "NOT_ESTABLISHED",
@@ -551,7 +574,8 @@
         ]
       },
       "rule_id": "TRX_TRX_R1_O2_TO_SETTLEMENT_ROLE",
-      "subject_profile": "TRX"
+      "subject_profile": "TRX",
+      "transition_rule_id": null
     },
     {
       "delta_basis": "NOT_ESTABLISHED",
@@ -574,7 +598,8 @@
         ]
       },
       "rule_id": "TRX_TRX_R1_O3_TO_RESOURCE_PRESSURE",
-      "subject_profile": "TRX"
+      "subject_profile": "TRX",
+      "transition_rule_id": null
     },
     {
       "delta_basis": "NOT_ESTABLISHED",
@@ -597,7 +622,8 @@
         ]
       },
       "rule_id": "TRX_TRX_R1_O4_TO_RESOURCE_PRESSURE",
-      "subject_profile": "TRX"
+      "subject_profile": "TRX",
+      "transition_rule_id": null
     },
     {
       "delta_basis": "NOT_ESTABLISHED",
@@ -620,7 +646,8 @@
         ]
       },
       "rule_id": "TRX_TRX_R1_O5_TO_VALIDATOR_DISTRIBUTION",
-      "subject_profile": "TRX"
+      "subject_profile": "TRX",
+      "transition_rule_id": null
     },
     {
       "delta_basis": "NOT_ESTABLISHED",
@@ -643,7 +670,8 @@
         ]
       },
       "rule_id": "TRX_TRX_R1_O6_TO_GOVERNANCE_STRUCTURE",
-      "subject_profile": "TRX"
+      "subject_profile": "TRX",
+      "transition_rule_id": null
     },
     {
       "delta_basis": "NOT_ESTABLISHED",
@@ -666,7 +694,8 @@
         ]
       },
       "rule_id": "TRX_TRX_R1_O7_TO_GOVERNANCE_STRUCTURE",
-      "subject_profile": "TRX"
+      "subject_profile": "TRX",
+      "transition_rule_id": null
     },
     {
       "delta_basis": "NOT_ESTABLISHED",
@@ -689,7 +718,8 @@
         ]
       },
       "rule_id": "TRX_TRX_R1_O8_TO_GOVERNANCE_STRUCTURE",
-      "subject_profile": "TRX"
+      "subject_profile": "TRX",
+      "transition_rule_id": null
     },
     {
       "delta_basis": "NOT_ESTABLISHED",
@@ -712,7 +742,8 @@
         ]
       },
       "rule_id": "XLM_XLM_R1_O1_TO_TREASURY_STRUCTURE",
-      "subject_profile": "XLM"
+      "subject_profile": "XLM",
+      "transition_rule_id": null
     },
     {
       "delta_basis": "NOT_ESTABLISHED",
@@ -735,7 +766,8 @@
         ]
       },
       "rule_id": "XLM_XLM_R1_O2_TO_TREASURY_STRUCTURE",
-      "subject_profile": "XLM"
+      "subject_profile": "XLM",
+      "transition_rule_id": null
     },
     {
       "delta_basis": "NOT_ESTABLISHED",
@@ -758,7 +790,8 @@
         ]
       },
       "rule_id": "XLM_XLM_R1_O3_TO_TREASURY_STRUCTURE",
-      "subject_profile": "XLM"
+      "subject_profile": "XLM",
+      "transition_rule_id": null
     },
     {
       "delta_basis": "NOT_ESTABLISHED",
@@ -781,7 +814,8 @@
         ]
       },
       "rule_id": "XLM_XLM_R1_O4_TO_FOUNDATION_DEPENDENCE",
-      "subject_profile": "XLM"
+      "subject_profile": "XLM",
+      "transition_rule_id": null
     },
     {
       "delta_basis": "NOT_ESTABLISHED",
@@ -804,7 +838,8 @@
         ]
       },
       "rule_id": "XLM_XLM_R1_O5_TO_TREASURY_STRUCTURE",
-      "subject_profile": "XLM"
+      "subject_profile": "XLM",
+      "transition_rule_id": null
     },
     {
       "delta_basis": "NOT_ESTABLISHED",
@@ -827,7 +862,8 @@
         ]
       },
       "rule_id": "XLM_XLM_R1_O6_TO_FOUNDATION_DEPENDENCE",
-      "subject_profile": "XLM"
+      "subject_profile": "XLM",
+      "transition_rule_id": null
     },
     {
       "delta_basis": "NOT_ESTABLISHED",
@@ -850,7 +886,8 @@
         ]
       },
       "rule_id": "XLM_XLM_R1_O7_TO_VALIDATOR_DISTRIBUTION",
-      "subject_profile": "XLM"
+      "subject_profile": "XLM",
+      "transition_rule_id": null
     },
     {
       "delta_basis": "NOT_ESTABLISHED",
@@ -873,7 +910,8 @@
         ]
       },
       "rule_id": "XLM_XLM_R1_O8_TO_SETTLEMENT_ROLE",
-      "subject_profile": "XLM"
+      "subject_profile": "XLM",
+      "transition_rule_id": null
     }
   ]
 }
