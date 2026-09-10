@@ -118,7 +118,9 @@ def update_public_pages(records: dict[str, dict]) -> None:
     write(ROOT / "gdr.html", gdr)
     write(DOCS / "gdr.html", gdr)
     verify = (ROOT / "verify.html").read_text(encoding="utf-8")
-    start = verify.find("<dt>Authorization ID</dt>")
+    start = verify.find("<dt>Evaluation Mode</dt>")
+    if start == -1:
+        start = verify.find("<dt>Authorization ID</dt>")
     end = verify.find("  </dl>", start)
     runtime_block = f"""<dt>Evaluation Mode</dt><dd><code>RUNTIME_EVALUATED</code></dd>
     <dt>Authorization ID</dt><dd><code>{strategy['authorization_id']}</code></dd>
