@@ -1,0 +1,162 @@
+[
+  {
+    "critical_assumptions": [
+      "Primary reserve asset is not semantically equivalent to never sell."
+    ],
+    "current_status": "VIABLE",
+    "description": "BTC monetization can coexist coherently with primary-reserve-asset policy.",
+    "discriminating_evidence_needed": [
+      "Future same-scope board policy text, audited annual discussion, and sale cadence after August 2026."
+    ],
+    "hypothesis_id": "H1",
+    "observed_contradicting_evidence": [],
+    "observed_contradicting_evidence_status": "NONE_FOUND",
+    "potential_falsifiers": [
+      "formal abandonment of reserve policy",
+      "sustained liquidation inconsistent with disclosed monetization framework"
+    ],
+    "reviewed_at": "2026-09-08T00:00:00Z",
+    "status_reason": "No observed same-scope contradiction exists in the frozen record; future falsifiers are separated.",
+    "supporting_evidence": [
+      "CLM-S6-001",
+      "CLM-S6-002",
+      "CLM-S6-009",
+      "CLM-S6-010"
+    ],
+    "title": "Coherent Treasury Evolution"
+  },
+  {
+    "critical_assumptions": [
+      "Hybrid status requires monetization to have an ongoing structural role rather than isolated execution."
+    ],
+    "current_status": "VIABLE",
+    "description": "Strategy has structurally moved to a hybrid accumulation + monetization model.",
+    "discriminating_evidence_needed": [
+      "Subsequent filings showing whether monetization persists or is narrowed to exceptions."
+    ],
+    "hypothesis_id": "H2",
+    "observed_contradicting_evidence": [],
+    "observed_contradicting_evidence_status": "NONE_FOUND",
+    "potential_falsifiers": [
+      "later evidence showing sales were isolated and not framework-linked",
+      "policy language treating monetization as exceptional only"
+    ],
+    "reviewed_at": "2026-09-08T00:00:00Z",
+    "status_reason": "No current frozen artifact materially contradicts hybrid classification.",
+    "supporting_evidence": [
+      "CLM-S6-002",
+      "CLM-S6-009",
+      "CLM-S6-019",
+      "CLM-S6-021"
+    ],
+    "title": "Structural Shift to Hybrid Treasury Management"
+  },
+  {
+    "critical_assumptions": [
+      "Cash obligations can influence behavior without being the sole or stress-only explanation."
+    ],
+    "current_status": "WEAKENED",
+    "description": "Cash obligations materially pressure liquidity behavior.",
+    "discriminating_evidence_needed": [
+      "Future reserve coverage ratios, preferred dividend cadence, and explicit liquidity language."
+    ],
+    "hypothesis_id": "H3",
+    "observed_contradicting_evidence": [
+      "USD Reserve growth",
+      "ATM capacity",
+      "reserve funding"
+    ],
+    "observed_contradicting_evidence_status": "FOUND",
+    "potential_falsifiers": [
+      "large reserve buffers persist while obligations are fully covered without monetization or new financing"
+    ],
+    "reviewed_at": "2026-09-08T00:00:00Z",
+    "status_reason": "Observed reserve and financing evidence weakens a stress-only pressure interpretation.",
+    "supporting_evidence": [
+      "CLM-S6-003",
+      "CLM-S6-015",
+      "CLM-S6-018"
+    ],
+    "title": "Cash-Obligation Pressure"
+  },
+  {
+    "critical_assumptions": [
+      "Financing flexibility can coexist with obligations and monetization but does not erase them."
+    ],
+    "current_status": "VIABLE",
+    "description": "Financing flexibility explains activity better than stress.",
+    "discriminating_evidence_needed": [
+      "Later ATM capacity, debt/preferred terms, and management discussion of liquidity constraints."
+    ],
+    "hypothesis_id": "H4",
+    "observed_contradicting_evidence": [
+      "BTC monetization and fixed obligations prevent a financing-only explanation from fully absorbing the evidence."
+    ],
+    "observed_contradicting_evidence_status": "FOUND",
+    "potential_falsifiers": [
+      "filings disclose constrained access",
+      "liquidity shortfall",
+      "forced-sale language"
+    ],
+    "reviewed_at": "2026-09-08T00:00:00Z",
+    "status_reason": "Financing flexibility remains viable but observed monetization/obligation evidence limits a financing-only explanation.",
+    "supporting_evidence": [
+      "CLM-S6-006",
+      "CLM-S6-013",
+      "CLM-S6-023"
+    ],
+    "title": "Financing Flexibility Dominates"
+  },
+  {
+    "critical_assumptions": [
+      "Semantic lag is channel/context-dependent and should not be treated as intent."
+    ],
+    "current_status": "VIABLE",
+    "description": "Headline narrative lags operational policy evolution.",
+    "discriminating_evidence_needed": [
+      "Longitudinal analysis of issuer homepage, presentations, and filings after S6 window."
+    ],
+    "hypothesis_id": "H5",
+    "observed_contradicting_evidence": [
+      "Framework language publicly integrates monetization."
+    ],
+    "observed_contradicting_evidence_status": "FOUND",
+    "potential_falsifiers": [
+      "public narrative consistently and prominently incorporates monetization alongside reserve identity"
+    ],
+    "reviewed_at": "2026-09-08T00:00:00Z",
+    "status_reason": "The framework narrows but does not remove the semantic-lag interpretation.",
+    "supporting_evidence": [
+      "CLM-S6-001",
+      "CLM-S6-002",
+      "CLM-S6-004"
+    ],
+    "title": "Semantic / Narrative Lag"
+  },
+  {
+    "critical_assumptions": [
+      "Measurement dates, policy scope, and security class distinctions are preserved."
+    ],
+    "current_status": "VIABLE",
+    "description": "Apparent conflicts mostly disappear after date/scope/definition alignment.",
+    "discriminating_evidence_needed": [
+      "Future same-date policy/action records and complete cost-basis components."
+    ],
+    "hypothesis_id": "H6",
+    "observed_contradicting_evidence": [],
+    "observed_contradicting_evidence_status": "NONE_FOUND",
+    "potential_falsifiers": [
+      "same-date same-scope claims remain irreconcilable after normalization",
+      "numerical conflict survives normalization",
+      "policy text explicitly contradicts disclosed action"
+    ],
+    "reviewed_at": "2026-09-08T00:00:00Z",
+    "status_reason": "No same-date same-scope material conflict survived normalization in the frozen record.",
+    "supporting_evidence": [
+      "CLM-S6-001",
+      "CLM-S6-009",
+      "CLM-S6-011"
+    ],
+    "title": "Apparent Conflict Caused by Scope / Timing"
+  }
+]

@@ -1,0 +1,215 @@
+{
+  "dependency_dimensions": [
+    "authorship_independence",
+    "observation_independence",
+    "hosting_independence"
+  ],
+  "edges": [
+    {
+      "dependency": "PARTIALLY_DEPENDENT",
+      "from": "ART-S6-IR-Q2-2026",
+      "reason": "Issuer-authored IR and issuer-filed SEC disclosure overlap.",
+      "to": "ART-S6-SEC-Q2-2026-10Q"
+    },
+    {
+      "dependency": "PARTIALLY_DEPENDENT",
+      "from": "ART-S6-SEC-2026-0706-8K",
+      "reason": "Issuer-filed current report and issuer IR framework are not mutually independent authorship.",
+      "to": "ART-S6-IR-DIGITAL-CREDIT"
+    },
+    {
+      "dependency": "PARTIALLY_DEPENDENT",
+      "from": "ART-S6-1-NASDAQ-MSTR-SEC-FILINGS-PAGE",
+      "reason": "Independent host/category for listing context; filing content remains SEC/issuer disclosure chain.",
+      "to": "ART-S6-SEC-Q2-2026-10Q"
+    },
+    {
+      "dependency": "PARTIALLY_DEPENDENT",
+      "from": "ART-S6-1-SEC-COMPANYFACTS-API-CANDIDATE",
+      "reason": "Government structured API mirrors issuer-filed XBRL facts.",
+      "to": "ART-S6-SEC-Q2-2026-10Q"
+    }
+  ],
+  "independent_source_coverage": "PARTIAL",
+  "limitation": "No source found that independently observes the material treasury-policy, BTC-sale, reserve, and obligation facts outside issuer-authored filings/IR. Nasdaq is accepted only for independent listing/security context.",
+  "method_completion": "S6.1",
+  "nodes": [
+    {
+      "artifact_id": "ART-S6-SEC-2025-10K",
+      "content_hash": "f8bdfc4540033f3cbf68917e01350290901081dd0fd3d62444af86b938f6345c",
+      "content_type": "text/html",
+      "published_at": "2026-02-13",
+      "publisher": "SEC",
+      "raw_file": "evidence-freeze/S6/raw/sec_2025_10k.html",
+      "retrieved_at": "2026-09-08T00:00:00Z",
+      "source_class": "REGULATORY_FILING",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1050446/000105044626000020/mstr-20251231.htm",
+      "title": "SEC 2025 Form 10-K",
+      "visibility": "HASH_METADATA_EXTRACT_ONLY"
+    },
+    {
+      "artifact_id": "ART-S6-SEC-Q1-2026-10Q",
+      "content_hash": "0062b4ac7be8f8550d1a6c06a0a3cf0aca078f7915d7ae8d7b687b7d054bbf6d",
+      "content_type": "text/html",
+      "published_at": "2026-05-06",
+      "publisher": "SEC",
+      "raw_file": "evidence-freeze/S6/raw/sec_q1_2026_10q.html",
+      "retrieved_at": "2026-09-08T00:00:00Z",
+      "source_class": "REGULATORY_FILING",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1050446/000105044626000031/mstr-20260331.htm",
+      "title": "SEC Q1 2026 Form 10-Q",
+      "visibility": "HASH_METADATA_EXTRACT_ONLY"
+    },
+    {
+      "artifact_id": "ART-S6-SEC-Q2-2026-10Q",
+      "content_hash": "7ca05da524aa6609e050313746c6619cfd614bb51f89a52cf8307b7cd6949f72",
+      "content_type": "text/html",
+      "published_at": "2026-08-03",
+      "publisher": "SEC",
+      "raw_file": "evidence-freeze/S6/raw/sec_q2_2026_10q.html",
+      "retrieved_at": "2026-09-08T00:00:00Z",
+      "source_class": "REGULATORY_FILING",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1050446/000105044626000044/mstr-20260630.htm",
+      "title": "SEC Q2 2026 Form 10-Q",
+      "visibility": "HASH_METADATA_EXTRACT_ONLY"
+    },
+    {
+      "artifact_id": "ART-S6-SEC-2026-0706-8K",
+      "content_hash": "0a5ba817cd88c586849d0ad91be45abbdb161e11b12879f2143c85456cbf6d74",
+      "content_type": "text/html",
+      "published_at": "2026-07-06",
+      "publisher": "SEC",
+      "raw_file": "evidence-freeze/S6/raw/sec_2026_0706_8k.html",
+      "retrieved_at": "2026-09-08T00:00:00Z",
+      "source_class": "REGULATORY_FILING",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1050446/000119312526295586/mstr-20260706.htm",
+      "title": "SEC July 6 2026 Form 8-K",
+      "visibility": "HASH_METADATA_EXTRACT_ONLY"
+    },
+    {
+      "artifact_id": "ART-S6-SEC-2026-0713-8K",
+      "content_hash": "0d574230843743df715ec6e26741adad92632e5afc28fc6f9b7e8b3e33aada60",
+      "content_type": "text/html",
+      "published_at": "2026-07-13",
+      "publisher": "SEC",
+      "raw_file": "evidence-freeze/S6/raw/sec_2026_0713_8k.html",
+      "retrieved_at": "2026-09-08T00:00:00Z",
+      "source_class": "REGULATORY_FILING",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1050446/000119312526301483/mstr-20260713.htm",
+      "title": "SEC July 13 2026 Form 8-K",
+      "visibility": "HASH_METADATA_EXTRACT_ONLY"
+    },
+    {
+      "artifact_id": "ART-S6-SEC-2026-0803-8K",
+      "content_hash": "d08462476aee69bd6364df94c893bf8928adb82871c65ff8be4fcfaca03f3b8a",
+      "content_type": "text/html",
+      "published_at": "2026-08-03",
+      "publisher": "SEC",
+      "raw_file": "evidence-freeze/S6/raw/sec_2026_0803_8k.html",
+      "retrieved_at": "2026-09-08T00:00:00Z",
+      "source_class": "REGULATORY_FILING",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1050446/000119312526329565/mstr-20260803.htm",
+      "title": "SEC August 3 2026 Form 8-K",
+      "visibility": "HASH_METADATA_EXTRACT_ONLY"
+    },
+    {
+      "artifact_id": "ART-S6-SEC-2026-0810-8K",
+      "content_hash": "b8d705f296596d777bbd7ad2e76e2482808cbf7817febf066f8e2dc43a8e1b58",
+      "content_type": "text/html",
+      "published_at": "2026-08-10",
+      "publisher": "SEC",
+      "raw_file": "evidence-freeze/S6/raw/sec_2026_0810_8k.html",
+      "retrieved_at": "2026-09-08T00:00:00Z",
+      "source_class": "REGULATORY_FILING",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1050446/000119312526341297/mstr-20260810.htm",
+      "title": "SEC August 10 2026 Form 8-K",
+      "visibility": "HASH_METADATA_EXTRACT_ONLY"
+    },
+    {
+      "artifact_id": "ART-S6-SEC-2026-0817-8K",
+      "content_hash": "4b4ec2e0ed97d8c8f793f99192e99259908fabc4658d788801dde74b7c7377a4",
+      "content_type": "text/html",
+      "published_at": "2026-08-17",
+      "publisher": "SEC",
+      "raw_file": "evidence-freeze/S6/raw/sec_2026_0817_8k.html",
+      "retrieved_at": "2026-09-08T00:00:00Z",
+      "source_class": "REGULATORY_FILING",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1050446/000119312526353240/mstr-20260817.htm",
+      "title": "SEC August 17 2026 Form 8-K",
+      "visibility": "HASH_METADATA_EXTRACT_ONLY"
+    },
+    {
+      "artifact_id": "ART-S6-IR-Q2-2026",
+      "content_hash": "42b0e0cfba1ba66328b02d1bb1dec0f30a6d25f6c137af9b87ed8799c06e90da",
+      "content_type": "text/html",
+      "published_at": "2026-07-30",
+      "publisher": "Strategy IR",
+      "raw_file": "evidence-freeze/S6/raw/strategy_q2_2026_results.html",
+      "retrieved_at": "2026-09-08T00:00:00Z",
+      "source_class": "COMPANY_PRESS_RELEASE",
+      "source_url": "https://www.strategy.com/press/strategy-announces-second-quarter-2026-financial-results_07-30-2026",
+      "title": "Strategy Q2 2026 results",
+      "visibility": "HASH_METADATA_EXTRACT_ONLY"
+    },
+    {
+      "artifact_id": "ART-S6-IR-DIGITAL-CREDIT",
+      "content_hash": "a89c4b07b871f9c0739fef0e42f8514ac25f4b8509d0201b11984d7f15f8efad",
+      "content_type": "text/html",
+      "published_at": "2026-06-29",
+      "publisher": "Strategy IR",
+      "raw_file": "evidence-freeze/S6/raw/strategy_digital_credit_framework.html",
+      "retrieved_at": "2026-09-08T00:00:00Z",
+      "source_class": "COMPANY_PRESS_RELEASE",
+      "source_url": "https://www.strategy.com/press/strategy-announces-digital-credit-capital-framework_06-29-2026",
+      "title": "Strategy Digital Credit Capital Framework",
+      "visibility": "HASH_METADATA_EXTRACT_ONLY"
+    },
+    {
+      "accepted_for": [
+        "security-listing context"
+      ],
+      "artifact_id": "ART-S6-1-NASDAQ-MSTR-SEC-FILINGS-PAGE",
+      "authorship_independence": true,
+      "candidate_use": "Listing/security metadata and independent hosting context; not independent disclosure content.",
+      "capture_type": "VERIFIED_EXTRACT",
+      "computed_dependency_status": "PARTIALLY_DEPENDENT",
+      "dependency_status": "PARTIALLY_DEPENDENT",
+      "hosting_independence": true,
+      "observation_independence": false,
+      "reason": "Nasdaq is not Strategy-authored, but its SEC-filing feed is described as SEC filings supplied through Quotemedia and does not independently observe Strategy treasury conduct.",
+      "rejected_for": [
+        "issuer disclosure facts",
+        "SEC filing content triangulation"
+      ],
+      "retrieved_at": "2026-09-08T00:00:00Z",
+      "source_class": "EXCHANGE_DISCLOSURE",
+      "source_url": "https://www.nasdaq.com/market-activity/stocks/mstr/sec-filings",
+      "title": "Nasdaq MSTR SEC Filings page",
+      "verification_method": "web search/open verified page metadata and Nasdaq SEC filings description"
+    },
+    {
+      "accepted_for": [
+        "structured filing mirror candidate"
+      ],
+      "artifact_id": "ART-S6-1-SEC-COMPANYFACTS-API-CANDIDATE",
+      "authorship_independence": false,
+      "candidate_use": "Structured government-hosted XBRL fact retrieval.",
+      "capture_type": "HASH_METADATA_ONLY",
+      "computed_dependency_status": "PARTIALLY_DEPENDENT",
+      "dependency_status": "PARTIALLY_DEPENDENT",
+      "hosting_independence": true,
+      "observation_independence": false,
+      "reason": "The source can independently host standardized XBRL facts, but the material facts remain issuer-filed disclosure content.",
+      "rejected_for": [
+        "independent observation of treasury policy or BTC sales"
+      ],
+      "retrieved_at": "2026-09-08T00:00:00Z",
+      "source_class": "GOVERNMENT_SOURCE",
+      "source_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001050446.json",
+      "title": "SEC company facts structured API candidate",
+      "verification_method": "candidate classified without adding material new evidence"
+    }
+  ],
+  "parent_graph": "evidence-freeze/S6/SOURCE_DEPENDENCY_GRAPH.json",
+  "version": "v2"
+}

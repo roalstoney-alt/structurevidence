@@ -1,0 +1,41 @@
+{
+  "research_id": "ECL.COMPANY.STRATEGY_INC.2026.001",
+  "substantive_finding_change": "NONE",
+  "versions": [
+    {
+      "path": "docs/research/ECL_STRATEGY_2026_001_PUBLIC_EVIDENCE_RESEARCH.md",
+      "reason": "Original S6 evidence report.",
+      "relationship": "base pilot report",
+      "substantive_change": "NONE",
+      "version": "S6 original"
+    },
+    {
+      "path": "docs/research/ECL_STRATEGY_2026_001_PUBLIC_EVIDENCE_RESEARCH_v0.2.md",
+      "reason": "Completed method controls.",
+      "relationship": "method supplement",
+      "substantive_change": "NONE",
+      "version": "S6.1 v0.2"
+    },
+    {
+      "path": "docs/research/ECL_STRATEGY_2026_001_PUBLIC_EVIDENCE_RESEARCH_v0.3.md",
+      "reason": "Corrected H5 independence label, ACH evidence semantics, and audit package.",
+      "relationship": "method semantics correction",
+      "substantive_change": "NONE",
+      "version": "S6.1a v0.3"
+    },
+    {
+      "path": "docs/research/ECL_METHOD_PILOT_NOTE_v0.3.md",
+      "reason": "Adds observed contradiction vs potential falsifier rule.",
+      "relationship": "supersedes v0.2 method note",
+      "substantive_change": "NONE",
+      "version": "S6.1a method note v0.3"
+    },
+    {
+      "path": "docs/research/STRATEGY_2026_001_PAIRED_REPORT_SUMMARY_v0.3.md",
+      "reason": "No structural conclusion change; keeps report chain aligned.",
+      "relationship": "version-chain consistency",
+      "substantive_change": "NONE",
+      "version": "S6.1a paired summary v0.3"
+    }
+  ]
+}

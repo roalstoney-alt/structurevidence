@@ -49,6 +49,9 @@ class Evaluation:
     gate_results: list[dict[str, Any]]
     authorization: str
     public_status: str
+    evaluation_as_of: str
+    record_created_at: str
+    aggregation_rule_version: str
     input_bundle_sha256: str
     evidence_envelope: dict[str, Any]
     config_hashes: dict[str, str]

@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "effects": {
+      "additionalProperties": {
+        "enum": [
+          "VETO",
+          "HUMAN_REVIEW_REQUIRED",
+          "REFRESH_REQUIRED",
+          "ABSTAIN",
+          "ALLOW_WITH_LIMITATIONS",
+          "ALLOW_PUBLICATION"
+        ],
+        "type": "string"
+      },
+      "required": [
+        "hard_fail",
+        "superseded",
+        "human_review_required",
+        "unresolved",
+        "stale",
+        "archived",
+        "insufficient_data",
+        "partial",
+        "limited",
+        "all_clear"
+      ],
+      "type": "object"
+    },
+    "gdr_se_version": {
+      "const": "GDR_SE_v0.1"
+    },
+    "precedence": {
+      "items": {
+        "enum": [
+          "VETO",
+          "HUMAN_REVIEW_REQUIRED",
+          "REFRESH_REQUIRED",
+          "ABSTAIN",
+          "ALLOW_WITH_LIMITATIONS",
+          "ALLOW_PUBLICATION"
+        ],
+        "type": "string"
+      },
+      "minItems": 1,
+      "type": "array",
+      "uniqueItems": true
+    },
+    "rule_version": {
+      "minLength": 1,
+      "type": "string"
+    }
+  },
+  "required": [
+    "gdr_se_version",
+    "rule_version",
+    "precedence",
+    "effects"
+  ],
+  "type": "object"
+}

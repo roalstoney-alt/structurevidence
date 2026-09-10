@@ -12,12 +12,14 @@ ENGINE = ROOT / "gdr-se" / "engine"
 sys.path.insert(0, str(ENGINE))
 
 from counterfactual import build_counterfactual  # noqa: E402
-from evaluator import CREATED_AT, VERSION, evaluate  # noqa: E402
+from clock import normalize_as_of  # noqa: E402
+from evaluator import RUNTIME_REVISION, VERSION, evaluate  # noqa: E402
 from integrity import canonical_sha256  # noqa: E402
 from resolver import resolve  # noqa: E402
 
 
 SUBJECTS = ["strategy", "BNB", "SOL", "TRX", "XLM"]
+RUNTIME_SUFFIX = "R1_1"
 
 
 def write_json(path: Path, data) -> None:
@@ -31,7 +33,14 @@ def write_text(path: Path, text: str) -> None:
 
 
 def authorization_id(evaluation) -> str:
-    return f"GDR-SE-AUTH-{evaluation.context.subject}-{evaluation.input_bundle_sha256[:16]}-R1"
+    return f"GDR-SE-AUTH-{evaluation.context.subject}-{evaluation.input_bundle_sha256[:16]}-R1.1"
+
+
+def previous_runtime_authorization_id(evaluation) -> str | None:
+    previous = evaluation.context.output_dir / "GDR_SE_AUTHORIZATION_RECORD_R1.json"
+    if previous.exists():
+        return json.loads(previous.read_text(encoding="utf-8")).get("authorization_id")
+    return evaluation.context.static_authorization_id
 
 
 def record_for(evaluation) -> dict:
@@ -42,6 +51,7 @@ def record_for(evaluation) -> dict:
         "report_version": evaluation.context.report_version,
         "gdr_se_version": VERSION,
         "evaluation_mode": "RUNTIME_EVALUATED",
+        "runtime_revision": RUNTIME_REVISION,
         "evaluation_id": evaluation.evaluation_id,
         "profile": evaluation.context.profile,
         "authorization": evaluation.authorization,
@@ -49,11 +59,15 @@ def record_for(evaluation) -> dict:
         "gate_results": evaluation.gate_results,
         "limitations": sorted({lim for row in evaluation.gate_results for lim in row["limitations"]}),
         "counterfactual": build_counterfactual(evaluation.context),
-        "created_at": CREATED_AT,
+        "evaluation_as_of": evaluation.evaluation_as_of,
+        "record_created_at": evaluation.record_created_at,
+        "evidence_last_reviewed": evaluation.context.last_reviewed,
+        "created_at": evaluation.record_created_at,
         "valid_until": None,
-        "supersedes_authorization_id": evaluation.context.static_authorization_id,
+        "supersedes_authorization_id": previous_runtime_authorization_id(evaluation),
         "input_bundle_sha256": evaluation.input_bundle_sha256,
         "config_hashes": evaluation.config_hashes,
+        "aggregation_rule_version": evaluation.aggregation_rule_version,
         "evidence_envelope": evaluation.evidence_envelope,
         "research_status": evaluation.context.research_status,
         "structural_state_reference": evaluation.context.structural_state,
@@ -67,11 +81,13 @@ def overlay_for(evaluation, record: dict) -> dict:
         "original_canonical_sha256": evaluation.evidence_envelope["canonical_research_sha256"],
         "gdr_se_version": VERSION,
         "evaluation_mode": "RUNTIME_EVALUATED",
+        "runtime_revision": RUNTIME_REVISION,
         "authorization_id": record["authorization_id"],
         "authorization": evaluation.authorization,
         "input_bundle_sha256": evaluation.input_bundle_sha256,
         "gate_summary": [{"gate_id": row["gate_id"], "status": row["status"], "validator": row["validator"]} for row in evaluation.gate_results],
-        "created_at": CREATED_AT,
+        "evaluation_as_of": evaluation.evaluation_as_of,
+        "record_created_at": evaluation.record_created_at,
     }
 
 
@@ -84,11 +100,12 @@ def trace_for(evaluation, record: dict) -> dict:
         "artifact_hashes": {row["role"]: row["sha256"] for row in evaluation.artifact_metadata},
         "config_hashes": evaluation.config_hashes,
         "gate_results": evaluation.gate_results,
-        "aggregation_rule_version": "GDR_SE_AGGREGATION_v0.1-R1",
+        "aggregation_rule_version": evaluation.aggregation_rule_version,
         "final_authorization": evaluation.authorization,
         "authorization_id": record["authorization_id"],
         "input_bundle_sha256": evaluation.input_bundle_sha256,
-        "created_at": CREATED_AT,
+        "evaluation_as_of": evaluation.evaluation_as_of,
+        "record_created_at": evaluation.record_created_at,
     }
 
 
@@ -97,13 +114,15 @@ def gate_table(evaluation) -> str:
         f"| {row['gate_id']} | {row['status']} | {row['severity']} | {row['validator']} | {row['rule_version']} | {row['reason']} |"
         for row in evaluation.gate_results
     )
-    return f"""# GDR-SE Runtime Gate Table R1
+    return f"""# GDR-SE Runtime Gate Table R1.1
 
 | Gate | Status | Severity | Validator | Rule Version | Reason |
 | --- | --- | --- | --- | --- | --- |
 {rows}
 
 Authorization: `{evaluation.authorization}`
+
+Evaluation As Of: `{evaluation.evaluation_as_of}`
 
 Input Bundle SHA-256: `{evaluation.input_bundle_sha256}`
 """
@@ -114,26 +133,27 @@ def append_history(record: dict) -> None:
     history_dir.mkdir(parents=True, exist_ok=True)
     history = history_dir / "authorization_history.jsonl"
     existing = history.read_text(encoding="utf-8").splitlines() if history.exists() else []
+    existing_ids = {json.loads(line).get("authorization_id") for line in existing if line.strip()}
     line = json.dumps(record, sort_keys=True)
-    if line not in existing:
+    if record["authorization_id"] not in existing_ids:
         with history.open("a", encoding="utf-8") as fh:
             fh.write(line + "\n")
 
 
-def write_evaluation(subject: str) -> dict:
-    evaluation = evaluate(resolve(subject, ROOT), ROOT)
+def write_evaluation(subject: str, as_of=None) -> dict:
+    evaluation = evaluate(resolve(subject, ROOT), ROOT, as_of=as_of)
     record = record_for(evaluation)
     out = evaluation.context.output_dir
-    write_json(out / "GDR_SE_AUTHORIZATION_RECORD_R1.json", record)
-    write_json(out / "GDR_SE_OVERLAY_R1.json", overlay_for(evaluation, record))
-    write_json(out / "GDR_SE_RUNTIME_TRACE.json", trace_for(evaluation, record))
-    write_text(out / "GDR_SE_GATE_TABLE_R1.md", gate_table(evaluation))
+    write_json(out / f"GDR_SE_AUTHORIZATION_RECORD_{RUNTIME_SUFFIX}.json", record)
+    write_json(out / f"GDR_SE_OVERLAY_{RUNTIME_SUFFIX}.json", overlay_for(evaluation, record))
+    write_json(out / f"GDR_SE_RUNTIME_TRACE_{RUNTIME_SUFFIX}.json", trace_for(evaluation, record))
+    write_text(out / f"GDR_SE_GATE_TABLE_{RUNTIME_SUFFIX}.md", gate_table(evaluation))
     append_history(record)
     return record
 
 
-def dry_run(subject: str) -> dict:
-    evaluation = evaluate(resolve(subject, ROOT), ROOT)
+def dry_run(subject: str, as_of=None) -> dict:
+    evaluation = evaluate(resolve(subject, ROOT), ROOT, as_of=as_of)
     return record_for(evaluation)
 
 
@@ -155,13 +175,18 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--all", action="store_true")
     parser.add_argument("--write", action="store_true")
     parser.add_argument("--dry-run", action="store_true", default=True)
+    parser.add_argument("--as-of", help="Timezone-aware UTC evaluation timestamp, for example YYYY-MM-DDTHH:MM:SSZ")
     args = parser.parse_args(argv)
+    try:
+        as_of = normalize_as_of(args.as_of) if args.as_of else None
+    except ValueError as exc:
+        parser.error(str(exc))
     subjects = SUBJECTS if args.all else [args.subject]
     if not subjects or subjects == [None]:
         parser.error("--subject or --all is required")
     records = []
     for subject in subjects:
-        record = write_evaluation(subject) if args.write else dry_run(subject)
+        record = write_evaluation(subject, as_of=as_of) if args.write else dry_run(subject, as_of=as_of)
         records.append(record)
         print(f"{subject}: {record['authorization']} {record['authorization_id']}")
     if args.write:

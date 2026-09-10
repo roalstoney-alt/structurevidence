@@ -1,0 +1,164 @@
+[
+  {
+    "evidence_reference": "evidence-freeze/S6.1a/",
+    "gate": "S6_1A_PARENT_HISTORY_PRESERVED",
+    "reason": "S6.1a correction gate satisfied.",
+    "status": "PASS"
+  },
+  {
+    "evidence_reference": "evidence-freeze/S6.1a/",
+    "gate": "S6_1A_H5_SOURCE_LABEL_CORRECTED",
+    "reason": "S6.1a correction gate satisfied.",
+    "status": "PASS"
+  },
+  {
+    "evidence_reference": "evidence-freeze/S6.1a/",
+    "gate": "S6_1A_HOSTING_AUTHORSHIP_SEPARATED",
+    "reason": "S6.1a correction gate satisfied.",
+    "status": "PASS"
+  },
+  {
+    "evidence_reference": "evidence-freeze/S6.1a/",
+    "gate": "S6_1A_ACH_OBSERVED_CONTRADICTION_SEMANTICS",
+    "reason": "S6.1a correction gate satisfied.",
+    "status": "PASS"
+  },
+  {
+    "evidence_reference": "evidence-freeze/S6.1a/",
+    "gate": "S6_1A_ACH_POTENTIAL_FALSIFIER_SEMANTICS",
+    "reason": "S6.1a correction gate satisfied.",
+    "status": "PASS"
+  },
+  {
+    "evidence_reference": "evidence-freeze/S6.1a/",
+    "gate": "S6_1A_H1_CORRECTED",
+    "reason": "S6.1a correction gate satisfied.",
+    "status": "PASS"
+  },
+  {
+    "evidence_reference": "evidence-freeze/S6.1a/",
+    "gate": "S6_1A_H2_CORRECTED",
+    "reason": "S6.1a correction gate satisfied.",
+    "status": "PASS"
+  },
+  {
+    "evidence_reference": "evidence-freeze/S6.1a/",
+    "gate": "S6_1A_H3_VALIDATED",
+    "reason": "S6.1a correction gate satisfied.",
+    "status": "PASS"
+  },
+  {
+    "evidence_reference": "evidence-freeze/S6.1a/",
+    "gate": "S6_1A_H4_VALIDATED",
+    "reason": "S6.1a correction gate satisfied.",
+    "status": "PASS"
+  },
+  {
+    "evidence_reference": "evidence-freeze/S6.1a/",
+    "gate": "S6_1A_H5_VALIDATED",
+    "reason": "S6.1a correction gate satisfied.",
+    "status": "PASS"
+  },
+  {
+    "evidence_reference": "evidence-freeze/S6.1a/",
+    "gate": "S6_1A_H6_CORRECTED",
+    "reason": "S6.1a correction gate satisfied.",
+    "status": "PASS"
+  },
+  {
+    "evidence_reference": "evidence-freeze/S6.1a/",
+    "gate": "S6_1A_ARTIFACT_CAPTURE_CLASSIFICATION",
+    "reason": "S6.1a correction gate satisfied.",
+    "status": "PASS"
+  },
+  {
+    "evidence_reference": "evidence-freeze/S6.1a/",
+    "gate": "S6_1A_IR_VERIFIED_EXTRACT",
+    "reason": "S6.1a correction gate satisfied.",
+    "status": "PASS"
+  },
+  {
+    "evidence_reference": "evidence-freeze/S6.1a/",
+    "gate": "S6_1A_MANIFEST",
+    "reason": "S6.1a correction gate satisfied.",
+    "status": "PASS"
+  },
+  {
+    "evidence_reference": "evidence-freeze/S6.1a/",
+    "gate": "S6_1A_SHA256SUMS",
+    "reason": "S6.1a correction gate satisfied.",
+    "status": "PASS"
+  },
+  {
+    "evidence_reference": "evidence-freeze/S6.1a/",
+    "gate": "S6_1A_PACKAGE_SELF_VERIFY",
+    "reason": "S6.1a correction gate satisfied.",
+    "status": "PASS"
+  },
+  {
+    "evidence_reference": "evidence-freeze/S6.1a/",
+    "gate": "S6_1A_REPORT_VERSION_MAP",
+    "reason": "S6.1a correction gate satisfied.",
+    "status": "PASS"
+  },
+  {
+    "evidence_reference": "evidence-freeze/S6.1a/",
+    "gate": "S6_1A_CORRECTION_RECORD",
+    "reason": "S6.1a correction gate satisfied.",
+    "status": "PASS"
+  },
+  {
+    "evidence_reference": "evidence-freeze/S6.1a/",
+    "gate": "S6_1A_TEST_RESULTS_RECORDED",
+    "reason": "S6.1a correction gate satisfied.",
+    "status": "PASS"
+  },
+  {
+    "evidence_reference": "evidence-freeze/S6.1a/",
+    "gate": "S6_1A_BUILD_RESULT_RECORDED",
+    "reason": "S6.1a correction gate satisfied.",
+    "status": "PASS"
+  },
+  {
+    "evidence_reference": "evidence-freeze/S6.1a/",
+    "gate": "S6_1A_REGRESSION_TESTS",
+    "reason": "S6.1a correction gate satisfied.",
+    "status": "PASS"
+  },
+  {
+    "evidence_reference": "evidence-freeze/S6.1a/",
+    "gate": "S6_1A_NO_SUBSTANTIVE_FINDING_CHANGE",
+    "reason": "S6.1a correction gate satisfied.",
+    "status": "PASS"
+  },
+  {
+    "evidence_reference": "evidence-freeze/S6.1a/",
+    "gate": "S6_1A_NO_AUTO_ACCUSATION",
+    "reason": "S6.1a correction gate satisfied.",
+    "status": "PASS"
+  },
+  {
+    "evidence_reference": "evidence-freeze/S6.1a/",
+    "gate": "S6_1A_NO_AUTO_PUBLICATION",
+    "reason": "S6.1a correction gate satisfied.",
+    "status": "PASS"
+  },
+  {
+    "evidence_reference": "evidence-freeze/S6.1a/",
+    "gate": "S6_1A_HUMAN_REVIEW_REQUIRED",
+    "reason": "S6.1a correction gate satisfied.",
+    "status": "PASS"
+  },
+  {
+    "evidence_reference": "evidence-freeze/S6.1a/",
+    "gate": "S6_1A_EVIDENCE_FREEZE",
+    "reason": "S6.1a correction gate satisfied.",
+    "status": "PASS"
+  },
+  {
+    "evidence_reference": "evidence-freeze/S6.1a/",
+    "gate": "S6_1A_METHOD_PILOT_READINESS",
+    "reason": "S6.1a correction gate satisfied.",
+    "status": "PASS"
+  }
+]

@@ -1,0 +1,329 @@
+{
+  "aggregation_rule_version": "GDR_SE_AGGREGATION_v0.1-R1.1",
+  "artifact_hashes": {
+    "canonical_research": "1769ec5adebc32ff3e3ecfd9cc1ea527ef30e025b7e559539266c331c147669a",
+    "claim_registry": "a35913db6e0b9640218db80651aa6063ea7c14e430a09265258ccb91303258f3",
+    "counter_evidence": "b596caf38b597799ef68b84cb4c3365b0a5024147fc90ee1b5864b52c166b862",
+    "independent_review": null,
+    "manifest": "1769ec5adebc32ff3e3ecfd9cc1ea527ef30e025b7e559539266c331c147669a",
+    "numerical_reconciliation": null,
+    "observation_registry": "1c1f85ec2cae8908c9cb53a2c36a8178795dfbfb9b86bea36389cf1c24db00e1",
+    "report": "416af04d120a0ee87046dee426ae0404c0fb3ca47cbe7f83e4d986ced3179e68",
+    "source_inventory": "62270e7cb8e2c40234a6552a10e26c452ec7fd871acfafebb744e907e08b2e1c"
+  },
+  "authorization_id": "GDR-SE-AUTH-strategy-3bb9747944234d87-R1.1",
+  "config_hashes": {
+    "aggregation_rules_sha256": "d716177c3161940a25ef7c77367a10d124ebb7f0d42bc571737009b4cdf91528",
+    "freshness_config_sha256": "e486d1cde399acf6319db7f09a7b2849c52ae1604dd87360312e162517c9b762",
+    "gates_config_sha256": "06e725a2e5ad5d506aad41e79f743e73a66e2634c6ec4b5f7166c598e6fb33c7",
+    "research_profile_sha256": "ce939807f8605fdd3c661a5a018fccfeecf233b63e0e5d83dee26bd35868a1cf"
+  },
+  "evaluation_as_of": "2026-09-10T14:18:35.507637Z",
+  "evaluation_id": "GDR-SE-EVAL-3bb9747944234d87-R1.1",
+  "final_authorization": "HUMAN_REVIEW_REQUIRED",
+  "gate_results": [
+    {
+      "computed_facts": {
+        "canonical_json_parse": true,
+        "duplicate_ids": [],
+        "ids_match": true,
+        "missing_fields": [],
+        "required_fields": [
+          "research_id",
+          "report_id",
+          "report_version",
+          "research_status",
+          "method_version",
+          "evidence_state",
+          "material_inconsistency",
+          "source_coverage"
+        ]
+      },
+      "evaluated_at": "2026-09-10T14:18:35.507637Z",
+      "evidence_refs": [
+        "research/PUBLICATION_PACKAGE_MANIFEST_EN.json"
+      ],
+      "gate_id": "G1_SCHEMA_INTEGRITY",
+      "limitations": [
+        "Legacy/profile schema is field-validated only."
+      ],
+      "reason": "Required runtime fields are present, but no formal profile JSON Schema is frozen.",
+      "rule_version": "GDR_SE_RUNTIME_RULES_v0.1-R1.1",
+      "severity": "HARD",
+      "status": "PARTIAL",
+      "validator": "validate_g1_schema"
+    },
+    {
+      "computed_facts": {
+        "blank_expected_hashes": [
+          "canonical_research",
+          "report",
+          "manifest"
+        ],
+        "documented_legacy_fallback": true,
+        "hash_matches": 4,
+        "hashed_artifacts": 7,
+        "mismatched": [],
+        "missing": [],
+        "present_artifacts": 7,
+        "required_artifacts": 7
+      },
+      "evaluated_at": "2026-09-10T14:18:35.507637Z",
+      "evidence_refs": [
+        "research/PUBLICATION_PACKAGE_MANIFEST_EN.json",
+        "research/Strategy_2026_Public_Evidence_Research_Report_v0.1_EN.md",
+        "research/PUBLICATION_PACKAGE_MANIFEST_EN.json",
+        "evidence-freeze/S6.1a/SOURCE_DEPENDENCY_GRAPH_v2.json",
+        "evidence-freeze/S6.1a/HYPOTHESIS_ASSESSMENTS_v2.json",
+        "evidence-freeze/S6.1a/TRIANGULATION_MATRIX_v2.json",
+        "evidence-freeze/S6.1a/COUNTER_EVIDENCE_SEARCH_LOG_v3.json"
+      ],
+      "gate_id": "G2_RTP_PROVENANCE",
+      "limitations": [
+        "Legacy provenance hash fallback is documented; this is not a PASS."
+      ],
+      "reason": "Required artifacts exist and are hashed, but legacy records do not carry all expected hashes.",
+      "rule_version": "GDR_SE_RUNTIME_RULES_v0.1-R1.1",
+      "severity": "HARD",
+      "status": "PARTIAL",
+      "validator": "validate_g2_provenance"
+    },
+    {
+      "computed_facts": {
+        "category": "CORPORATE_TREASURY",
+        "policy_status": "UNCONFIGURED",
+        "threshold_configured": false
+      },
+      "evaluated_at": "2026-09-10T14:18:35.507637Z",
+      "evidence_refs": [
+        "gdr-se/config/category_freshness.json"
+      ],
+      "gate_id": "G3_EVIDENCE_FRESHNESS",
+      "limitations": [],
+      "reason": "RDL freshness policy not configured for category CORPORATE_TREASURY.",
+      "rule_version": "GDR_SE_RUNTIME_RULES_v0.1-R1.1",
+      "severity": "SOFT",
+      "status": "UNRESOLVED",
+      "validator": "validate_g3_freshness"
+    },
+    {
+      "computed_facts": {
+        "artifact_independent_source_coverage": "PARTIAL",
+        "dependency_groups": 4,
+        "rule": "MULTIPLE_URLS_NOT_INDEPENDENT_SOURCES",
+        "source_coverage": "PARTIAL",
+        "unique_source_ids": 12
+      },
+      "evaluated_at": "2026-09-10T14:18:35.507637Z",
+      "evidence_refs": [
+        "evidence-freeze/S6.1a/SOURCE_DEPENDENCY_GRAPH_v2.json"
+      ],
+      "gate_id": "G4_SOURCE_DEPENDENCY",
+      "limitations": [
+        "Multiple URLs are not independent sources."
+      ],
+      "reason": "Source dependency was derived from declared coverage and dependency artifacts, not URL count.",
+      "rule_version": "GDR_SE_RUNTIME_RULES_v0.1-R1.1",
+      "severity": "SOFT",
+      "status": "PARTIAL",
+      "validator": "validate_g4_source_dependency"
+    },
+    {
+      "computed_facts": {
+        "total": 0
+      },
+      "evaluated_at": "2026-09-10T14:18:35.507637Z",
+      "evidence_refs": [],
+      "gate_id": "G5_NUMERICAL_RECONCILIATION",
+      "limitations": [],
+      "reason": "No profile-required numerical reconciliation artifact exists for this legacy profile.",
+      "rule_version": "GDR_SE_RUNTIME_RULES_v0.1-R1.1",
+      "severity": "SOFT",
+      "status": "NOT_APPLICABLE",
+      "validator": "validate_g5_numerical"
+    },
+    {
+      "computed_facts": {
+        "evidence_state": "SEMANTIC_TENSION_BUT_RECONCILABLE",
+        "human_review_required": false,
+        "material_inconsistency": "NO"
+      },
+      "evaluated_at": "2026-09-10T14:18:35.507637Z",
+      "evidence_refs": [],
+      "gate_id": "G6_ECL_CONSISTENCY",
+      "limitations": [],
+      "reason": "Evidence state was mapped without subject-specific exceptions.",
+      "rule_version": "GDR_SE_RUNTIME_RULES_v0.1-R1.1",
+      "severity": "SOFT",
+      "status": "PASS",
+      "validator": "validate_g6_ecl"
+    },
+    {
+      "computed_facts": {
+        "empty_queries": [],
+        "empty_sources": [],
+        "hypotheses": 6,
+        "missing_hypotheses": [],
+        "missing_impact": [],
+        "missing_uncertainty": [],
+        "placeholder_warning": false,
+        "targeted_searches": 6
+      },
+      "evaluated_at": "2026-09-10T14:18:35.507637Z",
+      "evidence_refs": [
+        "evidence-freeze/S6.1a/COUNTER_EVIDENCE_SEARCH_LOG_v3.json",
+        "evidence-freeze/S6.1a/HYPOTHESIS_ASSESSMENTS_v2.json"
+      ],
+      "gate_id": "G7_COUNTER_EVIDENCE_COMPLETENESS",
+      "limitations": [],
+      "reason": "Targeted counter-evidence exists for required hypotheses with queries, sources and uncertainty.",
+      "rule_version": "GDR_SE_RUNTIME_RULES_v0.1-R1.1",
+      "severity": "HARD",
+      "status": "PASS",
+      "validator": "validate_g7_counter_evidence"
+    },
+    {
+      "computed_facts": {
+        "review_required": false
+      },
+      "evaluated_at": "2026-09-10T14:18:35.507637Z",
+      "evidence_refs": [
+        null
+      ],
+      "gate_id": "G8_INDEPENDENT_REVIEW",
+      "limitations": [],
+      "reason": "Independent review is not required for this profile.",
+      "rule_version": "GDR_SE_RUNTIME_RULES_v0.1-R1.1",
+      "severity": "SOFT",
+      "status": "NOT_APPLICABLE",
+      "validator": "validate_g8_review"
+    },
+    {
+      "computed_facts": {
+        "entity_response_status": null,
+        "human_review_required": false
+      },
+      "evaluated_at": "2026-09-10T14:18:35.507637Z",
+      "evidence_refs": [],
+      "gate_id": "G9_SENSITIVITY_RIGHT_OF_REPLY",
+      "limitations": [],
+      "reason": "No sensitivity/right-of-reply trigger is present in runtime context.",
+      "rule_version": "GDR_SE_RUNTIME_RULES_v0.1-R1.1",
+      "severity": "SOFT",
+      "status": "NOT_APPLICABLE",
+      "validator": "validate_g9_sensitivity"
+    },
+    {
+      "computed_facts": {
+        "correction_status": "NONE",
+        "publication_status": "METHOD PILOT",
+        "supersession_status": "CURRENT"
+      },
+      "evaluated_at": "2026-09-10T14:18:35.507637Z",
+      "evidence_refs": [],
+      "gate_id": "G10_EXPIRY_SUPERSESSION",
+      "limitations": [],
+      "reason": "Supersession/correction artifacts do not block this current runtime overlay.",
+      "rule_version": "GDR_SE_RUNTIME_RULES_v0.1-R1.1",
+      "severity": "HARD",
+      "status": "PASS",
+      "validator": "validate_g10_supersession"
+    }
+  ],
+  "input_bundle_sha256": "3bb9747944234d875d224f8dca5dca0fc811cb39fb61a3f8576f9790f5791295",
+  "profile": "STRATEGY_LEGACY_METHOD_PILOT",
+  "record_created_at": "2026-09-10T14:18:35.508863Z",
+  "research_id": "ECL.COMPANY.STRATEGY_INC.2026.001",
+  "resolved_artifacts": [
+    {
+      "exists": true,
+      "expected_sha256": null,
+      "hash_match": false,
+      "path": "research/PUBLICATION_PACKAGE_MANIFEST_EN.json",
+      "readable": true,
+      "role": "canonical_research",
+      "sha256": "1769ec5adebc32ff3e3ecfd9cc1ea527ef30e025b7e559539266c331c147669a",
+      "size_bytes": 1476
+    },
+    {
+      "exists": true,
+      "expected_sha256": null,
+      "hash_match": false,
+      "path": "research/Strategy_2026_Public_Evidence_Research_Report_v0.1_EN.md",
+      "readable": true,
+      "role": "report",
+      "sha256": "416af04d120a0ee87046dee426ae0404c0fb3ca47cbe7f83e4d986ced3179e68",
+      "size_bytes": 9714
+    },
+    {
+      "exists": true,
+      "expected_sha256": null,
+      "hash_match": false,
+      "path": "research/PUBLICATION_PACKAGE_MANIFEST_EN.json",
+      "readable": true,
+      "role": "manifest",
+      "sha256": "1769ec5adebc32ff3e3ecfd9cc1ea527ef30e025b7e559539266c331c147669a",
+      "size_bytes": 1476
+    },
+    {
+      "exists": true,
+      "expected_sha256": "62270e7cb8e2c40234a6552a10e26c452ec7fd871acfafebb744e907e08b2e1c",
+      "hash_match": true,
+      "path": "evidence-freeze/S6.1a/SOURCE_DEPENDENCY_GRAPH_v2.json",
+      "readable": true,
+      "role": "source_inventory",
+      "sha256": "62270e7cb8e2c40234a6552a10e26c452ec7fd871acfafebb744e907e08b2e1c",
+      "size_bytes": 9837
+    },
+    {
+      "exists": true,
+      "expected_sha256": "1c1f85ec2cae8908c9cb53a2c36a8178795dfbfb9b86bea36389cf1c24db00e1",
+      "hash_match": true,
+      "path": "evidence-freeze/S6.1a/HYPOTHESIS_ASSESSMENTS_v2.json",
+      "readable": true,
+      "role": "observation_registry",
+      "sha256": "1c1f85ec2cae8908c9cb53a2c36a8178795dfbfb9b86bea36389cf1c24db00e1",
+      "size_bytes": 6313
+    },
+    {
+      "exists": true,
+      "expected_sha256": "a35913db6e0b9640218db80651aa6063ea7c14e430a09265258ccb91303258f3",
+      "hash_match": true,
+      "path": "evidence-freeze/S6.1a/TRIANGULATION_MATRIX_v2.json",
+      "readable": true,
+      "role": "claim_registry",
+      "sha256": "a35913db6e0b9640218db80651aa6063ea7c14e430a09265258ccb91303258f3",
+      "size_bytes": 1159
+    },
+    {
+      "exists": true,
+      "expected_sha256": "b596caf38b597799ef68b84cb4c3365b0a5024147fc90ee1b5864b52c166b862",
+      "hash_match": true,
+      "path": "evidence-freeze/S6.1a/COUNTER_EVIDENCE_SEARCH_LOG_v3.json",
+      "readable": true,
+      "role": "counter_evidence",
+      "sha256": "b596caf38b597799ef68b84cb4c3365b0a5024147fc90ee1b5864b52c166b862",
+      "size_bytes": 6432
+    },
+    {
+      "exists": false,
+      "expected_sha256": null,
+      "hash_match": false,
+      "path": null,
+      "readable": false,
+      "role": "numerical_reconciliation",
+      "sha256": null,
+      "size_bytes": 0
+    },
+    {
+      "exists": false,
+      "expected_sha256": null,
+      "hash_match": false,
+      "path": null,
+      "readable": false,
+      "role": "independent_review",
+      "sha256": null,
+      "size_bytes": 0
+    }
+  ]
+}

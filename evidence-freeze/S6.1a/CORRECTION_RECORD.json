@@ -1,0 +1,16 @@
+{
+  "correction_class": "METHOD_SEMANTICS_AND_AUDIT_COMPLETION",
+  "correction_id": "S6.1A-METHOD-SEMANTICS-AUDIT-20260908",
+  "generated_at": "2026-09-08T00:00:00Z",
+  "items_corrected": [
+    "H5 counter-evidence source independence corrected from independent source to partially dependent external context.",
+    "ACH observed contradiction semantics split from potential falsifiers for H1-H6.",
+    "Audit-ready package manifest, SHA256SUMS, correction record, and observed test/build results added."
+  ],
+  "parent_sprint": "S6.1",
+  "substantive_finding_change": "NONE",
+  "supersedes_records": [
+    "evidence-freeze/S6.1/HYPOTHESIS_ASSESSMENTS.json",
+    "evidence-freeze/S6.1/COUNTER_EVIDENCE_SEARCH_LOG_v2.json"
+  ]
+}

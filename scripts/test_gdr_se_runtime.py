@@ -16,6 +16,9 @@ from evaluator import evaluate  # noqa: E402
 from resolver import resolve  # noqa: E402
 
 
+FIXED_AS_OF = "2026-09-10T00:00:00Z"
+
+
 def fail(message: str) -> None:
     raise SystemExit(f"GDR_SE_RUNTIME_TEST_FAIL: {message}")
 
@@ -30,17 +33,19 @@ def semantic_gate_results(evaluation):
 
 def test_runtime_records() -> None:
     for subject in ["strategy", "BNB", "SOL", "TRX", "XLM"]:
-        evaluation = evaluate(resolve(subject, ROOT), ROOT)
+        evaluation = evaluate(resolve(subject, ROOT), ROOT, as_of=FIXED_AS_OF)
         if evaluation.authorization != "HUMAN_REVIEW_REQUIRED":
             fail(f"{subject} should be human-review required while freshness policy is unconfigured")
         if gate(evaluation, "G3_EVIDENCE_FRESHNESS")["status"] != "UNRESOLVED":
             fail(f"{subject} freshness did not resolve to UNRESOLVED")
         if not evaluation.input_bundle_sha256 or len(evaluation.input_bundle_sha256) != 64:
             fail(f"{subject} missing input bundle hash")
-        path = resolve(subject, ROOT).output_dir / "GDR_SE_AUTHORIZATION_RECORD_R1.json"
+        path = resolve(subject, ROOT).output_dir / "GDR_SE_AUTHORIZATION_RECORD_R1_1.json"
         record = json.loads(path.read_text(encoding="utf-8"))
         if record["evaluation_mode"] != "RUNTIME_EVALUATED":
             fail(f"{subject} runtime record missing evaluation mode")
+        if record["runtime_revision"] != "R1.1":
+            fail(f"{subject} runtime record missing R1.1 revision")
         if not record["supersedes_authorization_id"]:
             fail(f"{subject} runtime record does not supersede prior static record")
         if record["authorization"] != evaluation.authorization:
@@ -48,8 +53,8 @@ def test_runtime_records() -> None:
 
 
 def test_determinism() -> None:
-    first = evaluate(resolve("SOL", ROOT), ROOT)
-    second = evaluate(resolve("SOL", ROOT), ROOT)
+    first = evaluate(resolve("SOL", ROOT), ROOT, as_of=FIXED_AS_OF)
+    second = evaluate(resolve("SOL", ROOT), ROOT, as_of=FIXED_AS_OF)
     if semantic_gate_results(first) != semantic_gate_results(second):
         fail("gate semantic results are not deterministic")
     if first.authorization != second.authorization or first.input_bundle_sha256 != second.input_bundle_sha256:
@@ -57,7 +62,7 @@ def test_determinism() -> None:
 
 
 def test_no_upgrade_cases() -> None:
-    sol = evaluate(resolve("SOL", ROOT), ROOT)
+    sol = evaluate(resolve("SOL", ROOT), ROOT, as_of=FIXED_AS_OF)
     if gate(sol, "G6_ECL_CONSISTENCY")["status"] != "PARTIAL":
         fail("POTENTIAL_CONFLICT must map to PARTIAL")
     mutated = copy.deepcopy(sol.gate_results)
@@ -74,7 +79,7 @@ def test_no_upgrade_cases() -> None:
     if aggregate(mutated) != "VETO":
         fail("missing provenance did not veto")
     superseded = replace(resolve("BNB", ROOT), supersession_status="SUPERSEDED")
-    if evaluate(superseded, ROOT).authorization != "VETO":
+    if evaluate(superseded, ROOT, as_of=FIXED_AS_OF).authorization != "VETO":
         fail("superseded report did not veto")
 
 

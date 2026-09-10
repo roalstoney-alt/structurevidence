@@ -28,6 +28,9 @@ def resolve(subject: str, root: Path = ROOT) -> ResearchContext:
     if normalized == "strategy":
         profile_name = "STRATEGY_LEGACY_METHOD_PILOT"
         profile = profiles["profiles"][profile_name]
+        strategy_freeze = root / "evidence-freeze" / "S6.1a"
+        if not strategy_freeze.exists():
+            strategy_freeze = root.parent / "evidence-freeze" / "S6.1a"
         return ResearchContext(
             subject="strategy",
             profile=profile_name,
@@ -49,15 +52,15 @@ def resolve(subject: str, root: Path = ROOT) -> ResearchContext:
             canonical_path=root / "research" / "PUBLICATION_PACKAGE_MANIFEST_EN.json",
             report_path=root / "research" / "Strategy_2026_Public_Evidence_Research_Report_v0.1_EN.md",
             manifest_path=root / "research" / "PUBLICATION_PACKAGE_MANIFEST_EN.json",
-            source_inventory_path=root / "evidence-freeze" / "PUBLICATION-v0.1" / "MANIFEST.json",
-            observation_registry_path=root / "research" / "Strategy_2026_Structural_Dynamics_Report_v0.1_EN.md",
-            claim_registry_path=root / "research" / "Strategy_2026_Public_Evidence_Research_Report_v0.1_EN.md",
-            counter_evidence_path=root / "research" / "Structural_Dynamics_Evidence_Dynamics_Method_Paper_v0.1_EN.md",
+            source_inventory_path=strategy_freeze / "SOURCE_DEPENDENCY_GRAPH_v2.json",
+            observation_registry_path=strategy_freeze / "HYPOTHESIS_ASSESSMENTS_v2.json",
+            claim_registry_path=strategy_freeze / "TRIANGULATION_MATRIX_v2.json",
+            counter_evidence_path=strategy_freeze / "COUNTER_EVIDENCE_SEARCH_LOG_v3.json",
             numerical_reconciliation_path=None,
             independent_review_path=None,
-            source_dependency_path=None,
-            hypothesis_registry_path=None,
-            sha256sums_path=root / "evidence-freeze" / "PUBLICATION-v0.1" / "SHA256SUMS.txt",
+            source_dependency_path=strategy_freeze / "SOURCE_DEPENDENCY_GRAPH_v2.json",
+            hypothesis_registry_path=strategy_freeze / "HYPOTHESIS_ASSESSMENTS_v2.json",
+            sha256sums_path=strategy_freeze / "SHA256SUMS.txt",
             supersession_paths=(),
             output_dir=root / "research" / "gdr-se" / "strategy-2026",
             static_authorization_id=_static_id(root / "research" / "gdr-se" / "strategy-2026" / "GDR_SE_AUTHORIZATION_RECORD.json"),

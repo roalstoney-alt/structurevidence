@@ -1,0 +1,91 @@
+{
+  "correction_class": "METHOD_SEMANTICS_AND_AUDIT_COMPLETION",
+  "created_at": "2026-09-08T00:00:00Z",
+  "ecl_result": "SEMANTIC_TENSION_BUT_RECONCILABLE",
+  "entity_id": "ECL.COMPANY.STRATEGY_INC",
+  "entity_response_status": "NOT_REQUESTED",
+  "files": [
+    {
+      "artifact_role": "capture_classification",
+      "generated_at": "2026-09-08T00:00:00Z",
+      "path": "ARTIFACT_CAPTURE_CLASSIFICATION.json",
+      "sha256": "195469abed5babe41e62f751019eb686ab45c1d19d23f7835f4a00fb85720983",
+      "size_bytes": 6884
+    },
+    {
+      "artifact_role": "correction_record",
+      "generated_at": "2026-09-08T00:00:00Z",
+      "path": "CORRECTION_RECORD.json",
+      "sha256": "97a4e32b062e2ac83237461e946fe49a6765cf49b93297bbc35448198282827e",
+      "size_bytes": 728
+    },
+    {
+      "artifact_role": "corrected_counter_evidence",
+      "generated_at": "2026-09-08T00:00:00Z",
+      "path": "COUNTER_EVIDENCE_SEARCH_LOG_v3.json",
+      "sha256": "b596caf38b597799ef68b84cb4c3365b0a5024147fc90ee1b5864b52c166b862",
+      "size_bytes": 6432
+    },
+    {
+      "artifact_role": "corrected_ach",
+      "generated_at": "2026-09-08T00:00:00Z",
+      "path": "HYPOTHESIS_ASSESSMENTS_v2.json",
+      "sha256": "1c1f85ec2cae8908c9cb53a2c36a8178795dfbfb9b86bea36389cf1c24db00e1",
+      "size_bytes": 6313
+    },
+    {
+      "artifact_role": "corrected_ach_matrix",
+      "generated_at": "2026-09-08T00:00:00Z",
+      "path": "HYPOTHESIS_MATRIX_v2.json",
+      "sha256": "cbbf4d0aca4b50c2d5be4112fb94dfd596b47c836cb3bb6791db23280f0dea6f",
+      "size_bytes": 6720
+    },
+    {
+      "artifact_role": "report_versioning",
+      "generated_at": "2026-09-08T00:00:00Z",
+      "path": "REPORT_VERSION_MAP.json",
+      "sha256": "ae4ee331d2ca3a3f0d6aa602634b58a0a227a141532956d47ab10b0c4e15fee3",
+      "size_bytes": 1520
+    },
+    {
+      "artifact_role": "gate_table",
+      "generated_at": "2026-09-08T00:00:00Z",
+      "path": "S6_1A_GATE_TABLE.json",
+      "sha256": "da6018b09768c0cfc78d5b0ecab0059ecffd36f6c408eef549c85d6b7b21d290",
+      "size_bytes": 4683
+    },
+    {
+      "artifact_role": "dependency_graph",
+      "generated_at": "2026-09-08T00:00:00Z",
+      "path": "SOURCE_DEPENDENCY_GRAPH_v2.json",
+      "sha256": "62270e7cb8e2c40234a6552a10e26c452ec7fd871acfafebb744e907e08b2e1c",
+      "size_bytes": 9837
+    },
+    {
+      "artifact_role": "observed_test_build_results",
+      "generated_at": "2026-09-08T00:00:00Z",
+      "path": "TEST_SUMMARY.json",
+      "sha256": "bcfc82417b50d4445f50e3838055b56baf2ff370507e08118cd4da2118610bda",
+      "size_bytes": 370
+    },
+    {
+      "artifact_role": "triangulation_matrix",
+      "generated_at": "2026-09-08T00:00:00Z",
+      "path": "TRIANGULATION_MATRIX_v2.json",
+      "sha256": "a35913db6e0b9640218db80651aa6063ea7c14e430a09265258ccb91303258f3",
+      "size_bytes": 1159
+    }
+  ],
+  "hash_algorithm": "SHA-256",
+  "material_inconsistency": "NO",
+  "parent_snapshot": "../S6.1/MANIFEST.json",
+  "paths": "package_relative",
+  "project": "Structural Dynamics + Evidence Dynamics",
+  "publication_readiness": "METHOD_PILOT_READY",
+  "publication_status": "INTERNAL_REVIEW",
+  "research_id": "ECL.COMPANY.STRATEGY_INC.2026.001",
+  "severity": "MINOR",
+  "snapshot_id": "SNAP-S6-1A-20260908-0001",
+  "sprint": "S6.1a",
+  "substantive_finding_change": "NONE"
+}

@@ -2,7 +2,7 @@
   "gdr_se_version": "GDR_SE_v0.1",
   "profiles": {
     "STRATEGY_LEGACY_METHOD_PILOT": {
-      "counter_evidence_required": false,
+      "counter_evidence_required": true,
       "formal_schema": false,
       "freshness_category": "CORPORATE_TREASURY",
       "independent_review_required": false,

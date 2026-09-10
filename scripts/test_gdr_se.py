@@ -53,12 +53,14 @@ def sha(rel: str) -> str:
 def check_records() -> None:
     ids = set()
     for subject, path in SUBJECTS.items():
-        record = read_json(path / "GDR_SE_AUTHORIZATION_RECORD_R1.json")
-        overlay = read_json(path / "GDR_SE_OVERLAY_R1.json")
+        record = read_json(path / "GDR_SE_AUTHORIZATION_RECORD_R1_1.json")
+        overlay = read_json(path / "GDR_SE_OVERLAY_R1_1.json")
         if record["gdr_se_version"] != VERSION or overlay["gdr_se_version"] != VERSION:
             fail(f"wrong version for {subject}")
         if record["evaluation_mode"] != "RUNTIME_EVALUATED":
             fail(f"missing runtime evaluation mode for {subject}")
+        if record.get("runtime_revision") != "R1.1" or overlay.get("runtime_revision") != "R1.1":
+            fail(f"missing R1.1 runtime revision for {subject}")
         if record["authorization_id"] in ids:
             fail("duplicate authorization id")
         ids.add(record["authorization_id"])
@@ -102,7 +104,7 @@ def check_no_upgrade_and_abstention() -> None:
             row["status"] = "INSUFFICIENT_DATA"
     if aggregate(abstain_gates) != "ABSTAIN":
         fail("insufficient data must abstain")
-    sol = read_json(SUBJECTS["sol"] / "GDR_SE_AUTHORIZATION_RECORD_R1.json")
+    sol = read_json(SUBJECTS["sol"] / "GDR_SE_AUTHORIZATION_RECORD_R1_1.json")
     if sol["evidence_state_reference"] != "POTENTIAL_CONFLICT":
         fail("SOL evidence state fixture changed")
     if sol["authorization"] == "VETO":

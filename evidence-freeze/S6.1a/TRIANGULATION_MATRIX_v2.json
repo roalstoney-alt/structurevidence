@@ -1,0 +1,43 @@
+[
+  {
+    "independent_source_if_available": "PARTIAL: Nasdaq validates listing/security context only, not treasury conduct.",
+    "issue": "BTC monetization vs primary reserve asset policy",
+    "issuer_filing": [
+      "ART-S6-SEC-2026-0706-8K",
+      "ART-S6-SEC-Q2-2026-10Q"
+    ],
+    "issuer_ir": [
+      "ART-S6-IR-DIGITAL-CREDIT",
+      "ART-S6-IR-Q2-2026"
+    ],
+    "numerical_reconciliation": [
+      "RECON-SALE-0706-A",
+      "RECON-SALE-0706-B",
+      "RECON-HOLDINGS-0705"
+    ],
+    "result": "SEMANTIC_TENSION_BUT_RECONCILABLE",
+    "structural_evidence": [
+      "STRUCT-S6-001"
+    ]
+  },
+  {
+    "independent_source_if_available": "NOT_FOUND for material liquidity-obligation facts.",
+    "issue": "Cash obligations, USD Reserve, and financing activity",
+    "issuer_filing": [
+      "ART-S6-SEC-Q1-2026-10Q",
+      "ART-S6-SEC-Q2-2026-10Q",
+      "ART-S6-SEC-2026-0713-8K"
+    ],
+    "issuer_ir": [
+      "ART-S6-IR-Q2-2026",
+      "ART-S6-IR-DIGITAL-CREDIT"
+    ],
+    "numerical_reconciliation": [
+      "RECON-COST-BASIS"
+    ],
+    "result": "NO_MATERIAL_INCONSISTENCY",
+    "structural_evidence": [
+      "STRUCT-S6-001"
+    ]
+  }
+]

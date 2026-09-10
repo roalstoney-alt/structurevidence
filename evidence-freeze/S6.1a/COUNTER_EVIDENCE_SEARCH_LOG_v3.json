@@ -1,0 +1,191 @@
+[
+  {
+    "counter_evidence_source_types": [
+      "same issuer",
+      "derived numerical reconciliation"
+    ],
+    "evidence_found": [
+      "No formal abandonment found in S6 record; sales are disclosed under monetization framework."
+    ],
+    "evidence_ids": [
+      "CLM-S6-001",
+      "CLM-S6-002",
+      "CLM-S6-009",
+      "CLM-S6-010"
+    ],
+    "falsifying_question": "Is there a formal abandonment or sale pattern inconsistent with primary reserve policy?",
+    "hypothesis_id": "H1",
+    "impact": "H1 remains viable; limitation is issuer-dependent source chain.",
+    "limitations": "Search remains bounded to public, lawful, internal-review artifacts and no right-of-reply was requested.",
+    "reviewed_at": "2026-09-08T00:00:00Z",
+    "search_result": "NO_MATERIAL_COUNTER_EVIDENCE_FOUND",
+    "search_terms": [
+      "formal abandonment reserve policy",
+      "Strategy BTC sales monetization framework",
+      "primary treasury reserve asset never sell"
+    ],
+    "sources_searched": [
+      "SEC 8-Ks",
+      "SEC Q2 2026 10-Q",
+      "Strategy Digital Credit framework",
+      "Nasdaq candidate"
+    ]
+  },
+  {
+    "counter_evidence_source_types": [
+      "same issuer"
+    ],
+    "evidence_found": [
+      "Multiple disclosed sale periods and framework language weaken an isolated-event objection."
+    ],
+    "evidence_ids": [
+      "CLM-S6-002",
+      "CLM-S6-019",
+      "CLM-S6-021"
+    ],
+    "falsifying_question": "Are monetization events negligible, isolated, or explicitly exceptional only?",
+    "hypothesis_id": "H2",
+    "impact": "H2 remains viable, subject to longer-window monitoring.",
+    "limitations": "Search remains bounded to public, lawful, internal-review artifacts and no right-of-reply was requested.",
+    "reviewed_at": "2026-09-08T00:00:00Z",
+    "search_result": "NO_MATERIAL_COUNTER_EVIDENCE_FOUND",
+    "search_terms": [
+      "isolated BTC sale",
+      "exceptional only monetization",
+      "BTC monetization program"
+    ],
+    "sources_searched": [
+      "SEC July/August 2026 8-Ks",
+      "Strategy Digital Credit framework"
+    ]
+  },
+  {
+    "counter_evidence_source_types": [
+      "same issuer",
+      "derived numerical reconciliation"
+    ],
+    "evidence_found": [
+      "Reserve growth and ATM proceeds counter a stress-only explanation."
+    ],
+    "evidence_ids": [
+      "CLM-S6-005",
+      "CLM-S6-013",
+      "CLM-S6-014",
+      "CLM-S6-015"
+    ],
+    "falsifying_question": "Do reserve buffers and financing capacity contradict a cash-pressure interpretation?",
+    "hypothesis_id": "H3",
+    "impact": "H3 is weakened as a sole explanation but not materially contradicted.",
+    "limitations": "Search remains bounded to public, lawful, internal-review artifacts and no right-of-reply was requested.",
+    "reviewed_at": "2026-09-08T00:00:00Z",
+    "search_result": "COUNTER_EVIDENCE_FOUND",
+    "search_terms": [
+      "USD Reserve growth",
+      "ATM capacity preferred dividends",
+      "liquidity needs software operations"
+    ],
+    "sources_searched": [
+      "SEC Q1 2026 10-Q",
+      "SEC Q2 2026 10-Q",
+      "Strategy Q2 2026 results"
+    ]
+  },
+  {
+    "counter_evidence_source_types": [
+      "same issuer"
+    ],
+    "evidence_found": [
+      "No forced-sale language captured; common ATM proceeds remained observable in the pilot record."
+    ],
+    "evidence_ids": [
+      "CLM-S6-013",
+      "CLM-S6-023"
+    ],
+    "falsifying_question": "Is there evidence of shrinking financing access or forced/constrained sales?",
+    "hypothesis_id": "H4",
+    "impact": "H4 remains viable but not exclusive.",
+    "limitations": "Search remains bounded to public, lawful, internal-review artifacts and no right-of-reply was requested.",
+    "reviewed_at": "2026-09-08T00:00:00Z",
+    "search_result": "NO_MATERIAL_COUNTER_EVIDENCE_FOUND",
+    "search_terms": [
+      "shrinking ATM access",
+      "forced sale",
+      "liquidity shortfall",
+      "constrained sale language"
+    ],
+    "sources_searched": [
+      "SEC Q2 2026 10-Q",
+      "SEC July/August 2026 8-Ks"
+    ]
+  },
+  {
+    "counter_evidence_source_types": [
+      "same issuer",
+      "partially dependent external context"
+    ],
+    "evidence_found": [
+      "Framework language integrates monetization, which narrows but does not remove the semantic gap."
+    ],
+    "evidence_ids": [
+      "CLM-S6-001",
+      "CLM-S6-002"
+    ],
+    "falsifying_question": "Has the public narrative explicitly updated enough to remove semantic lag?",
+    "hypothesis_id": "H5",
+    "impact": "H5 remains viable with narrower scope.",
+    "limitations": "Search remains bounded to public, lawful, internal-review artifacts and no right-of-reply was requested.",
+    "reviewed_at": "2026-09-08T00:00:00Z",
+    "search_result": "COUNTER_EVIDENCE_FOUND",
+    "search_terms": [
+      "Bitcoin treasury company monetization language",
+      "digital credit framework",
+      "headline narrative"
+    ],
+    "source_independence_correction": {
+      "corrected_from": [
+        "same issuer",
+        "independent source"
+      ],
+      "corrected_to": [
+        "same issuer",
+        "partially dependent external context"
+      ],
+      "reason": "Nasdaq context has hosting/category independence only and is not independent treasury-policy or monetization evidence."
+    },
+    "sources_searched": [
+      "Strategy IR",
+      "SEC filings",
+      "Nasdaq candidate"
+    ]
+  },
+  {
+    "counter_evidence_source_types": [
+      "derived numerical reconciliation",
+      "same issuer"
+    ],
+    "evidence_found": [
+      "No same-date same-scope material conflict survived normalization; cost-basis remains insufficient data."
+    ],
+    "evidence_ids": [
+      "RECON-HOLDINGS-0705",
+      "RECON-COST-BASIS"
+    ],
+    "falsifying_question": "Do same-date same-scope claims remain irreconcilable after normalization?",
+    "hypothesis_id": "H6",
+    "impact": "H6 remains viable.",
+    "limitations": "Search remains bounded to public, lawful, internal-review artifacts and no right-of-reply was requested.",
+    "reviewed_at": "2026-09-08T00:00:00Z",
+    "search_result": "NO_MATERIAL_COUNTER_EVIDENCE_FOUND",
+    "search_terms": [
+      "same date same scope contradiction",
+      "holdings roll forward conflict",
+      "policy action conflict"
+    ],
+    "sources_searched": [
+      "Claim Registry",
+      "Observation Registry",
+      "Numerical Reconciliation",
+      "SEC 8-Ks"
+    ]
+  }
+]

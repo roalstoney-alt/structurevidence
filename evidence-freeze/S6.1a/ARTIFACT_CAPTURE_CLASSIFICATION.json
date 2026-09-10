@@ -1,0 +1,134 @@
+[
+  {
+    "artifact_id": "ART-S6-SEC-2025-10K",
+    "capture_type": "FULL_RAW",
+    "completeness": "complete SEC HTML captured",
+    "notes": "Material regulatory filing artifact retained as full raw capture.",
+    "retrieved_at": "2026-09-08T00:00:00Z",
+    "rights_status": "public SEC archive raw capture retained",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1050446/000105044626000020/mstr-20251231.htm",
+    "verification_method": "raw SEC HTML bytes hashed in S6 freeze",
+    "verification_status": "HASHED_FULL_RAW_CAPTURE"
+  },
+  {
+    "artifact_id": "ART-S6-SEC-Q1-2026-10Q",
+    "capture_type": "FULL_RAW",
+    "completeness": "complete SEC HTML captured",
+    "notes": "Material regulatory filing artifact retained as full raw capture.",
+    "retrieved_at": "2026-09-08T00:00:00Z",
+    "rights_status": "public SEC archive raw capture retained",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1050446/000105044626000031/mstr-20260331.htm",
+    "verification_method": "raw SEC HTML bytes hashed in S6 freeze",
+    "verification_status": "HASHED_FULL_RAW_CAPTURE"
+  },
+  {
+    "artifact_id": "ART-S6-SEC-Q2-2026-10Q",
+    "capture_type": "FULL_RAW",
+    "completeness": "complete SEC HTML captured",
+    "notes": "Material regulatory filing artifact retained as full raw capture.",
+    "retrieved_at": "2026-09-08T00:00:00Z",
+    "rights_status": "public SEC archive raw capture retained",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1050446/000105044626000044/mstr-20260630.htm",
+    "verification_method": "raw SEC HTML bytes hashed in S6 freeze",
+    "verification_status": "HASHED_FULL_RAW_CAPTURE"
+  },
+  {
+    "artifact_id": "ART-S6-SEC-2026-0706-8K",
+    "capture_type": "FULL_RAW",
+    "completeness": "complete SEC HTML captured",
+    "notes": "Material regulatory filing artifact retained as full raw capture.",
+    "retrieved_at": "2026-09-08T00:00:00Z",
+    "rights_status": "public SEC archive raw capture retained",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1050446/000119312526295586/mstr-20260706.htm",
+    "verification_method": "raw SEC HTML bytes hashed in S6 freeze",
+    "verification_status": "HASHED_FULL_RAW_CAPTURE"
+  },
+  {
+    "artifact_id": "ART-S6-SEC-2026-0713-8K",
+    "capture_type": "FULL_RAW",
+    "completeness": "complete SEC HTML captured",
+    "notes": "Material regulatory filing artifact retained as full raw capture.",
+    "retrieved_at": "2026-09-08T00:00:00Z",
+    "rights_status": "public SEC archive raw capture retained",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1050446/000119312526301483/mstr-20260713.htm",
+    "verification_method": "raw SEC HTML bytes hashed in S6 freeze",
+    "verification_status": "HASHED_FULL_RAW_CAPTURE"
+  },
+  {
+    "artifact_id": "ART-S6-SEC-2026-0803-8K",
+    "capture_type": "FULL_RAW",
+    "completeness": "complete SEC HTML captured",
+    "notes": "Material regulatory filing artifact retained as full raw capture.",
+    "retrieved_at": "2026-09-08T00:00:00Z",
+    "rights_status": "public SEC archive raw capture retained",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1050446/000119312526329565/mstr-20260803.htm",
+    "verification_method": "raw SEC HTML bytes hashed in S6 freeze",
+    "verification_status": "HASHED_FULL_RAW_CAPTURE"
+  },
+  {
+    "artifact_id": "ART-S6-SEC-2026-0810-8K",
+    "capture_type": "FULL_RAW",
+    "completeness": "complete SEC HTML captured",
+    "notes": "Material regulatory filing artifact retained as full raw capture.",
+    "retrieved_at": "2026-09-08T00:00:00Z",
+    "rights_status": "public SEC archive raw capture retained",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1050446/000119312526341297/mstr-20260810.htm",
+    "verification_method": "raw SEC HTML bytes hashed in S6 freeze",
+    "verification_status": "HASHED_FULL_RAW_CAPTURE"
+  },
+  {
+    "artifact_id": "ART-S6-SEC-2026-0817-8K",
+    "capture_type": "FULL_RAW",
+    "completeness": "complete SEC HTML captured",
+    "notes": "Material regulatory filing artifact retained as full raw capture.",
+    "retrieved_at": "2026-09-08T00:00:00Z",
+    "rights_status": "public SEC archive raw capture retained",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1050446/000119312526353240/mstr-20260817.htm",
+    "verification_method": "raw SEC HTML bytes hashed in S6 freeze",
+    "verification_status": "HASHED_FULL_RAW_CAPTURE"
+  },
+  {
+    "artifact_id": "ART-S6-IR-Q2-2026",
+    "capture_type": "VERIFIED_EXTRACT",
+    "completeness": "bounded verified extract",
+    "notes": "S6.1 append-only correction: short IR artifact is not classified as FULL_RAW.",
+    "retrieved_at": "2026-09-08T00:00:00Z",
+    "rights_status": "verified extract only; full page not stored in S6 raw capture",
+    "source_url": "https://www.strategy.com/press/strategy-announces-second-quarter-2026-financial-results_07-30-2026",
+    "verification_method": "browser verified extract; curl raw was access-denied stub",
+    "verification_status": "VERIFIED_AGAINST_BROWSER_OPEN_SOURCE"
+  },
+  {
+    "artifact_id": "ART-S6-IR-DIGITAL-CREDIT",
+    "capture_type": "VERIFIED_EXTRACT",
+    "completeness": "bounded verified extract",
+    "notes": "S6.1 append-only correction: short IR artifact is not classified as FULL_RAW.",
+    "retrieved_at": "2026-09-08T00:00:00Z",
+    "rights_status": "verified extract only; full page not stored in S6 raw capture",
+    "source_url": "https://www.strategy.com/press/strategy-announces-digital-credit-capital-framework_06-29-2026",
+    "verification_method": "browser verified extract; curl raw was access-denied stub",
+    "verification_status": "VERIFIED_AGAINST_BROWSER_OPEN_SOURCE"
+  },
+  {
+    "artifact_id": "ART-S6-1-NASDAQ-MSTR-SEC-FILINGS-PAGE",
+    "capture_type": "VERIFIED_EXTRACT",
+    "completeness": "bounded verified extract",
+    "notes": "Used to classify independent hosting/security-listing context, not material issuer disclosure content.",
+    "retrieved_at": "2026-09-08T00:00:00Z",
+    "rights_status": "metadata/extract only",
+    "source_url": "https://www.nasdaq.com/market-activity/stocks/mstr/sec-filings",
+    "verification_method": "web search/open verified Nasdaq page context",
+    "verification_status": "VERIFIED_FOR_SOURCE_CATEGORY_ONLY"
+  },
+  {
+    "artifact_id": "ART-S6-1-SEC-COMPANYFACTS-API-CANDIDATE",
+    "capture_type": "HASH_METADATA_ONLY",
+    "completeness": "source identity only",
+    "notes": "Structured API candidate remains issuer-filed data and was not needed for material conclusion.",
+    "retrieved_at": "2026-09-08T00:00:00Z",
+    "rights_status": "metadata only",
+    "source_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001050446.json",
+    "verification_method": "source locator recorded; no material evidence added",
+    "verification_status": "CLASSIFIED_CANDIDATE_NOT_MATERIAL_EVIDENCE"
+  }
+]

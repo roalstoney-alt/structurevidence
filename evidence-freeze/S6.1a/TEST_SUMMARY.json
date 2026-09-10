@@ -1,0 +1,14 @@
+{
+  "build_result": {
+    "command": "python3 -B -m py_compile packages/domain/ecl.py scripts/generate_s6_1a_evidence.py scripts/freeze_s6_1a.py scripts/verify_s6_1a_package.py",
+    "exit_code": 0,
+    "result": "PASS"
+  },
+  "errors": 0,
+  "executed_at": "2026-09-08T00:00:00Z",
+  "failed": 0,
+  "passed": 289,
+  "result": "PASS",
+  "skipped": 0,
+  "tests_run": 289
+}

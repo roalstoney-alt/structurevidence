@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from datetime import date
 from pathlib import Path
 from typing import Any
 
@@ -20,10 +19,12 @@ GATES = [
     "G9_SENSITIVITY_RIGHT_OF_REPLY",
     "G10_EXPIRY_SUPERSESSION",
 ]
-RULE_VERSION = "GDR_SE_RUNTIME_RULES_v0.1-R1"
+RULE_VERSION = "GDR_SE_RUNTIME_RULES_v0.1-R1.1"
 
 
-def result(gate_id: str, status: str, severity: str, validator: str, reason: str, refs=None, facts=None, limitations=None, evaluated_at: str = "2026-09-10T00:00:00Z") -> dict:
+def result(gate_id: str, status: str, severity: str, validator: str, reason: str, refs=None, facts=None, limitations=None, evaluated_at: str | None = None) -> dict:
+    if evaluated_at is None:
+        raise ValueError("GDR_SE_EVALUATED_AT_REQUIRED")
     return {
         "gate_id": gate_id,
         "status": status,
@@ -114,9 +115,9 @@ def validate_g2_provenance(context, root: Path, evaluated_at: str) -> tuple[dict
     return result("G2_RTP_PROVENANCE", "PASS", "HARD", "validate_g2_provenance", "Required artifacts exist, are readable, non-empty, hashed and match recorded hashes.", refs, facts, evaluated_at=evaluated_at), all_meta
 
 
-def validate_g3_freshness(context, evaluated_at: str) -> dict:
+def validate_g3_freshness(context, evaluated_at: str, as_of_date) -> dict:
     config = load_config()
-    status, reason, facts = evaluate_freshness(context.category, context.last_reviewed, date(2026, 9, 10), config)
+    status, reason, facts = evaluate_freshness(context.category, context.last_reviewed, as_of_date, config)
     return result("G3_EVIDENCE_FRESHNESS", status, "SOFT", "validate_g3_freshness", reason, ["gdr-se/config/category_freshness.json"], facts, evaluated_at=evaluated_at)
 
 
@@ -131,7 +132,15 @@ def validate_g4_source_dependency(context, root: Path, evaluated_at: str) -> dic
         if isinstance(data, list):
             facts["unique_source_ids"] = len({row.get("source_id") for row in data if isinstance(row, dict) and row.get("source_id")})
         elif isinstance(data, dict):
-            facts["unique_source_ids"] = len({sid for group in data.get("groups", []) for sid in group.get("source_ids", [])})
+            groups = data.get("groups", [])
+            edges = data.get("edges", [])
+            nodes = data.get("nodes", [])
+            facts["dependency_groups"] = len(groups) or len(edges)
+            facts["unique_source_ids"] = len({sid for group in groups for sid in group.get("source_ids", [])})
+            if not facts["unique_source_ids"]:
+                facts["unique_source_ids"] = len({row.get("source_id") or row.get("artifact_id") or row.get("id") for row in nodes if isinstance(row, dict) and (row.get("source_id") or row.get("artifact_id") or row.get("id"))})
+            if data.get("independent_source_coverage"):
+                facts["artifact_independent_source_coverage"] = data["independent_source_coverage"]
     mapping = {"MULTI_SOURCE_INDEPENDENT": "PASS", "PARTIAL_INDEPENDENT": "PARTIAL", "PARTIAL": "PARTIAL", "PRIMARY_ONLY": "LIMITED", "PRIMARY_DOMINANT": "LIMITED", "LIMITED": "LIMITED", "UNRESOLVED": "UNRESOLVED"}
     status = mapping.get(coverage, "UNRESOLVED")
     return result("G4_SOURCE_DEPENDENCY", status, "SOFT", "validate_g4_source_dependency", "Source dependency was derived from declared coverage and dependency artifacts, not URL count.", refs, facts, ["Multiple URLs are not independent sources."] if status != "PASS" else [], evaluated_at)
@@ -200,11 +209,11 @@ def validate_g7_counter_evidence(context, root: Path, evaluated_at: str) -> dict
         return result("G7_COUNTER_EVIDENCE_COMPLETENESS", status, "HARD", "validate_g7_counter_evidence", "Legacy counter-evidence is prose, not a structured targeted log.", refs, {"structured_log": False, "hypotheses": 0}, ["Legacy method-pilot counter-evidence is not full R1 structured coverage."], evaluated_at)
     hypothesis_ids = {row.get("hypothesis_id") for row in hypotheses if isinstance(row, dict)}
     covered = {row.get("hypothesis_id") for row in data if isinstance(row, dict)}
-    empty_queries = [row.get("hypothesis_id") for row in data if not row.get("queries")]
-    empty_sources = [row.get("hypothesis_id") for row in data if not row.get("sources_checked")]
+    empty_queries = [row.get("hypothesis_id") for row in data if not (row.get("queries") or row.get("search_terms"))]
+    empty_sources = [row.get("hypothesis_id") for row in data if not (row.get("sources_checked") or row.get("sources_searched"))]
     missing_impact = [row.get("hypothesis_id") for row in data if not row.get("impact")]
-    missing_uncertainty = [row.get("hypothesis_id") for row in data if not row.get("remaining_uncertainty")]
-    generic = len({tuple(row.get("queries", [])) for row in data}) <= 1 or len({row.get("impact", "") for row in data}) <= 1
+    missing_uncertainty = [row.get("hypothesis_id") for row in data if not (row.get("remaining_uncertainty") or row.get("limitations"))]
+    generic = len({tuple(row.get("queries") or row.get("search_terms", [])) for row in data}) <= 1 or len({row.get("impact", "") for row in data}) <= 1
     facts = {"hypotheses": len(hypothesis_ids), "targeted_searches": len(data), "missing_hypotheses": sorted(hypothesis_ids - covered), "empty_queries": empty_queries, "empty_sources": empty_sources, "missing_impact": missing_impact, "missing_uncertainty": missing_uncertainty, "placeholder_warning": generic}
     if not data or facts["missing_hypotheses"] or empty_queries or empty_sources or missing_impact or missing_uncertainty:
         return result("G7_COUNTER_EVIDENCE_COMPLETENESS", "FAIL", "HARD", "validate_g7_counter_evidence", "Structured counter-evidence coverage is incomplete.", refs, facts, evaluated_at=evaluated_at)

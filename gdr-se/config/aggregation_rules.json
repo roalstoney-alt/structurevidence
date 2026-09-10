@@ -1,4 +1,16 @@
 {
+  "effects": {
+    "all_clear": "ALLOW_PUBLICATION",
+    "archived": "REFRESH_REQUIRED",
+    "hard_fail": "VETO",
+    "human_review_required": "HUMAN_REVIEW_REQUIRED",
+    "insufficient_data": "ABSTAIN",
+    "limited": "ALLOW_WITH_LIMITATIONS",
+    "partial": "ALLOW_WITH_LIMITATIONS",
+    "stale": "REFRESH_REQUIRED",
+    "superseded": "VETO",
+    "unresolved": "HUMAN_REVIEW_REQUIRED"
+  },
   "gdr_se_version": "GDR_SE_v0.1",
   "precedence": [
     "VETO",
@@ -8,5 +20,5 @@
     "ALLOW_WITH_LIMITATIONS",
     "ALLOW_PUBLICATION"
   ],
-  "rule_version": "GDR_SE_AGGREGATION_v0.1-R1"
+  "rule_version": "GDR_SE_AGGREGATION_v0.1-R1.1"
 }
