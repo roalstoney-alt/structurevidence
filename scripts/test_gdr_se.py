@@ -1,12 +1,18 @@
 from __future__ import annotations
 
 import hashlib
-import importlib.util
 import json
+import sys
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "gdr-se" / "engine"))
+sys.path.insert(0, str(ROOT / "commercial" / "intelligence"))
+
+from aggregation import aggregate  # noqa: E402
+from gdr_se_runtime import fulfillment_ready  # noqa: E402
+
 VERSION = "GDR_SE_v0.1"
 SUBJECTS = {
     "strategy": ROOT / "research" / "gdr-se" / "strategy-2026",
@@ -44,23 +50,15 @@ def sha(rel: str) -> str:
     return hashlib.sha256((ROOT / rel).read_bytes()).hexdigest()
 
 
-def load_publish_module():
-    path = ROOT / "scripts" / "publish_gdr_se.py"
-    spec = importlib.util.spec_from_file_location("publish_gdr_se", path)
-    if spec is None or spec.loader is None:
-        fail("cannot load publish_gdr_se")
-    module = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(module)
-    return module
-
-
 def check_records() -> None:
     ids = set()
     for subject, path in SUBJECTS.items():
-        record = read_json(path / "GDR_SE_AUTHORIZATION_RECORD.json")
-        overlay = read_json(path / "GDR_SE_OVERLAY.json")
+        record = read_json(path / "GDR_SE_AUTHORIZATION_RECORD_R1.json")
+        overlay = read_json(path / "GDR_SE_OVERLAY_R1.json")
         if record["gdr_se_version"] != VERSION or overlay["gdr_se_version"] != VERSION:
             fail(f"wrong version for {subject}")
+        if record["evaluation_mode"] != "RUNTIME_EVALUATED":
+            fail(f"missing runtime evaluation mode for {subject}")
         if record["authorization_id"] in ids:
             fail("duplicate authorization id")
         ids.add(record["authorization_id"])
@@ -83,17 +81,28 @@ def check_records() -> None:
 
 
 def check_no_upgrade_and_abstention() -> None:
-    module = load_publish_module()
-    veto = module.aggregate([{"status": "FAIL", "severity": "HARD", "gate_id": "G1_SCHEMA_INTEGRITY", "reason": ""}])
+    veto = aggregate([{"status": "FAIL", "severity": "HARD", "gate_id": "G1_SCHEMA_INTEGRITY", "reason": "", "computed_facts": {}}])
     if veto != "VETO":
         fail("hard fail must veto")
-    abstain_gates = [module.gate(gate_id, "PASS", "SOFT", "ok") for gate_id in module.GATES]
+    gate_ids = [
+        "G1_SCHEMA_INTEGRITY",
+        "G2_RTP_PROVENANCE",
+        "G3_EVIDENCE_FRESHNESS",
+        "G4_SOURCE_DEPENDENCY",
+        "G5_NUMERICAL_RECONCILIATION",
+        "G6_ECL_CONSISTENCY",
+        "G7_COUNTER_EVIDENCE_COMPLETENESS",
+        "G8_INDEPENDENT_REVIEW",
+        "G9_SENSITIVITY_RIGHT_OF_REPLY",
+        "G10_EXPIRY_SUPERSESSION",
+    ]
+    abstain_gates = [{"gate_id": gate_id, "status": "PASS", "severity": "SOFT", "reason": "fixture", "computed_facts": {}} for gate_id in gate_ids]
     for row in abstain_gates:
         if row["gate_id"] == "G6_ECL_CONSISTENCY":
             row["status"] = "INSUFFICIENT_DATA"
-    if module.aggregate(abstain_gates) != "ABSTAIN":
+    if aggregate(abstain_gates) != "ABSTAIN":
         fail("insufficient data must abstain")
-    sol = read_json(SUBJECTS["sol"] / "GDR_SE_AUTHORIZATION_RECORD.json")
+    sol = read_json(SUBJECTS["sol"] / "GDR_SE_AUTHORIZATION_RECORD_R1.json")
     if sol["evidence_state_reference"] != "POTENTIAL_CONFLICT":
         fail("SOL evidence state fixture changed")
     if sol["authorization"] == "VETO":
@@ -122,11 +131,12 @@ def check_commercial_and_monitor() -> None:
         fail("paid delivery schema must require ALLOW_PAID_DELIVERY")
     if "VETO" not in monitor_schema["properties"]["authorization"]["enum"]:
         fail("monitor schema must include veto")
-    payment_confirmed_no_auth = False and True
-    auth_payment_pending = True and False
-    both = True and True
-    if payment_confirmed_no_auth or auth_payment_pending or not both:
-        fail("commercial gate boolean contract failed")
+    if fulfillment_ready("CONFIRMED", "ALLOW_PUBLICATION"):
+        fail("publication authorization must not trigger paid fulfillment")
+    if fulfillment_ready("PENDING", "ALLOW_PAID_DELIVERY"):
+        fail("pending payment must not trigger paid fulfillment")
+    if not fulfillment_ready("CONFIRMED", "ALLOW_PAID_DELIVERY"):
+        fail("confirmed payment plus paid authorization should trigger fulfillment readiness")
 
 
 def check_hashes_and_terms() -> None:

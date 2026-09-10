@@ -1,0 +1,12 @@
+{
+  "gdr_se_version": "GDR_SE_v0.1",
+  "precedence": [
+    "VETO",
+    "HUMAN_REVIEW_REQUIRED",
+    "REFRESH_REQUIRED",
+    "ABSTAIN",
+    "ALLOW_WITH_LIMITATIONS",
+    "ALLOW_PUBLICATION"
+  ],
+  "rule_version": "GDR_SE_AGGREGATION_v0.1-R1"
+}

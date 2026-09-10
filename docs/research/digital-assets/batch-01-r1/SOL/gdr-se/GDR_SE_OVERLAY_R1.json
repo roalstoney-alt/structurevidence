@@ -1,0 +1,62 @@
+{
+  "authorization": "HUMAN_REVIEW_REQUIRED",
+  "authorization_id": "GDR-SE-AUTH-SOL-40d7dc67a8d79b12-R1",
+  "created_at": "2026-09-10T00:00:00Z",
+  "evaluation_mode": "RUNTIME_EVALUATED",
+  "gate_summary": [
+    {
+      "gate_id": "G1_SCHEMA_INTEGRITY",
+      "status": "PARTIAL",
+      "validator": "validate_g1_schema"
+    },
+    {
+      "gate_id": "G2_RTP_PROVENANCE",
+      "status": "PASS",
+      "validator": "validate_g2_provenance"
+    },
+    {
+      "gate_id": "G3_EVIDENCE_FRESHNESS",
+      "status": "UNRESOLVED",
+      "validator": "validate_g3_freshness"
+    },
+    {
+      "gate_id": "G4_SOURCE_DEPENDENCY",
+      "status": "PARTIAL",
+      "validator": "validate_g4_source_dependency"
+    },
+    {
+      "gate_id": "G5_NUMERICAL_RECONCILIATION",
+      "status": "PASS",
+      "validator": "validate_g5_numerical"
+    },
+    {
+      "gate_id": "G6_ECL_CONSISTENCY",
+      "status": "PARTIAL",
+      "validator": "validate_g6_ecl"
+    },
+    {
+      "gate_id": "G7_COUNTER_EVIDENCE_COMPLETENESS",
+      "status": "PARTIAL",
+      "validator": "validate_g7_counter_evidence"
+    },
+    {
+      "gate_id": "G8_INDEPENDENT_REVIEW",
+      "status": "PARTIAL",
+      "validator": "validate_g8_review"
+    },
+    {
+      "gate_id": "G9_SENSITIVITY_RIGHT_OF_REPLY",
+      "status": "NOT_APPLICABLE",
+      "validator": "validate_g9_sensitivity"
+    },
+    {
+      "gate_id": "G10_EXPIRY_SUPERSESSION",
+      "status": "PASS",
+      "validator": "validate_g10_supersession"
+    }
+  ],
+  "gdr_se_version": "GDR_SE_v0.1",
+  "input_bundle_sha256": "40d7dc67a8d79b12a37edb2f5623a06993cfb2de9984b3634eec835d3d1399bf",
+  "original_canonical_sha256": "3fd4dfd93611706c94c658a969f0797f07dee59eb177fb0a73633ee232eb70c0",
+  "research_id": "SE.ASSET.SOL.2026.001-R1"
+}

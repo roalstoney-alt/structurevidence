@@ -20,8 +20,11 @@
     "gate_id",
     "status",
     "severity",
+    "validator",
+    "rule_version",
     "reason",
     "evidence_refs",
+    "computed_facts",
     "limitations",
     "evaluated_at"
   ],

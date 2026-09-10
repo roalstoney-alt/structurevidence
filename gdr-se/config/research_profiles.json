@@ -1,0 +1,46 @@
+{
+  "gdr_se_version": "GDR_SE_v0.1",
+  "profiles": {
+    "STRATEGY_LEGACY_METHOD_PILOT": {
+      "counter_evidence_required": false,
+      "formal_schema": false,
+      "freshness_category": "CORPORATE_TREASURY",
+      "independent_review_required": false,
+      "legacy_hash_fallback": true,
+      "numerical_reconciliation_required": false,
+      "optional_artifacts": [
+        "numerical_reconciliation",
+        "independent_review"
+      ],
+      "required_artifacts": [
+        "canonical_research",
+        "report",
+        "manifest",
+        "source_inventory",
+        "observation_registry",
+        "claim_registry",
+        "counter_evidence"
+      ]
+    },
+    "DIGITAL_ASSET_R1": {
+      "counter_evidence_required": true,
+      "formal_schema": false,
+      "freshness_category": "L1_NETWORK",
+      "independent_review_required": true,
+      "legacy_hash_fallback": false,
+      "numerical_reconciliation_required": true,
+      "optional_artifacts": [],
+      "required_artifacts": [
+        "canonical_research",
+        "report",
+        "manifest",
+        "source_inventory",
+        "observation_registry",
+        "claim_registry",
+        "counter_evidence",
+        "numerical_reconciliation",
+        "independent_review"
+      ]
+    }
+  }
+}

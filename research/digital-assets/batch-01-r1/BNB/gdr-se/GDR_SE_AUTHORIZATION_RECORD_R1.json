@@ -1,0 +1,363 @@
+{
+  "authorization": "HUMAN_REVIEW_REQUIRED",
+  "authorization_id": "GDR-SE-AUTH-BNB-a947f5c38a1bf5cf-R1",
+  "config_hashes": {
+    "aggregation_rules_sha256": "5be3c38af677ebe9cbea95aa3c231d29e9e2ee285a499cfba63273b79f050a29",
+    "freshness_config_sha256": "e486d1cde399acf6319db7f09a7b2849c52ae1604dd87360312e162517c9b762",
+    "gates_config_sha256": "06e725a2e5ad5d506aad41e79f743e73a66e2634c6ec4b5f7166c598e6fb33c7",
+    "research_profile_sha256": "bce938195201e2273c714b788fa940b473385897c049fcea89805679249802a7"
+  },
+  "counterfactual": {
+    "discriminating_evidence": [
+      "Independently captured primary artifacts with stable hashes.",
+      "Targeted counter-evidence addressing the leading alternative hypotheses."
+    ],
+    "falsifiers": [
+      "New primary records contradict the current BNB finding.",
+      "A correction or supersession record invalidates a material source or calculation."
+    ],
+    "no_action_consequence": "Historical research may remain available, but current release or paid delivery remains blocked until runtime gates resolve.",
+    "rejected_alternative": "The alternative that TEMPORAL_CHANGE should be treated as release authorization was rejected."
+  },
+  "created_at": "2026-09-10T00:00:00Z",
+  "evaluation_id": "GDR-SE-EVAL-a947f5c38a1bf5cf-R1",
+  "evaluation_mode": "RUNTIME_EVALUATED",
+  "evidence_envelope": {
+    "artifacts": [
+      {
+        "exists": true,
+        "expected_sha256": "76e04e5a9be907d9fb825c6e7b25e75e056a4aa646672253c88acb2ef76ecf22",
+        "hash_match": true,
+        "path": "evidence-freeze/DIGITAL-ASSET-BATCH-01-R1/BNB/CANONICAL_RESEARCH_R1.json",
+        "readable": true,
+        "role": "canonical_research",
+        "sha256": "76e04e5a9be907d9fb825c6e7b25e75e056a4aa646672253c88acb2ef76ecf22",
+        "size_bytes": 11345
+      },
+      {
+        "exists": true,
+        "expected_sha256": "1578e0148d4693ebb3d79115048c239885ba416dffb0f3b60b745fea510b0f93",
+        "hash_match": true,
+        "path": "evidence-freeze/DIGITAL-ASSET-BATCH-01-R1/BNB/PUBLIC_EVIDENCE_RESEARCH_REPORT_R1.md",
+        "readable": true,
+        "role": "report",
+        "sha256": "1578e0148d4693ebb3d79115048c239885ba416dffb0f3b60b745fea510b0f93",
+        "size_bytes": 3224
+      },
+      {
+        "exists": true,
+        "expected_sha256": "9f7b70c65d4f47ec27f418553352a9c60c3f598fec60f5b02de5ba9d69a421c3",
+        "hash_match": true,
+        "path": "evidence-freeze/DIGITAL-ASSET-BATCH-01-R1/BNB/MANIFEST.json",
+        "readable": true,
+        "role": "manifest",
+        "sha256": "9f7b70c65d4f47ec27f418553352a9c60c3f598fec60f5b02de5ba9d69a421c3",
+        "size_bytes": 921
+      },
+      {
+        "exists": true,
+        "expected_sha256": "20f68e9d9871616b2790739d20f358e00c57cc4c0f98b6ea33dbb3581babab9e",
+        "hash_match": true,
+        "path": "evidence-freeze/DIGITAL-ASSET-BATCH-01-R1/BNB/SOURCE_INVENTORY.json",
+        "readable": true,
+        "role": "source_inventory",
+        "sha256": "20f68e9d9871616b2790739d20f358e00c57cc4c0f98b6ea33dbb3581babab9e",
+        "size_bytes": 2720
+      },
+      {
+        "exists": true,
+        "expected_sha256": "48057428087ac84b316d56b17814ff5a7377c0c1132872716e99863c5616bece",
+        "hash_match": true,
+        "path": "evidence-freeze/DIGITAL-ASSET-BATCH-01-R1/BNB/OBSERVATION_REGISTRY.json",
+        "readable": true,
+        "role": "observation_registry",
+        "sha256": "48057428087ac84b316d56b17814ff5a7377c0c1132872716e99863c5616bece",
+        "size_bytes": 4326
+      },
+      {
+        "exists": true,
+        "expected_sha256": "f4ad0ea8d70e10065b037ac6137a5c266b76e6f462427803cfae878e2106a362",
+        "hash_match": true,
+        "path": "evidence-freeze/DIGITAL-ASSET-BATCH-01-R1/BNB/CLAIM_REGISTRY.json",
+        "readable": true,
+        "role": "claim_registry",
+        "sha256": "f4ad0ea8d70e10065b037ac6137a5c266b76e6f462427803cfae878e2106a362",
+        "size_bytes": 1071
+      },
+      {
+        "exists": true,
+        "expected_sha256": "be43f2b58b011fad8f35579206634fd3e1b7eaebfa1c1f085a32fd110c59bbc9",
+        "hash_match": true,
+        "path": "evidence-freeze/DIGITAL-ASSET-BATCH-01-R1/BNB/COUNTER_EVIDENCE_SEARCH_LOG.json",
+        "readable": true,
+        "role": "counter_evidence",
+        "sha256": "be43f2b58b011fad8f35579206634fd3e1b7eaebfa1c1f085a32fd110c59bbc9",
+        "size_bytes": 4080
+      },
+      {
+        "exists": true,
+        "expected_sha256": "861e5b14be4c98555aaf3d8eb444b1f655ccb12be5b58b6baf7e66edc039f09d",
+        "hash_match": true,
+        "path": "evidence-freeze/DIGITAL-ASSET-BATCH-01-R1/BNB/NUMERICAL_RECONCILIATION.json",
+        "readable": true,
+        "role": "numerical_reconciliation",
+        "sha256": "861e5b14be4c98555aaf3d8eb444b1f655ccb12be5b58b6baf7e66edc039f09d",
+        "size_bytes": 1102
+      },
+      {
+        "exists": true,
+        "expected_sha256": "5fc6f616dc2eef4f46fcfad22bd7e10fb32e9b74f58c961a5749342031142fce",
+        "hash_match": true,
+        "path": "evidence-freeze/DIGITAL-ASSET-BATCH-01-R1/BNB/AGREEMENT_DIVERGENCE_AUDIT.md",
+        "readable": true,
+        "role": "independent_review",
+        "sha256": "5fc6f616dc2eef4f46fcfad22bd7e10fb32e9b74f58c961a5749342031142fce",
+        "size_bytes": 557
+      }
+    ],
+    "canonical_research_sha256": "76e04e5a9be907d9fb825c6e7b25e75e056a4aa646672253c88acb2ef76ecf22",
+    "claim_registry_sha256": "f4ad0ea8d70e10065b037ac6137a5c266b76e6f462427803cfae878e2106a362",
+    "counter_evidence_sha256": "be43f2b58b011fad8f35579206634fd3e1b7eaebfa1c1f085a32fd110c59bbc9",
+    "created_at": "2026-09-10T00:00:00Z",
+    "envelope_id": "GDR-SE-ENV-BNB-R1",
+    "immutable": true,
+    "observation_registry_sha256": "48057428087ac84b316d56b17814ff5a7377c0c1132872716e99863c5616bece",
+    "report_sha256": "1578e0148d4693ebb3d79115048c239885ba416dffb0f3b60b745fea510b0f93",
+    "research_id": "SE.ASSET.BNB.2026.001-R1",
+    "rtp_manifest_sha256": "9f7b70c65d4f47ec27f418553352a9c60c3f598fec60f5b02de5ba9d69a421c3",
+    "source_inventory_sha256": "20f68e9d9871616b2790739d20f358e00c57cc4c0f98b6ea33dbb3581babab9e"
+  },
+  "evidence_state_reference": "TEMPORAL_CHANGE",
+  "gate_results": [
+    {
+      "computed_facts": {
+        "canonical_json_parse": true,
+        "duplicate_ids": [],
+        "ids_match": true,
+        "missing_fields": [],
+        "required_fields": [
+          "research_id",
+          "report_id",
+          "report_version",
+          "research_status",
+          "method_version",
+          "evidence_state",
+          "material_inconsistency",
+          "source_coverage"
+        ]
+      },
+      "evaluated_at": "2026-09-10T00:00:00Z",
+      "evidence_refs": [
+        "evidence-freeze/DIGITAL-ASSET-BATCH-01-R1/BNB/CANONICAL_RESEARCH_R1.json"
+      ],
+      "gate_id": "G1_SCHEMA_INTEGRITY",
+      "limitations": [
+        "Legacy/profile schema is field-validated only."
+      ],
+      "reason": "Required runtime fields are present, but no formal profile JSON Schema is frozen.",
+      "rule_version": "GDR_SE_RUNTIME_RULES_v0.1-R1",
+      "severity": "HARD",
+      "status": "PARTIAL",
+      "validator": "validate_g1_schema"
+    },
+    {
+      "computed_facts": {
+        "blank_expected_hashes": [],
+        "documented_legacy_fallback": false,
+        "hash_matches": 9,
+        "hashed_artifacts": 9,
+        "mismatched": [],
+        "missing": [],
+        "present_artifacts": 9,
+        "required_artifacts": 9
+      },
+      "evaluated_at": "2026-09-10T00:00:00Z",
+      "evidence_refs": [
+        "evidence-freeze/DIGITAL-ASSET-BATCH-01-R1/BNB/CANONICAL_RESEARCH_R1.json",
+        "evidence-freeze/DIGITAL-ASSET-BATCH-01-R1/BNB/PUBLIC_EVIDENCE_RESEARCH_REPORT_R1.md",
+        "evidence-freeze/DIGITAL-ASSET-BATCH-01-R1/BNB/MANIFEST.json",
+        "evidence-freeze/DIGITAL-ASSET-BATCH-01-R1/BNB/SOURCE_INVENTORY.json",
+        "evidence-freeze/DIGITAL-ASSET-BATCH-01-R1/BNB/OBSERVATION_REGISTRY.json",
+        "evidence-freeze/DIGITAL-ASSET-BATCH-01-R1/BNB/CLAIM_REGISTRY.json",
+        "evidence-freeze/DIGITAL-ASSET-BATCH-01-R1/BNB/COUNTER_EVIDENCE_SEARCH_LOG.json",
+        "evidence-freeze/DIGITAL-ASSET-BATCH-01-R1/BNB/NUMERICAL_RECONCILIATION.json",
+        "evidence-freeze/DIGITAL-ASSET-BATCH-01-R1/BNB/AGREEMENT_DIVERGENCE_AUDIT.md"
+      ],
+      "gate_id": "G2_RTP_PROVENANCE",
+      "limitations": [],
+      "reason": "Required artifacts exist, are readable, non-empty, hashed and match recorded hashes.",
+      "rule_version": "GDR_SE_RUNTIME_RULES_v0.1-R1",
+      "severity": "HARD",
+      "status": "PASS",
+      "validator": "validate_g2_provenance"
+    },
+    {
+      "computed_facts": {
+        "category": "L1_NETWORK",
+        "policy_status": "UNCONFIGURED",
+        "threshold_configured": false
+      },
+      "evaluated_at": "2026-09-10T00:00:00Z",
+      "evidence_refs": [
+        "gdr-se/config/category_freshness.json"
+      ],
+      "gate_id": "G3_EVIDENCE_FRESHNESS",
+      "limitations": [],
+      "reason": "RDL freshness policy not configured for category L1_NETWORK.",
+      "rule_version": "GDR_SE_RUNTIME_RULES_v0.1-R1",
+      "severity": "SOFT",
+      "status": "UNRESOLVED",
+      "validator": "validate_g3_freshness"
+    },
+    {
+      "computed_facts": {
+        "dependency_groups": 3,
+        "rule": "MULTIPLE_URLS_NOT_INDEPENDENT_SOURCES",
+        "source_coverage": "PARTIAL",
+        "unique_source_ids": 5
+      },
+      "evaluated_at": "2026-09-10T00:00:00Z",
+      "evidence_refs": [
+        "evidence-freeze/DIGITAL-ASSET-BATCH-01-R1/BNB/SOURCE_DEPENDENCY_GRAPH.json"
+      ],
+      "gate_id": "G4_SOURCE_DEPENDENCY",
+      "limitations": [
+        "Multiple URLs are not independent sources."
+      ],
+      "reason": "Source dependency was derived from declared coverage and dependency artifacts, not URL count.",
+      "rule_version": "GDR_SE_RUNTIME_RULES_v0.1-R1",
+      "severity": "SOFT",
+      "status": "PARTIAL",
+      "validator": "validate_g4_source_dependency"
+    },
+    {
+      "computed_facts": {
+        "insufficient_data": 0,
+        "mismatch": 0,
+        "not_applicable": 0,
+        "reconciled": 3,
+        "total": 3
+      },
+      "evaluated_at": "2026-09-10T00:00:00Z",
+      "evidence_refs": [
+        "evidence-freeze/DIGITAL-ASSET-BATCH-01-R1/BNB/NUMERICAL_RECONCILIATION.json"
+      ],
+      "gate_id": "G5_NUMERICAL_RECONCILIATION",
+      "limitations": [],
+      "reason": "All material numerical reconciliation rows are reconciled.",
+      "rule_version": "GDR_SE_RUNTIME_RULES_v0.1-R1",
+      "severity": "SOFT",
+      "status": "PASS",
+      "validator": "validate_g5_numerical"
+    },
+    {
+      "computed_facts": {
+        "evidence_state": "TEMPORAL_CHANGE",
+        "human_review_required": false,
+        "material_inconsistency": "NO"
+      },
+      "evaluated_at": "2026-09-10T00:00:00Z",
+      "evidence_refs": [],
+      "gate_id": "G6_ECL_CONSISTENCY",
+      "limitations": [],
+      "reason": "Evidence state was mapped without subject-specific exceptions.",
+      "rule_version": "GDR_SE_RUNTIME_RULES_v0.1-R1",
+      "severity": "SOFT",
+      "status": "PASS",
+      "validator": "validate_g6_ecl"
+    },
+    {
+      "computed_facts": {
+        "empty_queries": [],
+        "empty_sources": [],
+        "hypotheses": 5,
+        "missing_hypotheses": [],
+        "missing_impact": [],
+        "missing_uncertainty": [],
+        "placeholder_warning": true,
+        "targeted_searches": 5
+      },
+      "evaluated_at": "2026-09-10T00:00:00Z",
+      "evidence_refs": [
+        "evidence-freeze/DIGITAL-ASSET-BATCH-01-R1/BNB/COUNTER_EVIDENCE_SEARCH_LOG.json",
+        "evidence-freeze/DIGITAL-ASSET-BATCH-01-R1/BNB/HYPOTHESIS_REGISTRY.json"
+      ],
+      "gate_id": "G7_COUNTER_EVIDENCE_COMPLETENESS",
+      "limitations": [
+        "Placeholder-like repetition prevents a full PASS."
+      ],
+      "reason": "Counter-evidence exists but contains repeated boilerplate patterns.",
+      "rule_version": "GDR_SE_RUNTIME_RULES_v0.1-R1",
+      "severity": "HARD",
+      "status": "PARTIAL",
+      "validator": "validate_g7_counter_evidence"
+    },
+    {
+      "computed_facts": {
+        "agreement_classification": "PARTIAL_AGREEMENT",
+        "human_review_required": false,
+        "review_required": true
+      },
+      "evaluated_at": "2026-09-10T00:00:00Z",
+      "evidence_refs": [
+        "evidence-freeze/DIGITAL-ASSET-BATCH-01-R1/BNB/AGREEMENT_DIVERGENCE_AUDIT.md"
+      ],
+      "gate_id": "G8_INDEPENDENT_REVIEW",
+      "limitations": [],
+      "reason": "Independent review agreement classification was read from the frozen review artifact.",
+      "rule_version": "GDR_SE_RUNTIME_RULES_v0.1-R1",
+      "severity": "SOFT",
+      "status": "PARTIAL",
+      "validator": "validate_g8_review"
+    },
+    {
+      "computed_facts": {
+        "entity_response_status": null,
+        "human_review_required": false
+      },
+      "evaluated_at": "2026-09-10T00:00:00Z",
+      "evidence_refs": [],
+      "gate_id": "G9_SENSITIVITY_RIGHT_OF_REPLY",
+      "limitations": [],
+      "reason": "No sensitivity/right-of-reply trigger is present in runtime context.",
+      "rule_version": "GDR_SE_RUNTIME_RULES_v0.1-R1",
+      "severity": "SOFT",
+      "status": "NOT_APPLICABLE",
+      "validator": "validate_g9_sensitivity"
+    },
+    {
+      "computed_facts": {
+        "correction_status": "NONE",
+        "publication_status": "R1 RESEARCH SUPPORT",
+        "supersession_status": "REFINED"
+      },
+      "evaluated_at": "2026-09-10T00:00:00Z",
+      "evidence_refs": [
+        "evidence-freeze/DIGITAL-ASSET-BATCH-01-R1/BNB/SUPERSESSION_NOTICE.md"
+      ],
+      "gate_id": "G10_EXPIRY_SUPERSESSION",
+      "limitations": [],
+      "reason": "Supersession/correction artifacts do not block this current runtime overlay.",
+      "rule_version": "GDR_SE_RUNTIME_RULES_v0.1-R1",
+      "severity": "HARD",
+      "status": "PASS",
+      "validator": "validate_g10_supersession"
+    }
+  ],
+  "gdr_se_version": "GDR_SE_v0.1",
+  "input_bundle_sha256": "a947f5c38a1bf5cfcead303c63f79785d523cef9dd4a9560ffb13cd302297021",
+  "limitations": [
+    "Legacy/profile schema is field-validated only.",
+    "Multiple URLs are not independent sources.",
+    "Placeholder-like repetition prevents a full PASS."
+  ],
+  "profile": "DIGITAL_ASSET_R1",
+  "public_status": "UNDER_REVIEW",
+  "report_id": "BNB_PUBLIC_EVIDENCE_RESEARCH_REPORT_R1",
+  "report_version": "R1",
+  "research_id": "SE.ASSET.BNB.2026.001-R1",
+  "research_status": "R1 RESEARCH SUPPORT",
+  "structural_state_reference": "BURN_LINKED_ECOSYSTEM_UTILITY_REGIME",
+  "supersedes_authorization_id": "GDR-SE-AUTH-BNB-2026-001",
+  "valid_until": null
+}

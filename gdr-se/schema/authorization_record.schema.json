@@ -19,13 +19,17 @@
     "report_id",
     "report_version",
     "gdr_se_version",
+    "evaluation_mode",
+    "evaluation_id",
     "authorization",
     "gate_results",
     "limitations",
     "counterfactual",
     "created_at",
     "valid_until",
-    "supersedes_authorization_id"
+    "supersedes_authorization_id",
+    "input_bundle_sha256",
+    "config_hashes"
   ],
   "title": "authorization_record",
   "type": "object"
