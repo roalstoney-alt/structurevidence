@@ -13,6 +13,20 @@
     UTILITY_STRUCTURE: "utility",
     VALIDATOR_DISTRIBUTION: "validator distribution"
   };
+  const displayLabels = {
+    SUPPLY_STRUCTURE: "Supply",
+    UTILITY_STRUCTURE: "Utility",
+    GOVERNANCE_STRUCTURE: "Governance",
+    VALIDATOR_DISTRIBUTION: "Validator distribution",
+    CONTRACTIONARY: "Contractionary",
+    ESTABLISHED_ROLE: "Established role",
+    MIXED_ROLE: "Mixed role",
+    MECHANISM_DEFINED: "Mechanism defined",
+    FIXED_OR_RESTRICTED_SET: "Fixed / restricted set",
+    TOWARD_CONTRACTION: "Toward contraction",
+    NOT_ESTABLISHED: "Not established"
+  };
+  const displayLabel = (value) => displayLabels[value] || String(value || "Not observed").replaceAll("_", " ").toLowerCase();
 
   if (requestedSubject && requestedSubject.trim().toLowerCase() !== "bnb") {
     workspace.innerHTML = `<section class="monitor-error"><p class="monitor-kicker">Coverage boundary</p><h1>${esc(requestedSubject.toUpperCase())} monitoring is not available</h1><p>Monitoring v1.0 currently exposes a generated workspace for BNB only. No BNB state has been substituted for this request.</p><p><a class="monitor-command" href="monitor.html?subject=bnb">Open BNB workspace</a> <a class="monitor-command secondary" href="index.html#asset-states">View archive coverage</a></p></section>`;
@@ -56,8 +70,49 @@
     document.querySelector("[data-risk-flags]").innerHTML = flags.map((flag) => `<div class="risk-row ${esc(flag.tone)}"><div><span>${esc(flag.label)}</span><strong>${esc(flag.state)}</strong></div><p>${esc(flag.note)}</p></div>`).join("");
   }
 
-  function render(snapshot) {
+  function renderStructureTimeline(snapshot, dataset) {
+    const chart = document.querySelector("[data-change-chart]");
+    const detail = document.querySelector("[data-change-detail]");
+    if (!chart || !detail) return;
+    if (!dataset?.buckets) {
+      chart.innerHTML = '<p class="change-unavailable">Structured timeline unavailable. The monitoring snapshot remains accessible below.</p>';
+      return;
+    }
+    const active = dataset.buckets.filter((row) => Number(row.observation_count) > 0);
+    const startMs = Math.min(...active.map((row) => Date.parse(row.date)));
+    const endMs = Date.parse(snapshot.snapshot_as_of);
+    const position = (date) => Math.max(2, Math.min(96, ((Date.parse(date) - startMs) / Math.max(1, endMs - startMs)) * 94 + 2));
+    const dimensionOrder = ["SUPPLY_STRUCTURE", "UTILITY_STRUCTURE", "GOVERNANCE_STRUCTURE", "VALIDATOR_DISTRIBUTION"];
+    const structuralHash = snapshot.rtp_provenance_refs.find((row) => row.role === "structural_day")?.sha256 || "";
+    const rows = dimensionOrder.map((dimension) => {
+      const observations = active.filter((row) => row.dimension_id === dimension).sort((a, b) => a.date.localeCompare(b.date));
+      if (!observations.length) return "";
+      const connectors = observations.slice(1).map((row, index) => {
+        const left = position(observations[index].date);
+        const right = position(row.date);
+        return `<span class="change-connector" style="left:${left}%;width:${Math.max(0, right - left)}%" aria-hidden="true"></span>`;
+      }).join("");
+      const points = observations.map((row) => {
+        const established = row.delta_state !== "NOT_ESTABLISHED";
+        const payload = encodeURIComponent(JSON.stringify({dimension:displayLabel(row.dimension_id),date:row.date,level:displayLabel(row.level_state),delta:displayLabel(row.delta_state),basis:displayLabel(row.delta_basis),observations:row.level_observation_ids || [],sources:row.source_refs || [],hash:structuralHash}));
+        return `<button class="change-point ${established ? "established" : "observed"} ${position(row.date) > 72 ? "align-right" : ""}" style="left:${position(row.date)}%" type="button" data-change-point="${payload}" aria-label="${esc(displayLabel(row.dimension_id))}, ${esc(row.date)}, ${esc(displayLabel(row.level_state))}"><span class="point-date">${esc(row.date.slice(5))}</span><i aria-hidden="true"></i><strong>${esc(displayLabel(row.level_state))}</strong>${established ? `<small>${esc(displayLabel(row.delta_state))}</small>` : ""}</button>`;
+      }).join("");
+      return `<div class="change-lane"><div class="lane-label"><strong>${esc(displayLabel(dimension))}</strong><span>${observations.reduce((sum, row) => sum + row.observation_count, 0)} observations</span></div><div class="lane-track">${connectors}${points}</div></div>`;
+    }).join("");
+    chart.innerHTML = `<div class="change-axis"><span>2026-07-15</span><span>2026-09-09</span><span>Snapshot<br>${esc(snapshot.snapshot_as_of.slice(0, 10))}</span></div>${rows}`;
+    const showDetail = (button) => {
+      const row = JSON.parse(decodeURIComponent(button.dataset.changePoint));
+      chart.querySelectorAll("[data-change-point]").forEach((point) => point.setAttribute("aria-pressed", point === button ? "true" : "false"));
+      detail.innerHTML = `<div><span>Selected observation</span><strong>${esc(row.dimension)} / ${esc(row.date)}</strong></div><dl><div><dt>Observed Level</dt><dd>${esc(row.level)}</dd></div><div><dt>Delta</dt><dd>${esc(row.delta)}</dd></div><div><dt>Basis</dt><dd>${esc(row.basis)}</dd></div><div><dt>Observation IDs</dt><dd>${row.observations.map(esc).join(", ")}</dd></div></dl><div class="change-lineage"><span>Structural-day SHA-256</span><code>${esc(row.hash)}</code><a href="timeline/subjects/bnb_structural_day.json">Open source artifact</a></div>`;
+    };
+    chart.querySelectorAll("[data-change-point]").forEach((button) => button.addEventListener("click", () => showDetail(button)));
+    const defaultPoint = chart.querySelector("[data-change-point].established") || chart.querySelector("[data-change-point]");
+    if (defaultPoint) showDetail(defaultPoint);
+  }
+
+  function render(snapshot, structuralDay) {
     renderExecutive(snapshot);
+    renderStructureTimeline(snapshot, structuralDay);
     document.querySelector("[data-monitor-boundary]").textContent = snapshot.monitoring_boundary;
     document.querySelector("[data-snapshot-strip]").innerHTML = [["SUBJECT",snapshot.subject_id],["SNAPSHOT AS-OF",snapshot.snapshot_as_of],["KNOWN-AT CUTOFF",snapshot.known_at_cutoff],["FRESHNESS",snapshot.freshness_snapshot.release_state],["GDR",snapshot.gdr_snapshot.authorization],["SNAPSHOT HASH",shortHash(snapshot.snapshot_sha256)]].map(([label,value]) => `<div><span>${esc(label)}</span><strong>${esc(value)}</strong></div>`).join("");
     document.querySelector("[data-state-grid]").innerHTML = [
@@ -81,5 +136,8 @@
     document.querySelector("[data-provenance-list]").innerHTML = snapshot.rtp_provenance_refs.map((row) => `<details><summary><span>${esc(row.role)}</span><strong>${esc(row.path.split("/").pop())}</strong></summary><dl><dt>Path</dt><dd>${esc(row.path)}</dd><dt>SHA-256</dt><dd><code>${esc(row.sha256)}</code></dd><dt>Boundary</dt><dd>Hash match proves artifact identity, not content truth.</dd></dl></details>`).join("");
   }
 
-  fetch("monitoring/subjects/bnb/MONITORING_SNAPSHOT.json").then((response) => { if (!response.ok) throw new Error("snapshot unavailable"); return response.json(); }).then(render).catch((error) => { workspace.innerHTML = `<section class="monitor-error"><h1>Monitoring snapshot unavailable</h1><p>${esc(error.message)}</p></section>`; });
+  Promise.all([
+    fetch("monitoring/subjects/bnb/MONITORING_SNAPSHOT.json").then((response) => { if (!response.ok) throw new Error("snapshot unavailable"); return response.json(); }),
+    fetch("timeline/subjects/bnb_structural_day.json").then((response) => response.ok ? response.json() : null).catch(() => null)
+  ]).then(([snapshot, structuralDay]) => render(snapshot, structuralDay)).catch((error) => { workspace.innerHTML = `<section class="monitor-error"><h1>Monitoring snapshot unavailable</h1><p>${esc(error.message)}</p></section>`; });
 })();
