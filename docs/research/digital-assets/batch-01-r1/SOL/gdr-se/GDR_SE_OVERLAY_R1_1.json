@@ -1,7 +1,7 @@
 {
   "authorization": "ALLOW_WITH_LIMITATIONS",
-  "authorization_id": "GDR-SE-AUTH-SOL-1ef496c91857efb2-R1.1",
-  "evaluation_as_of": "2026-09-11T02:44:39.154163Z",
+  "authorization_id": "GDR-SE-AUTH-SOL-6331ce51e6ecdf4d-R1.1",
+  "evaluation_as_of": "2026-09-11T03:55:43.713607Z",
   "evaluation_mode": "RUNTIME_EVALUATED",
   "gate_summary": [
     {
@@ -16,7 +16,7 @@
     },
     {
       "gate_id": "G3_EVIDENCE_FRESHNESS",
-      "status": "PARTIAL",
+      "status": "PASS",
       "validator": "validate_g3_freshness"
     },
     {
@@ -56,9 +56,9 @@
     }
   ],
   "gdr_se_version": "GDR_SE_v0.1",
-  "input_bundle_sha256": "1ef496c91857efb26c6b7952c1ebacab28cbbde0afa49356b110e2d60c977427",
+  "input_bundle_sha256": "6331ce51e6ecdf4dd7a664e737aaa0215c1ab9278986c5f1931cee2f04df0ee5",
   "original_canonical_sha256": "3fd4dfd93611706c94c658a969f0797f07dee59eb177fb0a73633ee232eb70c0",
-  "record_created_at": "2026-09-11T02:44:39.181853Z",
+  "record_created_at": "2026-09-11T03:55:43.743096Z",
   "research_id": "SE.ASSET.SOL.2026.001-R1",
   "runtime_revision": "R1.1"
 }

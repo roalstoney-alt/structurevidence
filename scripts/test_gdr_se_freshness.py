@@ -18,7 +18,7 @@ def fail(message: str) -> None:
 def main() -> None:
     config = {"categories": {"CORPORATE_TREASURY": {"status": "UNCONFIGURED"}}}
     status, reason, facts = evaluate_freshness("CORPORATE_TREASURY", "2026-09-08", date(2026, 9, 10), config, subject="strategy")
-    if facts.get("policy_version") != "RDL_FRESHNESS_v0.1":
+    if facts.get("policy_version") != "RDL_FRESHNESS_v0.1a":
         fail("mapped subject did not consume RDL freshness policy")
     status, _, facts = evaluate_freshness("UNKNOWN", "2026-09-08", date(2026, 9, 10), config)
     if status != "UNRESOLVED" or facts["policy_status"] != "ABSENT":

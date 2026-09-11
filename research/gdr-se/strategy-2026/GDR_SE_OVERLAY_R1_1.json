@@ -1,7 +1,7 @@
 {
   "authorization": "ALLOW_WITH_LIMITATIONS",
-  "authorization_id": "GDR-SE-AUTH-strategy-59bd0b24fafb3a04-R1.1",
-  "evaluation_as_of": "2026-09-11T02:44:39.154163Z",
+  "authorization_id": "GDR-SE-AUTH-strategy-673152115b4063c9-R1.1",
+  "evaluation_as_of": "2026-09-11T03:55:43.713607Z",
   "evaluation_mode": "RUNTIME_EVALUATED",
   "gate_summary": [
     {
@@ -16,7 +16,7 @@
     },
     {
       "gate_id": "G3_EVIDENCE_FRESHNESS",
-      "status": "FAIL",
+      "status": "PASS",
       "validator": "validate_g3_freshness"
     },
     {
@@ -56,9 +56,9 @@
     }
   ],
   "gdr_se_version": "GDR_SE_v0.1",
-  "input_bundle_sha256": "59bd0b24fafb3a0438aa70dd9e2c96ad241d3e8d8f90d4140227a1256f0f9375",
+  "input_bundle_sha256": "673152115b4063c9bb6fd555f6e34d99362cec5f741f6f8f8768558283e418d2",
   "original_canonical_sha256": "1769ec5adebc32ff3e3ecfd9cc1ea527ef30e025b7e559539266c331c147669a",
-  "record_created_at": "2026-09-11T02:44:39.155189Z",
+  "record_created_at": "2026-09-11T03:55:43.714550Z",
   "research_id": "ECL.COMPANY.STRATEGY_INC.2026.001",
   "runtime_revision": "R1.1"
 }

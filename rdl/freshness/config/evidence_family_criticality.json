@@ -6,7 +6,7 @@
     "CONDITIONAL",
     "NOT_APPLICABLE"
   ],
-  "policy_version": "RDL_FRESHNESS_v0.1",
+  "policy_version": "RDL_FRESHNESS_v0.1a",
   "rules": [
     {
       "criticality": "CRITICAL",

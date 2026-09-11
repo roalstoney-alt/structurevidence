@@ -4,7 +4,7 @@
 | --- | --- | --- | --- | --- | --- |
 | G1_SCHEMA_INTEGRITY | PARTIAL | HARD | validate_g1_schema | GDR_SE_RUNTIME_RULES_v0.1-R1.1 | Required runtime fields are present, but no formal profile JSON Schema is frozen. |
 | G2_RTP_PROVENANCE | PASS | HARD | validate_g2_provenance | GDR_SE_RUNTIME_RULES_v0.1-R1.1 | Required artifacts exist, are readable, non-empty, hashed and match recorded hashes. |
-| G3_EVIDENCE_FRESHNESS | FAIL | SOFT | validate_g3_freshness | GDR_SE_RUNTIME_RULES_v0.1-R1.1 | G3 consumed RDL Freshness Policy v0.1 release state EVENT_INVALIDATED. |
+| G3_EVIDENCE_FRESHNESS | PASS | SOFT | validate_g3_freshness | GDR_SE_RUNTIME_RULES_v0.1-R1.1 | G3 consumed RDL_FRESHNESS_v0.1a release state CURRENT. |
 | G4_SOURCE_DEPENDENCY | PARTIAL | SOFT | validate_g4_source_dependency | GDR_SE_RUNTIME_RULES_v0.1-R1.1 | Source dependency was derived from declared coverage and dependency artifacts, not URL count. |
 | G5_NUMERICAL_RECONCILIATION | PASS | SOFT | validate_g5_numerical | GDR_SE_RUNTIME_RULES_v0.1-R1.1 | All material numerical reconciliation rows are reconciled. |
 | G6_ECL_CONSISTENCY | PASS | SOFT | validate_g6_ecl | GDR_SE_RUNTIME_RULES_v0.1-R1.1 | Evidence state was mapped without subject-specific exceptions. |
@@ -15,6 +15,6 @@
 
 Authorization: `ALLOW_WITH_LIMITATIONS`
 
-Evaluation As Of: `2026-09-11T02:44:39.154163Z`
+Evaluation As Of: `2026-09-11T03:55:43.713607Z`
 
-Input Bundle SHA-256: `e7ab9818a69ab07cd4d352f268bfc492a8492b4813ef8760816df7ed214166e8`
+Input Bundle SHA-256: `42efdd473426788fabb46fb5a939194ff3dee906ceed46d195f154be10b598ae`

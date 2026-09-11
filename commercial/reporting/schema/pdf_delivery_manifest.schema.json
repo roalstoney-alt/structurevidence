@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "required": [
+    "order_id",
+    "report_id",
+    "artifact_id",
+    "pdf_sha256",
+    "page_count",
+    "file_size",
+    "generated_at",
+    "evaluation_as_of",
+    "gdr_authorization_id",
+    "freshness_record_path",
+    "delivery_status",
+    "delivery_method"
+  ],
+  "title": "StructEvidence Paid PDF Delivery Manifest",
+  "type": "object"
+}

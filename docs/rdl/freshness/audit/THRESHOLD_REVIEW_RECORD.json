@@ -1,5 +1,5 @@
 {
-  "policy_version": "RDL_FRESHNESS_v0.1",
+  "policy_version": "RDL_FRESHNESS_v0.1a",
   "records": [
     {
       "alternative_rejected": "Single global 30 day cutoff rejected because cadence evidence is sparse and domain-specific.",

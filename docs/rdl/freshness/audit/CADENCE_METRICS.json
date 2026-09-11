@@ -302,5 +302,5 @@
     }
   ],
   "minimum_empirical_interval_sample": 5,
-  "policy_version": "RDL_FRESHNESS_v0.1"
+  "policy_version": "RDL_FRESHNESS_v0.1a"
 }

@@ -1,4 +1,18 @@
 {
+  "event_domain_enum": [
+    "SUBJECT_EVENT",
+    "EVIDENCE_EVENT",
+    "RESEARCH_EVENT",
+    "AUTHORIZATION_EVENT"
+  ],
+  "event_targets": [
+    "LEVEL",
+    "DELTA",
+    "EVIDENCE",
+    "RELEASE",
+    "AUTHORIZATION",
+    "LEVEL_AND_DELTA"
+  ],
   "event_types": [
     "TREASURY_POLICY_CHANGE",
     "TREASURY_TRANSACTION",
@@ -13,104 +27,144 @@
     "MATERIAL_DISCLOSURE",
     "CLIENT_DIVERSITY_CHANGE"
   ],
-  "policy_version": "RDL_FRESHNESS_v0.1",
+  "policy_version": "RDL_FRESHNESS_v0.1a",
   "rules": [
     {
       "action": "INVALIDATE_BOTH",
-      "applies_to": "BOTH_LEVEL_DELTA",
+      "allowed_event_domains": [
+        "SUBJECT_EVENT"
+      ],
+      "applies_to": "LEVEL_AND_DELTA",
       "dimension_id": "TREASURY_STRUCTURE",
       "event_type": "TREASURY_POLICY_CHANGE",
       "requires_verified_event": true,
+      "retroactive_invalidation": false,
       "rule_id": "EV-001",
       "severity": "MATERIAL",
       "subject_class": "PUBLIC_COMPANY_TREASURY"
     },
     {
       "action": "MARK_FOR_REVIEW",
+      "allowed_event_domains": [
+        "SUBJECT_EVENT"
+      ],
       "applies_to": "LEVEL",
       "dimension_id": "TREASURY_STRUCTURE",
       "event_type": "TREASURY_TRANSACTION",
       "requires_verified_event": true,
+      "retroactive_invalidation": false,
       "rule_id": "EV-002",
       "severity": "POTENTIALLY_MATERIAL",
       "subject_class": "PUBLIC_COMPANY_TREASURY"
     },
     {
       "action": "HUMAN_REVIEW_REQUIRED",
+      "allowed_event_domains": [
+        "RESEARCH_EVENT"
+      ],
       "applies_to": "RELEASE",
       "dimension_id": "TREASURY_STRUCTURE",
       "event_type": "MATERIAL_DISCLOSURE",
       "requires_verified_event": true,
+      "retroactive_invalidation": false,
       "rule_id": "EV-003",
       "severity": "MATERIAL",
       "subject_class": "PUBLIC_COMPANY_TREASURY"
     },
     {
       "action": "INVALIDATE_BOTH",
-      "applies_to": "BOTH_LEVEL_DELTA",
+      "allowed_event_domains": [
+        "SUBJECT_EVENT"
+      ],
+      "applies_to": "LEVEL_AND_DELTA",
       "dimension_id": "SUPPLY_STRUCTURE",
       "event_type": "SUPPLY_MECHANISM_CHANGE",
       "requires_verified_event": true,
+      "retroactive_invalidation": false,
       "rule_id": "EV-004",
       "severity": "MATERIAL",
       "subject_class": "L1_NETWORK"
     },
     {
       "action": "INVALIDATE_BOTH",
-      "applies_to": "BOTH_LEVEL_DELTA",
+      "allowed_event_domains": [
+        "SUBJECT_EVENT"
+      ],
+      "applies_to": "LEVEL_AND_DELTA",
       "dimension_id": "VALIDATOR_DISTRIBUTION",
       "event_type": "VALIDATOR_SET_CHANGE",
       "requires_verified_event": true,
+      "retroactive_invalidation": false,
       "rule_id": "EV-005",
       "severity": "MATERIAL",
       "subject_class": "L1_NETWORK"
     },
     {
       "action": "MARK_FOR_REVIEW",
+      "allowed_event_domains": [
+        "SUBJECT_EVENT"
+      ],
       "applies_to": "LEVEL",
       "dimension_id": "VALIDATOR_DISTRIBUTION",
       "event_type": "CLIENT_DIVERSITY_CHANGE",
       "requires_verified_event": true,
+      "retroactive_invalidation": false,
       "rule_id": "EV-006",
       "severity": "POTENTIALLY_MATERIAL",
       "subject_class": "L1_NETWORK"
     },
     {
       "action": "INVALIDATE_BOTH",
-      "applies_to": "BOTH_LEVEL_DELTA",
+      "allowed_event_domains": [
+        "SUBJECT_EVENT"
+      ],
+      "applies_to": "LEVEL_AND_DELTA",
       "dimension_id": "GOVERNANCE_STRUCTURE",
       "event_type": "GOVERNANCE_CHANGE",
       "requires_verified_event": true,
+      "retroactive_invalidation": false,
       "rule_id": "EV-007",
       "severity": "MATERIAL",
       "subject_class": "L1_NETWORK"
     },
     {
       "action": "HUMAN_REVIEW_REQUIRED",
+      "allowed_event_domains": [
+        "RESEARCH_EVENT"
+      ],
       "applies_to": "RELEASE",
       "dimension_id": "*",
       "event_type": "CORRECTION",
       "requires_verified_event": true,
+      "retroactive_invalidation": false,
       "rule_id": "EV-008",
       "severity": "MATERIAL",
       "subject_class": "*"
     },
     {
       "action": "HUMAN_REVIEW_REQUIRED",
+      "allowed_event_domains": [
+        "EVIDENCE_EVENT"
+      ],
       "applies_to": "EVIDENCE",
       "dimension_id": "*",
       "event_type": "SOURCE_RETRACTION",
       "requires_verified_event": true,
+      "retroactive_invalidation": false,
       "rule_id": "EV-009",
       "severity": "MATERIAL",
       "subject_class": "*"
     },
     {
-      "action": "INVALIDATE_BOTH",
+      "action": "INVALIDATE_RELEASE",
+      "allowed_event_domains": [
+        "RESEARCH_EVENT"
+      ],
       "applies_to": "RELEASE",
       "dimension_id": "*",
       "event_type": "SUPERSESSION",
       "requires_verified_event": true,
+      "retroactive_invalidation": false,
       "rule_id": "EV-010",
       "severity": "MATERIAL",
       "subject_class": "*"

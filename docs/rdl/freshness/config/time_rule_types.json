@@ -1,5 +1,5 @@
 {
-  "policy_version": "RDL_FRESHNESS_v0.1",
+  "policy_version": "RDL_FRESHNESS_v0.1a",
   "time_rule_types": [
     "FIXED_WINDOW",
     "SOURCE_CADENCE_MULTIPLE",

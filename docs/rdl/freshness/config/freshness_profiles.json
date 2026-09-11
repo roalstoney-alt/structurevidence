@@ -1,5 +1,5 @@
 {
-  "policy_version": "RDL_FRESHNESS_v0.1",
+  "policy_version": "RDL_FRESHNESS_v0.1a",
   "profiles": [
     {
       "dimension_id": "TREASURY_STRUCTURE",

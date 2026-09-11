@@ -1,17 +1,22 @@
 {
   "config_hashes": {
-    "event_invalidation_rules_sha256": "9db66db75f2a3024a5028cf7041b5012cdda6fe333113e7c95b809b301f05f33",
-    "evidence_family_criticality_sha256": "13a50479fa4ba0ec9fff5de4138889bac448886acf164bf9090d217fba0158dc",
-    "freshness_precedence_sha256": "9141499caa91ef634b5e56e8e07644a19c83edc8ad433db58274cf51a8e37ae4",
-    "freshness_profiles_sha256": "7326aee19c3606a12233e08233cdc4ac072053d7cf96c6997343ba2b4a601f28",
-    "product_context_rules_sha256": "4e1e344f511bb41b305fa9c213df0afe5696be5a67e5c6fbf3d85ade955cef90"
+    "event_invalidation_rules_sha256": "3377542160cc9929d82ce59ad73ec4a980a8e423db474378df1003e0564378ca",
+    "evidence_family_criticality_sha256": "667a805875134cda13c56b0c67d2ad3f199c77bf954e9d25b7db3f1526817384",
+    "evidence_freshness_rules_sha256": "60303dca48035bad28b3a12c0d023e121c734d446a03ab86de8f679803159ce0",
+    "freshness_precedence_sha256": "bb9089e4856007dee9827789b9719ba0a745192d314808a833de3b5336fe0860",
+    "freshness_profiles_sha256": "42d3fd6408690db2d7e998f15c61b449bfca1684dd80070f1b59af454b47175f",
+    "product_context_rules_sha256": "7b57c78a5ee2665e1479f558f7c92fefb4ff80004eb1bc8770411240b7cde8ed"
   },
   "configured_count": 4,
-  "evaluation_engine_version": "RDL_FRESHNESS_ENGINE_v0.1",
-  "policy_version": "RDL_FRESHNESS_v0.1",
+  "evaluation_engine_version": "RDL_FRESHNESS_ENGINE_v0.1a",
+  "event_scope_hash": "3377542160cc9929d82ce59ad73ec4a980a8e423db474378df1003e0564378ca",
+  "evidence_freshness_config_hash": "60303dca48035bad28b3a12c0d023e121c734d446a03ab86de8f679803159ce0",
+  "policy_version": "RDL_FRESHNESS_v0.1a",
+  "precedence_hash": "bb9089e4856007dee9827789b9719ba0a745192d314808a833de3b5336fe0860",
   "research_derivation_hash": "f158ccbe5bba092db1174d651ecc56889592da29801ccd301935b2aff0cc7283",
   "rule_count": 13,
   "subject_count": 5,
+  "supersedes_policy_version": "RDL_FRESHNESS_v0.1",
   "unconfigured_count": 9,
-  "validation_report_hash": "ad5ccc884d8b1469f3e0839b5bf9c5378122cc5511a7245f417848f271a76b40"
+  "validation_report_hash": "372dee0dd1443ca5ff2693cc935163cc7923fc298dcee534c148ab0a7d41bbf9"
 }

@@ -1,0 +1,292 @@
+{
+  "metadata": {
+    "automated_fulfillment_readiness": "MANUAL_ONLY",
+    "payment_readiness": "EARLY_ACCESS",
+    "pdf_product_readiness": "PASS",
+    "private_pdf_path": "/Users/roal/Documents/ChatGPT/structevidence/private/paid-reports/test/registry-report.pdf",
+    "public_verify_path": "/Users/roal/Documents/ChatGPT/structevidence/verify/reports/ART-SE-PAID-PDF-HAPPY-PATH-v0.1.json"
+  },
+  "product_version": "STRUCTEVIDENCE_PAID_PDF_v0.1",
+  "registry_id": "PAID_PDF_GATE_RESULTS",
+  "renderer_version": "PyMuPDF-STRUCTEVIDENCE-PDF-RENDERER-v0.1",
+  "results": [
+    {
+      "computed_facts": {},
+      "evidence_refs": [],
+      "gate_id": "PDF01_PRODUCT_SKU",
+      "reason": "Paid PDF SKU exists.",
+      "rule_version": "STRUCTEVIDENCE_PAID_PDF_v0.1_VALIDATION",
+      "status": "PASS",
+      "validator": "run_paid_pdf_validation"
+    },
+    {
+      "computed_facts": {},
+      "evidence_refs": [],
+      "gate_id": "PDF02_REPORT_BUNDLE_SCHEMA",
+      "reason": "Bundle schema exists.",
+      "rule_version": "STRUCTEVIDENCE_PAID_PDF_v0.1_VALIDATION",
+      "status": "PASS",
+      "validator": "run_paid_pdf_validation"
+    },
+    {
+      "computed_facts": {},
+      "evidence_refs": [],
+      "gate_id": "PDF03_STRUCTURED_SOURCE_ONLY",
+      "reason": "Bundle uses structured artifacts.",
+      "rule_version": "STRUCTEVIDENCE_PAID_PDF_v0.1_VALIDATION",
+      "status": "PASS",
+      "validator": "run_paid_pdf_validation"
+    },
+    {
+      "computed_facts": {},
+      "evidence_refs": [],
+      "gate_id": "PDF04_PDF_RENDERER",
+      "reason": "PyMuPDF renderer selected because ReportLab is unavailable.",
+      "rule_version": "STRUCTEVIDENCE_PAID_PDF_v0.1_VALIDATION",
+      "status": "PASS",
+      "validator": "run_paid_pdf_validation"
+    },
+    {
+      "computed_facts": {},
+      "evidence_refs": [],
+      "gate_id": "PDF05_REQUIRED_SECTIONS",
+      "reason": "Required sections present.",
+      "rule_version": "STRUCTEVIDENCE_PAID_PDF_v0.1_VALIDATION",
+      "status": "PASS",
+      "validator": "run_paid_pdf_validation"
+    },
+    {
+      "computed_facts": {},
+      "evidence_refs": [],
+      "gate_id": "PDF06_REPORT_METADATA",
+      "reason": "PDF metadata present.",
+      "rule_version": "STRUCTEVIDENCE_PAID_PDF_v0.1_VALIDATION",
+      "status": "PASS",
+      "validator": "run_paid_pdf_validation"
+    },
+    {
+      "computed_facts": {},
+      "evidence_refs": [],
+      "gate_id": "PDF07_VERIFICATION_PAGE",
+      "reason": "Verification page present.",
+      "rule_version": "STRUCTEVIDENCE_PAID_PDF_v0.1_VALIDATION",
+      "status": "PASS",
+      "validator": "run_paid_pdf_validation"
+    },
+    {
+      "computed_facts": {},
+      "evidence_refs": [],
+      "gate_id": "PDF08_PDF_HASH",
+      "reason": "PDF hash recorded.",
+      "rule_version": "STRUCTEVIDENCE_PAID_PDF_v0.1_VALIDATION",
+      "status": "PASS",
+      "validator": "run_paid_pdf_validation"
+    },
+    {
+      "computed_facts": {},
+      "evidence_refs": [],
+      "gate_id": "PDF09_CONTENT_BUNDLE_HASH",
+      "reason": "Content bundle hash recorded.",
+      "rule_version": "STRUCTEVIDENCE_PAID_PDF_v0.1_VALIDATION",
+      "status": "PASS",
+      "validator": "run_paid_pdf_validation"
+    },
+    {
+      "computed_facts": {},
+      "evidence_refs": [],
+      "gate_id": "PDF10_PREFLIGHT",
+      "reason": "PDF preflight passed.",
+      "rule_version": "STRUCTEVIDENCE_PAID_PDF_v0.1_VALIDATION",
+      "status": "PASS",
+      "validator": "run_paid_pdf_validation"
+    },
+    {
+      "computed_facts": {},
+      "evidence_refs": [],
+      "gate_id": "PDF11_RENDER_QA",
+      "reason": "PDF render QA passed.",
+      "rule_version": "STRUCTEVIDENCE_PAID_PDF_v0.1_VALIDATION",
+      "status": "PASS",
+      "validator": "run_paid_pdf_validation"
+    },
+    {
+      "computed_facts": {},
+      "evidence_refs": [],
+      "gate_id": "PDF12_TEXT_QA",
+      "reason": "PDF text QA passed.",
+      "rule_version": "STRUCTEVIDENCE_PAID_PDF_v0.1_VALIDATION",
+      "status": "PASS",
+      "validator": "run_paid_pdf_validation"
+    },
+    {
+      "computed_facts": {},
+      "evidence_refs": [],
+      "gate_id": "PDF13_DRAFT_WATERMARK",
+      "reason": "Draft watermark and state present.",
+      "rule_version": "STRUCTEVIDENCE_PAID_PDF_v0.1_VALIDATION",
+      "status": "PASS",
+      "validator": "run_paid_pdf_validation"
+    },
+    {
+      "computed_facts": {},
+      "evidence_refs": [],
+      "gate_id": "PDF14_DRAFT_DELIVERY_BLOCK",
+      "reason": "Draft delivery blocked.",
+      "rule_version": "STRUCTEVIDENCE_PAID_PDF_v0.1_VALIDATION",
+      "status": "PASS",
+      "validator": "run_paid_pdf_validation"
+    },
+    {
+      "computed_facts": {},
+      "evidence_refs": [],
+      "gate_id": "PDF15_PAYMENT_GATE",
+      "reason": "Payment gate blocks final build.",
+      "rule_version": "STRUCTEVIDENCE_PAID_PDF_v0.1_VALIDATION",
+      "status": "PASS",
+      "validator": "run_paid_pdf_validation"
+    },
+    {
+      "computed_facts": {},
+      "evidence_refs": [],
+      "gate_id": "PDF16_FRESHNESS_GATE",
+      "reason": "Freshness gate blocks delivery.",
+      "rule_version": "STRUCTEVIDENCE_PAID_PDF_v0.1_VALIDATION",
+      "status": "PASS",
+      "validator": "run_paid_pdf_validation"
+    },
+    {
+      "computed_facts": {},
+      "evidence_refs": [],
+      "gate_id": "PDF17_GDR_PAID_DELIVERY_GATE",
+      "reason": "GDR gate blocks delivery.",
+      "rule_version": "STRUCTEVIDENCE_PAID_PDF_v0.1_VALIDATION",
+      "status": "PASS",
+      "validator": "run_paid_pdf_validation"
+    },
+    {
+      "computed_facts": {},
+      "evidence_refs": [],
+      "gate_id": "PDF18_AUTHORIZATION_SNAPSHOT_LOCK",
+      "reason": "Authorization snapshot lock enforced.",
+      "rule_version": "STRUCTEVIDENCE_PAID_PDF_v0.1_VALIDATION",
+      "status": "PASS",
+      "validator": "run_paid_pdf_validation"
+    },
+    {
+      "computed_facts": {},
+      "evidence_refs": [],
+      "gate_id": "PDF19_PRIVATE_STORAGE",
+      "reason": "PDF stored privately.",
+      "rule_version": "STRUCTEVIDENCE_PAID_PDF_v0.1_VALIDATION",
+      "status": "PASS",
+      "validator": "run_paid_pdf_validation"
+    },
+    {
+      "computed_facts": {},
+      "evidence_refs": [],
+      "gate_id": "PDF20_GITIGNORE_PRIVATE_PDFS",
+      "reason": "Private PDFs ignored.",
+      "rule_version": "STRUCTEVIDENCE_PAID_PDF_v0.1_VALIDATION",
+      "status": "PASS",
+      "validator": "run_paid_pdf_validation"
+    },
+    {
+      "computed_facts": {},
+      "evidence_refs": [],
+      "gate_id": "PDF21_NO_PUBLIC_PDF_EXPOSURE",
+      "reason": "No public PDF exposure.",
+      "rule_version": "STRUCTEVIDENCE_PAID_PDF_v0.1_VALIDATION",
+      "status": "PASS",
+      "validator": "run_paid_pdf_validation"
+    },
+    {
+      "computed_facts": {},
+      "evidence_refs": [],
+      "gate_id": "PDF22_DELIVERY_MANIFEST",
+      "reason": "Delivery manifest exists.",
+      "rule_version": "STRUCTEVIDENCE_PAID_PDF_v0.1_VALIDATION",
+      "status": "PASS",
+      "validator": "run_paid_pdf_validation"
+    },
+    {
+      "computed_facts": {},
+      "evidence_refs": [],
+      "gate_id": "PDF23_PUBLIC_VERIFY_RECORD",
+      "reason": "Public verify record exists and matches hash.",
+      "rule_version": "STRUCTEVIDENCE_PAID_PDF_v0.1_VALIDATION",
+      "status": "PASS",
+      "validator": "run_paid_pdf_validation"
+    },
+    {
+      "computed_facts": {},
+      "evidence_refs": [],
+      "gate_id": "PDF24_NO_PUBLIC_PII",
+      "reason": "Public verify record has no PII/payment fields.",
+      "rule_version": "STRUCTEVIDENCE_PAID_PDF_v0.1_VALIDATION",
+      "status": "PASS",
+      "validator": "run_paid_pdf_validation"
+    },
+    {
+      "computed_facts": {},
+      "evidence_refs": [],
+      "gate_id": "PDF25_TAMPER_DETECTION",
+      "reason": "Tamper detection rejects changed bytes.",
+      "rule_version": "STRUCTEVIDENCE_PAID_PDF_v0.1_VALIDATION",
+      "status": "PASS",
+      "validator": "run_paid_pdf_validation"
+    },
+    {
+      "computed_facts": {},
+      "evidence_refs": [],
+      "gate_id": "PDF26_HAPPY_PATH",
+      "reason": "Synthetic happy path reaches delivery-ready state.",
+      "rule_version": "STRUCTEVIDENCE_PAID_PDF_v0.1_VALIDATION",
+      "status": "PASS",
+      "validator": "run_paid_pdf_validation"
+    },
+    {
+      "computed_facts": {},
+      "evidence_refs": [],
+      "gate_id": "PDF27_FAILURE_PATH",
+      "reason": "Blocked path does not build final PDF.",
+      "rule_version": "STRUCTEVIDENCE_PAID_PDF_v0.1_VALIDATION",
+      "status": "PASS",
+      "validator": "run_paid_pdf_validation"
+    },
+    {
+      "computed_facts": {},
+      "evidence_refs": [],
+      "gate_id": "PDF28_PAID_PRODUCT_UI",
+      "reason": "Paid product UI describes PDF deliverable.",
+      "rule_version": "STRUCTEVIDENCE_PAID_PDF_v0.1_VALIDATION",
+      "status": "PASS",
+      "validator": "run_paid_pdf_validation"
+    },
+    {
+      "computed_facts": {},
+      "evidence_refs": [],
+      "gate_id": "PDF29_EARLY_ACCESS_PAYMENT_BOUNDARY",
+      "reason": "Payment-disabled boundary preserved.",
+      "rule_version": "STRUCTEVIDENCE_PAID_PDF_v0.1_VALIDATION",
+      "status": "PASS",
+      "validator": "run_paid_pdf_validation"
+    },
+    {
+      "computed_facts": {},
+      "evidence_refs": [],
+      "gate_id": "PDF30_ENGLISH_REPORT_SURFACE",
+      "reason": "Paid report surface is English.",
+      "rule_version": "STRUCTEVIDENCE_PAID_PDF_v0.1_VALIDATION",
+      "status": "PASS",
+      "validator": "run_paid_pdf_validation"
+    }
+  ],
+  "summary": {
+    "BLOCKED": 0,
+    "FAIL": 0,
+    "NOT_EVALUATED": 0,
+    "PARTIAL": 0,
+    "PASS": 30,
+    "acceptance": "PDF_PRODUCT_PASS"
+  }
+}

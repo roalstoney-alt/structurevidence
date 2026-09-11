@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "required": [
+    "relation_id",
+    "successor_artifact_id",
+    "superseded_artifact_id",
+    "relation_type",
+    "effective_at",
+    "known_at",
+    "source_ref"
+  ],
+  "type": "object"
+}

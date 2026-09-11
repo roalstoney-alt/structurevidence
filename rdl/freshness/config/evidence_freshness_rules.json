@@ -1,0 +1,308 @@
+{
+  "policy_version": "RDL_FRESHNESS_v0.1a",
+  "rules": [
+    {
+      "aging_boundary_days": 270,
+      "current_boundary_days": 180,
+      "event_triggers": [
+        "SOURCE_RETRACTION",
+        "CORRECTION",
+        "SUPERSESSION"
+      ],
+      "evidence_basis": "EXPERT_METHOD_RULE",
+      "evidence_strength": "WEAK",
+      "family_id": "PRIMARY_SOURCE_COVERAGE",
+      "product_context": "PUBLIC_RESEARCH",
+      "refresh_boundary_days": 365,
+      "rule_id": "FRESH-EVIDENCE-PUBLIC_RESEARCH-PRIMARY_SOURCE_COVERAGE",
+      "rule_type": "HYBRID_TIME_EVENT",
+      "status": "CONFIGURED",
+      "subject_class": "*"
+    },
+    {
+      "aging_boundary_days": 270,
+      "current_boundary_days": 180,
+      "event_triggers": [
+        "SOURCE_RETRACTION",
+        "CORRECTION",
+        "SUPERSESSION"
+      ],
+      "evidence_basis": "EXPERT_METHOD_RULE",
+      "evidence_strength": "WEAK",
+      "family_id": "COUNTER_EVIDENCE_COVERAGE",
+      "product_context": "PUBLIC_RESEARCH",
+      "refresh_boundary_days": 365,
+      "rule_id": "FRESH-EVIDENCE-PUBLIC_RESEARCH-COUNTER_EVIDENCE_COVERAGE",
+      "rule_type": "HYBRID_TIME_EVENT",
+      "status": "CONFIGURED",
+      "subject_class": "*"
+    },
+    {
+      "event_triggers": [
+        "CORRECTION"
+      ],
+      "evidence_basis": "RESEARCH_EVENT_STATUS",
+      "evidence_strength": "MODERATE",
+      "family_id": "CORRECTION_STATUS",
+      "product_context": "PUBLIC_RESEARCH",
+      "rule_id": "FRESH-EVIDENCE-PUBLIC_RESEARCH-CORRECTION_STATUS",
+      "rule_type": "EVENT_ONLY",
+      "status": "CONFIGURED",
+      "subject_class": "*"
+    },
+    {
+      "event_triggers": [
+        "SUPERSESSION"
+      ],
+      "evidence_basis": "RESEARCH_EVENT_STATUS",
+      "evidence_strength": "MODERATE",
+      "family_id": "SUPERSESSION_STATUS",
+      "product_context": "PUBLIC_RESEARCH",
+      "rule_id": "FRESH-EVIDENCE-PUBLIC_RESEARCH-SUPERSESSION_STATUS",
+      "rule_type": "EVENT_ONLY",
+      "status": "CONFIGURED",
+      "subject_class": "*"
+    },
+    {
+      "aging_boundary_days": 270,
+      "current_boundary_days": 180,
+      "event_triggers": [
+        "SOURCE_RETRACTION",
+        "CORRECTION",
+        "SUPERSESSION"
+      ],
+      "evidence_basis": "EXPERT_METHOD_RULE",
+      "evidence_strength": "WEAK",
+      "family_id": "PRIMARY_SOURCE_COVERAGE",
+      "product_context": "PAID_VERIFIED_REPORT",
+      "refresh_boundary_days": 365,
+      "rule_id": "FRESH-EVIDENCE-PAID_VERIFIED_REPORT-PRIMARY_SOURCE_COVERAGE",
+      "rule_type": "HYBRID_TIME_EVENT",
+      "status": "CONFIGURED",
+      "subject_class": "*"
+    },
+    {
+      "aging_boundary_days": 270,
+      "current_boundary_days": 180,
+      "event_triggers": [
+        "SOURCE_RETRACTION",
+        "CORRECTION",
+        "SUPERSESSION"
+      ],
+      "evidence_basis": "EXPERT_METHOD_RULE",
+      "evidence_strength": "WEAK",
+      "family_id": "COUNTER_EVIDENCE_COVERAGE",
+      "product_context": "PAID_VERIFIED_REPORT",
+      "refresh_boundary_days": 365,
+      "rule_id": "FRESH-EVIDENCE-PAID_VERIFIED_REPORT-COUNTER_EVIDENCE_COVERAGE",
+      "rule_type": "HYBRID_TIME_EVENT",
+      "status": "CONFIGURED",
+      "subject_class": "*"
+    },
+    {
+      "event_triggers": [
+        "CORRECTION"
+      ],
+      "evidence_basis": "RESEARCH_EVENT_STATUS",
+      "evidence_strength": "MODERATE",
+      "family_id": "CORRECTION_STATUS",
+      "product_context": "PAID_VERIFIED_REPORT",
+      "rule_id": "FRESH-EVIDENCE-PAID_VERIFIED_REPORT-CORRECTION_STATUS",
+      "rule_type": "EVENT_ONLY",
+      "status": "CONFIGURED",
+      "subject_class": "*"
+    },
+    {
+      "event_triggers": [
+        "SUPERSESSION"
+      ],
+      "evidence_basis": "RESEARCH_EVENT_STATUS",
+      "evidence_strength": "MODERATE",
+      "family_id": "SUPERSESSION_STATUS",
+      "product_context": "PAID_VERIFIED_REPORT",
+      "rule_id": "FRESH-EVIDENCE-PAID_VERIFIED_REPORT-SUPERSESSION_STATUS",
+      "rule_type": "EVENT_ONLY",
+      "status": "CONFIGURED",
+      "subject_class": "*"
+    },
+    {
+      "aging_boundary_days": 270,
+      "current_boundary_days": 180,
+      "event_triggers": [
+        "SOURCE_RETRACTION",
+        "CORRECTION",
+        "SUPERSESSION"
+      ],
+      "evidence_basis": "EXPERT_METHOD_RULE",
+      "evidence_strength": "WEAK",
+      "family_id": "PRIMARY_SOURCE_COVERAGE",
+      "product_context": "CUSTOM_AUDIT",
+      "refresh_boundary_days": 365,
+      "rule_id": "FRESH-EVIDENCE-CUSTOM_AUDIT-PRIMARY_SOURCE_COVERAGE",
+      "rule_type": "HYBRID_TIME_EVENT",
+      "status": "CONFIGURED",
+      "subject_class": "*"
+    },
+    {
+      "aging_boundary_days": 270,
+      "current_boundary_days": 180,
+      "event_triggers": [
+        "SOURCE_RETRACTION",
+        "CORRECTION",
+        "SUPERSESSION"
+      ],
+      "evidence_basis": "EXPERT_METHOD_RULE",
+      "evidence_strength": "WEAK",
+      "family_id": "COUNTER_EVIDENCE_COVERAGE",
+      "product_context": "CUSTOM_AUDIT",
+      "refresh_boundary_days": 365,
+      "rule_id": "FRESH-EVIDENCE-CUSTOM_AUDIT-COUNTER_EVIDENCE_COVERAGE",
+      "rule_type": "HYBRID_TIME_EVENT",
+      "status": "CONFIGURED",
+      "subject_class": "*"
+    },
+    {
+      "event_triggers": [
+        "CORRECTION"
+      ],
+      "evidence_basis": "RESEARCH_EVENT_STATUS",
+      "evidence_strength": "MODERATE",
+      "family_id": "CORRECTION_STATUS",
+      "product_context": "CUSTOM_AUDIT",
+      "rule_id": "FRESH-EVIDENCE-CUSTOM_AUDIT-CORRECTION_STATUS",
+      "rule_type": "EVENT_ONLY",
+      "status": "CONFIGURED",
+      "subject_class": "*"
+    },
+    {
+      "event_triggers": [
+        "SUPERSESSION"
+      ],
+      "evidence_basis": "RESEARCH_EVENT_STATUS",
+      "evidence_strength": "MODERATE",
+      "family_id": "SUPERSESSION_STATUS",
+      "product_context": "CUSTOM_AUDIT",
+      "rule_id": "FRESH-EVIDENCE-CUSTOM_AUDIT-SUPERSESSION_STATUS",
+      "rule_type": "EVENT_ONLY",
+      "status": "CONFIGURED",
+      "subject_class": "*"
+    },
+    {
+      "aging_boundary_days": 270,
+      "current_boundary_days": 180,
+      "event_triggers": [
+        "SOURCE_RETRACTION",
+        "CORRECTION",
+        "SUPERSESSION"
+      ],
+      "evidence_basis": "EXPERT_METHOD_RULE",
+      "evidence_strength": "WEAK",
+      "family_id": "PRIMARY_SOURCE_COVERAGE",
+      "product_context": "STRUCTURAL_MONITOR",
+      "refresh_boundary_days": 365,
+      "rule_id": "FRESH-EVIDENCE-STRUCTURAL_MONITOR-PRIMARY_SOURCE_COVERAGE",
+      "rule_type": "HYBRID_TIME_EVENT",
+      "status": "CONFIGURED",
+      "subject_class": "*"
+    },
+    {
+      "aging_boundary_days": 270,
+      "current_boundary_days": 180,
+      "event_triggers": [
+        "SOURCE_RETRACTION",
+        "CORRECTION",
+        "SUPERSESSION"
+      ],
+      "evidence_basis": "EXPERT_METHOD_RULE",
+      "evidence_strength": "WEAK",
+      "family_id": "COUNTER_EVIDENCE_COVERAGE",
+      "product_context": "STRUCTURAL_MONITOR",
+      "refresh_boundary_days": 365,
+      "rule_id": "FRESH-EVIDENCE-STRUCTURAL_MONITOR-COUNTER_EVIDENCE_COVERAGE",
+      "rule_type": "HYBRID_TIME_EVENT",
+      "status": "CONFIGURED",
+      "subject_class": "*"
+    },
+    {
+      "event_triggers": [
+        "CORRECTION"
+      ],
+      "evidence_basis": "RESEARCH_EVENT_STATUS",
+      "evidence_strength": "MODERATE",
+      "family_id": "CORRECTION_STATUS",
+      "product_context": "STRUCTURAL_MONITOR",
+      "rule_id": "FRESH-EVIDENCE-STRUCTURAL_MONITOR-CORRECTION_STATUS",
+      "rule_type": "EVENT_ONLY",
+      "status": "CONFIGURED",
+      "subject_class": "*"
+    },
+    {
+      "event_triggers": [
+        "SUPERSESSION"
+      ],
+      "evidence_basis": "RESEARCH_EVENT_STATUS",
+      "evidence_strength": "MODERATE",
+      "family_id": "SUPERSESSION_STATUS",
+      "product_context": "STRUCTURAL_MONITOR",
+      "rule_id": "FRESH-EVIDENCE-STRUCTURAL_MONITOR-SUPERSESSION_STATUS",
+      "rule_type": "EVENT_ONLY",
+      "status": "CONFIGURED",
+      "subject_class": "*"
+    },
+    {
+      "event_triggers": [],
+      "evidence_basis": "INSUFFICIENT",
+      "evidence_strength": "UNRESOLVED",
+      "family_id": "SECONDARY_SUPPORT",
+      "product_context": "*",
+      "rule_id": "FRESH-EVIDENCE-GLOBAL-SECONDARY_SUPPORT-UNCONFIGURED",
+      "rule_type": "UNCONFIGURED",
+      "status": "UNCONFIGURED",
+      "subject_class": "*"
+    },
+    {
+      "event_triggers": [],
+      "evidence_basis": "INSUFFICIENT",
+      "evidence_strength": "UNRESOLVED",
+      "family_id": "NUMERICAL_RECONCILIATION",
+      "product_context": "*",
+      "rule_id": "FRESH-EVIDENCE-GLOBAL-NUMERICAL_RECONCILIATION-UNCONFIGURED",
+      "rule_type": "UNCONFIGURED",
+      "status": "UNCONFIGURED",
+      "subject_class": "*"
+    },
+    {
+      "event_triggers": [],
+      "evidence_basis": "INSUFFICIENT",
+      "evidence_strength": "UNRESOLVED",
+      "family_id": "SOURCE_DEPENDENCY",
+      "product_context": "*",
+      "rule_id": "FRESH-EVIDENCE-GLOBAL-SOURCE_DEPENDENCY-UNCONFIGURED",
+      "rule_type": "UNCONFIGURED",
+      "status": "UNCONFIGURED",
+      "subject_class": "*"
+    },
+    {
+      "event_triggers": [],
+      "evidence_basis": "INSUFFICIENT",
+      "evidence_strength": "UNRESOLVED",
+      "family_id": "INDEPENDENT_REVIEW",
+      "product_context": "*",
+      "rule_id": "FRESH-EVIDENCE-GLOBAL-INDEPENDENT_REVIEW-UNCONFIGURED",
+      "rule_type": "UNCONFIGURED",
+      "status": "UNCONFIGURED",
+      "subject_class": "*"
+    },
+    {
+      "event_triggers": [],
+      "evidence_basis": "INSUFFICIENT",
+      "evidence_strength": "UNRESOLVED",
+      "family_id": "AUTHORIZATION_STATUS",
+      "product_context": "*",
+      "rule_id": "FRESH-EVIDENCE-GLOBAL-AUTHORIZATION_STATUS-UNCONFIGURED",
+      "rule_type": "UNCONFIGURED",
+      "status": "UNCONFIGURED",
+      "subject_class": "*"
+    }
+  ]
+}

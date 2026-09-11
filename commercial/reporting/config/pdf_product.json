@@ -1,0 +1,39 @@
+{
+  "automated_fulfillment_readiness": "MANUAL_ONLY",
+  "delivery_formats": [
+    "PDF"
+  ],
+  "delivery_methods_supported": [
+    "MANUAL_EMAIL_ATTACHMENT",
+    "SIGNED_PRIVATE_OBJECT_URL",
+    "AUTHENTICATED_DOWNLOAD"
+  ],
+  "payment_readiness": "EARLY_ACCESS",
+  "pdf_product_readiness": "PASS",
+  "private_storage_required": true,
+  "product_sku": "VERIFIED_RESEARCH_REPORT_PDF",
+  "product_version": "STRUCTEVIDENCE_PAID_PDF_v0.1",
+  "public_pdf_urls_enabled": false,
+  "renderer": "PyMuPDF",
+  "required_sections": [
+    "Cover",
+    "Executive Summary",
+    "Research Scope",
+    "Current Structural State",
+    "Structural Level / Delta",
+    "Freshness Status",
+    "Evidence Dynamics",
+    "Material Events",
+    "ECL Evidence Consistency",
+    "Counter-Evidence",
+    "Numerical Reconciliation",
+    "Source Dependency / Coverage",
+    "GDR-SE Authorization",
+    "What Could Change This Conclusion",
+    "Limitations",
+    "Verification Record",
+    "Appendix / Source Index"
+  ],
+  "sku_status": "EARLY_ACCESS_REQUEST",
+  "terms": "Research only. No investment advice."
+}

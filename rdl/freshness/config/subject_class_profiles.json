@@ -6,7 +6,7 @@
     "trx": "L1_NETWORK",
     "xlm": "L1_NETWORK"
   },
-  "policy_version": "RDL_FRESHNESS_v0.1",
+  "policy_version": "RDL_FRESHNESS_v0.1a",
   "subject_classes": [
     "PUBLIC_COMPANY_TREASURY",
     "L1_NETWORK",

@@ -1,4 +1,21 @@
 {
+  "fail_safe_facts": {
+    "EVENT_INVALIDATED": {
+      "human_review_required": true
+    },
+    "INSUFFICIENT_DATA": {
+      "human_review_required": true
+    },
+    "POLICY_NOT_CONFIGURED": {
+      "human_review_required": true
+    },
+    "REFRESH_REQUIRED": {
+      "refresh_required": true
+    },
+    "UNDER_REVIEW": {
+      "human_review_required": true
+    }
+  },
   "mapping": {
     "AGING": "PARTIAL",
     "CURRENT": "PASS",
@@ -10,27 +27,27 @@
     "SUPERSEDED": "SUPERSEDED",
     "UNDER_REVIEW": "UNRESOLVED"
   },
-  "policy_version": "RDL_FRESHNESS_v0.1",
+  "policy_version": "RDL_FRESHNESS_v0.1a",
   "subjects": {
     "bnb": {
-      "record_path": "research/freshness/bnb/FRESHNESS_EVALUATION_v0.1.json",
-      "release_freshness_state": "EVENT_INVALIDATED"
+      "record_path": "research/freshness/bnb/FRESHNESS_EVALUATION_v0.1a.json",
+      "release_freshness_state": "CURRENT"
     },
     "sol": {
-      "record_path": "research/freshness/sol/FRESHNESS_EVALUATION_v0.1.json",
-      "release_freshness_state": "CURRENT_WITH_LIMITATIONS"
+      "record_path": "research/freshness/sol/FRESHNESS_EVALUATION_v0.1a.json",
+      "release_freshness_state": "CURRENT"
     },
     "strategy": {
-      "record_path": "research/freshness/strategy/FRESHNESS_EVALUATION_v0.1.json",
-      "release_freshness_state": "EVENT_INVALIDATED"
+      "record_path": "research/freshness/strategy/FRESHNESS_EVALUATION_v0.1a.json",
+      "release_freshness_state": "CURRENT"
     },
     "trx": {
-      "record_path": "research/freshness/trx/FRESHNESS_EVALUATION_v0.1.json",
-      "release_freshness_state": "EVENT_INVALIDATED"
+      "record_path": "research/freshness/trx/FRESHNESS_EVALUATION_v0.1a.json",
+      "release_freshness_state": "CURRENT"
     },
     "xlm": {
-      "record_path": "research/freshness/xlm/FRESHNESS_EVALUATION_v0.1.json",
-      "release_freshness_state": "EVENT_INVALIDATED"
+      "record_path": "research/freshness/xlm/FRESHNESS_EVALUATION_v0.1a.json",
+      "release_freshness_state": "CURRENT"
     }
   }
 }

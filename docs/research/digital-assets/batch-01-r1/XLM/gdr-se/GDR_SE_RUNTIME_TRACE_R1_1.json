@@ -11,15 +11,15 @@
     "report": "2a0d60e5cf0f321adfa88eca5d8a6ca275ebaed2f12ad210830cab333b21c668",
     "source_inventory": "5f6df97578f4d6a902b5228d16430ca6cf0943edaf03de9dba68788534535303"
   },
-  "authorization_id": "GDR-SE-AUTH-XLM-671159e36a72ec64-R1.1",
+  "authorization_id": "GDR-SE-AUTH-XLM-0974565af81b25a2-R1.1",
   "config_hashes": {
     "aggregation_rules_sha256": "d716177c3161940a25ef7c77367a10d124ebb7f0d42bc571737009b4cdf91528",
     "freshness_config_sha256": "e486d1cde399acf6319db7f09a7b2849c52ae1604dd87360312e162517c9b762",
     "gates_config_sha256": "06e725a2e5ad5d506aad41e79f743e73a66e2634c6ec4b5f7166c598e6fb33c7",
     "research_profile_sha256": "ce939807f8605fdd3c661a5a018fccfeecf233b63e0e5d83dee26bd35868a1cf"
   },
-  "evaluation_as_of": "2026-09-11T02:44:39.154163Z",
-  "evaluation_id": "GDR-SE-EVAL-671159e36a72ec64-R1.1",
+  "evaluation_as_of": "2026-09-11T03:55:43.713607Z",
+  "evaluation_id": "GDR-SE-EVAL-0974565af81b25a2-R1.1",
   "final_authorization": "ALLOW_WITH_LIMITATIONS",
   "gate_results": [
     {
@@ -39,7 +39,7 @@
           "source_coverage"
         ]
       },
-      "evaluated_at": "2026-09-11T02:44:39.154163Z",
+      "evaluated_at": "2026-09-11T03:55:43.713607Z",
       "evidence_refs": [
         "evidence-freeze/DIGITAL-ASSET-BATCH-01-R1/XLM/CANONICAL_RESEARCH_R1.json"
       ],
@@ -64,7 +64,7 @@
         "present_artifacts": 9,
         "required_artifacts": 9
       },
-      "evaluated_at": "2026-09-11T02:44:39.154163Z",
+      "evaluated_at": "2026-09-11T03:55:43.713607Z",
       "evidence_refs": [
         "evidence-freeze/DIGITAL-ASSET-BATCH-01-R1/XLM/CANONICAL_RESEARCH_R1.json",
         "evidence-freeze/DIGITAL-ASSET-BATCH-01-R1/XLM/PUBLIC_EVIDENCE_RESEARCH_REPORT_R1.md",
@@ -87,23 +87,24 @@
     {
       "computed_facts": {
         "configured_profile_count": 4,
-        "input_bundle_hash": "13f6702129e5a17c9cc2bcf9309e2d6f4af653ec381544aa662e4cc8513a3a8b",
-        "policy_version": "RDL_FRESHNESS_v0.1",
-        "record_path": "research/freshness/xlm/FRESHNESS_EVALUATION_v0.1.json",
-        "release_freshness_state": "EVENT_INVALIDATED",
+        "input_bundle_hash": "0dbd3a41926f4490b5d75644038e0a3e2fae7b8b2a3cd649def6c2df39d8e01f",
+        "paid_delivery": "NOT_AUTHORIZED_BY_FRESHNESS_ALONE",
+        "policy_version": "RDL_FRESHNESS_v0.1a",
+        "record_path": "research/freshness/xlm/FRESHNESS_EVALUATION_v0.1a.json",
+        "release_freshness_state": "CURRENT",
         "subject": "xlm"
       },
-      "evaluated_at": "2026-09-11T02:44:39.154163Z",
+      "evaluated_at": "2026-09-11T03:55:43.713607Z",
       "evidence_refs": [
         "rdl/freshness/gdr_g3_adapter.json",
-        "research/freshness/xlm/FRESHNESS_EVALUATION_v0.1.json"
+        "research/freshness/xlm/FRESHNESS_EVALUATION_v0.1a.json"
       ],
       "gate_id": "G3_EVIDENCE_FRESHNESS",
       "limitations": [],
-      "reason": "G3 consumed RDL Freshness Policy v0.1 release state EVENT_INVALIDATED.",
+      "reason": "G3 consumed RDL_FRESHNESS_v0.1a release state CURRENT.",
       "rule_version": "GDR_SE_RUNTIME_RULES_v0.1-R1.1",
       "severity": "SOFT",
-      "status": "FAIL",
+      "status": "PASS",
       "validator": "validate_g3_freshness"
     },
     {
@@ -113,7 +114,7 @@
         "source_coverage": "PRIMARY_DOMINANT",
         "unique_source_ids": 5
       },
-      "evaluated_at": "2026-09-11T02:44:39.154163Z",
+      "evaluated_at": "2026-09-11T03:55:43.713607Z",
       "evidence_refs": [
         "evidence-freeze/DIGITAL-ASSET-BATCH-01-R1/XLM/SOURCE_DEPENDENCY_GRAPH.json"
       ],
@@ -135,7 +136,7 @@
         "reconciled": 3,
         "total": 3
       },
-      "evaluated_at": "2026-09-11T02:44:39.154163Z",
+      "evaluated_at": "2026-09-11T03:55:43.713607Z",
       "evidence_refs": [
         "evidence-freeze/DIGITAL-ASSET-BATCH-01-R1/XLM/NUMERICAL_RECONCILIATION.json"
       ],
@@ -153,7 +154,7 @@
         "human_review_required": false,
         "material_inconsistency": "NO"
       },
-      "evaluated_at": "2026-09-11T02:44:39.154163Z",
+      "evaluated_at": "2026-09-11T03:55:43.713607Z",
       "evidence_refs": [],
       "gate_id": "G6_ECL_CONSISTENCY",
       "limitations": [],
@@ -174,7 +175,7 @@
         "placeholder_warning": true,
         "targeted_searches": 5
       },
-      "evaluated_at": "2026-09-11T02:44:39.154163Z",
+      "evaluated_at": "2026-09-11T03:55:43.713607Z",
       "evidence_refs": [
         "evidence-freeze/DIGITAL-ASSET-BATCH-01-R1/XLM/COUNTER_EVIDENCE_SEARCH_LOG.json",
         "evidence-freeze/DIGITAL-ASSET-BATCH-01-R1/XLM/HYPOTHESIS_REGISTRY.json"
@@ -195,7 +196,7 @@
         "human_review_required": false,
         "review_required": true
       },
-      "evaluated_at": "2026-09-11T02:44:39.154163Z",
+      "evaluated_at": "2026-09-11T03:55:43.713607Z",
       "evidence_refs": [
         "evidence-freeze/DIGITAL-ASSET-BATCH-01-R1/XLM/AGREEMENT_DIVERGENCE_AUDIT.md"
       ],
@@ -212,7 +213,7 @@
         "entity_response_status": null,
         "human_review_required": false
       },
-      "evaluated_at": "2026-09-11T02:44:39.154163Z",
+      "evaluated_at": "2026-09-11T03:55:43.713607Z",
       "evidence_refs": [],
       "gate_id": "G9_SENSITIVITY_RIGHT_OF_REPLY",
       "limitations": [],
@@ -228,7 +229,7 @@
         "publication_status": "R1 RESEARCH SUPPORT",
         "supersession_status": "REFINED"
       },
-      "evaluated_at": "2026-09-11T02:44:39.154163Z",
+      "evaluated_at": "2026-09-11T03:55:43.713607Z",
       "evidence_refs": [
         "evidence-freeze/DIGITAL-ASSET-BATCH-01-R1/XLM/SUPERSESSION_NOTICE.md"
       ],
@@ -241,9 +242,9 @@
       "validator": "validate_g10_supersession"
     }
   ],
-  "input_bundle_sha256": "671159e36a72ec640d13dcf3da498f4c76193ac0716fb124bf18c85c81cb70b1",
+  "input_bundle_sha256": "0974565af81b25a2bf4b25aaca4881eb0ac45bbdde3d8129255ccc4f3be25091",
   "profile": "DIGITAL_ASSET_R1",
-  "record_created_at": "2026-09-11T02:44:39.202896Z",
+  "record_created_at": "2026-09-11T03:55:43.770480Z",
   "research_id": "SE.ASSET.XLM.2026.001-R1",
   "resolved_artifacts": [
     {

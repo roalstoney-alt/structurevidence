@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "required": [
+    "report_id",
+    "artifact_id",
+    "research_id",
+    "subject_id",
+    "report_version",
+    "evaluation_as_of",
+    "generated_at",
+    "product_sku",
+    "research_snapshot",
+    "timeline_snapshot",
+    "freshness_snapshot",
+    "ecl_snapshot",
+    "gdr_snapshot",
+    "counterfactual",
+    "sources",
+    "verification"
+  ],
+  "title": "StructEvidence Paid PDF Report Bundle",
+  "type": "object"
+}

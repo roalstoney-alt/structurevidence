@@ -46,7 +46,7 @@ def main() -> None:
     historical_b = evaluate(resolve("BNB", ROOT), ROOT, as_of="2026-09-10T00:00:00Z")
     if historical_a.input_bundle_sha256 != historical_b.input_bundle_sha256:
         fail("historical reproduction changed the input bundle hash")
-    if gate(evaluate(resolve("BNB", ROOT), ROOT, as_of="2027-09-10T00:00:00Z"), "G3_EVIDENCE_FRESHNESS")["computed_facts"].get("policy_version") != "RDL_FRESHNESS_v0.1":
+    if gate(evaluate(resolve("BNB", ROOT), ROOT, as_of="2027-09-10T00:00:00Z"), "G3_EVIDENCE_FRESHNESS")["computed_facts"].get("policy_version") != "RDL_FRESHNESS_v0.1a":
         fail("RDL freshness policy should remain the G3 source at historical as_of")
     print("GDR_SE_CLOCK_TESTS_PASS")
 

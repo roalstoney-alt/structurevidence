@@ -43,9 +43,9 @@ def main() -> None:
         fail("future-known event leaked into historical as_of")
     if pub.precedence_pick(policy, ["CURRENT", "SUPERSEDED"]) != "SUPERSEDED":
         fail("supersession precedence failed")
-    first = json.loads((ROOT / "research/freshness/sol/FRESHNESS_EVALUATION_v0.1.json").read_text(encoding="utf-8"))["input_bundle_hash"]
+    first = json.loads((ROOT / "research/freshness/sol/FRESHNESS_EVALUATION_v0.1a.json").read_text(encoding="utf-8"))["input_bundle_hash"]
     pub.build(as_of)
-    second = json.loads((ROOT / "research/freshness/sol/FRESHNESS_EVALUATION_v0.1.json").read_text(encoding="utf-8"))["input_bundle_hash"]
+    second = json.loads((ROOT / "research/freshness/sol/FRESHNESS_EVALUATION_v0.1a.json").read_text(encoding="utf-8"))["input_bundle_hash"]
     if first != second:
         fail("explicit as_of build is not reproducible")
     print("RDL_FRESHNESS_RUNTIME_TESTS_PASS")

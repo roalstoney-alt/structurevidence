@@ -49,24 +49,24 @@
     <dt>Supersession Status</dt><dd>Not superseded in current public presentation</dd>
     <dt>Evaluation Mode</dt><dd><code>RUNTIME_EVALUATED</code></dd>
     <dt>Runtime Revision</dt><dd><code>R1.1</code></dd>
-    <dt>Authorization ID</dt><dd><code>GDR-SE-AUTH-strategy-59bd0b24fafb3a04-R1.1</code></dd>
+    <dt>Authorization ID</dt><dd><code>GDR-SE-AUTH-strategy-673152115b4063c9-R1.1</code></dd>
     <dt>GDR-SE Version</dt><dd><code>GDR_SE_v0.1</code></dd>
     <dt>Gate Summary</dt><dd><a href="research/gdr-se/strategy-2026/GDR_SE_GATE_TABLE_R1_1.md">GDR-SE runtime gate table</a></dd>
     <dt>Authorization Outcome</dt><dd><code>ALLOW_WITH_LIMITATIONS</code></dd>
-    <dt>Evaluation As Of</dt><dd>2026-09-11T02:44:39.154163Z</dd>
-    <dt>Record Created At</dt><dd>2026-09-11T02:44:39.155189Z</dd>
+    <dt>Evaluation As Of</dt><dd>2026-09-11T03:55:43.713607Z</dd>
+    <dt>Record Created At</dt><dd>2026-09-11T03:55:43.714550Z</dd>
     <dt>Valid Until</dt><dd>Not set</dd>
-    <dt>Input Bundle Hash</dt><dd><code>59bd0b24fafb3a0438aa70dd9e2c96ad241d3e8d8f90d4140227a1256f0f9375</code></dd>
+    <dt>Input Bundle Hash</dt><dd><code>673152115b4063c9bb6fd555f6e34d99362cec5f741f6f8f8768558283e418d2</code></dd>
     <dt>Config Hash</dt><dd><code>d716177c3161940a25ef7c77367a10d124ebb7f0d42bc571737009b4cdf91528</code></dd>
     <dt>Aggregation Rule Version</dt><dd><code>GDR_SE_AGGREGATION_v0.1-R1.1</code></dd>
     <dt>Supersession</dt><dd><code>GDR-SE-AUTH-strategy-45c92ba47075258b-R1</code></dd>
     <dt>Gate</dt><dd><code>G3_EVIDENCE_FRESHNESS</code></dd>
-    <dt>Status</dt><dd><code>FAIL</code></dd>
+    <dt>Status</dt><dd><code>PASS</code></dd>
     <dt>Validator</dt><dd><code>validate_g3_freshness</code></dd>
     <dt>Rule Version</dt><dd><code>GDR_SE_RUNTIME_RULES_v0.1-R1.1</code></dd>
-    <dt>Reason</dt><dd>G3 consumed RDL Freshness Policy v0.1 release state EVENT_INVALIDATED.</dd>
-    <dt>Evidence Refs</dt><dd><code>rdl/freshness/gdr_g3_adapter.json, research/freshness/strategy/FRESHNESS_EVALUATION_v0.1.json</code></dd>
-    <dt>Computed Facts</dt><dd><code>{&quot;configured_profile_count&quot;: 4, &quot;input_bundle_hash&quot;: &quot;583968ac3263a1361e240f9f3ed46cd0c5b83c08ac082f818a1fe5a2a0529920&quot;, &quot;policy_version&quot;: &quot;RDL_FRESHNESS_v0.1&quot;, &quot;record_path&quot;: &quot;research/freshness/strategy/FRESHNESS_EVALUATION_v0.1.json&quot;, &quot;release_freshness_state&quot;: &quot;EVENT_INVALIDATED&quot;, &quot;subject&quot;: &quot;strategy&quot;}</code></dd>
+    <dt>Reason</dt><dd>G3 consumed RDL_FRESHNESS_v0.1a release state CURRENT.</dd>
+    <dt>Evidence Refs</dt><dd><code>rdl/freshness/gdr_g3_adapter.json, research/freshness/strategy/FRESHNESS_EVALUATION_v0.1a.json</code></dd>
+    <dt>Computed Facts</dt><dd><code>{&quot;configured_profile_count&quot;: 4, &quot;input_bundle_hash&quot;: &quot;4fb3c6d4ab34f5ec680248c9b48126c5885b83cc490ebd719f5654cd47caebdb&quot;, &quot;paid_delivery&quot;: &quot;NOT_AUTHORIZED_BY_FRESHNESS_ALONE&quot;, &quot;policy_version&quot;: &quot;RDL_FRESHNESS_v0.1a&quot;, &quot;record_path&quot;: &quot;research/freshness/strategy/FRESHNESS_EVALUATION_v0.1a.json&quot;, &quot;release_freshness_state&quot;: &quot;CURRENT&quot;, &quot;subject&quot;: &quot;strategy&quot;}</code></dd>
   </dl>
 </section>
 <section>
@@ -74,6 +74,11 @@
   <p><code>Finding -> Method -> Observation -> RTP Provenance -> Timeline Level/Delta -> RDL Freshness -> GDR-SE G3 -> Release Authorization</code></p>
 </section>
 <section><p><span class="status">Interactive lookup planned</span><span class="status">No fake search results</span><span class="status">Static manifest links only</span></p></section>
+<section>
+  <h2>Verified PDF Hash</h2>
+  <p>Paid PDF reports are verified by comparing the local PDF SHA-256 with the public-safe report metadata record. Public records may include Artifact ID, Report ID and SHA-256; paid PDF bytes are not published here.</p>
+  <p><code>SHA-256(local PDF) == verify/reports/&lt;artifact_id&gt;.json pdf_sha256</code></p>
+</section>
 </main>
   <footer class="site-footer">
     <div class="footer-inner">

@@ -37,7 +37,7 @@ def test_runtime_records() -> None:
         if evaluation.authorization not in {"ALLOW_WITH_LIMITATIONS", "HUMAN_REVIEW_REQUIRED", "VETO"}:
             fail(f"{subject} produced unknown authorization")
         g3 = gate(evaluation, "G3_EVIDENCE_FRESHNESS")
-        if g3["computed_facts"].get("policy_version") != "RDL_FRESHNESS_v0.1":
+        if g3["computed_facts"].get("policy_version") != "RDL_FRESHNESS_v0.1a":
             fail(f"{subject} G3 did not consume RDL freshness")
         if not evaluation.input_bundle_sha256 or len(evaluation.input_bundle_sha256) != 64:
             fail(f"{subject} missing input bundle hash")

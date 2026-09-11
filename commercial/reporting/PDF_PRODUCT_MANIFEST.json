@@ -1,0 +1,27 @@
+{
+  "config_hash": "4cd9bab6154e380d2b282fd487982e7eb03a8d1dcb90cdabb01c77709d8cd3da",
+  "delivery_gate_version": "PAID_PDF_DELIVERY_GATE_v0.1",
+  "private_storage_required": true,
+  "product_version": "STRUCTEVIDENCE_PAID_PDF_v0.1",
+  "renderer_version": "PyMuPDF-STRUCTEVIDENCE-PDF-RENDERER-v0.1",
+  "required_sections": [
+    "Cover",
+    "Executive Summary",
+    "Research Scope",
+    "Current Structural State",
+    "Structural Level / Delta",
+    "Freshness Status",
+    "Evidence Dynamics",
+    "Material Events",
+    "ECL Evidence Consistency",
+    "Counter-Evidence",
+    "Numerical Reconciliation",
+    "Source Dependency / Coverage",
+    "GDR-SE Authorization",
+    "What Could Change This Conclusion",
+    "Limitations",
+    "Verification Record",
+    "Appendix / Source Index"
+  ],
+  "schema_hash": "770ef35cd3ad009a191a5964fc30126ce63b139d98e3ba107a8f1050826e18c5"
+}

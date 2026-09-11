@@ -34,6 +34,7 @@ def evaluate_rdl_freshness(subject: str | None, category: str) -> tuple[str, str
     record = json.loads(record_path.read_text(encoding="utf-8"))
     freshness_state = record["release_result"]["release_freshness_state"]
     status = adapter["mapping"].get(freshness_state, "UNRESOLVED")
+    fail_safe = adapter.get("fail_safe_facts", {}).get(freshness_state, {})
     facts = {
         "policy_version": adapter["policy_version"],
         "subject": key,
@@ -41,8 +42,10 @@ def evaluate_rdl_freshness(subject: str | None, category: str) -> tuple[str, str
         "record_path": entry["record_path"],
         "input_bundle_hash": record["input_bundle_hash"],
         "configured_profile_count": sum(1 for row in record["dimension_level_results"] if row["freshness_state"] != "POLICY_NOT_CONFIGURED"),
+        "paid_delivery": record["release_result"].get("paid_delivery"),
     }
-    return status, f"G3 consumed RDL Freshness Policy v0.1 release state {freshness_state}.", facts
+    facts.update(fail_safe)
+    return status, f"G3 consumed {adapter['policy_version']} release state {freshness_state}.", facts
 
 
 def evaluate_freshness(category: str, last_reviewed: str, as_of: date, config: dict | None = None, subject: str | None = None) -> tuple[str, str, dict]:

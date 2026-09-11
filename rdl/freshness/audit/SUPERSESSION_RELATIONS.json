@@ -1,0 +1,62 @@
+{
+  "policy_version": "RDL_FRESHNESS_v0.1a",
+  "relation_types": [
+    "REPLACES",
+    "REFINES",
+    "DEPRECATES",
+    "CORRECTS",
+    "WITHDRAWS"
+  ],
+  "relations": [
+    {
+      "effective_at": "2026-09-09T00:00:00Z",
+      "known_at": "2026-09-09T00:00:00Z",
+      "relation_id": "SUP-STRATEGY-PILOT-R1",
+      "relation_type": "REFINES",
+      "source_ref": "v0.1a directional audit registry",
+      "subject": "strategy",
+      "successor_artifact_id": "STRATEGY-2026-R1",
+      "superseded_artifact_id": "STRATEGY-2026-PILOT"
+    },
+    {
+      "effective_at": "2026-09-09T00:00:00Z",
+      "known_at": "2026-09-09T00:00:00Z",
+      "relation_id": "SUP-BNB-PILOT-R1",
+      "relation_type": "REFINES",
+      "source_ref": "v0.1a directional audit registry",
+      "subject": "bnb",
+      "successor_artifact_id": "BNB-R1",
+      "superseded_artifact_id": "BNB-PILOT"
+    },
+    {
+      "effective_at": "2026-09-09T00:00:00Z",
+      "known_at": "2026-09-09T00:00:00Z",
+      "relation_id": "SUP-SOL-PILOT-R1",
+      "relation_type": "REFINES",
+      "source_ref": "v0.1a directional audit registry",
+      "subject": "sol",
+      "successor_artifact_id": "SOL-R1",
+      "superseded_artifact_id": "SOL-PILOT"
+    },
+    {
+      "effective_at": "2026-09-09T00:00:00Z",
+      "known_at": "2026-09-09T00:00:00Z",
+      "relation_id": "SUP-TRX-PILOT-R1",
+      "relation_type": "REFINES",
+      "source_ref": "v0.1a directional audit registry",
+      "subject": "trx",
+      "successor_artifact_id": "TRX-R1",
+      "superseded_artifact_id": "TRX-PILOT"
+    },
+    {
+      "effective_at": "2026-09-09T00:00:00Z",
+      "known_at": "2026-09-09T00:00:00Z",
+      "relation_id": "SUP-XLM-PILOT-R1",
+      "relation_type": "REFINES",
+      "source_ref": "v0.1a directional audit registry",
+      "subject": "xlm",
+      "successor_artifact_id": "XLM-R1",
+      "superseded_artifact_id": "XLM-PILOT"
+    }
+  ]
+}

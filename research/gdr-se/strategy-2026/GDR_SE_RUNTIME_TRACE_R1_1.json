@@ -11,15 +11,15 @@
     "report": "416af04d120a0ee87046dee426ae0404c0fb3ca47cbe7f83e4d986ced3179e68",
     "source_inventory": "62270e7cb8e2c40234a6552a10e26c452ec7fd871acfafebb744e907e08b2e1c"
   },
-  "authorization_id": "GDR-SE-AUTH-strategy-59bd0b24fafb3a04-R1.1",
+  "authorization_id": "GDR-SE-AUTH-strategy-673152115b4063c9-R1.1",
   "config_hashes": {
     "aggregation_rules_sha256": "d716177c3161940a25ef7c77367a10d124ebb7f0d42bc571737009b4cdf91528",
     "freshness_config_sha256": "e486d1cde399acf6319db7f09a7b2849c52ae1604dd87360312e162517c9b762",
     "gates_config_sha256": "06e725a2e5ad5d506aad41e79f743e73a66e2634c6ec4b5f7166c598e6fb33c7",
     "research_profile_sha256": "ce939807f8605fdd3c661a5a018fccfeecf233b63e0e5d83dee26bd35868a1cf"
   },
-  "evaluation_as_of": "2026-09-11T02:44:39.154163Z",
-  "evaluation_id": "GDR-SE-EVAL-59bd0b24fafb3a04-R1.1",
+  "evaluation_as_of": "2026-09-11T03:55:43.713607Z",
+  "evaluation_id": "GDR-SE-EVAL-673152115b4063c9-R1.1",
   "final_authorization": "ALLOW_WITH_LIMITATIONS",
   "gate_results": [
     {
@@ -39,7 +39,7 @@
           "source_coverage"
         ]
       },
-      "evaluated_at": "2026-09-11T02:44:39.154163Z",
+      "evaluated_at": "2026-09-11T03:55:43.713607Z",
       "evidence_refs": [
         "research/PUBLICATION_PACKAGE_MANIFEST_EN.json"
       ],
@@ -68,7 +68,7 @@
         "present_artifacts": 7,
         "required_artifacts": 7
       },
-      "evaluated_at": "2026-09-11T02:44:39.154163Z",
+      "evaluated_at": "2026-09-11T03:55:43.713607Z",
       "evidence_refs": [
         "research/PUBLICATION_PACKAGE_MANIFEST_EN.json",
         "research/Strategy_2026_Public_Evidence_Research_Report_v0.1_EN.md",
@@ -91,23 +91,24 @@
     {
       "computed_facts": {
         "configured_profile_count": 4,
-        "input_bundle_hash": "583968ac3263a1361e240f9f3ed46cd0c5b83c08ac082f818a1fe5a2a0529920",
-        "policy_version": "RDL_FRESHNESS_v0.1",
-        "record_path": "research/freshness/strategy/FRESHNESS_EVALUATION_v0.1.json",
-        "release_freshness_state": "EVENT_INVALIDATED",
+        "input_bundle_hash": "4fb3c6d4ab34f5ec680248c9b48126c5885b83cc490ebd719f5654cd47caebdb",
+        "paid_delivery": "NOT_AUTHORIZED_BY_FRESHNESS_ALONE",
+        "policy_version": "RDL_FRESHNESS_v0.1a",
+        "record_path": "research/freshness/strategy/FRESHNESS_EVALUATION_v0.1a.json",
+        "release_freshness_state": "CURRENT",
         "subject": "strategy"
       },
-      "evaluated_at": "2026-09-11T02:44:39.154163Z",
+      "evaluated_at": "2026-09-11T03:55:43.713607Z",
       "evidence_refs": [
         "rdl/freshness/gdr_g3_adapter.json",
-        "research/freshness/strategy/FRESHNESS_EVALUATION_v0.1.json"
+        "research/freshness/strategy/FRESHNESS_EVALUATION_v0.1a.json"
       ],
       "gate_id": "G3_EVIDENCE_FRESHNESS",
       "limitations": [],
-      "reason": "G3 consumed RDL Freshness Policy v0.1 release state EVENT_INVALIDATED.",
+      "reason": "G3 consumed RDL_FRESHNESS_v0.1a release state CURRENT.",
       "rule_version": "GDR_SE_RUNTIME_RULES_v0.1-R1.1",
       "severity": "SOFT",
-      "status": "FAIL",
+      "status": "PASS",
       "validator": "validate_g3_freshness"
     },
     {
@@ -118,7 +119,7 @@
         "source_coverage": "PARTIAL",
         "unique_source_ids": 12
       },
-      "evaluated_at": "2026-09-11T02:44:39.154163Z",
+      "evaluated_at": "2026-09-11T03:55:43.713607Z",
       "evidence_refs": [
         "evidence-freeze/S6.1a/SOURCE_DEPENDENCY_GRAPH_v2.json"
       ],
@@ -136,7 +137,7 @@
       "computed_facts": {
         "total": 0
       },
-      "evaluated_at": "2026-09-11T02:44:39.154163Z",
+      "evaluated_at": "2026-09-11T03:55:43.713607Z",
       "evidence_refs": [],
       "gate_id": "G5_NUMERICAL_RECONCILIATION",
       "limitations": [],
@@ -152,7 +153,7 @@
         "human_review_required": false,
         "material_inconsistency": "NO"
       },
-      "evaluated_at": "2026-09-11T02:44:39.154163Z",
+      "evaluated_at": "2026-09-11T03:55:43.713607Z",
       "evidence_refs": [],
       "gate_id": "G6_ECL_CONSISTENCY",
       "limitations": [],
@@ -173,7 +174,7 @@
         "placeholder_warning": false,
         "targeted_searches": 6
       },
-      "evaluated_at": "2026-09-11T02:44:39.154163Z",
+      "evaluated_at": "2026-09-11T03:55:43.713607Z",
       "evidence_refs": [
         "evidence-freeze/S6.1a/COUNTER_EVIDENCE_SEARCH_LOG_v3.json",
         "evidence-freeze/S6.1a/HYPOTHESIS_ASSESSMENTS_v2.json"
@@ -190,7 +191,7 @@
       "computed_facts": {
         "review_required": false
       },
-      "evaluated_at": "2026-09-11T02:44:39.154163Z",
+      "evaluated_at": "2026-09-11T03:55:43.713607Z",
       "evidence_refs": [
         null
       ],
@@ -207,7 +208,7 @@
         "entity_response_status": null,
         "human_review_required": false
       },
-      "evaluated_at": "2026-09-11T02:44:39.154163Z",
+      "evaluated_at": "2026-09-11T03:55:43.713607Z",
       "evidence_refs": [],
       "gate_id": "G9_SENSITIVITY_RIGHT_OF_REPLY",
       "limitations": [],
@@ -223,7 +224,7 @@
         "publication_status": "METHOD PILOT",
         "supersession_status": "CURRENT"
       },
-      "evaluated_at": "2026-09-11T02:44:39.154163Z",
+      "evaluated_at": "2026-09-11T03:55:43.713607Z",
       "evidence_refs": [],
       "gate_id": "G10_EXPIRY_SUPERSESSION",
       "limitations": [],
@@ -234,9 +235,9 @@
       "validator": "validate_g10_supersession"
     }
   ],
-  "input_bundle_sha256": "59bd0b24fafb3a0438aa70dd9e2c96ad241d3e8d8f90d4140227a1256f0f9375",
+  "input_bundle_sha256": "673152115b4063c9bb6fd555f6e34d99362cec5f741f6f8f8768558283e418d2",
   "profile": "STRATEGY_LEGACY_METHOD_PILOT",
-  "record_created_at": "2026-09-11T02:44:39.155189Z",
+  "record_created_at": "2026-09-11T03:55:43.714550Z",
   "research_id": "ECL.COMPANY.STRATEGY_INC.2026.001",
   "resolved_artifacts": [
     {

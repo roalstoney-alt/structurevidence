@@ -65,6 +65,8 @@ def candidate_effects(gate_results: list[dict]) -> list[str]:
         effects.append("superseded")
     if any(row.get("computed_facts", {}).get("human_review_required") for row in gate_results):
         effects.append("human_review_required")
+    if any(row.get("computed_facts", {}).get("refresh_required") for row in gate_results):
+        effects.append("stale")
     if any(row["status"] == "UNRESOLVED" for row in gate_results):
         effects.append("unresolved")
     g3 = by_id.get("G3_EVIDENCE_FRESHNESS", {})

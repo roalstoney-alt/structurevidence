@@ -1,0 +1,13 @@
+{
+  "artifact_id": "ART-SE-PAID-PDF-HAPPY-PATH-v0.1",
+  "correction_status": "NONE",
+  "evaluation_as_of": "2026-09-11T00:00:00Z",
+  "freshness_policy_version": "RDL_FRESHNESS_v0.1a",
+  "gdr_authorization_id": "GDR-SE-AUTH-PAID-PDF-FIXTURE",
+  "generated_at": "2026-09-11T04:49:42.335360Z",
+  "pdf_sha256": "3c29c74d9c1fbc862f5a2561ee3210ec3aee92fa4bc45a459ad5dd12361b7a56",
+  "report_id": "SE-PAID-PDF-HAPPY-PATH",
+  "report_version": "STRUCTEVIDENCE_PAID_PDF_v0.1",
+  "research_id": "SE.TEST.PAID_PDF.2026.001",
+  "supersession_status": "CURRENT"
+}

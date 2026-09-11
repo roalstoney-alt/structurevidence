@@ -25,7 +25,7 @@ def main() -> None:
     for subject in ["strategy", "BNB", "SOL", "TRX", "XLM"]:
         evaluation = evaluate(resolve(subject, ROOT), ROOT, as_of="2026-09-11T00:00:00Z")
         g3 = gate(evaluation, "G3_EVIDENCE_FRESHNESS")
-        if g3["computed_facts"].get("policy_version") != "RDL_FRESHNESS_v0.1":
+        if g3["computed_facts"].get("policy_version") != "RDL_FRESHNESS_v0.1a":
             fail(f"{subject} G3 did not consume RDL policy")
         if evaluation.authorization == "ALLOW_PUBLICATION":
             fail(f"{subject} was upgraded to unrestricted publication by freshness")
