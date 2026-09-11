@@ -1,3 +1,3 @@
 # PAID PDF RENDER QA v0.1
 
-PyMuPDF render QA passed. Page count: 17. SHA-256: 8dcd0ee1a68eb39f880478fa2b5f9a2cbf6053d01ba75ecdf398404b87908436.
+PyMuPDF render QA passed. Page count: 17. SHA-256: 56ef4693556d2bcd166d1be38986a34b4cad8876047bdec506addc65eaa40f3d.

@@ -3,6 +3,7 @@ from __future__ import annotations
 import hashlib
 import importlib.util
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -23,6 +24,7 @@ REQUIRED_PAGES = [
     "sample-report.html",
     "enterprise.html",
     "customize.html",
+    "checkout.html",
     "terms.html",
     "privacy.html",
     "terms-of-sale.html",
@@ -106,26 +108,26 @@ def check_configs_and_schemas() -> None:
     commercial = read_json("commercial/config/commercial.json")
     products = read_json("commercial/config/products.json")
     contact = read_json("commercial/config/contact.json")
-    if commercial["commercial_status"] != "EARLY_ACCESS" or commercial["payment_enabled"] is not False:
+    payment = read_json("commercial/config/payment.json")
+    if commercial["commercial_status"] != "MANUAL_PAID_SERVICES" or commercial["payment_enabled"] is not True:
         fail("commercial status/payment gate incorrect")
-    allowed_launch_gates = {
-        "BLOCKED",
-        "SINGAPORE_PAID_PILOT_READY_CONFIGURATION_PENDING",
-    }
-    if commercial["commercial_launch_gate"] not in allowed_launch_gates:
-        fail("missing blocked launch gate")
+    if commercial["commercial_launch_gate"] != "HONG_KONG_MANUAL_USDT_SETTLEMENT_ACTIVE":
+        fail("manual settlement launch gate missing")
     if products["verified_report"]["price"] is not None or products["verified_report"]["price_status"] != "CONFIG_REQUIRED":
         fail("verified report price must remain unconfigured")
     if products["custom_audit"]["price_status"] != "SCOPE_REQUIRED":
         fail("custom audit must require scope")
-    allowed_contact_statuses = {
-        "CONFIG_REQUIRED",
-        "SINGAPORE_ENTITY_SELECTED_LEGAL_NAME_AND_CONTACT_REQUIRED",
-    }
-    if contact["contact_status"] not in allowed_contact_statuses:
-        fail("contact config must remain explicit config-required")
-    if not all(contact.get(field) is None for field in ["company_name", "legal_email", "sales_email", "support_email"]):
-        fail("contact config must not invent seller identity before activation")
+    if contact["contact_status"] != "CONFIGURED_FOR_MANUAL_SERVICE_INTAKE":
+        fail("manual service contact status missing")
+    if contact.get("company_name") != "Structevidence.com" or contact.get("contact_person") != "John Success":
+        fail("seller contact identity mismatch")
+    if contact.get("whatsapp") != "+85266629951" or contact.get("sales_email") != "john.success1688@gmail.com":
+        fail("public contact channel mismatch")
+    if payment.get("payment_enabled") is not True or payment.get("primary_payment_method") != "USDT_TRC20":
+        fail("manual USDT payment channel is not active")
+    usdt = payment.get("usdt") or {}
+    if usdt.get("network") != "TRON" or usdt.get("token_standard") != "TRC20" or usdt.get("recipient_address") != "TQxjZ97Sgpdd685oYH2BAK2ik3J7CCRQRw":
+        fail("TRON USDT payment configuration mismatch")
     for rel in [
         "commercial/schema/order.schema.json",
         "commercial/schema/evidence_graph.schema.json",
@@ -173,12 +175,16 @@ def check_paid_boundary_and_copy() -> None:
     for product in ["Verified Research Report", "Custom Structural Audit", "Enterprise Evidence Review"]:
         if product not in customize:
             fail(f"customize page missing product: {product}")
-    for boundary in ["Configuration pending", "Scoped quote", "Custom scope required", "No checkout is active."]:
+    for boundary in ["Written quote required", "Scoped quote", "Custom scope required", "Checkout is quote-gated."]:
         if boundary not in customize:
             fail(f"customize page missing commercial boundary: {boundary}")
-    for rel in ["reports.html", "sample-report.html", "enterprise.html", "customize.html"]:
+    checkout = (ROOT / "checkout.html").read_text(encoding="utf-8")
+    for phrase in ["USDT-TRC20 settlement", "TQxjZ97Sgpdd685oYH2BAK2ik3J7CCRQRw", "Submit TXID by WhatsApp", "written quote"]:
+        if phrase not in checkout:
+            fail(f"checkout page missing payment boundary: {phrase}")
+    for rel in ["reports.html", "sample-report.html", "enterprise.html", "customize.html", "checkout.html"]:
         text = (ROOT / rel).read_text(encoding="utf-8")
-        if "$" in text:
+        if re.search(r"\$\s?\d", text):
             fail(f"fake price appears in {rel}")
     for path in (ROOT / "docs").rglob("*"):
         if path.is_file() and path.suffix.lower() == ".pdf" and "sample" not in path.name.lower():

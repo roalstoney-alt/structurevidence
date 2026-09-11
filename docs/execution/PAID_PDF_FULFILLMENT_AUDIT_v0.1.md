@@ -1,3 +1,3 @@
 # PAID PDF FULFILLMENT AUDIT v0.1
 
-Automated payment remains disabled. Initial readiness is manual early-access fulfillment only.
+Manual USDT-TRC20 payment is active after a written quote. Automated fulfillment remains disabled and delivery stays authorization-gated.

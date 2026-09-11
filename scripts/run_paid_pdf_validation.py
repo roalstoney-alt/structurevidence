@@ -63,7 +63,8 @@ def main() -> None:
     draft = build(draft_args)
     tampered = Path("private/paid-reports/test/tamper-registry.pdf")
     tampered.write_bytes(pdf_path.read_bytes() + b"x")
-    public_pdf_count = len([path for path in (ROOT / "docs").glob("**/*.pdf")]) + len([path for path in (ROOT / "verify").glob("**/*.pdf")])
+    public_pdfs = [path for path in (ROOT / "docs").glob("**/*.pdf")] + [path for path in (ROOT / "verify").glob("**/*.pdf")]
+    public_pdf_ok = all(path.name == "DEMO_BNB_MONITORING_SNAPSHOT_v1.0.pdf" for path in public_pdfs)
     product = read_json(ROOT / "commercial/reporting/config/pdf_product.json")
     paid_page = (ROOT / "paid-pilot.html").read_text(encoding="utf-8")
     ignored = (ROOT / ".gitignore").read_text(encoding="utf-8")
@@ -90,7 +91,7 @@ def main() -> None:
         gate("PDF18_AUTHORIZATION_SNAPSHOT_LOCK", authorize_pdf_delivery({"payment_status": "PAYMENT_CONFIRMED"}, dict(manifest, authorization_snapshot_hash="mismatch"), state_ready) == "BLOCK", "Authorization snapshot lock enforced."),
         gate("PDF19_PRIVATE_STORAGE", "private/paid-reports" in result["pdf_path"], "PDF stored privately."),
         gate("PDF20_GITIGNORE_PRIVATE_PDFS", "private/" in ignored and "*.pdf" in ignored, "Private PDFs ignored."),
-        gate("PDF21_NO_PUBLIC_PDF_EXPOSURE", public_pdf_count == 0, "No public PDF exposure."),
+        gate("PDF21_NO_PUBLIC_PDF_EXPOSURE", public_pdf_ok, "No paid PDF exposure; only the labeled public BNB demo is allowed."),
         gate("PDF22_DELIVERY_MANIFEST", Path(result["manifest_path"]).exists(), "Delivery manifest exists."),
         gate("PDF23_PUBLIC_VERIFY_RECORD", Path(result["verify_path"]).exists() and verify_record["pdf_sha256"] == manifest["pdf_sha256"], "Public verify record exists and matches hash."),
         gate("PDF24_NO_PUBLIC_PII", no_pii, "Public verify record has no PII/payment fields."),
@@ -98,7 +99,7 @@ def main() -> None:
         gate("PDF26_HAPPY_PATH", result["delivery_authorization"] == "ALLOW_DELIVERY", "Synthetic happy path reaches delivery-ready state."),
         gate("PDF27_FAILURE_PATH", authorize_pdf_build({"payment_status": "PAYMENT_CONFIRMED"}, report_state(bundle, override_auth="HUMAN_REVIEW_REQUIRED")) == "BLOCK", "Blocked path does not build final PDF."),
         gate("PDF28_PAID_PRODUCT_UI", "Verified PDF Report" in paid_page and "REQUEST VERIFIED PDF" in paid_page, "Paid product UI describes PDF deliverable."),
-        gate("PDF29_EARLY_ACCESS_PAYMENT_BOUNDARY", product["payment_readiness"] == "EARLY_ACCESS" and "PAYMENT: DISABLED" in paid_page, "Payment-disabled boundary preserved."),
+        gate("PDF29_EARLY_ACCESS_PAYMENT_BOUNDARY", product["payment_readiness"] == "EARLY_ACCESS" and "PAYMENT_ENABLED: true / MANUAL_CONFIRMATION" in paid_page and "Automated private download is not active" in paid_page, "Manual payment and non-automated fulfillment boundary preserved."),
         gate("PDF30_ENGLISH_REPORT_SURFACE", not any("\u4e00" <= ch <= "\u9fff" for ch in paid_page + json.dumps(bundle)), "Paid report surface is English."),
     ]
     registry = {"registry_id": "PAID_PDF_GATE_RESULTS", "product_version": "STRUCTEVIDENCE_PAID_PDF_v0.1", "renderer_version": RENDERER_VERSION, "summary": summary(rows), "metadata": {"pdf_product_readiness": product["pdf_product_readiness"], "payment_readiness": product["payment_readiness"], "automated_fulfillment_readiness": product["automated_fulfillment_readiness"], "private_pdf_path": result["pdf_path"], "public_verify_path": result["verify_path"]}, "results": rows}
@@ -108,7 +109,7 @@ def main() -> None:
         "PAID_PDF_AUTHORIZATION_AUDIT_v0.1.md": "Payment confirmation, current paid freshness, GDR ALLOW_PAID_DELIVERY, QA pass and snapshot lock are separate gates.",
         "PAID_PDF_SECURITY_AUDIT_v0.1.md": "PDF bytes stay under private/paid-reports and are ignored by Git. Public Verify records contain no customer PII.",
         "PAID_PDF_RENDER_QA_v0.1.md": f"PyMuPDF render QA passed. Page count: {manifest['page_count']}. SHA-256: {manifest['pdf_sha256']}.",
-        "PAID_PDF_FULFILLMENT_AUDIT_v0.1.md": "Automated payment remains disabled. Initial readiness is manual early-access fulfillment only.",
+        "PAID_PDF_FULFILLMENT_AUDIT_v0.1.md": "Manual USDT-TRC20 payment is active after a written quote. Automated fulfillment remains disabled and delivery stays authorization-gated.",
     }.items():
         (ROOT / "docs/execution" / name).write_text(f"# {name[:-3].replace('_', ' ')}\n\n{text}\n", encoding="utf-8")
     print(json.dumps(registry["summary"], sort_keys=True))

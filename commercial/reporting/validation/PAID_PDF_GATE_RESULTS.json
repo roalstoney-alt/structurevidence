@@ -194,7 +194,7 @@
       "computed_facts": {},
       "evidence_refs": [],
       "gate_id": "PDF21_NO_PUBLIC_PDF_EXPOSURE",
-      "reason": "No public PDF exposure.",
+      "reason": "No paid PDF exposure; only the labeled public BNB demo is allowed.",
       "rule_version": "STRUCTEVIDENCE_PAID_PDF_v0.1_VALIDATION",
       "status": "PASS",
       "validator": "run_paid_pdf_validation"
@@ -266,7 +266,7 @@
       "computed_facts": {},
       "evidence_refs": [],
       "gate_id": "PDF29_EARLY_ACCESS_PAYMENT_BOUNDARY",
-      "reason": "Payment-disabled boundary preserved.",
+      "reason": "Manual payment and non-automated fulfillment boundary preserved.",
       "rule_version": "STRUCTEVIDENCE_PAID_PDF_v0.1_VALIDATION",
       "status": "PASS",
       "validator": "run_paid_pdf_validation"

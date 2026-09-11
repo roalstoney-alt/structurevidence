@@ -1,11 +1,11 @@
 {
-  "acceptance": "MONITORING_REDESIGN_PASS",
+  "acceptance": "MONITORING_REDESIGN_PARTIAL",
   "counts": {
     "BLOCKED": 0,
     "FAIL": 0,
-    "NOT_EVALUATED": 0,
+    "NOT_EVALUATED": 1,
     "PARTIAL": 0,
-    "PASS": 50
+    "PASS": 49
   },
   "generated_at": "2026-09-11T00:00:00Z",
   "registry_id": "MONITORING_REDESIGN_GATE_RESULTS_v1.0",
@@ -28,7 +28,8 @@
         "sample-report.html",
         "paid-pilot.html",
         "enterprise.html",
-        "customize.html"
+        "customize.html",
+        "checkout.html"
       ],
       "gate_id": "MON02_NO_PRICE_PREDICTION",
       "status": "PASS"
@@ -341,7 +342,7 @@
       "status": "PASS"
     },
     {
-      "detail": "Payment remains disabled.",
+      "detail": "Manual payment is active while automated fulfillment remains disabled.",
       "evidence_refs": [
         "paid-pilot.html",
         "commercial/config/commercial.json"
@@ -367,7 +368,8 @@
         "sample-report.html",
         "paid-pilot.html",
         "enterprise.html",
-        "customize.html"
+        "customize.html",
+        "checkout.html"
       ],
       "gate_id": "MON42_ACCESSIBILITY",
       "status": "PASS"
@@ -399,7 +401,8 @@
         "sample-report.html",
         "paid-pilot.html",
         "enterprise.html",
-        "customize.html"
+        "customize.html",
+        "checkout.html"
       ],
       "gate_id": "MON45_HREF_INTEGRITY",
       "status": "PASS"
@@ -423,7 +426,8 @@
         "sample-report.html",
         "paid-pilot.html",
         "enterprise.html",
-        "customize.html"
+        "customize.html",
+        "checkout.html"
       ],
       "gate_id": "MON47_SECRET_SCAN",
       "status": "PASS"
@@ -457,7 +461,7 @@
         "https://www.structurevidence.org/monitor.html?subject=bnb"
       ],
       "gate_id": "MON50_PRODUCTION_SMOKE_TEST",
-      "status": "PASS"
+      "status": "NOT_EVALUATED"
     }
   ]
 }

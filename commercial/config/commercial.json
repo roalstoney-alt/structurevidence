@@ -1,15 +1,15 @@
 {
-  "blocked_reason": "Singapore operating jurisdiction is selected, but exact legal seller name, public contact channels, launch price, receiving wallet/network and payment verification are not yet configured.",
-  "commercial_launch_gate": "SINGAPORE_PAID_PILOT_READY_CONFIGURATION_PENDING",
-  "commercial_status": "EARLY_ACCESS",
-  "operating_jurisdiction": "Singapore",
+  "blocked_reason": null,
+  "commercial_launch_gate": "HONG_KONG_MANUAL_USDT_SETTLEMENT_ACTIVE",
+  "commercial_status": "MANUAL_PAID_SERVICES",
+  "operating_jurisdiction": "Hong Kong",
   "invoice_currency": "USD",
   "usdt_settlement_planned": true,
   "custom_audit_enabled": true,
   "gdr_gate_enabled": false,
   "mos_context_enabled": false,
-  "paid_report_enabled": false,
-  "payment_enabled": false,
+  "paid_report_enabled": true,
+  "payment_enabled": true,
   "search_demand_logging": false,
   "structural_delta_enabled": false
 }

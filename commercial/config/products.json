@@ -5,13 +5,14 @@
     "invoice_currency": "USD",
     "price": null,
     "price_status": "SCOPE_REQUIRED",
-    "settlement_methods_planned": ["BANK_TRANSFER", "USDT"]
+    "settlement_methods_active": ["USDT_TRC20"]
   },
   "enterprise_evidence_review": {
     "enabled": true,
     "invoice_currency": "USD",
     "price_status": "CUSTOM_SCOPE_REQUIRED",
-    "self_serve": false
+    "self_serve": false,
+    "settlement_methods_active": ["USDT_TRC20"]
   },
   "verified_report": {
     "cta_when_unpriced": "Request Paid Pilot Access",
@@ -20,6 +21,6 @@
     "invoice_currency": "USD",
     "price": null,
     "price_status": "CONFIG_REQUIRED",
-    "settlement_methods_planned": ["BANK_TRANSFER", "USDT"]
+    "settlement_methods_active": ["USDT_TRC20"]
   }
 }
