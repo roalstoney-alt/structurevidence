@@ -18,6 +18,8 @@ def main() -> None:
         require(required in monitor, f"missing simplified structure timeline: {required}")
     for required in [">Monitor</a>", ">Export PDF</a>", ">Login</a>", ">About Us</a>", ">Pricing</a>", ">Contact Us</a>"]:
         require(required in home, f"missing focused homepage navigation: {required}")
+    monitor_js = (ROOT / "assets/monitor.js").read_text(encoding="utf-8")
+    require("Ask Audit" in monitor_js and "customize.html?subject=" in monitor_js, "unsupported subject must route to customization")
     require('<details class="data-pack" data-market-pack>' in monitor, "market extension pack must use a collapsed disclosure")
     require('<details class="data-pack" data-market-pack open>' not in monitor, "market extension pack must be closed by default")
     pass_message("MONITORING_PUBLIC_SURFACE_TESTS")

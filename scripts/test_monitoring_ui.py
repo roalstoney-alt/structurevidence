@@ -5,7 +5,7 @@ from monitoring_test_common import ROOT, pass_message, require
 
 
 def main() -> None:
-    pages = ["index.html", "monitor.html", "verify.html", "reports.html"]
+    pages = ["index.html", "monitor.html", "verify.html", "reports.html", "customize.html"]
     for name in pages:
         text = (ROOT / name).read_text(encoding="utf-8")
         require('name="viewport"' in text, f"viewport missing: {name}")

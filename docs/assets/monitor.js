@@ -29,7 +29,8 @@
   const displayLabel = (value) => displayLabels[value] || String(value || "Not observed").replaceAll("_", " ").toLowerCase();
 
   if (requestedSubject && requestedSubject.trim().toLowerCase() !== "bnb") {
-    workspace.innerHTML = `<section class="monitor-error"><p class="monitor-kicker">Coverage boundary</p><h1>${esc(requestedSubject.toUpperCase())} monitoring is not available</h1><p>Monitoring v1.0 currently exposes a generated workspace for BNB only. No BNB state has been substituted for this request.</p><p><a class="monitor-command" href="monitor.html?subject=bnb">Open BNB workspace</a> <a class="monitor-command secondary" href="index.html#asset-states">View archive coverage</a></p></section>`;
+    const subject = requestedSubject.trim().toUpperCase();
+    workspace.innerHTML = `<section class="monitor-error"><p class="monitor-kicker">Coverage boundary</p><h1>${esc(subject)} monitoring is not available</h1><p>Monitoring v1.0 currently exposes a generated workspace for BNB only. No BNB state has been substituted for this request.</p><p><a class="monitor-command" href="customize.html?subject=${encodeURIComponent(subject)}">Ask Audit</a> <a class="monitor-command secondary" href="monitor.html?subject=bnb">Open BNB workspace</a></p><p>Custom research begins with evidence availability and scope review.</p></section>`;
     return;
   }
 

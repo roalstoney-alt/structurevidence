@@ -22,6 +22,7 @@ REQUIRED_PAGES = [
     "reports.html",
     "sample-report.html",
     "enterprise.html",
+    "customize.html",
     "terms.html",
     "privacy.html",
     "terms-of-sale.html",
@@ -168,7 +169,14 @@ def check_paid_boundary_and_copy() -> None:
     for forbidden in FORBIDDEN_TRADING_COPY:
         if forbidden in lowered:
             fail(f"forbidden public copy remains: {forbidden}")
-    for rel in ["reports.html", "sample-report.html", "enterprise.html"]:
+    customize = (ROOT / "customize.html").read_text(encoding="utf-8")
+    for product in ["Verified Research Report", "Custom Structural Audit", "Enterprise Evidence Review"]:
+        if product not in customize:
+            fail(f"customize page missing product: {product}")
+    for boundary in ["Configuration pending", "Scoped quote", "Custom scope required", "No checkout is active."]:
+        if boundary not in customize:
+            fail(f"customize page missing commercial boundary: {boundary}")
+    for rel in ["reports.html", "sample-report.html", "enterprise.html", "customize.html"]:
         text = (ROOT / rel).read_text(encoding="utf-8")
         if "$" in text:
             fail(f"fake price appears in {rel}")

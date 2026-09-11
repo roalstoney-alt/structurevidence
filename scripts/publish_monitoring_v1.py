@@ -16,6 +16,7 @@ PUBLIC_FILES = [
     "sample-report.html",
     "paid-pilot.html",
     "enterprise.html",
+    "customize.html",
     "assets/monitor.css",
     "assets/monitor.js",
     "assets/verify-monitor.js",

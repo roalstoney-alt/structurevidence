@@ -100,7 +100,7 @@ def main() -> int:
     post = {"algorithm": "SHA-256", "artifacts": frozen_now, "audit_id": "POST_MONITORING_REDESIGN_HASHES", "base_commit": pre["base_commit"], "generated_at": "2026-09-11T00:00:00Z"}
     post_path = ROOT / "docs/execution/POST_MONITORING_REDESIGN_HASHES.json"
     post_path.write_text(json.dumps(post, indent=2, sort_keys=True) + "\n", encoding="utf-8")
-    public_files = ["index.html", "monitor.html", "verify.html", "reports.html", "sample-report.html", "paid-pilot.html", "enterprise.html"]
+    public_files = ["index.html", "monitor.html", "verify.html", "reports.html", "sample-report.html", "paid-pilot.html", "enterprise.html", "customize.html"]
     href_ok, broken = hrefs_valid(public_files)
     sync_files = public_files + ["assets/monitor.css", "assets/monitor.js", "assets/verify-monitor.js", "reports/DEMO_BNB_MONITORING_SNAPSHOT_v1.0.pdf", "reports/demo-bnb-monitoring-snapshot-cover.png", "verify/reports/DEMO_BNB_MONITORING_SNAPSHOT_v1.0.json"] + [str(path.relative_to(ROOT)) for path in (ROOT / "monitoring").glob("subjects/bnb/*.json")] + ["monitoring/PUBLIC_MONITORING_INDEX.json", "monitoring/MONITORING_PRODUCT_CONTRACT_v1.0.md", "monitoring/config/status_vocabulary.json"]
     sync_ok = all(same(relative) for relative in sync_files)
