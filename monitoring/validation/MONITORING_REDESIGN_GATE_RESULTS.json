@@ -27,7 +27,8 @@
         "reports.html",
         "sample-report.html",
         "paid-pilot.html",
-        "enterprise.html"
+        "enterprise.html",
+        "customize.html"
       ],
       "gate_id": "MON02_NO_PRICE_PREDICTION",
       "status": "PASS"
@@ -365,7 +366,8 @@
         "reports.html",
         "sample-report.html",
         "paid-pilot.html",
-        "enterprise.html"
+        "enterprise.html",
+        "customize.html"
       ],
       "gate_id": "MON42_ACCESSIBILITY",
       "status": "PASS"
@@ -396,7 +398,8 @@
         "reports.html",
         "sample-report.html",
         "paid-pilot.html",
-        "enterprise.html"
+        "enterprise.html",
+        "customize.html"
       ],
       "gate_id": "MON45_HREF_INTEGRITY",
       "status": "PASS"
@@ -419,7 +422,8 @@
         "reports.html",
         "sample-report.html",
         "paid-pilot.html",
-        "enterprise.html"
+        "enterprise.html",
+        "customize.html"
       ],
       "gate_id": "MON47_SECRET_SCAN",
       "status": "PASS"
