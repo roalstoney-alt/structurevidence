@@ -1,0 +1,15 @@
+{
+  "index_id": "SE-PUBLIC-MONITORING-INDEX-v1",
+  "integrity_boundary": "Hash verification establishes artifact identity, not content truth.",
+  "records": [
+    {
+      "artifact_path": "monitoring/subjects/bnb/MONITORING_SNAPSHOT.json",
+      "snapshot_as_of": "2026-09-11T00:00:00Z",
+      "snapshot_id": "SE-MON-BNB-2026-09-11-v1",
+      "snapshot_sha256": "49cdce2d4fd215c262ca3e73bae08b1e6f18ee2a509e305a3c15eb39feb32125",
+      "source_bundle_hash": "cd776dc971cfce2e1c5e071ce9057e3b55532c1926b29cb949efb999fad737e0",
+      "subject_id": "BNB",
+      "workspace_path": "monitor.html?subject=bnb"
+    }
+  ]
+}

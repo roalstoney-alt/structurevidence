@@ -1,0 +1,1 @@
+"""StructEvidence monitoring view models."""

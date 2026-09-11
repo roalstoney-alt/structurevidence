@@ -1,0 +1,486 @@
+{
+  "events": [
+    {
+      "affected_dimensions": [
+        "AUTHORIZATION_STATUS"
+      ],
+      "artifact_ids": [
+        "research/digital-assets/batch-01-r1/BNB/gdr-se/GDR_SE_AUTHORIZATION_RECORD_R1_1.json"
+      ],
+      "artifact_sha256": [
+        "cdca713c388a08c4c2e0e0755ec7c016202c7dea9f72c76d79aa4ba4b514bcaf"
+      ],
+      "captured_at": "2026-09-10T14:18:35.520844Z",
+      "causal_status": "NOT_EVALUATED",
+      "correction_status": "NONE",
+      "effective_at": null,
+      "epistemic_status": "SUPPORTED",
+      "epistemic_status_as_of": "2026-09-11T00:00:00Z",
+      "event_domain": "AUTHORIZATION_EVENT",
+      "event_id": "TL-BNB-EE-AUTH",
+      "event_type": "GDR_SE_AUTHORIZATION_EVALUATED",
+      "impact_observation_window": null,
+      "known_at": "2026-09-10T14:18:35.520844Z",
+      "market_impact_status": "NOT_MEASURED",
+      "notes": [
+        "AUTHORIZATION_STATUS -> UNDER_REVIEW",
+        "Artifact integrity and content truth remain separate."
+      ],
+      "source_ids": [],
+      "subject_id": "BNB",
+      "supersedes_event_id": null
+    },
+    {
+      "affected_dimensions": [
+        "UTILITY_STRUCTURE"
+      ],
+      "artifact_ids": [
+        "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
+      ],
+      "artifact_sha256": [
+        "48057428087ac84b316d56b17814ff5a7377c0c1132872716e99863c5616bece"
+      ],
+      "captured_at": "2026-09-09T00:00:00Z",
+      "causal_status": "NOT_EVALUATED",
+      "correction_status": "NONE",
+      "effective_at": "2026-09-09T00:00:00Z",
+      "epistemic_status": "SUPPORTED",
+      "epistemic_status_as_of": "2026-09-11T00:00:00Z",
+      "event_domain": "SUBJECT_EVENT",
+      "event_id": "TL-BNB-SE009",
+      "event_type": "PUBLIC_FACT",
+      "impact_observation_window": null,
+      "known_at": "2026-09-09T00:00:00Z",
+      "market_impact_status": "NOT_MEASURED",
+      "notes": [
+        "Multichain ecosystem component maps to utility dependence.",
+        "Artifact integrity and content truth remain separate."
+      ],
+      "source_ids": [],
+      "subject_id": "BNB",
+      "supersedes_event_id": null
+    },
+    {
+      "affected_dimensions": [
+        "GOVERNANCE_STRUCTURE"
+      ],
+      "artifact_ids": [
+        "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
+      ],
+      "artifact_sha256": [
+        "48057428087ac84b316d56b17814ff5a7377c0c1132872716e99863c5616bece"
+      ],
+      "captured_at": "2026-09-09T00:00:00Z",
+      "causal_status": "NOT_EVALUATED",
+      "correction_status": "NONE",
+      "effective_at": "2026-07-15T00:00:00Z",
+      "epistemic_status": "SUPPORTED",
+      "epistemic_status_as_of": "2026-09-11T00:00:00Z",
+      "event_domain": "SUBJECT_EVENT",
+      "event_id": "TL-BNB-SE008",
+      "event_type": "PUBLIC_FACT",
+      "impact_observation_window": null,
+      "known_at": "2026-09-09T00:00:00Z",
+      "market_impact_status": "NOT_MEASURED",
+      "notes": [
+        "On-chain governance description maps to governance structure.",
+        "Artifact integrity and content truth remain separate."
+      ],
+      "source_ids": [],
+      "subject_id": "BNB",
+      "supersedes_event_id": null
+    },
+    {
+      "affected_dimensions": [
+        "GOVERNANCE_STRUCTURE"
+      ],
+      "artifact_ids": [
+        "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
+      ],
+      "artifact_sha256": [
+        "48057428087ac84b316d56b17814ff5a7377c0c1132872716e99863c5616bece"
+      ],
+      "captured_at": "2026-09-09T00:00:00Z",
+      "causal_status": "NOT_EVALUATED",
+      "correction_status": "NONE",
+      "effective_at": "2026-09-09T00:00:00Z",
+      "epistemic_status": "SUPPORTED",
+      "epistemic_status_as_of": "2026-09-11T00:00:00Z",
+      "event_domain": "SUBJECT_EVENT",
+      "event_id": "TL-BNB-SE007",
+      "event_type": "PUBLIC_FACT",
+      "impact_observation_window": null,
+      "known_at": "2026-09-09T00:00:00Z",
+      "market_impact_status": "NOT_MEASURED",
+      "notes": [
+        "Consensus-set selection maps to governance/control structure.",
+        "Artifact integrity and content truth remain separate."
+      ],
+      "source_ids": [],
+      "subject_id": "BNB",
+      "supersedes_event_id": null
+    },
+    {
+      "affected_dimensions": [
+        "VALIDATOR_DISTRIBUTION"
+      ],
+      "artifact_ids": [
+        "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
+      ],
+      "artifact_sha256": [
+        "48057428087ac84b316d56b17814ff5a7377c0c1132872716e99863c5616bece"
+      ],
+      "captured_at": "2026-09-09T00:00:00Z",
+      "causal_status": "NOT_EVALUATED",
+      "correction_status": "NONE",
+      "effective_at": "2026-09-09T00:00:00Z",
+      "epistemic_status": "SUPPORTED",
+      "epistemic_status_as_of": "2026-09-11T00:00:00Z",
+      "event_domain": "SUBJECT_EVENT",
+      "event_id": "TL-BNB-SE006",
+      "event_type": "PUBLIC_FACT",
+      "impact_observation_window": null,
+      "known_at": "2026-09-09T00:00:00Z",
+      "market_impact_status": "NOT_MEASURED",
+      "notes": [
+        "Cabinet/candidate split maps to validator distribution.",
+        "Artifact integrity and content truth remain separate."
+      ],
+      "source_ids": [],
+      "subject_id": "BNB",
+      "supersedes_event_id": null
+    },
+    {
+      "affected_dimensions": [
+        "VALIDATOR_DISTRIBUTION"
+      ],
+      "artifact_ids": [
+        "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
+      ],
+      "artifact_sha256": [
+        "48057428087ac84b316d56b17814ff5a7377c0c1132872716e99863c5616bece"
+      ],
+      "captured_at": "2026-09-09T00:00:00Z",
+      "causal_status": "NOT_EVALUATED",
+      "correction_status": "NONE",
+      "effective_at": "2026-09-09T00:00:00Z",
+      "epistemic_status": "SUPPORTED",
+      "epistemic_status_as_of": "2026-09-11T00:00:00Z",
+      "event_domain": "SUBJECT_EVENT",
+      "event_id": "TL-BNB-SE005",
+      "event_type": "PUBLIC_FACT",
+      "impact_observation_window": null,
+      "known_at": "2026-09-09T00:00:00Z",
+      "market_impact_status": "NOT_MEASURED",
+      "notes": [
+        "Validator election set constrains validator distribution.",
+        "Artifact integrity and content truth remain separate."
+      ],
+      "source_ids": [],
+      "subject_id": "BNB",
+      "supersedes_event_id": null
+    },
+    {
+      "affected_dimensions": [
+        "UTILITY_STRUCTURE"
+      ],
+      "artifact_ids": [
+        "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
+      ],
+      "artifact_sha256": [
+        "48057428087ac84b316d56b17814ff5a7377c0c1132872716e99863c5616bece"
+      ],
+      "captured_at": "2026-09-09T00:00:00Z",
+      "causal_status": "NOT_EVALUATED",
+      "correction_status": "NONE",
+      "effective_at": "2026-07-15T00:00:00Z",
+      "epistemic_status": "SUPPORTED",
+      "epistemic_status_as_of": "2026-09-11T00:00:00Z",
+      "event_domain": "SUBJECT_EVENT",
+      "event_id": "TL-BNB-SE004",
+      "event_type": "PUBLIC_FACT",
+      "impact_observation_window": null,
+      "known_at": "2026-09-09T00:00:00Z",
+      "market_impact_status": "NOT_MEASURED",
+      "notes": [
+        "Fee-utility claim maps to network utility structure.",
+        "Artifact integrity and content truth remain separate."
+      ],
+      "source_ids": [],
+      "subject_id": "BNB",
+      "supersedes_event_id": null
+    },
+    {
+      "affected_dimensions": [
+        "SUPPLY_STRUCTURE"
+      ],
+      "artifact_ids": [
+        "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
+      ],
+      "artifact_sha256": [
+        "48057428087ac84b316d56b17814ff5a7377c0c1132872716e99863c5616bece"
+      ],
+      "captured_at": "2026-09-09T00:00:00Z",
+      "causal_status": "NOT_EVALUATED",
+      "correction_status": "NONE",
+      "effective_at": "2026-07-15T00:00:00Z",
+      "epistemic_status": "SUPPORTED",
+      "epistemic_status_as_of": "2026-09-11T00:00:00Z",
+      "event_domain": "SUBJECT_EVENT",
+      "event_id": "TL-BNB-SE003",
+      "event_type": "PUBLIC_FACT",
+      "impact_observation_window": null,
+      "known_at": "2026-09-09T00:00:00Z",
+      "market_impact_status": "NOT_MEASURED",
+      "notes": [
+        "BEP95 burn mechanic belongs to supply mechanics.",
+        "Artifact integrity and content truth remain separate."
+      ],
+      "source_ids": [],
+      "subject_id": "BNB",
+      "supersedes_event_id": null
+    },
+    {
+      "affected_dimensions": [
+        "SUPPLY_STRUCTURE"
+      ],
+      "artifact_ids": [
+        "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
+      ],
+      "artifact_sha256": [
+        "48057428087ac84b316d56b17814ff5a7377c0c1132872716e99863c5616bece"
+      ],
+      "captured_at": "2026-09-09T00:00:00Z",
+      "causal_status": "NOT_EVALUATED",
+      "correction_status": "NONE",
+      "effective_at": "2026-07-15T00:00:00Z",
+      "epistemic_status": "SUPPORTED",
+      "epistemic_status_as_of": "2026-09-11T00:00:00Z",
+      "event_domain": "SUBJECT_EVENT",
+      "event_id": "TL-BNB-SE002",
+      "event_type": "PUBLIC_FACT",
+      "impact_observation_window": null,
+      "known_at": "2026-09-09T00:00:00Z",
+      "market_impact_status": "NOT_MEASURED",
+      "notes": [
+        "Long-run burn target belongs to supply mechanics.",
+        "Artifact integrity and content truth remain separate."
+      ],
+      "source_ids": [],
+      "subject_id": "BNB",
+      "supersedes_event_id": null
+    },
+    {
+      "affected_dimensions": [
+        "SUPPLY_STRUCTURE"
+      ],
+      "artifact_ids": [
+        "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
+      ],
+      "artifact_sha256": [
+        "48057428087ac84b316d56b17814ff5a7377c0c1132872716e99863c5616bece"
+      ],
+      "captured_at": "2026-09-09T00:00:00Z",
+      "causal_status": "NOT_EVALUATED",
+      "correction_status": "NONE",
+      "effective_at": "2026-07-15T00:00:00Z",
+      "epistemic_status": "SUPPORTED",
+      "epistemic_status_as_of": "2026-09-11T00:00:00Z",
+      "event_domain": "SUBJECT_EVENT",
+      "event_id": "TL-BNB-SE001",
+      "event_type": "PUBLIC_FACT",
+      "impact_observation_window": null,
+      "known_at": "2026-09-09T00:00:00Z",
+      "market_impact_status": "NOT_MEASURED",
+      "notes": [
+        "Quarterly burn directly changes circulating supply structure.",
+        "Artifact integrity and content truth remain separate."
+      ],
+      "source_ids": [],
+      "subject_id": "BNB",
+      "supersedes_event_id": null
+    },
+    {
+      "affected_dimensions": [
+        "PRIMARY_SOURCE_COVERAGE"
+      ],
+      "artifact_ids": [
+        "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
+      ],
+      "artifact_sha256": [
+        "48057428087ac84b316d56b17814ff5a7377c0c1132872716e99863c5616bece"
+      ],
+      "captured_at": "2026-09-09T00:00:00Z",
+      "causal_status": "NOT_EVALUATED",
+      "correction_status": "NONE",
+      "effective_at": null,
+      "epistemic_status": "SUPPORTED",
+      "epistemic_status_as_of": "2026-09-11T00:00:00Z",
+      "event_domain": "EVIDENCE_EVENT",
+      "event_id": "TL-BNB-EE001",
+      "event_type": "SOURCE_CAPTURED",
+      "impact_observation_window": null,
+      "known_at": "2026-09-09T00:00:00Z",
+      "market_impact_status": "NOT_MEASURED",
+      "notes": [
+        "PRIMARY_SOURCE_COVERAGE -> OBSERVED",
+        "Artifact integrity and content truth remain separate."
+      ],
+      "source_ids": [],
+      "subject_id": "BNB",
+      "supersedes_event_id": null
+    },
+    {
+      "affected_dimensions": [
+        "SUPERSESSION_STATUS"
+      ],
+      "artifact_ids": [
+        "research/digital-assets/batch-01-r1/BNB/SUPERSESSION_NOTICE.md"
+      ],
+      "artifact_sha256": [
+        "890e85af0c102837024802ebe0f47d7b980865b53bd77ebd5770811dfabaa6a1"
+      ],
+      "captured_at": "2026-09-09T00:00:00Z",
+      "causal_status": "NOT_EVALUATED",
+      "correction_status": "NONE",
+      "effective_at": null,
+      "epistemic_status": "SUPPORTED",
+      "epistemic_status_as_of": "2026-09-11T00:00:00Z",
+      "event_domain": "RESEARCH_EVENT",
+      "event_id": "TL-BNB-EE-SUPERSESSION_STATUS",
+      "event_type": "SUPERSESSION_ADDED",
+      "impact_observation_window": null,
+      "known_at": "2026-09-09T00:00:00Z",
+      "market_impact_status": "NOT_MEASURED",
+      "notes": [
+        "SUPERSESSION_STATUS -> COMPLETE",
+        "Artifact integrity and content truth remain separate."
+      ],
+      "source_ids": [],
+      "subject_id": "BNB",
+      "supersedes_event_id": null
+    },
+    {
+      "affected_dimensions": [
+        "SOURCE_DEPENDENCY"
+      ],
+      "artifact_ids": [
+        "research/digital-assets/batch-01-r1/BNB/SOURCE_DEPENDENCY_GRAPH.json"
+      ],
+      "artifact_sha256": [
+        "b45f1fe341b4e875f42dbf701fd750e6b684ea406fa056d131cf9e1640e05ffa"
+      ],
+      "captured_at": "2026-09-09T00:00:00Z",
+      "causal_status": "NOT_EVALUATED",
+      "correction_status": "NONE",
+      "effective_at": null,
+      "epistemic_status": "SUPPORTED",
+      "epistemic_status_as_of": "2026-09-11T00:00:00Z",
+      "event_domain": "EVIDENCE_EVENT",
+      "event_id": "TL-BNB-EE-SOURCE_DEPENDENCY",
+      "event_type": "ARTIFACT_FROZEN",
+      "impact_observation_window": null,
+      "known_at": "2026-09-09T00:00:00Z",
+      "market_impact_status": "NOT_MEASURED",
+      "notes": [
+        "SOURCE_DEPENDENCY -> PARTIAL",
+        "Artifact integrity and content truth remain separate."
+      ],
+      "source_ids": [],
+      "subject_id": "BNB",
+      "supersedes_event_id": null
+    },
+    {
+      "affected_dimensions": [
+        "NUMERICAL_RECONCILIATION"
+      ],
+      "artifact_ids": [
+        "research/digital-assets/batch-01-r1/BNB/NUMERICAL_RECONCILIATION.json"
+      ],
+      "artifact_sha256": [
+        "861e5b14be4c98555aaf3d8eb444b1f655ccb12be5b58b6baf7e66edc039f09d"
+      ],
+      "captured_at": "2026-09-09T00:00:00Z",
+      "causal_status": "NOT_EVALUATED",
+      "correction_status": "NONE",
+      "effective_at": null,
+      "epistemic_status": "SUPPORTED",
+      "epistemic_status_as_of": "2026-09-11T00:00:00Z",
+      "event_domain": "EVIDENCE_EVENT",
+      "event_id": "TL-BNB-EE-NUMERICAL_RECONCILIATION",
+      "event_type": "NUMERICAL_RECONCILIATION_COMPLETED",
+      "impact_observation_window": null,
+      "known_at": "2026-09-09T00:00:00Z",
+      "market_impact_status": "NOT_MEASURED",
+      "notes": [
+        "NUMERICAL_RECONCILIATION -> COMPLETE",
+        "Artifact integrity and content truth remain separate."
+      ],
+      "source_ids": [],
+      "subject_id": "BNB",
+      "supersedes_event_id": null
+    },
+    {
+      "affected_dimensions": [
+        "INDEPENDENT_REVIEW"
+      ],
+      "artifact_ids": [
+        "research/digital-assets/batch-01-r1/BNB/BLIND_REVIEW_OUTPUT.md"
+      ],
+      "artifact_sha256": [
+        "bc7c78cfc1722f40a67d081b79a090396549216695f205f11ec11f224c098929"
+      ],
+      "captured_at": "2026-09-09T00:00:00Z",
+      "causal_status": "NOT_EVALUATED",
+      "correction_status": "NONE",
+      "effective_at": null,
+      "epistemic_status": "SUPPORTED",
+      "epistemic_status_as_of": "2026-09-11T00:00:00Z",
+      "event_domain": "EVIDENCE_EVENT",
+      "event_id": "TL-BNB-EE-INDEPENDENT_REVIEW",
+      "event_type": "INDEPENDENT_REVIEW_COMPLETED",
+      "impact_observation_window": null,
+      "known_at": "2026-09-09T00:00:00Z",
+      "market_impact_status": "NOT_MEASURED",
+      "notes": [
+        "INDEPENDENT_REVIEW -> COMPLETE",
+        "Artifact integrity and content truth remain separate."
+      ],
+      "source_ids": [],
+      "subject_id": "BNB",
+      "supersedes_event_id": null
+    },
+    {
+      "affected_dimensions": [
+        "COUNTER_EVIDENCE_COVERAGE"
+      ],
+      "artifact_ids": [
+        "research/digital-assets/batch-01-r1/BNB/COUNTER_EVIDENCE_SEARCH_LOG.json"
+      ],
+      "artifact_sha256": [
+        "be43f2b58b011fad8f35579206634fd3e1b7eaebfa1c1f085a32fd110c59bbc9"
+      ],
+      "captured_at": "2026-09-09T00:00:00Z",
+      "causal_status": "NOT_EVALUATED",
+      "correction_status": "NONE",
+      "effective_at": null,
+      "epistemic_status": "SUPPORTED",
+      "epistemic_status_as_of": "2026-09-11T00:00:00Z",
+      "event_domain": "EVIDENCE_EVENT",
+      "event_id": "TL-BNB-EE-COUNTER_EVIDENCE_COVERAGE",
+      "event_type": "COUNTER_EVIDENCE_SEARCH_COMPLETED",
+      "impact_observation_window": null,
+      "known_at": "2026-09-09T00:00:00Z",
+      "market_impact_status": "NOT_MEASURED",
+      "notes": [
+        "COUNTER_EVIDENCE_COVERAGE -> PARTIAL",
+        "Artifact integrity and content truth remain separate."
+      ],
+      "source_ids": [],
+      "subject_id": "BNB",
+      "supersedes_event_id": null
+    }
+  ],
+  "ledger_id": "SE-MON-BNB-EVENTS-v1",
+  "subject_id": "BNB"
+}

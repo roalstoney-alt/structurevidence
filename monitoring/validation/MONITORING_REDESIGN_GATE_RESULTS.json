@@ -1,0 +1,459 @@
+{
+  "acceptance": "MONITORING_REDESIGN_PARTIAL",
+  "counts": {
+    "BLOCKED": 0,
+    "FAIL": 0,
+    "NOT_EVALUATED": 1,
+    "PARTIAL": 0,
+    "PASS": 49
+  },
+  "generated_at": "2026-09-11T00:00:00Z",
+  "registry_id": "MONITORING_REDESIGN_GATE_RESULTS_v1.0",
+  "results": [
+    {
+      "detail": "Versioned monitoring product contract.",
+      "evidence_refs": [
+        "monitoring/MONITORING_PRODUCT_CONTRACT_v1.0.md"
+      ],
+      "gate_id": "MON01_PRODUCT_DEFINITION",
+      "status": "PASS"
+    },
+    {
+      "detail": "No trading output language.",
+      "evidence_refs": [
+        "index.html",
+        "monitor.html",
+        "verify.html",
+        "reports.html",
+        "sample-report.html",
+        "paid-pilot.html",
+        "enterprise.html"
+      ],
+      "gate_id": "MON02_NO_PRICE_PREDICTION",
+      "status": "PASS"
+    },
+    {
+      "detail": "Freshness remains an explicit adapter.",
+      "evidence_refs": [
+        "monitoring/subjects/bnb/MONITORING_SNAPSHOT.json"
+      ],
+      "gate_id": "MON03_RDL_ROLE",
+      "status": "PASS"
+    },
+    {
+      "detail": "Twelve hashed inputs.",
+      "evidence_refs": [
+        "monitoring/subjects/bnb/PROVENANCE_INDEX.json"
+      ],
+      "gate_id": "MON04_RTP_PROVENANCE",
+      "status": "PASS"
+    },
+    {
+      "detail": "Evidence state is separately represented.",
+      "evidence_refs": [
+        "monitoring/subjects/bnb/MONITORING_SNAPSHOT.json"
+      ],
+      "gate_id": "MON05_EVIDENCE_DYNAMICS_ROLE",
+      "status": "PASS"
+    },
+    {
+      "detail": "MDL missing input boundary is explicit.",
+      "evidence_refs": [
+        "monitoring/MONITORING_PRODUCT_CONTRACT_v1.0.md"
+      ],
+      "gate_id": "MON06_MDL_ROLE",
+      "status": "PASS"
+    },
+    {
+      "detail": "Versioned action adapter blocks delivery.",
+      "evidence_refs": [
+        "monitoring/subjects/bnb/MONITORING_SNAPSHOT.json"
+      ],
+      "gate_id": "MON07_GDR_ROLE",
+      "status": "PASS"
+    },
+    {
+      "detail": "Integrity and truth are distinct.",
+      "evidence_refs": [
+        "monitoring/MONITORING_PRODUCT_CONTRACT_v1.0.md",
+        "verify.html"
+      ],
+      "gate_id": "MON08_INTEGRITY_NOT_TRUTH",
+      "status": "PASS"
+    },
+    {
+      "detail": "Dual axes are explicit.",
+      "evidence_refs": [
+        "monitoring/MONITORING_PRODUCT_CONTRACT_v1.0.md"
+      ],
+      "gate_id": "MON09_TRUTH_IMPACT_SEPARATION",
+      "status": "PASS"
+    },
+    {
+      "detail": "Causal boundary is public.",
+      "evidence_refs": [
+        "index.html",
+        "monitoring/MONITORING_PRODUCT_CONTRACT_v1.0.md"
+      ],
+      "gate_id": "MON10_OBSERVATION_NOT_CAUSATION",
+      "status": "PASS"
+    },
+    {
+      "detail": "Schema exists and focused schema tests passed.",
+      "evidence_refs": [
+        "monitoring/schema/information_event.schema.json"
+      ],
+      "gate_id": "MON11_INFORMATION_EVENT_SCHEMA",
+      "status": "PASS"
+    },
+    {
+      "detail": "Snapshot schema exists.",
+      "evidence_refs": [
+        "monitoring/schema/monitoring_snapshot.schema.json"
+      ],
+      "gate_id": "MON12_MONITORING_SNAPSHOT_SCHEMA",
+      "status": "PASS"
+    },
+    {
+      "detail": "Transition schema exists.",
+      "evidence_refs": [
+        "monitoring/schema/state_transition.schema.json"
+      ],
+      "gate_id": "MON13_STATE_TRANSITION_SCHEMA",
+      "status": "PASS"
+    },
+    {
+      "detail": "Manifest schema exists.",
+      "evidence_refs": [
+        "monitoring/schema/monitoring_build_manifest.schema.json"
+      ],
+      "gate_id": "MON14_BUILD_MANIFEST_SCHEMA",
+      "status": "PASS"
+    },
+    {
+      "detail": "Structured canonical, timeline, freshness, GDR, and RTP inputs.",
+      "evidence_refs": [
+        "monitoring/subjects/bnb/MONITORING_BUILD_MANIFEST.json"
+      ],
+      "gate_id": "MON15_BNB_STRUCTURED_INPUTS",
+      "status": "PASS"
+    },
+    {
+      "detail": "All events are visible at cutoff.",
+      "evidence_refs": [
+        "scripts/test_monitoring_no_lookahead.py"
+      ],
+      "gate_id": "MON16_BNB_NO_LOOKAHEAD",
+      "status": "PASS"
+    },
+    {
+      "detail": "Level and Delta remain separate.",
+      "evidence_refs": [
+        "scripts/test_monitoring_level_delta.py"
+      ],
+      "gate_id": "MON17_BNB_LEVEL_DELTA_SEPARATION",
+      "status": "PASS"
+    },
+    {
+      "detail": "Sixteen append-only events.",
+      "evidence_refs": [
+        "monitoring/subjects/bnb/INFORMATION_EVENT_LEDGER.json"
+      ],
+      "gate_id": "MON18_BNB_EVENT_LEDGER",
+      "status": "PASS"
+    },
+    {
+      "detail": "Seven evidence dynamics events.",
+      "evidence_refs": [
+        "monitoring/subjects/bnb/MONITORING_SNAPSHOT.json"
+      ],
+      "gate_id": "MON19_BNB_EVIDENCE_DYNAMICS",
+      "status": "PASS"
+    },
+    {
+      "detail": "No invented market observation.",
+      "evidence_refs": [
+        "monitoring/subjects/bnb/MONITORING_SNAPSHOT.json"
+      ],
+      "gate_id": "MON20_BNB_MARKET_OBSERVATION_BOUNDARY",
+      "status": "PASS"
+    },
+    {
+      "detail": "Ten missing liquidity dimensions remain explicit.",
+      "evidence_refs": [
+        "monitoring/subjects/bnb/MONITORING_SNAPSHOT.json"
+      ],
+      "gate_id": "MON21_BNB_LIQUIDITY_OBSERVATION_BOUNDARY",
+      "status": "PASS"
+    },
+    {
+      "detail": "RDL release state adapted without truth upgrade.",
+      "evidence_refs": [
+        "research/freshness/bnb/FRESHNESS_EVALUATION_v0.1a.json"
+      ],
+      "gate_id": "MON22_BNB_FRESHNESS",
+      "status": "PASS"
+    },
+    {
+      "detail": "Action-level authorization exposed.",
+      "evidence_refs": [
+        "monitoring/subjects/bnb/MONITORING_SNAPSHOT.json"
+      ],
+      "gate_id": "MON23_BNB_GDR_MONITOR_ACTION",
+      "status": "PASS"
+    },
+    {
+      "detail": "Input bytes match recorded hashes.",
+      "evidence_refs": [
+        "monitoring/subjects/bnb/PROVENANCE_INDEX.json"
+      ],
+      "gate_id": "MON24_BNB_RTP_LINEAGE",
+      "status": "PASS"
+    },
+    {
+      "detail": "Canonical content hash matches.",
+      "evidence_refs": [
+        "monitoring/subjects/bnb/MONITORING_SNAPSHOT.json"
+      ],
+      "gate_id": "MON25_SNAPSHOT_CONTENT_HASH",
+      "status": "PASS"
+    },
+    {
+      "detail": "All derived output hashes match.",
+      "evidence_refs": [
+        "monitoring/subjects/bnb/MONITORING_BUILD_MANIFEST.json"
+      ],
+      "gate_id": "MON26_OUTPUT_ARTIFACT_HASH",
+      "status": "PASS"
+    },
+    {
+      "detail": "Correction preserves original event.",
+      "evidence_refs": [
+        "monitoring/runtime/validators.py",
+        "scripts/test_information_event_dual_axis.py"
+      ],
+      "gate_id": "MON27_APPEND_ONLY_CORRECTIONS",
+      "status": "PASS"
+    },
+    {
+      "detail": "Supersession points forward from preserved original.",
+      "evidence_refs": [
+        "monitoring/runtime/validators.py"
+      ],
+      "gate_id": "MON28_APPEND_ONLY_SUPERSESSION",
+      "status": "PASS"
+    },
+    {
+      "detail": "First screen is the monitoring product.",
+      "evidence_refs": [
+        "index.html"
+      ],
+      "gate_id": "MON29_MONITOR_FIRST_HOME",
+      "status": "PASS"
+    },
+    {
+      "detail": "BNB opens the workspace; unsupported subjects fail honestly.",
+      "evidence_refs": [
+        "index.html",
+        "assets/monitor.js"
+      ],
+      "gate_id": "MON30_BNB_SEARCH_JOURNEY",
+      "status": "PASS"
+    },
+    {
+      "detail": "Coverage table includes five subjects.",
+      "evidence_refs": [
+        "index.html"
+      ],
+      "gate_id": "MON31_ASSET_STATE_TABLE",
+      "status": "PASS"
+    },
+    {
+      "detail": "Replay supports day/week/month.",
+      "evidence_refs": [
+        "monitor.html",
+        "assets/site.js"
+      ],
+      "gate_id": "MON32_STATE_TRANSITION_TIMELINE",
+      "status": "PASS"
+    },
+    {
+      "detail": "Ledger and domain filter rendered.",
+      "evidence_refs": [
+        "monitor.html",
+        "assets/monitor.js"
+      ],
+      "gate_id": "MON33_EVENT_LEDGER_UI",
+      "status": "PASS"
+    },
+    {
+      "detail": "Evidence dynamics view rendered.",
+      "evidence_refs": [
+        "monitor.html",
+        "assets/monitor.js"
+      ],
+      "gate_id": "MON34_EVIDENCE_DYNAMICS_UI",
+      "status": "PASS"
+    },
+    {
+      "detail": "Hash lineage is inspectable.",
+      "evidence_refs": [
+        "monitor.html",
+        "assets/monitor.js"
+      ],
+      "gate_id": "MON35_PROVENANCE_UI",
+      "status": "PASS"
+    },
+    {
+      "detail": "Exact public lookup and missing state implemented.",
+      "evidence_refs": [
+        "verify.html",
+        "assets/verify-monitor.js"
+      ],
+      "gate_id": "MON36_VERIFY_LOOKUP",
+      "status": "PASS"
+    },
+    {
+      "detail": "Eight-page deterministic snapshot export.",
+      "evidence_refs": [
+        "reports/DEMO_BNB_MONITORING_SNAPSHOT_v1.0.pdf",
+        "scripts/build_monitoring_snapshot_pdf.py"
+      ],
+      "gate_id": "MON37_SNAPSHOT_REPORT",
+      "status": "PASS"
+    },
+    {
+      "detail": "Public demo is explicitly noncommercial.",
+      "evidence_refs": [
+        "verify/reports/DEMO_BNB_MONITORING_SNAPSHOT_v1.0.json"
+      ],
+      "gate_id": "MON38_PUBLIC_DEMO_BOUNDARY",
+      "status": "PASS"
+    },
+    {
+      "detail": "Monitoring access, alerts, history, exports, and API hierarchy.",
+      "evidence_refs": [
+        "reports.html",
+        "paid-pilot.html"
+      ],
+      "gate_id": "MON39_COMMERCIAL_POSITIONING",
+      "status": "PASS"
+    },
+    {
+      "detail": "Payment remains disabled.",
+      "evidence_refs": [
+        "paid-pilot.html",
+        "commercial/config/commercial.json"
+      ],
+      "gate_id": "MON40_PAYMENT_READINESS_HONESTY",
+      "status": "PASS"
+    },
+    {
+      "detail": "No paid report bytes in public trees.",
+      "evidence_refs": [
+        "scripts/test_paid_pdf_security.py"
+      ],
+      "gate_id": "MON41_PRIVATE_REPORT_BOUNDARY",
+      "status": "PASS"
+    },
+    {
+      "detail": "Labels, landmarks, and alt text checked in browser.",
+      "evidence_refs": [
+        "index.html",
+        "monitor.html",
+        "verify.html",
+        "reports.html",
+        "sample-report.html",
+        "paid-pilot.html",
+        "enterprise.html"
+      ],
+      "gate_id": "MON42_ACCESSIBILITY",
+      "status": "PASS"
+    },
+    {
+      "detail": "1440x900, 1024x768, and 390x844 checked.",
+      "evidence_refs": [
+        "assets/monitor.css",
+        "docs/execution/MONITORING_REDESIGN_UI_AUDIT.md"
+      ],
+      "gate_id": "MON43_RESPONSIVE_LAYOUT",
+      "status": "PASS"
+    },
+    {
+      "detail": "All monitoring publication files are byte-identical.",
+      "evidence_refs": [
+        "scripts/publish_monitoring_v1.py"
+      ],
+      "gate_id": "MON44_ROOT_DOCS_SYNC",
+      "status": "PASS"
+    },
+    {
+      "detail": "No broken local links.",
+      "evidence_refs": [
+        "index.html",
+        "monitor.html",
+        "verify.html",
+        "reports.html",
+        "sample-report.html",
+        "paid-pilot.html",
+        "enterprise.html"
+      ],
+      "gate_id": "MON45_HREF_INTEGRITY",
+      "status": "PASS"
+    },
+    {
+      "detail": "All fifteen frozen hashes match.",
+      "evidence_refs": [
+        "docs/execution/PRE_MONITORING_REDESIGN_HASHES.json",
+        "docs/execution/POST_MONITORING_REDESIGN_HASHES.json"
+      ],
+      "gate_id": "MON46_FROZEN_HASHES_UNCHANGED",
+      "status": "PASS"
+    },
+    {
+      "detail": "No private-key or live-secret signatures found.",
+      "evidence_refs": [
+        "index.html",
+        "monitor.html",
+        "verify.html",
+        "reports.html",
+        "sample-report.html",
+        "paid-pilot.html",
+        "enterprise.html"
+      ],
+      "gate_id": "MON47_SECRET_SCAN",
+      "status": "PASS"
+    },
+    {
+      "detail": "Only the labeled public demo exists.",
+      "evidence_refs": [
+        "reports",
+        "docs/reports",
+        "scripts/test_paid_pdf_security.py"
+      ],
+      "gate_id": "MON48_PUBLIC_PDF_SCAN",
+      "status": "PASS"
+    },
+    {
+      "detail": "Prior behavioral and security suites passed.",
+      "evidence_refs": [
+        "scripts/test_timeline_r1_1a_commit_lineage.py",
+        "scripts/test_rdl_freshness_runtime.py",
+        "scripts/test_gdr_se_runtime.py",
+        "scripts/test_paid_pdf_security.py",
+        "scripts/test_commercial_v09.py"
+      ],
+      "gate_id": "MON49_PRIOR_TESTS",
+      "status": "PASS"
+    },
+    {
+      "detail": "Production routes and behaviors verified.",
+      "evidence_refs": [
+        "https://www.structurevidence.org/",
+        "https://www.structurevidence.org/monitor.html?subject=bnb"
+      ],
+      "gate_id": "MON50_PRODUCTION_SMOKE_TEST",
+      "status": "NOT_EVALUATED"
+    }
+  ]
+}

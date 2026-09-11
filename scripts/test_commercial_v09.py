@@ -64,17 +64,17 @@ def check_pages() -> None:
             fail(f"root/docs page mismatch {rel}")
     homepage = (ROOT / "index.html").read_text(encoding="utf-8")
     required = [
-        "Verifiable Structural &amp; Evidence Intelligence for Digital Assets.",
-        "Search an asset or entity to see its current structural and evidence state.",
-        "Current public coverage: MSTR",
+        "Market structure, evidence change, and observation coverage.",
+        "monitor.html?subject=bnb",
+        "Asset states",
         "BNB",
         "SOL",
         "TRX",
         "XLM",
-        "Free Scan",
-        "Request Early Access",
+        "MSTR",
+        "NOT_MEASURED",
         "reports.html",
-        "enterprise.html",
+        "Monitoring is not prediction",
     ]
     for phrase in required:
         if phrase not in homepage:
@@ -82,10 +82,8 @@ def check_pages() -> None:
     for forbidden in ["coverage-index", "REFINEMENT_TABLE.html", "verify-r1.html", "SOL is featured as the conflict demonstration case"]:
         if forbidden in homepage:
             fail(f"homepage still exposes research-dashboard copy/link {forbidden}")
-    hero = homepage[homepage.find("<section class=\"search-hero\""):homepage.find("</section>", homepage.find("<section class=\"search-hero\""))]
-    for internal_acronym in ["MOS", "GDR"]:
-        if internal_acronym in hero:
-            fail(f"homepage hero exposes internal acronym {internal_acronym}")
+    if "PAYMENT_ENABLED: true" in homepage:
+        fail("homepage implies enabled payment")
 
 
 def check_entities_free_scan() -> None:
@@ -179,7 +177,11 @@ def check_paid_boundary_and_copy() -> None:
             fail(f"fake price appears in {rel}")
     for path in (ROOT / "docs").rglob("*"):
         if path.is_file() and path.suffix.lower() == ".pdf" and "sample" not in path.name.lower():
-            fail(f"paid pdf-like file exposed in public docs: {path}")
+            if path.name != "DEMO_BNB_MONITORING_SNAPSHOT_v1.0.pdf":
+                fail(f"paid pdf-like file exposed in public docs: {path}")
+            record = read_json("verify/reports/DEMO_BNB_MONITORING_SNAPSHOT_v1.0.json")
+            if record.get("commercial_delivery") is not False or record.get("label") != "NOT A LIVE PAID REPORT":
+                fail("public monitoring demo lacks noncommercial boundary")
 
 
 def check_hashes_unchanged() -> None:

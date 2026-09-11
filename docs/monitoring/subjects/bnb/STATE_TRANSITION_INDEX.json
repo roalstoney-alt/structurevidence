@@ -1,0 +1,67 @@
+{
+  "index_id": "SE-MON-BNB-TRANSITIONS-v1",
+  "subject_id": "BNB",
+  "supported_resolutions": [
+    "DAY",
+    "WEEK",
+    "MONTH"
+  ],
+  "transitions": [
+    {
+      "basis": "NO_VALID_COMPARABLE_PRIOR",
+      "comparability_state": "NOT_ESTABLISHED",
+      "current_state": "NOT_ESTABLISHED",
+      "dimension_id": "GOVERNANCE_STRUCTURE",
+      "effective_at": null,
+      "known_at": "2026-09-11T00:00:00Z",
+      "prior_state": null,
+      "source_refs": [
+        "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
+      ],
+      "subject_id": "BNB",
+      "transition_id": "SE-MON-BNB-GOVERNANCE_STRUCTURE-v1"
+    },
+    {
+      "basis": "EXPLICIT_CHANGE_EVENT",
+      "comparability_state": "EXPLICIT_CHANGE_EVENT",
+      "current_state": "TOWARD_CONTRACTION",
+      "dimension_id": "SUPPLY_STRUCTURE",
+      "effective_at": "2026-07-15T00:00:00Z",
+      "known_at": "2026-09-11T00:00:00Z",
+      "prior_state": null,
+      "source_refs": [
+        "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
+      ],
+      "subject_id": "BNB",
+      "transition_id": "SE-MON-BNB-SUPPLY_STRUCTURE-v1"
+    },
+    {
+      "basis": "NO_VALID_COMPARABLE_PRIOR",
+      "comparability_state": "NOT_ESTABLISHED",
+      "current_state": "NOT_ESTABLISHED",
+      "dimension_id": "UTILITY_STRUCTURE",
+      "effective_at": null,
+      "known_at": "2026-09-11T00:00:00Z",
+      "prior_state": null,
+      "source_refs": [
+        "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
+      ],
+      "subject_id": "BNB",
+      "transition_id": "SE-MON-BNB-UTILITY_STRUCTURE-v1"
+    },
+    {
+      "basis": "NO_VALID_COMPARABLE_PRIOR",
+      "comparability_state": "NOT_ESTABLISHED",
+      "current_state": "NOT_ESTABLISHED",
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "effective_at": null,
+      "known_at": "2026-09-11T00:00:00Z",
+      "prior_state": null,
+      "source_refs": [
+        "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json"
+      ],
+      "subject_id": "BNB",
+      "transition_id": "SE-MON-BNB-VALIDATOR_DISTRIBUTION-v1"
+    }
+  ]
+}

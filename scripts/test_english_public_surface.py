@@ -115,6 +115,8 @@ def linked_public_paths() -> set[str]:
 
 def check_no_public_cn_links(paths: set[str]) -> None:
     for rel in paths:
+        if (ROOT / rel).suffix not in {".html", ".md", ".json", ".js", ".css", ".txt"}:
+            continue
         text = read(rel)
         link_targets = []
         link_targets.extend(markdown_links(text))
@@ -132,6 +134,8 @@ def check_linked_surface_no_cjk(paths: set[str]) -> None:
     }
     for rel in paths:
         if rel in allowed:
+            continue
+        if (ROOT / rel).suffix not in {".html", ".md", ".json", ".js", ".css", ".txt"}:
             continue
         text = read(rel)
         if CJK.search(text):

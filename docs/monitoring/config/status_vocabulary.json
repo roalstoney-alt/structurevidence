@@ -1,0 +1,36 @@
+{
+  "causal_status": [
+    "NOT_EVALUATED",
+    "TEMPORALLY_ASSOCIATED",
+    "ALTERNATIVE_EXPLANATIONS_OPEN",
+    "CAUSAL_SUPPORT_PARTIAL",
+    "CAUSAL_SUPPORT_ESTABLISHED"
+  ],
+  "epistemic_status": [
+    "UNVERIFIED",
+    "SUPPORTED",
+    "CONTESTED",
+    "FALSE",
+    "CORRECTED",
+    "RETRACTED",
+    "INSUFFICIENT_DATA"
+  ],
+  "market_impact_status": [
+    "NOT_MEASURED",
+    "NO_OBSERVED_IMPACT",
+    "ATTENTION_SHOCK",
+    "BEHAVIORAL_SHIFT",
+    "LIQUIDITY_DISLOCATION",
+    "MARKET_STATE_CHANGE",
+    "STRUCTURAL_EFFECT_UNRESOLVED",
+    "STRUCTURAL_EFFECT_OBSERVED"
+  ],
+  "missing_data": [
+    "NOT_OBSERVED",
+    "NOT_MEASURED",
+    "INSUFFICIENT_DATA",
+    "NOT_COMPARABLE",
+    "UNRESOLVED"
+  ],
+  "version": "MONITORING_STATUS_VOCAB_v1.0"
+}

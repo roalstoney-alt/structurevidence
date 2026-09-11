@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://structurevidence.org/schema/state_transition.v1.json",
+  "title": "StructEvidence State Transition",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["transition_id", "subject_id", "dimension_id", "prior_state", "current_state", "effective_at", "known_at", "basis", "comparability_state", "source_refs"],
+  "properties": {
+    "transition_id": {"type": "string"},
+    "subject_id": {"type": "string"},
+    "dimension_id": {"type": "string"},
+    "prior_state": {"type": ["string", "null"]},
+    "current_state": {"type": "string"},
+    "effective_at": {"type": ["string", "null"]},
+    "known_at": {"type": "string"},
+    "basis": {"type": "string"},
+    "comparability_state": {"enum": ["COMPARABLE", "EXPLICIT_CHANGE_EVENT", "NOT_COMPARABLE", "NOT_ESTABLISHED"]},
+    "source_refs": {"type": "array", "items": {"type": "string"}}
+  }
+}

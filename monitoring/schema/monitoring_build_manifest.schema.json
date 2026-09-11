@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://structurevidence.org/schema/monitoring_build_manifest.v1.json",
+  "title": "StructEvidence Monitoring Build Manifest",
+  "type": "object",
+  "required": ["manifest_id", "builder_version", "subject_id", "snapshot_id", "generated_at", "inputs", "outputs", "source_bundle_hash"],
+  "properties": {
+    "manifest_id": {"type": "string"},
+    "builder_version": {"type": "string"},
+    "subject_id": {"type": "string"},
+    "snapshot_id": {"type": "string"},
+    "generated_at": {"type": "string"},
+    "inputs": {"type": "array", "items": {"type": "object", "required": ["path", "role", "sha256"], "properties": {"path": {"type": "string"}, "role": {"type": "string"}, "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}}}},
+    "outputs": {"type": "array", "items": {"type": "object", "required": ["path", "sha256"], "properties": {"path": {"type": "string"}, "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}}}},
+    "source_bundle_hash": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+  }
+}

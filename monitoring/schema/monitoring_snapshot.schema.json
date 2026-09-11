@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://structurevidence.org/schema/monitoring_snapshot.v1.json",
+  "title": "StructEvidence Monitoring Snapshot",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "snapshot_id", "subject_id", "snapshot_as_of", "known_at_cutoff", "generated_at",
+    "source_bundle_hash", "structural_level", "structural_delta", "evidence_dynamics",
+    "market_dynamics", "liquidity_observations", "recent_events", "freshness_snapshot",
+    "gdr_snapshot", "rtp_provenance_refs", "prior_snapshot_id", "snapshot_sha256",
+    "builder_version", "schema_version"
+  ],
+  "properties": {
+    "snapshot_id": {"type": "string"},
+    "subject_id": {"type": "string"},
+    "snapshot_as_of": {"type": "string"},
+    "known_at_cutoff": {"type": "string"},
+    "generated_at": {"type": "string"},
+    "source_bundle_hash": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "structural_level": {"type": "object"},
+    "structural_delta": {"type": "object"},
+    "evidence_dynamics": {"type": "object"},
+    "market_dynamics": {"type": "object"},
+    "liquidity_observations": {"type": "array"},
+    "recent_events": {"type": "array"},
+    "freshness_snapshot": {"type": "object"},
+    "gdr_snapshot": {"type": "object"},
+    "rtp_provenance_refs": {"type": "array"},
+    "prior_snapshot_id": {"type": ["string", "null"]},
+    "snapshot_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "builder_version": {"const": "MONITORING_BUILDER_v1.0"},
+    "schema_version": {"const": "MONITORING_SNAPSHOT_v1.0"}
+  }
+}

@@ -1,0 +1,1 @@
+"""Monitoring snapshot report rendering."""

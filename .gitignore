@@ -9,3 +9,7 @@ tmp/
 dist/
 private/
 *.pdf
+!reports/
+!reports/DEMO_BNB_MONITORING_SNAPSHOT_v1.0.pdf
+!docs/reports/
+!docs/reports/DEMO_BNB_MONITORING_SNAPSHOT_v1.0.pdf

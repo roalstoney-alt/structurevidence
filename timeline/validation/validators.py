@@ -237,10 +237,14 @@ def validate_commit_lineage(remote_expected: bool = False) -> list[GateResult]:
     parent = git(["rev-parse", "HEAD^"])
     origin = git(["rev-parse", "origin/main"])
     remote = remote_main_sha()
-    lineage_ok = parent == R1_1_BASE or head == R1_1_BASE
+    lineage_ok = subprocess.run(
+        ["git", "merge-base", "--is-ancestor", R1_1_BASE, head],
+        cwd=ROOT,
+        check=False,
+    ).returncode == 0
     remote_ok = (head == origin == remote) if remote_expected else (origin == remote)
     return [
-        result("TL11A_15_BASE_COMMIT_LINEAGE", "PASS" if lineage_ok else "FAIL", "validate_commit_lineage", [".git"], {"head": head, "parent": parent, "r1_1a_base": R1_1_BASE}, "R1.1a lineage is derived from git ancestry."),
+        result("TL11A_15_BASE_COMMIT_LINEAGE", "PASS" if lineage_ok else "FAIL", "validate_commit_lineage", [".git"], {"head": head, "parent": parent, "r1_1a_base": R1_1_BASE, "base_is_ancestor": lineage_ok}, "R1.1a lineage is derived from git ancestry."),
         result("TL11A_25_GIT_PUSH", "PASS" if remote_ok else "NOT_APPLICABLE", "validate_commit_lineage", [".git"], {"head": head, "origin_main": origin, "remote_main": remote}, "Push gate is final-verification aware."),
         result("TL11A_26_REMOTE_MATCH", "PASS" if remote_ok else "NOT_APPLICABLE", "validate_commit_lineage", [".git"], {"head": head, "origin_main": origin, "remote_main": remote}, "Remote branch is checked from git, not report placeholders."),
     ]

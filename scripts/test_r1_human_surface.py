@@ -169,7 +169,7 @@ def check_homepage_contract() -> None:
         for entity in ["MSTR", "BNB", "SOL", "TRX", "XLM"]:
             if entity not in text:
                 fail(f"homepage missing entity {entity}")
-        for required in ["Current public coverage", "Free Scan", "Request Early Access", "reports.html", "enterprise.html"]:
+        for required in ["Asset states", "monitor.html?subject=bnb", "NOT_MEASURED", "Evidence Dynamics", "reports.html"]:
             if required not in text:
                 fail(f"homepage missing required text/link: {required}")
         for moved in ["coverage-index", "SOL is featured as the conflict demonstration case", "REFINEMENT_TABLE.html", "verify-r1.html"]:

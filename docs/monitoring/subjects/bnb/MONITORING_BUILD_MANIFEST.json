@@ -1,0 +1,92 @@
+{
+  "builder_version": "MONITORING_BUILDER_v1.0",
+  "generated_at": "2026-09-11T00:00:00Z",
+  "inputs": [
+    {
+      "path": "research/digital-assets/batch-01-r1/BNB/CANONICAL_RESEARCH_R1.json",
+      "role": "canonical_research",
+      "sha256": "76e04e5a9be907d9fb825c6e7b25e75e056a4aa646672253c88acb2ef76ecf22"
+    },
+    {
+      "path": "research/digital-assets/batch-01-r1/BNB/OBSERVATION_REGISTRY.json",
+      "role": "observation_registry",
+      "sha256": "48057428087ac84b316d56b17814ff5a7377c0c1132872716e99863c5616bece"
+    },
+    {
+      "path": "research/digital-assets/batch-01-r1/BNB/CLAIM_REGISTRY.json",
+      "role": "claim_registry",
+      "sha256": "f4ad0ea8d70e10065b037ac6137a5c266b76e6f462427803cfae878e2106a362"
+    },
+    {
+      "path": "research/digital-assets/batch-01-r1/BNB/SOURCE_INVENTORY.json",
+      "role": "source_inventory",
+      "sha256": "20f68e9d9871616b2790739d20f358e00c57cc4c0f98b6ea33dbb3581babab9e"
+    },
+    {
+      "path": "research/digital-assets/batch-01-r1/BNB/COUNTER_EVIDENCE_SEARCH_LOG.json",
+      "role": "counter_evidence",
+      "sha256": "be43f2b58b011fad8f35579206634fd3e1b7eaebfa1c1f085a32fd110c59bbc9"
+    },
+    {
+      "path": "timeline/subjects/bnb_structural_timeline.json",
+      "role": "structural_timeline",
+      "sha256": "ad8402e3927d1a1e3660fc841047f985a7e80e234ff9e9849a3d8d4f3a251f73"
+    },
+    {
+      "path": "timeline/subjects/bnb_structural_day.json",
+      "role": "structural_day",
+      "sha256": "c671736b4c61d223dfe198b961b7175541a5719ead265831998037333e93085b"
+    },
+    {
+      "path": "timeline/subjects/bnb_event_ledger.json",
+      "role": "event_ledger",
+      "sha256": "e3fc622ba74efe5ee5e4f847868ad9044990be40ed0b5c824f80bbef0b6a715f"
+    },
+    {
+      "path": "timeline/subjects/bnb_evidence_events.json",
+      "role": "evidence_events",
+      "sha256": "8b0163d0ce177f666fd31e8e0f0f660ebc8f62b29cbef32693e81f746ecd3d34"
+    },
+    {
+      "path": "research/freshness/bnb/FRESHNESS_EVALUATION_v0.1a.json",
+      "role": "freshness",
+      "sha256": "45109e1b9f737d315cfc42068b726eee380a959fc929e1c939894cb8979dbba1"
+    },
+    {
+      "path": "research/digital-assets/batch-01-r1/BNB/gdr-se/GDR_SE_AUTHORIZATION_RECORD_R1_1.json",
+      "role": "gdr_authorization",
+      "sha256": "cdca713c388a08c4c2e0e0755ec7c016202c7dea9f72c76d79aa4ba4b514bcaf"
+    },
+    {
+      "path": "evidence-freeze/DIGITAL-ASSET-BATCH-01-R1/BNB/MANIFEST.json",
+      "role": "rtp_manifest",
+      "sha256": "9f7b70c65d4f47ec27f418553352a9c60c3f598fec60f5b02de5ba9d69a421c3"
+    }
+  ],
+  "manifest_id": "SE-MON-BNB-BUILD-v1",
+  "outputs": [
+    {
+      "path": "monitoring/subjects/bnb/MONITORING_SNAPSHOT.json",
+      "sha256": "70b47fea069bcb6ba9f018345d1d91d2c9d0e1c57fc4c6f67593c4aa15e2c0f1"
+    },
+    {
+      "path": "monitoring/subjects/bnb/INFORMATION_EVENT_LEDGER.json",
+      "sha256": "a3417d5aec47aa208899592811dc6ddd8f42013bde651e337be6e4647e1c7539"
+    },
+    {
+      "path": "monitoring/subjects/bnb/STATE_TRANSITION_INDEX.json",
+      "sha256": "8d5842c60952441df945e2c809a6adceb304707f29846330e78e9f90e879170a"
+    },
+    {
+      "path": "monitoring/subjects/bnb/PROVENANCE_INDEX.json",
+      "sha256": "f0a6f0f852915b71687e83b82ac856d91352f0dc6f9f76f190464d51d319ae7a"
+    },
+    {
+      "path": "monitoring/PUBLIC_MONITORING_INDEX.json",
+      "sha256": "690eb7e89882a640583fddfaa0a928f156afc9c256237d57e904b386ec95e05f"
+    }
+  ],
+  "snapshot_id": "SE-MON-BNB-2026-09-11-v1",
+  "source_bundle_hash": "cd776dc971cfce2e1c5e071ce9057e3b55532c1926b29cb949efb999fad737e0",
+  "subject_id": "BNB"
+}

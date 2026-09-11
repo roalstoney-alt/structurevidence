@@ -1,0 +1,22 @@
+#!/usr/bin/env python3
+import re
+
+from monitoring_test_common import ROOT, pass_message, require
+
+
+def main() -> None:
+    pages = ["index.html", "monitor.html", "verify.html", "reports.html"]
+    for name in pages:
+        text = (ROOT / name).read_text(encoding="utf-8")
+        require('name="viewport"' in text, f"viewport missing: {name}")
+        require("assets/monitor.css" in text, f"monitor stylesheet missing: {name}")
+    css = (ROOT / "assets/monitor.css").read_text(encoding="utf-8")
+    require("@media(max-width:1050px)" in css and "@media(max-width:700px)" in css, "responsive breakpoints missing")
+    require("clamp(" not in css, "monitor typography must not scale with viewport width")
+    for name in pages:
+        root = (ROOT / name).read_bytes(); published = (ROOT / "docs" / name).read_bytes()
+        require(root == published, f"root/docs divergence: {name}")
+    pass_message("MONITORING_UI_TESTS")
+
+
+if __name__ == "__main__": main()

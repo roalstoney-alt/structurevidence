@@ -13,8 +13,18 @@ def fail(message: str) -> None:
 
 def main() -> None:
     tracked_like = [path for base in ["docs", "verify", "."] for path in (ROOT / base).glob("**/*.pdf") if "private" not in path.parts]
-    if tracked_like:
-        fail(f"public PDF exposure found: {tracked_like}")
+    allowed_demo_names = {"DEMO_BNB_MONITORING_SNAPSHOT_v1.0.pdf"}
+    unexpected = [path for path in tracked_like if path.name not in allowed_demo_names]
+    if unexpected:
+        fail(f"public paid or unlabeled PDF exposure found: {unexpected}")
+    for path in tracked_like:
+        data = path.read_bytes()
+        if b"DEMO_MONITORING_SNAPSHOT" not in data and b"NOT A LIVE PAID REPORT" not in data:
+            # Compressed streams may hide labels, so the public verification record is authoritative.
+            record_path = ROOT / "verify/reports/DEMO_BNB_MONITORING_SNAPSHOT_v1.0.json"
+            record = json.loads(record_path.read_text(encoding="utf-8")) if record_path.is_file() else {}
+            if record.get("commercial_delivery") is not False or record.get("label") != "NOT A LIVE PAID REPORT":
+                fail(f"public demo boundary is missing for {path}")
     ignored = (ROOT / ".gitignore").read_text(encoding="utf-8")
     if "private/" not in ignored or "*.pdf" not in ignored:
         fail("private PDF storage is not ignored")

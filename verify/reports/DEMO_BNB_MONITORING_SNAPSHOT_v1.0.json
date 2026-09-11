@@ -1,0 +1,12 @@
+{
+  "artifact_id": "SE-DEMO-BNB-MONITORING-SNAPSHOT-v1.0",
+  "artifact_type": "DEMO_MONITORING_SNAPSHOT",
+  "commercial_delivery": false,
+  "generated_from": "monitoring/subjects/bnb/MONITORING_SNAPSHOT.json",
+  "label": "NOT A LIVE PAID REPORT",
+  "path": "reports/DEMO_BNB_MONITORING_SNAPSHOT_v1.0.pdf",
+  "public_safe": true,
+  "sha256": "5938e99363321c8f0122f7804add4909c82684fa3d290dc11e99125a82b59387",
+  "snapshot_id": "SE-MON-BNB-2026-09-11-v1",
+  "snapshot_sha256": "49cdce2d4fd215c262ca3e73bae08b1e6f18ee2a509e305a3c15eb39feb32125"
+}

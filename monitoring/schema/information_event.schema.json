@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://structurevidence.org/schema/information_event.v1.json",
+  "title": "StructEvidence Information Event",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "event_id", "subject_id", "event_type", "event_domain", "effective_at",
+    "known_at", "captured_at", "source_ids", "artifact_ids", "artifact_sha256",
+    "epistemic_status", "epistemic_status_as_of", "market_impact_status",
+    "impact_observation_window", "affected_dimensions", "causal_status",
+    "correction_status", "supersedes_event_id", "notes"
+  ],
+  "properties": {
+    "event_id": {"type": "string", "minLength": 1},
+    "subject_id": {"type": "string", "minLength": 1},
+    "event_type": {"type": "string", "minLength": 1},
+    "event_domain": {"enum": ["SUBJECT_EVENT", "EVIDENCE_EVENT", "RESEARCH_EVENT", "AUTHORIZATION_EVENT", "MARKET_OBSERVATION", "LIQUIDITY_OBSERVATION"]},
+    "effective_at": {"type": ["string", "null"]},
+    "known_at": {"type": "string"},
+    "captured_at": {"type": "string"},
+    "source_ids": {"type": "array", "items": {"type": "string"}},
+    "artifact_ids": {"type": "array", "items": {"type": "string"}},
+    "artifact_sha256": {"type": "array", "items": {"type": "string", "pattern": "^[a-f0-9]{64}$"}},
+    "epistemic_status": {"enum": ["UNVERIFIED", "SUPPORTED", "CONTESTED", "FALSE", "CORRECTED", "RETRACTED", "INSUFFICIENT_DATA"]},
+    "epistemic_status_as_of": {"type": "string"},
+    "market_impact_status": {"enum": ["NOT_MEASURED", "NO_OBSERVED_IMPACT", "ATTENTION_SHOCK", "BEHAVIORAL_SHIFT", "LIQUIDITY_DISLOCATION", "MARKET_STATE_CHANGE", "STRUCTURAL_EFFECT_UNRESOLVED", "STRUCTURAL_EFFECT_OBSERVED"]},
+    "impact_observation_window": {"type": ["object", "null"]},
+    "affected_dimensions": {"type": "array", "items": {"type": "string"}},
+    "causal_status": {"enum": ["NOT_EVALUATED", "TEMPORALLY_ASSOCIATED", "ALTERNATIVE_EXPLANATIONS_OPEN", "CAUSAL_SUPPORT_PARTIAL", "CAUSAL_SUPPORT_ESTABLISHED"]},
+    "correction_status": {"enum": ["NONE", "CORRECTED", "RETRACTED", "SUPERSEDED"]},
+    "supersedes_event_id": {"type": ["string", "null"]},
+    "notes": {"type": "array", "items": {"type": "string"}}
+  }
+}
