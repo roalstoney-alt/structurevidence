@@ -3,9 +3,9 @@
     "base_commit": "8871b5afd2fda4ab30f430e1799ebcf530c42d52",
     "configured_rules": 4,
     "final_audit_commit": "not self-recorded by design; final SHA verified after push",
-    "implementation_commit": "8871b5afd2fda4ab30f430e1799ebcf530c42d52",
+    "implementation_commit": "990cae1bc3328f28d532de572fc81af9dc9af57c",
     "paid_delivery_status": "BLOCKED",
-    "remote_main": "8871b5afd2fda4ab30f430e1799ebcf530c42d52",
+    "remote_main": "990cae1bc3328f28d532de572fc81af9dc9af57c",
     "subject_classes": [
       "L1_NETWORK",
       "PUBLIC_COMPANY_TREASURY"
@@ -91,7 +91,7 @@
       "computed_facts": {
         "policy_version": "RDL_FRESHNESS_v0.1"
       },
-      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evaluated_at": "2026-09-11T02:54:49.725230Z",
       "evidence_refs": [
         "rdl/freshness/config/freshness_profiles.json"
       ],
@@ -108,7 +108,7 @@
           "PUBLIC_COMPANY_TREASURY"
         ]
       },
-      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evaluated_at": "2026-09-11T02:54:49.725230Z",
       "evidence_refs": [
         "rdl/freshness/config/subject_class_profiles.json"
       ],
@@ -122,7 +122,7 @@
       "computed_facts": {
         "configured_level_rules": 4
       },
-      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evaluated_at": "2026-09-11T02:54:49.725230Z",
       "evidence_refs": [
         "rdl/freshness/config/freshness_profiles.json"
       ],
@@ -136,7 +136,7 @@
       "computed_facts": {
         "delta_rules": 1
       },
-      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evaluated_at": "2026-09-11T02:54:49.725230Z",
       "evidence_refs": [
         "rdl/freshness/config/freshness_profiles.json"
       ],
@@ -150,7 +150,7 @@
       "computed_facts": {
         "criticality_rules": 36
       },
-      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evaluated_at": "2026-09-11T02:54:49.725230Z",
       "evidence_refs": [
         "rdl/freshness/config/evidence_family_criticality.json"
       ],
@@ -162,7 +162,7 @@
     },
     {
       "computed_facts": {},
-      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evaluated_at": "2026-09-11T02:54:49.725230Z",
       "evidence_refs": [
         "rdl/freshness/config"
       ],
@@ -183,7 +183,7 @@
           "UNCONFIGURED"
         ]
       },
-      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evaluated_at": "2026-09-11T02:54:49.725230Z",
       "evidence_refs": [
         "rdl/freshness/config/freshness_profiles.json"
       ],
@@ -197,7 +197,7 @@
       "computed_facts": {
         "event_rules": 10
       },
-      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evaluated_at": "2026-09-11T02:54:49.725230Z",
       "evidence_refs": [
         "rdl/freshness/config/event_invalidation_rules.json"
       ],
@@ -211,7 +211,7 @@
       "computed_facts": {
         "result": "UNDER_REVIEW"
       },
-      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evaluated_at": "2026-09-11T02:54:49.725230Z",
       "evidence_refs": [
         "rdl/freshness/config/freshness_precedence.json"
       ],
@@ -225,7 +225,7 @@
       "computed_facts": {
         "result": "SUPERSEDED"
       },
-      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evaluated_at": "2026-09-11T02:54:49.725230Z",
       "evidence_refs": [
         "rdl/freshness/config/freshness_precedence.json"
       ],
@@ -250,7 +250,7 @@
           "POLICY_NOT_CONFIGURED"
         ]
       },
-      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evaluated_at": "2026-09-11T02:54:49.725230Z",
       "evidence_refs": [
         "rdl/freshness/config/freshness_precedence.json"
       ],
@@ -264,7 +264,7 @@
       "computed_facts": {
         "mutated_level_state": "REFRESH_REQUIRED"
       },
-      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evaluated_at": "2026-09-11T02:54:49.725230Z",
       "evidence_refs": [
         "scripts/publish_rdl_freshness.py",
         "rdl/freshness/config/freshness_profiles.json"
@@ -277,7 +277,7 @@
     },
     {
       "computed_facts": {},
-      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evaluated_at": "2026-09-11T02:54:49.725230Z",
       "evidence_refs": [
         "rdl/freshness/audit/CADENCE_METRICS.json"
       ],
@@ -292,7 +292,7 @@
         "configured_rules": 4,
         "unconfigured_rules": 9
       },
-      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evaluated_at": "2026-09-11T02:54:49.725230Z",
       "evidence_refs": [
         "rdl/freshness/config/freshness_profiles.json"
       ],
@@ -304,7 +304,7 @@
     },
     {
       "computed_facts": {},
-      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evaluated_at": "2026-09-11T02:54:49.725230Z",
       "evidence_refs": [
         "docs/research/RDL_FRESHNESS_SENSITIVITY_ANALYSIS_v0.1.md"
       ],
@@ -318,7 +318,7 @@
       "computed_facts": {
         "sparse_state": "POLICY_NOT_CONFIGURED"
       },
-      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evaluated_at": "2026-09-11T02:54:49.725230Z",
       "evidence_refs": [
         "rdl/freshness/audit/UNCONFIGURED_FRESHNESS_RULES.json"
       ],
@@ -332,7 +332,7 @@
       "computed_facts": {
         "g3_unconfigured": "UNRESOLVED"
       },
-      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evaluated_at": "2026-09-11T02:54:49.725230Z",
       "evidence_refs": [
         "gdr-se/engine/freshness.py"
       ],
@@ -347,7 +347,7 @@
         "delta_state": "POLICY_NOT_CONFIGURED",
         "level_state": "REFRESH_REQUIRED"
       },
-      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evaluated_at": "2026-09-11T02:54:49.725230Z",
       "evidence_refs": [
         "scripts/publish_rdl_freshness.py"
       ],
@@ -361,7 +361,7 @@
       "computed_facts": {
         "future_known_event_count": 0
       },
-      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evaluated_at": "2026-09-11T02:54:49.725230Z",
       "evidence_refs": [
         "scripts/publish_rdl_freshness.py"
       ],
@@ -373,7 +373,7 @@
     },
     {
       "computed_facts": {},
-      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evaluated_at": "2026-09-11T02:54:49.725230Z",
       "evidence_refs": [
         "timeline/engine/clock.py",
         "scripts/publish_rdl_freshness.py"
@@ -386,7 +386,7 @@
     },
     {
       "computed_facts": {},
-      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evaluated_at": "2026-09-11T02:54:49.725230Z",
       "evidence_refs": [
         "scripts/test_rdl_freshness_runtime.py"
       ],
@@ -407,7 +407,7 @@
           }
         ]
       },
-      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evaluated_at": "2026-09-11T02:54:49.725230Z",
       "evidence_refs": [
         "rdl/freshness/config/event_invalidation_rules.json"
       ],
@@ -429,7 +429,7 @@
         "release_context": "PUBLIC_RESEARCH",
         "release_freshness_state": "CURRENT_WITH_LIMITATIONS"
       },
-      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evaluated_at": "2026-09-11T02:54:49.725230Z",
       "evidence_refs": [
         "scripts/publish_rdl_freshness.py"
       ],
@@ -453,7 +453,7 @@
         "release_context": "PAID_VERIFIED_REPORT",
         "release_freshness_state": "REFRESH_REQUIRED"
       },
-      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evaluated_at": "2026-09-11T02:54:49.725230Z",
       "evidence_refs": [
         "rdl/freshness/config/product_context_rules.json"
       ],
@@ -475,7 +475,7 @@
         },
         "g3_bnb": "FAIL"
       },
-      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evaluated_at": "2026-09-11T02:54:49.725230Z",
       "evidence_refs": [
         "gdr-se/engine/freshness.py",
         "rdl/freshness/gdr_g3_adapter.json"
@@ -490,7 +490,7 @@
       "computed_facts": {
         "overlay": true
       },
-      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evaluated_at": "2026-09-11T02:54:49.725230Z",
       "evidence_refs": [
         "dynamics.html",
         "gdr.html",
@@ -517,7 +517,7 @@
         },
         "release": "EVENT_INVALIDATED"
       },
-      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evaluated_at": "2026-09-11T02:54:49.725230Z",
       "evidence_refs": [
         "research/freshness/strategy/FRESHNESS_EVALUATION_v0.1.json"
       ],
@@ -543,7 +543,7 @@
         },
         "release": "EVENT_INVALIDATED"
       },
-      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evaluated_at": "2026-09-11T02:54:49.725230Z",
       "evidence_refs": [
         "research/freshness/bnb/FRESHNESS_EVALUATION_v0.1.json"
       ],
@@ -567,7 +567,7 @@
         },
         "release": "CURRENT_WITH_LIMITATIONS"
       },
-      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evaluated_at": "2026-09-11T02:54:49.725230Z",
       "evidence_refs": [
         "research/freshness/sol/FRESHNESS_EVALUATION_v0.1.json"
       ],
@@ -592,7 +592,7 @@
         },
         "release": "EVENT_INVALIDATED"
       },
-      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evaluated_at": "2026-09-11T02:54:49.725230Z",
       "evidence_refs": [
         "research/freshness/trx/FRESHNESS_EVALUATION_v0.1.json"
       ],
@@ -617,7 +617,7 @@
         },
         "release": "EVENT_INVALIDATED"
       },
-      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evaluated_at": "2026-09-11T02:54:49.725230Z",
       "evidence_refs": [
         "research/freshness/xlm/FRESHNESS_EVALUATION_v0.1.json"
       ],
@@ -629,7 +629,7 @@
     },
     {
       "computed_facts": {},
-      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evaluated_at": "2026-09-11T02:54:49.725230Z",
       "evidence_refs": [
         "research/freshness/*/FRESHNESS_EVALUATION_v0.1.json"
       ],
@@ -643,7 +643,7 @@
       "computed_facts": {
         "unconfigured_rules": 9
       },
-      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evaluated_at": "2026-09-11T02:54:49.725230Z",
       "evidence_refs": [
         "rdl/freshness/audit/UNCONFIGURED_FRESHNESS_RULES.json"
       ],
@@ -658,7 +658,7 @@
         "configured_rules": 4,
         "unconfigured_rules": 9
       },
-      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evaluated_at": "2026-09-11T02:54:49.725230Z",
       "evidence_refs": [
         "docs/research/RDL_FRESHNESS_POLICY_DERIVATION_v0.1.md",
         "docs/research/RDL_FRESHNESS_CADENCE_ANALYSIS_v0.1.md",
@@ -675,7 +675,7 @@
     },
     {
       "computed_facts": {},
-      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evaluated_at": "2026-09-11T02:54:49.725230Z",
       "evidence_refs": [
         "rdl/freshness/validation/RDL_FRESHNESS_GATE_RESULTS.json"
       ],
@@ -687,7 +687,7 @@
     },
     {
       "computed_facts": {},
-      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evaluated_at": "2026-09-11T02:54:49.725230Z",
       "evidence_refs": [
         "rdl/freshness/validation/gate_registry.py"
       ],
@@ -699,7 +699,7 @@
     },
     {
       "computed_facts": {},
-      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evaluated_at": "2026-09-11T02:54:49.725230Z",
       "evidence_refs": [
         "docs/execution/RDL_FRESHNESS_PRE_AUDIT.md"
       ],
@@ -711,7 +711,7 @@
     },
     {
       "computed_facts": {},
-      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evaluated_at": "2026-09-11T02:54:49.725230Z",
       "evidence_refs": [
         "gdr-se/engine/gates.py"
       ],
@@ -723,7 +723,7 @@
     },
     {
       "computed_facts": {},
-      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evaluated_at": "2026-09-11T02:54:49.725230Z",
       "evidence_refs": [
         "timeline/validation/TIMELINE_R1_1A_GATE_RESULTS.json"
       ],
@@ -735,7 +735,7 @@
     },
     {
       "computed_facts": {},
-      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evaluated_at": "2026-09-11T02:54:49.725230Z",
       "evidence_refs": [
         "scripts/test_english_public_surface.py"
       ],
@@ -747,7 +747,7 @@
     },
     {
       "computed_facts": {},
-      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evaluated_at": "2026-09-11T02:54:49.725230Z",
       "evidence_refs": [
         "scripts/test_timeline_ui.py"
       ],
@@ -761,7 +761,7 @@
       "computed_facts": {
         "docs_sync": true
       },
-      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evaluated_at": "2026-09-11T02:54:49.725230Z",
       "evidence_refs": [
         "rdl",
         "docs/rdl"
@@ -786,7 +786,7 @@
           "python3 -B scripts/test_timeline_ui.py": 0
         }
       },
-      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evaluated_at": "2026-09-11T02:54:49.725230Z",
       "evidence_refs": [
         "scripts/test_rdl_freshness_policy.py",
         "scripts/test_rdl_freshness_runtime.py"
@@ -799,11 +799,11 @@
     },
     {
       "computed_facts": {
-        "head": "8871b5afd2fda4ab30f430e1799ebcf530c42d52",
-        "origin_main": "8871b5afd2fda4ab30f430e1799ebcf530c42d52",
-        "remote_main": "8871b5afd2fda4ab30f430e1799ebcf530c42d52"
+        "head": "990cae1bc3328f28d532de572fc81af9dc9af57c",
+        "origin_main": "990cae1bc3328f28d532de572fc81af9dc9af57c",
+        "remote_main": "990cae1bc3328f28d532de572fc81af9dc9af57c"
       },
-      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evaluated_at": "2026-09-11T02:54:49.725230Z",
       "evidence_refs": [
         ".git"
       ],
@@ -815,11 +815,11 @@
     },
     {
       "computed_facts": {
-        "head": "8871b5afd2fda4ab30f430e1799ebcf530c42d52",
-        "origin_main": "8871b5afd2fda4ab30f430e1799ebcf530c42d52",
-        "remote_main": "8871b5afd2fda4ab30f430e1799ebcf530c42d52"
+        "head": "990cae1bc3328f28d532de572fc81af9dc9af57c",
+        "origin_main": "990cae1bc3328f28d532de572fc81af9dc9af57c",
+        "remote_main": "990cae1bc3328f28d532de572fc81af9dc9af57c"
       },
-      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evaluated_at": "2026-09-11T02:54:49.725230Z",
       "evidence_refs": [
         ".git"
       ],
