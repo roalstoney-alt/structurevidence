@@ -64,15 +64,12 @@ def check_pages() -> None:
             fail(f"root/docs page mismatch {rel}")
     homepage = (ROOT / "index.html").read_text(encoding="utf-8")
     required = [
-        "Market structure, evidence change, and observation coverage.",
-        "monitor.html?subject=bnb",
-        "Asset states",
-        "BNB",
-        "SOL",
-        "TRX",
-        "XLM",
-        "MSTR",
-        "NOT_MEASURED",
+        "Monitor structural change.",
+        'action="monitor.html"',
+        "BNB structural and evidence state",
+        "Executive insight",
+        "How the observed structure changed",
+        "Export PDF",
         "reports.html",
         "Monitoring is not prediction",
     ]

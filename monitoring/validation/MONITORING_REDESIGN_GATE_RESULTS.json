@@ -244,7 +244,7 @@
       "status": "PASS"
     },
     {
-      "detail": "First screen is the monitoring product.",
+      "detail": "First screen opens the monitoring workflow.",
       "evidence_refs": [
         "index.html"
       ],
@@ -261,11 +261,11 @@
       "status": "PASS"
     },
     {
-      "detail": "Coverage table includes five subjects.",
+      "detail": "Homepage presents the current BNB decision view and structure timeline.",
       "evidence_refs": [
         "index.html"
       ],
-      "gate_id": "MON31_ASSET_STATE_TABLE",
+      "gate_id": "MON31_HOME_DECISION_VIEW",
       "status": "PASS"
     },
     {

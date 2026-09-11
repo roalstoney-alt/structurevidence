@@ -166,12 +166,12 @@ def check_homepage_contract() -> None:
     index = (ROOT / "index.html").read_text(encoding="utf-8")
     docs_index = (ROOT / "docs" / "index.html").read_text(encoding="utf-8")
     for text in [index, docs_index]:
-        for entity in ["MSTR", "BNB", "SOL", "TRX", "XLM"]:
-            if entity not in text:
-                fail(f"homepage missing entity {entity}")
-        for required in ["Asset states", "monitor.html?subject=bnb", "NOT_MEASURED", "Evidence Dynamics", "reports.html"]:
+        for required in ["Monitor structural change.", 'action="monitor.html"', "BNB structural and evidence state", "Executive insight", "How the observed structure changed", "reports.html"]:
             if required not in text:
                 fail(f"homepage missing required text/link: {required}")
+        for removed in ["Asset states", ">SOL<", ">TRX<", ">XLM<", ">MSTR<"]:
+            if removed in text:
+                fail(f"homepage still exposes removed coverage content: {removed}")
         for moved in ["coverage-index", "SOL is featured as the conflict demonstration case", "REFINEMENT_TABLE.html", "verify-r1.html"]:
             if moved in text:
                 fail(f"homepage still exposes moved research detail: {moved}")
