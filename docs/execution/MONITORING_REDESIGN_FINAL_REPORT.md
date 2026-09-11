@@ -9,7 +9,7 @@
 - Payment readiness: `PAYMENT_ENABLED=false`.
 - Fulfillment readiness: `MANUAL_ONLY`; automated paid delivery is not active.
 - Private paid report exposure: `0`.
-- Gate summary: `{'PASS': 49, 'PARTIAL': 0, 'FAIL': 0, 'BLOCKED': 0, 'NOT_EVALUATED': 1}`.
-- Acceptance: `MONITORING_REDESIGN_PARTIAL`.
+- Gate summary: `{'PASS': 50, 'PARTIAL': 0, 'FAIL': 0, 'BLOCKED': 0, 'NOT_EVALUATED': 0}`.
+- Acceptance: `MONITORING_REDESIGN_PASS`.
 
 Measured limitation: no frozen market microstructure or liquidity time series exists in the BNB bundle, so market and liquidity states remain `NOT_MEASURED`.
