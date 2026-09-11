@@ -13,6 +13,7 @@ def main() -> None:
     css = (ROOT / "assets/monitor.css").read_text(encoding="utf-8")
     require("@media(max-width:1050px)" in css and "@media(max-width:700px)" in css, "responsive breakpoints missing")
     require("clamp(" not in css, "monitor typography must not scale with viewport width")
+    require(".executive-layout" in css and "data-executive-headline" in (ROOT / "monitor.html").read_text(encoding="utf-8"), "executive insight module missing")
     for name in pages:
         root = (ROOT / name).read_bytes(); published = (ROOT / "docs" / name).read_bytes()
         require(root == published, f"root/docs divergence: {name}")

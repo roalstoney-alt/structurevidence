@@ -7,6 +7,12 @@
   const sourceLink = (path) => path ? `<a href="${esc(path)}">${esc(path.split("/").pop())}</a>` : "NONE";
   const stateCard = (label, value, note, tone = "") => `<article class="state-cell ${tone}"><span>${esc(label)}</span><strong>${esc(value)}</strong><small>${esc(note)}</small></article>`;
   const requestedSubject = new URLSearchParams(window.location.search).get("subject");
+  const dimensionLabels = {
+    GOVERNANCE_STRUCTURE: "governance",
+    SUPPLY_STRUCTURE: "supply",
+    UTILITY_STRUCTURE: "utility",
+    VALIDATOR_DISTRIBUTION: "validator distribution"
+  };
 
   if (requestedSubject && requestedSubject.trim().toLowerCase() !== "bnb") {
     workspace.innerHTML = `<section class="monitor-error"><p class="monitor-kicker">Coverage boundary</p><h1>${esc(requestedSubject.toUpperCase())} monitoring is not available</h1><p>Monitoring v1.0 currently exposes a generated workspace for BNB only. No BNB state has been substituted for this request.</p><p><a class="monitor-command" href="monitor.html?subject=bnb">Open BNB workspace</a> <a class="monitor-command secondary" href="index.html#asset-states">View archive coverage</a></p></section>`;
@@ -18,7 +24,40 @@
     document.querySelector("[data-event-table] tbody").innerHTML = events.map((row) => `<tr><td>${esc(dateOnly(row.known_at))}</td><td><strong>${esc(row.event_id)}</strong><small>${esc(row.event_type)}</small></td><td>${esc(row.event_domain)}</td><td>${esc(row.epistemic_status)}</td><td><span class="state-muted">${esc(row.market_impact_status)}</span></td><td>${esc(row.causal_status)}</td><td>${sourceLink(row.artifact_ids[0])}</td></tr>`).join("") || `<tr><td colspan="7">No events match this domain.</td></tr>`;
   }
 
+  function renderExecutive(snapshot) {
+    const deltas = snapshot.structural_delta.dimensions;
+    const established = deltas.filter((row) => row.state !== "NOT_ESTABLISHED");
+    const open = deltas.filter((row) => row.state === "NOT_ESTABLISHED");
+    const supply = established.find((row) => row.dimension_id === "SUPPLY_STRUCTURE");
+    const impactOpen = snapshot.market_dynamics.state === "NOT_MEASURED";
+    const openLabels = open.map((row) => dimensionLabels[row.dimension_id] || row.dimension_id.toLowerCase()).join(", ");
+    const posture = snapshot.gdr_snapshot.authorization === "ALLOW_WITH_LIMITATIONS" ? "Monitor with limitations" : snapshot.gdr_snapshot.authorization.replaceAll("_", " ");
+    const headline = supply
+      ? "Supply contraction direction is established; market effect remains unresolved."
+      : "No structural direction is established in the current snapshot.";
+    const summary = supply
+      ? `The model records an explicit supply-structure change toward contraction, effective ${dateOnly(supply.effective_at)}. No comparable prior establishes change in ${openLabels || "the remaining dimensions"}. ${impactOpen ? "Price, depth, spread, and liquidity response have not been measured." : "Measured market observations are available in the supporting record."}`
+      : `Current structural Levels are observed, but the available history does not establish a comparable change direction. ${impactOpen ? "Market and liquidity response have not been measured." : "Measured market observations are available in the supporting record."}`;
+    document.querySelector("[data-executive-asof]").textContent = `As of ${snapshot.snapshot_as_of.slice(0, 10)} UTC`;
+    document.querySelector("[data-executive-posture]").textContent = posture;
+    document.querySelector("[data-executive-headline]").textContent = headline;
+    document.querySelector("[data-executive-summary]").textContent = summary;
+    document.querySelector("[data-executive-facts]").innerHTML = [
+      ["Established change", supply ? "Supply toward contraction" : "None"],
+      ["Evidence basis", supply?.basis === "EXPLICIT_CHANGE_EVENT" ? "Explicit change event" : "No comparable prior"],
+      ["Freshness", snapshot.freshness_snapshot.release_state]
+    ].map(([label, value]) => `<div><dt>${esc(label)}</dt><dd>${esc(value)}</dd></div>`).join("");
+    const flags = [
+      {label: "Market confirmation", state: impactOpen ? "OPEN" : "OBSERVED", note: impactOpen ? "No frozen price, depth, spread, or liquidity series." : "Measured observations are linked below.", tone: impactOpen ? "open" : "clear"},
+      {label: "Cross-dimension change", state: open.length ? "LIMITED" : "ESTABLISHED", note: open.length ? `${open.length} of ${deltas.length} structural dimensions lack a comparable prior.` : "All observed dimensions have a comparable prior.", tone: open.length ? "limited" : "clear"},
+      {label: "Evidence coverage", state: snapshot.evidence_dynamics.source_coverage, note: snapshot.evidence_dynamics.ecl_consistency.replaceAll("_", " ").toLowerCase(), tone: snapshot.evidence_dynamics.source_coverage === "PARTIAL" ? "limited" : "clear"}
+    ];
+    document.querySelector("[data-risk-count]").textContent = `${flags.filter((flag) => flag.tone !== "clear").length} open`;
+    document.querySelector("[data-risk-flags]").innerHTML = flags.map((flag) => `<div class="risk-row ${esc(flag.tone)}"><div><span>${esc(flag.label)}</span><strong>${esc(flag.state)}</strong></div><p>${esc(flag.note)}</p></div>`).join("");
+  }
+
   function render(snapshot) {
+    renderExecutive(snapshot);
     document.querySelector("[data-monitor-boundary]").textContent = snapshot.monitoring_boundary;
     document.querySelector("[data-snapshot-strip]").innerHTML = [["SUBJECT",snapshot.subject_id],["SNAPSHOT AS-OF",snapshot.snapshot_as_of],["KNOWN-AT CUTOFF",snapshot.known_at_cutoff],["FRESHNESS",snapshot.freshness_snapshot.release_state],["GDR",snapshot.gdr_snapshot.authorization],["SNAPSHOT HASH",shortHash(snapshot.snapshot_sha256)]].map(([label,value]) => `<div><span>${esc(label)}</span><strong>${esc(value)}</strong></div>`).join("");
     document.querySelector("[data-state-grid]").innerHTML = [

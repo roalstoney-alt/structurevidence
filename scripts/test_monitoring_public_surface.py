@@ -12,6 +12,8 @@ def main() -> None:
     for phrase in forbidden:
         require(phrase not in combined, f"forbidden output language: {phrase}")
     require("Monitoring is not prediction" in home + monitor, "monitoring boundary missing")
+    for required in ["Executive insight", "Risk flags", "Decision relevance, not a trading signal"]:
+        require(required in monitor, f"missing L1 decision view: {required}")
     pass_message("MONITORING_PUBLIC_SURFACE_TESTS")
 
 
