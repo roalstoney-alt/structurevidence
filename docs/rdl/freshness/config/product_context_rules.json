@@ -1,0 +1,44 @@
+{
+  "policy_version": "RDL_FRESHNESS_v0.1",
+  "rules": [
+    {
+      "allow_states": [
+        "CURRENT",
+        "CURRENT_WITH_LIMITATIONS",
+        "AGING",
+        "REFRESH_REQUIRED"
+      ],
+      "delivery_status_if_critical_unconfigured": "CURRENT_WITH_LIMITATIONS",
+      "product_context": "PUBLIC_RESEARCH",
+      "rationale": "Public research may remain visible with clear currentness labels."
+    },
+    {
+      "allow_states": [
+        "CURRENT"
+      ],
+      "delivery_status_if_critical_unconfigured": "REFRESH_REQUIRED",
+      "product_context": "PAID_VERIFIED_REPORT",
+      "rationale": "Paid current delivery cannot rely on unconfigured critical freshness rules."
+    },
+    {
+      "allow_states": [
+        "CURRENT",
+        "CURRENT_WITH_LIMITATIONS",
+        "AGING"
+      ],
+      "delivery_status_if_critical_unconfigured": "UNDER_REVIEW",
+      "product_context": "CUSTOM_AUDIT",
+      "rationale": "Custom audits can proceed only after scope review when policy is incomplete."
+    },
+    {
+      "allow_states": [
+        "CURRENT",
+        "CURRENT_WITH_LIMITATIONS",
+        "AGING"
+      ],
+      "delivery_status_if_critical_unconfigured": "UNDER_REVIEW",
+      "product_context": "STRUCTURAL_MONITOR",
+      "rationale": "Monitor activation requires configured refresh paths."
+    }
+  ]
+}

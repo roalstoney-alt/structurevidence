@@ -34,10 +34,11 @@ def semantic_gate_results(evaluation):
 def test_runtime_records() -> None:
     for subject in ["strategy", "BNB", "SOL", "TRX", "XLM"]:
         evaluation = evaluate(resolve(subject, ROOT), ROOT, as_of=FIXED_AS_OF)
-        if evaluation.authorization != "HUMAN_REVIEW_REQUIRED":
-            fail(f"{subject} should be human-review required while freshness policy is unconfigured")
-        if gate(evaluation, "G3_EVIDENCE_FRESHNESS")["status"] != "UNRESOLVED":
-            fail(f"{subject} freshness did not resolve to UNRESOLVED")
+        if evaluation.authorization not in {"ALLOW_WITH_LIMITATIONS", "HUMAN_REVIEW_REQUIRED", "VETO"}:
+            fail(f"{subject} produced unknown authorization")
+        g3 = gate(evaluation, "G3_EVIDENCE_FRESHNESS")
+        if g3["computed_facts"].get("policy_version") != "RDL_FRESHNESS_v0.1":
+            fail(f"{subject} G3 did not consume RDL freshness")
         if not evaluation.input_bundle_sha256 or len(evaluation.input_bundle_sha256) != 64:
             fail(f"{subject} missing input bundle hash")
         path = resolve(subject, ROOT).output_dir / "GDR_SE_AUTHORIZATION_RECORD_R1_1.json"

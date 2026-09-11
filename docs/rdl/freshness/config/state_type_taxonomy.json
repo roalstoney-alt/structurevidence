@@ -1,0 +1,7 @@
+{
+  "policy_version": "RDL_FRESHNESS_v0.1",
+  "state_types": [
+    "LEVEL",
+    "DELTA"
+  ]
+}

@@ -1,0 +1,192 @@
+{
+  "criticality_values": [
+    "CRITICAL",
+    "IMPORTANT",
+    "SUPPORTING",
+    "CONDITIONAL",
+    "NOT_APPLICABLE"
+  ],
+  "policy_version": "RDL_FRESHNESS_v0.1",
+  "rules": [
+    {
+      "criticality": "CRITICAL",
+      "family_id": "PRIMARY_SOURCE_COVERAGE",
+      "product_context": "PUBLIC_RESEARCH"
+    },
+    {
+      "criticality": "SUPPORTING",
+      "family_id": "SECONDARY_SUPPORT",
+      "product_context": "PUBLIC_RESEARCH"
+    },
+    {
+      "criticality": "CRITICAL",
+      "family_id": "COUNTER_EVIDENCE_COVERAGE",
+      "product_context": "PUBLIC_RESEARCH"
+    },
+    {
+      "criticality": "IMPORTANT",
+      "family_id": "NUMERICAL_RECONCILIATION",
+      "product_context": "PUBLIC_RESEARCH"
+    },
+    {
+      "criticality": "IMPORTANT",
+      "family_id": "SOURCE_DEPENDENCY",
+      "product_context": "PUBLIC_RESEARCH"
+    },
+    {
+      "criticality": "CONDITIONAL",
+      "family_id": "INDEPENDENT_REVIEW",
+      "product_context": "PUBLIC_RESEARCH"
+    },
+    {
+      "criticality": "CRITICAL",
+      "family_id": "CORRECTION_STATUS",
+      "product_context": "PUBLIC_RESEARCH"
+    },
+    {
+      "criticality": "CRITICAL",
+      "family_id": "SUPERSESSION_STATUS",
+      "product_context": "PUBLIC_RESEARCH"
+    },
+    {
+      "criticality": "IMPORTANT",
+      "family_id": "AUTHORIZATION_STATUS",
+      "product_context": "PUBLIC_RESEARCH"
+    },
+    {
+      "criticality": "CRITICAL",
+      "family_id": "PRIMARY_SOURCE_COVERAGE",
+      "product_context": "PAID_VERIFIED_REPORT"
+    },
+    {
+      "criticality": "SUPPORTING",
+      "family_id": "SECONDARY_SUPPORT",
+      "product_context": "PAID_VERIFIED_REPORT"
+    },
+    {
+      "criticality": "CRITICAL",
+      "family_id": "COUNTER_EVIDENCE_COVERAGE",
+      "product_context": "PAID_VERIFIED_REPORT"
+    },
+    {
+      "criticality": "CRITICAL",
+      "family_id": "NUMERICAL_RECONCILIATION",
+      "product_context": "PAID_VERIFIED_REPORT"
+    },
+    {
+      "criticality": "CRITICAL",
+      "family_id": "SOURCE_DEPENDENCY",
+      "product_context": "PAID_VERIFIED_REPORT"
+    },
+    {
+      "criticality": "CRITICAL",
+      "family_id": "INDEPENDENT_REVIEW",
+      "product_context": "PAID_VERIFIED_REPORT"
+    },
+    {
+      "criticality": "CRITICAL",
+      "family_id": "CORRECTION_STATUS",
+      "product_context": "PAID_VERIFIED_REPORT"
+    },
+    {
+      "criticality": "CRITICAL",
+      "family_id": "SUPERSESSION_STATUS",
+      "product_context": "PAID_VERIFIED_REPORT"
+    },
+    {
+      "criticality": "IMPORTANT",
+      "family_id": "AUTHORIZATION_STATUS",
+      "product_context": "PAID_VERIFIED_REPORT"
+    },
+    {
+      "criticality": "CRITICAL",
+      "family_id": "PRIMARY_SOURCE_COVERAGE",
+      "product_context": "CUSTOM_AUDIT"
+    },
+    {
+      "criticality": "SUPPORTING",
+      "family_id": "SECONDARY_SUPPORT",
+      "product_context": "CUSTOM_AUDIT"
+    },
+    {
+      "criticality": "CRITICAL",
+      "family_id": "COUNTER_EVIDENCE_COVERAGE",
+      "product_context": "CUSTOM_AUDIT"
+    },
+    {
+      "criticality": "IMPORTANT",
+      "family_id": "NUMERICAL_RECONCILIATION",
+      "product_context": "CUSTOM_AUDIT"
+    },
+    {
+      "criticality": "IMPORTANT",
+      "family_id": "SOURCE_DEPENDENCY",
+      "product_context": "CUSTOM_AUDIT"
+    },
+    {
+      "criticality": "CONDITIONAL",
+      "family_id": "INDEPENDENT_REVIEW",
+      "product_context": "CUSTOM_AUDIT"
+    },
+    {
+      "criticality": "CRITICAL",
+      "family_id": "CORRECTION_STATUS",
+      "product_context": "CUSTOM_AUDIT"
+    },
+    {
+      "criticality": "CRITICAL",
+      "family_id": "SUPERSESSION_STATUS",
+      "product_context": "CUSTOM_AUDIT"
+    },
+    {
+      "criticality": "IMPORTANT",
+      "family_id": "AUTHORIZATION_STATUS",
+      "product_context": "CUSTOM_AUDIT"
+    },
+    {
+      "criticality": "CRITICAL",
+      "family_id": "PRIMARY_SOURCE_COVERAGE",
+      "product_context": "STRUCTURAL_MONITOR"
+    },
+    {
+      "criticality": "SUPPORTING",
+      "family_id": "SECONDARY_SUPPORT",
+      "product_context": "STRUCTURAL_MONITOR"
+    },
+    {
+      "criticality": "CRITICAL",
+      "family_id": "COUNTER_EVIDENCE_COVERAGE",
+      "product_context": "STRUCTURAL_MONITOR"
+    },
+    {
+      "criticality": "IMPORTANT",
+      "family_id": "NUMERICAL_RECONCILIATION",
+      "product_context": "STRUCTURAL_MONITOR"
+    },
+    {
+      "criticality": "IMPORTANT",
+      "family_id": "SOURCE_DEPENDENCY",
+      "product_context": "STRUCTURAL_MONITOR"
+    },
+    {
+      "criticality": "CONDITIONAL",
+      "family_id": "INDEPENDENT_REVIEW",
+      "product_context": "STRUCTURAL_MONITOR"
+    },
+    {
+      "criticality": "CRITICAL",
+      "family_id": "CORRECTION_STATUS",
+      "product_context": "STRUCTURAL_MONITOR"
+    },
+    {
+      "criticality": "CRITICAL",
+      "family_id": "SUPERSESSION_STATUS",
+      "product_context": "STRUCTURAL_MONITOR"
+    },
+    {
+      "criticality": "IMPORTANT",
+      "family_id": "AUTHORIZATION_STATUS",
+      "product_context": "STRUCTURAL_MONITOR"
+    }
+  ]
+}

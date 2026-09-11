@@ -1,0 +1,362 @@
+{
+  "criticality_hash": "13a50479fa4ba0ec9fff5de4138889bac448886acf164bf9090d217fba0158dc",
+  "dimension_delta_results": [
+    {
+      "age_days": null,
+      "delta_state": "NOT_ESTABLISHED",
+      "dimension_id": "TREASURY_STRUCTURE",
+      "evaluation_as_of": "2026-09-11T00:00:00Z",
+      "event_status": "NO_INVALIDATING_EVENT",
+      "evidence_basis": "INSUFFICIENT",
+      "evidence_strength": "UNRESOLVED",
+      "freshness_state": "NOT_APPLICABLE",
+      "last_update_at": null,
+      "lineage": {
+        "timeline_bucket_id": "STRATEGY-STRUCT-DAY-2026-06-29-TREASURY_STRUCTURE"
+      },
+      "reason": "No current Delta exists; absence of Delta is not staleness.",
+      "rule_id": "FRESH-DELTA-DEFAULT-R0",
+      "rule_type": "UNCONFIGURED",
+      "state_type": "DELTA",
+      "subject_id": "strategy"
+    },
+    {
+      "age_days": null,
+      "delta_state": "NOT_ESTABLISHED",
+      "dimension_id": "RESOURCE_PRESSURE",
+      "evaluation_as_of": "2026-09-11T00:00:00Z",
+      "event_status": "NO_INVALIDATING_EVENT",
+      "evidence_basis": "INSUFFICIENT",
+      "evidence_strength": "UNRESOLVED",
+      "freshness_state": "NOT_APPLICABLE",
+      "last_update_at": null,
+      "lineage": {
+        "timeline_bucket_id": "STRATEGY-STRUCT-DAY-2026-07-06-RESOURCE_PRESSURE"
+      },
+      "reason": "No current Delta exists; absence of Delta is not staleness.",
+      "rule_id": "FRESH-DELTA-DEFAULT-R0",
+      "rule_type": "UNCONFIGURED",
+      "state_type": "DELTA",
+      "subject_id": "strategy"
+    },
+    {
+      "age_days": null,
+      "delta_state": "NOT_ESTABLISHED",
+      "dimension_id": "NARRATIVE_DEPENDENCE",
+      "evaluation_as_of": "2026-09-11T00:00:00Z",
+      "event_status": "NO_INVALIDATING_EVENT",
+      "evidence_basis": "INSUFFICIENT",
+      "evidence_strength": "UNRESOLVED",
+      "freshness_state": "NOT_APPLICABLE",
+      "last_update_at": null,
+      "lineage": {
+        "timeline_bucket_id": "STRATEGY-STRUCT-DAY-2026-07-06-NARRATIVE_DEPENDENCE"
+      },
+      "reason": "No current Delta exists; absence of Delta is not staleness.",
+      "rule_id": "FRESH-DELTA-DEFAULT-R0",
+      "rule_type": "UNCONFIGURED",
+      "state_type": "DELTA",
+      "subject_id": "strategy"
+    },
+    {
+      "age_days": null,
+      "delta_state": "NOT_ESTABLISHED",
+      "dimension_id": "SOURCE_DEPENDENCY",
+      "evaluation_as_of": "2026-09-11T00:00:00Z",
+      "event_status": "NO_INVALIDATING_EVENT",
+      "evidence_basis": "INSUFFICIENT",
+      "evidence_strength": "UNRESOLVED",
+      "freshness_state": "NOT_APPLICABLE",
+      "last_update_at": null,
+      "lineage": {
+        "timeline_bucket_id": "STRATEGY-STRUCT-DAY-2026-09-08-SOURCE_DEPENDENCY"
+      },
+      "reason": "No current Delta exists; absence of Delta is not staleness.",
+      "rule_id": "FRESH-DELTA-DEFAULT-R0",
+      "rule_type": "UNCONFIGURED",
+      "state_type": "DELTA",
+      "subject_id": "strategy"
+    }
+  ],
+  "dimension_level_results": [
+    {
+      "age_days": 74,
+      "dimension_id": "TREASURY_STRUCTURE",
+      "evaluation_as_of": "2026-09-11T00:00:00Z",
+      "event_status": "INVALIDATING_EVENT",
+      "evidence_basis": "REPORTING_SCHEDULE",
+      "evidence_strength": "MODERATE",
+      "freshness_state": "EVENT_INVALIDATED",
+      "last_update_at": "2026-06-29T00:00:00Z",
+      "level_state": "HYBRID_DEPENDENCE",
+      "lineage": {
+        "event_rules": [
+          {
+            "action": "INVALIDATE_BOTH",
+            "event_id": "TL-STRATEGY-EE-SUPERSESSION_STATUS",
+            "event_type": "SUPERSESSION",
+            "rule_id": "EV-010"
+          }
+        ],
+        "timeline_bucket_id": "STRATEGY-STRUCT-DAY-2026-06-29-TREASURY_STRUCTURE"
+      },
+      "reason": "Corporate treasury policy is tied to periodic SEC/company reporting and material disclosure events; cadence data is sparse, so the rule is a method-pilot reporting-period rule rather than empirical optimization.",
+      "rule_id": "FRESH-PCT-TREASURY-LEVEL",
+      "rule_type": "REPORTING_PERIOD",
+      "state_type": "LEVEL",
+      "subject_id": "strategy"
+    },
+    {
+      "age_days": 67,
+      "dimension_id": "RESOURCE_PRESSURE",
+      "evaluation_as_of": "2026-09-11T00:00:00Z",
+      "event_status": "INVALIDATING_EVENT",
+      "evidence_basis": "INSUFFICIENT",
+      "evidence_strength": "UNRESOLVED",
+      "freshness_state": "EVENT_INVALIDATED",
+      "last_update_at": "2026-07-06T00:00:00Z",
+      "level_state": "MATERIAL_DEPENDENCE",
+      "lineage": {
+        "event_rules": [
+          {
+            "action": "INVALIDATE_BOTH",
+            "event_id": "TL-STRATEGY-EE-SUPERSESSION_STATUS",
+            "event_type": "SUPERSESSION",
+            "rule_id": "EV-010"
+          }
+        ],
+        "timeline_bucket_id": "STRATEGY-STRUCT-DAY-2026-07-06-RESOURCE_PRESSURE"
+      },
+      "reason": "Insufficient cadence data for a configured v0.1 rule.",
+      "rule_id": "FRESH-PUBLIC-COMPANY-TREASURY-RESOURCE_PRESSURE-LEVEL-UNCONFIGURED",
+      "rule_type": "UNCONFIGURED",
+      "state_type": "LEVEL",
+      "subject_id": "strategy"
+    },
+    {
+      "age_days": 67,
+      "dimension_id": "NARRATIVE_DEPENDENCE",
+      "evaluation_as_of": "2026-09-11T00:00:00Z",
+      "event_status": "INVALIDATING_EVENT",
+      "evidence_basis": "INSUFFICIENT",
+      "evidence_strength": "UNRESOLVED",
+      "freshness_state": "EVENT_INVALIDATED",
+      "last_update_at": "2026-07-06T00:00:00Z",
+      "level_state": "MATERIAL_DEPENDENCE",
+      "lineage": {
+        "event_rules": [
+          {
+            "action": "INVALIDATE_BOTH",
+            "event_id": "TL-STRATEGY-EE-SUPERSESSION_STATUS",
+            "event_type": "SUPERSESSION",
+            "rule_id": "EV-010"
+          }
+        ],
+        "timeline_bucket_id": "STRATEGY-STRUCT-DAY-2026-07-06-NARRATIVE_DEPENDENCE"
+      },
+      "reason": "Insufficient cadence data for a configured v0.1 rule.",
+      "rule_id": "FRESH-PUBLIC-COMPANY-TREASURY-NARRATIVE_DEPENDENCE-LEVEL-UNCONFIGURED",
+      "rule_type": "UNCONFIGURED",
+      "state_type": "LEVEL",
+      "subject_id": "strategy"
+    },
+    {
+      "age_days": 3,
+      "dimension_id": "SOURCE_DEPENDENCY",
+      "evaluation_as_of": "2026-09-11T00:00:00Z",
+      "event_status": "NO_INVALIDATING_EVENT",
+      "evidence_basis": "INSUFFICIENT",
+      "evidence_strength": "UNRESOLVED",
+      "freshness_state": "CURRENT",
+      "last_update_at": "2026-09-08T00:00:00Z",
+      "level_state": "SOURCE_DEPENDENT",
+      "lineage": {
+        "event_rules": [],
+        "timeline_bucket_id": "STRATEGY-STRUCT-DAY-2026-09-08-SOURCE_DEPENDENCY"
+      },
+      "reason": "Insufficient cadence data for a configured v0.1 rule.",
+      "rule_id": "FRESH-PUBLIC-COMPANY-TREASURY-SOURCE_DEPENDENCY-LEVEL-UNCONFIGURED",
+      "rule_type": "UNCONFIGURED",
+      "state_type": "LEVEL",
+      "subject_id": "strategy"
+    }
+  ],
+  "engine_version": "RDL_FRESHNESS_ENGINE_v0.1",
+  "evaluation_as_of": "2026-09-11T00:00:00Z",
+  "event_rules_hash": "9db66db75f2a3024a5028cf7041b5012cdda6fe333113e7c95b809b301f05f33",
+  "evidence_family_results": [
+    {
+      "age_days": 3,
+      "criticality": "CRITICAL",
+      "evaluation_as_of": "2026-09-11T00:00:00Z",
+      "family_id": "PRIMARY_SOURCE_COVERAGE",
+      "freshness_state": "CURRENT",
+      "last_update_at": "2026-09-08T00:00:00Z",
+      "lineage": {
+        "timeline_bucket_id": "STRATEGY-EVID-DAY-2026-09-10-PRIMARY_SOURCE_COVERAGE"
+      },
+      "rule_id": "FRESH-EVIDENCE-PRIMARY_SOURCE_COVERAGE-HYBRID",
+      "rule_type": "HYBRID_TIME_EVENT",
+      "subject_id": "strategy"
+    },
+    {
+      "age_days": null,
+      "criticality": "SUPPORTING",
+      "evaluation_as_of": "2026-09-11T00:00:00Z",
+      "family_id": "SECONDARY_SUPPORT",
+      "freshness_state": "POLICY_NOT_CONFIGURED",
+      "last_update_at": null,
+      "lineage": {
+        "timeline_bucket_id": "STRATEGY-EVID-DAY-2026-09-10-SECONDARY_SUPPORT"
+      },
+      "rule_id": "FRESH-EVIDENCE-SECONDARY_SUPPORT-UNCONFIGURED",
+      "rule_type": "UNCONFIGURED",
+      "subject_id": "strategy"
+    },
+    {
+      "age_days": 3,
+      "criticality": "CRITICAL",
+      "evaluation_as_of": "2026-09-11T00:00:00Z",
+      "family_id": "COUNTER_EVIDENCE_COVERAGE",
+      "freshness_state": "CURRENT",
+      "last_update_at": "2026-09-08T00:00:00Z",
+      "lineage": {
+        "timeline_bucket_id": "STRATEGY-EVID-DAY-2026-09-10-COUNTER_EVIDENCE_COVERAGE"
+      },
+      "rule_id": "FRESH-EVIDENCE-COUNTER_EVIDENCE_COVERAGE-HYBRID",
+      "rule_type": "HYBRID_TIME_EVENT",
+      "subject_id": "strategy"
+    },
+    {
+      "age_days": 3,
+      "criticality": "IMPORTANT",
+      "evaluation_as_of": "2026-09-11T00:00:00Z",
+      "family_id": "NUMERICAL_RECONCILIATION",
+      "freshness_state": "POLICY_NOT_CONFIGURED",
+      "last_update_at": "2026-09-08T00:00:00Z",
+      "lineage": {
+        "timeline_bucket_id": "STRATEGY-EVID-DAY-2026-09-10-NUMERICAL_RECONCILIATION"
+      },
+      "rule_id": "FRESH-EVIDENCE-NUMERICAL_RECONCILIATION-UNCONFIGURED",
+      "rule_type": "UNCONFIGURED",
+      "subject_id": "strategy"
+    },
+    {
+      "age_days": 3,
+      "criticality": "IMPORTANT",
+      "evaluation_as_of": "2026-09-11T00:00:00Z",
+      "family_id": "SOURCE_DEPENDENCY",
+      "freshness_state": "POLICY_NOT_CONFIGURED",
+      "last_update_at": "2026-09-08T00:00:00Z",
+      "lineage": {
+        "timeline_bucket_id": "STRATEGY-EVID-DAY-2026-09-10-SOURCE_DEPENDENCY"
+      },
+      "rule_id": "FRESH-EVIDENCE-SOURCE_DEPENDENCY-UNCONFIGURED",
+      "rule_type": "UNCONFIGURED",
+      "subject_id": "strategy"
+    },
+    {
+      "age_days": 3,
+      "criticality": "CONDITIONAL",
+      "evaluation_as_of": "2026-09-11T00:00:00Z",
+      "family_id": "INDEPENDENT_REVIEW",
+      "freshness_state": "POLICY_NOT_CONFIGURED",
+      "last_update_at": "2026-09-08T00:00:00Z",
+      "lineage": {
+        "timeline_bucket_id": "STRATEGY-EVID-DAY-2026-09-10-INDEPENDENT_REVIEW"
+      },
+      "rule_id": "FRESH-EVIDENCE-INDEPENDENT_REVIEW-UNCONFIGURED",
+      "rule_type": "UNCONFIGURED",
+      "subject_id": "strategy"
+    },
+    {
+      "age_days": null,
+      "criticality": "CRITICAL",
+      "evaluation_as_of": "2026-09-11T00:00:00Z",
+      "family_id": "CORRECTION_STATUS",
+      "freshness_state": "CURRENT",
+      "last_update_at": null,
+      "lineage": {
+        "timeline_bucket_id": "STRATEGY-EVID-DAY-2026-09-10-CORRECTION_STATUS"
+      },
+      "rule_id": "FRESH-EVIDENCE-CORRECTION_STATUS-EVENT-ONLY",
+      "rule_type": "EVENT_ONLY",
+      "subject_id": "strategy"
+    },
+    {
+      "age_days": 3,
+      "criticality": "CRITICAL",
+      "evaluation_as_of": "2026-09-11T00:00:00Z",
+      "family_id": "SUPERSESSION_STATUS",
+      "freshness_state": "CURRENT",
+      "last_update_at": "2026-09-08T00:00:00Z",
+      "lineage": {
+        "timeline_bucket_id": "STRATEGY-EVID-DAY-2026-09-10-SUPERSESSION_STATUS"
+      },
+      "rule_id": "FRESH-EVIDENCE-SUPERSESSION_STATUS-EVENT-ONLY",
+      "rule_type": "EVENT_ONLY",
+      "subject_id": "strategy"
+    },
+    {
+      "age_days": 1,
+      "criticality": "IMPORTANT",
+      "evaluation_as_of": "2026-09-11T00:00:00Z",
+      "family_id": "AUTHORIZATION_STATUS",
+      "freshness_state": "POLICY_NOT_CONFIGURED",
+      "last_update_at": "2026-09-10T14:18:35.508863Z",
+      "lineage": {
+        "timeline_bucket_id": "STRATEGY-EVID-DAY-2026-09-10-AUTHORIZATION_STATUS"
+      },
+      "rule_id": "FRESH-EVIDENCE-AUTHORIZATION_STATUS-UNCONFIGURED",
+      "rule_type": "UNCONFIGURED",
+      "subject_id": "strategy"
+    }
+  ],
+  "input_bundle_hash": "583968ac3263a1361e240f9f3ed46cd0c5b83c08ac082f818a1fe5a2a0529920",
+  "policy_version": "RDL_FRESHNESS_v0.1",
+  "precedence_hash": "9141499caa91ef634b5e56e8e07644a19c83edc8ad433db58274cf51a8e37ae4",
+  "product_context": "PUBLIC_RESEARCH",
+  "profile_hash": "7326aee19c3606a12233e08233cdc4ac072053d7cf96c6997343ba2b4a601f28",
+  "release_result": {
+    "blocking_dimensions": [
+      "TREASURY_STRUCTURE",
+      "RESOURCE_PRESSURE",
+      "NARRATIVE_DEPENDENCE"
+    ],
+    "blocking_evidence_families": [],
+    "limitations": [
+      "SECONDARY_SUPPORT",
+      "NUMERICAL_RECONCILIATION",
+      "SOURCE_DEPENDENCY",
+      "INDEPENDENT_REVIEW",
+      "AUTHORIZATION_STATUS"
+    ],
+    "next_refresh_reason": "TIME_WINDOW",
+    "paid_delivery": "NOT_AUTHORIZED_BY_FRESHNESS_ALONE",
+    "release_context": "PUBLIC_RESEARCH",
+    "release_freshness_state": "EVENT_INVALIDATED"
+  },
+  "subject_class": "PUBLIC_COMPANY_TREASURY",
+  "subject_freshness_summary": {
+    "blocking_dimensions": [
+      "TREASURY_STRUCTURE",
+      "RESOURCE_PRESSURE",
+      "NARRATIVE_DEPENDENCE"
+    ],
+    "blocking_evidence_families": [],
+    "limitations": [
+      "SECONDARY_SUPPORT",
+      "NUMERICAL_RECONCILIATION",
+      "SOURCE_DEPENDENCY",
+      "INDEPENDENT_REVIEW",
+      "AUTHORIZATION_STATUS"
+    ],
+    "next_refresh_reason": "TIME_WINDOW",
+    "paid_delivery": "NOT_AUTHORIZED_BY_FRESHNESS_ALONE",
+    "release_context": "PUBLIC_RESEARCH",
+    "release_freshness_state": "EVENT_INVALIDATED"
+  },
+  "subject_id": "strategy",
+  "subject_key": "strategy",
+  "subject_label": "Strategy 2026"
+}

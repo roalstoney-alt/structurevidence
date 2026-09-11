@@ -1,0 +1,285 @@
+{
+  "policy_version": "RDL_FRESHNESS_v0.1",
+  "profiles": [
+    {
+      "dimension_id": "TREASURY_STRUCTURE",
+      "event_triggers": [
+        "TREASURY_POLICY_CHANGE",
+        "TREASURY_TRANSACTION",
+        "MATERIAL_DISCLOSURE",
+        "CORRECTION",
+        "SUPERSESSION"
+      ],
+      "evidence_basis": "REPORTING_SCHEDULE",
+      "evidence_strength": "MODERATE",
+      "rationale": "Corporate treasury policy is tied to periodic SEC/company reporting and material disclosure events; cadence data is sparse, so the rule is a method-pilot reporting-period rule rather than empirical optimization.",
+      "required_evidence_families": [
+        "PRIMARY_SOURCE_COVERAGE",
+        "CORRECTION_STATUS",
+        "SUPERSESSION_STATUS"
+      ],
+      "rule_id": "FRESH-PCT-TREASURY-LEVEL",
+      "state_type": "LEVEL",
+      "status": "CONFIGURED",
+      "subject_class": "PUBLIC_COMPANY_TREASURY",
+      "time_rule": {
+        "aging_boundary_days": 180,
+        "current_boundary_days": 120,
+        "refresh_boundary_days": 240,
+        "reporting_basis": "quarterly plus filing lag",
+        "rule_type": "REPORTING_PERIOD"
+      }
+    },
+    {
+      "dimension_id": "SUPPLY_STRUCTURE",
+      "event_triggers": [
+        "SUPPLY_MECHANISM_CHANGE",
+        "PROTOCOL_UPGRADE",
+        "CORRECTION",
+        "SUPERSESSION"
+      ],
+      "evidence_basis": "EXPERT_METHOD_RULE",
+      "evidence_strength": "WEAK",
+      "rationale": "Supply mechanics often persist between protocol changes; sparse current data prevents empirical cadence classification, so v0.1 uses broad bands plus event invalidation.",
+      "required_evidence_families": [
+        "PRIMARY_SOURCE_COVERAGE",
+        "CORRECTION_STATUS",
+        "SUPERSESSION_STATUS"
+      ],
+      "rule_id": "FRESH-L1-SUPPLY-LEVEL",
+      "state_type": "LEVEL",
+      "status": "CONFIGURED",
+      "subject_class": "L1_NETWORK",
+      "time_rule": {
+        "aging_boundary_days": 270,
+        "current_boundary_days": 180,
+        "refresh_boundary_days": 365,
+        "rule_type": "HYBRID_TIME_EVENT"
+      }
+    },
+    {
+      "dimension_id": "VALIDATOR_DISTRIBUTION",
+      "event_triggers": [
+        "VALIDATOR_SET_CHANGE",
+        "GOVERNANCE_CHANGE",
+        "PROTOCOL_UPGRADE",
+        "CLIENT_DIVERSITY_CHANGE",
+        "CORRECTION",
+        "SUPERSESSION"
+      ],
+      "evidence_basis": "EXPERT_METHOD_RULE",
+      "evidence_strength": "WEAK",
+      "rationale": "Validator distribution can change faster than persistent architecture, but current cross-subject cadence is sparse. The rule is conservative and event-sensitive.",
+      "required_evidence_families": [
+        "PRIMARY_SOURCE_COVERAGE",
+        "COUNTER_EVIDENCE_COVERAGE",
+        "CORRECTION_STATUS",
+        "SUPERSESSION_STATUS"
+      ],
+      "rule_id": "FRESH-L1-VALIDATOR-LEVEL",
+      "state_type": "LEVEL",
+      "status": "CONFIGURED",
+      "subject_class": "L1_NETWORK",
+      "time_rule": {
+        "aging_boundary_days": 180,
+        "current_boundary_days": 120,
+        "refresh_boundary_days": 240,
+        "rule_type": "HYBRID_TIME_EVENT"
+      }
+    },
+    {
+      "dimension_id": "GOVERNANCE_STRUCTURE",
+      "event_triggers": [
+        "GOVERNANCE_CHANGE",
+        "PROTOCOL_UPGRADE",
+        "CORRECTION",
+        "SUPERSESSION"
+      ],
+      "evidence_basis": "EXPERT_METHOD_RULE",
+      "evidence_strength": "WEAK",
+      "rationale": "Governance mechanism descriptions persist until a verified governance or protocol event changes the mechanism.",
+      "required_evidence_families": [
+        "PRIMARY_SOURCE_COVERAGE",
+        "CORRECTION_STATUS",
+        "SUPERSESSION_STATUS"
+      ],
+      "rule_id": "FRESH-L1-GOVERNANCE-LEVEL",
+      "state_type": "LEVEL",
+      "status": "CONFIGURED",
+      "subject_class": "L1_NETWORK",
+      "time_rule": {
+        "rule_type": "EVENT_ONLY"
+      }
+    },
+    {
+      "dimension_id": "*",
+      "event_triggers": [
+        "CORRECTION",
+        "SUPERSESSION"
+      ],
+      "evidence_basis": "INSUFFICIENT",
+      "evidence_strength": "UNRESOLVED",
+      "rationale": "Comparison-based Delta history is not yet dense enough for v0.1 time windows. Delta absence is not staleness.",
+      "required_evidence_families": [],
+      "rule_id": "FRESH-DELTA-DEFAULT-R0",
+      "state_type": "DELTA",
+      "status": "UNCONFIGURED",
+      "subject_class": "*",
+      "time_rule": {
+        "rule_type": "UNCONFIGURED"
+      }
+    },
+    {
+      "dimension_id": "RESOURCE_PRESSURE",
+      "event_triggers": [
+        "CORRECTION",
+        "SUPERSESSION"
+      ],
+      "evidence_basis": "INSUFFICIENT",
+      "evidence_strength": "UNRESOLVED",
+      "rationale": "Insufficient cadence data for a configured v0.1 rule.",
+      "required_evidence_families": [],
+      "rule_id": "FRESH-PUBLIC-COMPANY-TREASURY-RESOURCE_PRESSURE-LEVEL-UNCONFIGURED",
+      "state_type": "LEVEL",
+      "status": "UNCONFIGURED",
+      "subject_class": "PUBLIC_COMPANY_TREASURY",
+      "time_rule": {
+        "rule_type": "UNCONFIGURED"
+      }
+    },
+    {
+      "dimension_id": "NARRATIVE_DEPENDENCE",
+      "event_triggers": [
+        "CORRECTION",
+        "SUPERSESSION"
+      ],
+      "evidence_basis": "INSUFFICIENT",
+      "evidence_strength": "UNRESOLVED",
+      "rationale": "Insufficient cadence data for a configured v0.1 rule.",
+      "required_evidence_families": [],
+      "rule_id": "FRESH-PUBLIC-COMPANY-TREASURY-NARRATIVE_DEPENDENCE-LEVEL-UNCONFIGURED",
+      "state_type": "LEVEL",
+      "status": "UNCONFIGURED",
+      "subject_class": "PUBLIC_COMPANY_TREASURY",
+      "time_rule": {
+        "rule_type": "UNCONFIGURED"
+      }
+    },
+    {
+      "dimension_id": "SOURCE_DEPENDENCY",
+      "event_triggers": [
+        "CORRECTION",
+        "SUPERSESSION"
+      ],
+      "evidence_basis": "INSUFFICIENT",
+      "evidence_strength": "UNRESOLVED",
+      "rationale": "Insufficient cadence data for a configured v0.1 rule.",
+      "required_evidence_families": [],
+      "rule_id": "FRESH-PUBLIC-COMPANY-TREASURY-SOURCE_DEPENDENCY-LEVEL-UNCONFIGURED",
+      "state_type": "LEVEL",
+      "status": "UNCONFIGURED",
+      "subject_class": "PUBLIC_COMPANY_TREASURY",
+      "time_rule": {
+        "rule_type": "UNCONFIGURED"
+      }
+    },
+    {
+      "dimension_id": "UTILITY_STRUCTURE",
+      "event_triggers": [
+        "CORRECTION",
+        "SUPERSESSION"
+      ],
+      "evidence_basis": "INSUFFICIENT",
+      "evidence_strength": "UNRESOLVED",
+      "rationale": "Insufficient cadence data for a configured v0.1 rule.",
+      "required_evidence_families": [],
+      "rule_id": "FRESH-L1-NETWORK-UTILITY_STRUCTURE-LEVEL-UNCONFIGURED",
+      "state_type": "LEVEL",
+      "status": "UNCONFIGURED",
+      "subject_class": "L1_NETWORK",
+      "time_rule": {
+        "rule_type": "UNCONFIGURED"
+      }
+    },
+    {
+      "dimension_id": "RESOURCE_PRESSURE",
+      "event_triggers": [
+        "CORRECTION",
+        "SUPERSESSION"
+      ],
+      "evidence_basis": "INSUFFICIENT",
+      "evidence_strength": "UNRESOLVED",
+      "rationale": "Insufficient cadence data for a configured v0.1 rule.",
+      "required_evidence_families": [],
+      "rule_id": "FRESH-L1-NETWORK-RESOURCE_PRESSURE-LEVEL-UNCONFIGURED",
+      "state_type": "LEVEL",
+      "status": "UNCONFIGURED",
+      "subject_class": "L1_NETWORK",
+      "time_rule": {
+        "rule_type": "UNCONFIGURED"
+      }
+    },
+    {
+      "dimension_id": "SETTLEMENT_ROLE",
+      "event_triggers": [
+        "CORRECTION",
+        "SUPERSESSION"
+      ],
+      "evidence_basis": "INSUFFICIENT",
+      "evidence_strength": "UNRESOLVED",
+      "rationale": "Insufficient cadence data for a configured v0.1 rule.",
+      "required_evidence_families": [],
+      "rule_id": "FRESH-L1-NETWORK-SETTLEMENT_ROLE-LEVEL-UNCONFIGURED",
+      "state_type": "LEVEL",
+      "status": "UNCONFIGURED",
+      "subject_class": "L1_NETWORK",
+      "time_rule": {
+        "rule_type": "UNCONFIGURED"
+      }
+    },
+    {
+      "dimension_id": "TREASURY_STRUCTURE",
+      "event_triggers": [
+        "CORRECTION",
+        "SUPERSESSION"
+      ],
+      "evidence_basis": "INSUFFICIENT",
+      "evidence_strength": "UNRESOLVED",
+      "rationale": "Insufficient cadence data for a configured v0.1 rule.",
+      "required_evidence_families": [],
+      "rule_id": "FRESH-L1-NETWORK-TREASURY_STRUCTURE-LEVEL-UNCONFIGURED",
+      "state_type": "LEVEL",
+      "status": "UNCONFIGURED",
+      "subject_class": "L1_NETWORK",
+      "time_rule": {
+        "rule_type": "UNCONFIGURED"
+      }
+    },
+    {
+      "dimension_id": "FOUNDATION_DEPENDENCE",
+      "event_triggers": [
+        "CORRECTION",
+        "SUPERSESSION"
+      ],
+      "evidence_basis": "INSUFFICIENT",
+      "evidence_strength": "UNRESOLVED",
+      "rationale": "Insufficient cadence data for a configured v0.1 rule.",
+      "required_evidence_families": [],
+      "rule_id": "FRESH-L1-NETWORK-FOUNDATION_DEPENDENCE-LEVEL-UNCONFIGURED",
+      "state_type": "LEVEL",
+      "status": "UNCONFIGURED",
+      "subject_class": "L1_NETWORK",
+      "time_rule": {
+        "rule_type": "UNCONFIGURED"
+      }
+    }
+  ],
+  "time_rule_types": [
+    "FIXED_WINDOW",
+    "SOURCE_CADENCE_MULTIPLE",
+    "REPORTING_PERIOD",
+    "EVENT_ONLY",
+    "HYBRID_TIME_EVENT",
+    "UNCONFIGURED"
+  ]
+}

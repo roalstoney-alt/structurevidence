@@ -1,7 +1,7 @@
 {
   "aggregation_rule_version": "GDR_SE_AGGREGATION_v0.1-R1.1",
-  "authorization": "HUMAN_REVIEW_REQUIRED",
-  "authorization_id": "GDR-SE-AUTH-strategy-3bb9747944234d87-R1.1",
+  "authorization": "ALLOW_WITH_LIMITATIONS",
+  "authorization_id": "GDR-SE-AUTH-strategy-59bd0b24fafb3a04-R1.1",
   "config_hashes": {
     "aggregation_rules_sha256": "d716177c3161940a25ef7c77367a10d124ebb7f0d42bc571737009b4cdf91528",
     "freshness_config_sha256": "e486d1cde399acf6319db7f09a7b2849c52ae1604dd87360312e162517c9b762",
@@ -20,9 +20,9 @@
     "no_action_consequence": "Historical research may remain available, but current release or paid delivery remains blocked until runtime gates resolve.",
     "rejected_alternative": "The alternative that SEMANTIC_TENSION_BUT_RECONCILABLE should be treated as release authorization was rejected."
   },
-  "created_at": "2026-09-10T14:18:35.508863Z",
-  "evaluation_as_of": "2026-09-10T14:18:35.507637Z",
-  "evaluation_id": "GDR-SE-EVAL-3bb9747944234d87-R1.1",
+  "created_at": "2026-09-11T02:44:39.155189Z",
+  "evaluation_as_of": "2026-09-11T02:44:39.154163Z",
+  "evaluation_id": "GDR-SE-EVAL-59bd0b24fafb3a04-R1.1",
   "evaluation_mode": "RUNTIME_EVALUATED",
   "evidence_envelope": {
     "artifacts": [
@@ -123,7 +123,7 @@
     "envelope_id": "GDR-SE-ENV-strategy-R1.1",
     "immutable": true,
     "observation_registry_sha256": "1c1f85ec2cae8908c9cb53a2c36a8178795dfbfb9b86bea36389cf1c24db00e1",
-    "record_created_at": "2026-09-10T14:18:35.508863Z",
+    "record_created_at": "2026-09-11T02:44:39.155189Z",
     "report_sha256": "416af04d120a0ee87046dee426ae0404c0fb3ca47cbe7f83e4d986ced3179e68",
     "research_id": "ECL.COMPANY.STRATEGY_INC.2026.001",
     "rtp_manifest_sha256": "1769ec5adebc32ff3e3ecfd9cc1ea527ef30e025b7e559539266c331c147669a",
@@ -149,7 +149,7 @@
           "source_coverage"
         ]
       },
-      "evaluated_at": "2026-09-10T14:18:35.507637Z",
+      "evaluated_at": "2026-09-11T02:44:39.154163Z",
       "evidence_refs": [
         "research/PUBLICATION_PACKAGE_MANIFEST_EN.json"
       ],
@@ -178,7 +178,7 @@
         "present_artifacts": 7,
         "required_artifacts": 7
       },
-      "evaluated_at": "2026-09-10T14:18:35.507637Z",
+      "evaluated_at": "2026-09-11T02:44:39.154163Z",
       "evidence_refs": [
         "research/PUBLICATION_PACKAGE_MANIFEST_EN.json",
         "research/Strategy_2026_Public_Evidence_Research_Report_v0.1_EN.md",
@@ -200,20 +200,24 @@
     },
     {
       "computed_facts": {
-        "category": "CORPORATE_TREASURY",
-        "policy_status": "UNCONFIGURED",
-        "threshold_configured": false
+        "configured_profile_count": 4,
+        "input_bundle_hash": "583968ac3263a1361e240f9f3ed46cd0c5b83c08ac082f818a1fe5a2a0529920",
+        "policy_version": "RDL_FRESHNESS_v0.1",
+        "record_path": "research/freshness/strategy/FRESHNESS_EVALUATION_v0.1.json",
+        "release_freshness_state": "EVENT_INVALIDATED",
+        "subject": "strategy"
       },
-      "evaluated_at": "2026-09-10T14:18:35.507637Z",
+      "evaluated_at": "2026-09-11T02:44:39.154163Z",
       "evidence_refs": [
-        "gdr-se/config/category_freshness.json"
+        "rdl/freshness/gdr_g3_adapter.json",
+        "research/freshness/strategy/FRESHNESS_EVALUATION_v0.1.json"
       ],
       "gate_id": "G3_EVIDENCE_FRESHNESS",
       "limitations": [],
-      "reason": "RDL freshness policy not configured for category CORPORATE_TREASURY.",
+      "reason": "G3 consumed RDL Freshness Policy v0.1 release state EVENT_INVALIDATED.",
       "rule_version": "GDR_SE_RUNTIME_RULES_v0.1-R1.1",
       "severity": "SOFT",
-      "status": "UNRESOLVED",
+      "status": "FAIL",
       "validator": "validate_g3_freshness"
     },
     {
@@ -224,7 +228,7 @@
         "source_coverage": "PARTIAL",
         "unique_source_ids": 12
       },
-      "evaluated_at": "2026-09-10T14:18:35.507637Z",
+      "evaluated_at": "2026-09-11T02:44:39.154163Z",
       "evidence_refs": [
         "evidence-freeze/S6.1a/SOURCE_DEPENDENCY_GRAPH_v2.json"
       ],
@@ -242,7 +246,7 @@
       "computed_facts": {
         "total": 0
       },
-      "evaluated_at": "2026-09-10T14:18:35.507637Z",
+      "evaluated_at": "2026-09-11T02:44:39.154163Z",
       "evidence_refs": [],
       "gate_id": "G5_NUMERICAL_RECONCILIATION",
       "limitations": [],
@@ -258,7 +262,7 @@
         "human_review_required": false,
         "material_inconsistency": "NO"
       },
-      "evaluated_at": "2026-09-10T14:18:35.507637Z",
+      "evaluated_at": "2026-09-11T02:44:39.154163Z",
       "evidence_refs": [],
       "gate_id": "G6_ECL_CONSISTENCY",
       "limitations": [],
@@ -279,7 +283,7 @@
         "placeholder_warning": false,
         "targeted_searches": 6
       },
-      "evaluated_at": "2026-09-10T14:18:35.507637Z",
+      "evaluated_at": "2026-09-11T02:44:39.154163Z",
       "evidence_refs": [
         "evidence-freeze/S6.1a/COUNTER_EVIDENCE_SEARCH_LOG_v3.json",
         "evidence-freeze/S6.1a/HYPOTHESIS_ASSESSMENTS_v2.json"
@@ -296,7 +300,7 @@
       "computed_facts": {
         "review_required": false
       },
-      "evaluated_at": "2026-09-10T14:18:35.507637Z",
+      "evaluated_at": "2026-09-11T02:44:39.154163Z",
       "evidence_refs": [
         null
       ],
@@ -313,7 +317,7 @@
         "entity_response_status": null,
         "human_review_required": false
       },
-      "evaluated_at": "2026-09-10T14:18:35.507637Z",
+      "evaluated_at": "2026-09-11T02:44:39.154163Z",
       "evidence_refs": [],
       "gate_id": "G9_SENSITIVITY_RIGHT_OF_REPLY",
       "limitations": [],
@@ -329,7 +333,7 @@
         "publication_status": "METHOD PILOT",
         "supersession_status": "CURRENT"
       },
-      "evaluated_at": "2026-09-10T14:18:35.507637Z",
+      "evaluated_at": "2026-09-11T02:44:39.154163Z",
       "evidence_refs": [],
       "gate_id": "G10_EXPIRY_SUPERSESSION",
       "limitations": [],
@@ -341,15 +345,15 @@
     }
   ],
   "gdr_se_version": "GDR_SE_v0.1",
-  "input_bundle_sha256": "3bb9747944234d875d224f8dca5dca0fc811cb39fb61a3f8576f9790f5791295",
+  "input_bundle_sha256": "59bd0b24fafb3a0438aa70dd9e2c96ad241d3e8d8f90d4140227a1256f0f9375",
   "limitations": [
     "Legacy provenance hash fallback is documented; this is not a PASS.",
     "Legacy/profile schema is field-validated only.",
     "Multiple URLs are not independent sources."
   ],
   "profile": "STRATEGY_LEGACY_METHOD_PILOT",
-  "public_status": "UNDER_REVIEW",
-  "record_created_at": "2026-09-10T14:18:35.508863Z",
+  "public_status": "CURRENT_WITH_LIMITATIONS",
+  "record_created_at": "2026-09-11T02:44:39.155189Z",
   "report_id": "Strategy_2026_Public_Evidence_Research_Report_v0.1",
   "report_version": "Public v0.1",
   "research_id": "ECL.COMPANY.STRATEGY_INC.2026.001",

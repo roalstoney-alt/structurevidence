@@ -1,7 +1,7 @@
 {
   "aggregation_rule_version": "GDR_SE_AGGREGATION_v0.1-R1.1",
-  "authorization": "HUMAN_REVIEW_REQUIRED",
-  "authorization_id": "GDR-SE-AUTH-TRX-dbeac1d0ee474477-R1.1",
+  "authorization": "ALLOW_WITH_LIMITATIONS",
+  "authorization_id": "GDR-SE-AUTH-TRX-f92a23e2573bc726-R1.1",
   "config_hashes": {
     "aggregation_rules_sha256": "d716177c3161940a25ef7c77367a10d124ebb7f0d42bc571737009b4cdf91528",
     "freshness_config_sha256": "e486d1cde399acf6319db7f09a7b2849c52ae1604dd87360312e162517c9b762",
@@ -20,9 +20,9 @@
     "no_action_consequence": "Historical research may remain available, but current release or paid delivery remains blocked until runtime gates resolve.",
     "rejected_alternative": "The alternative that TEMPORAL_CHANGE should be treated as release authorization was rejected."
   },
-  "created_at": "2026-09-10T14:18:35.542590Z",
-  "evaluation_as_of": "2026-09-10T14:18:35.507637Z",
-  "evaluation_id": "GDR-SE-EVAL-dbeac1d0ee474477-R1.1",
+  "created_at": "2026-09-11T02:44:39.192099Z",
+  "evaluation_as_of": "2026-09-11T02:44:39.154163Z",
+  "evaluation_id": "GDR-SE-EVAL-f92a23e2573bc726-R1.1",
   "evaluation_mode": "RUNTIME_EVALUATED",
   "evidence_envelope": {
     "artifacts": [
@@ -123,7 +123,7 @@
     "envelope_id": "GDR-SE-ENV-TRX-R1.1",
     "immutable": true,
     "observation_registry_sha256": "b7f50d956c227022a9197646d662b0b5b2d2739d95b4ae3c27ba771303c34de8",
-    "record_created_at": "2026-09-10T14:18:35.542590Z",
+    "record_created_at": "2026-09-11T02:44:39.192099Z",
     "report_sha256": "f09d1bceb5fa80b13ba677a313d0877dd224d2b09343d25e8660c9d764a009eb",
     "research_id": "SE.ASSET.TRX.2026.001-R1",
     "rtp_manifest_sha256": "6422d6cec5593efe12c1c349e6a852becfc51246e0e8102afb45c1ed58ab818e",
@@ -149,7 +149,7 @@
           "source_coverage"
         ]
       },
-      "evaluated_at": "2026-09-10T14:18:35.507637Z",
+      "evaluated_at": "2026-09-11T02:44:39.154163Z",
       "evidence_refs": [
         "evidence-freeze/DIGITAL-ASSET-BATCH-01-R1/TRX/CANONICAL_RESEARCH_R1.json"
       ],
@@ -174,7 +174,7 @@
         "present_artifacts": 9,
         "required_artifacts": 9
       },
-      "evaluated_at": "2026-09-10T14:18:35.507637Z",
+      "evaluated_at": "2026-09-11T02:44:39.154163Z",
       "evidence_refs": [
         "evidence-freeze/DIGITAL-ASSET-BATCH-01-R1/TRX/CANONICAL_RESEARCH_R1.json",
         "evidence-freeze/DIGITAL-ASSET-BATCH-01-R1/TRX/PUBLIC_EVIDENCE_RESEARCH_REPORT_R1.md",
@@ -196,20 +196,24 @@
     },
     {
       "computed_facts": {
-        "category": "L1_NETWORK",
-        "policy_status": "UNCONFIGURED",
-        "threshold_configured": false
+        "configured_profile_count": 4,
+        "input_bundle_hash": "f059407d7a7608717d0a3b0dfc1be4e34cbda93c018f8ebd4b8b6344bfb0edcf",
+        "policy_version": "RDL_FRESHNESS_v0.1",
+        "record_path": "research/freshness/trx/FRESHNESS_EVALUATION_v0.1.json",
+        "release_freshness_state": "EVENT_INVALIDATED",
+        "subject": "trx"
       },
-      "evaluated_at": "2026-09-10T14:18:35.507637Z",
+      "evaluated_at": "2026-09-11T02:44:39.154163Z",
       "evidence_refs": [
-        "gdr-se/config/category_freshness.json"
+        "rdl/freshness/gdr_g3_adapter.json",
+        "research/freshness/trx/FRESHNESS_EVALUATION_v0.1.json"
       ],
       "gate_id": "G3_EVIDENCE_FRESHNESS",
       "limitations": [],
-      "reason": "RDL freshness policy not configured for category L1_NETWORK.",
+      "reason": "G3 consumed RDL Freshness Policy v0.1 release state EVENT_INVALIDATED.",
       "rule_version": "GDR_SE_RUNTIME_RULES_v0.1-R1.1",
       "severity": "SOFT",
-      "status": "UNRESOLVED",
+      "status": "FAIL",
       "validator": "validate_g3_freshness"
     },
     {
@@ -219,7 +223,7 @@
         "source_coverage": "PARTIAL",
         "unique_source_ids": 5
       },
-      "evaluated_at": "2026-09-10T14:18:35.507637Z",
+      "evaluated_at": "2026-09-11T02:44:39.154163Z",
       "evidence_refs": [
         "evidence-freeze/DIGITAL-ASSET-BATCH-01-R1/TRX/SOURCE_DEPENDENCY_GRAPH.json"
       ],
@@ -241,7 +245,7 @@
         "reconciled": 3,
         "total": 3
       },
-      "evaluated_at": "2026-09-10T14:18:35.507637Z",
+      "evaluated_at": "2026-09-11T02:44:39.154163Z",
       "evidence_refs": [
         "evidence-freeze/DIGITAL-ASSET-BATCH-01-R1/TRX/NUMERICAL_RECONCILIATION.json"
       ],
@@ -259,7 +263,7 @@
         "human_review_required": false,
         "material_inconsistency": "NO"
       },
-      "evaluated_at": "2026-09-10T14:18:35.507637Z",
+      "evaluated_at": "2026-09-11T02:44:39.154163Z",
       "evidence_refs": [],
       "gate_id": "G6_ECL_CONSISTENCY",
       "limitations": [],
@@ -280,7 +284,7 @@
         "placeholder_warning": true,
         "targeted_searches": 5
       },
-      "evaluated_at": "2026-09-10T14:18:35.507637Z",
+      "evaluated_at": "2026-09-11T02:44:39.154163Z",
       "evidence_refs": [
         "evidence-freeze/DIGITAL-ASSET-BATCH-01-R1/TRX/COUNTER_EVIDENCE_SEARCH_LOG.json",
         "evidence-freeze/DIGITAL-ASSET-BATCH-01-R1/TRX/HYPOTHESIS_REGISTRY.json"
@@ -301,7 +305,7 @@
         "human_review_required": false,
         "review_required": true
       },
-      "evaluated_at": "2026-09-10T14:18:35.507637Z",
+      "evaluated_at": "2026-09-11T02:44:39.154163Z",
       "evidence_refs": [
         "evidence-freeze/DIGITAL-ASSET-BATCH-01-R1/TRX/AGREEMENT_DIVERGENCE_AUDIT.md"
       ],
@@ -318,7 +322,7 @@
         "entity_response_status": null,
         "human_review_required": false
       },
-      "evaluated_at": "2026-09-10T14:18:35.507637Z",
+      "evaluated_at": "2026-09-11T02:44:39.154163Z",
       "evidence_refs": [],
       "gate_id": "G9_SENSITIVITY_RIGHT_OF_REPLY",
       "limitations": [],
@@ -334,7 +338,7 @@
         "publication_status": "R1 RESEARCH SUPPORT",
         "supersession_status": "REFINED"
       },
-      "evaluated_at": "2026-09-10T14:18:35.507637Z",
+      "evaluated_at": "2026-09-11T02:44:39.154163Z",
       "evidence_refs": [
         "evidence-freeze/DIGITAL-ASSET-BATCH-01-R1/TRX/SUPERSESSION_NOTICE.md"
       ],
@@ -348,15 +352,15 @@
     }
   ],
   "gdr_se_version": "GDR_SE_v0.1",
-  "input_bundle_sha256": "dbeac1d0ee4744777f9969c3995f7efeb08dcef5badcb26f1b5a7f4c27e047e7",
+  "input_bundle_sha256": "f92a23e2573bc7263cc37f9f5676a356a66327570247fd2113512cd1b4837c58",
   "limitations": [
     "Legacy/profile schema is field-validated only.",
     "Multiple URLs are not independent sources.",
     "Placeholder-like repetition prevents a full PASS."
   ],
   "profile": "DIGITAL_ASSET_R1",
-  "public_status": "UNDER_REVIEW",
-  "record_created_at": "2026-09-10T14:18:35.542590Z",
+  "public_status": "CURRENT_WITH_LIMITATIONS",
+  "record_created_at": "2026-09-11T02:44:39.192099Z",
   "report_id": "TRX_PUBLIC_EVIDENCE_RESEARCH_REPORT_R1",
   "report_version": "R1",
   "research_id": "SE.ASSET.TRX.2026.001-R1",

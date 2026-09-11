@@ -1,0 +1,15 @@
+{
+  "policy_version": "RDL_FRESHNESS_v0.1",
+  "states": [
+    "CURRENT",
+    "CURRENT_WITH_LIMITATIONS",
+    "AGING",
+    "REFRESH_REQUIRED",
+    "EVENT_INVALIDATED",
+    "UNDER_REVIEW",
+    "SUPERSEDED",
+    "INSUFFICIENT_DATA",
+    "NOT_APPLICABLE",
+    "POLICY_NOT_CONFIGURED"
+  ]
+}

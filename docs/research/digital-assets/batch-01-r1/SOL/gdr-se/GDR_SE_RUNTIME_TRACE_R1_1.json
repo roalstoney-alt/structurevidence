@@ -11,16 +11,16 @@
     "report": "20593c587f9a2939c168bf461b9fb912398deccb53fe9a790c4c1c5f3c11e615",
     "source_inventory": "4644939c4ec06f98ce25dd47cf09d4da08d602c102576888df67b17f2daaa46b"
   },
-  "authorization_id": "GDR-SE-AUTH-SOL-d14d64f761fcafd6-R1.1",
+  "authorization_id": "GDR-SE-AUTH-SOL-1ef496c91857efb2-R1.1",
   "config_hashes": {
     "aggregation_rules_sha256": "d716177c3161940a25ef7c77367a10d124ebb7f0d42bc571737009b4cdf91528",
     "freshness_config_sha256": "e486d1cde399acf6319db7f09a7b2849c52ae1604dd87360312e162517c9b762",
     "gates_config_sha256": "06e725a2e5ad5d506aad41e79f743e73a66e2634c6ec4b5f7166c598e6fb33c7",
     "research_profile_sha256": "ce939807f8605fdd3c661a5a018fccfeecf233b63e0e5d83dee26bd35868a1cf"
   },
-  "evaluation_as_of": "2026-09-10T14:18:35.507637Z",
-  "evaluation_id": "GDR-SE-EVAL-d14d64f761fcafd6-R1.1",
-  "final_authorization": "HUMAN_REVIEW_REQUIRED",
+  "evaluation_as_of": "2026-09-11T02:44:39.154163Z",
+  "evaluation_id": "GDR-SE-EVAL-1ef496c91857efb2-R1.1",
+  "final_authorization": "ALLOW_WITH_LIMITATIONS",
   "gate_results": [
     {
       "computed_facts": {
@@ -39,7 +39,7 @@
           "source_coverage"
         ]
       },
-      "evaluated_at": "2026-09-10T14:18:35.507637Z",
+      "evaluated_at": "2026-09-11T02:44:39.154163Z",
       "evidence_refs": [
         "evidence-freeze/DIGITAL-ASSET-BATCH-01-R1/SOL/CANONICAL_RESEARCH_R1.json"
       ],
@@ -64,7 +64,7 @@
         "present_artifacts": 9,
         "required_artifacts": 9
       },
-      "evaluated_at": "2026-09-10T14:18:35.507637Z",
+      "evaluated_at": "2026-09-11T02:44:39.154163Z",
       "evidence_refs": [
         "evidence-freeze/DIGITAL-ASSET-BATCH-01-R1/SOL/CANONICAL_RESEARCH_R1.json",
         "evidence-freeze/DIGITAL-ASSET-BATCH-01-R1/SOL/PUBLIC_EVIDENCE_RESEARCH_REPORT_R1.md",
@@ -86,20 +86,24 @@
     },
     {
       "computed_facts": {
-        "category": "L1_NETWORK",
-        "policy_status": "UNCONFIGURED",
-        "threshold_configured": false
+        "configured_profile_count": 4,
+        "input_bundle_hash": "a4a4db0585968b53a24715228c2913585cdb5ffbd9b3ef37ed7f9cd5a2c0b948",
+        "policy_version": "RDL_FRESHNESS_v0.1",
+        "record_path": "research/freshness/sol/FRESHNESS_EVALUATION_v0.1.json",
+        "release_freshness_state": "CURRENT_WITH_LIMITATIONS",
+        "subject": "sol"
       },
-      "evaluated_at": "2026-09-10T14:18:35.507637Z",
+      "evaluated_at": "2026-09-11T02:44:39.154163Z",
       "evidence_refs": [
-        "gdr-se/config/category_freshness.json"
+        "rdl/freshness/gdr_g3_adapter.json",
+        "research/freshness/sol/FRESHNESS_EVALUATION_v0.1.json"
       ],
       "gate_id": "G3_EVIDENCE_FRESHNESS",
       "limitations": [],
-      "reason": "RDL freshness policy not configured for category L1_NETWORK.",
+      "reason": "G3 consumed RDL Freshness Policy v0.1 release state CURRENT_WITH_LIMITATIONS.",
       "rule_version": "GDR_SE_RUNTIME_RULES_v0.1-R1.1",
       "severity": "SOFT",
-      "status": "UNRESOLVED",
+      "status": "PARTIAL",
       "validator": "validate_g3_freshness"
     },
     {
@@ -109,7 +113,7 @@
         "source_coverage": "PARTIAL",
         "unique_source_ids": 5
       },
-      "evaluated_at": "2026-09-10T14:18:35.507637Z",
+      "evaluated_at": "2026-09-11T02:44:39.154163Z",
       "evidence_refs": [
         "evidence-freeze/DIGITAL-ASSET-BATCH-01-R1/SOL/SOURCE_DEPENDENCY_GRAPH.json"
       ],
@@ -131,7 +135,7 @@
         "reconciled": 3,
         "total": 3
       },
-      "evaluated_at": "2026-09-10T14:18:35.507637Z",
+      "evaluated_at": "2026-09-11T02:44:39.154163Z",
       "evidence_refs": [
         "evidence-freeze/DIGITAL-ASSET-BATCH-01-R1/SOL/NUMERICAL_RECONCILIATION.json"
       ],
@@ -149,7 +153,7 @@
         "human_review_required": false,
         "material_inconsistency": "NO"
       },
-      "evaluated_at": "2026-09-10T14:18:35.507637Z",
+      "evaluated_at": "2026-09-11T02:44:39.154163Z",
       "evidence_refs": [],
       "gate_id": "G6_ECL_CONSISTENCY",
       "limitations": [],
@@ -170,7 +174,7 @@
         "placeholder_warning": true,
         "targeted_searches": 5
       },
-      "evaluated_at": "2026-09-10T14:18:35.507637Z",
+      "evaluated_at": "2026-09-11T02:44:39.154163Z",
       "evidence_refs": [
         "evidence-freeze/DIGITAL-ASSET-BATCH-01-R1/SOL/COUNTER_EVIDENCE_SEARCH_LOG.json",
         "evidence-freeze/DIGITAL-ASSET-BATCH-01-R1/SOL/HYPOTHESIS_REGISTRY.json"
@@ -191,7 +195,7 @@
         "human_review_required": false,
         "review_required": true
       },
-      "evaluated_at": "2026-09-10T14:18:35.507637Z",
+      "evaluated_at": "2026-09-11T02:44:39.154163Z",
       "evidence_refs": [
         "evidence-freeze/DIGITAL-ASSET-BATCH-01-R1/SOL/AGREEMENT_DIVERGENCE_AUDIT.md"
       ],
@@ -208,7 +212,7 @@
         "entity_response_status": null,
         "human_review_required": false
       },
-      "evaluated_at": "2026-09-10T14:18:35.507637Z",
+      "evaluated_at": "2026-09-11T02:44:39.154163Z",
       "evidence_refs": [],
       "gate_id": "G9_SENSITIVITY_RIGHT_OF_REPLY",
       "limitations": [],
@@ -224,7 +228,7 @@
         "publication_status": "R1 RESEARCH SUPPORT",
         "supersession_status": "REFINED"
       },
-      "evaluated_at": "2026-09-10T14:18:35.507637Z",
+      "evaluated_at": "2026-09-11T02:44:39.154163Z",
       "evidence_refs": [
         "evidence-freeze/DIGITAL-ASSET-BATCH-01-R1/SOL/SUPERSESSION_NOTICE.md"
       ],
@@ -237,9 +241,9 @@
       "validator": "validate_g10_supersession"
     }
   ],
-  "input_bundle_sha256": "d14d64f761fcafd6f4a4b5ae8a021689741a2ef9f1b513be67ab616e02a2da51",
+  "input_bundle_sha256": "1ef496c91857efb26c6b7952c1ebacab28cbbde0afa49356b110e2d60c977427",
   "profile": "DIGITAL_ASSET_R1",
-  "record_created_at": "2026-09-10T14:18:35.531446Z",
+  "record_created_at": "2026-09-11T02:44:39.181853Z",
   "research_id": "SE.ASSET.SOL.2026.001-R1",
   "resolved_artifacts": [
     {

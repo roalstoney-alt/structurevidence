@@ -1,0 +1,89 @@
+{
+  "policy_version": "RDL_FRESHNESS_v0.1",
+  "records": [
+    {
+      "alternative_rejected": "Single global 30 day cutoff rejected because cadence evidence is sparse and domain-specific.",
+      "candidate_thresholds": {
+        "aging": [
+          150,
+          180,
+          270
+        ],
+        "current": [
+          90,
+          120,
+          180
+        ],
+        "refresh": [
+          210,
+          240,
+          365
+        ]
+      },
+      "chosen_rule": {
+        "aging_boundary_days": 180,
+        "current_boundary_days": 120,
+        "refresh_boundary_days": 240
+      },
+      "reviewer_rationale": "Corporate treasury policy is tied to periodic SEC/company reporting and material disclosure events; cadence data is sparse, so the rule is a method-pilot reporting-period rule rather than empirical optimization.",
+      "rule_id": "FRESH-PCT-TREASURY-LEVEL",
+      "subject_outcomes_hidden": true
+    },
+    {
+      "alternative_rejected": "Single global 30 day cutoff rejected because cadence evidence is sparse and domain-specific.",
+      "candidate_thresholds": {
+        "aging": [
+          150,
+          180,
+          270
+        ],
+        "current": [
+          90,
+          120,
+          180
+        ],
+        "refresh": [
+          210,
+          240,
+          365
+        ]
+      },
+      "chosen_rule": {
+        "aging_boundary_days": 270,
+        "current_boundary_days": 180,
+        "refresh_boundary_days": 365
+      },
+      "reviewer_rationale": "Supply mechanics often persist between protocol changes; sparse current data prevents empirical cadence classification, so v0.1 uses broad bands plus event invalidation.",
+      "rule_id": "FRESH-L1-SUPPLY-LEVEL",
+      "subject_outcomes_hidden": true
+    },
+    {
+      "alternative_rejected": "Single global 30 day cutoff rejected because cadence evidence is sparse and domain-specific.",
+      "candidate_thresholds": {
+        "aging": [
+          150,
+          180,
+          270
+        ],
+        "current": [
+          90,
+          120,
+          180
+        ],
+        "refresh": [
+          210,
+          240,
+          365
+        ]
+      },
+      "chosen_rule": {
+        "aging_boundary_days": 180,
+        "current_boundary_days": 120,
+        "refresh_boundary_days": 240
+      },
+      "reviewer_rationale": "Validator distribution can change faster than persistent architecture, but current cross-subject cadence is sparse. The rule is conservative and event-sensitive.",
+      "rule_id": "FRESH-L1-VALIDATOR-LEVEL",
+      "subject_outcomes_hidden": true
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "policy_version": "RDL_FRESHNESS_v0.1",
+  "precedence": [
+    "SUPERSEDED",
+    "EVENT_INVALIDATED",
+    "UNDER_REVIEW",
+    "REFRESH_REQUIRED",
+    "INSUFFICIENT_DATA",
+    "AGING",
+    "CURRENT_WITH_LIMITATIONS",
+    "CURRENT",
+    "NOT_APPLICABLE",
+    "POLICY_NOT_CONFIGURED"
+  ]
+}

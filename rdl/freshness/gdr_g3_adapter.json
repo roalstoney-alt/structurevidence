@@ -1,0 +1,36 @@
+{
+  "mapping": {
+    "AGING": "PARTIAL",
+    "CURRENT": "PASS",
+    "CURRENT_WITH_LIMITATIONS": "PARTIAL",
+    "EVENT_INVALIDATED": "FAIL",
+    "INSUFFICIENT_DATA": "UNRESOLVED",
+    "POLICY_NOT_CONFIGURED": "UNRESOLVED",
+    "REFRESH_REQUIRED": "UNRESOLVED",
+    "SUPERSEDED": "SUPERSEDED",
+    "UNDER_REVIEW": "UNRESOLVED"
+  },
+  "policy_version": "RDL_FRESHNESS_v0.1",
+  "subjects": {
+    "bnb": {
+      "record_path": "research/freshness/bnb/FRESHNESS_EVALUATION_v0.1.json",
+      "release_freshness_state": "EVENT_INVALIDATED"
+    },
+    "sol": {
+      "record_path": "research/freshness/sol/FRESHNESS_EVALUATION_v0.1.json",
+      "release_freshness_state": "CURRENT_WITH_LIMITATIONS"
+    },
+    "strategy": {
+      "record_path": "research/freshness/strategy/FRESHNESS_EVALUATION_v0.1.json",
+      "release_freshness_state": "EVENT_INVALIDATED"
+    },
+    "trx": {
+      "record_path": "research/freshness/trx/FRESHNESS_EVALUATION_v0.1.json",
+      "release_freshness_state": "EVENT_INVALIDATED"
+    },
+    "xlm": {
+      "record_path": "research/freshness/xlm/FRESHNESS_EVALUATION_v0.1.json",
+      "release_freshness_state": "EVENT_INVALIDATED"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "policy_version": "RDL_FRESHNESS_v0.1",
+  "time_rule_types": [
+    "FIXED_WINDOW",
+    "SOURCE_CADENCE_MULTIPLE",
+    "REPORTING_PERIOD",
+    "EVENT_ONLY",
+    "HYBRID_TIME_EVENT",
+    "UNCONFIGURED"
+  ]
+}

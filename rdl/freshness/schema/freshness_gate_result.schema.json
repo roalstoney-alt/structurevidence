@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "required": [
+    "gate_id",
+    "status",
+    "validator",
+    "rule_version",
+    "evaluated_at",
+    "evidence_refs",
+    "computed_facts",
+    "reason"
+  ],
+  "type": "object"
+}

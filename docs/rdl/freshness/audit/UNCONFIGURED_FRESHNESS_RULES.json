@@ -1,0 +1,68 @@
+{
+  "items": [
+    {
+      "dimension_id": "*",
+      "reason": "INSUFFICIENT_CADENCE_DATA",
+      "rule_id": "FRESH-DELTA-DEFAULT-R0",
+      "state_type": "DELTA",
+      "subject_class": "*"
+    },
+    {
+      "dimension_id": "RESOURCE_PRESSURE",
+      "reason": "INSUFFICIENT_CADENCE_DATA",
+      "rule_id": "FRESH-PUBLIC-COMPANY-TREASURY-RESOURCE_PRESSURE-LEVEL-UNCONFIGURED",
+      "state_type": "LEVEL",
+      "subject_class": "PUBLIC_COMPANY_TREASURY"
+    },
+    {
+      "dimension_id": "NARRATIVE_DEPENDENCE",
+      "reason": "INSUFFICIENT_CADENCE_DATA",
+      "rule_id": "FRESH-PUBLIC-COMPANY-TREASURY-NARRATIVE_DEPENDENCE-LEVEL-UNCONFIGURED",
+      "state_type": "LEVEL",
+      "subject_class": "PUBLIC_COMPANY_TREASURY"
+    },
+    {
+      "dimension_id": "SOURCE_DEPENDENCY",
+      "reason": "INSUFFICIENT_CADENCE_DATA",
+      "rule_id": "FRESH-PUBLIC-COMPANY-TREASURY-SOURCE_DEPENDENCY-LEVEL-UNCONFIGURED",
+      "state_type": "LEVEL",
+      "subject_class": "PUBLIC_COMPANY_TREASURY"
+    },
+    {
+      "dimension_id": "UTILITY_STRUCTURE",
+      "reason": "INSUFFICIENT_CADENCE_DATA",
+      "rule_id": "FRESH-L1-NETWORK-UTILITY_STRUCTURE-LEVEL-UNCONFIGURED",
+      "state_type": "LEVEL",
+      "subject_class": "L1_NETWORK"
+    },
+    {
+      "dimension_id": "RESOURCE_PRESSURE",
+      "reason": "INSUFFICIENT_CADENCE_DATA",
+      "rule_id": "FRESH-L1-NETWORK-RESOURCE_PRESSURE-LEVEL-UNCONFIGURED",
+      "state_type": "LEVEL",
+      "subject_class": "L1_NETWORK"
+    },
+    {
+      "dimension_id": "SETTLEMENT_ROLE",
+      "reason": "INSUFFICIENT_CADENCE_DATA",
+      "rule_id": "FRESH-L1-NETWORK-SETTLEMENT_ROLE-LEVEL-UNCONFIGURED",
+      "state_type": "LEVEL",
+      "subject_class": "L1_NETWORK"
+    },
+    {
+      "dimension_id": "TREASURY_STRUCTURE",
+      "reason": "INSUFFICIENT_CADENCE_DATA",
+      "rule_id": "FRESH-L1-NETWORK-TREASURY_STRUCTURE-LEVEL-UNCONFIGURED",
+      "state_type": "LEVEL",
+      "subject_class": "L1_NETWORK"
+    },
+    {
+      "dimension_id": "FOUNDATION_DEPENDENCE",
+      "reason": "INSUFFICIENT_CADENCE_DATA",
+      "rule_id": "FRESH-L1-NETWORK-FOUNDATION_DEPENDENCE-LEVEL-UNCONFIGURED",
+      "state_type": "LEVEL",
+      "subject_class": "L1_NETWORK"
+    }
+  ],
+  "policy_version": "RDL_FRESHNESS_v0.1"
+}

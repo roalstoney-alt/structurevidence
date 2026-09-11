@@ -1,7 +1,7 @@
 {
   "aggregation_rule_version": "GDR_SE_AGGREGATION_v0.1-R1.1",
-  "authorization": "HUMAN_REVIEW_REQUIRED",
-  "authorization_id": "GDR-SE-AUTH-SOL-d14d64f761fcafd6-R1.1",
+  "authorization": "ALLOW_WITH_LIMITATIONS",
+  "authorization_id": "GDR-SE-AUTH-SOL-1ef496c91857efb2-R1.1",
   "config_hashes": {
     "aggregation_rules_sha256": "d716177c3161940a25ef7c77367a10d124ebb7f0d42bc571737009b4cdf91528",
     "freshness_config_sha256": "e486d1cde399acf6319db7f09a7b2849c52ae1604dd87360312e162517c9b762",
@@ -20,9 +20,9 @@
     "no_action_consequence": "Historical research may remain available, but current release or paid delivery remains blocked until runtime gates resolve.",
     "rejected_alternative": "The alternative that POTENTIAL_CONFLICT should be treated as release authorization was rejected."
   },
-  "created_at": "2026-09-10T14:18:35.531446Z",
-  "evaluation_as_of": "2026-09-10T14:18:35.507637Z",
-  "evaluation_id": "GDR-SE-EVAL-d14d64f761fcafd6-R1.1",
+  "created_at": "2026-09-11T02:44:39.181853Z",
+  "evaluation_as_of": "2026-09-11T02:44:39.154163Z",
+  "evaluation_id": "GDR-SE-EVAL-1ef496c91857efb2-R1.1",
   "evaluation_mode": "RUNTIME_EVALUATED",
   "evidence_envelope": {
     "artifacts": [
@@ -123,7 +123,7 @@
     "envelope_id": "GDR-SE-ENV-SOL-R1.1",
     "immutable": true,
     "observation_registry_sha256": "0006a5ce9fabaa54f86077084d3d600132a694e517804f5460f7b1676549c681",
-    "record_created_at": "2026-09-10T14:18:35.531446Z",
+    "record_created_at": "2026-09-11T02:44:39.181853Z",
     "report_sha256": "20593c587f9a2939c168bf461b9fb912398deccb53fe9a790c4c1c5f3c11e615",
     "research_id": "SE.ASSET.SOL.2026.001-R1",
     "rtp_manifest_sha256": "76fed1633baf7ec6bd7cffd885d89ac96a0fd67fbba13fb859df526df6780734",
@@ -149,7 +149,7 @@
           "source_coverage"
         ]
       },
-      "evaluated_at": "2026-09-10T14:18:35.507637Z",
+      "evaluated_at": "2026-09-11T02:44:39.154163Z",
       "evidence_refs": [
         "evidence-freeze/DIGITAL-ASSET-BATCH-01-R1/SOL/CANONICAL_RESEARCH_R1.json"
       ],
@@ -174,7 +174,7 @@
         "present_artifacts": 9,
         "required_artifacts": 9
       },
-      "evaluated_at": "2026-09-10T14:18:35.507637Z",
+      "evaluated_at": "2026-09-11T02:44:39.154163Z",
       "evidence_refs": [
         "evidence-freeze/DIGITAL-ASSET-BATCH-01-R1/SOL/CANONICAL_RESEARCH_R1.json",
         "evidence-freeze/DIGITAL-ASSET-BATCH-01-R1/SOL/PUBLIC_EVIDENCE_RESEARCH_REPORT_R1.md",
@@ -196,20 +196,24 @@
     },
     {
       "computed_facts": {
-        "category": "L1_NETWORK",
-        "policy_status": "UNCONFIGURED",
-        "threshold_configured": false
+        "configured_profile_count": 4,
+        "input_bundle_hash": "a4a4db0585968b53a24715228c2913585cdb5ffbd9b3ef37ed7f9cd5a2c0b948",
+        "policy_version": "RDL_FRESHNESS_v0.1",
+        "record_path": "research/freshness/sol/FRESHNESS_EVALUATION_v0.1.json",
+        "release_freshness_state": "CURRENT_WITH_LIMITATIONS",
+        "subject": "sol"
       },
-      "evaluated_at": "2026-09-10T14:18:35.507637Z",
+      "evaluated_at": "2026-09-11T02:44:39.154163Z",
       "evidence_refs": [
-        "gdr-se/config/category_freshness.json"
+        "rdl/freshness/gdr_g3_adapter.json",
+        "research/freshness/sol/FRESHNESS_EVALUATION_v0.1.json"
       ],
       "gate_id": "G3_EVIDENCE_FRESHNESS",
       "limitations": [],
-      "reason": "RDL freshness policy not configured for category L1_NETWORK.",
+      "reason": "G3 consumed RDL Freshness Policy v0.1 release state CURRENT_WITH_LIMITATIONS.",
       "rule_version": "GDR_SE_RUNTIME_RULES_v0.1-R1.1",
       "severity": "SOFT",
-      "status": "UNRESOLVED",
+      "status": "PARTIAL",
       "validator": "validate_g3_freshness"
     },
     {
@@ -219,7 +223,7 @@
         "source_coverage": "PARTIAL",
         "unique_source_ids": 5
       },
-      "evaluated_at": "2026-09-10T14:18:35.507637Z",
+      "evaluated_at": "2026-09-11T02:44:39.154163Z",
       "evidence_refs": [
         "evidence-freeze/DIGITAL-ASSET-BATCH-01-R1/SOL/SOURCE_DEPENDENCY_GRAPH.json"
       ],
@@ -241,7 +245,7 @@
         "reconciled": 3,
         "total": 3
       },
-      "evaluated_at": "2026-09-10T14:18:35.507637Z",
+      "evaluated_at": "2026-09-11T02:44:39.154163Z",
       "evidence_refs": [
         "evidence-freeze/DIGITAL-ASSET-BATCH-01-R1/SOL/NUMERICAL_RECONCILIATION.json"
       ],
@@ -259,7 +263,7 @@
         "human_review_required": false,
         "material_inconsistency": "NO"
       },
-      "evaluated_at": "2026-09-10T14:18:35.507637Z",
+      "evaluated_at": "2026-09-11T02:44:39.154163Z",
       "evidence_refs": [],
       "gate_id": "G6_ECL_CONSISTENCY",
       "limitations": [],
@@ -280,7 +284,7 @@
         "placeholder_warning": true,
         "targeted_searches": 5
       },
-      "evaluated_at": "2026-09-10T14:18:35.507637Z",
+      "evaluated_at": "2026-09-11T02:44:39.154163Z",
       "evidence_refs": [
         "evidence-freeze/DIGITAL-ASSET-BATCH-01-R1/SOL/COUNTER_EVIDENCE_SEARCH_LOG.json",
         "evidence-freeze/DIGITAL-ASSET-BATCH-01-R1/SOL/HYPOTHESIS_REGISTRY.json"
@@ -301,7 +305,7 @@
         "human_review_required": false,
         "review_required": true
       },
-      "evaluated_at": "2026-09-10T14:18:35.507637Z",
+      "evaluated_at": "2026-09-11T02:44:39.154163Z",
       "evidence_refs": [
         "evidence-freeze/DIGITAL-ASSET-BATCH-01-R1/SOL/AGREEMENT_DIVERGENCE_AUDIT.md"
       ],
@@ -318,7 +322,7 @@
         "entity_response_status": null,
         "human_review_required": false
       },
-      "evaluated_at": "2026-09-10T14:18:35.507637Z",
+      "evaluated_at": "2026-09-11T02:44:39.154163Z",
       "evidence_refs": [],
       "gate_id": "G9_SENSITIVITY_RIGHT_OF_REPLY",
       "limitations": [],
@@ -334,7 +338,7 @@
         "publication_status": "R1 RESEARCH SUPPORT",
         "supersession_status": "REFINED"
       },
-      "evaluated_at": "2026-09-10T14:18:35.507637Z",
+      "evaluated_at": "2026-09-11T02:44:39.154163Z",
       "evidence_refs": [
         "evidence-freeze/DIGITAL-ASSET-BATCH-01-R1/SOL/SUPERSESSION_NOTICE.md"
       ],
@@ -348,15 +352,15 @@
     }
   ],
   "gdr_se_version": "GDR_SE_v0.1",
-  "input_bundle_sha256": "d14d64f761fcafd6f4a4b5ae8a021689741a2ef9f1b513be67ab616e02a2da51",
+  "input_bundle_sha256": "1ef496c91857efb26c6b7952c1ebacab28cbbde0afa49356b110e2d60c977427",
   "limitations": [
     "Legacy/profile schema is field-validated only.",
     "Multiple URLs are not independent sources.",
     "Placeholder-like repetition prevents a full PASS."
   ],
   "profile": "DIGITAL_ASSET_R1",
-  "public_status": "UNDER_REVIEW",
-  "record_created_at": "2026-09-10T14:18:35.531446Z",
+  "public_status": "CURRENT_WITH_LIMITATIONS",
+  "record_created_at": "2026-09-11T02:44:39.181853Z",
   "report_id": "SOL_PUBLIC_EVIDENCE_RESEARCH_REPORT_R1",
   "report_version": "R1",
   "research_id": "SE.ASSET.SOL.2026.001-R1",

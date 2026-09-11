@@ -117,8 +117,9 @@ def validate_g2_provenance(context, root: Path, evaluated_at: str) -> tuple[dict
 
 def validate_g3_freshness(context, evaluated_at: str, as_of_date) -> dict:
     config = load_config()
-    status, reason, facts = evaluate_freshness(context.category, context.last_reviewed, as_of_date, config)
-    return result("G3_EVIDENCE_FRESHNESS", status, "SOFT", "validate_g3_freshness", reason, ["gdr-se/config/category_freshness.json"], facts, evaluated_at=evaluated_at)
+    status, reason, facts = evaluate_freshness(context.category, context.last_reviewed, as_of_date, config, context.subject)
+    refs = ["rdl/freshness/gdr_g3_adapter.json", facts.get("record_path", "gdr-se/config/category_freshness.json")]
+    return result("G3_EVIDENCE_FRESHNESS", status, "SOFT", "validate_g3_freshness", reason, refs, facts, evaluated_at=evaluated_at)
 
 
 def validate_g4_source_dependency(context, root: Path, evaluated_at: str) -> dict:

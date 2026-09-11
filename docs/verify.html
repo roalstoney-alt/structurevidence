@@ -49,29 +49,29 @@
     <dt>Supersession Status</dt><dd>Not superseded in current public presentation</dd>
     <dt>Evaluation Mode</dt><dd><code>RUNTIME_EVALUATED</code></dd>
     <dt>Runtime Revision</dt><dd><code>R1.1</code></dd>
-    <dt>Authorization ID</dt><dd><code>GDR-SE-AUTH-strategy-3bb9747944234d87-R1.1</code></dd>
+    <dt>Authorization ID</dt><dd><code>GDR-SE-AUTH-strategy-59bd0b24fafb3a04-R1.1</code></dd>
     <dt>GDR-SE Version</dt><dd><code>GDR_SE_v0.1</code></dd>
     <dt>Gate Summary</dt><dd><a href="research/gdr-se/strategy-2026/GDR_SE_GATE_TABLE_R1_1.md">GDR-SE runtime gate table</a></dd>
-    <dt>Authorization Outcome</dt><dd><code>HUMAN_REVIEW_REQUIRED</code></dd>
-    <dt>Evaluation As Of</dt><dd>2026-09-10T14:18:35.507637Z</dd>
-    <dt>Record Created At</dt><dd>2026-09-10T14:18:35.508863Z</dd>
+    <dt>Authorization Outcome</dt><dd><code>ALLOW_WITH_LIMITATIONS</code></dd>
+    <dt>Evaluation As Of</dt><dd>2026-09-11T02:44:39.154163Z</dd>
+    <dt>Record Created At</dt><dd>2026-09-11T02:44:39.155189Z</dd>
     <dt>Valid Until</dt><dd>Not set</dd>
-    <dt>Input Bundle Hash</dt><dd><code>3bb9747944234d875d224f8dca5dca0fc811cb39fb61a3f8576f9790f5791295</code></dd>
+    <dt>Input Bundle Hash</dt><dd><code>59bd0b24fafb3a0438aa70dd9e2c96ad241d3e8d8f90d4140227a1256f0f9375</code></dd>
     <dt>Config Hash</dt><dd><code>d716177c3161940a25ef7c77367a10d124ebb7f0d42bc571737009b4cdf91528</code></dd>
     <dt>Aggregation Rule Version</dt><dd><code>GDR_SE_AGGREGATION_v0.1-R1.1</code></dd>
     <dt>Supersession</dt><dd><code>GDR-SE-AUTH-strategy-45c92ba47075258b-R1</code></dd>
     <dt>Gate</dt><dd><code>G3_EVIDENCE_FRESHNESS</code></dd>
-    <dt>Status</dt><dd><code>UNRESOLVED</code></dd>
+    <dt>Status</dt><dd><code>FAIL</code></dd>
     <dt>Validator</dt><dd><code>validate_g3_freshness</code></dd>
     <dt>Rule Version</dt><dd><code>GDR_SE_RUNTIME_RULES_v0.1-R1.1</code></dd>
-    <dt>Reason</dt><dd>RDL freshness policy not configured for category CORPORATE_TREASURY.</dd>
-    <dt>Evidence Refs</dt><dd><code>gdr-se/config/category_freshness.json</code></dd>
-    <dt>Computed Facts</dt><dd><code>{&quot;category&quot;: &quot;CORPORATE_TREASURY&quot;, &quot;policy_status&quot;: &quot;UNCONFIGURED&quot;, &quot;threshold_configured&quot;: false}</code></dd>
+    <dt>Reason</dt><dd>G3 consumed RDL Freshness Policy v0.1 release state EVENT_INVALIDATED.</dd>
+    <dt>Evidence Refs</dt><dd><code>rdl/freshness/gdr_g3_adapter.json, research/freshness/strategy/FRESHNESS_EVALUATION_v0.1.json</code></dd>
+    <dt>Computed Facts</dt><dd><code>{&quot;configured_profile_count&quot;: 4, &quot;input_bundle_hash&quot;: &quot;583968ac3263a1361e240f9f3ed46cd0c5b83c08ac082f818a1fe5a2a0529920&quot;, &quot;policy_version&quot;: &quot;RDL_FRESHNESS_v0.1&quot;, &quot;record_path&quot;: &quot;research/freshness/strategy/FRESHNESS_EVALUATION_v0.1.json&quot;, &quot;release_freshness_state&quot;: &quot;EVENT_INVALIDATED&quot;, &quot;subject&quot;: &quot;strategy&quot;}</code></dd>
   </dl>
 </section>
 <section>
   <h2>Verification Path</h2>
-  <ol class="process"><li>Finding</li><li>Method</li><li>Calculation / Claim</li><li>Source / Artifact</li><li>RTP provenance</li><li>RDL publication gate</li></ol>
+  <p><code>Finding -> Method -> Observation -> RTP Provenance -> Timeline Level/Delta -> RDL Freshness -> GDR-SE G3 -> Release Authorization</code></p>
 </section>
 <section><p><span class="status">Interactive lookup planned</span><span class="status">No fake search results</span><span class="status">Static manifest links only</span></p></section>
 </main>

@@ -1,0 +1,842 @@
+{
+  "metadata": {
+    "base_commit": "8871b5afd2fda4ab30f430e1799ebcf530c42d52",
+    "configured_rules": 4,
+    "final_audit_commit": "not self-recorded by design; final SHA verified after push",
+    "implementation_commit": "8871b5afd2fda4ab30f430e1799ebcf530c42d52",
+    "paid_delivery_status": "BLOCKED",
+    "remote_main": "8871b5afd2fda4ab30f430e1799ebcf530c42d52",
+    "subject_classes": [
+      "L1_NETWORK",
+      "PUBLIC_COMPANY_TREASURY"
+    ],
+    "subject_outcomes": {
+      "bnb": {
+        "critical_evidence": {
+          "CURRENT": 4
+        },
+        "delta": {
+          "EVENT_INVALIDATED": 1,
+          "NOT_APPLICABLE": 3
+        },
+        "gdr": "ALLOW_WITH_LIMITATIONS",
+        "level": {
+          "CURRENT": 3,
+          "EVENT_INVALIDATED": 1
+        },
+        "release": "EVENT_INVALIDATED"
+      },
+      "sol": {
+        "critical_evidence": {
+          "CURRENT": 4
+        },
+        "delta": {
+          "NOT_APPLICABLE": 4
+        },
+        "gdr": "ALLOW_WITH_LIMITATIONS",
+        "level": {
+          "CURRENT": 4
+        },
+        "release": "CURRENT_WITH_LIMITATIONS"
+      },
+      "strategy": {
+        "critical_evidence": {
+          "CURRENT": 4
+        },
+        "delta": {
+          "NOT_APPLICABLE": 4
+        },
+        "gdr": "ALLOW_WITH_LIMITATIONS",
+        "level": {
+          "CURRENT": 1,
+          "EVENT_INVALIDATED": 3
+        },
+        "release": "EVENT_INVALIDATED"
+      },
+      "trx": {
+        "critical_evidence": {
+          "CURRENT": 4
+        },
+        "delta": {
+          "NOT_APPLICABLE": 4
+        },
+        "gdr": "ALLOW_WITH_LIMITATIONS",
+        "level": {
+          "CURRENT": 3,
+          "EVENT_INVALIDATED": 1
+        },
+        "release": "EVENT_INVALIDATED"
+      },
+      "xlm": {
+        "critical_evidence": {
+          "CURRENT": 4
+        },
+        "delta": {
+          "NOT_APPLICABLE": 4
+        },
+        "gdr": "ALLOW_WITH_LIMITATIONS",
+        "level": {
+          "CURRENT": 1,
+          "EVENT_INVALIDATED": 3
+        },
+        "release": "EVENT_INVALIDATED"
+      }
+    },
+    "unconfigured_rules": 9
+  },
+  "policy_version": "RDL_FRESHNESS_v0.1",
+  "registry_id": "RDL_FRESHNESS_GATE_RESULTS",
+  "results": [
+    {
+      "computed_facts": {
+        "policy_version": "RDL_FRESHNESS_v0.1"
+      },
+      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evidence_refs": [
+        "rdl/freshness/config/freshness_profiles.json"
+      ],
+      "gate_id": "RDLF01_POLICY_SCHEMA",
+      "reason": "Policy config schema has required version.",
+      "rule_version": "RDL_FRESHNESS_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "validate_configs"
+    },
+    {
+      "computed_facts": {
+        "subject_classes": [
+          "L1_NETWORK",
+          "PUBLIC_COMPANY_TREASURY"
+        ]
+      },
+      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evidence_refs": [
+        "rdl/freshness/config/subject_class_profiles.json"
+      ],
+      "gate_id": "RDLF02_SUBJECT_CLASS_PROFILES",
+      "reason": "Current subjects are mapped to explicit subject classes.",
+      "rule_version": "RDL_FRESHNESS_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "validate_configs"
+    },
+    {
+      "computed_facts": {
+        "configured_level_rules": 4
+      },
+      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evidence_refs": [
+        "rdl/freshness/config/freshness_profiles.json"
+      ],
+      "gate_id": "RDLF03_LEVEL_FRESHNESS_RULES",
+      "reason": "Configured Level rules exist for the minimum v0.1 scope.",
+      "rule_version": "RDL_FRESHNESS_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "validate_configs"
+    },
+    {
+      "computed_facts": {
+        "delta_rules": 1
+      },
+      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evidence_refs": [
+        "rdl/freshness/config/freshness_profiles.json"
+      ],
+      "gate_id": "RDLF04_DELTA_FRESHNESS_RULES",
+      "reason": "Delta rules are separate and sparse Delta remains unconfigured.",
+      "rule_version": "RDL_FRESHNESS_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "validate_configs"
+    },
+    {
+      "computed_facts": {
+        "criticality_rules": 36
+      },
+      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evidence_refs": [
+        "rdl/freshness/config/evidence_family_criticality.json"
+      ],
+      "gate_id": "RDLF05_EVIDENCE_FAMILY_RULES",
+      "reason": "Evidence family criticality is configured by product context.",
+      "rule_version": "RDL_FRESHNESS_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "validate_configs"
+    },
+    {
+      "computed_facts": {},
+      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evidence_refs": [
+        "rdl/freshness/config"
+      ],
+      "gate_id": "RDLF06_NO_GLOBAL_THRESHOLD",
+      "reason": "No global freshness threshold exists.",
+      "rule_version": "RDL_FRESHNESS_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "validate_configs"
+    },
+    {
+      "computed_facts": {
+        "time_rule_types": [
+          "FIXED_WINDOW",
+          "SOURCE_CADENCE_MULTIPLE",
+          "REPORTING_PERIOD",
+          "EVENT_ONLY",
+          "HYBRID_TIME_EVENT",
+          "UNCONFIGURED"
+        ]
+      },
+      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evidence_refs": [
+        "rdl/freshness/config/freshness_profiles.json"
+      ],
+      "gate_id": "RDLF07_TIME_RULE_TYPES",
+      "reason": "Multiple time-rule types are supported.",
+      "rule_version": "RDL_FRESHNESS_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "validate_configs"
+    },
+    {
+      "computed_facts": {
+        "event_rules": 10
+      },
+      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evidence_refs": [
+        "rdl/freshness/config/event_invalidation_rules.json"
+      ],
+      "gate_id": "RDLF08_EVENT_INVALIDATION_RULES",
+      "reason": "Event invalidation rules are configured.",
+      "rule_version": "RDL_FRESHNESS_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "validate_configs"
+    },
+    {
+      "computed_facts": {
+        "result": "UNDER_REVIEW"
+      },
+      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evidence_refs": [
+        "rdl/freshness/config/freshness_precedence.json"
+      ],
+      "gate_id": "RDLF09_CORRECTION_OVERRIDE",
+      "reason": "Correction/review state overrides normal currentness.",
+      "rule_version": "RDL_FRESHNESS_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "validate_runtime_behaviors"
+    },
+    {
+      "computed_facts": {
+        "result": "SUPERSEDED"
+      },
+      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evidence_refs": [
+        "rdl/freshness/config/freshness_precedence.json"
+      ],
+      "gate_id": "RDLF10_SUPERSESSION_OVERRIDE",
+      "reason": "Supersession overrides normal currentness.",
+      "rule_version": "RDL_FRESHNESS_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "validate_runtime_behaviors"
+    },
+    {
+      "computed_facts": {
+        "precedence": [
+          "SUPERSEDED",
+          "EVENT_INVALIDATED",
+          "UNDER_REVIEW",
+          "REFRESH_REQUIRED",
+          "INSUFFICIENT_DATA",
+          "AGING",
+          "CURRENT_WITH_LIMITATIONS",
+          "CURRENT",
+          "NOT_APPLICABLE",
+          "POLICY_NOT_CONFIGURED"
+        ]
+      },
+      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evidence_refs": [
+        "rdl/freshness/config/freshness_precedence.json"
+      ],
+      "gate_id": "RDLF11_POLICY_PRECEDENCE",
+      "reason": "Policy precedence is config-driven.",
+      "rule_version": "RDL_FRESHNESS_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "validate_configs"
+    },
+    {
+      "computed_facts": {
+        "mutated_level_state": "REFRESH_REQUIRED"
+      },
+      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evidence_refs": [
+        "scripts/publish_rdl_freshness.py",
+        "rdl/freshness/config/freshness_profiles.json"
+      ],
+      "gate_id": "RDLF12_CONFIG_DRIVEN_RUNTIME",
+      "reason": "Time behavior is read from rule config.",
+      "rule_version": "RDL_FRESHNESS_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "validate_runtime_behaviors"
+    },
+    {
+      "computed_facts": {},
+      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evidence_refs": [
+        "rdl/freshness/audit/CADENCE_METRICS.json"
+      ],
+      "gate_id": "RDLF13_CADENCE_METRICS",
+      "reason": "Cadence metrics were computed from Timeline observations.",
+      "rule_version": "RDL_FRESHNESS_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "validate_outputs"
+    },
+    {
+      "computed_facts": {
+        "configured_rules": 4,
+        "unconfigured_rules": 9
+      },
+      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evidence_refs": [
+        "rdl/freshness/config/freshness_profiles.json"
+      ],
+      "gate_id": "RDLF14_THRESHOLD_EVIDENCE_BASIS",
+      "reason": "Every rule carries evidence basis and categorical strength.",
+      "rule_version": "RDL_FRESHNESS_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "validate_configs"
+    },
+    {
+      "computed_facts": {},
+      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evidence_refs": [
+        "docs/research/RDL_FRESHNESS_SENSITIVITY_ANALYSIS_v0.1.md"
+      ],
+      "gate_id": "RDLF15_SENSITIVITY_ANALYSIS",
+      "reason": "Sensitivity analysis record exists.",
+      "rule_version": "RDL_FRESHNESS_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "validate_outputs"
+    },
+    {
+      "computed_facts": {
+        "sparse_state": "POLICY_NOT_CONFIGURED"
+      },
+      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evidence_refs": [
+        "rdl/freshness/audit/UNCONFIGURED_FRESHNESS_RULES.json"
+      ],
+      "gate_id": "RDLF16_SPARSE_DATA_FAILSAFE",
+      "reason": "Sparse categories remain unconfigured.",
+      "rule_version": "RDL_FRESHNESS_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "validate_runtime_behaviors"
+    },
+    {
+      "computed_facts": {
+        "g3_unconfigured": "UNRESOLVED"
+      },
+      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evidence_refs": [
+        "gdr-se/engine/freshness.py"
+      ],
+      "gate_id": "RDLF17_POLICY_NOT_CONFIGURED_FAILSAFE",
+      "reason": "Unconfigured freshness does not become CURRENT/PASS.",
+      "rule_version": "RDL_FRESHNESS_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "validate_runtime_behaviors"
+    },
+    {
+      "computed_facts": {
+        "delta_state": "POLICY_NOT_CONFIGURED",
+        "level_state": "REFRESH_REQUIRED"
+      },
+      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evidence_refs": [
+        "scripts/publish_rdl_freshness.py"
+      ],
+      "gate_id": "RDLF18_LEVEL_DELTA_SEPARATION",
+      "reason": "Level and Delta are evaluated independently.",
+      "rule_version": "RDL_FRESHNESS_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "validate_runtime_behaviors"
+    },
+    {
+      "computed_facts": {
+        "future_known_event_count": 0
+      },
+      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evidence_refs": [
+        "scripts/publish_rdl_freshness.py"
+      ],
+      "gate_id": "RDLF19_NO_LOOKAHEAD",
+      "reason": "Events known after as_of do not affect historical policy view.",
+      "rule_version": "RDL_FRESHNESS_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "validate_runtime_behaviors"
+    },
+    {
+      "computed_facts": {},
+      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evidence_refs": [
+        "timeline/engine/clock.py",
+        "scripts/publish_rdl_freshness.py"
+      ],
+      "gate_id": "RDLF20_RUNTIME_CLOCK",
+      "reason": "Freshness build uses current UTC or explicit as_of.",
+      "rule_version": "RDL_FRESHNESS_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "validate_outputs"
+    },
+    {
+      "computed_facts": {},
+      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evidence_refs": [
+        "scripts/test_rdl_freshness_runtime.py"
+      ],
+      "gate_id": "RDLF21_AS_OF_REPRODUCTION",
+      "reason": "Explicit as_of reproduction is tested.",
+      "rule_version": "RDL_FRESHNESS_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "validate_outputs"
+    },
+    {
+      "computed_facts": {
+        "event_hit": [
+          {
+            "action": "INVALIDATE_BOTH",
+            "event_id": "E1",
+            "event_type": "GOVERNANCE_CHANGE",
+            "rule_id": "EV-007"
+          }
+        ]
+      },
+      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evidence_refs": [
+        "rdl/freshness/config/event_invalidation_rules.json"
+      ],
+      "gate_id": "RDLF22_EVENT_VERIFICATION",
+      "reason": "Verified event can override young age through event rules.",
+      "rule_version": "RDL_FRESHNESS_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "validate_runtime_behaviors"
+    },
+    {
+      "computed_facts": {
+        "blocking_dimensions": [],
+        "blocking_evidence_families": [],
+        "limitations": [
+          "SOURCE_DEPENDENCY"
+        ],
+        "next_refresh_reason": "MANUAL_REVIEW",
+        "paid_delivery": "NOT_AUTHORIZED_BY_FRESHNESS_ALONE",
+        "release_context": "PUBLIC_RESEARCH",
+        "release_freshness_state": "CURRENT_WITH_LIMITATIONS"
+      },
+      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evidence_refs": [
+        "scripts/publish_rdl_freshness.py"
+      ],
+      "gate_id": "RDLF23_RELEASE_AGGREGATION",
+      "reason": "Release freshness is aggregated from component states.",
+      "rule_version": "RDL_FRESHNESS_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "validate_runtime_behaviors"
+    },
+    {
+      "computed_facts": {
+        "blocking_dimensions": [],
+        "blocking_evidence_families": [
+          "PRIMARY_SOURCE_COVERAGE"
+        ],
+        "limitations": [
+          "PRIMARY_SOURCE_COVERAGE"
+        ],
+        "next_refresh_reason": "POLICY_NOT_CONFIGURED",
+        "paid_delivery": "BLOCKED",
+        "release_context": "PAID_VERIFIED_REPORT",
+        "release_freshness_state": "REFRESH_REQUIRED"
+      },
+      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evidence_refs": [
+        "rdl/freshness/config/product_context_rules.json"
+      ],
+      "gate_id": "RDLF24_PAID_CONTEXT_RULES",
+      "reason": "Paid context is stricter than public display.",
+      "rule_version": "RDL_FRESHNESS_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "validate_runtime_behaviors"
+    },
+    {
+      "computed_facts": {
+        "facts": {
+          "configured_profile_count": 4,
+          "input_bundle_hash": "13743bd6d0bdd7a78c7ca454a55fc46daa37c2d1a07bbbc7c3a803e908fcf04f",
+          "policy_version": "RDL_FRESHNESS_v0.1",
+          "record_path": "research/freshness/bnb/FRESHNESS_EVALUATION_v0.1.json",
+          "release_freshness_state": "EVENT_INVALIDATED",
+          "subject": "bnb"
+        },
+        "g3_bnb": "FAIL"
+      },
+      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evidence_refs": [
+        "gdr-se/engine/freshness.py",
+        "rdl/freshness/gdr_g3_adapter.json"
+      ],
+      "gate_id": "RDLF25_GDR_G3_INTEGRATION",
+      "reason": "GDR-SE G3 consumes RDL freshness facts.",
+      "rule_version": "RDL_FRESHNESS_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "validate_runtime_behaviors"
+    },
+    {
+      "computed_facts": {
+        "overlay": true
+      },
+      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evidence_refs": [
+        "dynamics.html",
+        "gdr.html",
+        "verify.html"
+      ],
+      "gate_id": "RDLF26_TIMELINE_OVERLAY",
+      "reason": "Public pages include freshness overlay and GDR/Verify chain updates.",
+      "rule_version": "RDL_FRESHNESS_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "validate_outputs"
+    },
+    {
+      "computed_facts": {
+        "critical_evidence": {
+          "CURRENT": 4
+        },
+        "delta": {
+          "NOT_APPLICABLE": 4
+        },
+        "gdr": "ALLOW_WITH_LIMITATIONS",
+        "level": {
+          "CURRENT": 1,
+          "EVENT_INVALIDATED": 3
+        },
+        "release": "EVENT_INVALIDATED"
+      },
+      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evidence_refs": [
+        "research/freshness/strategy/FRESHNESS_EVALUATION_v0.1.json"
+      ],
+      "gate_id": "RDLF27_STRATEGY_PILOT",
+      "reason": "strategy freshness pilot runtime record exists.",
+      "rule_version": "RDL_FRESHNESS_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "validate_outputs"
+    },
+    {
+      "computed_facts": {
+        "critical_evidence": {
+          "CURRENT": 4
+        },
+        "delta": {
+          "EVENT_INVALIDATED": 1,
+          "NOT_APPLICABLE": 3
+        },
+        "gdr": "ALLOW_WITH_LIMITATIONS",
+        "level": {
+          "CURRENT": 3,
+          "EVENT_INVALIDATED": 1
+        },
+        "release": "EVENT_INVALIDATED"
+      },
+      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evidence_refs": [
+        "research/freshness/bnb/FRESHNESS_EVALUATION_v0.1.json"
+      ],
+      "gate_id": "RDLF28_BNB_PILOT",
+      "reason": "bnb freshness pilot runtime record exists.",
+      "rule_version": "RDL_FRESHNESS_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "validate_outputs"
+    },
+    {
+      "computed_facts": {
+        "critical_evidence": {
+          "CURRENT": 4
+        },
+        "delta": {
+          "NOT_APPLICABLE": 4
+        },
+        "gdr": "ALLOW_WITH_LIMITATIONS",
+        "level": {
+          "CURRENT": 4
+        },
+        "release": "CURRENT_WITH_LIMITATIONS"
+      },
+      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evidence_refs": [
+        "research/freshness/sol/FRESHNESS_EVALUATION_v0.1.json"
+      ],
+      "gate_id": "RDLF29_SOL_PILOT",
+      "reason": "sol freshness pilot runtime record exists.",
+      "rule_version": "RDL_FRESHNESS_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "validate_outputs"
+    },
+    {
+      "computed_facts": {
+        "critical_evidence": {
+          "CURRENT": 4
+        },
+        "delta": {
+          "NOT_APPLICABLE": 4
+        },
+        "gdr": "ALLOW_WITH_LIMITATIONS",
+        "level": {
+          "CURRENT": 3,
+          "EVENT_INVALIDATED": 1
+        },
+        "release": "EVENT_INVALIDATED"
+      },
+      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evidence_refs": [
+        "research/freshness/trx/FRESHNESS_EVALUATION_v0.1.json"
+      ],
+      "gate_id": "RDLF30_TRX_PILOT",
+      "reason": "trx freshness pilot runtime record exists.",
+      "rule_version": "RDL_FRESHNESS_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "validate_outputs"
+    },
+    {
+      "computed_facts": {
+        "critical_evidence": {
+          "CURRENT": 4
+        },
+        "delta": {
+          "NOT_APPLICABLE": 4
+        },
+        "gdr": "ALLOW_WITH_LIMITATIONS",
+        "level": {
+          "CURRENT": 1,
+          "EVENT_INVALIDATED": 3
+        },
+        "release": "EVENT_INVALIDATED"
+      },
+      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evidence_refs": [
+        "research/freshness/xlm/FRESHNESS_EVALUATION_v0.1.json"
+      ],
+      "gate_id": "RDLF31_XLM_PILOT",
+      "reason": "xlm freshness pilot runtime record exists.",
+      "rule_version": "RDL_FRESHNESS_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "validate_outputs"
+    },
+    {
+      "computed_facts": {},
+      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evidence_refs": [
+        "research/freshness/*/FRESHNESS_EVALUATION_v0.1.json"
+      ],
+      "gate_id": "RDLF32_EVIDENCE_FAMILY_PILOT",
+      "reason": "Evidence family freshness is evaluated for all pilot subjects.",
+      "rule_version": "RDL_FRESHNESS_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "validate_outputs"
+    },
+    {
+      "computed_facts": {
+        "unconfigured_rules": 9
+      },
+      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evidence_refs": [
+        "rdl/freshness/audit/UNCONFIGURED_FRESHNESS_RULES.json"
+      ],
+      "gate_id": "RDLF33_UNCONFIGURED_REGISTRY",
+      "reason": "Unconfigured freshness rules are explicitly registered.",
+      "rule_version": "RDL_FRESHNESS_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "validate_outputs"
+    },
+    {
+      "computed_facts": {
+        "configured_rules": 4,
+        "unconfigured_rules": 9
+      },
+      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evidence_refs": [
+        "docs/research/RDL_FRESHNESS_POLICY_DERIVATION_v0.1.md",
+        "docs/research/RDL_FRESHNESS_CADENCE_ANALYSIS_v0.1.md",
+        "docs/research/RDL_FRESHNESS_SENSITIVITY_ANALYSIS_v0.1.md",
+        "docs/research/RDL_FRESHNESS_EVENT_RULES_v0.1.md",
+        "whitepapers/RDL/RDL_Freshness_Policy_v0.1.md",
+        "rdl/freshness/RDL_FRESHNESS_POLICY_MANIFEST.json"
+      ],
+      "gate_id": "RDLF34_POLICY_MANIFEST",
+      "reason": "Policy manifest and research outputs exist.",
+      "rule_version": "RDL_FRESHNESS_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "validate_outputs"
+    },
+    {
+      "computed_facts": {},
+      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evidence_refs": [
+        "rdl/freshness/validation/RDL_FRESHNESS_GATE_RESULTS.json"
+      ],
+      "gate_id": "RDLF35_GATE_REGISTRY",
+      "reason": "Gate registry is generated by validation runner.",
+      "rule_version": "RDL_FRESHNESS_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "validate_outputs"
+    },
+    {
+      "computed_facts": {},
+      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evidence_refs": [
+        "rdl/freshness/validation/gate_registry.py"
+      ],
+      "gate_id": "RDLF36_NO_DEFAULT_PASS",
+      "reason": "Missing gate output becomes NOT_EVALUATED.",
+      "rule_version": "RDL_FRESHNESS_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "validate_outputs"
+    },
+    {
+      "computed_facts": {},
+      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evidence_refs": [
+        "docs/execution/RDL_FRESHNESS_PRE_AUDIT.md"
+      ],
+      "gate_id": "RDLF37_RESEARCH_HASHES_UNCHANGED",
+      "reason": "Frozen research payloads are not edited.",
+      "rule_version": "RDL_FRESHNESS_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "validate_outputs"
+    },
+    {
+      "computed_facts": {},
+      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evidence_refs": [
+        "gdr-se/engine/gates.py"
+      ],
+      "gate_id": "RDLF38_GDR_SEMANTICS_UNCHANGED",
+      "reason": "Only G3 freshness source changed; aggregation precedence remains unchanged.",
+      "rule_version": "RDL_FRESHNESS_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "validate_outputs"
+    },
+    {
+      "computed_facts": {},
+      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evidence_refs": [
+        "timeline/validation/TIMELINE_R1_1A_GATE_RESULTS.json"
+      ],
+      "gate_id": "RDLF39_TIMELINE_SEMANTICS_UNCHANGED",
+      "reason": "Timeline R1.1a semantics remain frozen.",
+      "rule_version": "RDL_FRESHNESS_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "validate_outputs"
+    },
+    {
+      "computed_facts": {},
+      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evidence_refs": [
+        "scripts/test_english_public_surface.py"
+      ],
+      "gate_id": "RDLF40_ENGLISH_PUBLIC_SURFACE",
+      "reason": "English public-surface tests pass.",
+      "rule_version": "RDL_FRESHNESS_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "validate_outputs"
+    },
+    {
+      "computed_facts": {},
+      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evidence_refs": [
+        "scripts/test_timeline_ui.py"
+      ],
+      "gate_id": "RDLF41_HREF_INTEGRITY",
+      "reason": "Href integrity covered by UI tests.",
+      "rule_version": "RDL_FRESHNESS_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "validate_outputs"
+    },
+    {
+      "computed_facts": {
+        "docs_sync": true
+      },
+      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evidence_refs": [
+        "rdl",
+        "docs/rdl"
+      ],
+      "gate_id": "RDLF42_ROOT_DOCS_SYNC",
+      "reason": "Freshness outputs are copied to docs.",
+      "rule_version": "RDL_FRESHNESS_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "validate_outputs"
+    },
+    {
+      "computed_facts": {
+        "test_commands": {
+          "python3 -B scripts/test_english_public_surface.py": 0,
+          "python3 -B scripts/test_gdr_se_clock.py": 0,
+          "python3 -B scripts/test_gdr_se_freshness.py": 0,
+          "python3 -B scripts/test_gdr_se_runtime.py": 0,
+          "python3 -B scripts/test_rdl_freshness_gdr.py": 0,
+          "python3 -B scripts/test_rdl_freshness_policy.py": 0,
+          "python3 -B scripts/test_rdl_freshness_runtime.py": 0,
+          "python3 -B scripts/test_rdl_freshness_validation.py": 0,
+          "python3 -B scripts/test_timeline_ui.py": 0
+        }
+      },
+      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evidence_refs": [
+        "scripts/test_rdl_freshness_policy.py",
+        "scripts/test_rdl_freshness_runtime.py"
+      ],
+      "gate_id": "RDLF43_TESTS",
+      "reason": "Test command registry reports success.",
+      "rule_version": "RDL_FRESHNESS_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "validate_outputs"
+    },
+    {
+      "computed_facts": {
+        "head": "8871b5afd2fda4ab30f430e1799ebcf530c42d52",
+        "origin_main": "8871b5afd2fda4ab30f430e1799ebcf530c42d52",
+        "remote_main": "8871b5afd2fda4ab30f430e1799ebcf530c42d52"
+      },
+      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evidence_refs": [
+        ".git"
+      ],
+      "gate_id": "RDLF44_GIT_PUSH",
+      "reason": "Git push gate is verified after final push.",
+      "rule_version": "RDL_FRESHNESS_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "validate_outputs"
+    },
+    {
+      "computed_facts": {
+        "head": "8871b5afd2fda4ab30f430e1799ebcf530c42d52",
+        "origin_main": "8871b5afd2fda4ab30f430e1799ebcf530c42d52",
+        "remote_main": "8871b5afd2fda4ab30f430e1799ebcf530c42d52"
+      },
+      "evaluated_at": "2026-09-11T02:51:20.987719Z",
+      "evidence_refs": [
+        ".git"
+      ],
+      "gate_id": "RDLF45_REMOTE_MATCH",
+      "reason": "Remote match is derived from git.",
+      "rule_version": "RDL_FRESHNESS_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "validate_outputs"
+    }
+  ],
+  "summary": {
+    "BLOCKED": 0,
+    "FAIL": 0,
+    "NOT_EVALUATED": 0,
+    "PARTIAL": 0,
+    "PASS": 45,
+    "acceptance": "METHOD_PILOT_PASS"
+  },
+  "validation_rules_sha256": "19ed241d31cf2a276a061f52e744975619f3e396f02507c5c65c01a7b580bcdb"
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "required": [
+    "policy_version",
+    "subject_id",
+    "evaluation_as_of",
+    "dimension_level_results",
+    "dimension_delta_results",
+    "evidence_family_results",
+    "release_result",
+    "input_bundle_hash"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,17 @@
+{
+  "config_hashes": {
+    "event_invalidation_rules_sha256": "9db66db75f2a3024a5028cf7041b5012cdda6fe333113e7c95b809b301f05f33",
+    "evidence_family_criticality_sha256": "13a50479fa4ba0ec9fff5de4138889bac448886acf164bf9090d217fba0158dc",
+    "freshness_precedence_sha256": "9141499caa91ef634b5e56e8e07644a19c83edc8ad433db58274cf51a8e37ae4",
+    "freshness_profiles_sha256": "7326aee19c3606a12233e08233cdc4ac072053d7cf96c6997343ba2b4a601f28",
+    "product_context_rules_sha256": "4e1e344f511bb41b305fa9c213df0afe5696be5a67e5c6fbf3d85ade955cef90"
+  },
+  "configured_count": 4,
+  "evaluation_engine_version": "RDL_FRESHNESS_ENGINE_v0.1",
+  "policy_version": "RDL_FRESHNESS_v0.1",
+  "research_derivation_hash": "f158ccbe5bba092db1174d651ecc56889592da29801ccd301935b2aff0cc7283",
+  "rule_count": 13,
+  "subject_count": 5,
+  "unconfigured_count": 9,
+  "validation_report_hash": "3f7fd729d663eacb5a53a43e71e793fe9dfb0d8786e9b84746cedcd323c8c9f8"
+}

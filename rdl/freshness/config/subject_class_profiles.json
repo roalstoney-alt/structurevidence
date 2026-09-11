@@ -1,0 +1,16 @@
+{
+  "current_subject_mapping": {
+    "bnb": "L1_NETWORK",
+    "sol": "L1_NETWORK",
+    "strategy": "PUBLIC_COMPANY_TREASURY",
+    "trx": "L1_NETWORK",
+    "xlm": "L1_NETWORK"
+  },
+  "policy_version": "RDL_FRESHNESS_v0.1",
+  "subject_classes": [
+    "PUBLIC_COMPANY_TREASURY",
+    "L1_NETWORK",
+    "PROTOCOL_GOVERNANCE",
+    "MARKET_CONTEXT"
+  ]
+}
