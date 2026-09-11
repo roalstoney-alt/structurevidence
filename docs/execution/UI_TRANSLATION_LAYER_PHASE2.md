@@ -16,3 +16,7 @@ The visualization does not interpolate between observations, convert categories 
 ## Preserved layers
 
 The detailed day/week/month Timeline, state table, event ledger, Evidence Dynamics, GDR action table, Verify route, and RTP provenance remain available below the simplified view.
+
+## Sparse market-data treatment
+
+Unconnected market-depth and liquidity dimensions are removed from the primary state grid. Their explicit `NOT_MEASURED` values, reason, observation windows, and source coverage remain available inside a closed-by-default Data extension pack. This changes presentation priority only; it does not change or suppress the underlying monitoring state.

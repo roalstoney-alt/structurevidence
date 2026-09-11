@@ -118,9 +118,7 @@
     document.querySelector("[data-state-grid]").innerHTML = [
       stateCard("Structural Level",snapshot.structural_level.overall_state,`${snapshot.structural_level.dimensions.length} observed dimensions`,"structural"),
       stateCard("Structural Delta",snapshot.structural_delta.overall_state,"Level and Delta remain separate","delta"),
-      stateCard("Evidence State",snapshot.evidence_dynamics.overall_state,snapshot.evidence_dynamics.ecl_consistency,"evidence"),
-      stateCard("Market Dynamics",snapshot.market_dynamics.state,"Flow-8 unavailable without measured inputs","missing"),
-      stateCard("Liquidity Observation",snapshot.liquidity_observations.every((row) => row.state === "NOT_MEASURED") ? "NOT_MEASURED" : "PARTIAL","No frozen microstructure series","missing")
+      stateCard("Evidence State",snapshot.evidence_dynamics.overall_state,snapshot.evidence_dynamics.ecl_consistency,"evidence")
     ].join("");
     const levels = Object.fromEntries(snapshot.structural_level.dimensions.map((row) => [row.dimension_id,row]));
     document.querySelector("[data-transition-table] tbody").innerHTML = snapshot.structural_delta.dimensions.map((row) => { const level = levels[row.dimension_id] || {}; return `<tr><td><strong>${esc(row.dimension_id)}</strong></td><td>${esc(level.state || "NOT_OBSERVED")}</td><td>${esc(dateOnly(level.effective_at))}</td><td>${esc(row.state)}</td><td>${esc(row.basis)}</td><td>${esc(row.comparability_state)}</td></tr>`; }).join("");
@@ -130,6 +128,8 @@
     document.querySelector("[data-evidence-summary]").innerHTML = [["CLAIMS",evidence.claim_count],["SOURCES",evidence.source_count],["DEPENDENCY GROUPS",evidence.dependency_group_count],["SOURCE COVERAGE",evidence.source_coverage],["ECL CONSISTENCY",evidence.ecl_consistency]].map(([label,value]) => `<div><span>${esc(label)}</span><strong>${esc(value)}</strong></div>`).join("");
     document.querySelector("[data-evidence-table] tbody").innerHTML = evidence.events.map((row) => `<tr><td>${esc(row.family_id)}</td><td>${esc(row.state_after)}</td><td>${esc(dateOnly(row.known_at))}</td><td>${esc(row.observation_mode)}</td><td>${sourceLink(row.artifact_refs?.[0])}</td></tr>`).join("");
     document.querySelector("[data-market-reason]").textContent = snapshot.market_dynamics.reason;
+    const marketPackOpen = snapshot.market_dynamics.state !== "NOT_MEASURED" || snapshot.liquidity_observations.some((row) => row.state !== "NOT_MEASURED");
+    document.querySelector("[data-market-pack-state]").textContent = marketPackOpen ? "Coverage available" : "Not connected";
     document.querySelector("[data-market-table] tbody").innerHTML = snapshot.liquidity_observations.map((row) => `<tr><td>${esc(row.metric)}</td><td><strong class="state-muted">${esc(row.state)}</strong></td><td>${esc(row.observation_window || "NONE")}</td><td>${row.source_refs.length ? esc(row.source_refs.length) : "NO INPUT ARTIFACT"}</td></tr>`).join("");
     document.querySelector("[data-gdr-id]").textContent = snapshot.gdr_snapshot.authorization_id;
     document.querySelector("[data-gdr-table] tbody").innerHTML = Object.entries(snapshot.gdr_snapshot.actions).map(([action,outcome]) => `<tr><td><strong>${esc(action)}</strong></td><td>${esc(outcome)}</td><td>${action === "COMMERCIAL_DELIVERY" ? "Requires exact paid-delivery authorization" : "Versioned monitor adapter v1.0"}</td></tr>`).join("");

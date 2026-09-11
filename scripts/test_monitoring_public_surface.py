@@ -16,6 +16,8 @@ def main() -> None:
         require(required in monitor, f"missing L1 decision view: {required}")
     for required in ["How the observed structure changed", "Established Delta", "Comparison open", "data-change-chart"]:
         require(required in monitor, f"missing simplified structure timeline: {required}")
+    require('<details class="data-pack" data-market-pack>' in monitor, "market extension pack must use a collapsed disclosure")
+    require('<details class="data-pack" data-market-pack open>' not in monitor, "market extension pack must be closed by default")
     pass_message("MONITORING_PUBLIC_SURFACE_TESTS")
 
 
