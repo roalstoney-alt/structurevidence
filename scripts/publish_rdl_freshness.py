@@ -556,8 +556,12 @@ def write_pages(runtime: dict) -> None:
     write_text(ROOT / "verify.html", verify_text)
     shutil.copyfile(ROOT / "verify.html", ROOT / "docs" / "verify.html")
     rdl = (ROOT / "architecture" / "rdl.html").read_text(encoding="utf-8")
-    if "freshness policy" not in rdl.lower():
-        rdl = rdl.replace("<section>\n  <h2>Operational Detail</h2>", "<section><h2>RDL Operating Scope</h2><p><code>RDL -> publication policy -> correction/supersession -> freshness policy -> governance standards</code></p></section>\n<section>\n  <h2>Operational Detail</h2>")
+    rdl_scope = "<section><h2>RDL Operating Scope</h2><p><code>RDL -> publication policy -> correction/supersession -> RDL Freshness Policy v0.1 -> governance standards</code></p></section>"
+    if "RDL Freshness Policy v0.1" not in rdl:
+        if "RDL -> publication policy -> correction/supersession -> freshness policy -> governance standards" in rdl:
+            rdl = rdl.replace("<section><h2>RDL Operating Scope</h2><p><code>RDL -> publication policy -> correction/supersession -> freshness policy -> governance standards</code></p></section>", rdl_scope)
+        else:
+            rdl = rdl.replace("<section>\n  <h2>Operational Detail</h2>", f"{rdl_scope}\n<section>\n  <h2>Operational Detail</h2>")
     write_text(ROOT / "architecture" / "rdl.html", rdl)
     (ROOT / "docs" / "architecture").mkdir(parents=True, exist_ok=True)
     shutil.copyfile(ROOT / "architecture" / "rdl.html", ROOT / "docs" / "architecture" / "rdl.html")
