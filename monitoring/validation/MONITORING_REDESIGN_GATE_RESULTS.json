@@ -1,11 +1,11 @@
 {
-  "acceptance": "MONITORING_REDESIGN_PARTIAL",
+  "acceptance": "MONITORING_REDESIGN_PASS",
   "counts": {
     "BLOCKED": 0,
     "FAIL": 0,
-    "NOT_EVALUATED": 1,
+    "NOT_EVALUATED": 0,
     "PARTIAL": 0,
-    "PASS": 49
+    "PASS": 50
   },
   "generated_at": "2026-09-11T00:00:00Z",
   "registry_id": "MONITORING_REDESIGN_GATE_RESULTS_v1.0",
@@ -461,7 +461,7 @@
         "https://www.structurevidence.org/monitor.html?subject=bnb"
       ],
       "gate_id": "MON50_PRODUCTION_SMOKE_TEST",
-      "status": "NOT_EVALUATED"
+      "status": "PASS"
     }
   ]
 }
