@@ -2,5 +2,15 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "structevidence-landing",
   "main": "worker.js",
-  "compatibility_date": "2026-09-12"
+  "compatibility_date": "2026-09-12",
+  "routes": [
+    {
+      "pattern": "structevidence.com",
+      "custom_domain": true
+    },
+    {
+      "pattern": "www.structevidence.com",
+      "custom_domain": true
+    }
+  ]
 }

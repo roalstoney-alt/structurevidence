@@ -3,6 +3,7 @@
 *.pyc
 __pycache__/
 node_modules/
+.wrangler/
 .env
 .env.*
 tmp/
