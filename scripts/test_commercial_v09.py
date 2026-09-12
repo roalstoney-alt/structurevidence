@@ -25,6 +25,7 @@ REQUIRED_PAGES = [
     "enterprise.html",
     "customize.html",
     "checkout.html",
+    "landing.html",
     "terms.html",
     "privacy.html",
     "terms-of-sale.html",
@@ -182,6 +183,10 @@ def check_paid_boundary_and_copy() -> None:
     for phrase in ["USDT-TRC20 settlement", "TQxjZ97Sgpdd685oYH2BAK2ik3J7CCRQRw", "Submit TXID by WhatsApp", "written quote"]:
         if phrase not in checkout:
             fail(f"checkout page missing payment boundary: {phrase}")
+    landing = (ROOT / "landing.html").read_text(encoding="utf-8")
+    for phrase in ["Monitor what changed. Verify why.", "Request a custom audit", "Written quote / USDT-TRC20", "utm_campaign"]:
+        if phrase not in landing:
+            fail(f"campaign landing page missing: {phrase}")
     for rel in ["reports.html", "sample-report.html", "enterprise.html", "customize.html", "checkout.html"]:
         text = (ROOT / rel).read_text(encoding="utf-8")
         if re.search(r"\$\s?\d", text):
