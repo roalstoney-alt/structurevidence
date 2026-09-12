@@ -17,6 +17,11 @@ def main() -> None:
     require(".change-chart" in css and "data-change-detail" in (ROOT / "monitor.html").read_text(encoding="utf-8"), "structure change visualization missing")
     require(".data-pack" in css and "data-market-pack-state" in (ROOT / "monitor.html").read_text(encoding="utf-8"), "collapsed data extension pack missing")
     require('stateCard("Market Dynamics"' not in (ROOT / "assets/monitor.js").read_text(encoding="utf-8"), "unmeasured market card must not occupy the primary state grid")
+    for name in ["index.html", "monitor.html"]:
+        text = (ROOT / name).read_text(encoding="utf-8")
+        require("Loading" not in text, f"public first paint still exposes loading placeholder: {name}")
+    home = (ROOT / "index.html").read_text(encoding="utf-8")
+    require("Need another asset? Ask Audit" in home and "terms-of-sale.html" in home and "privacy.html" in home, "homepage commercial and legal paths missing")
     for name in pages:
         root = (ROOT / name).read_bytes(); published = (ROOT / "docs" / name).read_bytes()
         require(root == published, f"root/docs divergence: {name}")

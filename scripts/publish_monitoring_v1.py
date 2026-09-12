@@ -22,6 +22,8 @@ PUBLIC_FILES = [
     "terms-of-sale.html",
     "privacy.html",
     "refund-policy.html",
+    "sitemap.xml",
+    "robots.txt",
     "assets/monitor.css",
     "assets/monitor.js",
     "assets/verify-monitor.js",
