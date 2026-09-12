@@ -28,6 +28,7 @@ PUBLIC_FILES = [
     "assets/monitor.js",
     "assets/verify-monitor.js",
     "assets/tron-usdt-qr.jpg",
+    "assets/favicon.svg",
     "reports/DEMO_BNB_MONITORING_SNAPSHOT_v1.0.pdf",
     "reports/demo-bnb-monitoring-snapshot-cover.png",
     "verify/reports/DEMO_BNB_MONITORING_SNAPSHOT_v1.0.json",
