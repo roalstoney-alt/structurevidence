@@ -383,7 +383,7 @@
         "technical-risk/TECHNICAL_RISK_MANIFEST.json"
       ],
       "gate_id": "CML35_REMOTE_MATCH",
-      "reason": "Implementation commit 4a86744c5ce316aceec0808636be237e0ae1dec9 matched origin/main and production returned HTTP 200.",
+      "reason": "Implementation commit 7a4e892df4c8d934909c53eb279bc10267cc802a matched origin/main and production returned HTTP 200.",
       "rule_version": "CML_VALIDATION_v0.1",
       "status": "PASS",
       "validator": "scripts/test_cml_v01.py"
