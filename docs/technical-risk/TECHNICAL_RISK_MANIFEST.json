@@ -1,6 +1,6 @@
 {
   "audit_policy_version": "CML_AUDIT_v0.1a",
-  "build_commit": "ce1869fb5b04bb80bdad3451d1cf778c5ef557ca",
+  "build_commit": "088012605a7b731ce2b868c87eef8c9af986a94a",
   "config_hashes": {
     "cml_taxonomy.json": "13ef388c9b3d249de5cc6114ee10ec5fa2c8986a67e078ce316e9150bcedcc92",
     "evidence_families.json": "3f511d93a4a643bf2a22f984cec385df940554cba09e2f36498e7bf35bfb54c1",

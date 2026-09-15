@@ -7,14 +7,19 @@
   "results": [
     {
       "computed_facts": {
-        "error": "AssertionError: Repository HEAD matches the manifest implementation commit; any pending changes are closure outputs only."
+        "closure_output_only": true,
+        "manifest_build_commit": "088012605a7b731ce2b868c87eef8c9af986a94a",
+        "repo_head": "088012605a7b731ce2b868c87eef8c9af986a94a",
+        "worktree_clean": false
       },
       "evaluated_at": "2026-09-16T00:00:00Z",
-      "evidence_refs": [],
+      "evidence_refs": [
+        "technical-risk/TECHNICAL_RISK_MANIFEST.json"
+      ],
       "gate_id": "CML01_REPO_BASELINE",
-      "reason": "Independent validator failed: Repository HEAD matches the manifest implementation commit; any pending changes are closure outputs only.",
+      "reason": "Repository HEAD matches the manifest implementation commit; any pending changes are closure outputs only.",
       "rule_version": "CML_AUDIT_v0.1a",
-      "status": "FAIL",
+      "status": "PASS",
       "validator": "validate_repo_baseline"
     },
     {
@@ -563,8 +568,8 @@
     },
     {
       "computed_facts": {
-        "manifest_build_commit": "ce1869fb5b04bb80bdad3451d1cf778c5ef557ca",
-        "remote_main_sha": "ce1869fb5b04bb80bdad3451d1cf778c5ef557ca"
+        "manifest_build_commit": "088012605a7b731ce2b868c87eef8c9af986a94a",
+        "remote_main_sha": "088012605a7b731ce2b868c87eef8c9af986a94a"
       },
       "evaluated_at": "2026-09-16T00:00:00Z",
       "evidence_refs": [
@@ -677,8 +682,8 @@
     }
   ],
   "summary": {
-    "FAIL": 1,
+    "FAIL": 0,
     "NOT_EVALUATED": 0,
-    "PASS": 39
+    "PASS": 40
   }
 }
