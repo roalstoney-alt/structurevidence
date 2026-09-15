@@ -6,12 +6,14 @@ from __future__ import annotations
 import hashlib
 import html
 import json
+import os
 import shutil
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE_SHA = "0abab7f1246f70445d018478542a6dc0f7b5ab05"
+BUILD_COMMIT = os.environ.get("CML_BUILD_COMMIT", f"UNCOMMITTED_FROM_BASE:{BASE_SHA}")
 AS_OF = "2026-09-16T00:00:00Z"
 CORE_VERSION = "STRUCTEVIDENCE_EVIDENCE_CORE_v0.1"
 MODULE_VERSION = "STRUCTEVIDENCE_TECHNICAL_RISK_v0.1"
@@ -704,7 +706,7 @@ def main() -> None:
         write(folder / "09_COUNTER_EVIDENCE.md", f"# Counter-Evidence\n\n{pilot['counter_evidence']}\n")
         write(folder / "10_LIMITATIONS.md", "# Limitations\n\nPublic-evidence pilot only. No client BOM, pricing, inventory, drawings, application limits, laboratory raw data or qualification approval is included. A paper candidate is never a qualified replacement.\n")
         artifact_hashes = {path.name: file_digest(path) for path in sorted(folder.iterdir()) if path.is_file()}
-        release = {"record_id": pilot["record_id"], "record_hash": record["core"]["record_hash"], "artifact_hashes": artifact_hashes, "freshness_state": pilot["freshness"], "gdr_version": "GDR_SE_v0.1-R1.1_DOMAIN_ADAPTER_PENDING", "release_state": "PUBLIC_METHOD_PILOT", "authorization_state": "ALLOW_PUBLIC_WITH_LIMITATIONS", "paid_delivery_state": "REQUEST_ONLY", "evaluation_as_of": AS_OF}
+        release = {"record_id": pilot["record_id"], "record_hash": record["core"]["record_hash"], "artifact_hashes": artifact_hashes, "freshness_state": pilot["freshness"], "gdr_version": "GDR_SE_v0.1-R1.1+CML_DOMAIN_ADAPTER_v0.1", "release_state": "PUBLIC_METHOD_PILOT", "authorization_state": "ALLOW_PUBLIC_WITH_LIMITATIONS", "paid_delivery_state": "REQUEST_ONLY", "evaluation_as_of": AS_OF}
         write_json(folder / "12_RELEASE_MANIFEST.json", release)
         pilot_hashes[pilot["record_id"]] = record["core"]["record_hash"]
         index.append({"slug": pilot["slug"], "record_id": pilot["record_id"], "manufacturer": pilot["manufacturer"], "manufacturer_part_number": pilot["manufacturer_part_number"], "search_aliases": pilot["search_aliases"], "product_family": pilot["product_family"], "technical_item_type": pilot["technical_item_type"], "lifecycle_state": pilot["lifecycle_state"], "qualification_state": "LAB_VERIFICATION_REQUIRED", "record_hash": record["core"]["record_hash"], "href": f"../record/{pilot['slug']}/"})
@@ -712,7 +714,7 @@ def main() -> None:
     write_json(ROOT / "technical-risk/records/PUBLIC_RECORD_INDEX.json", {"module_version": MODULE_VERSION, "evaluation_as_of": AS_OF, "records": index})
     schema_hashes = {Path(path).name: file_digest(ROOT / path) for path in schema_files()}
     config_hashes = {path.name: file_digest(path) for path in sorted((ROOT / "technical-risk/config").glob("*.json"))}
-    manifest = {"module_version": MODULE_VERSION, "protocol_version": PROTOCOL_VERSION, "evidence_core_version": CORE_VERSION, "schema_hashes": schema_hashes, "config_hashes": config_hashes, "pilot_record_ids": list(pilot_hashes), "pilot_record_hashes": pilot_hashes, "freshness_policy_version": "RDL_FRESHNESS_v0.1a+CML_FRESHNESS_PROFILE_v0.1", "gdr_version": "GDR_SE_v0.1-R1.1_DOMAIN_ADAPTER_PENDING", "build_commit": BASE_SHA, "evaluation_as_of": AS_OF, "public_release_state": "METHOD_PILOT_ALLOW_WITH_LIMITATIONS"}
+    manifest = {"module_version": MODULE_VERSION, "protocol_version": PROTOCOL_VERSION, "evidence_core_version": CORE_VERSION, "schema_hashes": schema_hashes, "config_hashes": config_hashes, "pilot_record_ids": list(pilot_hashes), "pilot_record_hashes": pilot_hashes, "freshness_policy_version": "RDL_FRESHNESS_v0.1a+CML_FRESHNESS_PROFILE_v0.1", "gdr_version": "GDR_SE_v0.1-R1.1+CML_DOMAIN_ADAPTER_v0.1", "build_commit": BUILD_COMMIT, "evaluation_as_of": AS_OF, "public_release_state": "METHOD_PILOT_ALLOW_WITH_LIMITATIONS"}
     write_json(ROOT / "technical-risk/TECHNICAL_RISK_MANIFEST.json", manifest)
     history = ROOT / "technical-risk/CML_VERSION_HISTORY.jsonl"
     if not history.exists():

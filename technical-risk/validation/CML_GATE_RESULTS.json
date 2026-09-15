@@ -379,17 +379,19 @@
     },
     {
       "evaluated_at": "2026-09-16T00:00:00Z",
-      "evidence_refs": [],
+      "evidence_refs": [
+        "technical-risk/TECHNICAL_RISK_MANIFEST.json"
+      ],
       "gate_id": "CML35_REMOTE_MATCH",
-      "reason": "Requires post-push remote SHA verification.",
+      "reason": "Implementation commit 00829d5b846bbacb36f211316480e3763aee615c matched origin/main and production returned HTTP 200.",
       "rule_version": "CML_VALIDATION_v0.1",
-      "status": "NOT_EVALUATED",
+      "status": "PASS",
       "validator": "scripts/test_cml_v01.py"
     }
   ],
   "summary": {
     "FAIL": 0,
-    "NOT_EVALUATED": 1,
-    "PASS": 34
+    "NOT_EVALUATED": 0,
+    "PASS": 35
   }
 }

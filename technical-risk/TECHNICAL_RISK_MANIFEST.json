@@ -1,5 +1,5 @@
 {
-  "build_commit": "0abab7f1246f70445d018478542a6dc0f7b5ab05",
+  "build_commit": "00829d5b846bbacb36f211316480e3763aee615c",
   "config_hashes": {
     "cml_taxonomy.json": "13ef388c9b3d249de5cc6114ee10ec5fa2c8986a67e078ce316e9150bcedcc92",
     "evidence_families.json": "3f511d93a4a643bf2a22f984cec385df940554cba09e2f36498e7bf35bfb54c1",
@@ -10,7 +10,7 @@
   "evaluation_as_of": "2026-09-16T00:00:00Z",
   "evidence_core_version": "STRUCTEVIDENCE_EVIDENCE_CORE_v0.1",
   "freshness_policy_version": "RDL_FRESHNESS_v0.1a+CML_FRESHNESS_PROFILE_v0.1",
-  "gdr_version": "GDR_SE_v0.1-R1.1_DOMAIN_ADAPTER_PENDING",
+  "gdr_version": "GDR_SE_v0.1-R1.1+CML_DOMAIN_ADAPTER_v0.1",
   "module_version": "STRUCTEVIDENCE_TECHNICAL_RISK_v0.1",
   "pilot_record_hashes": {
     "SE.CML.RECORD.AMPHENOL-RF.095-725-134-006.v0.1": "7f269926c670caa06d9059eecbc99eb419c6edfbf9b8b9e9506b90251a5998c0",

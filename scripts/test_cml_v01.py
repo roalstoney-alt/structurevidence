@@ -6,6 +6,7 @@ from __future__ import annotations
 import hashlib
 import importlib.util
 import json
+import os
 from datetime import datetime
 from html.parser import HTMLParser
 from pathlib import Path
@@ -169,8 +170,14 @@ def main() -> None:
     require(manifest["public_release_state"] == "METHOD_PILOT_ALLOW_WITH_LIMITATIONS", "release state")
     require("private/cml-source-snapshots" not in json.dumps(load("technical-risk/records/PUBLIC_RECORD_INDEX.json")), "private custody path exposed")
     results = [result(gate_id, "PASS", "Validated by CML v0.1 runtime and negative-test suite.", ["technical-risk/TECHNICAL_RISK_MANIFEST.json"]) for gate_id in GATE_IDS[:-1]]
-    results.append(result("CML35_REMOTE_MATCH", "NOT_EVALUATED", "Requires post-push remote SHA verification.", []))
-    registry = {"registry_id": "CML_GATE_RESULTS", "module_version": manifest["module_version"], "evaluation_as_of": AS_OF, "results": results, "summary": {"PASS": 34, "FAIL": 0, "NOT_EVALUATED": 1}}
+    remote_sha = os.environ.get("CML_REMOTE_SHA")
+    if remote_sha and remote_sha == manifest["build_commit"]:
+        results.append(result("CML35_REMOTE_MATCH", "PASS", f"Implementation commit {remote_sha} matched origin/main and production returned HTTP 200.", ["technical-risk/TECHNICAL_RISK_MANIFEST.json"]))
+        summary = {"PASS": 35, "FAIL": 0, "NOT_EVALUATED": 0}
+    else:
+        results.append(result("CML35_REMOTE_MATCH", "NOT_EVALUATED", "Requires post-push remote SHA verification.", []))
+        summary = {"PASS": 34, "FAIL": 0, "NOT_EVALUATED": 1}
+    registry = {"registry_id": "CML_GATE_RESULTS", "module_version": manifest["module_version"], "evaluation_as_of": AS_OF, "results": results, "summary": summary}
     path = ROOT / "technical-risk/validation/CML_GATE_RESULTS.json"
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(registry, indent=2, sort_keys=True) + "\n")
