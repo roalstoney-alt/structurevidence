@@ -1,0 +1,21 @@
+{
+  "acquisition_domain": "structevidence.com",
+  "acquisition_root_artifact": "landing.html",
+  "brand": "StructEvidence",
+  "canonical_research_domain": "structurevidence.org",
+  "domain_split_prohibited": true,
+  "domains": [
+    "STRUCTURAL_INTELLIGENCE",
+    "TECHNICAL_RISK"
+  ],
+  "evidence_core": "STRUCTEVIDENCE_EVIDENCE_CORE_v0.1",
+  "shared_artifact_origin": "https://structurevidence.org",
+  "shared_systems": [
+    "REPOSITORY",
+    "EVIDENCE_CORE",
+    "RECORD_STORE",
+    "VERIFY",
+    "RELEASE_GOVERNANCE"
+  ],
+  "version": "CML_SITE_INTEGRATION_v0.1a"
+}

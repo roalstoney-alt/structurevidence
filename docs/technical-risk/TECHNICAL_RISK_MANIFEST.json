@@ -1,5 +1,5 @@
 {
-  "build_commit": "00829d5b846bbacb36f211316480e3763aee615c",
+  "build_commit": "4a86744c5ce316aceec0808636be237e0ae1dec9",
   "config_hashes": {
     "cml_taxonomy.json": "13ef388c9b3d249de5cc6114ee10ec5fa2c8986a67e078ce316e9150bcedcc92",
     "evidence_families.json": "3f511d93a4a643bf2a22f984cec385df940554cba09e2f36498e7bf35bfb54c1",
@@ -36,5 +36,6 @@
     "cml_test_requirement.schema.json": "d131c879c11af94b5adad293a593ad352a6fea4fd17eab2b3ff30e383639773f",
     "evidence_core_record.schema.json": "14d7bedce0ba48ff01955aa85a58d217263366e1956a27478f466cac2c6ddb8c",
     "technical_item.schema.json": "5bbb00d248447b305695086049e40a51517f59de5385ee41e9e826b879eb91a8"
-  }
+  },
+  "site_integration_version": "CML_SITE_INTEGRATION_v0.1a"
 }

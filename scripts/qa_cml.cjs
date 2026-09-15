@@ -22,6 +22,21 @@ const { chromium } = require('/Users/roal/.cache/codex-runtimes/codex-primary-ru
     await page.close();
   }
 
+  for (const item of cases) {
+    const page = await browser.newPage({ viewport: { width: item.width, height: item.height } });
+    await page.goto('http://127.0.0.1:8765/', { waitUntil: 'networkidle' });
+    if (!(await page.locator('body').innerText()).includes('Evidence domains')) throw new Error(`${item.name}: org domain section`);
+    if (!(await page.locator('a[href="technical-risk/"]').count())) throw new Error(`${item.name}: org Technical Risk link`);
+    if ((await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth)) > 1) throw new Error(`${item.name}: org overflow`);
+    await page.screenshot({ path: `/tmp/cml-org-${item.name}.png`, fullPage: true });
+    await page.goto('http://127.0.0.1:8765/landing.html', { waitUntil: 'networkidle' });
+    if (!(await page.locator('header a[href="/technical-risk/"]').count())) throw new Error(`${item.name}: com Technical Risk navigation`);
+    if (!(await page.locator('header a[href="/technical-risk/request-analysis/"]').count())) throw new Error(`${item.name}: com request navigation`);
+    if ((await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth)) > 1) throw new Error(`${item.name}: com overflow`);
+    await page.screenshot({ path: `/tmp/cml-com-${item.name}.png`, fullPage: true });
+    await page.close();
+  }
+
   const page = await browser.newPage({ viewport: { width: 1280, height: 900 } });
   await page.goto('http://127.0.0.1:8765/technical-risk/search/', { waitUntil: 'networkidle' });
   await page.fill('#cml-query', 'MRF101AN');
@@ -33,6 +48,7 @@ const { chromium } = require('/Users/roal/.cache/codex-runtimes/codex-primary-ru
   if (!(await page.locator('[data-cml-results]').innerText()).includes('No structured assessment')) throw new Error('search empty state');
   if (!(await page.locator('[data-cml-results] a').getAttribute('href')).includes('request-analysis')) throw new Error('search request CTA');
   await page.goto('http://127.0.0.1:8765/technical-risk/record/amphenol-rf-095-725-134-006/', { waitUntil: 'networkidle' });
+  if ((await page.locator('link[rel="canonical"]').getAttribute('href')) !== 'https://structurevidence.org/technical-risk/record/amphenol-rf-095-725-134-006/') throw new Error('record canonical');
   if (!(await page.locator('body').innerText()).includes('PAPER != QUALIFIED')) throw new Error('qualification boundary');
   const recordOverflow = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
   if (recordOverflow > 1) throw new Error(`record overflow ${recordOverflow}`);

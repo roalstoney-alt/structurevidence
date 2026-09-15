@@ -7,6 +7,7 @@ import hashlib
 import importlib.util
 import json
 import os
+import jsonschema
 from datetime import datetime
 from html.parser import HTMLParser
 from pathlib import Path
@@ -27,7 +28,9 @@ GATE_IDS = [
     "CML25_RF40_ASSEMBLY_PILOT", "CML26_PUBLIC_RECORD_RENDERING", "CML27_VERIFY_LINEAGE",
     "CML28_REQUEST_ANALYSIS_CTA", "CML29_PAYMENT_FAILSAFE", "CML30_NO_PUBLIC_CLIENT_BOM",
     "CML31_NO_NUMERIC_RISK_SCORE", "CML32_RELEASE_MANIFEST", "CML33_TESTS", "CML34_ROOT_DOCS_SYNC",
-    "CML35_REMOTE_MATCH",
+    "CML35_REMOTE_MATCH", "CML36_ORG_MAIN_SITE_INTEGRATION", "CML37_CROSS_DOMAIN_NAVIGATION",
+    "CML38_SHARED_TECHNICAL_RISK_ARTIFACTS", "CML39_CANONICAL_DOMAIN_POLICY",
+    "CML40_NO_PRODUCT_DOMAIN_SPLIT",
 ]
 PRIVATE_KEYS = {"customer_bom", "annual_usage", "inventory", "customer_pricing", "supplier_quotation", "customer_drawings", "customer_firmware", "customer_qualification_limits", "nda_documents", "revenue_exposure", "internal_failure_data", "private_lab_raw_data"}
 
@@ -68,6 +71,13 @@ def import_adapter():
     assert spec.loader
     spec.loader.exec_module(module)
     return module
+
+
+def validate_schema(instance: object, schema_path: str) -> None:
+    path = ROOT / schema_path
+    schema = json.loads(path.read_text(encoding="utf-8"))
+    resolver = jsonschema.RefResolver(base_uri=path.as_uri(), referrer=schema)
+    jsonschema.Draft202012Validator(schema, resolver=resolver).validate(instance)
 
 
 class LinkParser(HTMLParser):
@@ -128,6 +138,17 @@ def validate_record(record: dict, sources: dict, folder: Path, adapter) -> None:
     release = load(str((folder / "12_RELEASE_MANIFEST.json").relative_to(ROOT)))
     require(release["record_hash"] == expected, "release hash mismatch")
     require(release["paid_delivery_state"] == "REQUEST_ONLY", "fake paid fulfillment")
+    for name, artifact_hash in release["artifact_hashes"].items():
+        require(name != "12_RELEASE_MANIFEST.json", "release manifest cannot hash itself")
+        require(hashlib.sha256((folder / name).read_bytes()).hexdigest() == artifact_hash, f"artifact hash mismatch: {name}")
+    validate_schema(item, "technical-risk/schema/technical_item.schema.json")
+    validate_schema(event, "technical-risk/schema/cml_event.schema.json")
+    validate_schema(record, "technical-risk/schema/cml_public_record.schema.json")
+    validate_schema(release, "technical-risk/schema/cml_release_manifest.schema.json")
+    for candidate in cml["alternative"]["candidates"]:
+        validate_schema(candidate, "technical-risk/schema/cml_candidate.schema.json")
+    for cell in cml["verification"]["compatibility_matrix"]:
+        validate_schema(cell, "technical-risk/schema/cml_compatibility.schema.json")
     effect = adapter.release_effect(record, sources)
     require(effect["public_release"] == "ALLOW_WITH_LIMITATIONS" and effect["paid_delivery"] == "BLOCK", "GDR adapter boundary")
 
@@ -169,14 +190,35 @@ def main() -> None:
     require(digest(load("technical-risk/records/PUBLIC_RECORD_INDEX.json")) == digest(load("docs/technical-risk/records/PUBLIC_RECORD_INDEX.json")), "root/docs mismatch")
     require(manifest["public_release_state"] == "METHOD_PILOT_ALLOW_WITH_LIMITATIONS", "release state")
     require("private/cml-source-snapshots" not in json.dumps(load("technical-risk/records/PUBLIC_RECORD_INDEX.json")), "private custody path exposed")
-    results = [result(gate_id, "PASS", "Validated by CML v0.1 runtime and negative-test suite.", ["technical-risk/TECHNICAL_RISK_MANIFEST.json"]) for gate_id in GATE_IDS[:-1]]
+    index_html = (ROOT / "index.html").read_text(encoding="utf-8")
+    landing_html = (ROOT / "landing.html").read_text(encoding="utf-8")
+    architecture_html = (ROOT / "architecture.html").read_text(encoding="utf-8")
+    worker_source = (ROOT / "deploy/cloudflare-landing/worker.js").read_text(encoding="utf-8")
+    shared_pages = [ROOT / "technical-risk/index.html", ROOT / "technical-risk/search/index.html", ROOT / "technical-risk/method/index.html", *sorted((ROOT / "technical-risk/record").glob("*/index.html")), *sorted((ROOT / "technical-risk/verify").glob("*/index.html"))]
+
+    require("Evidence domains" in index_html and 'href="technical-risk/"' in index_html, "org homepage Technical Risk integration")
+    require(all(token in landing_html for token in ["/technical-risk/", "/technical-risk/search/", "/technical-risk/request-analysis/", "structurevidence.org/monitor.html"]), "com cross-domain navigation")
+    require(all(token in index_html for token in ["technical-risk/", "technical-risk/search/", "technical-risk/method/"]), "org cross-domain navigation")
+    require("One Evidence Core" in architecture_html and "technical-risk/method/" in architecture_html, "durable shared-core explanation")
+    require('https://structurevidence.org' in worker_source and '"/landing.html"' in worker_source, "worker origin routing")
+    require(all('rel="canonical" href="https://structurevidence.org/technical-risk/' in path.read_text(encoding="utf-8") for path in shared_pages), "Technical Risk canonical policy")
+    require('rel="canonical" href="https://structurevidence.org/"' in index_html, "org root canonical")
+    require('rel="canonical" href="https://structevidence.com/"' in landing_html, "com landing canonical")
+
+    results = [result(gate_id, "PASS", "Validated by CML v0.1 runtime and negative-test suite.", ["technical-risk/TECHNICAL_RISK_MANIFEST.json"]) for gate_id in GATE_IDS[:34]]
     remote_sha = os.environ.get("CML_REMOTE_SHA")
     if remote_sha and remote_sha == manifest["build_commit"]:
         results.append(result("CML35_REMOTE_MATCH", "PASS", f"Implementation commit {remote_sha} matched origin/main and production returned HTTP 200.", ["technical-risk/TECHNICAL_RISK_MANIFEST.json"]))
-        summary = {"PASS": 35, "FAIL": 0, "NOT_EVALUATED": 0}
     else:
         results.append(result("CML35_REMOTE_MATCH", "NOT_EVALUATED", "Requires post-push remote SHA verification.", []))
-        summary = {"PASS": 34, "FAIL": 0, "NOT_EVALUATED": 1}
+    results.extend([
+        result("CML36_ORG_MAIN_SITE_INTEGRATION", "PASS", "The primary .org homepage exposes Technical Risk as a peer evidence domain while retaining the BNB monitor.", ["index.html"]),
+        result("CML37_CROSS_DOMAIN_NAVIGATION", "PASS", "Both public domains expose direct paths to Technical Risk, search, request analysis and the Structural Monitor.", ["index.html", "landing.html", "technical-risk/index.html"]),
+        result("CML38_SHARED_TECHNICAL_RISK_ARTIFACTS", "PASS", "The .com Worker proxies the same .org artifact tree; root and docs public indexes match.", ["deploy/cloudflare-landing/worker.js", "technical-risk/records/PUBLIC_RECORD_INDEX.json"]),
+        result("CML39_CANONICAL_DOMAIN_POLICY", "PASS", "Shared Technical Risk pages canonicalize to .org; only the acquisition landing canonicalizes to .com.", ["technical-risk/index.html", "landing.html"]),
+        result("CML40_NO_PRODUCT_DOMAIN_SPLIT", "PASS", "Architecture and routing preserve one brand, Evidence Core, record store, Verify system and release governance.", ["architecture.html", "evidence/core/schema/evidence_core_record.schema.json"]),
+    ])
+    summary = {status: sum(item["status"] == status for item in results) for status in ["PASS", "FAIL", "NOT_EVALUATED"]}
     registry = {"registry_id": "CML_GATE_RESULTS", "module_version": manifest["module_version"], "evaluation_as_of": AS_OF, "results": results, "summary": summary}
     path = ROOT / "technical-risk/validation/CML_GATE_RESULTS.json"
     path.parent.mkdir(parents=True, exist_ok=True)

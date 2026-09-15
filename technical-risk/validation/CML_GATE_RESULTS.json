@@ -383,7 +383,67 @@
         "technical-risk/TECHNICAL_RISK_MANIFEST.json"
       ],
       "gate_id": "CML35_REMOTE_MATCH",
-      "reason": "Implementation commit 00829d5b846bbacb36f211316480e3763aee615c matched origin/main and production returned HTTP 200.",
+      "reason": "Implementation commit 4a86744c5ce316aceec0808636be237e0ae1dec9 matched origin/main and production returned HTTP 200.",
+      "rule_version": "CML_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "scripts/test_cml_v01.py"
+    },
+    {
+      "evaluated_at": "2026-09-16T00:00:00Z",
+      "evidence_refs": [
+        "index.html"
+      ],
+      "gate_id": "CML36_ORG_MAIN_SITE_INTEGRATION",
+      "reason": "The primary .org homepage exposes Technical Risk as a peer evidence domain while retaining the BNB monitor.",
+      "rule_version": "CML_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "scripts/test_cml_v01.py"
+    },
+    {
+      "evaluated_at": "2026-09-16T00:00:00Z",
+      "evidence_refs": [
+        "index.html",
+        "landing.html",
+        "technical-risk/index.html"
+      ],
+      "gate_id": "CML37_CROSS_DOMAIN_NAVIGATION",
+      "reason": "Both public domains expose direct paths to Technical Risk, search, request analysis and the Structural Monitor.",
+      "rule_version": "CML_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "scripts/test_cml_v01.py"
+    },
+    {
+      "evaluated_at": "2026-09-16T00:00:00Z",
+      "evidence_refs": [
+        "deploy/cloudflare-landing/worker.js",
+        "technical-risk/records/PUBLIC_RECORD_INDEX.json"
+      ],
+      "gate_id": "CML38_SHARED_TECHNICAL_RISK_ARTIFACTS",
+      "reason": "The .com Worker proxies the same .org artifact tree; root and docs public indexes match.",
+      "rule_version": "CML_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "scripts/test_cml_v01.py"
+    },
+    {
+      "evaluated_at": "2026-09-16T00:00:00Z",
+      "evidence_refs": [
+        "technical-risk/index.html",
+        "landing.html"
+      ],
+      "gate_id": "CML39_CANONICAL_DOMAIN_POLICY",
+      "reason": "Shared Technical Risk pages canonicalize to .org; only the acquisition landing canonicalizes to .com.",
+      "rule_version": "CML_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "scripts/test_cml_v01.py"
+    },
+    {
+      "evaluated_at": "2026-09-16T00:00:00Z",
+      "evidence_refs": [
+        "architecture.html",
+        "evidence/core/schema/evidence_core_record.schema.json"
+      ],
+      "gate_id": "CML40_NO_PRODUCT_DOMAIN_SPLIT",
+      "reason": "Architecture and routing preserve one brand, Evidence Core, record store, Verify system and release governance.",
       "rule_version": "CML_VALIDATION_v0.1",
       "status": "PASS",
       "validator": "scripts/test_cml_v01.py"
@@ -392,6 +452,6 @@
   "summary": {
     "FAIL": 0,
     "NOT_EVALUATED": 0,
-    "PASS": 35
+    "PASS": 40
   }
 }

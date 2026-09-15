@@ -18,6 +18,7 @@ AS_OF = "2026-09-16T00:00:00Z"
 CORE_VERSION = "STRUCTEVIDENCE_EVIDENCE_CORE_v0.1"
 MODULE_VERSION = "STRUCTEVIDENCE_TECHNICAL_RISK_v0.1"
 PROTOCOL_VERSION = "CML_v0.1"
+SITE_INTEGRATION_VERSION = "CML_SITE_INTEGRATION_v0.1a"
 
 
 def canonical(value: object) -> bytes:
@@ -427,9 +428,9 @@ EVIDENCE_FAMILIES = ["MANUFACTURER_LIFECYCLE_EVIDENCE", "MANUFACTURER_DATASHEET"
 PRODUCT_CONTEXTS = ["PUBLIC_TECHNICAL_RECORD", "SNIPE_BRIEF", "SUBSTITUTION_EVIDENCE_REPORT", "CUSTOM_BOM_AUDIT", "TECHNICAL_DUE_DILIGENCE", "TECHNICAL_MONITOR"]
 
 
-def page(title: str, description: str, body: str, prefix: str = "../") -> str:
+def page(title: str, description: str, body: str, prefix: str, canonical_path: str) -> str:
     return f"""<!doctype html>
-<html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>{html.escape(title)} - StructEvidence</title><meta name=\"description\" content=\"{html.escape(description)}\"><link rel=\"icon\" href=\"{prefix}assets/favicon.svg\" type=\"image/svg+xml\"><link rel=\"stylesheet\" href=\"{prefix}assets/technical-risk.css?v=20260916\"></head>
+<html lang=\"en\"><head><meta charset=\"utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>{html.escape(title)} - StructEvidence</title><meta name=\"description\" content=\"{html.escape(description)}\"><link rel=\"canonical\" href=\"https://structurevidence.org{html.escape(canonical_path)}\"><link rel=\"icon\" href=\"{prefix}assets/favicon.svg\" type=\"image/svg+xml\"><link rel=\"stylesheet\" href=\"{prefix}assets/technical-risk.css?v=20260916\"></head>
 <body><header class=\"tr-header\"><a class=\"tr-brand\" href=\"{prefix}technical-risk/\"><span>SE</span><strong>StructEvidence</strong><em>Technical Risk</em></a><nav><a href=\"{prefix}technical-risk/search/\">Search</a><a href=\"{prefix}technical-risk/method/\">Method</a><a href=\"{prefix}technical-risk/request-analysis/\" class=\"nav-action\">Request analysis</a></nav></header><main>{body}</main><footer class=\"tr-footer\"><strong>StructEvidence</strong><span>Evidence for technical supply-chain decisions.</span><a href=\"{prefix}technical-risk/method/\">Method</a><a href=\"{prefix}privacy.html\">Privacy</a><a href=\"{prefix}terms.html\">Terms</a></footer></body></html>"""
 
 
@@ -460,7 +461,7 @@ def record_page(record: dict, slug: str) -> str:
 <section class=\"tr-section\"><div class=\"section-heading\"><div><p class=\"eyebrow\">Verification</p><h2>Compatibility matrix</h2></div><span class=\"boundary-label\">PAPER != QUALIFIED</span></div><div class=\"table-wrap\"><table><thead><tr><th>Dimension</th><th>Current state</th><th>Required evidence or test</th></tr></thead><tbody>{matrix}</tbody></table></div><div class=\"test-list\"><h3>Required verification</h3><ul>{tests}</ul></div></section>
 <section class=\"decision-band\"><div><p class=\"eyebrow\">Current decision path</p><h2>{html.escape(cml['decision']['current_recommendation'])}</h2><div class=\"paths\">{paths}</div></div><a class=\"button\" href=\"../../request-analysis/?record={html.escape(slug)}\">Request technical analysis</a></section>
 <section class=\"tr-section audit-grid\"><div><p class=\"eyebrow\">Counter-evidence</p><h2>What weakens the case</h2><p>{html.escape(cml['counter_evidence'])}</p></div><div><p class=\"eyebrow\">Verify</p><h2>Lineage</h2><dl><dt>Record ID</dt><dd><code>{html.escape(core['record_id'])}</code></dd><dt>Input hash</dt><dd><code>{core['input_hash']}</code></dd><dt>Record hash</dt><dd><code>{core['record_hash']}</code></dd><dt>Boundary</dt><dd>{html.escape(cml['public_private_boundary'])}</dd></dl><a href=\"../../verify/{html.escape(slug)}/\">Open verification record</a></div></section>"""
-    return page(item["manufacturer_part_number"], item["description"], body, "../../../")
+    return page(item["manufacturer_part_number"], item["description"], body, "../../../", f"/technical-risk/record/{slug}/")
 
 
 def landing_page(records: list[dict]) -> str:
@@ -471,14 +472,14 @@ def landing_page(records: list[dict]) -> str:
 <section class=\"tr-section intro\"><div><p class=\"eyebrow\">CML / Component Migration &amp; Lifecycle</p><h2>Identify the event. Map the dependency. Test the alternatives. Preserve the evidence.</h2></div><p>StructEvidence does not create a second evidence database for components. CML is a domain of the same Evidence Core, designed so catalysts, specialty chemicals, APIs, optics, motors and bearings can later reuse the same decision grammar.</p></section>
 <section class=\"tr-section\"><div class=\"section-heading\"><div><p class=\"eyebrow\">Four-target pilot</p><h2>Current public records</h2></div><a href=\"search/\">Search exact identity</a></div><div class=\"record-grid\">{cards}</div></section>
 <section class=\"decision-band\"><div><p class=\"eyebrow\">Private decision context</p><h2>Need an item, assembly or BOM reviewed?</h2><p>Client BOM, usage, pricing, drawings and qualification limits remain private and never enter Public Verify.</p></div><a class=\"button\" href=\"request-analysis/\">Request technical analysis</a></section>"""
-    return page("Technical Risk", "Auditable evidence for component lifecycle, migration and qualification decisions.", body, "../")
+    return page("Technical Risk", "Auditable evidence for component lifecycle, migration and qualification decisions.", body, "../", "/technical-risk/")
 
 
 def search_page(index: list[dict]) -> str:
     body = """
 <section class=\"search-hero\"><p class=\"eyebrow\">Exact identity search</p><h1>Find a public technical record.</h1><p>Search by manufacturer, exact part number, family or item type. Punctuation is preserved.</p><form data-cml-search><label for=\"cml-query\">Manufacturer or part number</label><div><input id=\"cml-query\" name=\"q\" autocomplete=\"off\" placeholder=\"e.g. 095-725-134-006\"><button type=\"submit\">Search</button></div></form><div data-cml-results aria-live=\"polite\"></div></section>
 <script src=\"../../assets/cml-search.js?v=20260916\"></script>"""
-    return page("Technical record search", "Search StructEvidence CML public technical records by exact identity.", body, "../../")
+    return page("Technical record search", "Search StructEvidence CML public technical records by exact identity.", body, "../../", "/technical-risk/search/")
 
 
 def method_page() -> str:
@@ -486,14 +487,14 @@ def method_page() -> str:
 <section class=\"method-hero\"><p class=\"eyebrow\">CML / Method pilot v0.1</p><h1>Evidence before equivalence.</h1><p>CML structures technical supply-chain decisions without converting uncertainty into unsupported compatibility claims.</p></section>
 <section class=\"tr-section method-grid\"><article><span>01</span><h2>Identity</h2><p>Preserve manufacturer spelling and exact part-number punctuation. Similar strings are not silently merged.</p></article><article><span>02</span><h2>Event</h2><p>Record what changed with separate effective and knowledge clocks and an explicit event domain.</p></article><article><span>03</span><h2>Dependency</h2><p>Map the assembly, interface, process and customer scope that make migration consequential.</p></article><article><span>04</span><h2>Evidence</h2><p>Separate facts, inferences, engineering judgment, recommendations and unknowns.</p></article><article><span>05</span><h2>Alternative</h2><p>An identified candidate is not a qualified replacement. OEM status is modeled separately.</p></article><article><span>06</span><h2>Verification</h2><p>Compatibility is dimension-based and qualification is always bound to a defined scope.</p></article><article><span>07</span><h2>Decision</h2><p>Output defensible actions such as monitor, lifetime buy, qualify, redesign or insufficient evidence.</p></article></section>
 <section class=\"tr-section law\"><p class=\"eyebrow\">Frozen laws</p><h2>What the method will not do</h2><div><p>Paper compatibility != qualified replacement</p><p>40 GHz connector != 40 GHz assembly qualification</p><p>Distributor inventory != manufacturer lifecycle</p><p>Hash integrity != source truth</p><p>Missing evidence != PASS</p><p>CML decisions != predictions</p></div></section>"""
-    return page("CML method", "The CML evidence and decision method for technical lifecycle and migration records.", body, "../../")
+    return page("CML method", "The CML evidence and decision method for technical lifecycle and migration records.", body, "../../", "/technical-risk/method/")
 
 
 def request_page() -> str:
     body = """
 <section class=\"request-hero\"><div><p class=\"eyebrow\">Request technical analysis</p><h1>Start with the exact item and decision context.</h1><p>We first confirm public evidence availability, private-data boundaries and the verification scope. Payment and delivery remain manually authorized.</p></div><aside><span>Access</span><strong>REQUEST ONLY</strong><span>Fulfillment</span><strong>MANUAL REVIEW</strong><span>Public client BOM</span><strong>PROHIBITED</strong></aside></section>
 <section class=\"tr-section request-grid\"><div><h2>Include in your request</h2><ul><li>Manufacturer and exact part number</li><li>Lifecycle notice or technical concern</li><li>Assembly or application context</li><li>Decision deadline</li><li>Required verification or qualification scope</li></ul></div><div><h2>Contact</h2><p><strong>John Success / Structevidence.com</strong></p><p>Hong Kong</p><p><a href=\"https://wa.me/85266629951?text=Hello%20John%2C%20I%20would%20like%20to%20request%20a%20StructEvidence%20Technical%20Risk%20analysis.%20Manufacturer%20and%20part%20number%3A%20\">WhatsApp +852 6662 9951</a></p><p><a href=\"mailto:john.success1688@gmail.com?subject=StructEvidence%20Technical%20Risk%20request\">john.success1688@gmail.com</a></p><p class=\"note\">Research service only. No brokerage, procurement, custody, exchange or universal substitution warranty.</p></div></section>"""
-    return page("Request technical analysis", "Request a scoped StructEvidence Technical Risk analysis.", body, "../../")
+    return page("Request technical analysis", "Request a scoped StructEvidence Technical Risk analysis.", body, "../../", "/technical-risk/request-analysis/")
 
 
 def docs_text(records: list[dict]) -> dict[str, str]:
@@ -602,6 +603,8 @@ The domain may be published as a Method Pilot and request-only service. It may n
         "docs/execution/CML_PUBLIC_PRIVATE_AUDIT.md": "# CML Public / Private Audit\n\nPASS: pilot records contain public manufacturer evidence only. Client BOM, usage, pricing, drawings, firmware, test raw data and commercial terms are prohibited from Public Verify.\n",
         "docs/execution/CML_FOUR_TARGET_RESEARCH_AUDIT.md": "# CML Four-Target Research Audit\n\nFour public evidence pilots are implemented. No pilot claims a qualified substitute. Amphenol connector and NXP records retain conflicting/weakening evidence; Murata preserves suffix specificity; RF40 distinguishes connector capability from assembly qualification.\n",
         "docs/execution/CML_UI_AUDIT.md": "# CML UI Audit\n\nTechnical Risk landing, exact-identity search, four record pages, method, request analysis and Verify pages are generated. The public view shows decision state first and hash lineage second.\n",
+        "docs/architecture/CML_UNIFIED_SITE_ARCHITECTURE_v0.1a.md": "# CML Unified Site Architecture v0.1a\n\nStructEvidence operates one brand, repository, Evidence Core, record store, Verify surface and release-governance system. `structurevidence.org` is the canonical research and application domain. `structevidence.com` is the acquisition domain; its root uses `landing.html` while shared paths proxy the `.org` artifacts. Structural Intelligence and Technical Risk / CML are peer evidence domains, not separate products or truth systems.\n",
+        "docs/execution/CML_V0_1A_MAIN_SITE_INTEGRATION_AUDIT.md": "# CML v0.1a Main-Site Integration Audit\n\nCML36-CML40 cover `.org` homepage discovery, cross-domain navigation, shared artifacts, canonical-domain policy and prevention of product/domain split. The checks are implemented in `scripts/test_cml_v01.py`; visual and responsive navigation checks are implemented in `scripts/qa_cml.cjs`.\n",
     }
 
 
@@ -677,6 +680,7 @@ def main() -> None:
     write_json(ROOT / "technical-risk/config/product_contexts.json", {"module_version": MODULE_VERSION, "contexts": PRODUCT_CONTEXTS, "fact_invariance": "PRODUCT_CONTEXT_MUST_NOT_CHANGE_TECHNICAL_FACTS"})
     write_json(ROOT / "technical-risk/config/freshness_profiles.json", {"policy_version": "CML_FRESHNESS_PROFILE_v0.1", "global_threshold": None, "profiles": {"MANUFACTURER_LIFECYCLE_EVIDENCE": "EVENT_DRIVEN", "MANUFACTURER_DATASHEET": "REVISION_DRIVEN", "MANUFACTURER_PCN": "EVENT_DRIVEN", "CERTIFICATION_EVIDENCE": "REVISION_AND_EXPIRY_DRIVEN", "SUPPLY_AVAILABILITY_EVIDENCE": "POLICY_NOT_CONFIGURED", "INDEPENDENT_TEST_EVIDENCE": "SCOPE_AND_REVISION_DRIVEN", "CUSTOMER_QUALIFICATION_EVIDENCE": "SCOPE_AND_REVISION_DRIVEN"}})
     write_json(ROOT / "technical-risk/config/public_private_boundary.json", {"public": ["manufacturer", "manufacturer_part_number", "official_lifecycle_evidence", "pcn", "datasheet", "published_specifications", "public_certification", "public_oem_replacement", "general_verification_requirements", "public_technical_comparison", "evidence_lineage", "record_freshness"], "private": ["customer_bom", "customer_product", "annual_usage", "inventory", "customer_pricing", "supplier_quotation", "customer_drawings", "customer_firmware", "customer_qualification_limits", "nda_documents", "revenue_exposure", "internal_failure_data", "private_lab_raw_data", "commercial_negotiations"]})
+    write_json(ROOT / "technical-risk/CML_SITE_ARCHITECTURE_v0.1a.json", {"version": SITE_INTEGRATION_VERSION, "brand": "StructEvidence", "canonical_research_domain": "structurevidence.org", "acquisition_domain": "structevidence.com", "acquisition_root_artifact": "landing.html", "shared_artifact_origin": "https://structurevidence.org", "evidence_core": CORE_VERSION, "domains": ["STRUCTURAL_INTELLIGENCE", "TECHNICAL_RISK"], "shared_systems": ["REPOSITORY", "EVIDENCE_CORE", "RECORD_STORE", "VERIFY", "RELEASE_GOVERNANCE"], "domain_split_prohibited": True})
 
     records = []
     index = []
@@ -705,7 +709,7 @@ def main() -> None:
         write(folder / "08_SOLUTION_PATHS.md", "# Solution Paths\n\n" + "\n".join(f"- `{x}`" for x in pilot["decision_paths"]) + f"\n\n{pilot['decision']}\n")
         write(folder / "09_COUNTER_EVIDENCE.md", f"# Counter-Evidence\n\n{pilot['counter_evidence']}\n")
         write(folder / "10_LIMITATIONS.md", "# Limitations\n\nPublic-evidence pilot only. No client BOM, pricing, inventory, drawings, application limits, laboratory raw data or qualification approval is included. A paper candidate is never a qualified replacement.\n")
-        artifact_hashes = {path.name: file_digest(path) for path in sorted(folder.iterdir()) if path.is_file()}
+        artifact_hashes = {path.name: file_digest(path) for path in sorted(folder.iterdir()) if path.is_file() and path.name != "12_RELEASE_MANIFEST.json"}
         release = {"record_id": pilot["record_id"], "record_hash": record["core"]["record_hash"], "artifact_hashes": artifact_hashes, "freshness_state": pilot["freshness"], "gdr_version": "GDR_SE_v0.1-R1.1+CML_DOMAIN_ADAPTER_v0.1", "release_state": "PUBLIC_METHOD_PILOT", "authorization_state": "ALLOW_PUBLIC_WITH_LIMITATIONS", "paid_delivery_state": "REQUEST_ONLY", "evaluation_as_of": AS_OF}
         write_json(folder / "12_RELEASE_MANIFEST.json", release)
         pilot_hashes[pilot["record_id"]] = record["core"]["record_hash"]
@@ -714,7 +718,7 @@ def main() -> None:
     write_json(ROOT / "technical-risk/records/PUBLIC_RECORD_INDEX.json", {"module_version": MODULE_VERSION, "evaluation_as_of": AS_OF, "records": index})
     schema_hashes = {Path(path).name: file_digest(ROOT / path) for path in schema_files()}
     config_hashes = {path.name: file_digest(path) for path in sorted((ROOT / "technical-risk/config").glob("*.json"))}
-    manifest = {"module_version": MODULE_VERSION, "protocol_version": PROTOCOL_VERSION, "evidence_core_version": CORE_VERSION, "schema_hashes": schema_hashes, "config_hashes": config_hashes, "pilot_record_ids": list(pilot_hashes), "pilot_record_hashes": pilot_hashes, "freshness_policy_version": "RDL_FRESHNESS_v0.1a+CML_FRESHNESS_PROFILE_v0.1", "gdr_version": "GDR_SE_v0.1-R1.1+CML_DOMAIN_ADAPTER_v0.1", "build_commit": BUILD_COMMIT, "evaluation_as_of": AS_OF, "public_release_state": "METHOD_PILOT_ALLOW_WITH_LIMITATIONS"}
+    manifest = {"module_version": MODULE_VERSION, "protocol_version": PROTOCOL_VERSION, "site_integration_version": SITE_INTEGRATION_VERSION, "evidence_core_version": CORE_VERSION, "schema_hashes": schema_hashes, "config_hashes": config_hashes, "pilot_record_ids": list(pilot_hashes), "pilot_record_hashes": pilot_hashes, "freshness_policy_version": "RDL_FRESHNESS_v0.1a+CML_FRESHNESS_PROFILE_v0.1", "gdr_version": "GDR_SE_v0.1-R1.1+CML_DOMAIN_ADAPTER_v0.1", "build_commit": BUILD_COMMIT, "evaluation_as_of": AS_OF, "public_release_state": "METHOD_PILOT_ALLOW_WITH_LIMITATIONS"}
     write_json(ROOT / "technical-risk/TECHNICAL_RISK_MANIFEST.json", manifest)
     history = ROOT / "technical-risk/CML_VERSION_HISTORY.jsonl"
     if not history.exists():
@@ -735,7 +739,7 @@ def main() -> None:
         write(ROOT / f"technical-risk/record/{pilot['slug']}/index.html", record_page(record, pilot["slug"]))
         verify = record["core"] | {"public_verify": True, "private_fields_included": False, "source_refs": [source(x) for x in pilot["source_ids"]]}
         body = f"<section class=\"verify-hero\"><p class=\"eyebrow\">Public Verify / CML</p><h1>{html.escape(pilot['manufacturer_part_number'])}</h1><p>Recompute the canonical public record hash from the linked JSON and compare it with this release commitment.</p></section><section class=\"tr-section verify-grid\"><div><span>Record ID</span><code>{html.escape(record['core']['record_id'])}</code></div><div><span>Input SHA-256</span><code>{record['core']['input_hash']}</code></div><div><span>Record SHA-256</span><code>{record['core']['record_hash']}</code></div><div><span>Supersession</span><strong>{record['core']['supersession_status']}</strong></div><div><span>Public/private check</span><strong>NO PRIVATE CLIENT DATA</strong></div><div><a href=\"../../records/{pilot['slug']}/11_PUBLIC_RECORD.json\">Open canonical JSON</a></div></section>"
-        write(ROOT / f"technical-risk/verify/{pilot['slug']}/index.html", page(f"Verify {pilot['manufacturer_part_number']}", "Verify a hash-bound CML public technical record.", body, "../../../"))
+        write(ROOT / f"technical-risk/verify/{pilot['slug']}/index.html", page(f"Verify {pilot['manufacturer_part_number']}", "Verify a hash-bound CML public technical record.", body, "../../../", f"/technical-risk/verify/{pilot['slug']}/"))
 
     for relative in ["technical-risk", "evidence/core", "assets/technical-risk.css", "assets/cml-search.js"]:
         src = ROOT / relative
