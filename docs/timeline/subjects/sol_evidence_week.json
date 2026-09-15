@@ -1,24 +1,25 @@
 {
   "buckets": [
     {
-      "age_days_at_period_end": 3,
+      "age_days_at_period_end": 2,
       "bucket_end": "2026-09-13",
       "bucket_id": "SOL-EVID-WEEK-2026-W37-AUTHORIZATION_STATUS",
       "bucket_start": "2026-09-07",
-      "closing_state": "UNDER_REVIEW",
+      "closing_state": "COMPLETE",
       "events": [
         "TL-SOL-EE-AUTH"
       ],
       "events_count": 1,
       "family_id": "AUTHORIZATION_STATUS",
-      "latest_update_at": "2026-09-10T14:18:35.531446Z",
+      "latest_update_at": "2026-09-11T03:55:43.743096Z",
       "lineage": {
         "artifact_refs": [
           "research/digital-assets/batch-01-r1/SOL/gdr-se/GDR_SE_AUTHORIZATION_RECORD_R1_1.json"
         ],
         "day_bucket_ids": [
           "SOL-EVID-DAY-2026-09-09-AUTHORIZATION_STATUS",
-          "SOL-EVID-DAY-2026-09-10-AUTHORIZATION_STATUS"
+          "SOL-EVID-DAY-2026-09-10-AUTHORIZATION_STATUS",
+          "SOL-EVID-DAY-2026-09-11-AUTHORIZATION_STATUS"
         ],
         "evidence_event_ids": [
           "TL-SOL-EE-AUTH"
@@ -30,7 +31,8 @@
       "resolution": "WEEK",
       "source_day_bucket_ids": [
         "SOL-EVID-DAY-2026-09-09-AUTHORIZATION_STATUS",
-        "SOL-EVID-DAY-2026-09-10-AUTHORIZATION_STATUS"
+        "SOL-EVID-DAY-2026-09-10-AUTHORIZATION_STATUS",
+        "SOL-EVID-DAY-2026-09-11-AUTHORIZATION_STATUS"
       ],
       "subject_id": "SOL",
       "transition_count": 1,
@@ -51,7 +53,8 @@
         "artifact_refs": [],
         "day_bucket_ids": [
           "SOL-EVID-DAY-2026-09-09-CORRECTION_STATUS",
-          "SOL-EVID-DAY-2026-09-10-CORRECTION_STATUS"
+          "SOL-EVID-DAY-2026-09-10-CORRECTION_STATUS",
+          "SOL-EVID-DAY-2026-09-11-CORRECTION_STATUS"
         ],
         "evidence_event_ids": []
       },
@@ -61,7 +64,8 @@
       "resolution": "WEEK",
       "source_day_bucket_ids": [
         "SOL-EVID-DAY-2026-09-09-CORRECTION_STATUS",
-        "SOL-EVID-DAY-2026-09-10-CORRECTION_STATUS"
+        "SOL-EVID-DAY-2026-09-10-CORRECTION_STATUS",
+        "SOL-EVID-DAY-2026-09-11-CORRECTION_STATUS"
       ],
       "subject_id": "SOL",
       "transition_count": 0,
@@ -86,7 +90,8 @@
         ],
         "day_bucket_ids": [
           "SOL-EVID-DAY-2026-09-09-COUNTER_EVIDENCE_COVERAGE",
-          "SOL-EVID-DAY-2026-09-10-COUNTER_EVIDENCE_COVERAGE"
+          "SOL-EVID-DAY-2026-09-10-COUNTER_EVIDENCE_COVERAGE",
+          "SOL-EVID-DAY-2026-09-11-COUNTER_EVIDENCE_COVERAGE"
         ],
         "evidence_event_ids": [
           "TL-SOL-EE-COUNTER_EVIDENCE_COVERAGE"
@@ -98,7 +103,8 @@
       "resolution": "WEEK",
       "source_day_bucket_ids": [
         "SOL-EVID-DAY-2026-09-09-COUNTER_EVIDENCE_COVERAGE",
-        "SOL-EVID-DAY-2026-09-10-COUNTER_EVIDENCE_COVERAGE"
+        "SOL-EVID-DAY-2026-09-10-COUNTER_EVIDENCE_COVERAGE",
+        "SOL-EVID-DAY-2026-09-11-COUNTER_EVIDENCE_COVERAGE"
       ],
       "subject_id": "SOL",
       "transition_count": 1,
@@ -123,7 +129,8 @@
         ],
         "day_bucket_ids": [
           "SOL-EVID-DAY-2026-09-09-INDEPENDENT_REVIEW",
-          "SOL-EVID-DAY-2026-09-10-INDEPENDENT_REVIEW"
+          "SOL-EVID-DAY-2026-09-10-INDEPENDENT_REVIEW",
+          "SOL-EVID-DAY-2026-09-11-INDEPENDENT_REVIEW"
         ],
         "evidence_event_ids": [
           "TL-SOL-EE-INDEPENDENT_REVIEW"
@@ -135,7 +142,8 @@
       "resolution": "WEEK",
       "source_day_bucket_ids": [
         "SOL-EVID-DAY-2026-09-09-INDEPENDENT_REVIEW",
-        "SOL-EVID-DAY-2026-09-10-INDEPENDENT_REVIEW"
+        "SOL-EVID-DAY-2026-09-10-INDEPENDENT_REVIEW",
+        "SOL-EVID-DAY-2026-09-11-INDEPENDENT_REVIEW"
       ],
       "subject_id": "SOL",
       "transition_count": 1,
@@ -160,7 +168,8 @@
         ],
         "day_bucket_ids": [
           "SOL-EVID-DAY-2026-09-09-NUMERICAL_RECONCILIATION",
-          "SOL-EVID-DAY-2026-09-10-NUMERICAL_RECONCILIATION"
+          "SOL-EVID-DAY-2026-09-10-NUMERICAL_RECONCILIATION",
+          "SOL-EVID-DAY-2026-09-11-NUMERICAL_RECONCILIATION"
         ],
         "evidence_event_ids": [
           "TL-SOL-EE-NUMERICAL_RECONCILIATION"
@@ -172,7 +181,8 @@
       "resolution": "WEEK",
       "source_day_bucket_ids": [
         "SOL-EVID-DAY-2026-09-09-NUMERICAL_RECONCILIATION",
-        "SOL-EVID-DAY-2026-09-10-NUMERICAL_RECONCILIATION"
+        "SOL-EVID-DAY-2026-09-10-NUMERICAL_RECONCILIATION",
+        "SOL-EVID-DAY-2026-09-11-NUMERICAL_RECONCILIATION"
       ],
       "subject_id": "SOL",
       "transition_count": 1,
@@ -197,7 +207,8 @@
         ],
         "day_bucket_ids": [
           "SOL-EVID-DAY-2026-09-09-PRIMARY_SOURCE_COVERAGE",
-          "SOL-EVID-DAY-2026-09-10-PRIMARY_SOURCE_COVERAGE"
+          "SOL-EVID-DAY-2026-09-10-PRIMARY_SOURCE_COVERAGE",
+          "SOL-EVID-DAY-2026-09-11-PRIMARY_SOURCE_COVERAGE"
         ],
         "evidence_event_ids": [
           "TL-SOL-EE001"
@@ -209,7 +220,8 @@
       "resolution": "WEEK",
       "source_day_bucket_ids": [
         "SOL-EVID-DAY-2026-09-09-PRIMARY_SOURCE_COVERAGE",
-        "SOL-EVID-DAY-2026-09-10-PRIMARY_SOURCE_COVERAGE"
+        "SOL-EVID-DAY-2026-09-10-PRIMARY_SOURCE_COVERAGE",
+        "SOL-EVID-DAY-2026-09-11-PRIMARY_SOURCE_COVERAGE"
       ],
       "subject_id": "SOL",
       "transition_count": 1,
@@ -230,7 +242,8 @@
         "artifact_refs": [],
         "day_bucket_ids": [
           "SOL-EVID-DAY-2026-09-09-SECONDARY_SUPPORT",
-          "SOL-EVID-DAY-2026-09-10-SECONDARY_SUPPORT"
+          "SOL-EVID-DAY-2026-09-10-SECONDARY_SUPPORT",
+          "SOL-EVID-DAY-2026-09-11-SECONDARY_SUPPORT"
         ],
         "evidence_event_ids": []
       },
@@ -240,7 +253,8 @@
       "resolution": "WEEK",
       "source_day_bucket_ids": [
         "SOL-EVID-DAY-2026-09-09-SECONDARY_SUPPORT",
-        "SOL-EVID-DAY-2026-09-10-SECONDARY_SUPPORT"
+        "SOL-EVID-DAY-2026-09-10-SECONDARY_SUPPORT",
+        "SOL-EVID-DAY-2026-09-11-SECONDARY_SUPPORT"
       ],
       "subject_id": "SOL",
       "transition_count": 0,
@@ -265,7 +279,8 @@
         ],
         "day_bucket_ids": [
           "SOL-EVID-DAY-2026-09-09-SOURCE_DEPENDENCY",
-          "SOL-EVID-DAY-2026-09-10-SOURCE_DEPENDENCY"
+          "SOL-EVID-DAY-2026-09-10-SOURCE_DEPENDENCY",
+          "SOL-EVID-DAY-2026-09-11-SOURCE_DEPENDENCY"
         ],
         "evidence_event_ids": [
           "TL-SOL-EE-SOURCE_DEPENDENCY"
@@ -277,7 +292,8 @@
       "resolution": "WEEK",
       "source_day_bucket_ids": [
         "SOL-EVID-DAY-2026-09-09-SOURCE_DEPENDENCY",
-        "SOL-EVID-DAY-2026-09-10-SOURCE_DEPENDENCY"
+        "SOL-EVID-DAY-2026-09-10-SOURCE_DEPENDENCY",
+        "SOL-EVID-DAY-2026-09-11-SOURCE_DEPENDENCY"
       ],
       "subject_id": "SOL",
       "transition_count": 1,
@@ -302,7 +318,8 @@
         ],
         "day_bucket_ids": [
           "SOL-EVID-DAY-2026-09-09-SUPERSESSION_STATUS",
-          "SOL-EVID-DAY-2026-09-10-SUPERSESSION_STATUS"
+          "SOL-EVID-DAY-2026-09-10-SUPERSESSION_STATUS",
+          "SOL-EVID-DAY-2026-09-11-SUPERSESSION_STATUS"
         ],
         "evidence_event_ids": [
           "TL-SOL-EE-SUPERSESSION_STATUS"
@@ -314,7 +331,8 @@
       "resolution": "WEEK",
       "source_day_bucket_ids": [
         "SOL-EVID-DAY-2026-09-09-SUPERSESSION_STATUS",
-        "SOL-EVID-DAY-2026-09-10-SUPERSESSION_STATUS"
+        "SOL-EVID-DAY-2026-09-10-SUPERSESSION_STATUS",
+        "SOL-EVID-DAY-2026-09-11-SUPERSESSION_STATUS"
       ],
       "subject_id": "SOL",
       "transition_count": 1,

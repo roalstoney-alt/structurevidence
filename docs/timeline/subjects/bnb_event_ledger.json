@@ -287,13 +287,13 @@
       "family_id": "AUTHORIZATION_STATUS",
       "freshness_trigger_candidate": true,
       "knowledge_mode": "CONTEMPORANEOUS",
-      "known_at": "2026-09-10T14:18:35.520844Z",
-      "label": "AUTHORIZATION_STATUS -> UNDER_REVIEW",
+      "known_at": "2026-09-11T03:55:43.728177Z",
+      "label": "AUTHORIZATION_STATUS -> COMPLETE",
       "observation_mode": "DIRECT",
       "refs": [
         "research/digital-assets/batch-01-r1/BNB/gdr-se/GDR_SE_AUTHORIZATION_RECORD_R1_1.json"
       ],
-      "timestamp": "2026-09-10T14:18:35.520844Z",
+      "timestamp": "2026-09-11T03:55:43.728177Z",
       "trigger_type": null
     }
   ],

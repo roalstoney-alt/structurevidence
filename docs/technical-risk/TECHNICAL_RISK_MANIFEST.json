@@ -1,5 +1,6 @@
 {
-  "build_commit": "7a4e892df4c8d934909c53eb279bc10267cc802a",
+  "audit_policy_version": "CML_AUDIT_v0.1a",
+  "build_commit": "ce1869fb5b04bb80bdad3451d1cf778c5ef557ca",
   "config_hashes": {
     "cml_taxonomy.json": "13ef388c9b3d249de5cc6114ee10ec5fa2c8986a67e078ce316e9150bcedcc92",
     "evidence_families.json": "3f511d93a4a643bf2a22f984cec385df940554cba09e2f36498e7bf35bfb54c1",
@@ -10,13 +11,13 @@
   "evaluation_as_of": "2026-09-16T00:00:00Z",
   "evidence_core_version": "STRUCTEVIDENCE_EVIDENCE_CORE_v0.1",
   "freshness_policy_version": "RDL_FRESHNESS_v0.1a+CML_FRESHNESS_PROFILE_v0.1",
-  "gdr_version": "GDR_SE_v0.1-R1.1+CML_DOMAIN_ADAPTER_v0.1",
+  "gdr_version": "GDR_SE_v0.1-R1.1+CML_DOMAIN_ADAPTER_v0.1a",
   "module_version": "STRUCTEVIDENCE_TECHNICAL_RISK_v0.1",
   "pilot_record_hashes": {
-    "SE.CML.RECORD.AMPHENOL-RF.095-725-134-006.v0.1": "7f269926c670caa06d9059eecbc99eb419c6edfbf9b8b9e9506b90251a5998c0",
-    "SE.CML.RECORD.AMPHENOL.10081811-101-07LF.v0.1": "b00fb777615eba86a6ba8b48d8aaa456a9265754db83d064ed70be5f0b46a56e",
-    "SE.CML.RECORD.MURATA.MYMGM5R012ELA5RND.v0.1": "58c8136e7888aaf662975c8c0779696ef41784d9d98fc33c1e41bdb52b10ac18",
-    "SE.CML.RECORD.NXP.RADIO-POWER-2026.v0.1": "08bf397d4519968f87955badf8cb0cfe39224022920e970721732592e423ce37"
+    "SE.CML.RECORD.AMPHENOL-RF.095-725-134-006.v0.1": "0616350e28fe26de50acc10877a7adf07ac1b033d6403c742dc6e011110e8b57",
+    "SE.CML.RECORD.AMPHENOL.10081811-101-07LF.v0.1": "e665909621d08fe0c1049a1a09775d69e101856ed3b9305c500f887e8c2af51f",
+    "SE.CML.RECORD.MURATA.MYMGM5R012ELA5RND.v0.1": "f18e8d0dd74abd6874d4325af895197e07bb10d331f2e18167891f28a6b3f9dd",
+    "SE.CML.RECORD.NXP.RADIO-POWER-2026.v0.1": "fad0d50b97e54a61c22078da35b79f63bb8de8e0bed1a0cc38d398977ac409aa"
   },
   "pilot_record_ids": [
     "SE.CML.RECORD.AMPHENOL.10081811-101-07LF.v0.1",
@@ -28,14 +29,14 @@
   "public_release_state": "METHOD_PILOT_ALLOW_WITH_LIMITATIONS",
   "schema_hashes": {
     "CML_SNIPE_REPORT_v0.1.schema.json": "2be626008cc4b027a4f3f6ba7fdd0c338795967e2297e8ad996b512d1a30491d",
-    "cml_candidate.schema.json": "eea668d5954edfe4b2ed3aa0f45679865fbb1ca6bbf1190e8a29a5d6cc651248",
-    "cml_compatibility.schema.json": "c17b5563c5c9409eb7456e34e352fceceeeb851c1aa87239fe6ced7009e611d7",
-    "cml_event.schema.json": "904ca5835744ac6282339a56947c5dad685ff6fa933d2be5da7b00ae21309bf1",
-    "cml_public_record.schema.json": "e4737632a02145da337774e202a0d1d52413db62ffb2b5cd7329039d2b669d87",
-    "cml_release_manifest.schema.json": "b5de485840fbd778cf8dc5fbbf7255061e78c123032cbfb14840ddcfe6215935",
-    "cml_test_requirement.schema.json": "d131c879c11af94b5adad293a593ad352a6fea4fd17eab2b3ff30e383639773f",
-    "evidence_core_record.schema.json": "14d7bedce0ba48ff01955aa85a58d217263366e1956a27478f466cac2c6ddb8c",
-    "technical_item.schema.json": "5bbb00d248447b305695086049e40a51517f59de5385ee41e9e826b879eb91a8"
+    "cml_candidate.schema.json": "52e02f97f77b78c761778afd453cc6cc3cfdbedc572da6abf89af69cf7ddca48",
+    "cml_compatibility.schema.json": "3acc6eec2f9972c85b70b347f114dff845dfbd25f92f8aeefa4e91be9ed0cf84",
+    "cml_event.schema.json": "5239dded3539c81c4eae087518584f73e8a09faeef4377d1913f8f5f407ec20d",
+    "cml_public_record.schema.json": "bd3c1498391b3bde8e150daa6a07b900521d9ac8104a2a18f33e7dc954509726",
+    "cml_release_manifest.schema.json": "15a13046d0bb128aacdb6848c8af6bd743062bf64e7c2daeeea53688dcc62379",
+    "cml_test_requirement.schema.json": "7ec54ad48e2d4c29d2579304365bfc500fbced66c225e652ebc47d0016219fa7",
+    "evidence_core_record.schema.json": "90c90681f12c2b8533e58af763f7350d1d33efb3ffc4cff7cb8f8237cb9d8c08",
+    "technical_item.schema.json": "6b370a419589253db5578cd0164df19e6cbd015baec3417bf132d61f7f846ae3"
   },
   "site_integration_version": "CML_SITE_INTEGRATION_v0.1a"
 }

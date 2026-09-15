@@ -7,6 +7,7 @@
   "manufacturer": "Amphenol Communications Solutions",
   "manufacturer_normalized": "AMPHENOL_COMMUNICATIONS_SOLUTIONS",
   "manufacturer_part_number": "10081811-101-07LF",
+  "manufacturer_part_number_exact": "10081811-101-07LF",
   "manufacturer_product_url": null,
   "nominal_application_class": "Board interconnect",
   "package_or_interface": "2.54 mm board-header class; footprint verification required",

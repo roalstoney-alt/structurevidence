@@ -10,6 +10,7 @@
   "manufacturer": "NXP Semiconductors",
   "manufacturer_normalized": "NXP_SEMICONDUCTORS",
   "manufacturer_part_number": "RADIO-POWER-2026-FAMILY",
+  "manufacturer_part_number_exact": "RADIO-POWER-2026-FAMILY",
   "manufacturer_product_url": "https://www.nxp.com/pcn/202603037DN",
   "nominal_application_class": "RF power amplification",
   "package_or_interface": "Multiple RF transistor packages; board-specific matching networks",

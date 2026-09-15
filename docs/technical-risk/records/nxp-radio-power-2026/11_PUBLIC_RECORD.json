@@ -55,7 +55,9 @@
         "The MRF101AN overview has shown an inconsistent Active label while package/quality and the discontinuance notice indicate EOL."
       ]
     },
-    "freshness_state": "EVENT_DRIVEN_CURRENT_WITH_INTERFACE_CONFLICT",
+    "freshness_reason": "MANUFACTURER_INTERFACE_STATUS_CONFLICT",
+    "freshness_rule_type": "EVENT_DRIVEN",
+    "freshness_state": "CURRENT_WITH_LIMITATIONS",
     "identity": {
       "created_at": "2026-09-16T00:00:00Z",
       "datasheet_refs": [
@@ -68,6 +70,7 @@
       "manufacturer": "NXP Semiconductors",
       "manufacturer_normalized": "NXP_SEMICONDUCTORS",
       "manufacturer_part_number": "RADIO-POWER-2026-FAMILY",
+      "manufacturer_part_number_exact": "RADIO-POWER-2026-FAMILY",
       "manufacturer_product_url": "https://www.nxp.com/pcn/202603037DN",
       "nominal_application_class": "RF power amplification",
       "package_or_interface": "Multiple RF transistor packages; board-specific matching networks",
@@ -78,6 +81,7 @@
       "technical_item_type": "RF_POWER_SEMICONDUCTOR"
     },
     "lifecycle_state": "LAST_TIME_BUY_OPEN",
+    "product_context": "PUBLIC_TECHNICAL_RECORD",
     "public_private_boundary": "PUBLIC_EVIDENCE_ONLY_NO_CLIENT_BOM",
     "verification": {
       "compatibility_matrix": [
@@ -138,11 +142,11 @@
     "created_at": "2026-09-16T00:00:00Z",
     "domain": "TECHNICAL_RISK",
     "effective_at": "2026-04-01T00:00:00Z",
-    "input_hash": "0afa49b699834ca44effba0c5987bc6bf03ee198d64f1385dc3a20e263943e52",
+    "input_hash": "40b9afa28130ce215b6526a9b9bcecb292d1d8ebdea8876cef1c553ef5906b4a",
     "known_at": "2026-03-31T00:00:00Z",
     "policy_version": "RDL_FRESHNESS_v0.1a+CML_PROFILE_v0.1",
     "protocol": "CML",
-    "record_hash": "08bf397d4519968f87955badf8cb0cfe39224022920e970721732592e423ce37",
+    "record_hash": "fad0d50b97e54a61c22078da35b79f63bb8de8e0bed1a0cc38d398977ac409aa",
     "record_id": "SE.CML.RECORD.NXP.RADIO-POWER-2026.v0.1",
     "source_refs": [
       "NXP_202603037DN",

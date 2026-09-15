@@ -63,7 +63,7 @@ Freeze the exact suffix and customer operating envelope, then request Murata cro
 
 ## Freshness
 
-`POLICY_NOT_CONFIGURED_EVENT_REVIEWED` as evaluated `2026-09-16T00:00:00Z`. No universal CML max-age rule is used.
+`POLICY_NOT_CONFIGURED` under `UNCONFIGURED` because `EXACT_LIFECYCLE_EFFECTIVE_DATE_UNRESOLVED`, as evaluated `2026-09-16T00:00:00Z`. No universal CML max-age rule is used.
 
 ## Limitations
 

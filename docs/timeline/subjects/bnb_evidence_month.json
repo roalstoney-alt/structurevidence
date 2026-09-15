@@ -1,24 +1,25 @@
 {
   "buckets": [
     {
-      "age_days_at_period_end": 20,
+      "age_days_at_period_end": 19,
       "bucket_end": "2026-09-30",
       "bucket_id": "BNB-EVID-MONTH-2026-09-AUTHORIZATION_STATUS",
       "bucket_start": "2026-09-01",
-      "closing_state": "UNDER_REVIEW",
+      "closing_state": "COMPLETE",
       "events": [
         "TL-BNB-EE-AUTH"
       ],
       "events_count": 1,
       "family_id": "AUTHORIZATION_STATUS",
-      "latest_update_at": "2026-09-10T14:18:35.520844Z",
+      "latest_update_at": "2026-09-11T03:55:43.728177Z",
       "lineage": {
         "artifact_refs": [
           "research/digital-assets/batch-01-r1/BNB/gdr-se/GDR_SE_AUTHORIZATION_RECORD_R1_1.json"
         ],
         "day_bucket_ids": [
           "BNB-EVID-DAY-2026-09-09-AUTHORIZATION_STATUS",
-          "BNB-EVID-DAY-2026-09-10-AUTHORIZATION_STATUS"
+          "BNB-EVID-DAY-2026-09-10-AUTHORIZATION_STATUS",
+          "BNB-EVID-DAY-2026-09-11-AUTHORIZATION_STATUS"
         ],
         "evidence_event_ids": [
           "TL-BNB-EE-AUTH"
@@ -53,7 +54,8 @@
         "artifact_refs": [],
         "day_bucket_ids": [
           "BNB-EVID-DAY-2026-09-09-CORRECTION_STATUS",
-          "BNB-EVID-DAY-2026-09-10-CORRECTION_STATUS"
+          "BNB-EVID-DAY-2026-09-10-CORRECTION_STATUS",
+          "BNB-EVID-DAY-2026-09-11-CORRECTION_STATUS"
         ],
         "evidence_event_ids": [],
         "week_bucket_ids": [
@@ -90,7 +92,8 @@
         ],
         "day_bucket_ids": [
           "BNB-EVID-DAY-2026-09-09-COUNTER_EVIDENCE_COVERAGE",
-          "BNB-EVID-DAY-2026-09-10-COUNTER_EVIDENCE_COVERAGE"
+          "BNB-EVID-DAY-2026-09-10-COUNTER_EVIDENCE_COVERAGE",
+          "BNB-EVID-DAY-2026-09-11-COUNTER_EVIDENCE_COVERAGE"
         ],
         "evidence_event_ids": [
           "TL-BNB-EE-COUNTER_EVIDENCE_COVERAGE"
@@ -129,7 +132,8 @@
         ],
         "day_bucket_ids": [
           "BNB-EVID-DAY-2026-09-09-INDEPENDENT_REVIEW",
-          "BNB-EVID-DAY-2026-09-10-INDEPENDENT_REVIEW"
+          "BNB-EVID-DAY-2026-09-10-INDEPENDENT_REVIEW",
+          "BNB-EVID-DAY-2026-09-11-INDEPENDENT_REVIEW"
         ],
         "evidence_event_ids": [
           "TL-BNB-EE-INDEPENDENT_REVIEW"
@@ -168,7 +172,8 @@
         ],
         "day_bucket_ids": [
           "BNB-EVID-DAY-2026-09-09-NUMERICAL_RECONCILIATION",
-          "BNB-EVID-DAY-2026-09-10-NUMERICAL_RECONCILIATION"
+          "BNB-EVID-DAY-2026-09-10-NUMERICAL_RECONCILIATION",
+          "BNB-EVID-DAY-2026-09-11-NUMERICAL_RECONCILIATION"
         ],
         "evidence_event_ids": [
           "TL-BNB-EE-NUMERICAL_RECONCILIATION"
@@ -207,7 +212,8 @@
         ],
         "day_bucket_ids": [
           "BNB-EVID-DAY-2026-09-09-PRIMARY_SOURCE_COVERAGE",
-          "BNB-EVID-DAY-2026-09-10-PRIMARY_SOURCE_COVERAGE"
+          "BNB-EVID-DAY-2026-09-10-PRIMARY_SOURCE_COVERAGE",
+          "BNB-EVID-DAY-2026-09-11-PRIMARY_SOURCE_COVERAGE"
         ],
         "evidence_event_ids": [
           "TL-BNB-EE001"
@@ -242,7 +248,8 @@
         "artifact_refs": [],
         "day_bucket_ids": [
           "BNB-EVID-DAY-2026-09-09-SECONDARY_SUPPORT",
-          "BNB-EVID-DAY-2026-09-10-SECONDARY_SUPPORT"
+          "BNB-EVID-DAY-2026-09-10-SECONDARY_SUPPORT",
+          "BNB-EVID-DAY-2026-09-11-SECONDARY_SUPPORT"
         ],
         "evidence_event_ids": [],
         "week_bucket_ids": [
@@ -279,7 +286,8 @@
         ],
         "day_bucket_ids": [
           "BNB-EVID-DAY-2026-09-09-SOURCE_DEPENDENCY",
-          "BNB-EVID-DAY-2026-09-10-SOURCE_DEPENDENCY"
+          "BNB-EVID-DAY-2026-09-10-SOURCE_DEPENDENCY",
+          "BNB-EVID-DAY-2026-09-11-SOURCE_DEPENDENCY"
         ],
         "evidence_event_ids": [
           "TL-BNB-EE-SOURCE_DEPENDENCY"
@@ -318,7 +326,8 @@
         ],
         "day_bucket_ids": [
           "BNB-EVID-DAY-2026-09-09-SUPERSESSION_STATUS",
-          "BNB-EVID-DAY-2026-09-10-SUPERSESSION_STATUS"
+          "BNB-EVID-DAY-2026-09-10-SUPERSESSION_STATUS",
+          "BNB-EVID-DAY-2026-09-11-SUPERSESSION_STATUS"
         ],
         "evidence_event_ids": [
           "TL-BNB-EE-SUPERSESSION_STATUS"

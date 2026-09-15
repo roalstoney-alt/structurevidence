@@ -1,11 +1,68 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "artifact_hashes": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "type": "object"
+    },
+    "authorization_state": {
+      "type": "string"
+    },
+    "evaluation_as_of": {
+      "type": "string"
+    },
+    "freshness_reason": {
+      "type": "string"
+    },
+    "freshness_rule_type": {
+      "type": "string"
+    },
+    "freshness_state": {
+      "enum": [
+        "SUPERSEDED",
+        "EVENT_INVALIDATED",
+        "UNDER_REVIEW",
+        "REFRESH_REQUIRED",
+        "INSUFFICIENT_DATA",
+        "AGING",
+        "CURRENT_WITH_LIMITATIONS",
+        "CURRENT",
+        "NOT_APPLICABLE",
+        "POLICY_NOT_CONFIGURED"
+      ],
+      "type": "string"
+    },
+    "gdr_version": {
+      "type": "string"
+    },
+    "paid_delivery_state": {
+      "type": "string"
+    },
+    "record_hash": {
+      "type": "string"
+    },
+    "record_id": {
+      "type": "string"
+    },
+    "release_state": {
+      "type": "string"
+    }
+  },
   "required": [
     "record_id",
     "record_hash",
     "artifact_hashes",
+    "freshness_state",
+    "freshness_reason",
+    "freshness_rule_type",
+    "gdr_version",
     "release_state",
-    "authorization_state"
+    "authorization_state",
+    "paid_delivery_state",
+    "evaluation_as_of"
   ],
   "title": "CML Release Manifest",
   "type": "object"

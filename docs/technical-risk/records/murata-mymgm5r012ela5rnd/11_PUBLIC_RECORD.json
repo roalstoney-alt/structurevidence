@@ -46,7 +46,9 @@
         "No bench comparison or customer qualification evidence is present."
       ]
     },
-    "freshness_state": "POLICY_NOT_CONFIGURED_EVENT_REVIEWED",
+    "freshness_reason": "EXACT_LIFECYCLE_EFFECTIVE_DATE_UNRESOLVED",
+    "freshness_rule_type": "UNCONFIGURED",
+    "freshness_state": "POLICY_NOT_CONFIGURED",
     "identity": {
       "created_at": "2026-09-16T00:00:00Z",
       "datasheet_refs": [
@@ -57,6 +59,7 @@
       "manufacturer": "Murata Manufacturing",
       "manufacturer_normalized": "MURATA_MANUFACTURING",
       "manufacturer_part_number": "MYMGM5R012ELA5RND",
+      "manufacturer_part_number_exact": "MYMGM5R012ELA5RND",
       "manufacturer_product_url": "https://www.murata.com/en-global/products/power",
       "nominal_application_class": "12 V input point-of-load conversion",
       "package_or_interface": "10.5 x 9.0 x 5.0 mm module class",
@@ -67,6 +70,7 @@
       "technical_item_type": "POWER_MODULE"
     },
     "lifecycle_state": "NRND",
+    "product_context": "PUBLIC_TECHNICAL_RECORD",
     "public_private_boundary": "PUBLIC_EVIDENCE_ONLY_NO_CLIENT_BOM",
     "verification": {
       "compatibility_matrix": [
@@ -126,11 +130,11 @@
     "created_at": "2026-09-16T00:00:00Z",
     "domain": "TECHNICAL_RISK",
     "effective_at": "2025-07-07T00:00:00Z",
-    "input_hash": "23d663af772a85075869c393419c84d3904f4d72508dd5ec94c68f5160dc0650",
+    "input_hash": "ae15037e6e98fb0b354af37192e3820479b94023bd6388ce566740c66afe9823",
     "known_at": "2026-09-16T00:00:00Z",
     "policy_version": "RDL_FRESHNESS_v0.1a+CML_PROFILE_v0.1",
     "protocol": "CML",
-    "record_hash": "58c8136e7888aaf662975c8c0779696ef41784d9d98fc33c1e41bdb52b10ac18",
+    "record_hash": "f18e8d0dd74abd6874d4325af895197e07bb10d331f2e18167891f28a6b3f9dd",
     "record_id": "SE.CML.RECORD.MURATA.MYMGM5R012ELA5RND.v0.1",
     "source_refs": [
       "MURATA_MYMGM5R012_DS",

@@ -19,6 +19,7 @@ CORE_VERSION = "STRUCTEVIDENCE_EVIDENCE_CORE_v0.1"
 MODULE_VERSION = "STRUCTEVIDENCE_TECHNICAL_RISK_v0.1"
 PROTOCOL_VERSION = "CML_v0.1"
 SITE_INTEGRATION_VERSION = "CML_SITE_INTEGRATION_v0.1a"
+AUDIT_POLICY_VERSION = "CML_AUDIT_v0.1a"
 
 
 def canonical(value: object) -> bytes:
@@ -165,7 +166,9 @@ PILOTS = [
         "decision_paths": ["LIFETIME_BUY", "QUALIFY_SECOND_SOURCE", "REDESIGN"],
         "decision": "Confirm remaining demand before the stated LTB boundary and begin a scope-bound second-source or redesign qualification. No qualified substitute is established.",
         "counter_evidence": "A later public Amphenol EOL list appears to include the same MPN under PCN 26043 with a different effective date. This may be an overlapping notice or later schedule and must be reconciled with Amphenol before procurement action.",
-        "freshness": "EVENT_DRIVEN_CURRENT_WITH_SOURCE_CONFLICT",
+        "freshness_state": "CURRENT_WITH_LIMITATIONS",
+        "freshness_reason": "CONFLICTING_PRIMARY_LIFECYCLE_EFFECTIVE_DATE",
+        "freshness_rule_type": "EVENT_DRIVEN",
     },
     {
         "slug": "nxp-radio-power-2026",
@@ -220,7 +223,9 @@ PILOTS = [
         "decision_paths": ["LIFETIME_BUY", "QUALIFY_ALTERNATIVE", "REDESIGN"],
         "decision": "Treat the notice as a lifecycle trigger. Separate lifetime-buy analysis from engineering migration; any alternate device requires board-level RF and thermal qualification.",
         "counter_evidence": "Some NXP overview surfaces have retained an Active label for MRF101AN. The later dated discontinuance notice and package status are treated as stronger lifecycle evidence, while the conflict remains visible.",
-        "freshness": "EVENT_DRIVEN_CURRENT_WITH_INTERFACE_CONFLICT",
+        "freshness_state": "CURRENT_WITH_LIMITATIONS",
+        "freshness_reason": "MANUFACTURER_INTERFACE_STATUS_CONFLICT",
+        "freshness_rule_type": "EVENT_DRIVEN",
     },
     {
         "slug": "murata-mymgm5r012ela5rnd",
@@ -273,7 +278,9 @@ PILOTS = [
         "decision_paths": ["MONITOR", "QUALIFY_SECOND_SOURCE", "REDESIGN"],
         "decision": "Freeze the exact suffix and customer operating envelope, then request Murata cross-reference confirmation. Any candidate remains paper-level until electrical, thermal and EMI verification is complete.",
         "counter_evidence": "The base series remains documented and only a specific suffix is visibly marked NRND. This may reduce immediate operational impact if the customer uses another orderable suffix; BOM identity must be exact.",
-        "freshness": "POLICY_NOT_CONFIGURED_EVENT_REVIEWED",
+        "freshness_state": "POLICY_NOT_CONFIGURED",
+        "freshness_reason": "EXACT_LIFECYCLE_EFFECTIVE_DATE_UNRESOLVED",
+        "freshness_rule_type": "UNCONFIGURED",
     },
     {
         "slug": "amphenol-rf-095-725-134-006",
@@ -326,7 +333,9 @@ PILOTS = [
         "decision_paths": ["QUALIFY_SECOND_SOURCE", "MONITOR"],
         "decision": "Use the exact assembly as a benchmark, not as proof that any cable using 40 GHz-capable connectors is equivalent. Freeze VNA method and acceptance limits before supplier comparison.",
         "counter_evidence": "The item is an active off-the-shelf assembly, so substitution may not be operationally necessary. The pilot tests whether CML can structure qualification evidence without inventing a lifecycle crisis.",
-        "freshness": "POLICY_NOT_CONFIGURED_ACTIVE_BASELINE",
+        "freshness_state": "POLICY_NOT_CONFIGURED",
+        "freshness_reason": "ACTIVE_BENCHMARK_HAS_NO_EMPIRICAL_CADENCE",
+        "freshness_rule_type": "UNCONFIGURED",
     },
 ]
 
@@ -343,7 +352,7 @@ def build_source_register(pilot: dict) -> dict:
 def build_item(pilot: dict) -> dict:
     fields = ["technical_item_id", "manufacturer", "manufacturer_normalized", "manufacturer_part_number", "part_number_normalized", "technical_item_type", "product_family", "description", "package_or_interface", "nominal_application_class", "manufacturer_product_url"]
     value = {key: pilot[key] for key in fields}
-    value.update({"datasheet_refs": pilot["source_ids"], "created_at": AS_OF, "record_version": PROTOCOL_VERSION})
+    value.update({"manufacturer_part_number_exact": pilot["manufacturer_part_number"], "datasheet_refs": pilot["source_ids"], "created_at": AS_OF, "record_version": PROTOCOL_VERSION})
     return value
 
 
@@ -378,7 +387,10 @@ def build_record(pilot: dict, source_register: dict, item: dict) -> dict:
         "verification": {"qualification_state": "LAB_VERIFICATION_REQUIRED", "compatibility_matrix": compatibility, "requirements": pilot["verification"]},
         "decision": {"supported_paths": pilot["decision_paths"], "current_recommendation": pilot["decision"], "claim_type": "DECISION_RECOMMENDATION"},
         "lifecycle_state": pilot["lifecycle_state"],
-        "freshness_state": pilot["freshness"],
+        "freshness_state": pilot["freshness_state"],
+        "freshness_reason": pilot["freshness_reason"],
+        "freshness_rule_type": pilot["freshness_rule_type"],
+        "product_context": "PUBLIC_TECHNICAL_RECORD",
         "counter_evidence": pilot["counter_evidence"],
         "public_private_boundary": "PUBLIC_EVIDENCE_ONLY_NO_CLIENT_BOM",
     }
@@ -388,25 +400,50 @@ def build_record(pilot: dict, source_register: dict, item: dict) -> dict:
 
 
 def schema_files() -> dict[str, dict]:
-    core_required = ["record_id", "subject_id", "subject_class", "domain", "protocol", "source_refs", "artifact_refs", "effective_at", "known_at", "created_at", "updated_at", "verification_status", "correction_status", "supersession_status", "policy_version", "input_hash", "record_hash"]
+    rdl_states = json.loads((ROOT / "rdl/freshness/config/freshness_precedence.json").read_text(encoding="utf-8"))["precedence"]
+    core_required = ["core_version", "record_id", "subject_id", "subject_class", "domain", "protocol", "source_refs", "artifact_refs", "effective_at", "known_at", "created_at", "updated_at", "verification_status", "correction_status", "supersession_status", "policy_version", "input_hash", "record_hash"]
+    string = {"type": "string"}
+    string_array = {"type": "array", "items": {"type": "string"}}
+    identity_properties = {
+        "technical_item_id": {"type": "string", "description": "Permanent exact technical-item identifier."},
+        "manufacturer": {"type": "string", "minLength": 1, "description": "Manufacturer display name."},
+        "manufacturer_normalized": {"type": "string", "description": "Non-destructive matching form of manufacturer name."},
+        "manufacturer_part_number": {"type": "string", "minLength": 1, "description": "Manufacturer part number as published."},
+        "manufacturer_part_number_exact": {"type": "string", "minLength": 1, "description": "Byte-identical source-derived manufacturer part number."},
+        "part_number_normalized": {"type": "string", "description": "Search form that does not replace the exact identity."},
+        "technical_item_type": {"enum": ["CONNECTOR", "RF_CONNECTOR", "RF_CABLE_ASSEMBLY", "POWER_MODULE", "RF_POWER_SEMICONDUCTOR", "IC", "MODULE", "ASSEMBLY", "OTHER"]},
+        "product_family": {"type": "string"}, "description": {"type": "string"}, "package_or_interface": {"type": "string"},
+        "nominal_application_class": {"type": "string"}, "manufacturer_product_url": {"type": ["string", "null"]},
+        "datasheet_refs": string_array, "created_at": string, "record_version": string,
+    }
+    event_properties = {"event_id": string, "event_type": {"type": "string", "enum": CONFIG["event_types"]}, "event_domain": {"type": "string", "enum": CONFIG["event_domains"]}, "technical_item_id": string, "effective_at": string, "known_at": string, "source_refs": string_array, "verification_status": string, "created_at": string, "detail": string}
+    candidate_properties = {"candidate_id": string, "relationship_type": string, "assessment_state": {"type": "string", "enum": CONFIG["qualification_states"]}, "description": string}
+    compatibility_properties = {"dimension": string, "state": {"type": "string", "enum": ["MATCH", "ACCEPTABLE_DIFFERENCE", "MISMATCH", "UNKNOWN", "REQUIRES_TEST", "NOT_APPLICABLE"]}, "evidence_or_test": string}
     return {
         "evidence/core/schema/evidence_core_record.schema.json": {
             "$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "https://structevidence.com/schema/evidence-core/v0.1", "title": "StructEvidence Evidence Core Record", "type": "object", "required": core_required,
-            "properties": {key: ({"type": "array", "items": {"type": "string"}} if key in {"source_refs", "artifact_refs"} else {"type": "string"}) for key in core_required}, "additionalProperties": True,
+            "properties": {key: (string_array if key in {"source_refs", "artifact_refs"} else {"type": "string", "description": f"Shared Evidence Core field: {key}."}) for key in core_required}, "additionalProperties": False,
         },
         "technical-risk/schema/technical_item.schema.json": {
-            "$schema": "https://json-schema.org/draft/2020-12/schema", "title": "CML Technical Item", "type": "object", "required": ["technical_item_id", "manufacturer", "manufacturer_part_number", "technical_item_type", "record_version"],
-            "properties": {"technical_item_id": {"type": "string"}, "manufacturer": {"type": "string", "minLength": 1}, "manufacturer_part_number": {"type": "string", "minLength": 1}, "technical_item_type": {"enum": ["CONNECTOR", "RF_CONNECTOR", "RF_CABLE_ASSEMBLY", "POWER_MODULE", "RF_POWER_SEMICONDUCTOR", "IC", "MODULE", "ASSEMBLY", "OTHER"]}, "record_version": {"type": "string"}}, "additionalProperties": True,
+            "$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "https://structevidence.com/schema/cml/technical-item/v0.1", "title": "CML Technical Item", "type": "object", "required": list(identity_properties), "properties": identity_properties, "additionalProperties": False,
         },
         "technical-risk/schema/cml_public_record.schema.json": {
             "$schema": "https://json-schema.org/draft/2020-12/schema", "title": "CML Public Record", "type": "object", "required": ["core", "cml"],
-            "properties": {"core": {"$ref": "../../evidence/core/schema/evidence_core_record.schema.json"}, "cml": {"type": "object", "required": ["identity", "event", "dependency", "evidence", "alternative", "verification", "decision", "lifecycle_state", "freshness_state", "public_private_boundary"]}}, "additionalProperties": False,
+            "properties": {"core": {"$ref": "../../evidence/core/schema/evidence_core_record.schema.json"}, "cml": {"type": "object", "required": ["identity", "event", "dependency", "evidence", "alternative", "verification", "decision", "lifecycle_state", "freshness_state", "freshness_reason", "freshness_rule_type", "counter_evidence", "public_private_boundary", "product_context"], "properties": {
+                "identity": {"$ref": "technical_item.schema.json"}, "event": {"$ref": "cml_event.schema.json"},
+                "dependency": {"type": "object", "required": ["context", "client_scope"], "properties": {"context": string, "client_scope": string}, "additionalProperties": False},
+                "evidence": {"type": "object", "required": ["known_facts", "unknowns", "source_register_id"], "properties": {"known_facts": string_array, "unknowns": string_array, "source_register_id": string}, "additionalProperties": False},
+                "alternative": {"type": "object", "required": ["oem_replacement_status", "candidates"], "properties": {"oem_replacement_status": string, "candidates": {"type": "array", "items": {"$ref": "cml_candidate.schema.json"}}}, "additionalProperties": False},
+                "verification": {"type": "object", "required": ["qualification_state", "compatibility_matrix", "requirements"], "properties": {"qualification_state": {"type": "string", "enum": CONFIG["qualification_states"]}, "compatibility_matrix": {"type": "array", "items": {"$ref": "cml_compatibility.schema.json"}}, "requirements": string_array}, "additionalProperties": False},
+                "decision": {"type": "object", "required": ["supported_paths", "current_recommendation", "claim_type"], "properties": {"supported_paths": string_array, "current_recommendation": string, "claim_type": string}, "additionalProperties": False},
+                "lifecycle_state": {"type": "string", "enum": CONFIG["lifecycle_states"]}, "freshness_state": {"type": "string", "enum": rdl_states}, "freshness_reason": string, "freshness_rule_type": {"type": "string", "enum": ["EVENT_DRIVEN", "REVISION_DRIVEN", "REVISION_AND_EXPIRY_DRIVEN", "SCOPE_AND_REVISION_DRIVEN", "UNCONFIGURED"]}, "counter_evidence": string, "public_private_boundary": string, "product_context": {"type": "string", "enum": PRODUCT_CONTEXTS},
+            }, "additionalProperties": False}}, "additionalProperties": False,
         },
-        "technical-risk/schema/cml_event.schema.json": {"$schema": "https://json-schema.org/draft/2020-12/schema", "title": "CML Event", "type": "object", "required": ["event_id", "event_type", "event_domain", "technical_item_id", "effective_at", "known_at", "source_refs", "verification_status", "created_at"]},
-        "technical-risk/schema/cml_candidate.schema.json": {"$schema": "https://json-schema.org/draft/2020-12/schema", "title": "CML Replacement Candidate", "type": "object", "required": ["candidate_id", "relationship_type", "assessment_state"]},
-        "technical-risk/schema/cml_compatibility.schema.json": {"$schema": "https://json-schema.org/draft/2020-12/schema", "title": "CML Compatibility Cell", "type": "object", "required": ["dimension", "state", "evidence_or_test"], "properties": {"state": {"enum": ["MATCH", "ACCEPTABLE_DIFFERENCE", "MISMATCH", "UNKNOWN", "REQUIRES_TEST", "NOT_APPLICABLE"]}}},
-        "technical-risk/schema/cml_test_requirement.schema.json": {"$schema": "https://json-schema.org/draft/2020-12/schema", "title": "CML Test Requirement", "type": "object", "required": ["test_requirement_id", "test_name", "status", "evidence_basis"]},
-        "technical-risk/schema/cml_release_manifest.schema.json": {"$schema": "https://json-schema.org/draft/2020-12/schema", "title": "CML Release Manifest", "type": "object", "required": ["record_id", "record_hash", "artifact_hashes", "release_state", "authorization_state"]},
+        "technical-risk/schema/cml_event.schema.json": {"$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "https://structevidence.com/schema/cml/event/v0.1", "title": "CML Event", "type": "object", "required": list(event_properties), "properties": event_properties, "additionalProperties": False},
+        "technical-risk/schema/cml_candidate.schema.json": {"$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "https://structevidence.com/schema/cml/candidate/v0.1", "title": "CML Replacement Candidate", "type": "object", "required": list(candidate_properties), "properties": candidate_properties, "additionalProperties": False},
+        "technical-risk/schema/cml_compatibility.schema.json": {"$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "https://structevidence.com/schema/cml/compatibility/v0.1", "title": "CML Compatibility Cell", "type": "object", "required": list(compatibility_properties), "properties": compatibility_properties, "additionalProperties": False},
+        "technical-risk/schema/cml_test_requirement.schema.json": {"$schema": "https://json-schema.org/draft/2020-12/schema", "title": "CML Test Requirement", "type": "object", "required": ["test_requirement_id", "original_item_id", "candidate_id", "test_category", "test_name", "standard", "test_method", "acceptance_criteria", "required_equipment", "third_party_lab_required", "customer_lab_required", "destructive", "sample_quantity", "evidence_basis", "status"], "properties": {key: ({"type": ["string", "null"]} if key == "candidate_id" else string) for key in ["test_requirement_id", "original_item_id", "candidate_id", "test_category", "test_name", "standard", "test_method", "acceptance_criteria", "required_equipment", "third_party_lab_required", "customer_lab_required", "destructive", "sample_quantity", "evidence_basis", "status"]}, "additionalProperties": False},
+        "technical-risk/schema/cml_release_manifest.schema.json": {"$schema": "https://json-schema.org/draft/2020-12/schema", "title": "CML Release Manifest", "type": "object", "required": ["record_id", "record_hash", "artifact_hashes", "freshness_state", "freshness_reason", "freshness_rule_type", "gdr_version", "release_state", "authorization_state", "paid_delivery_state", "evaluation_as_of"], "properties": {"record_id": string, "record_hash": string, "artifact_hashes": {"type": "object", "additionalProperties": {"type": "string"}}, "freshness_state": {"type": "string", "enum": rdl_states}, "freshness_reason": string, "freshness_rule_type": string, "gdr_version": string, "release_state": string, "authorization_state": string, "paid_delivery_state": string, "evaluation_as_of": string}, "additionalProperties": False},
         "technical-risk/schema/CML_SNIPE_REPORT_v0.1.schema.json": {"$schema": "https://json-schema.org/draft/2020-12/schema", "title": "CML Snipe Report v0.1", "type": "object", "required": ["executive_technical_issue", "named_item", "lifecycle_event", "evidence_chain", "unknowns", "required_verification", "current_recommendation", "freshness", "verification_record", "source_appendix"]},
     }
 
@@ -426,6 +463,66 @@ CONFIG = {
 
 EVIDENCE_FAMILIES = ["MANUFACTURER_LIFECYCLE_EVIDENCE", "MANUFACTURER_DATASHEET", "MANUFACTURER_PCN", "OEM_REPLACEMENT_EVIDENCE", "PACKAGE_INTERFACE_EVIDENCE", "CERTIFICATION_EVIDENCE", "TECHNICAL_COMPARISON", "COUNTER_EVIDENCE", "INDEPENDENT_TEST_EVIDENCE", "CUSTOMER_QUALIFICATION_EVIDENCE", "SUPPLY_AVAILABILITY_EVIDENCE", "SOURCE_DEPENDENCY", "CORRECTION_STATUS", "SUPERSESSION_STATUS", "AUTHORIZATION_STATUS"]
 PRODUCT_CONTEXTS = ["PUBLIC_TECHNICAL_RECORD", "SNIPE_BRIEF", "SUBSTITUTION_EVIDENCE_REPORT", "CUSTOM_BOM_AUDIT", "TECHNICAL_DUE_DILIGENCE", "TECHNICAL_MONITOR"]
+
+
+def generate_data_dictionary() -> tuple[str, dict]:
+    schema_paths = {
+        "core": ROOT / "evidence/core/schema/evidence_core_record.schema.json",
+        "cml": ROOT / "technical-risk/schema/cml_public_record.schema.json",
+        "test_requirements[]": ROOT / "technical-risk/schema/cml_test_requirement.schema.json",
+        "release_manifest": ROOT / "technical-risk/schema/cml_release_manifest.schema.json",
+    }
+    schema_lookup = {path.name: json.loads(path.read_text(encoding="utf-8")) for path in [*schema_paths.values(), *(ROOT / "technical-risk/schema").glob("*.schema.json")]}
+    rows: dict[str, dict] = {}
+
+    def walk(node: dict, path: str, schema_name: str, required: bool = True) -> None:
+        if "$ref" in node:
+            target = schema_lookup[Path(node["$ref"]).name]
+            walk(target, path, Path(node["$ref"]).name, required)
+            return
+        properties = node.get("properties", {})
+        if properties:
+            required_names = set(node.get("required", []))
+            for name, child in properties.items():
+                child_path = f"{path}.{name}" if path else name
+                walk(child, child_path, schema_name, name in required_names)
+            return
+        item = node.get("items")
+        if isinstance(item, dict) and (item.get("properties") or item.get("$ref")):
+            walk(item, f"{path}[]", schema_name, required)
+            return
+        field_name = path.rsplit(".", 1)[-1].replace("[]", "")
+        values = node.get("enum", [])
+        field_type = node.get("type", "enum" if values else "object")
+        if isinstance(field_type, list):
+            field_type = " | ".join(field_type)
+        boundary = "public"
+        authority = "Evidence Core" if path.startswith("core.") else "CML schema / reviewed evidence"
+        freshness = "RDL policy state" if "freshness" in path else "event or revision driven"
+        supersession = "new record; predecessor retained" if path.endswith(("record_hash", "record_id")) else "retained in record history"
+        rows[path] = {"json_path": path, "field_name": field_name, "schema": schema_name, "type": field_type, "required": required, "boundary": boundary, "description": node.get("description", field_name.replace("_", " ").capitalize()), "allowed_values": values, "source_authority": authority, "freshness_behavior": freshness, "supersession_behavior": supersession, "validation_rule": "schema enum" if values else f"JSON Schema {field_type}"}
+
+    for prefix, path in schema_paths.items():
+        schema = json.loads(path.read_text(encoding="utf-8"))
+        if prefix == "cml":
+            walk(schema["properties"]["cml"], "cml", path.name)
+        else:
+            walk(schema, prefix, path.name)
+
+    boundary = json.loads((ROOT / "technical-risk/config/public_private_boundary.json").read_text(encoding="utf-8"))
+    for name in boundary["private"]:
+        path = f"private_reserved.{name}"
+        rows[path] = {"json_path": path, "field_name": name, "schema": "public_private_boundary.json", "type": "reserved", "required": False, "boundary": "private / prohibited in Public Verify", "description": f"Private engagement field: {name.replace('_', ' ')}.", "allowed_values": [], "source_authority": "client / NDA", "freshness_behavior": "engagement policy", "supersession_behavior": "never copied into public record", "validation_rule": "must be absent from public artifacts"}
+
+    columns = ["JSON path", "field name", "schema", "type", "required", "boundary", "description", "allowed values", "source authority", "freshness behavior", "supersession behavior", "validation rule"]
+    lines = ["# CML Technical Risk Data Dictionary v0.1", "", f"Generated from Evidence Core and CML schemas plus boundary configuration. Authoritative path count: **{len(rows)}**.", "", "| " + " | ".join(columns) + " |", "| " + " | ".join(["---"] * len(columns)) + " |"]
+    for path, row in sorted(rows.items()):
+        values = ", ".join(row["allowed_values"]) if row["allowed_values"] else "-"
+        values = values.replace("|", "\\|")
+        cells = [f"`{path}`", row["field_name"], f"`{row['schema']}`", str(row["type"]), "yes" if row["required"] else "no", row["boundary"], row["description"], values, row["source_authority"], row["freshness_behavior"], row["supersession_behavior"], row["validation_rule"]]
+        lines.append("| " + " | ".join(str(cell).replace("|", "\\|") for cell in cells) + " |")
+    index = {"dictionary_version": "CML_DATA_DICTIONARY_v0.1", "generated_from": [str(path.relative_to(ROOT)) for path in schema_paths.values()] + ["technical-risk/config/public_private_boundary.json"], "authoritative_paths": sorted(rows), "row_count": len(rows)}
+    return "\n".join(lines) + "\n", index
 
 
 def page(title: str, description: str, body: str, prefix: str, canonical_path: str) -> str:
@@ -664,7 +761,7 @@ What technical decision is currently defensible for `{pilot['manufacturer_part_n
 
 ## Freshness
 
-`{pilot['freshness']}` as evaluated `{AS_OF}`. No universal CML max-age rule is used.
+`{pilot['freshness_state']}` under `{pilot['freshness_rule_type']}` because `{pilot['freshness_reason']}`, as evaluated `{AS_OF}`. No universal CML max-age rule is used.
 
 ## Limitations
 
@@ -680,6 +777,8 @@ def main() -> None:
     write_json(ROOT / "technical-risk/config/product_contexts.json", {"module_version": MODULE_VERSION, "contexts": PRODUCT_CONTEXTS, "fact_invariance": "PRODUCT_CONTEXT_MUST_NOT_CHANGE_TECHNICAL_FACTS"})
     write_json(ROOT / "technical-risk/config/freshness_profiles.json", {"policy_version": "CML_FRESHNESS_PROFILE_v0.1", "global_threshold": None, "profiles": {"MANUFACTURER_LIFECYCLE_EVIDENCE": "EVENT_DRIVEN", "MANUFACTURER_DATASHEET": "REVISION_DRIVEN", "MANUFACTURER_PCN": "EVENT_DRIVEN", "CERTIFICATION_EVIDENCE": "REVISION_AND_EXPIRY_DRIVEN", "SUPPLY_AVAILABILITY_EVIDENCE": "POLICY_NOT_CONFIGURED", "INDEPENDENT_TEST_EVIDENCE": "SCOPE_AND_REVISION_DRIVEN", "CUSTOMER_QUALIFICATION_EVIDENCE": "SCOPE_AND_REVISION_DRIVEN"}})
     write_json(ROOT / "technical-risk/config/public_private_boundary.json", {"public": ["manufacturer", "manufacturer_part_number", "official_lifecycle_evidence", "pcn", "datasheet", "published_specifications", "public_certification", "public_oem_replacement", "general_verification_requirements", "public_technical_comparison", "evidence_lineage", "record_freshness"], "private": ["customer_bom", "customer_product", "annual_usage", "inventory", "customer_pricing", "supplier_quotation", "customer_drawings", "customer_firmware", "customer_qualification_limits", "nda_documents", "revenue_exposure", "internal_failure_data", "private_lab_raw_data", "commercial_negotiations"]})
+    dictionary_markdown, dictionary_index = generate_data_dictionary()
+    write_json(ROOT / "technical-risk/validation/CML_DATA_DICTIONARY_INDEX.json", dictionary_index)
     write_json(ROOT / "technical-risk/CML_SITE_ARCHITECTURE_v0.1a.json", {"version": SITE_INTEGRATION_VERSION, "brand": "StructEvidence", "canonical_research_domain": "structurevidence.org", "acquisition_domain": "structevidence.com", "acquisition_root_artifact": "landing.html", "shared_artifact_origin": "https://structurevidence.org", "evidence_core": CORE_VERSION, "domains": ["STRUCTURAL_INTELLIGENCE", "TECHNICAL_RISK"], "shared_systems": ["REPOSITORY", "EVIDENCE_CORE", "RECORD_STORE", "VERIFY", "RELEASE_GOVERNANCE"], "domain_split_prohibited": True})
 
     records = []
@@ -710,7 +809,7 @@ def main() -> None:
         write(folder / "09_COUNTER_EVIDENCE.md", f"# Counter-Evidence\n\n{pilot['counter_evidence']}\n")
         write(folder / "10_LIMITATIONS.md", "# Limitations\n\nPublic-evidence pilot only. No client BOM, pricing, inventory, drawings, application limits, laboratory raw data or qualification approval is included. A paper candidate is never a qualified replacement.\n")
         artifact_hashes = {path.name: file_digest(path) for path in sorted(folder.iterdir()) if path.is_file() and path.name != "12_RELEASE_MANIFEST.json"}
-        release = {"record_id": pilot["record_id"], "record_hash": record["core"]["record_hash"], "artifact_hashes": artifact_hashes, "freshness_state": pilot["freshness"], "gdr_version": "GDR_SE_v0.1-R1.1+CML_DOMAIN_ADAPTER_v0.1", "release_state": "PUBLIC_METHOD_PILOT", "authorization_state": "ALLOW_PUBLIC_WITH_LIMITATIONS", "paid_delivery_state": "REQUEST_ONLY", "evaluation_as_of": AS_OF}
+        release = {"record_id": pilot["record_id"], "record_hash": record["core"]["record_hash"], "artifact_hashes": artifact_hashes, "freshness_state": pilot["freshness_state"], "freshness_reason": pilot["freshness_reason"], "freshness_rule_type": pilot["freshness_rule_type"], "gdr_version": "GDR_SE_v0.1-R1.1+CML_DOMAIN_ADAPTER_v0.1a", "release_state": "PUBLIC_METHOD_PILOT", "authorization_state": "ALLOW_PUBLIC_WITH_LIMITATIONS", "paid_delivery_state": "BLOCK", "evaluation_as_of": AS_OF}
         write_json(folder / "12_RELEASE_MANIFEST.json", release)
         pilot_hashes[pilot["record_id"]] = record["core"]["record_hash"]
         index.append({"slug": pilot["slug"], "record_id": pilot["record_id"], "manufacturer": pilot["manufacturer"], "manufacturer_part_number": pilot["manufacturer_part_number"], "search_aliases": pilot["search_aliases"], "product_family": pilot["product_family"], "technical_item_type": pilot["technical_item_type"], "lifecycle_state": pilot["lifecycle_state"], "qualification_state": "LAB_VERIFICATION_REQUIRED", "record_hash": record["core"]["record_hash"], "href": f"../record/{pilot['slug']}/"})
@@ -718,13 +817,21 @@ def main() -> None:
     write_json(ROOT / "technical-risk/records/PUBLIC_RECORD_INDEX.json", {"module_version": MODULE_VERSION, "evaluation_as_of": AS_OF, "records": index})
     schema_hashes = {Path(path).name: file_digest(ROOT / path) for path in schema_files()}
     config_hashes = {path.name: file_digest(path) for path in sorted((ROOT / "technical-risk/config").glob("*.json"))}
-    manifest = {"module_version": MODULE_VERSION, "protocol_version": PROTOCOL_VERSION, "site_integration_version": SITE_INTEGRATION_VERSION, "evidence_core_version": CORE_VERSION, "schema_hashes": schema_hashes, "config_hashes": config_hashes, "pilot_record_ids": list(pilot_hashes), "pilot_record_hashes": pilot_hashes, "freshness_policy_version": "RDL_FRESHNESS_v0.1a+CML_FRESHNESS_PROFILE_v0.1", "gdr_version": "GDR_SE_v0.1-R1.1+CML_DOMAIN_ADAPTER_v0.1", "build_commit": BUILD_COMMIT, "evaluation_as_of": AS_OF, "public_release_state": "METHOD_PILOT_ALLOW_WITH_LIMITATIONS"}
+    manifest = {"module_version": MODULE_VERSION, "protocol_version": PROTOCOL_VERSION, "site_integration_version": SITE_INTEGRATION_VERSION, "audit_policy_version": AUDIT_POLICY_VERSION, "evidence_core_version": CORE_VERSION, "schema_hashes": schema_hashes, "config_hashes": config_hashes, "pilot_record_ids": list(pilot_hashes), "pilot_record_hashes": pilot_hashes, "freshness_policy_version": "RDL_FRESHNESS_v0.1a+CML_FRESHNESS_PROFILE_v0.1", "gdr_version": "GDR_SE_v0.1-R1.1+CML_DOMAIN_ADAPTER_v0.1a", "build_commit": BUILD_COMMIT, "evaluation_as_of": AS_OF, "public_release_state": "METHOD_PILOT_ALLOW_WITH_LIMITATIONS"}
     write_json(ROOT / "technical-risk/TECHNICAL_RISK_MANIFEST.json", manifest)
     history = ROOT / "technical-risk/CML_VERSION_HISTORY.jsonl"
     if not history.exists():
         write(history, json.dumps({"module_version": MODULE_VERSION, "protocol_version": PROTOCOL_VERSION, "effective_at": AS_OF, "change": "Initial CML domain release", "base_commit": BASE_SHA}, sort_keys=True))
+    closure_commit = os.environ.get("CML_CLOSURE_IMPLEMENTATION_COMMIT")
+    if closure_commit:
+        existing = [json.loads(line) for line in history.read_text(encoding="utf-8").splitlines() if line.strip()]
+        if not any(row.get("audit_policy_version") == AUDIT_POLICY_VERSION for row in existing):
+            entry = {"effective_at": AS_OF, "base_commit": "ce1869fb5b04bb80bdad3451d1cf778c5ef557ca", "implementation_commit": closure_commit, "change_type": "AUDIT_HARDENING", "protocol_version": PROTOCOL_VERSION, "module_version": MODULE_VERSION, "site_integration_version": SITE_INTEGRATION_VERSION, "audit_policy_version": AUDIT_POLICY_VERSION, "summary": "Independent gate validators, canonical RDL freshness fields, hardened shared GDR adapter, schema-derived dictionary and metadata alignment; scientific findings unchanged.", "supersedes": "initial v0.1 audit behavior"}
+            with history.open("a", encoding="utf-8") as handle:
+                handle.write(json.dumps(entry, ensure_ascii=True, sort_keys=True) + "\n")
 
     docs = docs_text(records)
+    docs["docs/architecture/CML_TECHNICAL_RISK_DATA_DICTIONARY_v0.1.md"] = dictionary_markdown
     research_names = ["CML_PILOT_AMPHENOL_EOL_v0.1.md", "CML_PILOT_NXP_RF_POWER_EOL_v0.1.md", "CML_PILOT_MURATA_DCDC_v0.1.md", "CML_PILOT_RF40_ASSEMBLY_v0.1.md"]
     for name, pilot in zip(research_names, PILOTS):
         docs[f"docs/research/{name}"] = research_doc(pilot)
@@ -738,7 +845,8 @@ def main() -> None:
     for pilot, record in zip(PILOTS, records):
         write(ROOT / f"technical-risk/record/{pilot['slug']}/index.html", record_page(record, pilot["slug"]))
         verify = record["core"] | {"public_verify": True, "private_fields_included": False, "source_refs": [source(x) for x in pilot["source_ids"]]}
-        body = f"<section class=\"verify-hero\"><p class=\"eyebrow\">Public Verify / CML</p><h1>{html.escape(pilot['manufacturer_part_number'])}</h1><p>Recompute the canonical public record hash from the linked JSON and compare it with this release commitment.</p></section><section class=\"tr-section verify-grid\"><div><span>Record ID</span><code>{html.escape(record['core']['record_id'])}</code></div><div><span>Input SHA-256</span><code>{record['core']['input_hash']}</code></div><div><span>Record SHA-256</span><code>{record['core']['record_hash']}</code></div><div><span>Supersession</span><strong>{record['core']['supersession_status']}</strong></div><div><span>Public/private check</span><strong>NO PRIVATE CLIENT DATA</strong></div><div><a href=\"../../records/{pilot['slug']}/11_PUBLIC_RECORD.json\">Open canonical JSON</a></div></section>"
+        source_refs_html = ", ".join(html.escape(source_id) for source_id in record["core"]["source_refs"])
+        body = f"<section class=\"verify-hero\"><p class=\"eyebrow\">Public Verify / CML</p><h1>{html.escape(pilot['manufacturer_part_number'])}</h1><p>Recompute the canonical public record hash from the linked JSON and compare it with this release commitment.</p></section><section class=\"tr-section verify-grid\"><div><span>Record ID</span><code>{html.escape(record['core']['record_id'])}</code></div><div><span>Input SHA-256</span><code>{record['core']['input_hash']}</code></div><div><span>Record SHA-256</span><code>{record['core']['record_hash']}</code></div><div><span>Source refs</span><code>{source_refs_html}</code></div><div><span>Supersession</span><strong>{record['core']['supersession_status']}</strong></div><div><span>Public/private check</span><strong>NO PRIVATE CLIENT DATA</strong></div><div><a href=\"../../records/{pilot['slug']}/11_PUBLIC_RECORD.json\">Open canonical JSON</a></div><div><a href=\"../../records/{pilot['slug']}/12_RELEASE_MANIFEST.json\">Open release manifest</a></div></section>"
         write(ROOT / f"technical-risk/verify/{pilot['slug']}/index.html", page(f"Verify {pilot['manufacturer_part_number']}", "Verify a hash-bound CML public technical record.", body, "../../../", f"/technical-risk/verify/{pilot['slug']}/"))
 
     for relative in ["technical-risk", "evidence/core", "assets/technical-risk.css", "assets/cml-search.js"]:

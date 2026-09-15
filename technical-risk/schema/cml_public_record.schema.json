@@ -3,6 +3,196 @@
   "additionalProperties": false,
   "properties": {
     "cml": {
+      "additionalProperties": false,
+      "properties": {
+        "alternative": {
+          "additionalProperties": false,
+          "properties": {
+            "candidates": {
+              "items": {
+                "$ref": "cml_candidate.schema.json"
+              },
+              "type": "array"
+            },
+            "oem_replacement_status": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "oem_replacement_status",
+            "candidates"
+          ],
+          "type": "object"
+        },
+        "counter_evidence": {
+          "type": "string"
+        },
+        "decision": {
+          "additionalProperties": false,
+          "properties": {
+            "claim_type": {
+              "type": "string"
+            },
+            "current_recommendation": {
+              "type": "string"
+            },
+            "supported_paths": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          "required": [
+            "supported_paths",
+            "current_recommendation",
+            "claim_type"
+          ],
+          "type": "object"
+        },
+        "dependency": {
+          "additionalProperties": false,
+          "properties": {
+            "client_scope": {
+              "type": "string"
+            },
+            "context": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "context",
+            "client_scope"
+          ],
+          "type": "object"
+        },
+        "event": {
+          "$ref": "cml_event.schema.json"
+        },
+        "evidence": {
+          "additionalProperties": false,
+          "properties": {
+            "known_facts": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "source_register_id": {
+              "type": "string"
+            },
+            "unknowns": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          "required": [
+            "known_facts",
+            "unknowns",
+            "source_register_id"
+          ],
+          "type": "object"
+        },
+        "freshness_reason": {
+          "type": "string"
+        },
+        "freshness_rule_type": {
+          "enum": [
+            "EVENT_DRIVEN",
+            "REVISION_DRIVEN",
+            "REVISION_AND_EXPIRY_DRIVEN",
+            "SCOPE_AND_REVISION_DRIVEN",
+            "UNCONFIGURED"
+          ],
+          "type": "string"
+        },
+        "freshness_state": {
+          "enum": [
+            "SUPERSEDED",
+            "EVENT_INVALIDATED",
+            "UNDER_REVIEW",
+            "REFRESH_REQUIRED",
+            "INSUFFICIENT_DATA",
+            "AGING",
+            "CURRENT_WITH_LIMITATIONS",
+            "CURRENT",
+            "NOT_APPLICABLE",
+            "POLICY_NOT_CONFIGURED"
+          ],
+          "type": "string"
+        },
+        "identity": {
+          "$ref": "technical_item.schema.json"
+        },
+        "lifecycle_state": {
+          "enum": [
+            "ACTIVE",
+            "NRND",
+            "EOL_ANNOUNCED",
+            "LAST_TIME_BUY_OPEN",
+            "LAST_TIME_BUY_CLOSED",
+            "LAST_SHIP_PENDING",
+            "DISCONTINUED",
+            "OBSOLETE",
+            "STATUS_UNRESOLVED"
+          ],
+          "type": "string"
+        },
+        "product_context": {
+          "enum": [
+            "PUBLIC_TECHNICAL_RECORD",
+            "SNIPE_BRIEF",
+            "SUBSTITUTION_EVIDENCE_REPORT",
+            "CUSTOM_BOM_AUDIT",
+            "TECHNICAL_DUE_DILIGENCE",
+            "TECHNICAL_MONITOR"
+          ],
+          "type": "string"
+        },
+        "public_private_boundary": {
+          "type": "string"
+        },
+        "verification": {
+          "additionalProperties": false,
+          "properties": {
+            "compatibility_matrix": {
+              "items": {
+                "$ref": "cml_compatibility.schema.json"
+              },
+              "type": "array"
+            },
+            "qualification_state": {
+              "enum": [
+                "NOT_ASSESSED",
+                "PAPER_SCREENING",
+                "PAPER_COMPATIBLE_WITH_UNKNOWNS",
+                "LAB_VERIFICATION_REQUIRED",
+                "LAB_TESTING",
+                "QUALIFICATION_FAILED",
+                "QUALIFIED_FOR_DEFINED_SCOPE",
+                "CUSTOMER_VALIDATION_REQUIRED",
+                "CUSTOMER_APPROVED",
+                "SUPERSEDED"
+              ],
+              "type": "string"
+            },
+            "requirements": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          "required": [
+            "qualification_state",
+            "compatibility_matrix",
+            "requirements"
+          ],
+          "type": "object"
+        }
+      },
       "required": [
         "identity",
         "event",
@@ -13,7 +203,11 @@
         "decision",
         "lifecycle_state",
         "freshness_state",
-        "public_private_boundary"
+        "freshness_reason",
+        "freshness_rule_type",
+        "counter_evidence",
+        "public_private_boundary",
+        "product_context"
       ],
       "type": "object"
     },

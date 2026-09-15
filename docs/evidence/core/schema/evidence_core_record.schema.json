@@ -1,7 +1,7 @@
 {
   "$id": "https://structevidence.com/schema/evidence-core/v0.1",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "additionalProperties": true,
+  "additionalProperties": false,
   "properties": {
     "artifact_refs": {
       "items": {
@@ -9,34 +9,48 @@
       },
       "type": "array"
     },
+    "core_version": {
+      "description": "Shared Evidence Core field: core_version.",
+      "type": "string"
+    },
     "correction_status": {
+      "description": "Shared Evidence Core field: correction_status.",
       "type": "string"
     },
     "created_at": {
+      "description": "Shared Evidence Core field: created_at.",
       "type": "string"
     },
     "domain": {
+      "description": "Shared Evidence Core field: domain.",
       "type": "string"
     },
     "effective_at": {
+      "description": "Shared Evidence Core field: effective_at.",
       "type": "string"
     },
     "input_hash": {
+      "description": "Shared Evidence Core field: input_hash.",
       "type": "string"
     },
     "known_at": {
+      "description": "Shared Evidence Core field: known_at.",
       "type": "string"
     },
     "policy_version": {
+      "description": "Shared Evidence Core field: policy_version.",
       "type": "string"
     },
     "protocol": {
+      "description": "Shared Evidence Core field: protocol.",
       "type": "string"
     },
     "record_hash": {
+      "description": "Shared Evidence Core field: record_hash.",
       "type": "string"
     },
     "record_id": {
+      "description": "Shared Evidence Core field: record_id.",
       "type": "string"
     },
     "source_refs": {
@@ -46,22 +60,28 @@
       "type": "array"
     },
     "subject_class": {
+      "description": "Shared Evidence Core field: subject_class.",
       "type": "string"
     },
     "subject_id": {
+      "description": "Shared Evidence Core field: subject_id.",
       "type": "string"
     },
     "supersession_status": {
+      "description": "Shared Evidence Core field: supersession_status.",
       "type": "string"
     },
     "updated_at": {
+      "description": "Shared Evidence Core field: updated_at.",
       "type": "string"
     },
     "verification_status": {
+      "description": "Shared Evidence Core field: verification_status.",
       "type": "string"
     }
   },
   "required": [
+    "core_version",
     "record_id",
     "subject_id",
     "subject_class",

@@ -1,6 +1,14 @@
 {
+  "$id": "https://structevidence.com/schema/cml/compatibility/v0.1",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
   "properties": {
+    "dimension": {
+      "type": "string"
+    },
+    "evidence_or_test": {
+      "type": "string"
+    },
     "state": {
       "enum": [
         "MATCH",
@@ -9,7 +17,8 @@
         "UNKNOWN",
         "REQUIRES_TEST",
         "NOT_APPLICABLE"
-      ]
+      ],
+      "type": "string"
     }
   },
   "required": [

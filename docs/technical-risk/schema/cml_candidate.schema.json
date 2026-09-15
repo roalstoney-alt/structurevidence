@@ -1,9 +1,38 @@
 {
+  "$id": "https://structevidence.com/schema/cml/candidate/v0.1",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "assessment_state": {
+      "enum": [
+        "NOT_ASSESSED",
+        "PAPER_SCREENING",
+        "PAPER_COMPATIBLE_WITH_UNKNOWNS",
+        "LAB_VERIFICATION_REQUIRED",
+        "LAB_TESTING",
+        "QUALIFICATION_FAILED",
+        "QUALIFIED_FOR_DEFINED_SCOPE",
+        "CUSTOMER_VALIDATION_REQUIRED",
+        "CUSTOMER_APPROVED",
+        "SUPERSEDED"
+      ],
+      "type": "string"
+    },
+    "candidate_id": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "relationship_type": {
+      "type": "string"
+    }
+  },
   "required": [
     "candidate_id",
     "relationship_type",
-    "assessment_state"
+    "assessment_state",
+    "description"
   ],
   "title": "CML Replacement Candidate",
   "type": "object"

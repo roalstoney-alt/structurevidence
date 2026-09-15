@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-09-10T22:58:01.260181Z",
+  "as_of": "2026-09-10T14:18:35.507637Z",
   "atomic_observation_count": 8,
   "builder_version": "TIMELINE_MODEL_R1_1A",
   "comparability_rules_sha256": "5892c61ab7a336b6ea9630f42925df4389eb5412a902763de89c784ee98b05fa",
@@ -13,7 +13,7 @@
     "SETTLEMENT_ROLE": 2,
     "VALIDATOR_DISTRIBUTION": 1
   },
-  "evaluation_as_of": "2026-09-10T22:58:01.260181Z",
+  "evaluation_as_of": "2026-09-10T14:18:35.507637Z",
   "evidence_aggregation_rules_sha256": "bc921c7b76b424cd98b822b14f92c193cef9472c77dd1bf95111e1c0ea2e3732",
   "evidence_event_count": 7,
   "evidence_mapping_config_hash": "11f2bdf2eafdd659ee0b753dbb85d10ff3d1306e547c180127ee2d30f565d737",
@@ -33,7 +33,7 @@
     "research/digital-assets/batch-01-r1/TRX/NUMERICAL_RECONCILIATION.json": "5084bf0366417030a6463b8b0f0b9e916c495889a29847828e311b43c5a1569f",
     "research/digital-assets/batch-01-r1/TRX/OBSERVATION_REGISTRY.json": "b7f50d956c227022a9197646d662b0b5b2d2739d95b4ae3c27ba771303c34de8",
     "research/digital-assets/batch-01-r1/TRX/SOURCE_INVENTORY.json": "593435951a60b41a53575d965be4e2a1bb144c5b26040f1adfb0b4a9c3b6c936",
-    "research/digital-assets/batch-01-r1/TRX/gdr-se/GDR_SE_AUTHORIZATION_RECORD_R1_1.json": "592212337e3f16cb619fbe9fd51da9fe5a5482dad5a2f9e8f2df99411b0b6df3"
+    "research/digital-assets/batch-01-r1/TRX/gdr-se/GDR_SE_AUTHORIZATION_RECORD_R1_1.json": "99de1947327e6a287f02f4012f8c0a860d735743d79c00e4854d2ab83753acc0"
   },
   "level_aggregation_rules_sha256": "d904a192b3df6e970a17e16708de0b92fd1fd0aade1bab951823aa05a6fbab89",
   "level_mapping_sha256": "31c8caed62971da579801cfb4cc682ba4fda52c7e879314a6a9493970de55a30",
@@ -43,22 +43,22 @@
   "month_bucket_count": 4,
   "output_hashes": {
     "timeline/atomic/trx_atomic_observations.json": "fec54433bd393cbecf875e3a9173148c62e1e7471f26275460a2bd3a938d1ad9",
-    "timeline/subjects/trx_event_ledger.json": "6151b4401765a72808ab4b6c528627e5d3e7a8128feefa4b27cd12d99ec9403f",
-    "timeline/subjects/trx_evidence_day.json": "13e6cbe1378a02115263c4a5bb8c1dab9d7df060bf6641fe81bc0917ba79242b",
-    "timeline/subjects/trx_evidence_events.json": "272137752c31bff909beac0b3d2df1ed35d6c840a82b3c58de5e4f03034685d7",
-    "timeline/subjects/trx_evidence_month.json": "6964e4bf57f1ba3fe8265c9171df376959a28ebe8a21446c35c93677cdd66e20",
+    "timeline/subjects/trx_event_ledger.json": "0fd74c4a1f8a65bf037bdd546f6d447084a9193e5c2b7805504e13625373f3b6",
+    "timeline/subjects/trx_evidence_day.json": "4441d245b39ae05fd71cd513ca04d9368edb8141de9792b95f8852847c5a1e95",
+    "timeline/subjects/trx_evidence_events.json": "8919e84f83e7cf2352d5eaca70ce40f2c76bc65573631e9883e8ba698105c5d3",
+    "timeline/subjects/trx_evidence_month.json": "e013b2905434c9326bdfbddb46395e0a28be3a682a1a94f8fe06e9c885eae54d",
     "timeline/subjects/trx_evidence_timeline.json": "fc90fb79eb877664638cc9b879d1d5b05a96c71e9a3977a769cb6a841f817e9a",
-    "timeline/subjects/trx_evidence_week.json": "53f2bad40ae13a9fca41b50a5577b3754183de13342d90abfc3bfa1e37d8aa62",
+    "timeline/subjects/trx_evidence_week.json": "1554bfcf45dc5ed35b9af6a54950cdd2e534101444fc38ed928ad9581579df76",
     "timeline/subjects/trx_structural_day.json": "d320b2bb6184ef917cb1aec9fef7004e6cf541e46d603b13a0819e615f674048",
     "timeline/subjects/trx_structural_month.json": "b80433d6ad7d004a98e720019c1591008cff10e7cf1aa1518eca5ce2ca1c063b",
     "timeline/subjects/trx_structural_timeline.json": "4941da281a75dbe9fc747ba37af712197139b1502e9dbb3038254eb04ba84fb4",
     "timeline/subjects/trx_structural_week.json": "53c542dfa2e242963276c111a9a91e03003f2cdef5b67b5debdc554d670a28b1"
   },
-  "record_created_at": "2026-09-10T22:58:01.260477Z",
+  "record_created_at": "2026-09-10T14:18:35.507637Z",
   "structural_aggregation_rules_sha256": "2ab5c40cf90a732a9ae6682a4057a308efd89145f9030b6d4363e5d8cb1b84f4",
   "subject_id": "TRX",
   "taxonomy_sha256": "758319435d114d93571d0b0e6e8f56b496c9afd1e096b87fe1ee3db735198ff5",
-  "timeline_input_bundle_sha256": "cc3a047b18d2a96e42ccf92c60b8bdd2fee96683c8175a64c93302314de7b738",
+  "timeline_input_bundle_sha256": "6bb89a4d2dde89d8deb2eca3867f6761d2835fdabc9df012dbcd5bdc786d771e",
   "unresolved_timestamp_count": 0,
   "week_bucket_count": 4
 }

@@ -8,6 +8,7 @@
   "manufacturer": "Murata Manufacturing",
   "manufacturer_normalized": "MURATA_MANUFACTURING",
   "manufacturer_part_number": "MYMGM5R012ELA5RND",
+  "manufacturer_part_number_exact": "MYMGM5R012ELA5RND",
   "manufacturer_product_url": "https://www.murata.com/en-global/products/power",
   "nominal_application_class": "12 V input point-of-load conversion",
   "package_or_interface": "10.5 x 9.0 x 5.0 mm module class",

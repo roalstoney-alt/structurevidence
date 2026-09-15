@@ -64,7 +64,7 @@ Treat the notice as a lifecycle trigger. Separate lifetime-buy analysis from eng
 
 ## Freshness
 
-`EVENT_DRIVEN_CURRENT_WITH_INTERFACE_CONFLICT` as evaluated `2026-09-16T00:00:00Z`. No universal CML max-age rule is used.
+`CURRENT_WITH_LIMITATIONS` under `EVENT_DRIVEN` because `MANUFACTURER_INTERFACE_STATUS_CONFLICT`, as evaluated `2026-09-16T00:00:00Z`. No universal CML max-age rule is used.
 
 ## Limitations
 

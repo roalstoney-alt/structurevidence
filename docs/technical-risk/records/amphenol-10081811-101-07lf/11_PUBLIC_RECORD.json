@@ -45,7 +45,9 @@
         "A second Amphenol EOL listing with a different effective date requires manufacturer clarification."
       ]
     },
-    "freshness_state": "EVENT_DRIVEN_CURRENT_WITH_SOURCE_CONFLICT",
+    "freshness_reason": "CONFLICTING_PRIMARY_LIFECYCLE_EFFECTIVE_DATE",
+    "freshness_rule_type": "EVENT_DRIVEN",
+    "freshness_state": "CURRENT_WITH_LIMITATIONS",
     "identity": {
       "created_at": "2026-09-16T00:00:00Z",
       "datasheet_refs": [
@@ -55,6 +57,7 @@
       "manufacturer": "Amphenol Communications Solutions",
       "manufacturer_normalized": "AMPHENOL_COMMUNICATIONS_SOLUTIONS",
       "manufacturer_part_number": "10081811-101-07LF",
+      "manufacturer_part_number_exact": "10081811-101-07LF",
       "manufacturer_product_url": null,
       "nominal_application_class": "Board interconnect",
       "package_or_interface": "2.54 mm board-header class; footprint verification required",
@@ -65,6 +68,7 @@
       "technical_item_type": "CONNECTOR"
     },
     "lifecycle_state": "EOL_ANNOUNCED",
+    "product_context": "PUBLIC_TECHNICAL_RECORD",
     "public_private_boundary": "PUBLIC_EVIDENCE_ONLY_NO_CLIENT_BOM",
     "verification": {
       "compatibility_matrix": [
@@ -122,11 +126,11 @@
     "created_at": "2026-09-16T00:00:00Z",
     "domain": "TECHNICAL_RISK",
     "effective_at": "2027-03-15T00:00:00Z",
-    "input_hash": "6aad9dddd7ff19b92d54740a65619ef7903fbad168874541e3d6abc27cfdec18",
+    "input_hash": "431fdad74a86eb4c8963532d62479aa420743f9ad60a0875828409651c2c2051",
     "known_at": "2026-03-16T00:00:00Z",
     "policy_version": "RDL_FRESHNESS_v0.1a+CML_PROFILE_v0.1",
     "protocol": "CML",
-    "record_hash": "b00fb777615eba86a6ba8b48d8aaa456a9265754db83d064ed70be5f0b46a56e",
+    "record_hash": "e665909621d08fe0c1049a1a09775d69e101856ed3b9305c500f887e8c2af51f",
     "record_id": "SE.CML.RECORD.AMPHENOL.10081811-101-07LF.v0.1",
     "source_refs": [
       "AMPHENOL_PCN_26027"

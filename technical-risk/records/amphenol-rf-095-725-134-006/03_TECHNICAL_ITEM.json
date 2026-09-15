@@ -8,6 +8,7 @@
   "manufacturer": "Amphenol RF",
   "manufacturer_normalized": "AMPHENOL_RF",
   "manufacturer_part_number": "095-725-134-006",
+  "manufacturer_part_number_exact": "095-725-134-006",
   "manufacturer_product_url": "https://www.amphenolrf.com/en-us/part/095-725-134-006/10205/",
   "nominal_application_class": "Microwave interconnect up to 40 GHz",
   "package_or_interface": "2.92 mm plug to SMPM plug, 6 inches",

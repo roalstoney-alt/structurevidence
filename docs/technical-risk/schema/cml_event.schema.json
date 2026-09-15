@@ -1,5 +1,70 @@
 {
+  "$id": "https://structevidence.com/schema/cml/event/v0.1",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "created_at": {
+      "type": "string"
+    },
+    "detail": {
+      "type": "string"
+    },
+    "effective_at": {
+      "type": "string"
+    },
+    "event_domain": {
+      "enum": [
+        "SUBJECT_EVENT",
+        "EVIDENCE_EVENT",
+        "RESEARCH_EVENT",
+        "AUTHORIZATION_EVENT"
+      ],
+      "type": "string"
+    },
+    "event_id": {
+      "type": "string"
+    },
+    "event_type": {
+      "enum": [
+        "PCN_ISSUED",
+        "NRND_DECLARED",
+        "EOL_DECLARED",
+        "LAST_TIME_BUY_OPENED",
+        "LAST_TIME_BUY_REACHED",
+        "LAST_SHIP_REACHED",
+        "OEM_REPLACEMENT_ADDED",
+        "OEM_REPLACEMENT_REMOVED",
+        "DATASHEET_REVISION",
+        "PACKAGE_REVISION",
+        "CERTIFICATION_CHANGE",
+        "MANUFACTURING_SITE_CHANGE",
+        "MATERIAL_CHANGE",
+        "SPECIFICATION_CHANGE",
+        "CANDIDATE_IDENTIFIED",
+        "CANDIDATE_REJECTED",
+        "CANDIDATE_TESTED",
+        "CANDIDATE_FAILED",
+        "CANDIDATE_QUALIFIED",
+        "QUALIFICATION_REVOKED"
+      ],
+      "type": "string"
+    },
+    "known_at": {
+      "type": "string"
+    },
+    "source_refs": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "technical_item_id": {
+      "type": "string"
+    },
+    "verification_status": {
+      "type": "string"
+    }
+  },
   "required": [
     "event_id",
     "event_type",
@@ -9,7 +74,8 @@
     "known_at",
     "source_refs",
     "verification_status",
-    "created_at"
+    "created_at",
+    "detail"
   ],
   "title": "CML Event",
   "type": "object"

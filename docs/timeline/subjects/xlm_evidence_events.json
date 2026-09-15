@@ -110,16 +110,16 @@
         "research/digital-assets/batch-01-r1/XLM/gdr-se/GDR_SE_AUTHORIZATION_RECORD_R1_1.json"
       ],
       "capture_lag_days": 0,
-      "evaluation_as_of": "2026-09-10T14:18:35.507637Z",
+      "evaluation_as_of": "2026-09-11T03:55:43.713607Z",
       "event_type": "GDR_SE_AUTHORIZATION_EVALUATED",
       "evidence_event_id": "TL-XLM-EE-AUTH",
       "family_id": "AUTHORIZATION_STATUS",
-      "known_at": "2026-09-10T14:18:35.552624Z",
+      "known_at": "2026-09-11T03:55:43.770480Z",
       "observation_mode": "DIRECT",
       "source_refs": [
         "research/digital-assets/batch-01-r1/XLM/gdr-se/GDR_SE_AUTHORIZATION_RECORD_R1_1.json"
       ],
-      "state_after": "UNDER_REVIEW",
+      "state_after": "COMPLETE",
       "subject_id": "XLM"
     }
   ],

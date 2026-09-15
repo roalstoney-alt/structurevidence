@@ -61,7 +61,7 @@ Confirm remaining demand before the stated LTB boundary and begin a scope-bound 
 
 ## Freshness
 
-`EVENT_DRIVEN_CURRENT_WITH_SOURCE_CONFLICT` as evaluated `2026-09-16T00:00:00Z`. No universal CML max-age rule is used.
+`CURRENT_WITH_LIMITATIONS` under `EVENT_DRIVEN` because `CONFLICTING_PRIMARY_LIFECYCLE_EFFECTIVE_DATE`, as evaluated `2026-09-16T00:00:00Z`. No universal CML max-age rule is used.
 
 ## Limitations
 

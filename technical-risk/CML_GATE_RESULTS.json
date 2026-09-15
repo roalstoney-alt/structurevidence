@@ -1,457 +1,684 @@
 {
+  "audit_policy_version": "CML_AUDIT_v0.1a",
   "evaluation_as_of": "2026-09-16T00:00:00Z",
+  "independent_validator_count": 40,
   "module_version": "STRUCTEVIDENCE_TECHNICAL_RISK_v0.1",
   "registry_id": "CML_GATE_RESULTS",
   "results": [
     {
+      "computed_facts": {
+        "error": "AssertionError: Repository HEAD matches the manifest implementation commit; any pending changes are closure outputs only."
+      },
       "evaluated_at": "2026-09-16T00:00:00Z",
-      "evidence_refs": [
-        "technical-risk/TECHNICAL_RISK_MANIFEST.json"
-      ],
+      "evidence_refs": [],
       "gate_id": "CML01_REPO_BASELINE",
-      "reason": "Validated by CML v0.1 runtime and negative-test suite.",
-      "rule_version": "CML_VALIDATION_v0.1",
-      "status": "PASS",
-      "validator": "scripts/test_cml_v01.py"
+      "reason": "Independent validator failed: Repository HEAD matches the manifest implementation commit; any pending changes are closure outputs only.",
+      "rule_version": "CML_AUDIT_v0.1a",
+      "status": "FAIL",
+      "validator": "validate_repo_baseline"
     },
     {
+      "computed_facts": {
+        "evaluation_engine_version": "RDL_FRESHNESS_ENGINE_v0.1a",
+        "policy_version": "RDL_FRESHNESS_v0.1a"
+      },
       "evaluated_at": "2026-09-16T00:00:00Z",
       "evidence_refs": [
-        "technical-risk/TECHNICAL_RISK_MANIFEST.json"
+        "rdl/freshness/RDL_FRESHNESS_POLICY_MANIFEST.json"
       ],
       "gate_id": "CML02_RDL_V0_1A_VERIFIED",
-      "reason": "Validated by CML v0.1 runtime and negative-test suite.",
-      "rule_version": "CML_VALIDATION_v0.1",
+      "reason": "RDL policy and evaluation engine both resolve to v0.1a.",
+      "rule_version": "CML_AUDIT_v0.1a",
       "status": "PASS",
-      "validator": "scripts/test_cml_v01.py"
+      "validator": "validate_rdl_version"
     },
     {
+      "computed_facts": {
+        "mismatches": [],
+        "protected_files": 93
+      },
       "evaluated_at": "2026-09-16T00:00:00Z",
       "evidence_refs": [
-        "technical-risk/TECHNICAL_RISK_MANIFEST.json"
+        "docs/execution/POST_R1_1A_TIMELINE_HASHES.json"
       ],
       "gate_id": "CML03_FROZEN_TIMELINE_UNCHANGED",
-      "reason": "Validated by CML v0.1 runtime and negative-test suite.",
-      "rule_version": "CML_VALIDATION_v0.1",
+      "reason": "All authoritative Timeline R1.1a frozen hashes match current bytes.",
+      "rule_version": "CML_AUDIT_v0.1a",
       "status": "PASS",
-      "validator": "scripts/test_cml_v01.py"
+      "validator": "validate_frozen_timeline"
     },
     {
+      "computed_facts": {
+        "invalid_records": [],
+        "records_checked": 4
+      },
       "evaluated_at": "2026-09-16T00:00:00Z",
       "evidence_refs": [
-        "technical-risk/TECHNICAL_RISK_MANIFEST.json"
+        "evidence/core/schema/evidence_core_record.schema.json"
       ],
       "gate_id": "CML04_SHARED_CORE_REUSE",
-      "reason": "Validated by CML v0.1 runtime and negative-test suite.",
-      "rule_version": "CML_VALIDATION_v0.1",
+      "reason": "Every CML record uses the shared Evidence Core envelope and Technical Risk domain identifiers.",
+      "rule_version": "CML_AUDIT_v0.1a",
       "status": "PASS",
-      "validator": "scripts/test_cml_v01.py"
+      "validator": "validate_shared_core"
     },
     {
+      "computed_facts": {
+        "core_domain_leaks": [],
+        "domain_payloads": 4
+      },
       "evaluated_at": "2026-09-16T00:00:00Z",
       "evidence_refs": [
-        "technical-risk/TECHNICAL_RISK_MANIFEST.json"
+        "evidence/core/schema/evidence_core_record.schema.json",
+        "technical-risk/schema/cml_public_record.schema.json"
       ],
       "gate_id": "CML05_DOMAIN_SCHEMA_SEPARATION",
-      "reason": "Validated by CML v0.1 runtime and negative-test suite.",
-      "rule_version": "CML_VALIDATION_v0.1",
+      "reason": "Technical fields remain in the CML payload and the generic Evidence Core remains domain-neutral.",
+      "rule_version": "CML_AUDIT_v0.1a",
       "status": "PASS",
-      "validator": "scripts/test_cml_v01.py"
+      "validator": "validate_domain_separation"
     },
     {
+      "computed_facts": {
+        "parallel_system_paths": [],
+        "shared_artifact_refs": 7
+      },
       "evaluated_at": "2026-09-16T00:00:00Z",
       "evidence_refs": [
-        "technical-risk/TECHNICAL_RISK_MANIFEST.json"
+        "evidence/core/schema/evidence_core_record.schema.json",
+        "technical-risk/records"
       ],
       "gate_id": "CML06_NO_PARALLEL_PROVENANCE",
-      "reason": "Validated by CML v0.1 runtime and negative-test suite.",
-      "rule_version": "CML_VALIDATION_v0.1",
+      "reason": "CML uses shared core provenance fields and public Verify pages; no CML-only provenance engine exists.",
+      "rule_version": "CML_AUDIT_v0.1a",
       "status": "PASS",
-      "validator": "scripts/test_cml_v01.py"
+      "validator": "validate_no_parallel_provenance"
     },
     {
+      "computed_facts": {
+        "events_checked": 4,
+        "invalid_or_future_known": []
+      },
       "evaluated_at": "2026-09-16T00:00:00Z",
       "evidence_refs": [
-        "technical-risk/TECHNICAL_RISK_MANIFEST.json"
+        "technical-risk/schema/cml_event.schema.json"
       ],
       "gate_id": "CML07_DUAL_CLOCK",
-      "reason": "Validated by CML v0.1 runtime and negative-test suite.",
-      "rule_version": "CML_VALIDATION_v0.1",
+      "reason": "Every event has effective and knowledge clocks, and no future-known event enters this release.",
+      "rule_version": "CML_AUDIT_v0.1a",
       "status": "PASS",
-      "validator": "scripts/test_cml_v01.py"
+      "validator": "validate_dual_clock"
     },
     {
+      "computed_facts": {
+        "allowed_domains": [
+          "AUTHORIZATION_EVENT",
+          "EVIDENCE_EVENT",
+          "RESEARCH_EVENT",
+          "SUBJECT_EVENT"
+        ],
+        "invalid_events": []
+      },
       "evaluated_at": "2026-09-16T00:00:00Z",
       "evidence_refs": [
-        "technical-risk/TECHNICAL_RISK_MANIFEST.json"
+        "technical-risk/config/cml_taxonomy.json"
       ],
       "gate_id": "CML08_EVENT_DOMAIN_SCOPING",
-      "reason": "Validated by CML v0.1 runtime and negative-test suite.",
-      "rule_version": "CML_VALIDATION_v0.1",
+      "reason": "Event domain and exact technical-item target are explicit for every event.",
+      "rule_version": "CML_AUDIT_v0.1a",
       "status": "PASS",
-      "validator": "scripts/test_cml_v01.py"
+      "validator": "validate_event_scope"
     },
     {
+      "computed_facts": {
+        "predecessor": "BLOCK",
+        "successor": "ALLOW_WITH_LIMITATIONS"
+      },
       "evaluated_at": "2026-09-16T00:00:00Z",
       "evidence_refs": [
-        "technical-risk/TECHNICAL_RISK_MANIFEST.json"
+        "gdr-se/engine/domain_adapters/cml.py"
       ],
       "gate_id": "CML09_SUPERSESSION_DIRECTION",
-      "reason": "Validated by CML v0.1 runtime and negative-test suite.",
-      "rule_version": "CML_VALIDATION_v0.1",
+      "reason": "Synthetic predecessor is blocked as superseded while the current successor remains releasable with limitations.",
+      "rule_version": "CML_AUDIT_v0.1a",
       "status": "PASS",
-      "validator": "scripts/test_cml_v01.py"
+      "validator": "validate_supersession_direction"
     },
     {
+      "computed_facts": {
+        "identities_checked": 4,
+        "invalid": []
+      },
       "evaluated_at": "2026-09-16T00:00:00Z",
       "evidence_refs": [
-        "technical-risk/TECHNICAL_RISK_MANIFEST.json"
+        "technical-risk/schema/technical_item.schema.json"
       ],
       "gate_id": "CML10_TECHNICAL_ITEM_IDENTITY",
-      "reason": "Validated by CML v0.1 runtime and negative-test suite.",
-      "rule_version": "CML_VALIDATION_v0.1",
+      "reason": "Every record carries a manufacturer and permanent technical-item identity.",
+      "rule_version": "CML_AUDIT_v0.1a",
       "status": "PASS",
-      "validator": "scripts/test_cml_v01.py"
+      "validator": "validate_identity"
     },
     {
+      "computed_facts": {
+        "byte_exact_matches": 4,
+        "mismatches": []
+      },
       "evaluated_at": "2026-09-16T00:00:00Z",
       "evidence_refs": [
-        "technical-risk/TECHNICAL_RISK_MANIFEST.json"
+        "technical-risk/schema/technical_item.schema.json"
       ],
       "gate_id": "CML11_EXACT_PART_NUMBER",
-      "reason": "Validated by CML v0.1 runtime and negative-test suite.",
-      "rule_version": "CML_VALIDATION_v0.1",
+      "reason": "Source-derived exact MPN equals the displayed manufacturer part number byte-for-byte in all records.",
+      "rule_version": "CML_AUDIT_v0.1a",
       "status": "PASS",
-      "validator": "scripts/test_cml_v01.py"
+      "validator": "validate_exact_mpn"
     },
     {
+      "computed_facts": {
+        "missing": [],
+        "records_with_manufacturer_source": 4
+      },
       "evaluated_at": "2026-09-16T00:00:00Z",
       "evidence_refs": [
-        "technical-risk/TECHNICAL_RISK_MANIFEST.json"
+        "technical-risk/records"
       ],
       "gate_id": "CML12_LIFECYCLE_PRIMARY_SOURCE",
-      "reason": "Validated by CML v0.1 runtime and negative-test suite.",
-      "rule_version": "CML_VALIDATION_v0.1",
+      "reason": "Each lifecycle assessment includes manufacturer evidence.",
+      "rule_version": "CML_AUDIT_v0.1a",
       "status": "PASS",
-      "validator": "scripts/test_cml_v01.py"
+      "validator": "validate_primary_source"
     },
     {
+      "computed_facts": {
+        "distributor_only_effect": "BLOCK",
+        "reason": "PRIMARY_SOURCE_MISSING"
+      },
       "evaluated_at": "2026-09-16T00:00:00Z",
       "evidence_refs": [
-        "technical-risk/TECHNICAL_RISK_MANIFEST.json"
+        "gdr-se/engine/domain_adapters/cml.py"
       ],
       "gate_id": "CML13_NO_DISTRIBUTOR_LIFECYCLE_OVERRIDE",
-      "reason": "Validated by CML v0.1 runtime and negative-test suite.",
-      "rule_version": "CML_VALIDATION_v0.1",
+      "reason": "Distributor-only lifecycle evidence is blocked by the shared GDR adapter.",
+      "rule_version": "CML_AUDIT_v0.1a",
       "status": "PASS",
-      "validator": "scripts/test_cml_v01.py"
+      "validator": "validate_distributor_override"
     },
     {
+      "computed_facts": {
+        "global_threshold": null,
+        "noncanonical": [],
+        "states": {
+          "amphenol-10081811-101-07lf": "CURRENT_WITH_LIMITATIONS",
+          "amphenol-rf-095-725-134-006": "POLICY_NOT_CONFIGURED",
+          "murata-mymgm5r012ela5rnd": "POLICY_NOT_CONFIGURED",
+          "nxp-radio-power-2026": "CURRENT_WITH_LIMITATIONS"
+        }
+      },
       "evaluated_at": "2026-09-16T00:00:00Z",
       "evidence_refs": [
-        "technical-risk/TECHNICAL_RISK_MANIFEST.json"
+        "rdl/freshness/config/freshness_precedence.json",
+        "technical-risk/config/freshness_profiles.json"
       ],
       "gate_id": "CML14_NO_GLOBAL_FRESHNESS_THRESHOLD",
-      "reason": "Validated by CML v0.1 runtime and negative-test suite.",
-      "rule_version": "CML_VALIDATION_v0.1",
+      "reason": "No global threshold exists and every runtime state comes from canonical RDL precedence vocabulary.",
+      "rule_version": "CML_AUDIT_v0.1a",
       "status": "PASS",
-      "validator": "scripts/test_cml_v01.py"
+      "validator": "validate_freshness"
     },
     {
+      "computed_facts": {
+        "changed_field": "product_context",
+        "facts_invariant": true
+      },
       "evaluated_at": "2026-09-16T00:00:00Z",
       "evidence_refs": [
-        "technical-risk/TECHNICAL_RISK_MANIFEST.json"
+        "technical-risk/config/product_contexts.json",
+        "gdr-se/engine/domain_adapters/cml.py"
       ],
       "gate_id": "CML15_PRODUCT_CONTEXT_SEPARATION",
-      "reason": "Validated by CML v0.1 runtime and negative-test suite.",
-      "rule_version": "CML_VALIDATION_v0.1",
+      "reason": "Changing product context changes authorization context only; technical facts remain invariant.",
+      "rule_version": "CML_AUDIT_v0.1a",
       "status": "PASS",
-      "validator": "scripts/test_cml_v01.py"
+      "validator": "validate_product_context"
     },
     {
+      "computed_facts": {
+        "blocked": 12,
+        "prohibited_fields_injected": 12
+      },
       "evaluated_at": "2026-09-16T00:00:00Z",
       "evidence_refs": [
-        "technical-risk/TECHNICAL_RISK_MANIFEST.json"
+        "technical-risk/config/public_private_boundary.json",
+        "gdr-se/engine/domain_adapters/cml.py"
       ],
       "gate_id": "CML16_PUBLIC_PRIVATE_BOUNDARY",
-      "reason": "Validated by CML v0.1 runtime and negative-test suite.",
-      "rule_version": "CML_VALIDATION_v0.1",
+      "reason": "Every prohibited client field is detected recursively and blocks Public Verify release.",
+      "rule_version": "CML_AUDIT_v0.1a",
       "status": "PASS",
-      "validator": "scripts/test_cml_v01.py"
+      "validator": "validate_public_private"
     },
     {
+      "computed_facts": {
+        "hard_block_reasons": [
+          "UNVERIFIED_DROP_IN"
+        ],
+        "public_release": "BLOCK"
+      },
       "evaluated_at": "2026-09-16T00:00:00Z",
       "evidence_refs": [
-        "technical-risk/TECHNICAL_RISK_MANIFEST.json"
+        "gdr-se/engine/domain_adapters/cml.py"
       ],
       "gate_id": "CML17_NO_UNVERIFIED_DROPIN",
-      "reason": "Validated by CML v0.1 runtime and negative-test suite.",
-      "rule_version": "CML_VALIDATION_v0.1",
+      "reason": "A DROP_IN claim without qualification evidence is explicitly blocked.",
+      "rule_version": "CML_AUDIT_v0.1a",
       "status": "PASS",
-      "validator": "scripts/test_cml_v01.py"
+      "validator": "validate_dropin"
     },
     {
+      "computed_facts": {
+        "schema_valid_cells": 24
+      },
       "evaluated_at": "2026-09-16T00:00:00Z",
       "evidence_refs": [
-        "technical-risk/TECHNICAL_RISK_MANIFEST.json"
+        "technical-risk/schema/cml_compatibility.schema.json"
       ],
       "gate_id": "CML18_COMPATIBILITY_MATRIX",
-      "reason": "Validated by CML v0.1 runtime and negative-test suite.",
-      "rule_version": "CML_VALIDATION_v0.1",
+      "reason": "Every compatibility cell validates against the allowed state vocabulary.",
+      "rule_version": "CML_AUDIT_v0.1a",
       "status": "PASS",
-      "validator": "scripts/test_cml_v01.py"
+      "validator": "validate_compatibility"
     },
     {
+      "computed_facts": {
+        "schema_valid_requirements": 37
+      },
       "evaluated_at": "2026-09-16T00:00:00Z",
       "evidence_refs": [
-        "technical-risk/TECHNICAL_RISK_MANIFEST.json"
+        "technical-risk/schema/cml_test_requirement.schema.json"
       ],
       "gate_id": "CML19_TEST_REQUIREMENT_SCHEMA",
-      "reason": "Validated by CML v0.1 runtime and negative-test suite.",
-      "rule_version": "CML_VALIDATION_v0.1",
+      "reason": "Every generated test requirement validates structurally, including method, equipment, criteria and scope fields.",
+      "rule_version": "CML_AUDIT_v0.1a",
       "status": "PASS",
-      "validator": "scripts/test_cml_v01.py"
+      "validator": "validate_test_requirements"
     },
     {
+      "computed_facts": {
+        "missing_fixture_blocked": true,
+        "present": 4
+      },
       "evaluated_at": "2026-09-16T00:00:00Z",
       "evidence_refs": [
-        "technical-risk/TECHNICAL_RISK_MANIFEST.json"
+        "gdr-se/engine/domain_adapters/cml.py",
+        "technical-risk/records"
       ],
       "gate_id": "CML20_COUNTER_EVIDENCE",
-      "reason": "Validated by CML v0.1 runtime and negative-test suite.",
-      "rule_version": "CML_VALIDATION_v0.1",
+      "reason": "All pilots preserve counter-evidence, and a missing-counter-evidence fixture is blocked.",
+      "rule_version": "CML_AUDIT_v0.1a",
       "status": "PASS",
-      "validator": "scripts/test_cml_v01.py"
+      "validator": "validate_counter_evidence"
     },
     {
+      "computed_facts": {
+        "material_limitations": 4,
+        "weak": []
+      },
       "evaluated_at": "2026-09-16T00:00:00Z",
       "evidence_refs": [
-        "technical-risk/TECHNICAL_RISK_MANIFEST.json"
+        "technical-risk/records"
       ],
       "gate_id": "CML21_LIMITATIONS",
-      "reason": "Validated by CML v0.1 runtime and negative-test suite.",
-      "rule_version": "CML_VALIDATION_v0.1",
+      "reason": "Every pilot has a material, non-empty limitations artifact.",
+      "rule_version": "CML_AUDIT_v0.1a",
       "status": "PASS",
-      "validator": "scripts/test_cml_v01.py"
+      "validator": "validate_limitations"
     },
     {
+      "computed_facts": {
+        "conflict_visible": true,
+        "lifecycle": "EOL_ANNOUNCED",
+        "matrix_cells": 6,
+        "mpn": "10081811-101-07LF",
+        "qualified_candidates": 0
+      },
       "evaluated_at": "2026-09-16T00:00:00Z",
       "evidence_refs": [
-        "technical-risk/TECHNICAL_RISK_MANIFEST.json"
+        "technical-risk/records/amphenol-10081811-101-07lf"
       ],
       "gate_id": "CML22_AMPHENOL_PILOT",
-      "reason": "Validated by CML v0.1 runtime and negative-test suite.",
-      "rule_version": "CML_VALIDATION_v0.1",
+      "reason": "Amphenol exact identity, EOL evidence, source conflict, no-qualified-substitute boundary and verification matrix all reconcile.",
+      "rule_version": "CML_AUDIT_v0.1a",
       "status": "PASS",
-      "validator": "scripts/test_cml_v01.py"
+      "validator": "validate_amphenol"
     },
     {
+      "computed_facts": {
+        "board_dependency": true,
+        "lifecycle": "LAST_TIME_BUY_OPEN",
+        "qualified_candidates": 0,
+        "redesign_relationship": true
+      },
       "evaluated_at": "2026-09-16T00:00:00Z",
       "evidence_refs": [
-        "technical-risk/TECHNICAL_RISK_MANIFEST.json"
+        "technical-risk/records/nxp-radio-power-2026"
       ],
       "gate_id": "CML23_NXP_RF_PILOT",
-      "reason": "Validated by CML v0.1 runtime and negative-test suite.",
-      "rule_version": "CML_VALIDATION_v0.1",
+      "reason": "NXP discontinuance remains board-dependent; device alternative is not represented as a board drop-in and no candidate is qualified.",
+      "rule_version": "CML_AUDIT_v0.1a",
       "status": "PASS",
-      "validator": "scripts/test_cml_v01.py"
+      "validator": "validate_nxp"
     },
     {
+      "computed_facts": {
+        "exact_suffix": "MYMGM5R012ELA5RND",
+        "lifecycle": "NRND",
+        "oem_replacement": "OEM_REPLACEMENT_UNRESOLVED"
+      },
       "evaluated_at": "2026-09-16T00:00:00Z",
       "evidence_refs": [
-        "technical-risk/TECHNICAL_RISK_MANIFEST.json"
+        "technical-risk/records/murata-mymgm5r012ela5rnd"
       ],
       "gate_id": "CML24_MURATA_DCDC_PILOT",
-      "reason": "Validated by CML v0.1 runtime and negative-test suite.",
-      "rule_version": "CML_VALIDATION_v0.1",
+      "reason": "Murata NRND is scoped to the exact D suffix and OEM replacement remains unresolved.",
+      "rule_version": "CML_AUDIT_v0.1a",
       "status": "PASS",
-      "validator": "scripts/test_cml_v01.py"
+      "validator": "validate_murata"
     },
     {
+      "computed_facts": {
+        "assembly_boundary": true,
+        "lifecycle": "ACTIVE",
+        "qualified_candidates": 0,
+        "vna_required": true
+      },
       "evaluated_at": "2026-09-16T00:00:00Z",
       "evidence_refs": [
-        "technical-risk/TECHNICAL_RISK_MANIFEST.json"
+        "technical-risk/records/amphenol-rf-095-725-134-006"
       ],
       "gate_id": "CML25_RF40_ASSEMBLY_PILOT",
-      "reason": "Validated by CML v0.1 runtime and negative-test suite.",
-      "rule_version": "CML_VALIDATION_v0.1",
+      "reason": "RF40 remains an active assembly benchmark; connector capability is not assembly qualification and VNA evidence is required.",
+      "rule_version": "CML_AUDIT_v0.1a",
       "status": "PASS",
-      "validator": "scripts/test_cml_v01.py"
+      "validator": "validate_rf40"
     },
     {
+      "computed_facts": {
+        "rendered_records": [
+          "amphenol-10081811-101-07lf",
+          "amphenol-rf-095-725-134-006",
+          "murata-mymgm5r012ela5rnd",
+          "nxp-radio-power-2026"
+        ]
+      },
       "evaluated_at": "2026-09-16T00:00:00Z",
       "evidence_refs": [
-        "technical-risk/TECHNICAL_RISK_MANIFEST.json"
+        "technical-risk/record"
       ],
       "gate_id": "CML26_PUBLIC_RECORD_RENDERING",
-      "reason": "Validated by CML v0.1 runtime and negative-test suite.",
-      "rule_version": "CML_VALIDATION_v0.1",
+      "reason": "All four public CML records render as decision-first pages.",
+      "rule_version": "CML_AUDIT_v0.1a",
       "status": "PASS",
-      "validator": "scripts/test_cml_v01.py"
+      "validator": "validate_rendering"
     },
     {
+      "computed_facts": {
+        "inconsistent": [],
+        "verified_records": 4
+      },
       "evaluated_at": "2026-09-16T00:00:00Z",
       "evidence_refs": [
-        "technical-risk/TECHNICAL_RISK_MANIFEST.json"
+        "technical-risk/verify",
+        "technical-risk/records"
       ],
       "gate_id": "CML27_VERIFY_LINEAGE",
-      "reason": "Validated by CML v0.1 runtime and negative-test suite.",
-      "rule_version": "CML_VALIDATION_v0.1",
+      "reason": "Record IDs, hashes, source references and release manifests resolve consistently for all Verify records.",
+      "rule_version": "CML_AUDIT_v0.1a",
       "status": "PASS",
-      "validator": "scripts/test_cml_v01.py"
+      "validator": "validate_verify"
     },
     {
+      "computed_facts": {
+        "manual_review": true,
+        "request_wording": true,
+        "route_exists": true
+      },
       "evaluated_at": "2026-09-16T00:00:00Z",
       "evidence_refs": [
-        "technical-risk/TECHNICAL_RISK_MANIFEST.json"
+        "technical-risk/request-analysis/index.html"
       ],
       "gate_id": "CML28_REQUEST_ANALYSIS_CTA",
-      "reason": "Validated by CML v0.1 runtime and negative-test suite.",
-      "rule_version": "CML_VALIDATION_v0.1",
+      "reason": "Request Analysis route exists and states manual review rather than automated fulfillment.",
+      "rule_version": "CML_AUDIT_v0.1a",
       "status": "PASS",
-      "validator": "scripts/test_cml_v01.py"
+      "validator": "validate_cta"
     },
     {
+      "computed_facts": {
+        "paid_delivery_states": {
+          "amphenol-10081811-101-07lf": "BLOCK",
+          "amphenol-rf-095-725-134-006": "BLOCK",
+          "murata-mymgm5r012ela5rnd": "BLOCK",
+          "nxp-radio-power-2026": "BLOCK"
+        }
+      },
       "evaluated_at": "2026-09-16T00:00:00Z",
       "evidence_refs": [
-        "technical-risk/TECHNICAL_RISK_MANIFEST.json"
+        "technical-risk/records"
       ],
       "gate_id": "CML29_PAYMENT_FAILSAFE",
-      "reason": "Validated by CML v0.1 runtime and negative-test suite.",
-      "rule_version": "CML_VALIDATION_v0.1",
+      "reason": "Every Method Pilot release keeps paid decision delivery blocked or request-only.",
+      "rule_version": "CML_AUDIT_v0.1a",
       "status": "PASS",
-      "validator": "scripts/test_cml_v01.py"
+      "validator": "validate_payment"
     },
     {
+      "computed_facts": {
+        "records_scanned": 4,
+        "records_with_private_fields": []
+      },
       "evaluated_at": "2026-09-16T00:00:00Z",
       "evidence_refs": [
-        "technical-risk/TECHNICAL_RISK_MANIFEST.json"
+        "technical-risk/config/public_private_boundary.json",
+        "technical-risk/records"
       ],
       "gate_id": "CML30_NO_PUBLIC_CLIENT_BOM",
-      "reason": "Validated by CML v0.1 runtime and negative-test suite.",
-      "rule_version": "CML_VALIDATION_v0.1",
+      "reason": "No prohibited client/BOM field appears in a public structured record.",
+      "rule_version": "CML_AUDIT_v0.1a",
       "status": "PASS",
-      "validator": "scripts/test_cml_v01.py"
+      "validator": "validate_no_public_bom"
     },
     {
+      "computed_facts": {
+        "numeric_score_pages": [],
+        "prohibited_structured_keys": []
+      },
       "evaluated_at": "2026-09-16T00:00:00Z",
       "evidence_refs": [
-        "technical-risk/TECHNICAL_RISK_MANIFEST.json"
+        "technical-risk/records",
+        "technical-risk/record"
       ],
       "gate_id": "CML31_NO_NUMERIC_RISK_SCORE",
-      "reason": "Validated by CML v0.1 runtime and negative-test suite.",
-      "rule_version": "CML_VALIDATION_v0.1",
+      "reason": "No numeric risk score, replacement probability or score field appears in public outputs.",
+      "rule_version": "CML_AUDIT_v0.1a",
       "status": "PASS",
-      "validator": "scripts/test_cml_v01.py"
+      "validator": "validate_no_score"
     },
     {
+      "computed_facts": {
+        "invalid": [],
+        "self_hashes": 0,
+        "valid_manifests": 4
+      },
       "evaluated_at": "2026-09-16T00:00:00Z",
       "evidence_refs": [
-        "technical-risk/TECHNICAL_RISK_MANIFEST.json"
+        "technical-risk/schema/cml_release_manifest.schema.json",
+        "technical-risk/records"
       ],
       "gate_id": "CML32_RELEASE_MANIFEST",
-      "reason": "Validated by CML v0.1 runtime and negative-test suite.",
-      "rule_version": "CML_VALIDATION_v0.1",
+      "reason": "All release manifests validate, bind record and artifact hashes, carry GDR/freshness state and exclude self-hashes.",
+      "rule_version": "CML_AUDIT_v0.1a",
       "status": "PASS",
-      "validator": "scripts/test_cml_v01.py"
+      "validator": "validate_release_manifest"
     },
     {
+      "computed_facts": {
+        "subprocess_exit_codes": {
+          "scripts/test_cml_dictionary_drift.py": 0,
+          "scripts/test_cml_freshness_vocabulary.py": 0,
+          "scripts/test_cml_gdr_adapter.py": 0,
+          "scripts/test_cml_site_metadata.py": 0
+        }
+      },
       "evaluated_at": "2026-09-16T00:00:00Z",
       "evidence_refs": [
-        "technical-risk/TECHNICAL_RISK_MANIFEST.json"
+        "scripts/test_cml_freshness_vocabulary.py",
+        "scripts/test_cml_gdr_adapter.py",
+        "scripts/test_cml_dictionary_drift.py",
+        "scripts/test_cml_site_metadata.py"
       ],
       "gate_id": "CML33_TESTS",
-      "reason": "Validated by CML v0.1 runtime and negative-test suite.",
-      "rule_version": "CML_VALIDATION_v0.1",
+      "reason": "Independent freshness, GDR, dictionary-drift and site-metadata test subprocesses all exited zero.",
+      "rule_version": "CML_AUDIT_v0.1a",
       "status": "PASS",
-      "validator": "scripts/test_cml_v01.py"
+      "validator": "validate_tests"
     },
     {
+      "computed_facts": {
+        "mirror_files_checked": 85,
+        "mismatches": []
+      },
       "evaluated_at": "2026-09-16T00:00:00Z",
       "evidence_refs": [
-        "technical-risk/TECHNICAL_RISK_MANIFEST.json"
+        "technical-risk",
+        "docs/technical-risk",
+        "evidence/core",
+        "docs/evidence/core"
       ],
       "gate_id": "CML34_ROOT_DOCS_SYNC",
-      "reason": "Validated by CML v0.1 runtime and negative-test suite.",
-      "rule_version": "CML_VALIDATION_v0.1",
+      "reason": "Every intentionally mirrored CML, Evidence Core and frontend artifact is byte-identical.",
+      "rule_version": "CML_AUDIT_v0.1a",
       "status": "PASS",
-      "validator": "scripts/test_cml_v01.py"
+      "validator": "validate_root_docs_sync"
     },
     {
+      "computed_facts": {
+        "manifest_build_commit": "ce1869fb5b04bb80bdad3451d1cf778c5ef557ca",
+        "remote_main_sha": "ce1869fb5b04bb80bdad3451d1cf778c5ef557ca"
+      },
       "evaluated_at": "2026-09-16T00:00:00Z",
       "evidence_refs": [
         "technical-risk/TECHNICAL_RISK_MANIFEST.json"
       ],
       "gate_id": "CML35_REMOTE_MATCH",
-      "reason": "Implementation commit 7a4e892df4c8d934909c53eb279bc10267cc802a matched origin/main and production returned HTTP 200.",
-      "rule_version": "CML_VALIDATION_v0.1",
+      "reason": "Remote main matched the implementation commit used to build this audit release.",
+      "rule_version": "CML_AUDIT_v0.1a",
       "status": "PASS",
-      "validator": "scripts/test_cml_v01.py"
+      "validator": "validate_remote"
     },
     {
+      "computed_facts": {
+        "bnb_workspace": true,
+        "evidence_domains": true,
+        "technical_risk_link": true
+      },
       "evaluated_at": "2026-09-16T00:00:00Z",
       "evidence_refs": [
         "index.html"
       ],
       "gate_id": "CML36_ORG_MAIN_SITE_INTEGRATION",
-      "reason": "The primary .org homepage exposes Technical Risk as a peer evidence domain while retaining the BNB monitor.",
-      "rule_version": "CML_VALIDATION_v0.1",
+      "reason": "The .org homepage exposes Technical Risk as a peer domain while retaining the BNB workspace.",
+      "rule_version": "CML_AUDIT_v0.1a",
       "status": "PASS",
-      "validator": "scripts/test_cml_v01.py"
+      "validator": "validate_org_integration"
     },
     {
+      "computed_facts": {
+        "com_routes": [
+          "/technical-risk/",
+          "/technical-risk/search/",
+          "/technical-risk/request-analysis/",
+          "structurevidence.org/monitor.html"
+        ],
+        "org_routes": [
+          "technical-risk/",
+          "technical-risk/search/",
+          "technical-risk/method/"
+        ]
+      },
       "evaluated_at": "2026-09-16T00:00:00Z",
       "evidence_refs": [
         "index.html",
-        "landing.html",
-        "technical-risk/index.html"
+        "landing.html"
       ],
       "gate_id": "CML37_CROSS_DOMAIN_NAVIGATION",
-      "reason": "Both public domains expose direct paths to Technical Risk, search, request analysis and the Structural Monitor.",
-      "rule_version": "CML_VALIDATION_v0.1",
+      "reason": "Both domains expose direct routes to Technical Risk, search/request and the Structural Monitor.",
+      "rule_version": "CML_AUDIT_v0.1a",
       "status": "PASS",
-      "validator": "scripts/test_cml_v01.py"
+      "validator": "validate_cross_navigation"
     },
     {
+      "computed_facts": {
+        "public_index_match": true,
+        "worker_shared_origin": true
+      },
       "evaluated_at": "2026-09-16T00:00:00Z",
       "evidence_refs": [
         "deploy/cloudflare-landing/worker.js",
         "technical-risk/records/PUBLIC_RECORD_INDEX.json"
       ],
       "gate_id": "CML38_SHARED_TECHNICAL_RISK_ARTIFACTS",
-      "reason": "The .com Worker proxies the same .org artifact tree; root and docs public indexes match.",
-      "rule_version": "CML_VALIDATION_v0.1",
+      "reason": "The .com Worker proxies the .org origin and both publication trees share one public record index.",
+      "rule_version": "CML_AUDIT_v0.1a",
       "status": "PASS",
-      "validator": "scripts/test_cml_v01.py"
+      "validator": "validate_shared_artifacts"
     },
     {
+      "computed_facts": {
+        "bad_pages": [],
+        "root_canonicals": {
+          "com": true,
+          "org": true
+        },
+        "shared_pages_checked": 11
+      },
       "evaluated_at": "2026-09-16T00:00:00Z",
       "evidence_refs": [
-        "technical-risk/index.html",
+        "technical-risk",
+        "index.html",
         "landing.html"
       ],
       "gate_id": "CML39_CANONICAL_DOMAIN_POLICY",
-      "reason": "Shared Technical Risk pages canonicalize to .org; only the acquisition landing canonicalizes to .com.",
-      "rule_version": "CML_VALIDATION_v0.1",
+      "reason": "Shared Technical Risk pages canonicalize to .org; only the acquisition root canonicalizes to .com.",
+      "rule_version": "CML_AUDIT_v0.1a",
       "status": "PASS",
-      "validator": "scripts/test_cml_v01.py"
+      "validator": "validate_canonical"
     },
     {
+      "computed_facts": {
+        "architecture_copy": true,
+        "domains": [
+          "STRUCTURAL_INTELLIGENCE",
+          "TECHNICAL_RISK"
+        ],
+        "one_core_copy": "STRUCTEVIDENCE_EVIDENCE_CORE_v0.1",
+        "split_prohibited": true
+      },
       "evaluated_at": "2026-09-16T00:00:00Z",
       "evidence_refs": [
         "architecture.html",
-        "evidence/core/schema/evidence_core_record.schema.json"
+        "technical-risk/CML_SITE_ARCHITECTURE_v0.1a.json"
       ],
       "gate_id": "CML40_NO_PRODUCT_DOMAIN_SPLIT",
-      "reason": "Architecture and routing preserve one brand, Evidence Core, record store, Verify system and release governance.",
-      "rule_version": "CML_VALIDATION_v0.1",
+      "reason": "Architecture preserves one brand, Evidence Core, record store, Verify surface and release governance across two domains.",
+      "rule_version": "CML_AUDIT_v0.1a",
       "status": "PASS",
-      "validator": "scripts/test_cml_v01.py"
+      "validator": "validate_no_domain_split"
     }
   ],
   "summary": {
-    "FAIL": 0,
+    "FAIL": 1,
     "NOT_EVALUATED": 0,
-    "PASS": 40
+    "PASS": 39
   }
 }

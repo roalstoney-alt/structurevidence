@@ -1,10 +1,72 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "acceptance_criteria": {
+      "type": "string"
+    },
+    "candidate_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "customer_lab_required": {
+      "type": "string"
+    },
+    "destructive": {
+      "type": "string"
+    },
+    "evidence_basis": {
+      "type": "string"
+    },
+    "original_item_id": {
+      "type": "string"
+    },
+    "required_equipment": {
+      "type": "string"
+    },
+    "sample_quantity": {
+      "type": "string"
+    },
+    "standard": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "test_category": {
+      "type": "string"
+    },
+    "test_method": {
+      "type": "string"
+    },
+    "test_name": {
+      "type": "string"
+    },
+    "test_requirement_id": {
+      "type": "string"
+    },
+    "third_party_lab_required": {
+      "type": "string"
+    }
+  },
   "required": [
     "test_requirement_id",
+    "original_item_id",
+    "candidate_id",
+    "test_category",
     "test_name",
-    "status",
-    "evidence_basis"
+    "standard",
+    "test_method",
+    "acceptance_criteria",
+    "required_equipment",
+    "third_party_lab_required",
+    "customer_lab_required",
+    "destructive",
+    "sample_quantity",
+    "evidence_basis",
+    "status"
   ],
   "title": "CML Test Requirement",
   "type": "object"

@@ -45,7 +45,9 @@
         "No alternate supplier assembly has been qualified against this benchmark."
       ]
     },
-    "freshness_state": "POLICY_NOT_CONFIGURED_ACTIVE_BASELINE",
+    "freshness_reason": "ACTIVE_BENCHMARK_HAS_NO_EMPIRICAL_CADENCE",
+    "freshness_rule_type": "UNCONFIGURED",
+    "freshness_state": "POLICY_NOT_CONFIGURED",
     "identity": {
       "created_at": "2026-09-16T00:00:00Z",
       "datasheet_refs": [
@@ -56,6 +58,7 @@
       "manufacturer": "Amphenol RF",
       "manufacturer_normalized": "AMPHENOL_RF",
       "manufacturer_part_number": "095-725-134-006",
+      "manufacturer_part_number_exact": "095-725-134-006",
       "manufacturer_product_url": "https://www.amphenolrf.com/en-us/part/095-725-134-006/10205/",
       "nominal_application_class": "Microwave interconnect up to 40 GHz",
       "package_or_interface": "2.92 mm plug to SMPM plug, 6 inches",
@@ -66,6 +69,7 @@
       "technical_item_type": "RF_CABLE_ASSEMBLY"
     },
     "lifecycle_state": "ACTIVE",
+    "product_context": "PUBLIC_TECHNICAL_RECORD",
     "public_private_boundary": "PUBLIC_EVIDENCE_ONLY_NO_CLIENT_BOM",
     "verification": {
       "compatibility_matrix": [
@@ -121,11 +125,11 @@
     "created_at": "2026-09-16T00:00:00Z",
     "domain": "TECHNICAL_RISK",
     "effective_at": "2026-05-07T00:00:00Z",
-    "input_hash": "eb1363d72e9c2bdb7ab3568e273bb2206496b11011678a43f65f272f5fc05220",
+    "input_hash": "90c20236b82ba0f403255beda0c1afe8d02b48e2f481380f7b61de42c98992ea",
     "known_at": "2026-09-16T00:00:00Z",
     "policy_version": "RDL_FRESHNESS_v0.1a+CML_PROFILE_v0.1",
     "protocol": "CML",
-    "record_hash": "7f269926c670caa06d9059eecbc99eb419c6edfbf9b8b9e9506b90251a5998c0",
+    "record_hash": "0616350e28fe26de50acc10877a7adf07ac1b033d6403c742dc6e011110e8b57",
     "record_id": "SE.CML.RECORD.AMPHENOL-RF.095-725-134-006.v0.1",
     "source_refs": [
       "AMPHENOL_RF_40GHZ_PRODUCT",

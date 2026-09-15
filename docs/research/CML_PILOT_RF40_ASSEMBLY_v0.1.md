@@ -62,7 +62,7 @@ Use the exact assembly as a benchmark, not as proof that any cable using 40 GHz-
 
 ## Freshness
 
-`POLICY_NOT_CONFIGURED_ACTIVE_BASELINE` as evaluated `2026-09-16T00:00:00Z`. No universal CML max-age rule is used.
+`POLICY_NOT_CONFIGURED` under `UNCONFIGURED` because `ACTIVE_BENCHMARK_HAS_NO_EMPIRICAL_CADENCE`, as evaluated `2026-09-16T00:00:00Z`. No universal CML max-age rule is used.
 
 ## Limitations
 

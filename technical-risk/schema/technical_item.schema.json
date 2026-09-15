@@ -1,19 +1,63 @@
 {
+  "$id": "https://structevidence.com/schema/cml/technical-item/v0.1",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "additionalProperties": true,
+  "additionalProperties": false,
   "properties": {
+    "created_at": {
+      "type": "string"
+    },
+    "datasheet_refs": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "description": {
+      "type": "string"
+    },
     "manufacturer": {
+      "description": "Manufacturer display name.",
       "minLength": 1,
       "type": "string"
     },
+    "manufacturer_normalized": {
+      "description": "Non-destructive matching form of manufacturer name.",
+      "type": "string"
+    },
     "manufacturer_part_number": {
+      "description": "Manufacturer part number as published.",
       "minLength": 1,
+      "type": "string"
+    },
+    "manufacturer_part_number_exact": {
+      "description": "Byte-identical source-derived manufacturer part number.",
+      "minLength": 1,
+      "type": "string"
+    },
+    "manufacturer_product_url": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "nominal_application_class": {
+      "type": "string"
+    },
+    "package_or_interface": {
+      "type": "string"
+    },
+    "part_number_normalized": {
+      "description": "Search form that does not replace the exact identity.",
+      "type": "string"
+    },
+    "product_family": {
       "type": "string"
     },
     "record_version": {
       "type": "string"
     },
     "technical_item_id": {
+      "description": "Permanent exact technical-item identifier.",
       "type": "string"
     },
     "technical_item_type": {
@@ -33,8 +77,18 @@
   "required": [
     "technical_item_id",
     "manufacturer",
+    "manufacturer_normalized",
     "manufacturer_part_number",
+    "manufacturer_part_number_exact",
+    "part_number_normalized",
     "technical_item_type",
+    "product_family",
+    "description",
+    "package_or_interface",
+    "nominal_application_class",
+    "manufacturer_product_url",
+    "datasheet_refs",
+    "created_at",
     "record_version"
   ],
   "title": "CML Technical Item",

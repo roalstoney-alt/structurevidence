@@ -2,7 +2,7 @@
   "artifact_hashes": {
     "01_SOURCE_REGISTER.json": "730cc719e9051ccf9db6ecf16f18d122a59057203a5f221c0943260fd01952be",
     "02_EVENT_LEDGER.json": "ab6536170d4fcbebc6bfe95e36f91bfc232260e78c90cb131ef702d6996b4809",
-    "03_TECHNICAL_ITEM.json": "21152cc099072e102eb8c9e90dbf7b9117bd50769acd2b9dfbcdbea802052044",
+    "03_TECHNICAL_ITEM.json": "41cdbbefc791fbfa5afcd9d539f73e85fbadcc113cb25ae323a9eda2daab7307",
     "04_LIFECYCLE_ASSESSMENT.md": "e8de478b813f701a7a29dcc904c36e63dfacdf2906e136ad70118b3b34798033",
     "05_COMPATIBILITY_REQUIREMENTS.json": "07474019fa628d9771eab6abb7a4ec6841a6f6e9c2dfc7f3aba4198f9a0b9f3d",
     "06_CANDIDATE_REGISTER.json": "60529732505a8314a9e5dfd287af2ed478d137e73e66b85d64a9ea0faa5b05d5",
@@ -10,14 +10,16 @@
     "08_SOLUTION_PATHS.md": "87fc66eb416ddb43a2cabf8bf2750df68b2bf4a7a281e8fcdf8835ecb50a8489",
     "09_COUNTER_EVIDENCE.md": "c44592a500a5ebec59c7f122d55804c54ae37369a260922555fd12d6b468d3d3",
     "10_LIMITATIONS.md": "671dba994b525f6ba6c76f9f1251baea61343a25c676c1abfd649c058d8644de",
-    "11_PUBLIC_RECORD.json": "f73b1b9498f7d6dbe1d24f2856bfcd973558f8b331cc022a4e8105a450468d4e"
+    "11_PUBLIC_RECORD.json": "f54a7b0636d414ed0e2fd9e8e979324e7e947a52605f967a8abb11560978d694"
   },
   "authorization_state": "ALLOW_PUBLIC_WITH_LIMITATIONS",
   "evaluation_as_of": "2026-09-16T00:00:00Z",
-  "freshness_state": "EVENT_DRIVEN_CURRENT_WITH_SOURCE_CONFLICT",
-  "gdr_version": "GDR_SE_v0.1-R1.1+CML_DOMAIN_ADAPTER_v0.1",
-  "paid_delivery_state": "REQUEST_ONLY",
-  "record_hash": "b00fb777615eba86a6ba8b48d8aaa456a9265754db83d064ed70be5f0b46a56e",
+  "freshness_reason": "CONFLICTING_PRIMARY_LIFECYCLE_EFFECTIVE_DATE",
+  "freshness_rule_type": "EVENT_DRIVEN",
+  "freshness_state": "CURRENT_WITH_LIMITATIONS",
+  "gdr_version": "GDR_SE_v0.1-R1.1+CML_DOMAIN_ADAPTER_v0.1a",
+  "paid_delivery_state": "BLOCK",
+  "record_hash": "e665909621d08fe0c1049a1a09775d69e101856ed3b9305c500f887e8c2af51f",
   "record_id": "SE.CML.RECORD.AMPHENOL.10081811-101-07LF.v0.1",
   "release_state": "PUBLIC_METHOD_PILOT"
 }
