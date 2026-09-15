@@ -1,0 +1,19 @@
+{
+  "created_at": "2026-09-16T00:00:00Z",
+  "datasheet_refs": [
+    "AMPHENOL_RF_40GHZ_PRODUCT",
+    "AMPHENOL_RF_40GHZ_CUTSHEET"
+  ],
+  "description": "Six-inch, 50 ohm, 0.085-inch conformable cable assembly with 2.92 mm and SMPM straight plugs.",
+  "manufacturer": "Amphenol RF",
+  "manufacturer_normalized": "AMPHENOL_RF",
+  "manufacturer_part_number": "095-725-134-006",
+  "manufacturer_product_url": "https://www.amphenolrf.com/en-us/part/095-725-134-006/10205/",
+  "nominal_application_class": "Microwave interconnect up to 40 GHz",
+  "package_or_interface": "2.92 mm plug to SMPM plug, 6 inches",
+  "part_number_normalized": "095-725-134-006",
+  "product_family": "2.92 mm plug to SMPM plug cable assemblies",
+  "record_version": "CML_v0.1",
+  "technical_item_id": "SE.TECH.AMPHENOL-RF.095-725-134-006",
+  "technical_item_type": "RF_CABLE_ASSEMBLY"
+}

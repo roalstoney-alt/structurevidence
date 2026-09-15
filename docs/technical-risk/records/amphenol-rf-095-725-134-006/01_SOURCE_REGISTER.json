@@ -1,0 +1,29 @@
+{
+  "registry_id": "SE.CML.RECORD.AMPHENOL-RF.095-725-134-006.v0.1.sources",
+  "retrieved_at": "2026-09-16T00:00:00Z",
+  "source_hierarchy_rule": "Manufacturer evidence controls lifecycle; distributor evidence may supplement but never override.",
+  "sources": [
+    {
+      "publisher": "Amphenol RF",
+      "retrieved_at": "2026-09-16T00:00:00Z",
+      "snapshot_custody": "NOT_ARCHIVED",
+      "snapshot_limitation": "Origin denied automated archival; reviewed public manufacturer page is registered by URL and retrieval date.",
+      "snapshot_sha256": null,
+      "source_id": "AMPHENOL_RF_40GHZ_PRODUCT",
+      "source_type": "MANUFACTURER_PRODUCT_PAGE",
+      "url": "https://www.amphenolrf.com/en-us/part/095-725-134-006/10205/",
+      "verification_status": "URL_REGISTERED_ARCHIVE_BLOCKED"
+    },
+    {
+      "publisher": "Amphenol RF",
+      "retrieved_at": "2026-09-16T00:00:00Z",
+      "snapshot_custody": "NOT_ARCHIVED",
+      "snapshot_limitation": "Origin denied automated archival; reviewed public manufacturer PDF is registered by URL and retrieval date.",
+      "snapshot_sha256": null,
+      "source_id": "AMPHENOL_RF_40GHZ_CUTSHEET",
+      "source_type": "MANUFACTURER_CUTSHEET",
+      "url": "https://www.amphenolrf.com/library/download/link/link_id/600711/",
+      "verification_status": "URL_REGISTERED_ARCHIVE_BLOCKED"
+    }
+  ]
+}

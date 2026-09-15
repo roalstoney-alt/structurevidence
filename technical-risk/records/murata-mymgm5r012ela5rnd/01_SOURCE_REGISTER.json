@@ -1,0 +1,27 @@
+{
+  "registry_id": "SE.CML.RECORD.MURATA.MYMGM5R012ELA5RND.v0.1.sources",
+  "retrieved_at": "2026-09-16T00:00:00Z",
+  "source_hierarchy_rule": "Manufacturer evidence controls lifecycle; distributor evidence may supplement but never override.",
+  "sources": [
+    {
+      "publisher": "Murata Manufacturing",
+      "retrieved_at": "2026-09-16T00:00:00Z",
+      "snapshot_custody": "PRIVATE_INTERNAL",
+      "snapshot_sha256": "c309d3d7cd0370c4cc1eb15e909666e1ac914b2cd1027bed9963f8af9777b824",
+      "source_id": "MURATA_MYMGM5R012_DS",
+      "source_type": "MANUFACTURER_DATASHEET",
+      "url": "https://pim.murata.com/asset/pim4/nonIsolatedDCDCconverter/MYMGM5R012ELA5RN_PDF_NONISOLATEDDCDCCONVERTER",
+      "verification_status": "SNAPSHOT_HASHED"
+    },
+    {
+      "publisher": "Murata Manufacturing",
+      "retrieved_at": "2026-09-16T00:00:00Z",
+      "snapshot_custody": "PRIVATE_INTERNAL",
+      "snapshot_sha256": "128b5ea6e8cbd92d656534a635145eebcb7e26166d8894e6bd629d2c7b5e495b",
+      "source_id": "MURATA_POWER_EOL_INDEX",
+      "source_type": "MANUFACTURER_LIFECYCLE_INDEX",
+      "url": "https://www.murata.com/en-global/products/power/discontinued-and-not-recommended",
+      "verification_status": "SNAPSHOT_HASHED"
+    }
+  ]
+}

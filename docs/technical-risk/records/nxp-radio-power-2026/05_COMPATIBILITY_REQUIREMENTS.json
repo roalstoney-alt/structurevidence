@@ -1,0 +1,190 @@
+{
+  "matrix": [
+    {
+      "dimension": "MECHANICAL",
+      "evidence_or_test": "Representative devices use different packages",
+      "state": "MISMATCH"
+    },
+    {
+      "dimension": "ELECTRICAL",
+      "evidence_or_test": "Bias, supply and gain vary by device/application",
+      "state": "REQUIRES_TEST"
+    },
+    {
+      "dimension": "RF",
+      "evidence_or_test": "Frequency, output power, gain, efficiency and harmonics",
+      "state": "REQUIRES_TEST"
+    },
+    {
+      "dimension": "THERMAL",
+      "evidence_or_test": "Junction-to-case and board cooling",
+      "state": "REQUIRES_TEST"
+    },
+    {
+      "dimension": "RELIABILITY",
+      "evidence_or_test": "Load mismatch and long-duration operation",
+      "state": "REQUIRES_TEST"
+    },
+    {
+      "dimension": "MANUFACTURING",
+      "evidence_or_test": "PCB layout and matching-network redesign",
+      "state": "REQUIRES_TEST"
+    }
+  ],
+  "record_id": "SE.CML.RECORD.NXP.RADIO-POWER-2026.v0.1",
+  "test_requirements": [
+    {
+      "acceptance_criteria": "UNRESOLVED",
+      "candidate_id": null,
+      "customer_lab_required": "UNRESOLVED",
+      "destructive": "UNRESOLVED",
+      "evidence_basis": "PUBLIC_RECORD_REQUIREMENT",
+      "original_item_id": "SE.TECH.NXP.RADIO-POWER-2026-FAMILY",
+      "required_equipment": "TO_BE_DEFINED_FOR_SCOPE",
+      "sample_quantity": "UNRESOLVED",
+      "standard": "UNRESOLVED",
+      "status": "REQUIRED",
+      "test_category": "DOMAIN_SPECIFIC",
+      "test_method": "TO_BE_DEFINED_FOR_SCOPE",
+      "test_name": "S-parameters where applicable",
+      "test_requirement_id": "SE.CML.RECORD.NXP.RADIO-POWER-2026.v0.1.TEST.01",
+      "third_party_lab_required": "UNRESOLVED"
+    },
+    {
+      "acceptance_criteria": "UNRESOLVED",
+      "candidate_id": null,
+      "customer_lab_required": "UNRESOLVED",
+      "destructive": "UNRESOLVED",
+      "evidence_basis": "PUBLIC_RECORD_REQUIREMENT",
+      "original_item_id": "SE.TECH.NXP.RADIO-POWER-2026-FAMILY",
+      "required_equipment": "TO_BE_DEFINED_FOR_SCOPE",
+      "sample_quantity": "UNRESOLVED",
+      "standard": "UNRESOLVED",
+      "status": "REQUIRED",
+      "test_category": "DOMAIN_SPECIFIC",
+      "test_method": "TO_BE_DEFINED_FOR_SCOPE",
+      "test_name": "Small-signal stability",
+      "test_requirement_id": "SE.CML.RECORD.NXP.RADIO-POWER-2026.v0.1.TEST.02",
+      "third_party_lab_required": "UNRESOLVED"
+    },
+    {
+      "acceptance_criteria": "UNRESOLVED",
+      "candidate_id": null,
+      "customer_lab_required": "UNRESOLVED",
+      "destructive": "UNRESOLVED",
+      "evidence_basis": "PUBLIC_RECORD_REQUIREMENT",
+      "original_item_id": "SE.TECH.NXP.RADIO-POWER-2026-FAMILY",
+      "required_equipment": "TO_BE_DEFINED_FOR_SCOPE",
+      "sample_quantity": "UNRESOLVED",
+      "standard": "UNRESOLVED",
+      "status": "REQUIRED",
+      "test_category": "DOMAIN_SPECIFIC",
+      "test_method": "TO_BE_DEFINED_FOR_SCOPE",
+      "test_name": "Gain and output power",
+      "test_requirement_id": "SE.CML.RECORD.NXP.RADIO-POWER-2026.v0.1.TEST.03",
+      "third_party_lab_required": "UNRESOLVED"
+    },
+    {
+      "acceptance_criteria": "UNRESOLVED",
+      "candidate_id": null,
+      "customer_lab_required": "UNRESOLVED",
+      "destructive": "UNRESOLVED",
+      "evidence_basis": "PUBLIC_RECORD_REQUIREMENT",
+      "original_item_id": "SE.TECH.NXP.RADIO-POWER-2026-FAMILY",
+      "required_equipment": "TO_BE_DEFINED_FOR_SCOPE",
+      "sample_quantity": "UNRESOLVED",
+      "standard": "UNRESOLVED",
+      "status": "REQUIRED",
+      "test_category": "DOMAIN_SPECIFIC",
+      "test_method": "TO_BE_DEFINED_FOR_SCOPE",
+      "test_name": "PAE or drain efficiency",
+      "test_requirement_id": "SE.CML.RECORD.NXP.RADIO-POWER-2026.v0.1.TEST.04",
+      "third_party_lab_required": "UNRESOLVED"
+    },
+    {
+      "acceptance_criteria": "UNRESOLVED",
+      "candidate_id": null,
+      "customer_lab_required": "UNRESOLVED",
+      "destructive": "UNRESOLVED",
+      "evidence_basis": "PUBLIC_RECORD_REQUIREMENT",
+      "original_item_id": "SE.TECH.NXP.RADIO-POWER-2026-FAMILY",
+      "required_equipment": "TO_BE_DEFINED_FOR_SCOPE",
+      "sample_quantity": "UNRESOLVED",
+      "standard": "UNRESOLVED",
+      "status": "REQUIRED",
+      "test_category": "DOMAIN_SPECIFIC",
+      "test_method": "TO_BE_DEFINED_FOR_SCOPE",
+      "test_name": "Harmonics",
+      "test_requirement_id": "SE.CML.RECORD.NXP.RADIO-POWER-2026.v0.1.TEST.05",
+      "third_party_lab_required": "UNRESOLVED"
+    },
+    {
+      "acceptance_criteria": "UNRESOLVED",
+      "candidate_id": null,
+      "customer_lab_required": "UNRESOLVED",
+      "destructive": "UNRESOLVED",
+      "evidence_basis": "PUBLIC_RECORD_REQUIREMENT",
+      "original_item_id": "SE.TECH.NXP.RADIO-POWER-2026-FAMILY",
+      "required_equipment": "TO_BE_DEFINED_FOR_SCOPE",
+      "sample_quantity": "UNRESOLVED",
+      "standard": "UNRESOLVED",
+      "status": "REQUIRED",
+      "test_category": "DOMAIN_SPECIFIC",
+      "test_method": "TO_BE_DEFINED_FOR_SCOPE",
+      "test_name": "Thermal characterization",
+      "test_requirement_id": "SE.CML.RECORD.NXP.RADIO-POWER-2026.v0.1.TEST.06",
+      "third_party_lab_required": "UNRESOLVED"
+    },
+    {
+      "acceptance_criteria": "UNRESOLVED",
+      "candidate_id": null,
+      "customer_lab_required": "UNRESOLVED",
+      "destructive": "UNRESOLVED",
+      "evidence_basis": "PUBLIC_RECORD_REQUIREMENT",
+      "original_item_id": "SE.TECH.NXP.RADIO-POWER-2026-FAMILY",
+      "required_equipment": "TO_BE_DEFINED_FOR_SCOPE",
+      "sample_quantity": "UNRESOLVED",
+      "standard": "UNRESOLVED",
+      "status": "REQUIRED",
+      "test_category": "DOMAIN_SPECIFIC",
+      "test_method": "TO_BE_DEFINED_FOR_SCOPE",
+      "test_name": "Load-mismatch ruggedness",
+      "test_requirement_id": "SE.CML.RECORD.NXP.RADIO-POWER-2026.v0.1.TEST.07",
+      "third_party_lab_required": "UNRESOLVED"
+    },
+    {
+      "acceptance_criteria": "UNRESOLVED",
+      "candidate_id": null,
+      "customer_lab_required": "UNRESOLVED",
+      "destructive": "UNRESOLVED",
+      "evidence_basis": "PUBLIC_RECORD_REQUIREMENT",
+      "original_item_id": "SE.TECH.NXP.RADIO-POWER-2026-FAMILY",
+      "required_equipment": "TO_BE_DEFINED_FOR_SCOPE",
+      "sample_quantity": "UNRESOLVED",
+      "standard": "UNRESOLVED",
+      "status": "REQUIRED",
+      "test_category": "DOMAIN_SPECIFIC",
+      "test_method": "TO_BE_DEFINED_FOR_SCOPE",
+      "test_name": "Temperature sweep",
+      "test_requirement_id": "SE.CML.RECORD.NXP.RADIO-POWER-2026.v0.1.TEST.08",
+      "third_party_lab_required": "UNRESOLVED"
+    },
+    {
+      "acceptance_criteria": "UNRESOLVED",
+      "candidate_id": null,
+      "customer_lab_required": "UNRESOLVED",
+      "destructive": "UNRESOLVED",
+      "evidence_basis": "PUBLIC_RECORD_REQUIREMENT",
+      "original_item_id": "SE.TECH.NXP.RADIO-POWER-2026-FAMILY",
+      "required_equipment": "TO_BE_DEFINED_FOR_SCOPE",
+      "sample_quantity": "UNRESOLVED",
+      "standard": "UNRESOLVED",
+      "status": "REQUIRED",
+      "test_category": "DOMAIN_SPECIFIC",
+      "test_method": "TO_BE_DEFINED_FOR_SCOPE",
+      "test_name": "Long-duration operation",
+      "test_requirement_id": "SE.CML.RECORD.NXP.RADIO-POWER-2026.v0.1.TEST.09",
+      "third_party_lab_required": "UNRESOLVED"
+    }
+  ]
+}

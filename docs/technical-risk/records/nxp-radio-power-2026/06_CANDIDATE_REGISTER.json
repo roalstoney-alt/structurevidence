@@ -1,0 +1,12 @@
+{
+  "candidates": [
+    {
+      "assessment_state": "PAPER_SCREENING",
+      "candidate_id": "SE.CML.CANDIDATE.NXP.RP.ARCHITECTURE",
+      "description": "Alternate transistor, PA board or module architecture; no specific equivalent is established.",
+      "relationship_type": "REDESIGN_REQUIRED"
+    }
+  ],
+  "empty_state_meaning": null,
+  "registry_id": "SE.CML.RECORD.NXP.RADIO-POWER-2026.v0.1.candidates"
+}

@@ -1,0 +1,159 @@
+{
+  "cml": {
+    "alternative": {
+      "candidates": [
+        {
+          "assessment_state": "PAPER_SCREENING",
+          "candidate_id": "SE.CML.CANDIDATE.NXP.RP.ARCHITECTURE",
+          "description": "Alternate transistor, PA board or module architecture; no specific equivalent is established.",
+          "relationship_type": "REDESIGN_REQUIRED"
+        }
+      ],
+      "oem_replacement_status": "OEM_REPLACEMENT_NOT_LISTED"
+    },
+    "counter_evidence": "Some NXP overview surfaces have retained an Active label for MRF101AN. The later dated discontinuance notice and package status are treated as stronger lifecycle evidence, while the conflict remains visible.",
+    "decision": {
+      "claim_type": "DECISION_RECOMMENDATION",
+      "current_recommendation": "Treat the notice as a lifecycle trigger. Separate lifetime-buy analysis from engineering migration; any alternate device requires board-level RF and thermal qualification.",
+      "supported_paths": [
+        "LIFETIME_BUY",
+        "QUALIFY_ALTERNATIVE",
+        "REDESIGN"
+      ]
+    },
+    "dependency": {
+      "client_scope": "NOT_PROVIDED",
+      "context": "Device package, bias, frequency, power, thermal path, matching network, PCB layout and ruggedness form a board-level dependency."
+    },
+    "event": {
+      "created_at": "2026-09-16T00:00:00Z",
+      "detail": "Final Radio Power discontinuance notice lists full withdrawal, limited availability, sole-source classification, 2026-09-30 LTB and 2027-09-30 last delivery for selected representatives.",
+      "effective_at": "2026-04-01T00:00:00Z",
+      "event_domain": "SUBJECT_EVENT",
+      "event_id": "SE.CML.EVENT.NXP.202603037DN.RADIO-POWER",
+      "event_type": "EOL_DECLARED",
+      "known_at": "2026-03-31T00:00:00Z",
+      "source_refs": [
+        "NXP_202603037DN",
+        "NXP_MRF101AN_DS",
+        "NXP_MW6S010N_PAGE",
+        "NXP_MMRF1009H_DS"
+      ],
+      "technical_item_id": "SE.TECH.NXP.RADIO-POWER-2026-FAMILY",
+      "verification_status": "PRIMARY_SOURCE_REVIEWED"
+    },
+    "evidence": {
+      "known_facts": [
+        "SOURCE_FACT: NXP's final notice states the Radio Power product line is being ramped down.",
+        "SOURCE_FACT: MRF101AN, MW6S010GNR1 and MMRF1009HR5 are listed with no replacement and a 2026-09-30 LTB.",
+        "SOURCE_FACT: MRF101AN is a 50 V wideband 1.8-250 MHz device; MW6S010GNR1 is a 28 V 450-1500 MHz 10 W class device; MMRF1009HR5 is a 50 V 960-1215 MHz 500 W pulse device."
+      ],
+      "source_register_id": "SE.CML.RECORD.NXP.RADIO-POWER-2026.v0.1.sources",
+      "unknowns": [
+        "No reviewed evidence establishes a board drop-in successor for any selected device.",
+        "Application-specific matching networks, thermal margins and stability criteria are unknown.",
+        "The MRF101AN overview has shown an inconsistent Active label while package/quality and the discontinuance notice indicate EOL."
+      ]
+    },
+    "freshness_state": "EVENT_DRIVEN_CURRENT_WITH_INTERFACE_CONFLICT",
+    "identity": {
+      "created_at": "2026-09-16T00:00:00Z",
+      "datasheet_refs": [
+        "NXP_202603037DN",
+        "NXP_MRF101AN_DS",
+        "NXP_MW6S010N_PAGE",
+        "NXP_MMRF1009H_DS"
+      ],
+      "description": "Family-level lifecycle event with representative MRF101AN, MW6S010GNR1 and MMRF1009HR5 migration contexts.",
+      "manufacturer": "NXP Semiconductors",
+      "manufacturer_normalized": "NXP_SEMICONDUCTORS",
+      "manufacturer_part_number": "RADIO-POWER-2026-FAMILY",
+      "manufacturer_product_url": "https://www.nxp.com/pcn/202603037DN",
+      "nominal_application_class": "RF power amplification",
+      "package_or_interface": "Multiple RF transistor packages; board-specific matching networks",
+      "part_number_normalized": "RADIO-POWER-2026-FAMILY",
+      "product_family": "Radio Power discontinuance / selected representatives",
+      "record_version": "CML_v0.1",
+      "technical_item_id": "SE.TECH.NXP.RADIO-POWER-2026-FAMILY",
+      "technical_item_type": "RF_POWER_SEMICONDUCTOR"
+    },
+    "lifecycle_state": "LAST_TIME_BUY_OPEN",
+    "public_private_boundary": "PUBLIC_EVIDENCE_ONLY_NO_CLIENT_BOM",
+    "verification": {
+      "compatibility_matrix": [
+        {
+          "dimension": "MECHANICAL",
+          "evidence_or_test": "Representative devices use different packages",
+          "state": "MISMATCH"
+        },
+        {
+          "dimension": "ELECTRICAL",
+          "evidence_or_test": "Bias, supply and gain vary by device/application",
+          "state": "REQUIRES_TEST"
+        },
+        {
+          "dimension": "RF",
+          "evidence_or_test": "Frequency, output power, gain, efficiency and harmonics",
+          "state": "REQUIRES_TEST"
+        },
+        {
+          "dimension": "THERMAL",
+          "evidence_or_test": "Junction-to-case and board cooling",
+          "state": "REQUIRES_TEST"
+        },
+        {
+          "dimension": "RELIABILITY",
+          "evidence_or_test": "Load mismatch and long-duration operation",
+          "state": "REQUIRES_TEST"
+        },
+        {
+          "dimension": "MANUFACTURING",
+          "evidence_or_test": "PCB layout and matching-network redesign",
+          "state": "REQUIRES_TEST"
+        }
+      ],
+      "qualification_state": "LAB_VERIFICATION_REQUIRED",
+      "requirements": [
+        "S-parameters where applicable",
+        "Small-signal stability",
+        "Gain and output power",
+        "PAE or drain efficiency",
+        "Harmonics",
+        "Thermal characterization",
+        "Load-mismatch ruggedness",
+        "Temperature sweep",
+        "Long-duration operation"
+      ]
+    }
+  },
+  "core": {
+    "artifact_refs": [
+      "NXP_202603037DN:01a0f1aa50985503ef647c9346c728788eff76b3af295211e5c517744c310691",
+      "NXP_MRF101AN_DS:967fc14a3d2021aca9e2359e6f2811dad735c5de96af3dc2c57d50c4f1a9188b",
+      "NXP_MW6S010N_PAGE:0f6fec492e61bb0f1a663d76e24777b19587622a0b7e351f6a1eabd98858d75a",
+      "NXP_MMRF1009H_DS:541d5d61b2bdd0057074ea6f5d13303cb7e7ed8aa4729a0cdb3cfe30023887d7"
+    ],
+    "core_version": "STRUCTEVIDENCE_EVIDENCE_CORE_v0.1",
+    "correction_status": "NO_CORRECTION_RECORDED",
+    "created_at": "2026-09-16T00:00:00Z",
+    "domain": "TECHNICAL_RISK",
+    "effective_at": "2026-04-01T00:00:00Z",
+    "input_hash": "0afa49b699834ca44effba0c5987bc6bf03ee198d64f1385dc3a20e263943e52",
+    "known_at": "2026-03-31T00:00:00Z",
+    "policy_version": "RDL_FRESHNESS_v0.1a+CML_PROFILE_v0.1",
+    "protocol": "CML",
+    "record_hash": "08bf397d4519968f87955badf8cb0cfe39224022920e970721732592e423ce37",
+    "record_id": "SE.CML.RECORD.NXP.RADIO-POWER-2026.v0.1",
+    "source_refs": [
+      "NXP_202603037DN",
+      "NXP_MRF101AN_DS",
+      "NXP_MW6S010N_PAGE",
+      "NXP_MMRF1009H_DS"
+    ],
+    "subject_class": "TECHNICAL_ITEM",
+    "subject_id": "SE.TECH.NXP.RADIO-POWER-2026-FAMILY",
+    "supersession_status": "CURRENT",
+    "updated_at": "2026-09-16T00:00:00Z",
+    "verification_status": "REVIEWED_WITH_LIMITATIONS"
+  }
+}

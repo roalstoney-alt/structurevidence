@@ -1,0 +1,190 @@
+{
+  "matrix": [
+    {
+      "dimension": "MECHANICAL",
+      "evidence_or_test": "Drawing and dimensional inspection",
+      "state": "REQUIRES_TEST"
+    },
+    {
+      "dimension": "PINOUT",
+      "evidence_or_test": "PCB footprint and row geometry comparison",
+      "state": "UNKNOWN"
+    },
+    {
+      "dimension": "ELECTRICAL",
+      "evidence_or_test": "Current, resistance and dielectric tests",
+      "state": "REQUIRES_TEST"
+    },
+    {
+      "dimension": "MATERIAL",
+      "evidence_or_test": "Contact material and plating stack",
+      "state": "UNKNOWN"
+    },
+    {
+      "dimension": "ENVIRONMENTAL",
+      "evidence_or_test": "Thermal cycling and solderability",
+      "state": "REQUIRES_TEST"
+    },
+    {
+      "dimension": "RELIABILITY",
+      "evidence_or_test": "Insertion, retention and mating-cycle scope",
+      "state": "REQUIRES_TEST"
+    }
+  ],
+  "record_id": "SE.CML.RECORD.AMPHENOL.10081811-101-07LF.v0.1",
+  "test_requirements": [
+    {
+      "acceptance_criteria": "UNRESOLVED",
+      "candidate_id": null,
+      "customer_lab_required": "UNRESOLVED",
+      "destructive": "UNRESOLVED",
+      "evidence_basis": "PUBLIC_RECORD_REQUIREMENT",
+      "original_item_id": "SE.TECH.AMPHENOL.10081811-101-07LF",
+      "required_equipment": "TO_BE_DEFINED_FOR_SCOPE",
+      "sample_quantity": "UNRESOLVED",
+      "standard": "UNRESOLVED",
+      "status": "REQUIRED",
+      "test_category": "DOMAIN_SPECIFIC",
+      "test_method": "TO_BE_DEFINED_FOR_SCOPE",
+      "test_name": "Mechanical drawing comparison",
+      "test_requirement_id": "SE.CML.RECORD.AMPHENOL.10081811-101-07LF.v0.1.TEST.01",
+      "third_party_lab_required": "UNRESOLVED"
+    },
+    {
+      "acceptance_criteria": "UNRESOLVED",
+      "candidate_id": null,
+      "customer_lab_required": "UNRESOLVED",
+      "destructive": "UNRESOLVED",
+      "evidence_basis": "PUBLIC_RECORD_REQUIREMENT",
+      "original_item_id": "SE.TECH.AMPHENOL.10081811-101-07LF",
+      "required_equipment": "TO_BE_DEFINED_FOR_SCOPE",
+      "sample_quantity": "UNRESOLVED",
+      "standard": "UNRESOLVED",
+      "status": "REQUIRED",
+      "test_category": "DOMAIN_SPECIFIC",
+      "test_method": "TO_BE_DEFINED_FOR_SCOPE",
+      "test_name": "PCB footprint inspection",
+      "test_requirement_id": "SE.CML.RECORD.AMPHENOL.10081811-101-07LF.v0.1.TEST.02",
+      "third_party_lab_required": "UNRESOLVED"
+    },
+    {
+      "acceptance_criteria": "UNRESOLVED",
+      "candidate_id": null,
+      "customer_lab_required": "UNRESOLVED",
+      "destructive": "UNRESOLVED",
+      "evidence_basis": "PUBLIC_RECORD_REQUIREMENT",
+      "original_item_id": "SE.TECH.AMPHENOL.10081811-101-07LF",
+      "required_equipment": "TO_BE_DEFINED_FOR_SCOPE",
+      "sample_quantity": "UNRESOLVED",
+      "standard": "UNRESOLVED",
+      "status": "REQUIRED",
+      "test_category": "DOMAIN_SPECIFIC",
+      "test_method": "TO_BE_DEFINED_FOR_SCOPE",
+      "test_name": "Contact resistance",
+      "test_requirement_id": "SE.CML.RECORD.AMPHENOL.10081811-101-07LF.v0.1.TEST.03",
+      "third_party_lab_required": "UNRESOLVED"
+    },
+    {
+      "acceptance_criteria": "UNRESOLVED",
+      "candidate_id": null,
+      "customer_lab_required": "UNRESOLVED",
+      "destructive": "UNRESOLVED",
+      "evidence_basis": "PUBLIC_RECORD_REQUIREMENT",
+      "original_item_id": "SE.TECH.AMPHENOL.10081811-101-07LF",
+      "required_equipment": "TO_BE_DEFINED_FOR_SCOPE",
+      "sample_quantity": "UNRESOLVED",
+      "standard": "UNRESOLVED",
+      "status": "REQUIRED",
+      "test_category": "DOMAIN_SPECIFIC",
+      "test_method": "TO_BE_DEFINED_FOR_SCOPE",
+      "test_name": "Insulation resistance",
+      "test_requirement_id": "SE.CML.RECORD.AMPHENOL.10081811-101-07LF.v0.1.TEST.04",
+      "third_party_lab_required": "UNRESOLVED"
+    },
+    {
+      "acceptance_criteria": "UNRESOLVED",
+      "candidate_id": null,
+      "customer_lab_required": "UNRESOLVED",
+      "destructive": "UNRESOLVED",
+      "evidence_basis": "PUBLIC_RECORD_REQUIREMENT",
+      "original_item_id": "SE.TECH.AMPHENOL.10081811-101-07LF",
+      "required_equipment": "TO_BE_DEFINED_FOR_SCOPE",
+      "sample_quantity": "UNRESOLVED",
+      "standard": "UNRESOLVED",
+      "status": "REQUIRED",
+      "test_category": "DOMAIN_SPECIFIC",
+      "test_method": "TO_BE_DEFINED_FOR_SCOPE",
+      "test_name": "Dielectric withstand",
+      "test_requirement_id": "SE.CML.RECORD.AMPHENOL.10081811-101-07LF.v0.1.TEST.05",
+      "third_party_lab_required": "UNRESOLVED"
+    },
+    {
+      "acceptance_criteria": "UNRESOLVED",
+      "candidate_id": null,
+      "customer_lab_required": "UNRESOLVED",
+      "destructive": "UNRESOLVED",
+      "evidence_basis": "PUBLIC_RECORD_REQUIREMENT",
+      "original_item_id": "SE.TECH.AMPHENOL.10081811-101-07LF",
+      "required_equipment": "TO_BE_DEFINED_FOR_SCOPE",
+      "sample_quantity": "UNRESOLVED",
+      "standard": "UNRESOLVED",
+      "status": "REQUIRED",
+      "test_category": "DOMAIN_SPECIFIC",
+      "test_method": "TO_BE_DEFINED_FOR_SCOPE",
+      "test_name": "Solderability",
+      "test_requirement_id": "SE.CML.RECORD.AMPHENOL.10081811-101-07LF.v0.1.TEST.06",
+      "third_party_lab_required": "UNRESOLVED"
+    },
+    {
+      "acceptance_criteria": "UNRESOLVED",
+      "candidate_id": null,
+      "customer_lab_required": "UNRESOLVED",
+      "destructive": "UNRESOLVED",
+      "evidence_basis": "PUBLIC_RECORD_REQUIREMENT",
+      "original_item_id": "SE.TECH.AMPHENOL.10081811-101-07LF",
+      "required_equipment": "TO_BE_DEFINED_FOR_SCOPE",
+      "sample_quantity": "UNRESOLVED",
+      "standard": "UNRESOLVED",
+      "status": "REQUIRED",
+      "test_category": "DOMAIN_SPECIFIC",
+      "test_method": "TO_BE_DEFINED_FOR_SCOPE",
+      "test_name": "Insertion and retention force",
+      "test_requirement_id": "SE.CML.RECORD.AMPHENOL.10081811-101-07LF.v0.1.TEST.07",
+      "third_party_lab_required": "UNRESOLVED"
+    },
+    {
+      "acceptance_criteria": "UNRESOLVED",
+      "candidate_id": null,
+      "customer_lab_required": "UNRESOLVED",
+      "destructive": "UNRESOLVED",
+      "evidence_basis": "PUBLIC_RECORD_REQUIREMENT",
+      "original_item_id": "SE.TECH.AMPHENOL.10081811-101-07LF",
+      "required_equipment": "TO_BE_DEFINED_FOR_SCOPE",
+      "sample_quantity": "UNRESOLVED",
+      "standard": "UNRESOLVED",
+      "status": "REQUIRED",
+      "test_category": "DOMAIN_SPECIFIC",
+      "test_method": "TO_BE_DEFINED_FOR_SCOPE",
+      "test_name": "Thermal cycling",
+      "test_requirement_id": "SE.CML.RECORD.AMPHENOL.10081811-101-07LF.v0.1.TEST.08",
+      "third_party_lab_required": "UNRESOLVED"
+    },
+    {
+      "acceptance_criteria": "UNRESOLVED",
+      "candidate_id": null,
+      "customer_lab_required": "UNRESOLVED",
+      "destructive": "UNRESOLVED",
+      "evidence_basis": "PUBLIC_RECORD_REQUIREMENT",
+      "original_item_id": "SE.TECH.AMPHENOL.10081811-101-07LF",
+      "required_equipment": "TO_BE_DEFINED_FOR_SCOPE",
+      "sample_quantity": "UNRESOLVED",
+      "standard": "UNRESOLVED",
+      "status": "REQUIRED",
+      "test_category": "DOMAIN_SPECIFIC",
+      "test_method": "TO_BE_DEFINED_FOR_SCOPE",
+      "test_name": "Mating compatibility",
+      "test_requirement_id": "SE.CML.RECORD.AMPHENOL.10081811-101-07LF.v0.1.TEST.09",
+      "third_party_lab_required": "UNRESOLVED"
+    }
+  ]
+}

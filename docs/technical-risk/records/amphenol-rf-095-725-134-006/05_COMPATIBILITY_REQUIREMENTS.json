@@ -1,0 +1,190 @@
+{
+  "matrix": [
+    {
+      "dimension": "MECHANICAL",
+      "evidence_or_test": "Connector gauges, length and bend envelope",
+      "state": "REQUIRES_TEST"
+    },
+    {
+      "dimension": "RF",
+      "evidence_or_test": "S11, S21, VSWR and insertion loss through 40 GHz",
+      "state": "REQUIRES_TEST"
+    },
+    {
+      "dimension": "MATERIAL",
+      "evidence_or_test": "Manufacturer states gold-plated interfaces for family",
+      "state": "MATCH"
+    },
+    {
+      "dimension": "ENVIRONMENTAL",
+      "evidence_or_test": "Temperature and flex behavior",
+      "state": "REQUIRES_TEST"
+    },
+    {
+      "dimension": "RELIABILITY",
+      "evidence_or_test": "Mating repeatability and cycle scope",
+      "state": "REQUIRES_TEST"
+    },
+    {
+      "dimension": "MANUFACTURING",
+      "evidence_or_test": "Termination process and lot consistency",
+      "state": "REQUIRES_TEST"
+    }
+  ],
+  "record_id": "SE.CML.RECORD.AMPHENOL-RF.095-725-134-006.v0.1",
+  "test_requirements": [
+    {
+      "acceptance_criteria": "UNRESOLVED",
+      "candidate_id": null,
+      "customer_lab_required": "UNRESOLVED",
+      "destructive": "UNRESOLVED",
+      "evidence_basis": "PUBLIC_RECORD_REQUIREMENT",
+      "original_item_id": "SE.TECH.AMPHENOL-RF.095-725-134-006",
+      "required_equipment": "TO_BE_DEFINED_FOR_SCOPE",
+      "sample_quantity": "UNRESOLVED",
+      "standard": "UNRESOLVED",
+      "status": "REQUIRED",
+      "test_category": "DOMAIN_SPECIFIC",
+      "test_method": "TO_BE_DEFINED_FOR_SCOPE",
+      "test_name": "Calibrated VNA with defined reference planes",
+      "test_requirement_id": "SE.CML.RECORD.AMPHENOL-RF.095-725-134-006.v0.1.TEST.01",
+      "third_party_lab_required": "UNRESOLVED"
+    },
+    {
+      "acceptance_criteria": "UNRESOLVED",
+      "candidate_id": null,
+      "customer_lab_required": "UNRESOLVED",
+      "destructive": "UNRESOLVED",
+      "evidence_basis": "PUBLIC_RECORD_REQUIREMENT",
+      "original_item_id": "SE.TECH.AMPHENOL-RF.095-725-134-006",
+      "required_equipment": "TO_BE_DEFINED_FOR_SCOPE",
+      "sample_quantity": "UNRESOLVED",
+      "standard": "UNRESOLVED",
+      "status": "REQUIRED",
+      "test_category": "DOMAIN_SPECIFIC",
+      "test_method": "TO_BE_DEFINED_FOR_SCOPE",
+      "test_name": "S11 and return loss",
+      "test_requirement_id": "SE.CML.RECORD.AMPHENOL-RF.095-725-134-006.v0.1.TEST.02",
+      "third_party_lab_required": "UNRESOLVED"
+    },
+    {
+      "acceptance_criteria": "UNRESOLVED",
+      "candidate_id": null,
+      "customer_lab_required": "UNRESOLVED",
+      "destructive": "UNRESOLVED",
+      "evidence_basis": "PUBLIC_RECORD_REQUIREMENT",
+      "original_item_id": "SE.TECH.AMPHENOL-RF.095-725-134-006",
+      "required_equipment": "TO_BE_DEFINED_FOR_SCOPE",
+      "sample_quantity": "UNRESOLVED",
+      "standard": "UNRESOLVED",
+      "status": "REQUIRED",
+      "test_category": "DOMAIN_SPECIFIC",
+      "test_method": "TO_BE_DEFINED_FOR_SCOPE",
+      "test_name": "S21 and insertion loss",
+      "test_requirement_id": "SE.CML.RECORD.AMPHENOL-RF.095-725-134-006.v0.1.TEST.03",
+      "third_party_lab_required": "UNRESOLVED"
+    },
+    {
+      "acceptance_criteria": "UNRESOLVED",
+      "candidate_id": null,
+      "customer_lab_required": "UNRESOLVED",
+      "destructive": "UNRESOLVED",
+      "evidence_basis": "PUBLIC_RECORD_REQUIREMENT",
+      "original_item_id": "SE.TECH.AMPHENOL-RF.095-725-134-006",
+      "required_equipment": "TO_BE_DEFINED_FOR_SCOPE",
+      "sample_quantity": "UNRESOLVED",
+      "standard": "UNRESOLVED",
+      "status": "REQUIRED",
+      "test_category": "DOMAIN_SPECIFIC",
+      "test_method": "TO_BE_DEFINED_FOR_SCOPE",
+      "test_name": "VSWR",
+      "test_requirement_id": "SE.CML.RECORD.AMPHENOL-RF.095-725-134-006.v0.1.TEST.04",
+      "third_party_lab_required": "UNRESOLVED"
+    },
+    {
+      "acceptance_criteria": "UNRESOLVED",
+      "candidate_id": null,
+      "customer_lab_required": "UNRESOLVED",
+      "destructive": "UNRESOLVED",
+      "evidence_basis": "PUBLIC_RECORD_REQUIREMENT",
+      "original_item_id": "SE.TECH.AMPHENOL-RF.095-725-134-006",
+      "required_equipment": "TO_BE_DEFINED_FOR_SCOPE",
+      "sample_quantity": "UNRESOLVED",
+      "standard": "UNRESOLVED",
+      "status": "REQUIRED",
+      "test_category": "DOMAIN_SPECIFIC",
+      "test_method": "TO_BE_DEFINED_FOR_SCOPE",
+      "test_name": "Mating repeatability",
+      "test_requirement_id": "SE.CML.RECORD.AMPHENOL-RF.095-725-134-006.v0.1.TEST.05",
+      "third_party_lab_required": "UNRESOLVED"
+    },
+    {
+      "acceptance_criteria": "UNRESOLVED",
+      "candidate_id": null,
+      "customer_lab_required": "UNRESOLVED",
+      "destructive": "UNRESOLVED",
+      "evidence_basis": "PUBLIC_RECORD_REQUIREMENT",
+      "original_item_id": "SE.TECH.AMPHENOL-RF.095-725-134-006",
+      "required_equipment": "TO_BE_DEFINED_FOR_SCOPE",
+      "sample_quantity": "UNRESOLVED",
+      "standard": "UNRESOLVED",
+      "status": "REQUIRED",
+      "test_category": "DOMAIN_SPECIFIC",
+      "test_method": "TO_BE_DEFINED_FOR_SCOPE",
+      "test_name": "Mechanical inspection",
+      "test_requirement_id": "SE.CML.RECORD.AMPHENOL-RF.095-725-134-006.v0.1.TEST.06",
+      "third_party_lab_required": "UNRESOLVED"
+    },
+    {
+      "acceptance_criteria": "UNRESOLVED",
+      "candidate_id": null,
+      "customer_lab_required": "UNRESOLVED",
+      "destructive": "UNRESOLVED",
+      "evidence_basis": "PUBLIC_RECORD_REQUIREMENT",
+      "original_item_id": "SE.TECH.AMPHENOL-RF.095-725-134-006",
+      "required_equipment": "TO_BE_DEFINED_FOR_SCOPE",
+      "sample_quantity": "UNRESOLVED",
+      "standard": "UNRESOLVED",
+      "status": "REQUIRED",
+      "test_category": "DOMAIN_SPECIFIC",
+      "test_method": "TO_BE_DEFINED_FOR_SCOPE",
+      "test_name": "Flex behavior",
+      "test_requirement_id": "SE.CML.RECORD.AMPHENOL-RF.095-725-134-006.v0.1.TEST.07",
+      "third_party_lab_required": "UNRESOLVED"
+    },
+    {
+      "acceptance_criteria": "UNRESOLVED",
+      "candidate_id": null,
+      "customer_lab_required": "UNRESOLVED",
+      "destructive": "UNRESOLVED",
+      "evidence_basis": "PUBLIC_RECORD_REQUIREMENT",
+      "original_item_id": "SE.TECH.AMPHENOL-RF.095-725-134-006",
+      "required_equipment": "TO_BE_DEFINED_FOR_SCOPE",
+      "sample_quantity": "UNRESOLVED",
+      "standard": "UNRESOLVED",
+      "status": "REQUIRED",
+      "test_category": "DOMAIN_SPECIFIC",
+      "test_method": "TO_BE_DEFINED_FOR_SCOPE",
+      "test_name": "Temperature behavior",
+      "test_requirement_id": "SE.CML.RECORD.AMPHENOL-RF.095-725-134-006.v0.1.TEST.08",
+      "third_party_lab_required": "UNRESOLVED"
+    },
+    {
+      "acceptance_criteria": "UNRESOLVED",
+      "candidate_id": null,
+      "customer_lab_required": "UNRESOLVED",
+      "destructive": "UNRESOLVED",
+      "evidence_basis": "PUBLIC_RECORD_REQUIREMENT",
+      "original_item_id": "SE.TECH.AMPHENOL-RF.095-725-134-006",
+      "required_equipment": "TO_BE_DEFINED_FOR_SCOPE",
+      "sample_quantity": "UNRESOLVED",
+      "standard": "UNRESOLVED",
+      "status": "REQUIRED",
+      "test_category": "DOMAIN_SPECIFIC",
+      "test_method": "TO_BE_DEFINED_FOR_SCOPE",
+      "test_name": "Phase stability only when required",
+      "test_requirement_id": "SE.CML.RECORD.AMPHENOL-RF.095-725-134-006.v0.1.TEST.09",
+      "third_party_lab_required": "UNRESOLVED"
+    }
+  ]
+}

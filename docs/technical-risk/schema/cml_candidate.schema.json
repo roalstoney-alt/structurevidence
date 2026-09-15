@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "required": [
+    "candidate_id",
+    "relationship_type",
+    "assessment_state"
+  ],
+  "title": "CML Replacement Candidate",
+  "type": "object"
+}

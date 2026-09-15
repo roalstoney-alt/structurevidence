@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "cml": {
+      "required": [
+        "identity",
+        "event",
+        "dependency",
+        "evidence",
+        "alternative",
+        "verification",
+        "decision",
+        "lifecycle_state",
+        "freshness_state",
+        "public_private_boundary"
+      ],
+      "type": "object"
+    },
+    "core": {
+      "$ref": "../../evidence/core/schema/evidence_core_record.schema.json"
+    }
+  },
+  "required": [
+    "core",
+    "cml"
+  ],
+  "title": "CML Public Record",
+  "type": "object"
+}

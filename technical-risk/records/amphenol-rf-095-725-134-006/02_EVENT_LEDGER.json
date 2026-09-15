@@ -1,0 +1,21 @@
+{
+  "append_only": true,
+  "events": [
+    {
+      "created_at": "2026-09-16T00:00:00Z",
+      "detail": "Active manufacturer reference assembly selected as a qualification benchmark; this is not an EOL event.",
+      "effective_at": "2026-05-07T00:00:00Z",
+      "event_domain": "SUBJECT_EVENT",
+      "event_id": "SE.CML.EVENT.AMPHENOL-RF.095-725-134-006.BASELINE",
+      "event_type": "CANDIDATE_IDENTIFIED",
+      "known_at": "2026-09-16T00:00:00Z",
+      "source_refs": [
+        "AMPHENOL_RF_40GHZ_PRODUCT",
+        "AMPHENOL_RF_40GHZ_CUTSHEET"
+      ],
+      "technical_item_id": "SE.TECH.AMPHENOL-RF.095-725-134-006",
+      "verification_status": "PRIMARY_SOURCE_REVIEWED"
+    }
+  ],
+  "ledger_id": "SE.CML.RECORD.AMPHENOL-RF.095-725-134-006.v0.1.events"
+}

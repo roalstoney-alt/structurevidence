@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "state": {
+      "enum": [
+        "MATCH",
+        "ACCEPTABLE_DIFFERENCE",
+        "MISMATCH",
+        "UNKNOWN",
+        "REQUIRES_TEST",
+        "NOT_APPLICABLE"
+      ]
+    }
+  },
+  "required": [
+    "dimension",
+    "state",
+    "evidence_or_test"
+  ],
+  "title": "CML Compatibility Cell",
+  "type": "object"
+}

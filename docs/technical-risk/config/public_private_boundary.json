@@ -1,0 +1,32 @@
+{
+  "private": [
+    "customer_bom",
+    "customer_product",
+    "annual_usage",
+    "inventory",
+    "customer_pricing",
+    "supplier_quotation",
+    "customer_drawings",
+    "customer_firmware",
+    "customer_qualification_limits",
+    "nda_documents",
+    "revenue_exposure",
+    "internal_failure_data",
+    "private_lab_raw_data",
+    "commercial_negotiations"
+  ],
+  "public": [
+    "manufacturer",
+    "manufacturer_part_number",
+    "official_lifecycle_evidence",
+    "pcn",
+    "datasheet",
+    "published_specifications",
+    "public_certification",
+    "public_oem_replacement",
+    "general_verification_requirements",
+    "public_technical_comparison",
+    "evidence_lineage",
+    "record_freshness"
+  ]
+}

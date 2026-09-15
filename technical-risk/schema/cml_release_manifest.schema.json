@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "required": [
+    "record_id",
+    "record_hash",
+    "artifact_hashes",
+    "release_state",
+    "authorization_state"
+  ],
+  "title": "CML Release Manifest",
+  "type": "object"
+}

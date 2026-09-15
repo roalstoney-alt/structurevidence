@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "required": [
+    "test_requirement_id",
+    "test_name",
+    "status",
+    "evidence_basis"
+  ],
+  "title": "CML Test Requirement",
+  "type": "object"
+}

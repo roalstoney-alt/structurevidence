@@ -1,0 +1,19 @@
+{
+  "created_at": "2026-09-16T00:00:00Z",
+  "datasheet_refs": [
+    "MURATA_MYMGM5R012_DS",
+    "MURATA_POWER_EOL_INDEX"
+  ],
+  "description": "Non-isolated point-of-load DC-DC converter variant explicitly marked NRND in the reviewed Murata datasheet.",
+  "manufacturer": "Murata Manufacturing",
+  "manufacturer_normalized": "MURATA_MANUFACTURING",
+  "manufacturer_part_number": "MYMGM5R012ELA5RND",
+  "manufacturer_product_url": "https://www.murata.com/en-global/products/power",
+  "nominal_application_class": "12 V input point-of-load conversion",
+  "package_or_interface": "10.5 x 9.0 x 5.0 mm module class",
+  "part_number_normalized": "MYMGM5R012ELA5RND",
+  "product_family": "MonoBK 12 A DC-DC converter series",
+  "record_version": "CML_v0.1",
+  "technical_item_id": "SE.TECH.MURATA.MYMGM5R012ELA5RND",
+  "technical_item_type": "POWER_MODULE"
+}

@@ -1,0 +1,140 @@
+{
+  "cml": {
+    "alternative": {
+      "candidates": [],
+      "oem_replacement_status": "OEM_REPLACEMENT_UNRESOLVED"
+    },
+    "counter_evidence": "The item is an active off-the-shelf assembly, so substitution may not be operationally necessary. The pilot tests whether CML can structure qualification evidence without inventing a lifecycle crisis.",
+    "decision": {
+      "claim_type": "DECISION_RECOMMENDATION",
+      "current_recommendation": "Use the exact assembly as a benchmark, not as proof that any cable using 40 GHz-capable connectors is equivalent. Freeze VNA method and acceptance limits before supplier comparison.",
+      "supported_paths": [
+        "QUALIFY_SECOND_SOURCE",
+        "MONITOR"
+      ]
+    },
+    "dependency": {
+      "client_scope": "NOT_PROVIDED",
+      "context": "Complete-assembly electrical performance depends on both connectors, cable, termination process, bend history, length and calibration reference plane."
+    },
+    "event": {
+      "created_at": "2026-09-16T00:00:00Z",
+      "detail": "Active manufacturer reference assembly selected as a qualification benchmark; this is not an EOL event.",
+      "effective_at": "2026-05-07T00:00:00Z",
+      "event_domain": "SUBJECT_EVENT",
+      "event_id": "SE.CML.EVENT.AMPHENOL-RF.095-725-134-006.BASELINE",
+      "event_type": "CANDIDATE_IDENTIFIED",
+      "known_at": "2026-09-16T00:00:00Z",
+      "source_refs": [
+        "AMPHENOL_RF_40GHZ_PRODUCT",
+        "AMPHENOL_RF_40GHZ_CUTSHEET"
+      ],
+      "technical_item_id": "SE.TECH.AMPHENOL-RF.095-725-134-006",
+      "verification_status": "PRIMARY_SOURCE_REVIEWED"
+    },
+    "evidence": {
+      "known_facts": [
+        "SOURCE_FACT: The exact assembly is listed Active, 6.00 in (153 mm), 50 ohm, and 40 GHz maximum.",
+        "SOURCE_FACT: Interfaces are 2.92 mm straight plug to SMPM straight plug on 0.085-inch conformable cable.",
+        "SOURCE_FACT: The family cutsheet states DC-40 GHz interface ranges and warns specifications may vary by exact part number."
+      ],
+      "source_register_id": "SE.CML.RECORD.AMPHENOL-RF.095-725-134-006.v0.1.sources",
+      "unknowns": [
+        "No independent VNA trace, per-unit insertion-loss limit or return-loss acceptance curve is present.",
+        "Power handling, phase stability and flex-life limits are not established in reviewed evidence.",
+        "No alternate supplier assembly has been qualified against this benchmark."
+      ]
+    },
+    "freshness_state": "POLICY_NOT_CONFIGURED_ACTIVE_BASELINE",
+    "identity": {
+      "created_at": "2026-09-16T00:00:00Z",
+      "datasheet_refs": [
+        "AMPHENOL_RF_40GHZ_PRODUCT",
+        "AMPHENOL_RF_40GHZ_CUTSHEET"
+      ],
+      "description": "Six-inch, 50 ohm, 0.085-inch conformable cable assembly with 2.92 mm and SMPM straight plugs.",
+      "manufacturer": "Amphenol RF",
+      "manufacturer_normalized": "AMPHENOL_RF",
+      "manufacturer_part_number": "095-725-134-006",
+      "manufacturer_product_url": "https://www.amphenolrf.com/en-us/part/095-725-134-006/10205/",
+      "nominal_application_class": "Microwave interconnect up to 40 GHz",
+      "package_or_interface": "2.92 mm plug to SMPM plug, 6 inches",
+      "part_number_normalized": "095-725-134-006",
+      "product_family": "2.92 mm plug to SMPM plug cable assemblies",
+      "record_version": "CML_v0.1",
+      "technical_item_id": "SE.TECH.AMPHENOL-RF.095-725-134-006",
+      "technical_item_type": "RF_CABLE_ASSEMBLY"
+    },
+    "lifecycle_state": "ACTIVE",
+    "public_private_boundary": "PUBLIC_EVIDENCE_ONLY_NO_CLIENT_BOM",
+    "verification": {
+      "compatibility_matrix": [
+        {
+          "dimension": "MECHANICAL",
+          "evidence_or_test": "Connector gauges, length and bend envelope",
+          "state": "REQUIRES_TEST"
+        },
+        {
+          "dimension": "RF",
+          "evidence_or_test": "S11, S21, VSWR and insertion loss through 40 GHz",
+          "state": "REQUIRES_TEST"
+        },
+        {
+          "dimension": "MATERIAL",
+          "evidence_or_test": "Manufacturer states gold-plated interfaces for family",
+          "state": "MATCH"
+        },
+        {
+          "dimension": "ENVIRONMENTAL",
+          "evidence_or_test": "Temperature and flex behavior",
+          "state": "REQUIRES_TEST"
+        },
+        {
+          "dimension": "RELIABILITY",
+          "evidence_or_test": "Mating repeatability and cycle scope",
+          "state": "REQUIRES_TEST"
+        },
+        {
+          "dimension": "MANUFACTURING",
+          "evidence_or_test": "Termination process and lot consistency",
+          "state": "REQUIRES_TEST"
+        }
+      ],
+      "qualification_state": "LAB_VERIFICATION_REQUIRED",
+      "requirements": [
+        "Calibrated VNA with defined reference planes",
+        "S11 and return loss",
+        "S21 and insertion loss",
+        "VSWR",
+        "Mating repeatability",
+        "Mechanical inspection",
+        "Flex behavior",
+        "Temperature behavior",
+        "Phase stability only when required"
+      ]
+    }
+  },
+  "core": {
+    "artifact_refs": [],
+    "core_version": "STRUCTEVIDENCE_EVIDENCE_CORE_v0.1",
+    "correction_status": "NO_CORRECTION_RECORDED",
+    "created_at": "2026-09-16T00:00:00Z",
+    "domain": "TECHNICAL_RISK",
+    "effective_at": "2026-05-07T00:00:00Z",
+    "input_hash": "eb1363d72e9c2bdb7ab3568e273bb2206496b11011678a43f65f272f5fc05220",
+    "known_at": "2026-09-16T00:00:00Z",
+    "policy_version": "RDL_FRESHNESS_v0.1a+CML_PROFILE_v0.1",
+    "protocol": "CML",
+    "record_hash": "7f269926c670caa06d9059eecbc99eb419c6edfbf9b8b9e9506b90251a5998c0",
+    "record_id": "SE.CML.RECORD.AMPHENOL-RF.095-725-134-006.v0.1",
+    "source_refs": [
+      "AMPHENOL_RF_40GHZ_PRODUCT",
+      "AMPHENOL_RF_40GHZ_CUTSHEET"
+    ],
+    "subject_class": "TECHNICAL_ITEM",
+    "subject_id": "SE.TECH.AMPHENOL-RF.095-725-134-006",
+    "supersession_status": "CURRENT",
+    "updated_at": "2026-09-16T00:00:00Z",
+    "verification_status": "REVIEWED_WITH_LIMITATIONS"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "registry_id": "SE.CML.RECORD.NXP.RADIO-POWER-2026.v0.1.sources",
+  "retrieved_at": "2026-09-16T00:00:00Z",
+  "source_hierarchy_rule": "Manufacturer evidence controls lifecycle; distributor evidence may supplement but never override.",
+  "sources": [
+    {
+      "publisher": "NXP Semiconductors",
+      "retrieved_at": "2026-09-16T00:00:00Z",
+      "snapshot_custody": "PRIVATE_INTERNAL",
+      "snapshot_sha256": "01a0f1aa50985503ef647c9346c728788eff76b3af295211e5c517744c310691",
+      "source_id": "NXP_202603037DN",
+      "source_type": "MANUFACTURER_DISCONTINUANCE_NOTICE",
+      "url": "https://www.nxp.com/pcn/202603037DN",
+      "verification_status": "SNAPSHOT_HASHED"
+    },
+    {
+      "publisher": "NXP Semiconductors",
+      "retrieved_at": "2026-09-16T00:00:00Z",
+      "snapshot_custody": "PRIVATE_INTERNAL",
+      "snapshot_sha256": "967fc14a3d2021aca9e2359e6f2811dad735c5de96af3dc2c57d50c4f1a9188b",
+      "source_id": "NXP_MRF101AN_DS",
+      "source_type": "MANUFACTURER_DATASHEET",
+      "url": "https://www.nxp.com/docs/en/data-sheet/MRF101AN.pdf",
+      "verification_status": "SNAPSHOT_HASHED"
+    },
+    {
+      "publisher": "NXP Semiconductors",
+      "retrieved_at": "2026-09-16T00:00:00Z",
+      "snapshot_custody": "PRIVATE_INTERNAL",
+      "snapshot_sha256": "0f6fec492e61bb0f1a663d76e24777b19587622a0b7e351f6a1eabd98858d75a",
+      "source_id": "NXP_MW6S010N_PAGE",
+      "source_type": "MANUFACTURER_PRODUCT_PAGE",
+      "url": "https://www.nxp.com/products/radio-frequency-rf/legacy-rf/legacy-rf-power/450-1500-mhz-10-w-28-v-lateral-n-channel-broadband-rf-power-mosfets%3AMW6S010N",
+      "verification_status": "SNAPSHOT_HASHED"
+    },
+    {
+      "publisher": "NXP Semiconductors",
+      "retrieved_at": "2026-09-16T00:00:00Z",
+      "snapshot_custody": "PRIVATE_INTERNAL",
+      "snapshot_sha256": "541d5d61b2bdd0057074ea6f5d13303cb7e7ed8aa4729a0cdb3cfe30023887d7",
+      "source_id": "NXP_MMRF1009H_DS",
+      "source_type": "MANUFACTURER_DATASHEET",
+      "url": "https://www.nxp.com/docs/en/data-sheet/MMRF1009H.pdf",
+      "verification_status": "SNAPSHOT_HASHED"
+    }
+  ]
+}

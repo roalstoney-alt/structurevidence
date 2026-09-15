@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "manufacturer": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "manufacturer_part_number": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "record_version": {
+      "type": "string"
+    },
+    "technical_item_id": {
+      "type": "string"
+    },
+    "technical_item_type": {
+      "enum": [
+        "CONNECTOR",
+        "RF_CONNECTOR",
+        "RF_CABLE_ASSEMBLY",
+        "POWER_MODULE",
+        "RF_POWER_SEMICONDUCTOR",
+        "IC",
+        "MODULE",
+        "ASSEMBLY",
+        "OTHER"
+      ]
+    }
+  },
+  "required": [
+    "technical_item_id",
+    "manufacturer",
+    "manufacturer_part_number",
+    "technical_item_type",
+    "record_version"
+  ],
+  "title": "CML Technical Item",
+  "type": "object"
+}

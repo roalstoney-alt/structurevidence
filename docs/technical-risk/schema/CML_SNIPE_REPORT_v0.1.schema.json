@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "required": [
+    "executive_technical_issue",
+    "named_item",
+    "lifecycle_event",
+    "evidence_chain",
+    "unknowns",
+    "required_verification",
+    "current_recommendation",
+    "freshness",
+    "verification_record",
+    "source_appendix"
+  ],
+  "title": "CML Snipe Report v0.1",
+  "type": "object"
+}

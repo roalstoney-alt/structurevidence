@@ -1,0 +1,395 @@
+{
+  "evaluation_as_of": "2026-09-16T00:00:00Z",
+  "module_version": "STRUCTEVIDENCE_TECHNICAL_RISK_v0.1",
+  "registry_id": "CML_GATE_RESULTS",
+  "results": [
+    {
+      "evaluated_at": "2026-09-16T00:00:00Z",
+      "evidence_refs": [
+        "technical-risk/TECHNICAL_RISK_MANIFEST.json"
+      ],
+      "gate_id": "CML01_REPO_BASELINE",
+      "reason": "Validated by CML v0.1 runtime and negative-test suite.",
+      "rule_version": "CML_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "scripts/test_cml_v01.py"
+    },
+    {
+      "evaluated_at": "2026-09-16T00:00:00Z",
+      "evidence_refs": [
+        "technical-risk/TECHNICAL_RISK_MANIFEST.json"
+      ],
+      "gate_id": "CML02_RDL_V0_1A_VERIFIED",
+      "reason": "Validated by CML v0.1 runtime and negative-test suite.",
+      "rule_version": "CML_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "scripts/test_cml_v01.py"
+    },
+    {
+      "evaluated_at": "2026-09-16T00:00:00Z",
+      "evidence_refs": [
+        "technical-risk/TECHNICAL_RISK_MANIFEST.json"
+      ],
+      "gate_id": "CML03_FROZEN_TIMELINE_UNCHANGED",
+      "reason": "Validated by CML v0.1 runtime and negative-test suite.",
+      "rule_version": "CML_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "scripts/test_cml_v01.py"
+    },
+    {
+      "evaluated_at": "2026-09-16T00:00:00Z",
+      "evidence_refs": [
+        "technical-risk/TECHNICAL_RISK_MANIFEST.json"
+      ],
+      "gate_id": "CML04_SHARED_CORE_REUSE",
+      "reason": "Validated by CML v0.1 runtime and negative-test suite.",
+      "rule_version": "CML_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "scripts/test_cml_v01.py"
+    },
+    {
+      "evaluated_at": "2026-09-16T00:00:00Z",
+      "evidence_refs": [
+        "technical-risk/TECHNICAL_RISK_MANIFEST.json"
+      ],
+      "gate_id": "CML05_DOMAIN_SCHEMA_SEPARATION",
+      "reason": "Validated by CML v0.1 runtime and negative-test suite.",
+      "rule_version": "CML_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "scripts/test_cml_v01.py"
+    },
+    {
+      "evaluated_at": "2026-09-16T00:00:00Z",
+      "evidence_refs": [
+        "technical-risk/TECHNICAL_RISK_MANIFEST.json"
+      ],
+      "gate_id": "CML06_NO_PARALLEL_PROVENANCE",
+      "reason": "Validated by CML v0.1 runtime and negative-test suite.",
+      "rule_version": "CML_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "scripts/test_cml_v01.py"
+    },
+    {
+      "evaluated_at": "2026-09-16T00:00:00Z",
+      "evidence_refs": [
+        "technical-risk/TECHNICAL_RISK_MANIFEST.json"
+      ],
+      "gate_id": "CML07_DUAL_CLOCK",
+      "reason": "Validated by CML v0.1 runtime and negative-test suite.",
+      "rule_version": "CML_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "scripts/test_cml_v01.py"
+    },
+    {
+      "evaluated_at": "2026-09-16T00:00:00Z",
+      "evidence_refs": [
+        "technical-risk/TECHNICAL_RISK_MANIFEST.json"
+      ],
+      "gate_id": "CML08_EVENT_DOMAIN_SCOPING",
+      "reason": "Validated by CML v0.1 runtime and negative-test suite.",
+      "rule_version": "CML_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "scripts/test_cml_v01.py"
+    },
+    {
+      "evaluated_at": "2026-09-16T00:00:00Z",
+      "evidence_refs": [
+        "technical-risk/TECHNICAL_RISK_MANIFEST.json"
+      ],
+      "gate_id": "CML09_SUPERSESSION_DIRECTION",
+      "reason": "Validated by CML v0.1 runtime and negative-test suite.",
+      "rule_version": "CML_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "scripts/test_cml_v01.py"
+    },
+    {
+      "evaluated_at": "2026-09-16T00:00:00Z",
+      "evidence_refs": [
+        "technical-risk/TECHNICAL_RISK_MANIFEST.json"
+      ],
+      "gate_id": "CML10_TECHNICAL_ITEM_IDENTITY",
+      "reason": "Validated by CML v0.1 runtime and negative-test suite.",
+      "rule_version": "CML_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "scripts/test_cml_v01.py"
+    },
+    {
+      "evaluated_at": "2026-09-16T00:00:00Z",
+      "evidence_refs": [
+        "technical-risk/TECHNICAL_RISK_MANIFEST.json"
+      ],
+      "gate_id": "CML11_EXACT_PART_NUMBER",
+      "reason": "Validated by CML v0.1 runtime and negative-test suite.",
+      "rule_version": "CML_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "scripts/test_cml_v01.py"
+    },
+    {
+      "evaluated_at": "2026-09-16T00:00:00Z",
+      "evidence_refs": [
+        "technical-risk/TECHNICAL_RISK_MANIFEST.json"
+      ],
+      "gate_id": "CML12_LIFECYCLE_PRIMARY_SOURCE",
+      "reason": "Validated by CML v0.1 runtime and negative-test suite.",
+      "rule_version": "CML_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "scripts/test_cml_v01.py"
+    },
+    {
+      "evaluated_at": "2026-09-16T00:00:00Z",
+      "evidence_refs": [
+        "technical-risk/TECHNICAL_RISK_MANIFEST.json"
+      ],
+      "gate_id": "CML13_NO_DISTRIBUTOR_LIFECYCLE_OVERRIDE",
+      "reason": "Validated by CML v0.1 runtime and negative-test suite.",
+      "rule_version": "CML_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "scripts/test_cml_v01.py"
+    },
+    {
+      "evaluated_at": "2026-09-16T00:00:00Z",
+      "evidence_refs": [
+        "technical-risk/TECHNICAL_RISK_MANIFEST.json"
+      ],
+      "gate_id": "CML14_NO_GLOBAL_FRESHNESS_THRESHOLD",
+      "reason": "Validated by CML v0.1 runtime and negative-test suite.",
+      "rule_version": "CML_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "scripts/test_cml_v01.py"
+    },
+    {
+      "evaluated_at": "2026-09-16T00:00:00Z",
+      "evidence_refs": [
+        "technical-risk/TECHNICAL_RISK_MANIFEST.json"
+      ],
+      "gate_id": "CML15_PRODUCT_CONTEXT_SEPARATION",
+      "reason": "Validated by CML v0.1 runtime and negative-test suite.",
+      "rule_version": "CML_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "scripts/test_cml_v01.py"
+    },
+    {
+      "evaluated_at": "2026-09-16T00:00:00Z",
+      "evidence_refs": [
+        "technical-risk/TECHNICAL_RISK_MANIFEST.json"
+      ],
+      "gate_id": "CML16_PUBLIC_PRIVATE_BOUNDARY",
+      "reason": "Validated by CML v0.1 runtime and negative-test suite.",
+      "rule_version": "CML_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "scripts/test_cml_v01.py"
+    },
+    {
+      "evaluated_at": "2026-09-16T00:00:00Z",
+      "evidence_refs": [
+        "technical-risk/TECHNICAL_RISK_MANIFEST.json"
+      ],
+      "gate_id": "CML17_NO_UNVERIFIED_DROPIN",
+      "reason": "Validated by CML v0.1 runtime and negative-test suite.",
+      "rule_version": "CML_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "scripts/test_cml_v01.py"
+    },
+    {
+      "evaluated_at": "2026-09-16T00:00:00Z",
+      "evidence_refs": [
+        "technical-risk/TECHNICAL_RISK_MANIFEST.json"
+      ],
+      "gate_id": "CML18_COMPATIBILITY_MATRIX",
+      "reason": "Validated by CML v0.1 runtime and negative-test suite.",
+      "rule_version": "CML_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "scripts/test_cml_v01.py"
+    },
+    {
+      "evaluated_at": "2026-09-16T00:00:00Z",
+      "evidence_refs": [
+        "technical-risk/TECHNICAL_RISK_MANIFEST.json"
+      ],
+      "gate_id": "CML19_TEST_REQUIREMENT_SCHEMA",
+      "reason": "Validated by CML v0.1 runtime and negative-test suite.",
+      "rule_version": "CML_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "scripts/test_cml_v01.py"
+    },
+    {
+      "evaluated_at": "2026-09-16T00:00:00Z",
+      "evidence_refs": [
+        "technical-risk/TECHNICAL_RISK_MANIFEST.json"
+      ],
+      "gate_id": "CML20_COUNTER_EVIDENCE",
+      "reason": "Validated by CML v0.1 runtime and negative-test suite.",
+      "rule_version": "CML_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "scripts/test_cml_v01.py"
+    },
+    {
+      "evaluated_at": "2026-09-16T00:00:00Z",
+      "evidence_refs": [
+        "technical-risk/TECHNICAL_RISK_MANIFEST.json"
+      ],
+      "gate_id": "CML21_LIMITATIONS",
+      "reason": "Validated by CML v0.1 runtime and negative-test suite.",
+      "rule_version": "CML_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "scripts/test_cml_v01.py"
+    },
+    {
+      "evaluated_at": "2026-09-16T00:00:00Z",
+      "evidence_refs": [
+        "technical-risk/TECHNICAL_RISK_MANIFEST.json"
+      ],
+      "gate_id": "CML22_AMPHENOL_PILOT",
+      "reason": "Validated by CML v0.1 runtime and negative-test suite.",
+      "rule_version": "CML_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "scripts/test_cml_v01.py"
+    },
+    {
+      "evaluated_at": "2026-09-16T00:00:00Z",
+      "evidence_refs": [
+        "technical-risk/TECHNICAL_RISK_MANIFEST.json"
+      ],
+      "gate_id": "CML23_NXP_RF_PILOT",
+      "reason": "Validated by CML v0.1 runtime and negative-test suite.",
+      "rule_version": "CML_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "scripts/test_cml_v01.py"
+    },
+    {
+      "evaluated_at": "2026-09-16T00:00:00Z",
+      "evidence_refs": [
+        "technical-risk/TECHNICAL_RISK_MANIFEST.json"
+      ],
+      "gate_id": "CML24_MURATA_DCDC_PILOT",
+      "reason": "Validated by CML v0.1 runtime and negative-test suite.",
+      "rule_version": "CML_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "scripts/test_cml_v01.py"
+    },
+    {
+      "evaluated_at": "2026-09-16T00:00:00Z",
+      "evidence_refs": [
+        "technical-risk/TECHNICAL_RISK_MANIFEST.json"
+      ],
+      "gate_id": "CML25_RF40_ASSEMBLY_PILOT",
+      "reason": "Validated by CML v0.1 runtime and negative-test suite.",
+      "rule_version": "CML_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "scripts/test_cml_v01.py"
+    },
+    {
+      "evaluated_at": "2026-09-16T00:00:00Z",
+      "evidence_refs": [
+        "technical-risk/TECHNICAL_RISK_MANIFEST.json"
+      ],
+      "gate_id": "CML26_PUBLIC_RECORD_RENDERING",
+      "reason": "Validated by CML v0.1 runtime and negative-test suite.",
+      "rule_version": "CML_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "scripts/test_cml_v01.py"
+    },
+    {
+      "evaluated_at": "2026-09-16T00:00:00Z",
+      "evidence_refs": [
+        "technical-risk/TECHNICAL_RISK_MANIFEST.json"
+      ],
+      "gate_id": "CML27_VERIFY_LINEAGE",
+      "reason": "Validated by CML v0.1 runtime and negative-test suite.",
+      "rule_version": "CML_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "scripts/test_cml_v01.py"
+    },
+    {
+      "evaluated_at": "2026-09-16T00:00:00Z",
+      "evidence_refs": [
+        "technical-risk/TECHNICAL_RISK_MANIFEST.json"
+      ],
+      "gate_id": "CML28_REQUEST_ANALYSIS_CTA",
+      "reason": "Validated by CML v0.1 runtime and negative-test suite.",
+      "rule_version": "CML_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "scripts/test_cml_v01.py"
+    },
+    {
+      "evaluated_at": "2026-09-16T00:00:00Z",
+      "evidence_refs": [
+        "technical-risk/TECHNICAL_RISK_MANIFEST.json"
+      ],
+      "gate_id": "CML29_PAYMENT_FAILSAFE",
+      "reason": "Validated by CML v0.1 runtime and negative-test suite.",
+      "rule_version": "CML_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "scripts/test_cml_v01.py"
+    },
+    {
+      "evaluated_at": "2026-09-16T00:00:00Z",
+      "evidence_refs": [
+        "technical-risk/TECHNICAL_RISK_MANIFEST.json"
+      ],
+      "gate_id": "CML30_NO_PUBLIC_CLIENT_BOM",
+      "reason": "Validated by CML v0.1 runtime and negative-test suite.",
+      "rule_version": "CML_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "scripts/test_cml_v01.py"
+    },
+    {
+      "evaluated_at": "2026-09-16T00:00:00Z",
+      "evidence_refs": [
+        "technical-risk/TECHNICAL_RISK_MANIFEST.json"
+      ],
+      "gate_id": "CML31_NO_NUMERIC_RISK_SCORE",
+      "reason": "Validated by CML v0.1 runtime and negative-test suite.",
+      "rule_version": "CML_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "scripts/test_cml_v01.py"
+    },
+    {
+      "evaluated_at": "2026-09-16T00:00:00Z",
+      "evidence_refs": [
+        "technical-risk/TECHNICAL_RISK_MANIFEST.json"
+      ],
+      "gate_id": "CML32_RELEASE_MANIFEST",
+      "reason": "Validated by CML v0.1 runtime and negative-test suite.",
+      "rule_version": "CML_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "scripts/test_cml_v01.py"
+    },
+    {
+      "evaluated_at": "2026-09-16T00:00:00Z",
+      "evidence_refs": [
+        "technical-risk/TECHNICAL_RISK_MANIFEST.json"
+      ],
+      "gate_id": "CML33_TESTS",
+      "reason": "Validated by CML v0.1 runtime and negative-test suite.",
+      "rule_version": "CML_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "scripts/test_cml_v01.py"
+    },
+    {
+      "evaluated_at": "2026-09-16T00:00:00Z",
+      "evidence_refs": [
+        "technical-risk/TECHNICAL_RISK_MANIFEST.json"
+      ],
+      "gate_id": "CML34_ROOT_DOCS_SYNC",
+      "reason": "Validated by CML v0.1 runtime and negative-test suite.",
+      "rule_version": "CML_VALIDATION_v0.1",
+      "status": "PASS",
+      "validator": "scripts/test_cml_v01.py"
+    },
+    {
+      "evaluated_at": "2026-09-16T00:00:00Z",
+      "evidence_refs": [],
+      "gate_id": "CML35_REMOTE_MATCH",
+      "reason": "Requires post-push remote SHA verification.",
+      "rule_version": "CML_VALIDATION_v0.1",
+      "status": "NOT_EVALUATED",
+      "validator": "scripts/test_cml_v01.py"
+    }
+  ],
+  "summary": {
+    "FAIL": 0,
+    "NOT_EVALUATED": 1,
+    "PASS": 34
+  }
+}

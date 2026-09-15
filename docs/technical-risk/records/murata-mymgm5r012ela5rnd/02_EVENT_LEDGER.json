@@ -1,0 +1,21 @@
+{
+  "append_only": true,
+  "events": [
+    {
+      "created_at": "2026-09-16T00:00:00Z",
+      "detail": "The reviewed Murata datasheet identifies the D-suffix variant as NRND; an earlier effective date is not established, so the document revision date is used as the observable boundary with limitation.",
+      "effective_at": "2025-07-07T00:00:00Z",
+      "event_domain": "SUBJECT_EVENT",
+      "event_id": "SE.CML.EVENT.MURATA.MYMGM5R012ELA5RND.NRND",
+      "event_type": "NRND_DECLARED",
+      "known_at": "2026-09-16T00:00:00Z",
+      "source_refs": [
+        "MURATA_MYMGM5R012_DS",
+        "MURATA_POWER_EOL_INDEX"
+      ],
+      "technical_item_id": "SE.TECH.MURATA.MYMGM5R012ELA5RND",
+      "verification_status": "PRIMARY_SOURCE_REVIEWED"
+    }
+  ],
+  "ledger_id": "SE.CML.RECORD.MURATA.MYMGM5R012ELA5RND.v0.1.events"
+}

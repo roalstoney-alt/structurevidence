@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "required": [
+    "event_id",
+    "event_type",
+    "event_domain",
+    "technical_item_id",
+    "effective_at",
+    "known_at",
+    "source_refs",
+    "verification_status",
+    "created_at"
+  ],
+  "title": "CML Event",
+  "type": "object"
+}

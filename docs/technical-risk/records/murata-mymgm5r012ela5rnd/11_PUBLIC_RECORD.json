@@ -1,0 +1,145 @@
+{
+  "cml": {
+    "alternative": {
+      "candidates": [],
+      "oem_replacement_status": "OEM_REPLACEMENT_UNRESOLVED"
+    },
+    "counter_evidence": "The base series remains documented and only a specific suffix is visibly marked NRND. This may reduce immediate operational impact if the customer uses another orderable suffix; BOM identity must be exact.",
+    "decision": {
+      "claim_type": "DECISION_RECOMMENDATION",
+      "current_recommendation": "Freeze the exact suffix and customer operating envelope, then request Murata cross-reference confirmation. Any candidate remains paper-level until electrical, thermal and EMI verification is complete.",
+      "supported_paths": [
+        "MONITOR",
+        "QUALIFY_SECOND_SOURCE",
+        "REDESIGN"
+      ]
+    },
+    "dependency": {
+      "client_scope": "NOT_PROVIDED",
+      "context": "Input range, output voltage/current, regulation, efficiency, control polarity, pinout, thermal derating and board layout define migration scope."
+    },
+    "event": {
+      "created_at": "2026-09-16T00:00:00Z",
+      "detail": "The reviewed Murata datasheet identifies the D-suffix variant as NRND; an earlier effective date is not established, so the document revision date is used as the observable boundary with limitation.",
+      "effective_at": "2025-07-07T00:00:00Z",
+      "event_domain": "SUBJECT_EVENT",
+      "event_id": "SE.CML.EVENT.MURATA.MYMGM5R012ELA5RND.NRND",
+      "event_type": "NRND_DECLARED",
+      "known_at": "2026-09-16T00:00:00Z",
+      "source_refs": [
+        "MURATA_MYMGM5R012_DS",
+        "MURATA_POWER_EOL_INDEX"
+      ],
+      "technical_item_id": "SE.TECH.MURATA.MYMGM5R012ELA5RND",
+      "verification_status": "PRIMARY_SOURCE_REVIEWED"
+    },
+    "evidence": {
+      "known_facts": [
+        "SOURCE_FACT: MYMGM5R012ELA5RND is marked NRND in the manufacturer datasheet.",
+        "SOURCE_FACT: The series is a 12 A non-isolated DC-DC converter with 7.5-15 V input and a 10.5 x 9.0 x 5.0 mm package class.",
+        "SOURCE_FACT: Murata maintains a separate discontinued/NRND index and a DC-DC cross-reference surface."
+      ],
+      "source_register_id": "SE.CML.RECORD.MURATA.MYMGM5R012ELA5RND.v0.1.sources",
+      "unknowns": [
+        "An exact OEM successor for this suffix is not established in the reviewed snapshot.",
+        "Customer output setpoint, transient limits, EMI class and thermal environment are unknown.",
+        "No bench comparison or customer qualification evidence is present."
+      ]
+    },
+    "freshness_state": "POLICY_NOT_CONFIGURED_EVENT_REVIEWED",
+    "identity": {
+      "created_at": "2026-09-16T00:00:00Z",
+      "datasheet_refs": [
+        "MURATA_MYMGM5R012_DS",
+        "MURATA_POWER_EOL_INDEX"
+      ],
+      "description": "Non-isolated point-of-load DC-DC converter variant explicitly marked NRND in the reviewed Murata datasheet.",
+      "manufacturer": "Murata Manufacturing",
+      "manufacturer_normalized": "MURATA_MANUFACTURING",
+      "manufacturer_part_number": "MYMGM5R012ELA5RND",
+      "manufacturer_product_url": "https://www.murata.com/en-global/products/power",
+      "nominal_application_class": "12 V input point-of-load conversion",
+      "package_or_interface": "10.5 x 9.0 x 5.0 mm module class",
+      "part_number_normalized": "MYMGM5R012ELA5RND",
+      "product_family": "MonoBK 12 A DC-DC converter series",
+      "record_version": "CML_v0.1",
+      "technical_item_id": "SE.TECH.MURATA.MYMGM5R012ELA5RND",
+      "technical_item_type": "POWER_MODULE"
+    },
+    "lifecycle_state": "NRND",
+    "public_private_boundary": "PUBLIC_EVIDENCE_ONLY_NO_CLIENT_BOM",
+    "verification": {
+      "compatibility_matrix": [
+        {
+          "dimension": "MECHANICAL",
+          "evidence_or_test": "Package and land-pattern comparison",
+          "state": "REQUIRES_TEST"
+        },
+        {
+          "dimension": "PINOUT",
+          "evidence_or_test": "Pin map and control polarity",
+          "state": "UNKNOWN"
+        },
+        {
+          "dimension": "ELECTRICAL",
+          "evidence_or_test": "Line/load regulation and transient response",
+          "state": "REQUIRES_TEST"
+        },
+        {
+          "dimension": "THERMAL",
+          "evidence_or_test": "Derating in customer airflow and board stack",
+          "state": "REQUIRES_TEST"
+        },
+        {
+          "dimension": "EMI_EMC",
+          "evidence_or_test": "Conducted and radiated emissions",
+          "state": "REQUIRES_TEST"
+        },
+        {
+          "dimension": "SAFETY",
+          "evidence_or_test": "Non-isolated module; system-level safety scope remains separate",
+          "state": "NOT_APPLICABLE"
+        }
+      ],
+      "qualification_state": "LAB_VERIFICATION_REQUIRED",
+      "requirements": [
+        "No-load and full-load",
+        "Load transient",
+        "Line transient",
+        "Startup and shutdown",
+        "Ripple and noise",
+        "Efficiency",
+        "Thermal derating",
+        "Short circuit",
+        "EMI/EMC",
+        "Temperature sweep"
+      ]
+    }
+  },
+  "core": {
+    "artifact_refs": [
+      "MURATA_MYMGM5R012_DS:c309d3d7cd0370c4cc1eb15e909666e1ac914b2cd1027bed9963f8af9777b824",
+      "MURATA_POWER_EOL_INDEX:128b5ea6e8cbd92d656534a635145eebcb7e26166d8894e6bd629d2c7b5e495b"
+    ],
+    "core_version": "STRUCTEVIDENCE_EVIDENCE_CORE_v0.1",
+    "correction_status": "NO_CORRECTION_RECORDED",
+    "created_at": "2026-09-16T00:00:00Z",
+    "domain": "TECHNICAL_RISK",
+    "effective_at": "2025-07-07T00:00:00Z",
+    "input_hash": "23d663af772a85075869c393419c84d3904f4d72508dd5ec94c68f5160dc0650",
+    "known_at": "2026-09-16T00:00:00Z",
+    "policy_version": "RDL_FRESHNESS_v0.1a+CML_PROFILE_v0.1",
+    "protocol": "CML",
+    "record_hash": "58c8136e7888aaf662975c8c0779696ef41784d9d98fc33c1e41bdb52b10ac18",
+    "record_id": "SE.CML.RECORD.MURATA.MYMGM5R012ELA5RND.v0.1",
+    "source_refs": [
+      "MURATA_MYMGM5R012_DS",
+      "MURATA_POWER_EOL_INDEX"
+    ],
+    "subject_class": "TECHNICAL_ITEM",
+    "subject_id": "SE.TECH.MURATA.MYMGM5R012ELA5RND",
+    "supersession_status": "CURRENT",
+    "updated_at": "2026-09-16T00:00:00Z",
+    "verification_status": "REVIEWED_WITH_LIMITATIONS"
+  }
+}

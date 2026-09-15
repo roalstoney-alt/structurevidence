@@ -1,0 +1,40 @@
+{
+  "build_commit": "0abab7f1246f70445d018478542a6dc0f7b5ab05",
+  "config_hashes": {
+    "cml_taxonomy.json": "13ef388c9b3d249de5cc6114ee10ec5fa2c8986a67e078ce316e9150bcedcc92",
+    "evidence_families.json": "3f511d93a4a643bf2a22f984cec385df940554cba09e2f36498e7bf35bfb54c1",
+    "freshness_profiles.json": "021255ea8b8c55772ec2985291e87a97a10a9642886429de5f0607d6f4b25c91",
+    "product_contexts.json": "6a600c7d30c27fa103e7f07ee5b5636ef030d3a0bdcb6f2a3268e062b3758429",
+    "public_private_boundary.json": "28d5e4ccf840f29deff035b2c57bde5b1d181f08e09228a227a532f67d6c5bb6"
+  },
+  "evaluation_as_of": "2026-09-16T00:00:00Z",
+  "evidence_core_version": "STRUCTEVIDENCE_EVIDENCE_CORE_v0.1",
+  "freshness_policy_version": "RDL_FRESHNESS_v0.1a+CML_FRESHNESS_PROFILE_v0.1",
+  "gdr_version": "GDR_SE_v0.1-R1.1_DOMAIN_ADAPTER_PENDING",
+  "module_version": "STRUCTEVIDENCE_TECHNICAL_RISK_v0.1",
+  "pilot_record_hashes": {
+    "SE.CML.RECORD.AMPHENOL-RF.095-725-134-006.v0.1": "7f269926c670caa06d9059eecbc99eb419c6edfbf9b8b9e9506b90251a5998c0",
+    "SE.CML.RECORD.AMPHENOL.10081811-101-07LF.v0.1": "b00fb777615eba86a6ba8b48d8aaa456a9265754db83d064ed70be5f0b46a56e",
+    "SE.CML.RECORD.MURATA.MYMGM5R012ELA5RND.v0.1": "58c8136e7888aaf662975c8c0779696ef41784d9d98fc33c1e41bdb52b10ac18",
+    "SE.CML.RECORD.NXP.RADIO-POWER-2026.v0.1": "08bf397d4519968f87955badf8cb0cfe39224022920e970721732592e423ce37"
+  },
+  "pilot_record_ids": [
+    "SE.CML.RECORD.AMPHENOL.10081811-101-07LF.v0.1",
+    "SE.CML.RECORD.NXP.RADIO-POWER-2026.v0.1",
+    "SE.CML.RECORD.MURATA.MYMGM5R012ELA5RND.v0.1",
+    "SE.CML.RECORD.AMPHENOL-RF.095-725-134-006.v0.1"
+  ],
+  "protocol_version": "CML_v0.1",
+  "public_release_state": "METHOD_PILOT_ALLOW_WITH_LIMITATIONS",
+  "schema_hashes": {
+    "CML_SNIPE_REPORT_v0.1.schema.json": "2be626008cc4b027a4f3f6ba7fdd0c338795967e2297e8ad996b512d1a30491d",
+    "cml_candidate.schema.json": "eea668d5954edfe4b2ed3aa0f45679865fbb1ca6bbf1190e8a29a5d6cc651248",
+    "cml_compatibility.schema.json": "c17b5563c5c9409eb7456e34e352fceceeeb851c1aa87239fe6ced7009e611d7",
+    "cml_event.schema.json": "904ca5835744ac6282339a56947c5dad685ff6fa933d2be5da7b00ae21309bf1",
+    "cml_public_record.schema.json": "e4737632a02145da337774e202a0d1d52413db62ffb2b5cd7329039d2b669d87",
+    "cml_release_manifest.schema.json": "b5de485840fbd778cf8dc5fbbf7255061e78c123032cbfb14840ddcfe6215935",
+    "cml_test_requirement.schema.json": "d131c879c11af94b5adad293a593ad352a6fea4fd17eab2b3ff30e383639773f",
+    "evidence_core_record.schema.json": "14d7bedce0ba48ff01955aa85a58d217263366e1956a27478f466cac2c6ddb8c",
+    "technical_item.schema.json": "5bbb00d248447b305695086049e40a51517f59de5385ee41e9e826b879eb91a8"
+  }
+}

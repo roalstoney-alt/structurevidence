@@ -1,0 +1,76 @@
+{
+  "evaluation_as_of": "2026-09-16T00:00:00Z",
+  "module_version": "STRUCTEVIDENCE_TECHNICAL_RISK_v0.1",
+  "records": [
+    {
+      "href": "../record/amphenol-10081811-101-07lf/",
+      "lifecycle_state": "EOL_ANNOUNCED",
+      "manufacturer": "Amphenol Communications Solutions",
+      "manufacturer_part_number": "10081811-101-07LF",
+      "product_family": "HPL-578 BERGSTIK",
+      "qualification_state": "LAB_VERIFICATION_REQUIRED",
+      "record_hash": "b00fb777615eba86a6ba8b48d8aaa456a9265754db83d064ed70be5f0b46a56e",
+      "record_id": "SE.CML.RECORD.AMPHENOL.10081811-101-07LF.v0.1",
+      "search_aliases": [
+        "10111608-101-07LF",
+        "10111608-102-07LF",
+        "77316-162LF",
+        "PCN-26-027"
+      ],
+      "slug": "amphenol-10081811-101-07lf",
+      "technical_item_type": "CONNECTOR"
+    },
+    {
+      "href": "../record/nxp-radio-power-2026/",
+      "lifecycle_state": "LAST_TIME_BUY_OPEN",
+      "manufacturer": "NXP Semiconductors",
+      "manufacturer_part_number": "RADIO-POWER-2026-FAMILY",
+      "product_family": "Radio Power discontinuance / selected representatives",
+      "qualification_state": "LAB_VERIFICATION_REQUIRED",
+      "record_hash": "08bf397d4519968f87955badf8cb0cfe39224022920e970721732592e423ce37",
+      "record_id": "SE.CML.RECORD.NXP.RADIO-POWER-2026.v0.1",
+      "search_aliases": [
+        "MRF101AN",
+        "MW6S010GNR1",
+        "MMRF1009HR5",
+        "202603037DN"
+      ],
+      "slug": "nxp-radio-power-2026",
+      "technical_item_type": "RF_POWER_SEMICONDUCTOR"
+    },
+    {
+      "href": "../record/murata-mymgm5r012ela5rnd/",
+      "lifecycle_state": "NRND",
+      "manufacturer": "Murata Manufacturing",
+      "manufacturer_part_number": "MYMGM5R012ELA5RND",
+      "product_family": "MonoBK 12 A DC-DC converter series",
+      "qualification_state": "LAB_VERIFICATION_REQUIRED",
+      "record_hash": "58c8136e7888aaf662975c8c0779696ef41784d9d98fc33c1e41bdb52b10ac18",
+      "record_id": "SE.CML.RECORD.MURATA.MYMGM5R012ELA5RND.v0.1",
+      "search_aliases": [
+        "MYMGM5R012ELA5RN",
+        "MonoBK 12A"
+      ],
+      "slug": "murata-mymgm5r012ela5rnd",
+      "technical_item_type": "POWER_MODULE"
+    },
+    {
+      "href": "../record/amphenol-rf-095-725-134-006/",
+      "lifecycle_state": "ACTIVE",
+      "manufacturer": "Amphenol RF",
+      "manufacturer_part_number": "095-725-134-006",
+      "product_family": "2.92 mm plug to SMPM plug cable assemblies",
+      "qualification_state": "LAB_VERIFICATION_REQUIRED",
+      "record_hash": "7f269926c670caa06d9059eecbc99eb419c6edfbf9b8b9e9506b90251a5998c0",
+      "record_id": "SE.CML.RECORD.AMPHENOL-RF.095-725-134-006.v0.1",
+      "search_aliases": [
+        "095-725-134-XXX",
+        "2.92 mm",
+        "SMPM",
+        "40 GHz"
+      ],
+      "slug": "amphenol-rf-095-725-134-006",
+      "technical_item_type": "RF_CABLE_ASSEMBLY"
+    }
+  ]
+}

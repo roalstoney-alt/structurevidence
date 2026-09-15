@@ -1,0 +1,85 @@
+{
+  "$id": "https://structevidence.com/schema/evidence-core/v0.1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "artifact_refs": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "correction_status": {
+      "type": "string"
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "domain": {
+      "type": "string"
+    },
+    "effective_at": {
+      "type": "string"
+    },
+    "input_hash": {
+      "type": "string"
+    },
+    "known_at": {
+      "type": "string"
+    },
+    "policy_version": {
+      "type": "string"
+    },
+    "protocol": {
+      "type": "string"
+    },
+    "record_hash": {
+      "type": "string"
+    },
+    "record_id": {
+      "type": "string"
+    },
+    "source_refs": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "subject_class": {
+      "type": "string"
+    },
+    "subject_id": {
+      "type": "string"
+    },
+    "supersession_status": {
+      "type": "string"
+    },
+    "updated_at": {
+      "type": "string"
+    },
+    "verification_status": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "record_id",
+    "subject_id",
+    "subject_class",
+    "domain",
+    "protocol",
+    "source_refs",
+    "artifact_refs",
+    "effective_at",
+    "known_at",
+    "created_at",
+    "updated_at",
+    "verification_status",
+    "correction_status",
+    "supersession_status",
+    "policy_version",
+    "input_hash",
+    "record_hash"
+  ],
+  "title": "StructEvidence Evidence Core Record",
+  "type": "object"
+}

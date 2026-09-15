@@ -1,0 +1,20 @@
+{
+  "append_only": true,
+  "events": [
+    {
+      "created_at": "2026-09-16T00:00:00Z",
+      "detail": "PCN 26 027 lists the part in an end-of-life action with last-time buy 2026-09-15 and last shipment 2027-09-15.",
+      "effective_at": "2027-03-15T00:00:00Z",
+      "event_domain": "SUBJECT_EVENT",
+      "event_id": "SE.CML.EVENT.AMPHENOL.PCN-26-027.10081811-101-07LF",
+      "event_type": "EOL_DECLARED",
+      "known_at": "2026-03-16T00:00:00Z",
+      "source_refs": [
+        "AMPHENOL_PCN_26027"
+      ],
+      "technical_item_id": "SE.TECH.AMPHENOL.10081811-101-07LF",
+      "verification_status": "PRIMARY_SOURCE_REVIEWED"
+    }
+  ],
+  "ledger_id": "SE.CML.RECORD.AMPHENOL.10081811-101-07LF.v0.1.events"
+}

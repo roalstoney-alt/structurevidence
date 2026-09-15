@@ -1,0 +1,18 @@
+{
+  "created_at": "2026-09-16T00:00:00Z",
+  "datasheet_refs": [
+    "AMPHENOL_PCN_26027"
+  ],
+  "description": "Right-angle single-row BERGSTIK board header; exact drawing attributes remain only partially established in reviewed primary evidence.",
+  "manufacturer": "Amphenol Communications Solutions",
+  "manufacturer_normalized": "AMPHENOL_COMMUNICATIONS_SOLUTIONS",
+  "manufacturer_part_number": "10081811-101-07LF",
+  "manufacturer_product_url": null,
+  "nominal_application_class": "Board interconnect",
+  "package_or_interface": "2.54 mm board-header class; footprint verification required",
+  "part_number_normalized": "10081811-101-07LF",
+  "product_family": "HPL-578 BERGSTIK",
+  "record_version": "CML_v0.1",
+  "technical_item_id": "SE.TECH.AMPHENOL.10081811-101-07LF",
+  "technical_item_type": "CONNECTOR"
+}

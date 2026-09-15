@@ -1,0 +1,17 @@
+{
+  "registry_id": "SE.CML.RECORD.AMPHENOL.10081811-101-07LF.v0.1.sources",
+  "retrieved_at": "2026-09-16T00:00:00Z",
+  "source_hierarchy_rule": "Manufacturer evidence controls lifecycle; distributor evidence may supplement but never override.",
+  "sources": [
+    {
+      "publisher": "Amphenol Communications Solutions",
+      "retrieved_at": "2026-09-16T00:00:00Z",
+      "snapshot_custody": "PRIVATE_INTERNAL",
+      "snapshot_sha256": "1de0af0411ad1c5b4098877cef46b3c4d99a9168f6bf778ac7a7d602c6d4ac87",
+      "source_id": "AMPHENOL_PCN_26027",
+      "source_type": "MANUFACTURER_PCN_MIRROR",
+      "url": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8899/PCN-26027.pdf",
+      "verification_status": "SNAPSHOT_HASHED"
+    }
+  ]
+}
