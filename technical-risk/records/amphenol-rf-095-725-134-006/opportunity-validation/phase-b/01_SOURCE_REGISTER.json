@@ -1,0 +1,348 @@
+{
+  "assessment_version": "CML_OV_v0.1_PHASE_B",
+  "independent_evidence_families": [
+    "AMPHENOL_RF::PRODUCT_CATALOG",
+    "AMPHENOL_RF::PUBLIC_CONTACT",
+    "FARNELL::PUBLIC_MARKET_PRICE_SIGNAL",
+    "HASCO::PRODUCT_CATALOG",
+    "KEYSIGHT::AUTOMATION_CAPABILITY",
+    "KEYSIGHT::PUBLIC_CONTACT",
+    "KEYSIGHT::TEST_METHOD"
+  ],
+  "search_log": [
+    {
+      "outcome": "Found OEM/distributor catalog entries, not a current end-user BOM or service application.",
+      "purpose": "USAGE",
+      "query": "\"095-725-134-006\" application manual BOM",
+      "searched_at": "2026-09-16T02:26:44Z"
+    },
+    {
+      "outcome": "Opened exact Active product page; related document dates are 2026.",
+      "purpose": "USAGE",
+      "query": "site.amphenolrf.com \"095-725-134-006\"",
+      "searched_at": "2026-09-16T02:26:44Z"
+    },
+    {
+      "outcome": "Found regional cached listings. Direct UK Farnell/DigiKey opens failed; retain only one explicitly stale price signal.",
+      "purpose": "INEFFICIENCY",
+      "query": "\"095-725-134-006\" lead time price",
+      "searched_at": "2026-09-16T02:26:44Z"
+    },
+    {
+      "outcome": "Opened instrument-system verification and handler automation primary documentation.",
+      "purpose": "METHOD",
+      "query": "site.keysight.com cable assembly testing VNA automation connector repeatability manufacturing",
+      "searched_at": "2026-09-16T02:26:44Z"
+    },
+    {
+      "outcome": "Opened OEM family offering; existing standard/custom lengths and production tests.",
+      "purpose": "COUNTER_EVIDENCE",
+      "query": "site.amphenolrf.com 2.92 mm cable assemblies custom lengths 40 GHz tested",
+      "searched_at": "2026-09-16T02:26:44Z"
+    },
+    {
+      "outcome": "No exact installed application or repair case identified.",
+      "purpose": "USAGE",
+      "query": "\"095-725-134-006\" repair service test equipment -site:farnell.com -site:digikey.com",
+      "searched_at": "2026-09-16T02:26:44Z"
+    },
+    {
+      "outcome": "No current exact-part customer application established.",
+      "purpose": "USAGE",
+      "query": "\"095-725-134-006\" manual service application -site:amphenolrf.com -site:digikey* -site:farnell*",
+      "searched_at": "2026-09-16T02:26:44Z"
+    },
+    {
+      "outcome": "Opened official channel; no message.",
+      "purpose": "CONTACT",
+      "query": "site.amphenolrf.com \"Contact Us\" technical support",
+      "searched_at": "2026-09-16T02:26:44Z"
+    },
+    {
+      "outcome": "Opened official channel; no message.",
+      "purpose": "CONTACT",
+      "query": "site.keysight.com \"Contact\" \"Technical Support\"",
+      "searched_at": "2026-09-16T02:26:44Z"
+    },
+    {
+      "outcome": "No named customer custom-length adoption found.",
+      "purpose": "SOLUTION",
+      "query": "site.amphenolrf.com \"095-725-134\" \"custom\"",
+      "searched_at": "2026-09-16T02:26:44Z"
+    },
+    {
+      "outcome": "No current direct use established.",
+      "purpose": "USAGE",
+      "query": "\"095-725-134-006\" \"BOM\" OR \"manual\" OR \"repair\" OR \"tender\"",
+      "searched_at": "2026-09-16T02:26:44Z"
+    },
+    {
+      "outcome": "Results include USB multiport claims; excluded numeric benefits because topology and frequency/application scope differ. Generic overview open redirected to home.",
+      "purpose": "COUNTER_EVIDENCE",
+      "query": "site.keysight.com automated cable testing manual connections time VNA 40 GHz",
+      "searched_at": "2026-09-16T02:26:44Z"
+    },
+    {
+      "outcome": "Opened another vendor standard/custom 40 GHz cable offering; not same assembly or qualified alternate.",
+      "purpose": "COUNTER_EVIDENCE",
+      "query": "OPEN https://www.hasco-inc.com/littlebend-2.92mm",
+      "searched_at": "2026-09-16T02:26:44Z"
+    },
+    {
+      "outcome": "Drawing retrieval failed with cache miss; no exact acceptance curve established.",
+      "purpose": "SOLUTION",
+      "query": "OPEN exact OEM product Customer Drawing link https://www.amphenolrf.com/en-us/assets/file/4072085639/",
+      "searched_at": "2026-09-16T02:26:44Z"
+    }
+  ],
+  "sources": [
+    {
+      "access_status": "OPENED_CONTENT",
+      "artifact_hash": null,
+      "artifact_path": null,
+      "effective_at": null,
+      "evidence_family": "PRODUCT_CATALOG",
+      "host": "www.amphenolrf.com",
+      "independence_group": "AMPHENOL_RF",
+      "issuer": "Amphenol RF",
+      "known_at": "2026-09-16T02:26:44Z",
+      "limitations": [
+        "Catalog presence is not proof of a named customer application. Drawing link fetch failed; no exact acceptance curve reviewed."
+      ],
+      "locator": "Part status, specifications and related-document dates",
+      "observation_summary": "Exact assembly remains Active in the manufacturer catalog.",
+      "publication_date": null,
+      "retrieved_at": "2026-09-16T02:26:44Z",
+      "source_id": "O3-S01",
+      "source_type": "MANUFACTURER_PRODUCT_PAGE",
+      "supports_claims": [
+        "O3-C01",
+        "O3-C09"
+      ],
+      "tier": 1,
+      "title": "095-725-134-006 product page",
+      "underlying_artifact": "O3-S01",
+      "url": "https://www.amphenolrf.com/en-us/part/095-725-134-006/10205/"
+    },
+    {
+      "access_status": "OPENED_CONTENT",
+      "artifact_hash": null,
+      "artifact_path": null,
+      "effective_at": null,
+      "evidence_family": "PRODUCT_CATALOG",
+      "host": "www.amphenolrf.com",
+      "independence_group": "AMPHENOL_RF",
+      "issuer": "Amphenol RF",
+      "known_at": "2026-09-16T02:26:44Z",
+      "limitations": [
+        "Range-level capability; no exact-unit test data or actual customer efficiency verified."
+      ],
+      "locator": "Overview and Key Technical Details",
+      "observation_summary": "Range includes standard/custom lengths and advertised sweep testing, serialization, hi-pot and continuity checks.",
+      "publication_date": null,
+      "retrieved_at": "2026-09-16T02:26:44Z",
+      "source_id": "O3-S02",
+      "source_type": "MANUFACTURER_PRODUCT_PAGE",
+      "supports_claims": [
+        "O3-C02",
+        "O3-C03",
+        "O3-C07"
+      ],
+      "tier": 1,
+      "title": "2.92 mm cable assemblies range",
+      "underlying_artifact": "O3-S02",
+      "url": "https://www.amphenolrf.com/en-us/products/rf-cable-assemblies/2-92-mm-cable-assemblies/"
+    },
+    {
+      "access_status": "OPENED_CONTENT",
+      "artifact_hash": null,
+      "artifact_path": null,
+      "effective_at": null,
+      "evidence_family": "PRODUCT_CATALOG",
+      "host": "www.amphenolrf.com",
+      "independence_group": "AMPHENOL_RF",
+      "issuer": "Amphenol RF",
+      "known_at": "2026-09-16T02:26:44Z",
+      "limitations": [
+        "Typical specifications may vary by exact part. Interface frequency rating is not complete-assembly acceptance evidence."
+      ],
+      "locator": "Pages 1-2",
+      "observation_summary": "095-725-134-XXX is a preconfigured 2.92 mm-to-SMPM family with multiple standard lengths.",
+      "publication_date": null,
+      "retrieved_at": "2026-09-16T02:26:44Z",
+      "source_id": "O3-S03",
+      "source_type": "MANUFACTURER_DATASHEET",
+      "supports_claims": [
+        "O3-C02",
+        "O3-C03",
+        "O3-C10"
+      ],
+      "tier": 1,
+      "title": "2.92 mm plug cable assemblies cutsheet",
+      "underlying_artifact": "O3-S03",
+      "url": "https://www.amphenolrf.com/library/download/link/link_id/600711/"
+    },
+    {
+      "access_status": "OPENED_CONTENT",
+      "artifact_hash": null,
+      "artifact_path": null,
+      "effective_at": null,
+      "evidence_family": "TEST_METHOD",
+      "host": "helpfiles.keysight.com",
+      "independence_group": "KEYSIGHT",
+      "issuer": "Keysight Technologies",
+      "known_at": "2026-09-16T02:26:44Z",
+      "limitations": [
+        "Undated method documentation; no time study or exact target-user test process."
+      ],
+      "locator": "Introduction and Cable Substitution / Cable Flex Factor sections",
+      "observation_summary": "Cable stability and connector repeatability affect system uncertainty; system verification is not individual component qualification.",
+      "publication_date": null,
+      "retrieved_at": "2026-09-16T02:26:44Z",
+      "source_id": "O3-S04",
+      "source_type": "MANUFACTURER_APPLICATION_NOTE",
+      "supports_claims": [
+        "O3-C05"
+      ],
+      "tier": 1,
+      "title": "Keysight M9485A System Verification",
+      "underlying_artifact": "O3-S04",
+      "url": "https://helpfiles.keysight.com/csg/m9485a/support/system_verification.htm"
+    },
+    {
+      "access_status": "OPENED_CONTENT",
+      "artifact_hash": null,
+      "artifact_path": null,
+      "effective_at": null,
+      "evidence_family": "AUTOMATION_CAPABILITY",
+      "host": "helpfiles.keysight.com",
+      "independence_group": "KEYSIGHT",
+      "issuer": "Keysight Technologies",
+      "known_at": "2026-09-16T02:26:44Z",
+      "limitations": [
+        "Capability only; no measured improvement or fixture suitability for this exact assembly."
+      ],
+      "locator": "Overview and VNA and Part Handler Preparation",
+      "observation_summary": "SCPI-controlled triggering and pass/fail handling already support automated test workflows.",
+      "publication_date": null,
+      "retrieved_at": "2026-09-16T02:26:44Z",
+      "source_id": "O3-S05",
+      "source_type": "TOOL_DOCUMENTATION",
+      "supports_claims": [
+        "O3-C04",
+        "O3-C08"
+      ],
+      "tier": 1,
+      "title": "Keysight Material Handler I/O Connector",
+      "underlying_artifact": "O3-S05",
+      "url": "https://helpfiles.keysight.com/csg/pxivna/Programming/HandlerIO_Connector.htm"
+    },
+    {
+      "access_status": "OPENED_CONTENT",
+      "artifact_hash": null,
+      "artifact_path": null,
+      "effective_at": null,
+      "evidence_family": "PRODUCT_CATALOG",
+      "host": "www.hasco-inc.com",
+      "independence_group": "HASCO",
+      "issuer": "HASCO Components",
+      "known_at": "2026-09-16T02:26:44Z",
+      "limitations": [
+        "Different connector configuration/cable; not an approved alternate for 095-725-134-006. Page publication date unknown."
+      ],
+      "locator": "Littlebend description and test table",
+      "observation_summary": "Another supplier advertises standard/custom cable lengths and production RF/electrical testing.",
+      "publication_date": null,
+      "retrieved_at": "2026-09-16T02:26:44Z",
+      "source_id": "O3-S06",
+      "source_type": "MANUFACTURER_PRODUCT_PAGE",
+      "supports_claims": [
+        "O3-C07"
+      ],
+      "tier": 1,
+      "title": "HASCO Littlebend 2.92 mm 40 GHz cables",
+      "underlying_artifact": "O3-S06",
+      "url": "https://www.hasco-inc.com/littlebend-2.92mm"
+    },
+    {
+      "access_status": "SEARCH_EXCERPT_ONLY",
+      "artifact_hash": null,
+      "artifact_path": null,
+      "effective_at": null,
+      "evidence_family": "PUBLIC_MARKET_PRICE_SIGNAL",
+      "host": "uk.farnell.com",
+      "independence_group": "FARNELL",
+      "issuer": "Farnell",
+      "known_at": "2026-09-16T02:26:44Z",
+      "limitations": [
+        "SEARCH_EXCERPT_ONLY; engine described crawl seven months earlier. Not live inventory, a quote, actual paid price or actual customer lead time.",
+        "Distributor connector-B field says jack while OEM specifies plug; OEM controls identity."
+      ],
+      "locator": "Search excerpt; direct open failed",
+      "observation_summary": "Search-indexed listing displayed GBP 90.32 ex VAT at quantity one, minimum one and 17-week standard lead time.",
+      "publication_date": null,
+      "retrieved_at": "2026-09-16T02:26:44Z",
+      "source_id": "O3-S07",
+      "source_type": "DISTRIBUTOR_LISTING",
+      "supports_claims": [
+        "O3-C06",
+        "O3-C09"
+      ],
+      "tier": 3,
+      "title": "Farnell UK 095-725-134-006 indexed listing",
+      "underlying_artifact": "O3-S07",
+      "url": "https://uk.farnell.com/amphenol-rf/095-725-134-006/cable-assy-2-92mm-plug-smpm-plug/dp/4668394"
+    },
+    {
+      "access_status": "OPENED_CONTENT",
+      "artifact_hash": null,
+      "artifact_path": null,
+      "effective_at": null,
+      "evidence_family": "PUBLIC_CONTACT",
+      "host": "www.amphenolrf.com",
+      "independence_group": "AMPHENOL_RF",
+      "issuer": "Amphenol RF",
+      "known_at": "2026-09-16T02:26:44Z",
+      "limitations": [
+        "Future public forwarding path only; no contact submitted."
+      ],
+      "locator": "Reason for Outreach options",
+      "observation_summary": "Public Technical Support / Quality enquiry categories.",
+      "publication_date": null,
+      "retrieved_at": "2026-09-16T02:26:44Z",
+      "source_id": "O3-S08",
+      "source_type": "PUBLIC_CONTACT_PAGE",
+      "supports_claims": [],
+      "tier": 1,
+      "title": "Amphenol RF contact page",
+      "underlying_artifact": "O3-S08",
+      "url": "https://www.amphenolrf.com/en-us/contact-us/"
+    },
+    {
+      "access_status": "OPENED_CONTENT",
+      "artifact_hash": null,
+      "artifact_path": null,
+      "effective_at": null,
+      "evidence_family": "PUBLIC_CONTACT",
+      "host": "www.keysight.com",
+      "independence_group": "KEYSIGHT",
+      "issuer": "Keysight Technologies",
+      "known_at": "2026-09-16T02:26:44Z",
+      "limitations": [
+        "Generic channel, not a named customer or evidence of willingness to buy."
+      ],
+      "locator": "Help with owned product or solution",
+      "observation_summary": "Public technical support channel.",
+      "publication_date": null,
+      "retrieved_at": "2026-09-16T02:26:44Z",
+      "source_id": "O3-S09",
+      "source_type": "PUBLIC_CONTACT_PAGE",
+      "supports_claims": [],
+      "tier": 1,
+      "title": "Keysight contact page",
+      "underlying_artifact": "O3-S09",
+      "url": "https://www.keysight.com/us/en/contact.html"
+    }
+  ],
+  "target": "OV-03"
+}

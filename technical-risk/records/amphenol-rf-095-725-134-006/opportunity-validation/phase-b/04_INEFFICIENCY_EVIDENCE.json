@@ -1,0 +1,177 @@
+{
+  "claims": [
+    {
+      "claim_id": "O3-C05",
+      "claim_type": "SOURCE_FACT",
+      "current_usage_asserted": false,
+      "customer_pain": "UNKNOWN",
+      "evidence_basis": "TEST_METHOD",
+      "limitations": [
+        "Does not establish actual customer pain, adoption, efficiency or qualification."
+      ],
+      "scope": "GENERAL_METHOD",
+      "source_refs": [
+        "O3-S04"
+      ],
+      "statement": "Measurement cable behavior and connector repeatability require control; this is an uncertainty requirement, not measured inefficient work.",
+      "topic": "TEST_MEASUREMENT_REQUIREMENT"
+    },
+    {
+      "claim_id": "O3-C06",
+      "claim_type": "INDIRECT_PUBLIC_SIGNAL",
+      "current_usage_asserted": false,
+      "customer_pain": "UNKNOWN",
+      "evidence_basis": "MARKET_LISTING",
+      "limitations": [
+        "Stale indexed signal only. No price comparison, customer actual cost or lead-time impact."
+      ],
+      "scope": "EXACT_PART",
+      "source_refs": [
+        "O3-S07"
+      ],
+      "statement": "An indexed distributor listing shows price/lead-time signals, with minimum order one; direct retrieval failed and customer burden cannot be inferred.",
+      "topic": "PUBLIC_MARKET_PRICE_SIGNAL"
+    }
+  ],
+  "dimensions": [
+    {
+      "claim_refs": [
+        "O3-C06"
+      ],
+      "dimension": "UNIT_COST",
+      "materiality": "UNKNOWN",
+      "state": "PUBLIC_SIGNAL"
+    },
+    {
+      "claim_refs": [],
+      "dimension": "TOTAL_BOM_COST",
+      "materiality": "UNKNOWN",
+      "state": "UNKNOWN"
+    },
+    {
+      "claim_refs": [],
+      "dimension": "ENGINEERING_HOURS",
+      "materiality": "UNKNOWN",
+      "state": "UNKNOWN"
+    },
+    {
+      "claim_refs": [],
+      "dimension": "REDESIGN_COST",
+      "materiality": "UNKNOWN",
+      "state": "UNKNOWN"
+    },
+    {
+      "claim_refs": [],
+      "dimension": "QUALIFICATION_COST",
+      "materiality": "UNKNOWN",
+      "state": "UNKNOWN"
+    },
+    {
+      "claim_refs": [],
+      "dimension": "TEST_COST",
+      "materiality": "UNKNOWN",
+      "state": "UNKNOWN"
+    },
+    {
+      "claim_refs": [],
+      "dimension": "TOOLING_COST",
+      "materiality": "UNKNOWN",
+      "state": "UNKNOWN"
+    },
+    {
+      "claim_refs": [],
+      "dimension": "QUALIFICATION_TIME",
+      "materiality": "UNKNOWN",
+      "state": "UNKNOWN"
+    },
+    {
+      "claim_refs": [],
+      "dimension": "DESIGN_ITERATION_TIME",
+      "materiality": "UNKNOWN",
+      "state": "UNKNOWN"
+    },
+    {
+      "claim_refs": [
+        "O3-C06"
+      ],
+      "dimension": "LEAD_TIME",
+      "materiality": "UNKNOWN",
+      "state": "PUBLIC_SIGNAL"
+    },
+    {
+      "claim_refs": [
+        "O3-C06"
+      ],
+      "dimension": "MOQ",
+      "materiality": "UNKNOWN",
+      "state": "PUBLIC_SIGNAL"
+    },
+    {
+      "claim_refs": [],
+      "dimension": "INVENTORY_REQUIREMENT",
+      "materiality": "UNKNOWN",
+      "state": "UNKNOWN"
+    },
+    {
+      "claim_refs": [],
+      "dimension": "SUPPLIER_COUNT",
+      "materiality": "UNKNOWN",
+      "state": "UNKNOWN"
+    },
+    {
+      "claim_refs": [],
+      "dimension": "SINGLE_SOURCE_DEPENDENCY",
+      "materiality": "UNKNOWN",
+      "state": "UNKNOWN"
+    },
+    {
+      "claim_refs": [],
+      "dimension": "MANUFACTURABILITY",
+      "materiality": "UNKNOWN",
+      "state": "UNKNOWN"
+    },
+    {
+      "claim_refs": [],
+      "dimension": "ASSEMBLY_COMPLEXITY",
+      "materiality": "UNKNOWN",
+      "state": "UNKNOWN"
+    },
+    {
+      "claim_refs": [],
+      "dimension": "YIELD",
+      "materiality": "UNKNOWN",
+      "state": "UNKNOWN"
+    },
+    {
+      "claim_refs": [],
+      "dimension": "RELIABILITY",
+      "materiality": "UNKNOWN",
+      "state": "UNKNOWN"
+    },
+    {
+      "claim_refs": [],
+      "dimension": "CERTIFICATION_BURDEN",
+      "materiality": "UNKNOWN",
+      "state": "UNKNOWN"
+    },
+    {
+      "claim_refs": [],
+      "dimension": "SERVICEABILITY",
+      "materiality": "UNKNOWN",
+      "state": "UNKNOWN"
+    },
+    {
+      "claim_refs": [],
+      "dimension": "REPAIRABILITY",
+      "materiality": "UNKNOWN",
+      "state": "UNKNOWN"
+    },
+    {
+      "claim_refs": [],
+      "dimension": "FUTURE_LIFECYCLE_RISK",
+      "materiality": "UNKNOWN",
+      "state": "UNKNOWN"
+    }
+  ],
+  "overall_score": null
+}

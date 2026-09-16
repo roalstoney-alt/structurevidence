@@ -1,0 +1,158 @@
+{
+  "claims": [
+    {
+      "claim_id": "O1-C05",
+      "claim_type": "INDIRECT_PUBLIC_SIGNAL",
+      "current_usage_asserted": false,
+      "customer_pain": "UNKNOWN",
+      "evidence_basis": "LIFECYCLE_NOTICE",
+      "limitations": [
+        "Does not establish actual customer pain, adoption, efficiency or qualification."
+      ],
+      "scope": "EXACT_PART",
+      "source_refs": [
+        "O1-S01",
+        "O1-S03"
+      ],
+      "statement": "Two notices place the exact MPN under EOL actions; customer operational impact and migration burden remain unknown.",
+      "topic": "FUTURE_LIFECYCLE_RISK"
+    }
+  ],
+  "dimensions": [
+    {
+      "claim_refs": [],
+      "dimension": "UNIT_COST",
+      "materiality": "UNKNOWN",
+      "state": "UNKNOWN"
+    },
+    {
+      "claim_refs": [],
+      "dimension": "TOTAL_BOM_COST",
+      "materiality": "UNKNOWN",
+      "state": "UNKNOWN"
+    },
+    {
+      "claim_refs": [],
+      "dimension": "ENGINEERING_HOURS",
+      "materiality": "UNKNOWN",
+      "state": "UNKNOWN"
+    },
+    {
+      "claim_refs": [],
+      "dimension": "REDESIGN_COST",
+      "materiality": "UNKNOWN",
+      "state": "UNKNOWN"
+    },
+    {
+      "claim_refs": [],
+      "dimension": "QUALIFICATION_COST",
+      "materiality": "UNKNOWN",
+      "state": "UNKNOWN"
+    },
+    {
+      "claim_refs": [],
+      "dimension": "TEST_COST",
+      "materiality": "UNKNOWN",
+      "state": "UNKNOWN"
+    },
+    {
+      "claim_refs": [],
+      "dimension": "TOOLING_COST",
+      "materiality": "UNKNOWN",
+      "state": "UNKNOWN"
+    },
+    {
+      "claim_refs": [],
+      "dimension": "QUALIFICATION_TIME",
+      "materiality": "UNKNOWN",
+      "state": "UNKNOWN"
+    },
+    {
+      "claim_refs": [],
+      "dimension": "DESIGN_ITERATION_TIME",
+      "materiality": "UNKNOWN",
+      "state": "UNKNOWN"
+    },
+    {
+      "claim_refs": [],
+      "dimension": "LEAD_TIME",
+      "materiality": "UNKNOWN",
+      "state": "UNKNOWN"
+    },
+    {
+      "claim_refs": [],
+      "dimension": "MOQ",
+      "materiality": "UNKNOWN",
+      "state": "UNKNOWN"
+    },
+    {
+      "claim_refs": [],
+      "dimension": "INVENTORY_REQUIREMENT",
+      "materiality": "UNKNOWN",
+      "state": "UNKNOWN"
+    },
+    {
+      "claim_refs": [],
+      "dimension": "SUPPLIER_COUNT",
+      "materiality": "UNKNOWN",
+      "state": "UNKNOWN"
+    },
+    {
+      "claim_refs": [],
+      "dimension": "SINGLE_SOURCE_DEPENDENCY",
+      "materiality": "UNKNOWN",
+      "state": "UNKNOWN"
+    },
+    {
+      "claim_refs": [],
+      "dimension": "MANUFACTURABILITY",
+      "materiality": "UNKNOWN",
+      "state": "UNKNOWN"
+    },
+    {
+      "claim_refs": [],
+      "dimension": "ASSEMBLY_COMPLEXITY",
+      "materiality": "UNKNOWN",
+      "state": "UNKNOWN"
+    },
+    {
+      "claim_refs": [],
+      "dimension": "YIELD",
+      "materiality": "UNKNOWN",
+      "state": "UNKNOWN"
+    },
+    {
+      "claim_refs": [],
+      "dimension": "RELIABILITY",
+      "materiality": "UNKNOWN",
+      "state": "UNKNOWN"
+    },
+    {
+      "claim_refs": [],
+      "dimension": "CERTIFICATION_BURDEN",
+      "materiality": "UNKNOWN",
+      "state": "UNKNOWN"
+    },
+    {
+      "claim_refs": [],
+      "dimension": "SERVICEABILITY",
+      "materiality": "UNKNOWN",
+      "state": "UNKNOWN"
+    },
+    {
+      "claim_refs": [],
+      "dimension": "REPAIRABILITY",
+      "materiality": "UNKNOWN",
+      "state": "UNKNOWN"
+    },
+    {
+      "claim_refs": [
+        "O1-C05"
+      ],
+      "dimension": "FUTURE_LIFECYCLE_RISK",
+      "materiality": "UNKNOWN",
+      "state": "PUBLIC_SIGNAL"
+    }
+  ],
+  "overall_score": null
+}

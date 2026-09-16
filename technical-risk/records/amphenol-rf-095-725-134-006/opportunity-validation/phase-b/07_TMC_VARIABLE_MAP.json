@@ -1,0 +1,86 @@
+{
+  "interpretation": "Variable map only; no invented values, durations, total cost or total savings.",
+  "total": null,
+  "variables": [
+    {
+      "limitations": "Application-specific evidence is required; no public estimate is substituted for actual cost or duration.",
+      "source_refs": [],
+      "state": "MODEL_INPUT_REQUIRED",
+      "unit": null,
+      "value": null,
+      "variable": "PART_COST_DELTA"
+    },
+    {
+      "limitations": "Application-specific evidence is required; no public estimate is substituted for actual cost or duration.",
+      "source_refs": [],
+      "state": "MODEL_INPUT_REQUIRED",
+      "unit": null,
+      "value": null,
+      "variable": "ENGINEERING_COST"
+    },
+    {
+      "limitations": "Application-specific evidence is required; no public estimate is substituted for actual cost or duration.",
+      "source_refs": [],
+      "state": "MODEL_INPUT_REQUIRED",
+      "unit": null,
+      "value": null,
+      "variable": "PROTOTYPE_COST"
+    },
+    {
+      "limitations": "Application-specific evidence is required; no public estimate is substituted for actual cost or duration.",
+      "source_refs": [],
+      "state": "MODEL_INPUT_REQUIRED",
+      "unit": null,
+      "value": null,
+      "variable": "TOOLING_COST"
+    },
+    {
+      "limitations": "Application-specific evidence is required; no public estimate is substituted for actual cost or duration.",
+      "source_refs": [],
+      "state": "MODEL_INPUT_REQUIRED",
+      "unit": null,
+      "value": null,
+      "variable": "TEST_COST"
+    },
+    {
+      "limitations": "Application-specific evidence is required; no public estimate is substituted for actual cost or duration.",
+      "source_refs": [],
+      "state": "MODEL_INPUT_REQUIRED",
+      "unit": null,
+      "value": null,
+      "variable": "QUALIFICATION_COST"
+    },
+    {
+      "limitations": "Application-specific evidence is required; no public estimate is substituted for actual cost or duration.",
+      "source_refs": [],
+      "state": "MODEL_INPUT_REQUIRED",
+      "unit": null,
+      "value": null,
+      "variable": "CERTIFICATION_COST"
+    },
+    {
+      "limitations": "Application-specific evidence is required; no public estimate is substituted for actual cost or duration.",
+      "source_refs": [],
+      "state": "MODEL_INPUT_REQUIRED",
+      "unit": null,
+      "value": null,
+      "variable": "INVENTORY_COST"
+    },
+    {
+      "limitations": "Application-specific evidence is required; no public estimate is substituted for actual cost or duration.",
+      "source_refs": [],
+      "state": "MODEL_INPUT_REQUIRED",
+      "unit": null,
+      "value": null,
+      "variable": "DOWNTIME_RISK"
+    },
+    {
+      "limitations": "Application-specific evidence is required; no public estimate is substituted for actual cost or duration.",
+      "source_refs": [],
+      "state": "MODEL_INPUT_REQUIRED",
+      "unit": null,
+      "value": null,
+      "variable": "CHANGE_MANAGEMENT_COST"
+    }
+  ]
+}

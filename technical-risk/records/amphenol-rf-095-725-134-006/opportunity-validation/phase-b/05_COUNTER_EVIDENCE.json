@@ -1,0 +1,75 @@
+{
+  "claims": [
+    {
+      "claim_id": "O3-C07",
+      "claim_type": "ENGINEERING_JUDGMENT",
+      "current_usage_asserted": false,
+      "customer_pain": "UNKNOWN",
+      "evidence_basis": "MANUFACTURER_CATALOG",
+      "limitations": [
+        "Does not establish actual customer pain, adoption, efficiency or qualification."
+      ],
+      "scope": "INTERFACE_CLASS",
+      "source_refs": [
+        "O3-S02",
+        "O3-S06"
+      ],
+      "statement": "Existing standard/custom assemblies and RF testing weaken a presumed manufacturing or test-service gap.",
+      "topic": "EXISTING_SUPPLY_COUNTER_EVIDENCE"
+    },
+    {
+      "claim_id": "O3-C08",
+      "claim_type": "ENGINEERING_JUDGMENT",
+      "current_usage_asserted": false,
+      "customer_pain": "UNKNOWN",
+      "evidence_basis": "TOOL_CAPABILITY",
+      "limitations": [
+        "Does not establish actual customer pain, adoption, efficiency or qualification."
+      ],
+      "scope": "GENERAL_METHOD",
+      "source_refs": [
+        "O3-S05"
+      ],
+      "statement": "Adding automation is not a novel benefit by itself because supported automation already exists.",
+      "topic": "EXISTING_TOOL_COUNTER_EVIDENCE"
+    },
+    {
+      "claim_id": "O3-C09",
+      "claim_type": "SOURCE_FACT",
+      "current_usage_asserted": false,
+      "customer_pain": "UNKNOWN",
+      "evidence_basis": "MARKET_LISTING",
+      "limitations": [
+        "Does not establish actual customer pain, adoption, efficiency or qualification."
+      ],
+      "scope": "EXACT_PART",
+      "source_refs": [
+        "O3-S01",
+        "O3-S07"
+      ],
+      "statement": "Farnell indexed connector-B metadata conflicts with the OEM plug specification; it is not used to redefine identity.",
+      "topic": "DISTRIBUTOR_IDENTITY_CONFLICT"
+    },
+    {
+      "claim_id": "O3-C10",
+      "claim_type": "SOURCE_FACT",
+      "current_usage_asserted": false,
+      "customer_pain": "UNKNOWN",
+      "evidence_basis": "MANUFACTURER_CATALOG",
+      "limitations": [
+        "Does not establish actual customer pain, adoption, efficiency or qualification."
+      ],
+      "scope": "FAMILY",
+      "source_refs": [
+        "O3-S03"
+      ],
+      "statement": "The family cutsheet defers exact specifications to the component drawing; headline frequency does not establish alternative qualification.",
+      "topic": "QUALIFICATION_LIMIT"
+    }
+  ],
+  "search_performed": true,
+  "unresolved_conflicts": [
+    "Farnell cached SMPM jack field vs OEM SMPM plug.",
+    "No exact customer workflow, throughput or supplier qualification evidence found."
+  ]
+}

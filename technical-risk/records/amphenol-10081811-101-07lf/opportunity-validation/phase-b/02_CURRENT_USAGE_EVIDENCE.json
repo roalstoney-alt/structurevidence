@@ -1,0 +1,37 @@
+{
+  "claims": [
+    {
+      "claim_id": "O1-C01",
+      "claim_type": "UNKNOWN",
+      "current_usage_asserted": false,
+      "customer_pain": "UNKNOWN",
+      "evidence_basis": "SEARCH_COVERAGE",
+      "limitations": [
+        "Search failure does not establish absence of use or product retirement."
+      ],
+      "scope": "EXACT_PART",
+      "source_refs": [],
+      "statement": "No current exact-part application, service manual, BOM or tender was identified in the logged bounded searches.",
+      "topic": "CURRENT_USAGE"
+    },
+    {
+      "claim_id": "O1-C02",
+      "claim_type": "INDIRECT_PUBLIC_SIGNAL",
+      "current_usage_asserted": false,
+      "customer_pain": "UNKNOWN",
+      "evidence_basis": "MANUFACTURER_CATALOG",
+      "limitations": [
+        "Does not establish actual customer pain, adoption, efficiency or qualification."
+      ],
+      "scope": "FAMILY",
+      "source_refs": [
+        "O1-S04",
+        "O1-S05"
+      ],
+      "statement": "BergStik family documentation remains accessible; exact-part current use is unestablished.",
+      "topic": "FAMILY_RELEVANCE"
+    }
+  ],
+  "currentness_limitations": "Family catalog continuity is not current exact-MPN production or service demand.",
+  "signal": "NO_CURRENT_APPLICATION_FOUND"
+}

@@ -1,0 +1,74 @@
+{
+  "claims": [
+    {
+      "claim_id": "O1-C06",
+      "claim_type": "SOURCE_FACT",
+      "current_usage_asserted": false,
+      "customer_pain": "UNKNOWN",
+      "evidence_basis": "LIFECYCLE_NOTICE",
+      "limitations": [
+        "Does not establish actual customer pain, adoption, efficiency or qualification."
+      ],
+      "scope": "EXACT_PART",
+      "source_refs": [
+        "O1-S01"
+      ],
+      "statement": "The manufacturer attributes the pruning action to low-running demand; this weakens any assumption of a large active opportunity.",
+      "topic": "LOW_DEMAND"
+    },
+    {
+      "claim_id": "O1-C07",
+      "claim_type": "SOURCE_FACT",
+      "current_usage_asserted": false,
+      "customer_pain": "UNKNOWN",
+      "evidence_basis": "LIFECYCLE_NOTICE",
+      "limitations": [
+        "Does not establish actual customer pain, adoption, efficiency or qualification."
+      ],
+      "scope": "EXACT_PART",
+      "source_refs": [
+        "O1-S01",
+        "O1-S03"
+      ],
+      "statement": "PCN 26 027 lists LTB 2026-09-15 and effective 2027-03-15; PCN 26 043 lists LTB 2026-10-01 and effective 2027-04-01. Exact-part precedence is unresolved.",
+      "topic": "CONFLICTING_DATES"
+    },
+    {
+      "claim_id": "O1-C08",
+      "claim_type": "ENGINEERING_JUDGMENT",
+      "current_usage_asserted": false,
+      "customer_pain": "UNKNOWN",
+      "evidence_basis": "MANUFACTURER_CATALOG",
+      "limitations": [
+        "Does not establish actual customer pain, adoption, efficiency or qualification."
+      ],
+      "scope": "FAMILY",
+      "source_refs": [
+        "O1-S04",
+        "O1-S05"
+      ],
+      "statement": "Configurable family options could make standard sourcing sufficient; custom manufacture has no demonstrated advantage for this exact part.",
+      "topic": "STANDARD_PATH_COUNTER_EVIDENCE"
+    },
+    {
+      "claim_id": "O1-C09",
+      "claim_type": "SOURCE_FACT",
+      "current_usage_asserted": false,
+      "customer_pain": "UNKNOWN",
+      "evidence_basis": "LIFECYCLE_NOTICE",
+      "limitations": [
+        "No exact replacement MPN, interchangeability or customer qualification is established."
+      ],
+      "scope": "FAMILY",
+      "source_refs": [
+        "O1-S03"
+      ],
+      "statement": "The manufacturer states that technical equivalences remain available on request at family-plan level; this weakens an assumption of no alternative.",
+      "topic": "OEM_EQUIVALENCE_AVAILABILITY_STATEMENT"
+    }
+  ],
+  "search_performed": true,
+  "unresolved_conflicts": [
+    "PCN 26 027 vs PCN 26 043 exact-part schedule precedence; original CML lifecycle remains untouched."
+  ]
+}

@@ -1,0 +1,962 @@
+{
+  "$defs": {
+    "assessment": {
+      "additionalProperties": false,
+      "properties": {
+        "assessment_version": {
+          "const": "CML_OV_v0.1_PHASE_B"
+        },
+        "claim_type": {
+          "enum": [
+            "ENGINEERING_JUDGMENT",
+            "INDIRECT_PUBLIC_SIGNAL",
+            "UNKNOWN"
+          ]
+        },
+        "confirmed_customer_pain": {
+          "const": false
+        },
+        "decision": {
+          "enum": [
+            "PROCEED_TO_PHASE_C",
+            "PROCEED_TO_PHASE_C_HIGH_PRIORITY",
+            "CONTINUE_DESK_RESEARCH",
+            "MONITOR",
+            "PUBLIC_EVIDENCE_SUGGESTS_COMPETITIVE_RESOLUTION",
+            "PUBLIC_EVIDENCE_SUGGESTS_PRODUCT_PHASED_OUT",
+            "INSUFFICIENT_PUBLIC_EVIDENCE",
+            "REJECT_PHASE_B"
+          ]
+        },
+        "desk_opportunity_signal": {
+          "enum": [
+            "PUBLIC_EVIDENCE_UNRESOLVED_SIGNAL",
+            "PUBLIC_EVIDENCE_SUBOPTIMAL_SIGNAL",
+            "PUBLIC_EVIDENCE_COMPETITIVE_RESOLUTION",
+            "PUBLIC_EVIDENCE_PRODUCT_PHASED_OUT",
+            "PUBLIC_EVIDENCE_NO_CURRENT_APPLICATION",
+            "CONFLICTING_PUBLIC_EVIDENCE",
+            "INSUFFICIENT_PUBLIC_EVIDENCE"
+          ]
+        },
+        "human_validation_required": {
+          "enum": [
+            "YES",
+            "NO",
+            "UNKNOWN"
+          ]
+        },
+        "paid_delivery": {
+          "const": "BLOCK"
+        },
+        "phase_c_outreach": {
+          "const": "NOT_AUTHORIZED"
+        },
+        "public_release": {
+          "const": "BLOCK"
+        },
+        "qualification_state": {
+          "const": "NOT_ESTABLISHED"
+        },
+        "reason": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "solution_development": {
+          "const": "NOT_AUTHORIZED"
+        },
+        "supporting_claim_refs": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "type": "array",
+          "uniqueItems": true
+        },
+        "target": {
+          "enum": [
+            "OV-01",
+            "OV-03"
+          ]
+        }
+      },
+      "required": [
+        "assessment_version",
+        "target",
+        "desk_opportunity_signal",
+        "claim_type",
+        "supporting_claim_refs",
+        "reason",
+        "decision",
+        "human_validation_required",
+        "public_release",
+        "paid_delivery",
+        "solution_development",
+        "phase_c_outreach",
+        "qualification_state",
+        "confirmed_customer_pain"
+      ],
+      "type": "object"
+    },
+    "claim": {
+      "additionalProperties": false,
+      "properties": {
+        "claim_id": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "claim_type": {
+          "enum": [
+            "SOURCE_FACT",
+            "DIRECT_PUBLIC_EVIDENCE",
+            "DERIVED_FACT",
+            "INDIRECT_PUBLIC_SIGNAL",
+            "TECHNICAL_INFERENCE",
+            "ENGINEERING_JUDGMENT",
+            "IMPROVEMENT_HYPOTHESIS",
+            "UNKNOWN"
+          ]
+        },
+        "current_bridge": {
+          "additionalProperties": false,
+          "properties": {
+            "rationale": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "source_refs": {
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1,
+              "type": "array",
+              "uniqueItems": true
+            },
+            "valid_from": {
+              "format": "date",
+              "type": "string"
+            },
+            "valid_through": {
+              "format": "date",
+              "type": "string"
+            }
+          },
+          "required": [
+            "source_refs",
+            "valid_from",
+            "valid_through",
+            "rationale"
+          ],
+          "type": "object"
+        },
+        "current_usage_asserted": {
+          "type": "boolean"
+        },
+        "customer_pain": {
+          "enum": [
+            "UNKNOWN",
+            "DIRECT_PUBLIC_STATEMENT"
+          ]
+        },
+        "evidence_basis": {
+          "enum": [
+            "MANUFACTURER_CATALOG",
+            "LIFECYCLE_NOTICE",
+            "APPLICATION_DOCUMENT",
+            "MARKET_LISTING",
+            "TEST_METHOD",
+            "TOOL_CAPABILITY",
+            "SEARCH_COVERAGE",
+            "NONE"
+          ]
+        },
+        "limitations": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "type": "array",
+          "uniqueItems": true
+        },
+        "scope": {
+          "enum": [
+            "EXACT_PART",
+            "FAMILY",
+            "INTERFACE_CLASS",
+            "GENERAL_METHOD"
+          ]
+        },
+        "source_refs": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "type": "array",
+          "uniqueItems": true
+        },
+        "statement": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "topic": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "claim_id",
+        "claim_type",
+        "scope",
+        "topic",
+        "statement",
+        "source_refs",
+        "evidence_basis",
+        "current_usage_asserted",
+        "customer_pain",
+        "limitations"
+      ],
+      "type": "object"
+    },
+    "counter_evidence": {
+      "additionalProperties": false,
+      "properties": {
+        "claims": {
+          "items": {
+            "$ref": "#/$defs/claim"
+          },
+          "type": "array",
+          "uniqueItems": true
+        },
+        "search_performed": {
+          "const": true
+        },
+        "unresolved_conflicts": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "type": "array",
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "search_performed",
+        "claims",
+        "unresolved_conflicts"
+      ],
+      "type": "object"
+    },
+    "human_targets": {
+      "additionalProperties": false,
+      "properties": {
+        "authorization": {
+          "const": "DISCOVERY_ONLY_NO_OUTREACH"
+        },
+        "human_validation_required": {
+          "enum": [
+            "YES",
+            "NO",
+            "UNKNOWN"
+          ]
+        },
+        "questions": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "type": "array",
+          "uniqueItems": true
+        },
+        "targets": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "contact_path_verified": {
+                "const": true
+              },
+              "organization": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "outreach_sent": {
+                "const": false
+              },
+              "public_contact_path": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "public_role": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "public_source": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "why_technically_relevant": {
+                "minLength": 1,
+                "type": "string"
+              }
+            },
+            "required": [
+              "organization",
+              "public_role",
+              "why_technically_relevant",
+              "public_source",
+              "public_contact_path",
+              "contact_path_verified",
+              "outreach_sent"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "human_validation_required",
+        "targets",
+        "questions",
+        "authorization"
+      ],
+      "type": "object"
+    },
+    "hypotheses": {
+      "additionalProperties": false,
+      "properties": {
+        "disposition": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "hypotheses": {
+          "items": {
+            "$ref": "#/$defs/hypothesis"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "hypotheses",
+        "disposition"
+      ],
+      "type": "object"
+    },
+    "hypothesis": {
+      "additionalProperties": false,
+      "properties": {
+        "benefit_demonstrated": {
+          "const": false
+        },
+        "bottleneck": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "bottleneck_claim_refs": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "type": "array",
+          "uniqueItems": true
+        },
+        "claim_type": {
+          "const": "IMPROVEMENT_HYPOTHESIS"
+        },
+        "current_path": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "expected_improvement_dimension": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "failure_condition": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "hypothesis_id": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "measurable_metric": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "proposed_engineering_change": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "required_inputs": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "type": "array",
+          "uniqueItems": true
+        },
+        "scope": {
+          "enum": [
+            "EXACT_PART",
+            "INTERFACE_CLASS"
+          ]
+        },
+        "status": {
+          "enum": [
+            "CONDITIONAL_RESEARCH_HYPOTHESIS",
+            "REJECT_NO_EVIDENCED_BOTTLENECK"
+          ]
+        },
+        "testable": {
+          "type": "boolean"
+        },
+        "tool_method_class": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "tool_source_refs": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "type": "array",
+          "uniqueItems": true
+        },
+        "unknown_variables": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "type": "array",
+          "uniqueItems": true
+        },
+        "validation_method": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "hypothesis_id",
+        "status",
+        "claim_type",
+        "scope",
+        "bottleneck_claim_refs",
+        "bottleneck",
+        "current_path",
+        "proposed_engineering_change",
+        "tool_method_class",
+        "tool_source_refs",
+        "expected_improvement_dimension",
+        "measurable_metric",
+        "required_inputs",
+        "unknown_variables",
+        "validation_method",
+        "failure_condition",
+        "testable",
+        "benefit_demonstrated"
+      ],
+      "type": "object"
+    },
+    "inefficiency": {
+      "additionalProperties": false,
+      "properties": {
+        "claims": {
+          "items": {
+            "$ref": "#/$defs/claim"
+          },
+          "type": "array",
+          "uniqueItems": true
+        },
+        "dimensions": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "claim_refs": {
+                "items": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "type": "array",
+                "uniqueItems": true
+              },
+              "dimension": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "materiality": {
+                "const": "UNKNOWN"
+              },
+              "state": {
+                "enum": [
+                  "PUBLIC_SIGNAL",
+                  "UNKNOWN"
+                ]
+              }
+            },
+            "required": [
+              "dimension",
+              "state",
+              "claim_refs",
+              "materiality"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "overall_score": {
+          "type": "null"
+        }
+      },
+      "required": [
+        "claims",
+        "dimensions",
+        "overall_score"
+      ],
+      "type": "object"
+    },
+    "registry": {
+      "additionalProperties": false,
+      "properties": {
+        "assessment_version": {
+          "const": "CML_OV_v0.1_PHASE_B"
+        },
+        "independent_evidence_families": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "type": "array",
+          "uniqueItems": true
+        },
+        "search_log": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "outcome": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "purpose": {
+                "enum": [
+                  "USAGE",
+                  "SOLUTION",
+                  "INEFFICIENCY",
+                  "COUNTER_EVIDENCE",
+                  "METHOD",
+                  "CONTACT"
+                ]
+              },
+              "query": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "searched_at": {
+                "format": "date-time",
+                "type": "string"
+              }
+            },
+            "required": [
+              "query",
+              "purpose",
+              "searched_at",
+              "outcome"
+            ],
+            "type": "object"
+          },
+          "minItems": 1,
+          "type": "array"
+        },
+        "sources": {
+          "items": {
+            "$ref": "#/$defs/source"
+          },
+          "minItems": 1,
+          "type": "array"
+        },
+        "target": {
+          "enum": [
+            "OV-01",
+            "OV-03"
+          ]
+        }
+      },
+      "required": [
+        "assessment_version",
+        "target",
+        "sources",
+        "independent_evidence_families",
+        "search_log"
+      ],
+      "type": "object"
+    },
+    "solution": {
+      "additionalProperties": false,
+      "properties": {
+        "claims": {
+          "items": {
+            "$ref": "#/$defs/claim"
+          },
+          "type": "array",
+          "uniqueItems": true
+        },
+        "efficiency_conclusion": {
+          "const": "UNKNOWN"
+        },
+        "paths": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "adoption_verified": {
+                "type": "boolean"
+              },
+              "evidence_class": {
+                "enum": [
+                  "OBSERVED_CURRENT_SOLUTION",
+                  "COMMON_INDUSTRY_SOLUTION",
+                  "CML_INFERRED_POSSIBLE_SOLUTION",
+                  "UNKNOWN"
+                ]
+              },
+              "limitations": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "organization": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "path": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "source_refs": {
+                "items": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "type": "array",
+                "uniqueItems": true
+              }
+            },
+            "required": [
+              "path",
+              "evidence_class",
+              "organization",
+              "source_refs",
+              "adoption_verified",
+              "limitations"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "claims",
+        "paths",
+        "efficiency_conclusion"
+      ],
+      "type": "object"
+    },
+    "source": {
+      "additionalProperties": false,
+      "properties": {
+        "access_status": {
+          "enum": [
+            "OPENED_CONTENT",
+            "SEARCH_EXCERPT_ONLY"
+          ]
+        },
+        "artifact_hash": {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "artifact_path": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "effective_at": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "evidence_family": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "host": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "independence_group": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "issuer": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "known_at": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "limitations": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array"
+        },
+        "locator": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "observation_summary": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "publication_date": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "retrieved_at": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "source_id": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "source_type": {
+          "enum": [
+            "MANUFACTURER_PCN",
+            "MANUFACTURER_PRODUCT_PAGE",
+            "MANUFACTURER_DATASHEET",
+            "MANUFACTURER_APPLICATION_NOTE",
+            "DISTRIBUTOR_LISTING",
+            "TOOL_DOCUMENTATION",
+            "PUBLIC_CONTACT_PAGE",
+            "OEM_APPLICATION_DOCUMENT",
+            "SERVICE_DOCUMENT",
+            "PUBLIC_BOM",
+            "PUBLIC_PROCESS_STUDY",
+            "PUBLIC_PROCUREMENT_DOCUMENT"
+          ]
+        },
+        "supports_claims": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "type": "array",
+          "uniqueItems": true
+        },
+        "tier": {
+          "maximum": 5,
+          "minimum": 1,
+          "type": "integer"
+        },
+        "title": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "underlying_artifact": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "url": {
+          "format": "uri",
+          "type": "string"
+        }
+      },
+      "required": [
+        "source_id",
+        "title",
+        "issuer",
+        "host",
+        "url",
+        "source_type",
+        "tier",
+        "publication_date",
+        "effective_at",
+        "known_at",
+        "retrieved_at",
+        "artifact_hash",
+        "artifact_path",
+        "evidence_family",
+        "independence_group",
+        "underlying_artifact",
+        "supports_claims",
+        "limitations",
+        "access_status",
+        "locator",
+        "observation_summary"
+      ],
+      "type": "object"
+    },
+    "usage": {
+      "additionalProperties": false,
+      "properties": {
+        "claims": {
+          "items": {
+            "$ref": "#/$defs/claim"
+          },
+          "type": "array",
+          "uniqueItems": true
+        },
+        "currentness_limitations": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "signal": {
+          "enum": [
+            "CURRENT_USAGE_DIRECT",
+            "CURRENT_USAGE_INDIRECT",
+            "SERVICE_REPAIR_USAGE",
+            "HISTORICAL_USAGE_ONLY",
+            "NO_CURRENT_APPLICATION_FOUND",
+            "CONFLICTING_EVIDENCE",
+            "UNKNOWN"
+          ]
+        }
+      },
+      "required": [
+        "signal",
+        "claims",
+        "currentness_limitations"
+      ],
+      "type": "object"
+    },
+    "variable": {
+      "additionalProperties": false,
+      "properties": {
+        "limitations": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "source_refs": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "type": "array",
+          "uniqueItems": true
+        },
+        "state": {
+          "enum": [
+            "KNOWN",
+            "PUBLIC_SIGNAL",
+            "MODEL_INPUT_REQUIRED",
+            "UNKNOWN"
+          ]
+        },
+        "unit": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "value": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "variable": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "variable",
+        "state",
+        "value",
+        "unit",
+        "source_refs",
+        "limitations"
+      ],
+      "type": "object"
+    },
+    "variables": {
+      "additionalProperties": false,
+      "properties": {
+        "interpretation": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "total": {
+          "type": "null"
+        },
+        "variables": {
+          "items": {
+            "$ref": "#/$defs/variable"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "variables",
+        "total",
+        "interpretation"
+      ],
+      "type": "object"
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "assessment": {
+      "$ref": "#/$defs/assessment"
+    },
+    "counter_evidence": {
+      "$ref": "#/$defs/counter_evidence"
+    },
+    "human_targets": {
+      "$ref": "#/$defs/human_targets"
+    },
+    "hypotheses": {
+      "$ref": "#/$defs/hypotheses"
+    },
+    "inefficiency": {
+      "$ref": "#/$defs/inefficiency"
+    },
+    "solution": {
+      "$ref": "#/$defs/solution"
+    },
+    "sources": {
+      "$ref": "#/$defs/registry"
+    },
+    "tmc": {
+      "$ref": "#/$defs/variables"
+    },
+    "ttq": {
+      "$ref": "#/$defs/variables"
+    },
+    "usage": {
+      "$ref": "#/$defs/usage"
+    }
+  },
+  "required": [
+    "sources",
+    "usage",
+    "solution",
+    "inefficiency",
+    "counter_evidence",
+    "hypotheses",
+    "tmc",
+    "ttq",
+    "human_targets",
+    "assessment"
+  ],
+  "title": "Phase B Wave 1 evidence package",
+  "type": "object"
+}

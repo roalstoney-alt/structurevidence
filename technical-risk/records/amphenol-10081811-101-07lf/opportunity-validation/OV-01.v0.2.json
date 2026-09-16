@@ -1,0 +1,322 @@
+{
+  "core": {
+    "artifact_refs": [
+      "AMPHENOL_PCN_26027:1de0af0411ad1c5b4098877cef46b3c4d99a9168f6bf778ac7a7d602c6d4ac87",
+      "technical-risk/records/amphenol-10081811-101-07lf/11_PUBLIC_RECORD.json:f54a7b0636d414ed0e2fd9e8e979324e7e947a52605f967a8abb11560978d694",
+      "technical-risk/records/amphenol-10081811-101-07lf/12_RELEASE_MANIFEST.json:136f21b8fe7642ec0ef174b83d952d55d07a35ffdbc3bce0ec71867b2a274b1c",
+      "technical-risk/records/amphenol-10081811-101-07lf/opportunity-validation/OV-01.v0.1.json:3bde9227e87ab0cad3f940926811bd8857e9257af75d1356fbb80f3b3026ef4d",
+      "technical-risk/records/amphenol-10081811-101-07lf/opportunity-validation/phase-b/01_SOURCE_REGISTER.json:bfdceb7b607af47c145b3a7b5d8ff848b8ec25a906c4b07ac443063b29a1d71b",
+      "technical-risk/records/amphenol-10081811-101-07lf/opportunity-validation/phase-b/02_CURRENT_USAGE_EVIDENCE.json:507fcb876a3a311ac01efe3e152e97d34103e2de892bd70646cbb64ba3755e94",
+      "technical-risk/records/amphenol-10081811-101-07lf/opportunity-validation/phase-b/03_CURRENT_SOLUTION_MAP.json:3b088ce1c791d7dcfd8dbfc8a28e6c0535ce52d8572ef2a9ecc02101a7a77473",
+      "technical-risk/records/amphenol-10081811-101-07lf/opportunity-validation/phase-b/04_INEFFICIENCY_EVIDENCE.json:9608cc2f400e2d12e109f1cf6d19a583166e9a83d23d3e0f2abe43e79de2d7a5",
+      "technical-risk/records/amphenol-10081811-101-07lf/opportunity-validation/phase-b/05_COUNTER_EVIDENCE.json:39a7a071f1bf676f073c6598eccf69d9420efad5698a9f3f496c370a08cda2e0",
+      "technical-risk/records/amphenol-10081811-101-07lf/opportunity-validation/phase-b/06_IMPROVEMENT_HYPOTHESES.json:7916f05f8ab5a6a2632acf7fae075bc1e4148cc8f92b93152b0ff4a42026f7f4",
+      "technical-risk/records/amphenol-10081811-101-07lf/opportunity-validation/phase-b/07_TMC_VARIABLE_MAP.json:bc5ca8d20ff0dd25a930881e5f1f235932f291618b63415020acb04a80cd7490",
+      "technical-risk/records/amphenol-10081811-101-07lf/opportunity-validation/phase-b/08_TTQ_VARIABLE_MAP.json:f55016b08cb4426ca0524431b51bfcb01fb154ae50dd4a4d29c5f376d6e13e7a",
+      "technical-risk/records/amphenol-10081811-101-07lf/opportunity-validation/phase-b/09_HUMAN_VALIDATION_TARGETS.json:bb6501dd627243d7e33254c8ec9831500c52ece4e6b4734a88acce6e8975836c",
+      "technical-risk/records/amphenol-10081811-101-07lf/opportunity-validation/phase-b/10_PHASE_B_ASSESSMENT.json:baab2bfa12ed4c61609e351b6c591592c63a6fcc5972de78fbf82bb8fc516b9e",
+      "technical-risk/records/amphenol-10081811-101-07lf/opportunity-validation/phase-b/11_LIMITATIONS.md:cfbbb3c885342a03dde48cef871e23553fd6c03362f32b9b8408647b1e455b49"
+    ],
+    "core_version": "STRUCTEVIDENCE_EVIDENCE_CORE_v0.1",
+    "correction_status": "NO_CORRECTION_RECORDED",
+    "created_at": "2026-09-16T07:16:59Z",
+    "domain": "TECHNICAL_RISK",
+    "effective_at": "2026-09-16T07:16:59Z",
+    "input_hash": "4eb281ba4f82226371918a91380ea6449c19224990a78cf60d72a4741763f0e6",
+    "known_at": "2026-09-16T07:16:59Z",
+    "policy_version": "CML_OV_v0.1_PHASE_B",
+    "protocol": "CML",
+    "record_hash": "fec71f405cb14cbb7292e90e3574d0347ad2e13803b1aa3b59f8265cfed4fa23",
+    "record_id": "SE.CML.OV.OV-01.v0.2",
+    "source_refs": [
+      "AMPHENOL_PCN_26027",
+      "O1-S01",
+      "O1-S02",
+      "O1-S03",
+      "O1-S04",
+      "O1-S05",
+      "O1-S06"
+    ],
+    "subject_class": "TECHNICAL_ITEM",
+    "subject_id": "SE.TECH.AMPHENOL.10081811-101-07LF",
+    "supersession_status": "CURRENT",
+    "updated_at": "2026-09-16T07:16:59Z",
+    "verification_status": "PUBLIC_EVIDENCE_REVIEWED_WITH_LIMITATIONS"
+  },
+  "opportunity_validation": {
+    "artifact_hashes": {
+      "01_SOURCE_REGISTER.json": "bfdceb7b607af47c145b3a7b5d8ff848b8ec25a906c4b07ac443063b29a1d71b",
+      "02_CURRENT_USAGE_EVIDENCE.json": "507fcb876a3a311ac01efe3e152e97d34103e2de892bd70646cbb64ba3755e94",
+      "03_CURRENT_SOLUTION_MAP.json": "3b088ce1c791d7dcfd8dbfc8a28e6c0535ce52d8572ef2a9ecc02101a7a77473",
+      "04_INEFFICIENCY_EVIDENCE.json": "9608cc2f400e2d12e109f1cf6d19a583166e9a83d23d3e0f2abe43e79de2d7a5",
+      "05_COUNTER_EVIDENCE.json": "39a7a071f1bf676f073c6598eccf69d9420efad5698a9f3f496c370a08cda2e0",
+      "06_IMPROVEMENT_HYPOTHESES.json": "7916f05f8ab5a6a2632acf7fae075bc1e4148cc8f92b93152b0ff4a42026f7f4",
+      "07_TMC_VARIABLE_MAP.json": "bc5ca8d20ff0dd25a930881e5f1f235932f291618b63415020acb04a80cd7490",
+      "08_TTQ_VARIABLE_MAP.json": "f55016b08cb4426ca0524431b51bfcb01fb154ae50dd4a4d29c5f376d6e13e7a",
+      "09_HUMAN_VALIDATION_TARGETS.json": "bb6501dd627243d7e33254c8ec9831500c52ece4e6b4734a88acce6e8975836c",
+      "10_PHASE_B_ASSESSMENT.json": "baab2bfa12ed4c61609e351b6c591592c63a6fcc5972de78fbf82bb8fc516b9e",
+      "11_LIMITATIONS.md": "cfbbb3c885342a03dde48cef871e23553fd6c03362f32b9b8408647b1e455b49"
+    },
+    "assessment_version": "CML_OV_v0.1_PHASE_B",
+    "baseline": {
+      "commit": "19be538447a90672491768d818fa07e3dd3dd377",
+      "counter_evidence": "A later public Amphenol EOL list appears to include the same MPN under PCN 26043 with a different effective date. This may be an overlapping notice or later schedule and must be reconciled with Amphenol before procurement action.",
+      "event_effective_at": "2027-03-15T00:00:00Z",
+      "event_known_at": "2026-03-16T00:00:00Z",
+      "freshness_reason": "CONFLICTING_PRIMARY_LIFECYCLE_EFFECTIVE_DATE",
+      "freshness_rule_type": "EVENT_DRIVEN",
+      "freshness_state": "CURRENT_WITH_LIMITATIONS",
+      "identity_scope": "EXACT_PART",
+      "lifecycle_state": "EOL_ANNOUNCED",
+      "limitations_ref": "technical-risk/records/amphenol-10081811-101-07lf/10_LIMITATIONS.md",
+      "oem_replacement_status": "OEM_REPLACEMENT_NOT_LISTED",
+      "qualification_state": "LAB_VERIFICATION_REQUIRED",
+      "record_hash": "e665909621d08fe0c1049a1a09775d69e101856ed3b9305c500f887e8c2af51f",
+      "record_id": "SE.CML.RECORD.AMPHENOL.10081811-101-07LF.v0.1",
+      "record_path": "technical-risk/records/amphenol-10081811-101-07lf/11_PUBLIC_RECORD.json",
+      "release_manifest_path": "technical-risk/records/amphenol-10081811-101-07lf/12_RELEASE_MANIFEST.json",
+      "release_manifest_sha256": "136f21b8fe7642ec0ef174b83d952d55d07a35ffdbc3bce0ec71867b2a274b1c",
+      "unknowns": [
+        "An OEM-approved replacement is not established by the reviewed evidence.",
+        "Exact footprint, mating and plating equivalence for any third-party candidate is not established.",
+        "A second Amphenol EOL listing with a different effective date requires manufacturer clarification."
+      ],
+      "verification_requirements_ref": "technical-risk/records/amphenol-10081811-101-07lf/05_COMPATIBILITY_REQUIREMENTS.json"
+    },
+    "client_scope": "NOT_PROVIDED",
+    "current_solution_audit": {
+      "constraints": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "current_handling": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "operating_cost": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "solution_efficiency": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "switching_barriers": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "technical_performance": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      }
+    },
+    "event_domain": "RESEARCH_EVENT",
+    "freshness_reason": "OV_ASSESSMENT_CADENCE_NOT_CONFIGURED",
+    "freshness_rule_type": "UNCONFIGURED",
+    "freshness_state": "POLICY_NOT_CONFIGURED",
+    "governance": {
+      "gdr_adapter_ref": "gdr-se/engine/domain_adapters/cml.py",
+      "opportunity_qualification": "NOT_ASSESSED",
+      "paid_delivery": "BLOCK",
+      "public_release": "BLOCK",
+      "reason": "PHASE_B_INTERNAL_RESEARCH_ONLY",
+      "solution_development": "NOT_AUTHORIZED"
+    },
+    "ov_id": "OV-01",
+    "phase": "PHASE_B_WAVE_1",
+    "phase_b_assessment": {
+      "assessment_version": "CML_OV_v0.1_PHASE_B",
+      "claim_type": "ENGINEERING_JUDGMENT",
+      "confirmed_customer_pain": false,
+      "decision": "CONTINUE_DESK_RESEARCH",
+      "desk_opportunity_signal": "CONFLICTING_PUBLIC_EVIDENCE",
+      "human_validation_required": "YES",
+      "paid_delivery": "BLOCK",
+      "phase_c_outreach": "NOT_AUTHORIZED",
+      "public_release": "BLOCK",
+      "qualification_state": "NOT_ESTABLISHED",
+      "reason": "Lifecycle schedules conflict, while exact usage, adopted workaround and material inefficiency are unestablished. Phase C opportunity threshold is not met.",
+      "solution_development": "NOT_AUTHORIZED",
+      "supporting_claim_refs": [
+        "O1-C01",
+        "O1-C04",
+        "O1-C06",
+        "O1-C07"
+      ],
+      "target": "OV-01"
+    },
+    "predecessor_path": "technical-risk/records/amphenol-10081811-101-07lf/opportunity-validation/OV-01.v0.1.json",
+    "predecessor_record_hash": "0b40c7e355b57cadeb0fd37e4abcf6f28c5af1b03130633d6f2a46e077b35217",
+    "predecessor_record_id": "SE.CML.OV.OV-01.v0.1",
+    "problem_persistence": {
+      "active_customer_pain": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "affected_application": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "internal_resolution": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "problem_persistence": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      }
+    },
+    "public_private_boundary": "PUBLIC_EVIDENCE_ONLY_NO_CLIENT_BOM",
+    "research_event": {
+      "created_at": "2026-09-16T07:16:59Z",
+      "effective_at": "2026-09-16T07:16:59Z",
+      "event_domain": "RESEARCH_EVENT",
+      "event_type": "EXTERNAL_EVIDENCE_DISCOVERY",
+      "known_at": "2026-09-16T07:16:59Z",
+      "source_refs": [
+        "O1-S01",
+        "O1-S02",
+        "O1-S03",
+        "O1-S04",
+        "O1-S05",
+        "O1-S06"
+      ]
+    },
+    "solution_improvement_potential": {
+      "acceptance_criteria": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "application_scope": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "baseline_value": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "cost_assessment": {
+        "certification": {
+          "evidence_refs": [],
+          "state": "NOT_ASSESSED",
+          "value": null
+        },
+        "comparison_horizon": {
+          "evidence_refs": [],
+          "state": "NOT_ASSESSED",
+          "value": null
+        },
+        "downtime": {
+          "evidence_refs": [],
+          "state": "NOT_ASSESSED",
+          "value": null
+        },
+        "engineering_redesign": {
+          "evidence_refs": [],
+          "state": "NOT_ASSESSED",
+          "value": null
+        },
+        "lifetime_operation": {
+          "evidence_refs": [],
+          "state": "NOT_ASSESSED",
+          "value": null
+        },
+        "manufacturing_transition": {
+          "evidence_refs": [],
+          "state": "NOT_ASSESSED",
+          "value": null
+        },
+        "qualification": {
+          "evidence_refs": [],
+          "state": "NOT_ASSESSED",
+          "value": null
+        },
+        "supply_logistics": {
+          "evidence_refs": [],
+          "state": "NOT_ASSESSED",
+          "value": null
+        },
+        "tooling": {
+          "evidence_refs": [],
+          "state": "NOT_ASSESSED",
+          "value": null
+        },
+        "total_migration_cost": {
+          "evidence_refs": [],
+          "state": "NOT_ASSESSED",
+          "value": null
+        },
+        "unit_cost": {
+          "evidence_refs": [],
+          "state": "NOT_ASSESSED",
+          "value": null
+        },
+        "verification": {
+          "evidence_refs": [],
+          "state": "NOT_ASSESSED",
+          "value": null
+        }
+      },
+      "manufacturing_tool_potential": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "measurable_improvement": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "metric": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "modern_design_potential": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "net_benefit": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "target_value": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "test_method": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "unit": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "verification_tool_potential": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      }
+    },
+    "status": "PUBLIC_EVIDENCE_ASSESSED_WITH_LIMITATIONS",
+    "version": "CML_OV_v0.1_PHASE_B"
+  }
+}

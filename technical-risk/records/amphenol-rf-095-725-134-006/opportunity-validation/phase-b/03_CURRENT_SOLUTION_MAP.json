@@ -1,0 +1,62 @@
+{
+  "claims": [
+    {
+      "claim_id": "O3-C03",
+      "claim_type": "SOURCE_FACT",
+      "current_usage_asserted": false,
+      "customer_pain": "UNKNOWN",
+      "evidence_basis": "MANUFACTURER_CATALOG",
+      "limitations": [
+        "Does not establish actual customer pain, adoption, efficiency or qualification."
+      ],
+      "scope": "FAMILY",
+      "source_refs": [
+        "O3-S02",
+        "O3-S03"
+      ],
+      "statement": "Manufacturer already offers off-the-shelf lengths, custom-length discussion and range-level production tests.",
+      "topic": "EXISTING_OEM_OFFERING"
+    },
+    {
+      "claim_id": "O3-C04",
+      "claim_type": "SOURCE_FACT",
+      "current_usage_asserted": false,
+      "customer_pain": "UNKNOWN",
+      "evidence_basis": "TOOL_CAPABILITY",
+      "limitations": [
+        "Does not establish actual customer pain, adoption, efficiency or qualification."
+      ],
+      "scope": "GENERAL_METHOD",
+      "source_refs": [
+        "O3-S05"
+      ],
+      "statement": "VNA triggering and pass/fail automation are already documented capabilities; a user-specific manual workflow was not observed.",
+      "topic": "EXISTING_AUTOMATION"
+    }
+  ],
+  "efficiency_conclusion": "UNKNOWN",
+  "paths": [
+    {
+      "adoption_verified": false,
+      "evidence_class": "UNKNOWN",
+      "limitations": "Catalog sourcing and OEM testing are offered; no named company adoption or internal workaround was observed.",
+      "organization": null,
+      "path": "UNKNOWN",
+      "source_refs": [
+        "O3-S02",
+        "O3-S03"
+      ]
+    },
+    {
+      "adoption_verified": false,
+      "evidence_class": "COMMON_INDUSTRY_SOLUTION",
+      "limitations": "Documented instrument-system verification/automation methods; no exact assembly user adoption established.",
+      "organization": null,
+      "path": "INTERNAL_REQUALIFICATION",
+      "source_refs": [
+        "O3-S04",
+        "O3-S05"
+      ]
+    }
+  ]
+}

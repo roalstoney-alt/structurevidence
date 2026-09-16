@@ -1,0 +1,5 @@
+# Phase B Wave 1 limitations — OV-01
+
+No exact current application or adopted handling path was identified. No actual pricing, lead time, engineering hours or qualification cost was available. A later OEM PCN broadens the date conflict and states family-level technical equivalences are available on request; it does not prove an exact successor or supersede frozen findings. Low demand and standard family configurability were retained as counter-evidence. No evidence-backed custom-part improvement hypothesis was accepted.
+
+Public desk research only; no company contact, pricing request, sample, test execution, supplier selection or replacement design. No publication or paid delivery. Sources were opened through web retrieval; source files are not locally archived (artifact hashes are null). Known/retrieved times are conservative registration times after review, not original publication dates. Search indexing is incomplete; no-result searches are not proof of no demand. Issuer-based independence grouping prevents distributor mirrors from becoming independent corroboration.

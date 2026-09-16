@@ -1,0 +1,39 @@
+{
+  "claims": [
+    {
+      "claim_id": "O3-C01",
+      "claim_type": "INDIRECT_PUBLIC_SIGNAL",
+      "current_usage_asserted": false,
+      "customer_pain": "UNKNOWN",
+      "evidence_basis": "MANUFACTURER_CATALOG",
+      "limitations": [
+        "Does not establish actual customer pain, adoption, efficiency or qualification."
+      ],
+      "scope": "EXACT_PART",
+      "source_refs": [
+        "O3-S01"
+      ],
+      "statement": "The exact part is currently listed Active by its manufacturer; no end-user application was identified.",
+      "topic": "CURRENT_CATALOG_RELEVANCE"
+    },
+    {
+      "claim_id": "O3-C02",
+      "claim_type": "INDIRECT_PUBLIC_SIGNAL",
+      "current_usage_asserted": false,
+      "customer_pain": "UNKNOWN",
+      "evidence_basis": "MANUFACTURER_CATALOG",
+      "limitations": [
+        "Does not establish actual customer pain, adoption, efficiency or qualification."
+      ],
+      "scope": "INTERFACE_CLASS",
+      "source_refs": [
+        "O3-S02",
+        "O3-S03"
+      ],
+      "statement": "Manufacturer documentation targets high-frequency test/measurement and related RF systems; this describes intended uses rather than installed demand.",
+      "topic": "APPLICATION_CLASS_RELEVANCE"
+    }
+  ],
+  "currentness_limitations": "Current OEM catalog provides an indirect relevance bridge. Exact installed/customer usage is unknown; distributor stock is not used as usage evidence.",
+  "signal": "CURRENT_USAGE_INDIRECT"
+}

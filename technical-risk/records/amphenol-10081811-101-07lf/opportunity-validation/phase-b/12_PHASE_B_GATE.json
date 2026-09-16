@@ -1,0 +1,200 @@
+{
+  "baseline_commit": "ad3206fff3c8d8375b1c9e087df44bd9c7336927",
+  "evaluation_as_of": "2026-09-16T07:17:38.248395+00:00",
+  "paid_delivery": "BLOCK",
+  "public_release": "BLOCK",
+  "record_hash": "fec71f405cb14cbb7292e90e3574d0347ad2e13803b1aa3b59f8265cfed4fa23",
+  "results": [
+    {
+      "computed_facts": {
+        "baseline_commit": "ad3206fff3c8d8375b1c9e087df44bd9c7336927",
+        "predecessor_hash": "0b40c7e355b57cadeb0fd37e4abcf6f28c5af1b03130633d6f2a46e077b35217",
+        "tracked_mutations": []
+      },
+      "gate_id": "OV-B01_BASELINE_INTEGRITY",
+      "reason": "Evidence discipline satisfied; no opportunity or release approval implied.",
+      "rule_version": "CML_OV_v0.1_PHASE_B",
+      "status": "PASS",
+      "validator": "baseline_integrity"
+    },
+    {
+      "computed_facts": {
+        "claims": 9,
+        "sources": 6,
+        "unarchived_sources": 6
+      },
+      "gate_id": "OV-B02_SOURCE_PROVENANCE",
+      "reason": "Evidence discipline satisfied; no opportunity or release approval implied.",
+      "rule_version": "CML_OV_v0.1_PHASE_B",
+      "status": "PASS",
+      "validator": "source_provenance"
+    },
+    {
+      "computed_facts": {
+        "demand_inference": false,
+        "evidence_families": [
+          "AMPHENOL_CS::LIFECYCLE_NOTICE",
+          "AMPHENOL_CS::PRODUCT_CATALOG",
+          "AMPHENOL_CS::PUBLIC_CONTACT"
+        ],
+        "issuer_groups": 1
+      },
+      "gate_id": "OV-B03_SOURCE_INDEPENDENCE",
+      "reason": "Evidence discipline satisfied; no opportunity or release approval implied.",
+      "rule_version": "CML_OV_v0.1_PHASE_B",
+      "status": "PASS",
+      "validator": "source_independence"
+    },
+    {
+      "computed_facts": {
+        "direct_application_claims": 0,
+        "signal": "NO_CURRENT_APPLICATION_FOUND"
+      },
+      "gate_id": "OV-B04_CURRENT_USAGE_EVIDENCE",
+      "reason": "Evidence discipline satisfied; no opportunity or release approval implied.",
+      "rule_version": "CML_OV_v0.1_PHASE_B",
+      "status": "PASS",
+      "validator": "current_usage"
+    },
+    {
+      "computed_facts": {},
+      "gate_id": "OV-B05_CURRENT_SOLUTION_EVIDENCE",
+      "reason": "No observed end-user current solution; catalog/method offerings are kept separate.",
+      "rule_version": "CML_OV_v0.1_PHASE_B",
+      "status": "NOT_EVALUATED",
+      "validator": "current_solution"
+    },
+    {
+      "computed_facts": {
+        "materiality": "UNKNOWN",
+        "public_signal_dimensions": [
+          "FUTURE_LIFECYCLE_RISK"
+        ]
+      },
+      "gate_id": "OV-B06_INEFFICIENCY_DISCIPLINE",
+      "reason": "Evidence discipline satisfied; no opportunity or release approval implied.",
+      "rule_version": "CML_OV_v0.1_PHASE_B",
+      "status": "PASS",
+      "validator": "inefficiency_discipline"
+    },
+    {
+      "computed_facts": {
+        "counter_claims": 4,
+        "unresolved_conflicts": [
+          "PCN 26 027 vs PCN 26 043 exact-part schedule precedence; original CML lifecycle remains untouched."
+        ]
+      },
+      "gate_id": "OV-B07_COUNTER_EVIDENCE",
+      "reason": "Evidence discipline satisfied; no opportunity or release approval implied.",
+      "rule_version": "CML_OV_v0.1_PHASE_B",
+      "status": "PASS",
+      "validator": "counter_evidence"
+    },
+    {
+      "computed_facts": {},
+      "gate_id": "OV-B08_IMPROVEMENT_HYPOTHESIS",
+      "reason": "No accepted evidence-backed bottleneck/improvement hypothesis; rejection retained.",
+      "rule_version": "CML_OV_v0.1_PHASE_B",
+      "status": "NOT_EVALUATED",
+      "validator": "improvement_hypothesis"
+    },
+    {
+      "computed_facts": {},
+      "gate_id": "OV-B09_TOOL_BOTTLENECK_MAPPING",
+      "reason": "No justified tool-to-bottleneck-to-effect mapping; capabilities alone confer no benefit.",
+      "rule_version": "CML_OV_v0.1_PHASE_B",
+      "status": "NOT_EVALUATED",
+      "validator": "tool_bottleneck_mapping"
+    },
+    {
+      "computed_facts": {
+        "numeric_inputs": 0,
+        "total": null,
+        "variables": 10
+      },
+      "gate_id": "OV-B10_TMC_DISCIPLINE",
+      "reason": "Evidence discipline satisfied; no opportunity or release approval implied.",
+      "rule_version": "CML_OV_v0.1_PHASE_B",
+      "status": "PASS",
+      "validator": "tmc_discipline"
+    },
+    {
+      "computed_facts": {
+        "numeric_inputs": 0,
+        "total": null,
+        "variables": 9
+      },
+      "gate_id": "OV-B11_TTQ_DISCIPLINE",
+      "reason": "Evidence discipline satisfied; no opportunity or release approval implied.",
+      "rule_version": "CML_OV_v0.1_PHASE_B",
+      "status": "PASS",
+      "validator": "ttq_discipline"
+    },
+    {
+      "computed_facts": {
+        "baseline_gdr_effect": "ALLOW_WITH_LIMITATIONS",
+        "phase_b_paid_delivery": "BLOCK",
+        "phase_b_public_release": "BLOCK",
+        "private_fields": []
+      },
+      "gate_id": "OV-B12_PRIVATE_BOUNDARY",
+      "reason": "Evidence discipline satisfied; no opportunity or release approval implied.",
+      "rule_version": "CML_OV_v0.1_PHASE_B",
+      "status": "PASS",
+      "validator": "private_boundary"
+    },
+    {
+      "computed_facts": {
+        "development": "NOT_AUTHORIZED",
+        "qualification": "NOT_ESTABLISHED"
+      },
+      "gate_id": "OV-B13_NO_UNVERIFIED_QUALIFICATION",
+      "reason": "Evidence discipline satisfied; no opportunity or release approval implied.",
+      "rule_version": "CML_OV_v0.1_PHASE_B",
+      "status": "PASS",
+      "validator": "no_unverified_qualification"
+    },
+    {
+      "computed_facts": {
+        "confirmed_customer_pain": false,
+        "decision": "CONTINUE_DESK_RESEARCH",
+        "desk_signal": "CONFLICTING_PUBLIC_EVIDENCE"
+      },
+      "gate_id": "OV-B14_DESK_SIGNAL_DISCIPLINE",
+      "reason": "Evidence discipline satisfied; no opportunity or release approval implied.",
+      "rule_version": "CML_OV_v0.1_PHASE_B",
+      "status": "PASS",
+      "validator": "desk_signal_discipline"
+    },
+    {
+      "computed_facts": {
+        "future_public_channels": 1,
+        "messages_sent": 0
+      },
+      "gate_id": "OV-B15_HUMAN_VALIDATION_BOUNDARY",
+      "reason": "Evidence discipline satisfied; no opportunity or release approval implied.",
+      "rule_version": "CML_OV_v0.1_PHASE_B",
+      "status": "PASS",
+      "validator": "human_validation_boundary"
+    },
+    {
+      "computed_facts": {
+        "artifacts_bound": 11,
+        "gate_and_self_hash_excluded": true,
+        "record_hash": "fec71f405cb14cbb7292e90e3574d0347ad2e13803b1aa3b59f8265cfed4fa23"
+      },
+      "gate_id": "OV-B16_SUCCESSOR_HASH_INTEGRITY",
+      "reason": "Evidence discipline satisfied; no opportunity or release approval implied.",
+      "rule_version": "CML_OV_v0.1_PHASE_B",
+      "status": "PASS",
+      "validator": "successor_hash_integrity"
+    }
+  ],
+  "summary": {
+    "FAIL": 0,
+    "NOT_EVALUATED": 3,
+    "PASS": 13
+  },
+  "target": "OV-01",
+  "validator_sha256": "bfaf9dfcd01cdf2a5ba4e35042644632dc835ddc4cd180228d2dd9e5a9b2f750"
+}

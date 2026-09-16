@@ -1,0 +1,20 @@
+{
+  "authorization": "DISCOVERY_ONLY_NO_OUTREACH",
+  "human_validation_required": "YES",
+  "questions": [
+    "Which notice controls this exact MPN?",
+    "Is an OEM successor documented for the exact footprint and mating/plating scope?",
+    "Is there a current end-user application with an actual migration burden?"
+  ],
+  "targets": [
+    {
+      "contact_path_verified": true,
+      "organization": "Amphenol Communications Solutions",
+      "outreach_sent": false,
+      "public_contact_path": "https://www.amphenol-cs.com/contact-us",
+      "public_role": "Product Manager / local ACS representative identified in PCNs",
+      "public_source": "O1-S03",
+      "why_technically_relevant": "Resolve notice precedence, exact successor availability and drawing scope; not evidence of a customer prospect."
+    }
+  ]
+}

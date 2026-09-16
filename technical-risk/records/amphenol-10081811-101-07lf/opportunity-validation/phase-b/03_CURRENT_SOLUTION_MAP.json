@@ -1,0 +1,61 @@
+{
+  "claims": [
+    {
+      "claim_id": "O1-C03",
+      "claim_type": "SOURCE_FACT",
+      "current_usage_asserted": false,
+      "customer_pain": "UNKNOWN",
+      "evidence_basis": "LIFECYCLE_NOTICE",
+      "limitations": [
+        "Does not establish actual customer pain, adoption, efficiency or qualification."
+      ],
+      "scope": "EXACT_PART",
+      "source_refs": [
+        "O1-S01",
+        "O1-S02"
+      ],
+      "statement": "PCN 26 027 presents a lifetime-buy option; no customer purchase or stock-consumption behavior was found.",
+      "topic": "LIFETIME_BUY_OPTION"
+    },
+    {
+      "claim_id": "O1-C04",
+      "claim_type": "SOURCE_FACT",
+      "current_usage_asserted": false,
+      "customer_pain": "UNKNOWN",
+      "evidence_basis": "LIFECYCLE_NOTICE",
+      "limitations": [
+        "Does not establish actual customer pain, adoption, efficiency or qualification."
+      ],
+      "scope": "EXACT_PART",
+      "source_refs": [
+        "O1-S03"
+      ],
+      "statement": "PCN 26 043 provides an alternative-enquiry route but no exact replacement has been established in reviewed evidence.",
+      "topic": "OEM_SUCCESSOR_UNRESOLVED"
+    }
+  ],
+  "efficiency_conclusion": "UNKNOWN",
+  "paths": [
+    {
+      "adoption_verified": false,
+      "evidence_class": "CML_INFERRED_POSSIBLE_SOLUTION",
+      "limitations": "Manufacturer offered the window; actual customer uptake is unknown and schedule precedence is unresolved.",
+      "organization": null,
+      "path": "LIFETIME_BUY",
+      "source_refs": [
+        "O1-S01",
+        "O1-S03"
+      ]
+    },
+    {
+      "adoption_verified": false,
+      "evidence_class": "UNKNOWN",
+      "limitations": "Enquiry route is not a named qualified successor.",
+      "organization": null,
+      "path": "OEM_SUCCESSOR",
+      "source_refs": [
+        "O1-S03"
+      ]
+    }
+  ]
+}

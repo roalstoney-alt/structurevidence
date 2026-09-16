@@ -1,0 +1,31 @@
+{
+  "authorization": "DISCOVERY_ONLY_NO_OUTREACH",
+  "human_validation_required": "YES",
+  "questions": [
+    "What actual manual test work remains after existing automation?",
+    "Which exact application and accepted S-parameter limits apply?",
+    "Does fixture reuse reduce total test effort without raising uncertainty?",
+    "Do standard OEM lengths and tests already meet needs?",
+    "What actual cost, volume and willingness to pay would justify change?"
+  ],
+  "targets": [
+    {
+      "contact_path_verified": true,
+      "organization": "Amphenol RF",
+      "outreach_sent": false,
+      "public_contact_path": "https://www.amphenolrf.com/en-us/contact-us/",
+      "public_role": "Technical Support / Quality team (public enquiry categories)",
+      "public_source": "O3-S08",
+      "why_technically_relevant": "Clarify exact assembly production acceptance scope, available trace data and custom-length process."
+    },
+    {
+      "contact_path_verified": true,
+      "organization": "Keysight Technologies",
+      "outreach_sent": false,
+      "public_contact_path": "https://www.keysight.com/us/en/contact.html",
+      "public_role": "Technical support (public forwarding channel)",
+      "public_source": "O3-S09",
+      "why_technically_relevant": "Clarify applicable fixture, calibration and automation boundaries; not a validated customer lead."
+    }
+  ]
+}
