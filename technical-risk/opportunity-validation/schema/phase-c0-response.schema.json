@@ -1,0 +1,105 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "phase-c0-response.schema.json",
+  "title": "CML Opportunity Validation Phase C0 human-discovery response",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["core", "discovery_response"],
+  "properties": {
+    "core": {"$ref": "../../../evidence/core/schema/evidence_core_record.schema.json"},
+    "discovery_response": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "version", "phase", "record_kind", "target", "organization", "role",
+        "contact_source", "interaction_date", "application_confirmed",
+        "current_solution", "current_bottleneck", "improvement_dimension",
+        "measurable", "acceptance_logic", "willing_to_review_new_path",
+        "statements", "confidentiality", "limitations", "opportunity_state",
+        "improvement_hypothesis", "c0_result"
+      ],
+      "properties": {
+        "version": {"const": "CML_OV_v0.1_PHASE_C0"},
+        "phase": {"const": "PHASE_C0"},
+        "record_kind": {"enum": ["TEMPLATE", "RESPONSE"]},
+        "target": {"enum": ["OV-01", "OV-03"]},
+        "organization": {"type": "string", "minLength": 1},
+        "role": {"type": "string", "minLength": 1},
+        "contact_source": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["contact_type", "public_reference", "verified_public"],
+          "properties": {
+            "contact_type": {"$ref": "#/$defs/contact_type"},
+            "public_reference": {"type": "string", "minLength": 1},
+            "verified_public": {"type": "boolean"}
+          }
+        },
+        "interaction_date": {"type": ["string", "null"], "format": "date"},
+        "application_confirmed": {"$ref": "#/$defs/discovery_status"},
+        "current_solution": {
+          "type": "array", "minItems": 1, "uniqueItems": true,
+          "items": {"$ref": "#/$defs/current_solution"}
+        },
+        "current_bottleneck": {
+          "type": "array", "minItems": 1, "uniqueItems": true,
+          "items": {"$ref": "#/$defs/bottleneck"}
+        },
+        "improvement_dimension": {
+          "type": "array", "minItems": 1, "uniqueItems": true,
+          "items": {"$ref": "#/$defs/improvement_dimension"}
+        },
+        "measurable": {"$ref": "#/$defs/discovery_status"},
+        "acceptance_logic": {"type": "string", "minLength": 1},
+        "willing_to_review_new_path": {"$ref": "#/$defs/discovery_status"},
+        "statements": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["field", "statement", "evidence_class", "limitations"],
+            "properties": {
+              "field": {"enum": ["APPLICATION", "CURRENT_HANDLING", "BOTTLENECK", "MAGNITUDE", "IMPROVEMENT", "VALIDATION", "OTHER"]},
+              "statement": {"type": "string", "minLength": 1},
+              "evidence_class": {"$ref": "#/$defs/evidence_class"},
+              "limitations": {"type": "array", "items": {"type": "string", "minLength": 1}}
+            }
+          }
+        },
+        "confidentiality": {"$ref": "#/$defs/confidentiality"},
+        "limitations": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+        "opportunity_state": {"$ref": "#/$defs/opportunity_state"},
+        "improvement_hypothesis": {
+          "oneOf": [
+            {"type": "null"},
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["real_bottleneck", "current_path", "proposed_change", "measurable_effect", "validation_method", "failure_condition"],
+              "properties": {
+                "real_bottleneck": {"type": "string", "minLength": 1},
+                "current_path": {"type": "string", "minLength": 1},
+                "proposed_change": {"type": "string", "minLength": 1},
+                "measurable_effect": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+                "validation_method": {"type": "string", "minLength": 1},
+                "failure_condition": {"type": "string", "minLength": 1}
+              }
+            }
+          ]
+        },
+        "c0_result": {"$ref": "#/$defs/c0_result"}
+      }
+    }
+  },
+  "$defs": {
+    "discovery_status": {"enum": ["YES", "NO", "UNKNOWN", "PARTIAL", "NOT_DISCLOSED"]},
+    "contact_type": {"enum": ["VERIFIED_PUBLIC_PROFESSIONAL_PROFILE", "OFFICIAL_COMPANY_CONTACT", "OFFICIAL_TECHNICAL_SUPPORT_CHANNEL", "PUBLIC_BUSINESS_EMAIL", "PUBLIC_NAMED_PROFESSIONAL_EMAIL", "INTERNAL_FORWARDING"]},
+    "current_solution": {"enum": ["LIFETIME_BUY", "OEM_SUCCESSOR", "THIRD_PARTY_SECOND_SOURCE", "REDESIGN", "CUSTOM_PART", "INVENTORY_BUFFER", "BROKER_SOURCE", "INTERNAL_REQUALIFICATION", "PROCESS_AUTOMATION", "PRODUCT_RETIREMENT", "OTHER", "UNKNOWN"]},
+    "bottleneck": {"enum": ["COST", "ENGINEERING_TIME", "QUALIFICATION_TIME", "TEST_TIME", "TOOLING", "MOQ", "LEAD_TIME", "SUPPLY_RISK", "SINGLE_SOURCE", "REDESIGN", "CERTIFICATION", "MANUFACTURABILITY", "YIELD", "RETEST", "TRACEABILITY", "SERVICEABILITY", "NONE_IDENTIFIED", "UNKNOWN"]},
+    "improvement_dimension": {"enum": ["LOWER_TOTAL_COST", "SHORTER_ENGINEERING_CYCLE", "SHORTER_QUALIFICATION", "LOWER_MOQ", "FASTER_LEAD_TIME", "SECOND_SOURCE", "LOWER_TEST_BURDEN", "BETTER_AUTOMATION", "BETTER_MANUFACTURABILITY", "BETTER_TRACEABILITY", "REDUCED_REDESIGN", "NO_MATERIAL_IMPROVEMENT_NEEDED", "UNKNOWN"]},
+    "evidence_class": {"enum": ["DIRECT_USER_STATEMENT", "DIRECT_ENGINEER_STATEMENT", "DIRECT_SERVICE_STATEMENT", "DIRECT_SUPPLIER_STATEMENT", "PUBLIC_SOURCE_FACT", "DERIVED_FACT", "TECHNICAL_INFERENCE", "ENGINEERING_JUDGMENT", "UNKNOWN"]},
+    "confidentiality": {"enum": ["PRIVATE", "PUBLIC_AUTHORIZED", "ANONYMIZED_AGGREGATE"]},
+    "opportunity_state": {"enum": ["ACTIVE_UNRESOLVED", "RESOLVED_BUT_SUBOPTIMAL", "RESOLVED_COMPETITIVE", "NO_CURRENT_APPLICATION", "INSUFFICIENT_DIRECT_EVIDENCE"]},
+    "c0_result": {"enum": ["PROCEED_TO_SOLUTION_SCOPING", "ARCHIVE", "MONITOR", "INSUFFICIENT_DIRECT_EVIDENCE"]}
+  }
+}

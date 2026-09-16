@@ -1,0 +1,49 @@
+{
+  "core": {
+    "artifact_refs": [],
+    "core_version": "STRUCTEVIDENCE_EVIDENCE_CORE_v0.1",
+    "correction_status": "NONE",
+    "created_at": "1970-01-01T00:00:00Z",
+    "domain": "TECHNICAL_RISK",
+    "effective_at": "1970-01-01T00:00:00Z",
+    "input_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "known_at": "1970-01-01T00:00:00Z",
+    "policy_version": "CML_OV_v0.1_PHASE_C0",
+    "protocol": "CML",
+    "record_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "record_id": "REPLACE_BEFORE_INGESTION",
+    "source_refs": [],
+    "subject_class": "CML_OPPORTUNITY_VALIDATION_DISCOVERY_RESPONSE",
+    "subject_id": "REPLACE_BEFORE_INGESTION",
+    "supersession_status": "CURRENT",
+    "updated_at": "1970-01-01T00:00:00Z",
+    "verification_status": "TEMPLATE_UNPOPULATED"
+  },
+  "discovery_response": {
+    "acceptance_logic": "UNKNOWN",
+    "application_confirmed": "UNKNOWN",
+    "c0_result": "INSUFFICIENT_DIRECT_EVIDENCE",
+    "confidentiality": "PRIVATE",
+    "contact_source": {
+      "contact_type": "INTERNAL_FORWARDING",
+      "public_reference": "REPLACE_BEFORE_INGESTION",
+      "verified_public": false
+    },
+    "current_bottleneck": ["UNKNOWN"],
+    "current_solution": ["UNKNOWN"],
+    "improvement_dimension": ["UNKNOWN"],
+    "improvement_hypothesis": null,
+    "interaction_date": null,
+    "limitations": ["Template only; replace placeholders with reviewed discovery evidence before ingestion."],
+    "measurable": "UNKNOWN",
+    "opportunity_state": "INSUFFICIENT_DIRECT_EVIDENCE",
+    "organization": "REPLACE_BEFORE_INGESTION",
+    "phase": "PHASE_C0",
+    "record_kind": "TEMPLATE",
+    "role": "REPLACE_BEFORE_INGESTION",
+    "statements": [],
+    "target": "OV-01",
+    "version": "CML_OV_v0.1_PHASE_C0",
+    "willing_to_review_new_path": "UNKNOWN"
+  }
+}
