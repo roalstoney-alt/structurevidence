@@ -1,0 +1,315 @@
+{
+  "package": {
+    "append_only_history": true,
+    "manifest_artifacts": 8,
+    "mirrors": 9,
+    "records": 4
+  },
+  "phase": "PHASE_A",
+  "records": {
+    "OV-01": {
+      "gates": [
+        {
+          "computed_facts": {
+            "schema": "technical-risk/opportunity-validation/schema/record.schema.json"
+          },
+          "gate_id": "OV-A01_SCHEMA",
+          "rule_version": "CML_OV_v0.1_PHASE_A",
+          "status": "PASS",
+          "validator": "schema_gate"
+        },
+        {
+          "computed_facts": {
+            "baseline_record_hash": "e665909621d08fe0c1049a1a09775d69e101856ed3b9305c500f887e8c2af51f",
+            "frozen_artifacts_checked": 12
+          },
+          "gate_id": "OV-A02_BASELINE",
+          "rule_version": "CML_OV_v0.1_PHASE_A",
+          "status": "PASS",
+          "validator": "baseline_gate"
+        },
+        {
+          "computed_facts": {
+            "event_domain": "RESEARCH_EVENT",
+            "source_count": 1
+          },
+          "gate_id": "OV-A03_SHARED_ENVELOPE",
+          "rule_version": "CML_OV_v0.1_PHASE_A",
+          "status": "PASS",
+          "validator": "envelope_gate"
+        },
+        {
+          "computed_facts": {
+            "record_hash": "0b40c7e355b57cadeb0fd37e4abcf6f28c5af1b03130633d6f2a46e077b35217"
+          },
+          "gate_id": "OV-A04_HASH_INTEGRITY",
+          "rule_version": "CML_OV_v0.1_PHASE_A",
+          "status": "PASS",
+          "validator": "integrity_gate"
+        },
+        {
+          "computed_facts": {
+            "unassessed_dimensions": 34
+          },
+          "gate_id": "OV-A05_UNASSESSED",
+          "rule_version": "CML_OV_v0.1_PHASE_A",
+          "status": "PASS",
+          "validator": "unknown_gate"
+        },
+        {
+          "computed_facts": {
+            "client_scope": "NOT_PROVIDED",
+            "private_fields_detected": []
+          },
+          "gate_id": "OV-A06_BOUNDARY",
+          "rule_version": "CML_OV_v0.1_PHASE_A",
+          "status": "PASS",
+          "validator": "boundary_gate"
+        },
+        {
+          "computed_facts": {
+            "baseline_gdr_public_release": "ALLOW_WITH_LIMITATIONS",
+            "baseline_gdr_reasons": [],
+            "ov_paid_delivery": "BLOCK",
+            "ov_public_release": "BLOCK"
+          },
+          "gate_id": "OV-A07_GOVERNANCE",
+          "rule_version": "CML_OV_v0.1_PHASE_A",
+          "status": "PASS",
+          "validator": "governance_gate"
+        }
+      ],
+      "paid_delivery": "BLOCK",
+      "public_release": "BLOCK",
+      "reason": "PHASE_A_INITIALIZATION_ONLY"
+    },
+    "OV-02": {
+      "gates": [
+        {
+          "computed_facts": {
+            "schema": "technical-risk/opportunity-validation/schema/record.schema.json"
+          },
+          "gate_id": "OV-A01_SCHEMA",
+          "rule_version": "CML_OV_v0.1_PHASE_A",
+          "status": "PASS",
+          "validator": "schema_gate"
+        },
+        {
+          "computed_facts": {
+            "baseline_record_hash": "f18e8d0dd74abd6874d4325af895197e07bb10d331f2e18167891f28a6b3f9dd",
+            "frozen_artifacts_checked": 12
+          },
+          "gate_id": "OV-A02_BASELINE",
+          "rule_version": "CML_OV_v0.1_PHASE_A",
+          "status": "PASS",
+          "validator": "baseline_gate"
+        },
+        {
+          "computed_facts": {
+            "event_domain": "RESEARCH_EVENT",
+            "source_count": 2
+          },
+          "gate_id": "OV-A03_SHARED_ENVELOPE",
+          "rule_version": "CML_OV_v0.1_PHASE_A",
+          "status": "PASS",
+          "validator": "envelope_gate"
+        },
+        {
+          "computed_facts": {
+            "record_hash": "86f672487a8c3b7b65f2909a988d0bb901f7e956b17a1d111157060098a670b7"
+          },
+          "gate_id": "OV-A04_HASH_INTEGRITY",
+          "rule_version": "CML_OV_v0.1_PHASE_A",
+          "status": "PASS",
+          "validator": "integrity_gate"
+        },
+        {
+          "computed_facts": {
+            "unassessed_dimensions": 34
+          },
+          "gate_id": "OV-A05_UNASSESSED",
+          "rule_version": "CML_OV_v0.1_PHASE_A",
+          "status": "PASS",
+          "validator": "unknown_gate"
+        },
+        {
+          "computed_facts": {
+            "client_scope": "NOT_PROVIDED",
+            "private_fields_detected": []
+          },
+          "gate_id": "OV-A06_BOUNDARY",
+          "rule_version": "CML_OV_v0.1_PHASE_A",
+          "status": "PASS",
+          "validator": "boundary_gate"
+        },
+        {
+          "computed_facts": {
+            "baseline_gdr_public_release": "ALLOW_WITH_LIMITATIONS",
+            "baseline_gdr_reasons": [],
+            "ov_paid_delivery": "BLOCK",
+            "ov_public_release": "BLOCK"
+          },
+          "gate_id": "OV-A07_GOVERNANCE",
+          "rule_version": "CML_OV_v0.1_PHASE_A",
+          "status": "PASS",
+          "validator": "governance_gate"
+        }
+      ],
+      "paid_delivery": "BLOCK",
+      "public_release": "BLOCK",
+      "reason": "PHASE_A_INITIALIZATION_ONLY"
+    },
+    "OV-03": {
+      "gates": [
+        {
+          "computed_facts": {
+            "schema": "technical-risk/opportunity-validation/schema/record.schema.json"
+          },
+          "gate_id": "OV-A01_SCHEMA",
+          "rule_version": "CML_OV_v0.1_PHASE_A",
+          "status": "PASS",
+          "validator": "schema_gate"
+        },
+        {
+          "computed_facts": {
+            "baseline_record_hash": "0616350e28fe26de50acc10877a7adf07ac1b033d6403c742dc6e011110e8b57",
+            "frozen_artifacts_checked": 12
+          },
+          "gate_id": "OV-A02_BASELINE",
+          "rule_version": "CML_OV_v0.1_PHASE_A",
+          "status": "PASS",
+          "validator": "baseline_gate"
+        },
+        {
+          "computed_facts": {
+            "event_domain": "RESEARCH_EVENT",
+            "source_count": 2
+          },
+          "gate_id": "OV-A03_SHARED_ENVELOPE",
+          "rule_version": "CML_OV_v0.1_PHASE_A",
+          "status": "PASS",
+          "validator": "envelope_gate"
+        },
+        {
+          "computed_facts": {
+            "record_hash": "4d061d1f768a6a35f0ea4e76991a60260ea51b13e6a40d58905a788aaa1e1314"
+          },
+          "gate_id": "OV-A04_HASH_INTEGRITY",
+          "rule_version": "CML_OV_v0.1_PHASE_A",
+          "status": "PASS",
+          "validator": "integrity_gate"
+        },
+        {
+          "computed_facts": {
+            "unassessed_dimensions": 34
+          },
+          "gate_id": "OV-A05_UNASSESSED",
+          "rule_version": "CML_OV_v0.1_PHASE_A",
+          "status": "PASS",
+          "validator": "unknown_gate"
+        },
+        {
+          "computed_facts": {
+            "client_scope": "NOT_PROVIDED",
+            "private_fields_detected": []
+          },
+          "gate_id": "OV-A06_BOUNDARY",
+          "rule_version": "CML_OV_v0.1_PHASE_A",
+          "status": "PASS",
+          "validator": "boundary_gate"
+        },
+        {
+          "computed_facts": {
+            "baseline_gdr_public_release": "ALLOW_WITH_LIMITATIONS",
+            "baseline_gdr_reasons": [],
+            "ov_paid_delivery": "BLOCK",
+            "ov_public_release": "BLOCK"
+          },
+          "gate_id": "OV-A07_GOVERNANCE",
+          "rule_version": "CML_OV_v0.1_PHASE_A",
+          "status": "PASS",
+          "validator": "governance_gate"
+        }
+      ],
+      "paid_delivery": "BLOCK",
+      "public_release": "BLOCK",
+      "reason": "PHASE_A_INITIALIZATION_ONLY"
+    },
+    "OV-04": {
+      "gates": [
+        {
+          "computed_facts": {
+            "schema": "technical-risk/opportunity-validation/schema/record.schema.json"
+          },
+          "gate_id": "OV-A01_SCHEMA",
+          "rule_version": "CML_OV_v0.1_PHASE_A",
+          "status": "PASS",
+          "validator": "schema_gate"
+        },
+        {
+          "computed_facts": {
+            "baseline_record_hash": "fad0d50b97e54a61c22078da35b79f63bb8de8e0bed1a0cc38d398977ac409aa",
+            "frozen_artifacts_checked": 12
+          },
+          "gate_id": "OV-A02_BASELINE",
+          "rule_version": "CML_OV_v0.1_PHASE_A",
+          "status": "PASS",
+          "validator": "baseline_gate"
+        },
+        {
+          "computed_facts": {
+            "event_domain": "RESEARCH_EVENT",
+            "source_count": 4
+          },
+          "gate_id": "OV-A03_SHARED_ENVELOPE",
+          "rule_version": "CML_OV_v0.1_PHASE_A",
+          "status": "PASS",
+          "validator": "envelope_gate"
+        },
+        {
+          "computed_facts": {
+            "record_hash": "bba5ef620a62c94bd9af10654ce12794ac304df2d7c3d4adf0a5016d58d912fb"
+          },
+          "gate_id": "OV-A04_HASH_INTEGRITY",
+          "rule_version": "CML_OV_v0.1_PHASE_A",
+          "status": "PASS",
+          "validator": "integrity_gate"
+        },
+        {
+          "computed_facts": {
+            "unassessed_dimensions": 34
+          },
+          "gate_id": "OV-A05_UNASSESSED",
+          "rule_version": "CML_OV_v0.1_PHASE_A",
+          "status": "PASS",
+          "validator": "unknown_gate"
+        },
+        {
+          "computed_facts": {
+            "client_scope": "NOT_PROVIDED",
+            "private_fields_detected": []
+          },
+          "gate_id": "OV-A06_BOUNDARY",
+          "rule_version": "CML_OV_v0.1_PHASE_A",
+          "status": "PASS",
+          "validator": "boundary_gate"
+        },
+        {
+          "computed_facts": {
+            "baseline_gdr_public_release": "ALLOW_WITH_LIMITATIONS",
+            "baseline_gdr_reasons": [],
+            "ov_paid_delivery": "BLOCK",
+            "ov_public_release": "BLOCK"
+          },
+          "gate_id": "OV-A07_GOVERNANCE",
+          "rule_version": "CML_OV_v0.1_PHASE_A",
+          "status": "PASS",
+          "validator": "governance_gate"
+        }
+      ],
+      "paid_delivery": "BLOCK",
+      "public_release": "BLOCK",
+      "reason": "PHASE_A_INITIALIZATION_ONLY"
+    }
+  }
+}

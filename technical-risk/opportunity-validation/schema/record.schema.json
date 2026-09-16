@@ -1,0 +1,960 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "core": {
+      "$ref": "../../../evidence/core/schema/evidence_core_record.schema.json"
+    },
+    "opportunity_validation": {
+      "additionalProperties": false,
+      "properties": {
+        "baseline": {
+          "additionalProperties": false,
+          "properties": {
+            "commit": {
+              "const": "19be538447a90672491768d818fa07e3dd3dd377"
+            },
+            "counter_evidence": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "event_effective_at": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "event_known_at": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "freshness_reason": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "freshness_rule_type": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "freshness_state": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "identity_scope": {
+              "enum": [
+                "EXACT_PART",
+                "FAMILY_EVENT"
+              ]
+            },
+            "lifecycle_state": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "limitations_ref": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "oem_replacement_status": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "qualification_state": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "record_hash": {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            "record_id": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "record_path": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "release_manifest_path": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "release_manifest_sha256": {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            "unknowns": {
+              "items": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "verification_requirements_ref": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "commit",
+            "record_path",
+            "record_id",
+            "record_hash",
+            "release_manifest_path",
+            "release_manifest_sha256",
+            "identity_scope",
+            "event_effective_at",
+            "event_known_at",
+            "lifecycle_state",
+            "qualification_state",
+            "oem_replacement_status",
+            "freshness_state",
+            "freshness_reason",
+            "freshness_rule_type",
+            "unknowns",
+            "counter_evidence",
+            "limitations_ref",
+            "verification_requirements_ref"
+          ],
+          "type": "object"
+        },
+        "client_scope": {
+          "const": "NOT_PROVIDED"
+        },
+        "current_solution_audit": {
+          "additionalProperties": false,
+          "properties": {
+            "constraints": {
+              "additionalProperties": false,
+              "properties": {
+                "evidence_refs": {
+                  "const": []
+                },
+                "state": {
+                  "const": "NOT_ASSESSED"
+                },
+                "value": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "state",
+                "value",
+                "evidence_refs"
+              ],
+              "type": "object"
+            },
+            "current_handling": {
+              "additionalProperties": false,
+              "properties": {
+                "evidence_refs": {
+                  "const": []
+                },
+                "state": {
+                  "const": "NOT_ASSESSED"
+                },
+                "value": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "state",
+                "value",
+                "evidence_refs"
+              ],
+              "type": "object"
+            },
+            "operating_cost": {
+              "additionalProperties": false,
+              "properties": {
+                "evidence_refs": {
+                  "const": []
+                },
+                "state": {
+                  "const": "NOT_ASSESSED"
+                },
+                "value": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "state",
+                "value",
+                "evidence_refs"
+              ],
+              "type": "object"
+            },
+            "solution_efficiency": {
+              "additionalProperties": false,
+              "properties": {
+                "evidence_refs": {
+                  "const": []
+                },
+                "state": {
+                  "const": "NOT_ASSESSED"
+                },
+                "value": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "state",
+                "value",
+                "evidence_refs"
+              ],
+              "type": "object"
+            },
+            "switching_barriers": {
+              "additionalProperties": false,
+              "properties": {
+                "evidence_refs": {
+                  "const": []
+                },
+                "state": {
+                  "const": "NOT_ASSESSED"
+                },
+                "value": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "state",
+                "value",
+                "evidence_refs"
+              ],
+              "type": "object"
+            },
+            "technical_performance": {
+              "additionalProperties": false,
+              "properties": {
+                "evidence_refs": {
+                  "const": []
+                },
+                "state": {
+                  "const": "NOT_ASSESSED"
+                },
+                "value": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "state",
+                "value",
+                "evidence_refs"
+              ],
+              "type": "object"
+            }
+          },
+          "required": [
+            "current_handling",
+            "technical_performance",
+            "solution_efficiency",
+            "constraints",
+            "operating_cost",
+            "switching_barriers"
+          ],
+          "type": "object"
+        },
+        "event_domain": {
+          "const": "RESEARCH_EVENT"
+        },
+        "freshness_reason": {
+          "const": "OV_ASSESSMENT_CADENCE_NOT_CONFIGURED"
+        },
+        "freshness_rule_type": {
+          "const": "UNCONFIGURED"
+        },
+        "freshness_state": {
+          "const": "POLICY_NOT_CONFIGURED"
+        },
+        "governance": {
+          "additionalProperties": false,
+          "properties": {
+            "gdr_adapter_ref": {
+              "const": "gdr-se/engine/domain_adapters/cml.py"
+            },
+            "opportunity_qualification": {
+              "const": "NOT_ASSESSED"
+            },
+            "paid_delivery": {
+              "const": "BLOCK"
+            },
+            "public_release": {
+              "const": "BLOCK"
+            },
+            "reason": {
+              "const": "PHASE_A_INITIALIZATION_ONLY"
+            },
+            "solution_development": {
+              "const": "NOT_AUTHORIZED"
+            }
+          },
+          "required": [
+            "public_release",
+            "paid_delivery",
+            "solution_development",
+            "opportunity_qualification",
+            "reason",
+            "gdr_adapter_ref"
+          ],
+          "type": "object"
+        },
+        "ov_id": {
+          "enum": [
+            "OV-01",
+            "OV-02",
+            "OV-03",
+            "OV-04"
+          ]
+        },
+        "phase": {
+          "const": "PHASE_A"
+        },
+        "problem_persistence": {
+          "additionalProperties": false,
+          "properties": {
+            "active_customer_pain": {
+              "additionalProperties": false,
+              "properties": {
+                "evidence_refs": {
+                  "const": []
+                },
+                "state": {
+                  "const": "NOT_ASSESSED"
+                },
+                "value": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "state",
+                "value",
+                "evidence_refs"
+              ],
+              "type": "object"
+            },
+            "affected_application": {
+              "additionalProperties": false,
+              "properties": {
+                "evidence_refs": {
+                  "const": []
+                },
+                "state": {
+                  "const": "NOT_ASSESSED"
+                },
+                "value": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "state",
+                "value",
+                "evidence_refs"
+              ],
+              "type": "object"
+            },
+            "internal_resolution": {
+              "additionalProperties": false,
+              "properties": {
+                "evidence_refs": {
+                  "const": []
+                },
+                "state": {
+                  "const": "NOT_ASSESSED"
+                },
+                "value": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "state",
+                "value",
+                "evidence_refs"
+              ],
+              "type": "object"
+            },
+            "problem_persistence": {
+              "additionalProperties": false,
+              "properties": {
+                "evidence_refs": {
+                  "const": []
+                },
+                "state": {
+                  "const": "NOT_ASSESSED"
+                },
+                "value": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "state",
+                "value",
+                "evidence_refs"
+              ],
+              "type": "object"
+            }
+          },
+          "required": [
+            "problem_persistence",
+            "active_customer_pain",
+            "affected_application",
+            "internal_resolution"
+          ],
+          "type": "object"
+        },
+        "public_private_boundary": {
+          "const": "PUBLIC_EVIDENCE_ONLY_NO_CLIENT_BOM"
+        },
+        "solution_improvement_potential": {
+          "additionalProperties": false,
+          "properties": {
+            "acceptance_criteria": {
+              "additionalProperties": false,
+              "properties": {
+                "evidence_refs": {
+                  "const": []
+                },
+                "state": {
+                  "const": "NOT_ASSESSED"
+                },
+                "value": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "state",
+                "value",
+                "evidence_refs"
+              ],
+              "type": "object"
+            },
+            "application_scope": {
+              "additionalProperties": false,
+              "properties": {
+                "evidence_refs": {
+                  "const": []
+                },
+                "state": {
+                  "const": "NOT_ASSESSED"
+                },
+                "value": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "state",
+                "value",
+                "evidence_refs"
+              ],
+              "type": "object"
+            },
+            "baseline_value": {
+              "additionalProperties": false,
+              "properties": {
+                "evidence_refs": {
+                  "const": []
+                },
+                "state": {
+                  "const": "NOT_ASSESSED"
+                },
+                "value": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "state",
+                "value",
+                "evidence_refs"
+              ],
+              "type": "object"
+            },
+            "cost_assessment": {
+              "additionalProperties": false,
+              "properties": {
+                "certification": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "evidence_refs": {
+                      "const": []
+                    },
+                    "state": {
+                      "const": "NOT_ASSESSED"
+                    },
+                    "value": {
+                      "type": "null"
+                    }
+                  },
+                  "required": [
+                    "state",
+                    "value",
+                    "evidence_refs"
+                  ],
+                  "type": "object"
+                },
+                "comparison_horizon": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "evidence_refs": {
+                      "const": []
+                    },
+                    "state": {
+                      "const": "NOT_ASSESSED"
+                    },
+                    "value": {
+                      "type": "null"
+                    }
+                  },
+                  "required": [
+                    "state",
+                    "value",
+                    "evidence_refs"
+                  ],
+                  "type": "object"
+                },
+                "downtime": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "evidence_refs": {
+                      "const": []
+                    },
+                    "state": {
+                      "const": "NOT_ASSESSED"
+                    },
+                    "value": {
+                      "type": "null"
+                    }
+                  },
+                  "required": [
+                    "state",
+                    "value",
+                    "evidence_refs"
+                  ],
+                  "type": "object"
+                },
+                "engineering_redesign": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "evidence_refs": {
+                      "const": []
+                    },
+                    "state": {
+                      "const": "NOT_ASSESSED"
+                    },
+                    "value": {
+                      "type": "null"
+                    }
+                  },
+                  "required": [
+                    "state",
+                    "value",
+                    "evidence_refs"
+                  ],
+                  "type": "object"
+                },
+                "lifetime_operation": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "evidence_refs": {
+                      "const": []
+                    },
+                    "state": {
+                      "const": "NOT_ASSESSED"
+                    },
+                    "value": {
+                      "type": "null"
+                    }
+                  },
+                  "required": [
+                    "state",
+                    "value",
+                    "evidence_refs"
+                  ],
+                  "type": "object"
+                },
+                "manufacturing_transition": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "evidence_refs": {
+                      "const": []
+                    },
+                    "state": {
+                      "const": "NOT_ASSESSED"
+                    },
+                    "value": {
+                      "type": "null"
+                    }
+                  },
+                  "required": [
+                    "state",
+                    "value",
+                    "evidence_refs"
+                  ],
+                  "type": "object"
+                },
+                "qualification": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "evidence_refs": {
+                      "const": []
+                    },
+                    "state": {
+                      "const": "NOT_ASSESSED"
+                    },
+                    "value": {
+                      "type": "null"
+                    }
+                  },
+                  "required": [
+                    "state",
+                    "value",
+                    "evidence_refs"
+                  ],
+                  "type": "object"
+                },
+                "supply_logistics": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "evidence_refs": {
+                      "const": []
+                    },
+                    "state": {
+                      "const": "NOT_ASSESSED"
+                    },
+                    "value": {
+                      "type": "null"
+                    }
+                  },
+                  "required": [
+                    "state",
+                    "value",
+                    "evidence_refs"
+                  ],
+                  "type": "object"
+                },
+                "tooling": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "evidence_refs": {
+                      "const": []
+                    },
+                    "state": {
+                      "const": "NOT_ASSESSED"
+                    },
+                    "value": {
+                      "type": "null"
+                    }
+                  },
+                  "required": [
+                    "state",
+                    "value",
+                    "evidence_refs"
+                  ],
+                  "type": "object"
+                },
+                "total_migration_cost": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "evidence_refs": {
+                      "const": []
+                    },
+                    "state": {
+                      "const": "NOT_ASSESSED"
+                    },
+                    "value": {
+                      "type": "null"
+                    }
+                  },
+                  "required": [
+                    "state",
+                    "value",
+                    "evidence_refs"
+                  ],
+                  "type": "object"
+                },
+                "unit_cost": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "evidence_refs": {
+                      "const": []
+                    },
+                    "state": {
+                      "const": "NOT_ASSESSED"
+                    },
+                    "value": {
+                      "type": "null"
+                    }
+                  },
+                  "required": [
+                    "state",
+                    "value",
+                    "evidence_refs"
+                  ],
+                  "type": "object"
+                },
+                "verification": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "evidence_refs": {
+                      "const": []
+                    },
+                    "state": {
+                      "const": "NOT_ASSESSED"
+                    },
+                    "value": {
+                      "type": "null"
+                    }
+                  },
+                  "required": [
+                    "state",
+                    "value",
+                    "evidence_refs"
+                  ],
+                  "type": "object"
+                }
+              },
+              "required": [
+                "unit_cost",
+                "engineering_redesign",
+                "tooling",
+                "verification",
+                "qualification",
+                "certification",
+                "manufacturing_transition",
+                "downtime",
+                "supply_logistics",
+                "lifetime_operation",
+                "total_migration_cost",
+                "comparison_horizon"
+              ],
+              "type": "object"
+            },
+            "manufacturing_tool_potential": {
+              "additionalProperties": false,
+              "properties": {
+                "evidence_refs": {
+                  "const": []
+                },
+                "state": {
+                  "const": "NOT_ASSESSED"
+                },
+                "value": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "state",
+                "value",
+                "evidence_refs"
+              ],
+              "type": "object"
+            },
+            "measurable_improvement": {
+              "additionalProperties": false,
+              "properties": {
+                "evidence_refs": {
+                  "const": []
+                },
+                "state": {
+                  "const": "NOT_ASSESSED"
+                },
+                "value": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "state",
+                "value",
+                "evidence_refs"
+              ],
+              "type": "object"
+            },
+            "metric": {
+              "additionalProperties": false,
+              "properties": {
+                "evidence_refs": {
+                  "const": []
+                },
+                "state": {
+                  "const": "NOT_ASSESSED"
+                },
+                "value": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "state",
+                "value",
+                "evidence_refs"
+              ],
+              "type": "object"
+            },
+            "modern_design_potential": {
+              "additionalProperties": false,
+              "properties": {
+                "evidence_refs": {
+                  "const": []
+                },
+                "state": {
+                  "const": "NOT_ASSESSED"
+                },
+                "value": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "state",
+                "value",
+                "evidence_refs"
+              ],
+              "type": "object"
+            },
+            "net_benefit": {
+              "additionalProperties": false,
+              "properties": {
+                "evidence_refs": {
+                  "const": []
+                },
+                "state": {
+                  "const": "NOT_ASSESSED"
+                },
+                "value": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "state",
+                "value",
+                "evidence_refs"
+              ],
+              "type": "object"
+            },
+            "target_value": {
+              "additionalProperties": false,
+              "properties": {
+                "evidence_refs": {
+                  "const": []
+                },
+                "state": {
+                  "const": "NOT_ASSESSED"
+                },
+                "value": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "state",
+                "value",
+                "evidence_refs"
+              ],
+              "type": "object"
+            },
+            "test_method": {
+              "additionalProperties": false,
+              "properties": {
+                "evidence_refs": {
+                  "const": []
+                },
+                "state": {
+                  "const": "NOT_ASSESSED"
+                },
+                "value": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "state",
+                "value",
+                "evidence_refs"
+              ],
+              "type": "object"
+            },
+            "unit": {
+              "additionalProperties": false,
+              "properties": {
+                "evidence_refs": {
+                  "const": []
+                },
+                "state": {
+                  "const": "NOT_ASSESSED"
+                },
+                "value": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "state",
+                "value",
+                "evidence_refs"
+              ],
+              "type": "object"
+            },
+            "verification_tool_potential": {
+              "additionalProperties": false,
+              "properties": {
+                "evidence_refs": {
+                  "const": []
+                },
+                "state": {
+                  "const": "NOT_ASSESSED"
+                },
+                "value": {
+                  "type": "null"
+                }
+              },
+              "required": [
+                "state",
+                "value",
+                "evidence_refs"
+              ],
+              "type": "object"
+            }
+          },
+          "required": [
+            "modern_design_potential",
+            "verification_tool_potential",
+            "manufacturing_tool_potential",
+            "measurable_improvement",
+            "metric",
+            "unit",
+            "baseline_value",
+            "target_value",
+            "application_scope",
+            "test_method",
+            "acceptance_criteria",
+            "net_benefit",
+            "cost_assessment"
+          ],
+          "type": "object"
+        },
+        "status": {
+          "const": "INITIALIZED_UNASSESSED"
+        },
+        "version": {
+          "const": "CML_OV_v0.1_PHASE_A"
+        }
+      },
+      "required": [
+        "version",
+        "ov_id",
+        "phase",
+        "status",
+        "event_domain",
+        "baseline",
+        "problem_persistence",
+        "current_solution_audit",
+        "solution_improvement_potential",
+        "client_scope",
+        "public_private_boundary",
+        "freshness_state",
+        "freshness_reason",
+        "freshness_rule_type",
+        "governance"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "core",
+    "opportunity_validation"
+  ],
+  "title": "CML Opportunity Validation Phase A record",
+  "type": "object"
+}

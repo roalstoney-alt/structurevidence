@@ -1,0 +1,34 @@
+{
+  "public_verify_registration": false,
+  "records": [
+    {
+      "baseline_record_hash": "e665909621d08fe0c1049a1a09775d69e101856ed3b9305c500f887e8c2af51f",
+      "ov_id": "OV-01",
+      "path": "technical-risk/records/amphenol-10081811-101-07lf/opportunity-validation/OV-01.v0.1.json",
+      "record_hash": "0b40c7e355b57cadeb0fd37e4abcf6f28c5af1b03130633d6f2a46e077b35217",
+      "record_id": "SE.CML.OV.OV-01.v0.1"
+    },
+    {
+      "baseline_record_hash": "f18e8d0dd74abd6874d4325af895197e07bb10d331f2e18167891f28a6b3f9dd",
+      "ov_id": "OV-02",
+      "path": "technical-risk/records/murata-mymgm5r012ela5rnd/opportunity-validation/OV-02.v0.1.json",
+      "record_hash": "86f672487a8c3b7b65f2909a988d0bb901f7e956b17a1d111157060098a670b7",
+      "record_id": "SE.CML.OV.OV-02.v0.1"
+    },
+    {
+      "baseline_record_hash": "0616350e28fe26de50acc10877a7adf07ac1b033d6403c742dc6e011110e8b57",
+      "ov_id": "OV-03",
+      "path": "technical-risk/records/amphenol-rf-095-725-134-006/opportunity-validation/OV-03.v0.1.json",
+      "record_hash": "4d061d1f768a6a35f0ea4e76991a60260ea51b13e6a40d58905a788aaa1e1314",
+      "record_id": "SE.CML.OV.OV-03.v0.1"
+    },
+    {
+      "baseline_record_hash": "fad0d50b97e54a61c22078da35b79f63bb8de8e0bed1a0cc38d398977ac409aa",
+      "ov_id": "OV-04",
+      "path": "technical-risk/records/nxp-radio-power-2026/opportunity-validation/OV-04.v0.1.json",
+      "record_hash": "bba5ef620a62c94bd9af10654ce12794ac304df2d7c3d4adf0a5016d58d912fb",
+      "record_id": "SE.CML.OV.OV-04.v0.1"
+    }
+  ],
+  "version": "CML_OV_v0.1_PHASE_A"
+}

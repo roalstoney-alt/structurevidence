@@ -1,0 +1,27 @@
+{
+  "assessment_state": {
+    "NOT_ASSESSED": "No assessment performed; value must be null and evidence_refs empty."
+  },
+  "client_scope": {
+    "NOT_PROVIDED": "No customer context supplied."
+  },
+  "freshness": {
+    "reason": "OV_ASSESSMENT_CADENCE_NOT_CONFIGURED",
+    "rule_type": "UNCONFIGURED",
+    "state": "POLICY_NOT_CONFIGURED"
+  },
+  "future_transitions": "Require a separately authorized schema/policy revision and evidence review; no automatic promotion from lifecycle or working solution.",
+  "opportunity_qualification": {
+    "NOT_ASSESSED": "No commercial opportunity finding."
+  },
+  "record_status": {
+    "INITIALIZED_UNASSESSED": "Architecture initialized; no empirical OV conclusion."
+  },
+  "release": {
+    "BLOCK": "Initialization is not release or paid-delivery authorization."
+  },
+  "solution_development": {
+    "NOT_AUTHORIZED": "Requires a later explicit authorization."
+  },
+  "version": "CML_OV_v0.1_PHASE_A"
+}

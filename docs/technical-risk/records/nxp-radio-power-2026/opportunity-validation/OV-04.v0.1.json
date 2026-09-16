@@ -1,0 +1,257 @@
+{
+  "core": {
+    "artifact_refs": [
+      "NXP_202603037DN:01a0f1aa50985503ef647c9346c728788eff76b3af295211e5c517744c310691",
+      "NXP_MRF101AN_DS:967fc14a3d2021aca9e2359e6f2811dad735c5de96af3dc2c57d50c4f1a9188b",
+      "NXP_MW6S010N_PAGE:0f6fec492e61bb0f1a663d76e24777b19587622a0b7e351f6a1eabd98858d75a",
+      "NXP_MMRF1009H_DS:541d5d61b2bdd0057074ea6f5d13303cb7e7ed8aa4729a0cdb3cfe30023887d7",
+      "technical-risk/records/nxp-radio-power-2026/11_PUBLIC_RECORD.json:e502c13b2c8a78d855a9eb4e0041762c0282bee724d33ac3cda8461ddfe6b56c",
+      "technical-risk/records/nxp-radio-power-2026/12_RELEASE_MANIFEST.json:d980ad9c76910b4e381560467e313170aaea39eaec5379703587b2a358981a84"
+    ],
+    "core_version": "STRUCTEVIDENCE_EVIDENCE_CORE_v0.1",
+    "correction_status": "NO_CORRECTION_RECORDED",
+    "created_at": "2026-09-16T01:52:28Z",
+    "domain": "TECHNICAL_RISK",
+    "effective_at": "2026-09-16T01:52:28Z",
+    "input_hash": "88b5eb7bda41d023176c26e71d67637fe5487d3b246a14f6685ce3a4b0f7da16",
+    "known_at": "2026-09-16T01:52:28Z",
+    "policy_version": "CML_OV_v0.1_PHASE_A",
+    "protocol": "CML",
+    "record_hash": "bba5ef620a62c94bd9af10654ce12794ac304df2d7c3d4adf0a5016d58d912fb",
+    "record_id": "SE.CML.OV.OV-04.v0.1",
+    "source_refs": [
+      "NXP_202603037DN",
+      "NXP_MRF101AN_DS",
+      "NXP_MW6S010N_PAGE",
+      "NXP_MMRF1009H_DS"
+    ],
+    "subject_class": "TECHNICAL_ITEM",
+    "subject_id": "SE.TECH.NXP.RADIO-POWER-2026-FAMILY",
+    "supersession_status": "CURRENT",
+    "updated_at": "2026-09-16T01:52:28Z",
+    "verification_status": "NOT_ASSESSED"
+  },
+  "opportunity_validation": {
+    "baseline": {
+      "commit": "19be538447a90672491768d818fa07e3dd3dd377",
+      "counter_evidence": "Some NXP overview surfaces have retained an Active label for MRF101AN. The later dated discontinuance notice and package status are treated as stronger lifecycle evidence, while the conflict remains visible.",
+      "event_effective_at": "2026-04-01T00:00:00Z",
+      "event_known_at": "2026-03-31T00:00:00Z",
+      "freshness_reason": "MANUFACTURER_INTERFACE_STATUS_CONFLICT",
+      "freshness_rule_type": "EVENT_DRIVEN",
+      "freshness_state": "CURRENT_WITH_LIMITATIONS",
+      "identity_scope": "FAMILY_EVENT",
+      "lifecycle_state": "LAST_TIME_BUY_OPEN",
+      "limitations_ref": "technical-risk/records/nxp-radio-power-2026/10_LIMITATIONS.md",
+      "oem_replacement_status": "OEM_REPLACEMENT_NOT_LISTED",
+      "qualification_state": "LAB_VERIFICATION_REQUIRED",
+      "record_hash": "fad0d50b97e54a61c22078da35b79f63bb8de8e0bed1a0cc38d398977ac409aa",
+      "record_id": "SE.CML.RECORD.NXP.RADIO-POWER-2026.v0.1",
+      "record_path": "technical-risk/records/nxp-radio-power-2026/11_PUBLIC_RECORD.json",
+      "release_manifest_path": "technical-risk/records/nxp-radio-power-2026/12_RELEASE_MANIFEST.json",
+      "release_manifest_sha256": "d980ad9c76910b4e381560467e313170aaea39eaec5379703587b2a358981a84",
+      "unknowns": [
+        "No reviewed evidence establishes a board drop-in successor for any selected device.",
+        "Application-specific matching networks, thermal margins and stability criteria are unknown.",
+        "The MRF101AN overview has shown an inconsistent Active label while package/quality and the discontinuance notice indicate EOL."
+      ],
+      "verification_requirements_ref": "technical-risk/records/nxp-radio-power-2026/05_COMPATIBILITY_REQUIREMENTS.json"
+    },
+    "client_scope": "NOT_PROVIDED",
+    "current_solution_audit": {
+      "constraints": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "current_handling": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "operating_cost": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "solution_efficiency": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "switching_barriers": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "technical_performance": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      }
+    },
+    "event_domain": "RESEARCH_EVENT",
+    "freshness_reason": "OV_ASSESSMENT_CADENCE_NOT_CONFIGURED",
+    "freshness_rule_type": "UNCONFIGURED",
+    "freshness_state": "POLICY_NOT_CONFIGURED",
+    "governance": {
+      "gdr_adapter_ref": "gdr-se/engine/domain_adapters/cml.py",
+      "opportunity_qualification": "NOT_ASSESSED",
+      "paid_delivery": "BLOCK",
+      "public_release": "BLOCK",
+      "reason": "PHASE_A_INITIALIZATION_ONLY",
+      "solution_development": "NOT_AUTHORIZED"
+    },
+    "ov_id": "OV-04",
+    "phase": "PHASE_A",
+    "problem_persistence": {
+      "active_customer_pain": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "affected_application": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "internal_resolution": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "problem_persistence": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      }
+    },
+    "public_private_boundary": "PUBLIC_EVIDENCE_ONLY_NO_CLIENT_BOM",
+    "solution_improvement_potential": {
+      "acceptance_criteria": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "application_scope": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "baseline_value": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "cost_assessment": {
+        "certification": {
+          "evidence_refs": [],
+          "state": "NOT_ASSESSED",
+          "value": null
+        },
+        "comparison_horizon": {
+          "evidence_refs": [],
+          "state": "NOT_ASSESSED",
+          "value": null
+        },
+        "downtime": {
+          "evidence_refs": [],
+          "state": "NOT_ASSESSED",
+          "value": null
+        },
+        "engineering_redesign": {
+          "evidence_refs": [],
+          "state": "NOT_ASSESSED",
+          "value": null
+        },
+        "lifetime_operation": {
+          "evidence_refs": [],
+          "state": "NOT_ASSESSED",
+          "value": null
+        },
+        "manufacturing_transition": {
+          "evidence_refs": [],
+          "state": "NOT_ASSESSED",
+          "value": null
+        },
+        "qualification": {
+          "evidence_refs": [],
+          "state": "NOT_ASSESSED",
+          "value": null
+        },
+        "supply_logistics": {
+          "evidence_refs": [],
+          "state": "NOT_ASSESSED",
+          "value": null
+        },
+        "tooling": {
+          "evidence_refs": [],
+          "state": "NOT_ASSESSED",
+          "value": null
+        },
+        "total_migration_cost": {
+          "evidence_refs": [],
+          "state": "NOT_ASSESSED",
+          "value": null
+        },
+        "unit_cost": {
+          "evidence_refs": [],
+          "state": "NOT_ASSESSED",
+          "value": null
+        },
+        "verification": {
+          "evidence_refs": [],
+          "state": "NOT_ASSESSED",
+          "value": null
+        }
+      },
+      "manufacturing_tool_potential": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "measurable_improvement": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "metric": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "modern_design_potential": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "net_benefit": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "target_value": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "test_method": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "unit": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "verification_tool_potential": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      }
+    },
+    "status": "INITIALIZED_UNASSESSED",
+    "version": "CML_OV_v0.1_PHASE_A"
+  }
+}

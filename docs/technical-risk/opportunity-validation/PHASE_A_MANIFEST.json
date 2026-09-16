@@ -1,0 +1,18 @@
+{
+  "artifact_hashes": {
+    "technical-risk/opportunity-validation/INDEX.json": "994ac61b38475f09fe138bd92bcce07e89200d438240f145871af05eb2d0b77c",
+    "technical-risk/opportunity-validation/STATUS_VOCABULARY.json": "3e6480204083a68b0d6005130a25de7031549450b91f7eced14962f9e7b0b6e3",
+    "technical-risk/opportunity-validation/schema/record.schema.json": "7c5436dc1eb23822c5ab7953a4d75b2abf1a2624c506bdf022cce68f75cddc2b",
+    "technical-risk/opportunity-validation/templates/phase-a-record.json": "3bde9227e87ab0cad3f940926811bd8857e9257af75d1356fbb80f3b3026ef4d",
+    "technical-risk/records/amphenol-10081811-101-07lf/opportunity-validation/OV-01.v0.1.json": "3bde9227e87ab0cad3f940926811bd8857e9257af75d1356fbb80f3b3026ef4d",
+    "technical-risk/records/amphenol-rf-095-725-134-006/opportunity-validation/OV-03.v0.1.json": "fb4c5e7f03df8a49db14293c73570ce40275158f307a7d6ce902e5794236e310",
+    "technical-risk/records/murata-mymgm5r012ela5rnd/opportunity-validation/OV-02.v0.1.json": "b8646a7639218e1a013ccd0934faf216e6e4cd4c1a242c780a162f6d236197b0",
+    "technical-risk/records/nxp-radio-power-2026/opportunity-validation/OV-04.v0.1.json": "f003a1483adfa2b8a5707f0979cd55c7fdb6752a608c39bb97cc8525b54649e8"
+  },
+  "baseline_commit": "19be538447a90672491768d818fa07e3dd3dd377",
+  "initialized_at": "2026-09-16T01:52:28Z",
+  "paid_delivery_state": "BLOCK",
+  "purpose": "INITIALIZATION_INTEGRITY_ONLY",
+  "release_state": "BLOCK",
+  "version": "CML_OV_v0.1_PHASE_A"
+}

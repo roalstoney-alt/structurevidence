@@ -1,0 +1,251 @@
+{
+  "core": {
+    "artifact_refs": [
+      "technical-risk/records/amphenol-rf-095-725-134-006/11_PUBLIC_RECORD.json:e12b5a2e826b74817e15f59df5438a75638598690050a6c8127ad129b6e05306",
+      "technical-risk/records/amphenol-rf-095-725-134-006/12_RELEASE_MANIFEST.json:cb0d8c67a84d48327f0545f9073070fe43a41e625de46d0e501134831b8b4836"
+    ],
+    "core_version": "STRUCTEVIDENCE_EVIDENCE_CORE_v0.1",
+    "correction_status": "NO_CORRECTION_RECORDED",
+    "created_at": "2026-09-16T01:52:28Z",
+    "domain": "TECHNICAL_RISK",
+    "effective_at": "2026-09-16T01:52:28Z",
+    "input_hash": "86fe2efdc9775f5fca95e11341e5d02771c78cf96e5468855508db1f72e432ed",
+    "known_at": "2026-09-16T01:52:28Z",
+    "policy_version": "CML_OV_v0.1_PHASE_A",
+    "protocol": "CML",
+    "record_hash": "4d061d1f768a6a35f0ea4e76991a60260ea51b13e6a40d58905a788aaa1e1314",
+    "record_id": "SE.CML.OV.OV-03.v0.1",
+    "source_refs": [
+      "AMPHENOL_RF_40GHZ_PRODUCT",
+      "AMPHENOL_RF_40GHZ_CUTSHEET"
+    ],
+    "subject_class": "TECHNICAL_ITEM",
+    "subject_id": "SE.TECH.AMPHENOL-RF.095-725-134-006",
+    "supersession_status": "CURRENT",
+    "updated_at": "2026-09-16T01:52:28Z",
+    "verification_status": "NOT_ASSESSED"
+  },
+  "opportunity_validation": {
+    "baseline": {
+      "commit": "19be538447a90672491768d818fa07e3dd3dd377",
+      "counter_evidence": "The item is an active off-the-shelf assembly, so substitution may not be operationally necessary. The pilot tests whether CML can structure qualification evidence without inventing a lifecycle crisis.",
+      "event_effective_at": "2026-05-07T00:00:00Z",
+      "event_known_at": "2026-09-16T00:00:00Z",
+      "freshness_reason": "ACTIVE_BENCHMARK_HAS_NO_EMPIRICAL_CADENCE",
+      "freshness_rule_type": "UNCONFIGURED",
+      "freshness_state": "POLICY_NOT_CONFIGURED",
+      "identity_scope": "EXACT_PART",
+      "lifecycle_state": "ACTIVE",
+      "limitations_ref": "technical-risk/records/amphenol-rf-095-725-134-006/10_LIMITATIONS.md",
+      "oem_replacement_status": "OEM_REPLACEMENT_UNRESOLVED",
+      "qualification_state": "LAB_VERIFICATION_REQUIRED",
+      "record_hash": "0616350e28fe26de50acc10877a7adf07ac1b033d6403c742dc6e011110e8b57",
+      "record_id": "SE.CML.RECORD.AMPHENOL-RF.095-725-134-006.v0.1",
+      "record_path": "technical-risk/records/amphenol-rf-095-725-134-006/11_PUBLIC_RECORD.json",
+      "release_manifest_path": "technical-risk/records/amphenol-rf-095-725-134-006/12_RELEASE_MANIFEST.json",
+      "release_manifest_sha256": "cb0d8c67a84d48327f0545f9073070fe43a41e625de46d0e501134831b8b4836",
+      "unknowns": [
+        "No independent VNA trace, per-unit insertion-loss limit or return-loss acceptance curve is present.",
+        "Power handling, phase stability and flex-life limits are not established in reviewed evidence.",
+        "No alternate supplier assembly has been qualified against this benchmark."
+      ],
+      "verification_requirements_ref": "technical-risk/records/amphenol-rf-095-725-134-006/05_COMPATIBILITY_REQUIREMENTS.json"
+    },
+    "client_scope": "NOT_PROVIDED",
+    "current_solution_audit": {
+      "constraints": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "current_handling": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "operating_cost": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "solution_efficiency": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "switching_barriers": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "technical_performance": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      }
+    },
+    "event_domain": "RESEARCH_EVENT",
+    "freshness_reason": "OV_ASSESSMENT_CADENCE_NOT_CONFIGURED",
+    "freshness_rule_type": "UNCONFIGURED",
+    "freshness_state": "POLICY_NOT_CONFIGURED",
+    "governance": {
+      "gdr_adapter_ref": "gdr-se/engine/domain_adapters/cml.py",
+      "opportunity_qualification": "NOT_ASSESSED",
+      "paid_delivery": "BLOCK",
+      "public_release": "BLOCK",
+      "reason": "PHASE_A_INITIALIZATION_ONLY",
+      "solution_development": "NOT_AUTHORIZED"
+    },
+    "ov_id": "OV-03",
+    "phase": "PHASE_A",
+    "problem_persistence": {
+      "active_customer_pain": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "affected_application": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "internal_resolution": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "problem_persistence": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      }
+    },
+    "public_private_boundary": "PUBLIC_EVIDENCE_ONLY_NO_CLIENT_BOM",
+    "solution_improvement_potential": {
+      "acceptance_criteria": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "application_scope": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "baseline_value": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "cost_assessment": {
+        "certification": {
+          "evidence_refs": [],
+          "state": "NOT_ASSESSED",
+          "value": null
+        },
+        "comparison_horizon": {
+          "evidence_refs": [],
+          "state": "NOT_ASSESSED",
+          "value": null
+        },
+        "downtime": {
+          "evidence_refs": [],
+          "state": "NOT_ASSESSED",
+          "value": null
+        },
+        "engineering_redesign": {
+          "evidence_refs": [],
+          "state": "NOT_ASSESSED",
+          "value": null
+        },
+        "lifetime_operation": {
+          "evidence_refs": [],
+          "state": "NOT_ASSESSED",
+          "value": null
+        },
+        "manufacturing_transition": {
+          "evidence_refs": [],
+          "state": "NOT_ASSESSED",
+          "value": null
+        },
+        "qualification": {
+          "evidence_refs": [],
+          "state": "NOT_ASSESSED",
+          "value": null
+        },
+        "supply_logistics": {
+          "evidence_refs": [],
+          "state": "NOT_ASSESSED",
+          "value": null
+        },
+        "tooling": {
+          "evidence_refs": [],
+          "state": "NOT_ASSESSED",
+          "value": null
+        },
+        "total_migration_cost": {
+          "evidence_refs": [],
+          "state": "NOT_ASSESSED",
+          "value": null
+        },
+        "unit_cost": {
+          "evidence_refs": [],
+          "state": "NOT_ASSESSED",
+          "value": null
+        },
+        "verification": {
+          "evidence_refs": [],
+          "state": "NOT_ASSESSED",
+          "value": null
+        }
+      },
+      "manufacturing_tool_potential": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "measurable_improvement": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "metric": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "modern_design_potential": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "net_benefit": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "target_value": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "test_method": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "unit": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "verification_tool_potential": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      }
+    },
+    "status": "INITIALIZED_UNASSESSED",
+    "version": "CML_OV_v0.1_PHASE_A"
+  }
+}
