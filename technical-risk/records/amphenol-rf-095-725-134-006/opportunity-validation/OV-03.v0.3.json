@@ -1,0 +1,341 @@
+{
+  "core": {
+    "artifact_refs": [
+      "technical-risk/records/amphenol-rf-095-725-134-006/11_PUBLIC_RECORD.json:e12b5a2e826b74817e15f59df5438a75638598690050a6c8127ad129b6e05306",
+      "technical-risk/records/amphenol-rf-095-725-134-006/12_RELEASE_MANIFEST.json:cb0d8c67a84d48327f0545f9073070fe43a41e625de46d0e501134831b8b4836",
+      "technical-risk/records/amphenol-rf-095-725-134-006/opportunity-validation/OV-03.v0.1.json:fb4c5e7f03df8a49db14293c73570ce40275158f307a7d6ce902e5794236e310",
+      "technical-risk/records/amphenol-rf-095-725-134-006/opportunity-validation/phase-b/01_SOURCE_REGISTER.json:82f00543b68a2ccc1554e3b2df4e3c232cf1753f7f73627442971228fd4044fa",
+      "technical-risk/records/amphenol-rf-095-725-134-006/opportunity-validation/phase-b/02_CURRENT_USAGE_EVIDENCE.json:bd2b3b2505fb4f65edc51cdd07df365e8bba88b5f3212a919ef880681560b232",
+      "technical-risk/records/amphenol-rf-095-725-134-006/opportunity-validation/phase-b/03_CURRENT_SOLUTION_MAP.json:ef9ee9f86eacaa205dea360e05a27e780c9b140d33e2d0168434dd8ac5328b12",
+      "technical-risk/records/amphenol-rf-095-725-134-006/opportunity-validation/phase-b/04_INEFFICIENCY_EVIDENCE.json:f60f48be11e1b8ce96f2a05c687c579c874503797109f66cace500c4d5968396",
+      "technical-risk/records/amphenol-rf-095-725-134-006/opportunity-validation/phase-b/05_COUNTER_EVIDENCE.json:115882f505d0541ff4b111dc34f05ace02b3fb4612da680e8739823ccf8ab501",
+      "technical-risk/records/amphenol-rf-095-725-134-006/opportunity-validation/phase-b/06_IMPROVEMENT_HYPOTHESES.json:a041a1004f8795c36d1b35c2d61582447acd6c7984d16bb6b240fd05b46fc453",
+      "technical-risk/records/amphenol-rf-095-725-134-006/opportunity-validation/phase-b/07_TMC_VARIABLE_MAP.json:bc5ca8d20ff0dd25a930881e5f1f235932f291618b63415020acb04a80cd7490",
+      "technical-risk/records/amphenol-rf-095-725-134-006/opportunity-validation/phase-b/08_TTQ_VARIABLE_MAP.json:f55016b08cb4426ca0524431b51bfcb01fb154ae50dd4a4d29c5f376d6e13e7a",
+      "technical-risk/records/amphenol-rf-095-725-134-006/opportunity-validation/phase-b/09_HUMAN_VALIDATION_TARGETS.json:586c34dc037f7d44d272011fd487211471223dd1b01e75a1dab9daf2d967588e",
+      "technical-risk/records/amphenol-rf-095-725-134-006/opportunity-validation/phase-b/10_PHASE_B_ASSESSMENT.json:02c22e37454e22f0ad69fc241d746a3079c596bf4272cd25d46696b4a23da5af",
+      "technical-risk/records/amphenol-rf-095-725-134-006/opportunity-validation/phase-b/11_LIMITATIONS.md:023107a71f2a1e813c71cb64e4b3e8ba271c7b985d94a0f81491b47a25a0fc40",
+      "technical-risk/records/amphenol-rf-095-725-134-006/opportunity-validation/OV-03.v0.2.json:fbf7b327c3582fd5dbf5b1bfe35550f9d62e79b5c5656e3450590815ac4cb6ac",
+      "technical-risk/records/amphenol-rf-095-725-134-006/opportunity-validation/phase-b-r1/01_TARGETED_DISCOVERY.json:42eea16667bedd68356838bcf0295206e320bc567cd63c8150f3270e0def6a56",
+      "technical-risk/records/amphenol-rf-095-725-134-006/opportunity-validation/phase-b-r1/03_LIMITATIONS.md:59f7806fd5b584afcde47f5cfbeebf5bcc489a8ecf4d355bd913d714ee640bee"
+    ],
+    "core_version": "STRUCTEVIDENCE_EVIDENCE_CORE_v0.1",
+    "correction_status": "NO_CORRECTION_RECORDED",
+    "created_at": "2026-09-16T22:35:07+08:00",
+    "domain": "TECHNICAL_RISK",
+    "effective_at": "2026-09-16T22:35:07+08:00",
+    "input_hash": "7ca762a1068c8c55eaf007c756aaeb4e7e72d975f969c71486be57d66e22c999",
+    "known_at": "2026-09-16T22:35:07+08:00",
+    "policy_version": "CML_OV_v0.1_PHASE_B_R1",
+    "protocol": "CML",
+    "record_hash": "b2be47aeb231c9264d03853e757e21527e9d0b33c0845131f2563aaf83fa3047",
+    "record_id": "SE.CML.OV.OV-03.v0.3",
+    "source_refs": [
+      "AMPHENOL_RF_40GHZ_CUTSHEET",
+      "AMPHENOL_RF_40GHZ_PRODUCT",
+      "O3-S01",
+      "O3-S02",
+      "O3-S03",
+      "O3-S04",
+      "O3-S05",
+      "O3-S06",
+      "O3-S07",
+      "O3-S08",
+      "O3-S09",
+      "R1-O3-S01",
+      "R1-O3-S02",
+      "R1-O3-S03",
+      "R1-O3-S04",
+      "R1-O3-S05"
+    ],
+    "subject_class": "TECHNICAL_ITEM",
+    "subject_id": "SE.TECH.AMPHENOL-RF.095-725-134-006",
+    "supersession_status": "CURRENT",
+    "updated_at": "2026-09-16T22:35:07+08:00",
+    "verification_status": "TARGETED_PUBLIC_RESEARCH_REVIEWED_WITH_LIMITATIONS"
+  },
+  "opportunity_validation": {
+    "artifact_hashes": {
+      "01_TARGETED_DISCOVERY.json": "42eea16667bedd68356838bcf0295206e320bc567cd63c8150f3270e0def6a56",
+      "03_LIMITATIONS.md": "59f7806fd5b584afcde47f5cfbeebf5bcc489a8ecf4d355bd913d714ee640bee"
+    },
+    "assessment_version": "CML_OV_v0.1_PHASE_B_R1",
+    "baseline": {
+      "commit": "19be538447a90672491768d818fa07e3dd3dd377",
+      "counter_evidence": "The item is an active off-the-shelf assembly, so substitution may not be operationally necessary. The pilot tests whether CML can structure qualification evidence without inventing a lifecycle crisis.",
+      "event_effective_at": "2026-05-07T00:00:00Z",
+      "event_known_at": "2026-09-16T00:00:00Z",
+      "freshness_reason": "ACTIVE_BENCHMARK_HAS_NO_EMPIRICAL_CADENCE",
+      "freshness_rule_type": "UNCONFIGURED",
+      "freshness_state": "POLICY_NOT_CONFIGURED",
+      "identity_scope": "EXACT_PART",
+      "lifecycle_state": "ACTIVE",
+      "limitations_ref": "technical-risk/records/amphenol-rf-095-725-134-006/10_LIMITATIONS.md",
+      "oem_replacement_status": "OEM_REPLACEMENT_UNRESOLVED",
+      "qualification_state": "LAB_VERIFICATION_REQUIRED",
+      "record_hash": "0616350e28fe26de50acc10877a7adf07ac1b033d6403c742dc6e011110e8b57",
+      "record_id": "SE.CML.RECORD.AMPHENOL-RF.095-725-134-006.v0.1",
+      "record_path": "technical-risk/records/amphenol-rf-095-725-134-006/11_PUBLIC_RECORD.json",
+      "release_manifest_path": "technical-risk/records/amphenol-rf-095-725-134-006/12_RELEASE_MANIFEST.json",
+      "release_manifest_sha256": "cb0d8c67a84d48327f0545f9073070fe43a41e625de46d0e501134831b8b4836",
+      "unknowns": [
+        "No independent VNA trace, per-unit insertion-loss limit or return-loss acceptance curve is present.",
+        "Power handling, phase stability and flex-life limits are not established in reviewed evidence.",
+        "No alternate supplier assembly has been qualified against this benchmark."
+      ],
+      "verification_requirements_ref": "technical-risk/records/amphenol-rf-095-725-134-006/05_COMPATIBILITY_REQUIREMENTS.json"
+    },
+    "client_scope": "NOT_PROVIDED",
+    "current_solution_audit": {
+      "constraints": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "current_handling": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "operating_cost": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "solution_efficiency": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "switching_barriers": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "technical_performance": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      }
+    },
+    "event_domain": "RESEARCH_EVENT",
+    "freshness_reason": "OV_ASSESSMENT_CADENCE_NOT_CONFIGURED",
+    "freshness_rule_type": "UNCONFIGURED",
+    "freshness_state": "POLICY_NOT_CONFIGURED",
+    "governance": {
+      "gdr_adapter_ref": "gdr-se/engine/domain_adapters/cml.py",
+      "opportunity_qualification": "NOT_ASSESSED",
+      "paid_delivery": "BLOCK",
+      "public_release": "BLOCK",
+      "reason": "PHASE_B_R1_INTERNAL_RESEARCH_ONLY",
+      "solution_development": "NOT_AUTHORIZED"
+    },
+    "ov_id": "OV-03",
+    "phase": "PHASE_B_R1",
+    "phase_b_assessment": {
+      "assessment_version": "CML_OV_v0.1_PHASE_B",
+      "claim_type": "ENGINEERING_JUDGMENT",
+      "confirmed_customer_pain": false,
+      "decision": "CONTINUE_DESK_RESEARCH",
+      "desk_opportunity_signal": "INSUFFICIENT_PUBLIC_EVIDENCE",
+      "human_validation_required": "YES",
+      "paid_delivery": "BLOCK",
+      "phase_c_outreach": "NOT_AUTHORIZED",
+      "public_release": "BLOCK",
+      "qualification_state": "NOT_ESTABLISHED",
+      "reason": "Current catalog relevance and existing test/tool supply are evident; actual inefficient handling and a material target-specific bottleneck are not. The resolved-but-suboptimal hypothesis is not established; Phase C opportunity threshold is not met.",
+      "solution_development": "NOT_AUTHORIZED",
+      "supporting_claim_refs": [
+        "O3-C01",
+        "O3-C03",
+        "O3-C05",
+        "O3-C07",
+        "O3-C08"
+      ],
+      "target": "OV-03"
+    },
+    "phase_b_r1_assessment": {
+      "confirmed_customer_pain": false,
+      "current_application_conclusion": "The 40 GHz/2.92 mm interface class has current production and test applications, but no named target-user application or exact assembly qualification record was found.",
+      "facts_requiring_nonpublic_validation": [
+        "Exact production traveler and acceptance limits for the target assembly",
+        "Whether testing is sampled or performed on every unit",
+        "Calibration and de-embedding cadence and fixture reuse",
+        "Operator minutes, queue time, throughput and automation level",
+        "First-pass yield, retest and failure-diagnosis burden",
+        "Qualification scope, environmental requirements and cost"
+      ],
+      "public_bottleneck": false,
+      "public_evidence_ceiling": "Supplier and tool documentation exposes what can be measured and automated, but the variables needed to show a bottleneck are organization-specific: baseline process, acceptance scope, volume, labor, retest, yield, fixture/calibration policy and cost.",
+      "reason": "Targeted public research found real production and VNA workflow evidence but no target-specific inefficiency. The correct outcome is an evidence ceiling, not a public bottleneck or customer-pain finding.",
+      "terminal_outcome": "PUBLIC_EVIDENCE_CEILING",
+      "workflow_conclusion": "Public sources establish production test layers and mature automated VNA workflows; they do not establish that the current target workflow is manual, slow, costly or deficient."
+    },
+    "predecessor_path": "technical-risk/records/amphenol-rf-095-725-134-006/opportunity-validation/OV-03.v0.2.json",
+    "predecessor_record_hash": "6ad7cab9f699df02344c560ea344549c824eb35ec93b3a179033fbebf0b1bb0f",
+    "predecessor_record_id": "SE.CML.OV.OV-03.v0.2",
+    "problem_persistence": {
+      "active_customer_pain": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "affected_application": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "internal_resolution": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "problem_persistence": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      }
+    },
+    "public_private_boundary": "PUBLIC_EVIDENCE_ONLY_NO_CLIENT_BOM",
+    "research_event": {
+      "created_at": "2026-09-16T22:35:07+08:00",
+      "effective_at": "2026-09-16T22:35:07+08:00",
+      "event_domain": "RESEARCH_EVENT",
+      "event_type": "TARGETED_APPLICATION_AND_WORKFLOW_DISCOVERY",
+      "known_at": "2026-09-16T22:35:07+08:00",
+      "source_refs": [
+        "R1-O3-S01",
+        "R1-O3-S02",
+        "R1-O3-S03",
+        "R1-O3-S04",
+        "R1-O3-S05"
+      ]
+    },
+    "solution_improvement_potential": {
+      "acceptance_criteria": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "application_scope": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "baseline_value": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "cost_assessment": {
+        "certification": {
+          "evidence_refs": [],
+          "state": "NOT_ASSESSED",
+          "value": null
+        },
+        "comparison_horizon": {
+          "evidence_refs": [],
+          "state": "NOT_ASSESSED",
+          "value": null
+        },
+        "downtime": {
+          "evidence_refs": [],
+          "state": "NOT_ASSESSED",
+          "value": null
+        },
+        "engineering_redesign": {
+          "evidence_refs": [],
+          "state": "NOT_ASSESSED",
+          "value": null
+        },
+        "lifetime_operation": {
+          "evidence_refs": [],
+          "state": "NOT_ASSESSED",
+          "value": null
+        },
+        "manufacturing_transition": {
+          "evidence_refs": [],
+          "state": "NOT_ASSESSED",
+          "value": null
+        },
+        "qualification": {
+          "evidence_refs": [],
+          "state": "NOT_ASSESSED",
+          "value": null
+        },
+        "supply_logistics": {
+          "evidence_refs": [],
+          "state": "NOT_ASSESSED",
+          "value": null
+        },
+        "tooling": {
+          "evidence_refs": [],
+          "state": "NOT_ASSESSED",
+          "value": null
+        },
+        "total_migration_cost": {
+          "evidence_refs": [],
+          "state": "NOT_ASSESSED",
+          "value": null
+        },
+        "unit_cost": {
+          "evidence_refs": [],
+          "state": "NOT_ASSESSED",
+          "value": null
+        },
+        "verification": {
+          "evidence_refs": [],
+          "state": "NOT_ASSESSED",
+          "value": null
+        }
+      },
+      "manufacturing_tool_potential": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "measurable_improvement": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "metric": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "modern_design_potential": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "net_benefit": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "target_value": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "test_method": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "unit": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      },
+      "verification_tool_potential": {
+        "evidence_refs": [],
+        "state": "NOT_ASSESSED",
+        "value": null
+      }
+    },
+    "status": "PUBLIC_EVIDENCE_ASSESSED_WITH_LIMITATIONS",
+    "version": "CML_OV_v0.1_PHASE_B_R1"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "phase-b-r1-record.schema.json",
+  "title": "CML Opportunity Validation Phase B-R1 successor",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["core", "opportunity_validation"],
+  "properties": {
+    "core": {"$ref": "../../../evidence/core/schema/evidence_core_record.schema.json"},
+    "opportunity_validation": {
+      "type": "object",
+      "required": ["version", "phase", "assessment_version", "predecessor_record_id", "predecessor_record_hash", "predecessor_path", "research_event", "phase_b_r1_assessment", "artifact_hashes", "governance"],
+      "properties": {
+        "version": {"const": "CML_OV_v0.1_PHASE_B_R1"},
+        "phase": {"const": "PHASE_B_R1"},
+        "assessment_version": {"const": "CML_OV_v0.1_PHASE_B_R1"},
+        "predecessor_record_id": {"type": "string", "minLength": 1},
+        "predecessor_record_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "predecessor_path": {"type": "string", "minLength": 1},
+        "research_event": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["event_domain", "event_type", "effective_at", "known_at", "created_at", "source_refs"],
+          "properties": {
+            "event_domain": {"const": "RESEARCH_EVENT"},
+            "event_type": {"const": "TARGETED_APPLICATION_AND_WORKFLOW_DISCOVERY"},
+            "effective_at": {"type": "string", "format": "date-time"},
+            "known_at": {"type": "string", "format": "date-time"},
+            "created_at": {"type": "string", "format": "date-time"},
+            "source_refs": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}}
+          }
+        },
+        "phase_b_r1_assessment": {"$ref": "phase-b-r1-package.schema.json#/properties/assessment"},
+        "artifact_hashes": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["01_TARGETED_DISCOVERY.json", "03_LIMITATIONS.md"],
+          "properties": {
+            "01_TARGETED_DISCOVERY.json": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+            "03_LIMITATIONS.md": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+          }
+        },
+        "governance": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["public_release", "paid_delivery", "solution_development", "opportunity_qualification", "reason", "gdr_adapter_ref"],
+          "properties": {
+            "public_release": {"const": "BLOCK"},
+            "paid_delivery": {"const": "BLOCK"},
+            "solution_development": {"const": "NOT_AUTHORIZED"},
+            "opportunity_qualification": {"const": "NOT_ASSESSED"},
+            "reason": {"const": "PHASE_B_R1_INTERNAL_RESEARCH_ONLY"},
+            "gdr_adapter_ref": {"const": "gdr-se/engine/domain_adapters/cml.py"}
+          }
+        }
+      }
+    }
+  }
+}

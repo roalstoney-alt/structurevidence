@@ -1,0 +1,103 @@
+{
+  "assessment_version": "CML_OV_v0.1_PHASE_B_R1",
+  "baseline_commit": "b0459b2b945c78ae650a7e0a6db5b8f206857a46",
+  "paid_delivery": "BLOCK",
+  "public_release": "BLOCK",
+  "record_hash": "b2be47aeb231c9264d03853e757e21527e9d0b33c0845131f2563aaf83fa3047",
+  "results": [
+    {
+      "computed_facts": {
+        "baseline_commit": "b0459b2b945c78ae650a7e0a6db5b8f206857a46",
+        "baseline_commit_time": "2026-09-16T22:22:30+08:00",
+        "research_time": "2026-09-16T22:35:07+08:00",
+        "tracked_changes": []
+      },
+      "gate_id": "OV-R101_ACCEPTED_WAVE1_BASELINE",
+      "reason": "B-R1 discipline satisfied; no customer-pain or solution approval implied.",
+      "status": "PASS"
+    },
+    {
+      "computed_facts": {
+        "claims": 5,
+        "issuer_groups": 5,
+        "sources": 5
+      },
+      "gate_id": "OV-R102_SCHEMA_AND_PROVENANCE",
+      "reason": "B-R1 discipline satisfied; no customer-pain or solution approval implied.",
+      "status": "PASS"
+    },
+    {
+      "computed_facts": {
+        "passes": [
+          "FORTY_GHZ_PRODUCTION",
+          "FORTY_GHZ_QUALIFICATION",
+          "VNA_WORKFLOW"
+        ]
+      },
+      "gate_id": "OV-R103_TARGETED_SCOPE",
+      "reason": "B-R1 discipline satisfied; no customer-pain or solution approval implied.",
+      "status": "PASS"
+    },
+    {
+      "computed_facts": {
+        "customer_pain": false,
+        "terminal_outcome": "PUBLIC_EVIDENCE_CEILING"
+      },
+      "gate_id": "OV-R104_TERMINAL_OUTCOME",
+      "reason": "B-R1 discipline satisfied; no customer-pain or solution approval implied.",
+      "status": "PASS"
+    },
+    {
+      "computed_facts": {
+        "bottleneck_claims": 0,
+        "public_bottleneck": false
+      },
+      "gate_id": "OV-R105_BOTTLENECK_DISCIPLINE",
+      "reason": "B-R1 discipline satisfied; no customer-pain or solution approval implied.",
+      "status": "PASS"
+    },
+    {
+      "computed_facts": {
+        "contact_attempted": false,
+        "quotations_requested": false,
+        "replacement_designed": false,
+        "samples_bought": false,
+        "snipe_solution_authorized": false
+      },
+      "gate_id": "OV-R106_RESEARCH_BOUNDARY",
+      "reason": "B-R1 discipline satisfied; no customer-pain or solution approval implied.",
+      "status": "PASS"
+    },
+    {
+      "computed_facts": {
+        "excluded": [
+          "OV-02",
+          "OV-04"
+        ],
+        "targets": [
+          "OV-01",
+          "OV-03"
+        ]
+      },
+      "gate_id": "OV-R107_TARGET_ISOLATION",
+      "reason": "B-R1 discipline satisfied; no customer-pain or solution approval implied.",
+      "status": "PASS"
+    },
+    {
+      "computed_facts": {
+        "artifacts_bound": 2,
+        "record_hash": "b2be47aeb231c9264d03853e757e21527e9d0b33c0845131f2563aaf83fa3047"
+      },
+      "gate_id": "OV-R108_SUCCESSOR_INTEGRITY",
+      "reason": "B-R1 discipline satisfied; no customer-pain or solution approval implied.",
+      "status": "PASS"
+    }
+  ],
+  "summary": {
+    "FAIL": 0,
+    "PASS": 8
+  },
+  "target": "OV-03",
+  "terminal_outcome": "PUBLIC_EVIDENCE_CEILING",
+  "validator_sha256": "a68ef1b6da5e0eff0b4d4e0894a9a5778c5cc3844018ced318b9eaf7414108ad"
+}

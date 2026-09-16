@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "phase-b-r1-package.schema.json",
+  "title": "CML Opportunity Validation Phase B-R1 targeted discovery package",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["assessment_version", "target", "predecessor_record_id", "research_scope", "passes", "sources", "claims", "assessment", "boundaries"],
+  "properties": {
+    "assessment_version": {"const": "CML_OV_v0.1_PHASE_B_R1"},
+    "target": {"enum": ["OV-01", "OV-03"]},
+    "predecessor_record_id": {"type": "string", "minLength": 1},
+    "research_scope": {"enum": ["TARGETED_APPLICATION_AND_WORKFLOW", "FORTY_GHZ_PRODUCTION_QUALIFICATION_AND_VNA_WORKFLOW"]},
+    "passes": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["pass_id", "purpose", "queries", "result", "limitations"],
+        "properties": {
+          "pass_id": {"type": "string", "minLength": 1},
+          "purpose": {"enum": ["CURRENT_APPLICATION", "CURRENT_SOLUTION_WORKFLOW", "FORTY_GHZ_PRODUCTION", "FORTY_GHZ_QUALIFICATION", "VNA_WORKFLOW"]},
+          "queries": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+          "result": {"type": "string", "minLength": 1},
+          "limitations": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}}
+        }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["source_id", "title", "issuer", "host", "url", "source_type", "tier", "publication_date", "known_at", "retrieved_at", "access_status", "independence_group", "supports_claims", "limitations"],
+        "properties": {
+          "source_id": {"type": "string", "minLength": 1},
+          "title": {"type": "string", "minLength": 1},
+          "issuer": {"type": "string", "minLength": 1},
+          "host": {"type": "string", "minLength": 1},
+          "url": {"type": "string", "format": "uri", "pattern": "^https://"},
+          "source_type": {"enum": ["MANUFACTURER_NOTICE", "MANUFACTURER_PROCESS_DOCUMENT", "TOOL_VENDOR_WORKFLOW", "INDUSTRY_TECHNICAL_ARTICLE", "COMMERCIAL_OBSOLESCENCE_GUIDANCE"]},
+          "tier": {"enum": ["TIER_1", "TIER_3", "TIER_4"]},
+          "publication_date": {"type": ["string", "null"], "format": "date"},
+          "known_at": {"type": "string", "format": "date-time"},
+          "retrieved_at": {"type": "string", "format": "date-time"},
+          "access_status": {"enum": ["OPENED_CONTENT", "SEARCH_EXCERPT_ONLY"]},
+          "independence_group": {"type": "string", "minLength": 1},
+          "supports_claims": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+          "limitations": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}}
+        }
+      }
+    },
+    "claims": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["claim_id", "claim_type", "topic", "statement", "source_refs", "customer_pain", "observed_customer_workflow", "limitations"],
+        "properties": {
+          "claim_id": {"type": "string", "minLength": 1},
+          "claim_type": {"enum": ["SOURCE_FACT", "INDIRECT_PUBLIC_SIGNAL", "ENGINEERING_JUDGMENT", "UNKNOWN"]},
+          "topic": {"type": "string", "minLength": 1},
+          "statement": {"type": "string", "minLength": 1},
+          "source_refs": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+          "customer_pain": {"const": "NOT_ESTABLISHED"},
+          "observed_customer_workflow": {"type": "boolean"},
+          "limitations": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}}
+        }
+      }
+    },
+    "assessment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["terminal_outcome", "public_bottleneck", "confirmed_customer_pain", "current_application_conclusion", "workflow_conclusion", "public_evidence_ceiling", "facts_requiring_nonpublic_validation", "reason"],
+      "properties": {
+        "terminal_outcome": {"enum": ["PUBLIC_BOTTLENECK_FOUND", "PUBLIC_EVIDENCE_CEILING", "NO_PLAUSIBLE_CURRENT_APPLICATION", "INSUFFICIENT_AFTER_TARGETED_RESEARCH"]},
+        "public_bottleneck": {"type": "boolean"},
+        "confirmed_customer_pain": {"const": false},
+        "current_application_conclusion": {"type": "string", "minLength": 1},
+        "workflow_conclusion": {"type": "string", "minLength": 1},
+        "public_evidence_ceiling": {"type": ["string", "null"]},
+        "facts_requiring_nonpublic_validation": {"type": "array", "items": {"type": "string", "minLength": 1}},
+        "reason": {"type": "string", "minLength": 1}
+      }
+    },
+    "boundaries": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["contact_attempted", "samples_bought", "quotations_requested", "replacement_designed", "snipe_solution_authorized", "public_release", "paid_delivery"],
+      "properties": {
+        "contact_attempted": {"const": false},
+        "samples_bought": {"const": false},
+        "quotations_requested": {"const": false},
+        "replacement_designed": {"const": false},
+        "snipe_solution_authorized": {"const": false},
+        "public_release": {"const": "BLOCK"},
+        "paid_delivery": {"const": "BLOCK"}
+      }
+    }
+  }
+}

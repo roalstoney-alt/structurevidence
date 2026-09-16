@@ -1,0 +1,191 @@
+{
+  "assessment_version": "CML_OV_v0.1_PHASE_B_R1",
+  "target": "OV-03",
+  "predecessor_record_id": "SE.CML.OV.OV-03.v0.2",
+  "research_scope": "FORTY_GHZ_PRODUCTION_QUALIFICATION_AND_VNA_WORKFLOW",
+  "passes": [
+    {
+      "pass_id": "OV-03-R1-P1",
+      "purpose": "FORTY_GHZ_PRODUCTION",
+      "queries": ["current 40 GHz cable-assembly production testing, serialization and traceability"],
+      "result": "Current manufacturer material shows production test layers: standard RF assemblies receive hi-pot and continuity tests, 2.92 mm assemblies are described as sweep tested and serialized, and a separate manufacturer tests VNA assemblies for return loss, insertion loss, phase stability and loss stability before shipment.",
+      "limitations": ["Supplier product/process statements do not expose yield, takt time, operator effort, rework or cost.", "The sources do not prove the exact OV-03 assembly follows every cited workflow step."]
+    },
+    {
+      "pass_id": "OV-03-R1-P2",
+      "purpose": "FORTY_GHZ_QUALIFICATION",
+      "queries": ["40 GHz cable-assembly acceptance metrics, flexure stability and diagnostic test data"],
+      "result": "Public evidence identifies return loss/VSWR, insertion loss and stability under flexure as relevant measurements; acceptance limits remain product- and application-specific.",
+      "limitations": ["Product marketing and technical guidance are not a customer qualification plan.", "No applicable environmental, mating-cycle, phase-match or system acceptance requirements were found for the exact target use."]
+    },
+    {
+      "pass_id": "OV-03-R1-P3",
+      "purpose": "VNA_WORKFLOW",
+      "queries": ["automated 40 GHz VNA cable-assembly test, calibration, de-embedding, pass/fail and result archiving"],
+      "result": "Tool-vendor material documents calibrated/de-embedded VNA workflows, automated multi-metric testing, pass/fail reports and stored results up to 40 GHz or above. This establishes available workflow capability, not that the target manufacturer or a user has a manual bottleneck.",
+      "limitations": ["No named target organization workflow, baseline cycle time, retest rate or utilization was published.", "Automation capability alone cannot establish incremental benefit."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "R1-O3-S01",
+      "title": "2.92 mm Cable Assemblies",
+      "issuer": "Amphenol RF",
+      "host": "www.amphenolrf.com",
+      "url": "https://www.amphenolrf.com/en-us/products/rf-cable-assemblies/2-92-mm-cable-assemblies/",
+      "source_type": "MANUFACTURER_PROCESS_DOCUMENT",
+      "tier": "TIER_1",
+      "publication_date": null,
+      "known_at": "2026-09-16T22:35:07+08:00",
+      "retrieved_at": "2026-09-16T22:35:07+08:00",
+      "access_status": "OPENED_CONTENT",
+      "independence_group": "AMPHENOL_RF",
+      "supports_claims": ["R1-O3-C01", "R1-O3-C05"],
+      "limitations": ["Range-level statement; it does not provide an exact-unit traveler, test report or acceptance limit."]
+    },
+    {
+      "source_id": "R1-O3-S02",
+      "title": "GORE VNA Microwave/RF Test Assemblies datasheet",
+      "issuer": "W. L. Gore & Associates",
+      "host": "www.gore.com",
+      "url": "https://www.gore.com/sites/default/files/resources/pdf/2025-07/gore-gmca-vna-test-cables-datasheet-en.pdf",
+      "source_type": "MANUFACTURER_PROCESS_DOCUMENT",
+      "tier": "TIER_1",
+      "publication_date": null,
+      "known_at": "2026-09-16T22:35:07+08:00",
+      "retrieved_at": "2026-09-16T22:35:07+08:00",
+      "access_status": "OPENED_CONTENT",
+      "independence_group": "GORE",
+      "supports_claims": ["R1-O3-C02", "R1-O3-C04", "R1-O3-C05"],
+      "limitations": ["A different manufacturer's VNA test-assembly process, not the exact Amphenol assembly.", "Published specifications and test method do not disclose production economics or failure rates.", "The PDF carries a NOV22 revision marker; the current hosting path does not establish an exact publication date."]
+    },
+    {
+      "source_id": "R1-O3-S03",
+      "title": "Aerospace/Defense RF Coaxial Cable Test",
+      "issuer": "Keysight Technologies",
+      "host": "www.keysight.com",
+      "url": "https://www.keysight.com/us/en/lib/resources/solution-briefs/aerospacedefense-rf-coaxial-cable-test-2295373.html",
+      "source_type": "TOOL_VENDOR_WORKFLOW",
+      "tier": "TIER_1",
+      "publication_date": null,
+      "known_at": "2026-09-16T22:35:07+08:00",
+      "retrieved_at": "2026-09-16T22:35:07+08:00",
+      "access_status": "OPENED_CONTENT",
+      "independence_group": "KEYSIGHT",
+      "supports_claims": ["R1-O3-C03", "R1-O3-C05"],
+      "limitations": ["Vendor solution capability; it does not document adoption by Amphenol or an OV-03 customer.", "Claims of speed and reliability are not a comparative measurement for the target workflow."]
+    },
+    {
+      "source_id": "R1-O3-S04",
+      "title": "Automated cable and connector test solution for PCIe 5.0 and 6.0",
+      "issuer": "Rohde & Schwarz",
+      "host": "www.rohde-schwarz.com",
+      "url": "https://www.rohde-schwarz.com/in/applications/automated-internal-external-cable-and-connector-test-solution-in-line-with-pcie-5.0-and-6.0-specifications_56279-1602472.html",
+      "source_type": "TOOL_VENDOR_WORKFLOW",
+      "tier": "TIER_1",
+      "publication_date": null,
+      "known_at": "2026-09-16T22:35:07+08:00",
+      "retrieved_at": "2026-09-16T22:35:07+08:00",
+      "access_status": "OPENED_CONTENT",
+      "independence_group": "ROHDE_SCHWARZ",
+      "supports_claims": ["R1-O3-C03", "R1-O3-C05"],
+      "limitations": ["PCIe cable/connector workflow, not qualification of the exact RF coax assembly.", "Shows calibration, de-embedding and automation capability without target economics."]
+    },
+    {
+      "source_id": "R1-O3-S05",
+      "title": "Interpretation of Electrical Test Data with Regards to Microwave Cable Assemblies",
+      "issuer": "Times Microwave Systems",
+      "host": "timesmicrowave.com",
+      "url": "https://timesmicrowave.com/interpretation-of-electrical-test-data-with-regards-to-microwave-cable-assemblies/",
+      "source_type": "INDUSTRY_TECHNICAL_ARTICLE",
+      "tier": "TIER_4",
+      "publication_date": "2002-06-03",
+      "known_at": "2026-09-16T22:35:07+08:00",
+      "retrieved_at": "2026-09-16T22:35:07+08:00",
+      "access_status": "OPENED_CONTENT",
+      "independence_group": "TIMES_MICROWAVE",
+      "supports_claims": ["R1-O3-C04", "R1-O3-C05"],
+      "limitations": ["Historical technical article; useful for measurement semantics, not current adoption or throughput."]
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "R1-O3-C01",
+      "claim_type": "SOURCE_FACT",
+      "topic": "CURRENT_PRODUCTION_TEST_LAYER",
+      "statement": "Amphenol RF describes 2.92 mm assemblies as sweep tested and serialized, with hi-pot and continuity included in its production test descriptions.",
+      "source_refs": ["R1-O3-S01"],
+      "customer_pain": "NOT_ESTABLISHED",
+      "observed_customer_workflow": false,
+      "limitations": ["Range-level process statement; exact OV-03 test record and limits were not public."]
+    },
+    {
+      "claim_id": "R1-O3-C02",
+      "claim_type": "SOURCE_FACT",
+      "topic": "PRE_SHIPMENT_VNA_TEST",
+      "statement": "Gore states that all of its VNA assemblies are tested before shipment for return loss, insertion loss, phase stability and loss stability to maximum operating frequency.",
+      "source_refs": ["R1-O3-S02"],
+      "customer_pain": "NOT_ESTABLISHED",
+      "observed_customer_workflow": false,
+      "limitations": ["Independent supplier evidence demonstrates an available production pattern, not Amphenol or customer practice."]
+    },
+    {
+      "claim_id": "R1-O3-C03",
+      "claim_type": "SOURCE_FACT",
+      "topic": "AUTOMATED_VNA_WORKFLOW_AVAILABLE",
+      "statement": "Public tool workflows support automated RF cable measurements up to 40 GHz, calibration/de-embedding, multi-metric measurement, pass/fail reporting and stored QA results.",
+      "source_refs": ["R1-O3-S03", "R1-O3-S04"],
+      "customer_pain": "NOT_ESTABLISHED",
+      "observed_customer_workflow": false,
+      "limitations": ["Availability is not adoption and does not establish an improvement over the target's unknown baseline."]
+    },
+    {
+      "claim_id": "R1-O3-C04",
+      "claim_type": "SOURCE_FACT",
+      "topic": "QUALIFICATION_MEASUREMENT_CONTENT",
+      "statement": "Return loss/VSWR, insertion loss and stability under handling are public cable-assembly evaluation dimensions; plots can support diagnosis as well as pass/fail decisions.",
+      "source_refs": ["R1-O3-S02", "R1-O3-S05"],
+      "customer_pain": "NOT_ESTABLISHED",
+      "observed_customer_workflow": false,
+      "limitations": ["Actual acceptance limits and environmental scope depend on the application and remain unknown."]
+    },
+    {
+      "claim_id": "R1-O3-C05",
+      "claim_type": "ENGINEERING_JUDGMENT",
+      "topic": "PUBLIC_WORKFLOW_BOUNDARY",
+      "statement": "Public evidence describes mature production and automated VNA methods but does not expose a target-specific manual bottleneck or inefficient qualification path.",
+      "source_refs": ["R1-O3-S01", "R1-O3-S02", "R1-O3-S03", "R1-O3-S04", "R1-O3-S05"],
+      "customer_pain": "NOT_ESTABLISHED",
+      "observed_customer_workflow": false,
+      "limitations": ["Cycle time, labor, yield, retest, calibration cadence, fixture reuse, volume and costs are not published for the target."
+      ]
+    }
+  ],
+  "assessment": {
+    "terminal_outcome": "PUBLIC_EVIDENCE_CEILING",
+    "public_bottleneck": false,
+    "confirmed_customer_pain": false,
+    "current_application_conclusion": "The 40 GHz/2.92 mm interface class has current production and test applications, but no named target-user application or exact assembly qualification record was found.",
+    "workflow_conclusion": "Public sources establish production test layers and mature automated VNA workflows; they do not establish that the current target workflow is manual, slow, costly or deficient.",
+    "public_evidence_ceiling": "Supplier and tool documentation exposes what can be measured and automated, but the variables needed to show a bottleneck are organization-specific: baseline process, acceptance scope, volume, labor, retest, yield, fixture/calibration policy and cost.",
+    "facts_requiring_nonpublic_validation": [
+      "Exact production traveler and acceptance limits for the target assembly",
+      "Whether testing is sampled or performed on every unit",
+      "Calibration and de-embedding cadence and fixture reuse",
+      "Operator minutes, queue time, throughput and automation level",
+      "First-pass yield, retest and failure-diagnosis burden",
+      "Qualification scope, environmental requirements and cost"
+    ],
+    "reason": "Targeted public research found real production and VNA workflow evidence but no target-specific inefficiency. The correct outcome is an evidence ceiling, not a public bottleneck or customer-pain finding."
+  },
+  "boundaries": {
+    "contact_attempted": false,
+    "samples_bought": false,
+    "quotations_requested": false,
+    "replacement_designed": false,
+    "snipe_solution_authorized": false,
+    "public_release": "BLOCK",
+    "paid_delivery": "BLOCK"
+  }
+}

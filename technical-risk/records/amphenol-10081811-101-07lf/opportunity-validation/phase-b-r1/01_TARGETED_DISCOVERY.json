@@ -1,0 +1,160 @@
+{
+  "assessment_version": "CML_OV_v0.1_PHASE_B_R1",
+  "target": "OV-01",
+  "predecessor_record_id": "SE.CML.OV.OV-01.v0.2",
+  "research_scope": "TARGETED_APPLICATION_AND_WORKFLOW",
+  "passes": [
+    {
+      "pass_id": "OV-01-R1-P1",
+      "purpose": "CURRENT_APPLICATION",
+      "queries": [
+        "exact MPN plus BOM, approved-parts list or current product",
+        "exact MPN plus repair, service or maintenance PDF"
+      ],
+      "result": "No current OEM product, public BOM, service manual, repair instruction or procurement requirement naming the exact MPN was found. Results resolved to lifecycle notices, an old component description and commercial lifecycle commentary.",
+      "limitations": [
+        "Search indexing and public-document availability are incomplete.",
+        "Absence of a public exact-MPN application does not prove absence of installed or service use."
+      ]
+    },
+    {
+      "pass_id": "OV-01-R1-P2",
+      "purpose": "CURRENT_SOLUTION_WORKFLOW",
+      "queries": [
+        "exact MPN plus lifetime buy, requalification, redesign or replacement",
+        "exact MPN plus EMS, contract manufacturer or lifecycle management"
+      ],
+      "result": "No named user, manufacturer or service organization publicly documented an adopted handling path for this exact MPN. Public material describes offered EOL choices only: review affected BOMs, forecast lifetime demand, consider last-time buy, qualify alternatives or redesign.",
+      "limitations": [
+        "Commercial guidance describes a generic process and promotes the issuer's services.",
+        "No actual purchase, alternate qualification, redesign, excess-inventory outcome or customer workload was observed."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "R1-O1-S01",
+      "title": "Component Obsolescence and EOL Updates",
+      "issuer": "Microchip USA",
+      "host": "www.microchipusa.com",
+      "url": "https://www.microchipusa.com/industry-news/component-obsolescence-and-eol-updates",
+      "source_type": "COMMERCIAL_OBSOLESCENCE_GUIDANCE",
+      "tier": "TIER_4",
+      "publication_date": "2026-08-26",
+      "known_at": "2026-09-16T22:35:07+08:00",
+      "retrieved_at": "2026-09-16T22:35:07+08:00",
+      "access_status": "OPENED_CONTENT",
+      "independence_group": "MICROCHIP_USA",
+      "supports_claims": ["R1-O1-C03"],
+      "limitations": [
+        "Commercial obsolete-component service provider, not a user of the exact MPN.",
+        "Generic workflow recommendations do not establish adoption, cost, pain or qualification."
+      ]
+    },
+    {
+      "source_id": "R1-O1-S02",
+      "title": "Amphenol PCN 26 027",
+      "issuer": "Amphenol Communications Solutions",
+      "host": "mm.digikey.com",
+      "url": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8899/PCN-26027.pdf",
+      "source_type": "MANUFACTURER_NOTICE",
+      "tier": "TIER_1",
+      "publication_date": "2026-03-16",
+      "known_at": "2026-09-16T22:35:07+08:00",
+      "retrieved_at": "2026-09-16T22:35:07+08:00",
+      "access_status": "OPENED_CONTENT",
+      "independence_group": "AMPHENOL_CS",
+      "supports_claims": ["R1-O1-C02"],
+      "limitations": [
+        "Lifecycle notice addressed to affected customers; it does not identify customers or applications.",
+        "It offers a contact route but records no adopted workflow."
+      ]
+    },
+    {
+      "source_id": "R1-O1-S03",
+      "title": "Amphenol PCN 26 043 and EOL plan",
+      "issuer": "Amphenol Communications Solutions",
+      "host": "www.tti.com",
+      "url": "https://www.tti.com/content/dam/ttiinc/products/PCN/Amphenol/Amphenol-PCN-26043.pdf",
+      "source_type": "MANUFACTURER_NOTICE",
+      "tier": "TIER_1",
+      "publication_date": "2026-03-30",
+      "known_at": "2026-09-16T22:35:07+08:00",
+      "retrieved_at": "2026-09-16T22:35:07+08:00",
+      "access_status": "OPENED_CONTENT",
+      "independence_group": "AMPHENOL_CS",
+      "supports_claims": ["R1-O1-C02"],
+      "limitations": [
+        "The family-level statement that technical equivalences are available on request does not identify an exact alternative.",
+        "No customer adoption, compatibility or qualification evidence is provided."
+      ]
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "R1-O1-C01",
+      "claim_type": "UNKNOWN",
+      "topic": "TARGETED_CURRENT_APPLICATION_SEARCH",
+      "statement": "The targeted pass found no public current application naming the exact MPN.",
+      "source_refs": [],
+      "customer_pain": "NOT_ESTABLISHED",
+      "observed_customer_workflow": false,
+      "limitations": ["A bounded no-result search is not proof that no current application exists."]
+    },
+    {
+      "claim_id": "R1-O1-C02",
+      "claim_type": "SOURCE_FACT",
+      "topic": "MANUFACTURER_OFFERED_PATH",
+      "statement": "The manufacturer notices identify affected customers, last-time-buy timing and an alternative-enquiry route without naming an application or an adopted customer response.",
+      "source_refs": ["R1-O1-S02", "R1-O1-S03"],
+      "customer_pain": "NOT_ESTABLISHED",
+      "observed_customer_workflow": false,
+      "limitations": ["Distribution to affected customers implies some relationship but does not establish current use, burden or response."]
+    },
+    {
+      "claim_id": "R1-O1-C03",
+      "claim_type": "INDIRECT_PUBLIC_SIGNAL",
+      "topic": "GENERIC_EOL_WORKFLOW",
+      "statement": "A commercial lifecycle article recommends BOM review, demand forecasting, lifetime buy, alternate evaluation, redesign and excess-inventory management for the exact notice.",
+      "source_refs": ["R1-O1-S01"],
+      "customer_pain": "NOT_ESTABLISHED",
+      "observed_customer_workflow": false,
+      "limitations": ["This is generic commercial guidance, not evidence that a user performed any step."]
+    },
+    {
+      "claim_id": "R1-O1-C04",
+      "claim_type": "UNKNOWN",
+      "topic": "ADOPTED_CURRENT_SOLUTION",
+      "statement": "The actual current solution or workflow for any user of the exact MPN remains unknown.",
+      "source_refs": [],
+      "customer_pain": "NOT_ESTABLISHED",
+      "observed_customer_workflow": false,
+      "limitations": ["No public case, service document, change notice from a user or qualification record was found."]
+    }
+  ],
+  "assessment": {
+    "terminal_outcome": "PUBLIC_EVIDENCE_CEILING",
+    "public_bottleneck": false,
+    "confirmed_customer_pain": false,
+    "current_application_conclusion": "No exact current application was found in the authorized targeted pass, while manufacturer notices still refer to affected customers; no-application is therefore not established.",
+    "workflow_conclusion": "Offered EOL paths are public, but no user-specific adopted path or measurable burden is public.",
+    "public_evidence_ceiling": "Public indexed evidence resolves to lifecycle notices and generic commercial workflow guidance. The missing facts are organization-specific BOM presence, remaining demand, inventory, chosen path, engineering change and qualification outcome.",
+    "facts_requiring_nonpublic_validation": [
+      "Whether the exact MPN is present in a current production or service BOM",
+      "Remaining demand and on-hand or lifetime-buy inventory",
+      "Whether an exact technical equivalence was proposed and qualified",
+      "Whether PCB, mating-half or validation changes are required",
+      "Actual engineering, procurement and qualification burden"
+    ],
+    "reason": "Targeted public research cannot cross from an affected-customer notice to a named current application or observed workflow. This is an evidence ceiling, not proof of pain or absence of use."
+  },
+  "boundaries": {
+    "contact_attempted": false,
+    "samples_bought": false,
+    "quotations_requested": false,
+    "replacement_designed": false,
+    "snipe_solution_authorized": false,
+    "public_release": "BLOCK",
+    "paid_delivery": "BLOCK"
+  }
+}
