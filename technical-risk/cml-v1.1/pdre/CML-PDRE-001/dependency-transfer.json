@@ -1,16 +1,31 @@
 {
   "case_id": "CML-PDRE-001",
   "method_version": "CML_v1.1",
-  "assessment_status": "NOT_ASSESSED",
+  "assessment_status": "PARTIALLY_ASSESSED_PDRE-001A_ONLY",
   "research_units": [
     "PDRE-001A",
     "PDRE-001B"
   ],
-  "evidence_refs": [],
+  "evidence_refs": [
+    "EV-001",
+    "EV-002",
+    "EV-003",
+    "EV-004",
+    "EV-005",
+    "EV-006",
+    "EV-007"
+  ],
+  "dependency_release_scope": {
+    "research_unit": "PDRE-001A",
+    "old_dependency": "54V rack-level high-current distribution and rack-local power conversion",
+    "status": "CANDIDATE",
+    "constraints": ["CURRENT", "COPPER", "RACK_SPACE", "THERMAL", "POWER_SHELF_SPACE"],
+    "evidence_refs": ["EV-001"]
+  },
   "categories": [
     {
       "category": "COPPER",
-      "PDRE-001A": {"dependency_release": "UNKNOWN", "dependency_transfer": "UNKNOWN", "evidence_refs": []},
+      "PDRE-001A": {"dependency_release": "CURRENT_REDUCTION_DERIVED", "dependency_transfer": "UNKNOWN", "evidence_refs": ["EV-001"]},
       "PDRE-001B": {"dependency_release": "UNKNOWN", "dependency_transfer": "UNKNOWN", "evidence_refs": []}
     },
     {
@@ -20,12 +35,12 @@
     },
     {
       "category": "DC_PROTECTION",
-      "PDRE-001A": {"dependency_release": "UNKNOWN", "dependency_transfer": "UNKNOWN", "evidence_refs": []},
+      "PDRE-001A": {"dependency_release": "UNKNOWN", "dependency_transfer": "NEW_CRITICAL_DEPENDENCY", "evidence_refs": ["EV-002"]},
       "PDRE-001B": {"dependency_release": "UNKNOWN", "dependency_transfer": "UNKNOWN", "evidence_refs": []}
     },
     {
       "category": "DC_DC_CONVERSION",
-      "PDRE-001A": {"dependency_release": "UNKNOWN", "dependency_transfer": "UNKNOWN", "evidence_refs": []},
+      "PDRE-001A": {"dependency_release": "UNKNOWN", "dependency_transfer": "NEW_CRITICAL_DEPENDENCY", "evidence_refs": ["EV-002", "EV-003"]},
       "PDRE-001B": {"dependency_release": "UNKNOWN", "dependency_transfer": "UNKNOWN", "evidence_refs": []}
     },
     {
@@ -40,7 +55,7 @@
     },
     {
       "category": "INSULATION",
-      "PDRE-001A": {"dependency_release": "UNKNOWN", "dependency_transfer": "UNKNOWN", "evidence_refs": []},
+      "PDRE-001A": {"dependency_release": "UNKNOWN", "dependency_transfer": "NEW_CRITICAL_DEPENDENCY", "evidence_refs": [], "classification_basis": "AUTHORIZED_PACKET_CLASSIFICATION"},
       "PDRE-001B": {"dependency_release": "UNKNOWN", "dependency_transfer": "UNKNOWN", "evidence_refs": []}
     },
     {
@@ -50,7 +65,7 @@
     },
     {
       "category": "THERMAL_MANAGEMENT",
-      "PDRE-001A": {"dependency_release": "UNKNOWN", "dependency_transfer": "UNKNOWN", "evidence_refs": []},
+      "PDRE-001A": {"dependency_release": "UNKNOWN", "dependency_transfer": "NEW_CRITICAL_DEPENDENCY", "evidence_refs": [], "classification_basis": "AUTHORIZED_PACKET_CLASSIFICATION"},
       "PDRE-001B": {"dependency_release": "UNKNOWN", "dependency_transfer": "UNKNOWN", "evidence_refs": []}
     },
     {
@@ -60,7 +75,22 @@
     },
     {
       "category": "ENERGY_STORAGE",
-      "PDRE-001A": {"dependency_release": "UNKNOWN", "dependency_transfer": "UNKNOWN", "evidence_refs": []},
+      "PDRE-001A": {"dependency_release": "UNKNOWN", "dependency_transfer": "NEW_CRITICAL_DEPENDENCY", "evidence_refs": ["EV-002", "EV-003"]},
+      "PDRE-001B": {"dependency_release": "UNKNOWN", "dependency_transfer": "UNKNOWN", "evidence_refs": []}
+    },
+    {
+      "category": "DC_ARC_FLASH",
+      "PDRE-001A": {"dependency_release": "UNKNOWN", "dependency_transfer": "NEW_CRITICAL_DEPENDENCY", "evidence_refs": [], "classification_basis": "AUTHORIZED_PACKET_CLASSIFICATION"},
+      "PDRE-001B": {"dependency_release": "UNKNOWN", "dependency_transfer": "UNKNOWN", "evidence_refs": []}
+    },
+    {
+      "category": "HVDC_CONNECTOR_BUSWAY",
+      "PDRE-001A": {"dependency_release": "UNKNOWN", "dependency_transfer": "NEW_CRITICAL_DEPENDENCY", "evidence_refs": [], "classification_basis": "AUTHORIZED_PACKET_CLASSIFICATION"},
+      "PDRE-001B": {"dependency_release": "UNKNOWN", "dependency_transfer": "UNKNOWN", "evidence_refs": []}
+    },
+    {
+      "category": "FAULT_ISOLATION",
+      "PDRE-001A": {"dependency_release": "UNKNOWN", "dependency_transfer": "NEW_CRITICAL_DEPENDENCY", "evidence_refs": [], "classification_basis": "AUTHORIZED_PACKET_CLASSIFICATION"},
       "PDRE-001B": {"dependency_release": "UNKNOWN", "dependency_transfer": "UNKNOWN", "evidence_refs": []}
     }
   ],
@@ -70,6 +100,8 @@
     "A category may be released, retained, or transferred independently in each research unit."
   ],
   "limitations": [
-    "Category rows are tracking placeholders only; no dependency claim has been evaluated."
+    "Only PDRE-001A is partially assessed.",
+    "New critical dependency classifications without item-level evidence references are explicit authorized packet classifications, not independently derived facts.",
+    "PDRE-001B remains entirely UNKNOWN."
   ]
 }

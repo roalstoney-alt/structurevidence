@@ -6,9 +6,12 @@
   "research_status": "DISCOVERY_ACTIVE",
   "publication_status": "PRIVATE_DRAFT",
   "initialized_at": "2026-09-17T13:33:39Z",
-  "initialization_only": true,
-  "pdre_record_status": "NOT_INSTANTIATED_PENDING_APPROVED_EVIDENCE",
-  "approved_evidence_packet_count": 0,
+  "initialization_only": false,
+  "pdre_record_status": "INSTANTIATED_PRIVATE_DRAFT",
+  "approved_evidence_packet_count": 1,
+  "accepted_evidence_packets": [
+    "CML-PDRE-001-EVP-001"
+  ],
   "evidence_policy": {
     "external_facts_allowed_without_approved_packet": false,
     "urls_allowed_without_approved_packet": false,
@@ -42,12 +45,20 @@
       "new_path": "800VDC sidecar / power rack",
       "scope_provenance": "USER_PROVIDED_RESEARCH_SCOPE",
       "research_status": "DISCOVERY_ACTIVE",
+      "pdre_status": "CANDIDATE",
       "migration_readiness": {
-        "assignment_status": "NOT_ASSIGNED",
-        "code": null,
-        "evidence_refs": [],
+        "assignment_status": "ASSIGNED_FROM_APPROVED_EVIDENCE_PACKET",
+        "code": "R3",
+        "name": "SAMPLE_BENCH_TESTED",
+        "interpretation": "TECHNICALLY_CREDIBLE",
+        "supports_company_structural_assessment": false,
+        "evidence_refs": [
+          "EV-003",
+          "EV-004"
+        ],
         "limitations": [
-          "No approved evidence packet has been provided."
+          "Authorized only for PDRE-001A by CML-PDRE-001-EVP-001.",
+          "No application qualification, field deployment, operating history, or multi-entity replication is established."
         ]
       }
     },
@@ -56,26 +67,27 @@
       "old_path": "Traditional facility AC conversion chain",
       "new_path": "Centralized 800VDC / SST",
       "scope_provenance": "USER_PROVIDED_RESEARCH_SCOPE",
-      "research_status": "DISCOVERY_ACTIVE",
+      "research_status": "ACTIVE_SUBHYPOTHESIS",
+      "pdre_status": "NOT_ASSESSED",
       "migration_readiness": {
         "assignment_status": "NOT_ASSIGNED",
         "code": null,
         "evidence_refs": [],
         "limitations": [
-          "No approved evidence packet has been provided."
+          "CML-PDRE-001-EVP-001 does not authorize a readiness assignment for PDRE-001B."
         ]
       }
     }
   ],
   "tracking_dimensions": {
-    "ARCHITECTURE": "NOT_ASSESSED",
-    "MIGRATION_READINESS": "NOT_ASSIGNED",
-    "ADOPTION_FRICTION": "UNKNOWN",
+    "ARCHITECTURE": "EVIDENCE_INGESTED_PDRE-001A",
+    "MIGRATION_READINESS": "R3_PDRE-001A_ONLY",
+    "ADOPTION_FRICTION": "EVIDENCE_INGESTED_NO_LEVEL_ASSIGNED",
     "STRUCTURAL_EXPOSURE": "UNKNOWN",
     "BENEFICIARY_MAP": "UNKNOWN",
-    "DEPENDENCY_RELEASE": "UNKNOWN",
-    "DEPENDENCY_TRANSFER": "UNKNOWN",
-    "ECONOMICS": "UNKNOWN",
+    "DEPENDENCY_RELEASE": "CANDIDATE_PDRE-001A",
+    "DEPENDENCY_TRANSFER": "TRACKING_ACTIVE_PDRE-001A",
+    "ECONOMICS": "PARTIALLY_CHARACTERIZED_WITH_SOURCE_CLAIMS",
     "REAL_WORLD_RESPONSE": "NOT_EVALUATED",
     "MARKET_VALIDATION": "NOT_EVALUATED"
   },
@@ -84,11 +96,44 @@
     "evidence_index": "evidence-index.jsonl",
     "state_history": "state-history.jsonl",
     "dependency_transfer": "dependency-transfer.json",
+    "canonical_pdre_record": "pdre-record.json",
     "case_readme": "README.md"
   },
+  "dependency_release": {
+    "research_unit": "PDRE-001A",
+    "old_dependency": "54V rack-level high-current distribution and rack-local power conversion",
+    "status": "CANDIDATE",
+    "constraints": [
+      "CURRENT",
+      "COPPER",
+      "RACK_SPACE",
+      "THERMAL",
+      "POWER_SHELF_SPACE"
+    ],
+    "evidence_refs": [
+      "EV-001"
+    ]
+  },
+  "economic_state": {
+    "research_unit": "PDRE-001A",
+    "CURRENT_REDUCTION": "DERIVED",
+    "RACK_SPACE": "SOURCE_QUANTIFIED",
+    "COPPER_REDUCTION": "SOURCE_CLAIM_NOT_INDEPENDENTLY_VERIFIED",
+    "EFFICIENCY": "SOURCE_CLAIM_NOT_INDEPENDENTLY_VERIFIED",
+    "CAPEX": "UNKNOWN",
+    "FULL_ROI": "NOT_CALCULABLE",
+    "PAYBACK": "NOT_CALCULABLE",
+    "evidence_refs": [
+      "EV-001",
+      "EV-003",
+      "EV-007"
+    ]
+  },
   "limitations": [
-    "This is an initialization container, not a completed PDRE record.",
-    "No external facts, URLs, evidence, readiness findings, exposure findings, beneficiary findings, economics findings, responses, or validation outcomes have been added.",
-    "The supplied path descriptions define research scope only and do not establish a structural fact or migration event."
+    "The canonical record is a private draft for PDRE-001A only.",
+    "Source claims remain attributed and are not promoted to independently validated facts.",
+    "R3 does not establish application qualification or company-level structural migration.",
+    "PDRE-001B remains an active subhypothesis with no migration-readiness assignment.",
+    "No final structural exposure, beneficiary map, real-world response, or market validation has been established."
   ]
 }

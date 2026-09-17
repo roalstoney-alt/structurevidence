@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Targeted tests for the evidence-empty CML-PDRE-001 case container."""
+"""Targeted lifecycle tests for the CML-PDRE-001 case container."""
 
 import json
 import re
@@ -16,6 +16,7 @@ EXPECTED_FILES = {
     "evidence-index.jsonl",
     "state-history.jsonl",
     "timeline.jsonl",
+    "pdre-record.json",
 }
 TRACKING_DIMENSIONS = {
     "ARCHITECTURE",
@@ -41,6 +42,9 @@ TRANSFER_CATEGORIES = [
     "THERMAL_MANAGEMENT",
     "CONNECTOR_BUSWAY",
     "ENERGY_STORAGE",
+    "DC_ARC_FLASH",
+    "HVDC_CONNECTOR_BUSWAY",
+    "FAULT_ISOLATION",
 ]
 
 
@@ -74,11 +78,11 @@ class CMLPDRE001InitializationTests(unittest.TestCase):
         self.assertEqual(self.case["method_version"], "CML_v1.1")
         self.assertEqual(self.case["research_status"], "DISCOVERY_ACTIVE")
         self.assertEqual(self.case["publication_status"], "PRIVATE_DRAFT")
-        self.assertTrue(self.case["initialization_only"])
-        self.assertEqual(self.case["approved_evidence_packet_count"], 0)
+        self.assertFalse(self.case["initialization_only"])
+        self.assertEqual(self.case["approved_evidence_packet_count"], 1)
         self.assertEqual(
             self.case["pdre_record_status"],
-            "NOT_INSTANTIATED_PENDING_APPROVED_EVIDENCE",
+            "INSTANTIATED_PRIVATE_DRAFT",
         )
 
     def test_research_units_are_explicit_and_distinct(self):
@@ -92,49 +96,56 @@ class CMLPDRE001InitializationTests(unittest.TestCase):
         )
         self.assertEqual(units["PDRE-001B"]["new_path"], "Centralized 800VDC / SST")
 
-    def test_no_migration_readiness_level_is_assigned(self):
-        for unit in self.case["research_units"]:
-            readiness = unit["migration_readiness"]
-            self.assertEqual(readiness["assignment_status"], "NOT_ASSIGNED")
-            self.assertIsNone(readiness["code"])
-            self.assertEqual(readiness["evidence_refs"], [])
-        assigned_codes = {f"R{number}" for number in range(8)}
+    def test_readiness_is_r3_for_a_and_unassigned_for_b(self):
+        units = {item["pdre_unit_id"]: item for item in self.case["research_units"]}
+        readiness_a = units["PDRE-001A"]["migration_readiness"]
+        self.assertEqual(readiness_a["code"], "R3")
+        self.assertEqual(readiness_a["name"], "SAMPLE_BENCH_TESTED")
+        self.assertEqual(readiness_a["interpretation"], "TECHNICALLY_CREDIBLE")
+        self.assertFalse(readiness_a["supports_company_structural_assessment"])
+        readiness_b = units["PDRE-001B"]["migration_readiness"]
+        self.assertEqual(readiness_b["assignment_status"], "NOT_ASSIGNED")
+        self.assertIsNone(readiness_b["code"])
+        self.assertEqual(readiness_b["evidence_refs"], [])
+        prohibited_codes = {f"R{number}" for number in range(4, 8)}
         self.assertFalse(
             any(
-                isinstance(value, str) and value in assigned_codes
+                isinstance(value, str) and value in prohibited_codes
                 for value in walk(self.case)
             )
         )
 
     def test_all_required_dimensions_are_tracked_without_inferred_results(self):
         self.assertEqual(set(self.case["tracking_dimensions"]), TRACKING_DIMENSIONS)
-        self.assertEqual(self.case["tracking_dimensions"]["MIGRATION_READINESS"], "NOT_ASSIGNED")
+        self.assertEqual(self.case["tracking_dimensions"]["MIGRATION_READINESS"], "R3_PDRE-001A_ONLY")
         self.assertNotIn("PASS", self.case["tracking_dimensions"].values())
         self.assertNotIn("FAIL", self.case["tracking_dimensions"].values())
 
-    def test_dependency_transfer_categories_are_complete_and_unknown(self):
+    def test_dependency_transfer_categories_are_complete_and_b_remains_unknown(self):
         rows = self.transfer["categories"]
         self.assertEqual([row["category"] for row in rows], TRANSFER_CATEGORIES)
-        self.assertEqual(self.transfer["assessment_status"], "NOT_ASSESSED")
+        self.assertEqual(self.transfer["assessment_status"], "PARTIALLY_ASSESSED_PDRE-001A_ONLY")
         for row in rows:
-            for unit_id in ("PDRE-001A", "PDRE-001B"):
-                self.assertEqual(row[unit_id]["dependency_release"], "UNKNOWN")
-                self.assertEqual(row[unit_id]["dependency_transfer"], "UNKNOWN")
-                self.assertEqual(row[unit_id]["evidence_refs"], [])
+            self.assertEqual(row["PDRE-001B"]["dependency_release"], "UNKNOWN")
+            self.assertEqual(row["PDRE-001B"]["dependency_transfer"], "UNKNOWN")
+            self.assertEqual(row["PDRE-001B"]["evidence_refs"], [])
 
-    def test_evidence_index_and_append_only_logs_are_initialized_without_evidence(self):
+    def test_initial_events_are_preserved_and_packet_is_appended(self):
         evidence = load_jsonl("evidence-index.jsonl")
         timeline = load_jsonl("timeline.jsonl")
         states = load_jsonl("state-history.jsonl")
-        self.assertEqual(len(evidence), 1)
+        self.assertEqual(len(evidence), 8)
         self.assertEqual(evidence[0]["status"], "NO_APPROVED_EVIDENCE_PACKET")
         self.assertEqual(evidence[0]["approved_evidence_packet_count"], 0)
         self.assertEqual(evidence[0]["evidence_refs"], [])
+        self.assertEqual({row["evidence_id"] for row in evidence[1:]}, {f"EV-{number:03d}" for number in range(1, 8)})
         self.assertEqual(timeline[0]["event_domain"], "RESEARCH_ADMINISTRATION")
         self.assertEqual(timeline[0]["evidence_refs"], [])
         self.assertEqual(states[0]["research_status"], "DISCOVERY_ACTIVE")
         self.assertEqual(states[0]["publication_status"], "PRIVATE_DRAFT")
         self.assertEqual(states[0]["evidence_refs"], [])
+        self.assertEqual(states[-1]["previous_migration_readiness"], "NOT_ASSIGNED")
+        self.assertEqual(states[-1]["migration_readiness"], "R3")
 
     def test_schema_bindings_reuse_accepted_cml_v11_schemas(self):
         bindings = self.case["schema_bindings"]

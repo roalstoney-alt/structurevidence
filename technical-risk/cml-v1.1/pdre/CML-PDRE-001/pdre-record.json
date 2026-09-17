@@ -1,0 +1,202 @@
+{
+  "core": {
+    "artifact_refs": [
+      "technical-risk/cml-v1.1/pdre/CML-PDRE-001/CASE.json",
+      "technical-risk/cml-v1.1/pdre/CML-PDRE-001/evidence-index.jsonl",
+      "technical-risk/cml-v1.1/pdre/CML-PDRE-001/timeline.jsonl",
+      "technical-risk/cml-v1.1/pdre/CML-PDRE-001/state-history.jsonl",
+      "technical-risk/cml-v1.1/pdre/CML-PDRE-001/dependency-transfer.json"
+    ],
+    "core_version": "STRUCTEVIDENCE_EVIDENCE_CORE_v0.1",
+    "correction_status": "NONE",
+    "created_at": "2026-09-17T13:55:14Z",
+    "domain": "TECHNICAL_RISK",
+    "effective_at": "2026-05",
+    "input_hash": "cefcce5d3615f3853b5b0515c6e1eded891dd3d0c43a19d7586a61dfca770d1e",
+    "known_at": "2026-09-17T00:00:00Z",
+    "policy_version": "CML_v1.1",
+    "protocol": "CML",
+    "record_hash": "c9fa8c3a6d3f6601412b28ad38f7e94337ff5e69e7ba07ca9a5f75523a54e096",
+    "record_id": "SE.CML.PDRE.CML-PDRE-001.PDRE-001A.v0.1",
+    "source_refs": ["EV-001", "EV-002", "EV-003", "EV-004", "EV-005", "EV-006", "EV-007"],
+    "subject_class": "CML_PDRE_RECORD",
+    "subject_id": "PDRE-001A",
+    "supersession_status": "CURRENT",
+    "updated_at": "2026-09-17T13:55:14Z",
+    "verification_status": "APPROVED_PACKET_INGESTED_WITH_LIMITATIONS"
+  },
+  "pdre_record": {
+    "version": "CML_v1.1",
+    "record_kind": "PDRE_RECORD",
+    "identity": {
+      "cml_id": "CML-PDRE-001",
+      "pdre_id": "PDRE-001A",
+      "title": "54V in-rack distribution to 800VDC sidecar / power rack",
+      "primary_research_object": "PDRE_RECORD"
+    },
+    "old_path": {
+      "description": "54V rack-level high-current distribution and rack-local power conversion.",
+      "evidence_refs": ["EV-001"],
+      "limitations": ["Description is bounded to the approved packet and does not characterize every rack architecture."]
+    },
+    "new_path": {
+      "description": "800VDC sidecar / power rack with conversion moved outside the IT rack.",
+      "evidence_refs": ["EV-002", "EV-003", "EV-004"],
+      "limitations": ["The path is a candidate architecture; application qualification and field deployment are not established."]
+    },
+    "current_dependency": {
+      "dependency_id": "CML-PDRE-001-DEP-001A",
+      "technology": "54V rack distribution",
+      "component": "High-current rack distribution and rack-local power conversion",
+      "subsystem": "Rack power delivery",
+      "function": "Distribute and convert power within the rack.",
+      "required_because": "The approved packet describes it as the legacy rack-level path.",
+      "dependent_elements": ["Copper busbar", "Rack-local power conversion", "Power-shelf space"],
+      "substitution_difficulty": "UNKNOWN",
+      "failure_if_removed": "UNKNOWN",
+      "current_supplier_structure": "UNKNOWN",
+      "current_standard_dependency": "UNKNOWN",
+      "current_certification_dependency": "UNKNOWN",
+      "evidence_refs": ["EV-001"],
+      "unknowns": ["Independent measurement of the stated physical constraint.", "Supplier, standard, and certification dependencies."]
+    },
+    "path_dependency": {
+      "tooling": {"status": "UNKNOWN", "statement": "Tooling dependency is not assessed.", "evidence_refs": [], "limitations": ["No approved packet evidence assigns this dimension."]},
+      "qualification": {"status": "UNKNOWN", "statement": "Qualification dependency is not assessed.", "evidence_refs": ["EV-005"], "limitations": ["Safety and certification work underway does not establish qualification."]},
+      "supplier_ecosystem": {"status": "UNKNOWN", "statement": "Supplier-ecosystem lock-in is not assessed.", "evidence_refs": [], "limitations": ["Multi-entity coordination is not equivalent to supplier substitutability."]},
+      "engineering_knowledge": {"status": "UNKNOWN", "statement": "Engineering-knowledge dependency is not assessed.", "evidence_refs": [], "limitations": ["No approved packet evidence assigns this dimension."]},
+      "standards": {"status": "INFERRED", "statement": "Standardization remains in progress.", "evidence_refs": ["EV-005"], "limitations": ["A released draft specification does not establish completed standardization."]},
+      "software": {"status": "UNKNOWN", "statement": "Software dependency is not assessed.", "evidence_refs": [], "limitations": ["No approved packet evidence assigns this dimension."]},
+      "maintenance_practices": {"status": "UNKNOWN", "statement": "Maintenance-practice dependency is not assessed.", "evidence_refs": ["EV-002"], "limitations": ["Operational execution is identified only as an unresolved engineering issue."]},
+      "certification": {"status": "INFERRED", "statement": "Certification work remains underway.", "evidence_refs": ["EV-005"], "limitations": ["This does not establish certification completion."]},
+      "capital_equipment": {"status": "UNKNOWN", "statement": "Capital-equipment dependency is not assessed.", "evidence_refs": [], "limitations": ["CAPEX is unknown."]},
+      "installed_base": {"status": "UNKNOWN", "statement": "Installed-base dependency is not assessed.", "evidence_refs": [], "limitations": ["No installed-base evidence was provided."]}
+    },
+    "structural_constraints": [
+      {
+        "constraint_class": "PERFORMANCE_LIMIT",
+        "status": "INFERRED",
+        "statement": "The source claims legacy 54V rack distribution begins reaching physical constraints above approximately 200kW.",
+        "evidence_refs": ["EV-001"],
+        "limitations": ["Vendor source claim; not independently verified."]
+      },
+      {
+        "constraint_class": "MATERIAL_DEPENDENCY",
+        "status": "INFERRED",
+        "statement": "The source claims a 1MW rack may require up to approximately 200kg of copper busbar.",
+        "evidence_refs": ["EV-001"],
+        "limitations": ["Vendor source claim; not independently verified."]
+      }
+    ],
+    "alternative_path": {
+      "description": "800VDC sidecar / power rack with 800V-to-50V DC/DC conversion outside the IT rack.",
+      "viability": "POTENTIALLY_VIABLE",
+      "evidence_refs": ["EV-002", "EV-003", "EV-004"],
+      "limitations": ["Bench and product demonstrations do not establish application qualification or deployment."]
+    },
+    "pdre": {
+      "definition": "A Path Dependency Release Event occurs when a new technology, manufacturing method, material, standard, control architecture or industrial capability becomes sufficiently mature that a previously difficult-to-avoid dependency is no longer the only commercially viable technical path.",
+      "status": "CANDIDATE",
+      "release_claim": "The approved packet supports a candidate release from 54V in-rack distribution toward an 800VDC sidecar / power-rack path at sample-bench-tested readiness only.",
+      "pdre_evidence_chain": [
+        {"stage": "RESEARCH_THEORY", "status": "UNKNOWN", "evidence_refs": [], "effective_at": null, "known_at": null, "limitations": ["Not separately evaluated in the approved packet."]},
+        {"stage": "PATENT_PROTOTYPE", "status": "PARTIAL", "evidence_refs": ["EV-001"], "effective_at": "2025-05-20T00:00:00Z", "known_at": "2026-09-17T00:00:00Z", "limitations": ["Exhibition evidence only; no patent inference is made."]},
+        {"stage": "ENGINEERING_VALIDATION", "status": "ESTABLISHED", "evidence_refs": ["EV-003", "EV-004"], "effective_at": null, "known_at": "2026-09-17T00:00:00Z", "limitations": ["EV-004 has month-only event-time precision; no day is inferred."]},
+        {"stage": "PILOT_APPLICATION", "status": "ESTABLISHED", "evidence_refs": ["EV-003", "EV-004"], "effective_at": null, "known_at": "2026-09-17T00:00:00Z", "limitations": ["This is the accepted CML v1.1 R3 evidence-chain gate for sample bench testing; it does not assert a field pilot, application qualification, or deployment."]},
+        {"stage": "QUALIFICATION", "status": "NOT_ESTABLISHED", "evidence_refs": ["EV-005"], "effective_at": null, "known_at": "2026-09-17T00:00:00Z", "limitations": ["Safety and certification work underway is not qualification."]},
+        {"stage": "PRODUCTION", "status": "NOT_ESTABLISHED", "evidence_refs": ["EV-006", "EV-007"], "effective_at": null, "known_at": "2026-09-17T00:00:00Z", "limitations": ["Forward-looking availability and deployment timing do not establish current production."]},
+        {"stage": "FIELD_DEPLOYMENT", "status": "NOT_ESTABLISHED", "evidence_refs": ["EV-005", "EV-006", "EV-007"], "effective_at": null, "known_at": "2026-09-17T00:00:00Z", "limitations": ["EV-005 is prohibited from field-deployment use; EV-006 and EV-007 are counter-evidence boundaries."]},
+        {"stage": "MULTI_USER_MULTI_OEM_REPLICATION", "status": "NOT_ESTABLISHED", "evidence_refs": ["EV-005"], "effective_at": null, "known_at": "2026-09-17T00:00:00Z", "limitations": ["Ecosystem coordination does not establish replicated deployment."]}
+      ],
+      "limitations": ["Candidate status applies only to PDRE-001A.", "PDRE-001B is excluded from this readiness claim."]
+    },
+    "migration_readiness": {
+      "code": "R3",
+      "name": "SAMPLE_BENCH_TESTED",
+      "interpretation": "TECHNICALLY_CREDIBLE",
+      "evidence_refs": ["EV-003", "EV-004"],
+      "supports_company_structural_assessment": false,
+      "limitations": ["Authorized by CML-PDRE-001-EVP-001.", "R4 through R7 are not established."]
+    },
+    "adoption_friction": [
+      {"code": "AF1", "name": "CAPITAL_LOCK_IN", "state": "UNKNOWN", "evidence_refs": [], "limitations": ["CAPEX is unknown."]},
+      {"code": "AF2", "name": "QUALIFICATION_LOCK_IN", "state": "UNKNOWN", "evidence_refs": ["EV-005"], "limitations": ["Qualification work is unresolved; no friction level is inferred."]},
+      {"code": "AF3", "name": "INSTALLED_BASE_LOCK_IN", "state": "UNKNOWN", "evidence_refs": [], "limitations": ["Not assessed."]},
+      {"code": "AF4", "name": "SUPPLIER_LOCK_IN", "state": "UNKNOWN", "evidence_refs": [], "limitations": ["Not assessed."]},
+      {"code": "AF5", "name": "SOFTWARE_INTERFACE_LOCK_IN", "state": "UNKNOWN", "evidence_refs": [], "limitations": ["Not assessed."]},
+      {"code": "AF6", "name": "ORGANIZATIONAL_LOCK_IN", "state": "UNKNOWN", "evidence_refs": ["EV-002"], "limitations": ["Operational execution is an issue, but no friction level is inferred."]},
+      {"code": "AF7", "name": "REGULATORY_CERTIFICATION_LOCK_IN", "state": "UNKNOWN", "evidence_refs": ["EV-005"], "limitations": ["Safety and certification work underway does not determine friction severity."]},
+      {"code": "AF8", "name": "CANNIBALIZATION_RISK", "state": "UNKNOWN", "evidence_refs": [], "limitations": ["Not assessed."]},
+      {"code": "AF9", "name": "CUSTOMER_ACCEPTANCE_RISK", "state": "UNKNOWN", "evidence_refs": [], "limitations": ["Not assessed."]},
+      {"code": "AF10", "name": "UNKNOWN_INTERNAL_FRICTION", "state": "UNKNOWN", "evidence_refs": [], "limitations": ["No private internal evidence was provided."]}
+    ],
+    "economics": {
+      "performance": {"assessment": "UNKNOWN", "evidence_refs": ["EV-003"], "limitations": ["Efficiency is a source claim not independently verified."]},
+      "cost": {"assessment": "UNKNOWN", "evidence_refs": [], "limitations": ["CAPEX, ROI, and payback are not calculable."]},
+      "manufacturability": {"assessment": "UNKNOWN", "evidence_refs": [], "limitations": ["Not assessed."]},
+      "reliability": {"assessment": "UNKNOWN", "evidence_refs": [], "limitations": ["Not assessed."]},
+      "qualification_burden": {"assessment": "UNKNOWN", "evidence_refs": ["EV-005"], "limitations": ["Work underway does not quantify burden."]},
+      "tooling_requirement": {"assessment": "UNKNOWN", "evidence_refs": [], "limitations": ["Not assessed."]},
+      "control_complexity": {"assessment": "UNKNOWN", "evidence_refs": [], "limitations": ["Not assessed."]},
+      "maintenance": {"assessment": "UNKNOWN", "evidence_refs": ["EV-002"], "limitations": ["Operational execution remains an engineering issue; no economic direction is assigned."]},
+      "supply_availability": {"assessment": "UNKNOWN", "evidence_refs": ["EV-006", "EV-007"], "limitations": ["Forward-looking product timing does not establish current supply."]},
+      "yield": {"assessment": "UNKNOWN", "evidence_refs": [], "limitations": ["Not assessed."]},
+      "certification": {"assessment": "UNKNOWN", "evidence_refs": ["EV-005"], "limitations": ["Certification work underway does not establish economic direction."]},
+      "field_service": {"assessment": "UNKNOWN", "evidence_refs": [], "limitations": ["Not assessed."]},
+      "switching_cost": {"assessment": "UNKNOWN", "evidence_refs": [], "limitations": ["Not assessed."]}
+    },
+    "structural_exposure": {
+      "exposure_id": "CML-PDRE-001-EXPOSURE-001A",
+      "technology": [], "component": [], "subsystem": [], "product": [],
+      "supplier": [], "customer": [], "company": [], "industry": [],
+      "unknowns": ["R3 does not support material company-level structural assessment.", "No exposure entity is classified by this packet."]
+    },
+    "beneficiary_map": {
+      "beneficiary_map_id": "CML-PDRE-001-BENEFICIARY-001A",
+      "required_question": "Who gains new economic or strategic optionality if this path dependency is released?",
+      "beneficiaries": [],
+      "unknowns": ["No beneficiary classification or paying-customer status is established by this packet."]
+    },
+    "real_world_response": {
+      "status": "NOT_EVALUATED",
+      "evidence_refs": [],
+      "limitations": ["Product demonstrations and forward-looking timing are not treated as observed deployment response."]
+    },
+    "market_validation": {
+      "status": "NOT_EVALUATED",
+      "evidence_refs": [],
+      "limitations": ["Candidate PDRE status and R3 readiness are not market validation."]
+    },
+    "known_evidence": [
+      {"evidence_id": "EV-001", "evidence_type": "PROTOTYPE", "statement": "Source reports physical constraints for legacy 54V distribution and an exhibited 800V sidecar.", "source_ref": "NVIDIA Technical Blog, 2025-05-20", "structural_fact": false, "limitations": ["Source claims are not independently verified."]},
+      {"evidence_id": "EV-002", "evidence_type": "RESEARCH_PUBLICATION", "statement": "Source describes the sidecar path and unresolved protection, grounding, storage, and operational issues.", "source_ref": "Schneider Electric White Paper SPD_WP213_EN, 2026-03-02", "structural_fact": false, "limitations": ["White-paper claims remain source-attributed."]},
+      {"evidence_id": "EV-003", "evidence_type": "ENGINEERING_VALIDATION", "statement": "Source reports demonstrations of an 800VDC in-row power rack, integrated BBU capacity, and an 800V-to-50V DC/DC shelf.", "source_ref": "Delta Electronics GTC 2026, 2026-03-16", "structural_fact": false, "limitations": ["Claimed efficiency is not independently verified."]},
+      {"evidence_id": "EV-004", "evidence_type": "PROTOTYPE", "statement": "Source reports an 800VDC infrastructure prototype demonstration.", "source_ref": "Schneider Electric / NVIDIA GTC 2026, 2026-05", "structural_fact": false, "limitations": ["Month-only source date; no event day is inferred."]},
+      {"evidence_id": "EV-005", "evidence_type": "STANDARD", "statement": "Source reports multi-entity standardization activity, an SST specification release, and ongoing safety and certification work.", "source_ref": "Open Compute Project, 2026-08-11", "structural_fact": false, "limitations": ["Must not be used as field-deployment evidence."]},
+      {"evidence_id": "EV-006", "evidence_type": "MANAGEMENT_STATEMENT", "statement": "Source provides forward-looking power-rack and row-power-center timing.", "source_ref": "NVIDIA, 2026-08-11", "structural_fact": false, "limitations": ["Forward-looking claim used only as counter-evidence and a migration boundary."]},
+      {"evidence_id": "EV-007", "evidence_type": "MARKETING_CLAIM", "statement": "Source provides product capacity, forward deployment timing, and potential rack-space recovery claims.", "source_ref": "Vertiv, 2026", "structural_fact": false, "limitations": ["Performance and economic signals are not independently verified; year-only source date."]}
+    ],
+    "counter_evidence": [
+      {"statement": "Forward-looking availability in the second half of 2026 and 2027 bounds the claim against current field deployment.", "evidence_refs": ["EV-006"], "impact": "BOUNDS", "limitations": ["Timing is source-reported and forward-looking."]},
+      {"statement": "Stated deployment beginning in 2027 bounds the claim against current field deployment.", "evidence_refs": ["EV-007"], "impact": "BOUNDS", "limitations": ["Timing is source-reported and forward-looking."]}
+    ],
+    "unknowns": [
+      "Application qualification.", "Production deployment.", "Field deployment.", "Operating history.",
+      "Multi-entity replication.", "CAPEX.", "Full ROI.", "Payback.", "Independent validation of copper, rack-space, and efficiency claims."
+    ],
+    "next_observable": [
+      {"observable": "Evidence of application qualification for the PDRE-001A path.", "would_update": "Migration readiness beyond R3.", "evidence_needed": "Approved qualification result with event and knowledge times."},
+      {"observable": "Evidence of actual production or field deployment.", "would_update": "The current migration boundary.", "evidence_needed": "Approved production-deployment or field-operation evidence."}
+    ],
+    "timeline": [
+      {"event": "800V sidecar exhibition reported.", "effective_at": "2025-05-20T00:00:00Z", "known_at": "2026-09-17T00:00:00Z", "evidence_refs": ["EV-001"]},
+      {"event": "800VDC sidecar alternative-path white paper dated.", "effective_at": "2026-03-02T00:00:00Z", "known_at": "2026-09-17T00:00:00Z", "evidence_refs": ["EV-002"]},
+      {"event": "800VDC product demonstration reported.", "effective_at": "2026-03-16T00:00:00Z", "known_at": "2026-09-17T00:00:00Z", "evidence_refs": ["EV-003"]},
+      {"event": "Standardization and draft specification activity reported.", "effective_at": "2026-08-11T00:00:00Z", "known_at": "2026-09-17T00:00:00Z", "evidence_refs": ["EV-005"]},
+      {"event": "Forward product timing reported.", "effective_at": "2026-08-11T00:00:00Z", "known_at": "2026-09-17T00:00:00Z", "evidence_refs": ["EV-006"]}
+    ],
+    "revision_history": [
+      {"revision_id": "CML-PDRE-001-PDRE-001A-v0.1", "created_at": "2026-09-17T13:55:14Z", "supersedes": null, "change_summary": "Instantiated from approved evidence packet CML-PDRE-001-EVP-001 at authorized readiness R3."}
+    ]
+  }
+}
