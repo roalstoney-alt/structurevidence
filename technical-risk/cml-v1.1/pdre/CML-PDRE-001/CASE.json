@@ -1,0 +1,94 @@
+{
+  "case_id": "CML-PDRE-001",
+  "case_type": "PDRE_DISCOVERY_CASE_CONTAINER",
+  "method_version": "CML_v1.1",
+  "title": "800VDC / SST AI DATA CENTER POWER ARCHITECTURE",
+  "research_status": "DISCOVERY_ACTIVE",
+  "publication_status": "PRIVATE_DRAFT",
+  "initialized_at": "2026-09-17T13:33:39Z",
+  "initialization_only": true,
+  "pdre_record_status": "NOT_INSTANTIATED_PENDING_APPROVED_EVIDENCE",
+  "approved_evidence_packet_count": 0,
+  "evidence_policy": {
+    "external_facts_allowed_without_approved_packet": false,
+    "urls_allowed_without_approved_packet": false,
+    "readiness_assignment_allowed_without_approved_packet": false,
+    "required_input_for_research_assessment": "APPROVED_EVIDENCE_PACKET"
+  },
+  "schema_bindings": {
+    "pdre_record": "technical-risk/cml-v1.1/schema/pdre-record.schema.json",
+    "dependency_record": "technical-risk/cml-v1.1/schema/dependency-record.schema.json",
+    "structural_exposure": "technical-risk/cml-v1.1/schema/structural-exposure.schema.json",
+    "beneficiary_map": "technical-risk/cml-v1.1/schema/beneficiary-map.schema.json",
+    "real_world_response": "technical-risk/cml-v1.1/schema/real-world-response.schema.json",
+    "market_validation": "technical-risk/cml-v1.1/schema/market-validation.schema.json"
+  },
+  "scope_paths": {
+    "old_path": {
+      "statement": "Low-voltage rack distribution and conventional multi-stage AC-centric data-center power architecture.",
+      "provenance": "USER_PROVIDED_RESEARCH_SCOPE",
+      "evidence_status": "NOT_EVIDENCE"
+    },
+    "new_path": {
+      "statement": "800VDC sidecar / power rack / row-level DC, with longer-term facility-level centralized DC and SST paths.",
+      "provenance": "USER_PROVIDED_RESEARCH_SCOPE",
+      "evidence_status": "NOT_EVIDENCE"
+    }
+  },
+  "research_units": [
+    {
+      "pdre_unit_id": "PDRE-001A",
+      "old_path": "54V in-rack distribution",
+      "new_path": "800VDC sidecar / power rack",
+      "scope_provenance": "USER_PROVIDED_RESEARCH_SCOPE",
+      "research_status": "DISCOVERY_ACTIVE",
+      "migration_readiness": {
+        "assignment_status": "NOT_ASSIGNED",
+        "code": null,
+        "evidence_refs": [],
+        "limitations": [
+          "No approved evidence packet has been provided."
+        ]
+      }
+    },
+    {
+      "pdre_unit_id": "PDRE-001B",
+      "old_path": "Traditional facility AC conversion chain",
+      "new_path": "Centralized 800VDC / SST",
+      "scope_provenance": "USER_PROVIDED_RESEARCH_SCOPE",
+      "research_status": "DISCOVERY_ACTIVE",
+      "migration_readiness": {
+        "assignment_status": "NOT_ASSIGNED",
+        "code": null,
+        "evidence_refs": [],
+        "limitations": [
+          "No approved evidence packet has been provided."
+        ]
+      }
+    }
+  ],
+  "tracking_dimensions": {
+    "ARCHITECTURE": "NOT_ASSESSED",
+    "MIGRATION_READINESS": "NOT_ASSIGNED",
+    "ADOPTION_FRICTION": "UNKNOWN",
+    "STRUCTURAL_EXPOSURE": "UNKNOWN",
+    "BENEFICIARY_MAP": "UNKNOWN",
+    "DEPENDENCY_RELEASE": "UNKNOWN",
+    "DEPENDENCY_TRANSFER": "UNKNOWN",
+    "ECONOMICS": "UNKNOWN",
+    "REAL_WORLD_RESPONSE": "NOT_EVALUATED",
+    "MARKET_VALIDATION": "NOT_EVALUATED"
+  },
+  "artifact_refs": {
+    "timeline": "timeline.jsonl",
+    "evidence_index": "evidence-index.jsonl",
+    "state_history": "state-history.jsonl",
+    "dependency_transfer": "dependency-transfer.json",
+    "case_readme": "README.md"
+  },
+  "limitations": [
+    "This is an initialization container, not a completed PDRE record.",
+    "No external facts, URLs, evidence, readiness findings, exposure findings, beneficiary findings, economics findings, responses, or validation outcomes have been added.",
+    "The supplied path descriptions define research scope only and do not establish a structural fact or migration event."
+  ]
+}

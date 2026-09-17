@@ -1,0 +1,75 @@
+{
+  "case_id": "CML-PDRE-001",
+  "method_version": "CML_v1.1",
+  "assessment_status": "NOT_ASSESSED",
+  "research_units": [
+    "PDRE-001A",
+    "PDRE-001B"
+  ],
+  "evidence_refs": [],
+  "categories": [
+    {
+      "category": "COPPER",
+      "PDRE-001A": {"dependency_release": "UNKNOWN", "dependency_transfer": "UNKNOWN", "evidence_refs": []},
+      "PDRE-001B": {"dependency_release": "UNKNOWN", "dependency_transfer": "UNKNOWN", "evidence_refs": []}
+    },
+    {
+      "category": "POWER_SEMICONDUCTOR",
+      "PDRE-001A": {"dependency_release": "UNKNOWN", "dependency_transfer": "UNKNOWN", "evidence_refs": []},
+      "PDRE-001B": {"dependency_release": "UNKNOWN", "dependency_transfer": "UNKNOWN", "evidence_refs": []}
+    },
+    {
+      "category": "DC_PROTECTION",
+      "PDRE-001A": {"dependency_release": "UNKNOWN", "dependency_transfer": "UNKNOWN", "evidence_refs": []},
+      "PDRE-001B": {"dependency_release": "UNKNOWN", "dependency_transfer": "UNKNOWN", "evidence_refs": []}
+    },
+    {
+      "category": "DC_DC_CONVERSION",
+      "PDRE-001A": {"dependency_release": "UNKNOWN", "dependency_transfer": "UNKNOWN", "evidence_refs": []},
+      "PDRE-001B": {"dependency_release": "UNKNOWN", "dependency_transfer": "UNKNOWN", "evidence_refs": []}
+    },
+    {
+      "category": "HIGH_FREQUENCY_TRANSFORMER",
+      "PDRE-001A": {"dependency_release": "UNKNOWN", "dependency_transfer": "UNKNOWN", "evidence_refs": []},
+      "PDRE-001B": {"dependency_release": "UNKNOWN", "dependency_transfer": "UNKNOWN", "evidence_refs": []}
+    },
+    {
+      "category": "MAGNETIC_MATERIAL",
+      "PDRE-001A": {"dependency_release": "UNKNOWN", "dependency_transfer": "UNKNOWN", "evidence_refs": []},
+      "PDRE-001B": {"dependency_release": "UNKNOWN", "dependency_transfer": "UNKNOWN", "evidence_refs": []}
+    },
+    {
+      "category": "INSULATION",
+      "PDRE-001A": {"dependency_release": "UNKNOWN", "dependency_transfer": "UNKNOWN", "evidence_refs": []},
+      "PDRE-001B": {"dependency_release": "UNKNOWN", "dependency_transfer": "UNKNOWN", "evidence_refs": []}
+    },
+    {
+      "category": "PARTIAL_DISCHARGE",
+      "PDRE-001A": {"dependency_release": "UNKNOWN", "dependency_transfer": "UNKNOWN", "evidence_refs": []},
+      "PDRE-001B": {"dependency_release": "UNKNOWN", "dependency_transfer": "UNKNOWN", "evidence_refs": []}
+    },
+    {
+      "category": "THERMAL_MANAGEMENT",
+      "PDRE-001A": {"dependency_release": "UNKNOWN", "dependency_transfer": "UNKNOWN", "evidence_refs": []},
+      "PDRE-001B": {"dependency_release": "UNKNOWN", "dependency_transfer": "UNKNOWN", "evidence_refs": []}
+    },
+    {
+      "category": "CONNECTOR_BUSWAY",
+      "PDRE-001A": {"dependency_release": "UNKNOWN", "dependency_transfer": "UNKNOWN", "evidence_refs": []},
+      "PDRE-001B": {"dependency_release": "UNKNOWN", "dependency_transfer": "UNKNOWN", "evidence_refs": []}
+    },
+    {
+      "category": "ENERGY_STORAGE",
+      "PDRE-001A": {"dependency_release": "UNKNOWN", "dependency_transfer": "UNKNOWN", "evidence_refs": []},
+      "PDRE-001B": {"dependency_release": "UNKNOWN", "dependency_transfer": "UNKNOWN", "evidence_refs": []}
+    }
+  ],
+  "semantic_rules": [
+    "DEPENDENCY_RELEASE != DEPENDENCY_TRANSFER",
+    "UNKNOWN remains UNKNOWN until supported by an approved evidence packet.",
+    "A category may be released, retained, or transferred independently in each research unit."
+  ],
+  "limitations": [
+    "Category rows are tracking placeholders only; no dependency claim has been evaluated."
+  ]
+}
