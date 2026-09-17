@@ -7,18 +7,12 @@ import subprocess
 import unittest
 from pathlib import Path
 
+import cml_v11_regression as regression
+
 ROOT = Path(__file__).resolve().parents[1]
 BASE_SHA = "a1bb8e442316c48acb0af2aca0c8c269b00340af"
 V11_1_SHA = "2baced87c4df494fbbe706b4e73029d767050779"
 HISTORY_PATH = "technical-risk/CML_VERSION_HISTORY.jsonl"
-ALLOWED_CHANGED = {
-    HISTORY_PATH,
-    "technical-risk/cml-method-registry.json",
-    "technical-risk/cml-v1.1/METHOD_TRANSITION.json",
-    "technical-risk/cml-v1.1/history/HISTORICAL_BRANCH_FREEZE.json",
-    "docs/architecture/CML_V1_1_ARCHITECTURE.md",
-    "scripts/test_cml_v11_transition.py",
-}
 
 
 def load(path: str) -> dict:
@@ -52,20 +46,15 @@ class CMLV11TransitionTests(unittest.TestCase):
         self.assertEqual(transition["authorization"]["task"], "V11-1_METHOD_TRANSITION")
 
     def test_version_history_is_prefix_preserving_append_only(self):
-        prior = git("show", f"{BASE_SHA}:{HISTORY_PATH}").splitlines()
-        current = (ROOT / HISTORY_PATH).read_text(encoding="utf-8").splitlines()
-        self.assertEqual(current[: len(prior)], prior)
-        self.assertEqual(len(current), len(prior) + 1)
-        entry = json.loads(current[-1])
-        self.assertEqual(entry["change_type"], "METHOD_TRANSITION")
-        self.assertEqual(entry["method_version"], "CML_v1.1")
-        self.assertFalse(entry["scientific_findings_changed"])
-        self.assertFalse(entry["historical_records_rewritten"])
+        result = regression.validate_version_history()
+        self.assertGreaterEqual(result["current_lines"], result["base_lines"] + 1)
 
-    def test_no_historical_tracked_file_mutation(self):
-        changed = set(git("diff", "--name-only", BASE_SHA, "--").splitlines())
-        self.assertEqual(changed - ALLOWED_CHANGED, set())
-        self.assertEqual(changed & ALLOWED_CHANGED, ALLOWED_CHANGED)
+    def test_v11_1_milestone_changed_only_authorized_files(self):
+        result = regression.validate_v11_1_milestone()
+        self.assertEqual(result["milestone"], V11_1_SHA)
+
+    def test_current_historical_files_are_preserved(self):
+        self.assertEqual(regression.historical_mutations(), [])
 
     def test_historical_freeze_covers_all_branches(self):
         freeze = load("technical-risk/cml-v1.1/history/HISTORICAL_BRANCH_FREEZE.json")

@@ -11,8 +11,11 @@ from pathlib import Path
 import jsonschema
 from referencing import Registry, Resource
 
+import cml_v11_regression as regression
+
 ROOT = Path(__file__).resolve().parents[1]
-BASE_SHA = "2baced87c4df494fbbe706b4e73029d767050779"
+V11_2_ENTRY_SHA = "2baced87c4df494fbbe706b4e73029d767050779"
+V11_2_ACCEPTED_SHA = "33931a5de0e931b1ad218d63d83a9183fd3778ec"
 VERSION = "CML_v1.1"
 SCHEMA_DIR = ROOT / "technical-risk/cml-v1.1/schema"
 VOCAB_DIR = ROOT / "technical-risk/cml-v1.1/vocabulary"
@@ -118,22 +121,17 @@ def framework_integrity() -> dict:
 
 
 def preservation_regression() -> dict:
-    require(git("rev-parse", "HEAD").strip() == git("rev-parse", "origin/main").strip() == BASE_SHA, "V11-2 entry SHA drift")
+    milestone = regression.validate_v11_2_milestone()
     method = json.loads((ROOT / "technical-risk/cml-method-registry.json").read_text())
     transition = json.loads((ROOT / "technical-risk/cml-v1.1/METHOD_TRANSITION.json").read_text())
     freeze = json.loads((ROOT / "technical-risk/cml-v1.1/history/HISTORICAL_BRANCH_FREEZE.json").read_text())
     require(method["active_method"]["method_version"] == VERSION, "CML v1.1 is not active")
     require(not transition["historical_records_rewritten"] and not transition["scientific_findings_changed"], "V11-1 transition boundary changed")
     require(len(freeze["branches"]) == 5 and all(row["status"] == "HISTORICAL_METHOD_BRANCH" for row in freeze["branches"]), "historical freeze changed")
-    dirty = [row[3:] for row in git("status", "--porcelain").splitlines()]
-    allowed = (
-        "technical-risk/cml-v1.1/schema/", "technical-risk/cml-v1.1/vocabulary/",
-        "technical-risk/cml-v1.1/templates/", "scripts/validate_cml_v11_core.py",
-        "scripts/test_cml_v11_core.py", "scripts/test_cml_v11_transition.py",
-    )
-    historical = [path for path in dirty if not any(path == prefix or path.startswith(prefix) for prefix in allowed)]
-    require(not historical, f"historical or out-of-scope mutation: {historical}")
-    return {"active_method": VERSION, "frozen_branches": 5, "old_record_mutation_count": 0}
+    historical = regression.historical_mutations()
+    require(not historical, f"historical mutation: {historical}")
+    regression.validate_version_history()
+    return {"active_method": VERSION, "frozen_branches": 5, "old_record_mutation_count": 0, "v11_2_accepted_sha": milestone["accepted"], "frozen_core_files": milestone["frozen_core_files"]}
 
 
 def _keys(value: object) -> set[str]:
