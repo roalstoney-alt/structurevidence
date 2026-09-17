@@ -1,0 +1,14 @@
+{
+  "company_assessment_minimum_state": "R4",
+  "states": [
+    {"code": "R0", "interpretation": "POSSIBLE", "name": "THEORETICAL"},
+    {"code": "R1", "interpretation": "POSSIBLE", "name": "SPECIFICATION_COMPATIBLE"},
+    {"code": "R2", "interpretation": "TECHNICALLY_CREDIBLE", "name": "ENGINEERING_REVIEWED"},
+    {"code": "R3", "interpretation": "TECHNICALLY_CREDIBLE", "name": "SAMPLE_BENCH_TESTED"},
+    {"code": "R4", "interpretation": "PRODUCTION_CAPABLE_CANDIDATE", "name": "APPLICATION_QUALIFIED"},
+    {"code": "R5", "interpretation": "REAL_WORLD_VALIDATED", "name": "FIELD_DEPLOYED"},
+    {"code": "R6", "interpretation": "REAL_WORLD_VALIDATED", "name": "OPERATING_HISTORY_AVAILABLE"},
+    {"code": "R7", "interpretation": "INDUSTRY_LEVEL_MIGRATION_EVIDENCE", "name": "MULTI_ENTITY_REPLICATION"}
+  ],
+  "version": "CML_v1.1"
+}

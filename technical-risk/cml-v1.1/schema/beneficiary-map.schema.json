@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "beneficiary-map.schema.json",
+  "title": "CML v1.1 beneficiary map",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["core", "beneficiary_map"],
+  "properties": {
+    "core": {"$ref": "../../../evidence/core/schema/evidence_core_record.schema.json"},
+    "beneficiary_map": {"$ref": "#/$defs/beneficiary_map"}
+  },
+  "$defs": {
+    "beneficiary_map": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["beneficiary_map_id", "required_question", "beneficiaries", "unknowns"],
+      "properties": {
+        "beneficiary_map_id": {"type": "string", "minLength": 1},
+        "required_question": {"const": "Who gains new economic or strategic optionality if this path dependency is released?"},
+        "beneficiaries": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["entity", "beneficiary_class", "optionality", "evidence_refs", "commercial_target_class", "commercial_customer_status", "commercial_evidence_refs", "limitations"],
+            "properties": {
+              "entity": {"type": "string", "minLength": 1},
+              "beneficiary_class": {"enum": ["ALTERNATIVE_TECHNOLOGY_SUPPLIER", "SECOND_SOURCE_PROVIDER", "NEW_ENTRANT", "CHALLENGER", "SYSTEM_INTEGRATOR", "RETROFIT_PROVIDER", "REPAIR_MAINTENANCE_PROVIDER", "NEW_EQUIPMENT_MANUFACTURER", "NEW_FACTORY_GREENFIELD_PROJECT", "FORCED_MIGRATOR", "CAPITAL_ALLOCATOR", "INVESTOR"]},
+              "optionality": {"type": "string", "minLength": 1},
+              "evidence_refs": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+              "commercial_target_class": {"enum": ["CHANGE_BENEFICIARY", "FORCED_MIGRATOR", "CAPITAL_ALLOCATOR", "LEGACY_INCUMBENT", "NOT_APPLICABLE"]},
+              "commercial_customer_status": {"enum": ["CONFIRMED", "NOT_CONFIRMED", "UNKNOWN", "NOT_APPLICABLE"]},
+              "commercial_evidence_refs": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+              "limitations": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}}
+            }
+          }
+        },
+        "unknowns": {"type": "array", "items": {"type": "string", "minLength": 1}}
+      }
+    }
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "core": {
+    "artifact_refs": [], "core_version": "STRUCTEVIDENCE_EVIDENCE_CORE_v0.1", "correction_status": "NONE",
+    "created_at": "1970-01-01T00:00:00Z", "domain": "TECHNICAL_RISK", "effective_at": "1970-01-01T00:00:00Z",
+    "input_hash": "0000000000000000000000000000000000000000000000000000000000000000", "known_at": "1970-01-01T00:00:00Z",
+    "policy_version": "CML_v1.1", "protocol": "CML", "record_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "record_id": "REPLACE_BEFORE_INGESTION", "source_refs": [], "subject_class": "CML_PDRE_RECORD",
+    "subject_id": "REPLACE_BEFORE_INGESTION", "supersession_status": "CURRENT", "updated_at": "1970-01-01T00:00:00Z", "verification_status": "TEMPLATE_UNPOPULATED"
+  },
+  "pdre_record": {
+    "adoption_friction": [
+      {"code": "AF1", "name": "CAPITAL_LOCK_IN", "state": "UNKNOWN", "evidence_refs": [], "limitations": ["Not evaluated."]},
+      {"code": "AF2", "name": "QUALIFICATION_LOCK_IN", "state": "UNKNOWN", "evidence_refs": [], "limitations": ["Not evaluated."]},
+      {"code": "AF3", "name": "INSTALLED_BASE_LOCK_IN", "state": "UNKNOWN", "evidence_refs": [], "limitations": ["Not evaluated."]},
+      {"code": "AF4", "name": "SUPPLIER_LOCK_IN", "state": "UNKNOWN", "evidence_refs": [], "limitations": ["Not evaluated."]},
+      {"code": "AF5", "name": "SOFTWARE_INTERFACE_LOCK_IN", "state": "UNKNOWN", "evidence_refs": [], "limitations": ["Not evaluated."]},
+      {"code": "AF6", "name": "ORGANIZATIONAL_LOCK_IN", "state": "UNKNOWN", "evidence_refs": [], "limitations": ["Not evaluated."]},
+      {"code": "AF7", "name": "REGULATORY_CERTIFICATION_LOCK_IN", "state": "UNKNOWN", "evidence_refs": [], "limitations": ["Not evaluated."]},
+      {"code": "AF8", "name": "CANNIBALIZATION_RISK", "state": "UNKNOWN", "evidence_refs": [], "limitations": ["Not evaluated."]},
+      {"code": "AF9", "name": "CUSTOMER_ACCEPTANCE_RISK", "state": "UNKNOWN", "evidence_refs": [], "limitations": ["Not evaluated."]},
+      {"code": "AF10", "name": "UNKNOWN_INTERNAL_FRICTION", "state": "UNKNOWN", "evidence_refs": [], "limitations": ["Not evaluated."]}
+    ],
+    "alternative_path": {"description": "UNKNOWN", "viability": "UNKNOWN", "evidence_refs": [], "limitations": ["Not evaluated."]},
+    "beneficiary_map": {"beneficiaries": [], "beneficiary_map_id": "REPLACE_BEFORE_INGESTION", "required_question": "Who gains new economic or strategic optionality if this path dependency is released?", "unknowns": ["Not evaluated."]},
+    "counter_evidence": [],
+    "current_dependency": {"component": "UNKNOWN", "current_certification_dependency": "UNKNOWN", "current_standard_dependency": "UNKNOWN", "current_supplier_structure": "UNKNOWN", "dependency_id": "REPLACE_BEFORE_INGESTION", "dependent_elements": ["UNKNOWN"], "evidence_refs": [], "failure_if_removed": "UNKNOWN", "function": "UNKNOWN", "required_because": "UNKNOWN", "substitution_difficulty": "UNKNOWN", "subsystem": "UNKNOWN", "technology": "UNKNOWN", "unknowns": ["Not evaluated."]},
+    "economics": {
+      "performance": {"assessment": "UNKNOWN", "evidence_refs": [], "limitations": ["Not evaluated."]},
+      "cost": {"assessment": "UNKNOWN", "evidence_refs": [], "limitations": ["Not evaluated."]},
+      "manufacturability": {"assessment": "UNKNOWN", "evidence_refs": [], "limitations": ["Not evaluated."]},
+      "reliability": {"assessment": "UNKNOWN", "evidence_refs": [], "limitations": ["Not evaluated."]},
+      "qualification_burden": {"assessment": "UNKNOWN", "evidence_refs": [], "limitations": ["Not evaluated."]},
+      "tooling_requirement": {"assessment": "UNKNOWN", "evidence_refs": [], "limitations": ["Not evaluated."]},
+      "control_complexity": {"assessment": "UNKNOWN", "evidence_refs": [], "limitations": ["Not evaluated."]},
+      "maintenance": {"assessment": "UNKNOWN", "evidence_refs": [], "limitations": ["Not evaluated."]},
+      "supply_availability": {"assessment": "UNKNOWN", "evidence_refs": [], "limitations": ["Not evaluated."]},
+      "yield": {"assessment": "UNKNOWN", "evidence_refs": [], "limitations": ["Not evaluated."]},
+      "certification": {"assessment": "UNKNOWN", "evidence_refs": [], "limitations": ["Not evaluated."]},
+      "field_service": {"assessment": "UNKNOWN", "evidence_refs": [], "limitations": ["Not evaluated."]},
+      "switching_cost": {"assessment": "UNKNOWN", "evidence_refs": [], "limitations": ["Not evaluated."]}
+    },
+    "identity": {"cml_id": "REPLACE_BEFORE_INGESTION", "pdre_id": "REPLACE_BEFORE_INGESTION", "primary_research_object": "PDRE_RECORD", "title": "REPLACE_BEFORE_INGESTION"},
+    "known_evidence": [],
+    "market_validation": {"status": "NOT_EVALUATED", "evidence_refs": [], "limitations": ["Deferred to V11-3."]},
+    "migration_readiness": {"code": "R0", "name": "THEORETICAL", "interpretation": "POSSIBLE", "evidence_refs": [], "supports_company_structural_assessment": false, "limitations": ["No populated evidence."]},
+    "new_path": {"description": "UNKNOWN", "evidence_refs": [], "limitations": ["Not evaluated."]},
+    "next_observable": [{"observable": "Evidence required to evaluate the candidate.", "would_update": "Migration readiness.", "evidence_needed": "Technical evidence."}],
+    "old_path": {"description": "UNKNOWN", "evidence_refs": [], "limitations": ["Not evaluated."]},
+    "path_dependency": {
+      "tooling": {"status": "UNKNOWN", "statement": "UNKNOWN", "evidence_refs": [], "limitations": ["Not evaluated."]},
+      "qualification": {"status": "UNKNOWN", "statement": "UNKNOWN", "evidence_refs": [], "limitations": ["Not evaluated."]},
+      "supplier_ecosystem": {"status": "UNKNOWN", "statement": "UNKNOWN", "evidence_refs": [], "limitations": ["Not evaluated."]},
+      "engineering_knowledge": {"status": "UNKNOWN", "statement": "UNKNOWN", "evidence_refs": [], "limitations": ["Not evaluated."]},
+      "standards": {"status": "UNKNOWN", "statement": "UNKNOWN", "evidence_refs": [], "limitations": ["Not evaluated."]},
+      "software": {"status": "UNKNOWN", "statement": "UNKNOWN", "evidence_refs": [], "limitations": ["Not evaluated."]},
+      "maintenance_practices": {"status": "UNKNOWN", "statement": "UNKNOWN", "evidence_refs": [], "limitations": ["Not evaluated."]},
+      "certification": {"status": "UNKNOWN", "statement": "UNKNOWN", "evidence_refs": [], "limitations": ["Not evaluated."]},
+      "capital_equipment": {"status": "UNKNOWN", "statement": "UNKNOWN", "evidence_refs": [], "limitations": ["Not evaluated."]},
+      "installed_base": {"status": "UNKNOWN", "statement": "UNKNOWN", "evidence_refs": [], "limitations": ["Not evaluated."]}
+    },
+    "pdre": {
+      "definition": "A Path Dependency Release Event occurs when a new technology, manufacturing method, material, standard, control architecture or industrial capability becomes sufficiently mature that a previously difficult-to-avoid dependency is no longer the only commercially viable technical path.",
+      "status": "UNKNOWN", "release_claim": "UNKNOWN",
+      "pdre_evidence_chain": [
+        {"stage": "RESEARCH_THEORY", "status": "UNKNOWN", "evidence_refs": [], "effective_at": null, "known_at": null, "limitations": ["Not evaluated."]},
+        {"stage": "PATENT_PROTOTYPE", "status": "UNKNOWN", "evidence_refs": [], "effective_at": null, "known_at": null, "limitations": ["Not evaluated."]},
+        {"stage": "ENGINEERING_VALIDATION", "status": "UNKNOWN", "evidence_refs": [], "effective_at": null, "known_at": null, "limitations": ["Not evaluated."]},
+        {"stage": "PILOT_APPLICATION", "status": "UNKNOWN", "evidence_refs": [], "effective_at": null, "known_at": null, "limitations": ["Not evaluated."]},
+        {"stage": "QUALIFICATION", "status": "UNKNOWN", "evidence_refs": [], "effective_at": null, "known_at": null, "limitations": ["Not evaluated."]},
+        {"stage": "PRODUCTION", "status": "UNKNOWN", "evidence_refs": [], "effective_at": null, "known_at": null, "limitations": ["Not evaluated."]},
+        {"stage": "FIELD_DEPLOYMENT", "status": "UNKNOWN", "evidence_refs": [], "effective_at": null, "known_at": null, "limitations": ["Not evaluated."]},
+        {"stage": "MULTI_USER_MULTI_OEM_REPLICATION", "status": "UNKNOWN", "evidence_refs": [], "effective_at": null, "known_at": null, "limitations": ["Not evaluated."]}
+      ],
+      "limitations": ["Template only."]
+    },
+    "real_world_response": {"status": "NOT_EVALUATED", "evidence_refs": [], "limitations": ["Deferred to V11-3."]},
+    "record_kind": "TEMPLATE",
+    "revision_history": [{"revision_id": "TEMPLATE", "created_at": "1970-01-01T00:00:00Z", "supersedes": null, "change_summary": "Unpopulated template."}],
+    "structural_constraints": [{"constraint_class": "RELIABILITY_UNCERTAINTY", "status": "UNKNOWN", "statement": "UNKNOWN", "evidence_refs": [], "limitations": ["Not evaluated."]}],
+    "structural_exposure": {"company": [], "component": [], "customer": [], "exposure_id": "REPLACE_BEFORE_INGESTION", "industry": [], "product": [], "subsystem": [], "supplier": [], "technology": [], "unknowns": ["Not evaluated."]},
+    "timeline": [],
+    "unknowns": ["All substantive fields require evidence."],
+    "version": "CML_v1.1"
+  }
+}

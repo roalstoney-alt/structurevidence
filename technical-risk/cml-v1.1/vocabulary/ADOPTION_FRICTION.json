@@ -1,0 +1,16 @@
+{
+  "classes": [
+    {"code": "AF1", "name": "CAPITAL_LOCK_IN"},
+    {"code": "AF2", "name": "QUALIFICATION_LOCK_IN"},
+    {"code": "AF3", "name": "INSTALLED_BASE_LOCK_IN"},
+    {"code": "AF4", "name": "SUPPLIER_LOCK_IN"},
+    {"code": "AF5", "name": "SOFTWARE_INTERFACE_LOCK_IN"},
+    {"code": "AF6", "name": "ORGANIZATIONAL_LOCK_IN"},
+    {"code": "AF7", "name": "REGULATORY_CERTIFICATION_LOCK_IN"},
+    {"code": "AF8", "name": "CANNIBALIZATION_RISK"},
+    {"code": "AF9", "name": "CUSTOMER_ACCEPTANCE_RISK"},
+    {"code": "AF10", "name": "UNKNOWN_INTERNAL_FRICTION"}
+  ],
+  "states": ["LOW", "MODERATE", "HIGH", "EXTREME", "UNKNOWN", "NOT_APPLICABLE"],
+  "version": "CML_v1.1"
+}

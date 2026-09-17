@@ -9,6 +9,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE_SHA = "a1bb8e442316c48acb0af2aca0c8c269b00340af"
+V11_1_SHA = "2baced87c4df494fbbe706b4e73029d767050779"
 HISTORY_PATH = "technical-risk/CML_VERSION_HISTORY.jsonl"
 ALLOWED_CHANGED = {
     HISTORY_PATH,
@@ -29,9 +30,10 @@ def git(*args: str) -> str:
 
 
 class CMLV11TransitionTests(unittest.TestCase):
-    def test_base_is_the_accepted_c0_commit(self):
-        self.assertEqual(git("rev-parse", "HEAD").strip(), BASE_SHA)
-        self.assertEqual(git("rev-parse", "origin/main").strip(), BASE_SHA)
+    def test_base_is_ancestor_and_head_matches_origin(self):
+        head = git("rev-parse", "HEAD").strip()
+        self.assertEqual(head, git("rev-parse", "origin/main").strip())
+        subprocess.check_call(["git", "merge-base", "--is-ancestor", BASE_SHA, head], cwd=ROOT)
 
     def test_method_registry_has_one_active_method(self):
         registry = load("technical-risk/cml-method-registry.json")
@@ -63,7 +65,7 @@ class CMLV11TransitionTests(unittest.TestCase):
     def test_no_historical_tracked_file_mutation(self):
         changed = set(git("diff", "--name-only", BASE_SHA, "--").splitlines())
         self.assertEqual(changed - ALLOWED_CHANGED, set())
-        self.assertEqual(changed & ALLOWED_CHANGED, {HISTORY_PATH})
+        self.assertEqual(changed & ALLOWED_CHANGED, ALLOWED_CHANGED)
 
     def test_historical_freeze_covers_all_branches(self):
         freeze = load("technical-risk/cml-v1.1/history/HISTORICAL_BRANCH_FREEZE.json")
@@ -94,8 +96,9 @@ class CMLV11TransitionTests(unittest.TestCase):
         ]:
             self.assertIn(phrase, text)
 
-    def test_v11_1_does_not_create_research_schemas(self):
-        self.assertFalse((ROOT / "technical-risk/cml-v1.1/schema").exists())
+    def test_v11_1_did_not_create_research_schemas(self):
+        tree = git("ls-tree", "-r", "--name-only", V11_1_SHA, "--", "technical-risk/cml-v1.1/schema")
+        self.assertEqual(tree, "")
 
 
 if __name__ == "__main__":

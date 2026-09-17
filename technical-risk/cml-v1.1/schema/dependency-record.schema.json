@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "dependency-record.schema.json",
+  "title": "CML v1.1 current dependency record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["core", "dependency"],
+  "properties": {
+    "core": {"$ref": "../../../evidence/core/schema/evidence_core_record.schema.json"},
+    "dependency": {"$ref": "#/$defs/dependency"}
+  },
+  "$defs": {
+    "dependency": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["dependency_id", "technology", "component", "subsystem", "function", "required_because", "dependent_elements", "substitution_difficulty", "failure_if_removed", "current_supplier_structure", "current_standard_dependency", "current_certification_dependency", "evidence_refs", "unknowns"],
+      "properties": {
+        "dependency_id": {"type": "string", "minLength": 1},
+        "technology": {"type": "string", "minLength": 1},
+        "component": {"type": "string", "minLength": 1},
+        "subsystem": {"type": "string", "minLength": 1},
+        "function": {"type": "string", "minLength": 1},
+        "required_because": {"type": "string", "minLength": 1},
+        "dependent_elements": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+        "substitution_difficulty": {"enum": ["LOW", "MODERATE", "HIGH", "EXTREME", "UNKNOWN"]},
+        "failure_if_removed": {"type": "string", "minLength": 1},
+        "current_supplier_structure": {"type": "string", "minLength": 1},
+        "current_standard_dependency": {"type": "string", "minLength": 1},
+        "current_certification_dependency": {"type": "string", "minLength": 1},
+        "evidence_refs": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+        "unknowns": {"type": "array", "items": {"type": "string", "minLength": 1}}
+      }
+    }
+  }
+}

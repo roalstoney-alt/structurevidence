@@ -1,0 +1,258 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "pdre-record.schema.json",
+  "title": "CML v1.1 Path Dependency Release Event record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["core", "pdre_record"],
+  "properties": {
+    "core": {"$ref": "../../../evidence/core/schema/evidence_core_record.schema.json"},
+    "pdre_record": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["version", "record_kind", "identity", "old_path", "new_path", "current_dependency", "path_dependency", "structural_constraints", "alternative_path", "pdre", "migration_readiness", "adoption_friction", "economics", "structural_exposure", "beneficiary_map", "real_world_response", "market_validation", "known_evidence", "counter_evidence", "unknowns", "next_observable", "timeline", "revision_history"],
+      "properties": {
+        "version": {"const": "CML_v1.1"},
+        "record_kind": {"enum": ["TEMPLATE", "PDRE_RECORD"]},
+        "identity": {
+          "type": "object", "additionalProperties": false,
+          "required": ["cml_id", "pdre_id", "title", "primary_research_object"],
+          "properties": {
+            "cml_id": {"type": "string", "minLength": 1},
+            "pdre_id": {"type": "string", "minLength": 1},
+            "title": {"type": "string", "minLength": 1},
+            "primary_research_object": {"const": "PDRE_RECORD"}
+          }
+        },
+        "old_path": {"$ref": "#/$defs/technical_path"},
+        "new_path": {"$ref": "#/$defs/technical_path"},
+        "current_dependency": {"$ref": "dependency-record.schema.json#/$defs/dependency"},
+        "path_dependency": {"$ref": "#/$defs/path_dependency"},
+        "structural_constraints": {
+          "type": "array", "minItems": 1,
+          "items": {
+            "type": "object", "additionalProperties": false,
+            "required": ["constraint_class", "status", "statement", "evidence_refs", "limitations"],
+            "properties": {
+              "constraint_class": {"enum": ["PERFORMANCE_LIMIT", "COST_LIMIT", "MATERIAL_DEPENDENCY", "SUPPLIER_LOCK_IN", "PROPRIETARY_INTERFACE", "CERTIFICATION_LOCK_IN", "CAPITAL_EQUIPMENT_LOCK_IN", "MAINTENANCE_LOCK_IN", "SOFTWARE_DEPENDENCY", "KNOWLEDGE_DEPENDENCY", "RELIABILITY_UNCERTAINTY", "REGULATORY_CONSTRAINT"]},
+              "status": {"$ref": "#/$defs/observation_status"},
+              "statement": {"type": "string", "minLength": 1},
+              "evidence_refs": {"$ref": "#/$defs/evidence_refs"},
+              "limitations": {"$ref": "#/$defs/limitations"}
+            }
+          }
+        },
+        "alternative_path": {
+          "type": "object", "additionalProperties": false,
+          "required": ["description", "viability", "evidence_refs", "limitations"],
+          "properties": {
+            "description": {"type": "string", "minLength": 1},
+            "viability": {"enum": ["VIABLE", "POTENTIALLY_VIABLE", "NOT_VIABLE", "UNKNOWN"]},
+            "evidence_refs": {"$ref": "#/$defs/evidence_refs"},
+            "limitations": {"$ref": "#/$defs/limitations"}
+          }
+        },
+        "pdre": {
+          "type": "object", "additionalProperties": false,
+          "required": ["definition", "status", "release_claim", "pdre_evidence_chain", "limitations"],
+          "properties": {
+            "definition": {"const": "A Path Dependency Release Event occurs when a new technology, manufacturing method, material, standard, control architecture or industrial capability becomes sufficiently mature that a previously difficult-to-avoid dependency is no longer the only commercially viable technical path."},
+            "status": {"enum": ["CONFIRMED", "CANDIDATE", "NOT_ESTABLISHED", "UNKNOWN"]},
+            "release_claim": {"type": "string", "minLength": 1},
+            "pdre_evidence_chain": {
+              "type": "array", "minItems": 8, "maxItems": 8,
+              "items": {
+                "type": "object", "additionalProperties": false,
+                "required": ["stage", "status", "evidence_refs", "effective_at", "known_at", "limitations"],
+                "properties": {
+                  "stage": {"enum": ["RESEARCH_THEORY", "PATENT_PROTOTYPE", "ENGINEERING_VALIDATION", "PILOT_APPLICATION", "QUALIFICATION", "PRODUCTION", "FIELD_DEPLOYMENT", "MULTI_USER_MULTI_OEM_REPLICATION"]},
+                  "status": {"enum": ["ESTABLISHED", "PARTIAL", "NOT_ESTABLISHED", "UNKNOWN", "NOT_APPLICABLE"]},
+                  "evidence_refs": {"$ref": "#/$defs/evidence_refs"},
+                  "effective_at": {"type": ["string", "null"], "format": "date-time"},
+                  "known_at": {"type": ["string", "null"], "format": "date-time"},
+                  "limitations": {"$ref": "#/$defs/limitations"}
+                }
+              }
+            },
+            "limitations": {"$ref": "#/$defs/limitations"}
+          }
+        },
+        "migration_readiness": {
+          "type": "object", "additionalProperties": false,
+          "required": ["code", "name", "interpretation", "evidence_refs", "supports_company_structural_assessment", "limitations"],
+          "properties": {
+            "code": {"enum": ["R0", "R1", "R2", "R3", "R4", "R5", "R6", "R7"]},
+            "name": {"enum": ["THEORETICAL", "SPECIFICATION_COMPATIBLE", "ENGINEERING_REVIEWED", "SAMPLE_BENCH_TESTED", "APPLICATION_QUALIFIED", "FIELD_DEPLOYED", "OPERATING_HISTORY_AVAILABLE", "MULTI_ENTITY_REPLICATION"]},
+            "interpretation": {"enum": ["POSSIBLE", "TECHNICALLY_CREDIBLE", "PRODUCTION_CAPABLE_CANDIDATE", "REAL_WORLD_VALIDATED", "INDUSTRY_LEVEL_MIGRATION_EVIDENCE"]},
+            "evidence_refs": {"$ref": "#/$defs/evidence_refs"},
+            "supports_company_structural_assessment": {"type": "boolean"},
+            "limitations": {"$ref": "#/$defs/limitations"}
+          }
+        },
+        "adoption_friction": {
+          "type": "array", "minItems": 10, "maxItems": 10,
+          "items": {
+            "type": "object", "additionalProperties": false,
+            "required": ["code", "name", "state", "evidence_refs", "limitations"],
+            "properties": {
+              "code": {"enum": ["AF1", "AF2", "AF3", "AF4", "AF5", "AF6", "AF7", "AF8", "AF9", "AF10"]},
+              "name": {"enum": ["CAPITAL_LOCK_IN", "QUALIFICATION_LOCK_IN", "INSTALLED_BASE_LOCK_IN", "SUPPLIER_LOCK_IN", "SOFTWARE_INTERFACE_LOCK_IN", "ORGANIZATIONAL_LOCK_IN", "REGULATORY_CERTIFICATION_LOCK_IN", "CANNIBALIZATION_RISK", "CUSTOMER_ACCEPTANCE_RISK", "UNKNOWN_INTERNAL_FRICTION"]},
+              "state": {"enum": ["LOW", "MODERATE", "HIGH", "EXTREME", "UNKNOWN", "NOT_APPLICABLE"]},
+              "evidence_refs": {"$ref": "#/$defs/evidence_refs"},
+              "limitations": {"$ref": "#/$defs/limitations"}
+            }
+          }
+        },
+        "economics": {"$ref": "#/$defs/economics"},
+        "structural_exposure": {"$ref": "structural-exposure.schema.json#/$defs/structural_exposure"},
+        "beneficiary_map": {"$ref": "beneficiary-map.schema.json#/$defs/beneficiary_map"},
+        "real_world_response": {"$ref": "#/$defs/deferred_section"},
+        "market_validation": {"$ref": "#/$defs/deferred_section"},
+        "known_evidence": {
+          "type": "array",
+          "items": {
+            "type": "object", "additionalProperties": false,
+            "required": ["evidence_id", "evidence_type", "statement", "source_ref", "structural_fact", "limitations"],
+            "properties": {
+              "evidence_id": {"type": "string", "minLength": 1},
+              "evidence_type": {"enum": ["RESEARCH_PUBLICATION", "PATENT", "PROTOTYPE", "DATASHEET", "STANDARD", "TEST_RESULT", "ENGINEERING_VALIDATION", "QUALIFICATION_RESULT", "PRODUCTION_DEPLOYMENT", "FIELD_OPERATION", "OPERATING_HISTORY", "MANUFACTURING_EVIDENCE", "MULTI_ENTITY_REPLICATION", "MARKETING_CLAIM", "MANAGEMENT_STATEMENT", "INTERVIEW", "ANALYST_OPINION"]},
+              "statement": {"type": "string", "minLength": 1},
+              "source_ref": {"type": "string", "minLength": 1},
+              "structural_fact": {"type": "boolean"},
+              "limitations": {"$ref": "#/$defs/limitations"}
+            }
+          }
+        },
+        "counter_evidence": {
+          "type": "array",
+          "items": {
+            "type": "object", "additionalProperties": false,
+            "required": ["statement", "evidence_refs", "impact", "limitations"],
+            "properties": {
+              "statement": {"type": "string", "minLength": 1},
+              "evidence_refs": {"$ref": "#/$defs/evidence_refs"},
+              "impact": {"enum": ["WEAKENS", "CONTRADICTS", "BOUNDS", "UNKNOWN"]},
+              "limitations": {"$ref": "#/$defs/limitations"}
+            }
+          }
+        },
+        "unknowns": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+        "next_observable": {
+          "type": "array", "minItems": 1,
+          "items": {
+            "type": "object", "additionalProperties": false,
+            "required": ["observable", "would_update", "evidence_needed"],
+            "properties": {
+              "observable": {"type": "string", "minLength": 1},
+              "would_update": {"type": "string", "minLength": 1},
+              "evidence_needed": {"type": "string", "minLength": 1}
+            }
+          }
+        },
+        "timeline": {
+          "type": "array",
+          "items": {
+            "type": "object", "additionalProperties": false,
+            "required": ["event", "effective_at", "known_at", "evidence_refs"],
+            "properties": {
+              "event": {"type": "string", "minLength": 1},
+              "effective_at": {"type": "string", "format": "date-time"},
+              "known_at": {"type": "string", "format": "date-time"},
+              "evidence_refs": {"$ref": "#/$defs/evidence_refs"}
+            }
+          }
+        },
+        "revision_history": {
+          "type": "array", "minItems": 1,
+          "items": {
+            "type": "object", "additionalProperties": false,
+            "required": ["revision_id", "created_at", "supersedes", "change_summary"],
+            "properties": {
+              "revision_id": {"type": "string", "minLength": 1},
+              "created_at": {"type": "string", "format": "date-time"},
+              "supersedes": {"type": ["string", "null"]},
+              "change_summary": {"type": "string", "minLength": 1}
+            }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "evidence_refs": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "limitations": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+    "observation_status": {"enum": ["OBSERVED", "INFERRED", "UNKNOWN", "NOT_APPLICABLE"]},
+    "technical_path": {
+      "type": "object", "additionalProperties": false,
+      "required": ["description", "evidence_refs", "limitations"],
+      "properties": {
+        "description": {"type": "string", "minLength": 1},
+        "evidence_refs": {"$ref": "#/$defs/evidence_refs"},
+        "limitations": {"$ref": "#/$defs/limitations"}
+      }
+    },
+    "lock_in_dimension": {
+      "type": "object", "additionalProperties": false,
+      "required": ["status", "statement", "evidence_refs", "limitations"],
+      "properties": {
+        "status": {"$ref": "#/$defs/observation_status"},
+        "statement": {"type": "string", "minLength": 1},
+        "evidence_refs": {"$ref": "#/$defs/evidence_refs"},
+        "limitations": {"$ref": "#/$defs/limitations"}
+      }
+    },
+    "path_dependency": {
+      "type": "object", "additionalProperties": false,
+      "required": ["tooling", "qualification", "supplier_ecosystem", "engineering_knowledge", "standards", "software", "maintenance_practices", "certification", "capital_equipment", "installed_base"],
+      "properties": {
+        "tooling": {"$ref": "#/$defs/lock_in_dimension"},
+        "qualification": {"$ref": "#/$defs/lock_in_dimension"},
+        "supplier_ecosystem": {"$ref": "#/$defs/lock_in_dimension"},
+        "engineering_knowledge": {"$ref": "#/$defs/lock_in_dimension"},
+        "standards": {"$ref": "#/$defs/lock_in_dimension"},
+        "software": {"$ref": "#/$defs/lock_in_dimension"},
+        "maintenance_practices": {"$ref": "#/$defs/lock_in_dimension"},
+        "certification": {"$ref": "#/$defs/lock_in_dimension"},
+        "capital_equipment": {"$ref": "#/$defs/lock_in_dimension"},
+        "installed_base": {"$ref": "#/$defs/lock_in_dimension"}
+      }
+    },
+    "economic_dimension": {
+      "type": "object", "additionalProperties": false,
+      "required": ["assessment", "evidence_refs", "limitations"],
+      "properties": {
+        "assessment": {"enum": ["ADVANTAGE", "DISADVANTAGE", "NEUTRAL", "UNKNOWN", "NOT_APPLICABLE"]},
+        "evidence_refs": {"$ref": "#/$defs/evidence_refs"},
+        "limitations": {"$ref": "#/$defs/limitations"}
+      }
+    },
+    "economics": {
+      "type": "object", "additionalProperties": false,
+      "required": ["performance", "cost", "manufacturability", "reliability", "qualification_burden", "tooling_requirement", "control_complexity", "maintenance", "supply_availability", "yield", "certification", "field_service", "switching_cost"],
+      "properties": {
+        "performance": {"$ref": "#/$defs/economic_dimension"},
+        "cost": {"$ref": "#/$defs/economic_dimension"},
+        "manufacturability": {"$ref": "#/$defs/economic_dimension"},
+        "reliability": {"$ref": "#/$defs/economic_dimension"},
+        "qualification_burden": {"$ref": "#/$defs/economic_dimension"},
+        "tooling_requirement": {"$ref": "#/$defs/economic_dimension"},
+        "control_complexity": {"$ref": "#/$defs/economic_dimension"},
+        "maintenance": {"$ref": "#/$defs/economic_dimension"},
+        "supply_availability": {"$ref": "#/$defs/economic_dimension"},
+        "yield": {"$ref": "#/$defs/economic_dimension"},
+        "certification": {"$ref": "#/$defs/economic_dimension"},
+        "field_service": {"$ref": "#/$defs/economic_dimension"},
+        "switching_cost": {"$ref": "#/$defs/economic_dimension"}
+      }
+    },
+    "deferred_section": {
+      "type": "object", "additionalProperties": false,
+      "required": ["status", "evidence_refs", "limitations"],
+      "properties": {
+        "status": {"const": "NOT_EVALUATED"},
+        "evidence_refs": {"$ref": "#/$defs/evidence_refs"},
+        "limitations": {"$ref": "#/$defs/limitations"}
+      }
+    }
+  }
+}

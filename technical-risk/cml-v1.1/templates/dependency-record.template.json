@@ -1,0 +1,16 @@
+{
+  "core": {
+    "artifact_refs": [], "core_version": "STRUCTEVIDENCE_EVIDENCE_CORE_v0.1", "correction_status": "NONE",
+    "created_at": "1970-01-01T00:00:00Z", "domain": "TECHNICAL_RISK", "effective_at": "1970-01-01T00:00:00Z",
+    "input_hash": "0000000000000000000000000000000000000000000000000000000000000000", "known_at": "1970-01-01T00:00:00Z",
+    "policy_version": "CML_v1.1", "protocol": "CML", "record_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "record_id": "REPLACE_BEFORE_INGESTION", "source_refs": [], "subject_class": "CML_DEPENDENCY_RECORD",
+    "subject_id": "REPLACE_BEFORE_INGESTION", "supersession_status": "CURRENT", "updated_at": "1970-01-01T00:00:00Z", "verification_status": "TEMPLATE_UNPOPULATED"
+  },
+  "dependency": {
+    "component": "UNKNOWN", "current_certification_dependency": "UNKNOWN", "current_standard_dependency": "UNKNOWN",
+    "current_supplier_structure": "UNKNOWN", "dependency_id": "REPLACE_BEFORE_INGESTION", "dependent_elements": ["UNKNOWN"],
+    "evidence_refs": [], "failure_if_removed": "UNKNOWN", "function": "UNKNOWN", "required_because": "UNKNOWN",
+    "substitution_difficulty": "UNKNOWN", "subsystem": "UNKNOWN", "technology": "UNKNOWN", "unknowns": ["Populate from public evidence."]
+  }
+}

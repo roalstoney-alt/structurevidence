@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "structural-exposure.schema.json",
+  "title": "CML v1.1 structural exposure record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["core", "structural_exposure"],
+  "properties": {
+    "core": {"$ref": "../../../evidence/core/schema/evidence_core_record.schema.json"},
+    "structural_exposure": {"$ref": "#/$defs/structural_exposure"}
+  },
+  "$defs": {
+    "exposure_node": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["subject", "state", "evidence_refs", "limitations"],
+      "properties": {
+        "subject": {"type": "string", "minLength": 1},
+        "state": {"enum": ["HIGH_LEGACY_EXPOSURE", "ACTIVE_MIGRATION", "LOW_DEPENDENCY", "MULTI_PATH_CAPABILITY", "UNKNOWN"]},
+        "evidence_refs": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+        "limitations": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}}
+      }
+    },
+    "structural_exposure": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["exposure_id", "technology", "component", "subsystem", "product", "supplier", "customer", "company", "industry", "unknowns"],
+      "properties": {
+        "exposure_id": {"type": "string", "minLength": 1},
+        "technology": {"type": "array", "items": {"$ref": "#/$defs/exposure_node"}},
+        "component": {"type": "array", "items": {"$ref": "#/$defs/exposure_node"}},
+        "subsystem": {"type": "array", "items": {"$ref": "#/$defs/exposure_node"}},
+        "product": {"type": "array", "items": {"$ref": "#/$defs/exposure_node"}},
+        "supplier": {"type": "array", "items": {"$ref": "#/$defs/exposure_node"}},
+        "customer": {"type": "array", "items": {"$ref": "#/$defs/exposure_node"}},
+        "company": {"type": "array", "items": {"$ref": "#/$defs/exposure_node"}},
+        "industry": {"type": "array", "items": {"$ref": "#/$defs/exposure_node"}},
+        "unknowns": {"type": "array", "items": {"type": "string", "minLength": 1}}
+      }
+    }
+  }
+}

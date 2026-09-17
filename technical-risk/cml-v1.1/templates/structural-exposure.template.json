@@ -1,0 +1,14 @@
+{
+  "core": {
+    "artifact_refs": [], "core_version": "STRUCTEVIDENCE_EVIDENCE_CORE_v0.1", "correction_status": "NONE",
+    "created_at": "1970-01-01T00:00:00Z", "domain": "TECHNICAL_RISK", "effective_at": "1970-01-01T00:00:00Z",
+    "input_hash": "0000000000000000000000000000000000000000000000000000000000000000", "known_at": "1970-01-01T00:00:00Z",
+    "policy_version": "CML_v1.1", "protocol": "CML", "record_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "record_id": "REPLACE_BEFORE_INGESTION", "source_refs": [], "subject_class": "CML_STRUCTURAL_EXPOSURE",
+    "subject_id": "REPLACE_BEFORE_INGESTION", "supersession_status": "CURRENT", "updated_at": "1970-01-01T00:00:00Z", "verification_status": "TEMPLATE_UNPOPULATED"
+  },
+  "structural_exposure": {
+    "company": [], "component": [], "customer": [], "exposure_id": "REPLACE_BEFORE_INGESTION", "industry": [],
+    "product": [], "subsystem": [], "supplier": [], "technology": [], "unknowns": ["Populate exposure layers from evidence."]
+  }
+}
