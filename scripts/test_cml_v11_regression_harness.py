@@ -10,10 +10,25 @@ import validate_cml_v11_core as core
 
 
 class CMLV11RegressionHarnessTests(unittest.TestCase):
-    def test_current_accepted_v11_2_does_not_break_v11_1(self):
-        self.assertEqual(regression.git("rev-parse", "HEAD").strip(), regression.V11_2_ACCEPTED_SHA)
-        self.assertEqual(regression.validate_v11_1_milestone()["milestone"], regression.V11_1_SHA)
-        self.assertEqual(regression.historical_mutations(), [])
+    def test_current_head_descends_from_accepted_v11_2_without_breaking_v11_1(self):
+        head = regression.git("rev-parse", "HEAD").strip()
+
+        self.assertTrue(
+            regression.is_ancestor(
+                regression.V11_2_ACCEPTED_SHA,
+                head,
+            )
+        )
+
+        self.assertEqual(
+            regression.validate_v11_1_milestone()["milestone"],
+            regression.V11_1_SHA
+        )
+
+        self.assertEqual(
+            regression.historical_mutations(),
+            []
+        )
 
     def test_current_head_passes_v11_2_milestone_regression(self):
         result = regression.validate_v11_2_milestone()
