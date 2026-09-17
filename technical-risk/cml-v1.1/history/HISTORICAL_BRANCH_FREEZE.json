@@ -1,0 +1,43 @@
+{
+  "base_sha": "a1bb8e442316c48acb0af2aca0c8c269b00340af",
+  "branches": [
+    {
+      "branch_id": "CML_v0.1_METHOD_PILOT",
+      "status": "HISTORICAL_METHOD_BRANCH"
+    },
+    {
+      "branch_id": "CML_OV_v0.1_PHASE_A",
+      "status": "HISTORICAL_METHOD_BRANCH"
+    },
+    {
+      "branch_id": "CML_OV_v0.1_PHASE_B",
+      "status": "HISTORICAL_METHOD_BRANCH"
+    },
+    {
+      "branch_id": "CML_OV_v0.1_PHASE_B_R1",
+      "status": "HISTORICAL_METHOD_BRANCH"
+    },
+    {
+      "branch_id": "CML_OV_v0.1_PHASE_C0",
+      "primary_research_gate_status": "DEPRECATED_AS_PRIMARY_RESEARCH_GATE",
+      "status": "HISTORICAL_METHOD_BRANCH"
+    }
+  ],
+  "freeze_policy": {
+    "append_only_exception": "technical-risk/CML_VERSION_HISTORY.jsonl",
+    "new_method_roots": [
+      "technical-risk/cml-method-registry.json",
+      "technical-risk/cml-v1.1/",
+      "docs/architecture/CML_V1_1_ARCHITECTURE.md",
+      "scripts/test_cml_v11_transition.py"
+    ],
+    "protected_tracked_scopes": [
+      "technical-risk/",
+      "docs/architecture/CML_*",
+      "docs/execution/CML_*",
+      "scripts/*cml*"
+    ],
+    "rule": "All files tracked in the protected scopes at base_sha remain byte-identical, except for the append-only version-history file. Existing routes, conclusions, timestamps, hashes and release states remain unchanged."
+  },
+  "freeze_version": "CML_v1.1_TASK_V11-1"
+}

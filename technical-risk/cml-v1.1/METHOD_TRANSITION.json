@@ -1,0 +1,43 @@
+{
+  "active_primary_workflow": [
+    "CURRENT_DEPENDENCY",
+    "PATH_DEPENDENCY",
+    "STRUCTURAL_CONSTRAINT",
+    "ALTERNATIVE_TECHNICAL_PATH",
+    "PDRE",
+    "MIGRATION_READINESS",
+    "ADOPTION_FRICTION",
+    "STRUCTURAL_EXPOSURE",
+    "BENEFICIARY_MAP",
+    "REAL_WORLD_RESPONSE",
+    "MARKET_VALIDATION"
+  ],
+  "authorization": {
+    "source": "CML v1.1 IMPLEMENTATION WORKFLOW",
+    "status": "IMPLEMENTATION_AUTHORIZED",
+    "task": "V11-1_METHOD_TRANSITION"
+  },
+  "deprecated_primary_workflows": [
+    "COMPANY_FIRST_DECISION_MAKER_DISCOVERY",
+    "PAIN_FIRST_OPPORTUNITY_VALIDATION",
+    "PHASE_C0_HUMAN_DISCOVERY_AS_MANDATORY_GATE"
+  ],
+  "effective_at": "2026-09-17T07:45:21Z",
+  "from_method": "CML_v0.1_AND_CML_OV_v0.1",
+  "historical_records_rewritten": false,
+  "preserved_research": [
+    "CML_v0.1_METHOD_PILOT",
+    "CML_OV_v0.1_PHASE_A",
+    "CML_OV_v0.1_PHASE_B",
+    "CML_OV_v0.1_PHASE_B_R1",
+    "CML_OV_v0.1_PHASE_C0",
+    "OV-01_AMPHENOL_10081811-101-07LF",
+    "OV-02_MURATA_MYMGM5R012ELA5RND",
+    "OV-03_AMPHENOL_RF_095-725-134-006",
+    "OV-04_NXP_RADIO_POWER_FAMILY"
+  ],
+  "reason": "Transition from company/pain-first Opportunity Validation to public-evidence-first Path Dependency Release, Beneficiary Mapping and Technical Migration Intelligence while retaining prior work as method history and discovery-path evidence.",
+  "scientific_findings_changed": false,
+  "to_method": "CML_v1.1",
+  "transition_id": "SE.CML.METHOD_TRANSITION.v1.1.2026-09-17"
+}

@@ -1,0 +1,37 @@
+{
+  "active_method": {
+    "method_version": "CML_v1.1",
+    "name": "CML Working Principles v1.1",
+    "status": "ACTIVE_PRIMARY_METHOD",
+    "transition_record": "technical-risk/cml-v1.1/METHOD_TRANSITION.json"
+  },
+  "historical_methods": [
+    {
+      "method_version": "CML_v0.1",
+      "name": "CML Method Pilot",
+      "status": "HISTORICAL_METHOD_BRANCH"
+    },
+    {
+      "method_version": "CML_OV_v0.1_PHASE_A",
+      "name": "CML Opportunity Validation Phase A",
+      "status": "HISTORICAL_METHOD_BRANCH"
+    },
+    {
+      "method_version": "CML_OV_v0.1_PHASE_B",
+      "name": "CML Opportunity Validation Phase B",
+      "status": "HISTORICAL_METHOD_BRANCH"
+    },
+    {
+      "method_version": "CML_OV_v0.1_PHASE_B_R1",
+      "name": "CML Opportunity Validation Phase B-R1",
+      "status": "HISTORICAL_METHOD_BRANCH"
+    },
+    {
+      "method_version": "CML_OV_v0.1_PHASE_C0",
+      "name": "CML Opportunity Validation Phase C0 Human Discovery",
+      "primary_research_gate_status": "DEPRECATED_AS_PRIMARY_RESEARCH_GATE",
+      "status": "HISTORICAL_METHOD_BRANCH"
+    }
+  ],
+  "registry_version": "CML_METHOD_REGISTRY_v1.1"
+}
