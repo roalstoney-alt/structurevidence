@@ -1,0 +1,224 @@
+{
+  "core": {
+    "artifact_refs": [
+      "rdl/research/RDL_RESEARCH_RECORD_MANIFEST.json",
+      "rdl/research/schema/research-record.schema.json",
+      "rdl/research/templates/research-record.template.json",
+      "rdl/research/validation/validator.py",
+      "rdl/research/vocabulary/RESEARCH_LEVELS.json",
+      "rdl/research/vocabulary/RESEARCH_CLASSES.json",
+      "rdl/research/vocabulary/STOP_REASONS.json",
+      "scripts/test_rdl_research_record.py",
+      "docs/upgrade/PHASE_1_DESIGN.md",
+      "docs/upgrade/RDL_RESEARCH_RECORD_SCHEMA_v0.1.md",
+      "docs/upgrade/RDL_STOP_REASON_TAXONOMY_v0.1.md",
+      "docs/upgrade/RDL_TELEMETRY_POLICY_v0.1.md",
+      "docs/upgrade/RDL_BOUNDARY_POLICY_v0.1.md",
+      "docs/upgrade/PHASE_1_TEST_REPORT.md",
+      "docs/upgrade/PHASE_1_EXECUTION_REPORT.md"
+    ],
+    "core_version": "STRUCTEVIDENCE_EVIDENCE_CORE_v0.1",
+    "correction_status": "NONE",
+    "created_at": "2026-09-19T05:10:57Z",
+    "domain": "RESEARCH_GOVERNANCE",
+    "effective_at": "2026-09-19T05:10:57Z",
+    "input_hash": "b40bfb78b8ba8f4b355fceb5bcd4756c383cec442f7602d4541af2c27ccb2bdd",
+    "known_at": "2026-09-19T05:10:57Z",
+    "policy_version": "RDL_RESEARCH_RECORD_v0.1",
+    "protocol": "RDL",
+    "record_hash": "b2951dd160ddd5b4aad062e5b841bfa0194ae975f1018353df5957b6c2a05ed9",
+    "record_id": "RDL-METHODOLOGY-PHASE-1-2026-09-19",
+    "source_refs": [
+      "docs/upgrade/EVIDENCE_TO_OUTCOME_BASELINE.md",
+      "docs/upgrade/ARCHITECTURE_BEFORE.md",
+      "docs/upgrade/SCHEMA_BEFORE.md",
+      "docs/upgrade/RDL_RESEARCH_AUDIT.md",
+      "docs/upgrade/TOKEN_COST_AUDIT.md",
+      "docs/upgrade/TEST_BASELINE.md",
+      "docs/upgrade/PHASE_0_EXECUTION_REPORT.md"
+    ],
+    "subject_class": "RDL_RESEARCH_RECORD",
+    "subject_id": "STRUCTEVIDENCE-RDL-PHASE-1",
+    "supersession_status": "CURRENT",
+    "updated_at": "2026-09-19T05:10:57Z",
+    "verification_status": "IMPLEMENTED_AND_TARGETED_TESTED"
+  },
+  "research_record": {
+    "research_id": "RDL-METHODOLOGY-PHASE-1-2026-09-19",
+    "schema_version": "RDL_RESEARCH_RECORD_v0.1",
+    "case_id": null,
+    "pdre_id": null,
+    "customer_case_id": null,
+    "research_level": "L0_REUSE",
+    "research_class": "METHODOLOGY_RESEARCH",
+    "initiated_by": "HUMAN",
+    "started_at": "2026-09-19T04:54:52Z",
+    "completed_at": "2026-09-19T05:10:57Z",
+    "decision_to_change": "Implement the minimum additive RDL research-governance record without altering existing CML, RDL freshness, RTP, ECN, GDR-SE, or historical records.",
+    "research_question": "Can repository-local primitives support a canonical research-of-research record without creating a parallel evidence, timeline, authorization, or database system?",
+    "before_state_ref": "docs/upgrade/PHASE_0_EXECUTION_REPORT.md",
+    "after_state_ref": "docs/upgrade/PHASE_1_EXECUTION_REPORT.md",
+    "known_before": [
+      "The existing Evidence Core provides shared provenance and hash fields.",
+      "CML, timeline, freshness, GDR-SE, source inventory, and manifest systems already exist.",
+      "No canonical research-of-research record existed."
+    ],
+    "unknowns_before": [
+      "Whether one additive schema could represent research governance while preserving all system boundaries.",
+      "Whether UNKNOWN telemetry and failed research could be machine-enforced without an aggregate score."
+    ],
+    "minimum_missing_evidence": [
+      "A schema-valid reference-first record design.",
+      "Synthetic fixtures for reuse, verification, duplication, unavailable evidence, decision change, and unknown telemetry.",
+      "Targeted adversarial tests plus unchanged current CML and RDL freshness baselines."
+    ],
+    "hypothesis_before": "A single Evidence-Core-backed RDL record is sufficient for Phase 1.",
+    "hypothesis_after": "The additive RDL record is sufficient for Phase 1 and passes targeted/current-method tests without modifying existing systems.",
+    "readiness_before": "NOT_APPLICABLE",
+    "readiness_after": "NOT_APPLICABLE",
+    "decision_before": "IMPLEMENT_MINIMUM_ADDITIVE_RDL_RECORD",
+    "decision_after": "PHASE_1_IMPLEMENTED_PENDING_HUMAN_REVIEW",
+    "decision_changed": true,
+    "decision_change_reason": "The schema, validator, fixtures, and boundary tests demonstrate the minimum additive design while preserving existing authoritative systems.",
+    "research_actions": [
+      {
+        "action_id": "RDL-P1-A01",
+        "action_type": "REUSE",
+        "started_at": "2026-09-19T04:54:52Z",
+        "completed_at": "2026-09-19T04:56:00Z",
+        "research_level": "L0_REUSE",
+        "external_research": false,
+        "input_refs": ["docs/upgrade/PHASE_0_EXECUTION_REPORT.md"],
+        "output_refs": ["rdl/research/RDL_RESEARCH_RECORD_MANIFEST.json"],
+        "outcome": "Existing system boundaries and reusable primitives were adopted.",
+        "limitations": ["No external factual research was authorized or performed."]
+      },
+      {
+        "action_id": "RDL-P1-A02",
+        "action_type": "CODING",
+        "started_at": "2026-09-19T04:56:00Z",
+        "completed_at": "2026-09-19T05:04:00Z",
+        "research_level": "L0_REUSE",
+        "external_research": false,
+        "input_refs": ["evidence/core/schema/evidence_core_record.schema.json", "docs/upgrade/SCHEMA_BEFORE.md"],
+        "output_refs": ["rdl/research/schema/research-record.schema.json", "rdl/research/validation/validator.py"],
+        "outcome": "Canonical schema and semantic validator implemented.",
+        "limitations": ["Phase 1 implements observation, not optimization or semantic search."]
+      },
+      {
+        "action_id": "RDL-P1-A03",
+        "action_type": "TESTING",
+        "started_at": "2026-09-19T05:04:00Z",
+        "completed_at": "2026-09-19T05:08:00Z",
+        "research_level": "L0_REUSE",
+        "external_research": false,
+        "input_refs": ["rdl/research/fixtures/", "scripts/test_rdl_research_record.py"],
+        "output_refs": ["docs/upgrade/PHASE_1_TEST_REPORT.md"],
+        "outcome": "New targeted tests and current CML/RDL freshness baselines passed.",
+        "limitations": ["Three pre-existing Opportunity Validation failures remain out of scope."]
+      },
+      {
+        "action_id": "RDL-P1-A04",
+        "action_type": "DOCUMENTATION",
+        "started_at": "2026-09-19T05:08:00Z",
+        "completed_at": "2026-09-19T05:10:57Z",
+        "research_level": "L0_REUSE",
+        "external_research": false,
+        "input_refs": ["rdl/research/schema/research-record.schema.json", "rdl/research/validation/validator.py"],
+        "output_refs": ["docs/upgrade/PHASE_1_DESIGN.md", "docs/upgrade/PHASE_1_EXECUTION_REPORT.md"],
+        "outcome": "Phase 1 design, policies, test report, and execution report documented.",
+        "limitations": ["Phase 2 is not authorized."]
+      }
+    ],
+    "query_refs": [],
+    "source_refs_checked": [
+      "docs/upgrade/EVIDENCE_TO_OUTCOME_BASELINE.md",
+      "docs/upgrade/ARCHITECTURE_BEFORE.md",
+      "docs/upgrade/SCHEMA_BEFORE.md",
+      "docs/upgrade/RDL_RESEARCH_AUDIT.md",
+      "docs/upgrade/TOKEN_COST_AUDIT.md",
+      "docs/upgrade/TEST_BASELINE.md",
+      "docs/upgrade/PHASE_0_EXECUTION_REPORT.md"
+    ],
+    "source_refs_used": [
+      "docs/upgrade/EVIDENCE_TO_OUTCOME_BASELINE.md",
+      "docs/upgrade/ARCHITECTURE_BEFORE.md",
+      "docs/upgrade/SCHEMA_BEFORE.md",
+      "docs/upgrade/RDL_RESEARCH_AUDIT.md",
+      "docs/upgrade/TOKEN_COST_AUDIT.md",
+      "docs/upgrade/TEST_BASELINE.md",
+      "docs/upgrade/PHASE_0_EXECUTION_REPORT.md"
+    ],
+    "source_refs_rejected": [],
+    "new_evidence_refs": [],
+    "counter_evidence_refs": [],
+    "duplicate_evidence_refs": [],
+    "unknowns_resolved": [
+      "Whether one additive schema could represent research governance while preserving all system boundaries.",
+      "Whether UNKNOWN telemetry and failed research could be machine-enforced without an aggregate score."
+    ],
+    "unknowns_remaining": [
+      "Observed model, token, human-time, and engineering-time telemetry remain unavailable."
+    ],
+    "reusable_asset_refs": [
+      "rdl/research/schema/research-record.schema.json",
+      "rdl/research/templates/research-record.template.json",
+      "rdl/research/validation/validator.py",
+      "rdl/research/vocabulary/RESEARCH_LEVELS.json",
+      "rdl/research/vocabulary/RESEARCH_CLASSES.json",
+      "rdl/research/vocabulary/STOP_REASONS.json",
+      "rdl/research/fixtures/",
+      "scripts/test_rdl_research_record.py",
+      "docs/upgrade/PHASE_1_DESIGN.md"
+    ],
+    "stop_reason": "PHASE_COMPLETE",
+    "human_review_required": true,
+    "authorization": {"status": "NOT_REQUIRED", "authorization_ref": null, "authority": "NOT_APPLICABLE"},
+    "telemetry": {
+      "model_calls": {"status": "UNKNOWN", "value": null, "source_ref": null},
+      "tool_calls": {"status": "UNKNOWN", "value": null, "source_ref": null},
+      "estimated_tokens": {"status": "UNKNOWN", "value": null, "source_ref": null},
+      "observed_input_tokens": {"status": "UNKNOWN", "value": null, "source_ref": null},
+      "observed_output_tokens": {"status": "UNKNOWN", "value": null, "source_ref": null},
+      "estimated_model_cost": {"status": "UNKNOWN", "value": null, "source_ref": null},
+      "observed_model_cost": {"status": "UNKNOWN", "value": null, "source_ref": null},
+      "data_cost": {"status": "OBSERVED", "value": 0, "source_ref": "NO_EXTERNAL_RESEARCH_PERFORMED"},
+      "human_minutes": {"status": "UNKNOWN", "value": null, "source_ref": null},
+      "engineering_minutes": {"status": "UNKNOWN", "value": null, "source_ref": null},
+      "currency": "USD",
+      "cost_source": "REPOSITORY_LOCAL_L0_REUSE",
+      "cost_limit": {"status": "UNKNOWN", "value": null, "source_ref": null}
+    },
+    "lookup_keys": {
+      "claim_refs": [],
+      "hypothesis_refs": ["RDL-P1-H1-MINIMUM_ADDITIVE_RECORD"],
+      "entity_refs": [],
+      "component_refs": ["RDL_RESEARCH_RECORD_v0.1"],
+      "standard_refs": [],
+      "migration_path_refs": []
+    },
+    "boundary_refs": {
+      "evidence_core_refs": ["evidence/core/schema/evidence_core_record.schema.json"],
+      "cml_state_refs": ["technical-risk/cml-method-registry.json", "technical-risk/cml-v1.1/"],
+      "timeline_refs": ["timeline/schema/event_ledger.schema.json", "monitoring/schema/state_transition.schema.json"],
+      "rtp_refs": ["gdr-se/schema/evidence_envelope.schema.json", "evidence-freeze/"],
+      "gdr_authorization_refs": ["gdr-se/schema/authorization_record.schema.json"],
+      "outcome_refs": []
+    },
+    "structural_interpretation_authority": "CML_REFERENCE_ONLY",
+    "revision_history": [
+      {
+        "revision_id": "RDL-METHODOLOGY-PHASE-1-2026-09-19-v0.1",
+        "created_at": "2026-09-19T05:10:57Z",
+        "supersedes": null,
+        "change_summary": "Initial Phase 1 methodology-research record.",
+        "preserves_original": true
+      }
+    ],
+    "notes": [
+      "Phase 1 used repository-local information only.",
+      "Historical artifacts were not migrated.",
+      "Phase 2 is not authorized."
+    ]
+  }
+}

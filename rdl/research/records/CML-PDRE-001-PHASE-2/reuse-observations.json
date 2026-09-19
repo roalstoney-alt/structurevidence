@@ -1,0 +1,59 @@
+{
+  "observation_id": "RDL-CML-PDRE-001-PHASE-2-REUSE-OBSERVATIONS",
+  "case_id": "CML-PDRE-001",
+  "research_level": "L0_REUSE",
+  "external_research_performed": false,
+  "external_research_cost": {"status": "OBSERVED", "value": 0, "currency": "USD", "basis": "NO_EXTERNAL_RESEARCH"},
+  "counts": {
+    "TOTAL_EXISTING_EVIDENCE_ITEMS": 7,
+    "TOTAL_EVIDENCE_ITEMS_INSPECTED": 7,
+    "REUSED_DIRECTLY_COUNT": 2,
+    "REUSED_WITH_NORMALIZATION_COUNT": 3,
+    "COUNTER_EVIDENCE_REUSED_COUNT": 2,
+    "DUPLICATE_COUNT": 0,
+    "STALE_COUNT": 0,
+    "SUPERSEDED_COUNT": 0,
+    "UNUSABLE_COUNT": 0,
+    "DECISION_RELEVANT_COUNT": 7,
+    "UNKNOWN_GAP_COUNT": 14,
+    "FUTURE_L1_CANDIDATE_COUNT": 6
+  },
+  "research_reuse_ratio": {
+    "status": "CALCULATED",
+    "value": 1.0,
+    "numerator": 7,
+    "denominator": 7,
+    "formula": "(REUSED_DIRECTLY_COUNT + REUSED_WITH_NORMALIZATION_COUNT + COUNTER_EVIDENCE_REUSED_COUNT) / TOTAL_EVIDENCE_ITEMS_INSPECTED",
+    "scope": "Canonical indexed evidence items only; administrative index initialization row excluded.",
+    "not_a_score": true
+  },
+  "source_independence": {
+    "source_count": 7,
+    "provisional_issuer_group_count": 6,
+    "original_source_count": "UNKNOWN",
+    "derivative_source_count": "UNKNOWN",
+    "state": "INSUFFICIENT_INDEPENDENCE"
+  },
+  "freshness": {
+    "CURRENT": 0,
+    "STALE": 0,
+    "SUPERSEDED": 0,
+    "UNKNOWN_FRESHNESS": 7,
+    "reason": "The case inventory does not contain a domain-specific freshness determination for these seven items; no source refresh was performed."
+  },
+  "saturation_observations": {
+    "high_duplication": "NOT_OBSERVED_FROM_IDENTIFIERS",
+    "low_unique_evidence_gain": "NOT_EVALUATED_NO_NEW_RESEARCH",
+    "repeated_claims": "POSSIBLE_BUT_LINEAGE_UNKNOWN",
+    "stable_decision_state": "R3_PRESERVED",
+    "unresolved_public_data_gaps": "OBSERVED",
+    "stale_evidence_concentration": "UNKNOWN_FRESHNESS"
+  },
+  "decision": {
+    "before": "RECONSTRUCTION_COVERAGE_UNKNOWN",
+    "after": "RECONSTRUCTION_DECISION_USEFUL_WITH_DOCUMENTED_GAPS",
+    "changed": true,
+    "reason": "All seven canonical evidence items were mapped to a bounded R3 reconstruction for PDRE-001A while PDRE-001B and qualification dimensions remain explicitly unresolved."
+  },
+  "limitations": ["The ratio measures reuse coverage, not evidence quality or technical success.", "UNKNOWN qualification gaps are counted by required qualification dimension.", "No universal score or priority rank is produced."]
+}

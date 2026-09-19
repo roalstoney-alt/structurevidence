@@ -1,0 +1,218 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "research-record.schema.json",
+  "title": "RDL Research Record v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["core", "research_record"],
+  "properties": {
+    "core": {"$ref": "../../../evidence/core/schema/evidence_core_record.schema.json"},
+    "research_record": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "research_id", "schema_version", "case_id", "pdre_id", "customer_case_id",
+        "research_level", "research_class", "initiated_by", "started_at", "completed_at",
+        "decision_to_change", "research_question", "before_state_ref", "after_state_ref",
+        "known_before", "unknowns_before", "minimum_missing_evidence", "hypothesis_before",
+        "hypothesis_after", "readiness_before", "readiness_after", "decision_before",
+        "decision_after", "decision_changed", "decision_change_reason", "research_actions",
+        "query_refs", "source_refs_checked", "source_refs_used", "source_refs_rejected",
+        "new_evidence_refs", "counter_evidence_refs", "duplicate_evidence_refs",
+        "unknowns_resolved", "unknowns_remaining", "reusable_asset_refs", "stop_reason",
+        "human_review_required", "authorization", "telemetry", "lookup_keys", "boundary_refs",
+        "structural_interpretation_authority", "revision_history", "notes"
+      ],
+      "properties": {
+        "research_id": {"type": "string", "minLength": 1},
+        "schema_version": {"const": "RDL_RESEARCH_RECORD_v0.1"},
+        "case_id": {"type": ["string", "null"], "minLength": 1},
+        "pdre_id": {"type": ["string", "null"], "minLength": 1},
+        "customer_case_id": {"type": ["string", "null"], "minLength": 1},
+        "research_level": {"enum": ["L0_REUSE", "L1_VERIFY", "L2_INVESTIGATE", "L3_DEEP"]},
+        "research_class": {"enum": ["INVENTORY_RESEARCH", "CUSTOMER_SPECIFIC_RESEARCH", "METHODOLOGY_RESEARCH"]},
+        "initiated_by": {"enum": ["HUMAN", "CODEX", "SYSTEM"]},
+        "started_at": {"type": "string", "format": "date-time"},
+        "completed_at": {"type": "string", "format": "date-time"},
+        "decision_to_change": {"type": "string", "minLength": 1},
+        "research_question": {"type": "string", "minLength": 1},
+        "before_state_ref": {"type": "string", "minLength": 1},
+        "after_state_ref": {"type": "string", "minLength": 1},
+        "known_before": {"$ref": "#/$defs/nonempty_strings"},
+        "unknowns_before": {"$ref": "#/$defs/nonempty_strings"},
+        "minimum_missing_evidence": {"$ref": "#/$defs/nonempty_strings"},
+        "hypothesis_before": {"type": ["string", "null"]},
+        "hypothesis_after": {"type": ["string", "null"]},
+        "readiness_before": {"type": ["string", "null"]},
+        "readiness_after": {"type": ["string", "null"]},
+        "decision_before": {"type": "string", "minLength": 1},
+        "decision_after": {"type": "string", "minLength": 1},
+        "decision_changed": {"type": "boolean"},
+        "decision_change_reason": {"type": ["string", "null"]},
+        "research_actions": {
+          "type": "array",
+          "items": {"$ref": "#/$defs/research_action"}
+        },
+        "query_refs": {"$ref": "#/$defs/unique_refs"},
+        "source_refs_checked": {"$ref": "#/$defs/unique_refs"},
+        "source_refs_used": {"$ref": "#/$defs/unique_refs"},
+        "source_refs_rejected": {"$ref": "#/$defs/unique_refs"},
+        "new_evidence_refs": {"$ref": "#/$defs/unique_refs"},
+        "counter_evidence_refs": {"$ref": "#/$defs/unique_refs"},
+        "duplicate_evidence_refs": {"$ref": "#/$defs/unique_refs"},
+        "unknowns_resolved": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+        "unknowns_remaining": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+        "reusable_asset_refs": {"$ref": "#/$defs/unique_refs"},
+        "stop_reason": {
+          "type": "string",
+          "pattern": "^(EVIDENCE_SUFFICIENT|MINIMUM_MISSING_EVIDENCE_FOUND|RESEARCH_SATURATED|DUPLICATE_ONLY|PUBLIC_DATA_INSUFFICIENT|SOURCE_UNAVAILABLE|SEARCH_SPACE_EXHAUSTED|EVIDENCE_CONTRADICTED|WRONG_HYPOTHESIS|COMMERCIAL_RELEVANCE_FAILED|RESEARCH_BUDGET_REACHED|HUMAN_REVIEW_REQUIRED|PHASE_COMPLETE|EXTENSION_[A-Z0-9_]+)$"
+        },
+        "human_review_required": {"type": "boolean"},
+        "authorization": {"$ref": "#/$defs/authorization"},
+        "telemetry": {"$ref": "#/$defs/telemetry"},
+        "lookup_keys": {"$ref": "#/$defs/lookup_keys"},
+        "boundary_refs": {"$ref": "#/$defs/boundary_refs"},
+        "structural_interpretation_authority": {"const": "CML_REFERENCE_ONLY"},
+        "revision_history": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"$ref": "#/$defs/revision"}
+        },
+        "notes": {"type": "array", "items": {"type": "string", "minLength": 1}}
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"decision_changed": {"const": true}}},
+          "then": {
+            "properties": {"decision_change_reason": {"type": "string", "minLength": 1}},
+            "not": {"properties": {"decision_before": {"const": "UNKNOWN"}, "decision_after": {"const": "UNKNOWN"}}, "required": ["decision_before", "decision_after"]}
+          }
+        }
+      ]
+    }
+  },
+  "$defs": {
+    "unique_refs": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "nonempty_strings": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "research_action": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["action_id", "action_type", "started_at", "completed_at", "research_level", "external_research", "input_refs", "output_refs", "outcome", "limitations"],
+      "properties": {
+        "action_id": {"type": "string", "minLength": 1},
+        "action_type": {"enum": ["REUSE", "QUERY", "SOURCE_CHECK", "SOURCE_REVIEW", "VERIFICATION", "NORMALIZATION", "CODING", "TESTING", "ANALYSIS", "DOCUMENTATION", "OTHER"]},
+        "started_at": {"type": "string", "format": "date-time"},
+        "completed_at": {"type": "string", "format": "date-time"},
+        "research_level": {"enum": ["L0_REUSE", "L1_VERIFY", "L2_INVESTIGATE", "L3_DEEP"]},
+        "external_research": {"type": "boolean"},
+        "input_refs": {"$ref": "#/$defs/unique_refs"},
+        "output_refs": {"$ref": "#/$defs/unique_refs"},
+        "outcome": {"type": "string", "minLength": 1},
+        "limitations": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}}
+      }
+    },
+    "measurement": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "value", "source_ref"],
+      "properties": {
+        "status": {"enum": ["UNKNOWN", "NOT_APPLICABLE", "OBSERVED", "ESTIMATED"]},
+        "value": {"type": ["number", "null"], "minimum": 0},
+        "source_ref": {"type": ["string", "null"]}
+      },
+      "oneOf": [
+        {
+          "properties": {
+            "status": {"enum": ["UNKNOWN", "NOT_APPLICABLE"]},
+            "value": {"type": "null"},
+            "source_ref": {"type": ["string", "null"]}
+          }
+        },
+        {
+          "properties": {
+            "status": {"enum": ["OBSERVED", "ESTIMATED"]},
+            "value": {"type": "number", "minimum": 0},
+            "source_ref": {"type": "string", "minLength": 1}
+          }
+        }
+      ]
+    },
+    "telemetry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["model_calls", "tool_calls", "estimated_tokens", "observed_input_tokens", "observed_output_tokens", "estimated_model_cost", "observed_model_cost", "data_cost", "human_minutes", "engineering_minutes", "currency", "cost_source", "cost_limit"],
+      "properties": {
+        "model_calls": {"$ref": "#/$defs/measurement"},
+        "tool_calls": {"$ref": "#/$defs/measurement"},
+        "estimated_tokens": {"$ref": "#/$defs/measurement"},
+        "observed_input_tokens": {"$ref": "#/$defs/measurement"},
+        "observed_output_tokens": {"$ref": "#/$defs/measurement"},
+        "estimated_model_cost": {"$ref": "#/$defs/measurement"},
+        "observed_model_cost": {"$ref": "#/$defs/measurement"},
+        "data_cost": {"$ref": "#/$defs/measurement"},
+        "human_minutes": {"$ref": "#/$defs/measurement"},
+        "engineering_minutes": {"$ref": "#/$defs/measurement"},
+        "currency": {"type": "string", "pattern": "^([A-Z]{3}|UNKNOWN)$"},
+        "cost_source": {"type": "string", "minLength": 1},
+        "cost_limit": {"$ref": "#/$defs/measurement"}
+      }
+    },
+    "authorization": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "authorization_ref", "authority"],
+      "properties": {
+        "status": {"enum": ["NOT_REQUIRED", "REQUIRED_PENDING", "AUTHORIZED", "DENIED"]},
+        "authorization_ref": {"type": ["string", "null"]},
+        "authority": {"enum": ["HUMAN", "GDR_SE_REFERENCE", "NOT_APPLICABLE"]}
+      }
+    },
+    "lookup_keys": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["claim_refs", "hypothesis_refs", "entity_refs", "component_refs", "standard_refs", "migration_path_refs"],
+      "properties": {
+        "claim_refs": {"$ref": "#/$defs/unique_refs"},
+        "hypothesis_refs": {"$ref": "#/$defs/unique_refs"},
+        "entity_refs": {"$ref": "#/$defs/unique_refs"},
+        "component_refs": {"$ref": "#/$defs/unique_refs"},
+        "standard_refs": {"$ref": "#/$defs/unique_refs"},
+        "migration_path_refs": {"$ref": "#/$defs/unique_refs"}
+      }
+    },
+    "boundary_refs": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["evidence_core_refs", "cml_state_refs", "timeline_refs", "rtp_refs", "gdr_authorization_refs", "outcome_refs"],
+      "properties": {
+        "evidence_core_refs": {"$ref": "#/$defs/unique_refs"},
+        "cml_state_refs": {"$ref": "#/$defs/unique_refs"},
+        "timeline_refs": {"$ref": "#/$defs/unique_refs"},
+        "rtp_refs": {"$ref": "#/$defs/unique_refs"},
+        "gdr_authorization_refs": {"$ref": "#/$defs/unique_refs"},
+        "outcome_refs": {"$ref": "#/$defs/unique_refs"}
+      }
+    },
+    "revision": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["revision_id", "created_at", "supersedes", "change_summary", "preserves_original"],
+      "properties": {
+        "revision_id": {"type": "string", "minLength": 1},
+        "created_at": {"type": "string", "format": "date-time"},
+        "supersedes": {"type": ["string", "null"]},
+        "change_summary": {"type": "string", "minLength": 1},
+        "preserves_original": {"const": true}
+      }
+    }
+  }
+}

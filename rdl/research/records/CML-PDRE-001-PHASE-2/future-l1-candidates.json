@@ -1,0 +1,75 @@
+{
+  "candidate_inventory_id": "RDL-CML-PDRE-001-PHASE-2-FUTURE-L1-CANDIDATES",
+  "case_id": "CML-PDRE-001",
+  "execution_authorized": false,
+  "candidates": [
+    {
+      "gap_id": "L1-CANDIDATE-001",
+      "question": "Is the PDRE-001A architecture application-qualified across the relevant electrical, mechanical, thermal, insulation, partial-discharge, reliability, EMC, and safety requirements?",
+      "decision_affected": "Whether migration readiness can be evaluated beyond R3.",
+      "existing_evidence": ["EV-003", "EV-004", "EV-005"],
+      "why_insufficient": "Demonstrations and work underway do not establish application qualification.",
+      "minimum_new_evidence_needed": "An approved qualification result with scope, requirements, result, event time, knowledge time, and provenance.",
+      "expected_information_value": "Could change the readiness boundary; no commercial migration conclusion follows automatically.",
+      "recommended_research_level": "L1_VERIFY",
+      "priority_basis": ["HIGH_DECISION_RELEVANCE", "CURRENT_EVIDENCE_DEFICIENCY", "POSSIBLE_READINESS_CHANGE"]
+    },
+    {
+      "gap_id": "L1-CANDIDATE-002",
+      "question": "Does approved evidence establish actual production or field deployment of PDRE-001A?",
+      "decision_affected": "Whether R5 FIELD_DEPLOYED can be evaluated.",
+      "existing_evidence": ["EV-005", "EV-006", "EV-007"],
+      "why_insufficient": "The records explicitly prohibit or bound a current field-deployment inference.",
+      "minimum_new_evidence_needed": "A dated, approved production-deployment or field-operation record with independently traceable provenance.",
+      "expected_information_value": "Could change the current field-deployment boundary.",
+      "recommended_research_level": "L1_VERIFY",
+      "priority_basis": ["HIGH_DECISION_RELEVANCE", "COUNTER_EVIDENCE_PRESENT", "POSSIBLE_READINESS_CHANGE"]
+    },
+    {
+      "gap_id": "L1-CANDIDATE-003",
+      "question": "Are the copper, rack-space, and efficiency claims independently supported?",
+      "decision_affected": "Whether current technical and economic source claims can become stronger evidence.",
+      "existing_evidence": ["EV-001", "EV-003", "EV-007"],
+      "why_insufficient": "All three dimensions remain source claims not independently verified.",
+      "minimum_new_evidence_needed": "One independent technical source or approved test artifact for each claim selected for verification.",
+      "expected_information_value": "Could strengthen or contradict constraint and economic interpretations without itself establishing migration.",
+      "recommended_research_level": "L1_VERIFY",
+      "priority_basis": ["MATERIAL_CLAIMS", "INSUFFICIENT_INDEPENDENCE", "POSSIBLE_MODEL_REVISION"]
+    },
+    {
+      "gap_id": "L1-CANDIDATE-004",
+      "question": "What supplier, manufacturing, and qualified-capacity evidence exists for PDRE-001A?",
+      "decision_affected": "Whether supply availability and manufacturing readiness can be represented beyond UNKNOWN.",
+      "existing_evidence": ["EV-003", "EV-006", "EV-007"],
+      "why_insufficient": "Product demonstrations and forward timing do not establish qualified production capacity or supplier readiness.",
+      "minimum_new_evidence_needed": "Approved supplier/manufacturing evidence that distinguishes announced capacity from qualified available capacity.",
+      "expected_information_value": "Could resolve current supply and manufacturing unknowns.",
+      "recommended_research_level": "L1_VERIFY",
+      "priority_basis": ["DECISION_RELEVANT_UNKNOWN", "FORWARD_LOOKING_ONLY", "SUPPLY_BOUNDARY"]
+    },
+    {
+      "gap_id": "L1-CANDIDATE-005",
+      "question": "Does repository-external verification support a PDRE-001B centralized 800VDC / SST dependency-transfer chain?",
+      "decision_affected": "Whether PDRE-001B can move from active subhypothesis to an assessed candidate.",
+      "existing_evidence": ["EV-005"],
+      "why_insufficient": "The approved packet does not authorize a readiness assignment or complete dependency-transfer reconstruction for PDRE-001B.",
+      "minimum_new_evidence_needed": "A bounded approved packet that directly addresses the facility-level old path, alternative path, transferred dependencies, and readiness evidence.",
+      "expected_information_value": "Could determine whether PDRE-001B is assessable; outcome may remain unresolved.",
+      "recommended_research_level": "L1_VERIFY",
+      "priority_basis": ["SEPARATE_SUBHYPOTHESIS", "CURRENTLY_NOT_ASSIGNED", "NO_MERGE_WITH_PDRE_001A"]
+    },
+    {
+      "gap_id": "L1-CANDIDATE-006",
+      "question": "Can source independence and derivative lineage be established for the seven indexed evidence items?",
+      "decision_affected": "Whether repeated source claims represent independent confirmation.",
+      "existing_evidence": ["EV-001", "EV-002", "EV-003", "EV-004", "EV-005", "EV-006", "EV-007"],
+      "why_insufficient": "Repository metadata identifies issuers but not full source lineage or derivation relationships.",
+      "minimum_new_evidence_needed": "Source-lineage metadata connecting each claim to its original or derivative source.",
+      "expected_information_value": "Could change independence counts but not directly assign technical readiness.",
+      "recommended_research_level": "L1_VERIFY",
+      "priority_basis": ["INSUFFICIENT_INDEPENDENCE", "REUSE_QUALITY", "NO_AUTOMATIC_PRIORITY"]
+    }
+  ],
+  "prohibited_fields": ["gap_score", "research_score", "commercial_score", "MEV_score"],
+  "limitations": ["These are candidates for human review only.", "No candidate was executed or automatically prioritized."]
+}

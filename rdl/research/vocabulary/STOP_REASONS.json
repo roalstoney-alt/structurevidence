@@ -1,0 +1,24 @@
+{
+  "vocabulary_id": "RDL_STOP_REASONS_v0.1",
+  "extension_prefix": "EXTENSION_",
+  "reasons": [
+    "EVIDENCE_SUFFICIENT",
+    "MINIMUM_MISSING_EVIDENCE_FOUND",
+    "RESEARCH_SATURATED",
+    "DUPLICATE_ONLY",
+    "PUBLIC_DATA_INSUFFICIENT",
+    "SOURCE_UNAVAILABLE",
+    "SEARCH_SPACE_EXHAUSTED",
+    "EVIDENCE_CONTRADICTED",
+    "WRONG_HYPOTHESIS",
+    "COMMERCIAL_RELEVANCE_FAILED",
+    "RESEARCH_BUDGET_REACHED",
+    "HUMAN_REVIEW_REQUIRED",
+    "PHASE_COMPLETE"
+  ],
+  "rules": [
+    "A stop reason is a research outcome, not automatically an execution failure.",
+    "Historical records are not retroactively forced into this taxonomy.",
+    "Extensions use the EXTENSION_ prefix and do not rewrite earlier records."
+  ]
+}

@@ -1,0 +1,205 @@
+{
+  "core": {
+    "artifact_refs": [
+      "rdl/research/records/CML-PDRE-001-PHASE-2/evidence-inventory.json",
+      "rdl/research/records/CML-PDRE-001-PHASE-2/dependency-mappings.json",
+      "rdl/research/records/CML-PDRE-001-PHASE-2/qualification-gaps.json",
+      "rdl/research/records/CML-PDRE-001-PHASE-2/future-l1-candidates.json",
+      "rdl/research/records/CML-PDRE-001-PHASE-2/reuse-observations.json",
+      "docs/upgrade/CML_PDRE_001_RECONSTRUCTION.md",
+      "docs/upgrade/CML_PDRE_001_RESEARCH_REUSE_AUDIT.md"
+    ],
+    "core_version": "STRUCTEVIDENCE_EVIDENCE_CORE_v0.1",
+    "correction_status": "NONE",
+    "created_at": "2026-09-19T07:36:04Z",
+    "domain": "RESEARCH_GOVERNANCE",
+    "effective_at": "2026-09-19T07:36:04Z",
+    "input_hash": "07c2567bd3e23252d6d8109a30979a9c4d46e859e9a0edf19975e2262eeb67bf",
+    "known_at": "2026-09-19T07:36:04Z",
+    "policy_version": "RDL_RESEARCH_RECORD_v0.1",
+    "protocol": "RDL",
+    "record_hash": "f49a3c14b5bb74b4b5435668687e074eb6f8a52b48ec9ec6daa2d5ab8206df62",
+    "record_id": "RDL-CML-PDRE-001-PHASE-2-2026-09-19",
+    "source_refs": [
+      "rdl/research/schema/research-record.schema.json",
+      "rdl/research/validation/validator.py",
+      "technical-risk/cml-v1.1/pdre/CML-PDRE-001/CASE.json",
+      "technical-risk/cml-v1.1/pdre/CML-PDRE-001/README.md",
+      "technical-risk/cml-v1.1/pdre/CML-PDRE-001/dependency-transfer.json",
+      "technical-risk/cml-v1.1/pdre/CML-PDRE-001/evidence-index.jsonl",
+      "technical-risk/cml-v1.1/pdre/CML-PDRE-001/pdre-record.json",
+      "technical-risk/cml-v1.1/pdre/CML-PDRE-001/state-history.jsonl",
+      "technical-risk/cml-v1.1/pdre/CML-PDRE-001/timeline.jsonl"
+    ],
+    "subject_class": "RDL_RESEARCH_RECORD",
+    "subject_id": "CML-PDRE-001",
+    "supersession_status": "CURRENT",
+    "updated_at": "2026-09-19T07:36:04Z",
+    "verification_status": "PHASE_2_L0_REUSE_VALIDATED"
+  },
+  "research_record": {
+    "research_id": "RDL-CML-PDRE-001-PHASE-2-2026-09-19",
+    "schema_version": "RDL_RESEARCH_RECORD_v0.1",
+    "case_id": "CML-PDRE-001",
+    "pdre_id": "PDRE-001A",
+    "customer_case_id": null,
+    "research_level": "L0_REUSE",
+    "research_class": "METHODOLOGY_RESEARCH",
+    "initiated_by": "HUMAN",
+    "started_at": "2026-09-19T07:20:00Z",
+    "completed_at": "2026-09-19T07:36:04Z",
+    "decision_to_change": "Determine whether the existing StructEvidence repository contains sufficient reusable evidence to reconstruct a decision-useful CML-PDRE-001 baseline without new external research, and identify the minimum evidence gaps that would justify later L1 verification.",
+    "research_question": "How much of CML-PDRE-001 can be reconstructed from existing repository evidence alone, what evidence remains reusable, stale, duplicated, contradictory or missing, and which unresolved gaps are decision-relevant enough to justify future verification?",
+    "before_state_ref": "technical-risk/cml-v1.1/pdre/CML-PDRE-001/CASE.json",
+    "after_state_ref": "rdl/research/records/CML-PDRE-001-PHASE-2/reuse-observations.json",
+    "known_before": [
+      "CML-PDRE-001 contains two separately scoped research units.",
+      "PDRE-001A is a candidate at R3 SAMPLE_BENCH_TESTED.",
+      "PDRE-001B is an active subhypothesis with readiness NOT_ASSIGNED.",
+      "Seven approved evidence items exist in the canonical case index."
+    ],
+    "unknowns_before": [
+      "How much of the case can be reconstructed from repository evidence alone.",
+      "Which existing evidence is directly reusable, normalized, counter-evidence, duplicate, stale, superseded, or unusable.",
+      "Which qualification gaps are decision-relevant candidates for later verification."
+    ],
+    "minimum_missing_evidence": [
+      "A complete repository-local mapping of existing CML-PDRE-001 evidence sufficient to determine actual reuse coverage and unresolved gaps."
+    ],
+    "hypothesis_before": "The repository may contain sufficient reusable research capital for a bounded reconstruction without new research.",
+    "hypothesis_after": "The seven canonical evidence items support a decision-useful bounded reconstruction of PDRE-001A at the already accepted R3 state; they do not resolve qualification, field deployment, source independence, or PDRE-001B.",
+    "readiness_before": "R3_PDRE-001A_ONLY; PDRE-001B_NOT_ASSIGNED",
+    "readiness_after": "R3_PDRE-001A_ONLY; PDRE-001B_NOT_ASSIGNED",
+    "decision_before": "RECONSTRUCTION_COVERAGE_UNKNOWN",
+    "decision_after": "RECONSTRUCTION_DECISION_USEFUL_WITH_DOCUMENTED_GAPS",
+    "decision_changed": true,
+    "decision_change_reason": "All seven canonical evidence items were mapped into an auditable reconstruction with explicit counter-evidence, qualification unknowns, and six bounded future L1 candidates.",
+    "research_actions": [
+      {
+        "action_id": "PHASE2-ACTION-001",
+        "action_type": "REUSE",
+        "started_at": "2026-09-19T07:20:00Z",
+        "completed_at": "2026-09-19T07:25:00Z",
+        "research_level": "L0_REUSE",
+        "external_research": false,
+        "input_refs": ["technical-risk/cml-v1.1/pdre/CML-PDRE-001/evidence-index.jsonl", "technical-risk/cml-v1.1/pdre/CML-PDRE-001/pdre-record.json"],
+        "output_refs": ["rdl/research/records/CML-PDRE-001-PHASE-2/evidence-inventory.json"],
+        "outcome": "Seven canonical evidence items were inventoried by reference.",
+        "limitations": ["No source was refreshed and no external fact was added."]
+      },
+      {
+        "action_id": "PHASE2-ACTION-002",
+        "action_type": "NORMALIZATION",
+        "started_at": "2026-09-19T07:25:00Z",
+        "completed_at": "2026-09-19T07:30:00Z",
+        "research_level": "L0_REUSE",
+        "external_research": false,
+        "input_refs": ["technical-risk/cml-v1.1/pdre/CML-PDRE-001/dependency-transfer.json", "technical-risk/cml-v1.1/pdre/CML-PDRE-001/pdre-record.json"],
+        "output_refs": ["rdl/research/records/CML-PDRE-001-PHASE-2/dependency-mappings.json", "rdl/research/records/CML-PDRE-001-PHASE-2/qualification-gaps.json"],
+        "outcome": "Dependency transfer and qualification dimensions were normalized without changing canonical CML state.",
+        "limitations": ["Missing evidence remains UNKNOWN and RDL does not assign readiness."]
+      },
+      {
+        "action_id": "PHASE2-ACTION-003",
+        "action_type": "ANALYSIS",
+        "started_at": "2026-09-19T07:30:00Z",
+        "completed_at": "2026-09-19T07:34:00Z",
+        "research_level": "L0_REUSE",
+        "external_research": false,
+        "input_refs": ["rdl/research/records/CML-PDRE-001-PHASE-2/evidence-inventory.json", "rdl/research/records/CML-PDRE-001-PHASE-2/qualification-gaps.json"],
+        "output_refs": ["rdl/research/records/CML-PDRE-001-PHASE-2/reuse-observations.json", "rdl/research/records/CML-PDRE-001-PHASE-2/future-l1-candidates.json"],
+        "outcome": "Reuse counts, a transparent reuse ratio, and future candidate gaps were derived.",
+        "limitations": ["Candidates are not authorized work and are not automatically prioritized."]
+      },
+      {
+        "action_id": "PHASE2-ACTION-004",
+        "action_type": "DOCUMENTATION",
+        "started_at": "2026-09-19T07:34:00Z",
+        "completed_at": "2026-09-19T07:36:04Z",
+        "research_level": "L0_REUSE",
+        "external_research": false,
+        "input_refs": ["rdl/research/records/CML-PDRE-001-PHASE-2/reuse-observations.json"],
+        "output_refs": ["docs/upgrade/CML_PDRE_001_RECONSTRUCTION.md", "docs/upgrade/CML_PDRE_001_RESEARCH_REUSE_AUDIT.md"],
+        "outcome": "The bounded reconstruction and audit package were documented for human review.",
+        "limitations": ["Phase 3 and all L1 verification remain unauthorized."]
+      }
+    ],
+    "query_refs": ["LOCAL_REPOSITORY_CML_PDRE_001_CANONICAL_PATHS"],
+    "source_refs_checked": [
+      "rdl/research/schema/research-record.schema.json",
+      "rdl/research/validation/validator.py",
+      "technical-risk/cml-v1.1/pdre/CML-PDRE-001/CASE.json",
+      "technical-risk/cml-v1.1/pdre/CML-PDRE-001/README.md",
+      "technical-risk/cml-v1.1/pdre/CML-PDRE-001/dependency-transfer.json",
+      "technical-risk/cml-v1.1/pdre/CML-PDRE-001/evidence-index.jsonl",
+      "technical-risk/cml-v1.1/pdre/CML-PDRE-001/pdre-record.json",
+      "technical-risk/cml-v1.1/pdre/CML-PDRE-001/state-history.jsonl",
+      "technical-risk/cml-v1.1/pdre/CML-PDRE-001/timeline.jsonl"
+    ],
+    "source_refs_used": [
+      "technical-risk/cml-v1.1/pdre/CML-PDRE-001/CASE.json",
+      "technical-risk/cml-v1.1/pdre/CML-PDRE-001/README.md",
+      "technical-risk/cml-v1.1/pdre/CML-PDRE-001/dependency-transfer.json",
+      "technical-risk/cml-v1.1/pdre/CML-PDRE-001/evidence-index.jsonl",
+      "technical-risk/cml-v1.1/pdre/CML-PDRE-001/pdre-record.json",
+      "technical-risk/cml-v1.1/pdre/CML-PDRE-001/state-history.jsonl",
+      "technical-risk/cml-v1.1/pdre/CML-PDRE-001/timeline.jsonl"
+    ],
+    "source_refs_rejected": [],
+    "new_evidence_refs": [],
+    "counter_evidence_refs": ["EV-006", "EV-007"],
+    "duplicate_evidence_refs": [],
+    "unknowns_resolved": ["Repository reuse coverage for the seven canonical evidence items.", "Repository-local dependency-transfer reconstruction coverage.", "Qualification-gap representation across fourteen required dimensions."],
+    "unknowns_remaining": ["Application qualification.", "Field deployment and operating history.", "Independent validation of copper, rack-space, and efficiency claims.", "Supplier, manufacturing, and qualified-capacity evidence.", "PDRE-001B dependency-transfer and readiness.", "Source lineage and independence.", "CAPEX, ROI, and payback."],
+    "reusable_asset_refs": [
+      "rdl/research/records/CML-PDRE-001-PHASE-2/evidence-inventory.json",
+      "rdl/research/records/CML-PDRE-001-PHASE-2/dependency-mappings.json",
+      "rdl/research/records/CML-PDRE-001-PHASE-2/qualification-gaps.json",
+      "rdl/research/records/CML-PDRE-001-PHASE-2/future-l1-candidates.json",
+      "rdl/research/records/CML-PDRE-001-PHASE-2/reuse-observations.json"
+    ],
+    "stop_reason": "PHASE_COMPLETE",
+    "human_review_required": true,
+    "authorization": {"status": "NOT_REQUIRED", "authorization_ref": null, "authority": "NOT_APPLICABLE"},
+    "telemetry": {
+      "model_calls": {"status": "UNKNOWN", "value": null, "source_ref": null},
+      "tool_calls": {"status": "UNKNOWN", "value": null, "source_ref": null},
+      "estimated_tokens": {"status": "UNKNOWN", "value": null, "source_ref": null},
+      "observed_input_tokens": {"status": "UNKNOWN", "value": null, "source_ref": null},
+      "observed_output_tokens": {"status": "UNKNOWN", "value": null, "source_ref": null},
+      "estimated_model_cost": {"status": "UNKNOWN", "value": null, "source_ref": null},
+      "observed_model_cost": {"status": "UNKNOWN", "value": null, "source_ref": null},
+      "data_cost": {"status": "OBSERVED", "value": 0, "source_ref": "NO_EXTERNAL_RESEARCH"},
+      "human_minutes": {"status": "UNKNOWN", "value": null, "source_ref": null},
+      "engineering_minutes": {"status": "UNKNOWN", "value": null, "source_ref": null},
+      "currency": "USD",
+      "cost_source": "NO_EXTERNAL_RESEARCH",
+      "cost_limit": {"status": "UNKNOWN", "value": null, "source_ref": null}
+    },
+    "lookup_keys": {
+      "claim_refs": ["EV-001", "EV-002", "EV-003", "EV-004", "EV-005", "EV-006", "EV-007"],
+      "hypothesis_refs": ["PDRE-001A", "PDRE-001B"],
+      "entity_refs": ["NVIDIA", "SCHNEIDER_ELECTRIC", "DELTA_ELECTRONICS", "OPEN_COMPUTE_PROJECT", "VERTIV"],
+      "component_refs": ["DC_DC_CONVERSION", "DC_PROTECTION", "ENERGY_STORAGE", "INSULATION", "THERMAL_MANAGEMENT"],
+      "standard_refs": ["SST_SPECIFICATION_V0.3_SOURCE_CLAIM"],
+      "migration_path_refs": ["PDRE-001A", "PDRE-001B"]
+    },
+    "boundary_refs": {
+      "evidence_core_refs": ["technical-risk/cml-v1.1/pdre/CML-PDRE-001/pdre-record.json"],
+      "cml_state_refs": ["technical-risk/cml-v1.1/pdre/CML-PDRE-001/CASE.json", "technical-risk/cml-v1.1/pdre/CML-PDRE-001/dependency-transfer.json"],
+      "timeline_refs": ["technical-risk/cml-v1.1/pdre/CML-PDRE-001/timeline.jsonl", "technical-risk/cml-v1.1/pdre/CML-PDRE-001/state-history.jsonl"],
+      "rtp_refs": [],
+      "gdr_authorization_refs": [],
+      "outcome_refs": ["rdl/research/records/CML-PDRE-001-PHASE-2/reuse-observations.json"]
+    },
+    "structural_interpretation_authority": "CML_REFERENCE_ONLY",
+    "revision_history": [
+      {"revision_id": "RDL-CML-PDRE-001-PHASE-2-v0.1", "created_at": "2026-09-19T07:36:04Z", "supersedes": null, "change_summary": "Initial L0_REUSE reconstruction from repository-local evidence only.", "preserves_original": true}
+    ],
+    "notes": [
+      "The schema-required minimum_missing_evidence field was populated with the information needed to complete the methodological reconstruction decision; future L1 candidate gaps remain separate.",
+      "This real case suggests a future schema review could consider allowing an empty minimum_missing_evidence array at research start; no schema change was made.",
+      "No evidence store, provenance system, timeline system, readiness score, or commercial score was created."
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "module_version": "RDL_RESEARCH_RECORD_v0.1",
+  "status": "PHASE_1_IMPLEMENTED_PENDING_HUMAN_REVIEW",
+  "schema": "rdl/research/schema/research-record.schema.json",
+  "template": "rdl/research/templates/research-record.template.json",
+  "validator": "rdl/research/validation/validator.py",
+  "record_root": "rdl/research/records/",
+  "fixture_root": "rdl/research/fixtures/",
+  "vocabularies": [
+    "rdl/research/vocabulary/RESEARCH_LEVELS.json",
+    "rdl/research/vocabulary/RESEARCH_CLASSES.json",
+    "rdl/research/vocabulary/STOP_REASONS.json"
+  ],
+  "reused_systems": {
+    "evidence_core": "evidence/core/schema/evidence_core_record.schema.json",
+    "cml": "technical-risk/cml-v1.1/",
+    "timeline": "timeline/",
+    "rdl_freshness": "rdl/freshness/",
+    "gdr_se": "gdr-se/",
+    "rtp_style_manifests": "evidence-freeze/"
+  },
+  "evidence_store_created": false,
+  "timeline_system_created": false,
+  "authorization_system_created": false,
+  "database_created": false,
+  "legacy_policy": "LEGACY / PRE-RDL-RESEARCH-RECORD means canonical research-of-research record unavailable; it does not mean no research occurred."
+}

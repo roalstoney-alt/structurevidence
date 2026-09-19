@@ -1,0 +1,55 @@
+{
+  "mapping_id": "RDL-CML-PDRE-001-PHASE-2-DEPENDENCY-MAPPINGS",
+  "case_id": "CML-PDRE-001",
+  "research_level": "L0_REUSE",
+  "canonical_dependency_ref": "technical-risk/cml-v1.1/pdre/CML-PDRE-001/dependency-transfer.json",
+  "mappings": [
+    {
+      "research_unit": "PDRE-001A",
+      "old_dependency": "54V rack-level high-current distribution and rack-local power conversion",
+      "constraint": ["CURRENT", "COPPER", "RACK_SPACE", "THERMAL", "POWER_SHELF_SPACE"],
+      "alternative_path": "800VDC sidecar / power rack with conversion outside the IT rack",
+      "dependency_released": {
+        "state": "CANDIDATE",
+        "items": ["54V rack-level high-current distribution", "rack-local power conversion"],
+        "evidence_refs": ["EV-001"]
+      },
+      "dependency_created": [
+        {"category": "DC_DC_CONVERSION", "state": "NEW_CRITICAL_DEPENDENCY", "evidence_refs": ["EV-002", "EV-003"]},
+        {"category": "DC_PROTECTION", "state": "NEW_CRITICAL_DEPENDENCY", "evidence_refs": ["EV-002"]},
+        {"category": "DC_ARC_FLASH", "state": "AUTHORIZED_PACKET_CLASSIFICATION", "evidence_refs": []},
+        {"category": "HVDC_CONNECTOR_BUSWAY", "state": "AUTHORIZED_PACKET_CLASSIFICATION", "evidence_refs": []},
+        {"category": "ENERGY_STORAGE", "state": "NEW_CRITICAL_DEPENDENCY", "evidence_refs": ["EV-002", "EV-003"]},
+        {"category": "INSULATION", "state": "AUTHORIZED_PACKET_CLASSIFICATION", "evidence_refs": []},
+        {"category": "FAULT_ISOLATION", "state": "AUTHORIZED_PACKET_CLASSIFICATION", "evidence_refs": []},
+        {"category": "THERMAL_MANAGEMENT", "state": "AUTHORIZED_PACKET_CLASSIFICATION", "evidence_refs": []}
+      ],
+      "new_bottleneck": {
+        "state": "PARTIALLY_IDENTIFIED",
+        "categories": ["DC_DC_CONVERSION", "DC_PROTECTION", "ENERGY_STORAGE"],
+        "evidence_refs": ["EV-002", "EV-003"],
+        "limitations": ["Item-level evidence is absent for four additional authorized packet classifications.", "Severity and commercial materiality remain UNKNOWN."]
+      },
+      "supporting_evidence_refs": ["EV-001", "EV-002", "EV-003", "EV-004"],
+      "counter_evidence_refs": ["EV-005", "EV-006", "EV-007"],
+      "migration_readiness": "R3_SAMPLE_BENCH_TESTED",
+      "structural_exposure": "UNKNOWN",
+      "unknowns": ["Application qualification", "Field deployment", "Operating history", "Company-level structural exposure", "Commercial migration"]
+    },
+    {
+      "research_unit": "PDRE-001B",
+      "old_dependency": "Traditional facility AC conversion chain",
+      "constraint": "UNKNOWN",
+      "alternative_path": "Centralized 800VDC / SST",
+      "dependency_released": "UNKNOWN",
+      "dependency_created": "UNKNOWN",
+      "new_bottleneck": "UNKNOWN",
+      "supporting_evidence_refs": [],
+      "counter_evidence_refs": [],
+      "migration_readiness": "NOT_ASSIGNED",
+      "structural_exposure": "UNKNOWN",
+      "unknowns": ["Repository evidence does not support reconstruction of the PDRE-001B dependency-transfer chain."]
+    }
+  ],
+  "semantic_rules": ["DEPENDENCY_RELEASE != DEPENDENCY_TRANSFER", "RDL references CML state and does not independently assign readiness.", "UNKNOWN is preserved when repository evidence is absent."]
+}

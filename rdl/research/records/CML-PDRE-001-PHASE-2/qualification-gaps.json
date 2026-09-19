@@ -1,0 +1,24 @@
+{
+  "gap_inventory_id": "RDL-CML-PDRE-001-PHASE-2-QUALIFICATION-GAPS",
+  "case_id": "CML-PDRE-001",
+  "research_unit": "PDRE-001A",
+  "allowed_states": ["SUPPORTED", "UNSUPPORTED", "UNKNOWN", "TEST_REQUIRED", "NOT_APPLICABLE"],
+  "dimensions": [
+    {"dimension": "electrical", "state": "UNKNOWN", "existing_evidence_refs": ["EV-003", "EV-004"], "reason": "Demonstration evidence does not establish application qualification."},
+    {"dimension": "mechanical", "state": "UNKNOWN", "existing_evidence_refs": [], "reason": "No repository qualification evidence is indexed."},
+    {"dimension": "thermal", "state": "UNKNOWN", "existing_evidence_refs": [], "reason": "Thermal management is classified as a transferred dependency without qualification evidence."},
+    {"dimension": "insulation", "state": "UNKNOWN", "existing_evidence_refs": [], "reason": "Insulation is classified as a transferred dependency without qualification evidence."},
+    {"dimension": "partial_discharge", "state": "UNKNOWN", "existing_evidence_refs": [], "reason": "No indexed partial-discharge evidence exists."},
+    {"dimension": "reliability", "state": "UNKNOWN", "existing_evidence_refs": [], "reason": "No indexed reliability evidence exists."},
+    {"dimension": "EMC", "state": "UNKNOWN", "existing_evidence_refs": [], "reason": "No indexed EMC evidence exists."},
+    {"dimension": "safety", "state": "UNKNOWN", "existing_evidence_refs": ["EV-005"], "reason": "Safety work underway does not establish satisfaction."},
+    {"dimension": "standard", "state": "UNKNOWN", "existing_evidence_refs": ["EV-005"], "reason": "A draft specification and ongoing work do not establish a completed standard."},
+    {"dimension": "manufacturing", "state": "UNKNOWN", "existing_evidence_refs": [], "reason": "No indexed manufacturing qualification evidence exists."},
+    {"dimension": "supplier", "state": "UNKNOWN", "existing_evidence_refs": [], "reason": "No indexed supplier-qualification evidence exists."},
+    {"dimension": "capacity", "state": "UNKNOWN", "existing_evidence_refs": ["EV-003", "EV-007"], "reason": "Source-reported product capacity is not qualified production capacity."},
+    {"dimension": "field_validation", "state": "UNKNOWN", "existing_evidence_refs": ["EV-005", "EV-006", "EV-007"], "reason": "Existing records explicitly do not establish field deployment."},
+    {"dimension": "customer_validation", "state": "UNKNOWN", "existing_evidence_refs": [], "reason": "No indexed customer-validation evidence exists."}
+  ],
+  "summary": {"SUPPORTED": 0, "UNSUPPORTED": 0, "UNKNOWN": 14, "TEST_REQUIRED": 0, "NOT_APPLICABLE": 0},
+  "limitations": ["Absence is represented as UNKNOWN, not UNSUPPORTED.", "No tests or verification were performed in Phase 2."]
+}

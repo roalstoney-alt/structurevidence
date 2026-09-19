@@ -1,0 +1,8 @@
+{
+  "vocabulary_id": "RDL_RESEARCH_CLASSES_v0.1",
+  "classes": ["INVENTORY_RESEARCH", "CUSTOMER_SPECIFIC_RESEARCH", "METHODOLOGY_RESEARCH"],
+  "rules": [
+    "Public evidence mentioning a company does not make research customer-specific.",
+    "Reusable evidence must remain separable from private customer context."
+  ]
+}

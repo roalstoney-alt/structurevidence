@@ -1,0 +1,10 @@
+{
+  "vocabulary_id": "RDL_RESEARCH_LEVELS_v0.1",
+  "levels": [
+    {"code": "L0_REUSE", "external_research": false, "human_approval_required": false},
+    {"code": "L1_VERIFY", "external_research": true, "human_approval_required": false},
+    {"code": "L2_INVESTIGATE", "external_research": true, "human_approval_required": true},
+    {"code": "L3_DEEP", "external_research": true, "human_approval_required": true}
+  ],
+  "rule": "Research level describes scope; it does not itself grant authorization."
+}
