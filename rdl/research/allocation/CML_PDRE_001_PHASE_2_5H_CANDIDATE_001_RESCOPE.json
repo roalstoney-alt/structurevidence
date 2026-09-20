@@ -1,0 +1,24 @@
+{
+  "rescope_id": "CML-PDRE-001-PHASE-2.5H-CANDIDATE-001-RESCOPE",
+  "candidate_id": "L1-CANDIDATE-001",
+  "source_candidate_ref": "rdl/research/records/CML-PDRE-001-PHASE-2/future-l1-candidates.json#L1-CANDIDATE-001",
+  "research_level_used": "L0_REUSE",
+  "external_research_performed": false,
+  "question": "Has the PDRE-001A 800VDC-to-50V DC/DC shelf path been application-qualified against a defined electrical requirement set?",
+  "system_boundary": "PDRE-001A 800VDC sidecar or power-rack output through the source-reported 800V-to-50V DC/DC shelf interface; no facility-level PDRE-001B scope.",
+  "qualification_dimension": "ELECTRICAL",
+  "decision_affected": "Whether an electrical application-qualification result exists that could be submitted to CML for a bounded R4 evaluation; no automatic readiness change follows.",
+  "minimum_new_evidence": "One independently attributable electrical application-qualification result specifying the bounded interface, requirement set, result, event time, knowledge time, and provenance.",
+  "acceptable_source_class": "INDEPENDENT_QUALIFICATION_SOURCE",
+  "stop_condition": "Stop after one qualifying result confirms or refutes satisfaction of the defined electrical requirement set, or after an authorized bounded search is exhausted without finding that evidence class.",
+  "current_repository_evidence_refs": ["EV-003", "EV-004"],
+  "authorization_state": "NOT_AUTHORIZED",
+  "authorized_research_level": null,
+  "human_decision": "REQUEST_RESCOPING",
+  "final_state": "RESCOPED_PENDING_FUTURE_HUMAN_REVIEW",
+  "limitations": [
+    "The qualification question is not answered.",
+    "No external research, qualification test, L1 execution, or L2 authorization occurred.",
+    "Mechanical, thermal, insulation, partial-discharge, reliability, EMC, and safety dimensions remain outside this rescope."
+  ]
+}

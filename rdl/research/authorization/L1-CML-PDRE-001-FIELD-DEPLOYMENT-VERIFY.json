@@ -1,0 +1,42 @@
+{
+  "authorization_id": "L1-CML-PDRE-001-FIELD-DEPLOYMENT-VERIFY",
+  "case_id": "CML-PDRE-001",
+  "candidate_id": "L1-CANDIDATE-002",
+  "authorization_authority": "HUMAN",
+  "authorization_time": "2026-09-20T09:51:03Z",
+  "authorization_state": "AUTHORIZED_FOR_FUTURE_EXECUTION_NOT_EXECUTED",
+  "allowed_research_level": "L1_VERIFY",
+  "research_question": "Does a dated, independently attributable public record exist showing actual production deployment or field operation relevant to CML-PDRE-001?",
+  "decision_affected": "Whether R5 FIELD_DEPLOYED can be evaluated.",
+  "minimum_sufficient_evidence": "ONE dated independently attributable production-deployment or field-operation record.",
+  "research_scope": "VERY_NARROW",
+  "allowed_future_actions": [
+    "Search narrowly for the specified evidence class.",
+    "Inspect primary or independently attributable sources.",
+    "Confirm or refute deployment status.",
+    "Preserve contradiction and uncertainty."
+  ],
+  "prohibited_future_actions": [
+    "Expand into general 800VDC research.",
+    "Research all qualification dimensions.",
+    "Research supplier capacity.",
+    "Build the full PDRE-001B chain.",
+    "Perform L2 multi-source investigation.",
+    "Modify historical CML records.",
+    "Infer deployment from ecosystem membership, partnership, roadmap, reference design, demonstrator, or management narrative alone."
+  ],
+  "stop_conditions": [
+    {"code": "QUALIFYING_RECORD_FOUND", "condition": "One qualifying production-deployment or field-operation record is found."},
+    {"code": "AUTHORITATIVE_REFUTATION_FOUND", "condition": "One authoritative source directly refutes the relevant deployment interpretation."},
+    {"code": "BOUNDED_SEARCH_EXHAUSTED", "condition": "The predefined bounded search is exhausted without finding the required evidence class.", "required_result": "NOT_FOUND_WITHIN_BOUNDED_SEARCH", "prohibited_result": "NO_DEPLOYMENT_EXISTS"}
+  ],
+  "execution_status": "NOT_STARTED",
+  "external_research_performed_in_phase_2_5h": false,
+  "authorized_l1_count_contribution": 1,
+  "authorized_l2_count_contribution": 0,
+  "authorized_l3_count_contribution": 0,
+  "limitations": [
+    "This specification authorizes only a future bounded execution.",
+    "It does not establish R5, deployment, commercial migration, or any technical result."
+  ]
+}

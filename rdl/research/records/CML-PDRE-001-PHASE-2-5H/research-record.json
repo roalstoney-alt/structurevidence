@@ -1,0 +1,195 @@
+{
+  "core": {
+    "artifact_refs": [
+      "rdl/research/allocation/CML_PDRE_001_PHASE_2_5_HUMAN_DECISIONS.json",
+      "rdl/research/allocation/CML_PDRE_001_PHASE_2_5H_CANDIDATE_001_RESCOPE.json",
+      "rdl/research/allocation/CML_PDRE_001_PHASE_2_5H_CANDIDATE_005_DECOMPOSITION.json",
+      "rdl/research/authorization/L1-CML-PDRE-001-FIELD-DEPLOYMENT-VERIFY.json",
+      "docs/upgrade/PHASE_2_5H_HUMAN_ALLOCATION_FREEZE.md"
+    ],
+    "core_version": "STRUCTEVIDENCE_EVIDENCE_CORE_v0.1",
+    "correction_status": "NONE",
+    "created_at": "2026-09-20T09:51:03Z",
+    "domain": "RESEARCH_GOVERNANCE",
+    "effective_at": "2026-09-20T09:51:03Z",
+    "input_hash": "7f188ad62c4f6a59082b669d6ffda3a4abe7bfbb3b69e463d7e874cd979c3e96",
+    "known_at": "2026-09-20T09:51:03Z",
+    "policy_version": "RDL_RESEARCH_RECORD_v0.1",
+    "protocol": "RDL",
+    "record_hash": "9256dc879bd7dc3d1fc20bdab6ad728ef187a17a4c5094e3fa7b4fe1d49258a8",
+    "record_id": "RDL-CML-PDRE-001-PHASE-2.5H-2026-09-20",
+    "source_refs": [
+      "rdl/research/allocation/CML_PDRE_001_PHASE_2_5_ALLOCATION.json",
+      "rdl/research/allocation/CML_PDRE_001_PHASE_2_5_CANDIDATES.json",
+      "rdl/research/allocation/CML_PDRE_001_PHASE_2_5_HUMAN_DECISIONS.json",
+      "rdl/research/allocation/CML_PDRE_001_PHASE_2_5H_CANDIDATE_001_RESCOPE.json",
+      "rdl/research/allocation/CML_PDRE_001_PHASE_2_5H_CANDIDATE_005_DECOMPOSITION.json",
+      "rdl/research/authorization/L1-CML-PDRE-001-FIELD-DEPLOYMENT-VERIFY.json",
+      "rdl/research/schema/research-record.schema.json",
+      "rdl/research/validation/validator.py"
+    ],
+    "subject_class": "RDL_RESEARCH_RECORD",
+    "subject_id": "CML-PDRE-001",
+    "supersession_status": "CURRENT",
+    "updated_at": "2026-09-20T09:51:03Z",
+    "verification_status": "PHASE_2_5H_HUMAN_ALLOCATION_FREEZE_VALIDATED"
+  },
+  "research_record": {
+    "research_id": "RDL-CML-PDRE-001-PHASE-2.5H-2026-09-20",
+    "schema_version": "RDL_RESEARCH_RECORD_v0.1",
+    "case_id": "CML-PDRE-001",
+    "pdre_id": "PDRE-001A",
+    "customer_case_id": null,
+    "research_level": "L0_REUSE",
+    "research_class": "METHODOLOGY_RESEARCH",
+    "initiated_by": "HUMAN",
+    "started_at": "2026-09-20T09:40:00Z",
+    "completed_at": "2026-09-20T09:51:03Z",
+    "decision_to_change": "Freeze the human allocation decisions for all six Phase 2.5 candidates, rescope Candidates 001 and 005 without research, and create exactly one bounded future L1 authorization specification for Candidate 002.",
+    "research_question": "How should the six preserved machine recommendations transition into authoritative human allocation decisions while keeping Phase 2.5H at L0 and executing no external research?",
+    "before_state_ref": "rdl/research/allocation/CML_PDRE_001_PHASE_2_5_ALLOCATION.json",
+    "after_state_ref": "rdl/research/allocation/CML_PDRE_001_PHASE_2_5_HUMAN_DECISIONS.json",
+    "known_before": [
+      "Six Phase 2.5 allocation cards preserve machine recommendations and PENDING human decisions.",
+      "Candidate 001 requires rescoping before future authorization review.",
+      "Candidate 002 has a VERY_NARROW field-deployment verification scope.",
+      "Candidate 005 requires decomposition before future authorization review.",
+      "No Phase 2.5 candidate research has been executed."
+    ],
+    "unknowns_before": [
+      "The authoritative human decision for each candidate.",
+      "The single bounded qualification question for Candidate 001.",
+      "The minimum first question for Candidate 005.",
+      "Whether exactly one future L1 authorization would be approved."
+    ],
+    "minimum_missing_evidence": [
+      "An authoritative six-candidate human decision set plus repository-local rescope artifacts for Candidates 001 and 005 and a bounded authorization specification for any approved L1 candidate."
+    ],
+    "hypothesis_before": "Human allocation may approve one bounded L1 candidate while preserving the others as non-authorized decisions.",
+    "hypothesis_after": "Human allocation approved exactly one future L1 verification for Candidate 002, requested L0 rescoping for 001 and 005, deferred 003 and 004, and placed 006 on watch; no research was executed.",
+    "readiness_before": "R3_PDRE-001A_ONLY; PDRE-001B_NOT_ASSIGNED",
+    "readiness_after": "R3_PDRE-001A_ONLY; PDRE-001B_NOT_ASSIGNED",
+    "decision_before": "SIX_HUMAN_DECISIONS_PENDING; AUTHORIZED_L1_COUNT_0",
+    "decision_after": "SIX_HUMAN_DECISIONS_FROZEN; AUTHORIZED_L1_COUNT_1; L1_EXECUTION_NOT_STARTED",
+    "decision_changed": true,
+    "decision_change_reason": "The human authority froze all six decisions and authorized exactly one future bounded L1 specification while preserving original machine recommendations and executing no research.",
+    "research_actions": [
+      {
+        "action_id": "PHASE2-5H-ACTION-001",
+        "action_type": "REUSE",
+        "started_at": "2026-09-20T09:40:00Z",
+        "completed_at": "2026-09-20T09:43:00Z",
+        "research_level": "L0_REUSE",
+        "external_research": false,
+        "input_refs": ["rdl/research/allocation/CML_PDRE_001_PHASE_2_5_ALLOCATION.json", "rdl/research/allocation/CML_PDRE_001_PHASE_2_5_CANDIDATES.json"],
+        "output_refs": ["rdl/research/allocation/CML_PDRE_001_PHASE_2_5_HUMAN_DECISIONS.json"],
+        "outcome": "All six human decisions were recorded without overwriting machine recommendations.",
+        "limitations": ["Decision recording is not research execution."]
+      },
+      {
+        "action_id": "PHASE2-5H-ACTION-002",
+        "action_type": "ANALYSIS",
+        "started_at": "2026-09-20T09:43:00Z",
+        "completed_at": "2026-09-20T09:47:00Z",
+        "research_level": "L0_REUSE",
+        "external_research": false,
+        "input_refs": ["rdl/research/records/CML-PDRE-001-PHASE-2/qualification-gaps.json", "technical-risk/cml-v1.1/pdre/CML-PDRE-001/CASE.json", "technical-risk/cml-v1.1/pdre/CML-PDRE-001/dependency-transfer.json"],
+        "output_refs": ["rdl/research/allocation/CML_PDRE_001_PHASE_2_5H_CANDIDATE_001_RESCOPE.json", "rdl/research/allocation/CML_PDRE_001_PHASE_2_5H_CANDIDATE_005_DECOMPOSITION.json"],
+        "outcome": "Candidate 001 was narrowed to one electrical qualification question and Candidate 005 was decomposed into four unanswered sub-questions.",
+        "limitations": ["Neither candidate was researched, answered, or authorized."]
+      },
+      {
+        "action_id": "PHASE2-5H-ACTION-003",
+        "action_type": "DOCUMENTATION",
+        "started_at": "2026-09-20T09:47:00Z",
+        "completed_at": "2026-09-20T09:51:03Z",
+        "research_level": "L0_REUSE",
+        "external_research": false,
+        "input_refs": ["rdl/research/allocation/CML_PDRE_001_PHASE_2_5_HUMAN_DECISIONS.json"],
+        "output_refs": ["rdl/research/authorization/L1-CML-PDRE-001-FIELD-DEPLOYMENT-VERIFY.json", "docs/upgrade/PHASE_2_5H_HUMAN_ALLOCATION_FREEZE.md"],
+        "outcome": "Exactly one future L1 authorization specification was documented for Candidate 002.",
+        "limitations": ["The authorized future research was not started."]
+      }
+    ],
+    "query_refs": ["LOCAL_REPOSITORY_PHASE_2_5_ALLOCATION_STATE"],
+    "source_refs_checked": [
+      "rdl/research/allocation/CML_PDRE_001_PHASE_2_5_ALLOCATION.json",
+      "rdl/research/allocation/CML_PDRE_001_PHASE_2_5_CANDIDATES.json",
+      "rdl/research/records/CML-PDRE-001-PHASE-2/qualification-gaps.json",
+      "technical-risk/cml-v1.1/pdre/CML-PDRE-001/CASE.json",
+      "technical-risk/cml-v1.1/pdre/CML-PDRE-001/dependency-transfer.json"
+    ],
+    "source_refs_used": [
+      "rdl/research/allocation/CML_PDRE_001_PHASE_2_5_ALLOCATION.json",
+      "rdl/research/allocation/CML_PDRE_001_PHASE_2_5_CANDIDATES.json",
+      "rdl/research/records/CML-PDRE-001-PHASE-2/qualification-gaps.json",
+      "technical-risk/cml-v1.1/pdre/CML-PDRE-001/CASE.json",
+      "technical-risk/cml-v1.1/pdre/CML-PDRE-001/dependency-transfer.json"
+    ],
+    "source_refs_rejected": [],
+    "new_evidence_refs": [],
+    "counter_evidence_refs": ["EV-006", "EV-007"],
+    "duplicate_evidence_refs": [],
+    "unknowns_resolved": [
+      "Authoritative human decision for each of six candidates.",
+      "Single bounded qualification question for Candidate 001.",
+      "Four-part decomposition and minimum first question for Candidate 005.",
+      "Identity and scope of the sole authorized future L1 verification."
+    ],
+    "unknowns_remaining": [
+      "The technical answer to Candidate 001's rescoped electrical qualification question.",
+      "The technical answers to all four Candidate 005 sub-questions.",
+      "The field-deployment verification result for Candidate 002.",
+      "Whether future human review will authorize research for Candidates 001 or 005."
+    ],
+    "reusable_asset_refs": [
+      "rdl/research/allocation/CML_PDRE_001_PHASE_2_5_HUMAN_DECISIONS.json",
+      "rdl/research/allocation/CML_PDRE_001_PHASE_2_5H_CANDIDATE_001_RESCOPE.json",
+      "rdl/research/allocation/CML_PDRE_001_PHASE_2_5H_CANDIDATE_005_DECOMPOSITION.json",
+      "rdl/research/authorization/L1-CML-PDRE-001-FIELD-DEPLOYMENT-VERIFY.json"
+    ],
+    "stop_reason": "PHASE_COMPLETE",
+    "human_review_required": false,
+    "authorization": {"status": "AUTHORIZED", "authorization_ref": "rdl/research/authorization/L1-CML-PDRE-001-FIELD-DEPLOYMENT-VERIFY.json", "authority": "HUMAN"},
+    "telemetry": {
+      "model_calls": {"status": "UNKNOWN", "value": null, "source_ref": null},
+      "tool_calls": {"status": "UNKNOWN", "value": null, "source_ref": null},
+      "estimated_tokens": {"status": "UNKNOWN", "value": null, "source_ref": null},
+      "observed_input_tokens": {"status": "UNKNOWN", "value": null, "source_ref": null},
+      "observed_output_tokens": {"status": "UNKNOWN", "value": null, "source_ref": null},
+      "estimated_model_cost": {"status": "UNKNOWN", "value": null, "source_ref": null},
+      "observed_model_cost": {"status": "UNKNOWN", "value": null, "source_ref": null},
+      "data_cost": {"status": "OBSERVED", "value": 0, "source_ref": "NO_EXTERNAL_RESEARCH"},
+      "human_minutes": {"status": "UNKNOWN", "value": null, "source_ref": null},
+      "engineering_minutes": {"status": "UNKNOWN", "value": null, "source_ref": null},
+      "currency": "USD",
+      "cost_source": "NO_EXTERNAL_RESEARCH",
+      "cost_limit": {"status": "UNKNOWN", "value": null, "source_ref": null}
+    },
+    "lookup_keys": {
+      "claim_refs": ["EV-003", "EV-004", "EV-005", "EV-006", "EV-007"],
+      "hypothesis_refs": ["L1-CANDIDATE-001", "L1-CANDIDATE-002", "L1-CANDIDATE-003", "L1-CANDIDATE-004", "L1-CANDIDATE-005", "L1-CANDIDATE-006"],
+      "entity_refs": [],
+      "component_refs": ["800V_TO_50V_DC_DC_SHELF"],
+      "standard_refs": [],
+      "migration_path_refs": ["PDRE-001A", "PDRE-001B"]
+    },
+    "boundary_refs": {
+      "evidence_core_refs": ["rdl/research/records/CML-PDRE-001-PHASE-2-5/research-record.json"],
+      "cml_state_refs": ["technical-risk/cml-v1.1/pdre/CML-PDRE-001/CASE.json", "technical-risk/cml-v1.1/pdre/CML-PDRE-001/pdre-record.json"],
+      "timeline_refs": ["technical-risk/cml-v1.1/pdre/CML-PDRE-001/timeline.jsonl"],
+      "rtp_refs": [],
+      "gdr_authorization_refs": ["rdl/research/authorization/L1-CML-PDRE-001-FIELD-DEPLOYMENT-VERIFY.json"],
+      "outcome_refs": ["rdl/research/allocation/CML_PDRE_001_PHASE_2_5_HUMAN_DECISIONS.json"]
+    },
+    "structural_interpretation_authority": "CML_REFERENCE_ONLY",
+    "revision_history": [
+      {"revision_id": "RDL-CML-PDRE-001-PHASE-2.5H-v0.1", "created_at": "2026-09-20T09:51:03Z", "supersedes": null, "change_summary": "Frozen human allocation decisions, two L0 rescope artifacts, and one future bounded L1 authorization without executing research.", "preserves_original": true}
+    ],
+    "notes": [
+      "Original machine recommendations remain in the Phase 2.5 allocation artifact and are repeated beside human decisions in the human-decision set.",
+      "The Candidate 002 authorization is for future execution only; execution_status remains NOT_STARTED.",
+      "Phase 2.5H performed no external research and made no CML readiness change."
+    ]
+  }
+}

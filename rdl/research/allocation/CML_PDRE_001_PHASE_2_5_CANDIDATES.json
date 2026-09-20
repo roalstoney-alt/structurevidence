@@ -1,0 +1,48 @@
+{
+  "candidate_set_id": "PHASE_2_5_CANDIDATE_SET",
+  "case_id": "CML-PDRE-001",
+  "baseline_sha": "c690e2a890878056aecc057dc0afafbd3729164f",
+  "baseline_tag": "structevidence-rdl-research-baseline-v0.1",
+  "research_level": "L0_REUSE",
+  "source_artifact": "rdl/research/records/CML-PDRE-001-PHASE-2/future-l1-candidates.json",
+  "source_sha256": "f2f87855e2a448b5b5322b342feff46e6027c8d1fd85eec9bf638499b1d97d3e",
+  "candidate_count": 6,
+  "candidate_ids": [
+    "L1-CANDIDATE-001",
+    "L1-CANDIDATE-002",
+    "L1-CANDIDATE-003",
+    "L1-CANDIDATE-004",
+    "L1-CANDIDATE-005",
+    "L1-CANDIDATE-006"
+  ],
+  "set_mutation_allowed": false,
+  "execution_authorized": false,
+  "entry_gate": {
+    "status": "PASS_WITH_HUMAN_EXCEPTION",
+    "tracked_baseline_mutation_count": 0,
+    "staged_change_count": 0,
+    "untracked_path_count": 2,
+    "approved_unrelated_path_count": 2,
+    "unexpected_relevant_untracked_path_count": 0,
+    "approved_ignore_set": [
+      {
+        "path": "carepathchina-update/",
+        "classification": "UNRELATED_PROJECT_PATH",
+        "entry_state": "PRE_EXISTING_UNTRACKED_PATH",
+        "human_status": "HUMAN_CLASSIFIED_UNRELATED",
+        "gate_treatment": "IGNORED_FOR_PHASE_ENTRY_GATE"
+      },
+      {
+        "path": "stoneyrola-update/",
+        "classification": "UNRELATED_PROJECT_PATH",
+        "entry_state": "PRE_EXISTING_UNTRACKED_PATH",
+        "human_status": "HUMAN_CLASSIFIED_UNRELATED",
+        "gate_treatment": "IGNORED_FOR_PHASE_ENTRY_GATE"
+      }
+    ]
+  },
+  "limitations": [
+    "The approved unrelated paths were not read, modified, deleted, moved, staged, hashed as inputs, or used as evidence.",
+    "No candidate was added, removed, merged, renamed, or answered."
+  ]
+}

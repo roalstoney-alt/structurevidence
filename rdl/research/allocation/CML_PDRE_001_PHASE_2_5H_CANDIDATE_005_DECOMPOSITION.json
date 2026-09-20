@@ -1,0 +1,58 @@
+{
+  "decomposition_id": "CML-PDRE-001-PHASE-2.5H-CANDIDATE-005-DECOMPOSITION",
+  "candidate_id": "L1-CANDIDATE-005",
+  "source_candidate_ref": "rdl/research/records/CML-PDRE-001-PHASE-2/future-l1-candidates.json#L1-CANDIDATE-005",
+  "research_level_used": "L0_REUSE",
+  "external_research_performed": false,
+  "sub_questions": [
+    {
+      "sub_question_id": "005-A",
+      "label": "OLD_FACILITY_DEPENDENCY",
+      "question": "What specific conversion stages and dependencies constitute the traditional facility AC conversion chain scoped by PDRE-001B?",
+      "current_repository_evidence": ["The PDRE-001B old-path scope exists as a user-provided research scope.", "No item-level evidence reconstructs the facility conversion chain."],
+      "current_repository_evidence_refs": ["technical-risk/cml-v1.1/pdre/CML-PDRE-001/CASE.json", "technical-risk/cml-v1.1/pdre/CML-PDRE-001/dependency-transfer.json"],
+      "decision_affected": "Whether the old dependency is sufficiently defined to test a path-dependency release claim.",
+      "minimum_missing_evidence": "One authoritative facility architecture record identifying the relevant conversion stages, functions, and dependency boundary."
+    },
+    {
+      "sub_question_id": "005-B",
+      "label": "ALTERNATIVE_ARCHITECTURE",
+      "question": "What bounded centralized 800VDC or SST facility architecture is the alternative path for PDRE-001B?",
+      "current_repository_evidence": ["The alternative path exists as a user-provided scope.", "EV-005 records SST specification and standardization activity but does not establish the full facility architecture."],
+      "current_repository_evidence_refs": ["technical-risk/cml-v1.1/pdre/CML-PDRE-001/CASE.json", "technical-risk/cml-v1.1/pdre/CML-PDRE-001/evidence-index.jsonl#EV-005"],
+      "decision_affected": "Whether the proposed alternative can be represented as a distinct technical path rather than an unbounded concept.",
+      "minimum_missing_evidence": "One authoritative architecture record defining the centralized 800VDC or SST system boundary and conversion path."
+    },
+    {
+      "sub_question_id": "005-C",
+      "label": "DEPENDENCY_TRANSFER",
+      "question": "Which facility-level dependencies would be released, retained, or newly created by the bounded PDRE-001B alternative?",
+      "current_repository_evidence": ["Every PDRE-001B dependency-transfer category remains UNKNOWN in the canonical mapping."],
+      "current_repository_evidence_refs": ["technical-risk/cml-v1.1/pdre/CML-PDRE-001/dependency-transfer.json"],
+      "decision_affected": "Whether a dependency-release claim can be separated from newly created bottlenecks.",
+      "minimum_missing_evidence": "One traceable comparison mapping the defined old architecture to the defined alternative and identifying released, retained, and created dependencies."
+    },
+    {
+      "sub_question_id": "005-D",
+      "label": "QUALIFICATION_READINESS",
+      "question": "What repository-traceable engineering validation or qualification evidence supports a migration-readiness assessment for PDRE-001B?",
+      "current_repository_evidence": ["PDRE-001B readiness is NOT_ASSIGNED.", "The approved packet does not authorize transfer of PDRE-001A readiness."],
+      "current_repository_evidence_refs": ["technical-risk/cml-v1.1/pdre/CML-PDRE-001/CASE.json", "technical-risk/cml-v1.1/pdre/CML-PDRE-001/pdre-record.json"],
+      "decision_affected": "Whether PDRE-001B can move from active subhypothesis to a separately assessed candidate.",
+      "minimum_missing_evidence": "One approved PDRE-001B-specific engineering validation or qualification record with scope, result, provenance, event time, and knowledge time."
+    }
+  ],
+  "minimum_first_question": {
+    "sub_question_id": "005-A",
+    "question": "What specific conversion stages and dependencies constitute the traditional facility AC conversion chain scoped by PDRE-001B?",
+    "selection_basis": "The old dependency must be bounded before release, transfer, or readiness can be evaluated; the minimum evidence unit is one authoritative architecture record.",
+    "authorization_state": "NOT_AUTHORIZED"
+  },
+  "human_decision": "REQUEST_RESCOPING",
+  "final_state": "DECOMPOSED_PENDING_FUTURE_HUMAN_REVIEW",
+  "limitations": [
+    "No sub-question is answered or researched.",
+    "No external search, L1 execution, L2 authorization, or readiness assignment occurred.",
+    "PDRE-001A evidence is not merged into PDRE-001B."
+  ]
+}

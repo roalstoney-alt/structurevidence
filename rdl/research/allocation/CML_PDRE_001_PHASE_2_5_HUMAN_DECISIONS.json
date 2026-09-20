@@ -1,0 +1,92 @@
+{
+  "decision_set_id": "CML-PDRE-001-PHASE-2.5H-HUMAN-DECISIONS",
+  "case_id": "CML-PDRE-001",
+  "baseline_sha": "c690e2a890878056aecc057dc0afafbd3729164f",
+  "machine_allocation_ref": "rdl/research/allocation/CML_PDRE_001_PHASE_2_5_ALLOCATION.json",
+  "candidate_set_ref": "rdl/research/allocation/CML_PDRE_001_PHASE_2_5_CANDIDATES.json",
+  "decision_time": "2026-09-20T09:51:03Z",
+  "decision_authority": "HUMAN",
+  "research_level_used": "L0_REUSE",
+  "external_research_performed": false,
+  "decisions": [
+    {
+      "candidate_id": "L1-CANDIDATE-001",
+      "codex_recommendation": "DEFER_L2_REVIEW",
+      "human_decision": "REQUEST_RESCOPING",
+      "decision_rationale": "Reduce the broad multi-discipline qualification question to one bounded qualification dimension before any future authorization decision.",
+      "authorization_state": "NOT_AUTHORIZED",
+      "authorized_research_level": null,
+      "follow_up_ref": "rdl/research/allocation/CML_PDRE_001_PHASE_2_5H_CANDIDATE_001_RESCOPE.json",
+      "final_state": "RESCOPED_PENDING_FUTURE_HUMAN_REVIEW"
+    },
+    {
+      "candidate_id": "L1-CANDIDATE-002",
+      "codex_recommendation": "L1_VERIFY",
+      "human_decision": "APPROVE_L1",
+      "decision_rationale": "The field-deployment evidence question is very narrow, decision-linked, and bounded by one sufficient evidence unit or bounded-search exhaustion.",
+      "authorization_state": "AUTHORIZED_FOR_FUTURE_EXECUTION",
+      "authorized_research_level": "L1_VERIFY",
+      "follow_up_ref": "rdl/research/authorization/L1-CML-PDRE-001-FIELD-DEPLOYMENT-VERIFY.json",
+      "final_state": "AUTHORIZED_NOT_EXECUTED"
+    },
+    {
+      "candidate_id": "L1-CANDIDATE-003",
+      "codex_recommendation": "DEFER_L2_REVIEW",
+      "human_decision": "DEFER",
+      "decision_rationale": "Independent verification of three separate claims is deferred; existing claims remain source-attributed.",
+      "authorization_state": "NOT_AUTHORIZED",
+      "authorized_research_level": null,
+      "follow_up_ref": null,
+      "final_state": "DEFERRED"
+    },
+    {
+      "candidate_id": "L1-CANDIDATE-004",
+      "codex_recommendation": "DEFER_L2_REVIEW",
+      "human_decision": "DEFER",
+      "decision_rationale": "Supplier, manufacturing, and qualified-capacity research remains multi-source and is deferred.",
+      "authorization_state": "NOT_AUTHORIZED",
+      "authorized_research_level": null,
+      "follow_up_ref": null,
+      "final_state": "DEFERRED"
+    },
+    {
+      "candidate_id": "L1-CANDIDATE-005",
+      "codex_recommendation": "DEFER_L2_REVIEW",
+      "human_decision": "REQUEST_RESCOPING",
+      "decision_rationale": "Decompose the facility-level chain into four sub-questions and identify one minimum first question before future authorization review.",
+      "authorization_state": "NOT_AUTHORIZED",
+      "authorized_research_level": null,
+      "follow_up_ref": "rdl/research/allocation/CML_PDRE_001_PHASE_2_5H_CANDIDATE_005_DECOMPOSITION.json",
+      "final_state": "DECOMPOSED_PENDING_FUTURE_HUMAN_REVIEW"
+    },
+    {
+      "candidate_id": "L1-CANDIDATE-006",
+      "codex_recommendation": "WATCH",
+      "human_decision": "WATCH",
+      "decision_rationale": "Preserve insufficient independence while monitoring whether lineage uncertainty becomes decision-material.",
+      "authorization_state": "NOT_AUTHORIZED",
+      "authorized_research_level": null,
+      "follow_up_ref": null,
+      "final_state": "WATCH"
+    }
+  ],
+  "counts": {
+    "candidate_count": 6,
+    "human_decisions_recorded": 6,
+    "APPROVE_L1": 1,
+    "REQUEST_RESCOPING": 2,
+    "DEFER": 2,
+    "WATCH": 1,
+    "APPROVE_L2": 0,
+    "APPROVE_L3": 0,
+    "AUTHORIZED_L1_COUNT": 1,
+    "AUTHORIZED_L2_COUNT": 0,
+    "AUTHORIZED_L3_COUNT": 0
+  },
+  "semantic_rules": [
+    "CODEX_RECOMMENDATION != HUMAN_DECISION",
+    "Authorization does not imply execution.",
+    "Only Candidate 002 is authorized for future external research.",
+    "Phase 2.5H performs no external research."
+  ]
+}
