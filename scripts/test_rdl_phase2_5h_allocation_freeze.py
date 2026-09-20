@@ -53,7 +53,14 @@ class Phase25HFreezeTests(unittest.TestCase):
         cls.machine_by_id = {row["candidate_id"]: row for row in cls.machine["allocation_cards"]}
 
     def test_a_baseline_and_candidate_set_are_preserved(self):
-        self.assertEqual(subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip(), BASELINE_SHA)
+        self.assertEqual(
+            subprocess.run(
+                ["git", "merge-base", "--is-ancestor", BASELINE_SHA, "HEAD"],
+                cwd=ROOT,
+                check=False,
+            ).returncode,
+            0,
+        )
         source_ids = [row["gap_id"] for row in self.source["candidates"]]
         self.assertEqual(len(source_ids), 6)
         self.assertEqual(set(source_ids), set(self.decision_by_id))

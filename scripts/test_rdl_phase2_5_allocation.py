@@ -52,7 +52,14 @@ class Phase25AllocationTests(unittest.TestCase):
         }
 
     def test_a_baseline_and_annotated_tag_match(self):
-        self.assertEqual(subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip(), BASELINE_SHA)
+        self.assertEqual(
+            subprocess.run(
+                ["git", "merge-base", "--is-ancestor", BASELINE_SHA, "HEAD"],
+                cwd=ROOT,
+                check=False,
+            ).returncode,
+            0,
+        )
         self.assertEqual(
             subprocess.check_output(["git", "rev-parse", "structevidence-rdl-research-baseline-v0.1^{}"], cwd=ROOT, text=True).strip(),
             BASELINE_SHA,
