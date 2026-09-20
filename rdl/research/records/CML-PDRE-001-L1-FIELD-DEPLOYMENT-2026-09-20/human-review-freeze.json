@@ -1,0 +1,59 @@
+{
+  "freeze_id": "L0-HUMAN-REVIEW-FREEZE-L1-CML-PDRE-001",
+  "research_id": "RDL-CML-PDRE-001-L1-FIELD-DEPLOYMENT-2026-09-20",
+  "authorization_id": "L1-CML-PDRE-001-FIELD-DEPLOYMENT-VERIFY",
+  "mode": "L0_REUSE",
+  "frozen_at": "2026-09-20T11:12:14Z",
+  "external_research_performed": false,
+  "codex_research_result": {
+    "result": "QUALIFYING_FIELD_DEPLOYMENT_EVIDENCE_FOUND",
+    "stop_reason": "EVIDENCE_SUFFICIENT",
+    "evidence_id": "L1-EV-CML-PDRE-001-FIELD-DEPLOYMENT-001"
+  },
+  "human_cml_decision": {
+    "review": "ACCEPT",
+    "evidence_class": "FIELD_DEPLOYMENT_EVIDENCE",
+    "evidence_scope": [
+      "ONE_NAMED_OPERATOR",
+      "ONE_NAMED_CAMPUS",
+      "ONE_SST_BASED_10KV_AC_TO_800VDC_ARCHITECTURE",
+      "COMMERCIAL_OPERATION"
+    ],
+    "r5_scope": "ARCHITECTURE_FIELD_DEPLOYED_SINGLE_DEPLOYMENT_EVIDENCE",
+    "decision_before": "R5_FIELD_DEPLOYED_NOT_ESTABLISHED",
+    "decision_after": "R5_ARCHITECTURE_FIELD_DEPLOYMENT_EVIDENCE_ACCEPTED_SINGLE_INSTANCE",
+    "decision_changed": true,
+    "pdre_full_validation": false,
+    "prohibited_interpretations": [
+      "PDRE_CONFIRMED",
+      "INDUSTRY_FIELD_DEPLOYED",
+      "800VDC_SST_MIGRATION_COMPLETE"
+    ]
+  },
+  "time_semantics": {
+    "event_time": "2026-07-02",
+    "knowledge_time": "2026-09-20T10:46:47Z",
+    "event_time_equals_knowledge_time": false
+  },
+  "remaining_uncertainty": {
+    "operating_history": "UNKNOWN",
+    "multi_entity_replication": "UNKNOWN",
+    "independent_third_party_validation": "UNKNOWN",
+    "repeat_procurement": "UNKNOWN",
+    "industry_scale_adoption": "NOT_ESTABLISHED",
+    "pdre_status": "NOT_FULLY_VALIDATED",
+    "automatic_research_tasks_created": false
+  },
+  "cml_boundary": {
+    "canonical_readiness_changed": false,
+    "canonical_case_files_modified": false,
+    "transition_status": "CML_TRANSITION_PENDING_EXISTING_GOVERNANCE",
+    "reason": "The canonical case requires an approved evidence packet for additional facts or readiness changes; this L0 freeze does not bypass that governance."
+  },
+  "research_cost_ref": "rdl/research/records/CML-PDRE-001-L1-FIELD-DEPLOYMENT-2026-09-20/research-capital-observation.json",
+  "l1_status": "CLOSED_AND_FROZEN",
+  "l2_executed": false,
+  "l3_executed": false,
+  "phase_3_started": false,
+  "next_research_authorization": "NONE"
+}

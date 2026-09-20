@@ -1,0 +1,271 @@
+{
+  "core": {
+    "artifact_refs": [
+      "rdl/research/records/CML-PDRE-001-L1-FIELD-DEPLOYMENT-2026-09-20/source-classification.json",
+      "rdl/research/records/CML-PDRE-001-L1-FIELD-DEPLOYMENT-2026-09-20/field-deployment-evidence.json",
+      "rdl/research/records/CML-PDRE-001-L1-FIELD-DEPLOYMENT-2026-09-20/human-review-freeze.json",
+      "rdl/research/records/CML-PDRE-001-L1-FIELD-DEPLOYMENT-2026-09-20/research-capital-observation.json",
+      "docs/upgrade/L1_CML_PDRE_001_FIELD_DEPLOYMENT_VERIFY_REPORT.md"
+    ],
+    "core_version": "STRUCTEVIDENCE_EVIDENCE_CORE_v0.1",
+    "correction_status": "NONE",
+    "created_at": "2026-09-20T10:46:47Z",
+    "domain": "RESEARCH_GOVERNANCE",
+    "effective_at": "2026-07-02T00:00:00Z",
+    "input_hash": "062462d2ef4653ed06dde2257b5311039d562b53a8091b41c2fcc7ffea389d39",
+    "known_at": "2026-09-20T10:46:47Z",
+    "policy_version": "RDL_RESEARCH_RECORD_v0.1",
+    "protocol": "RDL",
+    "record_hash": "e6590a852663d844d25c789aa83bcad737d67cb73e1e7db76741d3e9052223f8",
+    "record_id": "RDL-CML-PDRE-001-L1-FIELD-DEPLOYMENT-2026-09-20",
+    "source_refs": [
+      "rdl/research/authorization/L1-CML-PDRE-001-FIELD-DEPLOYMENT-VERIFY.json",
+      "rdl/research/schema/research-record.schema.json",
+      "rdl/research/validation/validator.py"
+    ],
+    "subject_class": "RDL_RESEARCH_RECORD",
+    "subject_id": "CML-PDRE-001",
+    "supersession_status": "CURRENT",
+    "updated_at": "2026-09-20T11:12:14Z",
+    "verification_status": "L1_OUTCOME_HUMAN_REVIEW_ACCEPTED_AND_FROZEN"
+  },
+  "research_record": {
+    "research_id": "RDL-CML-PDRE-001-L1-FIELD-DEPLOYMENT-2026-09-20",
+    "schema_version": "RDL_RESEARCH_RECORD_v0.1",
+    "case_id": "CML-PDRE-001",
+    "pdre_id": "PDRE-001A_OR_PDRB_RELEVANT_ARCHITECTURE",
+    "customer_case_id": null,
+    "research_level": "L1_VERIFY",
+    "research_class": "INVENTORY_RESEARCH",
+    "initiated_by": "HUMAN",
+    "started_at": "2026-09-20T10:38:00Z",
+    "completed_at": "2026-09-20T10:46:47Z",
+    "decision_to_change": "Determine whether a dated, independently attributable public record makes R5 field-deployment evidence available for CML review without automatically mutating CML state.",
+    "research_question": "Does a dated, independently attributable public record exist showing actual production deployment or field operation relevant to CML-PDRE-001 800VDC / SST AI data-center power architecture?",
+    "before_state_ref": "technical-risk/cml-v1.1/pdre/CML-PDRE-001/CASE.json",
+    "after_state_ref": "rdl/research/records/CML-PDRE-001-L1-FIELD-DEPLOYMENT-2026-09-20/human-review-freeze.json",
+    "known_before": [
+      "PDRE-001A remains at R3 SAMPLE_BENCH_TESTED.",
+      "R5 FIELD_DEPLOYED is not established in the canonical CML case.",
+      "Product announcements, demonstrations, qualification, and planned deployment do not satisfy the authorized question."
+    ],
+    "unknowns_before": [
+      "Whether a dated, attributable public record establishes actual production deployment or field operation relevant to the case."
+    ],
+    "minimum_missing_evidence": [
+      "One dated, independently attributable production-deployment or field-operation record for a materially relevant 800VDC or SST data-center architecture or subsystem in its intended operational environment."
+    ],
+    "hypothesis_before": "A qualifying field-operation record may exist but has not been verified within the case evidence.",
+    "hypothesis_after": "A named data-center operator published a dated record stating that a 10kV-to-800VDC SST system entered commercial operation at a named cloud-computing campus.",
+    "readiness_before": "R3_PDRE-001A_ONLY; PDRE-001B_NOT_ASSIGNED",
+    "readiness_after": "UNCHANGED_PENDING_HUMAN_CML_REVIEW: R3_PDRE-001A_ONLY; PDRE-001B_NOT_ASSIGNED",
+    "decision_before": "R5_FIELD_DEPLOYED_NOT_ESTABLISHED",
+    "decision_after": "R5_ARCHITECTURE_FIELD_DEPLOYMENT_EVIDENCE_ACCEPTED_SINGLE_INSTANCE",
+    "decision_changed": true,
+    "decision_change_reason": "The bounded search found an attributable operator record with a date, named operational site, materially relevant SST-to-800VDC architecture, and explicit commercial operation language; human CML review accepted it only as single-instance architecture field-deployment evidence.",
+    "research_actions": [
+      {
+        "action_id": "L1-FIELD-DEPLOYMENT-ACTION-001",
+        "action_type": "QUERY",
+        "started_at": "2026-09-20T10:38:00Z",
+        "completed_at": "2026-09-20T10:41:00Z",
+        "research_level": "L1_VERIFY",
+        "external_research": true,
+        "input_refs": [
+          "rdl/research/authorization/L1-CML-PDRE-001-FIELD-DEPLOYMENT-VERIFY.json"
+        ],
+        "output_refs": [
+          "rdl/research/records/CML-PDRE-001-L1-FIELD-DEPLOYMENT-2026-09-20/source-classification.json"
+        ],
+        "outcome": "Four narrow queries surfaced one apparent qualifying operator record and eight non-qualifying or counter-evidence leads.",
+        "limitations": [
+          "Search stopped when the first qualifying record was verified; this is not an exhaustive market survey."
+        ]
+      },
+      {
+        "action_id": "L1-FIELD-DEPLOYMENT-ACTION-002",
+        "action_type": "SOURCE_REVIEW",
+        "started_at": "2026-09-20T10:41:00Z",
+        "completed_at": "2026-09-20T10:44:00Z",
+        "research_level": "L1_VERIFY",
+        "external_research": true,
+        "input_refs": [
+          "https://www.chindatagroup.com/media/news/533.html"
+        ],
+        "output_refs": [
+          "rdl/research/records/CML-PDRE-001-L1-FIELD-DEPLOYMENT-2026-09-20/field-deployment-evidence.json"
+        ],
+        "outcome": "The primary operator publication met the authorized minimum evidence threshold for field-operation evidence availability.",
+        "limitations": [
+          "Performance claims were not independently validated and the record remains pending human/CML review."
+        ]
+      },
+      {
+        "action_id": "L1-FIELD-DEPLOYMENT-ACTION-003",
+        "action_type": "NORMALIZATION",
+        "started_at": "2026-09-20T10:44:00Z",
+        "completed_at": "2026-09-20T10:46:47Z",
+        "research_level": "L1_VERIFY",
+        "external_research": false,
+        "input_refs": [
+          "rdl/research/records/CML-PDRE-001-L1-FIELD-DEPLOYMENT-2026-09-20/source-classification.json",
+          "rdl/research/records/CML-PDRE-001-L1-FIELD-DEPLOYMENT-2026-09-20/field-deployment-evidence.json"
+        ],
+        "output_refs": [
+          "rdl/research/records/CML-PDRE-001-L1-FIELD-DEPLOYMENT-2026-09-20/research-record.json",
+          "docs/upgrade/L1_CML_PDRE_001_FIELD_DEPLOYMENT_VERIFY_REPORT.md"
+        ],
+        "outcome": "Qualifying and rejected leads were preserved as reusable research capital without changing canonical CML state.",
+        "limitations": [
+          "RDL has CML_REFERENCE_ONLY authority and cannot assign R5."
+        ]
+      }
+    ],
+    "query_refs": [
+      "L1-QUERY-001",
+      "L1-QUERY-002",
+      "L1-QUERY-003",
+      "L1-QUERY-004"
+    ],
+    "source_refs_checked": [
+      "L1-SRC-001",
+      "L1-SRC-002",
+      "L1-SRC-003",
+      "L1-SRC-004",
+      "L1-SRC-005",
+      "L1-SRC-006",
+      "L1-SRC-007",
+      "L1-SRC-008",
+      "L1-SRC-009"
+    ],
+    "source_refs_used": [
+      "L1-SRC-001"
+    ],
+    "source_refs_rejected": [
+      "L1-SRC-002",
+      "L1-SRC-003",
+      "L1-SRC-004",
+      "L1-SRC-005",
+      "L1-SRC-006",
+      "L1-SRC-007",
+      "L1-SRC-008",
+      "L1-SRC-009"
+    ],
+    "new_evidence_refs": [
+      "L1-EV-CML-PDRE-001-FIELD-DEPLOYMENT-001"
+    ],
+    "counter_evidence_refs": [
+      "L1-SRC-004",
+      "L1-SRC-005"
+    ],
+    "duplicate_evidence_refs": [],
+    "unknowns_resolved": [
+      "A dated attributable public field-operation record relevant to the 800VDC/SST case exists."
+    ],
+    "unknowns_remaining": [
+      "Whether human/CML review will accept the record for a canonical readiness transition.",
+      "Independent validation of the operator's performance and efficiency claims.",
+      "Operating-history duration and reliability evidence.",
+      "Multi-entity replication.",
+      "Whether the deployment maps to PDRE-001A, PDRE-001B, or a separately scoped materially relevant architecture for canonical state purposes."
+    ],
+    "reusable_asset_refs": [
+      "rdl/research/records/CML-PDRE-001-L1-FIELD-DEPLOYMENT-2026-09-20/source-classification.json",
+      "rdl/research/records/CML-PDRE-001-L1-FIELD-DEPLOYMENT-2026-09-20/field-deployment-evidence.json",
+      "docs/upgrade/L1_CML_PDRE_001_FIELD_DEPLOYMENT_VERIFY_REPORT.md"
+    ],
+    "stop_reason": "EVIDENCE_SUFFICIENT",
+    "human_review_required": true,
+    "authorization": {
+      "status": "AUTHORIZED",
+      "authorization_ref": "rdl/research/authorization/L1-CML-PDRE-001-FIELD-DEPLOYMENT-VERIFY.json",
+      "authority": "HUMAN"
+    },
+    "telemetry": {
+      "model_calls": {"status": "UNKNOWN", "value": null, "source_ref": null},
+      "tool_calls": {"status": "UNKNOWN", "value": null, "source_ref": null},
+      "estimated_tokens": {"status": "UNKNOWN", "value": null, "source_ref": null},
+      "observed_input_tokens": {"status": "UNKNOWN", "value": null, "source_ref": null},
+      "observed_output_tokens": {"status": "UNKNOWN", "value": null, "source_ref": null},
+      "estimated_model_cost": {"status": "UNKNOWN", "value": null, "source_ref": null},
+      "observed_model_cost": {"status": "UNKNOWN", "value": null, "source_ref": null},
+      "data_cost": {"status": "UNKNOWN", "value": null, "source_ref": null},
+      "human_minutes": {"status": "UNKNOWN", "value": null, "source_ref": null},
+      "engineering_minutes": {"status": "UNKNOWN", "value": null, "source_ref": null},
+      "currency": "UNKNOWN",
+      "cost_source": "UNKNOWN",
+      "cost_limit": {"status": "UNKNOWN", "value": null, "source_ref": null}
+    },
+    "lookup_keys": {
+      "claim_refs": [
+        "L1-EV-CML-PDRE-001-FIELD-DEPLOYMENT-001"
+      ],
+      "hypothesis_refs": [
+        "L1-CANDIDATE-002"
+      ],
+      "entity_refs": [
+        "CHINDATA",
+        "SANGYUAN_CLOUD_COMPUTING_CAMPUS"
+      ],
+      "component_refs": [
+        "SOLID_STATE_TRANSFORMER",
+        "800VDC_POWER_SYSTEM"
+      ],
+      "standard_refs": [],
+      "migration_path_refs": [
+        "CML-PDRE-001",
+        "PDRE-001A",
+        "PDRE-001B"
+      ]
+    },
+    "boundary_refs": {
+      "evidence_core_refs": [
+        "rdl/research/records/CML-PDRE-001-L1-FIELD-DEPLOYMENT-2026-09-20/field-deployment-evidence.json"
+      ],
+      "cml_state_refs": [
+        "technical-risk/cml-v1.1/pdre/CML-PDRE-001/CASE.json",
+        "technical-risk/cml-v1.1/pdre/CML-PDRE-001/pdre-record.json"
+      ],
+      "timeline_refs": [
+        "technical-risk/cml-v1.1/pdre/CML-PDRE-001/timeline.jsonl",
+        "technical-risk/cml-v1.1/pdre/CML-PDRE-001/state-history.jsonl"
+      ],
+      "rtp_refs": [],
+      "gdr_authorization_refs": [
+        "rdl/research/authorization/L1-CML-PDRE-001-FIELD-DEPLOYMENT-VERIFY.json"
+      ],
+      "outcome_refs": [
+        "rdl/research/records/CML-PDRE-001-L1-FIELD-DEPLOYMENT-2026-09-20/source-classification.json",
+        "rdl/research/records/CML-PDRE-001-L1-FIELD-DEPLOYMENT-2026-09-20/human-review-freeze.json",
+        "rdl/research/records/CML-PDRE-001-L1-FIELD-DEPLOYMENT-2026-09-20/research-capital-observation.json"
+      ]
+    },
+    "structural_interpretation_authority": "CML_REFERENCE_ONLY",
+    "revision_history": [
+      {
+        "revision_id": "RDL-CML-PDRE-001-L1-FIELD-DEPLOYMENT-2026-09-20-v0.1",
+        "created_at": "2026-09-20T10:46:47Z",
+        "supersedes": null,
+        "change_summary": "Initial bounded L1 verification; qualifying field-operation evidence found and preserved pending human/CML review.",
+        "preserves_original": true
+      },
+      {
+        "revision_id": "RDL-CML-PDRE-001-L1-FIELD-DEPLOYMENT-2026-09-20-v0.2",
+        "created_at": "2026-09-20T11:12:14Z",
+        "supersedes": "RDL-CML-PDRE-001-L1-FIELD-DEPLOYMENT-2026-09-20-v0.1",
+        "change_summary": "Human CML review accepted and froze the qualifying record as single-instance architecture field-deployment evidence; canonical readiness remains unchanged pending existing governance.",
+        "preserves_original": true
+      }
+    ],
+    "notes": [
+      "Primary result: QUALIFYING_FIELD_DEPLOYMENT_EVIDENCE_FOUND.",
+      "Search stopped after the first qualifying deep source review as required by the authorization.",
+      "EVENT_TIME and KNOWLEDGE_TIME remain separate.",
+      "The canonical CML case, readiness, timeline, and state history were not modified.",
+      "CODEX_RESEARCH_RESULT remains QUALIFYING_FIELD_DEPLOYMENT_EVIDENCE_FOUND; HUMAN_CML_DECISION is separately frozen as ACCEPT.",
+      "Canonical transition status is CML_TRANSITION_PENDING_EXISTING_GOVERNANCE because the case requires an approved evidence packet for additional readiness changes.",
+      "Observed account credit delta is preserved as raw telemetry and is not converted to USD or a research score.",
+      "Candidate 001, Candidate 005, L2, L3, and Phase 3 were not executed."
+    ]
+  }
+}

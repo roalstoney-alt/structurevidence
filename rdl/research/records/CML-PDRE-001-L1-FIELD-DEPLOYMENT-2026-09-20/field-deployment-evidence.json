@@ -1,0 +1,55 @@
+{
+  "core": {
+    "artifact_refs": [
+      "rdl/research/records/CML-PDRE-001-L1-FIELD-DEPLOYMENT-2026-09-20/source-classification.json",
+      "rdl/research/records/CML-PDRE-001-L1-FIELD-DEPLOYMENT-2026-09-20/human-review-freeze.json"
+    ],
+    "core_version": "STRUCTEVIDENCE_EVIDENCE_CORE_v0.1",
+    "correction_status": "NONE",
+    "created_at": "2026-09-20T10:46:47Z",
+    "domain": "TECHNICAL_RISK",
+    "effective_at": "2026-07-02T00:00:00Z",
+    "input_hash": "137815a88c1b239f5e882ee76549f4973afde9c6967484bf49ccd0bc87905153",
+    "known_at": "2026-09-20T10:46:47Z",
+    "policy_version": "CML_v1.1_RDL_L1_VERIFY",
+    "protocol": "RDL",
+    "record_hash": "122f867611e3287ad133a0430133da6112dc0f2b0365b1265ac6e159b4fb1482",
+    "record_id": "L1-EV-CML-PDRE-001-FIELD-DEPLOYMENT-001",
+    "source_refs": [
+      "https://www.chindatagroup.com/media/news/533.html"
+    ],
+    "subject_class": "FIELD_DEPLOYMENT_EVIDENCE",
+    "subject_id": "CML-PDRE-001",
+    "supersession_status": "CURRENT",
+    "updated_at": "2026-09-20T11:12:14Z",
+    "verification_status": "HUMAN_CML_REVIEW_ACCEPTED_SINGLE_INSTANCE"
+  },
+  "evidence": {
+    "evidence_id": "L1-EV-CML-PDRE-001-FIELD-DEPLOYMENT-001",
+    "source_id": "L1-SRC-001",
+    "source_class": "NAMED_DATA_CENTER_OPERATOR_PRIMARY_PUBLICATION",
+    "publisher": "Chindata",
+    "title": "Chindata Commences Commercial Operation of an SST-Based DC Power System for Hyperscale Data Centers",
+    "url": "https://www.chindatagroup.com/media/news/533.html",
+    "publication_time": "2026-07-02",
+    "event_time": "2026-07-02",
+    "event_time_precision": "DAY",
+    "knowledge_time": "2026-09-20T10:46:47Z",
+    "classification": "QUALIFYING_EVIDENCE",
+    "qualifying_state": "FIELD_OPERATION",
+    "operational_environment": "Chindata Sangyuan Cloud Computing Campus near Beijing",
+    "architecture": "10kV utility AC to 800VDC using an SST-based intelligent DC power system",
+    "claim_summary": [
+      "The named operator reported commencement of commercial operation at a named cloud-computing campus.",
+      "The system uses a 10kV-to-800VDC SST architecture for hyperscale AI infrastructure.",
+      "The operator reported that the project entered commercial operation after 34 performance and safety validation tests."
+    ],
+    "decision_use": "Makes R5 field-deployment evidence available for CML review; does not itself mutate readiness.",
+    "limitations": [
+      "The record is an attributable operator publication, not an independent third-party audit.",
+      "The L1 review did not independently verify performance or efficiency figures.",
+      "The L1 result does not establish operating history, multi-entity replication, or PDRE-001A application qualification.",
+      "Human/CML review is required before any CML state change."
+    ]
+  }
+}
