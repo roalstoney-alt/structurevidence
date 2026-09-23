@@ -26,7 +26,7 @@ function fallbackLink(form, payload, status) {
   const subject = form.dataset.subject || "StructureEvidence scope request";
   const fields = Object.entries(payload).filter(([, value]) => value).map(([key, value]) => `${key.replaceAll("_", " ").toUpperCase()}: ${value}`);
   const link = document.createElement("a");
-  link.href = `mailto:john.success1688@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(fields.join("\n\n"))}`;
+  link.href = `mailto:support@structevidence.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(fields.join("\n\n"))}`;
   link.textContent = "Use email fallback";
   status.replaceChildren(document.createTextNode("The secure request service is unavailable. Nothing was recorded. "), link, document.createTextNode(" and clearly identify the message as a fallback submission."));
 }

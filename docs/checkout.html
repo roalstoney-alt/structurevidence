@@ -22,10 +22,10 @@
       <div class="context-grid"><div><span>Product</span><strong data-product-name>Research service</strong></div><div><span>Subject</span><strong data-subject>To be confirmed</strong></div><div><span>Seller</span><strong>Structevidence.com</strong></div><div><span>Contact</span><strong>John Success</strong></div></div>
       <div class="address-box"><span class="address-label">TRON receiving address</span><div class="address-row"><code data-wallet-address>TQxjZ97Sgpdd685oYH2BAK2ik3J7CCRQRw</code><button class="copy-button" type="button" data-copy-address>Copy address</button></div></div>
       <ul class="payment-warnings"><li>Send only USDT using the TRON (TRC20) network.</li><li>Pay only the amount confirmed in your written quote or invoice.</li><li>Do not use Ethereum, BNB Smart Chain, or another network for this address.</li><li>Displaying this page or scanning the QR code does not create or confirm an order.</li></ul>
-      <div class="submit-row"><a class="monitor-command" data-whatsapp href="https://wa.me/85266629951">Submit TXID by WhatsApp</a><a class="monitor-command secondary" data-email href="mailto:john.success1688@gmail.com">Submit TXID by email</a></div>
+      <div class="submit-row"><a class="monitor-command" data-whatsapp href="https://wa.me/85266629951">Submit TXID by WhatsApp</a><a class="monitor-command secondary" data-email href="mailto:support@structevidence.com">Submit TXID by email</a></div>
     </div>
   </section>
-  <section class="after-payment"><div><p class="monitor-kicker">After payment</p><h2>Send the transaction ID for verification.</h2></div><div><p>Include the transaction ID, selected product, and research subject. We verify the receiving address, USDT token contract, amount, and on-chain status before fulfillment. Payment does not bypass report freshness, review, or delivery authorization gates.</p><div class="contact-lines"><a href="https://wa.me/85266629951">WhatsApp: +852 6662 9951</a><a href="mailto:john.success1688@gmail.com">john.success1688@gmail.com</a><span>Hong Kong</span></div></div></section>
+  <section class="after-payment"><div><p class="monitor-kicker">After payment</p><h2>Send the transaction ID for verification.</h2></div><div><p>Include the transaction ID, selected product, and research subject. We verify the receiving address, USDT token contract, amount, and on-chain status before fulfillment. Payment does not bypass report freshness, review, or delivery authorization gates.</p><div class="contact-lines"><a href="https://wa.me/85266629951">WhatsApp: +852 6662 9951</a><a href="mailto:support@structevidence.com">support@structevidence.com</a><span>Hong Kong</span></div></div></section>
   <section class="checkout-legal">By proceeding, you acknowledge the <a href="terms-of-sale.html">Terms of Sale</a>, <a href="refund-policy.html">Refund Policy</a>, and <a href="privacy.html">Privacy boundary</a>. StructEvidence does not request wallet private keys or seed phrases.</section>
 </main>
 <footer class="monitor-footer checkout-footer"><strong>StructEvidence</strong><a href="customize.html">Products</a><a href="enterprise.html">Contact Us</a></footer>
@@ -40,7 +40,7 @@
   document.querySelector("[data-subject]").textContent = subject ? subject.toUpperCase() : "To be confirmed";
   const message = `Hello John, I am submitting a USDT-TRC20 transaction for ${productName}${subject ? ` / ${subject.toUpperCase()}` : ""}. TXID: `;
   document.querySelector("[data-whatsapp]").href = `https://wa.me/85266629951?text=${encodeURIComponent(message)}`;
-  document.querySelector("[data-email]").href = `mailto:john.success1688@gmail.com?subject=${encodeURIComponent("StructEvidence payment verification")}&body=${encodeURIComponent(message)}`;
+  document.querySelector("[data-email]").href = `mailto:support@structevidence.com?subject=${encodeURIComponent("StructEvidence payment verification")}&body=${encodeURIComponent(message)}`;
   document.querySelector("[data-copy-address]").addEventListener("click", async (event) => {
     await navigator.clipboard.writeText(document.querySelector("[data-wallet-address]").textContent);
     event.currentTarget.textContent = "Copied";

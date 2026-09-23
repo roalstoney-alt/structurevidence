@@ -122,7 +122,7 @@ def check_configs_and_schemas() -> None:
         fail("manual service contact status missing")
     if contact.get("company_name") != "Structevidence.com" or contact.get("contact_person") != "John Success":
         fail("seller contact identity mismatch")
-    if contact.get("whatsapp") != "+85266629951" or contact.get("sales_email") != "john.success1688@gmail.com":
+    if contact.get("whatsapp") != "+85266629951" or contact.get("sales_email") != "support@structevidence.com":
         fail("public contact channel mismatch")
     if payment.get("payment_enabled") is not True or payment.get("primary_payment_method") != "USDT_TRC20":
         fail("manual USDT payment channel is not active")
