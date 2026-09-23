@@ -1,0 +1,41 @@
+{
+  "record_id": "CML-PDRE-001-PUBLICATION-2026-09-23",
+  "record_kind": "PUBLICATION_CONTROL_RECORD",
+  "case_id": "CML-PDRE-001",
+  "canonical_case_ref": "technical-risk/cml-v1.1/pdre/CML-PDRE-001/CASE.json",
+  "canonical_pdre_ref": "technical-risk/cml-v1.1/pdre/CML-PDRE-001/pdre-record.json",
+  "decision": {
+    "publication_status": "PUBLICATION_APPROVED",
+    "public_projection_status": "PUBLIC_PROJECTION_ACTIVE",
+    "decision_authority": "HUMAN",
+    "decision_date": "2026-09-23",
+    "date_precision": "DAY",
+    "public_url": "https://structurevidence.org/cases/800vdc/"
+  },
+  "projection_scope": {
+    "approved_public_surface": "800V DC Live Evidence Case",
+    "approved_claim_boundary": "ARCHITECTURE_FIELD_DEPLOYED_SINGLE_DEPLOYMENT_EVIDENCE",
+    "pdre_full_validation": false,
+    "single_deployment_is_not_industry_adoption": true,
+    "vendor_claims_must_remain_attributed": true,
+    "counter_evidence_must_remain_visible": true,
+    "unknown_states_must_remain_preserved": true
+  },
+  "canonical_state_boundary": {
+    "case_publication_status_legacy_value": "PRIVATE_DRAFT",
+    "research_status_mutated": false,
+    "pdre_status_mutated": false,
+    "migration_readiness_mutated": false,
+    "historical_evidence_mutated": false,
+    "note": "This record authorizes a public projection of the approved case evidence without rewriting the historical research state or canonical evidence history."
+  },
+  "publication_basis": {
+    "human_review": "APPROVED_TO_REMAIN_PUBLIC",
+    "public_claims_reviewed": true,
+    "single_instance_boundary_preserved": true,
+    "vendor_claims_attributed": true,
+    "counter_evidence_visible": true,
+    "unknown_states_preserved": true,
+    "rollback_required": false
+  }
+}
