@@ -17,7 +17,7 @@ class PaidReadinessUITest(unittest.TestCase):
 
     def test_home_ctas(self):
         text = ROUTES[0].read_text()
-        self.assertIn('href="/context/">Start with a decision', text)
+        self.assertIn('href="https://structevidence.com/context/">Start with a decision', text)
         self.assertIn('href="/cases/800vdc/">See the 800V DC evidence case', text)
 
     def test_approved_800v_state(self):

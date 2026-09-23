@@ -3,6 +3,7 @@
 *.pyc
 __pycache__/
 node_modules/
+.pnpm-store/
 .wrangler/
 .env
 .env.*

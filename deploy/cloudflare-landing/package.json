@@ -1,0 +1,15 @@
+{
+  "name": "structurevidence-customer-intake-worker",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "check": "wrangler deploy --dry-run --outdir dist"
+  },
+  "dependencies": {
+    "jose": "^6.1.0"
+  },
+  "devDependencies": {
+    "wrangler": "^4.38.0"
+  }
+}
