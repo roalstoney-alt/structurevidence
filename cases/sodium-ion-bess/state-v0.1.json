@@ -1,0 +1,80 @@
+{
+  "case_id": "SE-BESS-SODIUM-001",
+  "version": "0.1",
+  "title": "Sodium-Ion Energy Storage Commercialization State Map",
+  "scope": "Stationary battery energy storage systems only; vehicle, starter-battery, and solid-state battery claims are excluded.",
+  "decision_question": "Has sodium-ion stationary storage crossed from product and production claims into a procurable, delivered, commissioned technology with public field-operating evidence?",
+  "knowledge_cutoff": "2026-09-24",
+  "current_state": {
+    "product_announced": "SUPPORTED",
+    "supply_cooperation_agreement": "SUPPORTED",
+    "production_readiness": "VERIFICATION_REQUIRED",
+    "customer_batch_delivery": "NOT_ESTABLISHED",
+    "named_commissioned_site": "NOT_ESTABLISHED",
+    "independent_field_performance": "NOT_ESTABLISHED",
+    "long_operating_history": "UNKNOWN",
+    "lifecycle_cost_advantage_over_lfp": "NOT_ESTABLISHED",
+    "universal_lfp_replacement": "NOT_ESTABLISHED"
+  },
+  "records": [
+    {
+      "record_id": "SE-BESS-SODIUM-001-EV-001",
+      "event_date": "2021-07-29",
+      "knowledge_date": "2026-09-24",
+      "publisher": "CATL",
+      "source_type": "manufacturer announcement",
+      "url": "https://www.catl.com/en/news/665.html",
+      "accepted_support": "Sodium-ion technology and a planned industrial-chain target were publicly announced.",
+      "does_not_support": "Stationary BESS customer delivery, commissioning, or field-operating history."
+    },
+    {
+      "record_id": "SE-BESS-SODIUM-001-EV-002",
+      "event_date": "2025-04-21",
+      "knowledge_date": "2026-09-24",
+      "publisher": "CATL",
+      "source_type": "manufacturer product launch",
+      "url": "https://www.catl.com/en/news/6401.html",
+      "accepted_support": "Naxtra sodium-ion products were publicly launched with manufacturer-attributed mass-production claims.",
+      "does_not_support": "A delivered or commissioned stationary storage system."
+    },
+    {
+      "record_id": "SE-BESS-SODIUM-001-EV-003",
+      "event_date": "2026-04-27",
+      "knowledge_date": "2026-09-24",
+      "publisher": "CATL and HyperStrong",
+      "source_type": "manufacturer and counterparty announcements",
+      "url": "https://www.catl.com/en/news/6812.html",
+      "corroborating_url": "https://www.hyperstrong.com/en/news/company-news/95",
+      "accepted_support": "Two counterparties publicly described a three-year 60 GWh sodium-ion energy-storage cooperation agreement.",
+      "does_not_support": "Shipment, customer acceptance, commissioning, grid connection, or operating performance."
+    },
+    {
+      "record_id": "SE-BESS-SODIUM-001-EV-004",
+      "event_date": "2026-06-22",
+      "knowledge_date": "2026-09-24",
+      "publisher": "CATL",
+      "source_type": "manufacturer product launch",
+      "url": "https://www.catl.com/en/news/6861.html",
+      "accepted_support": "TENER Sodium was publicly launched as a stationary BESS product and future delivery milestones were stated.",
+      "does_not_support": "Completed customer delivery or a named commissioned customer site as of the knowledge cutoff. The phrase field-validated remains source-attributed."
+    },
+    {
+      "record_id": "SE-BESS-SODIUM-001-EV-005",
+      "event_date": "2026-08-25",
+      "knowledge_date": "2026-09-24",
+      "publisher": "CATL",
+      "source_type": "manufacturer event announcement",
+      "url": "https://www.catl.com/en/news/6977.html",
+      "accepted_support": "TENER Sodium was publicly showcased and a Brazil market partnership was announced.",
+      "does_not_support": "A named commissioned sodium-ion BESS or public field-performance dataset."
+    }
+  ],
+  "next_transition_evidence": [
+    "Named customer shipment and acceptance record",
+    "Named site commissioning or grid-connection record",
+    "Dated operating history tied to that system",
+    "Independent performance or safety validation",
+    "Repeat procurement or multi-operator replication"
+  ],
+  "update_rule": "New evidence is appended with event time and knowledge time. A state changes only when the new record meets the stated threshold; previous records remain visible and may be superseded, not overwritten."
+}

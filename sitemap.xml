@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url><loc>https://structurevidence.org/</loc></url>
+<url><loc>https://structurevidence.org/cases/</loc></url>
 <url><loc>https://structurevidence.org/cases/800vdc/</loc></url>
+<url><loc>https://structurevidence.org/cases/sodium-ion-bess/</loc></url>
 <url><loc>https://structurevidence.org/verify/</loc></url>
 <url><loc>https://structurevidence.org/decision-pack/</loc></url>
 <url><loc>https://structurevidence.org/context/</loc></url>
