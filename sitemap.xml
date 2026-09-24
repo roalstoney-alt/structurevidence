@@ -1,28 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://structurevidence.org/</loc></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<url><loc>https://structurevidence.org/</loc><xhtml:link rel="alternate" hreflang="x-default" href="https://structurevidence.org/"/><xhtml:link rel="alternate" hreflang="en" href="https://structurevidence.org/en/"/><xhtml:link rel="alternate" hreflang="zh-CN" href="https://structurevidence.org/zh-cn/"/><xhtml:link rel="alternate" hreflang="es" href="https://structurevidence.org/es/"/></url>
+<url><loc>https://structurevidence.org/en/</loc><xhtml:link rel="alternate" hreflang="x-default" href="https://structurevidence.org/"/><xhtml:link rel="alternate" hreflang="en" href="https://structurevidence.org/en/"/><xhtml:link rel="alternate" hreflang="zh-CN" href="https://structurevidence.org/zh-cn/"/><xhtml:link rel="alternate" hreflang="es" href="https://structurevidence.org/es/"/></url>
+<url><loc>https://structurevidence.org/zh-cn/</loc><xhtml:link rel="alternate" hreflang="x-default" href="https://structurevidence.org/"/><xhtml:link rel="alternate" hreflang="en" href="https://structurevidence.org/en/"/><xhtml:link rel="alternate" hreflang="zh-CN" href="https://structurevidence.org/zh-cn/"/><xhtml:link rel="alternate" hreflang="es" href="https://structurevidence.org/es/"/></url>
+<url><loc>https://structurevidence.org/es/</loc><xhtml:link rel="alternate" hreflang="x-default" href="https://structurevidence.org/"/><xhtml:link rel="alternate" hreflang="en" href="https://structurevidence.org/en/"/><xhtml:link rel="alternate" hreflang="zh-CN" href="https://structurevidence.org/zh-cn/"/><xhtml:link rel="alternate" hreflang="es" href="https://structurevidence.org/es/"/></url>
 <url><loc>https://structurevidence.org/cases/</loc></url>
 <url><loc>https://structurevidence.org/cases/800vdc/</loc></url>
 <url><loc>https://structurevidence.org/cases/sodium-ion-bess/</loc></url>
 <url><loc>https://structurevidence.org/verify/</loc></url>
 <url><loc>https://structurevidence.org/decision-pack/</loc></url>
 <url><loc>https://structurevidence.org/context/</loc></url>
-  <url><loc>https://structurevidence.org/monitor.html?subject=bnb</loc></url>
-  <url><loc>https://structurevidence.org/reports.html</loc></url>
-  <url><loc>https://structurevidence.org/customize.html</loc></url>
-  <url><loc>https://structurevidence.org/checkout.html</loc></url>
-  <url><loc>https://structurevidence.org/enterprise.html</loc></url>
-  <url><loc>https://structurevidence.org/about.html</loc></url>
-  <url><loc>https://structurevidence.org/terms.html</loc></url>
-  <url><loc>https://structurevidence.org/terms-of-sale.html</loc></url>
-  <url><loc>https://structurevidence.org/refund-policy.html</loc></url>
-  <url><loc>https://structurevidence.org/privacy.html</loc></url>
-  <url><loc>https://structurevidence.org/technical-risk/</loc></url>
-  <url><loc>https://structurevidence.org/technical-risk/search/</loc></url>
-  <url><loc>https://structurevidence.org/technical-risk/method/</loc></url>
-  <url><loc>https://structurevidence.org/technical-risk/request-analysis/</loc></url>
-  <url><loc>https://structurevidence.org/technical-risk/record/amphenol-10081811-101-07lf/</loc></url>
-  <url><loc>https://structurevidence.org/technical-risk/record/nxp-radio-power-2026/</loc></url>
-  <url><loc>https://structurevidence.org/technical-risk/record/murata-mymgm5r012ela5rnd/</loc></url>
-  <url><loc>https://structurevidence.org/technical-risk/record/amphenol-rf-095-725-134-006/</loc></url>
+<url><loc>https://structurevidence.org/method.html</loc></url>
+<url><loc>https://structurevidence.org/privacy.html</loc></url>
+<url><loc>https://structurevidence.org/terms-of-sale.html</loc></url>
+<url><loc>https://structurevidence.org/technical-risk/</loc></url>
+<url><loc>https://structurevidence.org/technical-risk/search/</loc></url>
+<url><loc>https://structurevidence.org/technical-risk/method/</loc></url>
+<url><loc>https://structurevidence.org/technical-risk/request-analysis/</loc></url>
 </urlset>
