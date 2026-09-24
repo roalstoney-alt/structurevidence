@@ -17,8 +17,57 @@ const pricingBody = `<section class="page-hero"><p class="kicker">Pricing</p><h1
 
 const termsBody = `<section class="page-hero"><p class="kicker">Terms</p><h1>Commercial service boundary.</h1><p class="lead">MATRIX ASIA PACIFIC LIMITED provides manually scoped StructureEvidence research services. Submission is not an engagement or research authorization.</p></section><section><div class="detail-grid"><article><h3>Written scope</h3><p>The accepted contract or scope controls the question, exclusions, responsible researcher, output, cut-off timestamp, quote, invoice, and customer-data boundary.</p></article><article><h3>Evidence state</h3><p>Payment does not determine a finding. Results may remain NOT ESTABLISHED, UNKNOWN, or VERIFICATION REQUIRED.</p></article><article><h3>Customer responsibility</h3><p>Customers remain responsible for engineering, legal, financial, safety, procurement, and qualification decisions.</p></article></div></section><section><div class="section-head"><p class="kicker">Evidence-cycle terms</p><h2>Dated delivery, no included revision rounds.</h2></div><p>Each engagement covers evidence available and accepted up to the explicit cut-off timestamp stated for that delivery. Evidence appearing later is outside the completed scope and requires a new paid collection cycle.</p><p>When a subsequent service cycle is purchased, qualifying new evidence is incorporated and any prior state that has become superseded is corrected in that cycle. This does not constitute continuous monitoring or a free revision obligation.</p></section><section><div class="section-head"><p class="kicker">Cancellation, refund, and rush</p><h2>Agreed before work begins.</h2></div><p>After research begins, fees are generally non-refundable because research capacity and computational or third-party costs are consumed. Rush handling costs USD 399 per request and does not bypass evidence, privacy, or authorization controls.</p></section><section class="final"><h2>Questions about an engagement?</h2><a class="button" href="mailto:support@structevidence.com">Contact support</a></section>`;
 
+
+const localizeChrome = (html, locale) => {
+  if (locale === "zh-CN") return html
+    .replace('<html lang="en">','<html lang="zh-CN">')
+    .replace('>Skip to content<','>跳到正文<')
+    .replace('>Verify a Claim<','>验证判断<')
+    .replace('>Decision Pack<','>决策证据包<')
+    .replace('>Pricing<','>价格<')
+    .replace('>Deliverables<','>交付物<')
+    .replace('>About<','>关于<')
+    .replace('>Research<','>公开研究<')
+    .replace('Technical evidence for consequential decisions.','为关键决策提供可追溯技术证据。')
+    .replace('Customer submissions remain separate from public research. No BOM, internal document, or company context is published without separate written authorization.','客户提交内容与公开研究严格分离。未经单独书面授权，不公开 BOM、内部文件或公司决策背景。')
+    .replace('Research service only. Not investment advice, legal assurance, a credit rating, health score, or trading signal.','仅提供研究服务；不构成投资建议、法律保证、信用评级、健康评分或交易信号。');
+  if (locale === "es") return html
+    .replace('<html lang="en">','<html lang="es">')
+    .replace('>Skip to content<','>Ir al contenido<')
+    .replace('>Verify a Claim<','>Verificar afirmación<')
+    .replace('>Decision Pack<','>Paquete de decisión<')
+    .replace('>Pricing<','>Precios<')
+    .replace('>Deliverables<','>Entregables<')
+    .replace('>About<','>Acerca de<')
+    .replace('>Research<','>Investigación pública<')
+    .replace('Technical evidence for consequential decisions.','Evidencia técnica trazable para decisiones importantes.')
+    .replace('Customer submissions remain separate from public research. No BOM, internal document, or company context is published without separate written authorization.','Los datos del cliente permanecen separados de la investigación pública. No se publica ningún BOM, documento interno o contexto empresarial sin autorización escrita independiente.')
+    .replace('Research service only. Not investment advice, legal assurance, a credit rating, health score, or trading signal.','Servicio de investigación únicamente. No constituye asesoramiento de inversión, garantía legal, calificación crediticia ni señal de trading.');
+  return html;
+};
+
+const zhCommercialHome = `<section class="hero"><p class="kicker">结构性窗口 · 技术证据 · 决策记忆</p><h1>在投入资源之前，先验证关键判断是否真的成立。</h1><p class="lead">StructureEvidence 帮助企业验证技术、供应链与产业迁移中的关键主张，明确哪些已经有证据、哪些尚未建立、哪些仍需验证，再形成可执行的决策路径。</p><div class="actions"><a class="button" href="/verify/?lang=zh-CN">验证一个判断</a><a class="button secondary" href="/context/?lang=zh-CN">从一个决策开始</a></div><a class="text-link" href="https://structurevidence.org/zh-cn/">查看公开结构证据 →</a></section>
+<section class="proof"><p class="kicker">公开证明</p><h2>先检查证据，再购买研究。</h2><p>800V DC / SST 与钠离子储能公开案例展示了同一原则：产品发布、合作协议、现场部署、长期运行和行业采用必须分层验证，不能压缩成一个营销结论。</p><a class="text-link" href="https://structurevidence.org/zh-cn/">进入简中公开节点 →</a></section>
+<section><div class="section-head"><p class="kicker">三个标准产品</p><h2>产品与价格全球一致，只改变销售语言。</h2></div><div class="price-grid"><article><p class="kicker">01 · 关键判断验证</p><strong>USD 199</strong><h3>一个边界明确的判断</h3><ul><li>证据与反证核查</li><li>明确当前状态与未知项</li><li>一个冻结的证据截止时间</li></ul><a class="button small" href="/verify/?lang=zh-CN">提交判断</a></article><article><p class="kicker">02 · 决策场景审查</p><strong>USD 1,999</strong><h3>一个真实企业决策</h3><ul><li>决策与证据地图</li><li>依赖转移与资格缺口</li><li>最小下一步验证</li></ul><a class="button small" href="/context/?lang=zh-CN">提交决策背景</a></article><article><p class="kicker">03 · 决策证据包</p><strong>USD 4,999</strong><h3>结构化决策交付</h3><ul><li>证据、未知和依赖关系</li><li>有边界的行动选项</li><li>可追溯交付记录</li></ul><a class="button small" href="/decision-pack/?lang=zh-CN">申请 Decision Pack</a></article></div><p class="scope-note">加急处理：USD 399 / 次，需根据容量书面确认。价格、服务边界和证据标准与英文及西语版本完全一致。</p></section>
+<section><div class="section-head"><p class="kicker">工作方式</p><h2>先复用已有证据，只为会改变决策的未知付费。</h2></div><ol class="steps"><li><span>01</span>定义一个真实决策或判断。</li><li><span>02</span>优先匹配已有证据与 Decision Memory。</li><li><span>03</span>只定义最小缺失证据。</li><li><span>04</span>人工确认范围后才开始研究。</li></ol></section>`;
+
+const esCommercialHome = `<section class="hero"><p class="kicker">Ventanas estructurales · Evidencia técnica · Memoria de decisión</p><h1>Verifica la afirmación crítica antes de comprometer recursos.</h1><p class="lead">StructureEvidence ayuda a empresas a comprobar afirmaciones técnicas, de cadena de suministro y de transición industrial, separar lo establecido de lo desconocido y convertir la evidencia en una ruta de decisión defendible.</p><div class="actions"><a class="button" href="/verify/?lang=es">Verificar una afirmación</a><a class="button secondary" href="/context/?lang=es">Empezar con una decisión</a></div><a class="text-link" href="https://structurevidence.org/es/">Explorar evidencia pública →</a></section>
+<section class="proof"><p class="kicker">Prueba pública</p><h2>Inspecciona la evidencia antes de comprar investigación.</h2><p>Los casos públicos de 800V DC / SST y almacenamiento de ion-sodio muestran la misma disciplina: lanzamiento, acuerdo, entrega, puesta en servicio, historial operativo y adopción sectorial son estados distintos.</p><a class="text-link" href="https://structurevidence.org/es/">Entrar al nodo público en español →</a></section>
+<section><div class="section-head"><p class="kicker">Tres productos estándar</p><h2>Los mismos productos y precios en todos los mercados.</h2></div><div class="price-grid"><article><p class="kicker">01 · Verificación de afirmación</p><strong>USD 199</strong><h3>Una afirmación bien delimitada</h3><ul><li>Revisión de evidencia y contraevidencia</li><li>Estado explícito e incógnitas</li><li>Un corte temporal de evidencia</li></ul><a class="button small" href="/verify/?lang=es">Enviar afirmación</a></article><article><p class="kicker">02 · Revisión de contexto de decisión</p><strong>USD 1,999</strong><h3>Una decisión empresarial</h3><ul><li>Mapa de decisión y evidencia</li><li>Dependencias y brechas de cualificación</li><li>Verificación mínima siguiente</li></ul><a class="button small" href="/context/?lang=es">Enviar contexto</a></article><article><p class="kicker">03 · Paquete de decisión</p><strong>USD 4,999</strong><h3>Entrega estructurada</h3><ul><li>Evidencia, incógnitas y dependencias</li><li>Opciones de acción acotadas</li><li>Paquete trazable</li></ul><a class="button small" href="/decision-pack/?lang=es">Solicitar Decision Pack</a></article></div><p class="scope-note">Gestión urgente: USD 399 por solicitud, sujeta a capacidad y aceptación escrita. Los precios y límites del servicio son idénticos a los de las versiones inglesa y china.</p></section>
+<section><div class="section-head"><p class="kicker">Cómo funciona</p><h2>Reutiliza primero la evidencia existente. Investiga sólo la incógnita que puede cambiar la decisión.</h2></div><ol class="steps"><li><span>01</span>Define una decisión o afirmación real.</li><li><span>02</span>Primero se reutiliza evidencia y Decision Memory existente.</li><li><span>03</span>Se acota únicamente la evidencia mínima que falta.</li><li><span>04</span>La investigación empieza sólo tras autorización humana escrita.</li></ol></section>`;
+
+const englishCommercialAlias = COMMERCIAL_PAGES["/"]
+  .replace('<link rel="canonical" href="https://structevidence.com/">','<link rel="canonical" href="https://structevidence.com/en/">')
+  .replace('<html lang="en">','<html lang="en">');
+
+const zhCommercialPage = localizeChrome(page("结构性窗口与技术决策", "验证关键技术与产业判断，并把证据沉淀为可追溯的决策记录。", zhCommercialHome, "zh-cn"), "zh-CN");
+const esCommercialPage = localizeChrome(page("Ventanas estructurales y decisiones técnicas", "Verifica afirmaciones técnicas e industriales y conserva la evidencia como memoria de decisión trazable.", esCommercialHome, "es"), "es");
+
 export const COMMERCIAL_PAGES_V2 = {
   ...COMMERCIAL_PAGES,
+  "/en/": englishCommercialAlias,
+  "/zh-cn/": zhCommercialPage,
+  "/es/": esCommercialPage,
   "/verify/": page("Verify a Claim", "Test one technical or industrial claim before you commit.", verifyBody, "verify"),
   "/context/": page("Start with Your Decision", "Submit company-specific decision context for human review.", contextBody, "context"),
   "/decision-pack/": page("Decision Pack", "Request a traceable package of evidence, gaps, and action options.", decisionBody, "decision-pack"),
