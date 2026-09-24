@@ -1,0 +1,36 @@
+{
+  "locale": "en",
+  "html_lang": "en",
+  "market_node": "/en/",
+  "language_name": "English",
+  "positioning": {
+    "eyebrow": "Structural Openings → Evidence → Decision Memory → Outcomes",
+    "headline": "The world changes before consensus does. We record the gap.",
+    "lead": "StructureEvidence identifies structural openings in industrial and technical systems, then verifies what the evidence actually establishes before a decision is made.",
+    "structural_opening": "A structural opening appears when a constraint, dependency, cost curve, regulation, or incumbent advantage begins to weaken before the market has fully repriced the change.",
+    "decision_memory": "Preserve what was known, unknown, contradicted, verified, and frozen at the time of the decision."
+  },
+  "navigation": {
+    "openings": "Structural Openings",
+    "cases": "Evidence Cases",
+    "method": "Method",
+    "verify": "Verify a Claim",
+    "decision": "Start with a Decision"
+  },
+  "cta": {
+    "primary": "Explore live evidence",
+    "secondary": "Test a decision"
+  },
+  "display_labels": {
+    "SUPPORTED": "SUPPORTED",
+    "CONTRADICTED": "CONTRADICTED",
+    "NOT_ESTABLISHED": "NOT ESTABLISHED",
+    "UNKNOWN": "UNKNOWN",
+    "VERIFICATION_REQUIRED": "VERIFICATION REQUIRED"
+  },
+  "invariants": {
+    "canonical_machine_states_language": "en",
+    "localized_copy_must_not_change_evidence_state": true,
+    "localized_homepages_are_market_interfaces_not_separate_research_records": true
+  }
+}
