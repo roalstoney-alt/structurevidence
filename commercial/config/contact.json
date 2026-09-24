@@ -26,7 +26,9 @@
     "decision_pack": 4999,
     "rush_handling_per_request": 399
   },
-  "delivery_timing": "Confirmed in the written quote after evidence-availability review.",
-  "included_review_rounds": "Confirmed in the written quote.",
+  "delivery_timing": "Each delivery states an explicit evidence cut-off timestamp on the delivery date.",
+  "included_review_rounds": 0,
+  "future_evidence_policy": "Evidence published after the cut-off requires a separately purchased collection cycle.",
+  "next_cycle_correction_policy": "A subsequently purchased service cycle incorporates qualifying new evidence and corrects any superseded prior state within that new delivery.",
   "seller_activation_rule": "Manual service intake and written-scope services are active. Automated fulfillment remains disabled."
 }

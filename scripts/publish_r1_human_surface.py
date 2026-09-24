@@ -27,11 +27,11 @@ def esc(value) -> str:
 
 
 def nav() -> str:
-    return '<header class="site-header"><div class="nav-wrap"><a class="brand" href="index.html"><span class="brand-mark">SE</span><span>StructEvidence</span></a><button class="nav-toggle" data-nav-toggle aria-controls="nav" aria-expanded="false">Menu</button><nav class="nav" id="nav" aria-label="Main navigation"><a href="index.html#search">Search</a><a href="research.html">Research</a><a href="standard.html">Standard</a><a href="about.html">About</a><a href="enterprise.html" class="enterprise-link">Enterprise Access</a></nav></div></header>'
+    return '<header class="site-header"><div class="nav-wrap"><a class="brand" href="index.html"><span class="brand-mark">SE</span><span>StructureEvidence</span></a><button class="nav-toggle" data-nav-toggle aria-controls="nav" aria-expanded="false">Menu</button><nav class="nav" id="nav" aria-label="Main navigation"><a href="index.html#search">Search</a><a href="research.html">Research</a><a href="standard.html">Standard</a><a href="about.html">About</a><a href="enterprise.html" class="enterprise-link">Enterprise Access</a></nav></div></header>'
 
 
 def footer() -> str:
-    return '<footer class="site-footer"><div class="footer-inner"><div class="footer-links"><strong>StructEvidence</strong><a href="research.html">Research</a><a href="standard.html">Standard</a><a href="about.html">About</a><a href="enterprise.html">Enterprise</a></div><p>Research only. No investment advice. Evidence inconsistency does not imply falsehood, misconduct or fraud. Findings may be corrected or superseded.</p></div></footer><script src="assets/site.js"></script>'
+    return '<footer class="site-footer"><div class="footer-inner"><div class="footer-links"><strong>StructureEvidence</strong><a href="research.html">Research</a><a href="standard.html">Standard</a><a href="about.html">About</a><a href="enterprise.html">Enterprise</a></div><p>Research only. No investment advice. Evidence inconsistency does not imply falsehood, misconduct or fraud. Findings may be corrected or superseded.</p></div></footer><script src="assets/site.js"></script>'
 
 
 def paths(asset: str) -> dict[str, Path]:
@@ -105,7 +105,7 @@ def asset_page(asset: str) -> str:
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{asset} R1 Human Verify - StructEvidence</title>
+  <title>{asset} R1 Human Verify - StructureEvidence</title>
   <meta name="description" content="Human-verifiable R1 research surface for {asset}.">
   <link rel="canonical" href="https://structurevidence.org/{asset.lower()}.html">
   <link rel="stylesheet" href="assets/style.css">
@@ -141,7 +141,7 @@ def refinement_table() -> str:
         can = asset_data(asset)["canonical"]
         old = old_state(asset)
         rows.append(f"<tr><td><a href=\"../../../../{asset.lower()}.html\">{asset}</a></td><td>{esc(old['structural_state'])} / {esc(old['evidence_state'])}</td><td>{esc(can['structural_state_final'])} / {esc(can['evidence_state_final'])}</td><td>{esc(gap_by_asset.get(asset, 'SOURCE_GAP'))}</td><td>REFINED</td></tr>")
-    return f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Batch01 R1 Refinement Table - StructEvidence</title><link rel="stylesheet" href="../../../../assets/style.css"></head><body>{nav().replace('href="', 'href="../../../../')}<main><section class="hero"><div class="hero-copy"><p class="eyebrow">Batch01 R1</p><h1>Refinement Table</h1><p class="lead">R1 comparison against v0.1 method-pilot labels. This is not ranking and does not establish decision usefulness.</p></div></section><section><div class="table-wrap"><table><thead><tr><th>Asset</th><th>v0.1 overclaim</th><th>R1 narrowed claim</th><th>Counter-evidence or gap that forced narrowing</th><th>Supersession</th></tr></thead><tbody>{''.join(rows)}</tbody></table></div></section></main>{footer().replace('href="', 'href="../../../../').replace('src="', 'src="../../../../')}</body></html>"""
+    return f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Batch01 R1 Refinement Table - StructureEvidence</title><link rel="stylesheet" href="../../../../assets/style.css"></head><body>{nav().replace('href="', 'href="../../../../')}<main><section class="hero"><div class="hero-copy"><p class="eyebrow">Batch01 R1</p><h1>Refinement Table</h1><p class="lead">R1 comparison against v0.1 method-pilot labels. This is not ranking and does not establish decision usefulness.</p></div></section><section><div class="table-wrap"><table><thead><tr><th>Asset</th><th>v0.1 overclaim</th><th>R1 narrowed claim</th><th>Counter-evidence or gap that forced narrowing</th><th>Supersession</th></tr></thead><tbody>{''.join(rows)}</tbody></table></div></section></main>{footer().replace('href="', 'href="../../../../').replace('src="', 'src="../../../../')}</body></html>"""
 
 
 def verify_page() -> str:
@@ -170,7 +170,7 @@ def verify_page() -> str:
             digest = "EXPECTED_SELF_HASH_EXCLUSION" if name == "SHA256SUMS.txt" else hashes.get(name, "GAP")
             file_rows.append(f"<tr><td>{esc(name)}</td><td><a href=\"evidence-freeze/{R1}/{asset}/{esc(name)}\">artifact</a></td><td>{esc(digest)}</td></tr>")
         blocks.append(f"""<section id="{asset.lower()}"><h2>{asset}</h2><p><span class="status">producer_source: R1 derivation artifacts</span><span class="status">reviewer_artifact: BLIND_REVIEW_OUTPUT.md</span><span class="status">SEPARATION: FILENAME_ONLY</span><span class="status">Research Status: {esc(can['publication_status'])}</span><span class="status">Decision usefulness: NOT_ESTABLISHED</span></p><h3>Required Artifact Gates</h3><div class="table-wrap"><table><thead><tr><th>Artifact</th><th>Gate</th><th>Path</th><th>Hash</th></tr></thead><tbody>{''.join(gate_rows)}</tbody></table></div><h3>Manifest Artifact List</h3><div class="table-wrap"><table><thead><tr><th>Artifact</th><th>Path</th><th>Hash</th></tr></thead><tbody>{''.join(file_rows)}</tbody></table></div></section>""")
-    return f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Batch01 R1 Verify - StructEvidence</title><link rel="stylesheet" href="assets/style.css"></head><body>{nav()}<main><section class="hero"><div class="hero-copy"><p class="eyebrow">Human Verify</p><h1>Batch01 R1 Research Chain</h1><p class="lead">Artifact gates rendered from R1 manifests and canonical JSON. Missing required artifacts render as FAIL.</p></div></section>{''.join(blocks)}</main>{footer()}</body></html>"""
+    return f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Batch01 R1 Verify - StructureEvidence</title><link rel="stylesheet" href="assets/style.css"></head><body>{nav()}<main><section class="hero"><div class="hero-copy"><p class="eyebrow">Human Verify</p><h1>Batch01 R1 Research Chain</h1><p class="lead">Artifact gates rendered from R1 manifests and canonical JSON. Missing required artifacts render as FAIL.</p></div></section>{''.join(blocks)}</main>{footer()}</body></html>"""
 
 
 def state_vocab() -> str:
@@ -181,7 +181,7 @@ def state_vocab() -> str:
         "SDF_TREASURY_DEPENDENT_PAYMENT_NETWORK": ["treasury dependence", "settlement object", "client/validator structure"],
     }
     mappings = "\n".join(f"- `{k}`: {', '.join(v)}" for k, v in labels.items())
-    return f"""# StructEvidence State Vocabulary
+    return f"""# StructureEvidence State Vocabulary
 
 ## Structural State Axes
 - issuance/burn
@@ -219,7 +219,7 @@ def update_entities() -> None:
 def update_front_office() -> None:
     cards = '<tr><td><a href="strategy-2026.html">Strategy</a></td><td>HYBRID_ACCUMULATION_MONETIZATION</td><td>SEMANTIC_TENSION_BUT_RECONCILABLE</td><td>Existing publication</td><td>NOT_ESTABLISHED</td></tr>'
     cards += "".join(f'<tr><td><a href="{a.lower()}.html">{a}</a></td><td>{esc(asset_data(a)["canonical"]["structural_state_final"])}</td><td>{esc(asset_data(a)["canonical"]["evidence_state_final"])}</td><td>{esc(asset_data(a)["canonical"]["publication_status"])}</td><td>{esc(asset_data(a)["canonical"]["decision_usefulness"])}</td></tr>' for a in ASSETS)
-    digital = f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Digital Assets - StructEvidence</title><link rel="stylesheet" href="assets/style.css"></head><body>{nav()}<main><section class="hero"><div class="hero-copy"><p class="eyebrow">Digital Assets</p><h1>Batch01 R1 Coverage Monitor</h1><p class="lead">Five covered entities are published: Strategy, BNB, SOL, TRX and XLM. The list is alphabetical by asset section and is not a ranking. Decision usefulness is not established.</p></div></section><section><h2>Demonstration Case</h2><p>SOL is the demonstration case for visible POTENTIAL_CONFLICT handling because execution-scale evidence and production client-diversity evidence remain distinct claims.</p></section><section><p><a href="research/digital-assets/batch-01-r1/REFINEMENT_TABLE.html">Open R1 Refinement Table</a> | <a href="verify-r1.html">Open Human Verify</a></p><div class="table-wrap"><table><thead><tr><th>Asset</th><th>Structural State</th><th>Evidence State</th><th>Research Status</th><th>Decision Usefulness</th></tr></thead><tbody>{cards}</tbody></table></div></section></main>{footer()}</body></html>"""
+    digital = f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Digital Assets - StructureEvidence</title><link rel="stylesheet" href="assets/style.css"></head><body>{nav()}<main><section class="hero"><div class="hero-copy"><p class="eyebrow">Digital Assets</p><h1>Batch01 R1 Coverage Monitor</h1><p class="lead">Five covered entities are published: Strategy, BNB, SOL, TRX and XLM. The list is alphabetical by asset section and is not a ranking. Decision usefulness is not established.</p></div></section><section><h2>Demonstration Case</h2><p>SOL is the demonstration case for visible POTENTIAL_CONFLICT handling because execution-scale evidence and production client-diversity evidence remain distinct claims.</p></section><section><p><a href="research/digital-assets/batch-01-r1/REFINEMENT_TABLE.html">Open R1 Refinement Table</a> | <a href="verify-r1.html">Open Human Verify</a></p><div class="table-wrap"><table><thead><tr><th>Asset</th><th>Structural State</th><th>Evidence State</th><th>Research Status</th><th>Decision Usefulness</th></tr></thead><tbody>{cards}</tbody></table></div></section></main>{footer()}</body></html>"""
     for root in [ROOT, DOCS]:
         write(root / "digital-assets.html", digital)
         idx = root / "index.html"

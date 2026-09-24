@@ -32,7 +32,7 @@ def write_json(path: Path, data) -> None:
 def nav(prefix: str = "") -> str:
     return f"""<header class="site-header">
   <div class="nav-wrap">
-    <a class="brand" href="{prefix}index.html" aria-label="StructEvidence home"><span class="brand-mark">SE</span><span>StructEvidence</span></a>
+    <a class="brand" href="{prefix}index.html" aria-label="StructureEvidence home"><span class="brand-mark">SE</span><span>StructureEvidence</span></a>
     <button class="nav-toggle" data-nav-toggle aria-controls="nav" aria-expanded="false">Menu</button>
     <nav class="nav" id="nav" aria-label="Main navigation"><a href="{prefix}index.html#search">Search</a><a href="{prefix}reports.html">Reports</a><a href="{prefix}research.html">Research</a><a href="{prefix}standard.html">Standard</a><a href="{prefix}verify.html">Verify</a><a href="{prefix}enterprise.html" class="enterprise-link">Enterprise</a></nav>
   </div>
@@ -42,7 +42,7 @@ def nav(prefix: str = "") -> str:
 def footer(prefix: str = "") -> str:
     return f"""<footer class="site-footer">
   <div class="footer-inner">
-    <div class="footer-links"><strong>StructEvidence</strong><a href="{prefix}reports.html">Reports</a><a href="{prefix}research.html">Research</a><a href="{prefix}standard.html">Standard</a><a href="{prefix}verify.html">Verify</a><a href="{prefix}enterprise.html">Enterprise</a></div>
+    <div class="footer-links"><strong>StructureEvidence</strong><a href="{prefix}reports.html">Reports</a><a href="{prefix}research.html">Research</a><a href="{prefix}standard.html">Standard</a><a href="{prefix}verify.html">Verify</a><a href="{prefix}enterprise.html">Enterprise</a></div>
     <p>Research only. No investment advice. Evidence inconsistency does not imply falsehood, misconduct or fraud. Findings may be corrected or superseded.</p>
   </div>
 </footer><script src="{prefix}assets/site.js"></script>"""
@@ -54,10 +54,10 @@ def page(title: str, description: str, body: str, canonical: str, prefix: str = 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{esc(title)} - StructEvidence</title>
+  <title>{esc(title)} - StructureEvidence</title>
   <meta name="description" content="{esc(description)}">
   <link rel="canonical" href="https://structurevidence.org/{esc(canonical)}">
-  <meta property="og:title" content="{esc(title)} - StructEvidence">
+  <meta property="og:title" content="{esc(title)} - StructureEvidence">
   <meta property="og:description" content="{esc(description)}">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://structurevidence.org/{esc(canonical)}">
@@ -186,7 +186,7 @@ def write_configs() -> None:
 def write_schemas() -> None:
     write_json(ROOT / "commercial" / "schema" / "order.schema.json", {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "title": "StructEvidence Order",
+        "title": "StructureEvidence Order",
         "type": "object",
         "additionalProperties": False,
         "required": ["order_id", "created_at", "product_id", "entity_id", "customer_email", "payment_status", "fulfillment_status", "report_version", "verification_id"],
@@ -204,7 +204,7 @@ def write_schemas() -> None:
     })
     write_json(ROOT / "commercial" / "schema" / "evidence_graph.schema.json", {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "title": "StructEvidence Evidence Graph",
+        "title": "StructureEvidence Evidence Graph",
         "type": "object",
         "required": ["graph_id", "nodes", "edges"],
         "properties": {
@@ -215,7 +215,7 @@ def write_schemas() -> None:
     })
     write_json(ROOT / "commercial" / "schema" / "structural_delta.schema.json", {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "title": "StructEvidence Structural Delta",
+        "title": "StructureEvidence Structural Delta",
         "type": "object",
         "required": ["entity_id", "previous_state", "current_state", "changed_dimensions", "new_evidence", "revised_evidence", "removed_evidence", "change_magnitude", "evidence_change", "why_changed", "what_could_reverse", "as_of"],
         "properties": {
@@ -235,7 +235,7 @@ def write_schemas() -> None:
     })
     write_json(ROOT / "commercial" / "schema" / "verification_record.schema.json", {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "title": "StructEvidence Verification Record",
+        "title": "StructureEvidence Verification Record",
         "type": "object",
         "required": ["research_id", "report_id", "report_version", "method_version", "observation_window", "last_reviewed", "source_count", "source_dependency_groups", "artifact_classes", "manifest_hash", "publication_timestamp", "correction_status", "supersession_status"],
         "properties": {
@@ -360,10 +360,10 @@ Purpose: use uncovered search demand to prioritize future research batches.
 
 
 def homepage() -> str:
-    return page("StructEvidence", "Search covered entities and request deeper verified structural and evidence research.", """
+    return page("StructureEvidence", "Search covered entities and request deeper verified structural and evidence research.", """
 <section class="search-hero" id="search">
   <div class="hero-copy">
-    <p class="eyebrow">StructEvidence</p>
+    <p class="eyebrow">StructureEvidence</p>
     <h1>Verifiable Structural &amp; Evidence Intelligence for Digital Assets.</h1>
     <p class="lead">Search an asset or entity to see its current structural and evidence state. Unlock the full research chain when deeper verification is required.</p>
     <p class="microcopy">Current public coverage: MSTR · BNB · SOL · TRX · XLM</p>
@@ -378,7 +378,7 @@ def homepage() -> str:
   </form>
   <div class="search-result-region" data-search-results aria-live="polite"></div>
   <template id="blank-result-template"><article class="health-card uncovered"><div class="result-heading"><div><h2>Enter an asset, protocol, treasury or institution.</h2><p>Search supports covered tickers and known aliases.</p></div></div></article></template>
-  <template id="uncovered-result-template"><article class="health-card uncovered"><div class="result-heading"><div><h2>Not Yet Covered</h2><p>No current StructEvidence research record exists for this entity.</p></div><button class="button subtle" type="button" data-reset-search>New Search</button></div><p>Request a scoped Structural &amp; Evidence Audit. Evidence availability and delivery scope are confirmed before work begins.</p><div class="actions compact"><a class="button primary" href="enterprise.html">Request Scope</a><a class="button" href="research-scope.html">Research Scope</a></div></article></template>
+  <template id="uncovered-result-template"><article class="health-card uncovered"><div class="result-heading"><div><h2>Not Yet Covered</h2><p>No current StructureEvidence research record exists for this entity.</p></div><button class="button subtle" type="button" data-reset-search>New Search</button></div><p>Request a scoped Structural &amp; Evidence Audit. Evidence availability and delivery scope are confirmed before work begins.</p><div class="actions compact"><a class="button primary" href="enterprise.html">Request Scope</a><a class="button" href="research-scope.html">Research Scope</a></div></article></template>
 </section>
 <section>
   <h2>What You Get</h2>
@@ -420,7 +420,7 @@ def reports_page() -> str:
 
 
 def sample_report_page() -> str:
-    return page("Sample Report", "Sample layout for a StructEvidence Verified Research Report using approved public research only.", """
+    return page("Sample Report", "Sample layout for a StructureEvidence Verified Research Report using approved public research only.", """
 <section class="hero"><div class="hero-copy"><p class="eyebrow">Sample Report</p><h1>Verified Research Report Sample</h1><p class="lead">A product-format sample using approved public research only. It demonstrates packaging, verification and evidence-graph preview without adding private evidence.</p><div class="actions"><a class="button primary" href="reports.html">Unlock Full Verified Report</a><a class="button" href="verify-r1.html">View Public Verification</a></div></div></section>
 <section><h2>Free Scan Preview</h2><p><span class="status">Asset / Entity</span><span class="status">Structural State</span><span class="status">Evidence State</span><span class="status">Source Coverage</span><span class="status">Last Reviewed</span><span class="status">3 Key Observations</span><span class="status">1 Key Limitation</span><span class="status">1 Open Question</span></p></section>
 <section><h2>Paid Section List</h2><p><span class="status">Full Structural Analysis</span><span class="status">Full Evidence Analysis</span><span class="status">Numerical Reconciliation</span><span class="status">ACH</span><span class="status">Counter-Evidence</span><span class="status">Falsifiers</span><span class="status">Evidence Gaps</span><span class="status">Provenance</span><span class="status">PDF</span><span class="status">Canonical JSON</span></p></section>
@@ -439,18 +439,18 @@ def enterprise_page() -> str:
   <article class="offering-card"><h2>Institutional Monitoring</h2><p>Planned after V0.9 paid validation. Watchlists, structural delta and alerts are not active products yet.</p><span class="status">Planned</span></article>
   <article class="offering-card"><h2>API Access</h2><p>Planned after coverage depth and paying demand justify an API surface.</p><span class="status">Planned</span></article>
 </section>
-<section id="request-path"><h2>Request Path</h2><p>Commercial access is currently early access. Submit requests through the approved contact channel once published, or use an existing direct relationship with StructEvidence. Public checkout is not enabled.</p><p><span class="status">Scope confirmation required</span><span class="status">No anonymous paid checkout</span><span class="status">No investment advice</span></p></section>
+<section id="request-path"><h2>Request Path</h2><p>Commercial access is currently early access. Submit requests through the approved contact channel once published, or use an existing direct relationship with StructureEvidence. Public checkout is not enabled.</p><p><span class="status">Scope confirmation required</span><span class="status">No anonymous paid checkout</span><span class="status">No investment advice</span></p></section>
 """, "enterprise.html")
 
 
 def legal_pages() -> dict[str, str]:
-    common = "StructEvidence uses public-source based research unless a custom scope explicitly supplies additional records. Reports do not guarantee completeness, do not guarantee undisclosed events are detected, do not provide investment advice, statutory audit or legal opinion, and may be corrected or superseded."
+    common = "StructureEvidence uses public-source based research unless a custom scope explicitly supplies additional records. Reports do not guarantee completeness, do not guarantee undisclosed events are detected, do not provide investment advice, statutory audit or legal opinion, and may be corrected or superseded."
     return {
-        "terms.html": page("Terms", "General terms for StructEvidence public and early-access research.", f"<section class=\"hero\"><div class=\"hero-copy\"><p class=\"eyebrow\">Terms</p><h1>Terms of Use</h1><p class=\"lead\">{common}</p></div></section><section><h2>Use Boundary</h2><p>Public pages are informational research surfaces. Users are responsible for independent review before relying on any content.</p></section>", "terms.html"),
-        "privacy.html": page("Privacy", "Privacy policy for StructEvidence early-access public website.", "<section class=\"hero\"><div class=\"hero-copy\"><p class=\"eyebrow\">Privacy</p><h1>Privacy Policy</h1><p class=\"lead\">Commercial V0.9 does not enable search demand logging, accounts, checkout or analytics-based identity collection in this repository.</p></div></section><section><h2>Minimum Data</h2><p>Future order flow should collect only the minimum data required for fulfillment, such as customer email and order identifiers.</p></section>", "privacy.html"),
-        "terms-of-sale.html": page("Terms of Sale", "Terms of sale placeholder for StructEvidence early access.", "<section class=\"hero\"><div class=\"hero-copy\"><p class=\"eyebrow\">Terms of Sale</p><h1>Paid Checkout Not Enabled</h1><p class=\"lead\">No self-serve payment is active until seller identity, pricing, payment provider, tax handling, fulfillment and support contacts are configured.</p></div></section><section><h2>Early Access</h2><p>Verified Reports and Custom Audits are request-based until the paid readiness gates pass.</p></section>", "terms-of-sale.html"),
-        "refund-policy.html": page("Refund Policy", "Refund policy placeholder for StructEvidence early access.", "<section class=\"hero\"><div class=\"hero-copy\"><p class=\"eyebrow\">Refund Policy</p><h1>Refund Terms Pending Configuration</h1><p class=\"lead\">Public checkout is not enabled. A finalized refund policy is required before any self-serve paid launch.</p></div></section><section><h2>Current State</h2><p>Commercial V0.9 remains early access and scope-based.</p></section>", "refund-policy.html"),
-        "research-scope.html": page("Research Scope", "StructEvidence research scope and evidence boundaries.", f"<section class=\"hero\"><div class=\"hero-copy\"><p class=\"eyebrow\">Research Scope</p><h1>Scope and Evidence Boundaries</h1><p class=\"lead\">{common}</p></div></section><section><h2>Scope Rules</h2><p>Structural classifications are methodology-dependent. Evidence inconsistency does not imply falsehood, misconduct or fraud. Public reports may be corrected or superseded through versioned records.</p></section>", "research-scope.html"),
+        "terms.html": page("Terms", "General terms for StructureEvidence public and early-access research.", f"<section class=\"hero\"><div class=\"hero-copy\"><p class=\"eyebrow\">Terms</p><h1>Terms of Use</h1><p class=\"lead\">{common}</p></div></section><section><h2>Use Boundary</h2><p>Public pages are informational research surfaces. Users are responsible for independent review before relying on any content.</p></section>", "terms.html"),
+        "privacy.html": page("Privacy", "Privacy policy for StructureEvidence early-access public website.", "<section class=\"hero\"><div class=\"hero-copy\"><p class=\"eyebrow\">Privacy</p><h1>Privacy Policy</h1><p class=\"lead\">Commercial V0.9 does not enable search demand logging, accounts, checkout or analytics-based identity collection in this repository.</p></div></section><section><h2>Minimum Data</h2><p>Future order flow should collect only the minimum data required for fulfillment, such as customer email and order identifiers.</p></section>", "privacy.html"),
+        "terms-of-sale.html": page("Terms of Sale", "Terms of sale placeholder for StructureEvidence early access.", "<section class=\"hero\"><div class=\"hero-copy\"><p class=\"eyebrow\">Terms of Sale</p><h1>Paid Checkout Not Enabled</h1><p class=\"lead\">No self-serve payment is active until seller identity, pricing, payment provider, tax handling, fulfillment and support contacts are configured.</p></div></section><section><h2>Early Access</h2><p>Verified Reports and Custom Audits are request-based until the paid readiness gates pass.</p></section>", "terms-of-sale.html"),
+        "refund-policy.html": page("Refund Policy", "Refund policy placeholder for StructureEvidence early access.", "<section class=\"hero\"><div class=\"hero-copy\"><p class=\"eyebrow\">Refund Policy</p><h1>Refund Terms Pending Configuration</h1><p class=\"lead\">Public checkout is not enabled. A finalized refund policy is required before any self-serve paid launch.</p></div></section><section><h2>Current State</h2><p>Commercial V0.9 remains early access and scope-based.</p></section>", "refund-policy.html"),
+        "research-scope.html": page("Research Scope", "StructureEvidence research scope and evidence boundaries.", f"<section class=\"hero\"><div class=\"hero-copy\"><p class=\"eyebrow\">Research Scope</p><h1>Scope and Evidence Boundaries</h1><p class=\"lead\">{common}</p></div></section><section><h2>Scope Rules</h2><p>Structural classifications are methodology-dependent. Evidence inconsistency does not imply falsehood, misconduct or fraud. Public reports may be corrected or superseded through versioned records.</p></section>", "research-scope.html"),
     }
 
 

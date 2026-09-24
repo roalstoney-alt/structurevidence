@@ -4,7 +4,13 @@ import unittest
 
 
 ROOT = Path(__file__).resolve().parents[1]
-UI = (ROOT / "deploy/cloudflare-landing/commercial-ui.js").read_text()
+UI = "\n".join(
+    (ROOT / path).read_text()
+    for path in [
+        "deploy/cloudflare-landing/commercial-ui.js",
+        "deploy/cloudflare-landing/commercial-upgrade.js",
+    ]
+)
 
 
 class CommercialReadinessTest(unittest.TestCase):
@@ -18,8 +24,8 @@ class CommercialReadinessTest(unittest.TestCase):
             "Inputs",
             "Deliverable",
             "Written scope",
-            "Timing and review",
-            "review rounds",
+            "Evidence cut-off",
+            "no revision rounds",
             "written quote",
             "Customer context is not copied into public verification",
         ]:
@@ -100,6 +106,9 @@ class CommercialReadinessTest(unittest.TestCase):
             "decision_pack": 4999,
             "rush_handling_per_request": 399,
         })
+        self.assertEqual(contact["included_review_rounds"], 0)
+        self.assertIn("cut-off timestamp", contact["delivery_timing"])
+        self.assertIn("separately purchased collection cycle", contact["future_evidence_policy"])
 
     def test_org_trust_and_terms_mirrors_are_consistent(self):
         for path in ["about.html", "docs/about.html", "terms-of-sale.html", "docs/terms-of-sale.html"]:

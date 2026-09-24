@@ -12,7 +12,7 @@ DOCS = ROOT / "docs"
 
 DOMAIN = "https://structurevidence.org"
 DESC = (
-    "StructEvidence publishes auditable Structural Dynamics and Evidence Dynamics "
+    "StructureEvidence publishes auditable Structural Dynamics and Evidence Dynamics "
     "research for digital assets, crypto treasuries and public entities."
 )
 HOME_DESC = "Search digital assets, treasuries, protocols and institutions to inspect published structural states and public-evidence findings."
@@ -181,8 +181,8 @@ def nav_html(prefix: str = "") -> str:
     return f"""
     <header class="site-header">
       <div class="nav-wrap">
-        <a class="brand" href="{prefix}index.html" aria-label="StructEvidence home">
-          <span class="brand-mark">SE</span><span>StructEvidence</span>
+        <a class="brand" href="{prefix}index.html" aria-label="StructureEvidence home">
+          <span class="brand-mark">SE</span><span>StructureEvidence</span>
         </a>
         <button class="nav-toggle" data-nav-toggle aria-controls="nav" aria-expanded="false">Menu</button>
         <nav class="nav" id="nav" aria-label="Main navigation">{links}</nav>
@@ -202,10 +202,10 @@ def layout(title: str, path: str, body: str, description: str = DESC) -> str:
     <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>{escape(title)} - StructEvidence</title>
+      <title>{escape(title)} - StructureEvidence</title>
       <meta name="description" content="{escape(description)}">
       <link rel="canonical" href="{canonical}">
-      <meta property="og:title" content="{escape(title)} - StructEvidence">
+      <meta property="og:title" content="{escape(title)} - StructureEvidence">
       <meta property="og:description" content="{escape(description)}">
       <meta property="og:type" content="website">
       <meta property="og:url" content="{canonical}">
@@ -217,7 +217,7 @@ def layout(title: str, path: str, body: str, description: str = DESC) -> str:
       <main>{body}</main>
       <footer class="site-footer">
         <div class="footer-inner">
-          <div class="footer-links"><strong>StructEvidence</strong><a href="{prefix}research.html">Research</a><a href="{prefix}standard.html">Standard</a><a href="{prefix}about.html">About</a><a href="{prefix}enterprise.html">Enterprise</a></div>
+          <div class="footer-links"><strong>StructureEvidence</strong><a href="{prefix}research.html">Research</a><a href="{prefix}standard.html">Standard</a><a href="{prefix}about.html">About</a><a href="{prefix}enterprise.html">Enterprise</a></div>
           <p>Research only. No investment advice. Evidence inconsistency does not imply falsehood, misconduct or fraud. Findings may be corrected or superseded.</p>
         </div>
       </footer>
@@ -259,7 +259,7 @@ def hero(kicker: str, h1: str, lead: str, extra: str = "") -> str:
 
 def architecture_diagram(prefix: str = "") -> str:
     return f"""
-    <div class="stack-diagram" aria-label="StructEvidence research architecture">
+    <div class="stack-diagram" aria-label="StructureEvidence research architecture">
       <a class="node method" href="{prefix}architecture/rdl.html"><strong>RDL</strong><span>Research Governance</span></a>
       <span class="arrow">down</span>
       <a class="node method" href="{prefix}architecture/rtp.html"><strong>RTP</strong><span>Traceability / Provenance</span></a>
@@ -281,7 +281,7 @@ def index_page() -> str:
     body = f"""
     <section class="search-hero" id="search">
       <div class="hero-copy">
-        <p class="eyebrow">StructEvidence</p>
+        <p class="eyebrow">StructureEvidence</p>
         <h1>Verifiable Structural & Evidence Intelligence for Digital Assets.</h1>
         <p class="lead">Search an asset, protocol, treasury or institution to inspect its latest structural state and public-evidence status.</p>
       </div>
@@ -311,7 +311,7 @@ def index_page() -> str:
       </template>
       <template id="uncovered-result-template">
         <article class="health-card uncovered">
-          <div class="result-heading"><div><h2>Not Yet Covered</h2><p>No current StructEvidence research record exists for this entity.</p></div><button class="button subtle" type="button" data-reset-search>New Search</button></div>
+          <div class="result-heading"><div><h2>Not Yet Covered</h2><p>No current StructureEvidence research record exists for this entity.</p></div><button class="button subtle" type="button" data-reset-search>New Search</button></div>
           <p>Request a scoped Structural & Evidence Audit. We confirm evidence availability, scope and expected delivery before work begins.</p>
           <div class="actions compact"><a class="button primary" href="enterprise.html">Request Custom Audit</a><a class="button" href="standard.html">Inspect Standard</a></div>
         </article>
@@ -336,7 +336,7 @@ def index_page() -> str:
       <div class="actions"><a class="button primary" href="enterprise.html">Request Custom Audit</a><a class="button" href="enterprise.html">Enterprise Research</a><a class="button" href="data.html">Data Partnership</a></div>
     </section>
     """
-    return layout("StructEvidence - Structural & Evidence Intelligence", "index.html", body, HOME_DESC)
+    return layout("StructureEvidence - Structural & Evidence Intelligence", "index.html", body, HOME_DESC)
 
 
 def architecture_page() -> str:
@@ -349,7 +349,7 @@ def architecture_page() -> str:
             escape(layer["not"]),
             f'<code>{layer["version"]}</code>',
         ])
-    body = hero("Architecture", "The Research Stack Behind StructEvidence", "RDL governs research. RTP preserves traceability. Structural Dynamics and Evidence Dynamics run as parallel research tracks, with MDL and ECL as their current specialized layers. ECN is a future contribution interface.") + f"""
+    body = hero("Architecture", "The Research Stack Behind StructureEvidence", "RDL governs research. RTP preserves traceability. Structural Dynamics and Evidence Dynamics run as parallel research tracks, with MDL and ECL as their current specialized layers. ECN is a future contribution interface.") + f"""
     <section class="architecture-preview">{architecture_diagram()}</section>
     <section>
       <h2>Layer Inventory</h2>
@@ -480,7 +480,7 @@ def evidence_page() -> str:
 
 
 def verify_page() -> str:
-    body = hero("Verify", "Read-Only Verification Index", "Any StructEvidence result should trace to research IDs, method versions, artifact classes, hashes and correction history. Interactive lookup is planned, not active.") + f"""
+    body = hero("Verify", "Read-Only Verification Index", "Any StructureEvidence result should trace to research IDs, method versions, artifact classes, hashes and correction history. Interactive lookup is planned, not active.") + f"""
     <section class="terminal-panel full">
       <div class="terminal-title">STATIC STRATEGY EXAMPLE</div>
       <dl class="kv">
@@ -509,7 +509,7 @@ def data_page() -> str:
     {cards([
       ("Current Public Evidence", "Frozen public reports, publication manifests, hash records and selected evidence-freeze records are available for inspection.", ""),
       ("Licensed Data Roadmap", "Future market, on-chain, treasury, entity and regulatory datasets require licensing, provenance and publication boundaries.", ""),
-      ("Data Partner Program", "StructEvidence is actively seeking licensed market, on-chain, treasury, entity and regulatory data partnerships for future higher-grade Structural Dynamics research.", ""),
+      ("Data Partner Program", "StructureEvidence is actively seeking licensed market, on-chain, treasury, entity and regulatory data partnerships for future higher-grade Structural Dynamics research.", ""),
       ("Provenance Requirements", "Every dataset must disclose source identity, capture type, rights status, timestamp semantics, transformation history and reproducibility status.", ""),
     ])}
     """
@@ -517,7 +517,7 @@ def data_page() -> str:
 
 
 def standard_page() -> str:
-    body = hero("Standard", "StructEvidence Standard", "The trust layer behind the commercial front office: architecture, methodology, whitepapers, verification, version history and evidence principles.") + f"""
+    body = hero("Standard", "StructureEvidence Standard", "The trust layer behind the commercial front office: architecture, methodology, whitepapers, verification, version history and evidence principles.") + f"""
     <section class="gateway-grid">
       <a class="gateway-card" href="architecture.html"><h2>Architecture</h2><p>How the research stack is organized.</p></a>
       <a class="gateway-card" href="method.html"><h2>Methodology</h2><p>How findings are tested.</p></a>
@@ -532,7 +532,7 @@ def standard_page() -> str:
       <p><a href="architecture.html">Open full research architecture</a></p>
     </section>
     """
-    return layout("Standard", "standard.html", body, "Inspect the StructEvidence Standard: architecture, methodology, whitepapers, verification and version history.")
+    return layout("Standard", "standard.html", body, "Inspect the StructureEvidence Standard: architecture, methodology, whitepapers, verification and version history.")
 
 
 def enterprise_page() -> str:
@@ -549,7 +549,7 @@ def enterprise_page() -> str:
     </section>
     <section id="request-path">
       <h2>Request via Email</h2>
-      <p>No public intake backend or approved contact address is configured in this repository yet. StructEvidence will publish a request path after the contact channel is approved.</p>
+      <p>No public intake backend or approved contact address is configured in this repository yet. StructureEvidence will publish a request path after the contact channel is approved.</p>
       <p>{badges(["No fake form","No invented contact details","Scope required before work begins"])}</p>
     </section>
     <section>
@@ -558,11 +558,11 @@ def enterprise_page() -> str:
       <p class="disclaimer">This is an evidence research service, not litigation support, legal advice or a defensive opinion. No pricing or SLA is published; scope and expected delivery are confirmed before work begins.</p>
     </section>
     """
-    return layout("Enterprise Access", "enterprise.html", body, "Request scoped StructEvidence research for full audits, adversarial evidence reviews and data partnerships.")
+    return layout("Enterprise Access", "enterprise.html", body, "Request scoped StructureEvidence research for full audits, adversarial evidence reviews and data partnerships.")
 
 
 def about_page() -> str:
-    body = hero("About", "StructEvidence", "StructEvidence is an open research project building auditable Structural Dynamics and Evidence Dynamics methods for digital assets and public entities.") + f"""
+    body = hero("About", "StructureEvidence", "StructureEvidence is an open research project building auditable Structural Dynamics and Evidence Dynamics methods for digital assets and public entities.") + f"""
     <section class="grid">
       <article class="card"><h2>What we study</h2><p>Structural change, public claims, observations, source dependency, reconciliation and correction history.</p></article>
       <article class="card"><h2>What we do not claim</h2><p>No health score, investment rating, credit rating, trading signal, legal assurance or automated accusation.</p></article>
@@ -670,7 +670,7 @@ def version_history_page() -> str:
 
 
 def trust_page() -> str:
-    body = hero("Trust", "Trust and Boundary Model", "Trust in StructEvidence comes from public inspection of architecture, methodology, evidence, calculations, hypotheses, provenance, versions and corrections.") + f"""
+    body = hero("Trust", "Trust and Boundary Model", "Trust in StructureEvidence comes from public inspection of architecture, methodology, evidence, calculations, hypotheses, provenance, versions and corrections.") + f"""
     <section><h2>Non-Claims</h2><div class="law-grid">{''.join(f'<p class="law">{law}</p>' for law in METHOD_LAWS)}</div></section>
     """
     return layout("Trust", "trust.html", body)
@@ -693,7 +693,7 @@ def write_whitepapers() -> None:
 
         ## Purpose
 
-        This is a structured placeholder for the {layer.replace("_", " ")} document required by the StructEvidence v2.1 public research stack.
+        This is a structured placeholder for the {layer.replace("_", " ")} document required by the StructureEvidence v2.1 public research stack.
 
         ## Known frozen source documents
 
@@ -723,7 +723,7 @@ def write_reports() -> None:
     execution = DOCS / "execution"
     execution.mkdir(parents=True, exist_ok=True)
     reports = {
-        "STRUCTEVIDENCE_V21_CONTENT_AUDIT.md": """# StructEvidence v2.1 Content Audit
+        "STRUCTEVIDENCE_V21_CONTENT_AUDIT.md": """# StructureEvidence v2.1 Content Audit
 
 Status: PASS
 
@@ -733,7 +733,7 @@ Status: PASS
 - No fake entity counts, customer logos, partners, live monitoring claims or fake backend results.
 - No universal health score, risk grade or investment language was introduced.
 """,
-        "STRUCTEVIDENCE_V21_METHOD_BOUNDARY_AUDIT.md": """# StructEvidence v2.1 Method Boundary Audit
+        "STRUCTEVIDENCE_V21_METHOD_BOUNDARY_AUDIT.md": """# StructureEvidence v2.1 Method Boundary Audit
 
 Status: PASS
 
@@ -742,7 +742,7 @@ Status: PASS
 - ECN is described as planned contribution infrastructure, not a conclusion engine.
 - No legal assurance, fraud inference, trading signal or universal score is displayed.
 """,
-        "STRUCTEVIDENCE_V21_ARCHITECTURE_AUDIT.md": """# StructEvidence v2.1 Architecture Audit
+        "STRUCTEVIDENCE_V21_ARCHITECTURE_AUDIT.md": """# StructureEvidence v2.1 Architecture Audit
 
 Status: PASS
 
@@ -754,22 +754,22 @@ Status: PASS
 - ECN is the future contribution layer.
 - Architecture pages and whitepaper library are linked.
 """,
-        "STRUCTEVIDENCE_V21_WHITEPAPER_AUDIT.md": """# StructEvidence v2.1 Whitepaper Audit
+        "STRUCTEVIDENCE_V21_WHITEPAPER_AUDIT.md": """# StructureEvidence v2.1 Whitepaper Audit
 
 Status: PASS
 
 All required whitepaper paths exist. Each missing finalized source is marked `DRAFT_SCAFFOLD`, not `FROZEN`. No draft is presented as peer reviewed or externally finalized.
 """,
-        "STRUCTEVIDENCE_V21_LINK_CHECK.md": """# StructEvidence v2.1 Link Check
+        "STRUCTEVIDENCE_V21_LINK_CHECK.md": """# StructureEvidence v2.1 Link Check
 
 Status: PASS
 
 Main navigation, required public pages, architecture drill-down pages, research report links, verify links and whitepaper links were included for static GitHub Pages use from `/docs`.
 """,
-        "STRUCTEVIDENCE_V21_REDESIGN_REPORT.md": """# StructEvidence v2.1 Redesign Report
+        "STRUCTEVIDENCE_V21_REDESIGN_REPORT.md": """# StructureEvidence v2.1 Redesign Report
 
 PROJECT
-StructEvidence
+StructureEvidence
 
 RELEASE
 Institutional Intelligence + Public Research Stack v2.1
@@ -877,7 +877,7 @@ Verified after publication; final SHA is intentionally not embedded in this self
 REMOTE_MATCH
 PASS
 """,
-        "STRUCTEVIDENCE_V22_CONTENT_AUDIT.md": """# StructEvidence v2.2 Content Audit
+        "STRUCTEVIDENCE_V22_CONTENT_AUDIT.md": """# StructureEvidence v2.2 Content Audit
 
 Status: PASS
 
@@ -886,7 +886,7 @@ Status: PASS
 - No fake score, fake coverage, fake SLA, fake pricing, fake customers or fake partners.
 - No trading language or investment call-to-action was added.
 """,
-        "STRUCTEVIDENCE_V22_COMMERCIAL_UX_AUDIT.md": """# StructEvidence v2.2 Commercial UX Audit
+        "STRUCTEVIDENCE_V22_COMMERCIAL_UX_AUDIT.md": """# StructureEvidence v2.2 Commercial UX Audit
 
 Status: PASS
 
@@ -896,7 +896,7 @@ Status: PASS
 - Uncovered result routes to request audit rather than a dead end.
 - Standard trust layer is one click away but not top-level technical clutter.
 """,
-        "STRUCTEVIDENCE_V22_METHOD_BOUNDARY_AUDIT.md": """# StructEvidence v2.2 Method Boundary Audit
+        "STRUCTEVIDENCE_V22_METHOD_BOUNDARY_AUDIT.md": """# StructureEvidence v2.2 Method Boundary Audit
 
 Status: PASS
 
@@ -904,7 +904,7 @@ Status: PASS
 - PARTIAL source coverage is preserved.
 - Strategy summary keeps the frozen structural/evidence states and material inconsistency value.
 """,
-        "STRUCTEVIDENCE_V22_SEARCH_AUDIT.md": """# StructEvidence v2.2 Search Audit
+        "STRUCTEVIDENCE_V22_SEARCH_AUDIT.md": """# StructureEvidence v2.2 Search Audit
 
 Status: PASS
 
@@ -923,7 +923,7 @@ Status: PASS
 
 No alert dialogs are used.
 """,
-        "STRUCTEVIDENCE_V22_LINK_CHECK.md": """# StructEvidence v2.2 Link Check
+        "STRUCTEVIDENCE_V22_LINK_CHECK.md": """# StructureEvidence v2.2 Link Check
 
 Status: PASS
 
@@ -931,10 +931,10 @@ Status: PASS
 - View Full Audit, Read Research, Inspect Evidence and request paths exist.
 - Standard links to Architecture, Methodology, Whitepapers, Verify, Version History and Evidence principles.
 """,
-        "STRUCTEVIDENCE_V22_REDESIGN_REPORT.md": """# StructEvidence v2.2 Redesign Report
+        "STRUCTEVIDENCE_V22_REDESIGN_REPORT.md": """# StructureEvidence v2.2 Redesign Report
 
 PROJECT
-StructEvidence
+StructureEvidence
 
 RELEASE
 Search-First Commercial Front Office v2.2

@@ -13,5 +13,10 @@ private/
 *.pdf
 !reports/
 !reports/DEMO_BNB_MONITORING_SNAPSHOT_v1.0.pdf
+!reports/STRUCTUREEVIDENCE_800VDC_DECISION_PACK_SAMPLE_v1.0.pdf
 !docs/reports/
 !docs/reports/DEMO_BNB_MONITORING_SNAPSHOT_v1.0.pdf
+!docs/reports/STRUCTUREEVIDENCE_800VDC_DECISION_PACK_SAMPLE_v1.0.pdf
+!output/
+!output/pdf/
+!output/pdf/STRUCTUREEVIDENCE_800VDC_DECISION_PACK_SAMPLE_v1.0.pdf

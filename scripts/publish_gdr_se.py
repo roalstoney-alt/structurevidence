@@ -38,8 +38,8 @@ def esc(value) -> str:
 def nav(prefix: str = "") -> str:
     return f"""<header class="site-header">
   <div class="nav-wrap">
-    <a class="brand" href="{prefix}index.html" aria-label="StructEvidence home">
-      <span class="brand-mark">SE</span><span>StructEvidence</span>
+    <a class="brand" href="{prefix}index.html" aria-label="StructureEvidence home">
+      <span class="brand-mark">SE</span><span>StructureEvidence</span>
     </a>
     <button class="nav-toggle" data-nav-toggle aria-controls="nav" aria-expanded="false">Menu</button>
     <nav class="nav" id="nav" aria-label="Main navigation"><a href="{prefix}index.html#search">Search</a><a href="{prefix}reports.html">Reports</a><a href="{prefix}research.html">Research</a><a href="{prefix}standard.html">Standard</a><a href="{prefix}verify.html">Verify</a><a href="{prefix}gdr.html">GDR-SE</a><a href="{prefix}enterprise.html" class="enterprise-link">Enterprise</a></nav>
@@ -50,7 +50,7 @@ def nav(prefix: str = "") -> str:
 def footer(prefix: str = "") -> str:
     return f"""<footer class="site-footer">
   <div class="footer-inner">
-    <div class="footer-links"><strong>StructEvidence</strong><a href="{prefix}reports.html">Reports</a><a href="{prefix}research.html">Research</a><a href="{prefix}standard.html">Standard</a><a href="{prefix}verify.html">Verify</a><a href="{prefix}gdr.html">GDR-SE</a><a href="{prefix}enterprise.html">Enterprise</a></div>
+    <div class="footer-links"><strong>StructureEvidence</strong><a href="{prefix}reports.html">Reports</a><a href="{prefix}research.html">Research</a><a href="{prefix}standard.html">Standard</a><a href="{prefix}verify.html">Verify</a><a href="{prefix}gdr.html">GDR-SE</a><a href="{prefix}enterprise.html">Enterprise</a></div>
     <p>Research only. No investment advice. Evidence inconsistency does not imply falsehood, misconduct or fraud. Findings may be corrected or superseded.</p>
   </div>
 </footer><script src="{prefix}assets/site.js"></script>"""
@@ -62,10 +62,10 @@ def page(title: str, description: str, canonical: str, body: str, prefix: str = 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{esc(title)} - StructEvidence</title>
+  <title>{esc(title)} - StructureEvidence</title>
   <meta name="description" content="{esc(description)}">
   <link rel="canonical" href="https://structurevidence.org/{esc(canonical)}">
-  <meta property="og:title" content="{esc(title)} - StructEvidence">
+  <meta property="og:title" content="{esc(title)} - StructureEvidence">
   <meta property="og:description" content="{esc(description)}">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://structurevidence.org/{esc(canonical)}">
@@ -112,7 +112,7 @@ def update_public_pages(records: dict[str, dict]) -> None:
   <div class="hero-copy">
     <p class="eyebrow">Decision Reliability</p>
     <h1>GDR-SE</h1>
-    <p class="lead">GDR-SE Runtime Enforcement v0.1-R1.1 determines whether a StructEvidence research result is sufficiently complete, current and traceable to be published, commercially delivered or used in monitoring.</p>
+    <p class="lead">GDR-SE Runtime Enforcement v0.1-R1.1 determines whether a StructureEvidence research result is sufficiently complete, current and traceable to be published, commercially delivered or used in monitoring.</p>
     <p><span class="status">GDR-SE Runtime Enforcement v0.1-R1.1</span><span class="status">Evaluation Mode: RUNTIME_EVALUATED</span></p>
   </div>
 </section>
@@ -127,7 +127,7 @@ def update_public_pages(records: dict[str, dict]) -> None:
   <p>GDR-SE evaluates freshness and expiry against an explicit UTC evaluation timestamp. Authorization precedence and Gate effects are versioned configuration inputs whose hashes are recorded with each evaluation.</p>
   <p>GDR-SE produces categorical release decisions, not scores, ratings or rankings.</p>
 </section>"""
-    gdr = page("GDR-SE", "Runtime decision reliability authorization for StructEvidence research release actions.", "gdr.html", body)
+    gdr = page("GDR-SE", "Runtime decision reliability authorization for StructureEvidence research release actions.", "gdr.html", body)
     write(ROOT / "gdr.html", gdr)
     write(DOCS / "gdr.html", gdr)
     verify = (ROOT / "verify.html").read_text(encoding="utf-8")
@@ -208,7 +208,7 @@ The previous GDR-SE implementation serialized static gate outcomes in the publis
     write(ROOT / "docs" / "execution" / "GDR_SE_RUNTIME_TEST_REPORT.md", "# GDR-SE Runtime Test Report\n\nGDR_SE_RUNTIME_TESTS_PASS\n")
     write(ROOT / "docs" / "execution" / "GDR_SE_R1_RUNTIME_CORRECTION_REPORT.md", f"""# GDR-SE R1 Runtime Correction Report
 
-PROJECT: StructEvidence
+PROJECT: StructureEvidence
 
 SPRINT: GDR-SE R1 Runtime Enforcement Correction
 
