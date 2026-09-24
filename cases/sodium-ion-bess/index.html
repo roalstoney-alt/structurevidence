@@ -20,7 +20,7 @@
     <h1 id="case-title">Sodium-Ion BESS: From launch claim to field evidence.</h1>
     <p class="lead">Has sodium-ion stationary storage crossed from product and production claims into a procurable, delivered, commissioned technology with public field-operating evidence?</p>
     <div class="callout"><strong>Current answer:</strong> product launch and a large cooperation agreement are supported. A named delivered and commissioned customer system is <strong>NOT ESTABLISHED</strong> at the 2026-09-24 knowledge cutoff.</div>
-    <div class="actions"><a class="button" href="#state-map">Inspect the state map</a><a class="button secondary" href="state-v0.1.json">Open machine-readable snapshot</a></div>
+    <div class="actions"><a class="button" href="#state-map">Inspect the state map</a><a class="button secondary" href="state-v0.1.json">Open frozen state</a><a class="button secondary" href="decision-memory-v0.1.json">Open Decision Memory</a></div>
   </section>
 
   <section class="product-section" aria-labelledby="boundary-title">
@@ -44,7 +44,7 @@
   </section>
 
   <section class="product-section" aria-labelledby="clock-title">
-    <div class="section-head"><div><p class="eyebrow">Dual clock</p><h2 id="clock-title">When it happened and when it became usable evidence.</h2></div><p>Event time locates the claim or agreement. Knowledge time records when StructureEvidence accepted the source into this bounded case. Both remain visible.</p></div>
+    <div class="section-head"><div><p class="eyebrow">Time semantics</p><h2 id="clock-title">When it happened is not the same as when it became knowable.</h2></div><p>The frozen public view keeps event time and knowledge time. The Decision Memory sidecar additionally preserves source publication time, first observation when available, and snapshot freeze time so later evidence cannot contaminate earlier decisions.</p></div>
     <div class="path-grid"><article class="path-card"><p class="field-label">Event time</p><h3>2021-07-29 → 2026-08-25</h3><p>The dated sequence of announcements, product launches, agreement signing, and market activity.</p></article><article class="path-card"><p class="field-label">Knowledge time / v0.1</p><h3>2026-09-24</h3><p>The cutoff at which the records below were assessed. Later evidence cannot silently backfill this snapshot.</p></article></div>
   </section>
 
@@ -80,7 +80,7 @@
   </section>
 
   <section class="product-section" aria-labelledby="update-title">
-    <div class="proof-card"><div class="proof-main"><p class="eyebrow">Living case protocol</p><h2 id="update-title">New evidence changes state. It does not rewrite history.</h2><p>Every accepted update receives an event time and knowledge time. Earlier snapshots remain retrievable. Contradictions, corrections, and superseding evidence are appended with their scope and reason.</p><div class="actions"><a class="button" href="state-v0.1.json">Download v0.1 state</a><a class="button secondary" href="https://structevidence.com/context/?case=sodium-ion-bess">Apply this map to a procurement decision</a></div></div><aside class="proof-aside"><p class="field-label">Current boundary</p><p>PRODUCT ≠ DELIVERY</p><p>AGREEMENT ≠ COMMISSIONING</p><p>TEST CLAIM ≠ FIELD HISTORY</p><p>SINGLE SITE ≠ MARKET ADOPTION</p></aside></div>
+    <div class="proof-card"><div class="proof-main"><p class="eyebrow">Living case protocol</p><h2 id="update-title">New evidence changes state. It does not rewrite history.</h2><p>Every accepted update is append-only. The frozen v0.1 state remains unchanged, while Decision Memory records publication lag, structured unknowns, reopen triggers, future workflow actions, and eventual outcomes.</p><div class="actions"><a class="button" href="state-v0.1.json">Open frozen v0.1 state</a><a class="button secondary" href="decision-memory-v0.1.json">Open Decision Memory v0.1</a><a class="button secondary" href="https://structevidence.com/context/?case=sodium-ion-bess">Apply this map to a procurement decision</a></div></div><aside class="proof-aside"><p class="field-label">Current boundary</p><p>PRODUCT ≠ DELIVERY</p><p>AGREEMENT ≠ COMMISSIONING</p><p>TEST CLAIM ≠ FIELD HISTORY</p><p>SINGLE SITE ≠ MARKET ADOPTION</p></aside></div>
   </section>
 </main>
 <footer class="product-footer"><div class="product-wrap footer-grid"><strong>StructureEvidence</strong><a href="/cases/">Evidence cases</a><a href="/method.html">Method</a><a href="/privacy.html">Privacy</a><span>v0.1 · Current as known on 2026-09-24.</span></div></footer><script src="/assets/product.js"></script></body></html>

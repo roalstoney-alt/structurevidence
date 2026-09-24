@@ -1,0 +1,213 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://structurevidence.org/schema/decision-memory/v0.1",
+  "title": "StructureEvidence Decision Memory Record v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["core", "decision_memory"],
+  "properties": {
+    "core": {"$ref": "../../core/schema/evidence_core_record.schema.json"},
+    "decision_memory": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schema_version", "memory_id", "case_id", "record_kind", "decision_question", "scope", "source_snapshot_refs", "evidence_states", "evidence_observations", "decision_state", "unknowns", "temporal_index", "state_transitions", "reopen_triggers", "workflow_bindings", "outcome_refs", "data_provenance", "revision_history"],
+      "properties": {
+        "schema_version": {"const": "STRUCTEVIDENCE_DECISION_MEMORY_v0.1"},
+        "memory_id": {"type": "string", "minLength": 1},
+        "case_id": {"type": "string", "minLength": 1},
+        "record_kind": {"enum": ["PUBLIC_EVIDENCE_CASE", "CUSTOMER_DECISION", "RESEARCH_DECISION"]},
+        "decision_question": {"type": "string", "minLength": 1},
+        "scope": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["statement", "included", "excluded"],
+          "properties": {
+            "statement": {"type": "string", "minLength": 1},
+            "included": {"type": "array", "items": {"type": "string", "minLength": 1}},
+            "excluded": {"type": "array", "items": {"type": "string", "minLength": 1}}
+          }
+        },
+        "source_snapshot_refs": {"$ref": "#/$defs/refs"},
+        "evidence_states": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["state_id", "label", "status", "evidence_refs", "limitations"],
+            "properties": {
+              "state_id": {"type": "string", "minLength": 1},
+              "label": {"type": "string", "minLength": 1},
+              "status": {"enum": ["SUPPORTED", "CONTRADICTED", "NOT_ESTABLISHED", "UNKNOWN", "VERIFICATION_REQUIRED", "SOURCE_ATTRIBUTED", "PARTIAL", "NOT_APPLICABLE"]},
+              "evidence_refs": {"$ref": "#/$defs/refs"},
+              "limitations": {"$ref": "#/$defs/strings"}
+            }
+          }
+        },
+        "evidence_observations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["evidence_id", "source_artifacts", "accepted_support", "does_not_support", "temporal_semantics", "state_effects", "limitations"],
+            "properties": {
+              "evidence_id": {"type": "string", "minLength": 1},
+              "source_artifacts": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": ["url", "publisher", "role", "published_at"],
+                  "properties": {
+                    "url": {"type": "string", "minLength": 1},
+                    "publisher": {"type": "string", "minLength": 1},
+                    "role": {"enum": ["PRIMARY_SOURCE", "COUNTERPARTY_CORROBORATION", "INDEPENDENT_SOURCE", "SECONDARY_SOURCE"]},
+                    "published_at": {"$ref": "#/$defs/time_value"}
+                  }
+                }
+              },
+              "accepted_support": {"type": "string", "minLength": 1},
+              "does_not_support": {"type": "string", "minLength": 1},
+              "temporal_semantics": {"$ref": "#/$defs/temporal_semantics"},
+              "state_effects": {"$ref": "#/$defs/refs"},
+              "limitations": {"$ref": "#/$defs/strings"}
+            }
+          }
+        },
+        "decision_state": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["status", "rationale", "context_refs"],
+          "properties": {
+            "status": {"enum": ["CONTEXT_REQUIRED", "OBSERVE", "VERIFY", "INVESTIGATE", "PROCEED_CONDITIONALLY", "PROCEED", "DEFER", "REJECT", "CLOSED"]},
+            "rationale": {"type": "string", "minLength": 1},
+            "context_refs": {"$ref": "#/$defs/refs"}
+          }
+        },
+        "unknowns": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["unknown_id", "question", "status", "decision_sensitivity", "why_unknown", "affected_state_refs", "minimum_resolving_evidence", "resolution_path", "research_level_candidate", "stop_condition"],
+            "properties": {
+              "unknown_id": {"type": "string", "minLength": 1},
+              "question": {"type": "string", "minLength": 1},
+              "status": {"enum": ["OPEN", "RESOLVED", "SUPERSEDED", "NOT_MATERIAL"]},
+              "decision_sensitivity": {"enum": ["MATERIAL", "CONDITIONAL", "LOW", "UNKNOWN"]},
+              "why_unknown": {"type": "string", "minLength": 1},
+              "affected_state_refs": {"$ref": "#/$defs/refs"},
+              "minimum_resolving_evidence": {"type": "string", "minLength": 1},
+              "resolution_path": {"type": "string", "minLength": 1},
+              "research_level_candidate": {"enum": ["L0_REUSE", "L1_VERIFY", "L2_INVESTIGATE", "L3_DEEP", "NONE"]},
+              "stop_condition": {"type": "string", "minLength": 1}
+            }
+          }
+        },
+        "temporal_index": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["knowledge_cutoff", "snapshot_frozen_at", "clock_policy"],
+          "properties": {
+            "knowledge_cutoff": {"$ref": "#/$defs/time_value"},
+            "snapshot_frozen_at": {"$ref": "#/$defs/time_value"},
+            "clock_policy": {"const": "EVENT_PUBLISHED_FIRST_OBSERVED_KNOWN_FROZEN"}
+          }
+        },
+        "state_transitions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["transition_id", "transition_type", "prior_state_ref", "new_state_ref", "effective_at", "known_at", "frozen_at", "trigger_evidence_refs", "interpretation", "preserves_prior_state"],
+            "properties": {
+              "transition_id": {"type": "string", "minLength": 1},
+              "transition_type": {"enum": ["INITIAL_SNAPSHOT", "EVIDENCE_STATE_CHANGE", "DECISION_STATE_CHANGE", "CORRECTION", "SUPERSESSION", "OUTCOME_UPDATE"]},
+              "prior_state_ref": {"type": ["string", "null"]},
+              "new_state_ref": {"type": "string", "minLength": 1},
+              "effective_at": {"$ref": "#/$defs/time_value"},
+              "known_at": {"$ref": "#/$defs/time_value"},
+              "frozen_at": {"$ref": "#/$defs/time_value"},
+              "trigger_evidence_refs": {"$ref": "#/$defs/refs"},
+              "interpretation": {"type": "string", "minLength": 1},
+              "preserves_prior_state": {"const": true}
+            }
+          }
+        },
+        "reopen_triggers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["trigger_id", "condition", "affected_state_refs", "minimum_evidence", "status"],
+            "properties": {
+              "trigger_id": {"type": "string", "minLength": 1},
+              "condition": {"type": "string", "minLength": 1},
+              "affected_state_refs": {"$ref": "#/$defs/refs"},
+              "minimum_evidence": {"type": "string", "minLength": 1},
+              "status": {"enum": ["OPEN", "MET", "SUPERSEDED"]}
+            }
+          }
+        },
+        "workflow_bindings": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["cml_refs", "rdl_refs", "authorization_refs", "action_refs"],
+          "properties": {
+            "cml_refs": {"$ref": "#/$defs/refs"},
+            "rdl_refs": {"$ref": "#/$defs/refs"},
+            "authorization_refs": {"$ref": "#/$defs/refs"},
+            "action_refs": {"$ref": "#/$defs/refs"}
+          }
+        },
+        "outcome_refs": {"$ref": "#/$defs/refs"},
+        "data_provenance": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["source_data_class", "derived_data_class", "ownership_boundary", "reproducibility_note"],
+          "properties": {
+            "source_data_class": {"const": "PUBLIC_EXTERNAL_SOURCES"},
+            "derived_data_class": {"const": "STRUCTEVIDENCE_TIME_INDEXED_DECISION_MEMORY"},
+            "ownership_boundary": {"type": "string", "minLength": 1},
+            "reproducibility_note": {"type": "string", "minLength": 1}
+          }
+        },
+        "revision_history": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["revision_id", "created_at", "supersedes", "change_summary", "preserves_original"],
+            "properties": {
+              "revision_id": {"type": "string", "minLength": 1},
+              "created_at": {"$ref": "#/$defs/time_value"},
+              "supersedes": {"type": ["string", "null"]},
+              "change_summary": {"type": "string", "minLength": 1},
+              "preserves_original": {"const": true}
+            }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "refs": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "strings": {"type": "array", "items": {"type": "string", "minLength": 1}},
+    "time_value": {"anyOf": [{"type": "string", "format": "date"}, {"type": "string", "format": "date-time"}]},
+    "nullable_time_value": {"anyOf": [{"type": "null"}, {"$ref": "#/$defs/time_value"}]},
+    "temporal_semantics": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["event_at", "published_at", "first_observed_at", "known_at", "frozen_at"],
+      "properties": {
+        "event_at": {"$ref": "#/$defs/time_value"},
+        "published_at": {"$ref": "#/$defs/time_value"},
+        "first_observed_at": {"$ref": "#/$defs/nullable_time_value"},
+        "known_at": {"$ref": "#/$defs/time_value"},
+        "frozen_at": {"$ref": "#/$defs/time_value"}
+      }
+    }
+  }
+}

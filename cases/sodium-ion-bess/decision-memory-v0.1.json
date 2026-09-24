@@ -1,0 +1,443 @@
+{
+  "core": {
+    "artifact_refs": [
+      "cases/sodium-ion-bess/state-v0.1.json",
+      "cases/sodium-ion-bess/index.html",
+      "evidence/decision-memory/schema/decision-memory-record.schema.json"
+    ],
+    "core_version": "STRUCTEVIDENCE_EVIDENCE_CORE_v0.1",
+    "correction_status": "NONE",
+    "created_at": "2026-09-24",
+    "domain": "INDUSTRIAL_TECHNOLOGY",
+    "effective_at": "2026-09-24",
+    "input_hash": "94dff6b9d345952fdb04de91fc2d300d9e962d25d47627d811abc58b75fb2b52",
+    "known_at": "2026-09-24",
+    "policy_version": "STRUCTEVIDENCE_DECISION_MEMORY_v0.1",
+    "protocol": "STRUCTEVIDENCE_DECISION_MEMORY",
+    "record_hash": "100ea4e4500b6a6739b262dce39d0fb58aff25840a0b48c7906c30172472727f",
+    "record_id": "DM-SE-BESS-SODIUM-001-v0.1",
+    "source_refs": [
+      "https://www.catl.com/en/news/665.html",
+      "https://www.catl.com/en/news/6401.html",
+      "https://www.hyperstrong.com/en/news/company-news/95",
+      "https://www.catl.com/en/news/6812.html",
+      "https://www.catl.com/en/news/6861.html",
+      "https://www.catl.com/en/news/6977.html"
+    ],
+    "subject_class": "DECISION_MEMORY_RECORD",
+    "subject_id": "SE-BESS-SODIUM-001",
+    "supersession_status": "CURRENT",
+    "updated_at": "2026-09-24",
+    "verification_status": "MIGRATED_FROM_FROZEN_PUBLIC_STATE_V0_1"
+  },
+  "decision_memory": {
+    "schema_version": "STRUCTEVIDENCE_DECISION_MEMORY_v0.1",
+    "memory_id": "DM-SE-BESS-SODIUM-001-v0.1",
+    "case_id": "SE-BESS-SODIUM-001",
+    "record_kind": "PUBLIC_EVIDENCE_CASE",
+    "decision_question": "Has sodium-ion stationary storage crossed from product and production claims into a procurable, delivered, commissioned technology with public field-operating evidence?",
+    "scope": {
+      "statement": "Stationary battery energy storage systems only.",
+      "included": [
+        "Stationary sodium-ion BESS product, supply, delivery, commissioning, field performance, operating history, and replication evidence."
+      ],
+      "excluded": [
+        "Vehicle batteries.",
+        "Starter batteries.",
+        "Solid-state battery claims.",
+        "Buyer-specific procurement suitability without customer context."
+      ]
+    },
+    "source_snapshot_refs": [
+      "cases/sodium-ion-bess/state-v0.1.json"
+    ],
+    "evidence_states": [
+      {
+        "state_id": "product_announced",
+        "label": "Stationary product announced",
+        "status": "SUPPORTED",
+        "evidence_refs": [
+          "SE-BESS-SODIUM-001-EV-004"
+        ],
+        "limitations": [
+          "Product existence does not establish delivery or commissioning."
+        ]
+      },
+      {
+        "state_id": "supply_cooperation_agreement",
+        "label": "Supply cooperation agreement",
+        "status": "SUPPORTED",
+        "evidence_refs": [
+          "SE-BESS-SODIUM-001-EV-003"
+        ],
+        "limitations": [
+          "Agreement existence does not establish shipment, acceptance, commissioning, or field performance."
+        ]
+      },
+      {
+        "state_id": "production_readiness",
+        "label": "Production readiness",
+        "status": "VERIFICATION_REQUIRED",
+        "evidence_refs": [
+          "SE-BESS-SODIUM-001-EV-002",
+          "SE-BESS-SODIUM-001-EV-003",
+          "SE-BESS-SODIUM-001-EV-004"
+        ],
+        "limitations": [
+          "Readiness language remains manufacturer-attributed without independently accepted production evidence."
+        ]
+      },
+      {
+        "state_id": "customer_batch_delivery",
+        "label": "Customer batch delivery",
+        "status": "NOT_ESTABLISHED",
+        "evidence_refs": [],
+        "limitations": [
+          "Planned milestones and supply agreements are not completed delivery records."
+        ]
+      },
+      {
+        "state_id": "named_commissioned_site",
+        "label": "Named commissioned site",
+        "status": "NOT_ESTABLISHED",
+        "evidence_refs": [],
+        "limitations": [
+          "No qualifying named customer site commissioning or grid-connection record was accepted at the cutoff."
+        ]
+      },
+      {
+        "state_id": "independent_field_performance",
+        "label": "Independent field performance",
+        "status": "NOT_ESTABLISHED",
+        "evidence_refs": [],
+        "limitations": [
+          "No customer-linked independent field dataset was accepted at the cutoff."
+        ]
+      },
+      {
+        "state_id": "long_operating_history",
+        "label": "Long operating history",
+        "status": "UNKNOWN",
+        "evidence_refs": [],
+        "limitations": [
+          "No qualifying duration, reliability, degradation, incident, or maintenance record was accepted."
+        ]
+      },
+      {
+        "state_id": "lifecycle_cost_advantage_over_lfp",
+        "label": "Lifecycle cost advantage over LFP",
+        "status": "NOT_ESTABLISHED",
+        "evidence_refs": [],
+        "limitations": [
+          "A system-level, duty-cycle-specific comparison is absent."
+        ]
+      },
+      {
+        "state_id": "universal_lfp_replacement",
+        "label": "Universal LFP replacement",
+        "status": "NOT_ESTABLISHED",
+        "evidence_refs": [],
+        "limitations": [
+          "No universal substitution conclusion is inferred from product or agreement evidence."
+        ]
+      }
+    ],
+    "evidence_observations": [
+      {
+        "evidence_id": "SE-BESS-SODIUM-001-EV-001",
+        "source_artifacts": [
+          {
+            "url": "https://www.catl.com/en/news/665.html",
+            "publisher": "CATL",
+            "role": "PRIMARY_SOURCE",
+            "published_at": "2021-07-29"
+          }
+        ],
+        "accepted_support": "Sodium-ion technology and a planned industrial-chain target were publicly announced.",
+        "does_not_support": "Stationary BESS customer delivery, commissioning, or field-operating history.",
+        "temporal_semantics": {
+          "event_at": "2021-07-29",
+          "published_at": "2021-07-29",
+          "first_observed_at": null,
+          "known_at": "2026-09-24",
+          "frozen_at": "2026-09-24"
+        },
+        "state_effects": [
+          "product_announced"
+        ],
+        "limitations": [
+          "The record predates the TENER Sodium stationary product and does not establish a customer deployment."
+        ]
+      },
+      {
+        "evidence_id": "SE-BESS-SODIUM-001-EV-002",
+        "source_artifacts": [
+          {
+            "url": "https://www.catl.com/en/news/6401.html",
+            "publisher": "CATL",
+            "role": "PRIMARY_SOURCE",
+            "published_at": "2025-04-21"
+          }
+        ],
+        "accepted_support": "Naxtra sodium-ion products were publicly launched with manufacturer-attributed mass-production claims.",
+        "does_not_support": "A delivered or commissioned stationary storage system.",
+        "temporal_semantics": {
+          "event_at": "2025-04-21",
+          "published_at": "2025-04-21",
+          "first_observed_at": null,
+          "known_at": "2026-09-24",
+          "frozen_at": "2026-09-24"
+        },
+        "state_effects": [
+          "production_readiness"
+        ],
+        "limitations": [
+          "The cited product family is not itself evidence of a commissioned stationary BESS."
+        ]
+      },
+      {
+        "evidence_id": "SE-BESS-SODIUM-001-EV-003",
+        "source_artifacts": [
+          {
+            "url": "https://www.hyperstrong.com/en/news/company-news/95",
+            "publisher": "HyperStrong",
+            "role": "COUNTERPARTY_CORROBORATION",
+            "published_at": "2026-04-29"
+          },
+          {
+            "url": "https://www.catl.com/en/news/6812.html",
+            "publisher": "CATL",
+            "role": "PRIMARY_SOURCE",
+            "published_at": "2026-05-06"
+          }
+        ],
+        "accepted_support": "Two counterparties publicly described a three-year 60 GWh sodium-ion energy-storage cooperation agreement signed on 2026-04-27.",
+        "does_not_support": "Shipment, customer acceptance, commissioning, grid connection, or operating performance.",
+        "temporal_semantics": {
+          "event_at": "2026-04-27",
+          "published_at": "2026-04-29",
+          "first_observed_at": null,
+          "known_at": "2026-09-24",
+          "frozen_at": "2026-09-24"
+        },
+        "state_effects": [
+          "supply_cooperation_agreement",
+          "production_readiness"
+        ],
+        "limitations": [
+          "published_at uses the earliest qualifying public counterparty publication; CATL published its corresponding announcement on 2026-05-06."
+        ]
+      },
+      {
+        "evidence_id": "SE-BESS-SODIUM-001-EV-004",
+        "source_artifacts": [
+          {
+            "url": "https://www.catl.com/en/news/6861.html",
+            "publisher": "CATL",
+            "role": "PRIMARY_SOURCE",
+            "published_at": "2026-06-22"
+          }
+        ],
+        "accepted_support": "TENER Sodium was publicly launched as a stationary BESS product and future delivery milestones were stated.",
+        "does_not_support": "Completed customer delivery or a named commissioned customer site as of the knowledge cutoff; field-validation language remains source-attributed.",
+        "temporal_semantics": {
+          "event_at": "2026-06-22",
+          "published_at": "2026-06-22",
+          "first_observed_at": null,
+          "known_at": "2026-09-24",
+          "frozen_at": "2026-09-24"
+        },
+        "state_effects": [
+          "product_announced",
+          "production_readiness"
+        ],
+        "limitations": [
+          "Manufacturer claims about validation, readiness, safety, or performance are not converted into independent field evidence."
+        ]
+      },
+      {
+        "evidence_id": "SE-BESS-SODIUM-001-EV-005",
+        "source_artifacts": [
+          {
+            "url": "https://www.catl.com/en/news/6977.html",
+            "publisher": "CATL",
+            "role": "PRIMARY_SOURCE",
+            "published_at": "2026-08-25"
+          }
+        ],
+        "accepted_support": "TENER Sodium was publicly showcased and a Brazil market partnership was announced.",
+        "does_not_support": "A named commissioned sodium-ion BESS or public field-performance dataset.",
+        "temporal_semantics": {
+          "event_at": "2026-08-25",
+          "published_at": "2026-08-25",
+          "first_observed_at": null,
+          "known_at": "2026-09-24",
+          "frozen_at": "2026-09-24"
+        },
+        "state_effects": [
+          "product_announced"
+        ],
+        "limitations": [
+          "Market activity and product display do not establish customer commissioning or operating history."
+        ]
+      }
+    ],
+    "decision_state": {
+      "status": "CONTEXT_REQUIRED",
+      "rationale": "The public evidence map establishes market evidence boundaries but cannot determine a buyer-specific procurement decision without architecture, qualification, duty-cycle, geography, certification, economics, and decision-deadline context.",
+      "context_refs": []
+    },
+    "unknowns": [
+      {
+        "unknown_id": "SE-BESS-SODIUM-001-UNK-DELIVERY",
+        "question": "Has a named customer accepted a batch delivery of a sodium-ion stationary storage system?",
+        "status": "OPEN",
+        "decision_sensitivity": "CONDITIONAL",
+        "why_unknown": "The accepted public record contains product, partnership, and future-delivery statements but no completed customer acceptance record.",
+        "affected_state_refs": [
+          "customer_batch_delivery"
+        ],
+        "minimum_resolving_evidence": "Dated, attributable shipment and customer acceptance for a sodium-ion stationary system.",
+        "resolution_path": "Targeted verification of customer, operator, logistics, regulatory, or commissioning records.",
+        "research_level_candidate": "L1_VERIFY",
+        "stop_condition": "Stop when one qualifying named customer delivery and acceptance record is verified, or when the authorized search boundary is exhausted."
+      },
+      {
+        "unknown_id": "SE-BESS-SODIUM-001-UNK-COMMISSIONING",
+        "question": "Does a named commissioned and grid- or service-operating sodium-ion stationary site exist?",
+        "status": "OPEN",
+        "decision_sensitivity": "CONDITIONAL",
+        "why_unknown": "A delivered system may not be commissioned, and no qualifying public site record was accepted.",
+        "affected_state_refs": [
+          "named_commissioned_site"
+        ],
+        "minimum_resolving_evidence": "Named operator, named site, system boundary, commissioning date, and grid or service status.",
+        "resolution_path": "Targeted verification of operator, project, regulator, utility, or EPC commissioning records.",
+        "research_level_candidate": "L1_VERIFY",
+        "stop_condition": "Stop when one qualifying named commissioned site is verified, or when the authorized search boundary is exhausted."
+      },
+      {
+        "unknown_id": "SE-BESS-SODIUM-001-UNK-FIELD-PERFORMANCE",
+        "question": "Is there an independent or customer-linked field-performance dataset for a named sodium-ion stationary system?",
+        "status": "OPEN",
+        "decision_sensitivity": "CONDITIONAL",
+        "why_unknown": "Manufacturer test and performance language is not equivalent to customer field validation.",
+        "affected_state_refs": [
+          "independent_field_performance"
+        ],
+        "minimum_resolving_evidence": "Independent test or operator dataset with method, system identity, operating boundary, and dated measurements.",
+        "resolution_path": "Verify operator, independent laboratory, insurer, regulator, or grid-service datasets tied to a named system.",
+        "research_level_candidate": "L2_INVESTIGATE",
+        "stop_condition": "Stop when a qualifying independent/customer-linked field dataset is accepted or public data is shown insufficient within scope."
+      },
+      {
+        "unknown_id": "SE-BESS-SODIUM-001-UNK-OPERATING-HISTORY",
+        "question": "What dated operating history exists for a named sodium-ion stationary system?",
+        "status": "OPEN",
+        "decision_sensitivity": "CONDITIONAL",
+        "why_unknown": "Commissioning alone would not establish durability, degradation, availability, incident rate, or maintenance burden.",
+        "affected_state_refs": [
+          "long_operating_history"
+        ],
+        "minimum_resolving_evidence": "Dated runtime, duty cycle, availability, degradation, incidents, and maintenance tied to a named system.",
+        "resolution_path": "Monitor and verify operator disclosures, service records, technical papers, regulator filings, and independent performance reports.",
+        "research_level_candidate": "L2_INVESTIGATE",
+        "stop_condition": "Stop when evidence is sufficient for the defined operating-history threshold or when the authorized observation window ends."
+      }
+    ],
+    "temporal_index": {
+      "knowledge_cutoff": "2026-09-24",
+      "snapshot_frozen_at": "2026-09-24",
+      "clock_policy": "EVENT_PUBLISHED_FIRST_OBSERVED_KNOWN_FROZEN"
+    },
+    "state_transitions": [
+      {
+        "transition_id": "DM-SE-BESS-SODIUM-001-TR-000",
+        "transition_type": "INITIAL_SNAPSHOT",
+        "prior_state_ref": null,
+        "new_state_ref": "cases/sodium-ion-bess/state-v0.1.json",
+        "effective_at": "2026-09-24",
+        "known_at": "2026-09-24",
+        "frozen_at": "2026-09-24",
+        "trigger_evidence_refs": [
+          "SE-BESS-SODIUM-001-EV-001",
+          "SE-BESS-SODIUM-001-EV-002",
+          "SE-BESS-SODIUM-001-EV-003",
+          "SE-BESS-SODIUM-001-EV-004",
+          "SE-BESS-SODIUM-001-EV-005"
+        ],
+        "interpretation": "Initial public evidence-state freeze. This records what StructureEvidence accepted by the knowledge cutoff; it does not backdate later knowledge to the underlying event dates.",
+        "preserves_prior_state": true
+      }
+    ],
+    "reopen_triggers": [
+      {
+        "trigger_id": "SE-BESS-SODIUM-001-RT-DELIVERY",
+        "condition": "A named customer shipment and acceptance record becomes publicly verifiable.",
+        "affected_state_refs": [
+          "customer_batch_delivery"
+        ],
+        "minimum_evidence": "Dated attributable shipment plus customer acceptance.",
+        "status": "OPEN"
+      },
+      {
+        "trigger_id": "SE-BESS-SODIUM-001-RT-COMMISSIONING",
+        "condition": "A named site commissioning or grid-connection record becomes publicly verifiable.",
+        "affected_state_refs": [
+          "named_commissioned_site"
+        ],
+        "minimum_evidence": "Named operator, site, system boundary, commissioning date, and operating status.",
+        "status": "OPEN"
+      },
+      {
+        "trigger_id": "SE-BESS-SODIUM-001-RT-HISTORY",
+        "condition": "Dated operating-history evidence tied to a named system becomes available.",
+        "affected_state_refs": [
+          "long_operating_history"
+        ],
+        "minimum_evidence": "Runtime, duty cycle, availability, degradation, incidents, and maintenance.",
+        "status": "OPEN"
+      },
+      {
+        "trigger_id": "SE-BESS-SODIUM-001-RT-INDEPENDENT",
+        "condition": "Independent or customer-linked field validation becomes publicly verifiable.",
+        "affected_state_refs": [
+          "independent_field_performance"
+        ],
+        "minimum_evidence": "Traceable system identity, method, boundary, and measured performance.",
+        "status": "OPEN"
+      },
+      {
+        "trigger_id": "SE-BESS-SODIUM-001-RT-REPLICATION",
+        "condition": "Repeat procurement or multi-operator replication becomes publicly verifiable.",
+        "affected_state_refs": [
+          "universal_lfp_replacement"
+        ],
+        "minimum_evidence": "Multiple attributable deployments across a defined market boundary; no universal replacement inference is automatic.",
+        "status": "OPEN"
+      }
+    ],
+    "workflow_bindings": {
+      "cml_refs": [],
+      "rdl_refs": [],
+      "authorization_refs": [],
+      "action_refs": []
+    },
+    "outcome_refs": [],
+    "data_provenance": {
+      "source_data_class": "PUBLIC_EXTERNAL_SOURCES",
+      "derived_data_class": "STRUCTEVIDENCE_TIME_INDEXED_DECISION_MEMORY",
+      "ownership_boundary": "Underlying public facts and source publications remain external/public. The StructureEvidence-derived asset is the normalized scope, source dependency, temporal indexing, accepted support, explicit non-support, unknown structure, state transition history, reopen logic, and later outcome linkage.",
+      "reproducibility_note": "A third party may re-read the public sources, but reproducing the same historical decision memory requires preserving what was accepted, rejected, unknown, and frozen at each knowledge cutoff."
+    },
+    "revision_history": [
+      {
+        "revision_id": "DM-SE-BESS-SODIUM-001-v0.1",
+        "created_at": "2026-09-24",
+        "supersedes": null,
+        "change_summary": "Initial Decision Memory sidecar created from the frozen sodium-ion BESS public state v0.1 without modifying that historical snapshot.",
+        "preserves_original": true
+      }
+    ]
+  }
+}
