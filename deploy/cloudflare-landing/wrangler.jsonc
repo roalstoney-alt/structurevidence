@@ -10,7 +10,8 @@
     "head_sampling_rate": 1
   },
   "vars": {
-    "PUBLIC_ORIGINS": "https://structevidence.com"
+    "PUBLIC_ORIGINS": "https://structevidence.com",
+    "TEAM_DOMAIN": "https://structevidence.cloudflareaccess.com"
   },
   "d1_databases": [
     {
