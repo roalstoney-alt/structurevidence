@@ -1,0 +1,36 @@
+{
+  "locale": "es",
+  "html_lang": "es",
+  "market_node": "/es/",
+  "language_name": "Español",
+  "positioning": {
+    "eyebrow": "Ventanas estructurales → Evidencia → Memoria de decisión → Resultados",
+    "headline": "El mundo cambia antes de que llegue el consenso. Registramos esa brecha.",
+    "lead": "StructureEvidence detecta cambios estructurales en sistemas industriales y técnicos y verifica qué establece realmente la evidencia antes de tomar una decisión.",
+    "structural_opening": "Una ventana estructural aparece cuando una restricción, dependencia, curva de costes, regulación o ventaja del incumbente empieza a debilitarse antes de que el mercado haya reajustado plenamente su valoración.",
+    "decision_memory": "Conserva qué se sabía, qué seguía siendo desconocido, qué fue verificado y qué quedó congelado en el momento de la decisión."
+  },
+  "navigation": {
+    "openings": "Ventanas estructurales",
+    "cases": "Casos de evidencia",
+    "method": "Método",
+    "verify": "Verificar una afirmación",
+    "decision": "Empezar con una decisión"
+  },
+  "cta": {
+    "primary": "Explorar evidencia pública",
+    "secondary": "Poner a prueba una decisión"
+  },
+  "display_labels": {
+    "SUPPORTED": "RESPALDADO",
+    "CONTRADICTED": "CONTRADICHO",
+    "NOT_ESTABLISHED": "NO ESTABLECIDO",
+    "UNKNOWN": "DESCONOCIDO",
+    "VERIFICATION_REQUIRED": "REQUIERE VERIFICACIÓN"
+  },
+  "invariants": {
+    "canonical_machine_states_language": "en",
+    "localized_copy_must_not_change_evidence_state": true,
+    "localized_homepages_are_market_interfaces_not_separate_research_records": true
+  }
+}
