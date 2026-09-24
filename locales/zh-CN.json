@@ -1,0 +1,36 @@
+{
+  "locale": "zh-CN",
+  "html_lang": "zh-CN",
+  "market_node": "/zh-cn/",
+  "language_name": "简体中文",
+  "positioning": {
+    "eyebrow": "结构性窗口 → 证据 → 决策记忆 → 结果",
+    "headline": "先找结构变化，再决定把资源投向哪里。",
+    "lead": "StructureEvidence 识别工业与技术系统中正在松动的旧依赖，并用可追溯证据区分：已经发生、尚未建立、仍需验证、真正未知。",
+    "structural_opening": "当技术、成本、法规、供应链或既有优势开始改变，而市场与组织尚未完成重新定价时，会出现结构性窗口。",
+    "decision_memory": "保留某个决策发生时，究竟知道什么、不知道什么、哪些证据被接受、哪些结论尚未成立。"
+  },
+  "navigation": {
+    "openings": "结构性窗口",
+    "cases": "公开证据案例",
+    "method": "方法",
+    "verify": "验证一个判断",
+    "decision": "从一个决策开始"
+  },
+  "cta": {
+    "primary": "查看公开证据",
+    "secondary": "验证一个判断"
+  },
+  "display_labels": {
+    "SUPPORTED": "已支持",
+    "CONTRADICTED": "存在反证",
+    "NOT_ESTABLISHED": "尚未建立",
+    "UNKNOWN": "未知",
+    "VERIFICATION_REQUIRED": "需要验证"
+  },
+  "invariants": {
+    "canonical_machine_states_language": "en",
+    "localized_copy_must_not_change_evidence_state": true,
+    "localized_homepages_are_market_interfaces_not_separate_research_records": true
+  }
+}
