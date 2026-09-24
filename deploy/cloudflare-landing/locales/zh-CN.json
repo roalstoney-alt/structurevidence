@@ -1,0 +1,16 @@
+{
+  "locale": "zh-CN",
+  "home": "/zh-cn/",
+  "product_prices": {
+    "claim_verification_usd": 199,
+    "decision_context_review_usd": 1999,
+    "decision_pack_usd": 4999,
+    "rush_handling_usd": 399
+  },
+  "labels": {
+    "language": "简体中文",
+    "claim": "关键判断验证",
+    "context": "决策场景审查",
+    "pack": "决策证据包"
+  }
+}
