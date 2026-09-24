@@ -120,7 +120,7 @@ def check_configs_and_schemas() -> None:
         fail("custom audit must require scope")
     if contact["contact_status"] != "CONFIGURED_FOR_MANUAL_SERVICE_INTAKE":
         fail("manual service contact status missing")
-    if contact.get("company_name") != "Structevidence.com" or contact.get("contact_person") != "John Success":
+    if contact.get("company_name") != "MATRIX ASIA PACIFIC LIMITED" or contact.get("contact_person") != "Stone Zhu":
         fail("seller contact identity mismatch")
     if contact.get("whatsapp") != "+85266629951" or contact.get("sales_email") != "support@structevidence.com":
         fail("public contact channel mismatch")

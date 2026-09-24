@@ -1,13 +1,32 @@
 {
-  "company_name": "Structevidence.com",
-  "contact_person": "John Success",
+  "brand_name": "StructureEvidence",
+  "company_name": "MATRIX ASIA PACIFIC LIMITED",
+  "company_registry_number": "1856995",
+  "business_registration_number": "60930306",
+  "business_correspondence_address": "ROOM 1, EMPRESS PLAZA, 17-19 CHATHAM ROAD SOUTH, TSIM SHA TSUI, KOWLOON, HONG KONG",
+  "contact_person": "Stone Zhu",
+  "responsible_researcher": "Stone Zhu",
+  "professional_profile": "https://www.linkedin.com/in/stone-zhu-0773423a4/",
   "contact_status": "CONFIGURED_FOR_MANUAL_SERVICE_INTAKE",
   "country": "Hong Kong",
   "jurisdiction": "Hong Kong",
-  "entity_type": "Company",
+  "entity_type": "Private company limited by shares",
   "legal_email": "support@structevidence.com",
   "sales_email": "support@structevidence.com",
   "support_email": "support@structevidence.com",
   "whatsapp": "+85266629951",
-  "seller_activation_rule": "Manual service intake and quote-confirmed USDT-TRC20 settlement are active. Automated fulfillment remains disabled."
+  "contracts_available": true,
+  "formal_quotations_available": true,
+  "invoices_available": true,
+  "research_foundation": "Public ACP-ATP whitepaper and independently developed MDL, MOS, RDL, and GDR research frameworks.",
+  "conflict_boundary": "Commercial payment purchases agreed scope, review, and delivery; it does not purchase a preferred finding.",
+  "standard_service_fees_usd": {
+    "claim_verification": 199,
+    "decision_context_review": 1999,
+    "decision_pack": 4999,
+    "rush_handling_per_request": 399
+  },
+  "delivery_timing": "Confirmed in the written quote after evidence-availability review.",
+  "included_review_rounds": "Confirmed in the written quote.",
+  "seller_activation_rule": "Manual service intake and written-scope services are active. Automated fulfillment remains disabled."
 }
