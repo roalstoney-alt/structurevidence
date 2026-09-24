@@ -1,0 +1,16 @@
+{
+  "locale": "en",
+  "home": "/en/",
+  "product_prices": {
+    "claim_verification_usd": 199,
+    "decision_context_review_usd": 1999,
+    "decision_pack_usd": 4999,
+    "rush_handling_usd": 399
+  },
+  "labels": {
+    "language": "English",
+    "claim": "Claim Verification",
+    "context": "Decision Context Review",
+    "pack": "Decision Pack"
+  }
+}
