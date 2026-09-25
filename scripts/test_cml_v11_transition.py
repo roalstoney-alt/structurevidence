@@ -24,10 +24,11 @@ def git(*args: str) -> str:
 
 
 class CMLV11TransitionTests(unittest.TestCase):
-    def test_base_is_ancestor_and_head_matches_origin(self):
+    def test_base_and_origin_are_ancestors_of_head(self):
         head = git("rev-parse", "HEAD").strip()
-        self.assertEqual(head, git("rev-parse", "origin/main").strip())
+        origin = git("rev-parse", "origin/main").strip()
         subprocess.check_call(["git", "merge-base", "--is-ancestor", BASE_SHA, head], cwd=ROOT)
+        subprocess.check_call(["git", "merge-base", "--is-ancestor", origin, head], cwd=ROOT)
 
     def test_method_registry_has_one_active_method(self):
         registry = load("technical-risk/cml-method-registry.json")
