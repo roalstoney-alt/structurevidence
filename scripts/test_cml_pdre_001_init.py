@@ -17,7 +17,9 @@ EXPECTED_FILES = {
     "state-history.jsonl",
     "timeline.jsonl",
     "pdre-record.json",
+    "publication-control.json",
 }
+INITIALIZATION_FILES = EXPECTED_FILES - {"publication-control.json"}
 TRACKING_DIMENSIONS = {
     "ARCHITECTURE",
     "MIGRATION_READINESS",
@@ -163,11 +165,20 @@ class CMLPDRE001InitializationTests(unittest.TestCase):
         for relative_path in bindings.values():
             self.assertTrue((ROOT / relative_path).is_file(), relative_path)
 
-    def test_no_url_or_external_source_was_added(self):
+    def test_initialization_files_contain_no_url_or_external_source(self):
         url_pattern = re.compile(r"https?://", re.IGNORECASE)
-        for path in CASE_DIR.iterdir():
+        for name in INITIALIZATION_FILES:
+            path = CASE_DIR / name
             self.assertIsNone(url_pattern.search(path.read_text()), path.name)
         self.assertFalse(any(key == "source_refs" for key in walk(self.case)))
+
+    def test_later_publication_control_is_explicit_and_human_authorized(self):
+        publication = json.loads((CASE_DIR / "publication-control.json").read_text())
+        self.assertEqual(publication["record_kind"], "PUBLICATION_CONTROL_RECORD")
+        self.assertEqual(publication["decision"]["decision_authority"], "HUMAN")
+        self.assertEqual(publication["decision"]["publication_status"], "PUBLICATION_APPROVED")
+        self.assertFalse(publication["projection_scope"]["pdre_full_validation"])
+        self.assertFalse(publication["canonical_state_boundary"]["historical_evidence_mutated"])
 
     def test_scope_statements_are_labeled_not_evidence(self):
         paths = self.case["scope_paths"]

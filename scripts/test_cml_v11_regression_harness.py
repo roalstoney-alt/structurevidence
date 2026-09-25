@@ -65,6 +65,12 @@ class CMLV11RegressionHarnessTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             regression.validate_version_history_lines(rewritten)
 
+    def test_formal_historical_file_supersessions_are_hash_bound(self):
+        self.assertEqual(
+            regression.formal_supersessions(),
+            {"scripts/publish_cml_v01.py", "technical-risk/request-analysis/index.html"},
+        )
+
 
 if __name__ == "__main__":
     unittest.main()

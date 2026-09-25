@@ -1,0 +1,39 @@
+{
+  "record_id": "SE.CML.HISTORICAL_FILE_SUPERSESSION.2026-09-25.001",
+  "record_version": "CML_HISTORICAL_FILE_SUPERSESSION_v0.1",
+  "decision": "FORMALLY_SUPERSEDE_BASELINE",
+  "decision_authority": "SE-FRR-001_PHASE_0_5_USER_DIRECTIVE",
+  "decision_date": "2026-09-25",
+  "baseline_sha": "a1bb8e442316c48acb0af2aca0c8c269b00340af",
+  "scope": "Two later commercial/contact evolutions that intentionally changed historically protected files without an explicit successor record.",
+  "files": [
+    {
+      "path": "scripts/publish_cml_v01.py",
+      "baseline_sha256": "e04e710c68a3d56a6d294cbffa64f28c4e08a2c901dc3d528558ad943669d55a",
+      "successor_sha256": "7a6d473ef4c1bbff64ed277065b008ff3d59453c73cd34292bdaac871609813c",
+      "introducing_commit": "a0baa74cd28175470ae35782c21548878e558a47",
+      "subsequent_commits": [
+        "007d784f09d014c3c795ffd784baef67bf0acad7",
+        "a59b5b65d7ef2c8ec799004dda46fdfc509bec19"
+      ],
+      "accepted_successor_state": "Current commercial brand/contact generator state at audited baseline 2356c9327ba5b40995435eca952edd706fd944fc"
+    },
+    {
+      "path": "technical-risk/request-analysis/index.html",
+      "baseline_sha256": "efb42167281cde9c156e97b34e3978c1b4f156b25ef970805bfcdaaa04f99ffd",
+      "successor_sha256": "3045ffdf674dcab7ad7cd8f55a593ed1d48d92d4b6facd537ef822e2a4c05059",
+      "introducing_commit": "a0baa74cd28175470ae35782c21548878e558a47",
+      "subsequent_commits": [
+        "007d784f09d014c3c795ffd784baef67bf0acad7"
+      ],
+      "accepted_successor_state": "Current support contact state at audited baseline 2356c9327ba5b40995435eca952edd706fd944fc"
+    }
+  ],
+  "preservation": {
+    "original_bytes_retained_in_git": true,
+    "scientific_findings_changed": false,
+    "research_state_changed": false,
+    "authorization_scope": "commercial identity and contact evolution only"
+  },
+  "rationale": "Later tracked commits intentionally updated commercial identity and contact information, and later guards require the successor state. Restoring the old bytes would reintroduce obsolete contact data and break accepted commercial/customer-intake invariants. This record narrowly supersedes byte identity for the two named, hash-bound successors; every other historical path remains frozen."
+}

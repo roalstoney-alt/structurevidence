@@ -1,0 +1,21 @@
+{
+  "record_id": "SE.CML.PDRE_001.CONTAINER_EVOLUTION.2026-09-25.001",
+  "record_version": "CML_CONTAINER_EVOLUTION_v0.1",
+  "case_id": "CML-PDRE-001",
+  "old_expectation": {
+    "source_commit": "923e6da9552ee6f299458c4a4ac7410723e67b12",
+    "scope": "Initialization container contained seven files and prohibited URLs because no external evidence or public projection had been authorized."
+  },
+  "current_repository_state": {
+    "introducing_commit": "8e82a910211fb19bb1dd3daca95764c76150bdef",
+    "predecessor_commit": "3f78f740aad224fa991a09a13046906846bbe571",
+    "artifact": "technical-risk/cml-v1.1/pdre/CML-PDRE-001/publication-control.json",
+    "artifact_sha256": "1e4d4f3684c09f8759ee128adecb602491e9ec78054db47a2c69693e45cb5e5b",
+    "state": "HUMAN_AUTHORIZED_PUBLIC_PROJECTION_CONTROL"
+  },
+  "rationale": "The added artifact is a later, explicit human publication decision. It preserves the canonical research state, marks full PDRE validation false, keeps the single-deployment boundary, and does not add an evidence source to the original initialization records.",
+  "decision": "FORMALLY_SUPERSEDE_CONTAINER_EXPECTATION",
+  "test_disposition": "The lifecycle test now checks the original no-URL/no-external-source invariant only across initialization files and separately verifies the publication control's authority and boundaries.",
+  "historical_research_mutated": false,
+  "effective_at": "2026-09-25"
+}

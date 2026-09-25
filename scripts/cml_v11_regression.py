@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import fnmatch
+import hashlib
 import json
 import subprocess
 from pathlib import Path
@@ -14,6 +15,7 @@ V11_1_SHA = "2baced87c4df494fbbe706b4e73029d767050779"
 V11_2_ENTRY_SHA = V11_1_SHA
 V11_2_ACCEPTED_SHA = "33931a5de0e931b1ad218d63d83a9183fd3778ec"
 HISTORY_PATH = "technical-risk/CML_VERSION_HISTORY.jsonl"
+SUPERSESSION_PATH = "technical-risk/cml-v1.1/history/HISTORICAL_FILE_SUPERSESSIONS.json"
 V11_1_AUTHORIZED_FILES = {
     HISTORY_PATH,
     "technical-risk/cml-method-registry.json",
@@ -101,11 +103,30 @@ def compare_content(
 
 
 def historical_mutations() -> list[str]:
-    return compare_content(
+    changed = compare_content(
         historical_protected_paths(),
         lambda path: commit_bytes(HISTORICAL_BASE_SHA, path),
         worktree_bytes,
     )
+    authorized = formal_supersessions()
+    return sorted(path for path in changed if path not in authorized)
+
+
+def formal_supersessions() -> set[str]:
+    record = json.loads((ROOT / SUPERSESSION_PATH).read_text(encoding="utf-8"))
+    require(record["decision"] == "FORMALLY_SUPERSEDE_BASELINE", "invalid historical-file supersession decision")
+    require(record["baseline_sha"] == HISTORICAL_BASE_SHA, "historical-file supersession baseline mismatch")
+    head = git("rev-parse", "HEAD").strip()
+    authorized: set[str] = set()
+    for item in record["files"]:
+        path = item["path"]
+        require(path in historical_protected_paths(), f"supersession path was not historically protected: {path}")
+        require(hashlib.sha256(commit_bytes(HISTORICAL_BASE_SHA, path)).hexdigest() == item["baseline_sha256"], f"baseline hash mismatch: {path}")
+        current = worktree_bytes(path)
+        require(current is not None and hashlib.sha256(current).hexdigest() == item["successor_sha256"], f"successor hash mismatch: {path}")
+        require(is_ancestor(item["introducing_commit"], head), f"introducing commit not in history: {path}")
+        authorized.add(path)
+    return authorized
 
 
 def frozen_v11_2_mutations() -> list[str]:
