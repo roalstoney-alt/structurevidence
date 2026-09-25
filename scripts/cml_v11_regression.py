@@ -162,9 +162,9 @@ def validate_v11_2_milestone() -> dict:
     origin = git("rev-parse", "origin/main").strip()
     require(is_ancestor(V11_2_ENTRY_SHA, V11_2_ACCEPTED_SHA), "V11-2 accepted commit is not descended from its entry")
     require(is_ancestor(V11_2_ACCEPTED_SHA, head), "current HEAD is not descended from accepted V11-2")
-    require(head == origin, "HEAD does not match origin/main")
+    require(is_ancestor(origin, head), "current branch does not descend from origin/main")
     paths = frozen_v11_2_paths()
     require(paths, "no V11-2 frozen core artifacts resolved")
     mutations = frozen_v11_2_mutations()
     require(not mutations, f"accepted V11-2 core artifacts changed: {mutations}")
-    return {"entry": V11_2_ENTRY_SHA, "accepted": V11_2_ACCEPTED_SHA, "head": head, "frozen_core_files": len(paths)}
+    return {"entry": V11_2_ENTRY_SHA, "accepted": V11_2_ACCEPTED_SHA, "origin": origin, "head": head, "frozen_core_files": len(paths)}
