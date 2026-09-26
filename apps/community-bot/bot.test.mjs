@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { COMMANDS, discordResponse, handleCommand } from "./bot.mjs";
 import { readFileSync } from "node:fs";
+import { registerGuildCommands, verifyGuild } from "./discord-api.mjs";
 
 const fixtures = {
   "/api/v1/subjects": { data: { items: [{ subject_id: "SE-SUBJ-000001", canonical_name: "NXP RF Power" }] } },
@@ -22,3 +23,30 @@ test("challenge redirects and cannot mutate State", async () => { const result =
 test("evidence returns reviewed public summary", async () => { const result = await handleCommand("evidence", { evidence_id: "SE-EV-20260925-000001" }, options); assert.match(result.content, /Review: ACCEPTED/); });
 test("Discord response suppresses mentions", () => { const response = discordResponse({ content: "@everyone", ephemeral: false }); assert.deepEqual(response.data.allowed_mentions.parse, []); });
 test("server specification is invite-only and least privilege", () => { const spec = JSON.parse(readFileSync(new URL("./discord-server-spec.json", import.meta.url))); assert.equal(spec.access, "INVITE_ONLY"); assert.equal(spec.member_cap, 15); assert.deepEqual(spec.privileged_intents, []); assert.equal(spec.bot_permissions.includes("ADMINISTRATOR"), false); assert.equal(spec.automatic_invites, false); });
+test("guild verification uses the official Bot API and rejects excess privilege", async () => {
+  const spec = JSON.parse(readFileSync(new URL("./discord-server-spec.json", import.meta.url)));
+  const categories = Object.keys(spec.categories).map((name, index) => ({ id: `c${index}`, name, type: 4 }));
+  const channels = Object.values(spec.categories).flat().map((name, index) => ({ id: `t${index}`, name, type: 0 }));
+  const payloads = {
+    "/api/v10/oauth2/applications/@me": { id: "app", bot: { id: "bot" }, flags: 0 },
+    "/api/v10/users/@me": { id: "bot" },
+    "/api/v10/guilds/guild": { id: "guild" },
+    "/api/v10/guilds/guild/roles": [{ id: "guild", name: "@everyone", permissions: "0" }, ...spec.roles.map((name, index) => ({ id: `r${index}`, name, permissions: "0" }))],
+    "/api/v10/guilds/guild/channels": [...categories, ...channels],
+    "/api/v10/guilds/guild/members/bot": { roles: [] },
+  };
+  const seen = [];
+  const apiFetch = async (url, init) => { seen.push({ url, auth: init.headers.authorization }); return new Response(JSON.stringify(payloads[new URL(url).pathname]), { status: 200 }); };
+  const result = await verifyGuild({ applicationId: "app", guildId: "guild", token: "secret", fetcher: apiFetch, spec });
+  assert.equal(result.pass, true); assert.equal(result.administrator, false); assert.equal(result.privileged_intents, false);
+  assert.ok(seen.every((call) => call.url.startsWith("https://discord.com/api/v10/"))); assert.ok(seen.every((call) => call.auth === "Bot secret"));
+  payloads["/api/v10/guilds/guild/roles"][0].permissions = "8";
+  const excessive = await verifyGuild({ applicationId: "app", guildId: "guild", token: "secret", fetcher: apiFetch, spec });
+  assert.equal(excessive.pass, false); assert.equal(excessive.administrator, true);
+});
+test("command registration is guild-scoped", async () => {
+  let request;
+  const apiFetch = async (url, init) => { request = { url, init }; return new Response(JSON.stringify(COMMANDS), { status: 200 }); };
+  const registered = await registerGuildCommands({ applicationId: "app", guildId: "guild", token: "secret", commands: COMMANDS, fetcher: apiFetch });
+  assert.match(request.url, /applications\/app\/guilds\/guild\/commands$/); assert.equal(request.init.method, "PUT"); assert.equal(registered.length, COMMANDS.length);
+});
