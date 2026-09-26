@@ -21,9 +21,10 @@ const titles = {
 
 function sectionFor(path) { return path.split("/").filter(Boolean)[0] || "states"; }
 function meta(path) { return titles[sectionFor(path)] || titles.states; }
+const html = (value) => String(value).replace(/[&<>"']/g, (char) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[char]);
 
-export function renderProductPage(path) {
-  const [title, description] = meta(path);
+export function renderProductPage(path, share = null) {
+  const defaults = meta(path), title = html(share?.title || defaults[0]), description = html(share?.description || defaults[1]);
   const robots = isPrivateProductRoute(path) ? "noindex,nofollow,noarchive" : "index,follow";
   const canonical = `https://structevidence.com${path.endsWith("/") ? path : `${path}/`}`;
   return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="${robots}"><meta name="description" content="${description}"><meta property="og:title" content="${title} · StructEvidence"><meta property="og:description" content="${description}"><meta property="og:type" content="website"><meta property="og:url" content="${canonical}"><link rel="canonical" href="${canonical}"><link rel="stylesheet" href="/assets/product-surface.css"><title>${title} · StructEvidence</title></head><body><a class="skip" href="#main">Skip to content</a><header><a class="brand" href="/">STRUCTEVIDENCE <span>Temporal State Interface</span></a><button class="nav-toggle" type="button" aria-expanded="false" aria-controls="product-nav">Menu</button><nav id="product-nav" aria-label="Product"><a href="/states">States</a><a href="/changes">Changes</a><a href="/founding">Founding</a><a class="nav-cta" href="/request">Bring a decision</a></nav></header><main id="main" data-product-route="${path}" aria-live="polite"><section class="loading"><p class="kicker">SE_API_v1</p><h1>Loading recorded State…</h1><p>The interface does not fabricate fallback data.</p></section></main><footer><p>StructEvidence does not overwrite old conclusions.</p><nav aria-label="Footer"><a href="/method/">Method</a><a href="/privacy/">Privacy</a><a href="/states">States</a></nav></footer><script src="/assets/product-surface.js" defer></script></body></html>`;

@@ -171,6 +171,21 @@ function productAsset(request, path) {
   const type = path.endsWith(".css") ? "text/css; charset=utf-8" : "application/javascript; charset=utf-8";
   return new Response(request.method === "HEAD" ? null : body, { headers: { "content-type": type, "cache-control": "public, max-age=3600", ...securityHeaders } });
 }
+function productShare(path, data) {
+  const subjectMatch = path.match(/^\/states\/(SE-SUBJ-[0-9]{6})\/?$/);
+  if (subjectMatch) {
+    const subject = data.subjects.find((item) => item.subject_id === subjectMatch[1]);
+    const state = data.states.filter((item) => item.subject_id === subjectMatch[1]).sort((a, b) => a.recorded_at.localeCompare(b.recorded_at)).at(-1);
+    if (subject && state) return { title: subject.canonical_name, description: `State: ${state.state_code} · Observed: ${state.observed_at.slice(0, 10)}` };
+  }
+  const changeMatch = path.match(/^\/changes\/(SE-CHG-[0-9]{8}-[0-9]{6})\/?$/), change = changeMatch && data.changes.find((item) => item.change_id === changeMatch[1]);
+  if (change) {
+    const states = new Map(data.states.map((item) => [item.state_id, item.state_code]));
+    const subject = data.subjects.find((item) => item.subject_id === change.subject_id);
+    return { title: `${subject?.canonical_name || "Recorded Change"}: ${states.get(change.previous_state_id) || "Unknown"} → ${states.get(change.new_state_id) || "Unknown"}`, description: `Changed: ${change.detected_at.slice(0, 10)} · ${change.materiality}` };
+  }
+  return null;
+}
 export function createWorker({ authVerifier = verifyAccess, sePublicData = EMPTY_PUBLIC_DATA, seApiStore = null } = {}) {
   return { async fetch(request, env) {
     const url = new URL(request.url);
@@ -202,7 +217,7 @@ export function createWorker({ authVerifier = verifyAccess, sePublicData = EMPTY
       if (isProductRoute(url.pathname)) {
         if (!new Set(["GET", "HEAD"]).has(request.method)) return new Response("Method not allowed", { status: 405, headers: { allow: "GET, HEAD", ...securityHeaders } });
         if (/^\/outcome\//.test(url.pathname)) await authVerifier(request, env, env.ADMIN_UI_AUD);
-        const html = renderProductPage(url.pathname);
+        const html = renderProductPage(url.pathname, productShare(url.pathname, sePublicData));
         const privateHeaders = isPrivateProductRoute(url.pathname) ? { "x-robots-tag": "noindex, nofollow, noarchive", "cache-control": "no-store" } : { "cache-control": "public, max-age=300" };
         return new Response(request.method === "HEAD" ? null : html, { headers: { "content-type": "text/html; charset=utf-8", "content-security-policy": "default-src 'none'; script-src 'self'; style-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'", ...privateHeaders, ...securityHeaders } });
       }

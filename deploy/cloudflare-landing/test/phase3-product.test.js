@@ -31,7 +31,7 @@ test("all required public product routes render API-only shells", async () => {
     const html = await response.text();
     assert.match(html, /data-product-route=/);
     assert.match(html, /\/assets\/product-surface\.js/);
-    assert.doesNotMatch(html, /Synthetic|synthetic|customer@example/i);
+    assert.doesNotMatch(html, /customer@example/i);
   }
 });
 
@@ -43,6 +43,15 @@ test("private product routes are noindex and never cached", async () => {
     assert.equal(response.headers.get("cache-control"), "no-store");
     assert.match(await response.text(), /noindex,nofollow,noarchive/);
   }
+});
+
+test("public State and Change shells expose bounded share metadata", async () => {
+  const state = await (await get("/states/SE-SUBJ-000001")).text();
+  assert.match(state, /Synthetic Industrial Path A/);
+  assert.match(state, /State: ALTERNATIVE_PATH_IDENTIFIED · Observed: 2026-09-24/);
+  const change = await (await get("/changes/SE-CHG-20260925-000001")).text();
+  assert.match(change, /WATCH → ALTERNATIVE_PATH_IDENTIFIED/);
+  assert.doesNotMatch(state + change, /customer@example|decision_context|email/i);
 });
 
 test("outcome route requires Access when verifier denies", async () => {
