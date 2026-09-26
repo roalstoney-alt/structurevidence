@@ -2,6 +2,7 @@ import { createRemoteJWKSet, jwtVerify } from "jose";
 import { ADMIN_APP_JS, ADMIN_HTML } from "./admin-ui.js";
 import { COMMERCIAL_APP_JS_UPGRADE as COMMERCIAL_APP_JS, COMMERCIAL_CSS_V2 as COMMERCIAL_CSS, COMMERCIAL_PAGES_V2 as COMMERCIAL_PAGES } from "./commercial-upgrade.js";
 import { EMPTY_PUBLIC_DATA, handleSeApiV1 } from "./se-api-v1.js";
+import { PRODUCT_APP_JS, PRODUCT_CSS, isPrivateProductRoute, isProductRoute, renderProductPage } from "./product-surface.js";
 
 const MAX_BODY_BYTES = 65_536;
 const REQUEST_STATUSES = new Set(["SUBMITTED", "UNDER_REVIEW", "SCOPE_PROPOSED", "AWAITING_CUSTOMER", "AUTHORIZED", "IN_PROGRESS", "DELIVERED", "CLOSED"]);
@@ -15,6 +16,7 @@ const securityHeaders = {
 };
 const jsonHeaders = { "content-type": "application/json; charset=utf-8", "cache-control": "no-store", ...securityHeaders };
 const json = (body, status = 200, extra = {}) => new Response(JSON.stringify(body), { status, headers: { ...jsonHeaders, ...extra } });
+const PRODUCT_EVENTS = new Set(["STATE_LIST_VIEW", "STATE_VIEW", "CHANGE_VIEW", "EVIDENCE_OPEN", "HISTORY_VIEW", "AS_OF_QUERY", "BRANCH_VIEW", "REQUEST_START", "REQUEST_SUBMIT", "CHALLENGE_START", "CHALLENGE_SUBMIT", "FOUNDING_WAITLIST_SUBMIT"]);
 const now = () => new Date().toISOString();
 const externalId = (prefix) => `${prefix}-${crypto.randomUUID().replaceAll("-", "").slice(0, 20).toUpperCase()}`;
 const clean = (value, max) => {
@@ -155,6 +157,20 @@ function commercialRoute(request, url) {
   if (!html) return new Response("Not found", { status: 404, headers: { "content-type": "text/plain; charset=utf-8", ...securityHeaders } });
   return new Response(request.method === "HEAD" ? null : html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=300", "content-security-policy": "default-src 'none'; script-src 'self'; style-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'", ...securityHeaders } });
 }
+async function productEvent(request) {
+  const input = await readJson(request);
+  const allowed = new Set(["event", "route", "subject_id", "state_id", "change_id"]);
+  if (!input || typeof input !== "object" || Array.isArray(input) || Object.keys(input).some((key) => !allowed.has(key)) || !PRODUCT_EVENTS.has(input.event) || typeof input.route !== "string" || input.route.length > 160) return json({ error: "Invalid product event" }, 400);
+  for (const key of ["subject_id", "state_id", "change_id"]) if (input[key] !== undefined && (typeof input[key] !== "string" || input[key].length > 64)) return json({ error: "Invalid product event dimension" }, 400);
+  console.log(JSON.stringify({ event: "product_event", product_event: input.event, route: input.route, subject_id: input.subject_id || null, state_id: input.state_id || null, change_id: input.change_id || null }));
+  return new Response(null, { status: 202, headers: securityHeaders });
+}
+function productAsset(request, path) {
+  if (!new Set(["GET", "HEAD"]).has(request.method)) return new Response("Method not allowed", { status: 405, headers: { allow: "GET, HEAD", ...securityHeaders } });
+  const body = path.endsWith(".css") ? PRODUCT_CSS : PRODUCT_APP_JS;
+  const type = path.endsWith(".css") ? "text/css; charset=utf-8" : "application/javascript; charset=utf-8";
+  return new Response(request.method === "HEAD" ? null : body, { headers: { "content-type": type, "cache-control": "public, max-age=3600", ...securityHeaders } });
+}
 export function createWorker({ authVerifier = verifyAccess, sePublicData = EMPTY_PUBLIC_DATA, seApiStore = null } = {}) {
   return { async fetch(request, env) {
     const url = new URL(request.url);
@@ -169,7 +185,27 @@ export function createWorker({ authVerifier = verifyAccess, sePublicData = EMPTY
       }
       if (url.pathname === "/api/requests" && request.method === "OPTIONS") return new Response(null, { status: 204, headers: corsHeaders(request, env) });
       if (url.pathname === "/api/requests" && request.method === "POST") return await submitRequest(request, env);
+      if (url.pathname === "/api/product-events" && request.method === "POST") return await productEvent(request);
+      if (url.pathname === "/api/product-config" && request.method === "GET") {
+        const configured = String(env.FOUNDING_ACCESS_STATUS || "WAITLIST");
+        const founding_access_status = new Set(["CLOSED", "WAITLIST", "INVITE_ONLY", "OPEN"]).has(configured) ? configured : "WAITLIST";
+        return json({ founding_access_status });
+      }
+      if (url.pathname === "/robots.txt" && request.method === "GET") return new Response("User-agent: *\nAllow: /states\nAllow: /changes\nAllow: /evidence\nAllow: /founding\nDisallow: /request\nDisallow: /challenge\nDisallow: /outcome\nDisallow: /admin\nDisallow: /api\n", { headers: { "content-type": "text/plain; charset=utf-8", "cache-control": "public, max-age=3600", ...securityHeaders } });
+      if (url.pathname === "/sitemap.xml" && request.method === "GET") {
+        const publicPaths = ["/", "/states", "/changes", "/founding", ...sePublicData.subjects.map((item) => `/states/${item.subject_id}`), ...sePublicData.changes.map((item) => `/changes/${item.change_id}`), ...sePublicData.evidence.map((item) => `/evidence/${item.evidence_id}`)];
+        const body = `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${publicPaths.map((path) => `<url><loc>https://structevidence.com${path}</loc></url>`).join("")}</urlset>`;
+        return new Response(body, { headers: { "content-type": "application/xml; charset=utf-8", "cache-control": "public, max-age=3600", ...securityHeaders } });
+      }
       if (url.pathname.startsWith("/api/admin/") || url.pathname.startsWith("/admin/requests")) return await adminRoute(request, url, env, authVerifier);
+      if (url.pathname === "/assets/product-surface.css" || url.pathname === "/assets/product-surface.js") return productAsset(request, url.pathname);
+      if (isProductRoute(url.pathname)) {
+        if (!new Set(["GET", "HEAD"]).has(request.method)) return new Response("Method not allowed", { status: 405, headers: { allow: "GET, HEAD", ...securityHeaders } });
+        if (/^\/outcome\//.test(url.pathname)) await authVerifier(request, env, env.ADMIN_UI_AUD);
+        const html = renderProductPage(url.pathname);
+        const privateHeaders = isPrivateProductRoute(url.pathname) ? { "x-robots-tag": "noindex, nofollow, noarchive", "cache-control": "no-store" } : { "cache-control": "public, max-age=300" };
+        return new Response(request.method === "HEAD" ? null : html, { headers: { "content-type": "text/html; charset=utf-8", "content-security-policy": "default-src 'none'; script-src 'self'; style-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'", ...privateHeaders, ...securityHeaders } });
+      }
       return commercialRoute(request, url);
     } catch (error) {
       if (error instanceof Response) return json({ error: await error.text() }, error.status, url.pathname === "/api/requests" ? corsHeaders(request, env) : {});

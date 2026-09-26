@@ -75,6 +75,9 @@ function publicState(item) {
     observed_at: item.observed_at, recorded_at: item.recorded_at, previous_state_id: item.previous_state_id,
     state_changed: item.state_changed, accepted_evidence_count: item.accepted_evidence_ids.length,
     counter_evidence_count: item.counter_evidence_ids.length, unknown_count: item.unknowns.length,
+    accepted_evidence_ids: item.accepted_evidence_ids, rejected_evidence_ids: item.rejected_evidence_ids,
+    counter_evidence_ids: item.counter_evidence_ids, unresolved_evidence_ids: item.unresolved_evidence_ids,
+    unknowns: item.unknowns, branch_ids: item.branch_ids, change_event_id: item.change_event_id,
     confidence_boundary: item.confidence_boundary, state_hash: item.state_hash, chain_hash: item.chain_hash,
     links: { history: `/api/v1/subjects/${item.subject_id}/states`, changes: `/api/v1/subjects/${item.subject_id}/changes`, evidence: `/api/v1/subjects/${item.subject_id}/evidence` },
   };
@@ -105,7 +108,8 @@ function publicChange(item, states) {
     previous: { state_id: item.previous_state_id, state_code: index.get(item.previous_state_id)?.state_code || null },
     current: { state_id: item.new_state_id, state_code: index.get(item.new_state_id)?.state_code || null },
     trigger_evidence_ids: item.trigger_evidence_ids, unknowns_resolved: item.unknowns_resolved,
-    unknowns_added: item.unknowns_added, materiality: item.materiality, change_summary: item.change_summary,
+    unknowns_added: item.unknowns_added, counter_evidence_added: item.counter_evidence_added,
+    counter_evidence_removed: item.counter_evidence_removed, materiality: item.materiality, change_summary: item.change_summary,
     change_hash: item.change_hash,
   };
 }
@@ -265,7 +269,7 @@ export async function handleSeApiV1(request, env, { publicData = EMPTY_PUBLIC_DA
         let values = sortStates(publicData.states.filter((item) => item.subject_id === subject.subject_id));
         if (url.searchParams.get("order") === "desc") values.reverse();
         else if (url.searchParams.get("order") && url.searchParams.get("order") !== "asc") return fail("INVALID_ORDER", "Order must be asc or desc.", 400, id, publicCors);
-        return respond(envelope(values.map((item) => ({ state_id: item.state_id, observed_at: item.observed_at, recorded_at: item.recorded_at, state_code: item.state_code, previous_state_id: item.previous_state_id, state_hash: item.state_hash, chain_hash: item.chain_hash })), { order: url.searchParams.get("order") || "asc" }), 200, publicCors);
+        return respond(envelope(values.map((item) => ({ state_id: item.state_id, observed_at: item.observed_at, recorded_at: item.recorded_at, state_code: item.state_code, previous_state_id: item.previous_state_id, change_event_id: item.change_event_id, state_hash: item.state_hash, chain_hash: item.chain_hash })), { order: url.searchParams.get("order") || "asc" }), 200, publicCors);
       }
       if (resource === "changes") return respond(envelope(publicData.changes.filter((item) => item.subject_id === subject.subject_id).map((item) => publicChange(item, publicData.states))), 200, publicCors);
       if (resource === "evidence") return respond(envelope(publicData.evidence.filter((item) => item.subject_id === subject.subject_id).map(publicEvidence)), 200, publicCors);
