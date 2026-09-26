@@ -32,4 +32,4 @@ Then open `http://127.0.0.1:8788/states`. This is explicitly a local test-data p
 
 ## Human checkpoint
 
-The functional preview is ready for Roal’s five-question review. This subjective checkpoint is the remaining human action; it does not require or authorize production deployment.
+Human review passed on 2026-09-26. `SE_FRR_PRODUCT_SURFACE_v0.1` is accepted and frozen for Phase 4A demand validation. Visual explanation, video onboarding, and general-audience simplification are deferred rather than treated as Phase 3 blockers.
