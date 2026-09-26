@@ -1,0 +1,12 @@
+{
+  "adapter": "scripts/se_frr_adapters.py:adapt_rdl_evidence",
+  "mapping_version": "SE_TEMPORAL_PROTOCOL_v0.1",
+  "output_object": "SE_EVIDENCE_v0.1",
+  "provenance_preserved": true,
+  "source_path": "rdl/research/records/CML-PDRE-001-L1-FIELD-DEPLOYMENT-2026-09-20/research-record.json",
+  "source_sha256": "435f7ebb2634c48d6abed4a2a5a0b3fd8403d55817e320076ecca6a88e4acbe8",
+  "source_system": "RDL_RESEARCH_RECORD_v0.1",
+  "state_mutation_authority": "NONE",
+  "status": "MAPPED_FIXTURE_ONLY_NO_BULK_MIGRATION",
+  "target_id": "SE-EV-20260920-900001"
+}

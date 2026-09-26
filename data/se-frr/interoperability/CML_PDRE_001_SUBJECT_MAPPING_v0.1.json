@@ -1,0 +1,11 @@
+{
+  "adapter": "scripts/se_frr_adapters.py:adapt_cml_subject",
+  "mapping_version": "SE_TEMPORAL_PROTOCOL_v0.1",
+  "output_object": "SE_SUBJECT_v0.1",
+  "provenance_preserved": true,
+  "source_path": "technical-risk/cml-v1.1/pdre/CML-PDRE-001/pdre-record.json",
+  "source_sha256": "a4b86464b0ec9bd09fa7fe54a93c1fe2912fcc255a77d48f527e984d006b4fe8",
+  "source_system": "CML_v1.1",
+  "status": "MAPPED_FIXTURE_ONLY_NO_BULK_MIGRATION",
+  "target_id": "SE-SUBJ-000001"
+}
