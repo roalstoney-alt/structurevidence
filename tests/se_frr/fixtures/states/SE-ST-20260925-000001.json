@@ -1,0 +1,58 @@
+{
+  "accepted_evidence_ids": [
+    "SE-EV-20260925-000001"
+  ],
+  "alternative_paths": [],
+  "branch_ids": [],
+  "chain_hash": "8b024c593e1e835ceffc44189667ad1540e0143f65e4363cccea8ec1e0f94096",
+  "change_event_id": null,
+  "confidence_boundary": {
+    "supported": [
+      "Legacy dependency observed"
+    ],
+    "unknown": [
+      "Operating history"
+    ],
+    "unsupported": [
+      "Field deployment"
+    ]
+  },
+  "constraints": [
+    "Field operation is unverified"
+  ],
+  "counter_evidence_ids": [
+    "SE-EV-20260925-000002"
+  ],
+  "current_dependency": "Synthetic legacy path",
+  "field_deployment_status": "NOT_ESTABLISHED",
+  "method_version": "SE_TEMPORAL_PROTOCOL_v0.1",
+  "migration_readiness": "OBSERVATION_ONLY",
+  "observed_at": "2026-09-22T12:00:00Z",
+  "previous_state_hash": null,
+  "previous_state_id": null,
+  "provenance": {
+    "commit_sha": null,
+    "created_by": "SE-FRR fixture builder",
+    "method_version": "SE_TEMPORAL_PROTOCOL_v0.1",
+    "recorded_at": "2026-09-25T12:00:00Z",
+    "repository": "StructEvidence synthetic protocol fixtures",
+    "source_object": "SYNTHETIC_TEST_FIXTURE",
+    "superseded_by": null,
+    "supersedes": null
+  },
+  "recorded_at": "2026-09-25T12:00:00Z",
+  "rejected_evidence_ids": [
+    "SE-EV-20260925-000003"
+  ],
+  "schema_version": "SE_STATE_v0.1",
+  "state_changed": false,
+  "state_code": "WATCH",
+  "state_hash": "95f6c9d611de7d4876bbb21e01112562f79df8f2edc28a1a03418633cf4a3c31",
+  "state_id": "SE-ST-20260925-000001",
+  "subject_id": "SE-SUBJ-000001",
+  "unknowns": [
+    "Operating history"
+  ],
+  "unresolved_evidence_ids": [],
+  "visibility": "PUBLIC"
+}

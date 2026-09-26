@@ -1,0 +1,40 @@
+{
+  "content_hash": "0ba880f4aae1d066fe5fedb786ae386ec09e3bc3cb9a019aa0438cc3331f3afb",
+  "counter_to": [],
+  "effective_at": "2026-09-22T10:00:00Z",
+  "evidence_id": "SE-EV-20260925-000003",
+  "evidence_type": "SYNTHETIC_PROTOCOL_EVIDENCE",
+  "normalized_claim": "An unattributed claim asserts full deployment.",
+  "observed_at": "2026-09-22T10:00:00Z",
+  "provenance": {
+    "commit_sha": null,
+    "created_by": "SE-FRR fixture builder",
+    "method_version": "SE_TEMPORAL_PROTOCOL_v0.1",
+    "recorded_at": "2026-09-25T12:00:00Z",
+    "repository": "StructEvidence synthetic protocol fixtures",
+    "source_object": "SYNTHETIC_TEST_FIXTURE",
+    "superseded_by": null,
+    "supersedes": null
+  },
+  "published_at": "2026-09-20T08:00:00Z",
+  "raw_reference": "synthetic://SE-EV-20260925-000003",
+  "recorded_at": "2026-09-25T12:00:00Z",
+  "research_class": "SYNTHETIC_TEST_ONLY",
+  "review": {
+    "reason": "Synthetic rejected fixture.",
+    "reviewed_at": "2026-09-25T12:00:00Z",
+    "reviewed_by": "fixture-reviewer",
+    "status": "REJECTED"
+  },
+  "schema_version": "SE_EVIDENCE_v0.1",
+  "source": {
+    "name": "Synthetic protocol source",
+    "publisher": null,
+    "retrieved_at": "2026-09-25T12:00:00Z",
+    "snapshot_ref": "SYNTHETIC_TEST_FIXTURE",
+    "type": "SYNTHETIC",
+    "url": null
+  },
+  "subject_id": "SE-SUBJ-000001",
+  "visibility": "PUBLIC"
+}

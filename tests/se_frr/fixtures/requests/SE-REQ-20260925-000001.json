@@ -1,0 +1,26 @@
+{
+  "decision_context": "Private fixture decision context.",
+  "linked_state_id": "SE-ST-20260925-000002",
+  "linked_subject_id": "SE-SUBJ-000001",
+  "outcome_status": "REPORTED",
+  "payment_status": "NOT_REQUIRED",
+  "provenance": {
+    "commit_sha": null,
+    "created_by": "SE-FRR fixture builder",
+    "method_version": "SE_TEMPORAL_PROTOCOL_v0.1",
+    "recorded_at": "2026-09-25T14:00:00Z",
+    "repository": "StructEvidence synthetic protocol fixtures",
+    "source_object": "SYNTHETIC_TEST_FIXTURE",
+    "superseded_by": null,
+    "supersedes": null
+  },
+  "question": "Should the synthetic alternative be tested?",
+  "request_id": "SE-REQ-20260925-000001",
+  "requester_ref": "PRIVATE_FIXTURE_REQUESTER",
+  "research_status": "DELIVERED",
+  "schema_version": "SE_REQUEST_v0.1",
+  "subject_text": "Synthetic Industrial Path A",
+  "submitted_at": "2026-09-25T14:00:00Z",
+  "urgency": "TEST_ONLY",
+  "visibility": "CUSTOMER_PRIVATE"
+}

@@ -1,0 +1,29 @@
+{
+  "challenge_id": "SE-CLG-20260925-000001",
+  "challenger_ref": "SYNTHETIC_CHALLENGER",
+  "claim": "The accepted signal is not deployment evidence.",
+  "provenance": {
+    "commit_sha": null,
+    "created_by": "SE-FRR fixture builder",
+    "method_version": "SE_TEMPORAL_PROTOCOL_v0.1",
+    "recorded_at": "2026-09-25T14:30:00Z",
+    "repository": "StructEvidence synthetic protocol fixtures",
+    "source_object": "SYNTHETIC_TEST_FIXTURE",
+    "superseded_by": null,
+    "supersedes": null
+  },
+  "resulting_evidence_ids": [
+    "SE-EV-20260925-000002"
+  ],
+  "resulting_state_id": "SE-ST-20260925-000002",
+  "review_reason": "Boundary retained.",
+  "review_status": "ACCEPTED",
+  "schema_version": "SE_CHALLENGE_v0.1",
+  "state_id": "SE-ST-20260925-000002",
+  "subject_id": "SE-SUBJ-000001",
+  "submitted_at": "2026-09-25T14:30:00Z",
+  "submitted_evidence_refs": [
+    "synthetic://challenge-1"
+  ],
+  "visibility": "FOUNDING_MEMBER"
+}

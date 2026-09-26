@@ -1,0 +1,32 @@
+{
+  "aliases": [
+    "Fixture Subject A"
+  ],
+  "canonical_name": "Synthetic Industrial Path A",
+  "created_at": "2026-09-25T10:00:00Z",
+  "created_by": "SE-FRR fixture builder",
+  "description": "Non-production fixture for temporal-state protocol verification.",
+  "geography": [
+    "TEST_ONLY"
+  ],
+  "industry": "Synthetic",
+  "provenance": {
+    "commit_sha": null,
+    "created_by": "SE-FRR fixture builder",
+    "method_version": "SE_TEMPORAL_PROTOCOL_v0.1",
+    "recorded_at": "2026-09-25T10:00:00Z",
+    "repository": "StructEvidence synthetic protocol fixtures",
+    "source_object": "SYNTHETIC_TEST_FIXTURE",
+    "superseded_by": null,
+    "supersedes": null
+  },
+  "schema_version": "SE_SUBJECT_v0.1",
+  "status": "WATCH",
+  "subject_id": "SE-SUBJ-000001",
+  "subject_type": "SYNTHETIC_TECHNICAL_PATH",
+  "tags": [
+    "SYNTHETIC",
+    "TEST_ONLY"
+  ],
+  "visibility": "PUBLIC"
+}

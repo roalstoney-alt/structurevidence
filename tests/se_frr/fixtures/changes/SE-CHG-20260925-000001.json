@@ -1,0 +1,32 @@
+{
+  "change_hash": "dcd3918cd8ff1ecc50e05f9e1c47cd48831ecef77bf52a0ac02387512cd86aef",
+  "change_id": "SE-CHG-20260925-000001",
+  "change_summary": "A credible alternative path was identified; deployment remains unverified.",
+  "counter_evidence_added": [],
+  "counter_evidence_removed": [],
+  "detected_at": "2026-09-24T12:00:00Z",
+  "materiality": "MATERIAL",
+  "new_state_hash": "d430fab229cbddcc020b70387d28517b19d898e7466cabdef966253e49a621c3",
+  "new_state_id": "SE-ST-20260925-000002",
+  "previous_state_hash": "95f6c9d611de7d4876bbb21e01112562f79df8f2edc28a1a03418633cf4a3c31",
+  "previous_state_id": "SE-ST-20260925-000001",
+  "provenance": {
+    "commit_sha": null,
+    "created_by": "SE-FRR fixture builder",
+    "method_version": "SE_TEMPORAL_PROTOCOL_v0.1",
+    "recorded_at": "2026-09-25T13:00:00Z",
+    "repository": "StructEvidence synthetic protocol fixtures",
+    "source_object": "SYNTHETIC_TEST_FIXTURE",
+    "superseded_by": null,
+    "supersedes": null
+  },
+  "recorded_at": "2026-09-25T13:00:00Z",
+  "schema_version": "SE_CHANGE_v0.1",
+  "subject_id": "SE-SUBJ-000001",
+  "trigger_evidence_ids": [
+    "SE-EV-20260925-000004"
+  ],
+  "unknowns_added": [],
+  "unknowns_resolved": [],
+  "visibility": "PUBLIC"
+}

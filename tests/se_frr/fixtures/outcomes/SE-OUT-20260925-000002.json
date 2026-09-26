@@ -1,0 +1,30 @@
+{
+  "action": "Ran a synthetic bench test.",
+  "action_at": "2026-09-26T08:00:00Z",
+  "authorization_for_public_use": true,
+  "commercial_result": null,
+  "created_at": "2026-09-26T09:30:00Z",
+  "outcome_id": "SE-OUT-20260925-000002",
+  "provenance": {
+    "commit_sha": null,
+    "created_by": "SE-FRR fixture builder",
+    "method_version": "SE_TEMPORAL_PROTOCOL_v0.1",
+    "recorded_at": "2026-09-26T09:30:00Z",
+    "repository": "StructEvidence synthetic protocol fixtures",
+    "source_object": "SYNTHETIC_TEST_FIXTURE",
+    "superseded_by": null,
+    "supersedes": null
+  },
+  "reported_at": "2026-09-26T09:00:00Z",
+  "reported_result": "Authorized synthetic result may enter the public projection.",
+  "request_id": "SE-REQ-20260925-000001",
+  "schema_version": "SE_OUTCOME_v0.1",
+  "state_id_used": "SE-ST-20260925-000002",
+  "subject_id": "SE-SUBJ-000001",
+  "supporting_evidence_refs": [
+    "SE-EV-20260925-000004"
+  ],
+  "technical_result": "Synthetic fixture result.",
+  "verification_status": "VERIFIED",
+  "visibility": "PUBLIC"
+}
