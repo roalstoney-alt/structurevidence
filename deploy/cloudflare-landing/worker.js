@@ -1,6 +1,7 @@
 import { createRemoteJWKSet, jwtVerify } from "jose";
 import { ADMIN_APP_JS, ADMIN_HTML } from "./admin-ui.js";
 import { COMMERCIAL_APP_JS_UPGRADE as COMMERCIAL_APP_JS, COMMERCIAL_CSS_V2 as COMMERCIAL_CSS, COMMERCIAL_PAGES_V2 as COMMERCIAL_PAGES } from "./commercial-upgrade.js";
+import { EMPTY_PUBLIC_DATA, handleSeApiV1 } from "./se-api-v1.js";
 
 const MAX_BODY_BYTES = 65_536;
 const REQUEST_STATUSES = new Set(["SUBMITTED", "UNDER_REVIEW", "SCOPE_PROPOSED", "AWAITING_CUSTOMER", "AUTHORIZED", "IN_PROGRESS", "DELIVERED", "CLOSED"]);
@@ -154,11 +155,15 @@ function commercialRoute(request, url) {
   if (!html) return new Response("Not found", { status: 404, headers: { "content-type": "text/plain; charset=utf-8", ...securityHeaders } });
   return new Response(request.method === "HEAD" ? null : html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=300", "content-security-policy": "default-src 'none'; script-src 'self'; style-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'", ...securityHeaders } });
 }
-export function createWorker({ authVerifier = verifyAccess } = {}) {
+export function createWorker({ authVerifier = verifyAccess, sePublicData = EMPTY_PUBLIC_DATA, seApiStore = null } = {}) {
   return { async fetch(request, env) {
     const url = new URL(request.url);
     try {
       if (url.hostname === "www.structevidence.com") return Response.redirect(`https://structevidence.com${url.pathname}${url.search}`, 308);
+      if (url.pathname === "/api/v1" || url.pathname.startsWith("/api/v1/")) {
+        const response = await handleSeApiV1(request, env, { publicData: sePublicData, store: seApiStore, authorize: authVerifier });
+        if (response) return response;
+      }
       if (url.pathname === "/api/requests" && request.method === "OPTIONS") return new Response(null, { status: 204, headers: corsHeaders(request, env) });
       if (url.pathname === "/api/requests" && request.method === "POST") return await submitRequest(request, env);
       if (url.pathname.startsWith("/api/admin/") || url.pathname.startsWith("/admin/requests")) return await adminRoute(request, url, env, authVerifier);
