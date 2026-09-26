@@ -1,0 +1,65 @@
+{
+  "schema_version": "SE_FRR_HANDOFF_v0.1",
+  "project": "SE-FRR-001",
+  "next_phase": "3",
+  "generated_at": "2026-09-26",
+  "source_worktree": "/Users/roal/Documents/ChatGPT/structurevidence-se-frr",
+  "forbidden_worktree": "/Users/roal/Documents/ChatGPT/structevidence",
+  "branch": "feat/se-frr-001",
+  "audited_baseline_sha": "2356c9327ba5b40995435eca952edd706fd944fc",
+  "phase_1_end_sha": "0e6a86bd05eede78946dd81ecaa4b5be3a2fd768",
+  "phase_2_end_sha": "b424255d18b4790b8a4831a92f9ffc2fe7784b8a",
+  "api_version": "SE_API_v1",
+  "api_contract": {
+    "operations": 21,
+    "public_endpoints": 13,
+    "protected_endpoints": 8
+  },
+  "verified_tests": {
+    "historical_baseline": "255/258 PASS; 2 FAILURES + 1 ERROR MATCH 3 FROZEN EXCEPTIONS",
+    "phase_1": "26/26 PASS",
+    "phase_2": "31/31 PASS",
+    "worker": "36/36 PASS",
+    "openapi_contract": "21/21 PASS",
+    "wrangler": "DRY_RUN_PASS_NO_DEPLOYMENT",
+    "new_unexplained_failures": 0
+  },
+  "entry_checks": [
+    "read_complete_phase_3_specification",
+    "confirm_branch",
+    "confirm_phase_2_sha_is_ancestor",
+    "confirm_clean_worktree",
+    "record_start_sha",
+    "run_fast_protocol_contract_worker_tests"
+  ],
+  "frozen_invariants": [
+    "append_only_evidence_state_change",
+    "no_canonical_crud",
+    "as_of_requires_observed_and_recorded_boundaries",
+    "canonical_hash_and_state_chain",
+    "public_private_separation",
+    "no_existing_object_overwrite",
+    "known_baseline_exception_set_frozen",
+    "zero_new_unexplained_failures"
+  ],
+  "not_authorized_by_handoff": [
+    "production_deployment",
+    "credential_access_or_change",
+    "live_private_d1_access",
+    "discord_connection",
+    "payment_enablement",
+    "user_recruitment",
+    "external_research"
+  ],
+  "deferred_issues": [
+    "production_public_projection_empty",
+    "d1_migration_0002_not_applied_remotely",
+    "customer_specific_status_authorization_not_designed",
+    "api_proposal_validation_preliminary",
+    "third_party_openapi_linting_not_added",
+    "performance_baseline_local_only",
+    "TECH_DEBT_SE_001"
+  ],
+  "token_transfer_supported": false,
+  "token_usage_instruction": "Start the destination task under the partner account/workspace so it consumes that account's own allocation."
+}
