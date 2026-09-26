@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://structurevidence.org/schemas/se-frr/state-change-proposal.v0.1.json",
+  "title": "SE State Change Proposal v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "proposal_id", "subject_id", "created_at", "created_by", "proposed_evidence_ids", "proposed_evidence", "previous_state_id", "previous_state_hash", "proposed_state", "proposed_change_event", "validation_status", "chain_verification_status", "review_status", "materialization_status", "commit_sha", "status"],
+  "properties": {
+    "schema_version": {"const": "SE_STATE_CHANGE_PROPOSAL_v0.1"},
+    "proposal_id": {"type": "string", "pattern": "^SE-PROP-[0-9]{8}-[0-9]{6}$"},
+    "subject_id": {"type": "string", "pattern": "^SE-SUBJ-[0-9]{6}$"},
+    "created_at": {"type": "string", "format": "date-time"},
+    "created_by": {"type": "string", "minLength": 1},
+    "proposed_evidence_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^SE-EV-[0-9]{8}-[0-9]{6}$"}},
+    "proposed_evidence": {"type": "array", "items": {"type": "object"}},
+    "previous_state_id": {"type": "string", "pattern": "^SE-ST-[0-9]{8}-[0-9]{6}$"},
+    "previous_state_hash": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "proposed_state": {"type": "object"},
+    "proposed_change_event": {"type": "object"},
+    "validation_status": {"enum": ["NOT_RUN", "VALIDATION_FAILED", "VALIDATED"]},
+    "chain_verification_status": {"enum": ["NOT_RUN", "REPOSITORY_VERIFICATION_REQUIRED", "VERIFIED", "FAILED"]},
+    "review_status": {"enum": ["REVIEW_REQUIRED", "APPROVED", "REJECTED"]},
+    "materialization_status": {"enum": ["NOT_MATERIALIZED", "MATERIALIZED"]},
+    "commit_sha": {"type": ["string", "null"]},
+    "status": {"enum": ["DRAFT", "VALIDATION_FAILED", "VALIDATED", "REVIEW_REQUIRED", "APPROVED", "MATERIALIZED", "COMMITTED", "REJECTED", "SUPERSEDED"]}
+  }
+}
