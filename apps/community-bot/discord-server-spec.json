@@ -1,0 +1,19 @@
+{
+  "name": "StructEvidence Founding Research Room",
+  "access": "INVITE_ONLY",
+  "member_cap": 15,
+  "roles": ["Visitor", "Founding Member", "Research Request User", "Contributor", "Moderator", "StructEvidence Team", "Bot"],
+  "categories": {
+    "00_START": ["start-here", "how-it-works", "research-room-rules"],
+    "01_STATE": ["state-feed", "change-feed", "public-cases"],
+    "02_RESEARCH": ["request-a-chain", "challenge-evidence", "submit-field-evidence"],
+    "03_DISCUSSION": ["structural-change", "component-migration", "technology-transition"],
+    "04_FOUNDING": ["founding-members", "research-room"],
+    "05_PRIVATE": ["private-request-threads"]
+  },
+  "commands": ["state", "change", "request", "challenge", "evidence"],
+  "bot_permissions": ["VIEW_CHANNEL", "SEND_MESSAGES", "EMBED_LINKS", "READ_MESSAGE_HISTORY", "USE_APPLICATION_COMMANDS"],
+  "privileged_intents": [],
+  "private_data_in_public_channels": false,
+  "automatic_invites": false
+}

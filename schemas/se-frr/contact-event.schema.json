@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://structurevidence.org/schemas/se-frr/contact-event.v0.1.json",
+  "title": "SE Demand Contact Event v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "event_id", "signal_id", "event_type", "event_at", "actor", "acquisition_source", "notes", "privacy_classification"],
+  "properties": {
+    "schema_version": {"const": "SE_CONTACT_EVENT_v0.1"},
+    "event_id": {"type": "string", "pattern": "^SE-DCE-[0-9]{8}-[A-F0-9]{12}$"},
+    "signal_id": {"type": "string", "pattern": "^SE-DSR-[0-9]{8}-[A-F0-9]{12}$"},
+    "event_type": {"enum": ["DEMAND_SIGNAL_DETECTED", "DEMAND_SIGNAL_QUALIFIED", "HUMAN_CONTACT_APPROVED", "HUMAN_CONTACT_SENT", "HUMAN_RESPONSE_RECEIVED", "STATE_LINK_OPENED", "RESEARCH_ROOM_JOINED", "REQUEST_SUBMITTED", "PAYMENT_INTENT_CONFIRMED", "MANUAL_COMMERCIAL_PILOT"]},
+    "event_at": {"type": "string", "format": "date-time"},
+    "actor": {"type": "string", "minLength": 1},
+    "acquisition_source": {"enum": ["REDDIT_PUBLIC_REPLY", "X_PUBLIC_REPLY", "GITHUB_DISCUSSION", "STACK_EXCHANGE", "PUBLIC_FORUM", "EXISTING_CONTACT", "REFERRAL", "DIRECT"]},
+    "notes": {"type": ["string", "null"], "maxLength": 2000},
+    "privacy_classification": {"const": "INTERNAL_ACQUISITION_SIGNAL"}
+  }
+}

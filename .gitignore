@@ -10,6 +10,8 @@ node_modules/
 tmp/
 dist/
 private/
+data/internal/**
+!data/internal/README.md
 *.pdf
 !reports/
 !reports/DEMO_BNB_MONITORING_SNAPSHOT_v1.0.pdf
