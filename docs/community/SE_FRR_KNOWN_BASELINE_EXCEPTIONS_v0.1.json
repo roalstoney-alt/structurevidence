@@ -1,0 +1,48 @@
+{
+  "schema_version": "SE_FRR_KNOWN_BASELINE_EXCEPTIONS_v0.1",
+  "frozen_at_phase": "SE-FRR-001_PHASE_1_ENTRY",
+  "frozen_at_commit": "d08ee23c212daf2ef97027002d95f24b268e8637",
+  "baseline_test_command": "python3 -m unittest discover -s scripts -p 'test_*.py'",
+  "baseline_result": {
+    "tests": 258,
+    "passed": 255,
+    "failures": 2,
+    "errors": 1
+  },
+  "known_baseline_exception_set": "FROZEN",
+  "exceptions": [
+    {
+      "exception_id": "SE-FRR-BE-001",
+      "test_name": "test_cml_ov_phase_a.PhaseATests.test_four_initializations_and_package",
+      "classification": "STALE_FROZEN_EXPECTATION",
+      "first_known_commit": "b0459b2b945c78ae650a7e0a6db5b8f206857a46",
+      "affected_component": "CML Opportunity Validation Phase A historical runner",
+      "expected_failure_signature": "ValueError: Phase A history entry",
+      "reason": "The frozen runner requires exactly one post-baseline version-history entry, while later authorized history is append-only.",
+      "accepted_at_phase": "SE-FRR-001_PHASE_0_5",
+      "resolution_status": "ACCEPTED_HISTORICAL_RUNNER_LIMITATION"
+    },
+    {
+      "exception_id": "SE-FRR-BE-002",
+      "test_name": "test_cml_ov_phase_b.PhaseBTests.test_positive_packages_and_substantive_gaps",
+      "classification": "STALE_FROZEN_EXPECTATION",
+      "first_known_commit": "b0459b2b945c78ae650a7e0a6db5b8f206857a46",
+      "affected_component": "CML Opportunity Validation Phase B baseline gate OV-B01",
+      "expected_failure_signature": "OV-B01_BASELINE_INTEGRITY; ValueError: frozen tracked files changed; summary PASS=12 FAIL=1 NOT_EVALUATED=3",
+      "reason": "The milestone-era gate treats every tracked successor change after its Phase A base as a violation, including authorized Wave 1 and later method work.",
+      "accepted_at_phase": "SE-FRR-001_PHASE_0_5",
+      "resolution_status": "ACCEPTED_HISTORICAL_RUNNER_LIMITATION"
+    },
+    {
+      "exception_id": "SE-FRR-BE-003",
+      "test_name": "test_cml_ov_phase_b_r1.PhaseBR1Tests.test_positive_targets",
+      "classification": "STALE_FROZEN_EXPECTATION",
+      "first_known_commit": "f2cb555aa773b788bd5268276d4adf054a1b5b25",
+      "affected_component": "CML Opportunity Validation Phase B-R1 baseline gate OV-R101",
+      "expected_failure_signature": "OV-R101_ACCEPTED_WAVE1_BASELINE; ValueError: accepted Wave 1 tracked baseline changed; summary PASS=7 FAIL=1",
+      "reason": "The milestone-era gate requires HEAD to equal the Wave 1 tree, so it rejects its own authorized B-R1 successor and later method work.",
+      "accepted_at_phase": "SE-FRR-001_PHASE_0_5",
+      "resolution_status": "ACCEPTED_HISTORICAL_RUNNER_LIMITATION"
+    }
+  ]
+}
