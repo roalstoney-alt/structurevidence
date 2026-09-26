@@ -279,5 +279,5 @@ components:
     ProposalInput:
       type: object
       additionalProperties: false
-      required: [subject_id, proposed_evidence_ids, previous_state_id, proposed_state, proposed_change_event]
-      properties: {subject_id: {type: string}, proposed_evidence_ids: {type: array, items: {type: string}}, previous_state_id: {type: string}, proposed_state: {type: object}, proposed_change_event: {type: object}}
+      required: [subject_id, proposed_evidence_ids, proposed_evidence, previous_state_id, previous_state_hash, proposed_state, proposed_change_event]
+      properties: {subject_id: {type: string}, proposed_evidence_ids: {type: array, items: {type: string}}, proposed_evidence: {type: array, items: {type: object}}, previous_state_id: {type: string}, previous_state_hash: {type: string, pattern: '^[a-f0-9]{64}$'}, proposed_state: {type: object}, proposed_change_event: {type: object}}

@@ -135,7 +135,13 @@ export class D1SeApiStore {
     const id = record[`${kind}_id`];
     const statements = [this.db.prepare(`INSERT INTO ${table} (object_id, created_at, status, payload_json) VALUES (?, ?, ?, ?)`).bind(id, record.created_at, record.status, JSON.stringify(record))];
     if (key) statements.push(this.db.prepare("INSERT INTO se_api_idempotency (scope, idempotency_key, object_id, created_at, response_json) VALUES (?, ?, ?, ?, ?)").bind(kind, key, id, record.created_at, JSON.stringify(response)));
-    await this.db.batch(statements);
+    try {
+      await this.db.batch(statements);
+    } catch (error) {
+      const concurrentReplay = await this.replay(kind, key);
+      if (concurrentReplay) return { response: concurrentReplay, replayed: true };
+      throw error;
+    }
     return { response, replayed: false };
   }
   async getRequest(id) {
@@ -290,9 +296,9 @@ export async function handleSeApiV1(request, env, { publicData = EMPTY_PUBLIC_DA
       const actor = await authorize(request, env, env.ADMIN_API_AUD);
       if (!db) return fail("CONTROL_PLANE_UNAVAILABLE", "Control plane is unavailable.", 503, id);
       if (method === "POST" && !proposalMatch[1]) {
-        const input = await readJson(request), allowed = new Set(["subject_id", "proposed_evidence_ids", "previous_state_id", "proposed_state", "proposed_change_event"]);
-        if (!exactFields(input, allowed) || !ID_PATTERNS.subject.test(input.subject_id || "") || !Array.isArray(input.proposed_evidence_ids) || !input.proposed_state || !input.proposed_change_event) throw Object.assign(new Error("Invalid proposal."), { status: 400, code: "INVALID_PROPOSAL" });
-        const proposal = { proposal_id: objectId("SE-PROP"), subject_id: input.subject_id, created_at: new Date().toISOString(), created_by: actor.email, proposed_evidence_ids: input.proposed_evidence_ids, previous_state_id: input.previous_state_id, proposed_state: input.proposed_state, proposed_change_event: input.proposed_change_event, validation_status: "NOT_RUN", chain_verification_status: "NOT_RUN", review_status: "REVIEW_REQUIRED", materialization_status: "NOT_MATERIALIZED", commit_sha: null, status: "DRAFT" };
+        const input = await readJson(request), allowed = new Set(["subject_id", "proposed_evidence_ids", "proposed_evidence", "previous_state_id", "previous_state_hash", "proposed_state", "proposed_change_event"]);
+        if (!exactFields(input, allowed) || !ID_PATTERNS.subject.test(input.subject_id || "") || !Array.isArray(input.proposed_evidence_ids) || !Array.isArray(input.proposed_evidence) || !/^[a-f0-9]{64}$/.test(input.previous_state_hash || "") || !input.proposed_state || !input.proposed_change_event) throw Object.assign(new Error("Invalid proposal."), { status: 400, code: "INVALID_PROPOSAL" });
+        const proposal = { schema_version: "SE_STATE_CHANGE_PROPOSAL_v0.1", proposal_id: objectId("SE-PROP"), subject_id: input.subject_id, created_at: new Date().toISOString(), created_by: actor.email, proposed_evidence_ids: input.proposed_evidence_ids, proposed_evidence: input.proposed_evidence, previous_state_id: input.previous_state_id, previous_state_hash: input.previous_state_hash, proposed_state: input.proposed_state, proposed_change_event: input.proposed_change_event, validation_status: "NOT_RUN", chain_verification_status: "NOT_RUN", review_status: "REVIEW_REQUIRED", materialization_status: "NOT_MATERIALIZED", commit_sha: null, status: "DRAFT" };
         await db.createProposal(proposal); return respond(envelope(proposal), 201);
       }
       const proposal = await db.getProposal(proposalMatch[1]);

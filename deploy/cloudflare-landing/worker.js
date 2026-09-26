@@ -161,8 +161,11 @@ export function createWorker({ authVerifier = verifyAccess, sePublicData = EMPTY
     try {
       if (url.hostname === "www.structevidence.com") return Response.redirect(`https://structevidence.com${url.pathname}${url.search}`, 308);
       if (url.pathname === "/api/v1" || url.pathname.startsWith("/api/v1/")) {
-        const response = await handleSeApiV1(request, env, { publicData: sePublicData, store: seApiStore, authorize: authVerifier });
-        if (response) return response;
+        const apiRequestId = request.headers.get("x-request-id") || `SE-HTTP-${crypto.randomUUID()}`;
+        const headers = new Headers(request.headers); headers.set("x-request-id", apiRequestId);
+        const apiRequest = new Request(request, { headers });
+        const response = await handleSeApiV1(apiRequest, env, { publicData: sePublicData, store: seApiStore, authorize: authVerifier });
+        if (response) { response.headers.set("x-request-id", apiRequestId); return response; }
       }
       if (url.pathname === "/api/requests" && request.method === "OPTIONS") return new Response(null, { status: 204, headers: corsHeaders(request, env) });
       if (url.pathname === "/api/requests" && request.method === "POST") return await submitRequest(request, env);

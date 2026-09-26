@@ -153,9 +153,9 @@ test("wrong Access audience is rejected", async () => {
 
 test("proposal requires validation before approval", async () => {
   const proposed_state = { ...publicData.states[1] }, proposed_change_event = { ...publicData.changes[0] };
-  const created = await post("/api/v1/admin/proposals", { subject_id: "SE-SUBJ-000001", proposed_evidence_ids: [], previous_state_id: "SE-ST-20260925-000002", proposed_state, proposed_change_event });
+  const created = await post("/api/v1/admin/proposals", { subject_id: "SE-SUBJ-000001", proposed_evidence_ids: [], proposed_evidence: [], previous_state_id: "SE-ST-20260925-000002", previous_state_hash: publicData.states[1].state_hash, proposed_state, proposed_change_event });
   const proposal = (await created.json()).data;
-  assert.equal(created.status, 201); assert.equal(proposal.status, "DRAFT");
+  assert.equal(created.status, 201); assert.equal(proposal.status, "DRAFT"); assert.equal(proposal.schema_version, "SE_STATE_CHANGE_PROPOSAL_v0.1");
   assert.equal((await post(`/api/v1/admin/proposals/${proposal.proposal_id}/approve`, {})).status, 409);
   const validated = await post(`/api/v1/admin/proposals/${proposal.proposal_id}/validate`, {}), checked = (await validated.json()).data;
   assert.equal(checked.status, "REVIEW_REQUIRED"); assert.equal(checked.chain_verification_status, "REPOSITORY_VERIFICATION_REQUIRED");

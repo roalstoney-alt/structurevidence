@@ -40,7 +40,7 @@ def validate_contract() -> dict[str, int | str]:
         "RequestInput": {"subject", "question", "decision_context", "urgency", "requested_output", "public_case_permission"},
         "ChallengeInput": {"state_id", "claim", "evidence_url", "notes"},
         "OutcomeInput": {"request_id", "state_id_used", "action", "reported_result", "authorization_for_public_use"},
-        "ProposalInput": {"subject_id", "proposed_evidence_ids", "previous_state_id", "proposed_state", "proposed_change_event"},
+        "ProposalInput": {"subject_id", "proposed_evidence_ids", "proposed_evidence", "previous_state_id", "previous_state_hash", "proposed_state", "proposed_change_event"},
     }
     schemas = spec["components"]["schemas"]
     for name, fields in expected_inputs.items():
