@@ -30,4 +30,4 @@ Tests exercise Subject list/lookup, current State, ordered State history, Change
 
 No new unexplained failure appeared. The pre-existing `jsonschema.RefResolver` warning remains non-failing deferred debt.
 
-Wrangler dry-run bundle: 143.30 KiB / gzip 35.97 KiB.
+Final Wrangler dry-run bundle: 144.12 KiB / gzip 36.14 KiB.
