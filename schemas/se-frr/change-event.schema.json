@@ -1,13 +1,13 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "https://structurevidence.org/schemas/se-frr/change-event.v0.1.json", "title": "SE Change v0.1",
   "type": "object", "additionalProperties": false,
-  "required": ["schema_version", "change_id", "subject_id", "previous_state_id", "previous_state_hash", "new_state_id", "new_state_hash", "detected_at", "recorded_at", "trigger_evidence_ids", "unknowns_resolved", "unknowns_added", "counter_evidence_added", "counter_evidence_removed", "change_summary", "materiality", "change_hash", "provenance"],
+  "required": ["schema_version", "change_id", "subject_id", "previous_state_id", "previous_state_hash", "new_state_id", "new_state_hash", "detected_at", "recorded_at", "trigger_evidence_ids", "unknowns_resolved", "unknowns_added", "counter_evidence_added", "counter_evidence_removed", "change_summary", "materiality", "visibility", "change_hash", "provenance"],
   "properties": {
     "schema_version": {"const": "SE_CHANGE_v0.1"}, "change_id": {"type": "string", "pattern": "^SE-CHG-[0-9]{8}-[0-9]{6}$"}, "subject_id": {"type": "string", "pattern": "^SE-SUBJ-[0-9]{6}$"},
     "previous_state_id": {"type": "string", "minLength": 1}, "previous_state_hash": {"$ref": "#/$defs/hash"}, "new_state_id": {"type": "string", "minLength": 1}, "new_state_hash": {"$ref": "#/$defs/hash"},
     "detected_at": {"$ref": "#/$defs/timestamp"}, "recorded_at": {"$ref": "#/$defs/timestamp"}, "trigger_evidence_ids": {"$ref": "#/$defs/refs"},
     "unknowns_resolved": {"$ref": "#/$defs/refs"}, "unknowns_added": {"$ref": "#/$defs/refs"}, "counter_evidence_added": {"$ref": "#/$defs/refs"}, "counter_evidence_removed": {"$ref": "#/$defs/refs"},
-    "change_summary": {"type": "string", "minLength": 1}, "materiality": {"enum": ["MINOR", "MATERIAL", "STRUCTURAL"]}, "change_hash": {"$ref": "#/$defs/hash"}, "provenance": {"$ref": "#/$defs/provenance"}
+    "change_summary": {"type": "string", "minLength": 1}, "materiality": {"enum": ["MINOR", "MATERIAL", "STRUCTURAL"]}, "visibility": {"enum": ["PUBLIC", "FOUNDING_MEMBER", "CUSTOMER_PRIVATE", "INTERNAL"]}, "change_hash": {"$ref": "#/$defs/hash"}, "provenance": {"$ref": "#/$defs/provenance"}
   },
   "$defs": {"refs": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}}, "timestamp": {"type": "string", "format": "date-time"}, "hash": {"type": "string", "pattern": "^[a-f0-9]{64}$"}, "provenance": {"type": "object", "additionalProperties": false, "required": ["repository", "commit_sha", "source_object", "created_by", "method_version", "recorded_at", "supersedes", "superseded_by"], "properties": {"repository": {"type": "string", "minLength": 1}, "commit_sha": {"type": ["string", "null"]}, "source_object": {"type": ["string", "null"]}, "created_by": {"type": "string", "minLength": 1}, "method_version": {"type": "string", "minLength": 1}, "recorded_at": {"$ref": "#/$defs/timestamp"}, "supersedes": {"type": ["string", "null"]}, "superseded_by": {"type": ["string", "null"]}}}}
 }
