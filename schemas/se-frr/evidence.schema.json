@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://structurevidence.org/schemas/se-frr/evidence.v0.1.json",
+  "title": "SE Evidence v0.1",
+  "type": "object", "additionalProperties": false,
+  "required": ["schema_version", "evidence_id", "subject_id", "published_at", "observed_at", "recorded_at", "effective_at", "source", "raw_reference", "normalized_claim", "evidence_type", "review", "counter_to", "research_class", "visibility", "content_hash", "provenance"],
+  "properties": {
+    "schema_version": {"const": "SE_EVIDENCE_v0.1"},
+    "evidence_id": {"type": "string", "pattern": "^SE-EV-[0-9]{8}-[0-9]{6}$"},
+    "subject_id": {"type": "string", "pattern": "^SE-SUBJ-[0-9]{6}$"},
+    "published_at": {"$ref": "#/$defs/nullable_timestamp"},
+    "observed_at": {"$ref": "#/$defs/timestamp"},
+    "recorded_at": {"$ref": "#/$defs/timestamp"},
+    "effective_at": {"$ref": "#/$defs/nullable_timestamp"},
+    "source": {
+      "type": "object", "additionalProperties": false,
+      "required": ["name", "url", "type", "publisher", "snapshot_ref", "retrieved_at"],
+      "properties": {
+        "name": {"type": "string", "minLength": 1}, "url": {"type": ["string", "null"], "format": "uri"},
+        "type": {"type": "string", "minLength": 1}, "publisher": {"type": ["string", "null"]},
+        "snapshot_ref": {"type": ["string", "null"]}, "retrieved_at": {"$ref": "#/$defs/timestamp"}
+      }
+    },
+    "raw_reference": {"type": "string", "minLength": 1},
+    "normalized_claim": {"type": "string", "minLength": 1},
+    "evidence_type": {"type": "string", "minLength": 1},
+    "review": {
+      "type": "object", "additionalProperties": false,
+      "required": ["status", "reason", "reviewed_at", "reviewed_by"],
+      "properties": {
+        "status": {"enum": ["ACCEPTED", "REJECTED", "COUNTER", "UNRESOLVED", "SUPERSEDED"]},
+        "reason": {"type": "string", "minLength": 1}, "reviewed_at": {"$ref": "#/$defs/timestamp"},
+        "reviewed_by": {"type": "string", "minLength": 1}
+      }
+    },
+    "counter_to": {"$ref": "#/$defs/refs"},
+    "research_class": {"type": "string", "minLength": 1},
+    "visibility": {"$ref": "#/$defs/visibility"},
+    "content_hash": {"$ref": "#/$defs/hash"},
+    "provenance": {"$ref": "#/$defs/provenance"}
+  },
+  "$defs": {
+    "refs": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "timestamp": {"type": "string", "format": "date-time"}, "nullable_timestamp": {"type": ["string", "null"], "format": "date-time"},
+    "hash": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "visibility": {"enum": ["PUBLIC", "FOUNDING_MEMBER", "CUSTOMER_PRIVATE", "INTERNAL"]},
+    "provenance": {
+      "type": "object", "additionalProperties": false,
+      "required": ["repository", "commit_sha", "source_object", "created_by", "method_version", "recorded_at", "supersedes", "superseded_by"],
+      "properties": {
+        "repository": {"type": "string", "minLength": 1}, "commit_sha": {"type": ["string", "null"]}, "source_object": {"type": ["string", "null"]},
+        "created_by": {"type": "string", "minLength": 1}, "method_version": {"type": "string", "minLength": 1}, "recorded_at": {"$ref": "#/$defs/timestamp"},
+        "supersedes": {"type": ["string", "null"]}, "superseded_by": {"type": ["string", "null"]}
+      }
+    }
+  }
+}

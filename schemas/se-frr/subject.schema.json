@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://structurevidence.org/schemas/se-frr/subject.v0.1.json",
+  "title": "SE Subject v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "subject_id", "canonical_name", "subject_type", "aliases", "industry", "geography", "description", "created_at", "created_by", "visibility", "status", "tags", "provenance"],
+  "properties": {
+    "schema_version": {"const": "SE_SUBJECT_v0.1"},
+    "subject_id": {"type": "string", "pattern": "^SE-SUBJ-[0-9]{6}$"},
+    "canonical_name": {"type": "string", "minLength": 1},
+    "subject_type": {"type": "string", "minLength": 1},
+    "aliases": {"$ref": "#/$defs/strings"},
+    "industry": {"type": ["string", "null"]},
+    "geography": {"$ref": "#/$defs/strings"},
+    "description": {"type": "string"},
+    "created_at": {"$ref": "#/$defs/timestamp"},
+    "created_by": {"type": "string", "minLength": 1},
+    "visibility": {"$ref": "#/$defs/visibility"},
+    "status": {"enum": ["ACTIVE", "WATCH", "ARCHIVED"]},
+    "tags": {"$ref": "#/$defs/strings"},
+    "provenance": {"$ref": "#/$defs/provenance"}
+  },
+  "$defs": {
+    "strings": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "timestamp": {"type": "string", "format": "date-time"},
+    "visibility": {"enum": ["PUBLIC", "FOUNDING_MEMBER", "CUSTOMER_PRIVATE", "INTERNAL"]},
+    "provenance": {
+      "type": "object", "additionalProperties": false,
+      "required": ["repository", "commit_sha", "source_object", "created_by", "method_version", "recorded_at", "supersedes", "superseded_by"],
+      "properties": {
+        "repository": {"type": "string", "minLength": 1}, "commit_sha": {"type": ["string", "null"]},
+        "source_object": {"type": ["string", "null"]}, "created_by": {"type": "string", "minLength": 1},
+        "method_version": {"type": "string", "minLength": 1}, "recorded_at": {"$ref": "#/$defs/timestamp"},
+        "supersedes": {"type": ["string", "null"]}, "superseded_by": {"type": ["string", "null"]}
+      }
+    }
+  }
+}

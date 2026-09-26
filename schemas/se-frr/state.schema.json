@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://structurevidence.org/schemas/se-frr/state.v0.1.json",
+  "title": "SE State v0.1",
+  "type": "object", "additionalProperties": false,
+  "required": ["schema_version", "state_id", "subject_id", "observed_at", "recorded_at", "state_code", "previous_state_id", "previous_state_hash", "current_dependency", "constraints", "alternative_paths", "migration_readiness", "field_deployment_status", "accepted_evidence_ids", "rejected_evidence_ids", "counter_evidence_ids", "unresolved_evidence_ids", "unknowns", "confidence_boundary", "branch_ids", "state_changed", "change_event_id", "state_hash", "chain_hash", "method_version", "visibility", "provenance"],
+  "properties": {
+    "schema_version": {"const": "SE_STATE_v0.1"},
+    "state_id": {"type": "string", "pattern": "^SE-ST-[0-9]{8}-[0-9]{6}$"},
+    "subject_id": {"type": "string", "pattern": "^SE-SUBJ-[0-9]{6}$"},
+    "observed_at": {"$ref": "#/$defs/timestamp"}, "recorded_at": {"$ref": "#/$defs/timestamp"},
+    "state_code": {"enum": ["INSUFFICIENT_EVIDENCE", "WATCH", "STRUCTURAL_CHANGE_DETECTED", "MIGRATION_PRESSURE_DETECTED", "ALTERNATIVE_PATH_IDENTIFIED", "MIGRATION_READY", "FIELD_DEPLOYMENT_CONFIRMED", "STRUCTURAL_RELEASE_CONFIRMED"]},
+    "previous_state_id": {"type": ["string", "null"]}, "previous_state_hash": {"anyOf": [{"$ref": "#/$defs/hash"}, {"type": "null"}]},
+    "current_dependency": {"type": ["string", "null"]}, "constraints": {"$ref": "#/$defs/strings"}, "alternative_paths": {"$ref": "#/$defs/strings"},
+    "migration_readiness": {"type": ["string", "null"]}, "field_deployment_status": {"type": ["string", "null"]},
+    "accepted_evidence_ids": {"$ref": "#/$defs/refs"}, "rejected_evidence_ids": {"$ref": "#/$defs/refs"},
+    "counter_evidence_ids": {"$ref": "#/$defs/refs"}, "unresolved_evidence_ids": {"$ref": "#/$defs/refs"}, "unknowns": {"$ref": "#/$defs/strings"},
+    "confidence_boundary": {
+      "type": "object", "additionalProperties": false, "required": ["supported", "unsupported", "unknown"],
+      "properties": {"supported": {"$ref": "#/$defs/strings"}, "unsupported": {"$ref": "#/$defs/strings"}, "unknown": {"$ref": "#/$defs/strings"}}
+    },
+    "branch_ids": {"$ref": "#/$defs/refs"}, "state_changed": {"type": "boolean"}, "change_event_id": {"type": ["string", "null"]},
+    "state_hash": {"$ref": "#/$defs/hash"}, "chain_hash": {"$ref": "#/$defs/hash"}, "method_version": {"const": "SE_TEMPORAL_PROTOCOL_v0.1"},
+    "visibility": {"$ref": "#/$defs/visibility"}, "provenance": {"$ref": "#/$defs/provenance"}
+  },
+  "$defs": {
+    "refs": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}}, "strings": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "timestamp": {"type": "string", "format": "date-time"}, "hash": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "visibility": {"enum": ["PUBLIC", "FOUNDING_MEMBER", "CUSTOMER_PRIVATE", "INTERNAL"]},
+    "provenance": {"type": "object", "additionalProperties": false, "required": ["repository", "commit_sha", "source_object", "created_by", "method_version", "recorded_at", "supersedes", "superseded_by"], "properties": {"repository": {"type": "string", "minLength": 1}, "commit_sha": {"type": ["string", "null"]}, "source_object": {"type": ["string", "null"]}, "created_by": {"type": "string", "minLength": 1}, "method_version": {"type": "string", "minLength": 1}, "recorded_at": {"$ref": "#/$defs/timestamp"}, "supersedes": {"type": ["string", "null"]}, "superseded_by": {"type": ["string", "null"]}}}
+  }
+}

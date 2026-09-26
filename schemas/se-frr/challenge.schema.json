@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema", "$id": "https://structurevidence.org/schemas/se-frr/challenge.v0.1.json", "title": "SE Challenge v0.1",
+  "type": "object", "additionalProperties": false,
+  "required": ["schema_version", "challenge_id", "submitted_at", "subject_id", "state_id", "challenger_ref", "claim", "submitted_evidence_refs", "review_status", "review_reason", "resulting_evidence_ids", "resulting_state_id", "visibility", "provenance"],
+  "properties": {
+    "schema_version": {"const": "SE_CHALLENGE_v0.1"}, "challenge_id": {"type": "string", "pattern": "^SE-CLG-[0-9]{8}-[0-9]{6}$"}, "submitted_at": {"$ref": "#/$defs/timestamp"}, "subject_id": {"type": "string", "pattern": "^SE-SUBJ-[0-9]{6}$"}, "state_id": {"type": "string", "minLength": 1}, "challenger_ref": {"type": "string", "minLength": 1}, "claim": {"type": "string", "minLength": 1},
+    "submitted_evidence_refs": {"$ref": "#/$defs/strings"}, "review_status": {"enum": ["SUBMITTED", "UNDER_REVIEW", "ACCEPTED", "PARTIALLY_ACCEPTED", "REJECTED", "CLOSED"]}, "review_reason": {"type": ["string", "null"]}, "resulting_evidence_ids": {"$ref": "#/$defs/strings"}, "resulting_state_id": {"type": ["string", "null"]}, "visibility": {"$ref": "#/$defs/visibility"}, "provenance": {"$ref": "#/$defs/provenance"}
+  },
+  "$defs": {"strings": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}}, "timestamp": {"type": "string", "format": "date-time"}, "visibility": {"enum": ["PUBLIC", "FOUNDING_MEMBER", "CUSTOMER_PRIVATE", "INTERNAL"]}, "provenance": {"type": "object", "additionalProperties": false, "required": ["repository", "commit_sha", "source_object", "created_by", "method_version", "recorded_at", "supersedes", "superseded_by"], "properties": {"repository": {"type": "string", "minLength": 1}, "commit_sha": {"type": ["string", "null"]}, "source_object": {"type": ["string", "null"]}, "created_by": {"type": "string", "minLength": 1}, "method_version": {"type": "string", "minLength": 1}, "recorded_at": {"$ref": "#/$defs/timestamp"}, "supersedes": {"type": ["string", "null"]}, "superseded_by": {"type": ["string", "null"]}}}}
+}
