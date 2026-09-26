@@ -1,0 +1,283 @@
+openapi: 3.1.0
+info:
+  title: StructEvidence Temporal Data API
+  version: SE_API_v1
+  description: Versioned read, protected-input, and controlled-proposal contract. Canonical Evidence, State, and Change objects are never exposed as CRUD resources.
+servers:
+  - url: https://structevidence.com/api/v1
+tags:
+  - name: Public
+  - name: Customer input
+  - name: Control plane
+paths:
+  /:
+    get:
+      tags: [Public]
+      operationId: getCapabilities
+      responses:
+        '200': {description: Capability document, content: {application/json: {schema: {$ref: '#/components/schemas/CapabilityEnvelope'}}}}
+  /subjects:
+    get:
+      tags: [Public]
+      operationId: listSubjects
+      responses:
+        '200': {description: Sanitized public Subjects, content: {application/json: {schema: {$ref: '#/components/schemas/SubjectListEnvelope'}}}}
+  /subjects/{subject_id}:
+    parameters: [{$ref: '#/components/parameters/SubjectId'}]
+    get:
+      tags: [Public]
+      operationId: getSubject
+      responses:
+        '200': {description: Sanitized Subject, content: {application/json: {schema: {$ref: '#/components/schemas/DataEnvelope'}}}}
+        '404': {$ref: '#/components/responses/NotFound'}
+  /subjects/{subject_id}/state:
+    parameters:
+      - $ref: '#/components/parameters/SubjectId'
+      - name: as_of
+        in: query
+        schema: {type: string, format: date-time}
+        description: Latest State with both observed_at and recorded_at at or before this boundary. published_at alone never makes information visible.
+    get:
+      tags: [Public]
+      operationId: getCurrentOrHistoricalState
+      responses:
+        '200':
+          description: Current recorded State, or State at the requested boundary; never a prediction, recommendation, or guarantee.
+          headers: {ETag: {$ref: '#/components/headers/ETag'}}
+          content: {application/json: {schema: {$ref: '#/components/schemas/StateEnvelope'}}}
+        '304': {$ref: '#/components/responses/NotModified'}
+        '404': {$ref: '#/components/responses/NotFound'}
+  /subjects/{subject_id}/states:
+    parameters:
+      - $ref: '#/components/parameters/SubjectId'
+      - {name: order, in: query, schema: {type: string, enum: [asc, desc], default: asc}}
+    get:
+      tags: [Public]
+      operationId: listStateHistory
+      responses:
+        '200': {description: Chronological immutable State history, content: {application/json: {schema: {$ref: '#/components/schemas/ListEnvelope'}}}}
+        '404': {$ref: '#/components/responses/NotFound'}
+  /subjects/{subject_id}/changes:
+    parameters: [{$ref: '#/components/parameters/SubjectId'}]
+    get:
+      tags: [Public]
+      operationId: listSubjectChanges
+      responses:
+        '200': {description: Subject change feed, content: {application/json: {schema: {$ref: '#/components/schemas/ListEnvelope'}}}}
+        '404': {$ref: '#/components/responses/NotFound'}
+  /subjects/{subject_id}/evidence:
+    parameters: [{$ref: '#/components/parameters/SubjectId'}]
+    get:
+      tags: [Public]
+      operationId: listSubjectEvidence
+      responses:
+        '200': {description: Public Evidence with source fact, normalized claim, and review result separated, content: {application/json: {schema: {$ref: '#/components/schemas/ListEnvelope'}}}}
+        '404': {$ref: '#/components/responses/NotFound'}
+  /subjects/{subject_id}/branches:
+    parameters: [{$ref: '#/components/parameters/SubjectId'}]
+    get:
+      tags: [Public]
+      operationId: listSubjectBranches
+      responses:
+        '200': {description: Possibility branches without probabilities, content: {application/json: {schema: {$ref: '#/components/schemas/ListEnvelope'}}}}
+        '404': {$ref: '#/components/responses/NotFound'}
+  /changes:
+    get:
+      tags: [Public]
+      operationId: listChanges
+      parameters:
+        - {name: subject_id, in: query, schema: {type: string}}
+        - {name: since, in: query, schema: {type: string, format: date-time}}
+        - {name: until, in: query, schema: {type: string, format: date-time}}
+        - {name: materiality, in: query, schema: {type: string, enum: [MINOR, MATERIAL, STRUCTURAL]}}
+        - {$ref: '#/components/parameters/Cursor'}
+        - {$ref: '#/components/parameters/Limit'}
+      responses:
+        '200': {description: Deterministically cursor-paginated Change feed, content: {application/json: {schema: {$ref: '#/components/schemas/ListEnvelope'}}}}
+        '400': {$ref: '#/components/responses/BadRequest'}
+  /states/{state_id}:
+    parameters: [{$ref: '#/components/parameters/StateId'}]
+    get:
+      tags: [Public]
+      operationId: getState
+      responses:
+        '200': {description: Public immutable State, headers: {ETag: {$ref: '#/components/headers/ETag'}}, content: {application/json: {schema: {$ref: '#/components/schemas/DataEnvelope'}}}}
+        '304': {$ref: '#/components/responses/NotModified'}
+        '404': {$ref: '#/components/responses/NotFound'}
+  /changes/{change_id}:
+    parameters: [{$ref: '#/components/parameters/ChangeId'}]
+    get:
+      tags: [Public]
+      operationId: getChange
+      responses:
+        '200': {description: Public immutable Change, headers: {ETag: {$ref: '#/components/headers/ETag'}}, content: {application/json: {schema: {$ref: '#/components/schemas/DataEnvelope'}}}}
+        '304': {$ref: '#/components/responses/NotModified'}
+        '404': {$ref: '#/components/responses/NotFound'}
+  /evidence/{evidence_id}:
+    parameters: [{$ref: '#/components/parameters/EvidenceId'}]
+    get:
+      tags: [Public]
+      operationId: getEvidence
+      responses:
+        '200': {description: Public immutable Evidence, headers: {ETag: {$ref: '#/components/headers/ETag'}}, content: {application/json: {schema: {$ref: '#/components/schemas/DataEnvelope'}}}}
+        '304': {$ref: '#/components/responses/NotModified'}
+        '404': {$ref: '#/components/responses/NotFound'}
+  /branches/{branch_id}:
+    parameters: [{$ref: '#/components/parameters/BranchId'}]
+    get:
+      tags: [Public]
+      operationId: getBranch
+      responses:
+        '200': {description: Public Branch, content: {application/json: {schema: {$ref: '#/components/schemas/DataEnvelope'}}}}
+        '404': {$ref: '#/components/responses/NotFound'}
+  /requests:
+    post:
+      tags: [Customer input]
+      operationId: submitRequest
+      description: CUSTOMER_PRIVATE D1 submission. Idempotency-Key is supported. Public submission rate class is PUBLIC_SUBMISSION.
+      parameters: [{$ref: '#/components/parameters/IdempotencyKey'}]
+      requestBody: {required: true, content: {application/json: {schema: {$ref: '#/components/schemas/RequestInput'}}}}
+      responses:
+        '201': {description: Created, content: {application/json: {schema: {$ref: '#/components/schemas/DataEnvelope'}}}}
+        '400': {$ref: '#/components/responses/BadRequest'}
+        '413': {description: Payload too large}
+        '429': {description: Rate limited}
+  /requests/{request_id}:
+    parameters: [{$ref: '#/components/parameters/RequestId'}]
+    get:
+      tags: [Customer input]
+      operationId: getRequestStatus
+      security: [{cloudflareAccess: []}]
+      responses:
+        '200': {description: Protected status-only view, content: {application/json: {schema: {$ref: '#/components/schemas/DataEnvelope'}}}}
+        '403': {$ref: '#/components/responses/Forbidden'}
+        '404': {$ref: '#/components/responses/NotFound'}
+  /challenges:
+    post:
+      tags: [Customer input]
+      operationId: submitChallenge
+      description: Stores CHALLENGE_SUBMITTED only; never mutates State.
+      parameters: [{$ref: '#/components/parameters/IdempotencyKey'}]
+      requestBody: {required: true, content: {application/json: {schema: {$ref: '#/components/schemas/ChallengeInput'}}}}
+      responses:
+        '201': {description: Challenge submitted, content: {application/json: {schema: {$ref: '#/components/schemas/DataEnvelope'}}}}
+        '400': {$ref: '#/components/responses/BadRequest'}
+        '413': {description: Payload too large}
+        '429': {description: Rate limited}
+  /outcomes:
+    post:
+      tags: [Customer input]
+      operationId: submitOutcome
+      description: Stores a CUSTOMER_PRIVATE Outcome report; never rewrites state_id_used.
+      parameters: [{$ref: '#/components/parameters/IdempotencyKey'}]
+      requestBody: {required: true, content: {application/json: {schema: {$ref: '#/components/schemas/OutcomeInput'}}}}
+      responses:
+        '201': {description: Outcome reported, content: {application/json: {schema: {$ref: '#/components/schemas/DataEnvelope'}}}}
+        '400': {$ref: '#/components/responses/BadRequest'}
+        '413': {description: Payload too large}
+        '429': {description: Rate limited}
+  /admin/proposals:
+    post:
+      tags: [Control plane]
+      operationId: createProposal
+      security: [{cloudflareAccess: []}]
+      requestBody: {required: true, content: {application/json: {schema: {$ref: '#/components/schemas/ProposalInput'}}}}
+      responses:
+        '201': {description: Draft proposal, content: {application/json: {schema: {$ref: '#/components/schemas/DataEnvelope'}}}}
+        '403': {$ref: '#/components/responses/Forbidden'}
+  /admin/proposals/{proposal_id}:
+    parameters: [{$ref: '#/components/parameters/ProposalId'}]
+    get:
+      tags: [Control plane]
+      operationId: getProposal
+      security: [{cloudflareAccess: []}]
+      responses:
+        '200': {description: Proposal status, content: {application/json: {schema: {$ref: '#/components/schemas/DataEnvelope'}}}}
+        '403': {$ref: '#/components/responses/Forbidden'}
+        '404': {$ref: '#/components/responses/NotFound'}
+  /admin/proposals/{proposal_id}/validate:
+    parameters: [{$ref: '#/components/parameters/ProposalId'}]
+    post:
+      tags: [Control plane]
+      operationId: validateProposal
+      security: [{cloudflareAccess: []}]
+      responses:
+        '200': {description: API pre-validation; repository chain verification remains required, content: {application/json: {schema: {$ref: '#/components/schemas/DataEnvelope'}}}}
+        '403': {$ref: '#/components/responses/Forbidden'}
+        '404': {$ref: '#/components/responses/NotFound'}
+  /admin/proposals/{proposal_id}/approve:
+    parameters: [{$ref: '#/components/parameters/ProposalId'}]
+    post:
+      tags: [Control plane]
+      operationId: approveProposal
+      security: [{cloudflareAccess: []}]
+      responses:
+        '200': {description: Human approval; does not materialize or bypass repository verification, content: {application/json: {schema: {$ref: '#/components/schemas/DataEnvelope'}}}}
+        '403': {$ref: '#/components/responses/Forbidden'}
+        '409': {description: Proposal has not passed validation}
+components:
+  securitySchemes:
+    cloudflareAccess: {type: apiKey, in: header, name: Cf-Access-Jwt-Assertion, description: JWT issuer, audience, and administrator allowlist are verified.}
+  headers:
+    ETag: {description: Quoted canonical state_hash, change_hash, or content_hash., schema: {type: string}}
+  parameters:
+    SubjectId: {name: subject_id, in: path, required: true, schema: {type: string, pattern: '^SE-SUBJ-[0-9]{6}$'}}
+    StateId: {name: state_id, in: path, required: true, schema: {type: string, pattern: '^SE-ST-[0-9]{8}-[0-9]{6}$'}}
+    ChangeId: {name: change_id, in: path, required: true, schema: {type: string, pattern: '^SE-CHG-[0-9]{8}-[0-9]{6}$'}}
+    EvidenceId: {name: evidence_id, in: path, required: true, schema: {type: string, pattern: '^SE-EV-[0-9]{8}-[0-9]{6}$'}}
+    BranchId: {name: branch_id, in: path, required: true, schema: {type: string, pattern: '^SE-BR-[0-9]{8}-[0-9]{6}$'}}
+    RequestId: {name: request_id, in: path, required: true, schema: {type: string}}
+    ProposalId: {name: proposal_id, in: path, required: true, schema: {type: string}}
+    Cursor: {name: cursor, in: query, schema: {type: string}, description: Opaque deterministic cursor.}
+    Limit: {name: limit, in: query, schema: {type: integer, minimum: 1, maximum: 100, default: 25}}
+    IdempotencyKey: {name: Idempotency-Key, in: header, required: false, schema: {type: string, minLength: 8, maxLength: 128}}
+  responses:
+    BadRequest: {description: Allowlist, timestamp, cursor, JSON, or field validation failed, content: {application/json: {schema: {$ref: '#/components/schemas/ErrorEnvelope'}}}}
+    Forbidden: {description: Access or origin rejected, content: {application/json: {schema: {$ref: '#/components/schemas/ErrorEnvelope'}}}}
+    NotFound: {description: Object did not exist in the sanitized projection, content: {application/json: {schema: {$ref: '#/components/schemas/ErrorEnvelope'}}}}
+    NotModified: {description: If-None-Match matched the canonical hash}
+  schemas:
+    DataEnvelope:
+      type: object
+      required: [api_version, data, meta, links]
+      properties: {api_version: {const: SE_API_v1}, data: {}, meta: {type: object}, links: {type: object}}
+    ListEnvelope:
+      allOf: [{$ref: '#/components/schemas/DataEnvelope'}]
+    ErrorEnvelope:
+      type: object
+      required: [api_version, error]
+      properties:
+        api_version: {const: SE_API_v1}
+        error:
+          type: object
+          required: [code, message, request_id]
+          properties: {code: {type: string}, message: {type: string}, request_id: {type: string}}
+    CapabilityEnvelope: {allOf: [{$ref: '#/components/schemas/DataEnvelope'}]}
+    SubjectListEnvelope: {allOf: [{$ref: '#/components/schemas/DataEnvelope'}]}
+    StateEnvelope: {allOf: [{$ref: '#/components/schemas/DataEnvelope'}]}
+    RequestInput:
+      type: object
+      additionalProperties: false
+      required: [subject, question, decision_context, urgency, requested_output, public_case_permission]
+      properties:
+        subject: {type: string}
+        question: {type: string}
+        decision_context: {type: string}
+        urgency: {type: string, enum: [LOW, NORMAL, HIGH, URGENT]}
+        requested_output: {type: string, enum: [EVIDENCE_CHAIN, STATE_HISTORY, CHANGE_REVIEW]}
+        public_case_permission: {type: boolean}
+    ChallengeInput:
+      type: object
+      additionalProperties: false
+      required: [state_id, claim, evidence_url, notes]
+      properties: {state_id: {type: string}, claim: {type: string}, evidence_url: {type: [string, 'null'], format: uri}, notes: {type: [string, 'null']}}
+    OutcomeInput:
+      type: object
+      additionalProperties: false
+      required: [request_id, state_id_used, action, reported_result, authorization_for_public_use]
+      properties: {request_id: {type: string}, state_id_used: {type: string}, action: {type: string}, reported_result: {type: string}, authorization_for_public_use: {type: boolean, default: false}}
+    ProposalInput:
+      type: object
+      additionalProperties: false
+      required: [subject_id, proposed_evidence_ids, previous_state_id, proposed_state, proposed_change_event]
+      properties: {subject_id: {type: string}, proposed_evidence_ids: {type: array, items: {type: string}}, previous_state_id: {type: string}, proposed_state: {type: object}, proposed_change_event: {type: object}}
