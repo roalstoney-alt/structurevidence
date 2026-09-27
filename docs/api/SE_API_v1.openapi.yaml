@@ -130,6 +130,49 @@ paths:
       responses:
         '200': {description: Public Branch, content: {application/json: {schema: {$ref: '#/components/schemas/DataEnvelope'}}}}
         '404': {$ref: '#/components/responses/NotFound'}
+  /events:
+    get:
+      tags: [Public]
+      operationId: listStructuralEventProjections
+      parameters: [{$ref: '#/components/parameters/AsOf'}]
+      responses:
+        '200': {description: Derived Structural Event projection index, content: {application/json: {schema: {$ref: '#/components/schemas/DataEnvelope'}}}}
+  /events/{event_id}:
+    parameters: [{$ref: '#/components/parameters/EventId'}, {$ref: '#/components/parameters/AsOf'}]
+    get:
+      tags: [Public]
+      operationId: getStructuralEventProjection
+      responses:
+        '200': {description: Derived projection; no duplicate canonical storage, content: {application/json: {schema: {$ref: '#/components/schemas/DataEnvelope'}}}}
+        '404': {$ref: '#/components/responses/NotFound'}
+  /events/{event_id}/timeline:
+    parameters: [{$ref: '#/components/parameters/EventId'}, {$ref: '#/components/parameters/AsOf'}]
+    get: {tags: [Public], operationId: getEventTimeline, responses: {'200': {description: Projected Change timeline, content: {application/json: {schema: {$ref: '#/components/schemas/DataEnvelope'}}}}}}
+  /events/{event_id}/evidence:
+    parameters: [{$ref: '#/components/parameters/EventId'}, {$ref: '#/components/parameters/AsOf'}]
+    get: {tags: [Public], operationId: getEventEvidence, responses: {'200': {description: Supporting and counter-Evidence projection, content: {application/json: {schema: {$ref: '#/components/schemas/DataEnvelope'}}}}}}
+  /events/{event_id}/branches:
+    parameters: [{$ref: '#/components/parameters/EventId'}, {$ref: '#/components/parameters/AsOf'}]
+    get: {tags: [Public], operationId: getEventBranches, responses: {'200': {description: Branch projection, content: {application/json: {schema: {$ref: '#/components/schemas/DataEnvelope'}}}}}}
+  /events/{event_id}/unknowns:
+    parameters: [{$ref: '#/components/parameters/EventId'}, {$ref: '#/components/parameters/AsOf'}]
+    get: {tags: [Public], operationId: getEventUnknowns, responses: {'200': {description: Open unknown projection, content: {application/json: {schema: {$ref: '#/components/schemas/DataEnvelope'}}}}}}
+  /events/{event_id}/outcomes:
+    parameters: [{$ref: '#/components/parameters/EventId'}, {$ref: '#/components/parameters/AsOf'}]
+    get: {tags: [Public], operationId: getEventOutcomes, responses: {'200': {description: Authorized public Outcome projection, content: {application/json: {schema: {$ref: '#/components/schemas/DataEnvelope'}}}}}}
+  /events/{event_id}/proof:
+    parameters: [{$ref: '#/components/parameters/EventId'}, {$ref: '#/components/parameters/AsOf'}]
+    get: {tags: [Public], operationId: getEventProof, responses: {'200': {description: Snapshot-chain proof projection, content: {application/json: {schema: {$ref: '#/components/schemas/DataEnvelope'}}}}}}
+  /events/{event_id}/rdl:
+    parameters: [{$ref: '#/components/parameters/EventId'}, {$ref: '#/components/parameters/AsOf'}]
+    get: {tags: [Public], operationId: getEventRdlHistory, responses: {'200': {description: RDL provenance history with UNKNOWN cost semantics, content: {application/json: {schema: {$ref: '#/components/schemas/DataEnvelope'}}}}}}
+  /atlas:
+    get:
+      tags: [Public]
+      operationId: getTemporalAtlas
+      parameters: [{$ref: '#/components/parameters/AsOf'}]
+      responses:
+        '200': {description: Cross-domain Temporal Atlas projection, content: {application/json: {schema: {$ref: '#/components/schemas/DataEnvelope'}}}}
   /requests:
     post:
       tags: [Customer input]
@@ -226,6 +269,8 @@ components:
     ChangeId: {name: change_id, in: path, required: true, schema: {type: string, pattern: '^SE-CHG-[0-9]{8}-[0-9]{6}$'}}
     EvidenceId: {name: evidence_id, in: path, required: true, schema: {type: string, pattern: '^SE-EV-[0-9]{8}-[0-9]{6}$'}}
     BranchId: {name: branch_id, in: path, required: true, schema: {type: string, pattern: '^SE-BR-[0-9]{8}-[0-9]{6}$'}}
+    EventId: {name: event_id, in: path, required: true, schema: {type: string, pattern: '^SE-EVENT-[0-9]{6}$'}}
+    AsOf: {name: as_of, in: query, required: false, schema: {type: string, format: date-time}, description: Projection boundary applied to observed and recorded timestamps.}
     RequestId: {name: request_id, in: path, required: true, schema: {type: string}}
     ProposalId: {name: proposal_id, in: path, required: true, schema: {type: string}}
     Cursor: {name: cursor, in: query, schema: {type: string}, description: Opaque deterministic cursor.}

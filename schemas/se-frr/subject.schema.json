@@ -4,7 +4,7 @@
   "title": "SE Subject v0.1",
   "type": "object",
   "additionalProperties": false,
-  "required": ["schema_version", "subject_id", "canonical_name", "subject_type", "aliases", "industry", "geography", "description", "created_at", "created_by", "visibility", "status", "tags", "provenance"],
+  "required": ["schema_version", "subject_id", "canonical_name", "subject_type", "aliases", "description", "created_at", "created_by", "visibility", "status", "tags", "provenance"],
   "properties": {
     "schema_version": {"const": "SE_SUBJECT_v0.1"},
     "subject_id": {"type": "string", "pattern": "^SE-SUBJ-[0-9]{6}$"},
@@ -19,6 +19,11 @@
     "visibility": {"$ref": "#/$defs/visibility"},
     "status": {"enum": ["ACTIVE", "WATCH", "ARCHIVED"]},
     "tags": {"$ref": "#/$defs/strings"},
+    "domain": {"enum": ["technology", "industry", "geography", "human_geography", "culture", "environment", "infrastructure", "ecology", "institution"]},
+    "subdomain": {"type": ["string", "null"]},
+    "object_type": {"type": ["string", "null"]},
+    "spatial_scope": {"$ref": "#/$defs/strings"},
+    "change_mechanisms": {"type": "array", "uniqueItems": true, "items": {"enum": ["EMERGENCE", "DECLINE", "SUBSTITUTION", "MIGRATION", "CONCENTRATION", "FRAGMENTATION", "ADOPTION", "ABANDONMENT", "RECONFIGURATION", "RECOVERY", "CONSTRAINT_RELEASE"]}},
     "provenance": {"$ref": "#/$defs/provenance"}
   },
   "$defs": {

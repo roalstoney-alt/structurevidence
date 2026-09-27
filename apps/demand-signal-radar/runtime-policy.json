@@ -1,0 +1,8 @@
+{
+  "phase": "PHASE_5A",
+  "enabled_by_default": false,
+  "status": "DEPRECATED_CUSTOMER_ACQUISITION_PATH",
+  "replacement": "Reality Event Radar v0.1",
+  "external_contact": false,
+  "payment_activation": false
+}

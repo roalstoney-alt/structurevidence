@@ -1,0 +1,12 @@
+{
+  "schema_version": "SE_PHASE5_SEED_PROJECTIONS_v0.1",
+  "projection_only": true,
+  "canonical_storage_created": false,
+  "events": [
+    {"event_key": "800V_DC_DATA_CENTER_POWER_ARCHITECTURE", "label": "800V DC Data Center Power Architecture", "source_refs": ["cases/800vdc/"], "evidence_refs": [], "state": "UNKNOWN"},
+    {"event_key": "SODIUM_ION_BATTERY_TRANSITION", "label": "Sodium-ion Battery Transition", "source_refs": ["cases/sodium-ion-bess/state-v0.1.json"], "evidence_refs": [], "state": "SOURCE_REVIEW_REQUIRED"},
+    {"event_key": "RARE_EARTH_FREE_MOTOR_TRANSITION", "label": "Rare-earth-free Motor Transition", "source_refs": [], "evidence_refs": [], "state": "UNKNOWN"},
+    {"event_key": "AMPHENOL_EOL_MIGRATION", "label": "Amphenol EOL Migration", "source_refs": ["technical-risk/records/amphenol-10081811-101-07lf/11_PUBLIC_RECORD.json"], "evidence_refs": [], "state": "SOURCE_REVIEW_REQUIRED"},
+    {"event_key": "NXP_RF_POWER_EOL", "label": "NXP RF Power EOL", "source_refs": [], "evidence_refs": [], "state": "UNKNOWN"}
+  ]
+}

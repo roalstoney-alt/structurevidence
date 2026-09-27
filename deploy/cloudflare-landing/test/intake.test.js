@@ -41,7 +41,7 @@ class FakeRateLimiter {
   async limit() { this.calls += 1; return { success: this.calls <= this.limitValue }; }
 }
 
-const baseEnv = (db, limiter = new FakeRateLimiter()) => ({ CUSTOMER_CASES_DB: db, PUBLIC_INTAKE_RATE_LIMITER: limiter, PUBLIC_ORIGINS: "https://structevidence.com", TEAM_DOMAIN: "https://team.cloudflareaccess.com", ADMIN_UI_AUD: "ui-aud", ADMIN_API_AUD: "api-aud", ADMIN_EMAILS: "admin@example.com" });
+const baseEnv = (db, limiter = new FakeRateLimiter()) => ({ PHASE4_CUSTOMER_ACQUISITION_ENABLED: "true", CUSTOMER_CASES_DB: db, PUBLIC_INTAKE_RATE_LIMITER: limiter, PUBLIC_ORIGINS: "https://structevidence.com", TEAM_DOMAIN: "https://team.cloudflareaccess.com", ADMIN_UI_AUD: "ui-aud", ADMIN_API_AUD: "api-aud", ADMIN_EMAILS: "admin@example.com" });
 const publicPost = (body, origin = "https://structevidence.com") => new Request("https://structevidence.com/api/requests", { method: "POST", headers: { "content-type": "application/json", origin, "cf-connecting-ip": "192.0.2.8" }, body: JSON.stringify(body) });
 const adminWorker = createWorker({ authVerifier: async () => ({ email: "admin@example.com" }) });
 

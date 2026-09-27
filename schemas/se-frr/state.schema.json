@@ -3,7 +3,7 @@
   "$id": "https://structurevidence.org/schemas/se-frr/state.v0.1.json",
   "title": "SE State v0.1",
   "type": "object", "additionalProperties": false,
-  "required": ["schema_version", "state_id", "subject_id", "observed_at", "recorded_at", "state_code", "previous_state_id", "previous_state_hash", "current_dependency", "constraints", "alternative_paths", "migration_readiness", "field_deployment_status", "accepted_evidence_ids", "rejected_evidence_ids", "counter_evidence_ids", "unresolved_evidence_ids", "unknowns", "confidence_boundary", "branch_ids", "state_changed", "change_event_id", "state_hash", "chain_hash", "method_version", "visibility", "provenance"],
+  "required": ["schema_version", "state_id", "subject_id", "observed_at", "recorded_at", "state_code", "previous_state_id", "previous_state_hash", "constraints", "alternative_paths", "accepted_evidence_ids", "rejected_evidence_ids", "counter_evidence_ids", "unresolved_evidence_ids", "unknowns", "confidence_boundary", "branch_ids", "state_changed", "change_event_id", "state_hash", "chain_hash", "method_version", "visibility", "provenance"],
   "properties": {
     "schema_version": {"const": "SE_STATE_v0.1"},
     "state_id": {"type": "string", "pattern": "^SE-ST-[0-9]{8}-[0-9]{6}$"},

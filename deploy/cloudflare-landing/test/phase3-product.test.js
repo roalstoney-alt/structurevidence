@@ -97,10 +97,10 @@ test("telemetry accepts only privacy-safe dimensions", async () => {
   assert.equal(leaked.status, 400);
 });
 
-test("founding access is configuration-driven and fails to WAITLIST", async () => {
+test("founding access is configuration-driven and invalid configuration fails closed", async () => {
   assert.deepEqual(await (await get("/api/product-config")).json(), { founding_access_status: "WAITLIST" });
   const invalid = await worker.fetch(new Request("https://structevidence.com/api/product-config"), { FOUNDING_ACCESS_STATUS: "INVALID" });
-  assert.deepEqual(await invalid.json(), { founding_access_status: "WAITLIST" });
+  assert.deepEqual(await invalid.json(), { founding_access_status: "CLOSED" });
 });
 
 test("default Worker public projection remains empty", async () => {

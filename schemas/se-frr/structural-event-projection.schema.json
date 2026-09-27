@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://structurevidence.org/schemas/se-frr/structural-event-projection.v0.1.json",
+  "title": "StructuralEventProjection v0.1",
+  "description": "A derived, non-canonical projection over existing append-only objects.",
+  "type": "object", "additionalProperties": false,
+  "required": ["projection_type", "projection_version", "event_id", "as_of", "subject", "current_state", "change_history", "supporting_evidence", "counter_evidence", "open_unknowns", "branches", "outcomes", "proof", "rdl_history"],
+  "properties": {
+    "projection_type": {"const": "StructuralEventProjection"},
+    "projection_version": {"const": "SE_EVENT_PROJECTION_v0.1"},
+    "event_id": {"type": "string", "pattern": "^SE-EVENT-[0-9]{6}$"},
+    "as_of": {"type": ["string", "null"], "format": "date-time"},
+    "subject": {"type": "object"}, "current_state": {"type": ["object", "null"]},
+    "change_history": {"type": "array", "items": {"type": "object"}},
+    "supporting_evidence": {"type": "array", "items": {"type": "object"}},
+    "counter_evidence": {"type": "array", "items": {"type": "object"}},
+    "open_unknowns": {"type": "array", "items": {"type": "string"}},
+    "branches": {"type": "array", "items": {"type": "object"}},
+    "outcomes": {"type": "array", "items": {"type": "object"}},
+    "proof": {"type": "object"}, "rdl_history": {"type": "array", "items": {"type": "object"}}
+  }
+}

@@ -1,13 +1,18 @@
+import { projectAtlas, projectStructuralEvent } from "./phase5-core.js";
+
 export const API_VERSION = "SE_API_v1";
 export const SE_API_V1_OPERATIONS = Object.freeze([
   ["GET", "/"], ["GET", "/subjects"], ["GET", "/subjects/{subject_id}"], ["GET", "/subjects/{subject_id}/state"],
   ["GET", "/subjects/{subject_id}/states"], ["GET", "/subjects/{subject_id}/changes"], ["GET", "/subjects/{subject_id}/evidence"],
   ["GET", "/subjects/{subject_id}/branches"], ["GET", "/changes"], ["GET", "/states/{state_id}"], ["GET", "/changes/{change_id}"],
   ["GET", "/evidence/{evidence_id}"], ["GET", "/branches/{branch_id}"], ["POST", "/requests"], ["GET", "/requests/{request_id}"],
+  ["GET", "/events"], ["GET", "/events/{event_id}"], ["GET", "/events/{event_id}/timeline"],
+  ["GET", "/events/{event_id}/evidence"], ["GET", "/events/{event_id}/branches"], ["GET", "/events/{event_id}/unknowns"],
+  ["GET", "/events/{event_id}/outcomes"], ["GET", "/events/{event_id}/proof"], ["GET", "/events/{event_id}/rdl"], ["GET", "/atlas"],
   ["POST", "/challenges"], ["POST", "/outcomes"], ["POST", "/admin/proposals"], ["GET", "/admin/proposals/{proposal_id}"],
   ["POST", "/admin/proposals/{proposal_id}/validate"], ["POST", "/admin/proposals/{proposal_id}/approve"]
 ]);
-export const EMPTY_PUBLIC_DATA = Object.freeze({ subjects: [], states: [], changes: [], evidence: [], branches: [], outcomes: [] });
+export const EMPTY_PUBLIC_DATA = Object.freeze({ subjects: [], states: [], changes: [], evidence: [], branches: [], outcomes: [], rdlRuns: [] });
 
 const MAX_BODY_BYTES = 65_536;
 const ID_PATTERNS = {
@@ -235,7 +240,7 @@ export async function handleSeApiV1(request, env, { publicData = EMPTY_PUBLIC_DA
   const db = storeFor(env, store);
   try {
     if (method === "OPTIONS" && ["/api/v1/requests", "/api/v1/challenges", "/api/v1/outcomes"].includes(path)) return new Response(null, { status: 204, headers: submissionCors(request, env) });
-    if (method === "GET" && path === "/api/v1") return respond(envelope({ capabilities: { subjects: true, state_history: true, as_of_queries: true, change_feed: true, evidence: true, branches: true, requests: true, challenges: true, outcomes: true }, schema_versions: { state: "SE_STATE_v0.1", evidence: "SE_EVIDENCE_v0.1" } }), 200, publicCors);
+    if (method === "GET" && path === "/api/v1") return respond(envelope({ capabilities: { subjects: true, state_history: true, as_of_queries: true, change_feed: true, evidence: true, branches: true, requests: true, challenges: true, outcomes: true, structural_event_projections: true, temporal_atlas: true, proof: true, rdl_history: true }, schema_versions: { state: "SE_STATE_v0.1", evidence: "SE_EVIDENCE_v0.1", event_projection: "SE_EVENT_PROJECTION_v0.1", rdl_run: "SE_RDL_RUN_v0.1" } }), 200, publicCors);
     if (method === "GET" && path === "/api/v1/subjects") {
       const items = publicData.subjects.map((subject) => {
         const state = currentState(publicData.states.filter((item) => item.subject_id === subject.subject_id));
@@ -253,6 +258,18 @@ export async function handleSeApiV1(request, env, { publicData = EMPTY_PUBLIC_DA
       if (until !== null) items = items.filter((item) => Date.parse(item.detected_at) <= until);
       const limit = Math.min(Math.max(Number(url.searchParams.get("limit") || 25), 1), 100), result = page(items, "change_id", url.searchParams.get("cursor"), limit);
       return respond(envelope(result.values.map((item) => publicChange(item, publicData.states)), { next_cursor: result.next, limit }), 200, publicCors);
+    }
+    if (method === "GET" && (path === "/api/v1/events" || path === "/api/v1/atlas")) {
+      const items = await projectAtlas(publicData, { asOf: url.searchParams.get("as_of") });
+      return respond(envelope(path.endsWith("/atlas") ? { events: items, domains: [...new Set(items.map((item) => item.subject.domain))].sort() } : { items, next_cursor: null }, { count: items.length, as_of: url.searchParams.get("as_of") }), 200, publicCors);
+    }
+    const eventMatch = path.match(/^\/api\/v1\/events\/(SE-EVENT-([0-9]{6}))(?:\/(timeline|evidence|branches|unknowns|outcomes|proof|rdl))?$/);
+    if (method === "GET" && eventMatch) {
+      const projection = await projectStructuralEvent(`SE-SUBJ-${eventMatch[2]}`, publicData, { asOf: url.searchParams.get("as_of") });
+      if (!projection) return fail("EVENT_NOT_FOUND", "Event projection not found.", 404, id, publicCors);
+      const resource = eventMatch[3];
+      const data = !resource ? projection : resource === "timeline" ? projection.change_history : resource === "evidence" ? { supporting: projection.supporting_evidence, counter: projection.counter_evidence } : resource === "branches" ? projection.branches : resource === "unknowns" ? projection.open_unknowns : resource === "outcomes" ? projection.outcomes : resource === "proof" ? projection.proof : projection.rdl_history;
+      return respond(envelope(data, { projection: true, canonical_storage_created: false, as_of: url.searchParams.get("as_of") }), 200, publicCors);
     }
     const subjectMatch = path.match(/^\/api\/v1\/subjects\/(SE-SUBJ-[0-9]{6})(?:\/(state|states|changes|evidence|branches))?$/);
     if (method === "GET" && subjectMatch) {

@@ -1,0 +1,6 @@
+{
+  "phase": "PHASE_5A",
+  "enabled_by_default": false,
+  "status": "PRESERVED_HISTORICAL_ASSET",
+  "reason": "Phase 4 Discord live-gate work is superseded by strategy. Explicit future authorization is required to reactivate."
+}

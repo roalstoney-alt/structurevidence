@@ -3,6 +3,7 @@ import { ADMIN_APP_JS, ADMIN_HTML } from "./admin-ui.js";
 import { COMMERCIAL_APP_JS_UPGRADE as COMMERCIAL_APP_JS, COMMERCIAL_CSS_V2 as COMMERCIAL_CSS, COMMERCIAL_PAGES_V2 as COMMERCIAL_PAGES } from "./commercial-upgrade.js";
 import { EMPTY_PUBLIC_DATA, handleSeApiV1 } from "./se-api-v1.js";
 import { PRODUCT_APP_JS, PRODUCT_CSS, isPrivateProductRoute, isProductRoute, renderProductPage } from "./product-surface.js";
+import { PHASE5_APP_JS, isPhase5Route, renderPhase5Page } from "./phase5-surface.js";
 
 const MAX_BODY_BYTES = 65_536;
 const REQUEST_STATUSES = new Set(["SUBMITTED", "UNDER_REVIEW", "SCOPE_PROPOSED", "AWAITING_CUSTOMER", "AUTHORIZED", "IN_PROGRESS", "DELIVERED", "CLOSED"]);
@@ -199,11 +200,14 @@ export function createWorker({ authVerifier = verifyAccess, sePublicData = EMPTY
         if (response) { response.headers.set("x-request-id", apiRequestId); return response; }
       }
       if (url.pathname === "/api/requests" && request.method === "OPTIONS") return new Response(null, { status: 204, headers: corsHeaders(request, env) });
-      if (url.pathname === "/api/requests" && request.method === "POST") return await submitRequest(request, env);
+      if (url.pathname === "/api/requests" && request.method === "POST") {
+        if (String(env.PHASE4_CUSTOMER_ACQUISITION_ENABLED || "false").toLowerCase() !== "true") return json({ error: "Phase 4 customer acquisition is disabled by strategy." }, 410, corsHeaders(request, env));
+        return await submitRequest(request, env);
+      }
       if (url.pathname === "/api/product-events" && request.method === "POST") return await productEvent(request);
       if (url.pathname === "/api/product-config" && request.method === "GET") {
-        const configured = String(env.FOUNDING_ACCESS_STATUS || "WAITLIST");
-        const founding_access_status = new Set(["CLOSED", "WAITLIST", "INVITE_ONLY", "OPEN"]).has(configured) ? configured : "WAITLIST";
+        const configured = String(env.FOUNDING_ACCESS_STATUS || "CLOSED");
+        const founding_access_status = new Set(["CLOSED", "WAITLIST", "INVITE_ONLY", "OPEN"]).has(configured) ? configured : "CLOSED";
         return json({ founding_access_status });
       }
       if (url.pathname === "/robots.txt" && request.method === "GET") return new Response("User-agent: *\nAllow: /states\nAllow: /changes\nAllow: /evidence\nAllow: /founding\nDisallow: /request\nDisallow: /challenge\nDisallow: /outcome\nDisallow: /admin\nDisallow: /api\n", { headers: { "content-type": "text/plain; charset=utf-8", "cache-control": "public, max-age=3600", ...securityHeaders } });
@@ -214,6 +218,11 @@ export function createWorker({ authVerifier = verifyAccess, sePublicData = EMPTY
       }
       if (url.pathname.startsWith("/api/admin/") || url.pathname.startsWith("/admin/requests")) return await adminRoute(request, url, env, authVerifier);
       if (url.pathname === "/assets/product-surface.css" || url.pathname === "/assets/product-surface.js") return productAsset(request, url.pathname);
+      if (url.pathname === "/assets/phase5-surface.js") return new Response(PHASE5_APP_JS, { headers: { "content-type": "application/javascript; charset=utf-8", "cache-control": "public, max-age=3600", ...securityHeaders } });
+      if (isPhase5Route(url.pathname)) {
+        if (!new Set(["GET", "HEAD"]).has(request.method)) return new Response("Method not allowed", { status: 405, headers: { allow: "GET, HEAD", ...securityHeaders } });
+        return new Response(request.method === "HEAD" ? null : renderPhase5Page(url.pathname), { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=300", "content-security-policy": "default-src 'none'; script-src 'self'; style-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'", ...securityHeaders } });
+      }
       if (isProductRoute(url.pathname)) {
         if (!new Set(["GET", "HEAD"]).has(request.method)) return new Response("Method not allowed", { status: 405, headers: { allow: "GET, HEAD", ...securityHeaders } });
         if (/^\/outcome\//.test(url.pathname)) await authVerifier(request, env, env.ADMIN_UI_AUD);
