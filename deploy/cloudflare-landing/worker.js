@@ -5,6 +5,10 @@ import { EMPTY_PUBLIC_DATA, handleSeApiV1 } from "./se-api-v1.js";
 import { PRODUCT_APP_JS, PRODUCT_CSS, isPrivateProductRoute, isProductRoute, renderProductPage } from "./product-surface.js";
 import { PHASE5_APP_JS, isPhase5Route, renderPhase5Page } from "./phase5-surface.js";
 import { PHASE5B_800V_INVENTORY } from "./phase5b-800v-canary.js";
+import { projectTemporalVisualization } from "./temporal-visualization.js";
+import { isTemporalPreviewRequest, renderTemporalPreviewPage, temporalPreviewEnabled, TEMPORAL_CSS_PATH, TEMPORAL_MOTION_CSS, TEMPORAL_MOTION_JS, TEMPORAL_PREVIEW_PATH, TEMPORAL_PUBLIC_PATH } from "./temporal-motion-surface.js";
+import CANONICAL_800V_RECORD from "../../technical-risk/cml-v1.1/pdre/CML-PDRE-001/pdre-record.json" with { type: "json" };
+import FIELD_DEPLOYMENT_RDL_RECORD from "../../rdl/research/records/CML-PDRE-001-L1-FIELD-DEPLOYMENT-2026-09-20/research-record.json" with { type: "json" };
 
 const MAX_BODY_BYTES = 65_536;
 const REQUEST_STATUSES = new Set(["SUBMITTED", "UNDER_REVIEW", "SCOPE_PROPOSED", "AWAITING_CUSTOMER", "AUTHORIZED", "IN_PROGRESS", "DELIVERED", "CLOSED"]);
@@ -188,10 +192,27 @@ function productShare(path, data) {
   }
   return null;
 }
-export function createWorker({ authVerifier = verifyAccess, sePublicData = EMPTY_PUBLIC_DATA, seApiStore = null, decisionInventory = PHASE5B_800V_INVENTORY, decisionStore = null, quoteEngine = null } = {}) {
+export function createWorker({ authVerifier = verifyAccess, sePublicData = EMPTY_PUBLIC_DATA, seApiStore = null, decisionInventory = PHASE5B_800V_INVENTORY, decisionStore = null, quoteEngine = null, temporalRecord = CANONICAL_800V_RECORD, temporalResearchRecords = [FIELD_DEPLOYMENT_RDL_RECORD] } = {}) {
   return { async fetch(request, env) {
     const url = new URL(request.url);
     try {
+      if (isTemporalPreviewRequest(url.pathname)) {
+        const localPreview = temporalPreviewEnabled(request, env);
+        const previewRoute = url.pathname === TEMPORAL_PREVIEW_PATH;
+        if (previewRoute && !localPreview) return new Response("Not found", { status: 404, headers: { "cache-control": "no-store", "x-robots-tag": "noindex, nofollow, noarchive", ...securityHeaders } });
+        if (url.pathname === "/api/v1/events/SE-EVENT-800001/temporal-visualization") {
+          if (request.method !== "GET") return new Response("Method not allowed", { status: 405, headers: { allow: "GET", ...securityHeaders } });
+          const windowDays = Number(url.searchParams.get("window") || 90);
+          const projection = await projectTemporalVisualization(temporalRecord, { asOf: url.searchParams.get("as_of") || null, windowDays, researchRecords: temporalResearchRecords });
+          return json({ api_version: "SE_API_v1", data: projection, meta: { preview_only: localPreview, canonical_mutation: false }, links: { evidence_view: "/events/SE-EVENT-800001", temporal_view: TEMPORAL_PUBLIC_PATH } });
+        }
+        if (request.method !== "GET" && request.method !== "HEAD") return new Response("Method not allowed", { status: 405, headers: { allow: "GET, HEAD", ...securityHeaders } });
+        const pageRoute = previewRoute || url.pathname === TEMPORAL_PUBLIC_PATH;
+        const body = pageRoute ? renderTemporalPreviewPage({ publicRelease: !previewRoute }) : url.pathname === TEMPORAL_CSS_PATH ? TEMPORAL_MOTION_CSS : TEMPORAL_MOTION_JS;
+        const type = pageRoute ? "text/html; charset=utf-8" : url.pathname === TEMPORAL_CSS_PATH ? "text/css; charset=utf-8" : "application/javascript; charset=utf-8";
+        const releaseHeaders = previewRoute ? { "cache-control": "no-store", "x-robots-tag": "noindex, nofollow, noarchive" } : { "cache-control": pageRoute ? "public, max-age=300" : "public, max-age=3600" };
+        return new Response(request.method === "HEAD" ? null : body, { headers: { "content-type": type, ...releaseHeaders, "content-security-policy": "default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; connect-src 'self'; base-uri 'none'; frame-ancestors 'none'", ...securityHeaders } });
+      }
       if (url.hostname === "www.structevidence.com") return Response.redirect(`https://structevidence.com${url.pathname}${url.search}`, 308);
       if (url.pathname === "/api/v1" || url.pathname.startsWith("/api/v1/")) {
         const apiRequestId = request.headers.get("x-request-id") || `SE-HTTP-${crypto.randomUUID()}`;

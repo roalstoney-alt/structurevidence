@@ -1,0 +1,54 @@
+import { mkdirSync, writeFileSync } from "node:fs";
+
+const chrome = await (await fetch("http://127.0.0.1:9223/json/version")).json();
+const socket = new WebSocket(chrome.webSocketDebuggerUrl);
+await new Promise((resolve, reject) => { socket.addEventListener("open", resolve, { once: true }); socket.addEventListener("error", reject, { once: true }); });
+let sequence = 0;
+const pending = new Map(), listeners = new Map(), errors = [];
+socket.addEventListener("message", ({ data }) => {
+  const message = JSON.parse(data);
+  if (message.id && pending.has(message.id)) { const { resolve, reject } = pending.get(message.id); pending.delete(message.id); return message.error ? reject(new Error(message.error.message)) : resolve(message.result); }
+  if (message.method === "Runtime.exceptionThrown") errors.push(message.params.exceptionDetails.text);
+  if (message.method === "Log.entryAdded" && message.params.entry.level === "error") errors.push(message.params.entry.text);
+  for (const resolve of listeners.get(message.method) || []) resolve(message.params);
+  listeners.delete(message.method);
+});
+const send = (method, params = {}, sessionId = undefined) => new Promise((resolve, reject) => { const id = ++sequence; pending.set(id, { resolve, reject }); socket.send(JSON.stringify({ id, method, params, ...(sessionId ? { sessionId } : {}) })); });
+const waitEvent = (method) => new Promise((resolve) => listeners.set(method, [...(listeners.get(method) || []), resolve]));
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+const evaluate = async (expression) => (await send("Runtime.evaluate", { expression, awaitPromise: true, returnByValue: true }, sessionId)).result.value;
+const navigate = async (url) => { const loaded = waitEvent("Page.loadEventFired"); await send("Page.navigate", { url }, sessionId); await loaded; await sleep(400); };
+const capture = async (name) => { const result = await send("Page.captureScreenshot", { format: "png", captureBeyondViewport: false }, sessionId); writeFileSync(`${artifactDir}/${name}`, Buffer.from(result.data, "base64")); };
+
+const target = await send("Target.createTarget", { url: "about:blank" });
+const attached = await send("Target.attachToTarget", { targetId: target.targetId, flatten: true });
+const sessionId = attached.sessionId;
+await Promise.all([send("Page.enable", {}, sessionId), send("Runtime.enable", {}, sessionId), send("Log.enable", {}, sessionId)]);
+const artifactDir = "/tmp/structurevidence-phase5b-tv-v02-review"; mkdirSync(artifactDir, { recursive: true });
+await send("Emulation.setDeviceMetricsOverride", { width: 1440, height: 1000, deviceScaleFactor: 1, mobile: false }, sessionId);
+await navigate("http://127.0.0.1:8791/__preview__/temporal/800vdc");
+if (!await evaluate("Boolean(document.querySelector('[data-play]')) && !Boolean(document.querySelector('.error'))")) throw new Error("Temporal view did not initialize.");
+await evaluate("document.querySelector('[data-play]').click()"); await sleep(300);
+if (!await evaluate("['FLOWING','DECELERATING'].includes(document.querySelector('[data-machine]').textContent)")) throw new Error("Continuous flow state did not start.");
+await capture("01_FLOWING_STATE.png"); await evaluate("document.querySelector('[data-play]').click()");
+await evaluate("(()=>{const a=[...document.querySelectorAll('.anchor:not(:has(.counter))')].find(x=>parseFloat(x.style.left)>1);const s=document.querySelector('[data-scrubber]');s.value=Math.max(0,parseFloat(a.style.left)*10-2);s.dispatchEvent(new Event('input',{bubbles:true}));document.querySelector('[data-play]').click()})()"); await sleep(700);
+if (!await evaluate("['EVENT_HOLD','STATE_CHANGE_HOLD'].includes(document.querySelector('[data-machine]').textContent) && !document.querySelector('[data-card]').hidden")) throw new Error("Normal event hold did not activate.");
+await capture("02_NORMAL_EVENT_HOLD.png");
+await evaluate("(()=>{document.querySelector('[data-reset]').click();const a=document.querySelector('.anchor:has(.counter)');const s=document.querySelector('[data-scrubber]');s.value=Math.max(0,parseFloat(a.style.left)*10-3);s.dispatchEvent(new Event('input',{bubbles:true}));document.querySelector('[data-play]').click()})()"); await sleep(700);
+if (!await evaluate("document.querySelector('[data-machine]').textContent==='EVENT_HOLD' && document.querySelector('[data-card]').classList.contains('counter-card')")) throw new Error("Counter-evidence parity hold failed.");
+await capture("03_COUNTER_EVIDENCE_HOLD.png");
+await evaluate("document.querySelector('[data-reset]').click();document.querySelector('[data-change]').click()");
+await capture("04_R4_TO_R5_HOLD.png");
+await evaluate("(()=>{const toggles=[...document.querySelectorAll('[data-toggle]')];for(const t of toggles.filter(x=>['COUNTER_EVIDENCE','UNKNOWN'].includes(x.dataset.toggle))){t.click();t.click()}const s=document.querySelector('[data-scrubber]');s.value=s.max;s.dispatchEvent(new Event('input',{bubbles:true}))})()");
+if (!await evaluate("document.querySelector('[data-frame-state]').textContent==='R3' && document.body.textContent.includes('NOT PRESENT')")) throw new Error("Current-state boundary was not preserved.");
+if (!await evaluate("document.body.textContent.includes('CENTRAL EVIDENCE RAIL') && document.body.textContent.includes('Operating history & reliability') && document.body.textContent.includes('EVIDENCE CADENCE')")) throw new Error("Refined evidence rail, gap labels, or cadence view missing.");
+await capture("05_CURRENT_STATE.png");
+await send("Emulation.setDeviceMetricsOverride", { width: 390, height: 844, deviceScaleFactor: 2, mobile: true }, sessionId); await sleep(300);
+await capture("06_MOBILE_CURRENT_STATE.png");
+await send("Emulation.setEmulatedMedia", { features: [{ name: "prefers-reduced-motion", value: "reduce" }] }, sessionId); await navigate("http://127.0.0.1:8791/__preview__/temporal/800vdc");
+if (!await evaluate("!document.querySelector('[data-play]').disabled && document.querySelector('[data-play]').textContent==='NEXT EVENT' && document.querySelectorAll('[data-event]').length>0")) throw new Error("Reduced-motion stepped fallback failed.");
+await evaluate("document.querySelector('[data-play]').click()");
+if (!await evaluate("!document.querySelector('[data-card]').hidden")) throw new Error("Reduced-motion event detail failed.");
+if (errors.length) throw new Error(`Browser console errors: ${errors.join(" | ")}`);
+console.log(JSON.stringify({ TEMPORAL_FLOW: "PASS", EVENT_HOLD: "PASS", COUNTER_EVIDENCE_PARITY: "PASS", DESKTOP_SMOKE: "PASS", MOBILE_SMOKE: "PASS", REDUCED_MOTION: "PASS", CONSOLE_ERRORS: 0, SCREENSHOTS: 6, ARTIFACT_DIR: artifactDir }));
+await send("Target.closeTarget", { targetId: target.targetId }); socket.close();

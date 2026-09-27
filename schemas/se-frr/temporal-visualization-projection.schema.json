@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://structevidence.com/schemas/se-frr/temporal-visualization-projection.schema.json",
+  "title": "TemporalVisualizationProjection",
+  "type": "object",
+  "required": ["projection_version", "subject_id", "generated_at", "as_of", "source_snapshot_hash", "projection_hash", "time_range", "states", "change_events", "branches", "evidence_events", "counter_evidence_events", "unknown_events", "outcome_events", "velocity_series", "provenance_map"],
+  "properties": {
+    "projection_version": { "const": "SE_TEMPORAL_VISUALIZATION_v0.1" },
+    "subject_id": { "type": "string" },
+    "generated_at": { "type": "string", "format": "date-time" },
+    "as_of": { "type": "string", "format": "date-time" },
+    "source_snapshot_hash": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "projection_hash": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "time_range": { "type": "object", "required": ["start", "end", "playback_clock", "compressed"], "properties": { "start": { "type": "string", "format": "date-time" }, "end": { "type": "string", "format": "date-time" }, "playback_clock": { "const": "KNOWLEDGE_TIME" }, "compressed": { "const": true } } },
+    "states": { "type": "array", "items": { "$ref": "#/$defs/visualItem" } },
+    "change_events": { "type": "array", "items": { "$ref": "#/$defs/visualItem" } },
+    "research_decision_events": { "type": "array", "items": { "$ref": "#/$defs/visualItem" } },
+    "branches": { "type": "array" },
+    "evidence_events": { "type": "array", "items": { "$ref": "#/$defs/visualItem" } },
+    "counter_evidence_events": { "type": "array", "items": { "$ref": "#/$defs/visualItem" } },
+    "unknown_events": { "type": "array", "items": { "$ref": "#/$defs/visualItem" } },
+    "outcome_events": { "type": "array" },
+    "velocity_series": { "type": "array", "items": { "type": "object", "required": ["component", "window_days", "event_count", "rate_per_day", "source_event_ids"] } },
+    "provenance_map": { "type": "object", "additionalProperties": { "type": "array", "items": { "type": "string" } } }
+  },
+  "$defs": {
+    "visualItem": {
+      "type": "object",
+      "required": ["source_refs"],
+      "properties": {
+        "visual_event_id": { "type": "string" }, "timestamp": { "type": "string", "format": "date-time" },
+        "effective_at": { "type": ["string", "null"] }, "event_type": { "type": "string" }, "subject_id": { "type": "string" },
+        "evidence_ids": { "type": "array", "items": { "type": "string" } }, "counter_evidence_ids": { "type": "array", "items": { "type": "string" } },
+        "unknown_ids": { "type": "array", "items": { "type": "string" } }, "outcome_ids": { "type": "array", "items": { "type": "string" } },
+        "source_refs": { "type": "array", "minItems": 1, "items": { "type": "string" } }
+      }
+    }
+  }
+}
