@@ -166,6 +166,14 @@ paths:
   /events/{event_id}/rdl:
     parameters: [{$ref: '#/components/parameters/EventId'}, {$ref: '#/components/parameters/AsOf'}]
     get: {tags: [Public], operationId: getEventRdlHistory, responses: {'200': {description: RDL provenance history with UNKNOWN cost semantics, content: {application/json: {schema: {$ref: '#/components/schemas/DataEnvelope'}}}}}}
+  /events/{event_id}/gaps:
+    parameters: [{$ref: '#/components/parameters/EventId'}]
+    get:
+      tags: [Public]
+      operationId: getEventDecisionGaps
+      responses:
+        '200': {description: Derived Decision Inventory with evidence, counter-evidence, and unknown counts}
+        '404': {$ref: '#/components/responses/NotFound'}
   /atlas:
     get:
       tags: [Public]
@@ -219,6 +227,74 @@ paths:
         '400': {$ref: '#/components/responses/BadRequest'}
         '413': {description: Payload too large}
         '429': {description: Rate limited}
+  /decision-requests:
+    post:
+      tags: [Control plane]
+      operationId: createDecisionRequest
+      security: [{cloudflareAccess: []}]
+      requestBody: {required: true, content: {application/json: {schema: {type: object, additionalProperties: false}}}}
+      responses: {'201': {description: Customer-private decision request created}, '403': {$ref: '#/components/responses/Forbidden'}}
+  /decision-requests/{request_id}/status:
+    parameters: [{$ref: '#/components/parameters/RequestId'}]
+    get:
+      tags: [Control plane]
+      operationId: getDecisionRequestStatus
+      security: [{cloudflareAccess: []}]
+      responses: {'200': {description: Protected state and gate status}, '403': {$ref: '#/components/responses/Forbidden'}}
+  /decision-requests/{request_id}/preflight:
+    parameters: [{$ref: '#/components/parameters/RequestId'}]
+    post:
+      tags: [Control plane]
+      operationId: runDecisionPreflight
+      security: [{cloudflareAccess: []}]
+      responses: {'200': {description: Low-cost feasibility preflight}, '403': {$ref: '#/components/responses/Forbidden'}}
+  /decision-requests/{request_id}/quote:
+    parameters: [{$ref: '#/components/parameters/RequestId'}]
+    post:
+      tags: [Control plane]
+      operationId: issueDecisionQuote
+      security: [{cloudflareAccess: []}]
+      responses: {'201': {description: Quote with expected and P90 cost or UNKNOWN}, '403': {$ref: '#/components/responses/Forbidden'}}
+  /decision-requests/{request_id}/accept:
+    parameters: [{$ref: '#/components/parameters/RequestId'}]
+    post:
+      tags: [Control plane]
+      operationId: acceptDecisionQuote
+      security: [{cloudflareAccess: []}]
+      responses: {'200': {description: Quote accepted and payment pending}, '403': {$ref: '#/components/responses/Forbidden'}}
+  /decision-requests/{request_id}/payment:
+    parameters: [{$ref: '#/components/parameters/RequestId'}]
+    post:
+      tags: [Control plane]
+      operationId: confirmDecisionPayment
+      security: [{cloudflareAccess: []}]
+      responses: {'200': {description: Manual payment confirmation recorded}, '403': {$ref: '#/components/responses/Forbidden'}}
+  /decision-requests/{request_id}/rdl:
+    parameters: [{$ref: '#/components/parameters/RequestId'}]
+    post:
+      tags: [Control plane]
+      operationId: bindDecisionRdl
+      security: [{cloudflareAccess: []}]
+      responses: {'200': {description: Paid scope bound to cutoff, envelope, provenance, and caps}, '403': {$ref: '#/components/responses/Forbidden'}, '409': {description: Payment not confirmed}}
+  /decision-requests/{request_id}/delivery:
+    parameters: [{$ref: '#/components/parameters/RequestId'}]
+    get:
+      tags: [Control plane]
+      operationId: getDecisionDelivery
+      security: [{cloudflareAccess: []}]
+      responses: {'200': {description: Protected determination and P1 proof}, '403': {$ref: '#/components/responses/Forbidden'}, '404': {$ref: '#/components/responses/NotFound'}}
+  /context-fit:
+    post:
+      tags: [Control plane]
+      operationId: scopeContextFit
+      security: [{cloudflareAccess: []}]
+      responses: {'201': {description: Architecture-only context-fit scope}, '403': {$ref: '#/components/responses/Forbidden'}}
+  /watch-cycles:
+    post:
+      tags: [Control plane]
+      operationId: createWatchCycle
+      security: [{cloudflareAccess: []}]
+      responses: {'201': {description: Bounded 30- or 90-day watch cycle}, '403': {$ref: '#/components/responses/Forbidden'}}
   /admin/proposals:
     post:
       tags: [Control plane]

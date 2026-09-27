@@ -81,8 +81,9 @@ test("Reality Event Radar classifies evidence and contains no acquisition behavi
 
 test("event and atlas API endpoints expose projections and all subresources", async () => {
   const events = await (await get("/api/v1/events")).json();
-  assert.equal(events.data.items.length, 1); assert.equal(events.data.items[0].event_id, "SE-EVENT-000001");
-  const atlas = await (await get("/api/v1/atlas")).json(); assert.equal(atlas.data.events.length, 1);
+  assert.equal(events.data.items.length, 2); assert.equal(events.data.items[0].event_id, "SE-EVENT-000001");
+  assert.ok(events.data.items.some((item) => item.event_id === "SE-EVENT-800001"));
+  const atlas = await (await get("/api/v1/atlas")).json(); assert.equal(atlas.data.events.length, 2);
   for (const suffix of ["", "/timeline", "/evidence", "/branches", "/unknowns", "/outcomes", "/proof", "/rdl"]) {
     const response = await get(`/api/v1/events/SE-EVENT-000001${suffix}`);
     assert.equal(response.status, 200, suffix);

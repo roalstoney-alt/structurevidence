@@ -14,13 +14,13 @@ class ApiContractTests(unittest.TestCase):
     def test_openapi_matches_worker_operation_manifest(self):
         result = validate_contract()
         self.assertEqual(result["result"], "PASS")
-        self.assertEqual(result["documented_operations"], 31)
+        self.assertEqual(result["documented_operations"], 42)
 
     def test_public_endpoint_count_is_frozen(self):
-        self.assertEqual(validate_contract()["public_endpoints"], 23)
+        self.assertEqual(validate_contract()["public_endpoints"], 24)
 
     def test_protected_endpoint_count_is_frozen(self):
-        self.assertEqual(validate_contract()["protected_endpoints"], 8)
+        self.assertEqual(validate_contract()["protected_endpoints"], 18)
 
 
 if __name__ == "__main__":

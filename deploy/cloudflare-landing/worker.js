@@ -4,6 +4,7 @@ import { COMMERCIAL_APP_JS_UPGRADE as COMMERCIAL_APP_JS, COMMERCIAL_CSS_V2 as CO
 import { EMPTY_PUBLIC_DATA, handleSeApiV1 } from "./se-api-v1.js";
 import { PRODUCT_APP_JS, PRODUCT_CSS, isPrivateProductRoute, isProductRoute, renderProductPage } from "./product-surface.js";
 import { PHASE5_APP_JS, isPhase5Route, renderPhase5Page } from "./phase5-surface.js";
+import { PHASE5B_800V_INVENTORY } from "./phase5b-800v-canary.js";
 
 const MAX_BODY_BYTES = 65_536;
 const REQUEST_STATUSES = new Set(["SUBMITTED", "UNDER_REVIEW", "SCOPE_PROPOSED", "AWAITING_CUSTOMER", "AUTHORIZED", "IN_PROGRESS", "DELIVERED", "CLOSED"]);
@@ -187,7 +188,7 @@ function productShare(path, data) {
   }
   return null;
 }
-export function createWorker({ authVerifier = verifyAccess, sePublicData = EMPTY_PUBLIC_DATA, seApiStore = null } = {}) {
+export function createWorker({ authVerifier = verifyAccess, sePublicData = EMPTY_PUBLIC_DATA, seApiStore = null, decisionInventory = PHASE5B_800V_INVENTORY, decisionStore = null, quoteEngine = null } = {}) {
   return { async fetch(request, env) {
     const url = new URL(request.url);
     try {
@@ -196,7 +197,7 @@ export function createWorker({ authVerifier = verifyAccess, sePublicData = EMPTY
         const apiRequestId = request.headers.get("x-request-id") || `SE-HTTP-${crypto.randomUUID()}`;
         const headers = new Headers(request.headers); headers.set("x-request-id", apiRequestId);
         const apiRequest = new Request(request, { headers });
-        const response = await handleSeApiV1(apiRequest, env, { publicData: sePublicData, store: seApiStore, authorize: authVerifier });
+        const response = await handleSeApiV1(apiRequest, env, { publicData: sePublicData, store: seApiStore, authorize: authVerifier, decisionInventory, decisionStore, quoteEngine });
         if (response) { response.headers.set("x-request-id", apiRequestId); return response; }
       }
       if (url.pathname === "/api/requests" && request.method === "OPTIONS") return new Response(null, { status: 204, headers: corsHeaders(request, env) });

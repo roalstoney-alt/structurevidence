@@ -1,4 +1,6 @@
 import { projectAtlas, projectStructuralEvent } from "./phase5-core.js";
+import { handlePhase5bApi } from "./phase5b-api.js";
+import { projectDecisionEventFromInventory } from "./phase5b-core.js";
 
 export const API_VERSION = "SE_API_v1";
 export const SE_API_V1_OPERATIONS = Object.freeze([
@@ -11,6 +13,10 @@ export const SE_API_V1_OPERATIONS = Object.freeze([
   ["GET", "/events/{event_id}/outcomes"], ["GET", "/events/{event_id}/proof"], ["GET", "/events/{event_id}/rdl"], ["GET", "/atlas"],
   ["POST", "/challenges"], ["POST", "/outcomes"], ["POST", "/admin/proposals"], ["GET", "/admin/proposals/{proposal_id}"],
   ["POST", "/admin/proposals/{proposal_id}/validate"], ["POST", "/admin/proposals/{proposal_id}/approve"]
+  , ["GET", "/events/{event_id}/gaps"], ["POST", "/decision-requests"], ["GET", "/decision-requests/{request_id}/status"]
+  , ["POST", "/decision-requests/{request_id}/preflight"], ["POST", "/decision-requests/{request_id}/quote"], ["POST", "/decision-requests/{request_id}/accept"]
+  , ["POST", "/decision-requests/{request_id}/payment"], ["POST", "/decision-requests/{request_id}/rdl"], ["GET", "/decision-requests/{request_id}/delivery"]
+  , ["POST", "/context-fit"], ["POST", "/watch-cycles"]
 ]);
 export const EMPTY_PUBLIC_DATA = Object.freeze({ subjects: [], states: [], changes: [], evidence: [], branches: [], outcomes: [], rdlRuns: [] });
 
@@ -235,10 +241,12 @@ async function submitObject(kind, request, env, store, id) {
   return respond(envelope(result.response, { idempotency_replayed: result.replayed }), result.replayed ? 200 : 201, cors);
 }
 
-export async function handleSeApiV1(request, env, { publicData = EMPTY_PUBLIC_DATA, store = null, authorize = null } = {}) {
+export async function handleSeApiV1(request, env, { publicData = EMPTY_PUBLIC_DATA, store = null, authorize = null, decisionInventory = null, decisionStore = null, quoteEngine = null } = {}) {
   const url = new URL(request.url), path = url.pathname, id = requestId(request), method = request.method;
   const db = storeFor(env, store);
   try {
+    const decisionResponse = await handlePhase5bApi(request, env, { inventory: decisionInventory, store: decisionStore, authorize, ...(quoteEngine ? { quoteEngine } : {}) });
+    if (decisionResponse) return decisionResponse;
     if (method === "OPTIONS" && ["/api/v1/requests", "/api/v1/challenges", "/api/v1/outcomes"].includes(path)) return new Response(null, { status: 204, headers: submissionCors(request, env) });
     if (method === "GET" && path === "/api/v1") return respond(envelope({ capabilities: { subjects: true, state_history: true, as_of_queries: true, change_feed: true, evidence: true, branches: true, requests: true, challenges: true, outcomes: true, structural_event_projections: true, temporal_atlas: true, proof: true, rdl_history: true }, schema_versions: { state: "SE_STATE_v0.1", evidence: "SE_EVIDENCE_v0.1", event_projection: "SE_EVENT_PROJECTION_v0.1", rdl_run: "SE_RDL_RUN_v0.1" } }), 200, publicCors);
     if (method === "GET" && path === "/api/v1/subjects") {
@@ -261,7 +269,15 @@ export async function handleSeApiV1(request, env, { publicData = EMPTY_PUBLIC_DA
     }
     if (method === "GET" && (path === "/api/v1/events" || path === "/api/v1/atlas")) {
       const items = await projectAtlas(publicData, { asOf: url.searchParams.get("as_of") });
+      if (decisionInventory && !url.searchParams.get("as_of")) {
+        const event = await projectDecisionEventFromInventory(decisionInventory);
+        items.push({ event_id: event.event_id, subject: event.subject, current_state: event.current_state,
+          open_unknown_count: event.open_unknowns.length, branch_count: 0, outcome_count: 0, proof_level: event.proof.proof_level });
+      }
       return respond(envelope(path.endsWith("/atlas") ? { events: items, domains: [...new Set(items.map((item) => item.subject.domain))].sort() } : { items, next_cursor: null }, { count: items.length, as_of: url.searchParams.get("as_of") }), 200, publicCors);
+    }
+    if (method === "GET" && path === "/api/v1/events/SE-EVENT-800001" && decisionInventory) {
+      return respond(envelope(await projectDecisionEventFromInventory(decisionInventory), { projection: true, canonical_storage_created: false }), 200, publicCors);
     }
     const eventMatch = path.match(/^\/api\/v1\/events\/(SE-EVENT-([0-9]{6}))(?:\/(timeline|evidence|branches|unknowns|outcomes|proof|rdl))?$/);
     if (method === "GET" && eventMatch) {

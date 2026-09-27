@@ -1,0 +1,18 @@
+{
+  "schema_version": "SE_RDL_COST_BASELINE_v0.1",
+  "baseline_id": "RDL_COST_BASELINE_001",
+  "source_observation": "rdl/research/records/CML-PDRE-001-L1-FIELD-DEPLOYMENT-2026-09-20/research-capital-observation.json",
+  "measurement_status": "OBSERVED",
+  "account_credit_delta": 37,
+  "currency_conversion_performed": false,
+  "usd_cost": "UNKNOWN",
+  "model_calls": "UNKNOWN",
+  "token_usage": "UNKNOWN",
+  "queries": { "authorized": 8, "used": 4 },
+  "deep_reviews": { "authorized": 5, "used": 1 },
+  "sources": { "checked": 9, "used": 1, "rejected": 8 },
+  "outputs": { "qualifying_evidence": 1, "counter_evidence": 2, "unknowns_resolved": 1, "unknowns_remaining": 5 },
+  "attribution_boundary": "Observed account-level credit delta; not billing-ledger-level exact attribution.",
+  "pricing_use": "CALIBRATION_ONLY",
+  "invented_currency_conversion": false
+}

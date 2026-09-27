@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://structevidence.com/schemas/se-frr/phase5b-decision-execution.schema.json",
+  "title": "SE-FRR Phase 5B Decision Execution Objects",
+  "type": "object",
+  "oneOf": [
+    { "$ref": "#/$defs/decisionInventory" },
+    { "$ref": "#/$defs/preflight" },
+    { "$ref": "#/$defs/quote" },
+    { "$ref": "#/$defs/determination" }
+  ],
+  "$defs": {
+    "unknownOrNumber": { "oneOf": [{ "type": "number", "minimum": 0 }, { "const": "UNKNOWN" }] },
+    "dimension": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["dimension_id", "current_state", "as_of", "why", "qualifying_records_count", "counter_records_count", "unknown_count", "verification_available", "last_change_at"],
+      "properties": {
+        "dimension_id": { "enum": ["FIELD_DEPLOYMENT", "OPERATING_HISTORY", "REPLICATION", "INDEPENDENT_VALIDATION", "ECONOMICS", "CONTEXT_FIT"] },
+        "current_state": { "type": "string" }, "as_of": { "type": "string", "format": "date-time" }, "why": { "type": "string" },
+        "qualifying_records_count": { "type": "integer", "minimum": 0 }, "linked_records_count": { "type": "integer", "minimum": 0 },
+        "counter_records_count": { "type": "integer", "minimum": 0 }, "unknown_count": { "type": "integer", "minimum": 0 },
+        "verification_available": { "type": "boolean" }, "last_change_at": { "type": "string", "format": "date-time" },
+        "evidence_refs": { "type": "array", "items": { "type": "string" }, "uniqueItems": true }
+      }
+    },
+    "decisionInventory": { "type": "object", "required": ["schema_version", "event_id", "canonical_record_hash", "as_of", "dimensions", "primary_gap"], "properties": { "schema_version": { "const": "SE_DECISION_INVENTORY_v0.1" }, "event_id": { "const": "SE-EVENT-800001" }, "canonical_record_hash": { "pattern": "^[a-f0-9]{64}$" }, "as_of": { "type": "string", "format": "date-time" }, "dimensions": { "type": "array", "minItems": 6, "maxItems": 6, "items": { "$ref": "#/$defs/dimension" } }, "primary_gap": { "const": "OPERATING_HISTORY" } } },
+    "preflight": { "type": "object", "required": ["schema_version", "feasibility", "acceptance_criteria", "recommended_envelope", "deep_research_performed"], "properties": { "schema_version": { "const": "SE_GAP_PREFLIGHT_v0.1" }, "feasibility": { "type": "string" }, "acceptance_criteria": { "type": "array", "items": { "type": "string" } }, "recommended_envelope": { "enum": ["G1", "G2", "G3"] }, "deep_research_performed": { "const": false } } },
+    "quote": { "type": "object", "required": ["schema_version", "quote_id", "request_id", "envelope_id", "expected_cost", "p90_cost", "minimum_price", "research_authorized"], "properties": { "schema_version": { "const": "SE_GAP_QUOTE_v0.1" }, "quote_id": { "type": "string" }, "request_id": { "type": "string" }, "envelope_id": { "enum": ["G1", "G2", "G3"] }, "expected_cost": { "$ref": "#/$defs/unknownOrNumber" }, "p90_cost": { "$ref": "#/$defs/unknownOrNumber" }, "minimum_price": { "$ref": "#/$defs/unknownOrNumber" }, "research_authorized": { "const": false } } },
+    "determination": { "type": "object", "required": ["schema_version", "request_id", "determination", "canonical_record_hash", "cutoff_at", "counter_evidence", "unknowns", "limitations", "favorable_result_guaranteed"], "properties": { "schema_version": { "const": "SE_GAP_DETERMINATION_v0.1" }, "request_id": { "type": "string" }, "determination": { "type": "object" }, "canonical_record_hash": { "pattern": "^[a-f0-9]{64}$" }, "cutoff_at": { "type": "string", "format": "date-time" }, "counter_evidence": { "type": "array" }, "unknowns": { "type": "array" }, "limitations": { "type": "array" }, "favorable_result_guaranteed": { "const": false } } }
+  }
+}

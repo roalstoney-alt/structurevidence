@@ -33,7 +33,7 @@ def validate_contract() -> dict[str, int | str]:
         operation = spec["paths"][path][method]
         if not operation.get("operationId") or not operation.get("responses"):
             raise ValueError(f"operation contract incomplete: {method.upper()} {path}")
-        expected = "201" if method == "post" and path in {"/requests", "/challenges", "/outcomes", "/admin/proposals"} else "200"
+        expected = "201" if method == "post" and path in {"/requests", "/challenges", "/outcomes", "/admin/proposals", "/decision-requests", "/decision-requests/{request_id}/quote", "/context-fit", "/watch-cycles"} else "200"
         if expected not in operation["responses"]:
             raise ValueError(f"documented success status missing: {method.upper()} {path} {expected}")
     expected_inputs = {
@@ -46,7 +46,7 @@ def validate_contract() -> dict[str, int | str]:
     for name, fields in expected_inputs.items():
         if set(schemas[name].get("required", [])) != fields or schemas[name].get("additionalProperties") is not False:
             raise ValueError(f"input allowlist mismatch: {name}")
-    public = sum(1 for method, path in documented if method == "get" and not path.startswith("/requests/") and not path.startswith("/admin/"))
+    public = sum(1 for method, path in documented if method == "get" and not spec["paths"][path][method].get("security"))
     protected = len(documented) - public
     return {"documented_operations": len(documented), "public_endpoints": public, "protected_endpoints": protected, "result": "PASS"}
 
