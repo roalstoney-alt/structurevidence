@@ -6,6 +6,7 @@ import { PRODUCT_APP_JS, PRODUCT_CSS, isPrivateProductRoute, isProductRoute, ren
 import { PHASE5_APP_JS, isPhase5Route, renderPhase5Page } from "./phase5-surface.js";
 import { PHASE5B_800V_INVENTORY } from "./phase5b-800v-canary.js";
 import { projectTemporalVisualization } from "./temporal-visualization.js";
+import { hydrateBundledTemporalRecord } from "./temporal-canonical-adapter.js";
 import { isTemporalPreviewRequest, renderTemporalPreviewPage, temporalPreviewEnabled, TEMPORAL_CSS_PATH, TEMPORAL_MOTION_CSS, TEMPORAL_MOTION_JS, TEMPORAL_PREVIEW_PATH, TEMPORAL_PUBLIC_PATH } from "./temporal-motion-surface.js";
 import CANONICAL_800V_RECORD from "../../technical-risk/cml-v1.1/pdre/CML-PDRE-001/pdre-record.json" with { type: "json" };
 import FIELD_DEPLOYMENT_RDL_RECORD from "../../rdl/research/records/CML-PDRE-001-L1-FIELD-DEPLOYMENT-2026-09-20/research-record.json" with { type: "json" };
@@ -192,7 +193,7 @@ function productShare(path, data) {
   }
   return null;
 }
-export function createWorker({ authVerifier = verifyAccess, sePublicData = EMPTY_PUBLIC_DATA, seApiStore = null, decisionInventory = PHASE5B_800V_INVENTORY, decisionStore = null, quoteEngine = null, temporalRecord = CANONICAL_800V_RECORD, temporalResearchRecords = [FIELD_DEPLOYMENT_RDL_RECORD] } = {}) {
+export function createWorker({ authVerifier = verifyAccess, sePublicData = EMPTY_PUBLIC_DATA, seApiStore = null, decisionInventory = PHASE5B_800V_INVENTORY, decisionStore = null, quoteEngine = null, temporalRecord = hydrateBundledTemporalRecord(CANONICAL_800V_RECORD), temporalResearchRecords = [FIELD_DEPLOYMENT_RDL_RECORD] } = {}) {
   return { async fetch(request, env) {
     const url = new URL(request.url);
     try {

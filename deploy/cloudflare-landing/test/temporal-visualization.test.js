@@ -5,8 +5,22 @@ import CANONICAL_800V_RECORD from "../../../technical-risk/cml-v1.1/pdre/CML-PDR
 import FIELD_DEPLOYMENT_RDL_RECORD from "../../../rdl/research/records/CML-PDRE-001-L1-FIELD-DEPLOYMENT-2026-09-20/research-record.json" with { type: "json" };
 import { createWorker } from "../worker.js";
 import { projectTemporalVisualization, temporalProjectionCanonicalForm } from "../temporal-visualization.js";
+import { BUNDLED_TEMPORAL_STATE_HISTORY, BUNDLED_TEMPORAL_TIMELINE } from "../temporal-canonical-adapter.js";
 
 const researchRecords = [FIELD_DEPLOYMENT_RDL_RECORD];
+
+test("production temporal adapter exactly mirrors canonical JSONL sources", () => {
+  const root = new URL("../../../", import.meta.url);
+  const readJsonl = (path) => readFileSync(new URL(path, root), "utf8").trim().split("\n").map((line) => JSON.parse(line));
+  const timeline = readJsonl("technical-risk/cml-v1.1/pdre/CML-PDRE-001/timeline.jsonl")
+    .filter((item) => item.evidence_refs.length && item.event_domain !== "RESEARCH_ADMINISTRATION")
+    .map((item) => ({ event_id: item.event_id, event: item.event_type, effective_at: item.effective_at, known_at: item.known_at, evidence_refs: item.evidence_refs, limitations: item.limitations }));
+  const stateHistory = readJsonl("technical-risk/cml-v1.1/pdre/CML-PDRE-001/state-history.jsonl")
+    .filter((item) => item.event_type === "MIGRATION_READINESS_TRANSITION")
+    .map((item) => ({ change_event_id: item.state_event_id, state_before: item.previous_migration_readiness, state_after: item.migration_readiness, known_at: item.known_at, effective_at: item.effective_at, evidence_ids: item.evidence_refs, reason: item.reason || "UNKNOWN", supports: item.interpretation, does_not_support: item.limitations }));
+  assert.deepEqual(BUNDLED_TEMPORAL_TIMELINE, timeline);
+  assert.deepEqual(BUNDLED_TEMPORAL_STATE_HISTORY, stateHistory);
+});
 
 test("TemporalVisualizationProjection is deterministic and does not mutate canonical inputs", async () => {
   const beforeRecord = JSON.stringify(CANONICAL_800V_RECORD), beforeResearch = JSON.stringify(researchRecords);
