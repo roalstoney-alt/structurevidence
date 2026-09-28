@@ -63,3 +63,43 @@ document.querySelectorAll("[data-scope-form]").forEach((form) => {
     }
   });
 });
+
+
+// Copy only a complete, bounded public citation. The card's visible fields remain the source.
+document.querySelectorAll("[data-copy-stop]").forEach((button) => {
+  button.addEventListener("click", async () => {
+    const card = button.closest("[data-stop-point]");
+    const keys = ["claim", "scope", "cutoff", "state", "supports", "limits", "next"];
+    const values = Object.fromEntries(keys.map((key) => [key, card.querySelector('[data-stop-field="' + key + '"]')?.textContent.trim() || ""]));
+    const version = card.dataset.version, url = card.dataset.stableUrl;
+    const status = card.querySelector("[data-copy-status]");
+    if (Object.values(values).some((value) => !value) || !version || !url) { status.textContent = "Citation is incomplete; copy blocked."; return; }
+    const citation = ["Claim: " + values.claim, "Scope: " + values.scope, "Time boundary: " + values.cutoff, "State: " + values.state, "Supports: " + values.supports, "Does not support: " + values.limits, "Next minimum verification: " + values.next, "Version: " + version, "Stable URL: " + url].join("\n");
+    try { await navigator.clipboard.writeText(citation); status.textContent = "Complete citation copied, including limits."; }
+    catch { status.textContent = "Clipboard unavailable. Open the permanent citation page to copy its text."; }
+  });
+});
+const publicEvidenceForm = document.querySelector("[data-public-evidence-form]");
+if (publicEvidenceForm) {
+  const caseField = publicEvidenceForm.querySelector("[data-evidence-case]");
+  const selectedCase = params.get("case");
+  if ([...caseField.options].some((option) => option.value === selectedCase)) caseField.value = selectedCase;
+  const status = publicEvidenceForm.querySelector("[data-evidence-status]");
+  const submissionText = () => {
+    const data = new FormData(publicEvidenceForm);
+    const value = (key) => String(data.get(key) || "").trim();
+    return ["Case: " + value("case_reference"), "Statement: " + value("claim"), "Source role: " + value("source_role"), "Source access: " + value("source_access"), "Public source URL / identifier: " + value("source_reference"), "Why this may change the boundary: " + value("reason"), "I provided no personal medical records or confidential content."].join("\n\n");
+  };
+  publicEvidenceForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    if (!publicEvidenceForm.reportValidity()) return;
+    const subject = "Public evidence review | " + caseField.value;
+    window.location.href = "mailto:support@structevidence.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(submissionText());
+    status.textContent = "Email draft prepared. Nothing is received until you send it from your mail application.";
+  });
+  publicEvidenceForm.querySelector("[data-copy-submission]").addEventListener("click", async () => {
+    if (!publicEvidenceForm.reportValidity()) return;
+    try { await navigator.clipboard.writeText(submissionText()); status.textContent = "Submission text copied. Send it to support@structevidence.com with the case ID in the subject."; }
+    catch { status.textContent = "Clipboard unavailable. Use the email submission button."; }
+  });
+}
