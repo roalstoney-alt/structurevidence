@@ -12,5 +12,5 @@
 @media(max-width:620px){.stop-card{padding:20px}.stop-fields{grid-template-columns:1fr}.stop-actions .button{width:100%}}
 
 /* Put the bounded statement in reach from the first screen. */
-.case-hero{padding:38px 0 20px}.case-hero h1{font-size:clamp(2.3rem,5vw,4rem);max-width:1040px}.case-hero+.product-section#stop-point{padding-top:26px}.citation-hero{padding:40px 0 16px}.citation-hero h1{font-size:clamp(2.1rem,4vw,3.25rem);max-width:1000px}.citation-hero+.citation-section{padding-top:22px}
+.case-hero{padding:38px 0 20px}body.product-site .case-hero h1{font-size:clamp(2.3rem,5vw,4rem);max-width:1040px}.case-hero+.product-section#stop-point{padding-top:26px}.citation-hero{padding:40px 0 16px}body.product-site .citation-hero h1{font-size:clamp(2.1rem,4vw,3.25rem);max-width:1000px}.citation-hero+.citation-section{padding-top:22px}
 @media(max-width:620px){.case-hero{padding:28px 0 14px}.citation-hero{padding:28px 0 10px}.case-hero+.product-section#stop-point,.citation-hero+.citation-section{padding-top:18px}}
