@@ -1,0 +1,75 @@
+{
+  "case_id": "SE-ONC-NSQNSCLC-CN-001",
+  "version": "0.1",
+  "knowledge_cutoff": "2026-09-28",
+  "publication_state": "PUBLIC_RESEARCH_PREVIEW",
+  "public_projection_active": true,
+  "clinical_interpretation_review": "PENDING",
+  "scope": "China non-squamous NSCLC; separate stage-specific treatment contexts; detailed index cohort is EGFR-mutated locally advanced or metastatic disease after EGFR-TKI progression",
+  "patient_level_data_held": false,
+  "hospital_outcome_dataset_acquired": false,
+  "patient_specific_success_probability": "NOT_ESTABLISHED_STOP",
+  "source_capture": "LINK_AND_METADATA_ONLY; no independently archived source-byte hashes claimed",
+  "claims": [
+    {
+      "claim_id": "CN-NSQ-001",
+      "statement": "Surgery is a stage-specific treatment pathway and an operated Chinese NSCLC cohort exists",
+      "status": "SUPPORTED_FOR_DEFINED_CONTEXT",
+      "limits": "Operated stage IA-IIIA patients are not exchangeable with advanced post-TKI trial patients; non-squamous subgroup must be verified before subgroup estimates",
+      "sources": ["S1", "S2"]
+    },
+    {
+      "claim_id": "CN-NSQ-002",
+      "statement": "Ivonescimab with pemetrexed and carboplatin was approved in China for EGFR-mutated locally advanced or metastatic non-squamous NSCLC progressing after EGFR-TKI",
+      "status": "SUPPORTED",
+      "sources": ["S3"]
+    },
+    {
+      "claim_id": "CN-NSQ-003",
+      "statement": "In HARMONi-A final analysis, trial-group median OS was 16.8 vs 14.1 months, HR 0.74 (95% CI 0.58-0.95), in randomized groups of 161 each",
+      "status": "SUPPORTED_FOR_TRIAL_POPULATION",
+      "limits": "Randomized drug comparison only; no personal forecast or cross-modality ranking",
+      "sources": ["S4"]
+    },
+    {
+      "claim_id": "CN-NSQ-004",
+      "statement": "An ECMO hospital-record study counted 2073 cases in 1700 Chinese tertiary hospitals in 2018",
+      "status": "SUPPORTED_FOR_COUNT_ONLY",
+      "limits": "Authors could not distinguish disease-specific outcomes; no lung-cancer ECMO efficacy estimate",
+      "sources": ["S5", "S6"]
+    },
+    {
+      "claim_id": "CN-NSQ-005",
+      "statement": "Lung transplantation for malignancy is discussed only for highly selected low-invasive lung-limited patterns",
+      "status": "CONSENSUS_CONTEXT_NOT_INDEX_COHORT",
+      "limits": "Not a treatment option established for the advanced post-TKI index cohort; local eligibility unverified",
+      "sources": ["S7"]
+    },
+    {
+      "claim_id": "CN-NSQ-006",
+      "statement": "Hospital-specific drug exposure, dose modification, follow-up survival, adverse-event and patient-feedback dataset for this case",
+      "status": "NOT_ACQUIRED",
+      "limits": "No hospital selected, no purchase, no rights or price asserted",
+      "sources": []
+    }
+  ],
+  "sources": [
+    {"id": "S1", "title": "Primary lung cancer diagnosis and treatment guideline (2022)", "publisher": "National Health Commission of China", "url": "https://www.nhc.gov.cn/yzygj/c100068/202204/0c1f7d3aca0545abbeb02030ce255930.shtml", "access": "PUBLIC", "role": "clinical context"},
+    {"id": "S2", "title": "Chinese multicenter surgical cohort, 11958 stage IA-IIIA NSCLC patients", "publisher": "Journal of Cancer Research and Clinical Oncology", "url": "https://pubmed.ncbi.nlm.nih.gov/37062036/", "access": "PUBLIC_ABSTRACT", "role": "observational surgical cohort"},
+    {"id": "S3", "title": "NMPA approval of ivonescimab injection", "publisher": "National Medical Products Administration", "url": "https://www.nmpa.gov.cn/zhuanti/cxylqx/cxypxx/20240524110617125.html", "access": "PUBLIC", "role": "regulatory indication"},
+    {"id": "S4", "title": "HARMONi-A final overall survival report (2026)", "publisher": "JAMA / PubMed", "url": "https://pubmed.ncbi.nlm.nih.gov/42307937/", "access": "PUBLIC_ABSTRACT", "role": "randomized drug comparison", "study_data_cutoff": "2025-04-12"},
+    {"id": "S5", "title": "2018 China ECMO hospital-record study", "publisher": "Critical Care", "url": "https://link.springer.com/article/10.1186/s13054-020-03270-1", "access": "PUBLIC", "role": "count and data-resolution limitation"},
+    {"id": "S6", "title": "ECMO practice guidance", "publisher": "ELSO", "url": "https://www.elso.org/ecmo-resources/elso-ecmo-guidelines.aspx", "access": "PUBLIC", "role": "support modality context"},
+    {"id": "S7", "title": "Selection of lung transplant candidates", "publisher": "ISHLT", "url": "https://www.ishlt.org/education-and-publications/standards-guidelines-detail/consensus-document-for-the-selection-of-lung-transplant-candidates-an-update-from-ishlt", "access": "PUBLIC", "role": "exceptional selection context"},
+    {"id": "S8", "title": "Understanding cancer prognosis", "publisher": "US National Cancer Institute", "url": "https://www.cancer.gov/about-cancer/diagnosis-staging/prognosis", "access": "PUBLIC", "role": "population-to-individual inference boundary"}
+  ],
+  "search_provenance": {
+    "status": "INITIAL_SOURCE_SCREEN_ONLY",
+    "scope": "Targeted regulator, original trial, national guideline, professional consensus and ECMO primary study searches; not a systematic review",
+    "search_date": "2026-09-28",
+    "unsearched_or_unresolved": ["Complete China 2026 treatment landscape", "Hospital-level treatment outcome datasets", "Updated local transplantation rules", "Cross-site survival linkage", "Pricing and publication licenses"],
+    "negative_search_semantics": "Not found within scope never means does not exist"
+  },
+  "reopen_triggers": ["New regulatory indication", "Updated randomized outcome", "Clinically reviewed stage branch", "Authorized hospital aggregate received", "Correction or source retraction"],
+  "stop_rules": ["Patient-specific probability or treatment ranking", "Cross-stage or cross-modality numerical comparison", "Unlicensed publication of purchased data", "Individual row or identifiable timeline", "Outcome absent or censoring unresolved"]
+}
