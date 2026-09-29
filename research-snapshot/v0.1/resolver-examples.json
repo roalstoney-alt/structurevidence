@@ -1,0 +1,104 @@
+{
+  "version": "v0.1",
+  "examples": [
+    {
+      "input": "Has a named 800VDC SST system been commercially deployed?",
+      "expected_match_class": "EXACT",
+      "claim_id": "CML-PDRE-001.NAMED_FIELD_DEPLOYMENT",
+      "legacy_state": "SUPPORTED_SINGLE_INSTANCE",
+      "normalized_state": {
+        "epistemic_state": "SUPPORTED",
+        "verification_depth": "FIELD_DEPLOYED_SINGLE_INSTANCE",
+        "applicability_scope": "UNKNOWN",
+        "freshness_state": "CURRENT",
+        "workflow_state": "NONE"
+      },
+      "boundary": [
+        "Independent performance validation.",
+        "Long operating history.",
+        "Multi-entity replication.",
+        "Application qualification.",
+        "Repeat procurement.",
+        "Industry adoption.",
+        "Full PDRE validation."
+      ]
+    },
+    {
+      "input": "Is 800VDC widely adopted?",
+      "expected_match_class": "EXACT",
+      "claim_id": "CML-PDRE-001.INDUSTRY_ADOPTION",
+      "legacy_state": "NOT_ESTABLISHED",
+      "normalized_state": {
+        "epistemic_state": "NOT_ESTABLISHED",
+        "verification_depth": "NOT_EVALUATED",
+        "applicability_scope": "UNKNOWN",
+        "freshness_state": "CURRENT",
+        "workflow_state": "NONE"
+      },
+      "boundary": [
+        "Independent performance validation.",
+        "Long operating history.",
+        "Multi-entity replication.",
+        "Application qualification.",
+        "Repeat procurement.",
+        "Industry adoption.",
+        "Full PDRE validation."
+      ]
+    },
+    {
+      "input": "Has sodium-ion BESS been commissioned at a named customer site?",
+      "expected_match_class": "EXACT",
+      "claim_id": "SE-BESS-SODIUM-001.NAMED_COMMISSIONED_SITE",
+      "legacy_state": "NOT_ESTABLISHED",
+      "normalized_state": {
+        "epistemic_state": "NOT_ESTABLISHED",
+        "verification_depth": "NOT_EVALUATED",
+        "applicability_scope": "UNKNOWN",
+        "freshness_state": "CURRENT",
+        "workflow_state": "NONE"
+      },
+      "boundary": [
+        "Shipment, customer acceptance, commissioning, grid connection, or operating performance.",
+        "Completed customer delivery or a named commissioned customer site as of the knowledge cutoff. The phrase field-validated remains source-attributed."
+      ]
+    },
+    {
+      "input": "What was HARMONi-A overall survival?",
+      "expected_match_class": "EXACT",
+      "claim_id": "SE-ONC-NSQNSCLC-CN-001.HARMONI_A_OS",
+      "legacy_state": "SUPPORTED_FOR_TRIAL_POPULATION",
+      "normalized_state": {
+        "epistemic_state": "SUPPORTED",
+        "verification_depth": "NOT_EVALUATED",
+        "applicability_scope": "POPULATION_SPECIFIC",
+        "freshness_state": "CURRENT",
+        "workflow_state": "NONE"
+      },
+      "boundary": [
+        "Randomized drug comparison only; no personal forecast or cross-modality ranking"
+      ]
+    },
+    {
+      "input": "What is my chance of surviving lung cancer with this treatment?",
+      "expected_match_class": "EXACT",
+      "claim_id": "SE-ONC-NSQNSCLC-CN-001.PATIENT_SPECIFIC_SUCCESS_PROBABILITY",
+      "legacy_state": "NOT_ESTABLISHED",
+      "normalized_state": {
+        "epistemic_state": "NOT_ESTABLISHED",
+        "verification_depth": "NOT_EVALUATED",
+        "applicability_scope": "UNKNOWN",
+        "freshness_state": "CURRENT",
+        "workflow_state": "NONE"
+      },
+      "boundary": "Population evidence does not authorize a personal probability, diagnosis, prognosis, or treatment ranking."
+    },
+    {
+      "input": "Is optical quantum computing replacing GPU clusters in Indonesian hospitals?",
+      "expected_match_class": "NONE",
+      "claim_id": null,
+      "legacy_state": null,
+      "normalized_state": null,
+      "boundary": "No governed public claim match; no evidence conclusion is generated."
+    }
+  ]
+}

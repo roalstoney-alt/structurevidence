@@ -1,5 +1,7 @@
 export const PROTOCOL_VERSION = "QUESTION_TO_EVIDENCE_COMMERCE_PROTOCOL_v0.1";
 export const VERIFY_URL = "https://structevidence.com/verify/";
+export const INFERENCE_POLICY = "CLOSED_BOUNDARY";
+export const UNDECLARED_INFERENCE = "OUT_OF_BOUNDARY";
 
 export const normalize = (value) => String(value || "").normalize("NFKD").toLowerCase().replace(/[^a-z0-9.]+/g, " ").trim().replace(/\s+/g, " ");
 
@@ -151,6 +153,26 @@ export function freshnessFor(claim) {
     reopen_trigger_status: "NO_QUALIFYING_REPOSITORY_LOCAL_EVIDENCE_IN_CURRENT_CANDIDATE_REVIEW",
     freshness_state: "CURRENT",
     basis: "PUBLICATION_APPROVED_V0.1_AND_CURRENT_CASE_WATCH_NO_STATE_CHANGE_CANDIDATE",
+  };
+}
+
+export function normalizedStateFor(claim) {
+  const legacy = claim.state;
+  const epistemic = {
+    SUPPORTED: "SUPPORTED",
+    NOT_ESTABLISHED: "NOT_ESTABLISHED",
+    UNKNOWN: "UNKNOWN",
+    SUPPORTED_SINGLE_INSTANCE: "SUPPORTED",
+    SUPPORTED_FOR_TRIAL_POPULATION: "SUPPORTED",
+    SUPPORTED_FOR_DEFINED_CONTEXT: "SUPPORTED",
+    VERIFICATION_REQUIRED: "UNKNOWN",
+  }[legacy] || "UNKNOWN";
+  return {
+    epistemic_state: epistemic,
+    verification_depth: legacy === "SUPPORTED_SINGLE_INSTANCE" ? "FIELD_DEPLOYED_SINGLE_INSTANCE" : "NOT_EVALUATED",
+    applicability_scope: legacy === "SUPPORTED_FOR_TRIAL_POPULATION" ? "POPULATION_SPECIFIC" : legacy === "SUPPORTED_FOR_DEFINED_CONTEXT" ? "USE_CASE_SPECIFIC" : "UNKNOWN",
+    freshness_state: freshnessFor(claim).freshness_state,
+    workflow_state: legacy === "VERIFICATION_REQUIRED" ? "VERIFICATION_REQUIRED" : "NONE",
   };
 }
 

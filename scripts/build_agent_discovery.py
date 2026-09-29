@@ -17,6 +17,7 @@ VERSION_DOI_URL = f"https://doi.org/{VERSION_DOI}"
 CONCEPT_DOI = "10.5281/zenodo.23033587"
 CONCEPT_DOI_URL = f"https://doi.org/{CONCEPT_DOI}"
 ZENODO_RECORD = "https://zenodo.org/records/23033588"
+INFERENCE_RULE = "An inference not explicitly represented by the claim state, supports, does_not_support, unknowns, or approved scope must not be treated as supported."
 UNRESOLVED = {"UNKNOWN", "NOT_ESTABLISHED", "VERIFICATION_REQUIRED"}
 
 
@@ -30,6 +31,60 @@ def compact(value) -> bytes:
 
 def unique(values):
     return list(dict.fromkeys(value for value in values if value))
+
+
+def normalized_state(claim):
+    legacy = claim["state"]
+    epistemic = {
+        "SUPPORTED": "SUPPORTED",
+        "NOT_ESTABLISHED": "NOT_ESTABLISHED",
+        "UNKNOWN": "UNKNOWN",
+        "SUPPORTED_SINGLE_INSTANCE": "SUPPORTED",
+        "SUPPORTED_FOR_TRIAL_POPULATION": "SUPPORTED",
+        "SUPPORTED_FOR_DEFINED_CONTEXT": "SUPPORTED",
+        "VERIFICATION_REQUIRED": "UNKNOWN",
+    }[legacy]
+    verification_depth = "FIELD_DEPLOYED_SINGLE_INSTANCE" if legacy == "SUPPORTED_SINGLE_INSTANCE" else "NOT_EVALUATED"
+    applicability_scope = {
+        "SUPPORTED_FOR_TRIAL_POPULATION": "POPULATION_SPECIFIC",
+        "SUPPORTED_FOR_DEFINED_CONTEXT": "USE_CASE_SPECIFIC",
+    }.get(legacy, "UNKNOWN")
+    workflow_state = "VERIFICATION_REQUIRED" if legacy == "VERIFICATION_REQUIRED" else "NONE"
+    mapping_status = "REVIEW_REQUIRED" if legacy == "VERIFICATION_REQUIRED" else "DETERMINISTIC"
+    return {
+        "claim_id": claim["claim_id"],
+        "legacy_state": legacy,
+        "normalized": {
+            "epistemic_state": epistemic,
+            "verification_depth": verification_depth,
+            "applicability_scope": applicability_scope,
+            "freshness_state": "CURRENT",
+            "workflow_state": workflow_state,
+        },
+        "mapping_basis": (
+            "Legacy VERIFICATION_REQUIRED is a workflow state; no explicit epistemic resolution is present in the source primitive."
+            if legacy == "VERIFICATION_REQUIRED"
+            else f"Deterministic mapping from legacy state {legacy}; unspecified orthogonal axes remain UNKNOWN or NOT_EVALUATED."
+        ),
+        "mapping_status": mapping_status,
+    }
+
+
+def state_normalization(claims):
+    return {
+        "$schema": "state-normalization/schema-v0.1.json",
+        "version": "STATE_NORMALIZATION_v0.1",
+        "inference_policy": "CLOSED_BOUNDARY",
+        "undeclared_inference": "OUT_OF_BOUNDARY",
+        "axes": {
+            "epistemic_state": ["SUPPORTED", "NOT_ESTABLISHED", "CONTRADICTED", "UNKNOWN"],
+            "verification_depth": ["SOURCE_STATEMENT", "MULTI_SOURCE_CORROBORATED", "NAMED_OPERATOR_SOURCE", "INDEPENDENT_VALIDATION", "FIELD_DEPLOYED_SINGLE_INSTANCE", "FIELD_DEPLOYED_MULTI_ENTITY", "OPERATING_HISTORY", "REPEAT_PROCUREMENT", "NOT_EVALUATED", "UNKNOWN"],
+            "applicability_scope": ["GENERAL", "ARCHITECTURE_SPECIFIC", "GEOGRAPHY_SPECIFIC", "POPULATION_SPECIFIC", "USE_CASE_SPECIFIC", "CUSTOMER_SPECIFIC_NOT_EVALUATED", "UNKNOWN"],
+            "freshness_state": ["CURRENT", "REVIEW_DUE", "STALE", "UNKNOWN"],
+            "workflow_state": ["NONE", "VERIFICATION_REQUIRED", "HUMAN_REVIEW_REQUIRED", "PUBLICATION_REVIEW_REQUIRED", "CLOSED"],
+        },
+        "claims": [normalized_state(claim) for claim in claims],
+    }
 
 
 def source_bundle(case_id: str):
@@ -185,6 +240,7 @@ def method_contract():
         ("COMMISSIONING_NE_OPERATING_HISTORY", "Commissioning does not establish operating history."),
         ("SOURCE_STATEMENT_NE_INDEPENDENT_VALIDATION", "A source's own statement is not independent third-party validation."),
         ("UNKNOWN_MUST_NOT_BE_INFERRED", "Unknown states remain unknown until qualifying evidence resolves them."),
+        ("UNDECLARED_INFERENCE_NOT_AUTHORIZED", INFERENCE_RULE),
     ]
     return {
         "method": "StructureEvidence Temporal Evidence Method",
@@ -212,6 +268,19 @@ def method_contract():
             "replication_repository": "https://github.com/roalstoney-alt/structurevidence",
             "public_method_site": "https://structurevidence.org",
             "machine_method_contract": METHOD_URL,
+        },
+        "inference_policy": {
+            "mode": "CLOSED_BOUNDARY",
+            "rule_id": "UNDECLARED_INFERENCE_NOT_AUTHORIZED",
+            "statement": INFERENCE_RULE,
+            "undeclared_inference": "OUT_OF_BOUNDARY",
+        },
+        "state_normalization": {
+            "version": "STATE_NORMALIZATION_v0.1",
+            "document": "https://structurevidence.org/protocol/state-normalization-v0.1.json",
+            "schema": "https://structurevidence.org/protocol/state-normalization/schema-v0.1.json",
+            "additive": True,
+            "legacy_state_preserved": True,
         },
         "principles": [{"id": key, "statement": statement} for key, statement in principles],
         "required_claim_fields": ["claim_id", "case_id", "statement", "state", "as_of", "supports", "does_not_support", "unknowns", "provenance", "next_observable", "canonical_url"],
@@ -261,6 +330,7 @@ def build_outputs():
         "changes": "https://structurevidence.org/changes.json",
         "capabilities": "https://structevidence.com/capabilities.json",
         "resolve_endpoint": "https://api.structurevidence.org/resolve",
+        "state_normalization": "https://structurevidence.org/protocol/state-normalization-v0.1.json",
         "scholarly_record": {
             "version_doi": VERSION_DOI,
             "version_doi_url": VERSION_DOI_URL,
@@ -294,6 +364,8 @@ def build_outputs():
         "claims/index.json": compact(index),
         "changes.json": compact(changes),
         "agent/index.html": agent_html(len(claims)).encode("utf-8"),
+        "protocol/state-normalization-v0.1.json": compact(state_normalization(claims)),
+        "protocol/state-normalization/schema-v0.1.json": (ROOT / "protocol/state-normalization/schema-v0.1.json").read_bytes(),
     }
     for claim in claims:
         static[f"claims/{claim['claim_id']}.json"] = compact(claim)

@@ -1,0 +1,218 @@
+{
+  "snapshot_version": "v0.1",
+  "paper_version": "v0.1",
+  "version_doi": "10.5281/zenodo.23033588",
+  "concept_doi": "10.5281/zenodo.23033587",
+  "repository_commit": "85f625b1f1eec890bd9980e51d5e4da1078d7313",
+  "protocol_version": "QUESTION_TO_EVIDENCE_COMMERCE_PROTOCOL_v0.1",
+  "total_claims": 26,
+  "case_count": 3,
+  "claims_per_case": {
+    "CML-PDRE-001": 9,
+    "SE-BESS-SODIUM-001": 9,
+    "SE-ONC-NSQNSCLC-CN-001": 8
+  },
+  "case_claim_counts": {
+    "CML-PDRE-001": 9,
+    "SE-BESS-SODIUM-001": 9,
+    "SE-ONC-NSQNSCLC-CN-001": 8
+  },
+  "generated_at": "2026-09-29",
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "118816690f11fe21c7b2c6ecefabdab32ca23e7ab53cc65c07d5d1efe544609d",
+      "size_bytes": 1067
+    },
+    {
+      "path": "claims/CML-PDRE-001.ARCHITECTURE_POSSIBILITY.json",
+      "sha256": "2e69642f1f063162e02676b73012db08a91fc301bbd42864d7ab1fd8523d9b83",
+      "size_bytes": 2374
+    },
+    {
+      "path": "claims/CML-PDRE-001.INDEPENDENT_VALIDATION.json",
+      "sha256": "7f80388765f3bccf8fe992ccb1f4873ac72b5c9343ba44e3a760746b03bb956f",
+      "size_bytes": 2394
+    },
+    {
+      "path": "claims/CML-PDRE-001.INDUSTRY_ADOPTION.json",
+      "sha256": "85211ef95ec9721ad73ddcb9c9be6afe93649a53de436030774fc7ff602a8955",
+      "size_bytes": 2425
+    },
+    {
+      "path": "claims/CML-PDRE-001.LONG_OPERATING_HISTORY.json",
+      "sha256": "c3ed001c708e09a136bba48f4c082c9df379a1511d44f1cec354c1e23fbe6d0f",
+      "size_bytes": 2358
+    },
+    {
+      "path": "claims/CML-PDRE-001.MULTI_ENTITY_REPLICATION.json",
+      "sha256": "0d6530f0761b6778c364436f0ca9f760ff21b59ceda3d74b1a5ae79f37ded750",
+      "size_bytes": 2405
+    },
+    {
+      "path": "claims/CML-PDRE-001.NAMED_FIELD_DEPLOYMENT.json",
+      "sha256": "3f9692e880c9e14331951d4014c3c135ad7ce63ece8b09d739d192a0f99c14df",
+      "size_bytes": 2500
+    },
+    {
+      "path": "claims/CML-PDRE-001.PDRE_FULL_VALIDATION.json",
+      "sha256": "cce409dce6e64913d93227568bec2944e9af3b7fb2c2953622126a00bb188be1",
+      "size_bytes": 2320
+    },
+    {
+      "path": "claims/CML-PDRE-001.REPEAT_PROCUREMENT.json",
+      "sha256": "f592c1d58a4db7fc4882afe2f5ddf8129c50732d60c4cc359c09922a2358f904",
+      "size_bytes": 2339
+    },
+    {
+      "path": "claims/CML-PDRE-001.SYSTEM_VALIDATION.json",
+      "sha256": "18afe56801d3ededb9d1e2a97def133db1ac3a5048003d021f340656039506d7",
+      "size_bytes": 2339
+    },
+    {
+      "path": "claims/SE-BESS-SODIUM-001.CUSTOMER_BATCH_DELIVERY.json",
+      "sha256": "b49dae09a5d8dc861eab2332511198d3800a6253d384ca4448ede4b140399231",
+      "size_bytes": 2935
+    },
+    {
+      "path": "claims/SE-BESS-SODIUM-001.INDEPENDENT_FIELD_PERFORMANCE.json",
+      "sha256": "154b92c7659c81928ee5c69e68abf1f6f2ba66e29fcf1799f5ba8a2f3e1ed9ff",
+      "size_bytes": 2930
+    },
+    {
+      "path": "claims/SE-BESS-SODIUM-001.LIFECYCLE_COST_ADVANTAGE_OVER_LFP.json",
+      "sha256": "224068c1f97f790894dc451179df628ebdf59d717959c74ea275d9c3331a8ec6",
+      "size_bytes": 2803
+    },
+    {
+      "path": "claims/SE-BESS-SODIUM-001.LONG_OPERATING_HISTORY.json",
+      "sha256": "d2023d7434b58c3debe4a6652ee6b1d5edcf01731351f46db189ffdf84fc2ee8",
+      "size_bytes": 2729
+    },
+    {
+      "path": "claims/SE-BESS-SODIUM-001.NAMED_COMMISSIONED_SITE.json",
+      "sha256": "dfc0eee93d23cee064a622f7a2556b3cec6ee44c44f62e3f0a9e3c3a1f718b97",
+      "size_bytes": 2990
+    },
+    {
+      "path": "claims/SE-BESS-SODIUM-001.PRODUCTION_READINESS.json",
+      "sha256": "c111c7bae76c357bebc6e5d3cb4d044247f76756d9286ce637bcf993924b5089",
+      "size_bytes": 2895
+    },
+    {
+      "path": "claims/SE-BESS-SODIUM-001.PRODUCT_ANNOUNCED.json",
+      "sha256": "00f5ba9986d7ba66c1607d6b6e619a5af8ed86a4b59081dc72a7d7a43fb181d7",
+      "size_bytes": 2683
+    },
+    {
+      "path": "claims/SE-BESS-SODIUM-001.SUPPLY_COOPERATION_AGREEMENT.json",
+      "sha256": "270f682a36cccf7552fe737b42ec9ce85e45a67ae5ca89659d981ebe532b8eff",
+      "size_bytes": 2670
+    },
+    {
+      "path": "claims/SE-BESS-SODIUM-001.UNIVERSAL_LFP_REPLACEMENT.json",
+      "sha256": "7955bfccc847b061dbc1959a493ccbc446429c0bfff01cf2dd8a35b893d9b751",
+      "size_bytes": 2728
+    },
+    {
+      "path": "claims/SE-ONC-NSQNSCLC-CN-001.CROSS_MODALITY_RANKING.json",
+      "sha256": "94bb0480d9b094c299e21ec9702612676e5a665ac3e37364af9239102ccf3c54",
+      "size_bytes": 2349
+    },
+    {
+      "path": "claims/SE-ONC-NSQNSCLC-CN-001.ECMO_AS_TUMOR_THERAPY.json",
+      "sha256": "77d16f447ee95c44f306bb536f0d4117c37e3b1f1a95d32711bcb4dc2aa0bd43",
+      "size_bytes": 2260
+    },
+    {
+      "path": "claims/SE-ONC-NSQNSCLC-CN-001.HARMONI_A_OS.json",
+      "sha256": "56392351b008ac4973473aee0e946287e53326a8c0a439de8ead62cd5cfa8d08",
+      "size_bytes": 2680
+    },
+    {
+      "path": "claims/SE-ONC-NSQNSCLC-CN-001.HOSPITAL_AGGREGATE_OUTCOME_DATA.json",
+      "sha256": "5cf45443e3df39061291c3317f670c0b880b60344fcda09e17048e4e17fd8f0e",
+      "size_bytes": 2318
+    },
+    {
+      "path": "claims/SE-ONC-NSQNSCLC-CN-001.IVONESCIMAB_APPROVAL.json",
+      "sha256": "b371dd6e9e3da2f7816737654eb39a0287a5c1bd0cf0ac0b43e1632a90dc2ca1",
+      "size_bytes": 2587
+    },
+    {
+      "path": "claims/SE-ONC-NSQNSCLC-CN-001.PATIENT_SPECIFIC_SUCCESS_PROBABILITY.json",
+      "sha256": "f3d60fd570de2186c93144cda491d67bd854743ba17eb41be2636abba28f782b",
+      "size_bytes": 2444
+    },
+    {
+      "path": "claims/SE-ONC-NSQNSCLC-CN-001.SURGERY_STAGE_SPECIFIC.json",
+      "sha256": "22cdb3587a0aef7f34a5feb29687697d7956089ecdbcfba0c98a2229b5e802aa",
+      "size_bytes": 2640
+    },
+    {
+      "path": "claims/SE-ONC-NSQNSCLC-CN-001.TRANSPLANT_FOR_INDEX_COHORT.json",
+      "sha256": "c19922d1f0faa43183300d934a64545c632ad1240295b082d89c4017df18e9e6",
+      "size_bytes": 2334
+    },
+    {
+      "path": "claims/index.json",
+      "sha256": "c0eccdb821f019a6febb3d73da8c9fdc9ab894337c7982416bfea528dc8c848f",
+      "size_bytes": 10339
+    },
+    {
+      "path": "implementation.json",
+      "sha256": "8e4430b85621ad0e95bbe8bcf6a38a2d83a82d31e41a2e586222321c2e4a9138",
+      "size_bytes": 436
+    },
+    {
+      "path": "method-contract.json",
+      "sha256": "abd48467209468e6c37593f6c74e266701f33b3da200b4540c3e908c1ea88e32",
+      "size_bytes": 3878
+    },
+    {
+      "path": "protocol/applicability/schema-v0.1.json",
+      "sha256": "0e1b21262d81b5619af0689568762bb8c08af051a3f7b60121c55e5c61f671c7",
+      "size_bytes": 576
+    },
+    {
+      "path": "protocol/claim-match/schema-v0.1.json",
+      "sha256": "66d582181dd9b910019089496404f860035f337b222dc07ddc131e8876c2ffe4",
+      "size_bytes": 1210
+    },
+    {
+      "path": "protocol/freshness/schema-v0.1.json",
+      "sha256": "eecef692fd05eb9c8ad69b29c67c1f953a98ffae3d9353acbac7a268c30e6b5d",
+      "size_bytes": 694
+    },
+    {
+      "path": "protocol/publication-eligibility/schema-v0.1.json",
+      "sha256": "d96989aa478c954b4d5e3c787954f80cde9cc29041210945dcbc2bb577fc8b13",
+      "size_bytes": 1204
+    },
+    {
+      "path": "protocol/question-intake/schema-v0.1.json",
+      "sha256": "7cdf74c9dc0fe1f5751b1a069ca0ab058b026b3f3d7227700c94757769948e03",
+      "size_bytes": 1449
+    },
+    {
+      "path": "protocol/state-normalization-v0.1.json",
+      "sha256": "fff09230dff1ffe46bc5bb5bec99153c2e59c6517ec1cda96eb3ad5fcd9004d3",
+      "size_bytes": 15157
+    },
+    {
+      "path": "protocol/state-normalization/schema-v0.1.json",
+      "sha256": "b738d2cff6dd95cdafe1c16a1c5854ef49ff2b56d9a541373a18f69f8664aa4c",
+      "size_bytes": 3299
+    },
+    {
+      "path": "protocol/verification-quote/schema-v0.1.json",
+      "sha256": "54d2ad1ffdff9fe960d88a259be0c67d7637d66270d54593c8499dce2ee8be7d",
+      "size_bytes": 2083
+    },
+    {
+      "path": "resolver-examples.json",
+      "sha256": "fe97bd461e5dd127945d5ada3e00fb66c13cf423f02dfa6990b5bc672fa768d5",
+      "size_bytes": 3822
+    }
+  ]
+}

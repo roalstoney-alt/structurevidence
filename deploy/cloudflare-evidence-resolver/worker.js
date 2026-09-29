@@ -1,6 +1,8 @@
 import { CLAIMS } from "./claims.js";
 import {
   PROTOCOL_VERSION,
+  INFERENCE_POLICY,
+  UNDECLARED_INFERENCE,
   applicabilityFor,
   buildVerificationQuote,
   classifyMatch,
@@ -8,6 +10,7 @@ import {
   evaluateIntake,
   freshnessFor,
   minimumEvidenceFor,
+  normalizedStateFor,
   rdlCandidate,
   verificationDepthFor,
 } from "./question-protocol.js";
@@ -63,6 +66,7 @@ function publicClaim(claim) {
     claim_id: claim.claim_id,
     case_id: claim.case_id,
     state: claim.state,
+    normalized_state: normalizedStateFor(claim),
     as_of: claim.as_of,
     statement: claim.statement,
     supports: claim.supports,
@@ -84,6 +88,7 @@ function publicStopPoint(claim) {
   return {
     claim_id: claim.claim_id,
     state: claim.state,
+    normalized_state: normalizedStateFor(claim),
     supports: claim.supports,
     does_not_support: claim.does_not_support,
     as_of: claim.as_of,
@@ -105,6 +110,8 @@ export function resolveQuery(query) {
     intake,
     method_contract: METHOD_CONTRACT,
     human_authorization_required: true,
+    inference_policy: INFERENCE_POLICY,
+    undeclared_inference: UNDECLARED_INFERENCE,
   };
   if (intake.intake_status === "FAIL") {
     return {

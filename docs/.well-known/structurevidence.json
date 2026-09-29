@@ -8,6 +8,7 @@
   "changes": "https://structurevidence.org/changes.json",
   "capabilities": "https://structevidence.com/capabilities.json",
   "resolve_endpoint": "https://api.structurevidence.org/resolve",
+  "state_normalization": "https://structurevidence.org/protocol/state-normalization-v0.1.json",
   "scholarly_record": {
     "version_doi": "10.5281/zenodo.23033588",
     "version_doi_url": "https://doi.org/10.5281/zenodo.23033588",

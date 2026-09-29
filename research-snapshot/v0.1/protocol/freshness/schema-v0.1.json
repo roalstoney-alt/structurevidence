@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://structurevidence.org/protocol/freshness/schema-v0.1.json",
+  "title": "FRESHNESS_STATE_v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["knowledge_cutoff", "last_public_review_at", "last_watch_at", "reopen_trigger_status", "freshness_state", "basis"],
+  "properties": {
+    "knowledge_cutoff": {"type": "string"},
+    "last_public_review_at": {"type": "string"},
+    "last_watch_at": {"type": "string"},
+    "reopen_trigger_status": {"type": "string"},
+    "freshness_state": {"enum": ["CURRENT", "REVIEW_DUE", "STALE", "UNKNOWN"]},
+    "basis": {"type": "string", "minLength": 1}
+  }
+}

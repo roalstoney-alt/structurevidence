@@ -1,0 +1,70 @@
+{
+  "claim_id": "SE-ONC-NSQNSCLC-CN-001.SURGERY_STAGE_SPECIFIC",
+  "case_id": "SE-ONC-NSQNSCLC-CN-001",
+  "version": "v0.1",
+  "statement": "Surgery is a stage-specific pathway, and an operated Chinese NSCLC cohort exists.",
+  "case_title": "China Non-Squamous NSCLC Evidence Pathway",
+  "state": "SUPPORTED_FOR_DEFINED_CONTEXT",
+  "as_of": "2026-09-28",
+  "scope": "China non-squamous NSCLC; separate stage-specific treatment contexts; detailed index cohort is EGFR-mutated locally advanced or metastatic disease after EGFR-TKI progression",
+  "supports": [
+    "Surgery is a stage-specific treatment pathway and an operated Chinese NSCLC cohort exists"
+  ],
+  "does_not_support": [
+    "Operated stage IA-IIIA patients are not exchangeable with advanced post-TKI trial patients; non-squamous subgroup must be verified before subgroup estimates"
+  ],
+  "unknowns": [
+    "Complete China 2026 treatment landscape",
+    "Hospital-level treatment outcome datasets",
+    "Updated local transplantation rules",
+    "Cross-site survival linkage",
+    "Pricing and publication licenses"
+  ],
+  "counter_evidence": [],
+  "next_observable": "New regulatory indication; Updated randomized outcome; Clinically reviewed stage branch; Authorized hospital aggregate received; Correction or source retraction",
+  "provenance": [
+    {
+      "source_ref": "cases/nsq-nsclc-china/state-v0.1.json",
+      "source_role": "PRIMARY_PUBLIC_EVIDENCE_STATE"
+    },
+    {
+      "source_ref": "cases/nsq-nsclc-china/stop-v0.1.html",
+      "source_role": "HUMAN_CITATION_BOUNDARY"
+    },
+    {
+      "source_ref": "cases/nsq-nsclc-china/publication-control-v0.1.json",
+      "source_role": "PUBLICATION_AUTHORITY"
+    },
+    {
+      "source_ref": "cases/nsq-nsclc-china/decision-memory-v0.1.json",
+      "source_role": "DECISION_STRUCTURE"
+    }
+  ],
+  "canonical_url": "https://structurevidence.org/claims/SE-ONC-NSQNSCLC-CN-001.SURGERY_STAGE_SPECIFIC.json",
+  "state_url": "https://structurevidence.org/cases/nsq-nsclc-china/state-v0.1.json",
+  "stop_point_url": "https://structurevidence.org/cases/nsq-nsclc-china/stop-v0.1.html",
+  "method_contract": "https://structurevidence.org/method-contract.json",
+  "citation_requirements": {
+    "must_preserve_state": true,
+    "must_preserve_as_of": true,
+    "must_include_boundary_when_material": true
+  },
+  "aliases": [
+    "non-squamous NSCLC",
+    "NSCLC China",
+    "lung cancer",
+    "ivonescimab",
+    "HARMONi-A",
+    "ECMO",
+    "lung transplant",
+    "NSCLC surgery stage specific",
+    "China NSCLC surgery"
+  ],
+  "keywords": [
+    "nsclc",
+    "china",
+    "surgery",
+    "stage",
+    "resectable"
+  ]
+}

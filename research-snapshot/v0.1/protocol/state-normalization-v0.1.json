@@ -1,0 +1,388 @@
+{
+  "$schema": "state-normalization/schema-v0.1.json",
+  "version": "STATE_NORMALIZATION_v0.1",
+  "inference_policy": "CLOSED_BOUNDARY",
+  "undeclared_inference": "OUT_OF_BOUNDARY",
+  "axes": {
+    "epistemic_state": [
+      "SUPPORTED",
+      "NOT_ESTABLISHED",
+      "CONTRADICTED",
+      "UNKNOWN"
+    ],
+    "verification_depth": [
+      "SOURCE_STATEMENT",
+      "MULTI_SOURCE_CORROBORATED",
+      "NAMED_OPERATOR_SOURCE",
+      "INDEPENDENT_VALIDATION",
+      "FIELD_DEPLOYED_SINGLE_INSTANCE",
+      "FIELD_DEPLOYED_MULTI_ENTITY",
+      "OPERATING_HISTORY",
+      "REPEAT_PROCUREMENT",
+      "NOT_EVALUATED",
+      "UNKNOWN"
+    ],
+    "applicability_scope": [
+      "GENERAL",
+      "ARCHITECTURE_SPECIFIC",
+      "GEOGRAPHY_SPECIFIC",
+      "POPULATION_SPECIFIC",
+      "USE_CASE_SPECIFIC",
+      "CUSTOMER_SPECIFIC_NOT_EVALUATED",
+      "UNKNOWN"
+    ],
+    "freshness_state": [
+      "CURRENT",
+      "REVIEW_DUE",
+      "STALE",
+      "UNKNOWN"
+    ],
+    "workflow_state": [
+      "NONE",
+      "VERIFICATION_REQUIRED",
+      "HUMAN_REVIEW_REQUIRED",
+      "PUBLICATION_REVIEW_REQUIRED",
+      "CLOSED"
+    ]
+  },
+  "claims": [
+    {
+      "claim_id": "CML-PDRE-001.ARCHITECTURE_POSSIBILITY",
+      "legacy_state": "SUPPORTED",
+      "normalized": {
+        "epistemic_state": "SUPPORTED",
+        "verification_depth": "NOT_EVALUATED",
+        "applicability_scope": "UNKNOWN",
+        "freshness_state": "CURRENT",
+        "workflow_state": "NONE"
+      },
+      "mapping_basis": "Deterministic mapping from legacy state SUPPORTED; unspecified orthogonal axes remain UNKNOWN or NOT_EVALUATED.",
+      "mapping_status": "DETERMINISTIC"
+    },
+    {
+      "claim_id": "CML-PDRE-001.SYSTEM_VALIDATION",
+      "legacy_state": "NOT_ESTABLISHED",
+      "normalized": {
+        "epistemic_state": "NOT_ESTABLISHED",
+        "verification_depth": "NOT_EVALUATED",
+        "applicability_scope": "UNKNOWN",
+        "freshness_state": "CURRENT",
+        "workflow_state": "NONE"
+      },
+      "mapping_basis": "Deterministic mapping from legacy state NOT_ESTABLISHED; unspecified orthogonal axes remain UNKNOWN or NOT_EVALUATED.",
+      "mapping_status": "DETERMINISTIC"
+    },
+    {
+      "claim_id": "CML-PDRE-001.NAMED_FIELD_DEPLOYMENT",
+      "legacy_state": "SUPPORTED_SINGLE_INSTANCE",
+      "normalized": {
+        "epistemic_state": "SUPPORTED",
+        "verification_depth": "FIELD_DEPLOYED_SINGLE_INSTANCE",
+        "applicability_scope": "UNKNOWN",
+        "freshness_state": "CURRENT",
+        "workflow_state": "NONE"
+      },
+      "mapping_basis": "Deterministic mapping from legacy state SUPPORTED_SINGLE_INSTANCE; unspecified orthogonal axes remain UNKNOWN or NOT_EVALUATED.",
+      "mapping_status": "DETERMINISTIC"
+    },
+    {
+      "claim_id": "CML-PDRE-001.LONG_OPERATING_HISTORY",
+      "legacy_state": "NOT_ESTABLISHED",
+      "normalized": {
+        "epistemic_state": "NOT_ESTABLISHED",
+        "verification_depth": "NOT_EVALUATED",
+        "applicability_scope": "UNKNOWN",
+        "freshness_state": "CURRENT",
+        "workflow_state": "NONE"
+      },
+      "mapping_basis": "Deterministic mapping from legacy state NOT_ESTABLISHED; unspecified orthogonal axes remain UNKNOWN or NOT_EVALUATED.",
+      "mapping_status": "DETERMINISTIC"
+    },
+    {
+      "claim_id": "CML-PDRE-001.MULTI_ENTITY_REPLICATION",
+      "legacy_state": "NOT_ESTABLISHED",
+      "normalized": {
+        "epistemic_state": "NOT_ESTABLISHED",
+        "verification_depth": "NOT_EVALUATED",
+        "applicability_scope": "UNKNOWN",
+        "freshness_state": "CURRENT",
+        "workflow_state": "NONE"
+      },
+      "mapping_basis": "Deterministic mapping from legacy state NOT_ESTABLISHED; unspecified orthogonal axes remain UNKNOWN or NOT_EVALUATED.",
+      "mapping_status": "DETERMINISTIC"
+    },
+    {
+      "claim_id": "CML-PDRE-001.INDEPENDENT_VALIDATION",
+      "legacy_state": "NOT_ESTABLISHED",
+      "normalized": {
+        "epistemic_state": "NOT_ESTABLISHED",
+        "verification_depth": "NOT_EVALUATED",
+        "applicability_scope": "UNKNOWN",
+        "freshness_state": "CURRENT",
+        "workflow_state": "NONE"
+      },
+      "mapping_basis": "Deterministic mapping from legacy state NOT_ESTABLISHED; unspecified orthogonal axes remain UNKNOWN or NOT_EVALUATED.",
+      "mapping_status": "DETERMINISTIC"
+    },
+    {
+      "claim_id": "CML-PDRE-001.REPEAT_PROCUREMENT",
+      "legacy_state": "NOT_ESTABLISHED",
+      "normalized": {
+        "epistemic_state": "NOT_ESTABLISHED",
+        "verification_depth": "NOT_EVALUATED",
+        "applicability_scope": "UNKNOWN",
+        "freshness_state": "CURRENT",
+        "workflow_state": "NONE"
+      },
+      "mapping_basis": "Deterministic mapping from legacy state NOT_ESTABLISHED; unspecified orthogonal axes remain UNKNOWN or NOT_EVALUATED.",
+      "mapping_status": "DETERMINISTIC"
+    },
+    {
+      "claim_id": "CML-PDRE-001.INDUSTRY_ADOPTION",
+      "legacy_state": "NOT_ESTABLISHED",
+      "normalized": {
+        "epistemic_state": "NOT_ESTABLISHED",
+        "verification_depth": "NOT_EVALUATED",
+        "applicability_scope": "UNKNOWN",
+        "freshness_state": "CURRENT",
+        "workflow_state": "NONE"
+      },
+      "mapping_basis": "Deterministic mapping from legacy state NOT_ESTABLISHED; unspecified orthogonal axes remain UNKNOWN or NOT_EVALUATED.",
+      "mapping_status": "DETERMINISTIC"
+    },
+    {
+      "claim_id": "CML-PDRE-001.PDRE_FULL_VALIDATION",
+      "legacy_state": "NOT_ESTABLISHED",
+      "normalized": {
+        "epistemic_state": "NOT_ESTABLISHED",
+        "verification_depth": "NOT_EVALUATED",
+        "applicability_scope": "UNKNOWN",
+        "freshness_state": "CURRENT",
+        "workflow_state": "NONE"
+      },
+      "mapping_basis": "Deterministic mapping from legacy state NOT_ESTABLISHED; unspecified orthogonal axes remain UNKNOWN or NOT_EVALUATED.",
+      "mapping_status": "DETERMINISTIC"
+    },
+    {
+      "claim_id": "SE-BESS-SODIUM-001.PRODUCT_ANNOUNCED",
+      "legacy_state": "SUPPORTED",
+      "normalized": {
+        "epistemic_state": "SUPPORTED",
+        "verification_depth": "NOT_EVALUATED",
+        "applicability_scope": "UNKNOWN",
+        "freshness_state": "CURRENT",
+        "workflow_state": "NONE"
+      },
+      "mapping_basis": "Deterministic mapping from legacy state SUPPORTED; unspecified orthogonal axes remain UNKNOWN or NOT_EVALUATED.",
+      "mapping_status": "DETERMINISTIC"
+    },
+    {
+      "claim_id": "SE-BESS-SODIUM-001.SUPPLY_COOPERATION_AGREEMENT",
+      "legacy_state": "SUPPORTED",
+      "normalized": {
+        "epistemic_state": "SUPPORTED",
+        "verification_depth": "NOT_EVALUATED",
+        "applicability_scope": "UNKNOWN",
+        "freshness_state": "CURRENT",
+        "workflow_state": "NONE"
+      },
+      "mapping_basis": "Deterministic mapping from legacy state SUPPORTED; unspecified orthogonal axes remain UNKNOWN or NOT_EVALUATED.",
+      "mapping_status": "DETERMINISTIC"
+    },
+    {
+      "claim_id": "SE-BESS-SODIUM-001.PRODUCTION_READINESS",
+      "legacy_state": "VERIFICATION_REQUIRED",
+      "normalized": {
+        "epistemic_state": "UNKNOWN",
+        "verification_depth": "NOT_EVALUATED",
+        "applicability_scope": "UNKNOWN",
+        "freshness_state": "CURRENT",
+        "workflow_state": "VERIFICATION_REQUIRED"
+      },
+      "mapping_basis": "Legacy VERIFICATION_REQUIRED is a workflow state; no explicit epistemic resolution is present in the source primitive.",
+      "mapping_status": "REVIEW_REQUIRED"
+    },
+    {
+      "claim_id": "SE-BESS-SODIUM-001.CUSTOMER_BATCH_DELIVERY",
+      "legacy_state": "NOT_ESTABLISHED",
+      "normalized": {
+        "epistemic_state": "NOT_ESTABLISHED",
+        "verification_depth": "NOT_EVALUATED",
+        "applicability_scope": "UNKNOWN",
+        "freshness_state": "CURRENT",
+        "workflow_state": "NONE"
+      },
+      "mapping_basis": "Deterministic mapping from legacy state NOT_ESTABLISHED; unspecified orthogonal axes remain UNKNOWN or NOT_EVALUATED.",
+      "mapping_status": "DETERMINISTIC"
+    },
+    {
+      "claim_id": "SE-BESS-SODIUM-001.NAMED_COMMISSIONED_SITE",
+      "legacy_state": "NOT_ESTABLISHED",
+      "normalized": {
+        "epistemic_state": "NOT_ESTABLISHED",
+        "verification_depth": "NOT_EVALUATED",
+        "applicability_scope": "UNKNOWN",
+        "freshness_state": "CURRENT",
+        "workflow_state": "NONE"
+      },
+      "mapping_basis": "Deterministic mapping from legacy state NOT_ESTABLISHED; unspecified orthogonal axes remain UNKNOWN or NOT_EVALUATED.",
+      "mapping_status": "DETERMINISTIC"
+    },
+    {
+      "claim_id": "SE-BESS-SODIUM-001.INDEPENDENT_FIELD_PERFORMANCE",
+      "legacy_state": "NOT_ESTABLISHED",
+      "normalized": {
+        "epistemic_state": "NOT_ESTABLISHED",
+        "verification_depth": "NOT_EVALUATED",
+        "applicability_scope": "UNKNOWN",
+        "freshness_state": "CURRENT",
+        "workflow_state": "NONE"
+      },
+      "mapping_basis": "Deterministic mapping from legacy state NOT_ESTABLISHED; unspecified orthogonal axes remain UNKNOWN or NOT_EVALUATED.",
+      "mapping_status": "DETERMINISTIC"
+    },
+    {
+      "claim_id": "SE-BESS-SODIUM-001.LONG_OPERATING_HISTORY",
+      "legacy_state": "UNKNOWN",
+      "normalized": {
+        "epistemic_state": "UNKNOWN",
+        "verification_depth": "NOT_EVALUATED",
+        "applicability_scope": "UNKNOWN",
+        "freshness_state": "CURRENT",
+        "workflow_state": "NONE"
+      },
+      "mapping_basis": "Deterministic mapping from legacy state UNKNOWN; unspecified orthogonal axes remain UNKNOWN or NOT_EVALUATED.",
+      "mapping_status": "DETERMINISTIC"
+    },
+    {
+      "claim_id": "SE-BESS-SODIUM-001.LIFECYCLE_COST_ADVANTAGE_OVER_LFP",
+      "legacy_state": "NOT_ESTABLISHED",
+      "normalized": {
+        "epistemic_state": "NOT_ESTABLISHED",
+        "verification_depth": "NOT_EVALUATED",
+        "applicability_scope": "UNKNOWN",
+        "freshness_state": "CURRENT",
+        "workflow_state": "NONE"
+      },
+      "mapping_basis": "Deterministic mapping from legacy state NOT_ESTABLISHED; unspecified orthogonal axes remain UNKNOWN or NOT_EVALUATED.",
+      "mapping_status": "DETERMINISTIC"
+    },
+    {
+      "claim_id": "SE-BESS-SODIUM-001.UNIVERSAL_LFP_REPLACEMENT",
+      "legacy_state": "NOT_ESTABLISHED",
+      "normalized": {
+        "epistemic_state": "NOT_ESTABLISHED",
+        "verification_depth": "NOT_EVALUATED",
+        "applicability_scope": "UNKNOWN",
+        "freshness_state": "CURRENT",
+        "workflow_state": "NONE"
+      },
+      "mapping_basis": "Deterministic mapping from legacy state NOT_ESTABLISHED; unspecified orthogonal axes remain UNKNOWN or NOT_EVALUATED.",
+      "mapping_status": "DETERMINISTIC"
+    },
+    {
+      "claim_id": "SE-ONC-NSQNSCLC-CN-001.SURGERY_STAGE_SPECIFIC",
+      "legacy_state": "SUPPORTED_FOR_DEFINED_CONTEXT",
+      "normalized": {
+        "epistemic_state": "SUPPORTED",
+        "verification_depth": "NOT_EVALUATED",
+        "applicability_scope": "USE_CASE_SPECIFIC",
+        "freshness_state": "CURRENT",
+        "workflow_state": "NONE"
+      },
+      "mapping_basis": "Deterministic mapping from legacy state SUPPORTED_FOR_DEFINED_CONTEXT; unspecified orthogonal axes remain UNKNOWN or NOT_EVALUATED.",
+      "mapping_status": "DETERMINISTIC"
+    },
+    {
+      "claim_id": "SE-ONC-NSQNSCLC-CN-001.IVONESCIMAB_APPROVAL",
+      "legacy_state": "SUPPORTED",
+      "normalized": {
+        "epistemic_state": "SUPPORTED",
+        "verification_depth": "NOT_EVALUATED",
+        "applicability_scope": "UNKNOWN",
+        "freshness_state": "CURRENT",
+        "workflow_state": "NONE"
+      },
+      "mapping_basis": "Deterministic mapping from legacy state SUPPORTED; unspecified orthogonal axes remain UNKNOWN or NOT_EVALUATED.",
+      "mapping_status": "DETERMINISTIC"
+    },
+    {
+      "claim_id": "SE-ONC-NSQNSCLC-CN-001.HARMONI_A_OS",
+      "legacy_state": "SUPPORTED_FOR_TRIAL_POPULATION",
+      "normalized": {
+        "epistemic_state": "SUPPORTED",
+        "verification_depth": "NOT_EVALUATED",
+        "applicability_scope": "POPULATION_SPECIFIC",
+        "freshness_state": "CURRENT",
+        "workflow_state": "NONE"
+      },
+      "mapping_basis": "Deterministic mapping from legacy state SUPPORTED_FOR_TRIAL_POPULATION; unspecified orthogonal axes remain UNKNOWN or NOT_EVALUATED.",
+      "mapping_status": "DETERMINISTIC"
+    },
+    {
+      "claim_id": "SE-ONC-NSQNSCLC-CN-001.ECMO_AS_TUMOR_THERAPY",
+      "legacy_state": "NOT_ESTABLISHED",
+      "normalized": {
+        "epistemic_state": "NOT_ESTABLISHED",
+        "verification_depth": "NOT_EVALUATED",
+        "applicability_scope": "UNKNOWN",
+        "freshness_state": "CURRENT",
+        "workflow_state": "NONE"
+      },
+      "mapping_basis": "Deterministic mapping from legacy state NOT_ESTABLISHED; unspecified orthogonal axes remain UNKNOWN or NOT_EVALUATED.",
+      "mapping_status": "DETERMINISTIC"
+    },
+    {
+      "claim_id": "SE-ONC-NSQNSCLC-CN-001.TRANSPLANT_FOR_INDEX_COHORT",
+      "legacy_state": "NOT_ESTABLISHED",
+      "normalized": {
+        "epistemic_state": "NOT_ESTABLISHED",
+        "verification_depth": "NOT_EVALUATED",
+        "applicability_scope": "UNKNOWN",
+        "freshness_state": "CURRENT",
+        "workflow_state": "NONE"
+      },
+      "mapping_basis": "Deterministic mapping from legacy state NOT_ESTABLISHED; unspecified orthogonal axes remain UNKNOWN or NOT_EVALUATED.",
+      "mapping_status": "DETERMINISTIC"
+    },
+    {
+      "claim_id": "SE-ONC-NSQNSCLC-CN-001.HOSPITAL_AGGREGATE_OUTCOME_DATA",
+      "legacy_state": "NOT_ESTABLISHED",
+      "normalized": {
+        "epistemic_state": "NOT_ESTABLISHED",
+        "verification_depth": "NOT_EVALUATED",
+        "applicability_scope": "UNKNOWN",
+        "freshness_state": "CURRENT",
+        "workflow_state": "NONE"
+      },
+      "mapping_basis": "Deterministic mapping from legacy state NOT_ESTABLISHED; unspecified orthogonal axes remain UNKNOWN or NOT_EVALUATED.",
+      "mapping_status": "DETERMINISTIC"
+    },
+    {
+      "claim_id": "SE-ONC-NSQNSCLC-CN-001.PATIENT_SPECIFIC_SUCCESS_PROBABILITY",
+      "legacy_state": "NOT_ESTABLISHED",
+      "normalized": {
+        "epistemic_state": "NOT_ESTABLISHED",
+        "verification_depth": "NOT_EVALUATED",
+        "applicability_scope": "UNKNOWN",
+        "freshness_state": "CURRENT",
+        "workflow_state": "NONE"
+      },
+      "mapping_basis": "Deterministic mapping from legacy state NOT_ESTABLISHED; unspecified orthogonal axes remain UNKNOWN or NOT_EVALUATED.",
+      "mapping_status": "DETERMINISTIC"
+    },
+    {
+      "claim_id": "SE-ONC-NSQNSCLC-CN-001.CROSS_MODALITY_RANKING",
+      "legacy_state": "NOT_ESTABLISHED",
+      "normalized": {
+        "epistemic_state": "NOT_ESTABLISHED",
+        "verification_depth": "NOT_EVALUATED",
+        "applicability_scope": "UNKNOWN",
+        "freshness_state": "CURRENT",
+        "workflow_state": "NONE"
+      },
+      "mapping_basis": "Deterministic mapping from legacy state NOT_ESTABLISHED; unspecified orthogonal axes remain UNKNOWN or NOT_EVALUATED.",
+      "mapping_status": "DETERMINISTIC"
+    }
+  ]
+}

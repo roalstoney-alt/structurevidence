@@ -1,0 +1,68 @@
+{
+  "claim_id": "SE-BESS-SODIUM-001.PRODUCT_ANNOUNCED",
+  "case_id": "SE-BESS-SODIUM-001",
+  "version": "v0.1",
+  "statement": "A stationary sodium-ion BESS product has been publicly announced.",
+  "case_title": "Sodium-Ion BESS Commercialization State",
+  "state": "SUPPORTED",
+  "as_of": "2026-09-24",
+  "scope": "Stationary battery energy storage systems only; vehicle, starter-battery, and solid-state battery claims are excluded.",
+  "supports": [
+    "TENER Sodium was publicly launched as a stationary BESS product and future delivery milestones were stated."
+  ],
+  "does_not_support": [
+    "Completed customer delivery or a named commissioned customer site as of the knowledge cutoff. The phrase field-validated remains source-attributed."
+  ],
+  "unknowns": [
+    "production_readiness: VERIFICATION_REQUIRED",
+    "customer_batch_delivery: NOT_ESTABLISHED",
+    "named_commissioned_site: NOT_ESTABLISHED",
+    "independent_field_performance: NOT_ESTABLISHED",
+    "long_operating_history: UNKNOWN",
+    "lifecycle_cost_advantage_over_lfp: NOT_ESTABLISHED",
+    "universal_lfp_replacement: NOT_ESTABLISHED"
+  ],
+  "counter_evidence": [],
+  "next_observable": "Named customer shipment and acceptance record; Named site commissioning or grid-connection record; Dated operating history tied to that system; Independent performance or safety validation; Repeat procurement or multi-operator replication",
+  "provenance": [
+    {
+      "source_ref": "cases/sodium-ion-bess/state-v0.1.json",
+      "source_role": "PRIMARY_PUBLIC_EVIDENCE_STATE"
+    },
+    {
+      "source_ref": "cases/sodium-ion-bess/stop-v0.1.html",
+      "source_role": "HUMAN_CITATION_BOUNDARY"
+    },
+    {
+      "source_ref": "cases/sodium-ion-bess/publication-control-v0.1.json",
+      "source_role": "PUBLICATION_AUTHORITY"
+    },
+    {
+      "source_ref": "cases/sodium-ion-bess/decision-memory-v0.1.json",
+      "source_role": "DECISION_STRUCTURE"
+    }
+  ],
+  "canonical_url": "https://structurevidence.org/claims/SE-BESS-SODIUM-001.PRODUCT_ANNOUNCED.json",
+  "state_url": "https://structurevidence.org/cases/sodium-ion-bess/state-v0.1.json",
+  "stop_point_url": "https://structurevidence.org/cases/sodium-ion-bess/stop-v0.1.html",
+  "method_contract": "https://structurevidence.org/method-contract.json",
+  "citation_requirements": {
+    "must_preserve_state": true,
+    "must_preserve_as_of": true,
+    "must_include_boundary_when_material": true
+  },
+  "aliases": [
+    "sodium-ion",
+    "sodium ion",
+    "BESS",
+    "stationary storage",
+    "sodium-ion BESS product",
+    "sodium battery product announced"
+  ],
+  "keywords": [
+    "sodium-ion",
+    "bess",
+    "product",
+    "announced"
+  ]
+}

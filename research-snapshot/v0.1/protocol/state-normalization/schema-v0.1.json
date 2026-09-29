@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://structurevidence.org/protocol/state-normalization/schema-v0.1.json",
+  "title": "StructureEvidence State Normalization v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["$schema", "version", "inference_policy", "undeclared_inference", "axes", "claims"],
+  "properties": {
+    "$schema": {"type": "string"},
+    "version": {"const": "STATE_NORMALIZATION_v0.1"},
+    "inference_policy": {"const": "CLOSED_BOUNDARY"},
+    "undeclared_inference": {"const": "OUT_OF_BOUNDARY"},
+    "axes": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["epistemic_state", "verification_depth", "applicability_scope", "freshness_state", "workflow_state"],
+      "properties": {
+        "epistemic_state": {"const": ["SUPPORTED", "NOT_ESTABLISHED", "CONTRADICTED", "UNKNOWN"]},
+        "verification_depth": {"const": ["SOURCE_STATEMENT", "MULTI_SOURCE_CORROBORATED", "NAMED_OPERATOR_SOURCE", "INDEPENDENT_VALIDATION", "FIELD_DEPLOYED_SINGLE_INSTANCE", "FIELD_DEPLOYED_MULTI_ENTITY", "OPERATING_HISTORY", "REPEAT_PROCUREMENT", "NOT_EVALUATED", "UNKNOWN"]},
+        "applicability_scope": {"const": ["GENERAL", "ARCHITECTURE_SPECIFIC", "GEOGRAPHY_SPECIFIC", "POPULATION_SPECIFIC", "USE_CASE_SPECIFIC", "CUSTOMER_SPECIFIC_NOT_EVALUATED", "UNKNOWN"]},
+        "freshness_state": {"const": ["CURRENT", "REVIEW_DUE", "STALE", "UNKNOWN"]},
+        "workflow_state": {"const": ["NONE", "VERIFICATION_REQUIRED", "HUMAN_REVIEW_REQUIRED", "PUBLICATION_REVIEW_REQUIRED", "CLOSED"]}
+      }
+    },
+    "claims": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"$ref": "#/$defs/mapping"}
+    }
+  },
+  "$defs": {
+    "mapping": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["claim_id", "legacy_state", "normalized", "mapping_basis", "mapping_status"],
+      "properties": {
+        "claim_id": {"type": "string", "minLength": 1},
+        "legacy_state": {"type": "string", "minLength": 1},
+        "normalized": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["epistemic_state", "verification_depth", "applicability_scope", "freshness_state", "workflow_state"],
+          "properties": {
+            "epistemic_state": {"enum": ["SUPPORTED", "NOT_ESTABLISHED", "CONTRADICTED", "UNKNOWN"]},
+            "verification_depth": {"enum": ["SOURCE_STATEMENT", "MULTI_SOURCE_CORROBORATED", "NAMED_OPERATOR_SOURCE", "INDEPENDENT_VALIDATION", "FIELD_DEPLOYED_SINGLE_INSTANCE", "FIELD_DEPLOYED_MULTI_ENTITY", "OPERATING_HISTORY", "REPEAT_PROCUREMENT", "NOT_EVALUATED", "UNKNOWN"]},
+            "applicability_scope": {"enum": ["GENERAL", "ARCHITECTURE_SPECIFIC", "GEOGRAPHY_SPECIFIC", "POPULATION_SPECIFIC", "USE_CASE_SPECIFIC", "CUSTOMER_SPECIFIC_NOT_EVALUATED", "UNKNOWN"]},
+            "freshness_state": {"enum": ["CURRENT", "REVIEW_DUE", "STALE", "UNKNOWN"]},
+            "workflow_state": {"enum": ["NONE", "VERIFICATION_REQUIRED", "HUMAN_REVIEW_REQUIRED", "PUBLICATION_REVIEW_REQUIRED", "CLOSED"]}
+          }
+        },
+        "mapping_basis": {"type": "string", "minLength": 1},
+        "mapping_status": {"enum": ["DETERMINISTIC", "REVIEW_REQUIRED"]}
+      }
+    }
+  }
+}

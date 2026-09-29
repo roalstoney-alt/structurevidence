@@ -1,0 +1,9 @@
+{
+  "repository": "https://github.com/roalstoney-alt/structurevidence",
+  "repository_commit": "85f625b1f1eec890bd9980e51d5e4da1078d7313",
+  "protocol_version": "QUESTION_TO_EVIDENCE_COMMERCE_PROTOCOL_v0.1",
+  "resolver_endpoint": "https://api.structurevidence.org/resolve",
+  "method_contract": "https://structurevidence.org/method-contract.json",
+  "inference_policy": "CLOSED_BOUNDARY",
+  "undeclared_inference": "OUT_OF_BOUNDARY"
+}

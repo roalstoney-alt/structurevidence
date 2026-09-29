@@ -36,6 +36,19 @@
     "public_method_site": "https://structurevidence.org",
     "machine_method_contract": "https://structurevidence.org/method-contract.json"
   },
+  "inference_policy": {
+    "mode": "CLOSED_BOUNDARY",
+    "rule_id": "UNDECLARED_INFERENCE_NOT_AUTHORIZED",
+    "statement": "An inference not explicitly represented by the claim state, supports, does_not_support, unknowns, or approved scope must not be treated as supported.",
+    "undeclared_inference": "OUT_OF_BOUNDARY"
+  },
+  "state_normalization": {
+    "version": "STATE_NORMALIZATION_v0.1",
+    "document": "https://structurevidence.org/protocol/state-normalization-v0.1.json",
+    "schema": "https://structurevidence.org/protocol/state-normalization/schema-v0.1.json",
+    "additive": true,
+    "legacy_state_preserved": true
+  },
   "principles": [
     {
       "id": "FACT_NE_CLAIM",
@@ -72,6 +85,10 @@
     {
       "id": "UNKNOWN_MUST_NOT_BE_INFERRED",
       "statement": "Unknown states remain unknown until qualifying evidence resolves them."
+    },
+    {
+      "id": "UNDECLARED_INFERENCE_NOT_AUTHORIZED",
+      "statement": "An inference not explicitly represented by the claim state, supports, does_not_support, unknowns, or approved scope must not be treated as supported."
     }
   ],
   "required_claim_fields": [

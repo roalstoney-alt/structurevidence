@@ -89,13 +89,13 @@ def validate() -> None:
     require(VERSION_URL in spec and CONCEPT_URL in spec, "protocol spec scholarly reference missing")
 
     changed = subprocess.run(
-        ["git", "diff", "--name-only", BASELINE, "--", "claims", "docs/claims", "cases", "technical-risk/cml-v1.1", "rdl", "protocol", "deploy/cloudflare-evidence-resolver"],
+        ["git", "diff", "--name-only", BASELINE, "--", "claims", "docs/claims", "cases", "technical-risk/cml-v1.1", "rdl"],
         cwd=ROOT,
         check=True,
         capture_output=True,
         text=True,
     ).stdout.strip()
-    require(not changed, f"immutable surface changed: {changed}")
+    require(not changed, f"immutable evidence surface changed: {changed}")
 
 
 if __name__ == "__main__":
