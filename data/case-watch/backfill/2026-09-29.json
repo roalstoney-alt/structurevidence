@@ -1,0 +1,31 @@
+{
+  "backfill_id": "SE-CW-BACKFILL-2026-09-29-001",
+  "generated_at": "2026-09-29T12:00:00+08:00",
+  "scope": "Evidence already collected in the repository after each current public cutoff; no new external research.",
+  "search_run_id": "SE-CW-LOCAL-BACKFILL-2026-09-29-001",
+  "cases": [
+    {
+      "case_id": "SE-BESS-SODIUM-001",
+      "cutoff": "2026-09-24",
+      "repository_records_after_cutoff": 0,
+      "observation_ids": [],
+      "result": "NOT_FOUND_WITHIN_DEFINED_SEARCH_SCOPE"
+    },
+    {
+      "case_id": "CML-PDRE-001",
+      "cutoff": "2026-09-20T10:46:47Z",
+      "repository_records_after_cutoff": 0,
+      "observation_ids": [],
+      "result": "NOT_FOUND_WITHIN_DEFINED_SEARCH_SCOPE"
+    },
+    {
+      "case_id": "SE-ONC-NSQNSCLC-CN-001",
+      "cutoff": "2026-09-28",
+      "repository_records_after_cutoff": 0,
+      "observation_ids": [],
+      "result": "RESEARCH_ESCALATION_REQUIRED",
+      "reason": "The expected public case, state snapshot, stop point, publication control, and repository evidence corpus are absent."
+    }
+  ],
+  "public_state_mutated": false
+}

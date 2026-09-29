@@ -1,0 +1,64 @@
+{
+  "week_id": "2026-W40",
+  "generated_at": "2026-09-29T12:00:00+08:00",
+  "review_period": {"start": "2026-09-28", "end": "2026-10-03", "complete": false},
+  "candidate_only": true,
+  "reviews": [
+    {
+      "case_id": "SE-BESS-SODIUM-001",
+      "review_period": {"start": "2026-09-28", "end": "2026-10-03", "complete": false},
+      "previous_version": "v0.1",
+      "records_screened": 0,
+      "relevant_records": 0,
+      "state_changing_records": 0,
+      "counter_evidence_records": 0,
+      "proposed_decision": "NO_STATE_CHANGE",
+      "proposed_next_version": null,
+      "reason": "No qualifying repository-local evidence was found after the 2026-09-24 cutoff within the authorized backfill scope.",
+      "minimum_missing_evidence": [],
+      "decision_that_could_change": null,
+      "recommended_rdl_level": "NONE",
+      "human_decision": "PENDING",
+      "publication_approved": false
+    },
+    {
+      "case_id": "CML-PDRE-001",
+      "review_period": {"start": "2026-09-28", "end": "2026-10-03", "complete": false},
+      "previous_version": "UNVERSIONED_PUBLIC_PROJECTION",
+      "records_screened": 0,
+      "relevant_records": 0,
+      "state_changing_records": 0,
+      "counter_evidence_records": 0,
+      "proposed_decision": "NO_STATE_CHANGE",
+      "proposed_next_version": null,
+      "reason": "No qualifying repository-local evidence was found after the 2026-09-20 knowledge time; second independent deployment and operating history remain unestablished.",
+      "minimum_missing_evidence": [],
+      "decision_that_could_change": null,
+      "recommended_rdl_level": "NONE",
+      "human_decision": "PENDING",
+      "publication_approved": false
+    },
+    {
+      "case_id": "SE-ONC-NSQNSCLC-CN-001",
+      "review_period": {"start": "2026-09-28", "end": "2026-10-03", "complete": false},
+      "previous_version": null,
+      "records_screened": 0,
+      "relevant_records": 0,
+      "state_changing_records": 0,
+      "counter_evidence_records": 0,
+      "proposed_decision": "RESEARCH_ESCALATION_REQUIRED",
+      "proposed_next_version": null,
+      "reason": "The repository does not contain the expected public case baseline, so a bounded comparison against the current frozen state is impossible.",
+      "minimum_missing_evidence": [
+        "Approved current state snapshot and version",
+        "Verified 2026-09-28 knowledge cutoff",
+        "Current stop point and publication-control record",
+        "Repository-local evidence register supporting the current bounded pathway"
+      ],
+      "decision_that_could_change": "Whether the case can enter weekly monitoring and whether any later evidence changes its bounded public pathway.",
+      "recommended_rdl_level": "L1_VERIFY",
+      "human_decision": "PENDING",
+      "publication_approved": false
+    }
+  ]
+}

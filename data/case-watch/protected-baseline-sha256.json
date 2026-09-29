@@ -1,0 +1,18 @@
+{
+  "captured_at": "2026-09-29T12:00:00+08:00",
+  "purpose": "Detect mutation of public projections, frozen snapshots, CML history, and RDL approval records during the first case-watch execution.",
+  "files": {
+    "cases/800vdc/index.html": "4b243d555c9d6808c4ff34dfeb988b70430d6e4ed591de4f1fb57300f3fd93d5",
+    "docs/cases/800vdc/index.html": "4b243d555c9d6808c4ff34dfeb988b70430d6e4ed591de4f1fb57300f3fd93d5",
+    "cases/sodium-ion-bess/index.html": "860ab57104cc068f1da15a88221e7d23504cfe536cef5cda2b5f7912c60330ce",
+    "docs/cases/sodium-ion-bess/index.html": "860ab57104cc068f1da15a88221e7d23504cfe536cef5cda2b5f7912c60330ce",
+    "cases/sodium-ion-bess/state-v0.1.json": "b9feb7c9e1f83a7881c804c6c00c70f8dd74acfdacdf8cda2dcc359233eef228",
+    "docs/cases/sodium-ion-bess/state-v0.1.json": "b9feb7c9e1f83a7881c804c6c00c70f8dd74acfdacdf8cda2dcc359233eef228",
+    "technical-risk/cml-v1.1/pdre/CML-PDRE-001/CASE.json": "8a91f9886d1c7791f59cf85404c905f1f6d67df91a96cff6121f57b9019d0cdb",
+    "technical-risk/cml-v1.1/pdre/CML-PDRE-001/pdre-record.json": "a4b86464b0ec9bd09fa7fe54a93c1fe2912fcc255a77d48f527e984d006b4fe8",
+    "technical-risk/cml-v1.1/pdre/CML-PDRE-001/publication-control.json": "1e4d4f3684c09f8759ee128adecb602491e9ec78054db47a2c69693e45cb5e5b",
+    "technical-risk/cml-v1.1/pdre/CML-PDRE-001/state-history.jsonl": "d8b1591fbfb5898f998bf4553a533d30b6650d5567193c9b48d5e640904b5629",
+    "technical-risk/cml-v1.1/pdre/CML-PDRE-001/timeline.jsonl": "4d5535cd4e619d0ac71ba0590beaa0cc392e1883e278e28423d00b3384318c16",
+    "rdl/research/records/CML-PDRE-001-L1-FIELD-DEPLOYMENT-2026-09-20/human-review-freeze.json": "78a518cfb87ed008a0a391b2f65ca6625f454f3dcc9e965c7db08fcc480235f6"
+  }
+}

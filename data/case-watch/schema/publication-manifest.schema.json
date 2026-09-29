@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://structurevidence.org/schema/case-watch/publication-manifest-v1.json",
+  "title": "StructureEvidence Weekly Publication Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["review_period", "generated_at", "cases"],
+  "properties": {
+    "review_period": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}/[0-9]{4}-[0-9]{2}-[0-9]{2}$"},
+    "generated_at": {"type": "string", "format": "date-time"},
+    "cases": {
+      "type": "array", "minItems": 3, "maxItems": 3,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["case_id", "previous_version", "decision", "new_version", "knowledge_cutoff", "records_considered", "state_changes", "unknowns_resolved", "unknowns_remaining", "counter_evidence_added", "human_decision", "publication_approved"],
+        "properties": {
+          "case_id": {"enum": ["CML-PDRE-001", "SE-BESS-SODIUM-001", "SE-ONC-NSQNSCLC-CN-001"]},
+          "previous_version": {"type": ["string", "null"]},
+          "decision": {"enum": ["NO_STATE_CHANGE", "PUBLIC_TIMELINE_UPDATE_ONLY", "PUBLIC_UNKNOWN_RESOLVED", "PUBLIC_STATE_TRANSITION", "PUBLIC_COUNTER_EVIDENCE_ADDED", "PUBLIC_STATE_WEAKENED", "PUBLIC_CORRECTION_REQUIRED", "RESEARCH_ESCALATION_REQUIRED"]},
+          "new_version": {"type": ["string", "null"]},
+          "knowledge_cutoff": {"type": ["string", "null"]},
+          "records_considered": {"type": "array", "items": {"type": "string"}},
+          "state_changes": {"type": "array", "items": {"type": "string"}},
+          "unknowns_resolved": {"type": "array", "items": {"type": "string"}},
+          "unknowns_remaining": {"type": "array", "items": {"type": "string"}},
+          "counter_evidence_added": {"type": "array", "items": {"type": "string"}},
+          "human_decision": {"enum": ["PENDING", "APPROVE_PUBLICATION", "REJECT_PUBLICATION", "REQUEST_RESCOPE", "DEFER", "AUTHORIZE_VERIFICATION"]},
+          "publication_approved": {"const": false}
+        }
+      }
+    }
+  }
+}

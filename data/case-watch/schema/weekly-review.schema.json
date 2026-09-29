@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://structurevidence.org/schema/case-watch/weekly-review-v1.json",
+  "title": "StructureEvidence Weekly Case Review",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["case_id", "review_period", "previous_version", "records_screened", "relevant_records", "state_changing_records", "counter_evidence_records", "proposed_decision", "proposed_next_version", "reason", "minimum_missing_evidence", "decision_that_could_change", "recommended_rdl_level", "human_decision", "publication_approved"],
+  "properties": {
+    "case_id": {"enum": ["CML-PDRE-001", "SE-BESS-SODIUM-001", "SE-ONC-NSQNSCLC-CN-001"]},
+    "review_period": {"type": "object", "required": ["start", "end", "complete"], "additionalProperties": false, "properties": {"start": {"type": "string", "format": "date"}, "end": {"type": "string", "format": "date"}, "complete": {"type": "boolean"}}},
+    "previous_version": {"type": ["string", "null"]},
+    "records_screened": {"type": "integer", "minimum": 0},
+    "relevant_records": {"type": "integer", "minimum": 0},
+    "state_changing_records": {"type": "integer", "minimum": 0},
+    "counter_evidence_records": {"type": "integer", "minimum": 0},
+    "proposed_decision": {"enum": ["NO_STATE_CHANGE", "PUBLIC_TIMELINE_UPDATE_ONLY", "PUBLIC_UNKNOWN_RESOLVED", "PUBLIC_STATE_TRANSITION", "PUBLIC_COUNTER_EVIDENCE_ADDED", "PUBLIC_STATE_WEAKENED", "PUBLIC_CORRECTION_REQUIRED", "RESEARCH_ESCALATION_REQUIRED"]},
+    "proposed_next_version": {"type": ["string", "null"]},
+    "reason": {"type": "string", "minLength": 1},
+    "minimum_missing_evidence": {"type": "array", "items": {"type": "string"}},
+    "decision_that_could_change": {"type": ["string", "null"]},
+    "recommended_rdl_level": {"enum": ["NONE", "L1_VERIFY", "L2_INVESTIGATE", "L3_DEEP"]},
+    "human_decision": {"enum": ["PENDING", "APPROVE_PUBLICATION", "REJECT_PUBLICATION", "REQUEST_RESCOPE", "DEFER", "AUTHORIZE_VERIFICATION"]},
+    "publication_approved": {"type": "boolean"}
+  }
+}

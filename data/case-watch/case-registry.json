@@ -1,0 +1,52 @@
+{
+  "registry_version": "1.0",
+  "frozen_case_count": 3,
+  "auto_add_cases": false,
+  "cases": [
+    {
+      "case_id": "CML-PDRE-001",
+      "public_slug": "/cases/800vdc/",
+      "title": "800VDC / SST AI Data-Center Power Architecture",
+      "domain": "INDUSTRIAL",
+      "expected_knowledge_cutoff": "2026-09-20",
+      "audit": {
+        "public_surface": "PRESENT",
+        "public_version": "UNVERSIONED_PUBLIC_PROJECTION",
+        "knowledge_cutoff": "2026-09-20T10:46:47Z",
+        "state_file": "MISSING_PUBLIC_STATE_SNAPSHOT",
+        "stop_point": "MISSING_VERSIONED_STOP_POINT",
+        "publication_control": "technical-risk/cml-v1.1/pdre/CML-PDRE-001/publication-control.json"
+      }
+    },
+    {
+      "case_id": "SE-BESS-SODIUM-001",
+      "public_slug": "/cases/sodium-ion-bess/",
+      "title": "Sodium-Ion BESS Commercialization State",
+      "domain": "INDUSTRIAL",
+      "expected_knowledge_cutoff": "2026-09-24",
+      "audit": {
+        "public_surface": "PRESENT",
+        "public_version": "v0.1",
+        "knowledge_cutoff": "2026-09-24",
+        "state_file": "cases/sodium-ion-bess/state-v0.1.json",
+        "stop_point": "MISSING_VERSIONED_STOP_POINT",
+        "publication_control": "MISSING"
+      }
+    },
+    {
+      "case_id": "SE-ONC-NSQNSCLC-CN-001",
+      "public_slug": "/cases/nsq-nsclc-china/",
+      "title": "China Non-Squamous NSCLC Evidence Pathway",
+      "domain": "MEDICAL_PUBLIC_RESEARCH",
+      "expected_knowledge_cutoff": "2026-09-28",
+      "audit": {
+        "public_surface": "MISSING",
+        "public_version": "MISSING",
+        "knowledge_cutoff": "NOT_VERIFIABLE",
+        "state_file": "MISSING",
+        "stop_point": "MISSING",
+        "publication_control": "MISSING"
+      }
+    }
+  ]
+}
