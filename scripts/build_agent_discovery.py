@@ -185,6 +185,13 @@ def method_contract():
         "method": "StructureEvidence Temporal Evidence Method",
         "version": "1.0",
         "purpose": "Prevent unsupported inference by separating evidence state, time boundary, and unresolved uncertainty.",
+        "question_protocol": {
+            "version": "QUESTION_TO_EVIDENCE_COMMERCE_PROTOCOL_v0.1",
+            "flow": ["QUESTION_INTAKE", "CLAIM_MATCH", "PUBLIC_STOP_POINT", "MINIMUM_MISSING_EVIDENCE", "HUMAN_AUTHORIZED_VERIFY"],
+            "match_classes": ["EXACT", "ISOMORPHIC", "PARTIAL", "NONE"],
+            "commerce_boundary": "PROCESS_BOUGHT_OUTCOME_NOT_BOUGHT",
+            "automatic_research_authorization": False,
+        },
         "principles": [{"id": key, "statement": statement} for key, statement in principles],
         "required_claim_fields": ["claim_id", "case_id", "statement", "state", "as_of", "supports", "does_not_support", "unknowns", "provenance", "next_observable", "canonical_url"],
     }
@@ -198,6 +205,7 @@ def agent_html(claim_count: int):
 <body class="product-site"><a class="skip-link" href="#main">Skip to content</a><header class="product-header"><nav class="product-nav" aria-label="Primary navigation"><a class="product-brand" href="/"><span>SE</span><strong>StructureEvidence</strong></a><div class="product-links"><a href="/cases/">Evidence Cases</a><a href="/method-contract.json">Method Contract</a></div></nav></header>
 <main class="product-main" id="main"><section class="page-hero"><p class="eyebrow">Agent Discovery Layer · v0.1</p><h1>StructureEvidence for Agents</h1><p class="lead">Resolve a question to a time-bounded evidence state before inferring beyond the evidence.</p></section>
 <section class="product-section"><div class="section-head"><div><p class="eyebrow">Public research plane</p><h2>Deterministic evidence retrieval.</h2></div><p>StructureEvidence exposes {claim_count} stable claim objects derived from three governed public cases. The resolver uses explicit aliases and keywords—no LLM and no external search.</p></div><div class="boundary-grid"><div><p class="field-label">Always preserve</p><p>Claim state, as-of boundary, supports, does not support, unknowns, provenance, and next observable.</p></div><div><p class="field-label">Never delegated</p><p>Research authorization, publication approval, deployment decisions, customer actions, or patient-specific medical advice.</p></div></div></section>
+<section class="product-section"><div class="section-head"><div><p class="eyebrow">Question protocol</p><h2>Question → claim → stop-point → missing evidence.</h2></div><p>The intake gate checks whether a question is atomic, falsifiable, scoped, and time-bounded. Governed matches are classified as EXACT, ISOMORPHIC, PARTIAL, or NONE. Sufficient public evidence is cited and stopped; only the minimum missing evidence may proceed to a human-authorized verification scope.</p></div><p>Freshness, verification depth, and applicability remain explicit. A quote is not research authorization, payment does not buy a desired outcome, and paid evidence is not public without a separate eligibility review and human publication approval.</p></section>
 <section class="product-section"><div class="actions"><a class="button" href="/claims/index.json">Enumerate claims</a><a class="button secondary" href="/method-contract.json">Read method contract</a><a class="button secondary" href="/.well-known/structurevidence.json">Open discovery manifest</a></div><p>Runtime resolver: <code>GET https://api.structurevidence.org/resolve?q=&lt;question&gt;</code>. Commercial capabilities are described separately at <a href="https://structevidence.com/capabilities.json">structevidence.com/capabilities.json</a>; human authorization is required.</p></section></main>
 <footer class="product-footer"><div class="product-wrap footer-grid"><strong>StructureEvidence</strong><a href="/claims/index.json">Claims</a><a href="/changes.json">Changes</a><span>Discovery and resolution only.</span></div></footer></body></html>'''
 
@@ -244,7 +252,7 @@ def build_outputs():
         "provider": "StructureEvidence",
         "version": "0.1",
         "services": [
-            {"service_id": "VERIFY_CLAIM", "description": "Verify a bounded technical or industrial claim against attributable evidence.", "input": ["claim_or_question", "decision_context_optional"], "output": ["bounded_verification_record", "supports", "does_not_support", "unknowns", "provenance"], "human_authorization_required": True, "automatic_research_authorization": False, "commercial_endpoint": "https://structevidence.com/verify/"},
+            {"service_id": "VERIFY_CLAIM", "description": "Verify a bounded technical or industrial claim against attributable evidence.", "input": ["claim_or_question", "decision_context_optional"], "output": ["bounded_verification_record", "supports", "does_not_support", "unknowns", "provenance"], "supports_question_intake": True, "supports_minimum_missing_evidence": True, "quote_requires_human_authorization": True, "outcome_guaranteed": False, "human_authorization_required": True, "automatic_research_authorization": False, "commercial_endpoint": "https://structevidence.com/verify/"},
             {"service_id": "CUSTOMER_CONTEXT", "description": "Map public evidence to a specific company, architecture or decision context.", "human_authorization_required": True, "automatic_research_authorization": False, "commercial_endpoint": "https://structevidence.com/context/"},
             {"service_id": "DECISION_PACK", "description": "Build a decision-ready evidence package for a defined decision boundary.", "human_authorization_required": True, "automatic_research_authorization": False, "commercial_endpoint": "https://structevidence.com/decision-pack/"},
         ],

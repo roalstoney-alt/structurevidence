@@ -2,6 +2,24 @@
   "method": "StructureEvidence Temporal Evidence Method",
   "version": "1.0",
   "purpose": "Prevent unsupported inference by separating evidence state, time boundary, and unresolved uncertainty.",
+  "question_protocol": {
+    "version": "QUESTION_TO_EVIDENCE_COMMERCE_PROTOCOL_v0.1",
+    "flow": [
+      "QUESTION_INTAKE",
+      "CLAIM_MATCH",
+      "PUBLIC_STOP_POINT",
+      "MINIMUM_MISSING_EVIDENCE",
+      "HUMAN_AUTHORIZED_VERIFY"
+    ],
+    "match_classes": [
+      "EXACT",
+      "ISOMORPHIC",
+      "PARTIAL",
+      "NONE"
+    ],
+    "commerce_boundary": "PROCESS_BOUGHT_OUTCOME_NOT_BOUGHT",
+    "automatic_research_authorization": false
+  },
   "principles": [
     {
       "id": "FACT_NE_CLAIM",

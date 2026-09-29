@@ -56,3 +56,15 @@ test("client script preserves private scoping context and fail-closed authorizat
   assert.match(js, /CUSTOMER_PRIVATE/);
   assert.match(js, /NOT_AUTHORIZED/);
 });
+
+test("Verify handoff prefills protocol scope without submitting", async () => {
+  const response = await worker.fetch(new Request("https://structevidence.com/assets/app.js"), env);
+  const js = await response.text();
+  assert.match(js, /prefill\('claim_or_question','question'\)/);
+  assert.match(js, /prefill\('existing_evidence','minimum_missing_evidence'\)/);
+  assert.match(js, /params\.get\('claim_id'\)/);
+  assert.match(js, /params\.get\('match_class'\)/);
+  assert.match(js, /params\.get\('rdl'\)/);
+  assert.doesNotMatch(js, /\.submit\(/);
+  assert.match(js, /Research authorization<\/dt><dd>NOT_AUTHORIZED/);
+});

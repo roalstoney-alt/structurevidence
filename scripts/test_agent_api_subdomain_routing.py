@@ -54,8 +54,13 @@ class AgentApiSubdomainRoutingTest(unittest.TestCase):
         self.assertEqual(manifest["claims_index"], "https://structurevidence.org/claims/index.json")
         self.assertEqual(manifest["capabilities"], "https://structevidence.com/capabilities.json")
 
-    def test_l_capabilities_manifest_unchanged(self):
-        self.assertEqual(changed("deploy/cloudflare-landing/capabilities.js"), [])
+    def test_l_capabilities_manifest_keeps_commercial_plane_boundary(self):
+        text = (ROOT / "deploy/cloudflare-landing/capabilities.js").read_text(encoding="utf-8")
+        payload = json.loads(text.split(" = ", 1)[1].rsplit(";", 1)[0])
+        self.assertTrue(all(service["human_authorization_required"] for service in payload["services"]))
+        self.assertTrue(all(not service["automatic_research_authorization"] for service in payload["services"]))
+        self.assertNotIn("matched_claims", text)
+        self.assertNotIn("customer_data", text)
 
     def test_m_root_docs_parity(self):
         for relative in [".well-known/structurevidence.json", "agent/index.html"]:
