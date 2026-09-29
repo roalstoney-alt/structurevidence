@@ -1,0 +1,30 @@
+{
+  "record_id": "SE-ONC-NSQNSCLC-CN-001-PUBLICATION-v0.1",
+  "kind": "PUBLICATION_CONTROL_RECORD",
+  "case_id": "SE-ONC-NSQNSCLC-CN-001",
+  "version": "v0.1",
+  "publication_status": "PUBLICATION_APPROVED",
+  "public_projection_status": "PUBLIC_PROJECTION_ACTIVE",
+  "knowledge_cutoff": "2026-09-28",
+  "public_url": "https://structurevidence.org/cases/nsq-nsclc-china/",
+  "approved_public_surface": "China Non-Squamous NSCLC Public Research Preview v0.1",
+  "approved_claim_boundary": "PUBLIC_RESEARCH_PATHWAY_PERSONAL_ESTIMATE_NOT_ESTABLISHED",
+  "human_authority": "NOT_RECORDED",
+  "decision_date": "NOT_RECORDED",
+  "preserve_unknowns": true,
+  "source_claims_attributed": true,
+  "counter_evidence_visible": true,
+  "clinical_interpretation_review": "PENDING",
+  "patient_specific_estimate": "NOT_ESTABLISHED",
+  "cross_modality_ranking": "NOT_SUPPORTED",
+  "personal_medical_records_collected": false,
+  "public_research_preview_only": true,
+  "historical_research_mutation": false,
+  "research_state_mutation": false,
+  "derived_from_existing_records_only": true,
+  "source_refs": [
+    "cases/nsq-nsclc-china/index.html",
+    "cases/nsq-nsclc-china/state-v0.1.json",
+    "cases/nsq-nsclc-china/stop-v0.1.html"
+  ]
+}

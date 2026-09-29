@@ -1,0 +1,190 @@
+{
+  "core": {
+    "artifact_refs": [
+      "cases/nsq-nsclc-china/state-v0.1.json",
+      "cases/nsq-nsclc-china/stop-v0.1.html",
+      "cases/nsq-nsclc-china/index.html",
+      "evidence/decision-memory/schema/decision-memory-record.schema.json"
+    ],
+    "core_version": "STRUCTEVIDENCE_EVIDENCE_CORE_v0.1",
+    "correction_status": "NONE",
+    "created_at": "2026-09-29",
+    "domain": "MEDICAL_PUBLIC_RESEARCH",
+    "effective_at": "2026-09-28",
+    "input_hash": "3c7a84fe2804b5673a4a8023ceeb00e2146e9d55fbad881eb848fb527599c9f6",
+    "known_at": "2026-09-28",
+    "policy_version": "STRUCTEVIDENCE_DECISION_MEMORY_v0.1",
+    "protocol": "STRUCTEVIDENCE_DECISION_MEMORY",
+    "record_hash": "655d9b7192e066140e360fdcc2487641522e0771b05ebea10d2e97fda797af5a",
+    "record_id": "SE-ONC-NSQNSCLC-CN-001-DM-v0.1",
+    "source_refs": [
+      "cases/nsq-nsclc-china/state-v0.1.json",
+      "cases/nsq-nsclc-china/stop-v0.1.html",
+      "cases/nsq-nsclc-china/index.html"
+    ],
+    "subject_class": "PUBLIC_RESEARCH_DECISION_MEMORY",
+    "subject_id": "SE-ONC-NSQNSCLC-CN-001",
+    "supersession_status": "CURRENT",
+    "updated_at": "2026-09-29",
+    "verification_status": "DERIVED_FROM_FROZEN_PUBLIC_STATE_V0_1"
+  },
+  "decision_memory": {
+    "schema_version": "STRUCTEVIDENCE_DECISION_MEMORY_v0.1",
+    "memory_id": "SE-ONC-NSQNSCLC-CN-001-DM-v0.1",
+    "case_id": "SE-ONC-NSQNSCLC-CN-001",
+    "record_kind": "PUBLIC_EVIDENCE_CASE",
+    "decision_question": "What can the published public evidence establish about stage-specific pathways for non-squamous NSCLC in China, and what remains unsupported for an individual?",
+    "scope": {
+      "statement": "China non-squamous NSCLC public research pathway; clinical stage, resectability, EGFR status, prior treatment, and fitness determine which evidence is relevant.",
+      "included": [
+        "Stage-specific surgery context and the published operated cohort.",
+        "The defined China-approved drug regimen and randomized trial population.",
+        "Exceptional transplantation context and ECMO life-support context.",
+        "Public evidence boundaries and hospital aggregate-data availability."
+      ],
+      "excluded": [
+        "Patient-specific treatment recommendations.",
+        "Personal success probabilities or individual prognosis.",
+        "Cross-stage or cross-modality ranking or winner selection.",
+        "Personal medical records or identifiable patient timelines."
+      ]
+    },
+    "source_snapshot_refs": [
+      "cases/nsq-nsclc-china/state-v0.1.json",
+      "cases/nsq-nsclc-china/stop-v0.1.html"
+    ],
+    "evidence_states": [
+      {
+        "state_id": "context_dimensions",
+        "label": "Stage, resectability, EGFR status, prior treatment, and fitness govern applicability",
+        "status": "SUPPORTED",
+        "evidence_refs": ["CN-NSQ-001", "CN-NSQ-002", "CN-NSQ-003"],
+        "limitations": ["The pathways are not interchangeable options for one patient."]
+      },
+      {
+        "state_id": "defined_trial_population_result",
+        "label": "Randomized drug result for the defined post-EGFR-TKI population",
+        "status": "SUPPORTED",
+        "evidence_refs": ["CN-NSQ-002", "CN-NSQ-003"],
+        "limitations": ["Trial-group results do not establish a personal forecast."]
+      },
+      {
+        "state_id": "patient_specific_probability",
+        "label": "Patient-specific success probability",
+        "status": "NOT_ESTABLISHED",
+        "evidence_refs": [],
+        "limitations": ["No personal estimate is supported by this public research case."]
+      },
+      {
+        "state_id": "cross_modality_ranking",
+        "label": "Cross-modality treatment ranking or winner",
+        "status": "NOT_ESTABLISHED",
+        "evidence_refs": [],
+        "limitations": ["Surgery, drug therapy, transplantation, and ECMO answer different clinical questions and are not ranked here."]
+      },
+      {
+        "state_id": "transplantation_for_index_cohort",
+        "label": "Transplantation for the advanced post-TKI index cohort",
+        "status": "NOT_ESTABLISHED",
+        "evidence_refs": ["CN-NSQ-005"],
+        "limitations": ["Transplantation is exceptional context and local eligibility remains unverified."]
+      },
+      {
+        "state_id": "ecmo_as_tumor_therapy",
+        "label": "ECMO as tumor therapy",
+        "status": "NOT_ESTABLISHED",
+        "evidence_refs": ["CN-NSQ-004"],
+        "limitations": ["ECMO is life support, not tumor therapy; the cited hospital records do not resolve disease-specific outcomes."]
+      },
+      {
+        "state_id": "hospital_aggregate_outcome_data",
+        "label": "Hospital-specific aggregate outcome dataset for this case",
+        "status": "NOT_ESTABLISHED",
+        "evidence_refs": ["CN-NSQ-006"],
+        "limitations": ["No hospital dataset was acquired or analyzed."]
+      }
+    ],
+    "evidence_observations": [],
+    "decision_state": {
+      "status": "CONTEXT_REQUIRED",
+      "rationale": "The public record supports separate stage- and cohort-specific facts. It does not support a patient-specific recommendation, probability, prognosis, or cross-modality ranking.",
+      "context_refs": ["context_dimensions", "patient_specific_probability", "cross_modality_ranking"]
+    },
+    "unknowns": [
+      {
+        "unknown_id": "NSCLC-U-001",
+        "question": "Is a defined hospital aggregate dataset available for permitted analysis?",
+        "status": "OPEN",
+        "decision_sensitivity": "MATERIAL",
+        "why_unknown": "No hospital-specific outcome dataset was acquired for this public case.",
+        "affected_state_refs": ["hospital_aggregate_outcome_data"],
+        "minimum_resolving_evidence": "A documented written response on availability and permitted aggregate analysis of a defined hospital cohort.",
+        "resolution_path": "Human-reviewed public research verification; no personal records.",
+        "research_level_candidate": "L1_VERIFY",
+        "stop_condition": "Stop if rights, cohort definition, outcome definition, or censoring cannot be established."
+      },
+      {
+        "unknown_id": "NSCLC-U-002",
+        "question": "What later public evidence changes the bounded China treatment pathway?",
+        "status": "OPEN",
+        "decision_sensitivity": "CONDITIONAL",
+        "why_unknown": "The complete China 2026 treatment landscape was outside the frozen v0.1 scope.",
+        "affected_state_refs": ["context_dimensions", "defined_trial_population_result"],
+        "minimum_resolving_evidence": "A new attributable approval, guideline, randomized outcome, final survival analysis, or material cohort or safety record.",
+        "resolution_path": "Daily Case Watch followed by weekly human review.",
+        "research_level_candidate": "L0_REUSE",
+        "stop_condition": "Stop when only anecdotal, testimonial, or non-attributable claims remain."
+      }
+    ],
+    "temporal_index": {
+      "knowledge_cutoff": "2026-09-28",
+      "snapshot_frozen_at": "2026-09-28",
+      "clock_policy": "EVENT_PUBLISHED_FIRST_OBSERVED_KNOWN_FROZEN"
+    },
+    "state_transitions": [
+      {
+        "transition_id": "SE-ONC-NSQNSCLC-CN-001-INITIAL-v0.1",
+        "transition_type": "INITIAL_SNAPSHOT",
+        "prior_state_ref": null,
+        "new_state_ref": "cases/nsq-nsclc-china/state-v0.1.json",
+        "effective_at": "2026-09-28",
+        "known_at": "2026-09-28",
+        "frozen_at": "2026-09-28",
+        "trigger_evidence_refs": ["cases/nsq-nsclc-china/state-v0.1.json"],
+        "interpretation": "Initial public research preview freeze; it preserves distinct clinical contexts and does not establish an individual forecast.",
+        "preserves_prior_state": true
+      }
+    ],
+    "reopen_triggers": [
+      {
+        "trigger_id": "NSCLC-RT-001",
+        "condition": "A new regulatory indication, guideline, randomized outcome, clinically reviewed stage branch, authorized hospital aggregate, correction, or retraction becomes attributable.",
+        "affected_state_refs": ["context_dimensions", "defined_trial_population_result", "hospital_aggregate_outcome_data"],
+        "minimum_evidence": "A dated attributable record that changes a bounded public evidence state.",
+        "status": "OPEN"
+      }
+    ],
+    "workflow_bindings": {
+      "cml_refs": [],
+      "rdl_refs": [],
+      "authorization_refs": [],
+      "action_refs": ["data/case-watch/case-registry.json"]
+    },
+    "outcome_refs": [],
+    "data_provenance": {
+      "source_data_class": "PUBLIC_EXTERNAL_SOURCES",
+      "derived_data_class": "STRUCTEVIDENCE_TIME_INDEXED_DECISION_MEMORY",
+      "ownership_boundary": "External publications remain external; this record preserves only the repository's frozen public research distinctions, unknowns, and review boundaries.",
+      "reproducibility_note": "This Decision Memory is derived only from the existing v0.1 public state, stop point, and case page; no new research or clinical interpretation was added."
+    },
+    "revision_history": [
+      {
+        "revision_id": "SE-ONC-NSQNSCLC-CN-001-DM-v0.1",
+        "created_at": "2026-09-29",
+        "supersedes": null,
+        "change_summary": "Initial public research Decision Memory derived from the frozen v0.1 case without changing its evidence state.",
+        "preserves_original": true
+      }
+    ]
+  }
+}

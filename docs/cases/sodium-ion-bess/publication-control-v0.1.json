@@ -1,0 +1,26 @@
+{
+  "record_id": "SE-BESS-SODIUM-001-PUBLICATION-v0.1",
+  "kind": "PUBLICATION_CONTROL_RECORD",
+  "case_id": "SE-BESS-SODIUM-001",
+  "version": "v0.1",
+  "publication_status": "PUBLICATION_APPROVED",
+  "public_projection_status": "PUBLIC_PROJECTION_ACTIVE",
+  "knowledge_cutoff": "2026-09-24",
+  "public_url": "https://structurevidence.org/cases/sodium-ion-bess/",
+  "approved_public_surface": "Sodium-Ion BESS Commercialization State Map v0.1",
+  "approved_claim_boundary": "PRODUCT_AND_COOPERATION_SUPPORTED_NAMED_COMMISSIONED_SITE_NOT_ESTABLISHED",
+  "human_authority": "NOT_RECORDED",
+  "decision_date": "NOT_RECORDED",
+  "preserve_unknowns": true,
+  "manufacturer_claims_attributed": true,
+  "counter_evidence_visible": true,
+  "historical_research_mutation": false,
+  "research_state_mutation": false,
+  "derived_from_existing_records_only": true,
+  "source_refs": [
+    "cases/sodium-ion-bess/index.html",
+    "cases/sodium-ion-bess/state-v0.1.json",
+    "cases/sodium-ion-bess/stop-v0.1.html",
+    "cases/sodium-ion-bess/decision-memory-v0.1.json"
+  ]
+}
