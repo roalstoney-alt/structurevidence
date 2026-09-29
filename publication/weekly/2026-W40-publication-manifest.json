@@ -18,7 +18,7 @@
     },
     {
       "case_id": "CML-PDRE-001",
-      "previous_version": "UNVERSIONED_PUBLIC_PROJECTION",
+      "previous_version": "v0.1",
       "decision": "NO_STATE_CHANGE",
       "new_version": null,
       "knowledge_cutoff": "2026-09-20T10:46:47Z",
@@ -32,14 +32,14 @@
     },
     {
       "case_id": "SE-ONC-NSQNSCLC-CN-001",
-      "previous_version": null,
-      "decision": "RESEARCH_ESCALATION_REQUIRED",
+      "previous_version": "v0.1",
+      "decision": "NO_STATE_CHANGE",
       "new_version": null,
-      "knowledge_cutoff": null,
+      "knowledge_cutoff": "2026-09-28",
       "records_considered": [],
       "state_changes": [],
       "unknowns_resolved": [],
-      "unknowns_remaining": ["Approved baseline state and evidence corpus are missing"],
+      "unknowns_remaining": ["Complete China 2026 treatment landscape", "Hospital-level treatment outcome datasets", "Updated local transplantation rules", "Cross-site survival linkage"],
       "counter_evidence_added": [],
       "human_decision": "PENDING",
       "publication_approved": false

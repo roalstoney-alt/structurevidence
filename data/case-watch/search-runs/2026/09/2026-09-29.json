@@ -21,7 +21,7 @@
   "paywalled_restricted_sources": [],
   "limits": [
     "No broad external research was authorized for first-execution backfill.",
-    "The NSCLC public case and its repository evidence corpus were not found.",
+    "Derived stop points and Decision Memory artifacts were inspected as baseline controls, not counted as new evidence.",
     "A zero result means NOT FOUND WITHIN DEFINED SEARCH SCOPE, not that evidence does not exist."
   ],
   "stop_reason": "DEFINED_REPOSITORY_SCOPE_EXHAUSTED"

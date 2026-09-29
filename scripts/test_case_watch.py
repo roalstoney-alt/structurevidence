@@ -33,19 +33,30 @@ class CaseWatchTest(unittest.TestCase):
         self.assertFalse(any(case["publication_approved"] for case in manifest["cases"]))
         self.assertFalse(any(case["new_version"] for case in manifest["cases"]))
 
-    def test_missing_baseline_stops_nsclc_review(self):
+    def test_current_nsclc_baseline_supports_no_change(self):
         weekly = json.loads((ROOT / "data" / "case-watch" / "weekly" / "2026-W40.json").read_text())
         medical = next(
             review for review in weekly["reviews"]
             if review["case_id"] == "SE-ONC-NSQNSCLC-CN-001"
         )
-        self.assertEqual(medical["proposed_decision"], "RESEARCH_ESCALATION_REQUIRED")
-        self.assertEqual(medical["recommended_rdl_level"], "L1_VERIFY")
-        self.assertGreaterEqual(len(medical["minimum_missing_evidence"]), 4)
+        self.assertEqual(medical["previous_version"], "v0.1")
+        self.assertEqual(medical["proposed_decision"], "NO_STATE_CHANGE")
+        self.assertEqual(medical["recommended_rdl_level"], "NONE")
+        self.assertEqual(medical["minimum_missing_evidence"], [])
 
-    def test_no_public_case_was_created(self):
-        self.assertFalse((ROOT / "cases" / "nsq-nsclc-china").exists())
-        self.assertFalse((ROOT / "docs" / "cases" / "nsq-nsclc-china").exists())
+    def test_current_nsclc_baseline_is_preexisting_and_protected(self):
+        baseline = json.loads((ROOT / "data" / "case-watch" / "protected-baseline-sha256.json").read_text())
+        self.assertTrue((ROOT / "cases" / "nsq-nsclc-china" / "state-v0.1.json").is_file())
+        self.assertTrue((ROOT / "cases" / "nsq-nsclc-china" / "stop-v0.1.html").is_file())
+        self.assertIn("cases/nsq-nsclc-china/state-v0.1.json", baseline["files"])
+        self.assertIn("cases/nsq-nsclc-china/stop-v0.1.html", baseline["files"])
+
+    def test_snapshot_primitive_gaps_remain_explicit(self):
+        registry = json.loads((ROOT / "data" / "case-watch" / "case-registry.json").read_text())
+        cases = {case["case_id"]: case["audit"] for case in registry["cases"]}
+        self.assertEqual(cases["CML-PDRE-001"]["state_file"], "MISSING_PUBLIC_STATE_SNAPSHOT")
+        self.assertEqual(cases["SE-BESS-SODIUM-001"]["publication_control"], "MISSING")
+        self.assertEqual(cases["SE-ONC-NSQNSCLC-CN-001"]["publication_control"], "MISSING")
 
 
 if __name__ == "__main__":

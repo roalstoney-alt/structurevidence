@@ -11,10 +11,10 @@
       "expected_knowledge_cutoff": "2026-09-20",
       "audit": {
         "public_surface": "PRESENT",
-        "public_version": "UNVERSIONED_PUBLIC_PROJECTION",
+        "public_version": "v0.1",
         "knowledge_cutoff": "2026-09-20T10:46:47Z",
         "state_file": "MISSING_PUBLIC_STATE_SNAPSHOT",
-        "stop_point": "MISSING_VERSIONED_STOP_POINT",
+        "stop_point": "cases/800vdc/stop-v0.1.html",
         "publication_control": "technical-risk/cml-v1.1/pdre/CML-PDRE-001/publication-control.json"
       }
     },
@@ -29,7 +29,8 @@
         "public_version": "v0.1",
         "knowledge_cutoff": "2026-09-24",
         "state_file": "cases/sodium-ion-bess/state-v0.1.json",
-        "stop_point": "MISSING_VERSIONED_STOP_POINT",
+        "stop_point": "cases/sodium-ion-bess/stop-v0.1.html",
+        "decision_memory": "cases/sodium-ion-bess/decision-memory-v0.1.json",
         "publication_control": "MISSING"
       }
     },
@@ -40,11 +41,11 @@
       "domain": "MEDICAL_PUBLIC_RESEARCH",
       "expected_knowledge_cutoff": "2026-09-28",
       "audit": {
-        "public_surface": "MISSING",
-        "public_version": "MISSING",
-        "knowledge_cutoff": "NOT_VERIFIABLE",
-        "state_file": "MISSING",
-        "stop_point": "MISSING",
+        "public_surface": "PRESENT",
+        "public_version": "v0.1",
+        "knowledge_cutoff": "2026-09-28",
+        "state_file": "cases/nsq-nsclc-china/state-v0.1.json",
+        "stop_point": "cases/nsq-nsclc-china/stop-v0.1.html",
         "publication_control": "MISSING"
       }
     }

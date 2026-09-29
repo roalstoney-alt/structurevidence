@@ -114,8 +114,14 @@ def validate_protected_files() -> None:
 def validate_root_docs_parity() -> None:
     pairs = [
         ("cases/800vdc/index.html", "docs/cases/800vdc/index.html"),
+        ("cases/800vdc/stop-v0.1.html", "docs/cases/800vdc/stop-v0.1.html"),
         ("cases/sodium-ion-bess/index.html", "docs/cases/sodium-ion-bess/index.html"),
         ("cases/sodium-ion-bess/state-v0.1.json", "docs/cases/sodium-ion-bess/state-v0.1.json"),
+        ("cases/sodium-ion-bess/stop-v0.1.html", "docs/cases/sodium-ion-bess/stop-v0.1.html"),
+        ("cases/sodium-ion-bess/decision-memory-v0.1.json", "docs/cases/sodium-ion-bess/decision-memory-v0.1.json"),
+        ("cases/nsq-nsclc-china/index.html", "docs/cases/nsq-nsclc-china/index.html"),
+        ("cases/nsq-nsclc-china/state-v0.1.json", "docs/cases/nsq-nsclc-china/state-v0.1.json"),
+        ("cases/nsq-nsclc-china/stop-v0.1.html", "docs/cases/nsq-nsclc-china/stop-v0.1.html"),
         ("cases/index.html", "docs/cases/index.html"),
         ("sitemap.xml", "docs/sitemap.xml"),
     ]
@@ -123,6 +129,26 @@ def validate_root_docs_parity() -> None:
         assert (ROOT / root_relative).read_bytes() == (ROOT / docs_relative).read_bytes(), (
             f"root/docs drift: {root_relative} != {docs_relative}"
         )
+
+
+def validate_baseline_semantics() -> None:
+    registry = load_json(DATA / "case-registry.json")
+    cases = {case["case_id"]: case for case in registry["cases"]}
+    assert all(case["audit"]["public_surface"] == "PRESENT" for case in cases.values())
+    assert all(case["audit"]["public_version"] == "v0.1" for case in cases.values())
+    assert cases["CML-PDRE-001"]["audit"]["state_file"] == "MISSING_PUBLIC_STATE_SNAPSHOT"
+    assert cases["SE-BESS-SODIUM-001"]["audit"]["publication_control"] == "MISSING"
+    assert cases["SE-ONC-NSQNSCLC-CN-001"]["audit"]["publication_control"] == "MISSING"
+
+    sodium = load_json(ROOT / "cases" / "sodium-ion-bess" / "state-v0.1.json")
+    assert any(record["event_date"] != record["knowledge_date"] for record in sodium["records"])
+    cml_stop = (ROOT / "cases" / "800vdc" / "stop-v0.1.html").read_text(encoding="utf-8")
+    assert "Source event 2026-07-02" in cml_stop
+    assert "knowledge time 2026-09-20T10:46:47Z" in cml_stop
+
+    nsclc = load_json(ROOT / "cases" / "nsq-nsclc-china" / "state-v0.1.json")
+    assert nsclc["knowledge_cutoff"] == "2026-09-28"
+    assert nsclc["patient_specific_success_probability"] == "NOT_ESTABLISHED_STOP"
 
 
 def validate_medical_boundary() -> None:
@@ -153,7 +179,8 @@ def main() -> int:
         ("publication manifest schema and gate", validate_manifest),
         ("search provenance", validate_search_provenance),
         ("protected public/CML/RDL immutability", validate_protected_files),
-        ("existing root/docs and sitemap parity", validate_root_docs_parity),
+        ("all intended root/docs and sitemap parity", validate_root_docs_parity),
+        ("refreshed baseline and dual-clock semantics", validate_baseline_semantics),
         ("medical public-research boundary", validate_medical_boundary),
     ]
     for label, check in checks:

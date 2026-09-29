@@ -23,8 +23,8 @@
       "cutoff": "2026-09-28",
       "repository_records_after_cutoff": 0,
       "observation_ids": [],
-      "result": "RESEARCH_ESCALATION_REQUIRED",
-      "reason": "The expected public case, state snapshot, stop point, publication control, and repository evidence corpus are absent."
+      "result": "NOT_FOUND_WITHIN_DEFINED_SEARCH_SCOPE",
+      "reason": "The v0.1 public research preview, frozen state, and stop point are present. No later qualifying repository-local evidence was found; publication control remains a baseline-model gap."
     }
   ],
   "public_state_mutated": false
