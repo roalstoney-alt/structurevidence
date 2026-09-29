@@ -54,10 +54,19 @@ test("no match does not generate an answer or action", () => {
   assert.equal(result.commercial_next_step, null);
 });
 
-test("HTTP endpoint is GET-only, deterministic JSON, and exposes no admin surface", async () => {
-  const response = await worker.fetch(new Request("https://structurevidence.org/api/resolve?q=Is%20800VDC%20widely%20adopted%3F"));
+test("HTTP endpoint is public read-only, deterministic JSON, and exposes no admin surface", async () => {
+  const response = await worker.fetch(new Request("https://api.structurevidence.org/resolve?q=Is%20800VDC%20widely%20adopted%3F"));
   assert.equal(response.status, 200);
+  assert.equal(response.headers.get("access-control-allow-origin"), "*");
+  assert.equal(response.headers.get("cache-control"), "no-store");
+  assert.equal(response.headers.get("content-type"), "application/json; charset=utf-8");
   assert.equal((await response.json()).result, "MATCHED");
-  assert.equal((await worker.fetch(new Request("https://structurevidence.org/api/resolve", { method: "POST" }))).status, 405);
-  assert.equal((await worker.fetch(new Request("https://structurevidence.org/api/admin/requests"))).status, 404);
+  const options = await worker.fetch(new Request("https://api.structurevidence.org/resolve", { method: "OPTIONS" }));
+  assert.equal(options.status, 204);
+  assert.equal(options.headers.get("access-control-allow-methods"), "GET, OPTIONS");
+  for (const method of ["POST", "PUT", "PATCH", "DELETE"]) {
+    assert.equal((await worker.fetch(new Request("https://api.structurevidence.org/resolve", { method }))).status, 405);
+  }
+  assert.equal((await worker.fetch(new Request("https://api.structurevidence.org/api/resolve"))).status, 404);
+  assert.equal((await worker.fetch(new Request("https://api.structurevidence.org/admin/requests"))).status, 404);
 });

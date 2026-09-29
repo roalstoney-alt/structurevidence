@@ -198,7 +198,7 @@ def agent_html(claim_count: int):
 <body class="product-site"><a class="skip-link" href="#main">Skip to content</a><header class="product-header"><nav class="product-nav" aria-label="Primary navigation"><a class="product-brand" href="/"><span>SE</span><strong>StructureEvidence</strong></a><div class="product-links"><a href="/cases/">Evidence Cases</a><a href="/method-contract.json">Method Contract</a></div></nav></header>
 <main class="product-main" id="main"><section class="page-hero"><p class="eyebrow">Agent Discovery Layer · v0.1</p><h1>StructureEvidence for Agents</h1><p class="lead">Resolve a question to a time-bounded evidence state before inferring beyond the evidence.</p></section>
 <section class="product-section"><div class="section-head"><div><p class="eyebrow">Public research plane</p><h2>Deterministic evidence retrieval.</h2></div><p>StructureEvidence exposes {claim_count} stable claim objects derived from three governed public cases. The resolver uses explicit aliases and keywords—no LLM and no external search.</p></div><div class="boundary-grid"><div><p class="field-label">Always preserve</p><p>Claim state, as-of boundary, supports, does not support, unknowns, provenance, and next observable.</p></div><div><p class="field-label">Never delegated</p><p>Research authorization, publication approval, deployment decisions, customer actions, or patient-specific medical advice.</p></div></div></section>
-<section class="product-section"><div class="actions"><a class="button" href="/claims/index.json">Enumerate claims</a><a class="button secondary" href="/method-contract.json">Read method contract</a><a class="button secondary" href="/.well-known/structurevidence.json">Open discovery manifest</a></div><p>Runtime resolver: <code>GET /api/resolve?q=&lt;question&gt;</code>. Commercial capabilities are described separately at <a href="https://structevidence.com/capabilities.json">structevidence.com/capabilities.json</a>; human authorization is required.</p></section></main>
+<section class="product-section"><div class="actions"><a class="button" href="/claims/index.json">Enumerate claims</a><a class="button secondary" href="/method-contract.json">Read method contract</a><a class="button secondary" href="/.well-known/structurevidence.json">Open discovery manifest</a></div><p>Runtime resolver: <code>GET https://api.structurevidence.org/resolve?q=&lt;question&gt;</code>. Commercial capabilities are described separately at <a href="https://structevidence.com/capabilities.json">structevidence.com/capabilities.json</a>; human authorization is required.</p></section></main>
 <footer class="product-footer"><div class="product-wrap footer-grid"><strong>StructureEvidence</strong><a href="/claims/index.json">Claims</a><a href="/changes.json">Changes</a><span>Discovery and resolution only.</span></div></footer></body></html>'''
 
 
@@ -230,7 +230,7 @@ def build_outputs():
         "claims_index": "https://structurevidence.org/claims/index.json",
         "changes": "https://structurevidence.org/changes.json",
         "capabilities": "https://structevidence.com/capabilities.json",
-        "resolve_endpoint": "https://structurevidence.org/api/resolve",
+        "resolve_endpoint": "https://api.structurevidence.org/resolve",
         "public_cases": list(registry["cases"]),
         "principles": ["EVENT_TIME_NE_KNOWLEDGE_TIME", "NOT_FOUND_NE_DOES_NOT_EXIST", "SINGLE_INSTANCE_NE_INDUSTRY_ADOPTION", "SOURCE_STATEMENT_NE_INDEPENDENT_VALIDATION", "UNKNOWN_MUST_NOT_BE_INFERRED"],
     }

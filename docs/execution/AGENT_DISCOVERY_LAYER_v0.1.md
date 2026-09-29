@@ -10,7 +10,7 @@ The layer is a deterministic downstream projection of three already-approved pub
 
 - `structurevidence.org` is the public research, discovery, and resolution plane.
 - The discovery manifest, method contract, claim index, 26 claim objects, empty approved-transition feed, and minimal agent page are static GitHub Pages artifacts mirrored byte-for-byte under `docs/`.
-- `GET /api/resolve?q=<question>` is a narrowly routed Cloudflare Worker. It reads the generated claim registry, uses deterministic ID/alias/keyword/statement/title matching, accepts only GET or HEAD, and has no database, external search, LLM, or administrative route.
+- `GET https://api.structurevidence.org/resolve?q=<question>` is a Cloudflare Worker on a dedicated API custom domain. It reads the generated claim registry, uses deterministic ID/alias/keyword/statement/title matching, accepts only public GET requests and CORS preflight, and has no database, external search, LLM, or administrative route.
 - `structevidence.com/capabilities.json` exposes only commercial capability metadata. It exposes no public claim registry, customer data, request records, authorization secrets, or administrative API.
 
 ## Projection
@@ -50,6 +50,6 @@ The tested implementation was published by normal fast-forward push at commit `8
 - Public resolver Worker version: `c8c72ef6-d302-4476-9527-112fc1ad28c9`
 - Commercial Worker version: `12d79798-b09e-45a8-a7cf-b9a56633125f`
 - Discovery manifest, method contract, claim index, change feed, agent page, individual claim retrieval, and commercial capabilities: PASS in production.
-- `https://structurevidence.org/api/resolve`: FAIL at initial acceptance because the apex DNS record resolves directly to GitHub Pages and bypasses the deployed Cloudflare route.
+- The original `https://structurevidence.org/api/resolve` route failed initial acceptance because the apex DNS record correctly resolves directly to GitHub Pages. It is superseded by the dedicated API-subdomain route.
 
-The Worker is deployed and its required resolver suite passes, but production activation requires a Cloudflare-authorized operator to proxy the existing `structurevidence.org` DNS record. The deployment credential used here has `workers_routes:write` and `zone:read`, but no DNS-write permission. The existing static site must remain the origin; no static resolver substitute was created.
+The apex remains on GitHub Pages. Production resolver activation is recorded separately in `AGENT_DISCOVERY_API_SUBDOMAIN_ROUTING_v0.1.md`; no static resolver substitute was created.

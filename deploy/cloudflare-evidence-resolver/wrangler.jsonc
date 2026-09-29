@@ -10,8 +10,8 @@
   },
   "routes": [
     {
-      "pattern": "structurevidence.org/api/resolve*",
-      "zone_name": "structurevidence.org"
+      "pattern": "api.structurevidence.org",
+      "custom_domain": true
     }
   ]
 }

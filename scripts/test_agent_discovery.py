@@ -87,7 +87,7 @@ class AgentDiscoveryTest(unittest.TestCase):
         manifest = load(".well-known/structurevidence.json")
         self.assertEqual(manifest["type"], "temporal_evidence_resolution_layer")
         self.assertEqual(set(manifest["public_cases"]), set(CASES))
-        self.assertEqual(manifest["resolve_endpoint"], "https://structurevidence.org/api/resolve")
+        self.assertEqual(manifest["resolve_endpoint"], "https://api.structurevidence.org/resolve")
 
     def test_c_method_contract_validation(self):
         contract = load("method-contract.json")

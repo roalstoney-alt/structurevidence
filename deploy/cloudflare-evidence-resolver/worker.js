@@ -5,7 +5,7 @@ const VERIFY_URL = "https://structevidence.com/verify/";
 const MEDICAL_CASE = "SE-ONC-NSQNSCLC-CN-001";
 const securityHeaders = {
   "access-control-allow-origin": "*",
-  "cache-control": "public, max-age=60",
+  "cache-control": "no-store",
   "content-security-policy": "default-src 'none'; frame-ancestors 'none'",
   "x-content-type-options": "nosniff",
   "x-frame-options": "DENY",
@@ -105,8 +105,9 @@ export function createWorker() {
   return {
     async fetch(request) {
       const url = new URL(request.url);
-      if (url.pathname !== "/api/resolve") return json({ error: "Not found" }, 404, request.method);
-      if (!new Set(["GET", "HEAD"]).has(request.method)) return new Response("Method not allowed", { status: 405, headers: { allow: "GET, HEAD", ...securityHeaders } });
+      if (url.pathname !== "/resolve") return json({ error: "Not found" }, 404, request.method);
+      if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: { allow: "GET, OPTIONS", "access-control-allow-methods": "GET, OPTIONS", ...securityHeaders } });
+      if (request.method !== "GET") return new Response("Method not allowed", { status: 405, headers: { allow: "GET, OPTIONS", ...securityHeaders } });
       const query = (url.searchParams.get("q") || "").trim();
       if (!query) return json({ error: "Missing q query parameter" }, 400, request.method);
       return json(resolveQuery(query), 200, request.method);
