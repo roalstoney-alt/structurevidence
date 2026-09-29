@@ -1,0 +1,1 @@
+event_id,timestamp,pilot_question_id,case_id,claim_id,channel,source_actor_type,event_type,referrer_class,direct_or_second_order,public_or_private,evidence_or_comment,qualified,notes
