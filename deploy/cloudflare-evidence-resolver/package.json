@@ -1,0 +1,12 @@
+{
+  "name": "structurevidence-public-claim-resolver",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "check": "wrangler deploy --dry-run --outdir dist"
+  },
+  "devDependencies": {
+    "wrangler": "^4.38.0"
+  }
+}

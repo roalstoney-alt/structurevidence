@@ -1,5 +1,6 @@
 import { createRemoteJWKSet, jwtVerify } from "jose";
 import { ADMIN_APP_JS, ADMIN_HTML } from "./admin-ui.js";
+import { CAPABILITIES } from "./capabilities.js";
 import { COMMERCIAL_APP_JS_UPGRADE as COMMERCIAL_APP_JS, COMMERCIAL_CSS_V2 as COMMERCIAL_CSS, COMMERCIAL_PAGES_V2 as COMMERCIAL_PAGES } from "./commercial-upgrade.js";
 
 const MAX_BODY_BYTES = 65_536;
@@ -148,6 +149,7 @@ async function adminRoute(request, url, env, authVerifier) {
 function commercialRoute(request, url) {
   if (!new Set(["GET", "HEAD"]).has(request.method)) return new Response("Method not allowed", { status: 405, headers: { allow: "GET, HEAD", ...securityHeaders } });
   const path = url.pathname === "/index.html" ? "/" : url.pathname;
+  if (path === "/capabilities.json") return new Response(request.method === "HEAD" ? null : JSON.stringify(CAPABILITIES, null, 2) + "\n", { headers: { "content-type": "application/json; charset=utf-8", "cache-control": "public, max-age=3600", ...securityHeaders } });
   if (path === "/assets/app.css") return new Response(COMMERCIAL_CSS, { headers: { "content-type": "text/css; charset=utf-8", "cache-control": "public, max-age=3600", ...securityHeaders } });
   if (path === "/assets/app.js") return new Response(COMMERCIAL_APP_JS, { headers: { "content-type": "application/javascript; charset=utf-8", "cache-control": "public, max-age=3600", ...securityHeaders } });
   const html = COMMERCIAL_PAGES[path];

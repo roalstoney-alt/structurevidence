@@ -1,0 +1,214 @@
+{
+  "version": "0.1",
+  "generated_at": "2026-09-29",
+  "claims": [
+    {
+      "claim_id": "CML-PDRE-001.ARCHITECTURE_POSSIBILITY",
+      "case_id": "CML-PDRE-001",
+      "statement": "A materially relevant 800VDC / SST architecture is publicly evidenced as technically possible.",
+      "state": "SUPPORTED",
+      "as_of": "2026-09-20T10:46:47Z",
+      "canonical_url": "https://structurevidence.org/claims/CML-PDRE-001.ARCHITECTURE_POSSIBILITY.json"
+    },
+    {
+      "claim_id": "CML-PDRE-001.SYSTEM_VALIDATION",
+      "case_id": "CML-PDRE-001",
+      "statement": "Independent system validation for the 800VDC / SST architecture is established.",
+      "state": "NOT_ESTABLISHED",
+      "as_of": "2026-09-20T10:46:47Z",
+      "canonical_url": "https://structurevidence.org/claims/CML-PDRE-001.SYSTEM_VALIDATION.json"
+    },
+    {
+      "claim_id": "CML-PDRE-001.NAMED_FIELD_DEPLOYMENT",
+      "case_id": "CML-PDRE-001",
+      "statement": "A named operator reported commercial operation of one SST-based 10kV AC to 800VDC system at a named campus.",
+      "state": "SUPPORTED_SINGLE_INSTANCE",
+      "as_of": "2026-09-20T10:46:47Z",
+      "canonical_url": "https://structurevidence.org/claims/CML-PDRE-001.NAMED_FIELD_DEPLOYMENT.json"
+    },
+    {
+      "claim_id": "CML-PDRE-001.LONG_OPERATING_HISTORY",
+      "case_id": "CML-PDRE-001",
+      "statement": "Long operating history for the named 800VDC / SST deployment is established.",
+      "state": "NOT_ESTABLISHED",
+      "as_of": "2026-09-20T10:46:47Z",
+      "canonical_url": "https://structurevidence.org/claims/CML-PDRE-001.LONG_OPERATING_HISTORY.json"
+    },
+    {
+      "claim_id": "CML-PDRE-001.MULTI_ENTITY_REPLICATION",
+      "case_id": "CML-PDRE-001",
+      "statement": "The 800VDC / SST architecture has been replicated by multiple independent entities.",
+      "state": "NOT_ESTABLISHED",
+      "as_of": "2026-09-20T10:46:47Z",
+      "canonical_url": "https://structurevidence.org/claims/CML-PDRE-001.MULTI_ENTITY_REPLICATION.json"
+    },
+    {
+      "claim_id": "CML-PDRE-001.INDEPENDENT_VALIDATION",
+      "case_id": "CML-PDRE-001",
+      "statement": "Independent third-party validation of the reported 800VDC / SST deployment is established.",
+      "state": "NOT_ESTABLISHED",
+      "as_of": "2026-09-20T10:46:47Z",
+      "canonical_url": "https://structurevidence.org/claims/CML-PDRE-001.INDEPENDENT_VALIDATION.json"
+    },
+    {
+      "claim_id": "CML-PDRE-001.REPEAT_PROCUREMENT",
+      "case_id": "CML-PDRE-001",
+      "statement": "Repeat procurement of the 800VDC / SST architecture is established.",
+      "state": "NOT_ESTABLISHED",
+      "as_of": "2026-09-20T10:46:47Z",
+      "canonical_url": "https://structurevidence.org/claims/CML-PDRE-001.REPEAT_PROCUREMENT.json"
+    },
+    {
+      "claim_id": "CML-PDRE-001.INDUSTRY_ADOPTION",
+      "case_id": "CML-PDRE-001",
+      "statement": "Industry-scale adoption of 800VDC / SST data-center power architecture is established.",
+      "state": "NOT_ESTABLISHED",
+      "as_of": "2026-09-20T10:46:47Z",
+      "canonical_url": "https://structurevidence.org/claims/CML-PDRE-001.INDUSTRY_ADOPTION.json"
+    },
+    {
+      "claim_id": "CML-PDRE-001.PDRE_FULL_VALIDATION",
+      "case_id": "CML-PDRE-001",
+      "statement": "Full PDRE validation for CML-PDRE-001 is established.",
+      "state": "NOT_ESTABLISHED",
+      "as_of": "2026-09-20T10:46:47Z",
+      "canonical_url": "https://structurevidence.org/claims/CML-PDRE-001.PDRE_FULL_VALIDATION.json"
+    },
+    {
+      "claim_id": "SE-BESS-SODIUM-001.PRODUCT_ANNOUNCED",
+      "case_id": "SE-BESS-SODIUM-001",
+      "statement": "A stationary sodium-ion BESS product has been publicly announced.",
+      "state": "SUPPORTED",
+      "as_of": "2026-09-24",
+      "canonical_url": "https://structurevidence.org/claims/SE-BESS-SODIUM-001.PRODUCT_ANNOUNCED.json"
+    },
+    {
+      "claim_id": "SE-BESS-SODIUM-001.SUPPLY_COOPERATION_AGREEMENT",
+      "case_id": "SE-BESS-SODIUM-001",
+      "statement": "A sodium-ion energy-storage supply cooperation agreement is publicly evidenced.",
+      "state": "SUPPORTED",
+      "as_of": "2026-09-24",
+      "canonical_url": "https://structurevidence.org/claims/SE-BESS-SODIUM-001.SUPPLY_COOPERATION_AGREEMENT.json"
+    },
+    {
+      "claim_id": "SE-BESS-SODIUM-001.PRODUCTION_READINESS",
+      "case_id": "SE-BESS-SODIUM-001",
+      "statement": "Production readiness for sodium-ion stationary BESS is established.",
+      "state": "VERIFICATION_REQUIRED",
+      "as_of": "2026-09-24",
+      "canonical_url": "https://structurevidence.org/claims/SE-BESS-SODIUM-001.PRODUCTION_READINESS.json"
+    },
+    {
+      "claim_id": "SE-BESS-SODIUM-001.CUSTOMER_BATCH_DELIVERY",
+      "case_id": "SE-BESS-SODIUM-001",
+      "statement": "A named customer batch delivery of sodium-ion stationary BESS is established.",
+      "state": "NOT_ESTABLISHED",
+      "as_of": "2026-09-24",
+      "canonical_url": "https://structurevidence.org/claims/SE-BESS-SODIUM-001.CUSTOMER_BATCH_DELIVERY.json"
+    },
+    {
+      "claim_id": "SE-BESS-SODIUM-001.NAMED_COMMISSIONED_SITE",
+      "case_id": "SE-BESS-SODIUM-001",
+      "statement": "A named customer sodium-ion stationary BESS site has been commissioned.",
+      "state": "NOT_ESTABLISHED",
+      "as_of": "2026-09-24",
+      "canonical_url": "https://structurevidence.org/claims/SE-BESS-SODIUM-001.NAMED_COMMISSIONED_SITE.json"
+    },
+    {
+      "claim_id": "SE-BESS-SODIUM-001.INDEPENDENT_FIELD_PERFORMANCE",
+      "case_id": "SE-BESS-SODIUM-001",
+      "statement": "Independent field-performance evidence for sodium-ion stationary BESS is established.",
+      "state": "NOT_ESTABLISHED",
+      "as_of": "2026-09-24",
+      "canonical_url": "https://structurevidence.org/claims/SE-BESS-SODIUM-001.INDEPENDENT_FIELD_PERFORMANCE.json"
+    },
+    {
+      "claim_id": "SE-BESS-SODIUM-001.LONG_OPERATING_HISTORY",
+      "case_id": "SE-BESS-SODIUM-001",
+      "statement": "Long public operating history for sodium-ion stationary BESS is established.",
+      "state": "UNKNOWN",
+      "as_of": "2026-09-24",
+      "canonical_url": "https://structurevidence.org/claims/SE-BESS-SODIUM-001.LONG_OPERATING_HISTORY.json"
+    },
+    {
+      "claim_id": "SE-BESS-SODIUM-001.LIFECYCLE_COST_ADVANTAGE_OVER_LFP",
+      "case_id": "SE-BESS-SODIUM-001",
+      "statement": "A lifecycle-cost advantage of sodium-ion stationary BESS over LFP is established.",
+      "state": "NOT_ESTABLISHED",
+      "as_of": "2026-09-24",
+      "canonical_url": "https://structurevidence.org/claims/SE-BESS-SODIUM-001.LIFECYCLE_COST_ADVANTAGE_OVER_LFP.json"
+    },
+    {
+      "claim_id": "SE-BESS-SODIUM-001.UNIVERSAL_LFP_REPLACEMENT",
+      "case_id": "SE-BESS-SODIUM-001",
+      "statement": "Sodium-ion stationary BESS is established as a universal replacement for LFP.",
+      "state": "NOT_ESTABLISHED",
+      "as_of": "2026-09-24",
+      "canonical_url": "https://structurevidence.org/claims/SE-BESS-SODIUM-001.UNIVERSAL_LFP_REPLACEMENT.json"
+    },
+    {
+      "claim_id": "SE-ONC-NSQNSCLC-CN-001.SURGERY_STAGE_SPECIFIC",
+      "case_id": "SE-ONC-NSQNSCLC-CN-001",
+      "statement": "Surgery is a stage-specific pathway, and an operated Chinese NSCLC cohort exists.",
+      "state": "SUPPORTED_FOR_DEFINED_CONTEXT",
+      "as_of": "2026-09-28",
+      "canonical_url": "https://structurevidence.org/claims/SE-ONC-NSQNSCLC-CN-001.SURGERY_STAGE_SPECIFIC.json"
+    },
+    {
+      "claim_id": "SE-ONC-NSQNSCLC-CN-001.IVONESCIMAB_APPROVAL",
+      "case_id": "SE-ONC-NSQNSCLC-CN-001",
+      "statement": "Ivonescimab with pemetrexed and carboplatin was approved in China for the defined post-EGFR-TKI non-squamous NSCLC indication.",
+      "state": "SUPPORTED",
+      "as_of": "2026-09-28",
+      "canonical_url": "https://structurevidence.org/claims/SE-ONC-NSQNSCLC-CN-001.IVONESCIMAB_APPROVAL.json"
+    },
+    {
+      "claim_id": "SE-ONC-NSQNSCLC-CN-001.HARMONI_A_OS",
+      "case_id": "SE-ONC-NSQNSCLC-CN-001",
+      "statement": "HARMONi-A final analysis reported trial-group median overall survival of 16.8 versus 14.1 months for its defined population.",
+      "state": "SUPPORTED_FOR_TRIAL_POPULATION",
+      "as_of": "2026-09-28",
+      "canonical_url": "https://structurevidence.org/claims/SE-ONC-NSQNSCLC-CN-001.HARMONI_A_OS.json"
+    },
+    {
+      "claim_id": "SE-ONC-NSQNSCLC-CN-001.ECMO_AS_TUMOR_THERAPY",
+      "case_id": "SE-ONC-NSQNSCLC-CN-001",
+      "statement": "ECMO is established as tumor therapy for non-squamous NSCLC.",
+      "state": "NOT_ESTABLISHED",
+      "as_of": "2026-09-28",
+      "canonical_url": "https://structurevidence.org/claims/SE-ONC-NSQNSCLC-CN-001.ECMO_AS_TUMOR_THERAPY.json"
+    },
+    {
+      "claim_id": "SE-ONC-NSQNSCLC-CN-001.TRANSPLANT_FOR_INDEX_COHORT",
+      "case_id": "SE-ONC-NSQNSCLC-CN-001",
+      "statement": "Lung transplantation is established for the advanced post-EGFR-TKI index cohort.",
+      "state": "NOT_ESTABLISHED",
+      "as_of": "2026-09-28",
+      "canonical_url": "https://structurevidence.org/claims/SE-ONC-NSQNSCLC-CN-001.TRANSPLANT_FOR_INDEX_COHORT.json"
+    },
+    {
+      "claim_id": "SE-ONC-NSQNSCLC-CN-001.HOSPITAL_AGGREGATE_OUTCOME_DATA",
+      "case_id": "SE-ONC-NSQNSCLC-CN-001",
+      "statement": "A hospital-specific aggregate outcome dataset has been acquired for this public NSCLC case.",
+      "state": "NOT_ESTABLISHED",
+      "as_of": "2026-09-28",
+      "canonical_url": "https://structurevidence.org/claims/SE-ONC-NSQNSCLC-CN-001.HOSPITAL_AGGREGATE_OUTCOME_DATA.json"
+    },
+    {
+      "claim_id": "SE-ONC-NSQNSCLC-CN-001.PATIENT_SPECIFIC_SUCCESS_PROBABILITY",
+      "case_id": "SE-ONC-NSQNSCLC-CN-001",
+      "statement": "A patient-specific treatment success probability is established by this public NSCLC case.",
+      "state": "NOT_ESTABLISHED",
+      "as_of": "2026-09-28",
+      "canonical_url": "https://structurevidence.org/claims/SE-ONC-NSQNSCLC-CN-001.PATIENT_SPECIFIC_SUCCESS_PROBABILITY.json"
+    },
+    {
+      "claim_id": "SE-ONC-NSQNSCLC-CN-001.CROSS_MODALITY_RANKING",
+      "case_id": "SE-ONC-NSQNSCLC-CN-001",
+      "statement": "This public NSCLC case establishes a cross-modality treatment ranking or winner.",
+      "state": "NOT_ESTABLISHED",
+      "as_of": "2026-09-28",
+      "canonical_url": "https://structurevidence.org/claims/SE-ONC-NSQNSCLC-CN-001.CROSS_MODALITY_RANKING.json"
+    }
+  ]
+}

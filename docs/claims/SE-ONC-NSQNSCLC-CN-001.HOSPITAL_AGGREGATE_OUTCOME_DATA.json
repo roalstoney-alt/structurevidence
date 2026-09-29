@@ -1,0 +1,64 @@
+{
+  "claim_id": "SE-ONC-NSQNSCLC-CN-001.HOSPITAL_AGGREGATE_OUTCOME_DATA",
+  "case_id": "SE-ONC-NSQNSCLC-CN-001",
+  "version": "v0.1",
+  "statement": "A hospital-specific aggregate outcome dataset has been acquired for this public NSCLC case.",
+  "case_title": "China Non-Squamous NSCLC Evidence Pathway",
+  "state": "NOT_ESTABLISHED",
+  "as_of": "2026-09-28",
+  "scope": "China non-squamous NSCLC; separate stage-specific treatment contexts; detailed index cohort is EGFR-mutated locally advanced or metastatic disease after EGFR-TKI progression",
+  "supports": [],
+  "does_not_support": [
+    "No hospital dataset was acquired or analyzed."
+  ],
+  "unknowns": [
+    "Is a defined hospital aggregate dataset available for permitted analysis?"
+  ],
+  "counter_evidence": [],
+  "next_observable": "New regulatory indication; Updated randomized outcome; Clinically reviewed stage branch; Authorized hospital aggregate received; Correction or source retraction",
+  "provenance": [
+    {
+      "source_ref": "cases/nsq-nsclc-china/state-v0.1.json",
+      "source_role": "PRIMARY_PUBLIC_EVIDENCE_STATE"
+    },
+    {
+      "source_ref": "cases/nsq-nsclc-china/stop-v0.1.html",
+      "source_role": "HUMAN_CITATION_BOUNDARY"
+    },
+    {
+      "source_ref": "cases/nsq-nsclc-china/publication-control-v0.1.json",
+      "source_role": "PUBLICATION_AUTHORITY"
+    },
+    {
+      "source_ref": "cases/nsq-nsclc-china/decision-memory-v0.1.json",
+      "source_role": "DECISION_STRUCTURE"
+    }
+  ],
+  "canonical_url": "https://structurevidence.org/claims/SE-ONC-NSQNSCLC-CN-001.HOSPITAL_AGGREGATE_OUTCOME_DATA.json",
+  "state_url": "https://structurevidence.org/cases/nsq-nsclc-china/state-v0.1.json",
+  "stop_point_url": "https://structurevidence.org/cases/nsq-nsclc-china/stop-v0.1.html",
+  "method_contract": "https://structurevidence.org/method-contract.json",
+  "citation_requirements": {
+    "must_preserve_state": true,
+    "must_preserve_as_of": true,
+    "must_include_boundary_when_material": true
+  },
+  "aliases": [
+    "non-squamous NSCLC",
+    "NSCLC China",
+    "lung cancer",
+    "ivonescimab",
+    "HARMONi-A",
+    "ECMO",
+    "lung transplant",
+    "NSCLC hospital outcome data",
+    "hospital aggregate dataset"
+  ],
+  "keywords": [
+    "nsclc",
+    "hospital",
+    "aggregate",
+    "outcome",
+    "data"
+  ]
+}

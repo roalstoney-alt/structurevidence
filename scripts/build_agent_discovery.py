@@ -1,0 +1,309 @@
+#!/usr/bin/env python3
+"""Build deterministic Agent Discovery projections from frozen public primitives."""
+
+from __future__ import annotations
+
+import argparse
+import json
+import sys
+from pathlib import Path
+
+
+ROOT = Path(__file__).resolve().parents[1]
+REGISTRY_PATH = ROOT / "agent-discovery" / "claim-registry-v0.1.json"
+METHOD_URL = "https://structurevidence.org/method-contract.json"
+UNRESOLVED = {"UNKNOWN", "NOT_ESTABLISHED", "VERIFICATION_REQUIRED"}
+
+
+def load(relative: str):
+    return json.loads((ROOT / relative).read_text(encoding="utf-8"))
+
+
+def compact(value) -> bytes:
+    return (json.dumps(value, ensure_ascii=False, indent=2) + "\n").encode("utf-8")
+
+
+def unique(values):
+    return list(dict.fromkeys(value for value in values if value))
+
+
+def source_bundle(case_id: str):
+    if case_id == "CML-PDRE-001":
+        return {
+            "state": load("cases/800vdc/state-v0.1.json"),
+            "control": load("technical-risk/cml-v1.1/pdre/CML-PDRE-001/publication-control.json"),
+            "memory": None,
+            "stop": (ROOT / "cases/800vdc/stop-v0.1.html").read_text(encoding="utf-8"),
+        }
+    slug = "sodium-ion-bess" if case_id == "SE-BESS-SODIUM-001" else "nsq-nsclc-china"
+    return {
+        "state": load(f"cases/{slug}/state-v0.1.json"),
+        "control": load(f"cases/{slug}/publication-control-v0.1.json"),
+        "memory": load(f"cases/{slug}/decision-memory-v0.1.json"),
+        "stop": (ROOT / f"cases/{slug}/stop-v0.1.html").read_text(encoding="utf-8"),
+    }
+
+
+def validate_primitives(registry, bundles) -> None:
+    required_ids = set(registry["cases"])
+    if required_ids != {"CML-PDRE-001", "SE-BESS-SODIUM-001", "SE-ONC-NSQNSCLC-CN-001"}:
+        raise ValueError("PRIMITIVE_CONSISTENCY_ERROR: case registry mismatch")
+    claim_ids = [row["claim_id"] for row in registry["claims"]]
+    if len(claim_ids) != len(set(claim_ids)):
+        raise ValueError("PRIMITIVE_CONSISTENCY_ERROR: duplicate claim ID")
+    for case_id, bundle in bundles.items():
+        state = bundle["state"]
+        control = bundle["control"]
+        if state["case_id"] != case_id or control["case_id"] != case_id:
+            raise ValueError(f"PRIMITIVE_CONSISTENCY_ERROR: case identity mismatch for {case_id}")
+        cutoff = state["knowledge_cutoff"]
+        control_cutoff = control.get("knowledge_cutoff") or bundle["stop"]
+        if cutoff not in str(control_cutoff):
+            raise ValueError(f"PRIMITIVE_CONSISTENCY_ERROR: cutoff mismatch for {case_id}")
+        if cutoff not in bundle["stop"]:
+            raise ValueError(f"PRIMITIVE_CONSISTENCY_ERROR: stop-point cutoff mismatch for {case_id}")
+        if bundle["memory"]:
+            memory = bundle["memory"]["decision_memory"]
+            if memory["case_id"] != case_id or memory["temporal_index"]["knowledge_cutoff"] != cutoff:
+                raise ValueError(f"PRIMITIVE_CONSISTENCY_ERROR: Decision Memory mismatch for {case_id}")
+    cml = bundles["CML-PDRE-001"]
+    boundary = cml["control"]["projection_scope"]["approved_claim_boundary"]
+    if cml["state"]["claim_boundary"] != boundary or cml["state"]["current_bounded_state"] not in cml["stop"]:
+        raise ValueError("PRIMITIVE_CONSISTENCY_ERROR: CML public boundary mismatch")
+
+
+def provenance(case_id: str, slug: str, has_memory: bool):
+    rows = [
+        {"source_ref": f"cases/{slug}/state-v0.1.json", "source_role": "PRIMARY_PUBLIC_EVIDENCE_STATE"},
+        {"source_ref": f"cases/{slug}/stop-v0.1.html", "source_role": "HUMAN_CITATION_BOUNDARY"},
+    ]
+    control = (
+        "technical-risk/cml-v1.1/pdre/CML-PDRE-001/publication-control.json"
+        if case_id == "CML-PDRE-001"
+        else f"cases/{slug}/publication-control-v0.1.json"
+    )
+    rows.append({"source_ref": control, "source_role": "PUBLICATION_AUTHORITY"})
+    if has_memory:
+        rows.append({"source_ref": f"cases/{slug}/decision-memory-v0.1.json", "source_role": "DECISION_STRUCTURE"})
+    return rows
+
+
+def project_claim(row, case, bundle):
+    state = bundle["state"]
+    memory = bundle["memory"]["decision_memory"] if bundle["memory"] else None
+    source_kind = row["source_kind"]
+    supports = []
+    does_not_support = []
+    unknowns = []
+    if source_kind == "state_map":
+        claim_state = state["states" if case["source_kind"] == "cml_state" else "current_state"][row["source_key"]]
+        if case["source_kind"] == "cml_state":
+            supports = state["supports"]
+            does_not_support = state["does_not_support"]
+            unknowns = state["unknowns"]
+            next_observable = state["next_minimum_verification"]
+        else:
+            records = {record["record_id"]: record for record in state["records"]}
+            selected = [records[record_id] for record_id in row.get("support_records", [])]
+            supports = [record["accepted_support"] for record in selected]
+            does_not_support = [record["does_not_support"] for record in selected]
+            unknowns = [
+                f"{key}: {value}"
+                for key, value in state["current_state"].items()
+                if value in UNRESOLVED or value.startswith("NOT_ESTABLISHED")
+            ]
+            next_observable = "; ".join(state["next_transition_evidence"])
+    elif source_kind == "nsclc_claim":
+        source = next(claim for claim in state["claims"] if claim["claim_id"] == row["source_key"])
+        claim_state = source["status"]
+        supports = [source["statement"]]
+        does_not_support = [source.get("limits", "NOT_RECORDED")]
+        unknowns = state["search_provenance"]["unsearched_or_unresolved"]
+        next_observable = "; ".join(state["reopen_triggers"])
+    elif source_kind == "decision_state":
+        source = next(item for item in memory["evidence_states"] if item["state_id"] == row["source_key"])
+        claim_state = source["status"]
+        supports = []
+        does_not_support = source["limitations"]
+        unknowns = [
+            item["question"]
+            for item in memory["unknowns"]
+            if row["source_key"] in item["affected_state_refs"]
+        ]
+        if not unknowns and claim_state in UNRESOLVED:
+            unknowns = [source["label"]]
+        next_observable = "; ".join(state["reopen_triggers"])
+    else:
+        raise ValueError(f"Unknown source_kind: {source_kind}")
+
+    if not does_not_support:
+        raise ValueError(f"DOES_NOT_SUPPORT missing for {row['claim_id']}")
+    slug = case["slug"]
+    claim = {
+        "claim_id": row["claim_id"],
+        "case_id": row["case_id"],
+        "version": "v0.1",
+        "statement": row["statement"],
+        "case_title": case["title"],
+        "state": claim_state,
+        "as_of": state["knowledge_cutoff"],
+        "scope": state.get("scope", "Public case scope as frozen in state-v0.1.json."),
+        "supports": unique(supports),
+        "does_not_support": unique(does_not_support),
+        "unknowns": unique(unknowns),
+        "counter_evidence": [],
+        "next_observable": next_observable or "NOT_RECORDED",
+        "provenance": provenance(row["case_id"], slug, memory is not None),
+        "canonical_url": f"https://structurevidence.org/claims/{row['claim_id']}.json",
+        "state_url": f"https://structurevidence.org/cases/{slug}/state-v0.1.json",
+        "stop_point_url": f"https://structurevidence.org/cases/{slug}/stop-v0.1.html",
+        "method_contract": METHOD_URL,
+        "citation_requirements": {
+            "must_preserve_state": True,
+            "must_preserve_as_of": True,
+            "must_include_boundary_when_material": True,
+        },
+        "aliases": unique(case["aliases"] + row.get("aliases", [])),
+        "keywords": unique(row.get("keywords", [])),
+    }
+    return claim
+
+
+def method_contract():
+    principles = [
+        ("FACT_NE_CLAIM", "A fact, claim, evidence record and decision are distinct objects."),
+        ("EVENT_TIME_NE_KNOWLEDGE_TIME", "When an event occurred is distinct from when it became known within the evidence system."),
+        ("NOT_FOUND_NE_DOES_NOT_EXIST", "Failure to find evidence within a defined search scope does not prove non-existence."),
+        ("SINGLE_INSTANCE_NE_INDUSTRY_ADOPTION", "One deployment does not establish broad adoption."),
+        ("ORDER_NE_DELIVERY", "An order does not establish delivery."),
+        ("DELIVERY_NE_COMMISSIONING", "Delivery does not establish commissioning."),
+        ("COMMISSIONING_NE_OPERATING_HISTORY", "Commissioning does not establish operating history."),
+        ("SOURCE_STATEMENT_NE_INDEPENDENT_VALIDATION", "A source's own statement is not independent third-party validation."),
+        ("UNKNOWN_MUST_NOT_BE_INFERRED", "Unknown states remain unknown until qualifying evidence resolves them."),
+    ]
+    return {
+        "method": "StructureEvidence Temporal Evidence Method",
+        "version": "1.0",
+        "purpose": "Prevent unsupported inference by separating evidence state, time boundary, and unresolved uncertainty.",
+        "principles": [{"id": key, "statement": statement} for key, statement in principles],
+        "required_claim_fields": ["claim_id", "case_id", "statement", "state", "as_of", "supports", "does_not_support", "unknowns", "provenance", "next_observable", "canonical_url"],
+    }
+
+
+def agent_html(claim_count: int):
+    return f'''<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>StructureEvidence for Agents</title><meta name="description" content="Resolve questions to time-bounded public evidence states without inferring beyond the evidence.">
+<link rel="canonical" href="https://structurevidence.org/agent/"><link rel="stylesheet" href="/assets/product.css?v=20260928-stop-2"></head>
+<body class="product-site"><a class="skip-link" href="#main">Skip to content</a><header class="product-header"><nav class="product-nav" aria-label="Primary navigation"><a class="product-brand" href="/"><span>SE</span><strong>StructureEvidence</strong></a><div class="product-links"><a href="/cases/">Evidence Cases</a><a href="/method-contract.json">Method Contract</a></div></nav></header>
+<main class="product-main" id="main"><section class="page-hero"><p class="eyebrow">Agent Discovery Layer · v0.1</p><h1>StructureEvidence for Agents</h1><p class="lead">Resolve a question to a time-bounded evidence state before inferring beyond the evidence.</p></section>
+<section class="product-section"><div class="section-head"><div><p class="eyebrow">Public research plane</p><h2>Deterministic evidence retrieval.</h2></div><p>StructureEvidence exposes {claim_count} stable claim objects derived from three governed public cases. The resolver uses explicit aliases and keywords—no LLM and no external search.</p></div><div class="boundary-grid"><div><p class="field-label">Always preserve</p><p>Claim state, as-of boundary, supports, does not support, unknowns, provenance, and next observable.</p></div><div><p class="field-label">Never delegated</p><p>Research authorization, publication approval, deployment decisions, customer actions, or patient-specific medical advice.</p></div></div></section>
+<section class="product-section"><div class="actions"><a class="button" href="/claims/index.json">Enumerate claims</a><a class="button secondary" href="/method-contract.json">Read method contract</a><a class="button secondary" href="/.well-known/structurevidence.json">Open discovery manifest</a></div><p>Runtime resolver: <code>GET /api/resolve?q=&lt;question&gt;</code>. Commercial capabilities are described separately at <a href="https://structevidence.com/capabilities.json">structevidence.com/capabilities.json</a>; human authorization is required.</p></section></main>
+<footer class="product-footer"><div class="product-wrap footer-grid"><strong>StructureEvidence</strong><a href="/claims/index.json">Claims</a><a href="/changes.json">Changes</a><span>Discovery and resolution only.</span></div></footer></body></html>'''
+
+
+def build_outputs():
+    registry = load("agent-discovery/claim-registry-v0.1.json")
+    bundles = {case_id: source_bundle(case_id) for case_id in registry["cases"]}
+    validate_primitives(registry, bundles)
+    claims = []
+    for row in registry["claims"]:
+        case = registry["cases"][row["case_id"]]
+        claims.append(project_claim(row, case, bundles[row["case_id"]]))
+    if len(claims) != len({claim["claim_id"] for claim in claims}):
+        raise ValueError("Duplicate projected claim ID")
+
+    index = {
+        "version": registry["version"],
+        "generated_at": registry["generated_at"],
+        "claims": [
+            {key: claim[key] for key in ("claim_id", "case_id", "statement", "state", "as_of", "canonical_url")}
+            for claim in claims
+        ],
+    }
+    discovery = {
+        "name": "StructureEvidence",
+        "version": "0.1",
+        "type": "temporal_evidence_resolution_layer",
+        "description": "Versioned, time-bounded evidence states for claims that matter.",
+        "method_contract": METHOD_URL,
+        "claims_index": "https://structurevidence.org/claims/index.json",
+        "changes": "https://structurevidence.org/changes.json",
+        "capabilities": "https://structevidence.com/capabilities.json",
+        "resolve_endpoint": "https://structurevidence.org/api/resolve",
+        "public_cases": list(registry["cases"]),
+        "principles": ["EVENT_TIME_NE_KNOWLEDGE_TIME", "NOT_FOUND_NE_DOES_NOT_EXIST", "SINGLE_INSTANCE_NE_INDUSTRY_ADOPTION", "SOURCE_STATEMENT_NE_INDEPENDENT_VALIDATION", "UNKNOWN_MUST_NOT_BE_INFERRED"],
+    }
+    changes = {
+        "version": "0.1",
+        "generated_at": registry["generated_at"],
+        "changes": [],
+        "note": "No approved cross-version public state transitions have been published yet.",
+    }
+    capabilities = {
+        "provider": "StructureEvidence",
+        "version": "0.1",
+        "services": [
+            {"service_id": "VERIFY_CLAIM", "description": "Verify a bounded technical or industrial claim against attributable evidence.", "input": ["claim_or_question", "decision_context_optional"], "output": ["bounded_verification_record", "supports", "does_not_support", "unknowns", "provenance"], "human_authorization_required": True, "automatic_research_authorization": False, "commercial_endpoint": "https://structevidence.com/verify/"},
+            {"service_id": "CUSTOMER_CONTEXT", "description": "Map public evidence to a specific company, architecture or decision context.", "human_authorization_required": True, "automatic_research_authorization": False, "commercial_endpoint": "https://structevidence.com/context/"},
+            {"service_id": "DECISION_PACK", "description": "Build a decision-ready evidence package for a defined decision boundary.", "human_authorization_required": True, "automatic_research_authorization": False, "commercial_endpoint": "https://structevidence.com/decision-pack/"},
+        ],
+    }
+
+    outputs = {}
+    static = {
+        ".well-known/structurevidence.json": compact(discovery),
+        "method-contract.json": compact(method_contract()),
+        "claims/index.json": compact(index),
+        "changes.json": compact(changes),
+        "agent/index.html": agent_html(len(claims)).encode("utf-8"),
+    }
+    for claim in claims:
+        static[f"claims/{claim['claim_id']}.json"] = compact(claim)
+    for relative, content in static.items():
+        outputs[relative] = content
+        outputs[f"docs/{relative}"] = content
+    claims_js = "// Generated by scripts/build_agent_discovery.py; do not edit.\nexport const CLAIMS = " + json.dumps(claims, ensure_ascii=False, separators=(",", ":")) + ";\n"
+    outputs["deploy/cloudflare-evidence-resolver/claims.js"] = claims_js.encode("utf-8")
+    capabilities_js = "// Generated by scripts/build_agent_discovery.py; do not edit.\nexport const CAPABILITIES = " + json.dumps(capabilities, ensure_ascii=False, separators=(",", ":")) + ";\n"
+    outputs["deploy/cloudflare-landing/capabilities.js"] = capabilities_js.encode("utf-8")
+
+    sitemap = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
+    urls = [
+        "https://structurevidence.org/.well-known/structurevidence.json",
+        "https://structurevidence.org/method-contract.json",
+        "https://structurevidence.org/claims/index.json",
+        "https://structurevidence.org/changes.json",
+        "https://structurevidence.org/agent/",
+    ] + [claim["canonical_url"] for claim in claims]
+    additions = "".join(f"<url><loc>{url}</loc></url>\n" for url in urls if f"<loc>{url}</loc>" not in sitemap)
+    expected_sitemap = sitemap.replace("</urlset>", additions + "</urlset>")
+    outputs["sitemap.xml"] = expected_sitemap.encode("utf-8")
+    outputs["docs/sitemap.xml"] = expected_sitemap.encode("utf-8")
+    return outputs
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--check", action="store_true")
+    args = parser.parse_args()
+    outputs = build_outputs()
+    stale = []
+    for relative, content in outputs.items():
+        path = ROOT / relative
+        if args.check:
+            if not path.is_file() or path.read_bytes() != content:
+                stale.append(relative)
+        else:
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_bytes(content)
+    if stale:
+        print("STALE_AGENT_DISCOVERY_OUTPUTS")
+        print("\n".join(stale))
+        return 1
+    print(f"AGENT_DISCOVERY_OUTPUTS={'CURRENT' if args.check else 'GENERATED'} count={len(outputs)}")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

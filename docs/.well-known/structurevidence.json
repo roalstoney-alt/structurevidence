@@ -1,0 +1,23 @@
+{
+  "name": "StructureEvidence",
+  "version": "0.1",
+  "type": "temporal_evidence_resolution_layer",
+  "description": "Versioned, time-bounded evidence states for claims that matter.",
+  "method_contract": "https://structurevidence.org/method-contract.json",
+  "claims_index": "https://structurevidence.org/claims/index.json",
+  "changes": "https://structurevidence.org/changes.json",
+  "capabilities": "https://structevidence.com/capabilities.json",
+  "resolve_endpoint": "https://structurevidence.org/api/resolve",
+  "public_cases": [
+    "CML-PDRE-001",
+    "SE-BESS-SODIUM-001",
+    "SE-ONC-NSQNSCLC-CN-001"
+  ],
+  "principles": [
+    "EVENT_TIME_NE_KNOWLEDGE_TIME",
+    "NOT_FOUND_NE_DOES_NOT_EXIST",
+    "SINGLE_INSTANCE_NE_INDUSTRY_ADOPTION",
+    "SOURCE_STATEMENT_NE_INDEPENDENT_VALIDATION",
+    "UNKNOWN_MUST_NOT_BE_INFERRED"
+  ]
+}

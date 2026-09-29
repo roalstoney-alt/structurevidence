@@ -1,0 +1,56 @@
+{
+  "method": "StructureEvidence Temporal Evidence Method",
+  "version": "1.0",
+  "purpose": "Prevent unsupported inference by separating evidence state, time boundary, and unresolved uncertainty.",
+  "principles": [
+    {
+      "id": "FACT_NE_CLAIM",
+      "statement": "A fact, claim, evidence record and decision are distinct objects."
+    },
+    {
+      "id": "EVENT_TIME_NE_KNOWLEDGE_TIME",
+      "statement": "When an event occurred is distinct from when it became known within the evidence system."
+    },
+    {
+      "id": "NOT_FOUND_NE_DOES_NOT_EXIST",
+      "statement": "Failure to find evidence within a defined search scope does not prove non-existence."
+    },
+    {
+      "id": "SINGLE_INSTANCE_NE_INDUSTRY_ADOPTION",
+      "statement": "One deployment does not establish broad adoption."
+    },
+    {
+      "id": "ORDER_NE_DELIVERY",
+      "statement": "An order does not establish delivery."
+    },
+    {
+      "id": "DELIVERY_NE_COMMISSIONING",
+      "statement": "Delivery does not establish commissioning."
+    },
+    {
+      "id": "COMMISSIONING_NE_OPERATING_HISTORY",
+      "statement": "Commissioning does not establish operating history."
+    },
+    {
+      "id": "SOURCE_STATEMENT_NE_INDEPENDENT_VALIDATION",
+      "statement": "A source's own statement is not independent third-party validation."
+    },
+    {
+      "id": "UNKNOWN_MUST_NOT_BE_INFERRED",
+      "statement": "Unknown states remain unknown until qualifying evidence resolves them."
+    }
+  ],
+  "required_claim_fields": [
+    "claim_id",
+    "case_id",
+    "statement",
+    "state",
+    "as_of",
+    "supports",
+    "does_not_support",
+    "unknowns",
+    "provenance",
+    "next_observable",
+    "canonical_url"
+  ]
+}

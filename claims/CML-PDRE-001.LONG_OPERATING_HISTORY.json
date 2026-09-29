@@ -1,0 +1,71 @@
+{
+  "claim_id": "CML-PDRE-001.LONG_OPERATING_HISTORY",
+  "case_id": "CML-PDRE-001",
+  "version": "v0.1",
+  "statement": "Long operating history for the named 800VDC / SST deployment is established.",
+  "case_title": "800VDC / SST AI Data-Center Power Architecture",
+  "state": "NOT_ESTABLISHED",
+  "as_of": "2026-09-20T10:46:47Z",
+  "scope": "Public case scope as frozen in state-v0.1.json.",
+  "supports": [
+    "One named operator reported commercial operation at one named campus for a materially relevant 10kV AC to SST to 800VDC architecture.",
+    "The source is the operator's own publication."
+  ],
+  "does_not_support": [
+    "Independent performance validation.",
+    "Long operating history.",
+    "Multi-entity replication.",
+    "Application qualification.",
+    "Repeat procurement.",
+    "Industry adoption.",
+    "Full PDRE validation."
+  ],
+  "unknowns": [
+    "Operating history under attributable conditions.",
+    "Independent third-party validation.",
+    "Multi-entity replication.",
+    "Repeat procurement."
+  ],
+  "counter_evidence": [],
+  "next_observable": "Obtain an independently attributable operating record for the named site with its observation period and conditions.",
+  "provenance": [
+    {
+      "source_ref": "cases/800vdc/state-v0.1.json",
+      "source_role": "PRIMARY_PUBLIC_EVIDENCE_STATE"
+    },
+    {
+      "source_ref": "cases/800vdc/stop-v0.1.html",
+      "source_role": "HUMAN_CITATION_BOUNDARY"
+    },
+    {
+      "source_ref": "technical-risk/cml-v1.1/pdre/CML-PDRE-001/publication-control.json",
+      "source_role": "PUBLICATION_AUTHORITY"
+    }
+  ],
+  "canonical_url": "https://structurevidence.org/claims/CML-PDRE-001.LONG_OPERATING_HISTORY.json",
+  "state_url": "https://structurevidence.org/cases/800vdc/state-v0.1.json",
+  "stop_point_url": "https://structurevidence.org/cases/800vdc/stop-v0.1.html",
+  "method_contract": "https://structurevidence.org/method-contract.json",
+  "citation_requirements": {
+    "must_preserve_state": true,
+    "must_preserve_as_of": true,
+    "must_include_boundary_when_material": true
+  },
+  "aliases": [
+    "800V",
+    "800VDC",
+    "800 VDC",
+    "SST",
+    "solid-state transformer",
+    "data center power",
+    "800VDC operating history",
+    "SST operating history"
+  ],
+  "keywords": [
+    "800vdc",
+    "sst",
+    "long",
+    "operating",
+    "history"
+  ]
+}

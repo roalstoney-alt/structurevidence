@@ -1,0 +1,17 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "structurevidence-public-claim-resolver",
+  "main": "worker.js",
+  "compatibility_date": "2026-09-29",
+  "workers_dev": false,
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 1
+  },
+  "routes": [
+    {
+      "pattern": "structurevidence.org/api/resolve*",
+      "zone_name": "structurevidence.org"
+    }
+  ]
+}
