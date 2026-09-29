@@ -8,6 +8,24 @@ The underlying source facts may be public. The compounding asset is the structur
 
 Official website: https://structurevidence.org
 
+## Scholarly Record
+
+Current method paper:
+
+**From Retrieval to Defensible Decisions: A Protocol for Time-Bounded Evidence States**
+
+Version DOI: https://doi.org/10.5281/zenodo.23033588
+
+Concept DOI (all versions): https://doi.org/10.5281/zenodo.23033587
+
+Zenodo: https://zenodo.org/records/23033588
+
+The Version DOI identifies this exact v0.1 publication. The Concept DOI identifies the paper family and resolves to the latest version.
+
+Protocol: `QUESTION_TO_EVIDENCE_COMMERCE_PROTOCOL_v0.1`
+
+Implementation baseline: `94ee5dc8670b8132979846c815b400f8cef17ab1`
+
 ## Core layers
 
 - **Evidence Core** — provenance and shared record envelope.

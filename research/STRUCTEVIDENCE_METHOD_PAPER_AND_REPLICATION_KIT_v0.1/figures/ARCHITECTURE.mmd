@@ -1,0 +1,26 @@
+flowchart TD
+    Q[Question already exists] --> R[Retrieval\nagent / consultant / human]
+    R --> I[Intake Gate\natomic · falsifiable · scoped · time-bounded]
+    I -->|FAIL| D[Decomposition draft]
+    D --> H1[Human selects / reframes]
+    H1 --> S1[STOP]
+    I -->|PASS| M[Claim Match\nEXACT · ISOMORPHIC · PARTIAL · NONE]
+    M -->|EXACT / validated ISOMORPHIC| P[Public Stop-Point\nstate · supports · does_not_support\nas_of · freshness · depth · applicability]
+    M -->|PARTIAL| PP[Return public boundary\n+ unresolved portion]
+    M -->|NONE| N[No public evidence answer]
+    P --> SU{Fresh + sufficient?}
+    SU -->|YES| C[CITE AND STOP]
+    SU -->|NO| E[Minimum Missing Evidence]
+    PP --> E
+    E --> L[RDL candidate\nL0 / L1 / L2 / L3]
+    L --> V[Verification Quote\nscope · envelope · cutoff · stop condition · cap]
+    V --> A[Human Authorization + Payment]
+    A --> PC[Paid Cycle\nprocess bought · outcome not bought]
+    PC --> ER[Result / Evidence]
+    ER --> PE{Publication Eligibility}
+    PE -->|PUBLIC| HR[Human Publication Review]
+    PE -->|PRIVATE| DM[Customer Decision Memory]
+    PE -->|MIXED| MX[Redact / Split]
+    HR --> NV[New Public Stop-Point Version\nappend-only]
+    NV --> CH[changes.json]
+    CH --> RE[Agent Reuse]

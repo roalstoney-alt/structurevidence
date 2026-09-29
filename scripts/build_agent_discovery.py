@@ -12,6 +12,11 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 REGISTRY_PATH = ROOT / "agent-discovery" / "claim-registry-v0.1.json"
 METHOD_URL = "https://structurevidence.org/method-contract.json"
+VERSION_DOI = "10.5281/zenodo.23033588"
+VERSION_DOI_URL = f"https://doi.org/{VERSION_DOI}"
+CONCEPT_DOI = "10.5281/zenodo.23033587"
+CONCEPT_DOI_URL = f"https://doi.org/{CONCEPT_DOI}"
+ZENODO_RECORD = "https://zenodo.org/records/23033588"
 UNRESOLVED = {"UNKNOWN", "NOT_ESTABLISHED", "VERIFICATION_REQUIRED"}
 
 
@@ -192,6 +197,22 @@ def method_contract():
             "commerce_boundary": "PROCESS_BOUGHT_OUTCOME_NOT_BOUGHT",
             "automatic_research_authorization": False,
         },
+        "scholarly_record": {
+            "title": "From Retrieval to Defensible Decisions: A Protocol for Time-Bounded Evidence States",
+            "publication_type": "methods_preprint",
+            "version": "v0.1",
+            "published_at": "2026-09-29",
+            "version_doi": VERSION_DOI,
+            "version_doi_url": VERSION_DOI_URL,
+            "concept_doi": CONCEPT_DOI,
+            "concept_doi_url": CONCEPT_DOI_URL,
+            "zenodo_record": ZENODO_RECORD,
+            "canonical_scholarly_version": "VERSION_DOI",
+            "canonical_scholarly_family": "CONCEPT_DOI",
+            "replication_repository": "https://github.com/roalstoney-alt/structurevidence",
+            "public_method_site": "https://structurevidence.org",
+            "machine_method_contract": METHOD_URL,
+        },
         "principles": [{"id": key, "statement": statement} for key, statement in principles],
         "required_claim_fields": ["claim_id", "case_id", "statement", "state", "as_of", "supports", "does_not_support", "unknowns", "provenance", "next_observable", "canonical_url"],
     }
@@ -206,6 +227,7 @@ def agent_html(claim_count: int):
 <main class="product-main" id="main"><section class="page-hero"><p class="eyebrow">Agent Discovery Layer · v0.1</p><h1>StructureEvidence for Agents</h1><p class="lead">Resolve a question to a time-bounded evidence state before inferring beyond the evidence.</p></section>
 <section class="product-section"><div class="section-head"><div><p class="eyebrow">Public research plane</p><h2>Deterministic evidence retrieval.</h2></div><p>StructureEvidence exposes {claim_count} stable claim objects derived from three governed public cases. The resolver uses explicit aliases and keywords—no LLM and no external search.</p></div><div class="boundary-grid"><div><p class="field-label">Always preserve</p><p>Claim state, as-of boundary, supports, does not support, unknowns, provenance, and next observable.</p></div><div><p class="field-label">Never delegated</p><p>Research authorization, publication approval, deployment decisions, customer actions, or patient-specific medical advice.</p></div></div></section>
 <section class="product-section"><div class="section-head"><div><p class="eyebrow">Question protocol</p><h2>Question → claim → stop-point → missing evidence.</h2></div><p>The intake gate checks whether a question is atomic, falsifiable, scoped, and time-bounded. Governed matches are classified as EXACT, ISOMORPHIC, PARTIAL, or NONE. Sufficient public evidence is cited and stopped; only the minimum missing evidence may proceed to a human-authorized verification scope.</p></div><p>Freshness, verification depth, and applicability remain explicit. A quote is not research authorization, payment does not buy a desired outcome, and paid evidence is not public without a separate eligibility review and human publication approval.</p></section>
+<section class="product-section"><div class="section-head"><div><p class="eyebrow">Scholarly reference</p><h2>From Retrieval to Defensible Decisions: A Protocol for Time-Bounded Evidence States</h2></div><p>Version DOI: <a href="{VERSION_DOI_URL}">{VERSION_DOI}</a><br>Concept DOI: <a href="{CONCEPT_DOI_URL}">{CONCEPT_DOI}</a></p></div></section>
 <section class="product-section"><div class="actions"><a class="button" href="/claims/index.json">Enumerate claims</a><a class="button secondary" href="/method-contract.json">Read method contract</a><a class="button secondary" href="/.well-known/structurevidence.json">Open discovery manifest</a></div><p>Runtime resolver: <code>GET https://api.structurevidence.org/resolve?q=&lt;question&gt;</code>. Commercial capabilities are described separately at <a href="https://structevidence.com/capabilities.json">structevidence.com/capabilities.json</a>; human authorization is required.</p></section></main>
 <footer class="product-footer"><div class="product-wrap footer-grid"><strong>StructureEvidence</strong><a href="/claims/index.json">Claims</a><a href="/changes.json">Changes</a><span>Discovery and resolution only.</span></div></footer></body></html>'''
 
@@ -239,6 +261,13 @@ def build_outputs():
         "changes": "https://structurevidence.org/changes.json",
         "capabilities": "https://structevidence.com/capabilities.json",
         "resolve_endpoint": "https://api.structurevidence.org/resolve",
+        "scholarly_record": {
+            "version_doi": VERSION_DOI,
+            "version_doi_url": VERSION_DOI_URL,
+            "concept_doi": CONCEPT_DOI,
+            "concept_doi_url": CONCEPT_DOI_URL,
+            "zenodo_record": ZENODO_RECORD,
+        },
         "public_cases": list(registry["cases"]),
         "principles": ["EVENT_TIME_NE_KNOWLEDGE_TIME", "NOT_FOUND_NE_DOES_NOT_EXIST", "SINGLE_INSTANCE_NE_INDUSTRY_ADOPTION", "SOURCE_STATEMENT_NE_INDEPENDENT_VALIDATION", "UNKNOWN_MUST_NOT_BE_INFERRED"],
     }

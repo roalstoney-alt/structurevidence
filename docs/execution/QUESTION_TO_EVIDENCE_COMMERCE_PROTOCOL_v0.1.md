@@ -6,6 +6,15 @@ Entry baseline: `79b21a0ded70af2a6b8bcd81ae097f81ea256357`
 
 Implementation commits: `33a6d8e`, `d2b4024`
 
+## Scholarly Reference
+
+- Method paper v0.1: [From Retrieval to Defensible Decisions: A Protocol for Time-Bounded Evidence States](https://doi.org/10.5281/zenodo.23033588)
+- Version DOI (exact publication): `10.5281/zenodo.23033588`
+- Concept DOI (all versions): `10.5281/zenodo.23033587`
+- Implementation baseline: `94ee5dc8670b8132979846c815b400f8cef17ab1`
+
+The method paper describes `QUESTION_TO_EVIDENCE_COMMERCE_PROTOCOL_v0.1`, implemented by the baseline above and exposed through `structurevidence.org` and `api.structurevidence.org`.
+
 ## Protocol
 
 The existing read-only resolver now applies a deterministic governed sequence:

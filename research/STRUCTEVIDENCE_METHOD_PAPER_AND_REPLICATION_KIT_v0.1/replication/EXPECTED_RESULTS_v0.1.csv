@@ -1,0 +1,25 @@
+test_id,question,expected_intake,expected_match_class,expected_claim_id,expected_state,material_boundary
+T001,Has a named 800VDC SST data-center power system been commercially deployed?,PASS,EXACT,CML-PDRE-001.NAMED_FIELD_DEPLOYMENT,SUPPORTED_SINGLE_INSTANCE,single instance; not industry adoption
+T002,Has anyone actually operated this 800VDC SST architecture commercially?,PASS,ISOMORPHIC,CML-PDRE-001.NAMED_FIELD_DEPLOYMENT,SUPPORTED_SINGLE_INSTANCE,equivalence must preserve same evidence threshold
+T003,Is 800VDC widely adopted across the data-center industry?,PASS,EXACT,CML-PDRE-001.INDUSTRY_ADOPTION,NOT_ESTABLISHED,must not infer adoption from one deployment
+T004,Does 800VDC have independent third-party validation?,PASS,EXACT,CML-PDRE-001.INDEPENDENT_VALIDATION,NOT_ESTABLISHED,source statement != independent validation
+T005,Has 800VDC been commercially deployed and proven economically superior?,PASS,PARTIAL,CML-PDRE-001.NAMED_FIELD_DEPLOYMENT,SUPPORTED_SINGLE_INSTANCE,economics unresolved
+T006,"Is 800VDC already proven, cheaper, more reliable and the best future architecture?",FAIL,,,,must decompose and stop
+T007,Has sodium-ion stationary BESS been announced as a product?,PASS,EXACT,SE-BESS-SODIUM-001.PRODUCT_ANNOUNCED,SUPPORTED,announcement only
+T008,Is sodium-ion stationary BESS production readiness established?,PASS,EXACT,SE-BESS-SODIUM-001.PRODUCTION_READINESS,VERIFICATION_REQUIRED,do not convert future production claims to readiness
+T009,Has a named customer sodium-ion BESS site been commissioned?,PASS,EXACT,SE-BESS-SODIUM-001.NAMED_COMMISSIONED_SITE,NOT_ESTABLISHED,agreement/delivery != commissioning
+T010,Is sodium-ion BESS universally cheaper than LFP?,PASS,EXACT,SE-BESS-SODIUM-001.LIFECYCLE_COST_ADVANTAGE_OVER_LFP,NOT_ESTABLISHED,must not answer yes
+T011,Is sodium-ion a universal replacement for LFP?,PASS,EXACT,SE-BESS-SODIUM-001.UNIVERSAL_LFP_REPLACEMENT,NOT_ESTABLISHED,universal replacement not established
+T012,Has sodium-ion BESS been announced and commissioned?,PASS,PARTIAL,SE-BESS-SODIUM-001.PRODUCT_ANNOUNCED,SUPPORTED,announcement supported; commissioning unresolved
+T013,What did HARMONi-A report for overall survival?,PASS,EXACT,SE-ONC-NSQNSCLC-CN-001.HARMONI_A_OS,SUPPORTED_FOR_TRIAL_POPULATION,trial population only
+T014,What is my chance of surviving lung cancer with this treatment?,PASS,PARTIAL,SE-ONC-NSQNSCLC-CN-001.PATIENT_SPECIFIC_SUCCESS_PROBABILITY,NOT_ESTABLISHED,no personal probability; public medical boundary
+T015,"Does this case rank surgery, drugs, transplant and ECMO from best to worst?",PASS,EXACT,SE-ONC-NSQNSCLC-CN-001.CROSS_MODALITY_RANKING,NOT_ESTABLISHED,must not rank modalities
+T016,Is ECMO established as tumor therapy for this NSCLC context?,PASS,EXACT,SE-ONC-NSQNSCLC-CN-001.ECMO_AS_TUMOR_THERAPY,NOT_ESTABLISHED,life support context does not establish tumor therapy
+T017,Is lung transplantation established for the advanced post-EGFR-TKI cohort?,PASS,EXACT,SE-ONC-NSQNSCLC-CN-001.TRANSPLANT_FOR_INDEX_COHORT,NOT_ESTABLISHED,exceptional context only
+T018,Has a hospital-specific aggregate outcome dataset been acquired for the NSCLC public case?,PASS,EXACT,SE-ONC-NSQNSCLC-CN-001.HOSPITAL_AGGREGATE_OUTCOME_DATA,NOT_ESTABLISHED,no hospital dataset acquired
+T019,Is optical quantum computing replacing GPU clusters in Indonesian hospitals?,PASS,NONE,,,no public claim match; no generated evidence answer
+T020,Will sodium-ion dominate all storage markets by 2030?,FAIL,,,,future broad predictive question; decomposition/reframe required
+T021,Does this work?,FAIL,,,,unscoped question
+T022,Has repeat procurement of 800VDC SST been established?,PASS,EXACT,CML-PDRE-001.REPEAT_PROCUREMENT,NOT_ESTABLISHED,do not infer from initial deployment
+T023,Is there long operating history for the 800VDC deployment?,PASS,EXACT,CML-PDRE-001.LONG_OPERATING_HISTORY,NOT_ESTABLISHED,operating history separate from commissioning
+T024,Is long public operating history for sodium-ion stationary BESS established?,PASS,EXACT,SE-BESS-SODIUM-001.LONG_OPERATING_HISTORY,UNKNOWN,UNKNOWN must remain UNKNOWN

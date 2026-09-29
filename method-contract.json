@@ -20,6 +20,22 @@
     "commerce_boundary": "PROCESS_BOUGHT_OUTCOME_NOT_BOUGHT",
     "automatic_research_authorization": false
   },
+  "scholarly_record": {
+    "title": "From Retrieval to Defensible Decisions: A Protocol for Time-Bounded Evidence States",
+    "publication_type": "methods_preprint",
+    "version": "v0.1",
+    "published_at": "2026-09-29",
+    "version_doi": "10.5281/zenodo.23033588",
+    "version_doi_url": "https://doi.org/10.5281/zenodo.23033588",
+    "concept_doi": "10.5281/zenodo.23033587",
+    "concept_doi_url": "https://doi.org/10.5281/zenodo.23033587",
+    "zenodo_record": "https://zenodo.org/records/23033588",
+    "canonical_scholarly_version": "VERSION_DOI",
+    "canonical_scholarly_family": "CONCEPT_DOI",
+    "replication_repository": "https://github.com/roalstoney-alt/structurevidence",
+    "public_method_site": "https://structurevidence.org",
+    "machine_method_contract": "https://structurevidence.org/method-contract.json"
+  },
   "principles": [
     {
       "id": "FACT_NE_CLAIM",

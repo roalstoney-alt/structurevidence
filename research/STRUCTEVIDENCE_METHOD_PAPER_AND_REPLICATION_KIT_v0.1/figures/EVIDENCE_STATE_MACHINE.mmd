@@ -1,0 +1,29 @@
+stateDiagram-v2
+    [*] --> QUESTION
+    QUESTION --> INTAKE_FAIL: not atomic/falsifiable/scoped/time-bounded
+    INTAKE_FAIL --> STOP
+    QUESTION --> MATCH: intake pass
+    MATCH --> NONE
+    MATCH --> PARTIAL
+    MATCH --> EXACT
+    MATCH --> ISOMORPHIC
+    ISOMORPHIC --> PARTIAL: equivalence fails
+    ISOMORPHIC --> STOP_POINT: equivalence passes
+    EXACT --> STOP_POINT
+    PARTIAL --> MISSING_EVIDENCE
+    NONE --> STOP
+    STOP_POINT --> CITE_STOP: sufficient + fresh
+    STOP_POINT --> MISSING_EVIDENCE: insufficient / stale / applicability gap
+    MISSING_EVIDENCE --> QUOTE
+    QUOTE --> STOP: not authorized
+    QUOTE --> PAID_CYCLE: human authorized
+    PAID_CYCLE --> RESULT
+    RESULT --> PRIVATE
+    RESULT --> MIXED
+    RESULT --> PUBLIC_ELIGIBLE
+    PUBLIC_ELIGIBLE --> PUBLIC_REVIEW
+    PUBLIC_REVIEW --> VERSIONED_PUBLIC_STATE: approved
+    PUBLIC_REVIEW --> PRIVATE: rejected/deferred
+    VERSIONED_PUBLIC_STATE --> [*]
+    PRIVATE --> [*]
+    MIXED --> PUBLIC_REVIEW: public extract eligible

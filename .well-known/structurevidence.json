@@ -8,6 +8,13 @@
   "changes": "https://structurevidence.org/changes.json",
   "capabilities": "https://structevidence.com/capabilities.json",
   "resolve_endpoint": "https://api.structurevidence.org/resolve",
+  "scholarly_record": {
+    "version_doi": "10.5281/zenodo.23033588",
+    "version_doi_url": "https://doi.org/10.5281/zenodo.23033588",
+    "concept_doi": "10.5281/zenodo.23033587",
+    "concept_doi_url": "https://doi.org/10.5281/zenodo.23033587",
+    "zenodo_record": "https://zenodo.org/records/23033588"
+  },
   "public_cases": [
     "CML-PDRE-001",
     "SE-BESS-SODIUM-001",

@@ -1,0 +1,36 @@
+{
+  "project": "STRUCTEVIDENCE_METHOD_PAPER_AND_REPLICATION_KIT_v0.1",
+  "status": "PUBLICATION_CANDIDATE",
+  "created_at": "2026-09-29",
+  "paper_version": "v0.1",
+  "version_doi": "10.5281/zenodo.23033588",
+  "concept_doi": "10.5281/zenodo.23033587",
+  "zenodo_record": "https://zenodo.org/records/23033588",
+  "protocol_version": "QUESTION_TO_EVIDENCE_COMMERCE_PROTOCOL_v0.1",
+  "implementation_baseline": "94ee5dc8670b8132979846c815b400f8cef17ab1",
+  "public_claim_count": 26,
+  "case_claim_counts": {
+    "CML-PDRE-001": 9,
+    "SE-BESS-SODIUM-001": 9,
+    "SE-ONC-NSQNSCLC-CN-001": 8
+  },
+  "production_endpoints": {
+    "research": "https://structurevidence.org",
+    "resolver": "https://api.structurevidence.org/resolve",
+    "commercial": "https://structevidence.com",
+    "method_contract": "https://structurevidence.org/method-contract.json",
+    "claims": "https://structurevidence.org/claims/index.json",
+    "changes": "https://structurevidence.org/changes.json"
+  },
+  "publication_claims": [
+    "representation_feasibility",
+    "protocol_feasibility",
+    "cross_domain_structural_feasibility"
+  ],
+  "explicit_nonclaims": [
+    "no comparative superiority claim",
+    "no statistical generalizability claim",
+    "no clinical validation claim",
+    "no guaranteed commercial ROI claim"
+  ]
+}

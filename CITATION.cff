@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+title: "From Retrieval to Defensible Decisions: A Protocol for Time-Bounded Evidence States"
+message: "If you use the StructureEvidence method or replication kit, please cite the Version DOI for the exact published version."
+authors:
+  - family-names: "Zhu"
+    given-names: "Stone"
+version: "0.1"
+date-released: "2026-09-29"
+doi: "10.5281/zenodo.23033588"
+identifiers:
+  - description: "Version DOI for the exact published v0.1 method paper."
+    type: doi
+    value: "10.5281/zenodo.23033588"
+  - description: "Concept DOI for the all-versions method-paper family."
+    type: doi
+    value: "10.5281/zenodo.23033587"
+url: "https://zenodo.org/records/23033588"
+repository-code: "https://github.com/roalstoney-alt/structurevidence"
+preferred-citation:
+  type: article
+  title: "From Retrieval to Defensible Decisions: A Protocol for Time-Bounded Evidence States"
+  authors:
+    - family-names: "Zhu"
+      given-names: "Stone"
+  year: 2026
+  version: "0.1"
+  doi: "10.5281/zenodo.23033588"
+  url: "https://doi.org/10.5281/zenodo.23033588"
