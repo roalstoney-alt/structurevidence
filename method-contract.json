@@ -49,6 +49,39 @@
     "additive": true,
     "legacy_state_preserved": true
   },
+  "state_identity": {
+    "required_dimensions": [
+      "claim_id",
+      "as_of",
+      "protocol_version",
+      "snapshot_commit"
+    ]
+  },
+  "decision_ownership": {
+    "evidence_state_determines_decision": false,
+    "agent_may": [
+      "RETRIEVE",
+      "COMPARE",
+      "EXPLAIN",
+      "TRACE"
+    ],
+    "final_decision_authority": "RESPONSIBLE_ACTOR"
+  },
+  "change_object_contract": {
+    "history_policy": "APPEND_DONT_ERASE",
+    "required_fields_when_transition_exists": [
+      "claim_id",
+      "from_state",
+      "to_state",
+      "from_as_of",
+      "to_as_of",
+      "protocol_version",
+      "transition_evidence",
+      "published_at",
+      "snapshot_commit",
+      "supersedes"
+    ]
+  },
   "principles": [
     {
       "id": "FACT_NE_CLAIM",
@@ -89,6 +122,30 @@
     {
       "id": "UNDECLARED_INFERENCE_NOT_AUTHORIZED",
       "statement": "An inference not explicitly represented by the claim state, supports, does_not_support, unknowns, or approved scope must not be treated as supported."
+    },
+    {
+      "id": "TIME_BOUNDED_STATE",
+      "statement": "Every evidence state has a knowledge-time boundary."
+    },
+    {
+      "id": "PROTOCOL_BOUNDED_STATE",
+      "statement": "Every evidence state identifies the protocol or evidence contract under which it was produced."
+    },
+    {
+      "id": "APPEND_DONT_ERASE",
+      "statement": "New evidence creates new state versions; previous approved public states remain retrievable."
+    },
+    {
+      "id": "CHANGE_IS_DATA",
+      "statement": "A transition from one evidence state to another is itself a first-class evidence record."
+    },
+    {
+      "id": "EVIDENCE_STATE_NE_DECISION",
+      "statement": "A defensible evidence state constrains the decision space but does not determine the final decision."
+    },
+    {
+      "id": "AGENT_READS_ACTOR_DECIDES",
+      "statement": "Agents may retrieve, compare, explain and trace evidence states; the responsible actor owns the final decision."
     }
   ],
   "required_claim_fields": [

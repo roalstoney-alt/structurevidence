@@ -34,3 +34,14 @@ test("resolver exposes the closed boundary without removing legacy fields", () =
     assert.ok(Object.hasOwn(result.public_stop_point, field));
   }
 });
+
+test("resolver stop-point carries complete temporal state identity", () => {
+  const result = resolveQuery("Has a named 800VDC SST system been commercially deployed?");
+  const stop = result.public_stop_point;
+  assert.ok(stop.as_of);
+  assert.equal(stop.protocol_version, "QUESTION_TO_EVIDENCE_COMMERCE_PROTOCOL_v0.1");
+  assert.match(stop.snapshot.commit, /^[0-9a-f]{40}$/);
+  assert.equal(stop.snapshot.permalink, `https://github.com/roalstoney-alt/structurevidence/tree/${stop.snapshot.commit}`);
+  assert.equal(stop.decision_ownership.final_decision_authority, "RESPONSIBLE_ACTOR");
+  assert.notEqual(stop.decision_ownership.final_decision_authority, "AGENT");
+});

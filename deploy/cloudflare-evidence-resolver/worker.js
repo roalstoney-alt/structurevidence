@@ -18,6 +18,15 @@ import {
 const METHOD_CONTRACT = "https://structurevidence.org/method-contract.json";
 const VERIFY_URL = "https://structevidence.com/verify/";
 const MEDICAL_CASE = "SE-ONC-NSQNSCLC-CN-001";
+const SNAPSHOT = Object.freeze({
+  commit: "58c7c4fe9fa334e030080cf7ab352c222b326ec2",
+  repository: "https://github.com/roalstoney-alt/structurevidence",
+  permalink: "https://github.com/roalstoney-alt/structurevidence/tree/58c7c4fe9fa334e030080cf7ab352c222b326ec2",
+});
+const DECISION_OWNERSHIP = Object.freeze({
+  agent_role: "EVIDENCE_INTERPRETATION",
+  final_decision_authority: "RESPONSIBLE_ACTOR",
+});
 const securityHeaders = {
   "access-control-allow-origin": "*",
   "cache-control": "no-store",
@@ -92,6 +101,8 @@ function publicStopPoint(claim) {
     supports: claim.supports,
     does_not_support: claim.does_not_support,
     as_of: claim.as_of,
+    protocol_version: PROTOCOL_VERSION,
+    snapshot: SNAPSHOT,
     freshness: freshness.freshness_state,
     freshness_metadata: freshness,
     verification_depth: verificationDepthFor(claim),
@@ -99,6 +110,8 @@ function publicStopPoint(claim) {
     unknowns: claim.unknowns,
     next_observable: claim.next_observable,
     canonical_url: claim.canonical_url,
+    inference_policy: INFERENCE_POLICY,
+    decision_ownership: DECISION_OWNERSHIP,
   };
 }
 
@@ -112,6 +125,8 @@ export function resolveQuery(query) {
     human_authorization_required: true,
     inference_policy: INFERENCE_POLICY,
     undeclared_inference: UNDECLARED_INFERENCE,
+    snapshot: SNAPSHOT,
+    decision_ownership: DECISION_OWNERSHIP,
   };
   if (intake.intake_status === "FAIL") {
     return {

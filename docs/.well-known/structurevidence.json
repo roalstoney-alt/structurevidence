@@ -9,6 +9,16 @@
   "capabilities": "https://structevidence.com/capabilities.json",
   "resolve_endpoint": "https://api.structurevidence.org/resolve",
   "state_normalization": "https://structurevidence.org/protocol/state-normalization-v0.1.json",
+  "temporal_state": {
+    "requires_as_of": true,
+    "requires_protocol_version": true,
+    "historical_states_preserved": true,
+    "change_is_data": true
+  },
+  "decision_boundary": {
+    "agent_role": "RETRIEVE_COMPARE_EXPLAIN_TRACE",
+    "final_decision_authority": "RESPONSIBLE_ACTOR"
+  },
   "scholarly_record": {
     "version_doi": "10.5281/zenodo.23033588",
     "version_doi_url": "https://doi.org/10.5281/zenodo.23033588",
