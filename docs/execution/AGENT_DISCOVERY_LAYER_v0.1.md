@@ -1,6 +1,6 @@
 # Agent Discovery Layer v0.1
 
-Status: implementation validation
+Status: deployed with production resolver DNS blocker
 
 Entry baseline: `54da445db0315836363aa5d5feebc3751fe85a20`
 
@@ -43,4 +43,13 @@ cd deploy/cloudflare-landing && pnpm test && pnpm run check
 
 The Python suite covers validation groups A-W, including byte immutability relative to the entry baseline and compatibility with the Daily/Weekly Case Watch validator. The Worker tests cover all six required queries, no-match behavior, bounded supported and unresolved states, medical safety, read-only routing, and commercial-plane metadata.
 
-Production endpoint acceptance is performed after normal fast-forward publication of the tested commit.
+## Deployment acceptance
+
+The tested implementation was published by normal fast-forward push at commit `875a32d0f750d17787238c837cd424214b6e07dc`.
+
+- Public resolver Worker version: `c8c72ef6-d302-4476-9527-112fc1ad28c9`
+- Commercial Worker version: `12d79798-b09e-45a8-a7cf-b9a56633125f`
+- Discovery manifest, method contract, claim index, change feed, agent page, individual claim retrieval, and commercial capabilities: PASS in production.
+- `https://structurevidence.org/api/resolve`: FAIL at initial acceptance because the apex DNS record resolves directly to GitHub Pages and bypasses the deployed Cloudflare route.
+
+The Worker is deployed and its required resolver suite passes, but production activation requires a Cloudflare-authorized operator to proxy the existing `structurevidence.org` DNS record. The deployment credential used here has `workers_routes:write` and `zone:read`, but no DNS-write permission. The existing static site must remain the origin; no static resolver substitute was created.
