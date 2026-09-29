@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://structurevidence.org/protocol/applicability/schema-v0.1.json",
+  "title": "APPLICABILITY_STATE_v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["applicability_state", "basis"],
+  "properties": {
+    "applicability_state": {"enum": ["GENERAL_PUBLIC_SCOPE", "ARCHITECTURE_LEVEL_ONLY", "CUSTOMER_SPECIFIC_NOT_EVALUATED", "GEOGRAPHY_SPECIFIC", "POPULATION_SPECIFIC", "USE_CASE_SPECIFIC", "NOT_APPLICABLE", "UNKNOWN"]},
+    "basis": {"type": "string", "minLength": 1}
+  }
+}

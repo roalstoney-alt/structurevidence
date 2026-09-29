@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://structurevidence.org/protocol/verification-quote/schema-v0.1.json",
+  "title": "VERIFICATION_QUOTE_v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["quote_id", "question_id", "claim_ids", "scope", "minimum_missing_evidence", "research_level_candidate", "source_scope", "search_envelope", "knowledge_cutoff", "stop_conditions", "deliverables", "delivery_window", "price", "research_cap", "publication_rights", "human_authorization_required", "payment_required", "outcome_guaranteed", "research_authorized", "quote_status"],
+  "properties": {
+    "quote_id": {"type": "string"},
+    "question_id": {"type": "string"},
+    "claim_ids": {"type": "array", "items": {"type": "string"}},
+    "scope": {"type": "string"},
+    "minimum_missing_evidence": {"type": "array", "minItems": 1, "items": {"type": "object"}},
+    "research_level_candidate": {"enum": ["L1_VERIFY", "L2_INVESTIGATE", "L3_DEEP"]},
+    "source_scope": {"type": "array", "items": {"type": "string"}},
+    "search_envelope": {"type": "string"},
+    "knowledge_cutoff": {"type": "string"},
+    "stop_conditions": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "deliverables": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "delivery_window": {"type": "string"},
+    "price": {"type": "object", "required": ["currency", "amount", "status"], "properties": {"currency": {"type": "string"}, "amount": {"type": ["number", "null"]}, "status": {"enum": ["DEFINED", "TO_BE_DEFINED"]}}},
+    "research_cap": {"type": "object", "required": ["unit", "maximum", "status"], "properties": {"unit": {"type": "string"}, "maximum": {"type": ["number", "null"]}, "status": {"enum": ["DEFINED", "UNKNOWN"]}}},
+    "publication_rights": {"const": "UNDETERMINED"},
+    "human_authorization_required": {"const": true},
+    "payment_required": {"const": true},
+    "outcome_guaranteed": {"const": false},
+    "research_authorized": {"const": false},
+    "quote_status": {"const": "AVAILABLE"}
+  }
+}

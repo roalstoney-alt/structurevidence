@@ -1,4 +1,16 @@
 import { CLAIMS } from "./claims.js";
+import {
+  PROTOCOL_VERSION,
+  applicabilityFor,
+  buildVerificationQuote,
+  classifyMatch,
+  commercialHandoff,
+  evaluateIntake,
+  freshnessFor,
+  minimumEvidenceFor,
+  rdlCandidate,
+  verificationDepthFor,
+} from "./question-protocol.js";
 
 const METHOD_CONTRACT = "https://structurevidence.org/method-contract.json";
 const VERIFY_URL = "https://structevidence.com/verify/";
@@ -67,29 +79,110 @@ function publicClaim(claim) {
   return result;
 }
 
+function publicStopPoint(claim) {
+  const freshness = freshnessFor(claim);
+  return {
+    claim_id: claim.claim_id,
+    state: claim.state,
+    supports: claim.supports,
+    does_not_support: claim.does_not_support,
+    as_of: claim.as_of,
+    freshness: freshness.freshness_state,
+    freshness_metadata: freshness,
+    verification_depth: verificationDepthFor(claim),
+    applicability: applicabilityFor(claim),
+    unknowns: claim.unknowns,
+    next_observable: claim.next_observable,
+    canonical_url: claim.canonical_url,
+  };
+}
+
 export function resolveQuery(query) {
-  const ranked = CLAIMS.map((claim) => ({ claim, match_score: scoreClaim(query, claim) })).filter((row) => row.match_score > 0).sort((a, b) => b.match_score - a.match_score || a.claim.claim_id.localeCompare(b.claim.claim_id));
-  if (!ranked.length) {
+  const intake = evaluateIntake(query);
+  const protocolBase = {
+    protocol_version: PROTOCOL_VERSION,
+    query,
+    intake,
+    method_contract: METHOD_CONTRACT,
+    human_authorization_required: true,
+  };
+  if (intake.intake_status === "FAIL") {
     return {
-      query,
+      ...protocolBase,
       result: "NO_MATCH",
+      match_class: null,
       matched_claims: [],
+      public_stop_point: null,
+      sufficiency: "UNKNOWN",
+      resolution_action: "DECOMPOSE_AND_STOP",
+      minimum_missing_evidence: [],
+      research_level_candidate: null,
+      available_capability: null,
+      quote_available: false,
+      verification_quote: null,
+      commercial_next_step: null,
+      human_action_required: true,
+      message: "Question intake failed. Human selection or reframing is required before claim matching.",
+    };
+  }
+  const ranked = CLAIMS.map((claim) => ({ claim, match_score: scoreClaim(query, claim) })).filter((row) => row.match_score > 0).sort((a, b) => b.match_score - a.match_score || a.claim.claim_id.localeCompare(b.claim.claim_id));
+  const match = classifyMatch(query, ranked, CLAIMS);
+  if (match.match_class === "NONE") {
+    return {
+      ...protocolBase,
+      result: "NO_MATCH",
+      match_class: "NONE",
+      matched_claims: [],
+      public_stop_point: null,
+      sufficiency: "UNKNOWN",
+      resolution_action: "NO_PUBLIC_MATCH",
+      minimum_missing_evidence: [],
+      research_level_candidate: null,
+      available_capability: null,
+      quote_available: false,
+      verification_quote: null,
       message: "No existing StructureEvidence public claim matched this query.",
       human_action_required: true,
       next_step: VERIFY_URL,
-      method_contract: METHOD_CONTRACT,
       commercial_next_step: null,
     };
   }
-  const top = ranked[0].match_score;
-  const selected = ranked.filter((row) => row.match_score === top).map((row) => publicClaim(row.claim));
+  const rawSelected = match.selected;
+  const selected = rawSelected.map((claim) => publicClaim(claim));
   const personalMedical = selected.some((claim) => claim.case_id === MEDICAL_CASE) && /\b(my|me|mine|personal|patient-specific)\b/i.test(query);
+  const primary = rawSelected[0];
+  const stopPoint = publicStopPoint(primary);
+  const missingEvidence = personalMedical ? [] : minimumEvidenceFor(intake.question_id, match, primary);
+  const researchLevel = missingEvidence.length ? rdlCandidate(match.match_class, missingEvidence) : "L0_REUSE";
+  const unresolvedClaim = selected.some((claim) => claim.resolution_status === "UNRESOLVED");
+  const sufficiency = match.match_class === "PARTIAL" ? "PARTIALLY_SUFFICIENT" : unresolvedClaim ? "INSUFFICIENT" : stopPoint.freshness === "CURRENT" ? "SUFFICIENT" : "UNKNOWN";
+  const resolutionAction = sufficiency === "SUFFICIENT" ? "CITE_AND_STOP" : missingEvidence.length ? "MINIMUM_MISSING_EVIDENCE_IDENTIFIED" : "STOP";
+  const quote = personalMedical ? { quote_status: "NOT_READY", missing_scope_fields: ["SEPARATELY_GOVERNED_MEDICAL_PRODUCT_PATH"] } : buildVerificationQuote({
+    intake,
+    claimIds: selected.map((claim) => claim.claim_id),
+    scope: match.unresolved_portion || `Resolve ${primary.claim_id} within its public boundary.`,
+    missingEvidence,
+    researchLevel: missingEvidence.length ? researchLevel : null,
+    knowledgeCutoff: primary.as_of,
+  });
+  const quoteReady = quote.quote_status === "AVAILABLE";
   return {
-    query,
+    ...protocolBase,
     result: "MATCHED",
+    match_class: match.match_class,
+    ...(match.match_class === "ISOMORPHIC" ? { equivalence: match.equivalence, equivalence_result: match.equivalence_result } : {}),
     matched_claims: selected,
-    method_contract: METHOD_CONTRACT,
-    commercial_next_step: null,
+    public_stop_point: stopPoint,
+    freshness: stopPoint.freshness_metadata,
+    sufficiency,
+    resolution_action: resolutionAction,
+    unresolved_portion: match.unresolved_portion,
+    minimum_missing_evidence: missingEvidence,
+    research_level_candidate: researchLevel,
+    available_capability: quoteReady ? "VERIFY_CLAIM" : null,
+    quote_available: quoteReady,
+    verification_quote: quote,
+    commercial_next_step: commercialHandoff({ intake, matchClass: match.match_class, claimIds: selected.map((claim) => claim.claim_id), missingEvidence, researchLevel, quoteReady }),
     ...(personalMedical ? { medical_boundary: "This public evidence object does not provide patient-specific medical advice." } : {}),
   };
 }

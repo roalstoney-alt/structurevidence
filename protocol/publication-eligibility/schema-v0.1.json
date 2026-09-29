@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://structurevidence.org/protocol/publication-eligibility/schema-v0.1.json",
+  "title": "PUBLICATION_ELIGIBILITY_v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["evidence_result_id", "publication_eligibility", "rights_status", "customer_confidentiality", "source_accessibility", "redaction_possible", "public_claim_impact", "human_publication_review_required", "public_transition_authorized"],
+  "properties": {
+    "evidence_result_id": {"type": "string"},
+    "publication_eligibility": {"enum": ["PUBLIC_ELIGIBLE", "CUSTOMER_PRIVATE", "MIXED_REDACTABLE", "CONFIDENTIAL", "SOURCE_CONTROLLED", "OTHER_RESTRICTED"]},
+    "rights_status": {"type": "string"},
+    "customer_confidentiality": {"type": "string"},
+    "source_accessibility": {"enum": ["PUBLIC", "PAYWALLED", "REGISTRATION_REQUIRED", "ACCESS_RESTRICTED", "SOURCE_CONTROLLED", "CONFIDENTIAL", "KNOWN_TO_EXIST_NOT_ACCESSIBLE"]},
+    "redaction_possible": {"type": "boolean"},
+    "public_claim_impact": {"type": "string"},
+    "human_publication_review_required": {"const": true},
+    "public_transition_authorized": {"const": false}
+  }
+}

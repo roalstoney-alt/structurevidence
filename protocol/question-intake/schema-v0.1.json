@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://structurevidence.org/protocol/question-intake/schema-v0.1.json",
+  "title": "QUESTION_INTAKE_v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["question_id", "raw_question", "normalized_question", "intake_status", "atomic", "falsifiable", "scoped", "time_bounded", "scope", "failure_reasons", "decomposition_draft", "human_selection_required"],
+  "properties": {
+    "question_id": {"type": "string", "minLength": 1},
+    "raw_question": {"type": "string", "minLength": 1},
+    "normalized_question": {"type": "string", "minLength": 1},
+    "intake_status": {"enum": ["PASS", "FAIL"]},
+    "atomic": {"type": "boolean"},
+    "falsifiable": {"type": "boolean"},
+    "scoped": {"type": "boolean"},
+    "time_bounded": {"type": "boolean"},
+    "scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["subject", "predicate", "context", "geography", "time_boundary"],
+      "properties": {
+        "subject": {"type": "string"},
+        "predicate": {"type": "string"},
+        "context": {"type": "string"},
+        "geography": {"type": "string"},
+        "time_boundary": {"type": "string"}
+      }
+    },
+    "failure_reasons": {"type": "array", "items": {"type": "string"}},
+    "decomposition_draft": {"type": "array", "items": {"type": "string"}},
+    "human_selection_required": {"type": "boolean"}
+  }
+}
