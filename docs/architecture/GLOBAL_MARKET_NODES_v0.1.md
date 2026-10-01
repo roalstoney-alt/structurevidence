@@ -2,7 +2,7 @@
 
 ## Objective
 
-StructureEvidence serves three market-facing language nodes from one canonical evidence system:
+StructEvidence serves three market-facing language nodes from one canonical evidence system:
 
 - English: `/en/`
 - Simplified Chinese: `/zh-cn/`

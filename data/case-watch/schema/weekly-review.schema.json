@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://structurevidence.org/schema/case-watch/weekly-review-v1.json",
-  "title": "StructureEvidence Weekly Case Review",
+  "title": "StructEvidence Weekly Case Review",
   "type": "object",
   "additionalProperties": false,
   "required": ["case_id", "review_period", "previous_version", "records_screened", "relevant_records", "state_changing_records", "counter_evidence_records", "proposed_decision", "proposed_next_version", "reason", "minimum_missing_evidence", "decision_that_could_change", "recommended_rdl_level", "human_decision", "publication_approved"],

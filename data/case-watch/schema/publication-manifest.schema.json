@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://structurevidence.org/schema/case-watch/publication-manifest-v1.json",
-  "title": "StructureEvidence Weekly Publication Manifest",
+  "title": "StructEvidence Weekly Publication Manifest",
   "type": "object",
   "additionalProperties": false,
   "required": ["review_period", "generated_at", "cases"],

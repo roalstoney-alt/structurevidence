@@ -1,4 +1,4 @@
-# StructureEvidence
+# StructEvidence
 
 **Time-indexed evidence → Decision memory → Workflow → Outcomes**
 
@@ -51,7 +51,7 @@ Existing dual-clock records remain valid. Missing historical observation timesta
 
 ## Product boundary
 
-StructureEvidence separates:
+StructEvidence separates:
 
 `FACT ≠ CLAIM ≠ EVIDENCE ≠ DECISION ≠ OUTCOME`
 

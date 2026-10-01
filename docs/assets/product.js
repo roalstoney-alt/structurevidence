@@ -23,7 +23,7 @@ function payloadFor(form) {
 }
 
 function fallbackLink(form, payload, status) {
-  const subject = form.dataset.subject || "StructureEvidence scope request";
+  const subject = form.dataset.subject || "StructEvidence scope request";
   const fields = Object.entries(payload).filter(([, value]) => value).map(([key, value]) => `${key.replaceAll("_", " ").toUpperCase()}: ${value}`);
   const link = document.createElement("a");
   link.href = `mailto:support@structevidence.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(fields.join("\n\n"))}`;

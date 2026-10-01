@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://structurevidence.org/schema/case-watch/daily-observation-v1.json",
-  "title": "StructureEvidence Daily Case Watch Observation",
+  "title": "StructEvidence Daily Case Watch Observation",
   "type": "object",
   "additionalProperties": false,
   "required": [

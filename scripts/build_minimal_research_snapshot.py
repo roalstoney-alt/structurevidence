@@ -72,9 +72,9 @@ def build_payloads():
     ]
 
     payloads = {
-        "README.md": f"""# StructureEvidence Minimal Research Snapshot v0.1
+        "README.md": f"""# StructEvidence Minimal Research Snapshot v0.1
 
-This offline-readable snapshot freezes the StructureEvidence method contract, 26 public claim objects, orthogonal state-normalization mapping, required protocol schemas, and six representative resolver expectations before the Vortex Discovery Pilot.
+This offline-readable snapshot freezes the StructEvidence method contract, 26 public claim objects, orthogonal state-normalization mapping, required protocol schemas, and six representative resolver expectations before the Vortex Discovery Pilot.
 
 - Repository baseline: `{ENTRY_SHA}`
 - Protocol: `{PROTOCOL_VERSION}`

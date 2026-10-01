@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 title: "From Retrieval to Defensible Decisions: A Protocol for Time-Bounded Evidence States"
-message: "If you use the StructureEvidence method or replication kit, please cite the Version DOI for the exact published version."
+message: "If you use the StructEvidence method or replication kit, please cite the Version DOI for the exact published version."
 authors:
   - family-names: "Zhu"
     given-names: "Stone"

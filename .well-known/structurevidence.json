@@ -1,5 +1,5 @@
 {
-  "name": "StructureEvidence",
+  "name": "StructEvidence",
   "version": "0.1",
   "type": "temporal_evidence_resolution_layer",
   "description": "Versioned, time-bounded evidence states for claims that matter.",

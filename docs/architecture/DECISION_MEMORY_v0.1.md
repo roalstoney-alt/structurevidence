@@ -1,8 +1,8 @@
-# StructureEvidence Decision Memory v0.1
+# StructEvidence Decision Memory v0.1
 
 ## Purpose
 
-StructureEvidence is moving from a collection of evidence reports toward a time-indexed decision-memory layer.
+StructEvidence is moving from a collection of evidence reports toward a time-indexed decision-memory layer.
 
 The compounding product loop is:
 
@@ -57,7 +57,7 @@ New Decision Memory records use five distinct clocks:
 
 - `event_at`: when the underlying event occurred.
 - `published_at`: when the source made the event or claim public.
-- `first_observed_at`: when StructureEvidence first encountered the source, if captured.
+- `first_observed_at`: when StructEvidence first encountered the source, if captured.
 - `known_at`: when the source was accepted into the bounded evidence state.
 - `frozen_at`: when the corresponding state or decision snapshot was frozen.
 
@@ -68,7 +68,7 @@ Backward compatibility:
 - Existing dual-clock records remain valid.
 - Missing historical `first_observed_at` stays `null`; it must not be reconstructed from hindsight.
 
-The sodium-ion case demonstrates why this matters: the 60 GWh agreement event occurred on 2026-04-27, HyperStrong published on 2026-04-29, CATL published on 2026-05-06, and StructureEvidence accepted the evidence into the v0.1 case at the 2026-09-24 cutoff.
+The sodium-ion case demonstrates why this matters: the 60 GWh agreement event occurred on 2026-04-27, HyperStrong published on 2026-04-29, CATL published on 2026-05-06, and StructEvidence accepted the evidence into the v0.1 case at the 2026-09-24 cutoff.
 
 ## Evidence state vs decision state
 

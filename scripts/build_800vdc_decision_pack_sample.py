@@ -86,7 +86,7 @@ def page_frame(canvas, doc):
     canvas.line(18 * mm, height - 17 * mm, width - 18 * mm, height - 17 * mm)
     canvas.setFont("Helvetica-Bold", 8)
     canvas.setFillColor(INK)
-    canvas.drawString(18 * mm, height - 12 * mm, "STRUCTUREEVIDENCE")
+    canvas.drawString(18 * mm, height - 12 * mm, "STRUCTEVIDENCE")
     canvas.setFont("Helvetica", 7.5)
     canvas.setFillColor(MUTED)
     canvas.drawRightString(width - 18 * mm, height - 12 * mm, "PUBLIC ILLUSTRATIVE SAMPLE - NOT CUSTOMER ADVICE")
@@ -105,8 +105,8 @@ def build():
         leftMargin=18 * mm,
         topMargin=25 * mm,
         bottomMargin=21 * mm,
-        title="StructureEvidence 800V DC Decision Pack Sample v1.0",
-        author="MATRIX ASIA PACIFIC LIMITED / StructureEvidence",
+        title="StructEvidence 800V DC Decision Pack Sample v1.0",
+        author="MATRIX ASIA PACIFIC LIMITED / StructEvidence",
         subject="Illustrative public Decision Pack based on the published 800V DC evidence case",
     )
     story = []
@@ -122,7 +122,7 @@ def build():
         p("This five-page artifact demonstrates the structure of a customer-facing Decision Pack using only already-public evidence. It is not a customer deliverable, engineering design, safety opinion, procurement recommendation, or claim of full PDRE validation."),
         Spacer(1, 5 * mm),
         p("Prepared by", "SEKicker"),
-        p("StructureEvidence - operated by MATRIX ASIA PACIFIC LIMITED<br/>Responsible researcher: Stone Zhu<br/>Commercial contact: support@structevidence.com", "SEBody"),
+        p("StructEvidence - operated by MATRIX ASIA PACIFIC LIMITED<br/>Responsible researcher: Stone Zhu<br/>Commercial contact: support@structevidence.com", "SEBody"),
         Spacer(1, 12 * mm),
         p("VERSION 1.0 / PUBLIC / CUSTOMER-NEUTRAL", "SEKicker"),
         PageBreak(),

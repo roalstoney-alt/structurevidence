@@ -1,5 +1,5 @@
 {
-  "method": "StructureEvidence Temporal Evidence Method",
+  "method": "StructEvidence Temporal Evidence Method",
   "version": "1.0",
   "purpose": "Prevent unsupported inference by separating evidence state, time boundary, and unresolved uncertainty.",
   "question_protocol": {

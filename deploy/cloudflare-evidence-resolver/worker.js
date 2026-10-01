@@ -163,7 +163,7 @@ export function resolveQuery(query) {
       available_capability: null,
       quote_available: false,
       verification_quote: null,
-      message: "No existing StructureEvidence public claim matched this query.",
+      message: "No existing StructEvidence public claim matched this query.",
       human_action_required: true,
       next_step: VERIFY_URL,
       commercial_next_step: null,

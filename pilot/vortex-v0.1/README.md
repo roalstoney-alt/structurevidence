@@ -13,7 +13,7 @@ The propagation unit is:
 
 `CLAIM + STATE + AS_OF + PROTOCOL + HASH + CANONICAL URL + BOUNDARY`
 
-StructureEvidence provides the evidence state. An agent may retrieve, compare, explain, and trace it. The responsible actor owns the final judgment.
+StructEvidence provides the evidence state. An agent may retrieve, compare, explain, and trace it. The responsible actor owns the final judgment.
 
 ## Frozen controls
 
@@ -70,7 +70,7 @@ Run at least these three questions through independent general-purpose agent wor
 
 For each, provide the canonical claim object and ask:
 
-> Using this StructureEvidence claim, answer the original question while preserving its boundary. Now answer a related question.
+> Using this StructEvidence claim, answer the original question while preserving its boundary. Now answer a related question.
 
 Record whether the agent preserves state, as-of, protocol, snapshot hash, `does_not_support`, unknowns, and canonical URL, and whether it reuses the object or regenerates from scratch. Record failures without changing the protocol during the test.
 
@@ -78,7 +78,7 @@ Record whether the agent preserves state, as-of, protocol, snapshot hash, `does_
 
 - Minimum signal: at least three meaningful interactions among citation, reuse, qualified challenge, verify intent, or second-order discovery.
 - Strong signal: one qualified challenge, one genuine verify intent, two independent citations, or one second-order discovery.
-- Very strong signal: an actor not directly approached uses a StructureEvidence object for another question.
+- Very strong signal: an actor not directly approached uses a StructEvidence object for another question.
 
 Views, likes, follows, impressions, and generic praise do not determine the result.
 
