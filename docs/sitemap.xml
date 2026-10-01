@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-<url><loc>https://structurevidence.org/</loc><xhtml:link rel="alternate" hreflang="x-default" href="https://structurevidence.org/"/><xhtml:link rel="alternate" hreflang="en" href="https://structurevidence.org/en/"/><xhtml:link rel="alternate" hreflang="zh-CN" href="https://structurevidence.org/zh-cn/"/><xhtml:link rel="alternate" hreflang="es" href="https://structurevidence.org/es/"/></url>
+<url><loc>https://structurevidence.org/</loc><lastmod>2026-10-01</lastmod><xhtml:link rel="alternate" hreflang="x-default" href="https://structurevidence.org/"/><xhtml:link rel="alternate" hreflang="en" href="https://structurevidence.org/en/"/><xhtml:link rel="alternate" hreflang="zh-CN" href="https://structurevidence.org/zh-cn/"/><xhtml:link rel="alternate" hreflang="es" href="https://structurevidence.org/es/"/></url>
 <url><loc>https://structurevidence.org/en/</loc><xhtml:link rel="alternate" hreflang="x-default" href="https://structurevidence.org/"/><xhtml:link rel="alternate" hreflang="en" href="https://structurevidence.org/en/"/><xhtml:link rel="alternate" hreflang="zh-CN" href="https://structurevidence.org/zh-cn/"/><xhtml:link rel="alternate" hreflang="es" href="https://structurevidence.org/es/"/></url>
 <url><loc>https://structurevidence.org/zh-cn/</loc><xhtml:link rel="alternate" hreflang="x-default" href="https://structurevidence.org/"/><xhtml:link rel="alternate" hreflang="en" href="https://structurevidence.org/en/"/><xhtml:link rel="alternate" hreflang="zh-CN" href="https://structurevidence.org/zh-cn/"/><xhtml:link rel="alternate" hreflang="es" href="https://structurevidence.org/es/"/></url>
 <url><loc>https://structurevidence.org/es/</loc><xhtml:link rel="alternate" hreflang="x-default" href="https://structurevidence.org/"/><xhtml:link rel="alternate" hreflang="en" href="https://structurevidence.org/en/"/><xhtml:link rel="alternate" hreflang="zh-CN" href="https://structurevidence.org/zh-cn/"/><xhtml:link rel="alternate" hreflang="es" href="https://structurevidence.org/es/"/></url>
-<url><loc>https://structurevidence.org/cases/</loc></url>
-<url><loc>https://structurevidence.org/cases/800vdc/</loc></url>
-<url><loc>https://structurevidence.org/cases/sodium-ion-bess/</loc></url>
+<url><loc>https://structurevidence.org/cases/</loc><lastmod>2026-10-01</lastmod></url>
+<url><loc>https://structurevidence.org/cases/800vdc/</loc><lastmod>2026-09-20</lastmod></url>
+<url><loc>https://structurevidence.org/cases/800vdc/index.json</loc><lastmod>2026-09-20</lastmod></url>
+<url><loc>https://structurevidence.org/cases/sodium-ion-bess/</loc><lastmod>2026-09-24</lastmod></url>
+<url><loc>https://structurevidence.org/cases/sodium-ion-bess/index.json</loc><lastmod>2026-09-24</lastmod></url>
 <url><loc>https://structurevidence.org/cases/nsq-nsclc-china/</loc></url>
-<url><loc>https://structurevidence.org/changes/</loc></url>
+<url><loc>https://structurevidence.org/changes/</loc><lastmod>2026-09-20</lastmod></url>
+<url><loc>https://structurevidence.org/feed.xml</loc><lastmod>2026-09-20</lastmod></url>
 <url><loc>https://structurevidence.org/cases/submit-evidence/</loc></url>
 <url><loc>https://structurevidence.org/cases/800vdc/stop-v0.1.html</loc></url>
 <url><loc>https://structurevidence.org/cases/sodium-ion-bess/stop-v0.1.html</loc></url>
@@ -54,4 +57,10 @@
 <url><loc>https://structurevidence.org/claims/SE-ONC-NSQNSCLC-CN-001.HOSPITAL_AGGREGATE_OUTCOME_DATA.json</loc></url>
 <url><loc>https://structurevidence.org/claims/SE-ONC-NSQNSCLC-CN-001.PATIENT_SPECIFIC_SUCCESS_PROBABILITY.json</loc></url>
 <url><loc>https://structurevidence.org/claims/SE-ONC-NSQNSCLC-CN-001.CROSS_MODALITY_RANKING.json</loc></url>
+<url><loc>https://structurevidence.org/e/L1-EV-CML-PDRE-001-FIELD-DEPLOYMENT-001/</loc><lastmod>2026-09-20</lastmod></url>
+<url><loc>https://structurevidence.org/e/SE-BESS-SODIUM-001-EV-001/</loc><lastmod>2026-09-24</lastmod></url>
+<url><loc>https://structurevidence.org/e/SE-BESS-SODIUM-001-EV-002/</loc><lastmod>2026-09-24</lastmod></url>
+<url><loc>https://structurevidence.org/e/SE-BESS-SODIUM-001-EV-003/</loc><lastmod>2026-09-24</lastmod></url>
+<url><loc>https://structurevidence.org/e/SE-BESS-SODIUM-001-EV-004/</loc><lastmod>2026-09-24</lastmod></url>
+<url><loc>https://structurevidence.org/e/SE-BESS-SODIUM-001-EV-005/</loc><lastmod>2026-09-24</lastmod></url>
 </urlset>

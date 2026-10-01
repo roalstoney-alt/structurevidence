@@ -1,0 +1,14 @@
+{
+  "evidence_id": "SE-BESS-SODIUM-001-EV-002",
+  "title": "Sodium-Ion Energy Storage Commercialization State Map: CATL record dated 2025-04-21",
+  "source_url": "https://www.catl.com/en/news/6401.html",
+  "publisher": "CATL",
+  "source_date": "2025-04-21",
+  "observed_date": "2026-09-24",
+  "classification": "MANUFACTURER_PRODUCT_LAUNCH",
+  "supports": "Naxtra sodium-ion products were publicly launched with manufacturer-attributed mass-production claims.",
+  "does_not_establish": "A delivered or commissioned stationary storage system.",
+  "parent_case": "SE-BESS-SODIUM-001",
+  "parent_case_url": "https://structurevidence.org/cases/sodium-ion-bess/",
+  "canonical_url": "https://structurevidence.org/e/SE-BESS-SODIUM-001-EV-002/"
+}

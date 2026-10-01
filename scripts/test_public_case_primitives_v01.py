@@ -32,15 +32,11 @@ PAIRS = [
     ),
 ]
 PROTECTED = [
-    "cases/800vdc/index.html",
     "cases/800vdc/stop-v0.1.html",
-    "docs/cases/800vdc/index.html",
     "docs/cases/800vdc/stop-v0.1.html",
-    "cases/sodium-ion-bess/index.html",
     "cases/sodium-ion-bess/state-v0.1.json",
     "cases/sodium-ion-bess/stop-v0.1.html",
     "cases/sodium-ion-bess/decision-memory-v0.1.json",
-    "docs/cases/sodium-ion-bess/index.html",
     "docs/cases/sodium-ion-bess/state-v0.1.json",
     "docs/cases/sodium-ion-bess/stop-v0.1.html",
     "docs/cases/sodium-ion-bess/decision-memory-v0.1.json",

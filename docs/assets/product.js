@@ -103,3 +103,42 @@ if (publicEvidenceForm) {
     catch { status.textContent = "Clipboard unavailable. Use the email submission button."; }
   });
 }
+
+document.querySelectorAll("[data-copy-citation]").forEach((button) => {
+  button.addEventListener("click", async () => {
+    const status = button.parentElement.querySelector("[data-citation-status]");
+    try {
+      await navigator.clipboard.writeText(button.dataset.citation);
+      status.textContent = " Citation copied.";
+    } catch {
+      status.textContent = " Clipboard unavailable; copy the citation text above.";
+    }
+  });
+});
+
+const activitySummary = document.querySelector("[data-activity-summary]");
+if (activitySummary) {
+  fetch(activitySummary.dataset.source)
+    .then((response) => response.ok ? response.json() : Promise.reject(new Error("change feed unavailable")))
+    .then((feed) => {
+      const end = new Date(feed.generated_at + "T23:59:59Z");
+      const start = new Date(end);
+      start.setUTCDate(start.getUTCDate() - 29);
+      const recent = feed.changes.filter((item) => {
+        const date = new Date(item.date + "T00:00:00Z");
+        return date >= start && date <= end;
+      });
+      const values = {
+        cases: new Set(recent.map((item) => item.case_id)).size,
+        evidence: recent.reduce((sum, item) => sum + (item.qualifying_evidence_added || 0), 0),
+        unknowns: recent.reduce((sum, item) => sum + (item.unknowns_resolved || 0), 0),
+        states: recent.filter((item) => item.state_changed).length,
+      };
+      Object.entries(values).forEach(([key, value]) => {
+        activitySummary.querySelector(`[data-activity="${key}"]`).textContent = String(value);
+      });
+    })
+    .catch(() => {
+      activitySummary.querySelectorAll("[data-activity]").forEach((node) => { node.textContent = "Unavailable"; });
+    });
+}

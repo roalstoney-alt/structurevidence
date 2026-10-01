@@ -11,6 +11,11 @@
 @media(max-width:900px){.stop-card-head{flex-direction:column}.stop-card-head .state{max-width:100%}}
 @media(max-width:620px){.stop-card{padding:20px}.stop-fields{grid-template-columns:1fr}.stop-actions .button{width:100%}}
 
+/* Gravity discovery and citation surfaces */
+.breadcrumbs{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding-top:24px;color:var(--p-muted);font-size:.78rem}.breadcrumbs a{font-weight:750}.case-facts{display:grid;grid-template-columns:repeat(3,1fr);margin:24px 0 0;border:1px solid var(--p-line);background:#fff}.case-facts div{padding:16px;border-right:1px solid var(--p-line)}.case-facts div:last-child{border-right:0}.case-facts dt{color:var(--p-muted);font:750 .68rem var(--p-mono);text-transform:uppercase}.case-facts dd{margin:6px 0 0;font-weight:800;overflow-wrap:anywhere}.question-list{display:grid;grid-template-columns:1fr 1fr;gap:10px 32px;padding-left:22px}.record-links{margin-top:22px}.citation-box{padding:24px;border-top:1px solid var(--p-line);background:#f7faf9}.citation-box [data-citation-status]{color:var(--p-green);font-weight:750}.case-index small{color:var(--p-muted)}.activity-grid{grid-template-columns:repeat(4,1fr)}
+@media(max-width:900px){.case-facts{grid-template-columns:1fr}.case-facts div{border-right:0;border-bottom:1px solid var(--p-line)}.case-facts div:last-child{border-bottom:0}.question-list{grid-template-columns:1fr}.activity-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){.activity-grid{grid-template-columns:1fr}}
+
 /* Put the bounded statement in reach from the first screen. */
 .case-hero{padding:38px 0 20px}body.product-site .case-hero h1{font-size:clamp(2.3rem,5vw,4rem);max-width:1040px}.case-hero+.product-section#stop-point{padding-top:26px}.citation-hero{padding:40px 0 16px}body.product-site .citation-hero h1{font-size:clamp(2.1rem,4vw,3.25rem);max-width:1000px}.citation-hero+.citation-section{padding-top:22px}
 @media(max-width:620px){.case-hero{padding:28px 0 14px}.citation-hero{padding:28px 0 10px}.case-hero+.product-section#stop-point,.citation-hero+.citation-section{padding-top:18px}}

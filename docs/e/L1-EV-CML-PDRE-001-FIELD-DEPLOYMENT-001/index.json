@@ -1,0 +1,14 @@
+{
+  "evidence_id": "L1-EV-CML-PDRE-001-FIELD-DEPLOYMENT-001",
+  "title": "800V DC Data Center Power Architecture: Field Deployment Evidence",
+  "source_url": "https://www.chindatagroup.com/media/news/533.html",
+  "publisher": "Chindata",
+  "source_date": "2026-07-02",
+  "observed_date": "2026-09-20",
+  "classification": "PRIMARY_OPERATOR_PUBLICATION",
+  "supports": "One named operator reported commercial operation at one named campus for a materially relevant 10kV AC to SST to 800VDC architecture.",
+  "does_not_establish": "Independent performance validation. Long operating history. Multi-entity replication. Application qualification. Repeat procurement. Industry adoption. Full PDRE validation.",
+  "parent_case": "CML-PDRE-001",
+  "parent_case_url": "https://structurevidence.org/cases/800vdc/",
+  "canonical_url": "https://structurevidence.org/e/L1-EV-CML-PDRE-001-FIELD-DEPLOYMENT-001/"
+}

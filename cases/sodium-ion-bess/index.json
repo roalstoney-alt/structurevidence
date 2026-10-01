@@ -1,0 +1,97 @@
+{
+  "case_id": "SE-BESS-SODIUM-001",
+  "title": "Sodium-Ion BESS Commercialization",
+  "canonical_url": "https://structurevidence.org/cases/sodium-ion-bess/",
+  "question": "Has sodium-ion stationary storage crossed from product and production claims into a procurable, delivered, commissioned technology with public field-operating evidence?",
+  "answer": "Product launch and cooperation evidence is supported; a named delivered and commissioned customer system is not established at the stated cutoff.",
+  "current_state": "NAMED_COMMISSIONED_SITE_NOT_ESTABLISHED",
+  "as_of": "2026-09-24",
+  "last_material_change": "2026-09-24",
+  "evidence": [
+    {
+      "evidence_id": "SE-BESS-SODIUM-001-EV-001",
+      "title": "Sodium-Ion Energy Storage Commercialization State Map: CATL record dated 2021-07-29",
+      "source_url": "https://www.catl.com/en/news/665.html",
+      "publisher": "CATL",
+      "source_date": "2021-07-29",
+      "observed_date": "2026-09-24",
+      "classification": "MANUFACTURER_ANNOUNCEMENT",
+      "supports": "Sodium-ion technology and a planned industrial-chain target were publicly announced.",
+      "does_not_establish": "Stationary BESS customer delivery, commissioning, or field-operating history."
+    },
+    {
+      "evidence_id": "SE-BESS-SODIUM-001-EV-002",
+      "title": "Sodium-Ion Energy Storage Commercialization State Map: CATL record dated 2025-04-21",
+      "source_url": "https://www.catl.com/en/news/6401.html",
+      "publisher": "CATL",
+      "source_date": "2025-04-21",
+      "observed_date": "2026-09-24",
+      "classification": "MANUFACTURER_PRODUCT_LAUNCH",
+      "supports": "Naxtra sodium-ion products were publicly launched with manufacturer-attributed mass-production claims.",
+      "does_not_establish": "A delivered or commissioned stationary storage system."
+    },
+    {
+      "evidence_id": "SE-BESS-SODIUM-001-EV-003",
+      "title": "Sodium-Ion Energy Storage Commercialization State Map: CATL and HyperStrong record dated 2026-04-27",
+      "source_url": "https://www.catl.com/en/news/6812.html",
+      "publisher": "CATL and HyperStrong",
+      "source_date": "2026-04-27",
+      "observed_date": "2026-09-24",
+      "classification": "MANUFACTURER_AND_COUNTERPARTY_ANNOUNCEMENTS",
+      "supports": "Two counterparties publicly described a three-year 60 GWh sodium-ion energy-storage cooperation agreement.",
+      "does_not_establish": "Shipment, customer acceptance, commissioning, grid connection, or operating performance."
+    },
+    {
+      "evidence_id": "SE-BESS-SODIUM-001-EV-004",
+      "title": "Sodium-Ion Energy Storage Commercialization State Map: CATL record dated 2026-06-22",
+      "source_url": "https://www.catl.com/en/news/6861.html",
+      "publisher": "CATL",
+      "source_date": "2026-06-22",
+      "observed_date": "2026-09-24",
+      "classification": "MANUFACTURER_PRODUCT_LAUNCH",
+      "supports": "TENER Sodium was publicly launched as a stationary BESS product and future delivery milestones were stated.",
+      "does_not_establish": "Completed customer delivery or a named commissioned customer site as of the knowledge cutoff. The phrase field-validated remains source-attributed."
+    },
+    {
+      "evidence_id": "SE-BESS-SODIUM-001-EV-005",
+      "title": "Sodium-Ion Energy Storage Commercialization State Map: CATL record dated 2026-08-25",
+      "source_url": "https://www.catl.com/en/news/6977.html",
+      "publisher": "CATL",
+      "source_date": "2026-08-25",
+      "observed_date": "2026-09-24",
+      "classification": "MANUFACTURER_EVENT_ANNOUNCEMENT",
+      "supports": "TENER Sodium was publicly showcased and a Brazil market partnership was announced.",
+      "does_not_establish": "A named commissioned sodium-ion BESS or public field-performance dataset."
+    }
+  ],
+  "counter_evidence": [
+    {
+      "title": "Commissioned-site threshold",
+      "state": "NO_QUALIFYING_RECORD_ACCEPTED",
+      "reason": "The reviewed record contains plans, launches, and cooperation evidence but no accepted named customer commissioning record."
+    }
+  ],
+  "unknowns": [
+    "Named customer shipment and acceptance record",
+    "Named site commissioning or grid-connection record",
+    "Dated operating history tied to that system",
+    "Independent performance or safety validation",
+    "Repeat procurement or multi-operator replication"
+  ],
+  "search_provenance": [
+    {
+      "run_date": "2026-09-24",
+      "boundary": "Stationary battery energy storage systems only; vehicle, starter-battery, and solid-state battery claims are excluded.",
+      "source_types": "Manufacturer and counterparty public records; no independent customer field dataset accepted."
+    }
+  ],
+  "history": [
+    {
+      "date": "2026-09-24",
+      "previous_state": "NO_PUBLIC_BASELINE",
+      "new_state": "NAMED_COMMISSIONED_SITE_NOT_ESTABLISHED",
+      "triggering_evidence": "SE-BESS-SODIUM-001-v0.1",
+      "why": "The frozen v0.1 record separated product and agreement evidence from delivery, commissioning, and operating history."
+    }
+  ]
+}

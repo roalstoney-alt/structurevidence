@@ -1,0 +1,14 @@
+{
+  "evidence_id": "SE-BESS-SODIUM-001-EV-003",
+  "title": "Sodium-Ion Energy Storage Commercialization State Map: CATL and HyperStrong record dated 2026-04-27",
+  "source_url": "https://www.catl.com/en/news/6812.html",
+  "publisher": "CATL and HyperStrong",
+  "source_date": "2026-04-27",
+  "observed_date": "2026-09-24",
+  "classification": "MANUFACTURER_AND_COUNTERPARTY_ANNOUNCEMENTS",
+  "supports": "Two counterparties publicly described a three-year 60 GWh sodium-ion energy-storage cooperation agreement.",
+  "does_not_establish": "Shipment, customer acceptance, commissioning, grid connection, or operating performance.",
+  "parent_case": "SE-BESS-SODIUM-001",
+  "parent_case_url": "https://structurevidence.org/cases/sodium-ion-bess/",
+  "canonical_url": "https://structurevidence.org/e/SE-BESS-SODIUM-001-EV-003/"
+}

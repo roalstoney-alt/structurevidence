@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://structurevidence.org/schemas/search-provenance.schema.json",
+  "title": "StructEvidence search provenance entry",
+  "type": "object",
+  "required": ["run_date", "boundary"],
+  "properties": {
+    "run_date": {"type": "string", "minLength": 10},
+    "boundary": {"type": "string", "minLength": 1},
+    "query_count": {"type": "integer", "minimum": 0},
+    "source_count": {"type": "integer", "minimum": 0},
+    "deep_review_count": {"type": "integer", "minimum": 0},
+    "source_types": {"type": "string"}
+  },
+  "additionalProperties": false
+}

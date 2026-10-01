@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://structurevidence.org/schemas/evidence.schema.json",
+  "title": "StructEvidence public evidence item",
+  "type": "object",
+  "required": ["evidence_id", "title", "source_url", "publisher", "source_date", "observed_date", "classification", "supports", "does_not_establish"],
+  "properties": {
+    "evidence_id": {"type": "string", "minLength": 1},
+    "title": {"type": "string", "minLength": 1},
+    "source_url": {"type": "string", "format": "uri"},
+    "publisher": {"type": "string", "minLength": 1},
+    "source_date": {"type": "string", "format": "date"},
+    "observed_date": {"type": "string", "minLength": 10},
+    "classification": {"type": "string", "minLength": 1},
+    "supports": {"type": "string", "minLength": 1},
+    "does_not_establish": {"type": "string", "minLength": 1}
+  },
+  "additionalProperties": false
+}

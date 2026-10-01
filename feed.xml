@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>StructEvidence material changes</title>
+  <id>https://structurevidence.org/feed.xml</id>
+  <link href="https://structurevidence.org/feed.xml" rel="self"/>
+  <link href="https://structurevidence.org/changes/"/>
+  <updated>2026-09-20T11:12:14Z</updated>
+  <author><name>StructEvidence</name></author>
+  <entry>
+    <title>800V DC / SST: single field instance accepted</title>
+    <id>https://structurevidence.org/changes/#cml-pdre-001-2026-09-20</id>
+    <link href="https://structurevidence.org/changes/#cml-pdre-001-2026-09-20"/>
+    <updated>2026-09-20T11:12:14Z</updated>
+    <summary>Previous: R5_FIELD_DEPLOYED_NOT_ESTABLISHED. New: R5_ARCHITECTURE_FIELD_DEPLOYMENT_EVIDENCE_ACCEPTED_SINGLE_INSTANCE. Trigger: L1-EV-CML-PDRE-001-FIELD-DEPLOYMENT-001. Independent validation, replication, repeat procurement, industry adoption, and full PDRE validation remain unresolved.</summary>
+  </entry>
+</feed>

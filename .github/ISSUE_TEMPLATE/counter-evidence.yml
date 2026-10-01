@@ -1,0 +1,37 @@
+name: Counter-evidence
+description: Submit a public source that challenges or narrows an accepted claim.
+title: "evidence: counter-evidence for "
+labels: ["counter-evidence"]
+body:
+  - type: input
+    id: case
+    attributes: {label: Case, description: Case ID or canonical case URL}
+    validations: {required: true}
+  - type: input
+    id: claim
+    attributes: {label: Claim affected}
+    validations: {required: true}
+  - type: input
+    id: url
+    attributes: {label: Source URL}
+    validations: {required: true}
+  - type: input
+    id: date
+    attributes: {label: Source date}
+    validations: {required: true}
+  - type: textarea
+    id: description
+    attributes: {label: Counter-evidence description}
+    validations: {required: true}
+  - type: textarea
+    id: change
+    attributes: {label: Why it may change or narrow the current state}
+    validations: {required: true}
+  - type: textarea
+    id: limits
+    attributes: {label: Known limitations}
+    validations: {required: true}
+  - type: textarea
+    id: relationship
+    attributes: {label: Relationship to source}
+    validations: {required: true}

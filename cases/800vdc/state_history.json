@@ -1,0 +1,9 @@
+[
+  {
+    "date": "2026-09-20",
+    "previous_state": "R5_FIELD_DEPLOYED_NOT_ESTABLISHED",
+    "new_state": "R5_ARCHITECTURE_FIELD_DEPLOYMENT_EVIDENCE_ACCEPTED_SINGLE_INSTANCE",
+    "triggering_evidence": "L1-EV-CML-PDRE-001-FIELD-DEPLOYMENT-001",
+    "why": "Human review accepted one attributable operator record for one named commercial deployment."
+  }
+]

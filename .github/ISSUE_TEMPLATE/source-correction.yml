@@ -1,0 +1,33 @@
+name: Source correction
+description: Correct a source URL, date, attribution, quotation, or transcription.
+title: "provenance: correct "
+labels: ["source-correction"]
+body:
+  - type: input
+    id: case
+    attributes: {label: Case, description: Case ID or canonical case URL}
+    validations: {required: true}
+  - type: input
+    id: claim
+    attributes: {label: Claim or record affected}
+    validations: {required: true}
+  - type: input
+    id: url
+    attributes: {label: Correct source URL}
+    validations: {required: true}
+  - type: input
+    id: date
+    attributes: {label: Correct source date}
+    validations: {required: true}
+  - type: textarea
+    id: correction
+    attributes: {label: Correction, description: Describe the current value and the corrected value}
+    validations: {required: true}
+  - type: textarea
+    id: limits
+    attributes: {label: Known limitations}
+    validations: {required: true}
+  - type: textarea
+    id: relationship
+    attributes: {label: Relationship to source}
+    validations: {required: true}

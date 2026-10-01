@@ -2,11 +2,13 @@
 
 **Time-indexed evidence → Decision memory → Workflow → Outcomes**
 
-StructureEvidence turns uncertain industrial and technical evidence into scoped, traceable, revisable decision objects.
+StructEvidence records how public evidence changes the state of real-world technical and industrial claims. It turns uncertain evidence into scoped, traceable, revisable decision objects.
 
 The underlying source facts may be public. The compounding asset is the structured history of what was accepted, rejected, contradicted, unknown, decision-relevant, frozen, reopened, and later observed in the real world.
 
-Official website: https://structurevidence.org
+Canonical records: https://structurevidence.org
+
+This repository is the verification layer for reproduction, inspection, challenge, citation, and contribution. The website remains the canonical truth source. Public records preserve claims, evidence, counter-evidence, unknowns, search boundaries, state transitions, and verification history.
 
 ## Scholarly Record
 
@@ -56,3 +58,16 @@ StructureEvidence separates:
 It does not convert source volume into truth, single deployments into industry adoption, or public evidence maps into buyer-specific recommendations without decision context.
 
 This project does not provide investment recommendations or automated accusations.
+
+## Public verification
+
+- [Case discovery index](https://structurevidence.org/cases/)
+- [Material change record](https://structurevidence.org/changes/)
+- [Contribution protocol](CONTRIBUTING.md)
+- [Citation metadata](CITATION.cff)
+
+```sh
+python3 scripts/export_public_records.py
+python3 scripts/check_public_record_drift.py
+python3 scripts/audit_internal_links.py
+```

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://structurevidence.org/schemas/case.schema.json",
+  "title": "StructEvidence public case",
+  "type": "object",
+  "required": ["case_id", "title", "canonical_url", "question", "answer", "current_state", "as_of", "last_material_change", "evidence", "counter_evidence", "unknowns", "search_provenance", "history"],
+  "properties": {
+    "case_id": {"type": "string", "minLength": 1},
+    "title": {"type": "string", "minLength": 1},
+    "canonical_url": {"type": "string", "format": "uri", "pattern": "^https://structurevidence\\.org/cases/"},
+    "question": {"type": "string", "minLength": 1},
+    "answer": {"type": "string", "minLength": 1},
+    "current_state": {"type": "string", "minLength": 1},
+    "as_of": {"type": "string", "minLength": 10},
+    "last_material_change": {"type": "string", "format": "date"},
+    "evidence": {"type": "array", "items": {"$ref": "evidence.schema.json"}},
+    "counter_evidence": {"type": "array", "items": {"type": "object"}},
+    "unknowns": {"type": "array", "items": {"type": "string"}},
+    "search_provenance": {"type": "array", "items": {"type": "object"}},
+    "history": {"type": "array", "items": {"$ref": "state.schema.json"}}
+  },
+  "additionalProperties": false
+}

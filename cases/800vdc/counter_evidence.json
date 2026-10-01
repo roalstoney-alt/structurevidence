@@ -1,0 +1,12 @@
+[
+  {
+    "title": "Vertiv practical path to 800 VDC",
+    "state": "PLANNED_DEPLOYMENT",
+    "reason": "Future commercialization and pilots do not establish field operation."
+  },
+  {
+    "title": "Siemens and Reinhausen DC power solutions",
+    "state": "UNDER_DEVELOPMENT",
+    "reason": "Development for future deployment does not establish field operation."
+  }
+]

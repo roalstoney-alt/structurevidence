@@ -1,0 +1,14 @@
+{
+  "evidence_id": "SE-BESS-SODIUM-001-EV-004",
+  "title": "Sodium-Ion Energy Storage Commercialization State Map: CATL record dated 2026-06-22",
+  "source_url": "https://www.catl.com/en/news/6861.html",
+  "publisher": "CATL",
+  "source_date": "2026-06-22",
+  "observed_date": "2026-09-24",
+  "classification": "MANUFACTURER_PRODUCT_LAUNCH",
+  "supports": "TENER Sodium was publicly launched as a stationary BESS product and future delivery milestones were stated.",
+  "does_not_establish": "Completed customer delivery or a named commissioned customer site as of the knowledge cutoff. The phrase field-validated remains source-attributed.",
+  "parent_case": "SE-BESS-SODIUM-001",
+  "parent_case_url": "https://structurevidence.org/cases/sodium-ion-bess/",
+  "canonical_url": "https://structurevidence.org/e/SE-BESS-SODIUM-001-EV-004/"
+}

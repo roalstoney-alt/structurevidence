@@ -1,0 +1,60 @@
+{
+  "case_id": "CML-PDRE-001",
+  "title": "800V DC Data Center Power Architecture",
+  "canonical_url": "https://structurevidence.org/cases/800vdc/",
+  "question": "Has 800V DC power architecture moved from proposal to independently attributable field deployment?",
+  "answer": "One attributable operator record supports one commercial SST-to-800VDC deployment; independent validation, replication, and industry adoption remain unresolved.",
+  "current_state": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+  "as_of": "2026-09-20T10:46:47Z",
+  "last_material_change": "2026-09-20",
+  "evidence": [
+    {
+      "evidence_id": "L1-EV-CML-PDRE-001-FIELD-DEPLOYMENT-001",
+      "title": "800V DC Data Center Power Architecture: Field Deployment Evidence",
+      "source_url": "https://www.chindatagroup.com/media/news/533.html",
+      "publisher": "Chindata",
+      "source_date": "2026-07-02",
+      "observed_date": "2026-09-20",
+      "classification": "PRIMARY_OPERATOR_PUBLICATION",
+      "supports": "One named operator reported commercial operation at one named campus for a materially relevant 10kV AC to SST to 800VDC architecture.",
+      "does_not_establish": "Independent performance validation. Long operating history. Multi-entity replication. Application qualification. Repeat procurement. Industry adoption. Full PDRE validation."
+    }
+  ],
+  "counter_evidence": [
+    {
+      "title": "Vertiv practical path to 800 VDC",
+      "state": "PLANNED_DEPLOYMENT",
+      "reason": "Future commercialization and pilots do not establish field operation."
+    },
+    {
+      "title": "Siemens and Reinhausen DC power solutions",
+      "state": "UNDER_DEVELOPMENT",
+      "reason": "Development for future deployment does not establish field operation."
+    }
+  ],
+  "unknowns": [
+    "Operating history under attributable conditions.",
+    "Independent third-party validation.",
+    "Multi-entity replication.",
+    "Repeat procurement.",
+    "Industry-scale adoption."
+  ],
+  "search_provenance": [
+    {
+      "run_date": "2026-09-20T10:46:47Z",
+      "query_count": 4,
+      "source_count": 9,
+      "deep_review_count": 1,
+      "boundary": "One narrow L1 field-deployment verification; no general 800V research was authorized."
+    }
+  ],
+  "history": [
+    {
+      "date": "2026-09-20",
+      "previous_state": "R5_FIELD_DEPLOYED_NOT_ESTABLISHED",
+      "new_state": "R5_ARCHITECTURE_FIELD_DEPLOYMENT_EVIDENCE_ACCEPTED_SINGLE_INSTANCE",
+      "triggering_evidence": "L1-EV-CML-PDRE-001-FIELD-DEPLOYMENT-001",
+      "why": "Human review accepted one attributable operator record for one named commercial deployment."
+    }
+  ]
+}

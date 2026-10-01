@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Private or sensitive report
+    url: mailto:support@structevidence.com
+    about: Do not publish secrets, personal medical records, or confidential customer material.

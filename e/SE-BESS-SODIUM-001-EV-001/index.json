@@ -1,0 +1,14 @@
+{
+  "evidence_id": "SE-BESS-SODIUM-001-EV-001",
+  "title": "Sodium-Ion Energy Storage Commercialization State Map: CATL record dated 2021-07-29",
+  "source_url": "https://www.catl.com/en/news/665.html",
+  "publisher": "CATL",
+  "source_date": "2021-07-29",
+  "observed_date": "2026-09-24",
+  "classification": "MANUFACTURER_ANNOUNCEMENT",
+  "supports": "Sodium-ion technology and a planned industrial-chain target were publicly announced.",
+  "does_not_establish": "Stationary BESS customer delivery, commissioning, or field-operating history.",
+  "parent_case": "SE-BESS-SODIUM-001",
+  "parent_case_url": "https://structurevidence.org/cases/sodium-ion-bess/",
+  "canonical_url": "https://structurevidence.org/e/SE-BESS-SODIUM-001-EV-001/"
+}

@@ -1,0 +1,35 @@
+name: State challenge
+description: Challenge the reasoning connecting accepted evidence to a current state.
+title: "state: challenge "
+labels: ["state-challenge"]
+body:
+  - type: input
+    id: case
+    attributes: {label: Case, description: Case ID or canonical case URL}
+    validations: {required: true}
+  - type: input
+    id: claim
+    attributes: {label: Claim affected}
+    validations: {required: true}
+  - type: textarea
+    id: challenge
+    attributes: {label: Challenge, description: Identify the inference, threshold, scope, or state you challenge}
+    validations: {required: true}
+  - type: input
+    id: url
+    attributes: {label: Supporting source URL, description: Optional if the challenge concerns method or logic}
+  - type: input
+    id: date
+    attributes: {label: Source date}
+  - type: textarea
+    id: change
+    attributes: {label: Proposed bounded change, description: What should change, if anything?}
+    validations: {required: true}
+  - type: textarea
+    id: limits
+    attributes: {label: Known limitations}
+    validations: {required: true}
+  - type: textarea
+    id: relationship
+    attributes: {label: Relationship to source or case}
+    validations: {required: true}

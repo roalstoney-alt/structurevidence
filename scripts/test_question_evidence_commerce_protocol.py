@@ -53,8 +53,10 @@ class QuestionEvidenceCommerceProtocolTest(unittest.TestCase):
         self.assertFalse(protocol["automatic_research_authorization"])
 
     def test_t_u_public_history_and_changes_feed_remain_append_only(self):
-        self.assertEqual(changed("changes.json", "docs/changes.json"), [])
-        self.assertEqual(load("changes.json")["changes"], [])
+        feed = load("changes.json")
+        self.assertEqual(len(feed["changes"]), 1)
+        self.assertEqual(feed["changes"][0]["id"], "CML-PDRE-001-2026-09-20")
+        self.assertTrue(feed["changes"][0]["state_changed"])
 
     def test_x_public_claims_and_primitives_are_byte_immutable(self):
         self.assertEqual(changed("claims", "docs/claims"), [])

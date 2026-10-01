@@ -1,6 +1,22 @@
 {
   "version": "0.1",
   "generated_at": "2026-09-29",
-  "changes": [],
-  "note": "No approved cross-version public state transitions have been published yet."
+  "changes": [
+    {
+      "id": "CML-PDRE-001-2026-09-20",
+      "type": "STATE_CHANGE",
+      "date": "2026-09-20",
+      "case_id": "CML-PDRE-001",
+      "case_url": "https://structurevidence.org/cases/800vdc/",
+      "previous_state": "R5_FIELD_DEPLOYED_NOT_ESTABLISHED",
+      "new_state": "R5_ARCHITECTURE_FIELD_DEPLOYMENT_EVIDENCE_ACCEPTED_SINGLE_INSTANCE",
+      "why": "Human review accepted one attributable operator record for one named commercial deployment.",
+      "triggering_evidence": "L1-EV-CML-PDRE-001-FIELD-DEPLOYMENT-001",
+      "triggering_evidence_url": "https://structurevidence.org/e/L1-EV-CML-PDRE-001-FIELD-DEPLOYMENT-001/",
+      "qualifying_evidence_added": 1,
+      "unknowns_resolved": 0,
+      "state_changed": true
+    }
+  ],
+  "note": "Only material evidence and state changes are included. Publication baselines and cosmetic site changes are excluded."
 }

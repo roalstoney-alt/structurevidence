@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://structurevidence.org/schemas/state.schema.json",
+  "title": "StructEvidence state transition",
+  "type": "object",
+  "required": ["date", "previous_state", "new_state", "triggering_evidence", "why"],
+  "properties": {
+    "date": {"type": "string", "format": "date"},
+    "previous_state": {"type": "string", "minLength": 1},
+    "new_state": {"type": "string", "minLength": 1},
+    "triggering_evidence": {"type": "string", "minLength": 1},
+    "why": {"type": "string", "minLength": 1}
+  },
+  "additionalProperties": false
+}
