@@ -1,8 +1,8 @@
 # StructEvidence Brand Audit v0.1
 
-Audit date: 2026-10-01  
-Target public brand: `StructEvidence`  
-Protected research domain: `structurevidence.org`  
+Audit date: 2026-10-01
+Target public brand: `StructEvidence`
+Protected research domain: `structurevidence.org`
 Protected commercial domain: `structevidence.com`
 
 ## Method
