@@ -16,6 +16,11 @@ from jsonschema import Draft202012Validator, FormatChecker
 
 ROOT = Path(__file__).resolve().parents[1]
 BASELINE = "8d4b028d3d0e113290ed5309e868fe300b5b9efd"
+BRAND_BASELINE = "4ed39b2389ad40f4f4dcb902c3436aff4c5ba352"
+BRAND_ONLY_SURFACES = {
+    "cases/nsq-nsclc-china/index.html",
+    "docs/cases/nsq-nsclc-china/index.html",
+}
 PAIRS = [
     ("cases/800vdc/state-v0.1.json", "docs/cases/800vdc/state-v0.1.json"),
     (
@@ -59,6 +64,19 @@ def load(relative: str):
     return json.loads((ROOT / relative).read_text(encoding="utf-8"))
 
 
+def git_blob(revision: str, relative: str) -> bytes:
+    return subprocess.run(
+        ["git", "show", f"{revision}:{relative}"],
+        cwd=ROOT,
+        capture_output=True,
+        check=True,
+    ).stdout
+
+
+def apply_brand_normalization(content: bytes) -> bytes:
+    return content.replace(b"StructureEvidence", b"StructEvidence")
+
+
 class PublicCasePrimitiveTest(unittest.TestCase):
     def test_a_required_primitives_exist(self):
         for root_file, docs_file in PAIRS:
@@ -71,13 +89,21 @@ class PublicCasePrimitiveTest(unittest.TestCase):
 
     def test_c_historical_immutability_and_no_research_mutation(self):
         result = subprocess.run(
-            ["git", "diff", "--exit-code", BASELINE, "--", *PROTECTED],
+            ["git", "diff", "--name-only", BASELINE, "--", *PROTECTED],
             cwd=ROOT,
             capture_output=True,
             text=True,
-            check=False,
+            check=True,
         )
-        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        changed = {line for line in result.stdout.splitlines() if line}
+        self.assertEqual(changed - BRAND_ONLY_SURFACES, set())
+        for relative in changed:
+            historical = git_blob(BRAND_BASELINE, relative)
+            self.assertEqual(
+                (ROOT / relative).read_bytes(),
+                apply_brand_normalization(historical),
+                relative,
+            )
 
     def test_d_cml_state_is_derived_without_state_change(self):
         state = load("cases/800vdc/state-v0.1.json")
@@ -117,11 +143,16 @@ class PublicCasePrimitiveTest(unittest.TestCase):
         source_paths = [
             ROOT / "cases/nsq-nsclc-china/state-v0.1.json",
             ROOT / "cases/nsq-nsclc-china/stop-v0.1.html",
-            ROOT / "cases/nsq-nsclc-china/index.html",
         ]
+        historical_index = git_blob(BRAND_BASELINE, "cases/nsq-nsclc-china/index.html")
+        self.assertEqual(
+            (ROOT / "cases/nsq-nsclc-china/index.html").read_bytes(),
+            apply_brand_normalization(historical_index),
+        )
         input_digest = hashlib.sha256()
         for path in source_paths:
             input_digest.update(path.read_bytes())
+        input_digest.update(historical_index)
         self.assertEqual(record["core"]["input_hash"], input_digest.hexdigest())
 
         core = dict(record["core"])
