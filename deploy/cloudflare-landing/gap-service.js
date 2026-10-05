@@ -56,7 +56,7 @@ function normalizeChallenge(input, gapId) {
   const attributionPreference = clean(input.attribution_preference, 32)?.toUpperCase();
   let attributionName = clean(input.attribution_name, 200);
   let organizationName = clean(input.organization_name, 300);
-  const contactEmail = clean(input.contact_email, 254)?.toLowerCase();
+  const contactEmail = clean(input.contact_email, 254)?.toLowerCase() ?? null;
   if (!evidenceReference || evidenceReference.length < 8) throw new Response("A public URL or document reference is required", { status: 400 });
   if (!EFFECTS.has(effect)) throw new Response("Invalid effect", { status: 400 });
   if (!ATTRIBUTIONS.has(attributionPreference)) throw new Response("Invalid attribution_preference", { status: 400 });
