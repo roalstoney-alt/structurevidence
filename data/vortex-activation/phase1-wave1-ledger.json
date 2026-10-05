@@ -211,6 +211,24 @@
       "public_url": null
     }
   ],
+  "execution_attempts": [
+    {
+      "attempted_at": "2026-10-05T18:44:37Z",
+      "authorization": "HUMAN_CONFIRMED_SEND_AND_PUBLISH",
+      "action": "SEND_6_TARGETED_MESSAGES_AND_PUBLISH_3_X_POSTS",
+      "result": "BLOCKED_BEFORE_TRANSMISSION",
+      "messages_sent": 0,
+      "x_posts_published": 0,
+      "blockers": [
+        "No authenticated outbound Google Workspace or SMTP session is exposed to this workspace.",
+        "The available in-app browser did not load the authenticated Gmail or X compose surfaces.",
+        "No X API credentials or authorized outbound-mail API credentials are available.",
+        "The unauthenticated local sendmail path was not used because it cannot provide trustworthy authenticated delivery for support@structevidence.com."
+      ],
+      "prepared_handoff": "/private/tmp/structurevidence-wave1-outbox-2026-10-06",
+      "notes": "No recipient data or message body was transmitted. All target and post states remain PREPARED."
+    }
+  ],
   "kpis": {
     "targets_prepared": 6,
     "targets_contacted": 0,
