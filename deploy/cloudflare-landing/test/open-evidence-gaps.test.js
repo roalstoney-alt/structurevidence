@@ -7,7 +7,11 @@ import { createWorker } from "../worker.js";
 
 class Statement {
   constructor(db, sql) { this.db = db; this.sql = sql; this.args = []; }
-  bind(...args) { this.args = args; return this; }
+  bind(...args) {
+    if (args.some((value) => value === undefined)) throw new TypeError("D1_TYPE_ERROR: Type 'undefined' not supported for value 'undefined'");
+    this.args = args;
+    return this;
+  }
   run() { return this.db.execute(this); }
   first() { return this.db.first(this); }
   all() { return this.db.all(this); }
@@ -166,7 +170,34 @@ test("challenge submission records a SUBMITTED event without changing evidence s
   assert.match(result.challenge_id, /^SE-GAP-CHL-[A-F0-9]{20}$/); assert.equal(result.state, "SUBMITTED"); assert.equal(result.state_changed, false);
   assert.equal(db.challenges[0].state, "SUBMITTED"); assert.equal(db.challenges[0].attribution_name, null); assert.equal(db.challenges[0].organization_name, null);
   assert.equal(db.events[0].event_type, "SUBMITTED"); assert.equal(db.events[0].previous_state, null); assert.equal(db.events[0].new_state, "SUBMITTED");
+  assert.equal(db.challenges[0].contact_email, null);
   assert.equal(db.challenges[0].client_key_hash.length, 64); assert.doesNotMatch(JSON.stringify(db.challenges[0]), /192\.0\.2\.44/);
+});
+
+test("anonymous and organization-only submissions persist omitted optional fields as SQL null", async () => {
+  const db = new FakeGapD1(), worker = createWorker(), env = envFor(db);
+  const anonymous = await worker.fetch(challengeRequest("OEG-CML-001", validChallenge()), env);
+  const organizationOnly = await worker.fetch(challengeRequest("OEG-CML-001", validChallenge({ attribution_preference: "ORGANIZATION_ONLY", organization_name: "Independent Test Lab" }), "192.0.2.45"), env);
+  assert.equal(anonymous.status, 201);
+  assert.equal(organizationOnly.status, 201);
+  assert.deepEqual(
+    db.challenges.map(({ attribution_preference, attribution_name, organization_name, contact_email }) => ({ attribution_preference, attribution_name, organization_name, contact_email })),
+    [
+      { attribution_preference: "ANONYMOUS", attribution_name: null, organization_name: null, contact_email: null },
+      { attribution_preference: "ORGANIZATION_ONLY", attribution_name: null, organization_name: "Independent Test Lab", contact_email: null }
+    ]
+  );
+});
+
+test("missing or placeholder challenge salt returns 503 without persistence", async () => {
+  for (const salt of [undefined, "CONFIGURE_GAP_RATE_LIMIT_SALT"]) {
+    const db = new FakeGapD1(), worker = createWorker(), env = { ...envFor(db), GAP_RATE_LIMIT_SALT: salt };
+    const response = await worker.fetch(challengeRequest("OEG-CML-001", validChallenge()), env);
+    assert.equal(response.status, 503);
+    assert.deepEqual(await response.json(), { error: "Challenge protection is not configured" });
+    assert.equal(db.challenges.length, 0);
+    assert.equal(db.events.length, 0);
+  }
 });
 
 test("challenge validation rejects state injection, mismatched gaps, missing attribution, and file-like fields", async () => {
