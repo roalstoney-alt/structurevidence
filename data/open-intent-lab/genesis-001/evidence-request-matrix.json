@@ -1,0 +1,375 @@
+{
+  "schema_version": "1.0",
+  "experiment": "OIL-GENESIS-001",
+  "domain_id": "OIL-DOMAIN-001",
+  "stage": "STAGE_3_CONTROLLED_SUPPLIER_EVIDENCE_REQUEST",
+  "created_as_of": "2026-10-03",
+  "supplier_statement_rule": {
+    "supplier_statement_alone_qualifies": false,
+    "may_establish": [
+      "CLAIM_ORIGIN",
+      "SOURCE_ATTRIBUTION"
+    ],
+    "may_assign_capability_status": false,
+    "formal_manufacturer_declaration_rule": "A formal declaration is evaluated as an artifact only when it identifies issuer, product or material scope, date, claim scope, and accountable source."
+  },
+  "visibility_enum": [
+    "PUBLIC",
+    "AUTHORIZED_BUYER",
+    "TRANSACTION_PRIVATE"
+  ],
+  "supplier_response_options": [
+    "EVIDENCE_ATTACHED",
+    "PUBLIC_REFERENCE_PROVIDED",
+    "CLAIM_SCOPE_CORRECTION",
+    "CLAIM_WITHDRAWN",
+    "EVIDENCE_UNAVAILABLE",
+    "CONFIDENTIAL_ONLY",
+    "NOT_APPLICABLE"
+  ],
+  "participation_status_codes": [
+    "PENDING_OUTREACH",
+    "OUTREACH_PREPARED",
+    "OUTREACH_SENT",
+    "RESPONDED",
+    "EVIDENCE_SUBMITTED",
+    "NO_RESPONSE",
+    "REFUSED_EVIDENCE",
+    "REFUSED_ANY_VISIBILITY",
+    "TOO_BUSY",
+    "NOT_THIS_CAPABILITY",
+    "WITHDRAWN"
+  ],
+  "consistency_relation_vocabulary": [
+    "CONFIRMS",
+    "CONSISTENT_WITH",
+    "PARTIALLY_CONSISTENT",
+    "CONTRADICTS",
+    "SUPERSEDES_SCOPE",
+    "NOT_COMPARABLE"
+  ],
+  "consistency_relation_rule": "No live relation is created in Stage 3. CONTRADICTS requires sufficiently comparable product family, configuration, batch, factory, method, conditions, date, and source; otherwise NOT_COMPARABLE may apply.",
+  "disclosure_event_vocabulary": [
+    "MATERIAL_FACT_NEWLY_DISCLOSED",
+    "MATERIAL_SCOPE_CLARIFIED",
+    "MATERIAL_SCOPE_RESTRICTED",
+    "MATERIAL_CLAIM_CONTRADICTED",
+    "MATERIAL_OUTCOME_DEVIATION",
+    "EVIDENCE_UPDATED",
+    "EVIDENCE_WITHDRAWN_BY_SOURCE"
+  ],
+  "disclosure_event_rule": "No live disclosure event is created in Stage 3. Event language records material information without inferring intent.",
+  "claim_evidence_requirements": [
+    {
+      "claim_id": "OIL-CAP-SIL-001",
+      "claim_text": "Provider evidence supports that the referenced hose or product family uses a platinum-cured silicone system.",
+      "claim_scope": "Referenced hose or product family and the documented formulation or manufacturing scope only.",
+      "acceptable_evidence_types": [
+        "THIRD_PARTY_TEST_REPORT",
+        "MANUFACTURER_DATASHEET",
+        "MANUFACTURER_DECLARATION",
+        "FACTORY_DOCUMENT"
+      ],
+      "minimum_required_scope": [
+        "manufacturer identity",
+        "hose or product family",
+        "platinum-cured material or process"
+      ],
+      "required_identifiers": [
+        "issuer",
+        "document title or identifier",
+        "product or family identifier",
+        "document date or revision"
+      ],
+      "non_qualifying_evidence": [
+        "sales email alone",
+        "marketing phrase alone",
+        "marketplace listing",
+        "reseller description",
+        "generic silicone claim"
+      ],
+      "verification_stop_condition": {
+        "any_of": [
+          "QUALIFYING_DOCUMENT",
+          "TWO_INDEPENDENT_SOURCES",
+          "INSUFFICIENT_EVIDENCE",
+          "MAX_VERIFICATION_TIME"
+        ],
+        "maximum_human_hours": 4
+      },
+      "visibility_options": [
+        "PUBLIC",
+        "AUTHORIZED_BUYER",
+        "TRANSACTION_PRIVATE"
+      ],
+      "notes": "Do not infer reinforcement, pressure, temperature, or food-contact compliance from this claim alone."
+    },
+    {
+      "claim_id": "OIL-CAP-SIL-002",
+      "claim_text": "Provider evidence supports reinforced construction for the referenced silicone hose or product family.",
+      "claim_scope": "Referenced construction or product family and documented reinforcement type only.",
+      "acceptable_evidence_types": [
+        "MANUFACTURER_DATASHEET",
+        "FACTORY_DOCUMENT",
+        "THIRD_PARTY_TEST_REPORT"
+      ],
+      "minimum_required_scope": [
+        "manufacturer identity",
+        "hose or product family",
+        "specific reinforcement construction"
+      ],
+      "required_identifiers": [
+        "issuer",
+        "document title or identifier",
+        "product or family identifier",
+        "reinforcement material or construction",
+        "document date or revision"
+      ],
+      "non_qualifying_evidence": [
+        "heavy duty phrase",
+        "high pressure phrase",
+        "industrial hose phrase",
+        "product image without construction specification"
+      ],
+      "verification_stop_condition": {
+        "any_of": [
+          "QUALIFYING_DOCUMENT",
+          "TWO_INDEPENDENT_SOURCES",
+          "INSUFFICIENT_EVIDENCE",
+          "MAX_VERIFICATION_TIME"
+        ],
+        "maximum_human_hours": 4
+      },
+      "visibility_options": [
+        "PUBLIC",
+        "AUTHORIZED_BUYER",
+        "TRANSACTION_PRIVATE"
+      ],
+      "notes": "Do not infer reinforcement material, braid count, pressure rating, or performance of another series."
+    },
+    {
+      "claim_id": "OIL-CAP-SIL-003",
+      "claim_text": "Provider evidence supports a maximum working pressure of at least 9 bar for the referenced hose configuration under documented conditions.",
+      "claim_scope": "Referenced size, construction, temperature, medium, test method, and other stated operating conditions.",
+      "acceptable_evidence_types": [
+        "THIRD_PARTY_TEST_REPORT",
+        "MANUFACTURER_DATASHEET",
+        "FACTORY_DOCUMENT"
+      ],
+      "minimum_required_scope": [
+        "hose series or product family",
+        "configuration and size",
+        "working pressure value and unit",
+        "working pressure distinguished from burst pressure",
+        "test or rating temperature"
+      ],
+      "required_identifiers": [
+        "issuer",
+        "document title or identifier",
+        "product or part identifier",
+        "test method or rating basis where available",
+        "document date or revision"
+      ],
+      "non_qualifying_evidence": [
+        "burst pressure only",
+        "generic high pressure phrase",
+        "pressure claim from unrelated series",
+        "sales statement without specification"
+      ],
+      "verification_stop_condition": {
+        "any_of": [
+          "QUALIFYING_DOCUMENT",
+          "TWO_INDEPENDENT_SOURCES",
+          "INSUFFICIENT_EVIDENCE",
+          "MAX_VERIFICATION_TIME"
+        ],
+        "maximum_human_hours": 4
+      },
+      "visibility_options": [
+        "PUBLIC",
+        "AUTHORIZED_BUYER",
+        "TRANSACTION_PRIVATE"
+      ],
+      "notes": "Never convert burst pressure to working pressure without explicit methodology linkage."
+    },
+    {
+      "claim_id": "OIL-CAP-SIL-004",
+      "claim_text": "Provider evidence supports an operating-temperature lower bound at or below -40 degC for the referenced hose or product family under documented conditions.",
+      "claim_scope": "Referenced product family, medium, duration, pressure or installation conditions, and definition of operating temperature.",
+      "acceptable_evidence_types": [
+        "MANUFACTURER_DATASHEET",
+        "THIRD_PARTY_TEST_REPORT",
+        "MANUFACTURER_DECLARATION",
+        "FACTORY_DOCUMENT"
+      ],
+      "minimum_required_scope": [
+        "product or material family",
+        "temperature value and unit",
+        "operating, temporary exposure, storage, or test-condition classification"
+      ],
+      "required_identifiers": [
+        "issuer",
+        "document title or identifier",
+        "product or family identifier",
+        "document date or revision"
+      ],
+      "non_qualifying_evidence": [
+        "storage limit presented as operating limit",
+        "test condition presented as continuous operation",
+        "temperature claim from unrelated material or series",
+        "sales statement without technical specification"
+      ],
+      "verification_stop_condition": {
+        "any_of": [
+          "QUALIFYING_DOCUMENT",
+          "TWO_INDEPENDENT_SOURCES",
+          "INSUFFICIENT_EVIDENCE",
+          "MAX_VERIFICATION_TIME"
+        ],
+        "maximum_human_hours": 4
+      },
+      "visibility_options": [
+        "PUBLIC",
+        "AUTHORIZED_BUYER",
+        "TRANSACTION_PRIVATE"
+      ],
+      "notes": "Do not merge operating, storage, temporary exposure, and test-condition temperatures."
+    },
+    {
+      "claim_id": "OIL-CAP-SIL-005",
+      "claim_text": "Provider evidence supports an operating-temperature upper bound at or above +180 degC for the referenced hose or product family under documented conditions.",
+      "claim_scope": "Referenced product family, medium, duration, pressure or installation conditions, and definition of operating temperature.",
+      "acceptable_evidence_types": [
+        "MANUFACTURER_DATASHEET",
+        "THIRD_PARTY_TEST_REPORT",
+        "MANUFACTURER_DECLARATION",
+        "FACTORY_DOCUMENT"
+      ],
+      "minimum_required_scope": [
+        "product or material family",
+        "temperature value and unit",
+        "continuous operation, short-term exposure, sterilization, storage, or test-condition classification"
+      ],
+      "required_identifiers": [
+        "issuer",
+        "document title or identifier",
+        "product or family identifier",
+        "document date or revision"
+      ],
+      "non_qualifying_evidence": [
+        "sterilization excursion presented as continuous operation",
+        "storage limit presented as operating limit",
+        "temperature claim from unrelated material or series",
+        "sales statement without technical specification"
+      ],
+      "verification_stop_condition": {
+        "any_of": [
+          "QUALIFYING_DOCUMENT",
+          "TWO_INDEPENDENT_SOURCES",
+          "INSUFFICIENT_EVIDENCE",
+          "MAX_VERIFICATION_TIME"
+        ],
+        "maximum_human_hours": 4
+      },
+      "visibility_options": [
+        "PUBLIC",
+        "AUTHORIZED_BUYER",
+        "TRANSACTION_PRIVATE"
+      ],
+      "notes": "A sterilization excursion does not establish continuous operation at the same temperature."
+    },
+    {
+      "claim_id": "OIL-CAP-SIL-006",
+      "claim_text": "The referenced product family has qualifying documentation addressing 21 CFR 177.2600 for the documented material, article, food-contact use, extraction conditions, and date scope.",
+      "claim_scope": "Exact documented product, material, application, extraction conditions, and applicable date scope only.",
+      "acceptable_evidence_types": [
+        "THIRD_PARTY_CERTIFICATE",
+        "THIRD_PARTY_TEST_REPORT",
+        "MANUFACTURER_DECLARATION"
+      ],
+      "minimum_required_scope": [
+        "21 CFR 177.2600 reference",
+        "product or material family",
+        "issuer",
+        "date",
+        "test or declaration basis"
+      ],
+      "required_identifiers": [
+        "issuer or laboratory",
+        "document title or identifier",
+        "product or material identifier",
+        "regulation reference",
+        "issue date or revision"
+      ],
+      "non_qualifying_evidence": [
+        "FDA grade phrase",
+        "FDA approved phrase",
+        "food grade phrase",
+        "sales email alone",
+        "catalog badge without supporting scope"
+      ],
+      "verification_stop_condition": {
+        "any_of": [
+          "QUALIFYING_DOCUMENT",
+          "TWO_INDEPENDENT_SOURCES",
+          "INSUFFICIENT_EVIDENCE",
+          "MAX_VERIFICATION_TIME"
+        ],
+        "maximum_human_hours": 4
+      },
+      "visibility_options": [
+        "PUBLIC",
+        "AUTHORIZED_BUYER",
+        "TRANSACTION_PRIVATE"
+      ],
+      "notes": "Do not describe the result as FDA approval or extend it beyond the source scope."
+    },
+    {
+      "claim_id": "OIL-CAP-SIL-007",
+      "claim_text": "The referenced product family has qualifying documentation addressing Regulation (EC) No 1935/2004 for the documented material, article, intended food-contact application, and date scope.",
+      "claim_scope": "Exact documented product, material, intended application, supporting measures, and applicable date scope only.",
+      "acceptable_evidence_types": [
+        "THIRD_PARTY_CERTIFICATE",
+        "THIRD_PARTY_TEST_REPORT",
+        "MANUFACTURER_DECLARATION"
+      ],
+      "minimum_required_scope": [
+        "Regulation (EC) No 1935/2004 reference",
+        "material or product family",
+        "intended food-contact use",
+        "issuer",
+        "date",
+        "supporting regulatory references"
+      ],
+      "required_identifiers": [
+        "issuer or laboratory",
+        "document title or identifier",
+        "product or material identifier",
+        "regulation reference",
+        "issue date or revision"
+      ],
+      "non_qualifying_evidence": [
+        "generic EU compliant phrase",
+        "food grade phrase",
+        "sales email alone",
+        "catalog badge without supporting scope",
+        "declaration for an unrelated material or product"
+      ],
+      "verification_stop_condition": {
+        "any_of": [
+          "QUALIFYING_DOCUMENT",
+          "TWO_INDEPENDENT_SOURCES",
+          "INSUFFICIENT_EVIDENCE",
+          "MAX_VERIFICATION_TIME"
+        ],
+        "maximum_human_hours": 4
+      },
+      "visibility_options": [
+        "PUBLIC",
+        "AUTHORIZED_BUYER",
+        "TRANSACTION_PRIVATE"
+      ],
+      "notes": "Documentation under the framework regulation does not automatically establish every material-specific EU requirement."
+    }
+  ]
+}

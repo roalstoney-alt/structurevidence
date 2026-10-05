@@ -13,7 +13,10 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-ENTRY_SHA = "54da445db0315836363aa5d5feebc3751fe85a20"
+# Authoritative main at the start of the Vortex branch. The prior constant
+# predated approved public-record and brand-normalization work already present
+# on main, so it could not distinguish this branch from upstream history.
+ENTRY_SHA = "f81fcbcbcab4891d0043eee8617f0a7b7f632ad2"
 CASES = {
     "CML-PDRE-001": "800vdc",
     "SE-BESS-SODIUM-001": "sodium-ion-bess",

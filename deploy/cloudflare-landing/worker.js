@@ -2,6 +2,8 @@ import { createRemoteJWKSet, jwtVerify } from "jose";
 import { ADMIN_APP_JS, ADMIN_HTML } from "./admin-ui.js";
 import { CAPABILITIES } from "./capabilities.js";
 import { COMMERCIAL_APP_JS_UPGRADE as COMMERCIAL_APP_JS, COMMERCIAL_CSS_V2 as COMMERCIAL_CSS, COMMERCIAL_PAGES_V2 as COMMERCIAL_PAGES } from "./commercial-upgrade.js";
+import { handleGapAdminApi, handleGapApi } from "./gap-service.js";
+import { GAP_APP_JS, GAP_CSS, findGap, renderGapChangeLog, renderGapDetail, renderGapIndex } from "./gaps.js";
 
 const MAX_BODY_BYTES = 65_536;
 const REQUEST_STATUSES = new Set(["SUBMITTED", "UNDER_REVIEW", "SCOPE_PROPOSED", "AWAITING_CUSTOMER", "AUTHORIZED", "IN_PROGRESS", "DELIVERED", "CLOSED"]);
@@ -139,6 +141,8 @@ async function adminRoute(request, url, env, authVerifier) {
   if (url.pathname === "/admin/requests" || url.pathname === "/admin/requests/") return new Response(ADMIN_HTML, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "no-store", "content-security-policy": "default-src 'none'; script-src 'self'; style-src 'unsafe-inline'; connect-src 'self'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'", ...securityHeaders } });
   if (url.pathname === "/admin/requests/app.js") return new Response(ADMIN_APP_JS, { headers: { "content-type": "application/javascript; charset=utf-8", "cache-control": "no-store", ...securityHeaders } });
   if (!env.CUSTOMER_CASES_DB) return json({ error: "Database binding missing" }, 503);
+  const gapAdminResponse = await handleGapAdminApi(request, url, env, actor);
+  if (gapAdminResponse) return gapAdminResponse;
   const match = url.pathname.match(/^\/api\/admin\/requests\/([^/]+)(?:\/(events))?$/);
   if (url.pathname === "/api/admin/requests" && request.method === "GET") return listRequests(url, env);
   if (match && request.method === "GET" && !match[2]) return requestDetail(match[1], env);
@@ -149,11 +153,23 @@ async function adminRoute(request, url, env, authVerifier) {
 function commercialRoute(request, url) {
   if (!new Set(["GET", "HEAD"]).has(request.method)) return new Response("Method not allowed", { status: 405, headers: { allow: "GET, HEAD", ...securityHeaders } });
   const path = url.pathname === "/index.html" ? "/" : url.pathname;
+  if (path === "/gaps") return Response.redirect(`${url.origin}/gaps/`, 308);
+  if (path === "/gaps/") return htmlResponse(request, renderGapIndex());
+  if (path === "/gaps/changes/") return htmlResponse(request, renderGapChangeLog());
+  const gapMatch = path.match(/^\/gaps\/([^/]+)\/$/);
+  if (gapMatch) {
+    const gap = findGap(decodeURIComponent(gapMatch[1]));
+    return gap ? htmlResponse(request, renderGapDetail(gap)) : new Response("Not found", { status: 404, headers: { "content-type": "text/plain; charset=utf-8", ...securityHeaders } });
+  }
   if (path === "/capabilities.json") return new Response(request.method === "HEAD" ? null : JSON.stringify(CAPABILITIES, null, 2) + "\n", { headers: { "content-type": "application/json; charset=utf-8", "cache-control": "public, max-age=3600", ...securityHeaders } });
-  if (path === "/assets/app.css") return new Response(COMMERCIAL_CSS, { headers: { "content-type": "text/css; charset=utf-8", "cache-control": "public, max-age=3600", ...securityHeaders } });
+  if (path === "/assets/app.css") return new Response(`${COMMERCIAL_CSS}\n${GAP_CSS}`, { headers: { "content-type": "text/css; charset=utf-8", "cache-control": "public, max-age=3600", ...securityHeaders } });
   if (path === "/assets/app.js") return new Response(COMMERCIAL_APP_JS, { headers: { "content-type": "application/javascript; charset=utf-8", "cache-control": "public, max-age=3600", ...securityHeaders } });
+  if (path === "/assets/gaps.js") return new Response(GAP_APP_JS, { headers: { "content-type": "application/javascript; charset=utf-8", "cache-control": "public, max-age=3600", ...securityHeaders } });
   const html = COMMERCIAL_PAGES[path];
   if (!html) return new Response("Not found", { status: 404, headers: { "content-type": "text/plain; charset=utf-8", ...securityHeaders } });
+  return htmlResponse(request, html);
+}
+function htmlResponse(request, html) {
   return new Response(request.method === "HEAD" ? null : html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "public, max-age=300", "content-security-policy": "default-src 'none'; script-src 'self'; style-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'", ...securityHeaders } });
 }
 export function createWorker({ authVerifier = verifyAccess } = {}) {
@@ -163,6 +179,8 @@ export function createWorker({ authVerifier = verifyAccess } = {}) {
       if (url.hostname === "www.structevidence.com") return Response.redirect(`https://structevidence.com${url.pathname}${url.search}`, 308);
       if (url.pathname === "/api/requests" && request.method === "OPTIONS") return new Response(null, { status: 204, headers: corsHeaders(request, env) });
       if (url.pathname === "/api/requests" && request.method === "POST") return await submitRequest(request, env);
+      const gapApiResponse = await handleGapApi(request, url, env);
+      if (gapApiResponse) return gapApiResponse;
       if (url.pathname.startsWith("/api/admin/") || url.pathname.startsWith("/admin/requests")) return await adminRoute(request, url, env, authVerifier);
       return commercialRoute(request, url);
     } catch (error) {
