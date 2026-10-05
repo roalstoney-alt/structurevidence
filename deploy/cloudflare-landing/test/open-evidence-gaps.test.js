@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 import test from "node:test";
 import { OPEN_EVIDENCE_GAPS, GAP_SUBMISSION_STATES } from "../gaps.js";
@@ -59,6 +60,17 @@ class FakeGapD1 {
 const envFor = (db) => ({ CUSTOMER_CASES_DB: db, GAP_RATE_LIMIT_SALT: "test-only-gap-rate-limit-salt", PUBLIC_ORIGINS: "https://structevidence.com", TEAM_DOMAIN: "https://team.cloudflareaccess.com", ADMIN_UI_AUD: "ui-aud", ADMIN_API_AUD: "api-aud", ADMIN_EMAILS: "admin@example.com" });
 const challengeRequest = (gapId, body, ip = "192.0.2.44") => new Request(`https://structevidence.com/api/gaps/${gapId}/challenge`, { method: "POST", headers: { "content-type": "application/json", origin: "https://structevidence.com", "cf-connecting-ip": ip }, body: JSON.stringify(body) });
 const validChallenge = (overrides = {}) => ({ gap_id: "OEG-CML-001", evidence_reference: "https://example.org/public-test-report", effect: "SUPPORT", attribution_preference: "ANONYMOUS", note: "Public report identifies the method and observation period.", ...overrides });
+const digestGap = (gap) => createHash("sha256").update(JSON.stringify(gap)).digest("hex");
+const externalGapText = (gap) => JSON.stringify({
+  claim_text: gap.claim_text,
+  current_state: gap.current_state,
+  current_scope: gap.current_scope,
+  what_is_established: gap.what_is_established,
+  what_is_not_established: gap.what_is_not_established,
+  what_would_change_this: gap.what_would_change_this,
+  acceptable_source_examples: gap.acceptable_source_examples,
+  non_qualifying_examples: gap.non_qualifying_examples
+});
 
 test("registry contains exactly six complete gaps, two per existing public case", () => {
   assert.equal(OPEN_EVIDENCE_GAPS.length, 6);
@@ -68,6 +80,66 @@ test("registry contains exactly six complete gaps, two per existing public case"
   assert.deepEqual([...counts.values()], [2, 2, 2]);
   const required = ["gap_id", "case_id", "claim_id", "claim_text", "current_state", "current_scope", "evidence_cutoff", "what_is_established", "what_is_not_established", "what_would_change_this", "acceptable_source_examples", "non_qualifying_examples", "last_reviewed", "challenge_url"];
   for (const gap of OPEN_EVIDENCE_GAPS) for (const field of required) assert.ok(gap[field], `${gap.gap_id}.${field}`);
+});
+
+test("four hard-frozen gaps remain byte-for-byte semantically unchanged", () => {
+  const expected = {
+    "OEG-CML-001": "1b93172c76b6f6eca76380fd92bf185806d1ad14eb99c32b5693a3d8c81a895b",
+    "OEG-CML-002": "defa59b1a9d9eebe3799dc47773f9c9762493e21d34651749eea6a170934f941",
+    "OEG-BESS-001": "19bf13f252597f84757e49ea04794335a3dd53f1c14737cad7b07b7fa8d9b461",
+    "OEG-ONC-001": "5a884c147daef52d6bfdfd557cf9959de3c09d15eef5fd4e0e56acf2f338ea30"
+  };
+  for (const [gapId, digest] of Object.entries(expected)) assert.equal(digestGap(OPEN_EVIDENCE_GAPS.find((gap) => gap.gap_id === gapId)), digest, gapId);
+});
+
+test("BESS-002 keeps its canonical claim while requiring attributable post-commissioning field evidence", () => {
+  const gap = OPEN_EVIDENCE_GAPS.find((item) => item.gap_id === "OEG-BESS-002");
+  assert.equal(gap.claim_id, "SE-BESS-SODIUM-001.INDEPENDENT_FIELD_PERFORMANCE");
+  assert.equal(gap.claim_text, "Independent field-performance evidence for sodium-ion stationary BESS is established.");
+  assert.equal(gap.current_state, "NOT_ESTABLISHED");
+  assert.match(gap.what_would_change_this, /attributable independent field-operation or performance evidence collected after commissioning/i);
+  assert.match(gap.what_would_change_this, /operating duration, availability, delivered capacity or energy, degradation, cycle history, or reliability/i);
+  assert.match(gap.what_would_change_this, /all measures are not required at once/i);
+  const nonQualifying = gap.non_qualifying_examples.join(" ");
+  for (const phrase of ["Manufacturer brochure", "Lab-only test", "simulation", "Planned deployment", "Shipment without commissioning", "generic product specification"]) assert.match(nonQualifying, new RegExp(phrase, "i"));
+});
+
+test("public medical gaps cannot expose patient-specific probability or individualized recommendations", () => {
+  const medicalGaps = OPEN_EVIDENCE_GAPS.filter((gap) => gap.case_id === "SE-ONC-NSQNSCLC-CN-001");
+  const publicText = medicalGaps.map(externalGapText).join(" ");
+  const prohibited = [
+    /patient-specific/i,
+    /specific patient/i,
+    /personal(?:ized)? prognosis/i,
+    /personal success/i,
+    /individualized treatment/i,
+    /treatment success probability/i,
+    /patient-specific benefit/i,
+    /patient-specific survival/i
+  ];
+  for (const pattern of prohibited) assert.doesNotMatch(publicText, pattern);
+  assert.doesNotMatch(publicText, /ECMO\s+(?:is|as)\s+(?:a\s+)?tumou?r therapy/i);
+  assert.ok(medicalGaps.every((gap) => gap.claim_id !== "SE-ONC-NSQNSCLC-CN-001.PATIENT_SPECIFIC_SUCCESS_PROBABILITY"));
+});
+
+test("ONC-002 is replaced by the existing population-level regulatory claim", () => {
+  const gap = OPEN_EVIDENCE_GAPS.find((item) => item.gap_id === "OEG-ONC-002");
+  const canonical = JSON.parse(readFileSync(new URL("../../../claims/SE-ONC-NSQNSCLC-CN-001.IVONESCIMAB_APPROVAL.json", import.meta.url), "utf8"));
+  assert.equal(gap.claim_id, canonical.claim_id);
+  assert.equal(gap.claim_text, canonical.statement);
+  assert.equal(gap.current_state, canonical.state);
+  assert.match(gap.current_scope, /^Population-level regulatory status/);
+  assert.match(gap.what_would_change_this, /official regulator record/i);
+});
+
+test("external gap fields are concise and avoid unnecessary internal protocol jargon", () => {
+  for (const gap of OPEN_EVIDENCE_GAPS) {
+    const text = externalGapText(gap);
+    assert.ok(text.length < 2200, `${gap.gap_id} external content is too long`);
+    assert.doesNotMatch(text, /\b(?:VCF|RDL|GDR|OIL)\b/, gap.gap_id);
+    assert.ok(gap.what_is_established.length > 0 && gap.what_is_not_established.length > 0);
+    assert.ok(gap.acceptable_source_examples.length > 0 && gap.non_qualifying_examples.length > 0);
+  }
 });
 
 test("public gap pages and machine-readable GET routes expose the same frozen registry", async () => {

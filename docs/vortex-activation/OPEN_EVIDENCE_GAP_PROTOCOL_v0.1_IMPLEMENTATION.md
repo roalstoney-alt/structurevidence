@@ -20,7 +20,7 @@ The implementation opens exactly six gaps—two for each of the three existing p
 | OEG-BESS-001 | SE-BESS-SODIUM-001 | SE-BESS-SODIUM-001.NAMED_COMMISSIONED_SITE |
 | OEG-BESS-002 | SE-BESS-SODIUM-001 | SE-BESS-SODIUM-001.INDEPENDENT_FIELD_PERFORMANCE |
 | OEG-ONC-001 | SE-ONC-NSQNSCLC-CN-001 | SE-ONC-NSQNSCLC-CN-001.HOSPITAL_AGGREGATE_OUTCOME_DATA |
-| OEG-ONC-002 | SE-ONC-NSQNSCLC-CN-001 | SE-ONC-NSQNSCLC-CN-001.PATIENT_SPECIFIC_SUCCESS_PROBABILITY |
+| OEG-ONC-002 | SE-ONC-NSQNSCLC-CN-001 | SE-ONC-NSQNSCLC-CN-001.IVONESCIMAB_APPROVAL |
 
 ## Public surface
 
@@ -36,6 +36,10 @@ The implementation opens exactly six gaps—two for each of the three existing p
 Submissions support exactly four proposed effects: `SUPPORT`, `CONTRADICT`, `NARROW_SCOPE`, and `CORRECT_ATTRIBUTION`. Attribution is `NAMED`, `ORGANIZATION_ONLY`, or `ANONYMOUS`. Public attribution describes evidence contribution only and is not endorsement.
 
 Every submission starts as `SUBMITTED`. No public form field can set review state. Cloudflare Access protects the review APIs. Human transitions append immutable events, and public change publication is a separate explicit operation permitted only after a matching human-reviewed final state.
+
+### Medical public-research boundary
+
+`OEG-ONC-002` uses the existing population-level regulatory claim `SE-ONC-NSQNSCLC-CN-001.IVONESCIMAB_APPROVAL`. The earlier patient-specific probability candidate was rejected before production release. No public gap may solicit, derive, estimate, expose, or publish a patient-specific treatment success probability, personalized prognosis, patient-specific benefit/risk estimate, or individualized treatment recommendation. Public intake also prohibits personal health information. ECMO remains life support context and is never represented as tumor therapy.
 
 ## Persistence and abuse controls
 
