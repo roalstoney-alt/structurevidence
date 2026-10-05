@@ -2,6 +2,7 @@
   "schema_version": "1.0",
   "wave_id": "VORTEX-PHASE1-WAVE1-2026-10-06",
   "started_at": "2026-10-05T18:33:05Z",
+  "completed_at": "2026-10-05T19:36:55Z",
   "project": "StructEvidence",
   "program": "VORTEX ACTIVATION",
   "protocol": "OPEN EVIDENCE GAP PROTOCOL v0.1",
@@ -28,8 +29,8 @@
         "subject": "Can you help correct this 800VDC evidence boundary?",
         "body": "We currently have Chindata's public record for one commercial SST-to-800VDC deployment, but we cannot yet establish independent validation of the named site. If you know a primary public test, commissioning, or operating record that changes this, I would value the correction: https://structevidence.com/gaps/OEG-CML-001/ Qualifying contributions can be publicly credited with your permission. No response is required if this is outside your area."
       },
-      "outreach_state": "PREPARED",
-      "sent_at": null,
+      "outreach_state": "SENT",
+      "sent_at": "2026-10-05T18:57:00Z",
       "response_received": false,
       "challenge_submitted": false,
       "challenge_id": null,
@@ -39,7 +40,7 @@
       "state_change": false,
       "scope_correction": false,
       "public_attribution": null,
-      "notes": "Only the official public contact-page reference is stored; no private contact detail is published."
+      "notes": "Only the official public contact-page reference is stored; no private contact detail is published. Delivery action was verified in the authenticated Gmail Sent view."
     },
     {
       "wave_id": "VORTEX-PHASE1-WAVE1-2026-10-06",
@@ -56,8 +57,8 @@
         "subject": "Can you help correct this 800VDC evidence boundary?",
         "body": "We currently have public evidence for one attributable commercial 800VDC/SST deployment, but we cannot yet establish a second independently attributable deployment. If you know a primary public source identifying another operator, site, architecture, and operating status, I would value the correction: https://structevidence.com/gaps/OEG-CML-002/ Qualifying contributions can be publicly credited with your permission. No response is required if this is outside your area."
       },
-      "outreach_state": "PREPARED",
-      "sent_at": null,
+      "outreach_state": "SENT",
+      "sent_at": "2026-10-05T19:06:00Z",
       "response_received": false,
       "challenge_submitted": false,
       "challenge_id": null,
@@ -67,7 +68,7 @@
       "state_change": false,
       "scope_correction": false,
       "public_attribution": null,
-      "notes": "The professional email is published on the official university profile; the ledger stores only that public profile URL."
+      "notes": "The professional email is published on the official university profile; the ledger stores only that public profile URL. Delivery action was verified in the authenticated Gmail Sent view."
     },
     {
       "wave_id": "VORTEX-PHASE1-WAVE1-2026-10-06",
@@ -84,8 +85,8 @@
         "subject": "Do you know a commissioned sodium-ion BESS site we missed?",
         "body": "We can support CATL's product-launch and agreement history, but we still cannot establish a named commissioned customer sodium-ion stationary BESS site from public evidence. If a public record identifies the customer or operator, site, commissioning or grid-connection date, and operating status, please correct this boundary: https://structevidence.com/gaps/OEG-BESS-001/ Qualifying contributions can be publicly credited with your permission."
       },
-      "outreach_state": "PREPARED",
-      "sent_at": null,
+      "outreach_state": "SENT",
+      "sent_at": "2026-10-05T19:15:00Z",
       "response_received": false,
       "challenge_submitted": false,
       "challenge_id": null,
@@ -95,7 +96,7 @@
       "state_change": false,
       "scope_correction": false,
       "public_attribution": null,
-      "notes": "Only the official public contact-page reference is stored; no private contact detail is published."
+      "notes": "Only the official public contact-page reference is stored; no private contact detail is published. Delivery action was verified in the authenticated Gmail Sent view."
     },
     {
       "wave_id": "VORTEX-PHASE1-WAVE1-2026-10-06",
@@ -112,8 +113,8 @@
         "subject": "Do you know independent sodium-ion BESS field evidence we missed?",
         "body": "We can support the sodium-ion product and agreement history, but we still cannot establish an independent post-commissioning field-performance record at a named stationary BESS. If you know a public source with the operator or third party, site, system, observation period, conditions, and method, please correct this boundary: https://structevidence.com/gaps/OEG-BESS-002/ Qualifying contributions can be publicly credited with your permission."
       },
-      "outreach_state": "PREPARED",
-      "sent_at": null,
+      "outreach_state": "SENT",
+      "sent_at": "2026-10-05T19:18:00Z",
       "response_received": false,
       "challenge_submitted": false,
       "challenge_id": null,
@@ -123,7 +124,7 @@
       "state_change": false,
       "scope_correction": false,
       "public_attribution": null,
-      "notes": "Only the official public contact-page reference is stored; no private contact detail is published."
+      "notes": "Only the official public contact-page reference is stored; no private contact detail is published. Delivery action was verified in the authenticated Gmail Sent view."
     },
     {
       "wave_id": "VORTEX-PHASE1-WAVE1-2026-10-06",
@@ -140,8 +141,8 @@
         "subject": "Can you help correct this public NSCLC evidence boundary?",
         "body": "StructEvidence records a bounded public evidence state for China non-squamous NSCLC after EGFR-TKI progression. We are looking specifically for a lawful public hospital-level aggregate dataset or analysis with cohort criteria, treatment exposure, outcome definitions, follow-up, censoring, and reuse terms: https://structevidence.com/gaps/OEG-ONC-001/ If you know a primary public source, corrections are welcome. Qualifying contributions can be publicly credited with permission. We are not requesting patient-level data or treatment advice."
       },
-      "outreach_state": "PREPARED",
-      "sent_at": null,
+      "outreach_state": "SENT",
+      "sent_at": "2026-10-05T19:21:00Z",
       "response_received": false,
       "challenge_submitted": false,
       "challenge_id": null,
@@ -151,7 +152,7 @@
       "state_change": false,
       "scope_correction": false,
       "public_attribution": null,
-      "notes": "The professional email is published on the official institution profile; the ledger stores only that public profile URL. No patient-level data is solicited."
+      "notes": "The professional email is published on the official institution profile; the ledger stores only that public profile URL. No patient-level data is solicited. Delivery action was verified in the authenticated Gmail Sent view."
     },
     {
       "wave_id": "VORTEX-PHASE1-WAVE1-2026-10-06",
@@ -168,8 +169,8 @@
         "subject": "Can you help correct this public NSCLC regulatory evidence boundary?",
         "body": "StructEvidence records a bounded public evidence state for the China approval of ivonescimab with pemetrexed and carboplatin after EGFR-TKI progression. We are looking only for an official public regulator record that changes, narrows, expands, suspends, withdraws, or corrects the approval or label scope: https://structevidence.com/gaps/OEG-ONC-002/ If such a primary public source exists, a correction is welcome. Qualifying contributions can be publicly credited with permission. We are not requesting patient data or individualized treatment advice."
       },
-      "outreach_state": "PREPARED",
-      "sent_at": null,
+      "outreach_state": "SENT",
+      "sent_at": "2026-10-05T19:24:00Z",
       "response_received": false,
       "challenge_submitted": false,
       "challenge_id": null,
@@ -179,7 +180,7 @@
       "state_change": false,
       "scope_correction": false,
       "public_attribution": null,
-      "notes": "Only the official public consultation-page reference is stored. No patient-level data or individualized medical claim is requested."
+      "notes": "Only the official public consultation-page reference is stored. No patient-level data or individualized medical claim is requested. Delivery action was verified in the authenticated Gmail Sent view."
     }
   ],
   "public_x_posts": [
@@ -188,27 +189,27 @@
       "topic": "OPEN EVIDENCE GAP — 800VDC",
       "text": "800VDC: established—one operator reports a commercial SST→800VDC deployment. Not established—independent validation or a second attributable site. Have a primary source that changes this? https://structevidence.com/gaps/OEG-CML-001/ Find where we’re wrong. Credit optional.",
       "character_count": 273,
-      "outreach_state": "PREPARED",
-      "published_at": null,
-      "public_url": null
+      "outreach_state": "SENT",
+      "published_at": "2026-10-05T19:29:14.935Z",
+      "public_url": "https://x.com/StructEvidence/status/2107191403336139263"
     },
     {
       "post_id": "VTX-W1-X-BESS",
       "topic": "OPEN EVIDENCE GAP — sodium-ion BESS",
       "text": "Sodium-ion BESS: launches and supply agreements are established. A named commissioned customer site and independent post-commissioning field results are not. Have a primary source? https://structevidence.com/gaps/OEG-BESS-001/ Find where we’re wrong. Credit optional.",
       "character_count": 267,
-      "outreach_state": "PREPARED",
-      "published_at": null,
-      "public_url": null
+      "outreach_state": "SENT",
+      "published_at": "2026-10-05T19:32:27.242Z",
+      "public_url": "https://x.com/StructEvidence/status/2107192209930121586"
     },
     {
       "post_id": "VTX-W1-X-NSCLC",
       "topic": "OPEN EVIDENCE GAP — NSCLC",
       "text": "China NSCLC: public trial and regulatory evidence is established within scope. A lawful hospital-level aggregate outcome dataset is not. Know a primary public source? https://structevidence.com/gaps/OEG-ONC-001/ Find where we’re wrong. Credit optional.",
       "character_count": 252,
-      "outreach_state": "PREPARED",
-      "published_at": null,
-      "public_url": null
+      "outreach_state": "SENT",
+      "published_at": "2026-10-05T19:36:05.908Z",
+      "public_url": "https://x.com/StructEvidence/status/2107193127081759088"
     }
   ],
   "execution_attempts": [
@@ -227,11 +228,25 @@
       ],
       "prepared_handoff": "/private/tmp/structurevidence-wave1-outbox-2026-10-06",
       "notes": "No recipient data or message body was transmitted. All target and post states remain PREPARED."
+    },
+    {
+      "attempted_at": "2026-10-05T18:57:00Z",
+      "completed_at": "2026-10-05T19:36:55Z",
+      "authorization": "HUMAN_RECONFIRMED_LOGGED_IN_CONTINUE_SEND",
+      "action": "SEND_6_TARGETED_MESSAGES_AND_PUBLISH_3_X_POSTS",
+      "result": "PASS",
+      "messages_sent": 6,
+      "x_posts_published": 3,
+      "verification": [
+        "Each targeted email was verified in the authenticated support@structevidence.com Gmail Sent view.",
+        "Each public X post was verified on @StructEvidence with a public status URL."
+      ],
+      "notes": "No external response or evidence submission was recorded during execution. Canonical gap and case states were not changed."
     }
   ],
   "kpis": {
     "targets_prepared": 6,
-    "targets_contacted": 0,
+    "targets_contacted": 6,
     "external_responses": 0,
     "external_submissions": 0,
     "in_scope_submissions": 0,
@@ -240,10 +255,10 @@
     "scope_corrections": 0,
     "strong_vortex_events": 0,
     "x_posts_prepared": 3,
-    "x_posts_published": 0
+    "x_posts_published": 3
   },
   "oil_status": "PAUSED",
   "bounty": "NONE",
   "wave_2_authorization": "NOT_AUTOMATIC",
-  "notes": "PREPARED records are not counted as contacted. No response is not evidence. Public state remains unchanged until external evidence is screened, qualified, and human-reviewed."
+  "notes": "Wave 1 outreach was sent and published after explicit human reconfirmation. No response is not evidence. Public state remains unchanged until external evidence is screened, qualified, and human-reviewed."
 }
