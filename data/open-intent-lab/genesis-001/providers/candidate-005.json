@@ -1,0 +1,78 @@
+{
+  "provider_candidate_id": "OIL-CAND-005",
+  "entity_name": "Trelleborg AB (publ)",
+  "trading_name": "Trelleborg Medical Solutions",
+  "country": "Sweden",
+  "official_domain": "trelleborg.com",
+  "official_website": "https://www.trelleborg.com/en/medical/",
+  "manufacturer_status": "MANUFACTURER",
+  "identity_status": "IDENTITY_PARTIAL",
+  "official_contact_channels": [
+    {
+      "type": "OFFICIAL_CONTACT_FORM",
+      "value": "https://www.trelleborg.com/en/medical/contact-us",
+      "source": "https://www.trelleborg.com/en/medical/contact-us"
+    },
+    {
+      "type": "OFFICIAL_LIFE_SCIENCES_EMAIL",
+      "value": "lifesciences.americas@trelleborg.com",
+      "source": "https://www.trelleborg.com/en/healthcare/-/media/tss-media-repository/healthcare-and-medical/pdfs/engineered_solutions_for_life_sciences_en.pdf"
+    }
+  ],
+  "public_signal_claim_ids": [
+    "OIL-CAP-SIL-001",
+    "OIL-CAP-SIL-002",
+    "OIL-CAP-SIL-003",
+    "OIL-CAP-SIL-004",
+    "OIL-CAP-SIL-005"
+  ],
+  "public_evidence_refs": [
+    {
+      "ref_id": "TR-PRODUCT",
+      "url": "https://www.trelleborg.com/en/medical/products-capabilities/tubing-and-hose/reinforced-tubing",
+      "source_class": "OFFICIAL_PRODUCT_PAGE",
+      "title": "PharmaSil reinforced silicone hose",
+      "scope": "PharmaSil and medical reinforced-tubing portfolio"
+    },
+    {
+      "ref_id": "TR-CATALOG",
+      "url": "https://www.trelleborg.com/healthcare/-/media/TSS-Media-Repository/Healthcare-and-Medical/PDFs/tubing_hose_sheeting_en.pdf?hash=C6CD9751A9B834B00E0674F8B3E46148&rev=6173352d78044f5ca74540cc555f608d",
+      "source_class": "OFFICIAL_PRODUCT_CATALOG",
+      "title": "Tubing, Hose and Sheeting for Healthcare and Medical Applications",
+      "scope": "200 HP series and listed pressure/temperature conditions"
+    },
+    {
+      "ref_id": "TR-IDENTITY",
+      "url": "https://www.trelleborg.com/en/about-us/organization/business-areas/trelleborg-medical-solutions",
+      "source_class": "OFFICIAL_CORPORATE_PAGE",
+      "title": "Trelleborg Medical Solutions business area",
+      "scope": "Group business identity and headquarters"
+    },
+    {
+      "ref_id": "TR-CONTACT",
+      "url": "https://www.trelleborg.com/en/medical/contact-us",
+      "source_class": "OFFICIAL_CONTACT_PAGE",
+      "title": "Trelleborg Medical Solutions contact",
+      "scope": "Official inquiry route"
+    }
+  ],
+  "public_signal_details": [
+    {"claim_id": "OIL-CAP-SIL-001", "signal": "PUBLIC_SIGNAL_PRESENT", "source_ref": "TR-PRODUCT", "scope": "PharmaSil reinforced hose", "notes": "Official page states platinum-cured silicone."},
+    {"claim_id": "OIL-CAP-SIL-002", "signal": "PUBLIC_SIGNAL_PRESENT", "source_ref": "TR-PRODUCT", "scope": "PharmaSil reinforced hose", "notes": "Official page states braid reinforcement."},
+    {"claim_id": "OIL-CAP-SIL-003", "signal": "PUBLIC_SIGNAL_PRESENT", "source_ref": "TR-CATALOG", "scope": "200 HP series at 68 F", "notes": "Official catalog lists several recommended working pressures above 9 bar."},
+    {"claim_id": "OIL-CAP-SIL-004", "signal": "PUBLIC_SIGNAL_PRESENT", "source_ref": "TR-PRODUCT", "scope": "PharmaSil stated temperature range", "notes": "Official page states -62 C."},
+    {"claim_id": "OIL-CAP-SIL-005", "signal": "PUBLIC_SIGNAL_PRESENT", "source_ref": "TR-PRODUCT", "scope": "PharmaSil stated temperature range", "notes": "Official page states +260 C."},
+    {"claim_id": "OIL-CAP-SIL-006", "signal": "NO_PUBLIC_SIGNAL_LOCATED", "source_ref": null, "scope": "PharmaSil / 200 HP", "notes": "Generic FDA language was located, but no exact public 21 CFR 177.2600 artifact was located within the Stage 2 boundary."},
+    {"claim_id": "OIL-CAP-SIL-007", "signal": "NO_PUBLIC_SIGNAL_LOCATED", "source_ref": null, "scope": "PharmaSil / 200 HP", "notes": "No exact public Regulation 1935/2004 artifact was located within the Stage 2 boundary."}
+  ],
+  "evidence_accessibility": "MEDIUM",
+  "contactability": "HIGH",
+  "reason_for_genesis_selection": "Official product and catalog material provide strong technical signals and a useful large-group test case, while the unresolved manufacturing affiliate tests identity scoping rather than being silently ignored.",
+  "known_gaps": [
+    "The precise legal manufacturing and contracting affiliate for PharmaSil must be established before production Provider creation.",
+    "No exact public 21 CFR 177.2600 or Regulation 1935/2004 artifact was located.",
+    "Product-series naming and catalog revision must be reconciled during invitation review."
+  ],
+  "conflict_related_party_flag": "INDEPENDENT",
+  "discovery_as_of": "2026-10-03"
+}

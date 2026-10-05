@@ -1,0 +1,199 @@
+{
+  "schema_version": "1.0",
+  "domain_id": "OIL-DOMAIN-001",
+  "domain_name": "Reinforced Platinum-Cured Silicone Hose",
+  "domain_version": "v0.1",
+  "experiment": "OIL-GENESIS-001",
+  "claim_id_convention": "OIL-CAP-SIL-NNN",
+  "claim_types": [
+    "TECHNICAL_CAPABILITY",
+    "COMPLIANCE_EVIDENCE"
+  ],
+  "allowed_units": [
+    "ENUM",
+    "bar",
+    "degC",
+    "REGULATORY_REFERENCE"
+  ],
+  "allowed_operators": [
+    "EQ",
+    "GTE",
+    "LTE",
+    "QUALIFYING_DOCUMENT_FOR_SCOPE"
+  ],
+  "canonical_status_mapping": {
+    "SUPPORTED": {
+      "state": "SUPPORTED"
+    },
+    "OBSERVED": {
+      "state": "OBSERVED",
+      "required_fields": [
+        "observation_scope",
+        "source",
+        "as_of"
+      ],
+      "conditional_fields": [
+        "related_demand_ref",
+        "related_outcome_ref"
+      ],
+      "rule": "OBSERVED is a canonical bounded real-world status and does not generalize beyond its observation scope."
+    },
+    "UNKNOWN": {
+      "state": "UNKNOWN"
+    },
+    "NOT_ESTABLISHED": {
+      "state": "NOT_ESTABLISHED"
+    },
+    "CONTRADICTED": {
+      "state": "CONTRADICTED"
+    }
+  },
+  "status_history_rule": {
+    "update_mode": "APPEND_ONLY",
+    "coexisting_statuses_allowed": true,
+    "historic_overwrite_allowed": false,
+    "supported_and_observed_may_coexist": true,
+    "contradictory_observation_rule": "Preserve the OBSERVED event and append any resulting CONTRADICTED claim-level decision without deleting prior support."
+  },
+  "visibility_enum": [
+    "PUBLIC",
+    "AUTHORIZED_BUYER",
+    "TRANSACTION_PRIVATE"
+  ],
+  "fact_origin_enum": [
+    "GENESIS_SUBMISSION",
+    "SUPPLIER_UPDATE",
+    "DEMAND_TRIGGERED",
+    "OUTCOME_GENERATED",
+    "STRUCTEVIDENCE_RESEARCH"
+  ],
+  "evidence_type_enum": [
+    "THIRD_PARTY_CERTIFICATE",
+    "THIRD_PARTY_TEST_REPORT",
+    "MANUFACTURER_DATASHEET",
+    "MANUFACTURER_DECLARATION",
+    "FACTORY_DOCUMENT",
+    "PHYSICAL_SAMPLE_OBSERVATION",
+    "BUYER_TEST",
+    "TRANSACTION_OUTCOME",
+    "PUBLIC_CORPORATE_RECORD"
+  ],
+  "claims": [
+    {
+      "claim_id": "OIL-CAP-SIL-001",
+      "claim_name": "platinum_cured",
+      "claim_type": "TECHNICAL_CAPABILITY",
+      "normalized_claim": "Provider evidence supports that the referenced hose or product family uses a platinum-cured silicone system.",
+      "scope": "Referenced hose/product family and the documented formulation or manufacturing scope only.",
+      "unit": "ENUM",
+      "operator": "EQ",
+      "value": "PLATINUM_CURED",
+      "evidence_examples": [
+        "MANUFACTURER_DATASHEET",
+        "MANUFACTURER_DECLARATION",
+        "FACTORY_DOCUMENT",
+        "THIRD_PARTY_TEST_REPORT"
+      ],
+      "prohibited_overinterpretation": "Do not infer medical grade, peroxide-free status, food-contact compliance, purity, extractables performance, or every product made by the provider."
+    },
+    {
+      "claim_id": "OIL-CAP-SIL-002",
+      "claim_name": "reinforced_construction",
+      "claim_type": "TECHNICAL_CAPABILITY",
+      "normalized_claim": "Provider evidence supports reinforced construction for the referenced silicone hose or product family.",
+      "scope": "Referenced construction/product family and documented reinforcement type only.",
+      "unit": "ENUM",
+      "operator": "EQ",
+      "value": "REINFORCED",
+      "evidence_examples": [
+        "MANUFACTURER_DATASHEET",
+        "FACTORY_DOCUMENT",
+        "THIRD_PARTY_TEST_REPORT",
+        "PHYSICAL_SAMPLE_OBSERVATION"
+      ],
+      "prohibited_overinterpretation": "Do not infer reinforcement material, braid count, pressure rating, burst pressure, kink resistance, or performance of another series."
+    },
+    {
+      "claim_id": "OIL-CAP-SIL-003",
+      "claim_name": "maximum_working_pressure",
+      "claim_type": "TECHNICAL_CAPABILITY",
+      "normalized_claim": "Provider evidence supports a maximum working pressure of at least 9 bar for the referenced hose configuration under the documented conditions.",
+      "scope": "Referenced size, construction, temperature, medium, test method, and other stated operating conditions.",
+      "unit": "bar",
+      "operator": "GTE",
+      "value": 9,
+      "evidence_examples": [
+        "THIRD_PARTY_TEST_REPORT",
+        "MANUFACTURER_DATASHEET",
+        "FACTORY_DOCUMENT"
+      ],
+      "prohibited_overinterpretation": "Do not infer burst pressure, proof pressure, safety factor, vacuum rating, dynamic impulse life, or unrelated size/series performance."
+    },
+    {
+      "claim_id": "OIL-CAP-SIL-004",
+      "claim_name": "minimum_operating_temperature",
+      "claim_type": "TECHNICAL_CAPABILITY",
+      "normalized_claim": "Provider evidence supports an operating-temperature lower bound at or below -40 degC for the referenced hose or product family under documented conditions.",
+      "scope": "Referenced product family, medium, duration, pressure/installation conditions, and definition of operating temperature.",
+      "unit": "degC",
+      "operator": "LTE",
+      "value": -40,
+      "evidence_examples": [
+        "MANUFACTURER_DATASHEET",
+        "MANUFACTURER_DECLARATION",
+        "THIRD_PARTY_TEST_REPORT",
+        "FACTORY_DOCUMENT"
+      ],
+      "prohibited_overinterpretation": "Do not infer continuous service duration, pressure retention at -40 degC, sterilization performance, or fitness for every medium."
+    },
+    {
+      "claim_id": "OIL-CAP-SIL-005",
+      "claim_name": "maximum_operating_temperature",
+      "claim_type": "TECHNICAL_CAPABILITY",
+      "normalized_claim": "Provider evidence supports an operating-temperature upper bound at or above +180 degC for the referenced hose or product family under documented conditions.",
+      "scope": "Referenced product family, medium, duration, pressure/installation conditions, and definition of operating temperature.",
+      "unit": "degC",
+      "operator": "GTE",
+      "value": 180,
+      "evidence_examples": [
+        "MANUFACTURER_DATASHEET",
+        "MANUFACTURER_DECLARATION",
+        "THIRD_PARTY_TEST_REPORT",
+        "FACTORY_DOCUMENT"
+      ],
+      "prohibited_overinterpretation": "Do not infer continuous service duration, pressure retention at +180 degC, steam/sterilization cycles, or fitness for every medium."
+    },
+    {
+      "claim_id": "OIL-CAP-SIL-006",
+      "claim_name": "fda_21_cfr_177_2600_documentation",
+      "claim_type": "COMPLIANCE_EVIDENCE",
+      "normalized_claim": "The referenced product family has qualifying documentation addressing 21 CFR 177.2600 for the documented material, article, food-contact use, extraction conditions, and date scope.",
+      "scope": "Exact documented product/material/application and applicable conditions only.",
+      "unit": "REGULATORY_REFERENCE",
+      "operator": "QUALIFYING_DOCUMENT_FOR_SCOPE",
+      "value": "21_CFR_177_2600",
+      "evidence_examples": [
+        "THIRD_PARTY_TEST_REPORT",
+        "MANUFACTURER_DECLARATION",
+        "THIRD_PARTY_CERTIFICATE"
+      ],
+      "prohibited_overinterpretation": "Do not call this an FDA approval or certification; do not infer compliance for undocumented formulations, articles, food types, temperatures, extraction conditions, or dates."
+    },
+    {
+      "claim_id": "OIL-CAP-SIL-007",
+      "claim_name": "ec_1935_2004_documentation",
+      "claim_type": "COMPLIANCE_EVIDENCE",
+      "normalized_claim": "The referenced product family has qualifying documentation addressing Regulation (EC) No 1935/2004 for the documented material, article, intended food-contact application, and date scope.",
+      "scope": "Exact documented product/material/application and applicable supporting measures only.",
+      "unit": "REGULATORY_REFERENCE",
+      "operator": "QUALIFYING_DOCUMENT_FOR_SCOPE",
+      "value": "EC_1935_2004",
+      "evidence_examples": [
+        "MANUFACTURER_DECLARATION",
+        "THIRD_PARTY_TEST_REPORT",
+        "THIRD_PARTY_CERTIFICATE"
+      ],
+      "prohibited_overinterpretation": "Do not infer universal EU food-contact compliance, compliance with every material-specific measure, every migration limit, GMP, or suitability for undocumented conditions."
+    }
+  ]
+}

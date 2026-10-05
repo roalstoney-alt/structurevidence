@@ -1,0 +1,78 @@
+{
+  "provider_candidate_id": "OIL-CAND-004",
+  "entity_name": "Watson-Marlow Flow Smart, Inc.",
+  "trading_name": "Watson-Marlow Fluid Technology Solutions / BioPure",
+  "country": "United States",
+  "official_domain": "wmfts.com",
+  "official_website": "https://www.wmfts.com",
+  "manufacturer_status": "MANUFACTURER",
+  "identity_status": "IDENTITY_VERIFIED",
+  "official_contact_channels": [
+    {
+      "type": "OFFICIAL_CONTACT_FORM",
+      "value": "https://www.wmfts.com/global/",
+      "source": "https://www.wmfts.com/global/"
+    },
+    {
+      "type": "OFFICIAL_PHONE",
+      "value": "+1 800 282 8823",
+      "source": "https://www.wmfts.com/global/"
+    }
+  ],
+  "public_signal_claim_ids": [
+    "OIL-CAP-SIL-001",
+    "OIL-CAP-SIL-002",
+    "OIL-CAP-SIL-003",
+    "OIL-CAP-SIL-004",
+    "OIL-CAP-SIL-005"
+  ],
+  "public_evidence_refs": [
+    {
+      "ref_id": "WM-PRODUCT",
+      "url": "https://www.wmfts.com/en-sg/prod-oem/biopure/fluid-transfer-hose-and-tubing/platinum-cured-silicone-braided-hose/",
+      "source_class": "OFFICIAL_PRODUCT_PAGE",
+      "title": "BioPure platinum-cured silicone braided hose",
+      "scope": "BioPure hose product family"
+    },
+    {
+      "ref_id": "WM-DATASHEET",
+      "url": "https://www.wmfts.com/siteassets/catalog/products/corporate/biopure/fluid-transfer-hose-and-tubing/7432/literature/wd-biopure-braided-hose-en.pdf",
+      "source_class": "OFFICIAL_TECHNICAL_DATASHEET",
+      "title": "BioPure braided hose datasheet",
+      "scope": "Listed sizes and 20 C pressure conditions"
+    },
+    {
+      "ref_id": "WM-VALIDATION",
+      "url": "https://www.wmfts.com/siteassets/catalog/products/corporate/biopure/fluid-transfer-hose-and-tubing/7432/literature/vs-biopure-siliconehose-en.pdf",
+      "source_class": "OFFICIAL_VALIDATION_SUMMARY",
+      "title": "BioPure silicone hose validation guide summary",
+      "scope": "Manufacturing identity, materials, temperature, and validation overview"
+    },
+    {
+      "ref_id": "WM-CONTACT",
+      "url": "https://www.wmfts.com/global/",
+      "source_class": "OFFICIAL_CONTACT_DIRECTORY",
+      "title": "WMFTS international contacts",
+      "scope": "Published BioPure sales and supply-site routes"
+    }
+  ],
+  "public_signal_details": [
+    {"claim_id": "OIL-CAP-SIL-001", "signal": "PUBLIC_SIGNAL_PRESENT", "source_ref": "WM-PRODUCT", "scope": "BioPure braided hose", "notes": "Official page states a continuously extruded platinum-cured silicone core."},
+    {"claim_id": "OIL-CAP-SIL-002", "signal": "PUBLIC_SIGNAL_PRESENT", "source_ref": "WM-PRODUCT", "scope": "BioPure braided hose", "notes": "Official page and validation summary state polyester braid reinforcement."},
+    {"claim_id": "OIL-CAP-SIL-003", "signal": "PUBLIC_SIGNAL_PRESENT", "source_ref": "WM-DATASHEET", "scope": "Specific sizes at 20 C", "notes": "Official table lists 12.11, 10.3, and 9.5 bar working-pressure values for specific sizes."},
+    {"claim_id": "OIL-CAP-SIL-004", "signal": "PUBLIC_SIGNAL_PRESENT", "source_ref": "WM-VALIDATION", "scope": "BioPure braided hose stated range", "notes": "Official validation summary states -65 C."},
+    {"claim_id": "OIL-CAP-SIL-005", "signal": "PUBLIC_SIGNAL_PRESENT", "source_ref": "WM-VALIDATION", "scope": "BioPure braided hose stated range", "notes": "Official validation summary states +254 C."},
+    {"claim_id": "OIL-CAP-SIL-006", "signal": "NO_PUBLIC_SIGNAL_LOCATED", "source_ref": null, "scope": "BioPure braided hose", "notes": "FDA-related validation language was located, but no exact public 21 CFR 177.2600 artifact was located within the Stage 2 boundary."},
+    {"claim_id": "OIL-CAP-SIL-007", "signal": "NO_PUBLIC_SIGNAL_LOCATED", "source_ref": null, "scope": "BioPure braided hose", "notes": "No exact public Regulation 1935/2004 artifact was located within the Stage 2 boundary."}
+  ],
+  "evidence_accessibility": "HIGH",
+  "contactability": "HIGH",
+  "reason_for_genesis_selection": "A named manufacturing entity, official size-specific datasheet, validation summary, and global BioPure contact directory provide a strong test case for distinguishing technical signals from unavailable compliance artifacts.",
+  "known_gaps": [
+    "No exact public 21 CFR 177.2600 or Regulation 1935/2004 artifact was located.",
+    "The current contracting entity for a future invitation may differ by region.",
+    "Validation documents have not undergone canonical review."
+  ],
+  "conflict_related_party_flag": "INDEPENDENT",
+  "discovery_as_of": "2026-10-03"
+}

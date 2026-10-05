@@ -1,0 +1,91 @@
+{
+  "provider_candidate_id": "OIL-CAND-003",
+  "entity_name": "NewAge Industries, Inc.",
+  "trading_name": "AdvantaPure",
+  "country": "United States",
+  "official_domain": "advantapure.com",
+  "official_website": "https://www.advantapure.com",
+  "manufacturer_status": "MANUFACTURER",
+  "identity_status": "IDENTITY_VERIFIED",
+  "official_contact_channels": [
+    {
+      "type": "OFFICIAL_SALES_EMAIL",
+      "value": "sales@advantapure.com",
+      "source": "https://www.advantapure.com/contact-us/"
+    },
+    {
+      "type": "OFFICIAL_GENERAL_EMAIL",
+      "value": "info@advantapure.com",
+      "source": "https://www.advantapure.com/contact-us/"
+    },
+    {
+      "type": "OFFICIAL_PHONE",
+      "value": "+1 215 526 2151",
+      "source": "https://www.advantapure.com/contact-us/"
+    }
+  ],
+  "public_signal_claim_ids": [
+    "OIL-CAP-SIL-001",
+    "OIL-CAP-SIL-002",
+    "OIL-CAP-SIL-003",
+    "OIL-CAP-SIL-004",
+    "OIL-CAP-SIL-005",
+    "OIL-CAP-SIL-006"
+  ],
+  "public_evidence_refs": [
+    {
+      "ref_id": "AP-PRODUCT",
+      "url": "https://www.advantapure.com/product/advantasil-apsh-p-silicone-hose/",
+      "source_class": "OFFICIAL_PRODUCT_PAGE",
+      "title": "AdvantaSil APSH-P",
+      "scope": "APSH-P product family and listed sizes"
+    },
+    {
+      "ref_id": "AP-DATASHEET",
+      "url": "https://www.advantapure.com/wp-content/uploads/2026/03/DS_AdvantaSil_APSH-P_R1.pdf",
+      "source_class": "OFFICIAL_TECHNICAL_DATASHEET",
+      "title": "AdvantaSil APSH-P datasheet",
+      "scope": "Current APSH-P specifications"
+    },
+    {
+      "ref_id": "AP-REGULATORY-SIGNAL",
+      "url": "https://advantapure.com/wp-content/uploads/2022/03/AdvantaSil_APSH_Silicone_Hose-1.pdf",
+      "source_class": "OFFICIAL_ARCHIVED_TECHNICAL_SHEET",
+      "title": "APSH braid-reinforced silicone hose technical sheet",
+      "scope": "Archived official APSH document; currency and product mapping require confirmation"
+    },
+    {
+      "ref_id": "AP-IDENTITY",
+      "url": "https://www.advantapure.com/about/our-company/",
+      "source_class": "OFFICIAL_CORPORATE_PAGE",
+      "title": "AdvantaPure company page",
+      "scope": "Division and parent-company manufacturing identity"
+    },
+    {
+      "ref_id": "AP-CONTACT",
+      "url": "https://www.advantapure.com/contact-us/",
+      "source_class": "OFFICIAL_CONTACT_PAGE",
+      "title": "AdvantaPure contact and manufacturing sites",
+      "scope": "Published contact routes and locations"
+    }
+  ],
+  "public_signal_details": [
+    {"claim_id": "OIL-CAP-SIL-001", "signal": "PUBLIC_SIGNAL_PRESENT", "source_ref": "AP-PRODUCT", "scope": "APSH-P", "notes": "Official page states platinum-cured silicone."},
+    {"claim_id": "OIL-CAP-SIL-002", "signal": "PUBLIC_SIGNAL_PRESENT", "source_ref": "AP-PRODUCT", "scope": "APSH-P", "notes": "Official page states polyester braid reinforcement."},
+    {"claim_id": "OIL-CAP-SIL-003", "signal": "PUBLIC_SIGNAL_PRESENT", "source_ref": "AP-DATASHEET", "scope": "Specific APSH-P sizes at 21.1 C", "notes": "Official table lists working pressure at or above 9 bar for several sizes."},
+    {"claim_id": "OIL-CAP-SIL-004", "signal": "PUBLIC_SIGNAL_PRESENT", "source_ref": "AP-PRODUCT", "scope": "General APSH-P temperature range", "notes": "Official page states -73.3 C."},
+    {"claim_id": "OIL-CAP-SIL-005", "signal": "PUBLIC_SIGNAL_PRESENT", "source_ref": "AP-PRODUCT", "scope": "General APSH-P temperature range", "notes": "Official page states +204.4 C."},
+    {"claim_id": "OIL-CAP-SIL-006", "signal": "PUBLIC_SIGNAL_PRESENT", "source_ref": "AP-REGULATORY-SIGNAL", "scope": "Archived APSH technical sheet", "notes": "Official archived sheet references FDA CFR 177.2600; current applicability requires confirmation."},
+    {"claim_id": "OIL-CAP-SIL-007", "signal": "NO_PUBLIC_SIGNAL_LOCATED", "source_ref": null, "scope": "APSH-P", "notes": "No exact public Regulation 1935/2004 document was located within the Stage 2 boundary."}
+  ],
+  "evidence_accessibility": "HIGH",
+  "contactability": "HIGH",
+  "reason_for_genesis_selection": "The manufacturer publishes size-specific pressure data, product-scope technical material, manufacturing locations, validation-package access, and direct sales/compliance channels.",
+  "known_gaps": [
+    "The archived FDA reference must be mapped to the current APSH-P product and revision.",
+    "No exact public Regulation 1935/2004 signal was located.",
+    "Validation and regulatory packages are available by request but were not requested in Stage 2."
+  ],
+  "conflict_related_party_flag": "INDEPENDENT",
+  "discovery_as_of": "2026-10-03"
+}

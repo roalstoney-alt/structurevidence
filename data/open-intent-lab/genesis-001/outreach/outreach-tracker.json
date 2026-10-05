@@ -1,0 +1,341 @@
+{
+  "schema_version": "1.0",
+  "experiment": "OIL-GENESIS-001",
+  "stage": "PAUSED",
+  "lifecycle_status": "PAUSED",
+  "paused_at": "2026-10-03T12:38:53Z",
+  "pause_source": "EXPLICIT_HUMAN_INSTRUCTION",
+  "last_completed_node": "STAGE_3_HUMAN_SEND_DECISION",
+  "next_action": "UNSET — awaiting human redesign of supplier participation approach",
+  "as_of": "2026-10-03",
+  "send_authorized": false,
+  "messages_sent": 0,
+  "response_windows_started": 0,
+  "provider_created": 0,
+  "evidence_ingested": 0,
+  "vcf_created": 0,
+  "demand_created": 0,
+  "outcome_created": 0,
+  "reuse_record_created": 0,
+  "human_send_decision_as_of": "2026-10-03",
+  "approved_for_outreach": 4,
+  "held_for_clarification": 1,
+  "approved_for_possible_outreach": [
+    "OIL-CAND-001",
+    "OIL-CAND-002",
+    "OIL-CAND-003",
+    "OIL-CAND-004"
+  ],
+  "send_authorized_candidate_ids": [],
+  "outreach_execution_baseline": "data/open-intent-lab/genesis-001/outreach/OUTREACH_EXECUTION_BASELINE.json",
+  "outreach_event_log": "data/open-intent-lab/genesis-001/outreach/outreach-events.jsonl",
+  "attempted_transmissions": 0,
+  "successful_transmissions": 0,
+  "blocked_transmissions": 4,
+  "failed_transmissions": 0,
+  "first_reality_boundary_t0": null,
+  "records": [
+    {
+      "candidate_id": "OIL-CAND-001",
+      "entity_name": "Venair Ibérica SAU",
+      "contact_channel": {
+        "type": "OFFICIAL_SALES_EMAIL",
+        "value": "info@venair.com",
+        "source": "candidate-001.json"
+      },
+      "claims_requested": [
+        "OIL-CAP-SIL-001",
+        "OIL-CAP-SIL-002",
+        "OIL-CAP-SIL-003",
+        "OIL-CAP-SIL-004",
+        "OIL-CAP-SIL-005",
+        "OIL-CAP-SIL-006",
+        "OIL-CAP-SIL-007"
+      ],
+      "pack_created_at": "2026-10-03",
+      "human_review_prepared": true,
+      "human_review_prepared_at": "2026-10-03",
+      "human_review_file": "data/open-intent-lab/genesis-001/outreach/review/candidate-001-review.md",
+      "send_approval": "YES",
+      "human_send_approval": "YES",
+      "final_recipient_or_channel": "info@venair.com",
+      "final_message_file": "data/open-intent-lab/genesis-001/outreach/candidate-001/final_outreach_message.md",
+      "final_message_hash": "sha256:076d1f2562375daa56207f75ad4cdc49f5629874599891a3ec19aae40f577ce0",
+      "final_claim_ids": [
+        "OIL-CAP-SIL-001",
+        "OIL-CAP-SIL-002",
+        "OIL-CAP-SIL-003",
+        "OIL-CAP-SIL-004",
+        "OIL-CAP-SIL-005",
+        "OIL-CAP-SIL-006",
+        "OIL-CAP-SIL-007"
+      ],
+      "human_review_status": "DECIDED",
+      "send_authorized": false,
+      "authorization_suspended_by_pause": true,
+      "paused_at": "2026-10-03T12:38:53Z",
+      "send_timestamp": null,
+      "sent_at": null,
+      "actual_send_status": "EXECUTION_BLOCKED",
+      "message_hash": "sha256:076d1f2562375daa56207f75ad4cdc49f5629874599891a3ec19aae40f577ce0",
+      "channel": "OFFICIAL_EMAIL",
+      "confirmation_reference": null,
+      "response_window_end": null,
+      "current_participation_status": "OUTREACH_PREPARED",
+      "execution_block_reason": "No authorized outbound email transport is available in the execution environment; verified sender identity must be supplied by the manual operator.",
+      "last_execution_checked_at": "2026-10-03T12:06:59Z",
+      "response_status": "OUTREACH_PREPARED",
+      "last_response_at": null,
+      "next_action": "PAUSED_AWAITING_PARTICIPATION_REDESIGN",
+      "outreach_events": [
+        {
+          "event_type": "HUMAN_SEND_APPROVED",
+          "occurred_at": "2026-10-03",
+          "source": "EXPLICIT_HUMAN_DECISION",
+          "append_only": true
+        },
+        {
+          "event_type": "OUTREACH_EXECUTION_BLOCKED",
+          "occurred_at": "2026-10-03T12:06:59Z",
+          "source": "EXECUTION_ENVIRONMENT_PREFLIGHT",
+          "submission_result": "EXECUTION_BLOCKED",
+          "append_only": true
+        }
+      ]
+    },
+    {
+      "candidate_id": "OIL-CAND-002",
+      "entity_name": "Saint-Gobain Performance Plastics Corporation",
+      "contact_channel": {
+        "type": "OFFICIAL_CONTACT_FORM",
+        "value": "https://www.medical.saint-gobain.com/contact-us",
+        "source": "candidate-002.json"
+      },
+      "claims_requested": [
+        "OIL-CAP-SIL-001",
+        "OIL-CAP-SIL-002",
+        "OIL-CAP-SIL-003",
+        "OIL-CAP-SIL-004",
+        "OIL-CAP-SIL-005",
+        "OIL-CAP-SIL-006",
+        "OIL-CAP-SIL-007"
+      ],
+      "pack_created_at": "2026-10-03",
+      "human_review_prepared": true,
+      "human_review_prepared_at": "2026-10-03",
+      "human_review_file": "data/open-intent-lab/genesis-001/outreach/review/candidate-002-review.md",
+      "send_approval": "YES",
+      "human_send_approval": "YES",
+      "final_recipient_or_channel": "https://www.biopharm.saint-gobain.com/contact-us#Application-Support-or-Quality",
+      "final_message_file": "data/open-intent-lab/genesis-001/outreach/candidate-002/final_outreach_message.md",
+      "final_message_hash": "sha256:38ba8c8f865beb66b04d73fbc68bae8573bd2e33c1d3b033335b7995c7e34aa3",
+      "final_claim_ids": [
+        "OIL-CAP-SIL-001",
+        "OIL-CAP-SIL-002",
+        "OIL-CAP-SIL-003",
+        "OIL-CAP-SIL-004",
+        "OIL-CAP-SIL-005",
+        "OIL-CAP-SIL-006",
+        "OIL-CAP-SIL-007"
+      ],
+      "human_review_status": "DECIDED",
+      "send_authorized": false,
+      "authorization_suspended_by_pause": true,
+      "paused_at": "2026-10-03T12:38:53Z",
+      "send_timestamp": null,
+      "sent_at": null,
+      "actual_send_status": "EXECUTION_BLOCKED",
+      "message_hash": "sha256:38ba8c8f865beb66b04d73fbc68bae8573bd2e33c1d3b033335b7995c7e34aa3",
+      "channel": "OFFICIAL_BUSINESS_UNIT_FORM",
+      "confirmation_reference": null,
+      "response_window_end": null,
+      "current_participation_status": "OUTREACH_PREPARED",
+      "execution_block_reason": "Browser automation was unavailable and verified sender identity/form values were not present; manual official-form submission is required.",
+      "last_execution_checked_at": "2026-10-03T12:06:59Z",
+      "response_status": "OUTREACH_PREPARED",
+      "last_response_at": null,
+      "next_action": "PAUSED_AWAITING_PARTICIPATION_REDESIGN",
+      "outreach_events": [
+        {
+          "event_type": "HUMAN_SEND_APPROVED",
+          "occurred_at": "2026-10-03",
+          "source": "EXPLICIT_HUMAN_DECISION",
+          "append_only": true
+        },
+        {
+          "event_type": "OUTREACH_EXECUTION_BLOCKED",
+          "occurred_at": "2026-10-03T12:06:59Z",
+          "source": "EXECUTION_ENVIRONMENT_PREFLIGHT",
+          "submission_result": "EXECUTION_BLOCKED",
+          "append_only": true
+        }
+      ]
+    },
+    {
+      "candidate_id": "OIL-CAND-003",
+      "entity_name": "NewAge Industries, Inc. / AdvantaPure",
+      "contact_channel": {
+        "type": "OFFICIAL_SALES_EMAIL",
+        "value": "sales@advantapure.com",
+        "source": "candidate-003.json"
+      },
+      "claims_requested": [
+        "OIL-CAP-SIL-001",
+        "OIL-CAP-SIL-002",
+        "OIL-CAP-SIL-003",
+        "OIL-CAP-SIL-004",
+        "OIL-CAP-SIL-005",
+        "OIL-CAP-SIL-006"
+      ],
+      "pack_created_at": "2026-10-03",
+      "human_review_prepared": true,
+      "human_review_prepared_at": "2026-10-03",
+      "human_review_file": "data/open-intent-lab/genesis-001/outreach/review/candidate-003-review.md",
+      "send_approval": "YES",
+      "human_send_approval": "YES",
+      "final_recipient_or_channel": "compliance@newageindustries.com",
+      "final_message_file": "data/open-intent-lab/genesis-001/outreach/candidate-003/final_outreach_message.md",
+      "final_message_hash": "sha256:1534617204764075f1afeb65ff09c0be913da29ce98314fef2480e928cacadeb",
+      "final_claim_ids": [
+        "OIL-CAP-SIL-001",
+        "OIL-CAP-SIL-002",
+        "OIL-CAP-SIL-003",
+        "OIL-CAP-SIL-004",
+        "OIL-CAP-SIL-005",
+        "OIL-CAP-SIL-006"
+      ],
+      "human_review_status": "DECIDED",
+      "send_authorized": false,
+      "authorization_suspended_by_pause": true,
+      "paused_at": "2026-10-03T12:38:53Z",
+      "send_timestamp": null,
+      "sent_at": null,
+      "actual_send_status": "EXECUTION_BLOCKED",
+      "message_hash": "sha256:1534617204764075f1afeb65ff09c0be913da29ce98314fef2480e928cacadeb",
+      "channel": "OFFICIAL_TECHNICAL_EMAIL",
+      "confirmation_reference": null,
+      "response_window_end": null,
+      "current_participation_status": "OUTREACH_PREPARED",
+      "execution_block_reason": "No authorized outbound email transport is available in the execution environment; verified sender identity must be supplied by the manual operator.",
+      "last_execution_checked_at": "2026-10-03T12:06:59Z",
+      "response_status": "OUTREACH_PREPARED",
+      "last_response_at": null,
+      "next_action": "PAUSED_AWAITING_PARTICIPATION_REDESIGN",
+      "outreach_events": [
+        {
+          "event_type": "HUMAN_SEND_APPROVED",
+          "occurred_at": "2026-10-03",
+          "source": "EXPLICIT_HUMAN_DECISION",
+          "append_only": true
+        },
+        {
+          "event_type": "OUTREACH_EXECUTION_BLOCKED",
+          "occurred_at": "2026-10-03T12:06:59Z",
+          "source": "EXECUTION_ENVIRONMENT_PREFLIGHT",
+          "submission_result": "EXECUTION_BLOCKED",
+          "append_only": true
+        }
+      ]
+    },
+    {
+      "candidate_id": "OIL-CAND-004",
+      "entity_name": "Watson-Marlow Flow Smart, Inc. / BioPure",
+      "contact_channel": {
+        "type": "OFFICIAL_CONTACT_FORM",
+        "value": "https://www.wmfts.com/global/",
+        "source": "candidate-004.json"
+      },
+      "claims_requested": [
+        "OIL-CAP-SIL-001",
+        "OIL-CAP-SIL-002",
+        "OIL-CAP-SIL-003",
+        "OIL-CAP-SIL-004",
+        "OIL-CAP-SIL-005"
+      ],
+      "pack_created_at": "2026-10-03",
+      "human_review_prepared": true,
+      "human_review_prepared_at": "2026-10-03",
+      "human_review_file": "data/open-intent-lab/genesis-001/outreach/review/candidate-004-review.md",
+      "send_approval": "YES",
+      "human_send_approval": "YES",
+      "final_recipient_or_channel": "https://www.wmfts.com/global/#BioPure-Contact-an-expert",
+      "final_message_file": "data/open-intent-lab/genesis-001/outreach/candidate-004/final_outreach_message.md",
+      "final_message_hash": "sha256:f018d7c49abdae04f3b367856e8d6ab2c2f61549713a5b8f5ef8f9dc4d78ccd8",
+      "final_claim_ids": [
+        "OIL-CAP-SIL-001",
+        "OIL-CAP-SIL-002",
+        "OIL-CAP-SIL-003",
+        "OIL-CAP-SIL-004",
+        "OIL-CAP-SIL-005"
+      ],
+      "human_review_status": "DECIDED",
+      "send_authorized": false,
+      "authorization_suspended_by_pause": true,
+      "paused_at": "2026-10-03T12:38:53Z",
+      "send_timestamp": null,
+      "sent_at": null,
+      "actual_send_status": "EXECUTION_BLOCKED",
+      "message_hash": "sha256:f018d7c49abdae04f3b367856e8d6ab2c2f61549713a5b8f5ef8f9dc4d78ccd8",
+      "channel": "OFFICIAL_PRODUCT_CONTACT_FORM",
+      "confirmation_reference": null,
+      "response_window_end": null,
+      "current_participation_status": "OUTREACH_PREPARED",
+      "execution_block_reason": "Browser automation was unavailable and verified sender identity/form values were not present; manual official-form submission is required.",
+      "last_execution_checked_at": "2026-10-03T12:06:59Z",
+      "response_status": "OUTREACH_PREPARED",
+      "last_response_at": null,
+      "next_action": "PAUSED_AWAITING_PARTICIPATION_REDESIGN",
+      "outreach_events": [
+        {
+          "event_type": "HUMAN_SEND_APPROVED",
+          "occurred_at": "2026-10-03",
+          "source": "EXPLICIT_HUMAN_DECISION",
+          "append_only": true
+        },
+        {
+          "event_type": "OUTREACH_EXECUTION_BLOCKED",
+          "occurred_at": "2026-10-03T12:06:59Z",
+          "source": "EXECUTION_ENVIRONMENT_PREFLIGHT",
+          "submission_result": "EXECUTION_BLOCKED",
+          "append_only": true
+        }
+      ]
+    },
+    {
+      "candidate_id": "OIL-CAND-005",
+      "entity_name": "Trelleborg AB (publ) / Trelleborg Medical Solutions",
+      "contact_channel": {
+        "type": "OFFICIAL_LIFE_SCIENCES_EMAIL",
+        "value": "lifesciences.americas@trelleborg.com",
+        "source": "candidate-005.json"
+      },
+      "claims_requested": [
+        "OIL-CAP-SIL-001",
+        "OIL-CAP-SIL-002",
+        "OIL-CAP-SIL-003",
+        "OIL-CAP-SIL-004",
+        "OIL-CAP-SIL-005"
+      ],
+      "pack_created_at": "2026-10-03",
+      "human_review_prepared": true,
+      "human_review_prepared_at": "2026-10-03",
+      "human_review_file": "data/open-intent-lab/genesis-001/outreach/review/candidate-005-review.md",
+      "send_approval": "HOLD",
+      "human_send_approval": "HOLD",
+      "final_recipient_or_channel": null,
+      "final_message_file": null,
+      "final_message_hash": null,
+      "final_claim_ids": [],
+      "human_review_status": "DECIDED",
+      "send_authorized": false,
+      "authorization_suspended_by_pause": false,
+      "paused_at": "2026-10-03T12:38:53Z",
+      "send_timestamp": null,
+      "sent_at": null,
+      "response_status": "OUTREACH_PREPARED",
+      "last_response_at": null,
+      "next_action": "PAUSED_HOLD_ATTRIBUTION",
+      "outreach_events": []
+    }
+  ]
+}

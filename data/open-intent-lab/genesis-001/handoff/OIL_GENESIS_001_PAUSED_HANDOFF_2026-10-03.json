@@ -1,0 +1,97 @@
+{
+  "schema_version": "1.0",
+  "package_type": "OIL_EXPERIMENT_PAUSED_HANDOFF",
+  "project": "StructEvidence Open Intent Lab",
+  "experiment": "OIL-GENESIS-001",
+  "frozen_at": "2026-10-03T12:38:53Z",
+  "authoritative_repository": {
+    "path": "/Users/roal/Documents/ChatGPT/structevidence-oil-genesis-001",
+    "branch": "codex/oil-genesis-001",
+    "head_sha": "f81fcbcbcab4891d0043eee8617f0a7b7f632ad2",
+    "origin_main_sha": "f81fcbcbcab4891d0043eee8617f0a7b7f632ad2",
+    "tracked_diff_files": 0,
+    "experiment_artifacts_are_untracked": true,
+    "untracked_paths_before_handoff": 70,
+    "expected_untracked_paths_after_handoff": 74,
+    "committed": false
+  },
+  "control_state": {
+    "current_status": "PAUSED",
+    "last_completed_node": "STAGE_3_HUMAN_SEND_DECISION",
+    "next_action": "UNSET — awaiting human redesign of supplier participation approach",
+    "send_authorized": false,
+    "automatic_resume_allowed": false,
+    "stage_4_allowed": false
+  },
+  "supplier_decisions": {
+    "approved_for_possible_outreach": [
+      {"candidate_id": "OIL-CAND-001", "name": "Venair"},
+      {"candidate_id": "OIL-CAND-002", "name": "Saint-Gobain"},
+      {"candidate_id": "OIL-CAND-003", "name": "AdvantaPure / NewAge"},
+      {"candidate_id": "OIL-CAND-004", "name": "BioPure / Watson-Marlow"}
+    ],
+    "hold": [
+      {"candidate_id": "OIL-CAND-005", "name": "Trelleborg"}
+    ],
+    "interpretation": "YES decisions are preserved as historical human approvals, but all current send authorization is suspended by PAUSED state. HOLD remains HOLD."
+  },
+  "reality_boundary": {
+    "messages_actually_sent": 0,
+    "first_reality_boundary_t0": null,
+    "response_windows_started": 0,
+    "attempted_transmissions": 0,
+    "successful_transmissions": 0,
+    "blocked_preflight_records": 4,
+    "failed_transmissions": 0
+  },
+  "production_records": {
+    "provider_created": 0,
+    "evidence_ingested": 0,
+    "vcf_created": 0,
+    "demand_created": 0,
+    "outcome_created": 0,
+    "reuse_record_created": 0
+  },
+  "prepared_message_hashes": {
+    "OIL-CAND-001": "sha256:076d1f2562375daa56207f75ad4cdc49f5629874599891a3ec19aae40f577ce0",
+    "OIL-CAND-002": "sha256:38ba8c8f865beb66b04d73fbc68bae8573bd2e33c1d3b033335b7995c7e34aa3",
+    "OIL-CAND-003": "sha256:1534617204764075f1afeb65ff09c0be913da29ce98314fef2480e928cacadeb",
+    "OIL-CAND-004": "sha256:f018d7c49abdae04f3b367856e8d6ab2c2f61549713a5b8f5ef8f9dc4d78ccd8"
+  },
+  "critical_artifacts": [
+    {"path": "data/open-intent-lab/genesis-001/claim-dictionary.json", "sha256": "e03e5671addcf258959dc9003658a08a4147aac3a59fb8c2668d7a049adff513"},
+    {"path": "data/open-intent-lab/genesis-001/evidence-request-matrix.json", "sha256": "4737a9568baa9de3fd4b2c43179b33ce45720d41c2e37cb5e8ae925c6d30f08c"},
+    {"path": "data/open-intent-lab/genesis-001/outreach/OUTREACH_EXECUTION_BASELINE.json", "sha256": "fc85d82416a7c35b07b2d00f4c3a757e07295dbbb5e2935ead7ddbf609ef81b8"},
+    {"path": "data/open-intent-lab/genesis-001/outreach/outreach-tracker.json", "sha256": "7295033a465a614c4c8eba8116297b484381dbcad74107cbbc2f54e4edafc1a3"},
+    {"path": "data/open-intent-lab/genesis-001/outreach/outreach-events.jsonl", "sha256": "ecebec7d3c1f1b20d0d244dbe160fe20ceecda1d0d1992a61c411a8c475b343e"},
+    {"path": "docs/open-intent-lab/genesis/OIL_GENESIS_001_HUMAN_SEND_DECISION.md", "sha256": "731e47771a7c78f0f7165a3f806f1f0776941be18ffd4ab485690257dd693f0d"},
+    {"path": "docs/open-intent-lab/execution/STAGE_03_FINAL_OUTREACH_EXECUTION_REPORT.md", "sha256": "bf88be8e9afcad8a02af4a2dcfe2c3fa2df7b8f66d44a8984fe91bbbed36c22d"}
+  ],
+  "original_repository_non_mutation_guard": {
+    "path": "/Users/roal/Documents/ChatGPT/structevidence",
+    "head_sha": "526882092bef2bf7a470d995d330f2e61b733de9",
+    "status_short_sha256": "d1c22282877c263d07d9986ad29f24190ff51b5072158960b0adc4ca4f3a52b4",
+    "working_diff_binary_sha256": "d8b12a2e7699aa6547cc910a4a4ed9a45e98590466217fc537f9a8a3471c7453"
+  },
+  "resume_gates": [
+    "A new explicit human decision must define the redesigned supplier participation approach.",
+    "PAUSED must not be interpreted as permission to send or to resume automatically.",
+    "Any changed recipient, channel, claim scope, or message body requires renewed human review and authorization.",
+    "A truthful principal-controlled sender identity and an authorized outbound transport must exist before transmission.",
+    "OIL-CAND-005 remains HOLD until attribution is resolved and a separate human decision is recorded.",
+    "Stage 4 cannot start until a real sent event establishes T0 and a response window."
+  ],
+  "unresolved_decisions": [
+    "Supplier participation model redesign",
+    "Whether any of the four possible outreach targets should remain in scope after redesign",
+    "Authorized sender identity and outbound transport",
+    "Whether frozen messages remain valid after redesign",
+    "Trelleborg legal-entity, product-family, and manufacturing-site attribution"
+  ],
+  "handoff_package": [
+    "docs/open-intent-lab/handoff/OIL_GENESIS_001_PAUSED_HANDOFF_2026-10-03.md",
+    "data/open-intent-lab/genesis-001/handoff/OIL_GENESIS_001_PAUSED_HANDOFF_2026-10-03.json",
+    "data/open-intent-lab/genesis-001/handoff/OIL_GENESIS_001_PAUSED_HANDOFF_2026-10-03.sha256",
+    "scripts/test_oil_genesis_paused_handoff.py"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0",
+  "sync_type": "OIL_PAUSE_GUARD_FOR_VORTEX_ACTIVATION",
+  "synced_at": "2026-10-05",
+  "source_handoff": {
+    "markdown_sha256": "9383d1995e5373fc5b34549ac438a5c30ee54015ee1acca891e0f759fa34f79e",
+    "manifest_sha256": "97e6952d295edc6c86c58a0811e9602b9d279ce8674b64a07c0a4c46c19a73ca",
+    "checksum_inventory_sha256": "9ad318e08c5cf9d03afeafc71a88e36a975defb28408235771bcd4bf6d68e02c"
+  },
+  "oil_state": {
+    "experiment": "OIL-GENESIS-001",
+    "current_status": "PAUSED",
+    "last_completed_node": "STAGE_3_HUMAN_SEND_DECISION",
+    "next_action": "UNSET — awaiting human redesign of supplier participation approach",
+    "send_authorized": false,
+    "messages_actually_sent": 0,
+    "first_reality_boundary_t0": null,
+    "response_windows_started": 0,
+    "provider_created": 0,
+    "evidence_ingested": 0,
+    "vcf_created": 0,
+    "demand_created": 0,
+    "outcome_created": 0,
+    "reuse_record_created": 0,
+    "automatic_resume_allowed": false,
+    "stage_4_allowed": false
+  },
+  "vortex_separation": {
+    "open_gap_challenges_are_oil_supplier_outreach": false,
+    "open_gap_challenges_create_oil_providers": false,
+    "open_gap_challenges_start_oil_t0": false,
+    "open_gap_challenges_authorize_oil_stage_4": false,
+    "possible_future_use": "Human-reviewed public gap outcomes may inform a future supplier participation redesign, but only after a new explicit human decision."
+  },
+  "synchronization_rule": "Any later OIL state change must update the authoritative OIL tracker and handoff first, then refresh this projection. VORTEX runtime activity must never mutate OIL state directly."
+}
