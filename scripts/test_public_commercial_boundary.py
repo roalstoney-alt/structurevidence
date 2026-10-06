@@ -68,11 +68,18 @@ def main() -> None:
 
     for case_path, gap_ids in CASE_GAPS.items():
         case = read(case_path)
+        require("/cases/submit-evidence/?case=" not in case, f"legacy email challenge route remains: {case_path}")
         require(case.count(">Challenge this gap</a>") == 2, f"case must expose exactly two Gap CTAs: {case_path}")
         for gap_id in gap_ids:
             require(f'href="/gaps/{gap_id}/">Challenge this gap</a>' in case, f"incorrect case routing: {gap_id}")
         require("Verify this gap" not in case and "/verify/?case=" not in case, f"legacy Gap CTA remains: {case_path}")
         require('href="https://structevidence.com/verify/">Need this evaluated for your decision?</a>' in case, f"secondary commercial CTA missing: {case_path}")
+        commercial_buttons = re.findall(
+            r'<a class="([^"]*\bbutton\b[^"]*)" href="(https://structevidence\.com/(?:verify|context|decision-pack)/[^"]*)"',
+            case,
+        )
+        for classes, url in commercial_buttons:
+            require("secondary" in classes.split(), f"primary-style commercial CTA remains: {case_path} -> {url}")
 
     legacy = read("cases/submit-evidence/index.html")
     require("Legacy / fallback contact route" in legacy, "legacy submit route not reclassified")
