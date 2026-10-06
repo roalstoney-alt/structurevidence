@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the .org discovery-only Open Evidence Gap surface."""
+"""Validate the .org Open Evidence Gap discovery and challenge surface."""
 
 from __future__ import annotations
 
@@ -47,13 +47,13 @@ def main() -> int:
     for gap_id in GAP_IDS:
         require(gaps.count(f'data-gap-id="{gap_id}"') == 1, f"missing or duplicate discovery record: {gap_id}")
         require(
-            f'href="https://structevidence.com/gaps/{gap_id}/">Challenge this gap</a>' in gaps,
-            f"incorrect live challenge target: {gap_id}",
+            f'href="/gaps/{gap_id}/">Challenge this gap</a>' in gaps,
+            f"incorrect .org challenge target: {gap_id}",
         )
 
     for relative, expected in CASE_GAPS.items():
         html = read(relative)
-        linked = set(re.findall(r"https://structevidence\.com/gaps/(OEG-[A-Z]+-\d{3})/", html))
+        linked = set(re.findall(r'href="/gaps/(OEG-[A-Z]+-\d{3})/"', html))
         require(linked == expected, f"case-to-gap links differ for {relative}: {linked}")
         require("Verify this gap" not in html, f"stale commercial gap CTA in {relative}")
         require("https://structevidence.com/verify/?case=" not in html, f"gap still routed to /verify/ in {relative}")
