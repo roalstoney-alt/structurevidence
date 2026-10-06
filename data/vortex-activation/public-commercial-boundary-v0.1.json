@@ -1,0 +1,26 @@
+{
+  "boundary_id": "STRUCTEVIDENCE_PUBLIC_COMMERCIAL_BOUNDARY_v0.1",
+  "version": "v0.1",
+  "frozen_at": "2026-10-06",
+  "status": "FROZEN",
+  "research_domain": "https://structurevidence.org",
+  "challenge_ui_domain": "https://structurevidence.org",
+  "challenge_api_domain": "https://structevidence.com",
+  "commercial_domain": "https://structevidence.com",
+  "primary_case_cta": "Challenge this gap",
+  "primary_case_cta_target": "https://structurevidence.org/gaps/{gap_id}/",
+  "secondary_case_cta": "Need this evaluated for your decision?",
+  "secondary_case_cta_target": "https://structevidence.com/verify/",
+  "challenge_requires_payment": false,
+  "challenge_enters_sales_funnel": false,
+  "commercial_verify_required_for_challenge": false,
+  "canonical_gap_api": "https://structevidence.com/api/gaps",
+  "canonical_gap_detail": "https://structevidence.com/api/gaps/{gap_id}",
+  "canonical_challenge_post": "https://structevidence.com/api/gaps/{gap_id}/challenge",
+  "raw_submission_public": false,
+  "review_events_append_only": true,
+  "public_projection_human_reviewed_only": true,
+  "no_auto_state_change": true,
+  "oil_status": "PAUSED"
+}
+
