@@ -61,7 +61,7 @@ class FakeGapD1 {
   }
 }
 
-const envFor = (db) => ({ CUSTOMER_CASES_DB: db, GAP_RATE_LIMIT_SALT: "test-only-gap-rate-limit-salt", PUBLIC_ORIGINS: "https://structevidence.com", TEAM_DOMAIN: "https://team.cloudflareaccess.com", ADMIN_UI_AUD: "ui-aud", ADMIN_API_AUD: "api-aud", ADMIN_EMAILS: "admin@example.com" });
+const envFor = (db) => ({ CUSTOMER_CASES_DB: db, GAP_RATE_LIMIT_SALT: "test-only-gap-rate-limit-salt", PUBLIC_ORIGINS: "https://structevidence.com,https://structurevidence.org,https://www.structurevidence.org", TEAM_DOMAIN: "https://team.cloudflareaccess.com", ADMIN_UI_AUD: "ui-aud", ADMIN_API_AUD: "api-aud", ADMIN_EMAILS: "admin@example.com" });
 const challengeRequest = (gapId, body, ip = "192.0.2.44") => new Request(`https://structevidence.com/api/gaps/${gapId}/challenge`, { method: "POST", headers: { "content-type": "application/json", origin: "https://structevidence.com", "cf-connecting-ip": ip }, body: JSON.stringify(body) });
 const validChallenge = (overrides = {}) => ({ gap_id: "OEG-CML-001", evidence_reference: "https://example.org/public-test-report", effect: "SUPPORT", attribution_preference: "ANONYMOUS", note: "Public report identifies the method and observation period.", ...overrides });
 const digestGap = (gap) => createHash("sha256").update(JSON.stringify(gap)).digest("hex");
@@ -172,6 +172,36 @@ test("challenge submission records a SUBMITTED event without changing evidence s
   assert.equal(db.events[0].event_type, "SUBMITTED"); assert.equal(db.events[0].previous_state, null); assert.equal(db.events[0].new_state, "SUBMITTED");
   assert.equal(db.challenges[0].contact_email, null);
   assert.equal(db.challenges[0].client_key_hash.length, 64); assert.doesNotMatch(JSON.stringify(db.challenges[0]), /192\.0\.2\.44/);
+});
+
+test("challenge POST explicitly permits the research origins without wildcard CORS", async () => {
+  for (const origin of ["https://structurevidence.org", "https://www.structurevidence.org"]) {
+    const db = new FakeGapD1(), worker = createWorker(), env = envFor(db);
+    const preflight = await worker.fetch(new Request("https://structevidence.com/api/gaps/OEG-CML-001/challenge", {
+      method: "OPTIONS",
+      headers: { origin, "access-control-request-method": "POST", "access-control-request-headers": "content-type" }
+    }), env);
+    assert.equal(preflight.status, 204);
+    assert.equal(preflight.headers.get("access-control-allow-origin"), origin);
+    assert.notEqual(preflight.headers.get("access-control-allow-origin"), "*");
+
+    const response = await worker.fetch(new Request("https://structevidence.com/api/gaps/OEG-CML-001/challenge", {
+      method: "POST",
+      headers: { "content-type": "application/json", origin, "cf-connecting-ip": "192.0.2.46" },
+      body: JSON.stringify(validChallenge())
+    }), env);
+    assert.equal(response.status, 201);
+    assert.equal(response.headers.get("access-control-allow-origin"), origin);
+    assert.notEqual(response.headers.get("access-control-allow-origin"), "*");
+  }
+
+  const rejected = await createWorker().fetch(new Request("https://structevidence.com/api/gaps/OEG-CML-001/challenge", {
+    method: "POST",
+    headers: { "content-type": "application/json", origin: "https://example.org", "cf-connecting-ip": "192.0.2.47" },
+    body: JSON.stringify(validChallenge())
+  }), envFor(new FakeGapD1()));
+  assert.equal(rejected.status, 403);
+  assert.equal(rejected.headers.get("access-control-allow-origin"), null);
 });
 
 test("anonymous and organization-only submissions persist omitted optional fields as SQL null", async () => {
