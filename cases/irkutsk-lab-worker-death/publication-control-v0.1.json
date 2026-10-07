@@ -5,8 +5,8 @@
   "version": "v0.1",
   "publication_status": "PUBLICATION_APPROVED",
   "publication_approved": true,
-  "public_projection_status": "PENDING_PRODUCTION_ACCEPTANCE",
-  "public_projection_active": false,
+  "public_projection_status": "PUBLIC_PROJECTION_ACTIVE",
+  "public_projection_active": true,
   "knowledge_cutoff": "2026-10-08T05:29:45+08:00",
   "public_url": "https://structurevidence.org/cases/irkutsk-lab-worker-death/",
   "public_snapshot": "https://structurevidence.org/cases/irkutsk-lab-worker-death/state-v0.1.json",
@@ -14,6 +14,19 @@
   "preserve_unknowns": true,
   "private_records_exposed": false,
   "internal_v0_7_published": false,
+  "production_acceptance": {
+    "accepted_at": "2026-10-08T05:49:13+08:00",
+    "deployed_main_sha": "9224393f649a40782a89f57283541abf0ef6ea82",
+    "content_verified": true,
+    "routes_verified": [
+      "https://structurevidence.org/en/",
+      "https://structurevidence.org/cases/irkutsk-lab-worker-death/",
+      "https://structurevidence.org/zh-cn/cases/irkutsk-lab-worker-death/",
+      "https://structurevidence.org/cases/irkutsk-lab-worker-death/index.json",
+      "https://structurevidence.org/cases/irkutsk-lab-worker-death/state-v0.1.json",
+      "https://structurevidence.org/cases/nsq-nsclc-china/"
+    ]
+  },
   "source_refs": [
     "cases/irkutsk-lab-worker-death/index.html",
     "cases/irkutsk-lab-worker-death/index.json",
