@@ -1,0 +1,149 @@
+{
+  "schema_version": "1.0",
+  "status_recorded_at": "2026-10-08T06:44:08+08:00",
+  "timestamp_semantics": {
+    "status_recorded_at": "Administrative status observation; not a scientific review timestamp.",
+    "evidence_state_as_of": "Cutoff of the currently published evidence state; retained until evidence changes.",
+    "last_reviewed_at": "Actual recorded review; null when no completed or bounded current review is recorded."
+  },
+  "cases": [
+    {
+      "case_id": "SE-IRK-LAB-001",
+      "title": "Irkutsk laboratory-worker death evidence tracker",
+      "canonical_path": "/cases/irkutsk-lab-worker-death/",
+      "question": "What is publicly established about the death of a worker at an Irkutsk infectious-disease research institute, and do the available records establish plague, an occupational pathogen link, a laboratory accident, a second plague case, or a second death?",
+      "current_public_state": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+      "evidence_state_as_of": "2026-10-08T06:15:59+08:00",
+      "last_material_change": "2026-10-08",
+      "featured": true,
+      "management_status": "ACTIVE",
+      "last_reviewed_at": "2026-10-08T06:15:59+08:00",
+      "review_result": "REVIEW_INCOMPLETE",
+      "latest_review_id": "SE-IRK-REVIEW-20261008-02",
+      "latest_review_file": "cases/irkutsk-lab-worker-death/search-review-v0.2.json",
+      "period": {
+        "id": "2026-10-08",
+        "start": "2026-10-08",
+        "end": "2026-10-08",
+        "status": "REVIEW_INCOMPLETE",
+        "scope": "Recorded source repair; first scheduled daily run unverified"
+      },
+      "period_review_id": "SE-IRK-REVIEW-20261008-02",
+      "monitoring": {
+        "cadence": "DAILY",
+        "enabled": true,
+        "configured_start_at": "2026-10-08T15:00:00+08:00",
+        "last_scheduled_run_at": null,
+        "next_run_at_from_service": null,
+        "schedule_timezone": "Asia/Hong_Kong"
+      },
+      "new_qualifying_evidence_count": null,
+      "new_counter_evidence_count": null
+    },
+    {
+      "case_id": "SE-ONC-NSQNSCLC-CN-001",
+      "title": "Non-squamous NSCLC in China",
+      "canonical_path": "/cases/nsq-nsclc-china/",
+      "question": "What published evidence and aggregate data gaps are decision-relevant across distinct clinical contexts?",
+      "current_public_state": "PUBLIC_RESEARCH_PREVIEW",
+      "evidence_state_as_of": "2026-09-28",
+      "last_material_change": "2026-09-28",
+      "featured": false,
+      "management_status": "FOLDED",
+      "last_reviewed_at": null,
+      "review_result": null,
+      "latest_review_id": null,
+      "latest_review_file": null,
+      "period": {
+        "id": "2026-W41",
+        "start": "2026-10-05",
+        "end": "2026-10-11",
+        "status": "NOT_YET_REVIEWED",
+        "scope": "Original three-case weekly review"
+      },
+      "period_review_id": null,
+      "monitoring": {
+        "cadence": "WEEKLY",
+        "enabled": true,
+        "configured_start_at": "2026-10-11T19:00:00+08:00",
+        "last_scheduled_run_at": null,
+        "next_run_at_from_service": null,
+        "schedule_timezone": "Asia/Singapore",
+        "previous_candidate": "data/case-watch/weekly/2026-W40.json",
+        "previous_candidate_complete": false
+      },
+      "new_qualifying_evidence_count": null,
+      "new_counter_evidence_count": null
+    },
+    {
+      "case_id": "SE-BESS-SODIUM-001",
+      "title": "Sodium-Ion BESS Commercialization",
+      "canonical_path": "/cases/sodium-ion-bess/",
+      "question": "Has sodium-ion stationary storage crossed from product and production claims into a procurable, delivered, commissioned technology with public field-operating evidence?",
+      "current_public_state": "NAMED_COMMISSIONED_SITE_NOT_ESTABLISHED",
+      "evidence_state_as_of": "2026-09-24",
+      "last_material_change": "2026-09-24",
+      "featured": true,
+      "management_status": "ACTIVE",
+      "last_reviewed_at": null,
+      "review_result": null,
+      "latest_review_id": null,
+      "latest_review_file": null,
+      "period": {
+        "id": "2026-W41",
+        "start": "2026-10-05",
+        "end": "2026-10-11",
+        "status": "NOT_YET_REVIEWED",
+        "scope": "Original three-case weekly review"
+      },
+      "period_review_id": null,
+      "monitoring": {
+        "cadence": "WEEKLY",
+        "enabled": true,
+        "configured_start_at": "2026-10-11T19:00:00+08:00",
+        "last_scheduled_run_at": null,
+        "next_run_at_from_service": null,
+        "schedule_timezone": "Asia/Singapore",
+        "previous_candidate": "data/case-watch/weekly/2026-W40.json",
+        "previous_candidate_complete": false
+      },
+      "new_qualifying_evidence_count": null,
+      "new_counter_evidence_count": null
+    },
+    {
+      "case_id": "CML-PDRE-001",
+      "title": "800V DC Data Center Power Architecture",
+      "canonical_path": "/cases/800vdc/",
+      "question": "Has 800V DC power architecture moved from proposal to independently attributable field deployment?",
+      "current_public_state": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+      "evidence_state_as_of": "2026-09-20T10:46:47Z",
+      "last_material_change": "2026-09-20",
+      "featured": true,
+      "management_status": "ACTIVE",
+      "last_reviewed_at": null,
+      "review_result": null,
+      "latest_review_id": null,
+      "latest_review_file": null,
+      "period": {
+        "id": "2026-W41",
+        "start": "2026-10-05",
+        "end": "2026-10-11",
+        "status": "NOT_YET_REVIEWED",
+        "scope": "Original three-case weekly review"
+      },
+      "period_review_id": null,
+      "monitoring": {
+        "cadence": "WEEKLY",
+        "enabled": true,
+        "configured_start_at": "2026-10-11T19:00:00+08:00",
+        "last_scheduled_run_at": null,
+        "next_run_at_from_service": null,
+        "schedule_timezone": "Asia/Singapore",
+        "previous_candidate": "data/case-watch/weekly/2026-W40.json",
+        "previous_candidate_complete": false
+      },
+      "new_qualifying_evidence_count": null,
+      "new_counter_evidence_count": null
+    }
+  ]
+}

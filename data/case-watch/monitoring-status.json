@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.0",
+  "status_recorded_at": "2026-10-08T06:44:08+08:00",
+  "observation_scope": "Current task configuration and repository records only; no new scientific source review performed.",
+  "cases": [
+    {
+      "case_id": "CML-PDRE-001",
+      "period": {
+        "id": "2026-W41",
+        "start": "2026-10-05",
+        "end": "2026-10-11",
+        "status": "NOT_YET_REVIEWED",
+        "scope": "Original three-case weekly review"
+      },
+      "period_review_id": null,
+      "latest_review_file": null,
+      "monitoring": {
+        "cadence": "WEEKLY",
+        "enabled": true,
+        "configured_start_at": "2026-10-11T19:00:00+08:00",
+        "last_scheduled_run_at": null,
+        "next_run_at_from_service": null,
+        "schedule_timezone": "Asia/Singapore",
+        "previous_candidate": "data/case-watch/weekly/2026-W40.json",
+        "previous_candidate_complete": false
+      }
+    },
+    {
+      "case_id": "SE-BESS-SODIUM-001",
+      "period": {
+        "id": "2026-W41",
+        "start": "2026-10-05",
+        "end": "2026-10-11",
+        "status": "NOT_YET_REVIEWED",
+        "scope": "Original three-case weekly review"
+      },
+      "period_review_id": null,
+      "latest_review_file": null,
+      "monitoring": {
+        "cadence": "WEEKLY",
+        "enabled": true,
+        "configured_start_at": "2026-10-11T19:00:00+08:00",
+        "last_scheduled_run_at": null,
+        "next_run_at_from_service": null,
+        "schedule_timezone": "Asia/Singapore",
+        "previous_candidate": "data/case-watch/weekly/2026-W40.json",
+        "previous_candidate_complete": false
+      }
+    },
+    {
+      "case_id": "SE-ONC-NSQNSCLC-CN-001",
+      "period": {
+        "id": "2026-W41",
+        "start": "2026-10-05",
+        "end": "2026-10-11",
+        "status": "NOT_YET_REVIEWED",
+        "scope": "Original three-case weekly review"
+      },
+      "period_review_id": null,
+      "latest_review_file": null,
+      "monitoring": {
+        "cadence": "WEEKLY",
+        "enabled": true,
+        "configured_start_at": "2026-10-11T19:00:00+08:00",
+        "last_scheduled_run_at": null,
+        "next_run_at_from_service": null,
+        "schedule_timezone": "Asia/Singapore",
+        "previous_candidate": "data/case-watch/weekly/2026-W40.json",
+        "previous_candidate_complete": false
+      }
+    },
+    {
+      "case_id": "SE-IRK-LAB-001",
+      "period": {
+        "id": "2026-10-08",
+        "start": "2026-10-08",
+        "end": "2026-10-08",
+        "status": "REVIEW_INCOMPLETE",
+        "scope": "Recorded source repair; first scheduled daily run unverified"
+      },
+      "period_review_id": "SE-IRK-REVIEW-20261008-02",
+      "latest_review_file": "cases/irkutsk-lab-worker-death/search-review-v0.2.json",
+      "monitoring": {
+        "cadence": "DAILY",
+        "enabled": true,
+        "configured_start_at": "2026-10-08T15:00:00+08:00",
+        "last_scheduled_run_at": null,
+        "next_run_at_from_service": null,
+        "schedule_timezone": "Asia/Hong_Kong"
+      }
+    }
+  ]
+}
