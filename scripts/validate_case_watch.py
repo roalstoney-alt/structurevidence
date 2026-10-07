@@ -14,11 +14,13 @@ from jsonschema import Draft202012Validator, FormatChecker
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data" / "case-watch"
-EXPECTED_CASE_IDS = {
+ACTIVE_CASE_IDS = {
     "CML-PDRE-001",
     "SE-BESS-SODIUM-001",
     "SE-ONC-NSQNSCLC-CN-001",
+    "SE-IRK-LAB-001",
 }
+W40_CASE_IDS = ACTIVE_CASE_IDS - {"SE-IRK-LAB-001"}
 
 
 def load_json(path: Path):
@@ -41,10 +43,15 @@ def validate(schema_path: Path, instance, label: str) -> None:
 def validate_registry() -> None:
     registry = load_json(DATA / "case-registry.json")
     ids = [case["case_id"] for case in registry["cases"]]
-    assert registry["frozen_case_count"] == 3
-    assert len(ids) == len(set(ids)) == 3
-    assert set(ids) == EXPECTED_CASE_IDS
+    assert registry["frozen_case_count"] == 4
+    assert len(ids) == len(set(ids)) == 4
+    assert set(ids) == ACTIVE_CASE_IDS
     assert registry["auto_add_cases"] is False
+    featured = {case["case_id"] for case in registry["cases"] if case.get("featured") is True}
+    assert featured == {"CML-PDRE-001", "SE-BESS-SODIUM-001", "SE-IRK-LAB-001"}
+    nsclc = next(case for case in registry["cases"] if case["case_id"] == "SE-ONC-NSQNSCLC-CN-001")
+    assert nsclc["featured"] is False
+    assert nsclc["management_status"] == "FOLDED"
 
 
 def validate_daily_ledgers() -> int:
@@ -73,7 +80,7 @@ def validate_weekly() -> None:
     assert weekly["candidate_only"] is True
     assert weekly["review_period"]["complete"] is False
     reviews = weekly["reviews"]
-    assert {review["case_id"] for review in reviews} == EXPECTED_CASE_IDS
+    assert {review["case_id"] for review in reviews} == W40_CASE_IDS
     schema = DATA / "schema" / "weekly-review.schema.json"
     for review in reviews:
         validate(schema, review, review["case_id"])
@@ -85,7 +92,7 @@ def validate_manifest() -> None:
     manifest = load_json(ROOT / "publication" / "weekly" / "2026-W40-publication-manifest.json")
     validate(DATA / "schema" / "publication-manifest.schema.json", manifest, "publication manifest")
     ids = [case["case_id"] for case in manifest["cases"]]
-    assert set(ids) == EXPECTED_CASE_IDS and len(ids) == len(set(ids))
+    assert set(ids) == W40_CASE_IDS and len(ids) == len(set(ids))
     assert all(case["publication_approved"] is False for case in manifest["cases"])
     assert all(case["human_decision"] == "PENDING" for case in manifest["cases"])
     assert all(case["new_version"] is None for case in manifest["cases"])
@@ -122,6 +129,13 @@ def validate_root_docs_parity() -> None:
         ("cases/nsq-nsclc-china/index.html", "docs/cases/nsq-nsclc-china/index.html"),
         ("cases/nsq-nsclc-china/state-v0.1.json", "docs/cases/nsq-nsclc-china/state-v0.1.json"),
         ("cases/nsq-nsclc-china/stop-v0.1.html", "docs/cases/nsq-nsclc-china/stop-v0.1.html"),
+        ("cases/irkutsk-lab-worker-death/index.html", "docs/cases/irkutsk-lab-worker-death/index.html"),
+        ("cases/irkutsk-lab-worker-death/index.json", "docs/cases/irkutsk-lab-worker-death/index.json"),
+        ("cases/irkutsk-lab-worker-death/state-v0.1.json", "docs/cases/irkutsk-lab-worker-death/state-v0.1.json"),
+        ("cases/irkutsk-lab-worker-death/stop-v0.1.html", "docs/cases/irkutsk-lab-worker-death/stop-v0.1.html"),
+        ("cases/irkutsk-lab-worker-death/publication-control-v0.1.json", "docs/cases/irkutsk-lab-worker-death/publication-control-v0.1.json"),
+        ("cases/irkutsk-lab-worker-death/search-review-v0.1.json", "docs/cases/irkutsk-lab-worker-death/search-review-v0.1.json"),
+        ("zh-cn/cases/irkutsk-lab-worker-death/index.html", "docs/zh-cn/cases/irkutsk-lab-worker-death/index.html"),
         ("cases/index.html", "docs/cases/index.html"),
         ("sitemap.xml", "docs/sitemap.xml"),
     ]

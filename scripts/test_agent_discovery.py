@@ -13,10 +13,8 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-# Authoritative main at the start of the Vortex branch. The prior constant
-# predated approved public-record and brand-normalization work already present
-# on main, so it could not distinguish this branch from upstream history.
-ENTRY_SHA = "f81fcbcbcab4891d0043eee8617f0a7b7f632ad2"
+# Authoritative main at the start of the Irkutsk publication branch.
+ENTRY_SHA = "73af88f2ca7f28214a3030a1d7188c868a386c53"
 CASES = {
     "CML-PDRE-001": "800vdc",
     "SE-BESS-SODIUM-001": "sodium-ion-bess",
@@ -38,13 +36,19 @@ PRIMITIVES = [
     "cases/nsq-nsclc-china/publication-control-v0.1.json",
     "cases/nsq-nsclc-china/decision-memory-v0.1.json",
 ]
-PROTECTED = [
-    "cases",
-    "docs/cases",
+PROTECTED_EXISTING_CASES = [
+    "cases/800vdc",
+    "cases/sodium-ion-bess",
+    "cases/nsq-nsclc-china",
+    "docs/cases/800vdc",
+    "docs/cases/sodium-ion-bess",
+    "docs/cases/nsq-nsclc-china",
     "technical-risk/cml-v1.1",
     "rdl",
-    "data/case-watch",
-    "docs/case-watch",
+    "data/case-watch/backfill",
+    "data/case-watch/weekly",
+    "docs/case-watch/daily",
+    "docs/case-watch/weekly",
     "publication/weekly",
 ]
 STATIC = [
@@ -195,7 +199,7 @@ class AgentDiscoveryTest(unittest.TestCase):
 
     def test_t_u_v_existing_histories_and_snapshots_are_immutable(self):
         result = subprocess.run(
-            ["git", "diff", "--exit-code", ENTRY_SHA, "--", *PROTECTED],
+            ["git", "diff", "--exit-code", ENTRY_SHA, "--", *PROTECTED_EXISTING_CASES],
             cwd=ROOT, capture_output=True, text=True, check=False,
         )
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)

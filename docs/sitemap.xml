@@ -4,7 +4,7 @@
 <url><loc>https://structurevidence.org/en/</loc><xhtml:link rel="alternate" hreflang="x-default" href="https://structurevidence.org/"/><xhtml:link rel="alternate" hreflang="en" href="https://structurevidence.org/en/"/><xhtml:link rel="alternate" hreflang="zh-CN" href="https://structurevidence.org/zh-cn/"/><xhtml:link rel="alternate" hreflang="es" href="https://structurevidence.org/es/"/></url>
 <url><loc>https://structurevidence.org/zh-cn/</loc><xhtml:link rel="alternate" hreflang="x-default" href="https://structurevidence.org/"/><xhtml:link rel="alternate" hreflang="en" href="https://structurevidence.org/en/"/><xhtml:link rel="alternate" hreflang="zh-CN" href="https://structurevidence.org/zh-cn/"/><xhtml:link rel="alternate" hreflang="es" href="https://structurevidence.org/es/"/></url>
 <url><loc>https://structurevidence.org/es/</loc><xhtml:link rel="alternate" hreflang="x-default" href="https://structurevidence.org/"/><xhtml:link rel="alternate" hreflang="en" href="https://structurevidence.org/en/"/><xhtml:link rel="alternate" hreflang="zh-CN" href="https://structurevidence.org/zh-cn/"/><xhtml:link rel="alternate" hreflang="es" href="https://structurevidence.org/es/"/></url>
-<url><loc>https://structurevidence.org/cases/</loc><lastmod>2026-10-01</lastmod></url>
+<url><loc>https://structurevidence.org/cases/</loc><lastmod>2026-10-08</lastmod></url>
 <url><loc>https://structurevidence.org/onepager/decision-cn.pdf</loc><lastmod>2026-10-07</lastmod></url>
 <url><loc>https://structurevidence.org/onepager/decision-en.pdf</loc><lastmod>2026-10-07</lastmod></url>
 <url><loc>https://structurevidence.org/onepager/investor-cn.pdf</loc><lastmod>2026-10-07</lastmod></url>
@@ -21,12 +21,18 @@
 <url><loc>https://structurevidence.org/cases/sodium-ion-bess/</loc><lastmod>2026-09-24</lastmod></url>
 <url><loc>https://structurevidence.org/cases/sodium-ion-bess/index.json</loc><lastmod>2026-09-24</lastmod></url>
 <url><loc>https://structurevidence.org/cases/nsq-nsclc-china/</loc></url>
-<url><loc>https://structurevidence.org/changes/</loc><lastmod>2026-09-20</lastmod></url>
-<url><loc>https://structurevidence.org/feed.xml</loc><lastmod>2026-09-20</lastmod></url>
+<url><loc>https://structurevidence.org/cases/irkutsk-lab-worker-death/</loc><lastmod>2026-10-08</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://structurevidence.org/cases/irkutsk-lab-worker-death/"/><xhtml:link rel="alternate" hreflang="zh-CN" href="https://structurevidence.org/zh-cn/cases/irkutsk-lab-worker-death/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://structurevidence.org/cases/irkutsk-lab-worker-death/"/></url>
+<url><loc>https://structurevidence.org/zh-cn/cases/irkutsk-lab-worker-death/</loc><lastmod>2026-10-08</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://structurevidence.org/cases/irkutsk-lab-worker-death/"/><xhtml:link rel="alternate" hreflang="zh-CN" href="https://structurevidence.org/zh-cn/cases/irkutsk-lab-worker-death/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://structurevidence.org/cases/irkutsk-lab-worker-death/"/></url>
+<url><loc>https://structurevidence.org/cases/irkutsk-lab-worker-death/index.json</loc><lastmod>2026-10-08</lastmod></url>
+<url><loc>https://structurevidence.org/cases/irkutsk-lab-worker-death/state-v0.1.json</loc><lastmod>2026-10-08</lastmod></url>
+<url><loc>https://structurevidence.org/cases/irkutsk-lab-worker-death/search-review-v0.1.json</loc><lastmod>2026-10-08</lastmod></url>
+<url><loc>https://structurevidence.org/changes/</loc><lastmod>2026-10-08</lastmod></url>
+<url><loc>https://structurevidence.org/feed.xml</loc><lastmod>2026-10-08</lastmod></url>
 <url><loc>https://structurevidence.org/cases/submit-evidence/</loc></url>
 <url><loc>https://structurevidence.org/cases/800vdc/stop-v0.1.html</loc></url>
 <url><loc>https://structurevidence.org/cases/sodium-ion-bess/stop-v0.1.html</loc></url>
 <url><loc>https://structurevidence.org/cases/nsq-nsclc-china/stop-v0.1.html</loc></url>
+<url><loc>https://structurevidence.org/cases/irkutsk-lab-worker-death/stop-v0.1.html</loc><lastmod>2026-10-08</lastmod></url>
 <url><loc>https://structurevidence.org/verify/</loc></url>
 <url><loc>https://structurevidence.org/decision-pack/</loc></url>
 <url><loc>https://structurevidence.org/context/</loc></url>
@@ -68,6 +74,17 @@
 <url><loc>https://structurevidence.org/claims/SE-ONC-NSQNSCLC-CN-001.HOSPITAL_AGGREGATE_OUTCOME_DATA.json</loc></url>
 <url><loc>https://structurevidence.org/claims/SE-ONC-NSQNSCLC-CN-001.PATIENT_SPECIFIC_SUCCESS_PROBABILITY.json</loc></url>
 <url><loc>https://structurevidence.org/claims/SE-ONC-NSQNSCLC-CN-001.CROSS_MODALITY_RANKING.json</loc></url>
+<url><loc>https://structurevidence.org/claims/SE-IRK-LAB-001.WORKER_AT_INSTITUTE.json</loc><lastmod>2026-10-08</lastmod></url>
+<url><loc>https://structurevidence.org/claims/SE-IRK-LAB-001.WORKER_DEATH_REPORTED.json</loc><lastmod>2026-10-08</lastmod></url>
+<url><loc>https://structurevidence.org/claims/SE-IRK-LAB-001.PNEUMONIA_UNKNOWN_ETIOLOGY_REPORTED.json</loc><lastmod>2026-10-08</lastmod></url>
+<url><loc>https://structurevidence.org/claims/SE-IRK-LAB-001.PNEUMONIC_PLAGUE_DIAGNOSIS.json</loc><lastmod>2026-10-08</lastmod></url>
+<url><loc>https://structurevidence.org/claims/SE-IRK-LAB-001.OCCUPATIONAL_PATHOGEN_LINK.json</loc><lastmod>2026-10-08</lastmod></url>
+<url><loc>https://structurevidence.org/claims/SE-IRK-LAB-001.LAB_ACCIDENT.json</loc><lastmod>2026-10-08</lastmod></url>
+<url><loc>https://structurevidence.org/claims/SE-IRK-LAB-001.CONTACTS_MONITORED.json</loc><lastmod>2026-10-08</lastmod></url>
+<url><loc>https://structurevidence.org/claims/SE-IRK-LAB-001.DANGEROUS_PATHOGEN_IN_CONTACTS.json</loc><lastmod>2026-10-08</lastmod></url>
+<url><loc>https://structurevidence.org/claims/SE-IRK-LAB-001.SECOND_PLAGUE_CASE.json</loc><lastmod>2026-10-08</lastmod></url>
+<url><loc>https://structurevidence.org/claims/SE-IRK-LAB-001.SECOND_DEATH.json</loc><lastmod>2026-10-08</lastmod></url>
+<url><loc>https://structurevidence.org/claims/SE-IRK-LAB-001.WHO_INITIAL_RISK_ASSESSMENT.json</loc><lastmod>2026-10-08</lastmod></url>
 <url><loc>https://structurevidence.org/e/L1-EV-CML-PDRE-001-FIELD-DEPLOYMENT-001/</loc><lastmod>2026-09-20</lastmod></url>
 <url><loc>https://structurevidence.org/e/SE-BESS-SODIUM-001-EV-001/</loc><lastmod>2026-09-24</lastmod></url>
 <url><loc>https://structurevidence.org/e/SE-BESS-SODIUM-001-EV-002/</loc><lastmod>2026-09-24</lastmod></url>

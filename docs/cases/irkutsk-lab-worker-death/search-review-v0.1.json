@@ -1,0 +1,31 @@
+{
+  "review_id": "SE-IRK-REVIEW-20261008-01",
+  "reviewed_at": "2026-10-08T05:29:45+08:00",
+  "result": "REVIEW_INCOMPLETE",
+  "state_changed": false,
+  "search_query_count": 4,
+  "page_open_attempt_count": 8,
+  "queries": [
+    "Irkutsk laboratory worker death plague 2026 public health statement",
+    "Иркутск сотрудник лаборатории умер чума 2026 Роспотребнадзор",
+    "site:who.int Irkutsk plague laboratory worker 2026",
+    "site:ecdc.europa.eu Irkutsk plague 2026"
+  ],
+  "opened_sources": [
+    {"url":"https://www.unognewsroom.org/story/en/3289/irkutsk-suspected-plague-death-who/9745","status":"READ"},
+    {"url":"https://apnews.com/article/russia-plague-irkutsk-who-trump-c1dfff772ca769bbdf26726787432d51","status":"READ"},
+    {"url":"https://apnews.com/article/russia-disease-plague-researcher-pneumonia-9ddc8e3e064637853407bfd24d8937f5","status":"READ"},
+    {"url":"https://amp.dw.com/en/russia-lab-worker-death-fact-check/a-79560752","status":"READ"},
+    {"url":"https://www.who.int/news-room/fact-sheets/detail/plague","status":"READ_GENERAL_REFERENCE_ONLY"},
+    {"url":"https://tass.ru/obschestvo/28180027","status":"READ_ATTRIBUTED_STATEMENT"},
+    {"url":"https://irknipchi.ru/index_eng.htm","status":"READ_INSTITUTIONAL_BACKGROUND_ONLY"},
+    {"url":"ECDC_TARGET_FROM_SEARCH_RESULT","status":"OPEN_FAILED_CACHE_MISS"}
+  ],
+  "stop_point": "The four-query and eight-open budget was reached. No qualifying evidence established plague, an occupational pathogen link, a laboratory accident, a second plague case, or a second death.",
+  "source_dependency": "Several reports depend on the same Russian public-health statement; repetition is not treated as independent replication.",
+  "package_inputs": {
+    "status": "MISSING",
+    "missing": ["PUBLIC_BASELINE_INPUT_v0.1.json","PUBLIC_BODY_zh-CN_DRAFT.md","PUBLIC_BODY_en_DRAFT.md","EXECUTION_AUTHORIZATION_AND_TARGETS.json","DAILY_MONITORING_PROMPT_AFTER_DEPLOY.txt","PACKAGE_MANIFEST.json"],
+    "handling": "A smaller verified public whitelist was created. Exact mappings for CL-003, CL-004, and CL-067 were not inferred."
+  }
+}

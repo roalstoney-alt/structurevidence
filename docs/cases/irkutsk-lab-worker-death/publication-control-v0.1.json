@@ -1,0 +1,24 @@
+{
+  "record_id": "SE-IRK-LAB-001-PUBLICATION-v0.1",
+  "kind": "PUBLICATION_CONTROL_RECORD",
+  "case_id": "SE-IRK-LAB-001",
+  "version": "v0.1",
+  "publication_status": "PUBLICATION_APPROVED",
+  "publication_approved": true,
+  "public_projection_status": "PENDING_PRODUCTION_ACCEPTANCE",
+  "public_projection_active": false,
+  "knowledge_cutoff": "2026-10-08T05:29:45+08:00",
+  "public_url": "https://structurevidence.org/cases/irkutsk-lab-worker-death/",
+  "public_snapshot": "https://structurevidence.org/cases/irkutsk-lab-worker-death/state-v0.1.json",
+  "approved_claim_boundary": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+  "preserve_unknowns": true,
+  "private_records_exposed": false,
+  "internal_v0_7_published": false,
+  "source_refs": [
+    "cases/irkutsk-lab-worker-death/index.html",
+    "cases/irkutsk-lab-worker-death/index.json",
+    "cases/irkutsk-lab-worker-death/state-v0.1.json",
+    "cases/irkutsk-lab-worker-death/stop-v0.1.html",
+    "cases/irkutsk-lab-worker-death/search-review-v0.1.json"
+  ]
+}

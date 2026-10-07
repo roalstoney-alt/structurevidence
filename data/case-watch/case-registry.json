@@ -1,6 +1,6 @@
 {
   "registry_version": "1.0",
-  "frozen_case_count": 3,
+  "frozen_case_count": 4,
   "auto_add_cases": false,
   "cases": [
     {
@@ -8,6 +8,8 @@
       "public_slug": "/cases/800vdc/",
       "title": "800VDC / SST AI Data-Center Power Architecture",
       "domain": "INDUSTRIAL",
+      "featured": true,
+      "management_status": "ACTIVE",
       "expected_knowledge_cutoff": "2026-09-20",
       "audit": {
         "public_surface": "PRESENT",
@@ -23,6 +25,8 @@
       "public_slug": "/cases/sodium-ion-bess/",
       "title": "Sodium-Ion BESS Commercialization State",
       "domain": "INDUSTRIAL",
+      "featured": true,
+      "management_status": "ACTIVE",
       "expected_knowledge_cutoff": "2026-09-24",
       "audit": {
         "public_surface": "PRESENT",
@@ -39,6 +43,8 @@
       "public_slug": "/cases/nsq-nsclc-china/",
       "title": "China Non-Squamous NSCLC Evidence Pathway",
       "domain": "MEDICAL_PUBLIC_RESEARCH",
+      "featured": false,
+      "management_status": "FOLDED",
       "expected_knowledge_cutoff": "2026-09-28",
       "audit": {
         "public_surface": "PRESENT",
@@ -47,6 +53,23 @@
         "state_file": "cases/nsq-nsclc-china/state-v0.1.json",
         "stop_point": "cases/nsq-nsclc-china/stop-v0.1.html",
         "publication_control": "MISSING"
+      }
+    },
+    {
+      "case_id": "SE-IRK-LAB-001",
+      "public_slug": "/cases/irkutsk-lab-worker-death/",
+      "title": "Irkutsk Laboratory-Worker Death Evidence Tracker",
+      "domain": "PUBLIC_HEALTH_EVENT_REVIEW",
+      "featured": true,
+      "management_status": "ACTIVE",
+      "expected_knowledge_cutoff": "2026-10-08",
+      "audit": {
+        "public_surface": "PRESENT",
+        "public_version": "v0.1",
+        "knowledge_cutoff": "2026-10-08T05:29:45+08:00",
+        "state_file": "cases/irkutsk-lab-worker-death/state-v0.1.json",
+        "stop_point": "cases/irkutsk-lab-worker-death/stop-v0.1.html",
+        "publication_control": "cases/irkutsk-lab-worker-death/publication-control-v0.1.json"
       }
     }
   ]

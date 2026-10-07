@@ -4,8 +4,15 @@
   <id>https://structurevidence.org/feed.xml</id>
   <link href="https://structurevidence.org/feed.xml" rel="self"/>
   <link href="https://structurevidence.org/changes/"/>
-  <updated>2026-09-20T11:12:14Z</updated>
+  <updated>2026-10-08T05:29:45+08:00</updated>
   <author><name>StructEvidence</name></author>
+  <entry>
+    <title>Irkutsk laboratory-worker death: first bounded public baseline</title>
+    <id>https://structurevidence.org/changes/#se-irk-lab-001-2026-10-08</id>
+    <link href="https://structurevidence.org/changes/#se-irk-lab-001-2026-10-08"/>
+    <updated>2026-10-08T05:29:45+08:00</updated>
+    <summary>Death reported; causative agent, pneumonic plague diagnosis, occupational pathogen link, laboratory accident, second plague case and second death not established. The bounded review is incomplete.</summary>
+  </entry>
   <entry>
     <title>800V DC / SST: single field instance accepted</title>
     <id>https://structurevidence.org/changes/#cml-pdre-001-2026-09-20</id>

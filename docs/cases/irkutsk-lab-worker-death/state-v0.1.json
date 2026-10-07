@@ -1,0 +1,29 @@
+{
+  "case_id": "SE-IRK-LAB-001",
+  "version": "v0.1",
+  "review_id": "SE-IRK-REVIEW-20261008-01",
+  "current_state": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+  "last_reviewed_at": "2026-10-08T05:29:45+08:00",
+  "evidence_updated_at": "2026-10-08T05:29:45+08:00",
+  "published_at": null,
+  "page_modified_at": "2026-10-08T05:29:45+08:00",
+  "public_whitelist_only": true,
+  "claims": [
+    {"claim_id":"SE-IRK-LAB-001.WORKER_AT_INSTITUTE","statement":"The deceased woman worked at the Irkutsk infectious-disease research institute.","status":"SUPPORTED","sources":["EV-001","EV-002"]},
+    {"claim_id":"SE-IRK-LAB-001.WORKER_DEATH_REPORTED","statement":"The death of the laboratory worker was publicly reported.","status":"SUPPORTED","sources":["EV-001","EV-002"]},
+    {"claim_id":"SE-IRK-LAB-001.PNEUMONIA_UNKNOWN_ETIOLOGY_REPORTED","statement":"Russian authorities publicly described the illness as pneumonia of unknown etiology or origin.","status":"SUPPORTED","sources":["EV-002","EV-003","EV-004"]},
+    {"claim_id":"SE-IRK-LAB-001.PNEUMONIC_PLAGUE_DIAGNOSIS","statement":"Pneumonic plague was established as the diagnosis.","status":"NOT_ESTABLISHED","sources":["EV-001","EV-002"]},
+    {"claim_id":"SE-IRK-LAB-001.OCCUPATIONAL_PATHOGEN_LINK","statement":"The illness or death was established as linked to a pathogen handled at work.","status":"NOT_ESTABLISHED","sources":["EV-003","EV-004"]},
+    {"claim_id":"SE-IRK-LAB-001.LAB_ACCIDENT","statement":"A laboratory accident was established.","status":"NOT_ESTABLISHED","sources":["EV-003","EV-004","EV-005"]},
+    {"claim_id":"SE-IRK-LAB-001.CONTACTS_MONITORED","statement":"Authorities reported that contacts were identified and monitored.","status":"SUPPORTED","sources":["EV-001","EV-002"]},
+    {"claim_id":"SE-IRK-LAB-001.DANGEROUS_PATHOGEN_IN_CONTACTS","statement":"A dangerous infectious-disease pathogen was established among monitored contacts.","status":"NOT_ESTABLISHED","sources":["EV-001","EV-002"]},
+    {"claim_id":"SE-IRK-LAB-001.SECOND_PLAGUE_CASE","input_alias":"CL-064-A","origin_claim_id":"CL-064","statement":"A second plague case was established.","status":"NOT_ESTABLISHED","sources":[]},
+    {"claim_id":"SE-IRK-LAB-001.SECOND_DEATH","input_alias":"CL-064-B","origin_claim_id":"CL-064","statement":"A second death connected to the suspected plague event was established.","status":"NOT_ESTABLISHED","sources":[]},
+    {"claim_id":"SE-IRK-LAB-001.WHO_INITIAL_RISK_ASSESSMENT","statement":"WHO published an initial, provisional risk assessment for this event.","status":"SUPPORTED","sources":["EV-001"]}
+  ],
+  "unresolved_input_aliases": ["CL-003","CL-004","CL-067"],
+  "unresolved_alias_reason": "The referenced handoff package was not present in the supplied location or repository, so no exact mapping was inferred.",
+  "history": [
+    {"recorded_at":"2026-10-08T05:29:45+08:00","state":"DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE","review_id":"SE-IRK-REVIEW-20261008-01","result":"REVIEW_INCOMPLETE","note":"First public bounded review; no historical status was overwritten."}
+  ]
+}
