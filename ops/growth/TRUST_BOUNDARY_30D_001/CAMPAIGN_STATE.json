@@ -1,0 +1,90 @@
+{
+  "campaign_id": "TRUST_BOUNDARY_30D_001",
+  "schema_version": "1.0",
+  "timezone": "Asia/Shanghai",
+  "window": {
+    "start": "2026-10-08",
+    "end": "2026-11-06"
+  },
+  "status": "READY_FOR_D1",
+  "current_day": "D0",
+  "completed_phases": [
+    "PHASE_0_POSITIONING_AND_ASSET_FREEZE",
+    "PHASE_1_PUBLIC_URL_SOURCE_VERIFICATION",
+    "PHASE_2_X_SESSION_VERIFICATION",
+    "PHASE_3_CAMPAIGN_WORKSPACE",
+    "PHASE_4_D1_ASSET_PREPARATION",
+    "PHASE_5_D2_X_PREPARATION"
+  ],
+  "positioning_locked": true,
+  "content_change": "PROHIBITED_EXCEPT_VERSIONED_CORRECTION",
+  "channels": {
+    "x": {
+      "status": "CONNECTED",
+      "publication_authorized": true,
+      "max_public_posts_per_day": 1,
+      "threads": false,
+      "automated_mass_reply": false,
+      "automated_dm": false,
+      "verified_on": "2026-10-07"
+    },
+    "xiaohongshu": {
+      "status": "PREPARE_ONLY"
+    },
+    "wechat_video_channel": {
+      "status": "PREPARE_ONLY"
+    },
+    "linkedin": {
+      "status": "PREPARE_ONLY"
+    }
+  },
+  "assets": [
+    {
+      "asset_id": "SE-DM-CN",
+      "path": "onepager/decision-cn.pdf",
+      "public_url": "https://structurevidence.org/onepager/decision-cn.pdf",
+      "sha256": "a96f220ca4e79259f9cf50c9fd5d15e3ccef862df3351e0c5dac595b7905f065",
+      "pages": 1,
+      "render_qa": "PASS"
+    },
+    {
+      "asset_id": "SE-DM-EN",
+      "path": "onepager/decision-en.pdf",
+      "public_url": "https://structurevidence.org/onepager/decision-en.pdf",
+      "sha256": "ca3e6e2bef66a9c64030afd690371668e2d371cdbb90ea7c30dcfd4e165c6bd2",
+      "pages": 1,
+      "render_qa": "PASS"
+    },
+    {
+      "asset_id": "SE-INV-CN",
+      "path": "onepager/investor-cn.pdf",
+      "public_url": "https://structurevidence.org/onepager/investor-cn.pdf",
+      "sha256": "54a878aeb3af99356f576476e93d08f4306f4742a3d64835040b37e031a607d1",
+      "pages": 1,
+      "render_qa": "PASS"
+    },
+    {
+      "asset_id": "SE-INV-EN",
+      "path": "onepager/investor-en.pdf",
+      "public_url": "https://structurevidence.org/onepager/investor-en.pdf",
+      "sha256": "c3862d36285ee0dceccd0c662da8fd310a88ce945a69b6b50043ecd33b98c70f",
+      "pages": 1,
+      "render_qa": "PASS"
+    }
+  ],
+  "public_cases": [
+    "https://structurevidence.org/cases/800vdc/",
+    "https://structurevidence.org/cases/sodium-ion-bess/",
+    "https://structurevidence.org/cases/nsq-nsclc-china/"
+  ],
+  "metrics": {
+    "artifact_opens": 0,
+    "qualified_dialogues": 0,
+    "written_scopes": 0,
+    "paid_verifications": 0,
+    "memo_or_minutes_citations": 0,
+    "boundary_challenges": 0,
+    "valid_corrections": 0
+  },
+  "last_updated": "2026-10-07"
+}
