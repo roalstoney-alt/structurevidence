@@ -38,7 +38,11 @@ def main() -> None:
     registry = load(ROOT / "data" / "case-watch" / "case-registry.json")
 
     assert index["case_id"] == CASE_ID
-    assert index["current_state"] == "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE"
+    # The current record may advance; the original fixed snapshot must not.
+    assert isinstance(index["current_state"], str) and index["current_state"]
+    if "current_snapshot" in index:
+        assert load(CASE / index["current_snapshot"])["current_state"] == index["current_state"]
+    assert state["current_state"] == "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE"
     claims = {row["claim_id"]: row["status"] for row in state["claims"]}
     assert claims == EXPECTED_CLAIMS
 

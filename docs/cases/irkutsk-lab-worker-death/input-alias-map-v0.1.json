@@ -1,0 +1,136 @@
+{
+  "case_id": "SE-IRK-LAB-001",
+  "version": "v0.1",
+  "mapped_at": "2026-10-08T06:15:59+08:00",
+  "input_file": "PUBLIC_BASELINE_INPUT_v0.1.json",
+  "input_sha256": "b8825994efe8bc3f7c29b2e7a9830c4dcdeb5803f218994625baa5a4f57b4308",
+  "mapping_method": "Recovered public-whitelist input, exact input texts and states retained; stable public IDs adapted with explicit scope notes.",
+  "mappings": [
+    {
+      "input_alias": "CL-001",
+      "origin_claim_id": "CL-001",
+      "input_statement": "A worker at the institute died on 2 October.",
+      "input_statement_zh": "研究所一名员工于10月2日死亡。",
+      "input_status": "SUPPORTED",
+      "public_claim_id": "SE-IRK-LAB-001.WORKER_DEATH_REPORTED",
+      "public_status": "SUPPORTED",
+      "mapping_type": "SCOPED_SEMANTIC_ADAPTER",
+      "scope_note": "The stable death-report claim retains its meaning; reported_death_date and its source separately carry the 2 October attribution."
+    },
+    {
+      "input_alias": "CL-002",
+      "origin_claim_id": "CL-002",
+      "input_statement": "Russian authorities described the illness as pneumonia of undetermined cause.",
+      "input_statement_zh": "俄方将病情描述为病因未明肺炎。",
+      "input_status": "OBSERVED",
+      "public_claim_id": "SE-IRK-LAB-001.PNEUMONIA_UNKNOWN_ETIOLOGY_REPORTED",
+      "public_status": "SUPPORTED",
+      "mapping_type": "SCOPED_SEMANTIC_ADAPTER",
+      "scope_note": "OBSERVED in the input becomes SUPPORTED only for the proposition that authorities publicly used this description. The underlying diagnosis is not upgraded."
+    },
+    {
+      "input_alias": "CL-003",
+      "origin_claim_id": "CL-003",
+      "input_statement": "Pneumonic plague was confirmed in the deceased worker.",
+      "input_statement_zh": "死者已确诊肺鼠疫。",
+      "input_status": "NOT ESTABLISHED",
+      "public_claim_id": "SE-IRK-LAB-001.PNEUMONIC_PLAGUE_DIAGNOSIS",
+      "public_status": "NOT_ESTABLISHED",
+      "mapping_type": "SCOPED_SEMANTIC_ADAPTER",
+      "scope_note": "A verification request or suspected-event report does not confirm a diagnosis or an additional death."
+    },
+    {
+      "input_alias": "CL-004",
+      "origin_claim_id": "CL-004",
+      "input_statement": "The death resulted from occupational laboratory exposure.",
+      "input_statement_zh": "死亡源于实验室职业暴露。",
+      "input_status": "NOT ESTABLISHED",
+      "public_claim_id": "SE-IRK-LAB-001.OCCUPATIONAL_LAB_EXPOSURE",
+      "public_status": "NOT_ESTABLISHED",
+      "mapping_type": "SCOPED_SEMANTIC_ADAPTER",
+      "scope_note": "An exposure chain and auditable incident review remain unavailable. This claim is broader than a link to a pathogen handled at work.",
+      "related_public_claim_ids": [
+        "SE-IRK-LAB-001.OCCUPATIONAL_PATHOGEN_LINK"
+      ]
+    },
+    {
+      "input_alias": "CL-062",
+      "origin_claim_id": "CL-062",
+      "input_statement": "WHO publicly stated that it requested additional information.",
+      "input_statement_zh": "WHO公开表述已向俄方索取病因、促使采取措施的病原等进一步信息。",
+      "input_status": "SUPPORTED",
+      "public_claim_id": "SE-IRK-LAB-001.WHO_ADDITIONAL_INFORMATION_REQUESTED",
+      "public_status": "SUPPORTED",
+      "mapping_type": "SCOPED_SEMANTIC_ADAPTER",
+      "scope_note": "Supports a verification procedure; it does not establish a pathogen diagnosis."
+    },
+    {
+      "input_alias": "CL-063",
+      "origin_claim_id": "CL-063",
+      "input_statement": "WHO requested verification of media reports of a second employee with pneumonia.",
+      "input_statement_zh": "WHO公开表述已要求核实第二名员工病因未明肺炎的媒体说法。",
+      "input_status": "SUPPORTED",
+      "public_claim_id": "SE-IRK-LAB-001.WHO_SECOND_EMPLOYEE_REPORT_VERIFICATION_REQUESTED",
+      "public_status": "SUPPORTED",
+      "mapping_type": "SCOPED_SEMANTIC_ADAPTER",
+      "scope_note": "A verification request does not confirm the reported second case."
+    },
+    {
+      "input_alias": "CL-064-A",
+      "origin_claim_id": "CL-064",
+      "input_statement": "A second employee was confirmed to have plague.",
+      "input_statement_zh": "第二名员工已确诊鼠疫。",
+      "input_status": "NOT ESTABLISHED",
+      "public_claim_id": "SE-IRK-LAB-001.SECOND_PLAGUE_CASE",
+      "public_status": "NOT_ESTABLISHED",
+      "mapping_type": "SCOPED_SEMANTIC_ADAPTER",
+      "scope_note": "A verification request or suspected-event report does not confirm a diagnosis or an additional death."
+    },
+    {
+      "input_alias": "CL-064-B",
+      "origin_claim_id": "CL-064",
+      "input_statement": "A second employee died in connection with this event.",
+      "input_statement_zh": "本事件已证实第二名员工死亡。",
+      "input_status": "NOT ESTABLISHED",
+      "public_claim_id": "SE-IRK-LAB-001.SECOND_DEATH",
+      "public_status": "NOT_ESTABLISHED",
+      "mapping_type": "SCOPED_SEMANTIC_ADAPTER",
+      "scope_note": "A verification request or suspected-event report does not confirm a diagnosis or an additional death."
+    },
+    {
+      "input_alias": "CL-065",
+      "origin_claim_id": "CL-065",
+      "input_statement": "Reuters reported that Russian regulators said about 90% of quarantined people had been released.",
+      "input_statement_zh": "Reuters报道俄监管机构称约90%被隔离者已解除隔离。",
+      "input_status": "OBSERVED",
+      "public_claim_id": "SE-IRK-LAB-001.CONTACT_RELEASE_90_PERCENT_REPORTED",
+      "public_status": "OBSERVED",
+      "mapping_type": "SCOPED_SEMANTIC_ADAPTER",
+      "scope_note": "Historical handoff attribution only, explicitly qualified by failed current access; no claim of fresh verification."
+    },
+    {
+      "input_alias": "CL-066",
+      "origin_claim_id": "CL-066",
+      "input_statement": "A public post attributed to Tedros relayed that observation of all identified contacts had ended.",
+      "input_statement_zh": "署名Tedros的公开帖转述俄方称已结束全部已识别接触者医学观察。",
+      "input_status": "OBSERVED",
+      "public_claim_id": "SE-IRK-LAB-001.CONTACT_OBSERVATION_COMPLETED_REPORTED",
+      "public_status": "OBSERVED",
+      "mapping_type": "SCOPED_SEMANTIC_ADAPTER",
+      "scope_note": "Underlying follow-up records are unavailable. Population and time definitions are not aligned with the 90% summary; neither summary excludes transmission."
+    },
+    {
+      "input_alias": "CL-067",
+      "origin_claim_id": "CL-067",
+      "input_statement": "WHO had all necessary information and completed a fully informed risk assessment.",
+      "input_statement_zh": "WHO已获得完整信息并完成本事件充分公共卫生风险评估。",
+      "input_status": "NOT ESTABLISHED",
+      "public_claim_id": "SE-IRK-LAB-001.WHO_FULLY_INFORMED_RISK_ASSESSMENT",
+      "public_status": "NOT_ESTABLISHED",
+      "mapping_type": "SCOPED_SEMANTIC_ADAPTER",
+      "scope_note": "WHO said it lacked the full picture needed for a full assessment. This does not negate its earlier provisional assessment or establish high risk.",
+      "distinct_from_public_claim_id": "SE-IRK-LAB-001.WHO_INITIAL_RISK_ASSESSMENT"
+    }
+  ],
+  "unresolved_input_aliases": []
+}

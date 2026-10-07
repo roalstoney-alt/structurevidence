@@ -1,0 +1,11 @@
+{
+  "case_id": "SE-IRK-LAB-001",
+  "baseline_commit": "bd850a75344f20c835b6959e83c4951e65df3c13",
+  "immutable_records": {
+    "cases/irkutsk-lab-worker-death/state-v0.1.json": "b4d1a72f36ca1eff017996726e60389d4d7390b31621fb7001d4694387bc7b5f",
+    "cases/irkutsk-lab-worker-death/search-review-v0.1.json": "b568bae2328a8e422496b752e09e497f1fe6951d5b865d357ae6abe3885ab925",
+    "cases/irkutsk-lab-worker-death/publication-control-v0.1.json": "ff89344305f0b19fa6a45ae50ad4414c82bab4dc27e6e281e177bb0520b09280",
+    "cases/irkutsk-lab-worker-death/stop-v0.1.html": "7e114abd4f829d06d7da3551852fd5d94189a86daa11aba472560e471111b45f",
+    "cases/irkutsk-lab-worker-death/index-v0.1.json": "31ced2c889bc30a1d6a4b19f73832ed8419e7ff6839d6481630baf3a007eea35"
+  }
+}

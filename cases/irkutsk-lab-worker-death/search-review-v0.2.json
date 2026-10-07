@@ -1,0 +1,83 @@
+{
+  "review_id": "SE-IRK-REVIEW-20261008-02",
+  "reviewed_at": "2026-10-08T06:15:59+08:00",
+  "result": "REVIEW_INCOMPLETE",
+  "state_changed": false,
+  "evidence_changed": true,
+  "event_type": "SOURCE_ACCESS_AND_ALIAS_REPAIR_NO_CORE_STATE_CHANGE",
+  "search_query_count": 0,
+  "page_open_attempt_count": 8,
+  "successful_page_open_count": 3,
+  "failed_page_open_count": 5,
+  "queries": [],
+  "review_scope": "Eight targeted reopen attempts for unresolved WHO procedure/risk claims and retained source metadata. This is not a complete daily news search.",
+  "opened_sources": [
+    {
+      "url": "https://www.ecdc.europa.eu/en/news-events/ecdc-closely-monitoring-situation-following-case-pneumonia-unknown-origin-russia",
+      "status": "OPEN_FAILED_TOOL_INACCESSIBLE"
+    },
+    {
+      "url": "https://www.unognewsroom.org/story/en/3289/irkutsk-suspected-plague-death-who/9745",
+      "status": "OPEN_FAILED_TOOL_INACCESSIBLE"
+    },
+    {
+      "url": "https://www.linkedin.com/posts/tedros-adhanom-ghebreyesus_since-the-first-media-reports-world-health-activity-7513361771949367297-epsp",
+      "status": "READ_ATTRIBUTED_PUBLIC_STATEMENT"
+    },
+    {
+      "url": "https://www.who.int/news-room/fact-sheets/detail/plague",
+      "status": "READ_GENERAL_REFERENCE_ONLY"
+    },
+    {
+      "url": "https://apnews.com/article/russia-plague-irkutsk-who-trump-c1dfff772ca769bbdf26726787432d51",
+      "status": "OPEN_FAILED_TOOL_INACCESSIBLE"
+    },
+    {
+      "url": "https://www.reuters.com/business/healthcare-pharmaceuticals/who-seeks-details-russia-media-reports-a-second-lab-worker-with-pneumonia-2026-10-07/",
+      "status": "OPEN_FAILED_TOOL_INACCESSIBLE"
+    },
+    {
+      "url": "https://transcripts.un.org/en/briefing/geneva/2026-10-06",
+      "status": "OPEN_FAILED_TOOL_INACCESSIBLE"
+    },
+    {
+      "url": "https://www.who.int/news-room/speeches/item/who-director-general-s-opening-remarks-at-the-media-briefing---7-october-2026",
+      "status": "READ_OFFICIAL_PRIMARY_STATEMENT"
+    }
+  ],
+  "stop_point": "The eight-open repair budget was reached. The WHO original statement was readable, but five targets were inaccessible. No diagnostic or occupational-causation claim was upgraded.",
+  "source_dependency": "WHO remarks, WHO-attributed public posts and related reports may depend on the same follow-up. Contact summaries are not independent clinical datasets.",
+  "package_inputs": {
+    "status": "AVAILABLE",
+    "recovered_at": "2026-10-08T06:15:59+08:00",
+    "files": [
+      {
+        "name": "PUBLIC_BASELINE_INPUT_v0.1.json",
+        "sha256": "b8825994efe8bc3f7c29b2e7a9830c4dcdeb5803f218994625baa5a4f57b4308"
+      },
+      {
+        "name": "PUBLIC_BODY_zh-CN_DRAFT.md",
+        "sha256": "2cf40b66bbf748e155eeaf6e0c02fe19f82bb38b196d9f76c7fba1ae0f12240f"
+      },
+      {
+        "name": "PUBLIC_BODY_en_DRAFT.md",
+        "sha256": "056a88f9835d9807a66afc82ac56f25d13499c86e05b12a049df50e9d49461ef"
+      },
+      {
+        "name": "EXECUTION_AUTHORIZATION_AND_TARGETS.json",
+        "sha256": "1dd2486b03995b7a13bac58fae8659fdff2c911c75552c759d8624d8f915e8f1"
+      },
+      {
+        "name": "DAILY_MONITORING_PROMPT_AFTER_DEPLOY.txt",
+        "sha256": "d72a782f19f329716e5de81cb779b7d20fd3a7369743ba7c1ba791e06272ee3c"
+      },
+      {
+        "name": "PACKAGE_MANIFEST.json",
+        "sha256": "a46d1f79c151c7bb1d237e6694714e73c3524f85d1fec7fb569a6a6b75de3622"
+      }
+    ],
+    "handling": "Only whitelisted claim texts, public source attribution and artifact digests enter the public projection. Operational input bodies are not published."
+  },
+  "historical_review_preserved": "search-review-v0.1.json",
+  "raw_source_bytes_archived": false
+}

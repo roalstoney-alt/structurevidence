@@ -1,0 +1,120 @@
+{
+  "case_id": "SE-IRK-LAB-001",
+  "title": "Irkutsk laboratory-worker death evidence tracker",
+  "canonical_url": "https://structurevidence.org/cases/irkutsk-lab-worker-death/",
+  "question": "What is publicly established about the death of a worker at an Irkutsk infectious-disease research institute, and do the available records establish plague, an occupational pathogen link, a laboratory accident, a second plague case, or a second death?",
+  "answer": "A worker death and an official description of pneumonia of unknown origin are publicly reported. As of the bounded review, the causative agent, pneumonic plague diagnosis, occupational pathogen link, laboratory accident, second plague case, and second death are not established by qualifying public evidence.",
+  "current_state": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+  "as_of": "2026-10-08T05:29:45+08:00",
+  "last_material_change": "2026-10-08",
+  "evidence": [
+    {
+      "evidence_id": "SE-IRK-LAB-001-EV-001",
+      "title": "WHO statement carried by the United Nations Geneva newsroom",
+      "source_url": "https://www.unognewsroom.org/story/en/3289/irkutsk-suspected-plague-death-who/9745",
+      "publisher": "United Nations Geneva / World Health Organization",
+      "source_date": "2026-10-05",
+      "observed_date": "2026-10-08T05:29:45+08:00",
+      "classification": "INTERNATIONAL_PUBLIC_HEALTH_STATEMENT",
+      "supports": "A female laboratory worker died; authorities were testing the cause, monitoring identified contacts, and WHO published an initial risk assessment.",
+      "does_not_establish": "A causative agent, a diagnosis of pneumonic plague, an occupational pathogen link, a laboratory accident, a second plague case, or a second death."
+    },
+    {
+      "evidence_id": "SE-IRK-LAB-001-EV-002",
+      "title": "WHO still did not know the causative agent in the Irkutsk death",
+      "source_url": "https://apnews.com/article/russia-plague-irkutsk-who-trump-c1dfff772ca769bbdf26726787432d51",
+      "publisher": "Associated Press",
+      "source_date": "2026-10-07",
+      "observed_date": "2026-10-08T05:29:45+08:00",
+      "classification": "ORIGINAL_REPORTING_WITH_DIRECT_PUBLIC_HEALTH_ATTRIBUTION",
+      "supports": "WHO said it did not know the causative agent; the Russian public-health statement described pneumonia of unknown origin and reported testing of contacts.",
+      "does_not_establish": "That media speculation about plague or a laboratory accident is correct."
+    },
+    {
+      "evidence_id": "SE-IRK-LAB-001-EV-003",
+      "title": "Russian public-health statement reported no evidence tying the illness to worked-with pathogens",
+      "source_url": "https://apnews.com/article/russia-disease-plague-researcher-pneumonia-9ddc8e3e064637853407bfd24d8937f5",
+      "publisher": "Associated Press",
+      "source_date": "2026-10-05",
+      "observed_date": "2026-10-08T05:29:45+08:00",
+      "classification": "ORIGINAL_REPORTING_WITH_GOVERNMENT_ATTRIBUTION",
+      "supports": "Russian authorities publicly reported pneumonia of unknown origin, no evidence of illness from pathogens handled at work, and no institute incident involving pathogenic microorganisms.",
+      "does_not_establish": "An independently replicated occupational-safety investigation or a final clinical diagnosis."
+    },
+    {
+      "evidence_id": "SE-IRK-LAB-001-EV-004",
+      "title": "Rospotrebnadzor commission findings reported by TASS",
+      "source_url": "https://tass.ru/obschestvo/28180027",
+      "publisher": "TASS, attributing Rospotrebnadzor",
+      "source_date": "2026-10-05",
+      "observed_date": "2026-10-08T05:29:45+08:00",
+      "classification": "STATE_MEDIA_REPORT_OF_PUBLIC_HEALTH_STATEMENT",
+      "supports": "The cited commission reported no laboratory accident and used the diagnosis description pneumonia of unknown etiology.",
+      "does_not_establish": "Independent confirmation of the commission's methods or a final pathogen diagnosis."
+    },
+    {
+      "evidence_id": "SE-IRK-LAB-001-EV-005",
+      "title": "Fact check of circulating Irkutsk claims",
+      "source_url": "https://amp.dw.com/en/russia-lab-worker-death-fact-check/a-79560752",
+      "publisher": "Deutsche Welle",
+      "source_date": "2026-10-06",
+      "observed_date": "2026-10-08T05:29:45+08:00",
+      "classification": "SECONDARY_FACT_CHECK",
+      "supports": "The reviewed public record did not prove a laboratory accident; unrelated WHO and video material were circulating alongside the event.",
+      "does_not_establish": "A final diagnosis or an independent laboratory investigation."
+    },
+    {
+      "evidence_id": "SE-IRK-LAB-001-EV-006",
+      "title": "WHO plague fact sheet",
+      "source_url": "https://www.who.int/news-room/fact-sheets/detail/plague",
+      "publisher": "World Health Organization",
+      "source_date": "2022-07-07",
+      "observed_date": "2026-10-08T05:29:45+08:00",
+      "classification": "GENERAL_MEDICAL_REFERENCE",
+      "supports": "Plague is a bacterial disease caused by Yersinia pestis and pneumonic plague has defined clinical and public-health characteristics.",
+      "does_not_establish": "That plague caused the Irkutsk worker's illness or death."
+    },
+    {
+      "evidence_id": "SE-IRK-LAB-001-EV-007",
+      "title": "Irkutsk Anti-Plague Research Institute public description",
+      "source_url": "https://irknipchi.ru/index_eng.htm",
+      "publisher": "Irkutsk Anti-Plague Research Institute",
+      "source_date": "2026-10-08",
+      "observed_date": "2026-10-08T05:29:45+08:00",
+      "classification": "INSTITUTIONAL_BACKGROUND",
+      "supports": "The institute publicly describes work on plague and other dangerous infectious diseases.",
+      "does_not_establish": "Which agent, if any, was involved in the worker's illness, or that a workplace incident occurred."
+    }
+  ],
+  "counter_evidence": [
+    {
+      "title": "Current official boundary",
+      "state": "CAUSE_NOT_ESTABLISHED",
+      "reason": "The reviewed official and attributed public statements did not identify the causative agent and reported no established occupational-pathogen link or laboratory accident."
+    }
+  ],
+  "unknowns": [
+    "Final causative-agent determination and clinical diagnosis",
+    "Independent documentation of any occupational pathogen link",
+    "Independent documentation of any laboratory accident",
+    "Qualifying evidence for a second plague case",
+    "Qualifying evidence for a second death",
+    "Complete ECDC review, because the targeted source could not be opened during this bounded run"
+  ],
+  "search_provenance": [
+    {
+      "run_date": "2026-10-08",
+      "boundary": "Four targeted searches and eight page-open attempts; WHO/UN, ECDC, Russian public-health attribution, and reliable original reporting prioritized.",
+      "source_types": "One international public-health statement, government-attributed reporting, two original news reports, one fact check, one general WHO reference, and one institutional background page. ECDC access remained incomplete."
+    }
+  ],
+  "history": [
+    {
+      "date": "2026-10-08",
+      "previous_state": "NO_PUBLIC_BASELINE",
+      "new_state": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+      "triggering_evidence": "SE-IRK-REVIEW-20261008-01",
+      "why": "The first public whitelist separated the reported death and official descriptions from unestablished diagnostic and occupational-causation claims; one targeted source path remained inaccessible."
+    }
+  ]
+}
