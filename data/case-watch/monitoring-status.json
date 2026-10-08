@@ -76,10 +76,10 @@
         "start": "2026-10-08",
         "end": "2026-10-08",
         "status": "REVIEW_INCOMPLETE",
-        "scope": "Recorded source repair; first scheduled daily run unverified"
+        "scope": "Actual bounded public-health review; source-date correction only; key original sources inaccessible."
       },
-      "period_review_id": "SE-IRK-REVIEW-20261008-02",
-      "latest_review_file": "cases/irkutsk-lab-worker-death/search-review-v0.2.json",
+      "period_review_id": "SE-IRK-REVIEW-20261008-03",
+      "latest_review_file": "cases/irkutsk-lab-worker-death/search-review-20261008-03.json",
       "monitoring": {
         "cadence": "DAILY",
         "enabled": true,
@@ -89,5 +89,6 @@
         "schedule_timezone": "Asia/Hong_Kong"
       }
     }
-  ]
+  ],
+  "recorded_at": "2026-10-08T15:48:22+08:00"
 }

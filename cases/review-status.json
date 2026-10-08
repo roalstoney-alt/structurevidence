@@ -17,18 +17,18 @@
       "last_material_change": "2026-10-08",
       "featured": true,
       "management_status": "ACTIVE",
-      "last_reviewed_at": "2026-10-08T06:15:59+08:00",
+      "last_reviewed_at": "2026-10-08T15:48:22+08:00",
       "review_result": "REVIEW_INCOMPLETE",
-      "latest_review_id": "SE-IRK-REVIEW-20261008-02",
-      "latest_review_file": "cases/irkutsk-lab-worker-death/search-review-v0.2.json",
+      "latest_review_id": "SE-IRK-REVIEW-20261008-03",
+      "latest_review_file": "cases/irkutsk-lab-worker-death/search-review-20261008-03.json",
       "period": {
         "id": "2026-10-08",
         "start": "2026-10-08",
         "end": "2026-10-08",
         "status": "REVIEW_INCOMPLETE",
-        "scope": "Recorded source repair; first scheduled daily run unverified"
+        "scope": "Actual bounded public-health review; source-date correction only; key original sources inaccessible."
       },
-      "period_review_id": "SE-IRK-REVIEW-20261008-02",
+      "period_review_id": "SE-IRK-REVIEW-20261008-03",
       "monitoring": {
         "cadence": "DAILY",
         "enabled": true,
@@ -37,8 +37,8 @@
         "next_run_at_from_service": null,
         "schedule_timezone": "Asia/Hong_Kong"
       },
-      "new_qualifying_evidence_count": null,
-      "new_counter_evidence_count": null
+      "new_qualifying_evidence_count": 0,
+      "new_counter_evidence_count": 0
     },
     {
       "case_id": "SE-ONC-NSQNSCLC-CN-001",

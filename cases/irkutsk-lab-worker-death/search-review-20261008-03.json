@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "case_id": "SE-IRK-LAB-001",
+  "review_id": "SE-IRK-REVIEW-20261008-03",
+  "reviewed_at": "2026-10-08T15:48:22+08:00",
+  "result": "REVIEW_INCOMPLETE",
+  "review_complete": false,
+  "state_changed": false,
+  "evidence_changed": true,
+  "evidence_change_scope": "SOURCE_DATE_METADATA_CORRECTION_ONLY",
+  "old_state": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+  "new_state": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+  "search_boundary": {
+    "public_scope": "Final cause, de-identified contact follow-up, WHO/IHR requests, second-employee verification and auditable safety review. Public-health subset only.",
+    "query_count": 2,
+    "page_open_attempt_count": 4,
+    "successful_page_open_count": 2,
+    "failed_page_open_count": 2,
+    "queries": [
+      "Иркутск сотрудница противочумного института 8 октября 2026 причина смерти Роспотребнадзор ВОЗ карантин",
+      "site.who.int Irkutsk October 8 2026 pneumonia second worker information"
+    ],
+    "exhaustive": false
+  },
+  "sources_checked": [
+    {
+      "url": "https://www.who.int/news-room/speeches/item/who-director-general-s-opening-remarks-at-the-media-briefing---7-october-2026",
+      "access_result": "READ_EXTRACTED_TEXT",
+      "source_published_at": "2026-10-07",
+      "event_time": "2026-10-02 through 2026-10-07",
+      "dependency_group": "WHO_FOLLOWUP_20261006_07",
+      "finding": "Previously recorded WHO requests and inability to complete a full risk assessment remain; no final diagnosis or confirmed second case established.",
+      "retrieved_at": "2026-10-08T15:48:22+08:00"
+    },
+    {
+      "url": "https://www.ecdc.europa.eu/en/news-events/ecdc-closely-monitoring-situation-following-case-pneumonia-unknown-origin-russia",
+      "access_result": "OPEN_FAILED_TOOL_INACCESSIBLE",
+      "source_published_at": null,
+      "finding": "No current text verified.",
+      "retrieved_at": "2026-10-08T15:48:22+08:00"
+    },
+    {
+      "url": "https://www.rospotrebnadzor.ru/",
+      "access_result": "OPEN_FAILED_TIMEOUT",
+      "source_published_at": null,
+      "finding": "No original current Russian statement or final diagnostic report verified.",
+      "retrieved_at": "2026-10-08T15:48:22+08:00"
+    },
+    {
+      "url": "https://www.unognewsroom.org/story/en/3289/irkutsk-suspected-plague-death-who/9745",
+      "access_result": "READ_EXTRACTED_TEXT",
+      "source_published_at": "2026-10-06",
+      "event_time": "2026-10-06 press briefing",
+      "dependency_group": "WHO_UNOG_BRIEFING_20261006",
+      "finding": "Displayed publication date and dateline are 6 October 2026; initial provisional assessment and contact monitoring statement are not a full informed risk assessment or final contact closure record.",
+      "retrieved_at": "2026-10-08T15:48:22+08:00"
+    }
+  ],
+  "new_qualifying_evidence_count": 0,
+  "new_counter_evidence_count": 0,
+  "count_scope": "Accepted new substantive clinical/public-health evidence in the checked subset; incomplete access is not evidence of absence.",
+  "metadata_correction_count": 1,
+  "metadata_corrections": [
+    {
+      "evidence_id": "SE-IRK-LAB-001-EV-001",
+      "field": "source_date",
+      "old": "2026-10-05",
+      "new": "2026-10-06",
+      "basis": "UNOG displayed 06-10-2026 and DATELINE 6 OCTOBER 2026; original event wording not upgraded.",
+      "source_url": "https://www.unognewsroom.org/story/en/3289/irkutsk-suspected-plague-death-who/9745"
+    }
+  ],
+  "counter_evidence_and_limits": [
+    "Russian attributed no-laboratory-incident statements remain distinct from an independent auditable safety investigation.",
+    "Second-employee verification request does not confirm a second plague case or death.",
+    "90% release and all identified contacts observation summaries retain separate populations, dates and attribution.",
+    "Monitoring or isolation does not establish infection or a transmission chain."
+  ],
+  "gaps": [
+    "Final clinical cause and pathogen testing detail not verified.",
+    "Complete de-identified contact and household follow-up closure records not verified.",
+    "Current Russian original statement and ECDC page inaccessible in this run.",
+    "Auditable independent laboratory-safety review not verified."
+  ],
+  "previous_review": "search-review-v0.2.json",
+  "raw_source_bytes_collected": false,
+  "evidence_state_as_of": "2026-10-08T06:15:59+08:00",
+  "snapshot": "state-v0.3.json",
+  "public_whitelist_only": true
+}
