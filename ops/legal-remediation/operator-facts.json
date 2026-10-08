@@ -3,9 +3,11 @@
   "company_registry_number": "1856995",
   "business_registration_number": "60930306",
   "source": "existing website operator statement",
+  "checked_at": "2026-10-08T12:36:34+08:00",
+  "register": "ops/legal-remediation/OPERATOR_FACTS_REGISTER.md",
   "credential_review_status": "OPERATOR_ASSERTED_NOT_INDEPENDENTLY_VERIFIED",
   "personal_credential_data_published": false,
   "customer_regions": null,
   "contract_scope_regions": null,
-  "status": "NEEDS_OPERATOR_FACTS"
+  "status": "NEEDS_OPERATOR_CONFIRMATION"
 }

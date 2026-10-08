@@ -19,6 +19,8 @@ class LegalBoundaryRemediationTest(unittest.TestCase):
         en = (ROOT / "en/index.html").read_text()
         for value in ("2026-09-20T10:46:47Z", "2026-09-24", "2026-10-08T06:15:59+08:00", "REVIEW INCOMPLETE"):
             self.assertIn(value, en)
+        for path in ("en/index.html", "zh-cn/index.html", "es/index.html"):
+            self.assertEqual((ROOT / path).read_bytes(), (ROOT / "docs" / path).read_bytes(), path)
 
     def test_scientific_case_files_are_not_copy_edited(self):
         changed = subprocess.check_output(
@@ -47,6 +49,11 @@ class LegalBoundaryRemediationTest(unittest.TestCase):
         self.assertNotIn("restricted_payload", projected)
         self.assertNotIn("SYNTHETIC_PRIVATE_TEXT", json.dumps(projected))
         self.assertEqual(projected["public_status"], "RESTRICTED")
+        for surface in ("json", "legacy_url", "feed"):
+            rendered = module.render_public_surface(record, surface)
+            self.assertNotIn("SYNTHETIC_PRIVATE_TEXT", rendered, surface)
+            self.assertIn("RESTRICTED", rendered, surface)
+            self.assertIn("restricted", rendered.lower(), surface)
 
     def test_org_legal_mirrors_and_commercial_contract_are_consistent(self):
         for name in ("privacy.html", "terms-of-sale.html", "refund-policy.html", "corrections-policy.html"):
@@ -55,6 +62,12 @@ class LegalBoundaryRemediationTest(unittest.TestCase):
         self.assertIn("confirmed service error is corrected without requiring another purchase", terms)
         self.assertIn("New evidence, a new source universe, a new cut-off or a new question", terms)
         self.assertNotIn("superseded evidence state is corrected automatically", terms)
+        public_copy = "\n".join(
+            (ROOT / name).read_text()
+            for name in ("privacy.html", "terms-of-sale.html", "refund-policy.html", "corrections-policy.html")
+        )
+        for marker in ("NEEDS_OPERATOR", "NEEDS_COUNSEL", "TODO", "TBD"):
+            self.assertNotIn(marker, public_copy)
 
     def test_notice_is_versioned_and_customer_text_is_not_event_note(self):
         worker = (ROOT / "deploy/cloudflare-landing/worker.js").read_text()
@@ -64,6 +77,9 @@ class LegalBoundaryRemediationTest(unittest.TestCase):
         self.assertIn("input.confidentiality_ack !== true", worker)
         self.assertIn("'REQUEST_SUBMITTED', ?, 'CUSTOMER', NULL, ?, NULL", worker)
         self.assertIn("CREATE TABLE request_private_context", migration)
+        admin_ui = (ROOT / "deploy/cloudflare-landing/admin-ui.js").read_text()
+        self.assertIn("Private context (restricted)", admin_ui)
+        self.assertIn("textContent=value", admin_ui)
 
 
 if __name__ == "__main__":

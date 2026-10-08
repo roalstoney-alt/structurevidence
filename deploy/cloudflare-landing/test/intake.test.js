@@ -74,12 +74,17 @@ test("front-end bypass cannot omit or repurpose legal acknowledgements", async (
 });
 
 test("private narrative is separated from append-only event notes and public response", async () => {
-  const worker = createWorker(), db = new FakeD1();
+  const worker = createWorker(), db = new FakeD1(), env = baseEnv(db);
   const secret = "SYNTHETIC_CUSTOMER_PRIVATE_CONTEXT";
-  const response = await worker.fetch(publicPost({ request_type: "VERIFY", email: "user@example.com", claim_or_question: "A claim", current_belief: secret }), baseEnv(db));
+  const response = await worker.fetch(publicPost({ request_type: "VERIFY", email: "user@example.com", claim_or_question: "A claim", current_belief: secret }), env);
   const body = await response.text();
   assert.equal(response.status, 201); assert.doesNotMatch(body, new RegExp(secret));
   assert.equal(db.events[0].note, null); assert.match(db.privateContexts[0].payload_json, new RegExp(secret));
+  const id = JSON.parse(body).request_id;
+  const detail = await adminWorker.fetch(new Request(`https://structevidence.com/api/admin/requests/${id}`), env);
+  assert.match(JSON.stringify(await detail.json()), new RegExp(secret));
+  const adminScript = await adminWorker.fetch(new Request("https://structevidence.com/admin/requests/app.js"), env);
+  assert.match(await adminScript.text(), /private-context/);
 });
 
 test("invalid public requests are rejected", async () => {
