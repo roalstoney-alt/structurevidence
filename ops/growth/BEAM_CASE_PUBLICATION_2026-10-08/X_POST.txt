@@ -1,0 +1,7 @@
+Evidence changes. Decisions remember.
+
+On Oct 8, our search surfaced Beam’s Sep 22 LOI state. A pre-send freshness check found the Oct 7 ScoutDI definitive SPA.
+
+The queued outreach was stale. We reopened the state and sent nothing.
+
+https://structurevidence.org/cases/beam/

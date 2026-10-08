@@ -1,0 +1,822 @@
+# RDL CASE — BEAM GLOBAL
+
+## The Boundary Moved Before We Acted
+
+**Subtitle:**
+A live case on Decision Opportunity Discovery, Freshness, Reopen Triggers, and self-correction
+
+**Proposed Case ID:** `RDL-DOD-BEAM-001`
+**Project:** StructEvidence
+**Program:** SE-DOD-001 — Decision Opportunity Discovery
+**Case Type:** Live State Transition / Freshness Correction
+**Review Date:** 2026-10-08
+**Evidence Boundary:** Public sources only
+**Private State:** UNKNOWN
+**External Outreach Sent:** NO
+**Status:** CORRECTED / REOPENED
+**Public Release Recommendation:** PUBLISHABLE
+
+---
+
+# 1. Executive Summary
+
+StructEvidence is testing a customer-discovery method that differs from conventional lead generation.
+
+We do not begin by asking:
+
+> **Which companies might need StructEvidence?**
+
+We begin with a different question:
+
+> **Where is a real, consequential decision already taking place, and where is there an evidence boundary that could materially affect that decision?**
+
+The operating sequence is:
+
+# Decision Pressure
+→ Evidence Gap
+→ Decision Owner
+→ Precision Pitch
+
+On October 8, 2026, SE-DOD-001 identified Beam Global as a strong Decision Opportunity in the Technology M&A / Industrial Investment vertical.
+
+The initial public record showed that Beam Global had announced, on September 22, 2026, a **non-binding Letter of Intent** to acquire a European drone technology company.
+
+Within that reviewed evidence boundary, the following states were supported:
+
+**SUPPORTED**
+
+- a non-binding LOI had been signed;
+- the target was described as already developing, manufacturing, and selling drone products;
+- Beam had stated an acquisition and vertical-integration thesis;
+- Beam had described an intention to transfer manufacturing to its own facilities.
+
+The following remained unestablished within the reviewed public boundary:
+
+**NOT ESTABLISHED**
+
+- target identity;
+- definitive agreement;
+- completed diligence;
+- final approval state;
+- validated manufacturing transfer;
+- integration cost boundary;
+- transaction closing.
+
+That made Beam one of the strongest first-wave outreach candidates. The manual review classified the opportunity as `SEND`, while explicitly keeping all private and internal evidence states as UNKNOWN. No message had yet been sent.
+
+Before transmission, however, a freshness review found that the public state had already changed.
+
+Beam Global had signed a definitive Share Sale and Purchase Agreement with the shareholders of ScoutDI AS on October 6, 2026, and disclosed the transaction publicly on October 7.
+
+Therefore, at least two previously unresolved states had already transitioned:
+
+```text
+TARGET IDENTITY
+UNKNOWN
+→
+SUPPORTED — ScoutDI AS
+```
+
+and:
+
+```text
+DEFINITIVE AGREEMENT
+NOT ESTABLISHED
+→
+SUPPORTED
+```
+
+The original outreach message had become stale before it was sent.
+
+The system therefore triggered:
+
+# REOPEN
+
+and transmission was stopped.
+
+---
+
+# 2. Why This Case Matters
+
+At first glance, this may look like a simple search-freshness issue.
+
+It is more important than that.
+
+The Beam case demonstrates a core property of real-world evidence systems:
+
+> **An evidence state that was reasonable yesterday may already be stale today.**
+
+A conventional research workflow often looks like:
+
+**Search → Report → Finish**
+
+Once the report is produced, the conclusion can continue circulating even after the world has moved.
+
+RDL is designed differently:
+
+**Claim**
+→ **Evidence**
+→ **State**
+→ **Next Observable**
+→ **New Evidence**
+→ **Reopen**
+→ **New State**
+
+The Beam case is the first SE-DOD example in which this mechanism was triggered during an actual outbound-decision workflow.
+
+---
+
+# 3. What Were We Looking For?
+
+Beam was not selected randomly.
+
+SE-DOD-001 defines an ideal Decision Opportunity as:
+
+```text
+ACTIVE DECISION
++
+MATERIAL EVIDENCE BOUNDARY
++
+HIGH COST OF ERROR
++
+IDENTIFIABLE DECISION OWNER
+```
+
+Beam fit this structure.
+
+## Decision Pressure
+
+The company was actively pursuing a cross-border technology acquisition.
+
+That creates real decision pressure around:
+
+- capital allocation;
+- transaction structure;
+- technology integration;
+- manufacturing transfer;
+- regulatory conditions;
+- strategic execution.
+
+## Cost of Error
+
+If key assumptions concerning:
+
+- technical maturity;
+- transferability of manufacturing;
+- regulatory conditions;
+- commercial maturity;
+- integration capital requirements;
+
+were wrong, they could affect:
+
+- go / no-go;
+- purchase price;
+- closing conditions;
+- capital allocation;
+- integration planning;
+- risk allocation.
+
+That is why the initial evidence gap was classified as material.
+
+---
+
+# 4. Initial Evidence State
+
+## State T0
+
+**Public evidence date:** 2026-09-22
+
+Beam announced a non-binding LOI with a European drone technology company.
+
+The reviewed evidence supported:
+
+```text
+LOI = SUPPORTED
+TARGET EXISTS = SUPPORTED
+TARGET PRODUCES / SELLS PRODUCTS = SUPPORTED
+ACQUISITION INTENT = SUPPORTED
+MANUFACTURING-TRANSFER INTENT = SUPPORTED
+```
+
+But it did not support:
+
+```text
+DEFINITIVE AGREEMENT = NOT ESTABLISHED
+TRANSACTION CLOSED = NOT ESTABLISHED
+MANUFACTURING TRANSFER VALIDATED = NOT ESTABLISHED
+INTEGRATION SUCCESS = NOT ESTABLISHED
+```
+
+The corresponding next-observable hypothesis was:
+
+> **If the transaction continued progressing, future public evidence should begin resolving the target identity, definitive documentation, closing conditions, and manufacturing-transfer boundary.**
+
+This is important.
+
+It was a:
+
+# Next Observable Hypothesis
+
+not an:
+
+# Outcome Prediction
+
+We were not claiming:
+
+> “Beam will complete the acquisition.”
+
+We were defining:
+
+> **Which future observations would cause the evidence state to move if the transaction continued progressing.**
+
+---
+
+# 5. State Transition
+
+## State T1
+
+**Agreement signed:** 2026-10-06
+**Public disclosure:** 2026-10-07
+
+Beam entered into a definitive Share Sale and Purchase Agreement with ScoutDI AS shareholders.
+
+The newly disclosed public record established:
+
+- the target identity: **ScoutDI AS**;
+- a definitive purchase agreement;
+- a base purchase price of **USD 24 million**;
+- an earn-out mechanism;
+- specified closing conditions.
+
+The evidence state therefore changed.
+
+### Target identity
+
+```text
+UNKNOWN
+↓
+SUPPORTED
+```
+
+### Definitive agreement
+
+```text
+NOT ESTABLISHED
+↓
+SUPPORTED
+```
+
+But this did not imply:
+
+```text
+TRANSACTION CLOSED = SUPPORTED
+```
+
+nor did it imply:
+
+```text
+MANUFACTURING TRANSFER VALIDATED = SUPPORTED
+INTEGRATION SUCCESS = SUPPORTED
+FUTURE REVENUE PERFORMANCE = SUPPORTED
+```
+
+The evidence boundary did not disappear.
+
+It moved.
+
+---
+
+# 6. Why This Must Not Be Presented as a Successful Prediction
+
+This case requires a strict methodological boundary.
+
+The SE-DOD manual review took place on:
+
+**2026-10-08**
+
+The definitive agreement had already been:
+
+**signed on 2026-10-06**
+and
+**publicly disclosed on 2026-10-07**
+
+Therefore, this case cannot honestly be described as:
+
+> **“StructEvidence predicted the definitive agreement before it happened.”**
+
+That would be false.
+
+The correct interpretation is:
+
+> **SE-DOD correctly identified a meaningful transaction-state structure, but the initial search was already one state behind reality. The pre-send freshness check detected the new public evidence and corrected the state before any action was taken.**
+
+What the case supports is:
+
+# State-machine relevance
+
+and:
+
+# Freshness correction
+
+It does not support:
+
+# Prospective prediction accuracy.
+
+---
+
+# 7. Why This Is More Valuable Than a Prediction Claim
+
+If StructEvidence were trying to appear unusually intelligent, it could be tempting to present this as:
+
+> “We anticipated Beam's next move.”
+
+That would violate the product's own discipline.
+
+The more important finding is:
+
+# Our own evidence state can become stale.
+
+If a verification system cannot detect when its own verification is outdated, then the question:
+
+# Who verifies the verifier?
+
+eventually points back at the verifier itself.
+
+The Beam case suggests the correct answer:
+
+# The verifier must remain reopenable.
+
+---
+
+# 8. What the Freshness Gate Prevented
+
+Suppose the original message had been sent without a freshness review.
+
+It would have stated that the reviewed public evidence did not establish:
+
+- target identity;
+- definitive agreement.
+
+By October 8, those statements were already stale.
+
+The failure path would have been:
+
+```text
+OLD PUBLIC STATE
+↓
+STALE OUTREACH
+↓
+RECIPIENT CORRECTS US
+↓
+TRUST LOSS
+```
+
+Instead, the workflow became:
+
+```text
+OLD PUBLIC STATE
+↓
+PRE-SEND RECHECK
+↓
+NEW EVIDENCE FOUND
+↓
+REOPEN
+↓
+STATE TRANSITION
+↓
+PITCH CANCELLED / REWRITTEN
+```
+
+External messages sent before correction:
+
+# 0
+
+The stale state therefore did not propagate.
+
+---
+
+# 9. A Definitive Agreement Is Still Not Ground Truth
+
+Moving from:
+
+```text
+LOI
+```
+
+to:
+
+```text
+DEFINITIVE AGREEMENT
+```
+
+does not turn every contractual representation into ground truth.
+
+Beam's October 7 Form 8-K states that representations, warranties, and covenants in the purchase agreement were made for transaction purposes, may be qualified by confidential disclosures and negotiated materiality standards, and should not automatically be treated as a complete characterization of actual facts or conditions.
+
+Therefore:
+
+# Definitive Agreement ≠ Ground Truth
+
+A signed agreement does not automatically establish:
+
+```text
+ALL REPRESENTATIONS = OBJECTIVE REAL-WORLD FACT
+MANUFACTURING TRANSFER = VALIDATED
+INTEGRATION = SUCCESSFUL
+COMMERCIAL OUTCOME = ACHIEVED
+```
+
+This is a direct illustration of StructEvidence's broader thesis:
+
+# Verification ≠ Ground Truth
+
+Every verified state still has a trust boundary.
+
+---
+
+# 10. How the Trust Boundary Moved
+
+## 2026-09-22
+
+```text
+SUPPORTED
+• non-binding LOI
+• acquisition intent
+• target produces and sells drone systems
+• proposed manufacturing transfer
+
+NOT ESTABLISHED
+• target identity
+• definitive agreement
+• closing
+• validated manufacturing transfer
+• integration result
+```
+
+## 2026-10-07
+
+```text
+SUPPORTED
+• target = ScoutDI
+• definitive purchase agreement
+• purchase-price structure
+• earn-out structure
+• specified closing conditions
+
+STILL NOT ESTABLISHED
+• completed closing
+• successful manufacturing transfer
+• successful integration
+• realized synergies
+• future commercial performance
+```
+
+The state changed.
+
+The boundary remained.
+
+---
+
+# 11. What RDL Actually Preserves
+
+RDL is not trying to preserve a sentence such as:
+
+> “Beam will acquire ScoutDI.”
+
+It is also not trying to say:
+
+> “Beam should acquire ScoutDI.”
+
+It preserves something different:
+
+# At Time T, what was actually established?
+
+The Beam sequence can be represented as:
+
+```text
+T0 — LOI state
+T1 — Definitive-agreement state
+T2 — Future closing state
+T3 — Future integration state
+T4 — Future operating outcome
+```
+
+Each state should retain:
+
+```text
+AS_OF
+SUPPORTING EVIDENCE
+DOES_NOT_SUPPORT
+UNKNOWN
+NEXT_OBSERVABLE
+REOPEN_TRIGGER
+```
+
+Later outcomes do not overwrite earlier uncertainty.
+
+---
+
+# 12. What This Case Supports
+
+## SUPPORTED
+
+1. **Decision Pressure Radar can identify real decisions.** Beam was genuinely in the middle of a material transaction.
+2. **State decomposition has operational value.** LOI, definitive agreement, closing, integration, and operating outcome are distinct states.
+3. **Next-observable logic is useful.** A definitive agreement was a meaningful next state in the transaction path.
+4. **Freshness is part of evidence quality.** A one-day evidence lag was enough to change whether an outbound message should be sent.
+5. **Reopen Trigger is not a theoretical field.** New public evidence actually triggered a reopen event.
+6. **Append-only history is preferable to silent overwrite.** The earlier LOI state was not “wrong” for its own date; the current state changed.
+
+---
+
+# 13. What This Case Does Not Support
+
+The case does **not** establish that:
+
+- Beam Global needs StructEvidence;
+- Beam's internal diligence is incomplete;
+- Beam's acquisition thesis is flawed;
+- StructEvidence can predict M&A outcomes;
+- StructEvidence can predict market prices;
+- the ScoutDI transaction will close;
+- manufacturing transfer will succeed;
+- StructEvidence has achieved product-market fit;
+- RDL is more accurate than traditional due diligence;
+- StructEvidence found the person who could approve or stop the transaction;
+- a missing public fact would necessarily stop the transaction.
+
+These remain:
+
+# NOT ESTABLISHED
+
+---
+
+# 14. Commercial Significance
+
+The Beam case does not validate customer demand.
+
+It validates something earlier in the commercial chain:
+
+> **The right discovery object is a decision undergoing state transition, not a static company profile.**
+
+Beam was valuable not because:
+
+> “Beam looks like a good prospect.”
+
+It was valuable because the following conditions existed simultaneously:
+
+```text
+ACTIVE TRANSACTION
++
+PUBLIC EVIDENCE STATE
++
+OBSERVABLE NEXT STATE
++
+MATERIAL DECISION CONSEQUENCE
+```
+
+That makes it a high-value RDL observation object.
+
+For commercial workflows, the transferable lesson is narrower:
+
+> **Before a decision record, outreach message, or transaction statement is used, confirm that the evidence state supporting it has not expired.**
+
+---
+
+# 15. Direct Improvement to the Dots Workflow
+
+The Beam case generated a new hard rule:
+
+# Freshness Before Outreach
+
+A Decision Opportunity can no longer move directly from research into outreach.
+
+The correct workflow is:
+
+```text
+DISCOVER
+↓
+QUALIFY
+↓
+RESOLVE OWNER
+↓
+DRAFT
+↓
+FRESHNESS RECHECK
+↓
+SEND
+```
+
+Add:
+
+```text
+Q0_FRESHNESS_RECHECK
+```
+
+Allowed states:
+
+```text
+PASS
+FAIL
+REOPEN
+```
+
+If new evidence materially changes the current state:
+
+```text
+SEND = PROHIBITED
+```
+
+until the evidence state has been rebuilt.
+
+---
+
+# 16. The Deeper RDL Insight
+
+The Beam case suggests that the core value of RDL is not simply:
+
+> **determining what is true now.**
+
+It is more accurately:
+
+> **preserving how far the evidence justified belief at a specific point in time.**
+
+Traditional reporting tends to compress history into:
+
+```text
+LOI → SPA → CLOSE → SUCCESS
+```
+
+Once the final outcome is known, the path can look inevitable.
+
+RDL preserves the uncertainty that actually existed:
+
+```text
+T0 — LOI exists; future unknown
+T1 — SPA exists; closing unknown
+T2 — Closing may occur; integration unknown
+T3 — Integration observed; outcome still measurable
+```
+
+This prevents:
+
+# Hindsight Compression
+
+— the rewriting of past uncertainty using facts that only became available later.
+
+---
+
+# 17. “Who Verifies the Verifier?” Applied to StructEvidence Itself
+
+StructEvidence asks externally:
+
+# Who verifies the verifier?
+
+The Beam case forces the same question inward:
+
+> **Who verifies StructEvidence?**
+
+The answer cannot be:
+
+> “StructEvidence should simply be trusted.”
+
+The answer must be:
+
+```text
+SOURCE
++
+TIME
++
+STATE
++
+COUNTER-EVIDENCE
++
+FRESHNESS
++
+REOPEN
+```
+
+Therefore:
+
+# StructEvidence itself must remain auditable and reopenable.
+
+No exception.
+
+---
+
+# 18. Public Case Summary
+
+## Beam Global — RDL Live State Transition
+
+**Initial public state:** Non-binding LOI.
+
+**Initial boundary:** Target identity and definitive agreement not established.
+
+**New evidence:** Beam Global signed a definitive Share Sale and Purchase Agreement with ScoutDI shareholders on October 6, 2026, and disclosed the transaction publicly on October 7.
+
+**State transition:**
+
+```text
+TARGET IDENTITY
+UNKNOWN → SUPPORTED
+
+DEFINITIVE AGREEMENT
+NOT ESTABLISHED → SUPPORTED
+```
+
+**Still unresolved:**
+
+```text
+CLOSING
+MANUFACTURING TRANSFER
+INTEGRATION
+REALIZED COMMERCIAL OUTCOME
+```
+
+**RDL action:** `REOPEN`
+
+**Commercial action:** `STALE OUTREACH CANCELLED`
+
+**External messages sent before correction:** `0`
+
+---
+
+# 19. Core Finding
+
+The most important result of this case is not:
+
+> **“We guessed correctly.”**
+
+It is:
+
+# “The world had already changed, and our system detected that our own evidence state also had to change before we acted on it.”
+
+High-stakes decisions do not need a system that claims to be permanently correct.
+
+They need a system capable of saying:
+
+> **What it currently knows.
+> What it does not know.
+> What evidence supports the state.
+> Until what cutoff the state is valid.
+> And when the system itself must admit that the state has become stale.**
+
+---
+
+# 20. Conclusion
+
+The Beam Global case provides the first live Freshness-Reopen sample from the SE-DOD / RDL workflow.
+
+It suggests that:
+
+# Evidence State is a function of time.
+
+A simplified representation is:
+
+> **S = f(E, t, B)**
+
+where:
+
+**S** = Evidence State
+**E** = Available Evidence
+**t** = Knowledge Cutoff
+**B** = Defined Evidence Boundary
+
+When new evidence materially changes the state, the correct system behavior is not to erase the past.
+
+It is:
+
+# Reopen → Append → Transition
+
+The Beam case therefore leaves behind something more valuable than a prediction record.
+
+It leaves an infrastructure record:
+
+# We caught our own evidence state becoming stale before we acted on it.
+
+That is what RDL should preserve.
+
+---
+
+## Public Tagline
+
+# Evidence changes.
+# Decisions remember.
+
+**StructEvidence records both.**
+
+---
+
+# Primary Public Sources
+
+1. Beam Global — Non-binding LOI announcement, 2026-09-22
+   https://www.sec.gov/Archives/edgar/data/1398805/000143774926030857/ex_1018438.htm
+
+2. Beam Global — Definitive ScoutDI acquisition announcement, 2026-10-07
+   https://beamforall.com/beam-global-signs-definitive-agreement-to-acquire-drone-technology-company-scoutdi-creating-a-vertically-integrated-u-s-drone-platform-for-industrial-and-defense-markets/
+
+3. Beam Global — Form 8-K, event date 2026-10-06, filed 2026-10-07
+   https://www.sec.gov/Archives/edgar/data/1398805/000143774926032264/beem20261007_8k.htm
+
+4. SE-DOD-001 — First-wave manual review, 2026-10-08
+   Internal execution record; public-source boundary only.
