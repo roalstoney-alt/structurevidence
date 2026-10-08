@@ -16,7 +16,9 @@ test("Decision Pack has a dedicated privacy-safe scope form", async () => {
   assert.match(html, /data-request-form data-request-type="CONTEXT"/);
   assert.match(html, /name="requested_output" value="DECISION_PACK"/);
   assert.match(html, /What would change the decision\?/);
+  assert.match(html, /name="privacy_notice_ack" type="checkbox" required/);
   assert.match(html, /name="confidentiality_ack" type="checkbox" required/);
+  assert.match(html, /does not authorize research, marketing, publication/);
   assert.doesNotMatch(html, /type="file"/);
 });
 
@@ -26,9 +28,9 @@ test("service pages publish the dated evidence-cycle boundary", async () => {
     assert.match(html, /cut-off timestamp/i, path);
   }
   const pricing = await page("/pricing/");
-  assert.match(pricing, /No included revision rounds/);
-  assert.match(pricing, /separately paid collection cycle/);
-  assert.match(pricing, /superseded evidence state is corrected automatically/);
+  assert.match(pricing, /Confirmed service errors/);
+  assert.match(pricing, /without requiring purchase of another cycle/);
+  assert.match(pricing, /new source universe/);
 });
 
 test("deliverables exposes the public Decision Pack PDF sample", async () => {
@@ -55,6 +57,16 @@ test("client script preserves private scoping context and fail-closed authorizat
   assert.match(js, /What would change the decision:/);
   assert.match(js, /CUSTOMER_PRIVATE/);
   assert.match(js, /NOT_AUTHORIZED/);
+  assert.match(js, /privacy_notice_version:"2026-10-08"/);
+  assert.match(js, /publication_authorization:false/);
+});
+
+test("privacy and terms disclose collection and separate correction from new research", async () => {
+  const privacy = await page("/privacy/"), terms = await page("/terms/");
+  assert.match(privacy, /patient records, identity documents, passwords, private keys/);
+  assert.match(privacy, /does not authorize research, marketing or publication/);
+  assert.match(terms, /confirmed service error is corrected without requiring another purchase/i);
+  assert.match(terms, /Website updates do not retroactively amend/);
 });
 
 test("Verify handoff prefills protocol scope without submitting", async () => {

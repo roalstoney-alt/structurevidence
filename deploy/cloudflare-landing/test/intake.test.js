@@ -12,13 +12,15 @@ class Statement {
 }
 
 class FakeD1 {
-  constructor() { this.customers = []; this.requests = []; this.events = []; }
+  constructor() { this.customers = []; this.requests = []; this.notices = []; this.privateContexts = []; this.events = []; }
   prepare(sql) { return new Statement(this, sql); }
   async batch(statements) { for (const statement of statements) await this.execute(statement); return statements.map(() => ({ success: true })); }
   async execute({ sql, args }) {
     if (sql.startsWith("INSERT INTO customers")) { this.customers.push(Object.fromEntries(["customer_id","created_at","updated_at","contact_name","email","company"].map((key, i) => [key, args[i]]))); return { success: true }; }
     if (sql.startsWith("INSERT INTO requests")) { this.requests.push({ request_id: args[0], created_at: args[1], updated_at: args[2], request_type: args[3], customer_id: args[4], decision: args[5], claim_or_question: args[6], technical_object: args[7], current_dependency: args[8], alternative_considered: args[9], decision_deadline: args[10], case_reference: args[11], requested_output: args[12], status: "SUBMITTED", privacy_class: "CUSTOMER_PRIVATE", human_owner: null, research_authorization_status: "NOT_AUTHORIZED" }); return { success: true }; }
-    if (sql.startsWith("INSERT INTO request_events")) { const fixedSubmission = sql.includes("'REQUEST_SUBMITTED'"); this.events.push({ event_id: args[0], request_id: args[1], event_type: fixedSubmission ? "REQUEST_SUBMITTED" : args[2], event_at: fixedSubmission ? args[2] : args[3], actor: fixedSubmission ? "CUSTOMER" : args[4], previous_state: fixedSubmission ? null : args[5], new_state: fixedSubmission ? args[3] : args[6], note: fixedSubmission ? args[4] : args[7] }); return { success: true }; }
+    if (sql.startsWith("INSERT INTO request_notices")) { this.notices.push({ request_id: args[0], notice_version: args[1], acknowledged_at: args[2], privacy_notice_ack: 1, confidentiality_boundary_ack: 1, publication_authorization: 0, marketing_consent: 0 }); return { success: true }; }
+    if (sql.startsWith("INSERT INTO request_private_context")) { this.privateContexts.push({ context_id: args[0], request_id: args[1], created_at: args[2], payload_json: args[3], retention_status: "NEEDS_OPERATOR_FACTS" }); return { success: true }; }
+    if (sql.startsWith("INSERT INTO request_events")) { const fixedSubmission = sql.includes("'REQUEST_SUBMITTED'"); this.events.push({ event_id: args[0], request_id: args[1], event_type: fixedSubmission ? "REQUEST_SUBMITTED" : args[2], event_at: fixedSubmission ? args[2] : args[3], actor: fixedSubmission ? "CUSTOMER" : args[4], previous_state: fixedSubmission ? null : args[5], new_state: fixedSubmission ? args[3] : args[6], note: fixedSubmission ? null : args[7] }); return { success: true }; }
     if (sql.startsWith("UPDATE requests SET")) { const requestId = args.at(-1), record = this.requests.find((item) => item.request_id === requestId); const fields = [...sql.matchAll(/(human_owner|status|research_authorization_status) = \?/g)].map((match) => match[1]); fields.forEach((field, i) => { record[field] = args[i]; }); record.updated_at = args.at(-2); return { success: true }; }
     throw new Error(`Unhandled SQL: ${sql}`);
   }
@@ -31,6 +33,8 @@ class FakeD1 {
   }
   async all({ sql, args }) {
     if (sql.startsWith("SELECT event_id")) return { results: this.events.filter((item) => item.request_id === args[0]) };
+    if (sql.startsWith("SELECT notice_version")) return { results: this.notices.filter((item) => item.request_id === args[0]) };
+    if (sql.startsWith("SELECT context_id")) return { results: this.privateContexts.filter((item) => item.request_id === args[0]) };
     if (sql.startsWith("SELECT r.request_id")) { const status = sql.includes("WHERE r.status") ? args[0] : null; return { results: this.requests.filter((item) => !status || item.status === status).map((item) => this.join(item)) }; }
     throw new Error(`Unhandled all SQL: ${sql}`);
   }
@@ -42,7 +46,9 @@ class FakeRateLimiter {
 }
 
 const baseEnv = (db, limiter = new FakeRateLimiter()) => ({ CUSTOMER_CASES_DB: db, PUBLIC_INTAKE_RATE_LIMITER: limiter, PUBLIC_ORIGINS: "https://structevidence.com", TEAM_DOMAIN: "https://team.cloudflareaccess.com", ADMIN_UI_AUD: "ui-aud", ADMIN_API_AUD: "api-aud", ADMIN_EMAILS: "admin@example.com" });
-const publicPost = (body, origin = "https://structevidence.com") => new Request("https://structevidence.com/api/requests", { method: "POST", headers: { "content-type": "application/json", origin, "cf-connecting-ip": "192.0.2.8" }, body: JSON.stringify(body) });
+const legalBoundary = { privacy_notice_version: "2026-10-08", privacy_notice_ack: true, confidentiality_ack: true, publication_authorization: false, marketing_consent: false };
+const publicPost = (body, origin = "https://structevidence.com") => new Request("https://structevidence.com/api/requests", { method: "POST", headers: { "content-type": "application/json", origin, "cf-connecting-ip": "192.0.2.8" }, body: JSON.stringify({ ...legalBoundary, ...body }) });
+const rawPublicPost = (body) => new Request("https://structevidence.com/api/requests", { method: "POST", headers: { "content-type": "application/json", origin: "https://structevidence.com", "cf-connecting-ip": "192.0.2.9" }, body: JSON.stringify(body) });
 const adminWorker = createWorker({ authVerifier: async () => ({ email: "admin@example.com" }) });
 
 test("customer submission persists unique defaults and append-only submission event", async () => {
@@ -55,6 +61,25 @@ test("customer submission persists unique defaults and append-only submission ev
   assert.match(firstBody.request_id, /^SE-REQ-[A-F0-9]{20}$/); assert.notEqual(firstBody.request_id, secondBody.request_id);
   assert.equal(db.requests[0].status, "SUBMITTED"); assert.equal(db.requests[0].privacy_class, "CUSTOMER_PRIVATE"); assert.equal(db.requests[0].research_authorization_status, "NOT_AUTHORIZED"); assert.equal(db.requests[0].human_owner, null);
   assert.equal(db.events[0].event_type, "REQUEST_SUBMITTED"); assert.equal(db.events[0].actor, "CUSTOMER");
+  assert.equal(db.notices[0].notice_version, "2026-10-08"); assert.equal(db.notices[0].publication_authorization, 0); assert.equal(db.events[0].note, null);
+});
+
+test("front-end bypass cannot omit or repurpose legal acknowledgements", async () => {
+  const worker = createWorker(), db = new FakeD1(), env = baseEnv(db);
+  const base = { request_type: "VERIFY", email: "user@example.com", claim_or_question: "A bounded claim" };
+  assert.equal((await worker.fetch(rawPublicPost(base), env)).status, 400);
+  assert.equal((await worker.fetch(rawPublicPost({ ...base, privacy_notice_version: "old", privacy_notice_ack: true, confidentiality_ack: true }), env)).status, 400);
+  assert.equal((await worker.fetch(rawPublicPost({ ...legalBoundary, ...base, publication_authorization: true }), env)).status, 400);
+  assert.equal(db.requests.length, 0);
+});
+
+test("private narrative is separated from append-only event notes and public response", async () => {
+  const worker = createWorker(), db = new FakeD1();
+  const secret = "SYNTHETIC_CUSTOMER_PRIVATE_CONTEXT";
+  const response = await worker.fetch(publicPost({ request_type: "VERIFY", email: "user@example.com", claim_or_question: "A claim", current_belief: secret }), baseEnv(db));
+  const body = await response.text();
+  assert.equal(response.status, 201); assert.doesNotMatch(body, new RegExp(secret));
+  assert.equal(db.events[0].note, null); assert.match(db.privateContexts[0].payload_json, new RegExp(secret));
 });
 
 test("invalid public requests are rejected", async () => {
@@ -100,7 +125,10 @@ test("admin routes select independent Access audiences", async () => {
 
 test("migration enforces append-only events and no file table", () => {
   const sql = readFileSync(new URL("../migrations/0001_customer_intake.sql", import.meta.url), "utf8");
+  const legalMigration = readFileSync(new URL("../migrations/0003_legal_boundary_notices.sql", import.meta.url), "utf8");
   assert.match(sql, /request_events_no_update/); assert.match(sql, /request_events_no_delete/); assert.doesNotMatch(sql, /CREATE TABLE request_files/i);
+  assert.match(legalMigration, /CREATE TABLE request_notices/); assert.match(legalMigration, /CREATE TABLE request_private_context/);
+  assert.match(legalMigration, /publication_authorization INTEGER NOT NULL DEFAULT 0/); assert.match(legalMigration, /request_private_context_no_delete/);
 });
 
 test("commercial pages are direct, concise, and connect forms same-origin", async () => {

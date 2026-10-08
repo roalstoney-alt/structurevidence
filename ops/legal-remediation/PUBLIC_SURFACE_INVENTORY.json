@@ -1,0 +1,15 @@
+{
+  "captured_at": "2026-10-08T12:05:12+08:00",
+  "actual_base_sha": "bfeeae97babd6a245faf9b0bdee4109dd6d2417c",
+  "surfaces": [
+    {"name":"research-root","paths":["index.html","en/index.html","zh-cn/index.html","es/index.html"],"role":"current public discovery and featured-case presentation","source_type":"hand-maintained static HTML","mirror":"docs equivalents"},
+    {"name":"case-indexes","paths":["cases/index.html","cases/*/index.html","cases/*/index.json","cases/*/state-v*.json","cases/*/stop-point.html"],"role":"current case pages, machine records, frozen snapshots and stop cards","source_type":"mixed current and historical","mirror":"docs/cases","history_rule":"do not globally replace historical versions"},
+    {"name":"gaps","paths":["gaps/index.html","gaps/*/index.html","deploy/cloudflare-landing/gaps.js"],"role":"research discovery on .org and live challenge surface on .com","source_type":"static discovery plus Worker renderer","mirror":"docs/gaps"},
+    {"name":"changes-and-feeds","paths":["changes/index.html","changes/EDITORIAL_PROTOCOL.md","changes.json","feed.xml"],"role":"administrative/evidence change discovery","source_type":"static"},
+    {"name":"metadata","paths":["sitemap.xml","robots.txt","**/index.html"],"role":"search, canonical, OpenGraph and JSON-LD metadata","source_type":"embedded static metadata","note":"case titles and summaries require the same bounded semantics as visible copy"},
+    {"name":"commercial-worker","paths":["deploy/cloudflare-landing/worker.js","deploy/cloudflare-landing/commercial-upgrade.js","deploy/cloudflare-landing/commercial-ui.js","deploy/cloudflare-landing/wrangler.jsonc","deploy/cloudflare-landing/migrations/*.sql"],"role":"live commercial pages, intake and admin workflow","source_type":"Worker","active_import_chain":"worker.js -> commercial-upgrade.js -> commercial-ui.js"},
+    {"name":"commercial-static","paths":["privacy.html","terms.html","terms-of-sale.html","refund-policy.html","about.html"],"role":"research-site legal and commercial boundary pages","source_type":"static HTML","mirror":"docs equivalents"},
+    {"name":"public-pdfs","paths":["reports/*.pdf","docs/reports/*.pdf"],"role":"frozen public samples","source_type":"binary artifacts","history_rule":"do not silently rewrite"},
+    {"name":"agent-documents","paths":["AGENTS.md",".agents/**","ops/**"],"role":"operator and automation instructions","source_type":"repository control documents","status":"no applicable AGENTS.md found at baseline"}
+  ]
+}
