@@ -1,0 +1,56 @@
+{
+  "campaign_id": "TRUST_BOUNDARY_30D_001",
+  "date": "2026-10-08",
+  "campaign_day": "D1",
+  "executed_at": "2026-10-08T16:00:56+08:00",
+  "result": "D1_PREPARE_ONLY_REVIEWED_X_ACCESS_BLOCKED",
+  "public_post": false,
+  "x_post_url": null,
+  "d0_assets_existing": true,
+  "d1_manual_package": "drafts/D1_2026-10-08_CN_DECISION_MAKER.md",
+  "d2_prepared_post": "posts/x/D2_2026-10-09_Q2_INVESTOR.md",
+  "first_x_publication_date": "2026-10-09",
+  "four_pdf_one_page_render_check": "PASS",
+  "frozen_sha256_check": "PASS",
+  "public_pdf_bytes": [
+    {
+      "name": "StructEvidence_Decision_Maker_CN.pdf",
+      "url": "https://structurevidence.org/onepager/decision-cn.pdf",
+      "exact_bytes_match": true,
+      "sha256": "a96f220ca4e79259f9cf50c9fd5d15e3ccef862df3351e0c5dac595b7905f065"
+    },
+    {
+      "name": "StructEvidence_Decision_Maker_EN.pdf",
+      "url": "https://structurevidence.org/onepager/decision-en.pdf",
+      "exact_bytes_match": true,
+      "sha256": "ca3e6e2bef66a9c64030afd690371668e2d371cdbb90ea7c30dcfd4e165c6bd2"
+    },
+    {
+      "name": "StructEvidence_Investor_CN.pdf",
+      "url": "https://structurevidence.org/onepager/investor-cn.pdf",
+      "exact_bytes_match": true,
+      "sha256": "54a878aeb3af99356f576476e93d08f4306f4742a3d64835040b37e031a607d1"
+    },
+    {
+      "name": "StructEvidence_Investor_EN.pdf",
+      "url": "https://structurevidence.org/onepager/investor-en.pdf",
+      "exact_bytes_match": true,
+      "sha256": "c3862d36285ee0dceccd0c662da8fd310a88ce945a69b6b50043ecd33b98c70f"
+    }
+  ],
+  "public_case_urls": {
+    "cases": "HTTP_200",
+    "800vdc": "HTTP_200",
+    "sodium-ion-bess": "HTTP_200"
+  },
+  "boundary_and_factual_copy_checks": "PASS: one question, one boundary, one link; no external company claim in prepared primary messages",
+  "x_session": "BLOCKED_USER_DENIED_ACCESS",
+  "duplicate_x_check": "NOT_PERFORMED_ACCESS_BLOCKED",
+  "inbound_capture": "NOT_PERFORMED_ACCESS_BLOCKED",
+  "meaningful_signal": "UNKNOWN_NOT_MEASURED",
+  "scheduled_campaign_task": "NOT_CONFIGURED",
+  "no_workaround_attempted": true,
+  "positioning_changed": false,
+  "asset_bytes_changed": false,
+  "future_publish_gate": "Date due, current authenticated account verified, duplicate check and boundary audit pass; at most one public post/day."
+}
