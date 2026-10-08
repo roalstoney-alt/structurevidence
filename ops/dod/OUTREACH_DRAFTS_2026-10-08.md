@@ -1,8 +1,8 @@
-# SE-DOD-001 first-contact drafts — protocol v0.1.1
+# SE-DOD-001 first-contact drafts — protocol v0.1.2
 
-Status: four `SEND_RECOMMENDED_AWAITING_HUMAN_AUTHORIZATION`; one `HOLD_OWNER_NOT_ESTABLISHED`. No message in this file has been sent.
+Status: two refreshed send recommendations requiring a new Q0 check at authorization; two holds; one reopened and prohibited. No message in this file has been sent.
 
-Each route is publicly attributable, but a corporate or IR route is not evidence of decision responsibility. The first ten outreach messages require manual review of target, accountability, evidence boundary, tone, public/private distinction, asset relevance, and route validity.
+Each route is publicly attributable, but a corporate or IR route is not evidence of decision responsibility. A `ROUTABLE` route must be addressed as a receiving function, not represented as the named owner's direct inbox. Q0 must be rerun immediately before any human send authorization.
 
 ## OR-001 — CATL / Amanda Xu
 
@@ -20,9 +20,9 @@ Would that boundary be useful in how your team records the transition from comme
 
 Proposed route: `andy.jin@nocera.net` — published in the SEC-filed LOI as the address for questions and clarification.
 
-I noticed Nocera has entered an SEC-filed LOI for a proposed equity interest in INERGX and described an active buy-and-build platform spanning storage, software, testing, certification, and repowering.
+Andy — I noticed Nocera's latest reviewed SEC filing still describes the proposed INERGX investment as a non-binding LOI, subject to diligence, further negotiation, and definitive documentation.
 
-The reviewed public record establishes the proposed transaction and strategy, but it does not establish definitive documentation, transaction completion, completed acquisitions, certified products, repeatable deployments, or customer acceptance. Your internal evidence may of course establish more than is visible publicly. Those states could affect follow-on investment approval, valuation, or transaction conditions.
+The public record supports the proposed transaction and buy-and-build strategy, but it does not establish the technical maturity, repeatability, certification, deployment, or customer-acceptance evidence underlying the current investment thesis. Your diligence record may of course establish more than is public. Those distinctions could affect valuation, conditions, or follow-on approval.
 
 StructEvidence provides boundary verification at the diligence cutoff: what is supported, what remains unknown, and what would reopen the record. A short overview is here: https://structurevidence.org/onepager/investor-en.pdf
 
@@ -30,36 +30,24 @@ Would that structure be useful in your technical diligence or investment-committ
 
 ## OR-003 — Beam Global / Desmond Wheatley
 
-Proposed route: `IR@BeamForAll.com`
+Status: `REOPEN_NEW_DEFINITIVE_SPA_SEND_PROHIBITED`.
 
-I noticed Beam Global has signed a non-binding LOI for a European drone technology company, with the transaction subject to diligence, definitive agreements, and closing conditions.
-
-The reviewed public record identifies production, sales, conditional approval, and a proposed US manufacturing transfer. It does not establish completed diligence, updated approval, validated transfer, or the cost boundary for integration. Your internal evidence may of course establish more than is visible publicly. Resolving those points could change go/no-go, price, conditions, or risk allocation.
-
-StructEvidence provides boundary verification rather than a transaction recommendation. A short overview is here: https://structurevidence.org/onepager/investor-en.pdf
-
-Would that structure be useful in your technical diligence or board record?
+The v0.1.1 LOI-based message is withdrawn. Beam announced an executed Share Purchase Agreement to acquire ScoutDI on 2026-10-07, naming the target and disclosing price, financing commitments, customers, and earnout terms. A new evidence boundary and message require separate review before this opportunity can return to the send queue.
 
 ## OR-004 — Vertiv / Gio Albertazzi
 
-Proposed route: `lynne.maxeiner@vertiv.com` — named Vertiv investor-relations contact in the acquisition announcement.
+Status: `HOLD_FUTURE_OBSERVABLE`.
 
-I noticed Vertiv has agreed to acquire Utility Innovation Group to accelerate time-to-power for AI data centers, with closing and integration still ahead.
-
-The reviewed public record establishes the agreement and strategic rationale, but it does not establish post-close integration performance, attributable customer outcomes, or whether operating evidence supports the stated financial and time-to-power case. Your internal evidence may of course establish more than is visible publicly. Those states could affect integration conditions, earnout assessment, or a reopened investment decision.
-
-StructEvidence provides boundary verification at the decision cutoff. A short overview is here: https://structurevidence.org/onepager/investor-en.pdf
-
-Would this format be useful in the transaction or integration decision record?
+The v0.1.1 message is withdrawn. Its central gap relied on realized post-close integration, customer outcomes, and earnout performance before the acquisition has closed. Those facts are `FUTURE_OBSERVABLE`, not a present material evidence gap, and cannot support first-contact outreach.
 
 ## OR-005 — ABB / Massimiliano Cifalitti
 
-Proposed route: `investor.relations@ch.abb.com`
+Proposed route: `investor.relations@ch.abb.com` — `ROUTABLE`, not represented as Massimiliano Cifalitti's direct inbox.
 
-I noticed ABB is acquiring Advantics and has highlighted up to 99 percent efficiency for its Silicon Carbide power-conversion modules.
+ABB Investor Relations team — please route this to the Smart Power transaction or technical-integration owner. ABB's Advantics announcement states that its Silicon Carbide power-converter modules deliver up to 99 percent efficiency.
 
-The reviewed public record supports the acquisition rationale and a stated module-level result, but it does not establish the test conditions, independent replication, production dispersion, or system-level efficiency after integration across intended applications. Your internal evidence may of course establish more than is visible publicly. Those distinctions could affect technical acceptance, transaction conditions, or integration gates.
+The reviewed public record supports the acquisition rationale and that stated module result, but it does not establish the test conditions, measurement method, load boundary, independent replication, or production dispersion behind the current claim. ABB's internal record may of course establish more. Those distinctions could affect technical acceptance or integration conditions now; this note does not rely on future post-close outcomes.
 
 StructEvidence provides boundary verification rather than a technology score. A short overview is here: https://structurevidence.org/onepager/investor-en.pdf
 
-Would this boundary be useful in the technical integration record for the acquisition?
+Would this evidence boundary be useful in the technical integration record for the acquisition?

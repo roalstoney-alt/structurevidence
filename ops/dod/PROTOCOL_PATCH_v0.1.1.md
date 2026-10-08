@@ -1,5 +1,7 @@
 # SE-DOD-001 protocol patch v0.1.1 application
 
+> Superseded for active send decisions by `PROTOCOL_PATCH_v0.1.2.md`. Retained as an execution-history snapshot.
+
 Applied: 2026-10-08 (Asia/Shanghai)
 
 Result: `PASS_WITH_PROTOCOL_PATCH`

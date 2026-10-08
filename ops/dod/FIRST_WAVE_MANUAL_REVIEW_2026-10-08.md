@@ -1,5 +1,7 @@
 # SE-DOD-001 — first-wave manual decision review
 
+> Historical v0.1.1 snapshot. Superseded for send decisions by `FIRST_WAVE_RECHECK_v0.1.2_2026-10-08.md`. Do not use the recommendations below without the v0.1.2 Q0, Q2B, and Q5B gates.
+
 Review date: 2026-10-08
 
 Review boundary: public sources only; no private state inferred
