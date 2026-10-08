@@ -1,6 +1,6 @@
 # SE-DOD-001 first-contact drafts — protocol v0.1.2
 
-Status: two refreshed send recommendations requiring a new Q0 check at authorization; two holds; one reopened and prohibited. No message in this file has been sent.
+Status: one refreshed send recommendation requiring a new Q0 check at authorization; two holds; two reopened and prohibited. No message in this file has been sent.
 
 Each route is publicly attributable, but a corporate or IR route is not evidence of decision responsibility. A `ROUTABLE` route must be addressed as a receiving function, not represented as the named owner's direct inbox. Q0 must be rerun immediately before any human send authorization.
 
@@ -18,15 +18,9 @@ Would that boundary be useful in how your team records the transition from comme
 
 ## OR-002 — Nocera / Andy Jin
 
-Proposed route: `andy.jin@nocera.net` — published in the SEC-filed LOI as the address for questions and clarification.
+Status: `REOPEN_PUBLIC_LOI_TERM_BOUNDARY_SEND_PROHIBITED`.
 
-Andy — I noticed Nocera's latest reviewed SEC filing still describes the proposed INERGX investment as a non-binding LOI, subject to diligence, further negotiation, and definitive documentation.
-
-The public record supports the proposed transaction and buy-and-build strategy, but it does not establish the technical maturity, repeatability, certification, deployment, or customer-acceptance evidence underlying the current investment thesis. Your diligence record may of course establish more than is public. Those distinctions could affect valuation, conditions, or follow-on approval.
-
-StructEvidence provides boundary verification at the diligence cutoff: what is supported, what remains unknown, and what would reopen the record. A short overview is here: https://structurevidence.org/onepager/investor-en.pdf
-
-Would that structure be useful in your technical diligence or investment-committee record?
+The v0.1.2 message is withdrawn. Nocera's 2026-10-02 10-Q/A says the INERGX transaction was not completed. The operative LOI states that it terminates on the 90th day after 2026-07-06 unless extended; that public term boundary was reached on 2026-10-04. No reviewed public source confirms an extension or definitive agreement. The active-decision state is therefore not established within the public boundary, and a new message is prohibited until the state is resolved and reviewed.
 
 ## OR-003 — Beam Global / Desmond Wheatley
 

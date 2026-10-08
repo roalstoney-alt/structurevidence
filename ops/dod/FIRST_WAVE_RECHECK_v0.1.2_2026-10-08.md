@@ -42,11 +42,17 @@ REASON = The reviewed public record still does not establish a person accountabl
 
 ## OR-002 — Nocera
 
-Q0_FRESHNESS_RECHECK = PASS
+Q0_FRESHNESS_RECHECK = REOPEN
 
-FRESHNESS_NOTE = The latest reviewed SEC filing continues to describe the INERGX transaction as a non-binding LOI subject to diligence and definitive documentation, and says it has not been completed.
+OLD_STATE = Active non-binding INERGX LOI subject to diligence and definitive documentation.
 
-Q1_ACTIVE_DECISION = PASS
+NEW_EVIDENCE = Nocera's 2026-10-02 10-Q/A states the transaction was not completed. The operative LOI terminates on the 90th day after 2026-07-06 unless extended, and no reviewed public source confirms an extension or definitive agreement.
+
+NEW_STATE = Active transaction status is not established within the public boundary after the stated LOI term boundary.
+
+STATE_TRANSITION_DATE = 2026-10-04
+
+Q1_ACTIVE_DECISION = FAIL
 
 Q2_MATERIAL_GAP = PASS
 
@@ -68,9 +74,11 @@ Q8_ONE_ASK = PASS
 
 Q9_MATCHING_ASSET = PASS
 
-MESSAGE_REFRESH = COMPLETE — the message now reflects the latest filing and addresses Andy Jin through the direct clarification route published in the LOI.
+MESSAGE_STATUS = SUPERSEDED_AND_WITHDRAWN
 
-FINAL_RECOMMENDATION = SEND_AFTER_NEW_Q0_AND_HUMAN_AUTHORIZATION
+FINAL_RECOMMENDATION = REOPEN
+
+SEND = PROHIBITED
 
 ## OR-003 — Beam Global
 
@@ -178,10 +186,10 @@ FINAL_RECOMMENDATION = SEND_AFTER_NEW_Q0_AND_HUMAN_AUTHORIZATION
 
 ## Result
 
-SEND_RECOMMENDATIONS = OR-002, OR-005
+SEND_RECOMMENDATIONS = OR-005
 
 HOLD = OR-001, OR-004
 
-REOPEN = OR-003
+REOPEN = OR-002, OR-003
 
 SEND_EXECUTED = NO

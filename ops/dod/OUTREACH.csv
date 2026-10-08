@@ -1,6 +1,6 @@
 outreach_id,contact_id,decision_event_id,date,channel,message_version,onepager,public_case,status,followup_date
 OR-001,CT-001,DE-A-005,2026-10-08,WEB_FORM,DOD-A-v0.1.1,https://structurevidence.org/onepager/decision-en.pdf,,HOLD_OWNER_NOT_ESTABLISHED,
-OR-002,CT-002,DE-D-001,2026-10-08,EMAIL,DOD-D-v0.1.2,https://structurevidence.org/onepager/investor-en.pdf,,SEND_RECOMMENDED_FRESHNESS_RECHECK_REQUIRED_AT_AUTHORIZATION,
+OR-002,CT-002,DE-D-001,2026-10-08,EMAIL,DOD-D-v0.1.2-SUPERSEDED,https://structurevidence.org/onepager/investor-en.pdf,,REOPEN_PUBLIC_LOI_TERM_BOUNDARY_SEND_PROHIBITED,
 OR-003,CT-003,DE-D-002,2026-10-08,EMAIL,DOD-D-v0.1.1-SUPERSEDED,https://structurevidence.org/onepager/investor-en.pdf,,REOPEN_NEW_DEFINITIVE_SPA_SEND_PROHIBITED,
 OR-004,CT-004,DE-D-003,2026-10-08,EMAIL,DOD-D-v0.1.1-WITHDRAWN,https://structurevidence.org/onepager/investor-en.pdf,,HOLD_FUTURE_OBSERVABLE,
 OR-005,CT-005,DE-D-004,2026-10-08,EMAIL,DOD-D-v0.1.2,https://structurevidence.org/onepager/investor-en.pdf,,SEND_RECOMMENDED_FRESHNESS_RECHECK_REQUIRED_AT_AUTHORIZATION,

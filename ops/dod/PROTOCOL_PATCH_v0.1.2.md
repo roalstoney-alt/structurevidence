@@ -10,7 +10,7 @@ Result: `PASS_WITH_RECLASSIFICATION`
 
 A recorded `PASS` is point-in-time evidence, not standing authorization. Q0 must be run again immediately before any human send authorization. `REOPEN` prohibits send until the evidence boundary and message are rebuilt and reviewed.
 
-The 2026-10-08 check identified one material transition: Beam Global announced a definitive Share Purchase Agreement to acquire ScoutDI on 2026-10-07. This supersedes the anonymous-target non-binding LOI state. OR-003 is `REOPEN`, and its v0.1.1 message is withdrawn.
+The 2026-10-08 checks identified two material freshness results. Beam Global announced a definitive Share Purchase Agreement to acquire ScoutDI on 2026-10-07, superseding the anonymous-target LOI state; OR-003 is `REOPEN`. Nocera's latest filing said the INERGX transaction was not completed immediately before the LOI's stated 90-day term boundary, and no reviewed public source confirms an extension or definitive agreement after that boundary; OR-002 is also `REOPEN`. Both prior messages are withdrawn and send is prohibited.
 
 ## Temporal observability
 
@@ -31,7 +31,7 @@ OR-005 passes Q2B because test conditions supporting ABB's already-public “up 
 ## Current first-wave state
 
 - OR-001 CATL: `HOLD_OWNER_NOT_ESTABLISHED`.
-- OR-002 Nocera: message refreshed; `SEND_RECOMMENDED_FRESHNESS_RECHECK_REQUIRED_AT_AUTHORIZATION`.
+- OR-002 Nocera: `REOPEN_PUBLIC_LOI_TERM_BOUNDARY_SEND_PROHIBITED`; the latest filing says the transaction was not completed, and the stated public LOI term boundary passed without a reviewed public extension or definitive agreement.
 - OR-003 Beam Global: `REOPEN_NEW_DEFINITIVE_SPA_SEND_PROHIBITED`.
 - OR-004 Vertiv: `HOLD_FUTURE_OBSERVABLE`.
 - OR-005 ABB: message refreshed around the present efficiency-claim test boundary; `SEND_RECOMMENDED_FRESHNESS_RECHECK_REQUIRED_AT_AUTHORIZATION`.
