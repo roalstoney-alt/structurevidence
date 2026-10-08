@@ -45,3 +45,17 @@ These failures reproduce after the branch changes and were not hidden or weakene
 No production deployment, production migration, cache purge, customer-data rewrite or live form submission was performed.
 
 New regression count attributable to this branch: **0**. The three baseline test groups listed above fail against unchanged inputs; the relevant tests/input files have no diff from the base SHA.
+
+## Authorized production release — 2026-10-08
+
+The statement above describes the original review-preparation run. A later owner authorization deployed the same exact source SHA to `.com` and applied D1 migration 0003. Full non-sensitive evidence is in `PRODUCTION_RELEASE_RECORD_2026-10-08.md`.
+
+- Release SHA: `9d25cfea1b3593d5a0a215550273e67deeb82035`.
+- D1 0003: applied at `2026-10-08 05:21:43` and remotely schema-verified; no pending migrations.
+- Worker version: `d2525a27-12bc-49a6-9328-f11af90ea7d8`, 100% active.
+- Actual public bodies and HTTP status: verified for apex, redirect, three localized entries, legal/commercial pages and forms.
+- Negative API validation: missing acknowledgement and invalid notice version returned HTTP 400.
+- Authorized synthetic intake: HTTP 201; notice/acknowledgements, private-context separation and null event note verified against only the synthetic record.
+- Public non-exposure: request paths returned 404 and public Gap/API/page output contained no synthetic private marker.
+- Admin negative path: PASS at Cloudflare Access. Admin positive path: NOT_VERIFIED because no approved Access-admin session was available; Access was not bypassed.
+- `.org` publication: not performed. Monitoring changes: none. Rollback: not executed.
