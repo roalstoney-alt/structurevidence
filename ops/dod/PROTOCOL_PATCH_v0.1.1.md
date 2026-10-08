@@ -18,17 +18,19 @@ Every row in the patched opportunity and material-gap ledgers records the review
 
 ## Owner resolution and first wave
 
-- `NAMED_ACCOUNTABLE_PERSON`: 5
-- `ACCOUNTABLE_ROLE_ONLY`: 6
+- `NAMED_ACCOUNTABLE_PERSON`: 4
+- `ACCOUNTABLE_ROLE_ONLY`: 7
 - `COMPANY_ROUTE_ONLY`: 4
 - `UNRESOLVED`: 5
 
-Only the five named-owner rows remain `OUTREACH_READY`. Five role-only rows remain `REVIEW`. Company-route-only and unresolved rows are `HOLD`. A verified corporate route is not treated as evidence of decision responsibility.
+Only four rows pass the named-owner gate after manual evidence-chain review. Six selected role-only rows remain `REVIEW`. Company-route-only and unresolved rows are `HOLD`. A verified corporate route is not treated as evidence of decision responsibility.
 
-All five provisional messages pass the nine pre-send content gates after the v0.1.1 edits. They remain `HOLD_PENDING_HUMAN_REVIEW`; no outreach is authorized or sent. The first ten outreach messages require manual review.
+Four messages pass the nine pre-send gates after the v0.1.1 manual review recorded in `FIRST_WAVE_MANUAL_REVIEW_2026-10-08.md`. OR-001 fails the named-owner gate because Amanda Xu's ESS role is relevant but the reviewed public record does not establish that she owns the 60 GWh order acceptance or China delivery decision. The four passing messages are recommended for send only after explicit human authorization; no outreach is authorized or sent. The first ten outreach messages require manual review.
+
+The review also corrected DE-D-001 to the operative SEC-filed LOI boundary. The LOI is largely non-binding apart from specified provisions; neither the opportunity ledger nor the first message describes the proposed investment as completed or fully binding.
 
 ## Best-opportunity decision
 
-DE-D-002 remains the provisional best decision opportunity because the public filing establishes an active acquisition decision, the unresolved facts could change go/no-go, price, conditions, and risk allocation, the cost of error is high, the CEO is named, and the route is official. The conclusion is limited to the reviewed public record; private diligence may establish more.
+DE-D-002 remains the best reviewed decision opportunity because the public filing establishes an active acquisition decision, the unresolved facts could change go/no-go, price, conditions, and risk allocation, the cost of error is high, the CEO is named, and the official route is expressly used to arrange CEO meetings. The conclusion is limited to the reviewed public record; private diligence may establish more.
 
 DE-A-005 is separately recorded as the most interesting evidence gap because the boundary between announced order/production readiness and attributable accepted field performance is unusually clear. It is not selected as best merely because the gap is large.

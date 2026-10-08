@@ -1,12 +1,12 @@
 # SE-DOD-001 first-contact drafts — protocol v0.1.1
 
-Status: `HOLD_PENDING_HUMAN_REVIEW`. No message in this file has been sent.
+Status: four `SEND_RECOMMENDED_AWAITING_HUMAN_AUTHORIZATION`; one `HOLD_OWNER_NOT_ESTABLISHED`. No message in this file has been sent.
 
 Each route is publicly attributable, but a corporate or IR route is not evidence of decision responsibility. The first ten outreach messages require manual review of target, accountability, evidence boundary, tone, public/private distinction, asset relevance, and route validity.
 
 ## OR-001 — CATL / Amanda Xu
 
-Proposed route: `CATL-IR@catl.com`
+Proposed route: official CATL product/technical/cooperation feedback form. Owner gate failed; do not send this draft unless the accountable person is resolved.
 
 I noticed CATL is moving TENER Sodium from launch toward initial customer deliveries following the announced three-year 60 GWh order.
 
@@ -18,11 +18,11 @@ Would that boundary be useful in how your team records the transition from comme
 
 ## OR-002 — Nocera / Andy Jin
 
-Proposed route: `info@nocera.company`
+Proposed route: `andy.jin@nocera.net` — published in the SEC-filed LOI as the address for questions and clarification.
 
-I noticed Nocera has entered a binding agreement for an equity interest in INERGX and described an active buy-and-build platform spanning storage, software, testing, certification, and repowering.
+I noticed Nocera has entered an SEC-filed LOI for a proposed equity interest in INERGX and described an active buy-and-build platform spanning storage, software, testing, certification, and repowering.
 
-The reviewed public record establishes the transaction and strategy, but it does not establish completed acquisitions, certified products, repeatable deployments, or customer acceptance. Your internal evidence may of course establish more than is visible publicly. Those states could affect follow-on investment approval, valuation, or transaction conditions.
+The reviewed public record establishes the proposed transaction and strategy, but it does not establish definitive documentation, transaction completion, completed acquisitions, certified products, repeatable deployments, or customer acceptance. Your internal evidence may of course establish more than is visible publicly. Those states could affect follow-on investment approval, valuation, or transaction conditions.
 
 StructEvidence provides boundary verification at the diligence cutoff: what is supported, what remains unknown, and what would reopen the record. A short overview is here: https://structurevidence.org/onepager/investor-en.pdf
 
@@ -42,7 +42,7 @@ Would that structure be useful in your technical diligence or board record?
 
 ## OR-004 — Vertiv / Gio Albertazzi
 
-Proposed route: `ir@vertiv.com`
+Proposed route: `lynne.maxeiner@vertiv.com` — named Vertiv investor-relations contact in the acquisition announcement.
 
 I noticed Vertiv has agreed to acquire Utility Innovation Group to accelerate time-to-power for AI data centers, with closing and integration still ahead.
 
