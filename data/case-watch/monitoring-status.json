@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "status_recorded_at": "2026-10-08T06:44:08+08:00",
-  "observation_scope": "Current task configuration and repository records only; no new scientific source review performed.",
+  "status_recorded_at": "2026-10-09T14:52:43+08:00",
+  "observation_scope": "Actual Irkutsk public-health review only; other cases and weekly monitoring unchanged.",
   "cases": [
     {
       "case_id": "CML-PDRE-001",
@@ -72,14 +72,14 @@
     {
       "case_id": "SE-IRK-LAB-001",
       "period": {
-        "id": "2026-10-08",
-        "start": "2026-10-08",
-        "end": "2026-10-08",
+        "id": "2026-10-09",
+        "start": "2026-10-09",
+        "end": "2026-10-09",
         "status": "REVIEW_INCOMPLETE",
-        "scope": "Actual bounded public-health review; source-date correction only; key original sources inaccessible."
+        "scope": "Actual bounded public-health review; two new attributed statements retained as candidates; original-source access incomplete."
       },
-      "period_review_id": "SE-IRK-REVIEW-20261008-03",
-      "latest_review_file": "cases/irkutsk-lab-worker-death/search-review-20261008-03.json",
+      "period_review_id": "SE-IRK-REVIEW-20261009-01",
+      "latest_review_file": "cases/irkutsk-lab-worker-death/search-review-20261009-01.json",
       "monitoring": {
         "cadence": "DAILY",
         "enabled": true,
