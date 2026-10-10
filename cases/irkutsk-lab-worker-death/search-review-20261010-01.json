@@ -1,0 +1,133 @@
+{
+  "schema_version": 1,
+  "case_id": "SE-IRK-LAB-001",
+  "review_id": "SE-IRK-REVIEW-20261010-01",
+  "reviewed_at": "2026-10-10T15:24:05+08:00",
+  "result": "REVIEW_INCOMPLETE",
+  "review_complete": false,
+  "state_changed": false,
+  "evidence_changed": false,
+  "old_state": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+  "new_state": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+  "search_boundary": {
+    "public_scope": "Final cause; de-identified contact follow-up; WHO/IHR information and second-employee report verification; auditable safety review; official procurement and patent metadata.",
+    "queries": [
+      "Иркутск противочумный институт 10 октября 2026 причина смерти второй сотрудник Роспотребнадзор",
+      "site:who.int OR site:un.org Irkutsk October 10 2026 pneumonia laboratory worker",
+      "site:zakupki.gov.ru 0334100002726000128 OR 0334100002726000149 OR 100013983126100191",
+      "RU2815337C1 OR 3811015807 2026 лицензия правообладатель"
+    ],
+    "query_count": 4,
+    "initial_page_open_attempt_count": 8,
+    "limited_supplemental_followup_count": 0,
+    "supplemental_boundary": "None; no new qualifying original was identified.",
+    "exhaustive": false
+  },
+  "sources_checked": [
+    {
+      "url": "https://www.who.int/news-room/speeches/item/who-director-general-s-opening-remarks-at-the-media-briefing---7-october-2026",
+      "access_result": "READ_EXTRACTED_TEXT",
+      "source_published_at": "2026-10-07",
+      "source_date_semantics": "Displayed date; null when unavailable.",
+      "retrieved_at": "2026-10-10T15:24:05+08:00",
+      "event_time": null,
+      "dependency_group": "WHO_FOLLOWUP_20261006_07",
+      "finding": "WHO still says it lacks the full picture and cannot conduct a full risk assessment; no later WHO public update found."
+    },
+    {
+      "url": "https://transcripts.un.org/en/briefing/geneva/2026-10-06",
+      "access_result": "READ_EXTRACTED_TEXT",
+      "source_published_at": "2026-10-06",
+      "source_date_semantics": "Displayed date; null when unavailable.",
+      "retrieved_at": "2026-10-10T15:24:05+08:00",
+      "event_time": null,
+      "dependency_group": "WHO_FOLLOWUP_20261006_07",
+      "finding": "Original UN transcript remains consistent with the recorded WHO/IHR request and preliminary assessment; no new final cause."
+    },
+    {
+      "url": "https://www.interfax.ru/russia/1121073",
+      "access_result": "READ_EXTRACTED_TEXT",
+      "source_published_at": "2026-10-08T12:08:00+03:00",
+      "source_date_semantics": "Displayed publication time; Russian news timestamp interpreted in Moscow time (+03:00).",
+      "retrieved_at": "2026-10-10T15:24:05+08:00",
+      "event_time": "2026-10-08",
+      "dependency_group": "RPN_CONTACT_FOLLOWUP_20261008",
+      "finding": "Previously recorded Russian press-service attribution: contact monitoring ended and nearly 5000 tests found no dangerous pathogens; underlying records remain unavailable."
+    },
+    {
+      "url": "https://www.reuters.com/business/healthcare-pharmaceuticals/russia-says-reports-second-case-linked-siberian-plague-lab-are-false-2026-10-08/",
+      "access_result": "READ_EXTRACTED_TEXT",
+      "source_published_at": "2026-10-08",
+      "source_date_semantics": "Displayed date; null when unavailable.",
+      "retrieved_at": "2026-10-10T15:24:05+08:00",
+      "event_time": "2026-10-08",
+      "dependency_group": "RPN_CONTACT_FOLLOWUP_20261008",
+      "finding": "Reuters reports checks complete but final cause remains undetermined; no post-9 October material update."
+    },
+    {
+      "url": "https://apnews.com/article/russia-plague-irkutsk-who-pneumonia-defe48862d80e6d4724be52215fb1c42",
+      "access_result": "READ_EXTRACTED_TEXT",
+      "source_published_at": "2026-10-08",
+      "source_date_semantics": "Displayed date; null when unavailable.",
+      "retrieved_at": "2026-10-10T15:24:05+08:00",
+      "event_time": "2026-10-08",
+      "dependency_group": "RPN_CONTACT_FOLLOWUP_20261008",
+      "finding": "AP reports preventive measures complete while final cause remains undisclosed; no post-9 October material update."
+    },
+    {
+      "url": "https://zakupki.gov.ru/epz/order/notice/ea20/view/common-info.html?regNumber=0334100002726000128",
+      "access_result": "OPEN_FAILED_TOOL_INTERNAL_ERROR",
+      "source_published_at": null,
+      "source_date_semantics": "Displayed date; null when unavailable.",
+      "retrieved_at": "2026-10-10T15:24:05+08:00",
+      "event_time": null,
+      "dependency_group": "OFFICIAL_FINANCE_RIGHTS",
+      "finding": "Official procurement page did not render; contract, acceptance and payment records not verified."
+    },
+    {
+      "url": "https://zakupki.gov.ru/epz/order/notice/ea20/view/common-info.html?regNumber=0334100002726000149",
+      "access_result": "OPEN_FAILED_TOOL_INTERNAL_ERROR",
+      "source_published_at": null,
+      "source_date_semantics": "Displayed date; null when unavailable.",
+      "retrieved_at": "2026-10-10T15:24:05+08:00",
+      "event_time": null,
+      "dependency_group": "OFFICIAL_FINANCE_RIGHTS",
+      "finding": "Official procurement page did not render; contract, acceptance and payment records not verified."
+    },
+    {
+      "url": "https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUPAT&DocNumber=2815337",
+      "access_result": "OPEN_FAILED_TOOL_INTERNAL_ERROR",
+      "source_published_at": null,
+      "source_date_semantics": "Displayed date; null when unavailable.",
+      "retrieved_at": "2026-10-10T15:24:05+08:00",
+      "event_time": null,
+      "dependency_group": "OFFICIAL_FINANCE_RIGHTS",
+      "finding": "Official patent register page did not render; current rights, transfer, licence and revenue metadata not verified."
+    }
+  ],
+  "new_qualifying_evidence_count": 0,
+  "new_counter_evidence_count": 0,
+  "count_scope": "New accepted substantive case-state evidence only. No post-9 October original or direct interview changed the recorded state.",
+  "new_attributed_statement_candidate_count": 0,
+  "candidate_review_gate": "HUMAN_GATE_REQUIRED_FOR_SUBSTANTIVE_STATE_CHANGE",
+  "candidate_findings": [],
+  "counter_evidence_and_limits": [
+    "Russian contact-closure and second-illness-denial statements remain attributed claims, not independent diagnosis or proof excluding transmission.",
+    "Historical about-90% release and all-identified-contact summaries retain separate dates, populations and sources; no inferred 100% exclusion of transmission.",
+    "WHO 7 October inability to complete a fully informed assessment remains; no newly verified WHO final assessment.",
+    "Observation and isolation do not establish infection; no household infection or transmission chain inferred."
+  ],
+  "gaps": [
+    "Final causative agent and clinical diagnostic record unavailable.",
+    "De-identified underlying contact and household follow-up closure records unavailable.",
+    "Official procurement and patent registers were inaccessible in this run.",
+    "Independent auditable laboratory safety investigation unavailable.",
+    "Current WHO/IHR event-site details not accessed; protected access not attempted."
+  ],
+  "previous_review": "search-review-20261009-01.json",
+  "previous_snapshot": "state-v0.4.json",
+  "snapshot": "state-v0.5.json",
+  "evidence_state_as_of": "2026-10-08T06:15:59+08:00",
+  "raw_source_bytes_collected": false,
+  "public_whitelist_only": true
+}

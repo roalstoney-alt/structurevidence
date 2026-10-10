@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "status_recorded_at": "2026-10-09T14:52:43+08:00",
+  "status_recorded_at": "2026-10-10T15:24:05+08:00",
   "timestamp_semantics": {
     "status_recorded_at": "Administrative status observation; not a scientific review timestamp.",
     "evidence_state_as_of": "Cutoff of the currently published evidence state; retained until evidence changes.",
@@ -17,18 +17,18 @@
       "last_material_change": "2026-10-08",
       "featured": true,
       "management_status": "ACTIVE",
-      "last_reviewed_at": "2026-10-09T14:52:43+08:00",
+      "last_reviewed_at": "2026-10-10T15:24:05+08:00",
       "review_result": "REVIEW_INCOMPLETE",
-      "latest_review_id": "SE-IRK-REVIEW-20261009-01",
-      "latest_review_file": "cases/irkutsk-lab-worker-death/search-review-20261009-01.json",
+      "latest_review_id": "SE-IRK-REVIEW-20261010-01",
+      "latest_review_file": "cases/irkutsk-lab-worker-death/search-review-20261010-01.json",
       "period": {
-        "id": "2026-10-09",
-        "start": "2026-10-09",
-        "end": "2026-10-09",
+        "id": "2026-10-10",
+        "start": "2026-10-10",
+        "end": "2026-10-10",
         "status": "REVIEW_INCOMPLETE",
-        "scope": "Actual bounded public-health review; two new attributed statements retained as candidates; original-source access incomplete."
+        "scope": "Actual bounded public-health, procurement and patent review; no qualifying new evidence; key official and underlying records inaccessible."
       },
-      "period_review_id": "SE-IRK-REVIEW-20261009-01",
+      "period_review_id": "SE-IRK-REVIEW-20261010-01",
       "monitoring": {
         "cadence": "DAILY",
         "enabled": true,

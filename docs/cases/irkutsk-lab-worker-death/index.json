@@ -208,6 +208,26 @@
         "supplemental_boundary": "Read existing Interfax excerpt and follow two explicit source links: governor original and second-illness press-service report. No broad additional search.",
         "exhaustive": false
       }
+    },
+    {
+      "review_id": "SE-IRK-REVIEW-20261010-01",
+      "reviewed_at": "2026-10-10T15:24:05+08:00",
+      "result": "REVIEW_INCOMPLETE",
+      "review_file": "search-review-20261010-01.json",
+      "search_boundary": {
+        "public_scope": "Final cause; de-identified contact follow-up; WHO/IHR information and second-employee report verification; auditable safety review; official procurement and patent metadata.",
+        "queries": [
+          "Иркутск противочумный институт 10 октября 2026 причина смерти второй сотрудник Роспотребнадзор",
+          "site:who.int OR site:un.org Irkutsk October 10 2026 pneumonia laboratory worker",
+          "site:zakupki.gov.ru 0334100002726000128 OR 0334100002726000149 OR 100013983126100191",
+          "RU2815337C1 OR 3811015807 2026 лицензия правообладатель"
+        ],
+        "query_count": 4,
+        "initial_page_open_attempt_count": 8,
+        "limited_supplemental_followup_count": 0,
+        "supplemental_boundary": "None; no new qualifying original was identified.",
+        "exhaustive": false
+      }
     }
   ],
   "history": [
@@ -244,10 +264,19 @@
       "triggering_evidence": "SE-IRK-REVIEW-20261009-01",
       "event_type": "BOUNDED_REVIEW_INCOMPLETE_NO_ACCEPTED_STATE_CHANGE",
       "why": "Retrieved two Russian press-service attributions as candidates; inaccessible primary records prevent a complete review. Accepted claims, evidence cutoff and evidence-updated timestamp unchanged."
+    },
+    {
+      "date": "2026-10-10",
+      "recorded_at": "2026-10-10T15:24:05+08:00",
+      "previous_state": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+      "new_state": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+      "triggering_evidence": "SE-IRK-REVIEW-20261010-01",
+      "event_type": "BOUNDED_REVIEW_INCOMPLETE_NO_ACCEPTED_STATE_CHANGE",
+      "why": "No post-9 October qualifying original changed the state; inaccessible official procurement, patent and underlying clinical records prevent a complete review. Accepted claims, evidence cutoff and evidence-updated timestamp unchanged."
     }
   ],
-  "current_snapshot": "state-v0.4.json",
-  "latest_review": "search-review-20261009-01.json",
+  "current_snapshot": "state-v0.5.json",
+  "latest_review": "search-review-20261010-01.json",
   "input_alias_map": "input-alias-map-v0.1.json",
   "claims": [
     {
@@ -442,7 +471,7 @@
       "origin_claim_id": "CL-067"
     }
   ],
-  "last_reviewed_at": "2026-10-09T14:52:43+08:00",
+  "last_reviewed_at": "2026-10-10T15:24:05+08:00",
   "evidence_updated_at": "2026-10-08T15:48:22+08:00",
-  "page_modified_at": "2026-10-09T14:52:43+08:00"
+  "page_modified_at": "2026-10-10T15:24:05+08:00"
 }
