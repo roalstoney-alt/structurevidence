@@ -1,0 +1,20 @@
+{
+  "campaign_id": "TRUST_BOUNDARY_30D_001",
+  "date": "2026-10-11",
+  "day": "D4",
+  "thesis_id": "Q2",
+  "calendar_execution": "Prepare Zhihu long-form article",
+  "channel": "PREPARE_ONLY",
+  "publication_authorized": false,
+  "public_post": false,
+  "artifact": "drafts/D4_2026-10-11_ZHIHU_Q2.md",
+  "asset_id": "SE-INV-CN",
+  "boundary_audit": "PASS",
+  "factual_claim_audit": "PASS",
+  "positioning_drift": false,
+  "frozen_assets_changed": false,
+  "public_cases_changed": false,
+  "outreach_sent": 0,
+  "metrics_observation": "UNKNOWN_NO_AUTHORIZED_X_READ_ACCESS",
+  "recorded_at": "2026-10-11T06:52:46+08:00"
+}
