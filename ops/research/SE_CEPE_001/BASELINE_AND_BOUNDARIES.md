@@ -2,7 +2,11 @@
 
 WORKFLOW = `SE-CEPE-001 v0.1`
 
-STATUS = `HUMAN_REVIEW_REQUIRED`
+STATUS = `ACTIVE_OBSERVATION_WINDOW`
+
+HUMAN_DECISION_RECORDED_AT = `2026-10-11T22:09:01+08:00`
+
+PUBLICATION_APPROVAL = `PENDING_EXACT_CONTENT_REVIEW`
 
 ISOLATED_BRANCH = `codex/se-cepe-001-continuous-v01`
 
@@ -37,7 +41,7 @@ not rewrite a historical Gold, claim JSON, snapshot or cutoff.
 ## Protected trust boundaries
 
 - `OUTREACH_AUTHORIZED = false`
-- `PUBLICATION_AUTHORIZED = false`
+- `PUBLICATION_AUTHORIZED = false` — exact-content review remains pending.
 - `PRODUCTION_DEPLOY_AUTHORIZED = false`
 - `PAID_RESEARCH_AUTHORIZED = false`
 - `HISTORICAL_REWRITE_AUTHORIZED = false`
@@ -66,6 +70,8 @@ This branch makes no site, API, Worker, database or production change. No paid
 source or API is authorized. Unmeasured human time and agent/tool cost remain
 `UNKNOWN`; they must never be recorded as zero merely because billing data is
 unavailable.
+
+PRODUCTION = `UNCHANGED`
 
 ## Observation scope
 

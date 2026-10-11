@@ -1,9 +1,16 @@
 # SE-CEPE-001 next human decision
 
-STATUS = `HUMAN_REVIEW_REQUIRED`
+SE_CEPE_001 = `ACTIVE_OBSERVATION_WINDOW`
 
-The observation pilot may run under its approved read-only boundary. No
-publication or outreach is implied.
+PUBLICATION_APPROVAL = `PENDING_EXACT_CONTENT_REVIEW`
+
+GTM005 = `HOLD`
+
+PRODUCTION = `UNCHANGED`
+
+The observation pilot may continue under its approved read-only boundary. No
+publication or outreach is implied. The next human gate applies only to exact
+publication content, account and time.
 
 ## Exact publication decision retained for later review
 
