@@ -1,0 +1,3 @@
+entry_id,date,cost_type,description,currency,amount,external_spend,approval_ref
+SE-GTM-002-COST-001,2026-10-11,INTERNAL_RESEARCH_REUSE,"Reuse of four existing CML public research records",USD,0,NO,NOT_REQUIRED
+SE-GTM-002-COST-002,2026-10-11,PUBLIC_WEB_REVIEW,"Read-only review of five potential partners' official capability and contact pages",USD,0,NO,NOT_REQUIRED

@@ -1,0 +1,228 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://structurevidence.org/ops/growth/se-gtm-002/cdsp-schema-v0.1.json",
+  "title": "StructEvidence Commercial Decision Stop-Point Record v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "record_id",
+    "record_version",
+    "predecessor_record_id",
+    "append_only",
+    "created_at",
+    "candidate_id",
+    "pipeline",
+    "use_case",
+    "trigger_event",
+    "source_url",
+    "source_publication_time",
+    "observed_event_time",
+    "company",
+    "affected_decision",
+    "decision_pressure_evidence",
+    "missing_critical_fact",
+    "evidence_state",
+    "counterevidence",
+    "decision_owner_role",
+    "verified_contact_route",
+    "estimated_decision_window",
+    "deliverable_fit",
+    "payment_signal",
+    "candidate_score",
+    "score_components",
+    "qualification_gates",
+    "outreach_authorization",
+    "contact_outcome",
+    "commercial_outcome",
+    "research_cost",
+    "confidence_and_limitations",
+    "assertion_register",
+    "history_events"
+  ],
+  "properties": {
+    "schema_version": {"const": "SE_CDSP_v0.1"},
+    "record_id": {"type": "string", "pattern": "^SE-GTM-002-CDSP-[0-9]{3}\\.v[0-9]+\\.[0-9]+$"},
+    "record_version": {"type": "string", "pattern": "^v[0-9]+\\.[0-9]+$"},
+    "predecessor_record_id": {"type": ["string", "null"]},
+    "append_only": {"const": true},
+    "created_at": {"type": "string", "format": "date-time"},
+    "candidate_id": {"type": "string", "pattern": "^SE-GTM-002-CAND-[0-9]{3}$"},
+    "pipeline": {"enum": ["EVENT_FIRST_DIRECT", "EXISTING_CUSTOMER_CHANNEL_PARTNER"]},
+    "use_case": {"enum": ["INDUSTRIAL_COMPONENT_EOL_QUALIFICATION", "TECHNICAL_RFQ_COMPLIANCE_SUPPLIER_EVIDENCE"]},
+    "trigger_event": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["event_type", "statement", "effective_at", "source_record_ref"],
+      "properties": {
+        "event_type": {"enum": ["EOL_DECLARED", "NRND_DECLARED", "RFQ_PUBLISHED", "QUALIFICATION_BENCHMARK_IDENTIFIED", "OTHER"]},
+        "statement": {"type": "string", "minLength": 1},
+        "effective_at": {"type": ["string", "null"], "format": "date-time"},
+        "source_record_ref": {"type": "string", "minLength": 1}
+      }
+    },
+    "source_url": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"type": "string", "format": "uri", "pattern": "^https://"}
+    },
+    "source_publication_time": {"$ref": "#/$defs/time_state"},
+    "observed_event_time": {"type": "string", "format": "date-time"},
+    "company": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "identification_state", "source_organization"],
+      "properties": {
+        "name": {"type": ["string", "null"]},
+        "identification_state": {"enum": ["NAMED", "UNIDENTIFIED_AFFECTED_CUSTOMER"]},
+        "source_organization": {"type": "string", "minLength": 1}
+      }
+    },
+    "affected_decision": {"type": "string", "minLength": 1},
+    "decision_pressure_evidence": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "#/$defs/evidence_observation"}
+    },
+    "missing_critical_fact": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "evidence_state": {"enum": ["SUPPORTED", "OBSERVED", "UNKNOWN", "NOT_ESTABLISHED", "CONTRADICTED"]},
+    "counterevidence": {
+      "type": "array",
+      "items": {"type": "string", "minLength": 1}
+    },
+    "decision_owner_role": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["role", "identification_state", "evidence_refs"],
+      "properties": {
+        "role": {"type": ["string", "null"]},
+        "identification_state": {"enum": ["NAMED_PERSON", "ROLE_ONLY", "UNKNOWN"]},
+        "evidence_refs": {"$ref": "#/$defs/refs"}
+      }
+    },
+    "verified_contact_route": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["route_type", "value", "verification_url", "verified_at", "purpose_fit"],
+      "properties": {
+        "route_type": {"enum": ["NONE", "OFFICIAL_FORM", "OFFICIAL_EMAIL", "OFFICIAL_PHONE", "PUBLIC_PROFILE"]},
+        "value": {"type": ["string", "null"]},
+        "verification_url": {"type": ["string", "null"], "format": "uri"},
+        "verified_at": {"type": ["string", "null"], "format": "date-time"},
+        "purpose_fit": {"enum": ["DIRECT", "ROUTABLE", "WEAK", "FAIL", "NOT_ASSESSED"]}
+      }
+    },
+    "estimated_decision_window": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["state", "start", "end", "basis"],
+      "properties": {
+        "state": {"enum": ["BOUNDED", "ESTIMATED", "UNKNOWN"]},
+        "start": {"type": ["string", "null"], "format": "date"},
+        "end": {"type": ["string", "null"], "format": "date"},
+        "basis": {"type": "string", "minLength": 1}
+      }
+    },
+    "deliverable_fit": {"enum": ["DECISION_BLOCKER_BRIEF", "CLAIM_VERIFICATION", "DECISION_CONTEXT_REVIEW", "DECISION_PACK", "NO_FIT_ESTABLISHED"]},
+    "payment_signal": {"enum": ["NONE_OBSERVED", "PRICE_REQUESTED", "BUDGET_CONFIRMED", "PAID"]},
+    "candidate_score": {"type": "integer", "minimum": 0, "maximum": 100},
+    "score_components": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["evidence_traceability", "decision_pressure", "material_gap", "owner_and_route", "deliverable_fit"],
+      "properties": {
+        "evidence_traceability": {"type": "integer", "minimum": 0, "maximum": 20},
+        "decision_pressure": {"type": "integer", "minimum": 0, "maximum": 20},
+        "material_gap": {"type": "integer", "minimum": 0, "maximum": 20},
+        "owner_and_route": {"type": "integer", "minimum": 0, "maximum": 20},
+        "deliverable_fit": {"type": "integer", "minimum": 0, "maximum": 20}
+      }
+    },
+    "qualification_gates": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["traceable_source", "named_affected_company", "active_decision", "material_gap", "decision_owner_role", "verified_route", "route_purpose_fit", "qualified", "send_ready", "failure_reasons"],
+      "properties": {
+        "traceable_source": {"type": "boolean"},
+        "named_affected_company": {"type": "boolean"},
+        "active_decision": {"type": "boolean"},
+        "material_gap": {"type": "boolean"},
+        "decision_owner_role": {"type": "boolean"},
+        "verified_route": {"type": "boolean"},
+        "route_purpose_fit": {"type": "boolean"},
+        "qualified": {"type": "boolean"},
+        "send_ready": {"type": "boolean"},
+        "failure_reasons": {"type": "array", "items": {"type": "string", "minLength": 1}}
+      }
+    },
+    "outreach_authorization": {"enum": ["NOT_AUTHORIZED", "HUMAN_REVIEW_REQUIRED", "APPROVED_FOR_SINGLE_SEND"]},
+    "contact_outcome": {"enum": ["NOT_CONTACTED", "SENT_NO_RESPONSE_YET", "RESPONDED", "DECLINED", "ROUTE_FAILED"]},
+    "commercial_outcome": {"enum": ["NO_OBSERVATION", "DECISION_PRESSURE_CONFIRMED", "DEMAND_CONFIRMED", "SCOPE_REQUESTED", "PAID_ORDER", "NO_FIT_CONFIRMED"]},
+    "research_cost": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["currency", "amount", "external_spend"],
+      "properties": {
+        "currency": {"const": "USD"},
+        "amount": {"type": "number", "minimum": 0},
+        "external_spend": {"type": "boolean"}
+      }
+    },
+    "confidence_and_limitations": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+    "assertion_register": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["observed_facts", "inferences", "hypotheses", "confirmed_customer_statements"],
+      "properties": {
+        "observed_facts": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+        "inferences": {"type": "array", "items": {"type": "string", "minLength": 1}},
+        "hypotheses": {"type": "array", "items": {"type": "string", "minLength": 1}},
+        "confirmed_customer_statements": {"type": "array", "items": {"type": "string", "minLength": 1}}
+      }
+    },
+    "history_events": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["event_id", "event_type", "recorded_at", "statement", "preserves_prior_state"],
+        "properties": {
+          "event_id": {"type": "string", "minLength": 1},
+          "event_type": {"enum": ["INITIAL_SNAPSHOT", "EVIDENCE_ADDED", "COUNTEREVIDENCE_ADDED", "STATE_TRANSITION", "CONTACT_EVENT", "COMMERCIAL_EVENT", "CORRECTION"]},
+          "recorded_at": {"type": "string", "format": "date-time"},
+          "statement": {"type": "string", "minLength": 1},
+          "preserves_prior_state": {"const": true}
+        }
+      }
+    }
+  },
+  "$defs": {
+    "refs": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "time_state": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["value", "state", "basis"],
+      "properties": {
+        "value": {"type": ["string", "null"], "format": "date-time"},
+        "state": {"enum": ["SUPPORTED", "NOT_ESTABLISHED", "UNKNOWN"]},
+        "basis": {"type": "string", "minLength": 1}
+      }
+    },
+    "evidence_observation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["statement", "classification", "source_ref"],
+      "properties": {
+        "statement": {"type": "string", "minLength": 1},
+        "classification": {"const": "OBSERVED_FACT"},
+        "source_ref": {"type": "string", "minLength": 1}
+      }
+    }
+  }
+}

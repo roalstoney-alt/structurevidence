@@ -1,0 +1,124 @@
+{
+  "schema_version": "SE_CDSP_v0.1",
+  "record_id": "SE-GTM-002-CDSP-003.v0.1",
+  "record_version": "v0.1",
+  "predecessor_record_id": null,
+  "append_only": true,
+  "created_at": "2026-10-11T00:00:00+08:00",
+  "candidate_id": "SE-GTM-002-CAND-003",
+  "pipeline": "EVENT_FIRST_DIRECT",
+  "use_case": "INDUSTRIAL_COMPONENT_EOL_QUALIFICATION",
+  "trigger_event": {
+    "event_type": "NRND_DECLARED",
+    "statement": "The reviewed Murata datasheet marks exact suffix MYMGM5R012ELA5RND as not recommended for new design.",
+    "effective_at": "2025-07-07T00:00:00Z",
+    "source_record_ref": "technical-risk/records/murata-mymgm5r012ela5rnd/11_PUBLIC_RECORD.json"
+  },
+  "source_url": [
+    "https://pim.murata.com/asset/pim4/nonIsolatedDCDCconverter/MYMGM5R012ELA5RN_PDF_NONISOLATEDDCDCCONVERTER",
+    "https://www.murata.com/en-global/products/power/discontinued-and-not-recommended"
+  ],
+  "source_publication_time": {
+    "value": null,
+    "state": "NOT_ESTABLISHED",
+    "basis": "The CML record uses the document revision date as an observable boundary with limitation."
+  },
+  "observed_event_time": "2026-09-16T00:00:00Z",
+  "company": {
+    "name": null,
+    "identification_state": "UNIDENTIFIED_AFFECTED_CUSTOMER",
+    "source_organization": "Murata Manufacturing"
+  },
+  "affected_decision": "An affected customer would need to freeze the exact suffix and operating envelope before cross-reference and electrical, thermal and EMI qualification.",
+  "decision_pressure_evidence": [
+    {
+      "statement": "The exact suffix is recorded as NRND and the base series remains documented.",
+      "classification": "OBSERVED_FACT",
+      "source_ref": "technical-risk/records/murata-mymgm5r012ela5rnd/11_PUBLIC_RECORD.json"
+    }
+  ],
+  "missing_critical_fact": [
+    "No named customer or exact customer BOM is established.",
+    "No customer operating envelope is available.",
+    "No qualified alternate module is established."
+  ],
+  "evidence_state": "SUPPORTED",
+  "counterevidence": [
+    "The base series remains documented and only a specific suffix is visibly NRND, which may reduce immediate impact for users of other suffixes."
+  ],
+  "decision_owner_role": {
+    "role": "Affected power-electronics design or component qualification owner",
+    "identification_state": "ROLE_ONLY",
+    "evidence_refs": []
+  },
+  "verified_contact_route": {
+    "route_type": "NONE",
+    "value": null,
+    "verification_url": null,
+    "verified_at": null,
+    "purpose_fit": "NOT_ASSESSED"
+  },
+  "estimated_decision_window": {
+    "state": "UNKNOWN",
+    "start": null,
+    "end": null,
+    "basis": "No named customer's build plan or redesign deadline is public."
+  },
+  "deliverable_fit": "DECISION_CONTEXT_REVIEW",
+  "payment_signal": "NONE_OBSERVED",
+  "candidate_score": 58,
+  "score_components": {
+    "evidence_traceability": 16,
+    "decision_pressure": 10,
+    "material_gap": 15,
+    "owner_and_route": 0,
+    "deliverable_fit": 17
+  },
+  "qualification_gates": {
+    "traceable_source": true,
+    "named_affected_company": false,
+    "active_decision": false,
+    "material_gap": true,
+    "decision_owner_role": true,
+    "verified_route": false,
+    "route_purpose_fit": false,
+    "qualified": false,
+    "send_ready": false,
+    "failure_reasons": [
+      "Affected customer is not identified.",
+      "Current customer decision pressure is not established.",
+      "No verified purpose-fit contact route exists."
+    ]
+  },
+  "outreach_authorization": "NOT_AUTHORIZED",
+  "contact_outcome": "NOT_CONTACTED",
+  "commercial_outcome": "NO_OBSERVATION",
+  "research_cost": {"currency": "USD", "amount": 0, "external_spend": false},
+  "confidence_and_limitations": [
+    "The exact-suffix NRND state is supported within the reused CML record.",
+    "The relevant customer and urgency remain unknown.",
+    "No customer need or willingness to pay is inferred."
+  ],
+  "assertion_register": {
+    "observed_facts": [
+      "The exact suffix is marked NRND.",
+      "Electrical, thermal and EMI verification remain required for alternatives."
+    ],
+    "inferences": [
+      "A customer using the exact suffix may need a migration decision."
+    ],
+    "hypotheses": [
+      "A bounded context review may be useful after a named BOM and operating envelope are supplied."
+    ],
+    "confirmed_customer_statements": []
+  },
+  "history_events": [
+    {
+      "event_id": "SE-GTM-002-CDSP-003-E001",
+      "event_type": "INITIAL_SNAPSHOT",
+      "recorded_at": "2026-10-11T00:00:00+08:00",
+      "statement": "Existing CML evidence reused; no customer interaction or outreach authorization exists.",
+      "preserves_prior_state": true
+    }
+  ]
+}

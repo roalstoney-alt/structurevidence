@@ -1,0 +1,125 @@
+{
+  "schema_version": "SE_CDSP_v0.1",
+  "record_id": "SE-GTM-002-CDSP-002.v0.1",
+  "record_version": "v0.1",
+  "predecessor_record_id": null,
+  "append_only": true,
+  "created_at": "2026-10-11T00:00:00+08:00",
+  "candidate_id": "SE-GTM-002-CAND-002",
+  "pipeline": "EVENT_FIRST_DIRECT",
+  "use_case": "INDUSTRIAL_COMPONENT_EOL_QUALIFICATION",
+  "trigger_event": {
+    "event_type": "EOL_DECLARED",
+    "statement": "NXP's final Radio Power discontinuance notice lists a product-line ramp-down and selected representatives with no replacement.",
+    "effective_at": "2026-04-01T00:00:00Z",
+    "source_record_ref": "technical-risk/records/nxp-radio-power-2026/11_PUBLIC_RECORD.json"
+  },
+  "source_url": [
+    "https://www.nxp.com/pcn/202603037DN",
+    "https://www.nxp.com/docs/en/data-sheet/MRF101AN.pdf",
+    "https://www.nxp.com/docs/en/data-sheet/MMRF1009H.pdf"
+  ],
+  "source_publication_time": {
+    "value": null,
+    "state": "NOT_ESTABLISHED",
+    "basis": "The existing record preserves event and retrieval times; this pilot does not infer a separate publication timestamp."
+  },
+  "observed_event_time": "2026-09-16T00:00:00Z",
+  "company": {
+    "name": null,
+    "identification_state": "UNIDENTIFIED_AFFECTED_CUSTOMER",
+    "source_organization": "NXP Semiconductors"
+  },
+  "affected_decision": "An affected RF equipment maker would need to separate lifetime-buy analysis from board-level RF, thermal and reliability migration qualification.",
+  "decision_pressure_evidence": [
+    {
+      "statement": "The existing record reports a 2026-09-30 last-time-buy date, 2027-09-30 last delivery and no listed replacement for selected devices.",
+      "classification": "OBSERVED_FACT",
+      "source_ref": "technical-risk/records/nxp-radio-power-2026/11_PUBLIC_RECORD.json"
+    }
+  ],
+  "missing_critical_fact": [
+    "No named affected equipment maker or BOM is established.",
+    "No application-specific matching network, thermal margin or stability requirement is public.",
+    "No board-level qualified successor is established."
+  ],
+  "evidence_state": "SUPPORTED",
+  "counterevidence": [
+    "Some NXP overview surfaces retained an Active label for MRF101AN; the conflict remains visible in the CML record."
+  ],
+  "decision_owner_role": {
+    "role": "Affected RF hardware engineering and component procurement owner",
+    "identification_state": "ROLE_ONLY",
+    "evidence_refs": []
+  },
+  "verified_contact_route": {
+    "route_type": "NONE",
+    "value": null,
+    "verification_url": null,
+    "verified_at": null,
+    "purpose_fit": "NOT_ASSESSED"
+  },
+  "estimated_decision_window": {
+    "state": "UNKNOWN",
+    "start": null,
+    "end": null,
+    "basis": "The manufacturer lifecycle window is known but the affected customer's design and inventory window is not."
+  },
+  "deliverable_fit": "DECISION_PACK",
+  "payment_signal": "NONE_OBSERVED",
+  "candidate_score": 72,
+  "score_components": {
+    "evidence_traceability": 18,
+    "decision_pressure": 18,
+    "material_gap": 18,
+    "owner_and_route": 0,
+    "deliverable_fit": 18
+  },
+  "qualification_gates": {
+    "traceable_source": true,
+    "named_affected_company": false,
+    "active_decision": false,
+    "material_gap": true,
+    "decision_owner_role": true,
+    "verified_route": false,
+    "route_purpose_fit": false,
+    "qualified": false,
+    "send_ready": false,
+    "failure_reasons": [
+      "Affected customer is not identified.",
+      "Active customer decision is not established.",
+      "No verified purpose-fit contact route exists."
+    ]
+  },
+  "outreach_authorization": "NOT_AUTHORIZED",
+  "contact_outcome": "NOT_CONTACTED",
+  "commercial_outcome": "NO_OBSERVATION",
+  "research_cost": {"currency": "USD", "amount": 0, "external_spend": false},
+  "confidence_and_limitations": [
+    "High confidence in the reused manufacturer notice and technical qualification boundary.",
+    "No public evidence identifies a buyer currently deciding how to respond.",
+    "A high score reflects event quality, not lead qualification."
+  ],
+  "assertion_register": {
+    "observed_facts": [
+      "The product-line discontinuance and selected no-replacement devices are recorded.",
+      "Board-level RF and thermal verification requirements remain open."
+    ],
+    "inferences": [
+      "A customer using a listed device may face a time-sensitive migration decision."
+    ],
+    "hypotheses": [
+      "A named affected RF equipment maker may value a bounded Decision Pack."
+    ],
+    "confirmed_customer_statements": []
+  },
+  "history_events": [
+    {
+      "event_id": "SE-GTM-002-CDSP-002-E001",
+      "event_type": "INITIAL_SNAPSHOT",
+      "recorded_at": "2026-10-11T00:00:00+08:00",
+      "statement": "Existing CML evidence reused; no customer interaction or outreach authorization exists.",
+      "preserves_prior_state": true
+    }
+  ]
+}

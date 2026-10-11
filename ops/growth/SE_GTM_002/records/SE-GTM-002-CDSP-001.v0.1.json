@@ -1,0 +1,123 @@
+{
+  "schema_version": "SE_CDSP_v0.1",
+  "record_id": "SE-GTM-002-CDSP-001.v0.1",
+  "record_version": "v0.1",
+  "predecessor_record_id": null,
+  "append_only": true,
+  "created_at": "2026-10-11T00:00:00+08:00",
+  "candidate_id": "SE-GTM-002-CAND-001",
+  "pipeline": "EVENT_FIRST_DIRECT",
+  "use_case": "INDUSTRIAL_COMPONENT_EOL_QUALIFICATION",
+  "trigger_event": {
+    "event_type": "EOL_DECLARED",
+    "statement": "Amphenol PCN 26 027 lists exact MPN 10081811-101-07LF in an end-of-life action.",
+    "effective_at": "2027-03-15T00:00:00Z",
+    "source_record_ref": "technical-risk/records/amphenol-10081811-101-07lf/11_PUBLIC_RECORD.json"
+  },
+  "source_url": [
+    "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/8899/PCN-26027.pdf"
+  ],
+  "source_publication_time": {
+    "value": null,
+    "state": "NOT_ESTABLISHED",
+    "basis": "The reused source registry records retrieval and event timing but does not establish a distinct publication timestamp."
+  },
+  "observed_event_time": "2026-09-16T00:00:00Z",
+  "company": {
+    "name": null,
+    "identification_state": "UNIDENTIFIED_AFFECTED_CUSTOMER",
+    "source_organization": "Amphenol Communications Solutions"
+  },
+  "affected_decision": "An affected customer would need to choose among remaining-demand confirmation, lifetime buy, second-source qualification or redesign.",
+  "decision_pressure_evidence": [
+    {
+      "statement": "The existing CML record reports last-time buy 2026-09-15, effective change 2027-03-15 and last shipment 2027-09-15.",
+      "classification": "OBSERVED_FACT",
+      "source_ref": "technical-risk/records/amphenol-10081811-101-07lf/11_PUBLIC_RECORD.json"
+    }
+  ],
+  "missing_critical_fact": [
+    "No named affected customer or current BOM is established.",
+    "No OEM-approved exact substitute is established.",
+    "No adopted customer handling path or migration deadline is established."
+  ],
+  "evidence_state": "SUPPORTED",
+  "counterevidence": [
+    "A later Amphenol EOL listing appears to include the same MPN with a different effective date and requires manufacturer clarification."
+  ],
+  "decision_owner_role": {
+    "role": "Affected customer's component engineering or procurement owner",
+    "identification_state": "ROLE_ONLY",
+    "evidence_refs": []
+  },
+  "verified_contact_route": {
+    "route_type": "NONE",
+    "value": null,
+    "verification_url": null,
+    "verified_at": null,
+    "purpose_fit": "NOT_ASSESSED"
+  },
+  "estimated_decision_window": {
+    "state": "UNKNOWN",
+    "start": null,
+    "end": null,
+    "basis": "Manufacturer dates exist, but no named customer's remaining demand, inventory or redesign schedule is public."
+  },
+  "deliverable_fit": "DECISION_BLOCKER_BRIEF",
+  "payment_signal": "NONE_OBSERVED",
+  "candidate_score": 70,
+  "score_components": {
+    "evidence_traceability": 18,
+    "decision_pressure": 16,
+    "material_gap": 18,
+    "owner_and_route": 0,
+    "deliverable_fit": 18
+  },
+  "qualification_gates": {
+    "traceable_source": true,
+    "named_affected_company": false,
+    "active_decision": false,
+    "material_gap": true,
+    "decision_owner_role": true,
+    "verified_route": false,
+    "route_purpose_fit": false,
+    "qualified": false,
+    "send_ready": false,
+    "failure_reasons": [
+      "Affected customer is not identified.",
+      "Active customer decision is not established.",
+      "No verified purpose-fit contact route exists."
+    ]
+  },
+  "outreach_authorization": "NOT_AUTHORIZED",
+  "contact_outcome": "NOT_CONTACTED",
+  "commercial_outcome": "NO_OBSERVATION",
+  "research_cost": {"currency": "USD", "amount": 0, "external_spend": false},
+  "confidence_and_limitations": [
+    "High confidence that the technical EOL trigger exists within the reused record.",
+    "No evidence that Amphenol or any unnamed customer is requesting StructEvidence work.",
+    "The event cannot be converted into a lead without a named affected decision."
+  ],
+  "assertion_register": {
+    "observed_facts": [
+      "The exact MPN is included in an EOL action.",
+      "The reviewed record establishes no qualified substitute."
+    ],
+    "inferences": [
+      "An affected BOM may require a bounded lifetime-buy, qualification or redesign decision."
+    ],
+    "hypotheses": [
+      "A named affected customer may value a Decision Blocker Brief if its decision and route can be established."
+    ],
+    "confirmed_customer_statements": []
+  },
+  "history_events": [
+    {
+      "event_id": "SE-GTM-002-CDSP-001-E001",
+      "event_type": "INITIAL_SNAPSHOT",
+      "recorded_at": "2026-10-11T00:00:00+08:00",
+      "statement": "Existing CML evidence reused; no customer interaction or outreach authorization exists.",
+      "preserves_prior_state": true
+    }
+  ]
+}

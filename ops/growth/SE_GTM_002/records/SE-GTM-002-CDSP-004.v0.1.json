@@ -1,0 +1,124 @@
+{
+  "schema_version": "SE_CDSP_v0.1",
+  "record_id": "SE-GTM-002-CDSP-004.v0.1",
+  "record_version": "v0.1",
+  "predecessor_record_id": null,
+  "append_only": true,
+  "created_at": "2026-10-11T00:00:00+08:00",
+  "candidate_id": "SE-GTM-002-CAND-004",
+  "pipeline": "EVENT_FIRST_DIRECT",
+  "use_case": "TECHNICAL_RFQ_COMPLIANCE_SUPPLIER_EVIDENCE",
+  "trigger_event": {
+    "event_type": "QUALIFICATION_BENCHMARK_IDENTIFIED",
+    "statement": "An active Amphenol RF cable assembly was selected in existing research as a public qualification benchmark; no RFQ event is established.",
+    "effective_at": "2026-05-07T00:00:00Z",
+    "source_record_ref": "technical-risk/records/amphenol-rf-095-725-134-006/11_PUBLIC_RECORD.json"
+  },
+  "source_url": [
+    "https://www.amphenolrf.com/en-us/part/095-725-134-006/10205/",
+    "https://www.amphenolrf.com/library/download/link/link_id/600711/"
+  ],
+  "source_publication_time": {
+    "value": null,
+    "state": "UNKNOWN",
+    "basis": "Origin pages were URL-registered in the reused record; a publication time was not established."
+  },
+  "observed_event_time": "2026-09-16T00:00:00Z",
+  "company": {
+    "name": null,
+    "identification_state": "UNIDENTIFIED_AFFECTED_CUSTOMER",
+    "source_organization": "Amphenol RF"
+  },
+  "affected_decision": "A buyer comparing supplier RF cable assemblies would need a frozen compliance matrix and VNA acceptance method.",
+  "decision_pressure_evidence": [
+    {
+      "statement": "The existing record identifies the active assembly as a benchmark and lists unresolved RF, mechanical, environmental and reliability tests.",
+      "classification": "OBSERVED_FACT",
+      "source_ref": "technical-risk/records/amphenol-rf-095-725-134-006/11_PUBLIC_RECORD.json"
+    }
+  ],
+  "missing_critical_fact": [
+    "No actual RFQ, buyer, decision deadline or supplier response package is established.",
+    "No buyer-specific specification or acceptance threshold is available.",
+    "No alternate supplier has been evaluated against the benchmark."
+  ],
+  "evidence_state": "NOT_ESTABLISHED",
+  "counterevidence": [
+    "The item is active and the reused record explicitly says substitution may not be operationally necessary."
+  ],
+  "decision_owner_role": {
+    "role": null,
+    "identification_state": "UNKNOWN",
+    "evidence_refs": []
+  },
+  "verified_contact_route": {
+    "route_type": "NONE",
+    "value": null,
+    "verification_url": null,
+    "verified_at": null,
+    "purpose_fit": "FAIL"
+  },
+  "estimated_decision_window": {
+    "state": "UNKNOWN",
+    "start": null,
+    "end": null,
+    "basis": "No RFQ or customer schedule exists in the reviewed boundary."
+  },
+  "deliverable_fit": "NO_FIT_ESTABLISHED",
+  "payment_signal": "NONE_OBSERVED",
+  "candidate_score": 45,
+  "score_components": {
+    "evidence_traceability": 16,
+    "decision_pressure": 2,
+    "material_gap": 12,
+    "owner_and_route": 0,
+    "deliverable_fit": 15
+  },
+  "qualification_gates": {
+    "traceable_source": true,
+    "named_affected_company": false,
+    "active_decision": false,
+    "material_gap": false,
+    "decision_owner_role": false,
+    "verified_route": false,
+    "route_purpose_fit": false,
+    "qualified": false,
+    "send_ready": false,
+    "failure_reasons": [
+      "No actual RFQ or buyer is established.",
+      "No active decision or deadline is established.",
+      "Decision-owner role and contact route are unknown."
+    ]
+  },
+  "outreach_authorization": "NOT_AUTHORIZED",
+  "contact_outcome": "NOT_CONTACTED",
+  "commercial_outcome": "NO_OBSERVATION",
+  "research_cost": {"currency": "USD", "amount": 0, "external_spend": false},
+  "confidence_and_limitations": [
+    "The technical benchmark is traceable.",
+    "It is a deliberate negative control and not a qualified opportunity.",
+    "An RFQ cannot be inferred from a product page or qualification matrix."
+  ],
+  "assertion_register": {
+    "observed_facts": [
+      "The exact assembly is active and documented as a technical benchmark.",
+      "The reused record lists tests required for supplier comparison."
+    ],
+    "inferences": [
+      "The record structure could support an RFQ compliance matrix if a real RFQ is later provided."
+    ],
+    "hypotheses": [
+      "Buyers with live RFQs may value supplier-evidence verification."
+    ],
+    "confirmed_customer_statements": []
+  },
+  "history_events": [
+    {
+      "event_id": "SE-GTM-002-CDSP-004-E001",
+      "event_type": "INITIAL_SNAPSHOT",
+      "recorded_at": "2026-10-11T00:00:00+08:00",
+      "statement": "Negative-control record created; no RFQ, customer interaction or outreach authorization exists.",
+      "preserves_prior_state": true
+    }
+  ]
+}
