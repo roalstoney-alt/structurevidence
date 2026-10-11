@@ -1,0 +1,10 @@
+{
+  "version": "0.1-draft",
+  "cases": [
+    {"case_id":"CML-PDRE-001","commissioned_by":"NOT_REVIEWED","sponsorship":"NOT_REVIEWED","material_relationships":"NOT_REVIEWED","customer_supplied_evidence":"NOT_REVIEWED"},
+    {"case_id":"SE-BESS-SODIUM-001","commissioned_by":"NOT_REVIEWED","sponsorship":"NOT_REVIEWED","material_relationships":"NOT_REVIEWED","customer_supplied_evidence":"NOT_REVIEWED"},
+    {"case_id":"SE-IRK-LAB-001","commissioned_by":"NOT_REVIEWED","sponsorship":"NOT_REVIEWED","material_relationships":"NOT_REVIEWED","customer_supplied_evidence":"NOT_REVIEWED"},
+    {"case_id":"SE-ONC-NSQNSCLC-CN-001","commissioned_by":"NOT_REVIEWED","sponsorship":"NOT_REVIEWED","material_relationships":"NOT_REVIEWED","customer_supplied_evidence":"NOT_REVIEWED"}
+  ],
+  "rule": "Payment purchases a defined scope, not a favorable conclusion, deletion of negative evidence, or a rating."
+}

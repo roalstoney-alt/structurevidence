@@ -6,6 +6,7 @@ import { handleGapAdminApi, handleGapApi } from "./gap-service.js";
 import { GAP_APP_JS, GAP_CSS, findGap, renderGapChangeLog, renderGapDetail, renderGapIndex } from "./gaps.js";
 
 const MAX_BODY_BYTES = 65_536;
+const PRIVACY_NOTICE_VERSION = "2026-10-08";
 const REQUEST_STATUSES = new Set(["SUBMITTED", "UNDER_REVIEW", "SCOPE_PROPOSED", "AWAITING_CUSTOMER", "AUTHORIZED", "IN_PROGRESS", "DELIVERED", "CLOSED"]);
 const AUTH_STATUSES = new Set(["NOT_AUTHORIZED", "L0_REUSE_AUTHORIZED", "L1_VERIFY_AUTHORIZED", "L2_INVESTIGATE_AUTHORIZED", "L3_DEEP_AUTHORIZED"]);
 const MANUAL_EVENTS = new Set(["SCOPE_PROPOSED", "CUSTOMER_RESPONSE_RECEIVED", "RESEARCH_STARTED", "DELIVERABLE_SENT", "CASE_CLOSED"]);
@@ -45,14 +46,19 @@ function normalizeSubmission(input) {
   const email = clean(input.email, 254)?.toLowerCase();
   const decision = clean(input.decision, 8000);
   const claim = clean(input.claim_or_question, 8000);
+  const noticeVersion = clean(input.privacy_notice_version, 32);
   if (!new Set(["VERIFY", "CONTEXT"]).has(requestType)) throw new Response("Invalid request_type", { status: 400 });
   if (!email || !validEmail(email)) throw new Response("Valid email is required", { status: 400 });
   if (!decision && !claim) throw new Response("Decision or claim/question is required", { status: 400 });
   if (requestType === "VERIFY" && !claim) throw new Response("Verify requests require claim_or_question", { status: 400 });
   if (requestType === "CONTEXT" && !decision) throw new Response("Context requests require decision", { status: 400 });
+  if (noticeVersion !== PRIVACY_NOTICE_VERSION) throw new Response("Current privacy notice acknowledgement is required", { status: 400 });
+  if (input.privacy_notice_ack !== true) throw new Response("Privacy notice acknowledgement is required", { status: 400 });
+  if (input.confidentiality_ack !== true) throw new Response("Confidentiality boundary acknowledgement is required", { status: 400 });
+  if (input.publication_authorization === true || input.marketing_consent === true) throw new Response("Publication and marketing authorization are not collected by this form", { status: 400 });
   const decisionDeadline = clean(input.decision_deadline, 10);
   if (!validDate(decisionDeadline)) throw new Response("Invalid decision_deadline", { status: 400 });
-  return { requestType, email, decision, claim, decisionDeadline, contactName: clean(input.contact_name, 200), company: clean(input.company, 300), technicalObject: clean(input.technical_object, 2000), currentDependency: clean(input.current_dependency, 8000), alternativeConsidered: clean(input.alternative_considered, 8000), caseReference: clean(input.case_reference, 300), requestedOutput: clean(input.requested_output, 1000), currentBelief: clean(input.current_belief, 4000), existingEvidence: clean(input.existing_evidence, 8000) };
+  return { requestType, email, decision, claim, decisionDeadline, noticeVersion, contactName: clean(input.contact_name, 200), company: clean(input.company, 300), technicalObject: clean(input.technical_object, 2000), currentDependency: clean(input.current_dependency, 8000), alternativeConsidered: clean(input.alternative_considered, 8000), caseReference: clean(input.case_reference, 300), requestedOutput: clean(input.requested_output, 1000), currentBelief: clean(input.current_belief, 4000), existingEvidence: clean(input.existing_evidence, 8000) };
 }
 async function submitRequest(request, env) {
   const origin = request.headers.get("origin");
@@ -65,11 +71,15 @@ async function submitRequest(request, env) {
   if (!success) return json({ error: "Too many requests. Try again in 10 seconds." }, 429, { ...cors, "retry-after": "10" });
   const input = normalizeSubmission(await readJson(request));
   const createdAt = now(), customerId = externalId("SE-CUS"), requestId = externalId("SE-REQ"), eventId = externalId("SE-EVT");
-  const privateContext = [input.currentBelief && `Current belief: ${input.currentBelief}`, input.existingEvidence && `Existing evidence: ${input.existingEvidence}`].filter(Boolean).join("\n\n") || null;
+  const privateContext = (input.currentBelief || input.existingEvidence) ? JSON.stringify({ current_belief: input.currentBelief, existing_evidence: input.existingEvidence }) : null;
   const customerInsert = env.CUSTOMER_CASES_DB.prepare("INSERT INTO customers (customer_id, created_at, updated_at, contact_name, email, company) VALUES (?, ?, ?, ?, ?, ?)").bind(customerId, createdAt, createdAt, input.contactName, input.email, input.company);
   const requestInsert = env.CUSTOMER_CASES_DB.prepare("INSERT INTO requests (request_id, created_at, updated_at, request_type, customer_id, decision, claim_or_question, technical_object, current_dependency, alternative_considered, decision_deadline, case_reference, requested_output, status, privacy_class, human_owner, research_authorization_status) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'SUBMITTED', 'CUSTOMER_PRIVATE', NULL, 'NOT_AUTHORIZED')").bind(requestId, createdAt, createdAt, input.requestType, customerId, input.decision, input.claim, input.technicalObject, input.currentDependency, input.alternativeConsidered, input.decisionDeadline, input.caseReference, input.requestedOutput);
-  const eventInsert = env.CUSTOMER_CASES_DB.prepare("INSERT INTO request_events (event_id, request_id, event_type, event_at, actor, previous_state, new_state, note) VALUES (?, ?, 'REQUEST_SUBMITTED', ?, 'CUSTOMER', NULL, ?, ?)").bind(eventId, requestId, createdAt, JSON.stringify({ status: "SUBMITTED", privacy_class: "CUSTOMER_PRIVATE", research_authorization_status: "NOT_AUTHORIZED" }), privateContext);
-  await env.CUSTOMER_CASES_DB.batch([customerInsert, requestInsert, eventInsert]);
+  const noticeInsert = env.CUSTOMER_CASES_DB.prepare("INSERT INTO request_notices (request_id, notice_version, acknowledged_at, privacy_notice_ack, confidentiality_boundary_ack, publication_authorization, marketing_consent) VALUES (?, ?, ?, 1, 1, 0, 0)").bind(requestId, input.noticeVersion, createdAt);
+  const eventInsert = env.CUSTOMER_CASES_DB.prepare("INSERT INTO request_events (event_id, request_id, event_type, event_at, actor, previous_state, new_state, note) VALUES (?, ?, 'REQUEST_SUBMITTED', ?, 'CUSTOMER', NULL, ?, NULL)").bind(eventId, requestId, createdAt, JSON.stringify({ status: "SUBMITTED", privacy_class: "CUSTOMER_PRIVATE", research_authorization_status: "NOT_AUTHORIZED", notice_version: input.noticeVersion }));
+  const statements = [customerInsert, requestInsert, noticeInsert];
+  if (privateContext) statements.push(env.CUSTOMER_CASES_DB.prepare("INSERT INTO request_private_context (context_id, request_id, created_at, payload_json, retention_status) VALUES (?, ?, ?, ?, 'NEEDS_OPERATOR_FACTS')").bind(externalId("SE-CTX"), requestId, createdAt, privateContext));
+  statements.push(eventInsert);
+  await env.CUSTOMER_CASES_DB.batch(statements);
   return json({ request_id: requestId, status: "SUBMITTED", created_at: createdAt }, 201, cors);
 }
 async function verifyAccess(request, env, audience) {
@@ -97,7 +107,9 @@ async function requestDetail(requestId, env) {
   const record = await env.CUSTOMER_CASES_DB.prepare("SELECT r.*, c.contact_name, c.email, c.company FROM requests r JOIN customers c ON c.customer_id = r.customer_id WHERE r.request_id = ?").bind(requestId).first();
   if (!record) return json({ error: "Request not found" }, 404);
   const events = await env.CUSTOMER_CASES_DB.prepare("SELECT event_id, event_type, event_at, actor, previous_state, new_state, note FROM request_events WHERE request_id = ? ORDER BY event_at ASC, event_id ASC").bind(requestId).all();
-  return json({ request: record, events: events.results || [] });
+  const notices = await env.CUSTOMER_CASES_DB.prepare("SELECT notice_version, acknowledged_at, privacy_notice_ack, confidentiality_boundary_ack, publication_authorization, marketing_consent FROM request_notices WHERE request_id = ?").bind(requestId).all();
+  const privateContext = await env.CUSTOMER_CASES_DB.prepare("SELECT context_id, created_at, payload_json, retention_status FROM request_private_context WHERE request_id = ? ORDER BY created_at ASC, context_id ASC").bind(requestId).all();
+  return json({ request: record, notices: notices.results || [], private_context: privateContext.results || [], events: events.results || [] });
 }
 function eventTypeFor(field, value) {
   if (field === "human_owner") return "OWNER_ASSIGNED";
