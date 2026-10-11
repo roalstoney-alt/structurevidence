@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "status_recorded_at": "2026-10-10T15:24:05+08:00",
+  "status_recorded_at": "2026-10-11T15:01:01+08:00",
   "timestamp_semantics": {
     "status_recorded_at": "Administrative status observation; not a scientific review timestamp.",
     "evidence_state_as_of": "Cutoff of the currently published evidence state; retained until evidence changes.",
@@ -13,22 +13,22 @@
       "canonical_path": "/cases/irkutsk-lab-worker-death/",
       "question": "What is publicly established about the death of a worker at an Irkutsk infectious-disease research institute, and do the available records establish plague, an occupational pathogen link, a laboratory accident, a second plague case, or a second death?",
       "current_public_state": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
-      "evidence_state_as_of": "2026-10-08T06:15:59+08:00",
-      "last_material_change": "2026-10-08",
+      "evidence_state_as_of": "2026-10-11T15:01:01+08:00",
+      "last_material_change": "2026-10-10",
       "featured": true,
       "management_status": "ACTIVE",
-      "last_reviewed_at": "2026-10-10T15:24:05+08:00",
+      "last_reviewed_at": "2026-10-11T15:01:01+08:00",
       "review_result": "REVIEW_INCOMPLETE",
-      "latest_review_id": "SE-IRK-REVIEW-20261010-01",
-      "latest_review_file": "cases/irkutsk-lab-worker-death/search-review-20261010-01.json",
+      "latest_review_id": "SE-IRK-REVIEW-20261011-01",
+      "latest_review_file": "cases/irkutsk-lab-worker-death/search-review-20261011-01.json",
       "period": {
-        "id": "2026-10-10",
-        "start": "2026-10-10",
-        "end": "2026-10-10",
+        "id": "2026-10-11",
+        "start": "2026-10-11",
+        "end": "2026-10-11",
         "status": "REVIEW_INCOMPLETE",
-        "scope": "Actual bounded public-health, procurement and patent review; no qualifying new evidence; key official and underlying records inaccessible."
+        "scope": "WHO DON620 accepted; core clinical state unchanged; procurement, patent and underlying clinical/safety records remain incomplete."
       },
-      "period_review_id": "SE-IRK-REVIEW-20261010-01",
+      "period_review_id": "SE-IRK-REVIEW-20261011-01",
       "monitoring": {
         "cadence": "DAILY",
         "enabled": true,
@@ -37,8 +37,8 @@
         "next_run_at_from_service": null,
         "schedule_timezone": "Asia/Hong_Kong"
       },
-      "new_qualifying_evidence_count": 0,
-      "new_counter_evidence_count": 0
+      "new_qualifying_evidence_count": 1,
+      "new_counter_evidence_count": 1
     },
     {
       "case_id": "SE-ONC-NSQNSCLC-CN-001",

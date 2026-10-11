@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "case_id": "SE-IRK-LAB-001",
+  "review_id": "SE-IRK-REVIEW-20261011-01",
+  "reviewed_at": "2026-10-11T15:01:01+08:00",
+  "result": "REVIEW_INCOMPLETE",
+  "review_complete": false,
+  "state_changed": false,
+  "evidence_changed": true,
+  "old_state": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+  "new_state": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+  "search_boundary": {
+    "public_scope": "Final cause; de-identified contact follow-up; WHO/IHR assessment and second-employee verification; auditable safety review; official procurement and patent metadata.",
+    "queries": [
+      "Иркутск противочумный институт 11 октября 2026 причина смерти второй сотрудник Роспотребнадзор",
+      "site:who.int OR site:un.org Irkutsk October 11 2026 plague laboratory pneumonia",
+      "site:zakupki.gov.ru 0334100002726000128 OR 0334100002726000149 OR 100013983126100191",
+      "RU2815337C1 3811015807 правообладатель лицензия 2026"
+    ],
+    "query_count": 4,
+    "initial_page_open_attempt_count": 8,
+    "limited_supplemental_followup_count": 0,
+    "supplemental_boundary": "None; the new WHO original was fully readable in the initial bounded set.",
+    "exhaustive": false
+  },
+  "sources_checked": [
+    {
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON620",
+      "access_result": "READ_EXTRACTED_TEXT",
+      "source_published_at": "2026-10-10",
+      "retrieved_at": "2026-10-11T15:01:01+08:00",
+      "event_time": "2026-10-02 to 2026-10-09",
+      "dependency_group": "WHO_DON620",
+      "finding": "New qualifying official source. WHO found no evidence of ongoing transmission based on Russian NFP information, while retaining an unconfirmed cause, uncertainty over monitoring sufficiency, and inability to fully exclude laboratory-associated exposure."
+    },
+    {
+      "url": "https://www.who.int/emergencies/emergency-events/item/2026-e000390",
+      "access_result": "READ_EVENT_INDEX",
+      "source_published_at": "2026-10-10",
+      "retrieved_at": "2026-10-11T15:01:01+08:00",
+      "dependency_group": "WHO_DON620",
+      "finding": "WHO event index points to DON620; not independent evidence."
+    },
+    {
+      "url": "https://www.reuters.com/business/healthcare-pharmaceuticals/who-says-russia-confirms-death-research-lab-no-plague-case-registered-2026-10-10/",
+      "access_result": "READ_EXTRACTED_TEXT",
+      "source_published_at": "2026-10-10T16:23:38Z",
+      "retrieved_at": "2026-10-11T15:01:01+08:00",
+      "dependency_group": "WHO_DON620_REPORTING",
+      "finding": "Direct reporting consistent with WHO DON; dependency retained."
+    },
+    {
+      "url": "https://apnews.com/article/russia-plague-siberia-death-who-cause-lab-d53d0eca3e410fa93962560d0a08711a",
+      "access_result": "READ_PAGE_METADATA_BODY_NOT_EXTRACTED",
+      "source_published_at": "2026-10-10T20:13:07Z",
+      "retrieved_at": "2026-10-11T15:01:01+08:00",
+      "dependency_group": "WHO_DON620_REPORTING",
+      "finding": "New report identified; usable details were not extracted and were not accepted independently."
+    },
+    {
+      "url": "https://zakupki.gov.ru/epz/order/notice/ea20/view/common-info.html?regNumber=0334100002726000128",
+      "access_result": "OPEN_FAILED_TOOL_INTERNAL_ERROR",
+      "source_published_at": null,
+      "retrieved_at": "2026-10-11T15:01:01+08:00",
+      "dependency_group": "OFFICIAL_FINANCE_RIGHTS",
+      "finding": "Official contract, acceptance and payment records not verified."
+    },
+    {
+      "url": "https://zakupki.gov.ru/epz/order/notice/ea20/view/common-info.html?regNumber=0334100002726000149",
+      "access_result": "OPEN_FAILED_TOOL_INTERNAL_ERROR",
+      "source_published_at": null,
+      "retrieved_at": "2026-10-11T15:01:01+08:00",
+      "dependency_group": "OFFICIAL_FINANCE_RIGHTS",
+      "finding": "Official contract, acceptance and payment records not verified."
+    },
+    {
+      "url": "https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUPAT&DocNumber=2815337",
+      "access_result": "OPEN_FAILED_TOOL_INTERNAL_ERROR",
+      "source_published_at": null,
+      "retrieved_at": "2026-10-11T15:01:01+08:00",
+      "dependency_group": "OFFICIAL_FINANCE_RIGHTS",
+      "finding": "Current rights, transfer, licence and revenue metadata not verified."
+    },
+    {
+      "url": "https://www.interfax.ru/russia/1121073",
+      "access_result": "READ_EXTRACTED_TEXT",
+      "source_published_at": "2026-10-08T12:08:00+03:00",
+      "retrieved_at": "2026-10-11T15:01:01+08:00",
+      "dependency_group": "RPN_CONTACT_FOLLOWUP_20261008",
+      "finding": "Previously recorded Russian press-service attribution; superseded for international assessment by the new WHO DON, but underlying records remain unavailable."
+    }
+  ],
+  "new_qualifying_evidence_count": 1,
+  "new_counter_evidence_count": 1,
+  "count_scope": "One new official WHO document is accepted once as a source; its explicit uncertainty about exposure and monitoring sufficiency is counted as one counter-evidence finding, not a second independent source.",
+  "counter_evidence_and_limits": [
+    "WHO has not identified evidence of ongoing transmission; this is not proof of zero transmission.",
+    "WHO cannot independently assess whether seven days of reported contact monitoring excluded all plausible causes.",
+    "WHO states laboratory-associated exposure cannot be fully excluded; this does not establish such exposure.",
+    "Reported COVID-19, rhinovirus and other findings among contacts are not attributed to household contacts and do not establish transmission from the deceased.",
+    "The 90% release and all-contact-completion summaries remain separate by date, population and source."
+  ],
+  "gaps": [
+    "Final etiological diagnosis remains unavailable.",
+    "Underlying clinical specimens, de-identified contact records and two reported biosafety investigation records remain unavailable.",
+    "Official procurement, payment, corporate and patent-rights pages failed to render."
+  ],
+  "previous_review": "search-review-20261010-01.json",
+  "previous_snapshot": "state-v0.5.json",
+  "snapshot": "state-v0.6.json",
+  "evidence_state_as_of": "2026-10-11T15:01:01+08:00",
+  "raw_source_bytes_collected": false,
+  "public_whitelist_only": true
+}
