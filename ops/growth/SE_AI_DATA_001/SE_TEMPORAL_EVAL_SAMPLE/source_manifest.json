@@ -1,0 +1,16 @@
+{
+  "experiment_id": "SE-AI-DATA-001",
+  "sample_version": "v0.1",
+  "created_at": "2026-10-11",
+  "source_policy": "Frozen approved public StructEvidence claim records; third-party source text is not redistributed.",
+  "records": [
+    {"claim_id":"CML-PDRE-001.ARCHITECTURE_POSSIBILITY","path":"docs/claims/CML-PDRE-001.ARCHITECTURE_POSSIBILITY.json","sha256":"2e69642f1f063162e02676b73012db08a91fc301bbd42864d7ab1fd8523d9b83"},
+    {"claim_id":"CML-PDRE-001.INDEPENDENT_VALIDATION","path":"docs/claims/CML-PDRE-001.INDEPENDENT_VALIDATION.json","sha256":"7f80388765f3bccf8fe992ccb1f4873ac72b5c9343ba44e3a760746b03bb956f"},
+    {"claim_id":"CML-PDRE-001.MULTI_ENTITY_REPLICATION","path":"docs/claims/CML-PDRE-001.MULTI_ENTITY_REPLICATION.json","sha256":"0d6530f0761b6778c364436f0ca9f760ff21b59ceda3d74b1a5ae79f37ded750"},
+    {"claim_id":"SE-BESS-SODIUM-001.PRODUCT_ANNOUNCED","path":"docs/claims/SE-BESS-SODIUM-001.PRODUCT_ANNOUNCED.json","sha256":"00f5ba9986d7ba66c1607d6b6e619a5af8ed86a4b59081dc72a7d7a43fb181d7"},
+    {"claim_id":"SE-BESS-SODIUM-001.CUSTOMER_BATCH_DELIVERY","path":"docs/claims/SE-BESS-SODIUM-001.CUSTOMER_BATCH_DELIVERY.json","sha256":"b49dae09a5d8dc861eab2332511198d3800a6253d384ca4448ede4b140399231"},
+    {"claim_id":"SE-BESS-SODIUM-001.NAMED_COMMISSIONED_SITE","path":"docs/claims/SE-BESS-SODIUM-001.NAMED_COMMISSIONED_SITE.json","sha256":"dfc0eee93d23cee064a622f7a2556b3cec6ee44c44f62e3f0a9e3c3a1f718b97"},
+    {"claim_id":"SE-IRK-LAB-001.LAB_ACCIDENT","path":"docs/claims/SE-IRK-LAB-001.LAB_ACCIDENT.json","sha256":"36e9bd357b70d53ad58474eef0122343c8326e12ee13708cc36c821b2cd06c6b"},
+    {"claim_id":"SE-IRK-LAB-001.SECOND_PLAGUE_CASE","path":"docs/claims/SE-IRK-LAB-001.SECOND_PLAGUE_CASE.json","sha256":"a94f6326cc6da020702df3ac2ddbf9979793ba21030599f65d1b7add9fcf67f7"}
+  ]
+}
