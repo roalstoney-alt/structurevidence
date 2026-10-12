@@ -1,0 +1,47 @@
+{
+  "campaign_id": "TRUST_BOUNDARY_30D_001",
+  "date": "2026-10-12",
+  "day": "D5",
+  "checked_at": "2026-10-12T09:51:44+08:00",
+  "calendar_authorization": "PREPARE_ONLY",
+  "publication_authorized": false,
+  "outreach_sent": 0,
+  "prospects_added": 15,
+  "messages_prepared": 15,
+  "onepager": {
+    "asset_id": "SE-DM-EN",
+    "url": "https://structurevidence.org/onepager/decision-en.pdf",
+    "sha256": "ca3e6e2bef66a9c64030afd690371668e2d371cdbb90ea7c30dcfd4e165c6bd2"
+  },
+  "official_source_domains": [
+    "fluenceenergy.com",
+    "wartsila.com",
+    "catl.com",
+    "sungrowpower.com",
+    "gevernova.com",
+    "trinasolar.com",
+    "canadiansolar.com",
+    "ekuenergy.com",
+    "zenobe.com",
+    "aes.com",
+    "nationalgrid.com",
+    "dtek.com",
+    "dri-energy.com",
+    "gorestreetcap.com",
+    "harmonyenergy.co.uk",
+    "formenergy.com"
+  ],
+  "route_fit": {
+    "routable": 11,
+    "weak": 4,
+    "direct": 0
+  },
+  "trust_boundary_audit": "PASS",
+  "factual_audit": "PASS_WITH_ROLE_AND_ROUTE_LIMITATIONS_DISCLOSED",
+  "content_published": 0,
+  "private_outreach_sent": 0,
+  "positioning_changed": false,
+  "onepagers_changed": false,
+  "production_changed": false,
+  "meaningful_signal": false
+}
