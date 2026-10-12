@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "status_recorded_at": "2026-10-11T15:01:01+08:00",
+  "status_recorded_at": "2026-10-12T15:37:28+08:00",
   "timestamp_semantics": {
     "status_recorded_at": "Administrative status observation; not a scientific review timestamp.",
     "evidence_state_as_of": "Cutoff of the currently published evidence state; retained until evidence changes.",
@@ -17,18 +17,18 @@
       "last_material_change": "2026-10-10",
       "featured": true,
       "management_status": "ACTIVE",
-      "last_reviewed_at": "2026-10-11T15:01:01+08:00",
+      "last_reviewed_at": "2026-10-12T15:37:28+08:00",
       "review_result": "REVIEW_INCOMPLETE",
-      "latest_review_id": "SE-IRK-REVIEW-20261011-01",
-      "latest_review_file": "cases/irkutsk-lab-worker-death/search-review-20261011-01.json",
+      "latest_review_id": "SE-IRK-REVIEW-20261012-01",
+      "latest_review_file": "cases/irkutsk-lab-worker-death/search-review-20261012-01.json",
       "period": {
-        "id": "2026-10-11",
-        "start": "2026-10-11",
-        "end": "2026-10-11",
+        "id": "2026-10-12",
+        "start": "2026-10-12",
+        "end": "2026-10-12",
         "status": "REVIEW_INCOMPLETE",
-        "scope": "WHO DON620 accepted; core clinical state unchanged; procurement, patent and underlying clinical/safety records remain incomplete."
+        "scope": "No qualifying new evidence; regulator, procurement, patent and underlying clinical/investigation records remained inaccessible."
       },
-      "period_review_id": "SE-IRK-REVIEW-20261011-01",
+      "period_review_id": "SE-IRK-REVIEW-20261012-01",
       "monitoring": {
         "cadence": "DAILY",
         "enabled": true,
@@ -37,8 +37,8 @@
         "next_run_at_from_service": null,
         "schedule_timezone": "Asia/Hong_Kong"
       },
-      "new_qualifying_evidence_count": 1,
-      "new_counter_evidence_count": 1
+      "new_qualifying_evidence_count": 0,
+      "new_counter_evidence_count": 0
     },
     {
       "case_id": "SE-ONC-NSQNSCLC-CN-001",

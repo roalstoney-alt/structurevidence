@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "case_id": "SE-IRK-LAB-001",
+  "review_id": "SE-IRK-REVIEW-20261012-01",
+  "reviewed_at": "2026-10-12T15:37:28+08:00",
+  "result": "REVIEW_INCOMPLETE",
+  "review_complete": false,
+  "state_changed": false,
+  "evidence_changed": false,
+  "old_state": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+  "new_state": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+  "search_boundary": {
+    "public_scope": "Final cause; de-identified contact follow-up; WHO/IHR revision; auditable safety or legal investigation; official procurement and patent metadata.",
+    "queries": [
+      "Иркутск противочумный институт 12 октября 2026 причина смерти расследование второй сотрудник",
+      "site:who.int OR site:un.org Irkutsk October 12 2026 pneumonia laboratory DON620 update",
+      "site:zakupki.gov.ru 0334100002726000128 OR 0334100002726000149 OR 100013983126100191",
+      "RU2815337C1 3811015807 правообладатель лицензия передача 2026"
+    ],
+    "query_count": 4,
+    "initial_page_open_attempt_count": 8,
+    "limited_supplemental_followup_count": 0,
+    "supplemental_boundary": "None; no new qualifying original was identified.",
+    "exhaustive": false
+  },
+  "sources_checked": [
+    {
+      "url": "https://meduza.io/feature/2026/10/06/v-irkutskoy-oblasti-umerla-sotrudnitsa-protivochumnogo-instituta-vlasti-vveli-karantin-no-otritsayut-ugrozu-chumy",
+      "access_result": "READ_EXTRACTED_TEXT",
+      "source_published_at": "2026-10-06",
+      "retrieved_at": "2026-10-12T15:37:28+08:00",
+      "dependency_group": "EARLY_LOCAL_REPORTING",
+      "finding": "Earlier reporting includes an attributed, subsequently deleted media claim of a criminal case; no official case number or current investigative record was produced, so it is not accepted as a new fact."
+    },
+    {
+      "url": "https://novayagazeta.eu/amp/articles/2026/10/10/chumy-net-no-karantin-est",
+      "access_result": "READ_EXTRACTED_TEXT",
+      "source_published_at": "2026-10-10",
+      "retrieved_at": "2026-10-12T15:37:28+08:00",
+      "dependency_group": "EXPERT_COMMENTARY",
+      "finding": "Anonymous expert commentary advances hypotheses, not event-specific diagnostic or auditable investigation evidence; no state change."
+    },
+    {
+      "url": "https://amp.dw.com/ru/probirka-mogla-razbitsa-ekspert-ob-ugroze-cumy-v-irkutske/a-79611512",
+      "access_result": "READ_EXTRACTED_TEXT",
+      "source_published_at": "2026-10-09",
+      "retrieved_at": "2026-10-12T15:37:28+08:00",
+      "dependency_group": "EXPERT_COMMENTARY",
+      "finding": "Named expert interview explains diagnostic uncertainty and possible interpretations; it does not provide case records or establish plague or laboratory exposure."
+    },
+    {
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON620",
+      "access_result": "READ_EXTRACTED_TEXT",
+      "source_published_at": "2026-10-10",
+      "retrieved_at": "2026-10-12T15:37:28+08:00",
+      "dependency_group": "WHO_DON620",
+      "finding": "Previously accepted WHO assessment remains unchanged; no later WHO revision found."
+    },
+    {
+      "url": "https://www.rospotrebnadzor.ru/deyatelnost/epidemiological-surveillance/?ELEMENT_ID=33189",
+      "access_result": "OPEN_FAILED_TOOL_INTERNAL_ERROR",
+      "source_published_at": null,
+      "retrieved_at": "2026-10-12T15:37:28+08:00",
+      "dependency_group": "RPN_PRIMARY",
+      "finding": "Linked regulator original remained inaccessible."
+    },
+    {
+      "url": "https://zakupki.gov.ru/epz/order/notice/ea20/view/common-info.html?regNumber=0334100002726000128",
+      "access_result": "OPEN_FAILED_TOOL_INTERNAL_ERROR",
+      "source_published_at": null,
+      "retrieved_at": "2026-10-12T15:37:28+08:00",
+      "dependency_group": "OFFICIAL_FINANCE_RIGHTS",
+      "finding": "Official contract, acceptance and payment records not verified."
+    },
+    {
+      "url": "https://zakupki.gov.ru/epz/order/notice/ea20/view/common-info.html?regNumber=0334100002726000149",
+      "access_result": "OPEN_FAILED_TOOL_INTERNAL_ERROR",
+      "source_published_at": null,
+      "retrieved_at": "2026-10-12T15:37:28+08:00",
+      "dependency_group": "OFFICIAL_FINANCE_RIGHTS",
+      "finding": "Official contract, acceptance and payment records not verified."
+    },
+    {
+      "url": "https://new.fips.ru/registers-doc-view/fips_servlet?DB=RUPAT&DocNumber=2815337",
+      "access_result": "OPEN_FAILED_TOOL_INTERNAL_ERROR",
+      "source_published_at": null,
+      "retrieved_at": "2026-10-12T15:37:28+08:00",
+      "dependency_group": "OFFICIAL_FINANCE_RIGHTS",
+      "finding": "Current rights, transfer, licence and revenue metadata not verified."
+    }
+  ],
+  "new_qualifying_evidence_count": 0,
+  "new_counter_evidence_count": 0,
+  "count_scope": "No post-10 October qualifying original or direct interview supplied event-specific clinical, investigative, financial or rights records.",
+  "counter_evidence_and_limits": [
+    "Expert interviews and anonymous hypotheses do not establish plague, laboratory exposure or deliberate conduct.",
+    "A deleted media report of a criminal case lacks an official case number or current investigative record and remains unverified.",
+    "WHO DON620 remains the latest accepted assessment: no ongoing-transmission evidence identified, while etiology and exposure uncertainty remain.",
+    "Observation and isolation do not establish infection; no household transmission chain inferred."
+  ],
+  "gaps": [
+    "Final etiological diagnosis unavailable.",
+    "Underlying clinical, de-identified contact and auditable biosafety investigation records unavailable.",
+    "Official regulator, procurement and patent pages were inaccessible in this run.",
+    "No official criminal-case identifier or investigative record verified."
+  ],
+  "previous_review": "search-review-20261011-01.json",
+  "previous_snapshot": "state-v0.6.json",
+  "snapshot": "state-v0.7.json",
+  "evidence_state_as_of": "2026-10-11T15:01:01+08:00",
+  "raw_source_bytes_collected": false,
+  "public_whitelist_only": true
+}

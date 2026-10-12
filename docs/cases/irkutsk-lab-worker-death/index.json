@@ -262,6 +262,26 @@
         "supplemental_boundary": "None; the new WHO original was fully readable in the initial bounded set.",
         "exhaustive": false
       }
+    },
+    {
+      "review_id": "SE-IRK-REVIEW-20261012-01",
+      "reviewed_at": "2026-10-12T15:37:28+08:00",
+      "result": "REVIEW_INCOMPLETE",
+      "review_file": "search-review-20261012-01.json",
+      "search_boundary": {
+        "public_scope": "Final cause; de-identified contact follow-up; WHO/IHR revision; auditable safety or legal investigation; official procurement and patent metadata.",
+        "queries": [
+          "Иркутск противочумный институт 12 октября 2026 причина смерти расследование второй сотрудник",
+          "site:who.int OR site:un.org Irkutsk October 12 2026 pneumonia laboratory DON620 update",
+          "site:zakupki.gov.ru 0334100002726000128 OR 0334100002726000149 OR 100013983126100191",
+          "RU2815337C1 3811015807 правообладатель лицензия передача 2026"
+        ],
+        "query_count": 4,
+        "initial_page_open_attempt_count": 8,
+        "limited_supplemental_followup_count": 0,
+        "supplemental_boundary": "None; no new qualifying original was identified.",
+        "exhaustive": false
+      }
     }
   ],
   "history": [
@@ -316,10 +336,19 @@
       "triggering_evidence": "SE-IRK-REVIEW-20261011-01",
       "event_type": "OFFICIAL_WHO_DON_ACCEPTED_NO_CORE_CLINICAL_STATE_CHANGE",
       "why": "WHO published a formal event assessment: no ongoing-transmission evidence identified from NFP information, but cause unconfirmed, monitoring sufficiency not independently established, and laboratory-associated exposure not fully excluded."
+    },
+    {
+      "date": "2026-10-12",
+      "recorded_at": "2026-10-12T15:37:28+08:00",
+      "previous_state": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+      "new_state": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+      "triggering_evidence": "SE-IRK-REVIEW-20261012-01",
+      "event_type": "BOUNDED_REVIEW_INCOMPLETE_NO_ACCEPTED_STATE_CHANGE",
+      "why": "No new qualifying original changed the state; official regulator, procurement, patent and underlying clinical/investigation records remained inaccessible. Evidence cutoff and last material change unchanged."
     }
   ],
-  "current_snapshot": "state-v0.6.json",
-  "latest_review": "search-review-20261011-01.json",
+  "current_snapshot": "state-v0.7.json",
+  "latest_review": "search-review-20261012-01.json",
   "input_alias_map": "input-alias-map-v0.1.json",
   "claims": [
     {
@@ -544,7 +573,7 @@
       "limit": "This supports WHO’s uncertainty statement; it does not establish that a laboratory exposure occurred."
     }
   ],
-  "last_reviewed_at": "2026-10-11T15:01:01+08:00",
+  "last_reviewed_at": "2026-10-12T15:37:28+08:00",
   "evidence_updated_at": "2026-10-11T15:01:01+08:00",
-  "page_modified_at": "2026-10-11T15:01:01+08:00"
+  "page_modified_at": "2026-10-12T15:37:28+08:00"
 }
