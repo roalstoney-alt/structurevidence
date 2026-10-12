@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "StructEvidence public evidence presentation projection",
+  "type": "object",
+  "required": ["version", "purpose", "presentation_updated_at", "cases"],
+  "properties": {
+    "version": {"type":"string"},
+    "purpose": {"type":"string"},
+    "presentation_updated_at": {"type":"string","format":"date-time"},
+    "cases": {"type":"array","items":{"$ref":"#/$defs/case"}}
+  },
+  "$defs": {
+    "case": {
+      "type":"object",
+      "required":["case_id","claim_id","statement","evidence_state_as_of","sources","source_scope","review_scope","not_recorded","not_implied","last_reviewed_at","review_completeness","public_status"],
+      "properties": {
+        "case_id":{"type":"string"}, "claim_id":{"type":"string"}, "statement":{"type":"string"},
+        "evidence_state_as_of":{"type":"string"},
+        "sources":{"type":"array","items":{"type":"object","required":["evidence_id","url","publisher"],"properties":{"evidence_id":{"type":"string"},"url":{"type":"string"},"publisher":{"type":"string"}}}},
+        "source_scope":{"type":"string"}, "review_scope":{"type":"string"},
+        "not_recorded":{"type":"array","items":{"type":"string"}}, "not_implied":{"type":"array","items":{"type":"string"}},
+        "last_reviewed_at":{"type":["string","null"]}, "review_completeness":{"type":"string"},
+        "public_status":{"enum":["CURRENT","SUPERSEDED","CORRECTED","RESTRICTED","WITHDRAWN"]}
+      }
+    }
+  }
+}

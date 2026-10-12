@@ -1,0 +1,10 @@
+{
+  "change_id": "LEGAL-BOUNDARY-REMEDIATION-2026-10-08",
+  "change_type": "PRESENTATION_AND_CONTROL",
+  "recorded_at": "2026-10-08T12:05:12+08:00",
+  "scientific_evidence_change": false,
+  "evidence_state_as_of_changed": false,
+  "last_material_change_changed": false,
+  "summary": "Added bounded featured-card attribution, legal/privacy policies, intake acknowledgement validation, private-context separation, and controlled publication rules.",
+  "production_applied": false
+}

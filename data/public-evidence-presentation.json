@@ -1,0 +1,63 @@
+{
+  "version": "0.1",
+  "purpose": "Presentation projection only; canonical evidence remains in existing case records.",
+  "presentation_updated_at": "2026-10-08T12:05:12+08:00",
+  "cases": [
+    {
+      "case_id": "CML-PDRE-001",
+      "claim_id": "CML-PDRE-001.INDEPENDENT_VALIDATION",
+      "statement": "One named operator reported commercial operation at one named campus for a relevant 10kV AC to SST to 800VDC architecture.",
+      "evidence_state_as_of": "2026-09-20T10:46:47Z",
+      "sources": [{"evidence_id":"L1-EV-CML-PDRE-001-FIELD-DEPLOYMENT-001","url":"https://www.chindatagroup.com/media/news/533.html","publisher":"Chindata"}],
+      "source_scope": "Operator report of one named deployment; not independent validation.",
+      "review_scope": "One accepted operator publication under the existing field-deployment record.",
+      "not_recorded": ["independent performance validation","long operating history","multi-entity replication","industry adoption"],
+      "not_implied": ["universal product qualification","repeat procurement","legal or investment eligibility"],
+      "last_reviewed_at": null,
+      "review_completeness": "NO_COMPLETED_CURRENT_REVIEW_RECORDED",
+      "public_status": "CURRENT"
+    },
+    {
+      "case_id": "SE-BESS-SODIUM-001",
+      "claim_id": "SE-BESS-SODIUM-001.NAMED_COMMISSIONED_SITE",
+      "statement": "The reviewed materials include product announcements and a counterparty-described three-year 60 GWh sodium-ion energy-storage cooperation agreement; no qualifying named commissioned site was accepted in this scope.",
+      "evidence_state_as_of": "2026-09-24",
+      "sources": [{"evidence_id":"SE-BESS-SODIUM-001-EV-003","url":"https://www.catl.com/en/news/6812.html","publisher":"CATL and HyperStrong"}],
+      "source_scope": "Counterparties described a cooperation agreement; the source does not establish shipment, acceptance, commissioning, grid connection or operating performance.",
+      "review_scope": "The five manufacturer/counterparty records in the existing case through 2026-09-24.",
+      "not_recorded": ["qualifying named commissioned customer site","public field-performance dataset"],
+      "not_implied": ["that no such site exists anywhere","that the chemistry, companies or agreement are invalid","financing eligibility"],
+      "last_reviewed_at": null,
+      "review_completeness": "NO_COMPLETED_CURRENT_REVIEW_RECORDED",
+      "public_status": "CURRENT"
+    },
+    {
+      "case_id": "SE-IRK-LAB-001",
+      "claim_id": "SE-IRK-LAB-001.CAUSE",
+      "statement": "A worker death and official description of pneumonia of unknown origin were reported; the bounded review does not establish the causative agent.",
+      "evidence_state_as_of": "2026-10-08T06:15:59+08:00",
+      "sources": [{"evidence_id":"SE-IRK-LAB-001-EV-001","url":"https://www.unognewsroom.org/story/en/3289/irkutsk-suspected-plague-death-who/9745","publisher":"United Nations Geneva / World Health Organization"}],
+      "source_scope": "Attributed public-health reporting and bounded follow-up records.",
+      "review_scope": "Existing public whitelist only; review remains incomplete.",
+      "not_recorded": ["confirmed plague diagnosis","confirmed occupational pathogen link","confirmed laboratory accident"],
+      "not_implied": ["cause or responsibility from financial, procurement or logistics anomalies","confirmed second case or death"],
+      "last_reviewed_at": "2026-10-08T06:15:59+08:00",
+      "review_completeness": "REVIEW_INCOMPLETE",
+      "public_status": "CURRENT"
+    },
+    {
+      "case_id": "SE-ONC-NSQNSCLC-CN-001",
+      "claim_id": "CN-NSQ-006",
+      "statement": "This is a public research preview; hospital-specific outcome data for the case were not acquired.",
+      "evidence_state_as_of": "2026-09-28",
+      "sources": [],
+      "source_scope": "Regulator, guideline, trial abstract and consensus context listed in the existing state record.",
+      "review_scope": "Initial source screen, not a systematic clinical review.",
+      "not_recorded": ["hospital-level outcome dataset","patient-level data","patient-specific success probability"],
+      "not_implied": ["individual treatment recommendation","hospital ranking","access or eligibility decision"],
+      "last_reviewed_at": null,
+      "review_completeness": "CLINICAL_INTERPRETATION_REVIEW_PENDING",
+      "public_status": "CURRENT"
+    }
+  ]
+}
