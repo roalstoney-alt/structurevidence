@@ -1,3 +1,4 @@
 run_id,started_at,finished_at,mode,tasks_scheduled,checks_completed,checks_failed,runtime_seconds,human_review_minutes,agent_tool_cost,content_drafts,publication_approvals,regression_status
 SE-CEPE-CTRL-20261011-001,2026-10-11T21:53:30+08:00,2026-10-11T21:52:42+08:00,controlled,8,8,0,9.195,UNKNOWN,UNKNOWN,0,0,NOT_RUN
 SE-CEPE-CTRL-20261011-002,2026-10-11T21:54:22+08:00,2026-10-11T21:54:50+08:00,controlled,8,8,0,28.079,UNKNOWN,UNKNOWN,0,0,NOT_RUN
+SE-CEPE-20261012T090153Z,2026-10-12T17:01:53+08:00,2026-10-12T17:02:06+08:00,scheduled,8,8,0,13.366,UNKNOWN,UNKNOWN,0,0,NOT_RUN

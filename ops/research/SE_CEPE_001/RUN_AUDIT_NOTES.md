@@ -19,3 +19,31 @@ The runner was corrected to:
 
 The next controlled run, if internally consistent and logged, is the only run
 eligible to establish T0 and scheduler verification.
+
+## `SE-CEPE-20261012T090153Z`
+
+DISPOSITION = `ACCEPTED_BOUNDED_NO_CHANGE_RUN`
+
+The scheduled runner completed checks for all eight registered tasks. Every
+task retained `NO_MATERIAL_CHANGE` within the documented primary-source
+availability and retrieval-hash scope; this is not a semantic conclusion that
+nothing changed outside that scope. `MATERIAL_EVENT_COUNT = 0` and no content
+draft was created.
+
+For `SE-TECP-007`, AP and TASS returned HTTP 403. The runner preserved both
+failed attempts as `SOURCE_UNAVAILABLE`, then used the already-registered WHO
+fallback successfully. The bounded task check therefore completed; the failed
+attempts were not erased or represented as successful retrievals.
+
+Post-run verification passed:
+
+- `scripts/test_se_cepe_001.py`: 12/12
+- `scripts/test_se_ai_data_001.py`: 7/7
+- `scripts/test_se_ai_data_001_observation_v02.py`: 10/10
+- `scripts/test_case_watch.py`: 5/5
+- `scripts/test_irkutsk_publication.py`: PASS
+- `scripts/test_irkutsk_alias_repair.py`: PASS
+
+Frozen Gold, claim hashes, protected snapshots, publication/outreach kill
+switches, `GTM005 = HOLD`, `GTM002 v0.4 = STOP_AND_RETAIN_RESULT`, and the
+Trust Boundary campaign inputs remain unchanged.
