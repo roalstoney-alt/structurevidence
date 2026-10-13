@@ -1,0 +1,21 @@
+{
+  "campaign_id": "TRUST_BOUNDARY_30D_001",
+  "date": "2026-10-13",
+  "day": "D6",
+  "checked_at": "2026-10-13T08:59:49+08:00",
+  "calendar_channel": "INTERNAL",
+  "publication_authorized": false,
+  "exact_questions_observed": 0,
+  "conversation_rows_added": 0,
+  "content_published": 0,
+  "private_outreach_sent": 0,
+  "outreach_prepared": 0,
+  "classification_result": "NO_OBSERVABLE_INPUT",
+  "trust_boundary_audit": "PASS",
+  "factual_audit": "PASS_NO_INFERENCE_FROM_ABSENCE",
+  "positioning_changed": false,
+  "onepagers_changed": false,
+  "objection_responses_changed": false,
+  "production_changed": false,
+  "meaningful_signal": false
+}

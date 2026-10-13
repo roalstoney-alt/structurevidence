@@ -4,7 +4,7 @@ date,day,theme,thesis_id,execution,channel,publication_authorized,status,artifac
 2026-10-10,D3,UniPat verifies performance; who verifies the evaluation?,Q2,Prepare 15-second CN/EN script,PREPARE_ONLY,NO,PLANNED,
 2026-10-11,D4,Evidence to experts/rubrics to evaluation to result,Q2,Prepare Zhihu long-form article,PREPARE_ONLY,NO,PREPARED,drafts/D4_2026-10-11_ZHIHU_Q2.md
 2026-10-12,D5,First buyer outreach,Q4,Research 15 storage/power decision makers and prepare personalized messages,PREPARE_ONLY,NO,PLANNED,
-2026-10-13,D6,Objection capture,Q4,Extract exact prospect questions without slogan changes,INTERNAL,NO,PLANNED,
+2026-10-13,D6,Objection capture,Q4,Extract exact prospect questions without slogan changes,INTERNAL,NO,NO_OBSERVABLE_INPUT,daily/2026-10-13_D6.md
 2026-10-14,D7,STOP CONTENT,Q4,Weekly evidence review only,NONE,NO,PLANNED,
 2026-10-15,D8,Sodium-ion boundary,Q3,Prepare agreement supported versus deployment not established,PREPARE_ONLY,NO,PLANNED,
 2026-10-16,D9,800V boundary,Q3,Prepare one commercial deployment versus repeatability established,PREPARE_ONLY,NO,PLANNED,
