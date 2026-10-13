@@ -47,3 +47,31 @@ Post-run verification passed:
 Frozen Gold, claim hashes, protected snapshots, publication/outreach kill
 switches, `GTM005 = HOLD`, `GTM002 v0.4 = STOP_AND_RETAIN_RESULT`, and the
 Trust Boundary campaign inputs remain unchanged.
+
+## `SE-CEPE-20261013T090308Z`
+
+DISPOSITION = `HUMAN_REVIEW_REQUIRED_AFTER_POSTCHECK`
+
+The scheduled runner completed 8/8 availability checks and wrote its original
+append-only records. A required post-run comparison then found changed WHO page
+hashes for `SE-TECP-007` and `SE-TECP-008` relative to the prior successful
+run. WHO response headers reported `Last-Modified` values on 2026-10-12 after
+the prior observation. Immediate repeat retrievals reproduced both new hashes.
+
+The runner-generated `NO_MATERIAL_CHANGE` records and automatic report are
+retained as history, but they are not accepted as the final disposition for
+those two tasks. The supplemental run
+`SE-CEPE-20261013T090308Z-POSTCHECK` appends two
+`INTERPRETATION_REVIEW_REQUIRED` observations and a human-review report.
+
+No frozen Gold, claim, case state or historical cutoff was changed. Existing X
+and Zhihu drafts remain unsent and are held pending the semantic review.
+
+Post-run verification passed:
+
+- `scripts/test_se_cepe_001.py`: 12/12
+- `scripts/test_se_ai_data_001.py`: 7/7
+- `scripts/test_se_ai_data_001_observation_v02.py`: 10/10
+- `scripts/test_case_watch.py`: 5/5
+- `scripts/test_irkutsk_publication.py`: PASS
+- `scripts/test_irkutsk_alias_repair.py`: PASS

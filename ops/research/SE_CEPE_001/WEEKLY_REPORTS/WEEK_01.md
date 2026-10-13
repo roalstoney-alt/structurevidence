@@ -19,18 +19,18 @@ PILOT_COMPLETE = `NO`
 
 ## Runs
 
-OBSERVATION_RUNS_COMPLETED = `1_VALID / 1_INVALIDATED_RETAINED`
+OBSERVATION_RUNS_COMPLETED = `3_VALID / 1_INVALIDATED_RETAINED`
 
-LATEST_RUN_ID = `SE-CEPE-CTRL-20261011-002`
+LATEST_RUN_ID = `SE-CEPE-20261013T090308Z-POSTCHECK`
 
-NEW_EVIDENCE_EVENTS = `0`
+NEW_EVIDENCE_EVENTS = `2_POTENTIAL_PENDING_HUMAN_REVIEW`
 
-DECISION_CHANGED = `NO`
+DECISION_CHANGED = `UNKNOWN_PENDING_HUMAN_REVIEW`
 
-The valid controlled source-availability run completed 8/8 checks. AP and TASS
-returned HTTP 403 for the Irkutsk accident task, so the runner used the already
-registered WHO fallback and retained every attempt. This is bounded source
-availability/retrieval evidence, not a broad web-search or semantic conclusion.
+The valid controlled and scheduled runs completed their bounded checks. The
+2026-10-13 postcheck found changed WHO source versions for `SE-TECP-007` and
+`SE-TECP-008`, appended review-required records and preserved the original
+runner output. No claim changed automatically.
 
 T0 = `2026-10-11T21:54:22+08:00`
 
@@ -38,9 +38,9 @@ PILOT_END = `2026-11-10T21:54:22+08:00`
 
 ## Drafts and audience signal
 
-X_DRAFTS_PREPARED = `1`
+X_DRAFTS_PREPARED = `1_HELD_PENDING_SEMANTIC_REVIEW`
 
-ZHIHU_DRAFTS_PREPARED = `1`
+ZHIHU_DRAFTS_PREPARED = `1_HELD_PENDING_SEMANTIC_REVIEW`
 
 CONTENT_PUBLISHED = `0`
 
@@ -53,6 +53,7 @@ drafts are held for exact human publication approval.
 
 OBSERVED_COST = `UNKNOWN`
 
-PRODUCT_FIXES_PROPOSED = `0`
+PRODUCT_FIXES_PROPOSED = `1_PENDING_HUMAN_REVIEW`
 
-No reproduced product issue currently justifies a change.
+`SE-CEPE-ISSUE-001` documents the missing prior-hash comparison. The smallest
+fix is proposed but not implemented.

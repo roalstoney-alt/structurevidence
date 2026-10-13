@@ -1,6 +1,6 @@
 # SE-CEPE-001 Zhihu drafts for review
 
-PUBLICATION_STATUS = `DRAFT_NOT_SENT`
+PUBLICATION_STATUS = `DRAFT_NOT_SENT_HOLD_PENDING_SEMANTIC_REVIEW`
 
 DESTINATION_ACCOUNT = `NOT_SELECTED_OR_APPROVED`
 
@@ -45,3 +45,5 @@ StructEvidence 的 Irkutsk 公共案例提供了一个有边界的例子。原�
 - 不宣称 WHO 后续通报证明实验室事故、第二例鼠疫病例或最终病原体。
 - 不宣称 30 天试点已经完成，也不宣称市场验证或成本降低已经成立。
 - 发布前仍需人类批准最终正文、知乎账号、链接和发布时间。
+
+CURRENT_HOLD = `2026-10-13 WHO 来源版本变化需要先完成人工语义复核；本草稿不得发布。`

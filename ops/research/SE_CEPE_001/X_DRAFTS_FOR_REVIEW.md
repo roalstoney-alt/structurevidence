@@ -1,6 +1,6 @@
 # SE-CEPE-001 X drafts for review
 
-PUBLICATION_STATUS = `DRAFT_NOT_SENT`
+PUBLICATION_STATUS = `DRAFT_NOT_SENT_HOLD_PENDING_SEMANTIC_REVIEW`
 
 DESTINATION_ACCOUNT = `@StructEvidence — NOT_APPROVED_FOR_THIS_COPY`
 
@@ -23,3 +23,5 @@ BOUNDARY = `The later public source expands the observable record; it does not r
 RIGHTS = `Original StructEvidence wording; factual paraphrase and links only; no copied quotation, raw task package or private material.`
 
 HUMAN_GATE = `Approve the exact copy, @StructEvidence account, links and publication time. Until then, do not post.`
+
+CURRENT_HOLD = `The 2026-10-13 WHO source-version delta requires semantic review before this copy can return to exact-content publication review.`

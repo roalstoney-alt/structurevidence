@@ -9,8 +9,23 @@ GTM005 = `HOLD`
 PRODUCTION = `UNCHANGED`
 
 The observation pilot may continue under its approved read-only boundary. No
-publication or outreach is implied. The next human gate applies only to exact
-publication content, account and time.
+publication or outreach is implied. A 2026-10-13 WHO source-version delta now
+requires semantic review before the existing publication drafts are eligible
+for exact-content approval.
+
+## Immediate evidence-state review
+
+Decide current-state handling without changing the frozen 2026-10-08 Gold:
+
+1. `SE-TECP-007`: retain `NOT_ESTABLISHED`, or request a different current
+   projection with rationale, given stronger reported no-incident evidence and
+   WHO's residual uncertainty about exposure and causative agent.
+2. `SE-TECP-008`: retain `NOT_ESTABLISHED` or approve a proposed current-state
+   review toward `CONTRADICTED`, given the later official no-additional-case and
+   negative high-threat-pathogen report.
+3. Approve or reject the isolated `SE-CEPE-ISSUE-001` runner fix.
+
+Until this review is resolved, X-001 and ZH-001 remain `HOLD_DRAFT`.
 
 ## Exact publication decision retained for later review
 

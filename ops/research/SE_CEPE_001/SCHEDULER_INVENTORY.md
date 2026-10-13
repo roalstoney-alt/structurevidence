@@ -6,7 +6,7 @@ Checked on: `2026-10-11` (Asia/Singapore)
 
 | Job | Source of truth | Enabled | Rhythm | Last run | Destination / boundary |
 |---|---|---:|---|---|---|
-| `se-ai-data-001-weekly-observation` | Codex heartbeat automation | YES | Daily 09:00, UTC+08, through 2026-11-10 | `SE-CEPE-20261012T090153Z` scheduled run | Current local chat; drafts only; watches the same eight tasks |
+| `se-ai-data-001-weekly-observation` | Codex heartbeat automation | YES | Daily 09:00, UTC+08, through 2026-11-10 | `SE-CEPE-20261013T090308Z-POSTCHECK` human-review-required postcheck | Current local chat; drafts only; watches the same eight tasks |
 | `structevidence-trust-boundary-30d` | Codex heartbeat automation | YES | Daily 01:00 until 2026-11-06 | Managed separately | Current local chat; separate campaign calendar and publication rules |
 | `case-review-freshness.yml` | `.github/workflows/case-review-freshness.yml` | On push, pull request and manual dispatch | No cron schedule | UNKNOWN | GitHub Actions checks; not a continuous observation scheduler |
 
@@ -25,7 +25,7 @@ FAILURE_DELIVERY = `Notify the current chat on source-check failure, protected r
 
 SCHEDULER_VERIFIED = `YES`
 
-SCHEDULER_LAST_RUN_ID = `SE-CEPE-20261012T090153Z`
+SCHEDULER_LAST_RUN_ID = `SE-CEPE-20261013T090308Z-POSTCHECK`
 
 AUTOMATION_UPDATE_RESULT = `ACTIVE`
 
@@ -33,8 +33,8 @@ T0 = `2026-10-11T21:54:22+08:00`
 
 PILOT_END = `2026-11-10T21:54:22+08:00`
 
-The automation update was accepted. The 2026-10-12 scheduled trigger wrote 8
-observations, one source-run summary, one cost row and one evidence-change
-report; its protected regressions passed. This verifies both the controlled
-execution path and one actual scheduled execution. It is not evidence that the
-30-day pilot is complete.
+The automation update was accepted. The 2026-10-13 scheduled trigger wrote 8
+observations. Its postcheck detected two changed WHO source versions, appended
+two review-required records and passed protected regressions. This verifies the
+scheduled execution path but requires human semantic review; it is not evidence
+that the 30-day pilot is complete.
