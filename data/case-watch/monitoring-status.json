@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "status_recorded_at": "2026-10-12T15:37:28+08:00",
+  "status_recorded_at": "2026-10-13T14:37:58+08:00",
   "observation_scope": "Actual Irkutsk review only; other cases and weekly monitoring unchanged.",
   "cases": [
     {
@@ -72,14 +72,14 @@
     {
       "case_id": "SE-IRK-LAB-001",
       "period": {
-        "id": "2026-10-12",
-        "start": "2026-10-12",
-        "end": "2026-10-12",
+        "id": "2026-10-13",
+        "start": "2026-10-13",
+        "end": "2026-10-13",
         "status": "REVIEW_INCOMPLETE",
         "scope": "No qualifying new evidence; regulator, procurement, patent and underlying clinical/investigation records remained inaccessible."
       },
-      "period_review_id": "SE-IRK-REVIEW-20261012-01",
-      "latest_review_file": "cases/irkutsk-lab-worker-death/search-review-20261012-01.json",
+      "period_review_id": "SE-IRK-REVIEW-20261013-01",
+      "latest_review_file": "cases/irkutsk-lab-worker-death/search-review-20261013-01.json",
       "monitoring": {
         "cadence": "DAILY",
         "enabled": true,

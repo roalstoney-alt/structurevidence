@@ -1,0 +1,458 @@
+{
+  "case_id": "SE-IRK-LAB-001",
+  "version": "v0.8",
+  "review_id": "SE-IRK-REVIEW-20261013-01",
+  "current_state": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+  "last_reviewed_at": "2026-10-13T14:37:58+08:00",
+  "evidence_updated_at": "2026-10-11T15:01:01+08:00",
+  "page_modified_at": "2026-10-13T14:37:58+08:00",
+  "public_whitelist_only": true,
+  "claims": [
+    {
+      "claim_id": "SE-IRK-LAB-001.WORKER_AT_INSTITUTE",
+      "statement": "The deceased woman worked at the Irkutsk infectious-disease research institute.",
+      "status": "SUPPORTED",
+      "sources": [
+        "SE-IRK-LAB-001-EV-001",
+        "SE-IRK-LAB-001-EV-002"
+      ]
+    },
+    {
+      "claim_id": "SE-IRK-LAB-001.WORKER_DEATH_REPORTED",
+      "statement": "The death of the laboratory worker was publicly reported.",
+      "status": "SUPPORTED",
+      "sources": [
+        "SE-IRK-LAB-001-EV-001",
+        "SE-IRK-LAB-001-EV-002",
+        "SE-IRK-LAB-001-EV-009"
+      ],
+      "reported_death_date": "2026-10-02",
+      "reported_death_date_sources": [
+        "SE-IRK-LAB-001-EV-009"
+      ],
+      "input_alias": "CL-001",
+      "origin_claim_id": "CL-001"
+    },
+    {
+      "claim_id": "SE-IRK-LAB-001.PNEUMONIA_UNKNOWN_ETIOLOGY_REPORTED",
+      "statement": "Russian authorities publicly described the illness as pneumonia of unknown etiology or origin.",
+      "status": "SUPPORTED",
+      "sources": [
+        "SE-IRK-LAB-001-EV-002",
+        "SE-IRK-LAB-001-EV-003",
+        "SE-IRK-LAB-001-EV-004"
+      ],
+      "input_alias": "CL-002",
+      "origin_claim_id": "CL-002"
+    },
+    {
+      "claim_id": "SE-IRK-LAB-001.PNEUMONIC_PLAGUE_DIAGNOSIS",
+      "statement": "Pneumonic plague was established as the diagnosis.",
+      "status": "NOT_ESTABLISHED",
+      "sources": [
+        "SE-IRK-LAB-001-EV-001",
+        "SE-IRK-LAB-001-EV-002",
+        "SE-IRK-LAB-001-EV-008",
+        "SE-IRK-LAB-001-EV-011"
+      ],
+      "limit": "WHO reports Russian testing did not identify plague among tested high-threat pathogens, while the fatal illness still lacks a confirmed causative agent.",
+      "input_alias": "CL-003",
+      "origin_claim_id": "CL-003"
+    },
+    {
+      "claim_id": "SE-IRK-LAB-001.OCCUPATIONAL_PATHOGEN_LINK",
+      "statement": "The illness or death was established as linked to a pathogen handled at work.",
+      "status": "NOT_ESTABLISHED",
+      "sources": [
+        "SE-IRK-LAB-001-EV-003",
+        "SE-IRK-LAB-001-EV-004",
+        "SE-IRK-LAB-001-EV-011"
+      ]
+    },
+    {
+      "claim_id": "SE-IRK-LAB-001.LAB_ACCIDENT",
+      "statement": "A laboratory accident was established.",
+      "status": "NOT_ESTABLISHED",
+      "sources": [
+        "SE-IRK-LAB-001-EV-003",
+        "SE-IRK-LAB-001-EV-004",
+        "SE-IRK-LAB-001-EV-005",
+        "SE-IRK-LAB-001-EV-011"
+      ]
+    },
+    {
+      "claim_id": "SE-IRK-LAB-001.CONTACTS_MONITORED",
+      "statement": "Authorities reported that contacts were identified and monitored.",
+      "status": "SUPPORTED",
+      "sources": [
+        "SE-IRK-LAB-001-EV-001",
+        "SE-IRK-LAB-001-EV-002",
+        "SE-IRK-LAB-001-EV-011"
+      ]
+    },
+    {
+      "claim_id": "SE-IRK-LAB-001.DANGEROUS_PATHOGEN_IN_CONTACTS",
+      "statement": "A dangerous infectious-disease pathogen was established among monitored contacts.",
+      "status": "NOT_ESTABLISHED",
+      "sources": [
+        "SE-IRK-LAB-001-EV-001",
+        "SE-IRK-LAB-001-EV-002",
+        "SE-IRK-LAB-001-EV-011"
+      ]
+    },
+    {
+      "claim_id": "SE-IRK-LAB-001.SECOND_PLAGUE_CASE",
+      "input_alias": "CL-064-A",
+      "origin_claim_id": "CL-064",
+      "statement": "A second plague case was established.",
+      "status": "NOT_ESTABLISHED",
+      "sources": [
+        "SE-IRK-LAB-001-EV-008",
+        "SE-IRK-LAB-001-EV-011"
+      ],
+      "limit": "A verification request or suspected-event report does not confirm a diagnosis or an additional death."
+    },
+    {
+      "claim_id": "SE-IRK-LAB-001.SECOND_DEATH",
+      "input_alias": "CL-064-B",
+      "origin_claim_id": "CL-064",
+      "statement": "A second death connected to the suspected plague event was established.",
+      "status": "NOT_ESTABLISHED",
+      "sources": [
+        "SE-IRK-LAB-001-EV-008",
+        "SE-IRK-LAB-001-EV-011"
+      ],
+      "limit": "A verification request or suspected-event report does not confirm a diagnosis or an additional death."
+    },
+    {
+      "claim_id": "SE-IRK-LAB-001.WHO_INITIAL_RISK_ASSESSMENT",
+      "statement": "WHO published an initial, provisional risk assessment for this event.",
+      "status": "SUPPORTED",
+      "sources": [
+        "SE-IRK-LAB-001-EV-001"
+      ]
+    },
+    {
+      "claim_id": "SE-IRK-LAB-001.OCCUPATIONAL_LAB_EXPOSURE",
+      "statement": "The death resulted from occupational laboratory exposure.",
+      "statement_zh": "死亡源于实验室职业暴露。",
+      "status": "NOT_ESTABLISHED",
+      "sources": [
+        "SE-IRK-LAB-001-EV-003",
+        "SE-IRK-LAB-001-EV-004",
+        "SE-IRK-LAB-001-EV-008",
+        "SE-IRK-LAB-001-EV-011"
+      ],
+      "limit": "WHO states laboratory-associated exposure cannot be fully excluded; this does not establish that such exposure occurred.",
+      "input_alias": "CL-004",
+      "origin_claim_id": "CL-004"
+    },
+    {
+      "claim_id": "SE-IRK-LAB-001.WHO_ADDITIONAL_INFORMATION_REQUESTED",
+      "statement": "WHO publicly stated that it requested additional information about the event.",
+      "statement_zh": "WHO 公开表述已索取本事件进一步信息。",
+      "status": "SUPPORTED",
+      "sources": [
+        "SE-IRK-LAB-001-EV-008"
+      ],
+      "limit": "Supports a verification procedure; it does not establish a pathogen diagnosis.",
+      "input_alias": "CL-062",
+      "origin_claim_id": "CL-062"
+    },
+    {
+      "claim_id": "SE-IRK-LAB-001.WHO_SECOND_EMPLOYEE_REPORT_VERIFICATION_REQUESTED",
+      "statement": "WHO requested verification of media reports of a second employee with pneumonia of undetermined cause.",
+      "statement_zh": "WHO 要求核实第二名员工病因未明肺炎的媒体说法。",
+      "status": "SUPPORTED",
+      "sources": [
+        "SE-IRK-LAB-001-EV-008"
+      ],
+      "limit": "A verification request does not confirm the reported second case.",
+      "input_alias": "CL-063",
+      "origin_claim_id": "CL-063"
+    },
+    {
+      "claim_id": "SE-IRK-LAB-001.CONTACT_RELEASE_90_PERCENT_REPORTED",
+      "statement": "The historical handoff records Reuters reporting that Russian regulators said about 90% of quarantined people had been released.",
+      "statement_zh": "历史交接记录载有 Reuters 转述俄监管机构称约 90% 被隔离者已解除隔离；本轮未能重开该报道。",
+      "status": "OBSERVED",
+      "sources": [
+        "SE-IRK-LAB-001-EV-010"
+      ],
+      "limit": "Retained historical attribution only; this article could not be reopened. Original release records and aligned population and time definitions are unavailable.",
+      "input_alias": "CL-065",
+      "origin_claim_id": "CL-065"
+    },
+    {
+      "claim_id": "SE-IRK-LAB-001.CONTACT_OBSERVATION_COMPLETED_REPORTED",
+      "statement": "WHO reported that the Russian NFP said medical observation of all identified contacts had ended.",
+      "statement_zh": "WHO 转述俄罗斯 IHR 国家联络点称全部已识别接触者医学观察已经结束。",
+      "status": "SUPPORTED",
+      "sources": [
+        "SE-IRK-LAB-001-EV-009",
+        "SE-IRK-LAB-001-EV-011"
+      ],
+      "limit": "SUPPORTED only as an official WHO account of Russian NFP information. Underlying follow-up records remain unavailable, and WHO could not independently assess whether seven days excluded all plausible causes.",
+      "input_alias": "CL-066",
+      "origin_claim_id": "CL-066"
+    },
+    {
+      "claim_id": "SE-IRK-LAB-001.WHO_FULLY_INFORMED_RISK_ASSESSMENT",
+      "statement": "WHO had all necessary information and completed a fully informed risk assessment of this event.",
+      "statement_zh": "WHO 已获得完整信息并完成本事件充分公共卫生风险评估。",
+      "status": "NOT_ESTABLISHED",
+      "sources": [
+        "SE-IRK-LAB-001-EV-008",
+        "SE-IRK-LAB-001-EV-011"
+      ],
+      "limit": "WHO issued a formal assessment but retained limited confidence: no confirmed etiology, insufficient basis to independently judge monitoring duration for all plausible causes, and laboratory-associated exposure not fully excluded.",
+      "input_alias": "CL-067",
+      "origin_claim_id": "CL-067"
+    },
+    {
+      "claim_id": "SE-IRK-LAB-001.WHO_NO_ONGOING_TRANSMISSION_EVIDENCE",
+      "statement": "WHO has not identified evidence of ongoing transmission associated with this event, based on information provided by the Russian NFP.",
+      "statement_zh": "基于俄罗斯 IHR 国家联络点提供的信息，WHO 尚未识别出与本事件有关的持续传播证据。",
+      "status": "SUPPORTED",
+      "sources": [
+        "SE-IRK-LAB-001-EV-011"
+      ],
+      "limit": "No evidence identified is not proof that transmission was impossible. WHO states confidence is limited by the unconfirmed diagnosis and uncertain source and mode of exposure."
+    },
+    {
+      "claim_id": "SE-IRK-LAB-001.WHO_LAB_EXPOSURE_NOT_FULLY_EXCLUDED",
+      "statement": "WHO stated that laboratory-associated exposure cannot be fully excluded at this stage.",
+      "statement_zh": "WHO 表示，现阶段仍不能完全排除实验室相关暴露。",
+      "status": "SUPPORTED",
+      "sources": [
+        "SE-IRK-LAB-001-EV-011"
+      ],
+      "limit": "This supports WHO’s uncertainty statement; it does not establish that a laboratory exposure occurred."
+    }
+  ],
+  "unresolved_input_aliases": [],
+  "history": [
+    {
+      "recorded_at": "2026-10-08T05:29:45+08:00",
+      "state": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+      "review_id": "SE-IRK-REVIEW-20261008-01",
+      "result": "REVIEW_INCOMPLETE",
+      "note": "First public bounded review; no historical status was overwritten."
+    },
+    {
+      "recorded_at": "2026-10-08T06:15:59+08:00",
+      "state": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+      "review_id": "SE-IRK-REVIEW-20261008-02",
+      "result": "REVIEW_INCOMPLETE",
+      "event_type": "EVIDENCE_ADDED_NO_CORE_STATE_CHANGE",
+      "note": "Recovered input mappings and read the WHO original statement. Initial and fully informed risk assessments are separate claims. Original v0.1 records remain unchanged."
+    },
+    {
+      "recorded_at": "2026-10-08T15:48:22+08:00",
+      "state": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+      "review_id": "SE-IRK-REVIEW-20261008-03",
+      "result": "REVIEW_INCOMPLETE",
+      "event_type": "SOURCE_DATE_METADATA_CORRECTION_NO_CORE_STATE_CHANGE",
+      "note": "UNOG source-date correction only; no clinical claim status changed. Previous snapshots and reviews remain immutable."
+    },
+    {
+      "recorded_at": "2026-10-09T14:52:43+08:00",
+      "state": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+      "review_id": "SE-IRK-REVIEW-20261009-01",
+      "result": "REVIEW_INCOMPLETE",
+      "event_type": "BOUNDED_REVIEW_INCOMPLETE_NO_ACCEPTED_STATE_CHANGE",
+      "note": "Two Russian press-service attributions retained in review as candidates. Clinical claims and accepted source records unchanged."
+    },
+    {
+      "recorded_at": "2026-10-10T15:24:05+08:00",
+      "state": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+      "review_id": "SE-IRK-REVIEW-20261010-01",
+      "result": "REVIEW_INCOMPLETE",
+      "event_type": "BOUNDED_REVIEW_INCOMPLETE_NO_ACCEPTED_STATE_CHANGE",
+      "note": "No new qualifying evidence. Clinical claims and accepted source records unchanged; official source access remains incomplete."
+    },
+    {
+      "recorded_at": "2026-10-11T15:01:01+08:00",
+      "state": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+      "review_id": "SE-IRK-REVIEW-20261011-01",
+      "result": "REVIEW_INCOMPLETE",
+      "event_type": "OFFICIAL_WHO_DON_ACCEPTED_NO_CORE_CLINICAL_STATE_CHANGE",
+      "note": "Accepted WHO DON620. Ongoing transmission evidence was not identified, but etiology, monitoring sufficiency and laboratory-exposure uncertainty remain."
+    },
+    {
+      "recorded_at": "2026-10-12T15:37:28+08:00",
+      "state": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+      "review_id": "SE-IRK-REVIEW-20261012-01",
+      "result": "REVIEW_INCOMPLETE",
+      "event_type": "BOUNDED_REVIEW_INCOMPLETE_NO_ACCEPTED_STATE_CHANGE",
+      "note": "No new qualifying evidence. WHO DON620 remains the latest accepted material evidence; clinical and evidence states unchanged."
+    },
+    {
+      "recorded_at": "2026-10-13T14:37:58+08:00",
+      "state": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+      "review_id": "SE-IRK-REVIEW-20261013-01",
+      "result": "REVIEW_INCOMPLETE",
+      "event_type": "BOUNDED_REVIEW_INCOMPLETE_NO_ACCEPTED_STATE_CHANGE",
+      "note": "No new qualifying evidence. WHO DON620 remains the latest accepted material evidence; clinical and evidence states unchanged."
+    }
+  ],
+  "snapshot_created_at": "2026-10-13T14:37:58+08:00",
+  "first_publication_at": "2026-10-08T05:49:13+08:00",
+  "input_alias_map": "input-alias-map-v0.1.json",
+  "sources": [
+    {
+      "evidence_id": "SE-IRK-LAB-001-EV-001",
+      "title": "WHO statement carried by the United Nations Geneva newsroom",
+      "source_url": "https://www.unognewsroom.org/story/en/3289/irkutsk-suspected-plague-death-who/9745",
+      "publisher": "United Nations Geneva / World Health Organization",
+      "source_date": "2026-10-06",
+      "observed_date": "2026-10-08T15:48:22+08:00",
+      "classification": "INTERNATIONAL_PUBLIC_HEALTH_STATEMENT",
+      "supports": "A female laboratory worker died; authorities were testing the cause, monitoring identified contacts, and WHO published an initial risk assessment.",
+      "does_not_establish": "A causative agent, a diagnosis of pneumonic plague, an occupational pathogen link, a laboratory accident, a second plague case, or a second death.",
+      "previous_recorded_source_date": "2026-10-05",
+      "source_date_semantics": "Date displayed on the UNOG newsroom article and its press-briefing dateline; original v0.1/v0.2 records preserved.",
+      "date_correction_record": "search-review-20261008-03.json",
+      "retrieval_level": "OPENED_EXTRACTED_TEXT"
+    },
+    {
+      "evidence_id": "SE-IRK-LAB-001-EV-002",
+      "title": "WHO still did not know the causative agent in the Irkutsk death",
+      "source_url": "https://apnews.com/article/russia-plague-irkutsk-who-trump-c1dfff772ca769bbdf26726787432d51",
+      "publisher": "Associated Press",
+      "source_date": "2026-10-07",
+      "observed_date": "2026-10-08T05:29:45+08:00",
+      "classification": "ORIGINAL_REPORTING_WITH_DIRECT_PUBLIC_HEALTH_ATTRIBUTION",
+      "supports": "WHO said it did not know the causative agent; the Russian public-health statement described pneumonia of unknown origin and reported testing of contacts.",
+      "does_not_establish": "That media speculation about plague or a laboratory accident is correct."
+    },
+    {
+      "evidence_id": "SE-IRK-LAB-001-EV-003",
+      "title": "Russian public-health statement reported no evidence tying the illness to worked-with pathogens",
+      "source_url": "https://apnews.com/article/russia-disease-plague-researcher-pneumonia-9ddc8e3e064637853407bfd24d8937f5",
+      "publisher": "Associated Press",
+      "source_date": "2026-10-05",
+      "observed_date": "2026-10-08T05:29:45+08:00",
+      "classification": "ORIGINAL_REPORTING_WITH_GOVERNMENT_ATTRIBUTION",
+      "supports": "Russian authorities publicly reported pneumonia of unknown origin, no evidence of illness from pathogens handled at work, and no institute incident involving pathogenic microorganisms.",
+      "does_not_establish": "An independently replicated occupational-safety investigation or a final clinical diagnosis."
+    },
+    {
+      "evidence_id": "SE-IRK-LAB-001-EV-004",
+      "title": "Rospotrebnadzor commission findings reported by TASS",
+      "source_url": "https://tass.ru/obschestvo/28180027",
+      "publisher": "TASS, attributing Rospotrebnadzor",
+      "source_date": "2026-10-05",
+      "observed_date": "2026-10-08T05:29:45+08:00",
+      "classification": "STATE_MEDIA_REPORT_OF_PUBLIC_HEALTH_STATEMENT",
+      "supports": "The cited commission reported no laboratory accident and used the diagnosis description pneumonia of unknown etiology.",
+      "does_not_establish": "Independent confirmation of the commission's methods or a final pathogen diagnosis."
+    },
+    {
+      "evidence_id": "SE-IRK-LAB-001-EV-005",
+      "title": "Fact check of circulating Irkutsk claims",
+      "source_url": "https://amp.dw.com/en/russia-lab-worker-death-fact-check/a-79560752",
+      "publisher": "Deutsche Welle",
+      "source_date": "2026-10-06",
+      "observed_date": "2026-10-08T05:29:45+08:00",
+      "classification": "SECONDARY_FACT_CHECK",
+      "supports": "The reviewed public record did not prove a laboratory accident; unrelated WHO and video material were circulating alongside the event.",
+      "does_not_establish": "A final diagnosis or an independent laboratory investigation."
+    },
+    {
+      "evidence_id": "SE-IRK-LAB-001-EV-006",
+      "title": "WHO plague fact sheet",
+      "source_url": "https://www.who.int/news-room/fact-sheets/detail/plague",
+      "publisher": "World Health Organization",
+      "source_date": "2026-09-29",
+      "observed_date": "2026-10-08T06:15:59+08:00",
+      "classification": "GENERAL_MEDICAL_REFERENCE",
+      "supports": "Plague is a bacterial disease caused by Yersinia pestis and pneumonic plague has defined clinical and public-health characteristics.",
+      "does_not_establish": "That plague caused the Irkutsk worker's illness or death.",
+      "previous_recorded_source_date": "2022-07-07",
+      "source_date_semantics": "Date displayed on the WHO page in this review; original publication date is not established.",
+      "retrieval_level": "OPENED_EXTRACTED_TEXT",
+      "date_correction_record": "index-v0.1.json"
+    },
+    {
+      "evidence_id": "SE-IRK-LAB-001-EV-007",
+      "title": "Irkutsk Anti-Plague Research Institute public description",
+      "source_url": "https://irknipchi.ru/index_eng.htm",
+      "publisher": "Irkutsk Anti-Plague Research Institute",
+      "source_date": "2026-10-08",
+      "observed_date": "2026-10-08T05:29:45+08:00",
+      "classification": "INSTITUTIONAL_BACKGROUND",
+      "supports": "The institute publicly describes work on plague and other dangerous infectious diseases.",
+      "does_not_establish": "Which agent, if any, was involved in the worker's illness, or that a workplace incident occurred."
+    },
+    {
+      "evidence_id": "SE-IRK-LAB-001-EV-008",
+      "title": "WHO Director-General opening remarks, 7 October 2026",
+      "source_url": "https://www.who.int/news-room/speeches/item/who-director-general-s-opening-remarks-at-the-media-briefing---7-october-2026",
+      "publisher": "World Health Organization",
+      "source_date": "2026-10-07",
+      "observed_date": "2026-10-08T06:15:59+08:00",
+      "classification": "OFFICIAL_PRIMARY_PUBLIC_HEALTH_STATEMENT",
+      "retrieval_level": "OPENED_EXTRACTED_TEXT",
+      "dependency_groups": [
+        "WHO_FOLLOWUP_20261006_07"
+      ],
+      "supports": "WHO sought laboratory-test information, reasons for public-health measures and contact health status; it sought verification of a second-employee media report and said the information was insufficient for a full risk assessment.",
+      "does_not_establish": "A plague diagnosis, an occupational exposure chain, a confirmed second case or a second death."
+    },
+    {
+      "evidence_id": "SE-IRK-LAB-001-EV-009",
+      "title": "Public post attributed to Tedros Adhanom Ghebreyesus",
+      "source_url": "https://www.linkedin.com/posts/tedros-adhanom-ghebreyesus_since-the-first-media-reports-world-health-activity-7513361771949367297-epsp",
+      "publisher": "Named public LinkedIn account attributed to Tedros",
+      "source_date": null,
+      "source_date_semantics": "Only a relative 3h label was displayed; no absolute publication time was verified.",
+      "observed_date": "2026-10-08T06:15:59+08:00",
+      "classification": "NAMED_PUBLIC_ACCOUNT_STATEMENT",
+      "retrieval_level": "OPENED_EXTRACTED_TEXT",
+      "dependency_groups": [
+        "WHO_FOLLOWUP_20261006_07",
+        "RUSSIAN_AUTHORITIES_VIA_WHO_CONTACT_SUMMARY"
+      ],
+      "supports": "The post dates the reported death to 2 October and relays Russian information that medical observation of all identified contacts had ended.",
+      "does_not_establish": "Independently verified clinical or contact follow-up records, a confirmed pathogen, or that transmission has been excluded."
+    },
+    {
+      "evidence_id": "SE-IRK-LAB-001-EV-010",
+      "title": "Reuters follow-up retained from the recovered public handoff",
+      "source_url": "https://www.reuters.com/business/healthcare-pharmaceuticals/who-seeks-details-russia-media-reports-a-second-lab-worker-with-pneumonia-2026-10-07/",
+      "publisher": "Reuters, attributing Russian regulators and WHO",
+      "source_date": "2026-10-07",
+      "source_date_semantics": "Historical handoff records 2026-10-07T09:06:00Z; not reverified during this review.",
+      "observed_date": "2026-10-08T04:56:29.069815+08:00",
+      "classification": "HISTORICAL_HANDOFF_NEWS_ATTRIBUTION",
+      "retrieval_level": "PRIOR_REVIEW_EXTRACTED_TEXT_RECORD_ONLY",
+      "latest_access_status": "OPEN_FAILED_TOOL_INACCESSIBLE",
+      "latest_access_attempt_at": "2026-10-08T06:15:59+08:00",
+      "dependency_groups": [
+        "WHO_FOLLOWUP_20261006_07",
+        "RPN_CONTACT_OBSERVATION_STATEMENT_20261007"
+      ],
+      "supports": "The historical public handoff records Reuters reporting an attributed claim that about 90% of quarantined people had been released.",
+      "does_not_establish": "Fresh access to the article, original release records, aligned contact populations and times, or exclusion of transmission."
+    },
+    {
+      "evidence_id": "SE-IRK-LAB-001-EV-011",
+      "title": "WHO Disease Outbreak News: pneumonia of undetermined etiology in the Russian Federation",
+      "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON620",
+      "publisher": "World Health Organization",
+      "source_date": "2026-10-10",
+      "observed_date": "2026-10-11T15:01:01+08:00",
+      "classification": "OFFICIAL_PRIMARY_DISEASE_OUTBREAK_ASSESSMENT",
+      "retrieval_level": "OPENED_EXTRACTED_TEXT",
+      "dependency_groups": [
+        "WHO_DON620",
+        "RUSSIAN_NFP_INFORMATION_RELAYED_BY_WHO"
+      ],
+      "supports": "WHO published that, based on Russian NFP information, it had not identified evidence of ongoing transmission; all identified contacts reportedly remained asymptomatic, tested negative for investigated high-threat pathogens and completed follow-up.",
+      "does_not_establish": "The causative agent, an independently verified complete contact record, sufficiency of the seven-day monitoring period for all plausible causes, or exclusion of a laboratory-associated exposure. WHO explicitly retained these uncertainties."
+    }
+  ],
+  "previous_snapshot": "state-v0.7.json",
+  "evidence_state_as_of": "2026-10-11T15:01:01+08:00"
+}

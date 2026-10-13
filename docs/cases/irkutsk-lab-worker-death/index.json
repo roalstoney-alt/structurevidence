@@ -282,6 +282,26 @@
         "supplemental_boundary": "None; no new qualifying original was identified.",
         "exhaustive": false
       }
+    },
+    {
+      "review_id": "SE-IRK-REVIEW-20261013-01",
+      "reviewed_at": "2026-10-13T14:37:58+08:00",
+      "result": "REVIEW_INCOMPLETE",
+      "review_file": "search-review-20261013-01.json",
+      "search_boundary": {
+        "public_scope": "Final cause; de-identified contact follow-up; WHO/IHR revision; auditable safety or legal investigation; official procurement and patent metadata.",
+        "queries": [
+          "site:who.int Irkutsk anti-plague institute worker death October 2026 update cause pathogen contact monitoring",
+          "site:rospotrebnadzor.ru Иркутск противочумный институт сотрудница смерть причина 13 октября 2026 расследование",
+          "\"0334100002726000128\" OR \"0334100002726000149\" OR \"100013983126100191\"",
+          "\"RU2815337C1\" Иркутский противочумный институт правообладатель передача лицензия"
+        ],
+        "query_count": 4,
+        "initial_page_open_attempt_count": 8,
+        "limited_supplemental_followup_count": 0,
+        "supplemental_boundary": "None; no new qualifying original was identified.",
+        "exhaustive": false
+      }
     }
   ],
   "history": [
@@ -345,10 +365,19 @@
       "triggering_evidence": "SE-IRK-REVIEW-20261012-01",
       "event_type": "BOUNDED_REVIEW_INCOMPLETE_NO_ACCEPTED_STATE_CHANGE",
       "why": "No new qualifying original changed the state; official regulator, procurement, patent and underlying clinical/investigation records remained inaccessible. Evidence cutoff and last material change unchanged."
+    },
+    {
+      "date": "2026-10-13",
+      "recorded_at": "2026-10-13T14:37:58+08:00",
+      "previous_state": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+      "new_state": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+      "triggering_evidence": "SE-IRK-REVIEW-20261013-01",
+      "event_type": "BOUNDED_REVIEW_INCOMPLETE_NO_ACCEPTED_STATE_CHANGE",
+      "why": "No new qualifying original changed the state; official regulator, procurement, patent and underlying clinical/investigation records remained inaccessible. Evidence cutoff and last material change unchanged."
     }
   ],
-  "current_snapshot": "state-v0.7.json",
-  "latest_review": "search-review-20261012-01.json",
+  "current_snapshot": "state-v0.8.json",
+  "latest_review": "search-review-20261013-01.json",
   "input_alias_map": "input-alias-map-v0.1.json",
   "claims": [
     {
@@ -573,7 +602,7 @@
       "limit": "This supports WHO’s uncertainty statement; it does not establish that a laboratory exposure occurred."
     }
   ],
-  "last_reviewed_at": "2026-10-12T15:37:28+08:00",
+  "last_reviewed_at": "2026-10-13T14:37:58+08:00",
   "evidence_updated_at": "2026-10-11T15:01:01+08:00",
-  "page_modified_at": "2026-10-12T15:37:28+08:00"
+  "page_modified_at": "2026-10-13T14:37:58+08:00"
 }
