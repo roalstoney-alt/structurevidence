@@ -11,12 +11,14 @@ try:
         BlockedPublisher,
         GateBlocked,
         PublisherError,
+        XOAuth1Publisher,
         canonical_post_text,
         check_schedule_ownership,
         classify_github_write,
         default_candidate,
         live_publish_once,
         new_run,
+        publisher_from_env,
         render_report,
         sha256_text,
         validate_candidate,
@@ -27,22 +29,24 @@ try:
     )
 except ModuleNotFoundError:
     from se_unified_ops import (
-    BlockedPublisher,
-    GateBlocked,
-    PublisherError,
-    canonical_post_text,
-    check_schedule_ownership,
-    classify_github_write,
-    default_candidate,
-    live_publish_once,
-    new_run,
-    render_report,
-    sha256_text,
-    validate_candidate,
-    validate_irkutsk_budget,
-    validate_review,
-    verify_public_deploy,
-    x_weighted_length,
+        BlockedPublisher,
+        GateBlocked,
+        PublisherError,
+        XOAuth1Publisher,
+        canonical_post_text,
+        check_schedule_ownership,
+        classify_github_write,
+        default_candidate,
+        live_publish_once,
+        new_run,
+        publisher_from_env,
+        render_report,
+        sha256_text,
+        validate_candidate,
+        validate_irkutsk_budget,
+        validate_review,
+        verify_public_deploy,
+        x_weighted_length,
     )
 
 
@@ -205,9 +209,26 @@ class AcceptanceTests(unittest.TestCase):
         self.assertEqual(item["approval_gate"], "HUMAN_GATE_REQUIRED")
 
     def test_A18_artifacts_do_not_contain_secrets(self):
-        artifact = json.dumps({"credential_env": "X_USER_ACCESS_TOKEN", "token_value": None})
+        artifact = json.dumps({"credential_envs": ["X_API_KEY", "X_API_SECRET", "X_ACCESS_TOKEN", "X_ACCESS_TOKEN_SECRET"], "token_values": None})
         self.assertNotIn("Bearer ", artifact)
         self.assertNotIn("oauth_token_secret", artifact.lower())
+        publisher = XOAuth1Publisher("key", "secret", "token", "token-secret")
+        header = publisher._oauth_header("GET", "https://api.x.com/2/users/me?user.fields=id", nonce="fixed", timestamp="123")
+        self.assertTrue(header.startswith("OAuth "))
+        self.assertIn('oauth_signature_method="HMAC-SHA1"', header)
+        self.assertNotIn("token-secret", header)
+        rfc_header = XOAuth1Publisher(
+            "dpf43f3p2l4k3l03", "kd94hf93k423kf44",
+            "nnch734d00sl2jdk", "pfkkdhi9sl3r4s00",
+        )._oauth_header(
+            "GET", "http://photos.example.net/photos?file=vacation.jpg&size=original",
+            nonce="kllo9940pd9333jh", timestamp="1191242096",
+        )
+        self.assertIn('oauth_signature="tR3%2BTy81lMeYAr%2FFid0kMTYa%2FWM%3D"', rfc_header)
+        self.assertIsInstance(publisher_from_env({
+            "X_API_KEY": "key", "X_API_SECRET": "secret",
+            "X_ACCESS_TOKEN": "token", "X_ACCESS_TOKEN_SECRET": "token-secret",
+        }), XOAuth1Publisher)
 
 
 if __name__ == "__main__":

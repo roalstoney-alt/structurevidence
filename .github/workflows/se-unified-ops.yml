@@ -8,7 +8,7 @@ on:
         required: true
         default: dry-run
         type: choice
-        options: [dry-run, live-x-test]
+        options: [dry-run, x-preflight, live-x-test]
       date_sgt:
         description: Scheduled Asia/Singapore date (YYYY-MM-DD)
         required: true
@@ -32,6 +32,10 @@ jobs:
         run: python -m unittest scripts.test_se_unified_ops
       - name: Execute bounded workflow
         env:
+          X_API_KEY: ${{ secrets.X_API_KEY }}
+          X_API_SECRET: ${{ secrets.X_API_SECRET }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
           X_USER_ACCESS_TOKEN: ${{ secrets.X_USER_ACCESS_TOKEN }}
           X_EXPECTED_HANDLE: structevidence
         run: python scripts/se_unified_ops.py --mode "${{ inputs.mode }}" --date "${{ inputs.date_sgt }}"
