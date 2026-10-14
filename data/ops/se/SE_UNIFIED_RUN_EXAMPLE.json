@@ -3,8 +3,9 @@
   "run_id": "SE-OPS-20261014-2200-e392c679-2680-59f4-a693-81c79a52be7f",
   "date_sgt": "2026-10-14",
   "scheduled_at": "2026-10-14T22:00:00+08:00",
-  "started_at": "2026-10-14T10:13:56Z",
-  "ended_at": "2026-10-14T10:13:56Z",
+  "started_at": "2026-10-14T10:22:37Z",
+  "ended_at": "2026-10-14T10:22:37Z",
+  "report_delivered_at": null,
   "repo_baseline_sha": "1f44e3a45ca3c444fc52b0d92e84c76df1197fd2",
   "repo_final_sha": null,
   "pipeline": {
@@ -158,41 +159,41 @@
       "event_id": "f7b4dfab90975ebe31fdd533e6c743804d9e957c131049367f0f07b1a8d2fdab",
       "event": "SCHEDULED",
       "stage": "scheduler",
-      "at": "2026-10-14T10:13:56Z",
+      "at": "2026-10-14T10:22:37Z",
       "proof": "2026-10-14T22:00:00+08:00"
     },
     {
       "event_id": "cfae3aed896bc8ab0391f8027084141ca1bf6c1d5f8c55f4202f52325f21eb66",
       "event": "STARTED",
       "stage": "orchestrator",
-      "at": "2026-10-14T10:13:56Z"
+      "at": "2026-10-14T10:22:37Z"
     },
     {
       "event_id": "22eac9561b543aed2117fbc70ea3bc6330ef2d614f32b26befa099e45fe7227b",
       "event": "ARTIFACT_CREATED",
       "stage": "x_candidate",
-      "at": "2026-10-14T10:13:56Z",
+      "at": "2026-10-14T10:22:37Z",
       "proof": "STATE_ROOT/x-candidates/2026-10-14.json"
     },
     {
       "event_id": "c52547a9763da600d377e88f0bf0d63429aab794b6307f93fef8617ec58db9eb",
       "event": "SEARCH_COMPLETED",
       "stage": "cases",
-      "at": "2026-10-14T10:13:56Z",
+      "at": "2026-10-14T10:22:37Z",
       "proof": "data/ops/se/review-inputs/2026-10-14.json"
     },
     {
       "event_id": "ef332f6fbb249ef4b32c087e20d8c55295ffd64f686b647473bde829c71740b2",
       "event": "ARTIFACT_CREATED",
       "stage": "alerts",
-      "at": "2026-10-14T10:13:56Z",
+      "at": "2026-10-14T10:22:37Z",
       "proof": "STATE_ROOT/alerts/2026-10-14.json"
     },
     {
       "event_id": "013dcb558c25b77a3c5e840f93997fc97138db8c9cca20d375c65d4151492d0d",
       "event": "ARTIFACT_CREATED",
       "stage": "daily_report",
-      "at": "2026-10-14T10:13:56Z",
+      "at": "2026-10-14T10:22:37Z",
       "proof": "STATE_ROOT/reports/2026-10-14.md"
     }
   ],

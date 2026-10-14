@@ -1,0 +1,201 @@
+{
+  "schema_version": "se-unified-run-v1",
+  "run_id": "SE-OPS-20261014-2200-e392c679-2680-59f4-a693-81c79a52be7f",
+  "date_sgt": "2026-10-14",
+  "scheduled_at": "2026-10-14T22:00:00+08:00",
+  "started_at": "2026-10-14T10:22:37Z",
+  "ended_at": "2026-10-14T10:22:37Z",
+  "report_delivered_at": null,
+  "repo_baseline_sha": "1f44e3a45ca3c444fc52b0d92e84c76df1197fd2",
+  "repo_final_sha": null,
+  "pipeline": {
+    "scheduler": "PASS",
+    "cases": "PARTIAL",
+    "cml_ingestion": "UNVERIFIED",
+    "x_publish": "BLOCKED",
+    "audit_persistence": "PASS",
+    "external_delivery": "BLOCKED"
+  },
+  "reviews": [
+    {
+      "case_id": "CML-PDRE-001",
+      "review_id": "SE-800V-REVIEW-20261014-01",
+      "reviewed_at": "2026-10-14T17:59:24+08:00",
+      "result": "NO_STATE_CHANGE",
+      "review_complete": true,
+      "search_boundary": "Targeted official-source refresh; see data/case-watch/reviews/2026-10-14/CML-PDRE-001.json.",
+      "sources_checked": [
+        {
+          "url": "https://www.chindatagroup.com/media/news/533.html",
+          "status": "READ"
+        }
+      ],
+      "old_state": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+      "new_state": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+      "new_qualifying_evidence_count": 0,
+      "new_counter_evidence_count": 0
+    },
+    {
+      "case_id": "SE-BESS-SODIUM-001",
+      "review_id": "SE-SODIUM-REVIEW-20261014-01",
+      "reviewed_at": "2026-10-14T17:59:24+08:00",
+      "result": "HUMAN_GATE_REQUIRED",
+      "review_complete": true,
+      "search_boundary": "Named commissioned/operating site search; see data/case-watch/reviews/2026-10-14/SE-BESS-SODIUM-001.json.",
+      "sources_checked": [
+        {
+          "url": "https://www.moonwatt.com/2026/06/22/moonwatt-commissions-the-first-distributed-sodium-ion-battery-system-purpose-built-for-hybrid-solar-plants/",
+          "status": "READ"
+        }
+      ],
+      "old_state": "NAMED_COMMISSIONED_SITE_NOT_ESTABLISHED",
+      "new_state": "NAMED_COMMISSIONED_SITE_NOT_ESTABLISHED",
+      "new_qualifying_evidence_count": 1,
+      "new_counter_evidence_count": 0
+    },
+    {
+      "case_id": "SE-IRK-LAB-001",
+      "review_id": "SE-IRK-REVIEW-20261014-02",
+      "reviewed_at": "2026-10-14T17:59:24+08:00",
+      "result": "REVIEW_INCOMPLETE",
+      "review_complete": false,
+      "search_boundary": "Four consolidated search groups and two webpage opens; see data/case-watch/reviews/2026-10-14/SE-IRK-LAB-001.json.",
+      "search_budget": {
+        "targeted_search_groups": 4,
+        "webpage_open_attempts": 2
+      },
+      "source_graph": [
+        {
+          "source_id": "WHO-DON620",
+          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON620/",
+          "retrieved_at": "2026-10-14T17:59:24+08:00",
+          "originator": "WHO with RF IHR NFP",
+          "publisher": "WHO",
+          "source_type": "INSTITUTIONAL_ASSESSMENT_AND_RELAY",
+          "claim_ids": [
+            "cause"
+          ],
+          "depends_on": [
+            "RF-IHR-NFP"
+          ],
+          "relation": "SUPPORT_WITH_UNCERTAINTY",
+          "verification_status": "READ",
+          "search_boundary": "WHO/IHR"
+        },
+        {
+          "source_id": "ECDC-W41-2026",
+          "url": "https://www.ecdc.europa.eu/sites/default/files/documents/communicable-disease-threats-report-week-41-2026.pdf",
+          "retrieved_at": "2026-10-14T17:59:24+08:00",
+          "originator": "ECDC with source chain",
+          "publisher": "ECDC",
+          "source_type": "INSTITUTIONAL_ASSESSMENT",
+          "claim_ids": [
+            "risk"
+          ],
+          "depends_on": [
+            "WHO-DON620"
+          ],
+          "relation": "SUPPORT_WITH_DEPENDENCY",
+          "verification_status": "READ",
+          "search_boundary": "institutional assessment"
+        }
+      ],
+      "sources_checked": [
+        {
+          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON620/",
+          "status": "READ"
+        }
+      ],
+      "old_state": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+      "new_state": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+      "new_qualifying_evidence_count": 0,
+      "new_counter_evidence_count": 0
+    }
+  ],
+  "x": {
+    "account": "@structevidence",
+    "publication_authorized": true,
+    "account_verified": false,
+    "candidate_file": "STATE_ROOT/x-candidates/2026-10-14.json",
+    "post_id": null,
+    "post_url": null,
+    "posted_at": null,
+    "result": "DRY_RUN_ONLY",
+    "blocker": "X_PUBLISH_BLOCKED_NO_WRITE_INTERFACE"
+  },
+  "internal_workflows": {
+    "sunday_weekly_synthesis": {
+      "due": false,
+      "state": "NOT_DUE",
+      "artifact": null
+    },
+    "monday_socsm": {
+      "due": false,
+      "state": "NOT_DUE",
+      "artifact": null,
+      "public_projection": "PRIVATE"
+    }
+  },
+  "receipt_ids": [],
+  "alerts": [
+    {
+      "code": "OBSERVABILITY_BLOCKED",
+      "dedupe_key": "CROSS_PROJECT:2026-10-14",
+      "detail": "No verified CML/LoveTimeline run evidence was supplied."
+    },
+    {
+      "code": "X_PUBLISH_BLOCKED",
+      "dedupe_key": "X:2026-10-14:DRY_RUN",
+      "detail": "X_PUBLISH_BLOCKED_NO_WRITE_INTERFACE"
+    },
+    {
+      "code": "MISSING_RUN_DETECTION_NOT_INDEPENDENT",
+      "dedupe_key": "MISSING_HEARTBEAT:2026-10-14",
+      "detail": "No independent health surface has been verified."
+    }
+  ],
+  "events": [
+    {
+      "event_id": "f7b4dfab90975ebe31fdd533e6c743804d9e957c131049367f0f07b1a8d2fdab",
+      "event": "SCHEDULED",
+      "stage": "scheduler",
+      "at": "2026-10-14T10:22:37Z",
+      "proof": "2026-10-14T22:00:00+08:00"
+    },
+    {
+      "event_id": "cfae3aed896bc8ab0391f8027084141ca1bf6c1d5f8c55f4202f52325f21eb66",
+      "event": "STARTED",
+      "stage": "orchestrator",
+      "at": "2026-10-14T10:22:37Z"
+    },
+    {
+      "event_id": "22eac9561b543aed2117fbc70ea3bc6330ef2d614f32b26befa099e45fe7227b",
+      "event": "ARTIFACT_CREATED",
+      "stage": "x_candidate",
+      "at": "2026-10-14T10:22:37Z",
+      "proof": "STATE_ROOT/x-candidates/2026-10-14.json"
+    },
+    {
+      "event_id": "c52547a9763da600d377e88f0bf0d63429aab794b6307f93fef8617ec58db9eb",
+      "event": "SEARCH_COMPLETED",
+      "stage": "cases",
+      "at": "2026-10-14T10:22:37Z",
+      "proof": "data/ops/se/review-inputs/2026-10-14.json"
+    },
+    {
+      "event_id": "ef332f6fbb249ef4b32c087e20d8c55295ffd64f686b647473bde829c71740b2",
+      "event": "ARTIFACT_CREATED",
+      "stage": "alerts",
+      "at": "2026-10-14T10:22:37Z",
+      "proof": "STATE_ROOT/alerts/2026-10-14.json"
+    },
+    {
+      "event_id": "013dcb558c25b77a3c5e840f93997fc97138db8c9cca20d375c65d4151492d0d",
+      "event": "ARTIFACT_CREATED",
+      "stage": "daily_report",
+      "at": "2026-10-14T10:22:37Z",
+      "proof": "STATE_ROOT/reports/2026-10-14.md"
+    }
+  ],
+  "outcome": "PARTIAL"
+}

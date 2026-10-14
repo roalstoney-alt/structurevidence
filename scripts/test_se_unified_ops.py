@@ -185,6 +185,7 @@ class AcceptanceTests(unittest.TestCase):
         report = render_report(run, self.candidate, {})
         self.assertIn("StructEvidence Daily Execution Report", report)
         self.assertIn("X_PUBLISH_BLOCKED", report)
+        self.assertIn("Report delivered at: NONE", report)
         self.assertEqual(new_run("2026-10-18", "abc")["internal_workflows"]["sunday_weekly_synthesis"]["state"], "UNVERIFIED")
         self.assertEqual(new_run("2026-10-19", "abc")["internal_workflows"]["monday_socsm"]["state"], "UNVERIFIED")
 

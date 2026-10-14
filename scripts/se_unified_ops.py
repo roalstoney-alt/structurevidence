@@ -433,6 +433,7 @@ def new_run(date_sgt: str, baseline_sha: str) -> dict[str, Any]:
     return {
         "schema_version": "se-unified-run-v1", "run_id": stable_run_id(date_sgt, scheduled),
         "date_sgt": date_sgt, "scheduled_at": scheduled, "started_at": None, "ended_at": None,
+        "report_delivered_at": None,
         "repo_baseline_sha": baseline_sha, "repo_final_sha": None,
         "pipeline": {key: "UNVERIFIED" for key in ("scheduler", "cases", "cml_ingestion", "x_publish", "audit_persistence", "external_delivery")},
         "reviews": [],
@@ -464,7 +465,9 @@ def render_report(run: dict[str, Any], candidate: dict[str, Any], cross_project:
     review_by_case = {r.get("case_id"): r for r in run.get("reviews", [])}
     lines = [
         f"# StructEvidence Daily Execution Report | {run['date_sgt']} | SGT", "",
-        f"Delivered at: {run.get('ended_at') or 'NONE'}", "",
+        f"Run ended at: {run.get('ended_at') or 'NONE'}",
+        f"Report delivered at: {run.get('report_delivered_at') or 'NONE'}",
+        f"Delivery state: {run.get('pipeline', {}).get('external_delivery', 'UNVERIFIED')}", "",
         "| Project / subflow | Due | Enabled | Last actual run | Execution evidence (review/artifact) | Publish/delivery receipt | State | Failure / next action |",
         "|---|---|---|---|---|---|---|---|",
     ]
