@@ -80,7 +80,7 @@
   ],
   "live_external_tests": {
     "x_publication": "BLOCKED_NO_AUTHORIZED_STRUCTEVIDENCE_ACCOUNT",
-    "github_branch_write": "PENDING",
+    "github_branch_write": "VERIFIED_D341AAF9871C2C27C6410B83437144E380796081",
     "pages_public_body": "NOT_ATTEMPTED"
   },
   "secret_values_recorded": false
