@@ -7,11 +7,13 @@ It has no scheduler of its own: an existing approved scheduler invokes this file
 from __future__ import annotations
 
 import argparse
+import base64
 import contextlib
 import dataclasses
 import datetime as dt
 import fcntl
 import hashlib
+import hmac
 import json
 import os
 import re
@@ -320,6 +322,97 @@ class XApiPublisher(XPublisher):
         return self._request("GET", f"/2/tweets/{post_id}?{query}").get("data", {})
 
 
+class XOAuth1Publisher(XPublisher):
+    """Official X API v2 adapter using OAuth 1.0a user context."""
+
+    def __init__(self, api_key: str, api_secret: str, access_token: str, access_token_secret: str, expected_handle: str = "structevidence", timeout: int = 20):
+        values = (api_key, api_secret, access_token, access_token_secret)
+        if not all(values):
+            raise PublisherError("X OAuth 1.0a credentials are incomplete")
+        self.api_key, self.api_secret, self.access_token, self.access_token_secret = values
+        self.expected_handle = expected_handle.lstrip("@").lower()
+        self.timeout = timeout
+        self.account: dict[str, Any] | None = None
+        self.last_rate_limit: dict[str, str] = {}
+
+    @staticmethod
+    def _encode(value: str) -> str:
+        return urllib.parse.quote(str(value), safe="~-._")
+
+    def _oauth_header(self, method: str, url: str, *, nonce: str | None = None, timestamp: str | None = None) -> str:
+        parsed = urllib.parse.urlsplit(url)
+        oauth = {
+            "oauth_consumer_key": self.api_key,
+            "oauth_nonce": nonce or uuid.uuid4().hex,
+            "oauth_signature_method": "HMAC-SHA1",
+            "oauth_timestamp": timestamp or str(int(dt.datetime.now(UTC).timestamp())),
+            "oauth_token": self.access_token,
+            "oauth_version": "1.0",
+        }
+        pairs = list(urllib.parse.parse_qsl(parsed.query, keep_blank_values=True)) + list(oauth.items())
+        encoded_pairs = sorted((self._encode(key), self._encode(value)) for key, value in pairs)
+        normalized = "&".join(f"{key}={value}" for key, value in encoded_pairs)
+        base_url = urllib.parse.urlunsplit((parsed.scheme, parsed.netloc, parsed.path, "", ""))
+        signature_base = "&".join((method.upper(), self._encode(base_url), self._encode(normalized)))
+        signing_key = f"{self._encode(self.api_secret)}&{self._encode(self.access_token_secret)}"
+        digest = hmac.new(signing_key.encode(), signature_base.encode(), hashlib.sha1).digest()
+        oauth["oauth_signature"] = base64.b64encode(digest).decode()
+        return "OAuth " + ", ".join(f'{self._encode(key)}="{self._encode(value)}"' for key, value in sorted(oauth.items()))
+
+    def _request(self, method: str, path: str, payload: dict[str, Any] | None = None) -> dict[str, Any]:
+        url = f"https://api.x.com{path}"
+        body = None if payload is None else canonical_json(payload).encode("utf-8")
+        request = urllib.request.Request(
+            url, data=body, method=method,
+            headers={"Authorization": self._oauth_header(method, url), "Content-Type": "application/json"},
+        )
+        try:
+            with urllib.request.urlopen(request, timeout=self.timeout) as response:
+                self.last_rate_limit = {
+                    key.lower(): value for key, value in response.headers.items()
+                    if key.lower().startswith("x-rate-limit")
+                }
+                return json.loads(response.read().decode("utf-8"))
+        except urllib.error.HTTPError as exc:
+            detail = exc.read(4096).decode("utf-8", errors="replace")
+            raise PublisherError(f"X API HTTP {exc.code}: {detail[:500]}", status=exc.code) from exc
+        except (urllib.error.URLError, TimeoutError) as exc:
+            raise PublisherError(f"X API transport error: {type(exc).__name__}", outcome_unknown=(method == "POST")) from exc
+
+    def verify_account(self) -> dict[str, Any]:
+        payload = self._request("GET", "/2/users/me?user.fields=id,username,name")
+        account = payload.get("data") or {}
+        if account.get("username", "").lower() != self.expected_handle:
+            raise PublisherError("authenticated X account does not match @structevidence", status=403)
+        self.account = account
+        return {"id": account["id"], "username": account["username"], "write_interface": "X_API_V2_OAUTH1_USER"}
+
+    def recent_posts(self, limit: int = 50) -> list[dict[str, Any]]:
+        account = self.account or self.verify_account()
+        query = urllib.parse.urlencode({"max_results": max(5, min(100, limit)), "tweet.fields": "created_at,author_id,text"})
+        return self._request("GET", f"/2/users/{account['id']}/tweets?{query}").get("data", [])
+
+    def publish(self, text: str, idempotency_key: str) -> dict[str, Any]:
+        del idempotency_key
+        return self._request("POST", "/2/tweets", {"text": text}).get("data", {})
+
+    def fetch_post(self, post_id: str) -> dict[str, Any]:
+        query = urllib.parse.urlencode({"tweet.fields": "created_at,author_id,text"})
+        return self._request("GET", f"/2/tweets/{post_id}?{query}").get("data", {})
+
+
+def publisher_from_env(environ: dict[str, str] | None = None, expected_handle: str = "structevidence") -> XPublisher:
+    environ = os.environ if environ is None else environ
+    oauth1_names = ("X_API_KEY", "X_API_SECRET", "X_ACCESS_TOKEN", "X_ACCESS_TOKEN_SECRET")
+    if all(environ.get(name) for name in oauth1_names):
+        return XOAuth1Publisher(*(environ[name] for name in oauth1_names), expected_handle=expected_handle)
+    if any(environ.get(name) for name in oauth1_names):
+        return BlockedPublisher("X_PUBLISH_BLOCKED_INCOMPLETE_OAUTH1_CREDENTIALS")
+    if environ.get("X_USER_ACCESS_TOKEN"):
+        return XApiPublisher(environ["X_USER_ACCESS_TOKEN"], expected_handle)
+    return BlockedPublisher("X_PUBLISH_BLOCKED_NO_WRITE_INTERFACE")
+
+
 class BlockedPublisher(XPublisher):
     def __init__(self, reason: str = "X_PUBLISH_BLOCKED_NO_WRITE_INTERFACE"):
         self.reason = reason
@@ -593,9 +686,7 @@ def run_orchestrator(args: argparse.Namespace) -> tuple[dict[str, Any], dict[str
         else:
             run["pipeline"]["cml_ingestion"] = "UNVERIFIED"
             run["alerts"].append({"code": "OBSERVABILITY_BLOCKED", "dedupe_key": f"CROSS_PROJECT:{date_sgt}", "detail": "No verified CML/LoveTimeline run evidence was supplied."})
-        publisher: XPublisher
-        token = os.environ.get("X_USER_ACCESS_TOKEN", "")
-        publisher = XApiPublisher(token, os.environ.get("X_EXPECTED_HANDLE", "structevidence")) if token else BlockedPublisher()
+        publisher = publisher_from_env(expected_handle=os.environ.get("X_EXPECTED_HANDLE", "structevidence"))
         if args.mode == "live-x-test":
             event(run, "WRITE_ATTEMPTED", "x_publish")
             try:
@@ -612,7 +703,7 @@ def run_orchestrator(args: argparse.Namespace) -> tuple[dict[str, Any], dict[str
                 run["alerts"].append({"code": "X_PUBLISH_OUTCOME_UNKNOWN" if exc.outcome_unknown else "X_PUBLISH_BLOCKED", "dedupe_key": f"X:{date_sgt}:{type(exc).__name__}", "detail": str(exc)})
         else:
             run["pipeline"]["x_publish"] = "BLOCKED"
-            run["x"].update(result="DRY_RUN_ONLY", blocker="X_PUBLISH_BLOCKED_NO_WRITE_INTERFACE" if not token else "DRY_RUN_MODE")
+            run["x"].update(result="DRY_RUN_ONLY", blocker=publisher.reason if isinstance(publisher, BlockedPublisher) else "DRY_RUN_MODE")
             run["alerts"].append({"code": "X_PUBLISH_BLOCKED", "dedupe_key": f"X:{date_sgt}:DRY_RUN", "detail": run["x"]["blocker"]})
 
         run["pipeline"]["audit_persistence"] = "PASS"
@@ -643,8 +734,17 @@ def main() -> int:
     parser.add_argument("--date")
     parser.add_argument("--baseline-sha")
     parser.add_argument("--cross-project-status")
-    parser.add_argument("--mode", choices=("dry-run", "live-x-test"), default="dry-run")
+    parser.add_argument("--mode", choices=("dry-run", "x-preflight", "live-x-test"), default="dry-run")
     args = parser.parse_args()
+    if args.mode == "x-preflight":
+        try:
+            account = publisher_from_env(expected_handle=os.environ.get("X_EXPECTED_HANDLE", "structevidence")).verify_account()
+            print(canonical_json({"account": f"@{account['username']}", "account_id": account["id"], "result": "X_AUTH_VERIFIED", "write_interface": account["write_interface"]}))
+            return 0
+        except PublisherError as exc:
+            error = f"X_API_HTTP_{exc.status}" if exc.status else str(exc)
+            print(canonical_json({"account": "@structevidence", "result": "X_AUTH_BLOCKED", "error": error}))
+            return 2
     run, _ = run_orchestrator(args)
     print(canonical_json({"run_id": run["run_id"], "outcome": run["outcome"], "x_result": run["x"]["result"]}))
     return 0 if run["outcome"] in {"PASS", "PARTIAL"} else 2

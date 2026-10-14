@@ -49,8 +49,11 @@ syndicated reposts becoming false corroboration.
 
 ## X publication
 
-The supported direct adapter uses the official X API v2 with an OAuth 2 user
-access token supplied at runtime as `X_USER_ACCESS_TOKEN`. It verifies
+The supported direct adapter uses the official X API v2. The preferred minimal
+configuration is OAuth 1.0a user context supplied at runtime as `X_API_KEY`,
+`X_API_SECRET`, `X_ACCESS_TOKEN`, and `X_ACCESS_TOKEN_SECRET`; these user tokens
+do not require an OAuth 2 refresh service. Existing OAuth 2 user access tokens
+remain supported through `X_USER_ACCESS_TOKEN`. The adapter verifies
 `/2/users/me` resolves exactly to `@structevidence`, reads recent account posts,
 checks duplication, sends at most one candidate, and reads the new post back.
 Tokens are never logged or persisted. A write response without a matching
