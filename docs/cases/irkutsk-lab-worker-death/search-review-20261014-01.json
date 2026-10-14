@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "case_id": "SE-IRK-LAB-001",
+  "review_id": "SE-IRK-REVIEW-20261014-01",
+  "reviewed_at": "2026-10-14T15:30:47+08:00",
+  "result": "REVIEW_INCOMPLETE",
+  "review_complete": false,
+  "state_changed": false,
+  "evidence_changed": false,
+  "old_state": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+  "new_state": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+  "search_boundary": {
+    "public_scope": "Final cause; de-identified contact follow-up; WHO/IHR revision; auditable public-health and biosafety disclosures.",
+    "queries": [
+      "site:who.int Irkutsk anti-plague institute worker death October 2026 update 14 October cause second employee",
+      "site:rospotrebnadzor.ru Иркутск противочумный институт сотрудница смерть 14 октября 2026 причина расследование"
+    ],
+    "query_count": 2,
+    "initial_page_open_attempt_count": 4,
+    "limited_supplemental_followup_count": 0,
+    "supplemental_boundary": "Public projection only; non-public supporting checks are excluded.",
+    "exhaustive": false
+  },
+  "sources_checked": [
+    {
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON620",
+      "access_result": "READ_EXTRACTED_TEXT",
+      "source_published_at": "2026-10-10",
+      "retrieved_at": "2026-10-14T15:30:47+08:00",
+      "dependency_group": "WHO_DON620",
+      "finding": "Page remained available and materially unchanged; it still reports no identified ongoing transmission while preserving uncertainty over etiology and exposure."
+    },
+    {
+      "url": "https://www.who.int/news-room/speeches/item/who-director-general-s-opening-remarks-at-the-media-briefing---7-october-2026",
+      "access_result": "READ_EXTRACTED_TEXT",
+      "source_published_at": "2026-10-07",
+      "retrieved_at": "2026-10-14T15:30:47+08:00",
+      "dependency_group": "WHO_EARLIER_REQUEST",
+      "finding": "Earlier WHO request for clarification remains superseded by DON620 for the current assessment; no later update was found."
+    },
+    {
+      "url": "https://www.rospotrebnadzor.ru/deyatelnost/epidemiological-surveillance/?ELEMENT_ID=33189",
+      "access_result": "OPEN_FAILED_TOOL_INTERNAL_ERROR",
+      "source_published_at": null,
+      "retrieved_at": "2026-10-14T15:30:47+08:00",
+      "dependency_group": "RPN_PRIMARY",
+      "finding": "Linked regulator original remained inaccessible."
+    },
+    {
+      "url": "https://www.reuters.com/business/healthcare-pharmaceuticals/who-seeks-details-russia-media-reports-a-second-lab-worker-with-pneumonia-2026-10-07/",
+      "access_result": "OPEN_FAILED_TOOL_INTERNAL_ERROR",
+      "source_published_at": "2026-10-07",
+      "retrieved_at": "2026-10-14T15:30:47+08:00",
+      "dependency_group": "DIRECT_MEDIA_REPORT",
+      "finding": "Direct media page could not be reopened; no new report was found through the bounded queries."
+    }
+  ],
+  "new_qualifying_evidence_count": 0,
+  "new_counter_evidence_count": 0,
+  "count_scope": "No post-10 October qualifying public-health original or direct interview changed the clinical state.",
+  "counter_evidence_and_limits": [
+    "WHO DON620 remains the latest accepted assessment: no ongoing-transmission evidence identified, while etiology and exposure uncertainty remain.",
+    "Observation and isolation do not establish infection; no household transmission chain is inferred."
+  ],
+  "gaps": [
+    "Final etiological diagnosis unavailable.",
+    "Underlying clinical, de-identified contact and auditable biosafety investigation records unavailable.",
+    "No official criminal-case identifier or investigative record verified."
+  ],
+  "previous_review": "search-review-20261013-01.json",
+  "previous_snapshot": "state-v0.8.json",
+  "snapshot": "state-v0.9.json",
+  "evidence_state_as_of": "2026-10-11T15:01:01+08:00",
+  "raw_source_bytes_collected": false,
+  "public_whitelist_only": true,
+  "private_branch_excluded": "Non-public supporting checks are excluded from this public projection."
+}
