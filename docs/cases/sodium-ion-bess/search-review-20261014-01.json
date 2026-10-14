@@ -1,0 +1,42 @@
+{
+  "schema_version": "se-case-review-v1",
+  "case_id": "SE-BESS-SODIUM-001",
+  "review_id": "SE-SODIUM-REVIEW-20261014-01",
+  "reviewed_at": "2026-10-14T17:59:24+08:00",
+  "result": "HUMAN_GATE_REQUIRED",
+  "review_complete": true,
+  "search_boundary": "Targeted public search for named delivered, commissioned, grid-connected or operating sodium-ion stationary BESS; vehicle and starter-battery claims excluded.",
+  "sources_checked": [
+    {
+      "url": "https://www.moonwatt.com/2026/06/22/moonwatt-commissions-the-first-distributed-sodium-ion-battery-system-purpose-built-for-hybrid-solar-plants/",
+      "publisher": "Moonwatt",
+      "status": "READ",
+      "retrieved_at": "2026-10-14T17:59:24+08:00",
+      "finding": "Manufacturer/operator-side record names a 500 kWh sodium-ion system at Cleantech Park Arnhem and reports it live under real grid conditions."
+    },
+    {
+      "url": "https://cleantechparkarnhem.nl/nieuws/moonwatt-koppelt-natrium-ionbatterij-aan-zonnepark-op-cleantech-park-arnhem/",
+      "publisher": "Cleantech Park Arnhem",
+      "status": "READ",
+      "retrieved_at": "2026-10-14T17:59:24+08:00",
+      "finding": "Named host-site record corroborates an operational 500 kWh installation supplying energy under real conditions, while attributing performance claims to the manufacturer."
+    },
+    {
+      "url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225531848.PDF",
+      "publisher": "BYD Company Limited",
+      "status": "READ",
+      "retrieved_at": "2026-10-14T17:59:24+08:00",
+      "finding": "Company interim report states commercialization of 100 MWh-scale sodium-ion storage projects but does not name a qualifying site in the reviewed passage."
+    }
+  ],
+  "old_state": "NAMED_COMMISSIONED_SITE_NOT_ESTABLISHED",
+  "new_state": "NAMED_COMMISSIONED_SITE_NOT_ESTABLISHED",
+  "proposed_state": "NAMED_OPERATIONAL_SITE_CANDIDATE_PENDING_HUMAN_REVIEW",
+  "new_qualifying_evidence_count": 1,
+  "new_counter_evidence_count": 0,
+  "gate_reason": "A named operational-site candidate would materially change the accepted public state and requires human review before projection.",
+  "evidence_state_as_of": "2026-09-24",
+  "last_material_change": "2026-09-24",
+  "old_fact_newly_highlighted": true,
+  "historical_backfill": false
+}

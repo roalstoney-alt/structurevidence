@@ -1,0 +1,38 @@
+{
+  "schema_version": "se-ops-baseline-v1",
+  "frozen": true,
+  "audited_at": "2026-10-14T09:47:57Z",
+  "audit_timezone": "Asia/Shanghai",
+  "repository": "roalstoney-alt/structurevidence",
+  "remote_url": "git@github.com:roalstoney-alt/structurevidence.git",
+  "observed_local_main_sha": "526882092bef2bf7a470d995d330f2e61b733de9",
+  "implementation_baseline_main_sha": "1f44e3a45ca3c444fc52b0d92e84c76df1197fd2",
+  "observed_local_main_clean": false,
+  "local_main_relation": "ahead 1, behind 99 before fetch; user changes preserved in original checkout",
+  "latest_case_review_ids": {
+    "CML-PDRE-001": null,
+    "SE-BESS-SODIUM-001": null,
+    "SE-ONC-NSQNSCLC-CN-001": null,
+    "SE-IRK-LAB-001": "SE-IRK-REVIEW-20261014-01"
+  },
+  "last_confirmed_x_post_url": null,
+  "latest_audited_execution": "cases/irkutsk-lab-worker-death/search-review-20261014-01.json",
+  "x_account": "@structevidence",
+  "x_account_identity_verified": false,
+  "x_write_scope_verified": false,
+  "known_blockers": [
+    "No repository X publisher or X-related secret name was found.",
+    "No X credential environment variable was present.",
+    "Metricool was available but not installed or connected.",
+    "Multiple active StructEvidence local heartbeat timers were observed.",
+    "Independent missing-run observability was not verified."
+  ],
+  "checked_files": [
+    "docs/case-watch/REVIEW_FRESHNESS_CONTRACT.md",
+    "data/case-watch/monitoring-status.json",
+    "cases/review-status.json",
+    "scripts/export_case_review_status.py",
+    "scripts/test_case_review_status.py",
+    ".github/workflows/case-review-freshness.yml"
+  ]
+}

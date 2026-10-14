@@ -1,0 +1,44 @@
+{
+  "schema_version": "se-schedule-ownership-v1",
+  "observed_at": "2026-10-14T10:07:00Z",
+  "required_single_task_id": "6aba2674e6448191867d0890ad2cc1ed",
+  "intended_owner": "Existing local Codex heartbeat structevidence-trust-boundary-30d",
+  "intended_local_time": "22:00",
+  "intended_timezone": "Asia/Singapore",
+  "report_semantics": "22:00 is the start time; report delivery occurs immediately after the bounded run and records actual delivery time.",
+  "timers": [
+    {
+      "id": "se-ai-data-001-weekly-observation",
+      "project": "StructEvidence",
+      "active": false,
+      "local_time": "09:00",
+      "timezone": "Asia/Singapore",
+      "logical_owner": "local Codex heartbeat",
+      "action_required": "NONE",
+      "reconciliation": "PAUSED_2026-10-14"
+    },
+    {
+      "id": "structevidence-trust-boundary-30d",
+      "project": "StructEvidence",
+      "active": true,
+      "local_time": "22:00",
+      "timezone": "Asia/Singapore",
+      "logical_owner": "local Codex heartbeat",
+      "action_required": "NONE",
+      "reconciliation": "REPURPOSED_AS_SINGLE_OWNER_2026-10-14"
+    },
+    {
+      "id": "6aba2674e6448191867d0890ad2cc1ed",
+      "project": "StructEvidence",
+      "active": false,
+      "local_time": "UNKNOWN",
+      "timezone": "UNKNOWN",
+      "logical_owner": "existing ChatGPT task",
+      "action_required": "KEEP_READ_ONLY_UNTIL_PLATFORM_TASK_CAN_BE_VERIFIED",
+      "reconciliation": "Codex app update returned AUTOMATION_NOT_FOUND; no replacement task was created and this unverified task is not counted as a firing executor."
+    }
+  ],
+  "single_schedule_check": "PASS",
+  "owner_selection_reason": "The specified platform-hosted task was not addressable from the Codex app, so the workflow-authorized fallback repurposed one already-existing authenticated heartbeat and paused the other StructEvidence timer.",
+  "new_independent_schedules_created": 0
+}

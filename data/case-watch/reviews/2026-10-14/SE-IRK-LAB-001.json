@@ -1,0 +1,105 @@
+{
+  "schema_version": "se-case-review-v1",
+  "case_id": "SE-IRK-LAB-001",
+  "review_id": "SE-IRK-REVIEW-20261014-02",
+  "reviewed_at": "2026-10-14T17:59:24+08:00",
+  "result": "REVIEW_INCOMPLETE",
+  "review_complete": false,
+  "search_boundary": "Consolidated WHO/IHR and official-regulator/governor follow-up plus institutional inspection/procurement/patent discovery; public institutional records only.",
+  "search_budget": {
+    "targeted_search_groups": 4,
+    "webpage_open_attempts": 2,
+    "bounded_original_document_followups": 0
+  },
+  "sources_checked": [
+    {
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON620/",
+      "publisher": "World Health Organization",
+      "status": "READ",
+      "retrieved_at": "2026-10-14T17:59:24+08:00",
+      "finding": "WHO still reports no identified ongoing transmission while preserving the missing confirmed diagnosis and exposure uncertainty."
+    },
+    {
+      "url": "https://www.ecdc.europa.eu/sites/default/files/documents/communicable-disease-threats-report-week-41-2026.pdf",
+      "publisher": "European Centre for Disease Prevention and Control",
+      "status": "READ",
+      "retrieved_at": "2026-10-14T17:59:24+08:00",
+      "finding": "ECDC says available information is insufficient for a firm EU risk conclusion and distinguishes reported contact figures from its assessment."
+    },
+    {
+      "url": "https://www.rospotrebnadzor.ru/deyatelnost/epidemiological-surveillance/?ELEMENT_ID=33189",
+      "publisher": "Rospotrebnadzor",
+      "status": "INACCESSIBLE_IN_THIS_RUN",
+      "retrieved_at": "2026-10-14T17:59:24+08:00",
+      "finding": "The regulator original was not returned by the bounded search/open interface."
+    }
+  ],
+  "source_graph": [
+    {
+      "source_id": "WHO-DON620",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON620/",
+      "published_at": "2026-10-10",
+      "event_at": "2026-10-02",
+      "retrieved_at": "2026-10-14T17:59:24+08:00",
+      "originator": "WHO with Russian Federation IHR NFP statements",
+      "publisher": "World Health Organization",
+      "source_type": "INSTITUTIONAL_ASSESSMENT_AND_RELAY",
+      "claim_ids": ["cause", "contacts", "second_case", "transmission", "biosafety"],
+      "depends_on": ["RF-IHR-NFP"],
+      "relation": "SUPPORT_WITH_UNCERTAINTY",
+      "verification_status": "READ",
+      "search_boundary": "WHO/IHR follow-up"
+    },
+    {
+      "source_id": "ECDC-W41-2026",
+      "url": "https://www.ecdc.europa.eu/sites/default/files/documents/communicable-disease-threats-report-week-41-2026.pdf",
+      "published_at": "2026-10-10",
+      "event_at": "2026-10-02",
+      "retrieved_at": "2026-10-14T17:59:24+08:00",
+      "originator": "ECDC assessment with WHO and media source chain",
+      "publisher": "ECDC",
+      "source_type": "INSTITUTIONAL_ASSESSMENT_AND_DERIVATIVE_SUMMARY",
+      "claim_ids": ["contacts", "public_health_measures", "eu_risk"],
+      "depends_on": ["WHO-DON620", "MEDIA-CHAIN-W41"],
+      "relation": "SUPPORT_WITH_DEPENDENCY",
+      "verification_status": "READ",
+      "search_boundary": "institutional risk assessment"
+    },
+    {
+      "source_id": "RPN-33189",
+      "url": "https://www.rospotrebnadzor.ru/deyatelnost/epidemiological-surveillance/?ELEMENT_ID=33189",
+      "published_at": null,
+      "event_at": null,
+      "retrieved_at": "2026-10-14T17:59:24+08:00",
+      "originator": "Rospotrebnadzor",
+      "publisher": "Rospotrebnadzor",
+      "source_type": "REGULATOR_ORIGINAL",
+      "claim_ids": ["cause", "biosafety", "contacts"],
+      "depends_on": [],
+      "relation": "UNKNOWN",
+      "verification_status": "INACCESSIBLE",
+      "search_boundary": "official regulator follow-up"
+    }
+  ],
+  "daily_counters": {
+    "new_sources": 1,
+    "new_attributed_statements": 0,
+    "new_independent_evidence": 0,
+    "state_changing_evidence": 0
+  },
+  "old_state": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+  "new_state": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+  "new_qualifying_evidence_count": 0,
+  "new_counter_evidence_count": 0,
+  "gaps": [
+    "Confirmed etiological diagnosis remains unavailable.",
+    "Underlying de-identified clinical and contact records remain unavailable.",
+    "Auditable original biosafety investigations and supervisory findings remain unavailable.",
+    "No qualifying public procurement, budget, acceptance/payment or patent record was verified in this bounded run."
+  ],
+  "previous_review": "cases/irkutsk-lab-worker-death/search-review-20261014-01.json",
+  "evidence_state_as_of": "2026-10-11T15:01:01+08:00",
+  "last_material_change": "2026-10-10",
+  "historical_backfill": false,
+  "private_branch_excluded": true
+}

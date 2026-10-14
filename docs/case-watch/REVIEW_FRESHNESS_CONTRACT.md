@@ -33,6 +33,10 @@ case records. Commit with the expected main SHA, observe the matching Pages run,
 and verify the public response bodies where access permits. A saved task or a
 successful deployment alone does not prove a completed scheduled public update.
 
-The original three-case weekly task still covers 800V DC, sodium-ion BESS and
-NSCLC. NSCLC remains folded from the homepage, while its public URL and monitoring
-history remain available. Irkutsk retains its separately authorized daily task.
+Prospectively from 2026-10-14, the single StructEvidence 22:00 Asia/Singapore
+logical trigger owns the unified daily run. It checks 800V DC, sodium-ion BESS
+and Irkutsk daily; Sunday adds the weekly synthesis and the bounded historical
+NSCLC review, with NSCLC remaining folded. Monday adds the private-wall SOCSM
+check. The earlier three-case weekly and separate Irkutsk task descriptions are
+preserved as historical schedule records only and do not authorize parallel
+production timers. See `docs/ops/SE_UNIFIED_RUNTIME_CONTRACT.md`.

@@ -1,0 +1,87 @@
+{
+  "schema_version": "se-test-results-v1",
+  "observed_at": "2026-10-14T10:09:54Z",
+  "baseline_main_sha": "1f44e3a45ca3c444fc52b0d92e84c76df1197fd2",
+  "summary": {
+    "passed": 58,
+    "total": 60,
+    "failed": 2,
+    "unexecuted": 0,
+    "result": "PARTIAL"
+  },
+  "suites": [
+    {
+      "command": "python3 -B -m unittest scripts.test_se_unified_ops -v",
+      "passed": 18,
+      "total": 18,
+      "result": "PASS",
+      "coverage": "Acceptance and fault-injection cases A01-A18"
+    },
+    {
+      "command": "python3 -B scripts/test_case_review_status.py",
+      "passed": 6,
+      "total": 6,
+      "result": "PASS"
+    },
+    {
+      "command": "python3 -B scripts/validate_case_watch.py",
+      "passed": 9,
+      "total": 9,
+      "result": "PASS"
+    },
+    {
+      "command": "python3 -B scripts/test_case_watch.py",
+      "passed": 5,
+      "total": 5,
+      "result": "PASS"
+    },
+    {
+      "command": "python3 -B scripts/test_irkutsk_publication.py",
+      "passed": 1,
+      "total": 1,
+      "result": "PASS"
+    },
+    {
+      "command": "python3 -B scripts/test_irkutsk_alias_repair.py",
+      "passed": 1,
+      "total": 1,
+      "result": "PASS"
+    },
+    {
+      "command": "python3 -B -m unittest tests.test_brand_identity -v",
+      "passed": 7,
+      "total": 7,
+      "result": "PASS"
+    },
+    {
+      "command": "python3 -B -m unittest tests.test_seo_surface -v",
+      "passed": 3,
+      "total": 3,
+      "result": "PASS"
+    },
+    {
+      "command": "git diff --check",
+      "passed": 1,
+      "total": 1,
+      "result": "PASS"
+    },
+    {
+      "command": "python3 -B scripts/test_public_case_primitives_v01.py",
+      "passed": 7,
+      "total": 9,
+      "result": "FAIL",
+      "failures": [
+        "test_c_historical_immutability_and_no_research_mutation",
+        "test_f_nsclc_decision_memory_uses_existing_schema_and_hashes"
+      ],
+      "attribution": "PRE_EXISTING_ON_BASELINE_MAIN",
+      "proof": "The affected cases/nsq-nsclc-china/index.html and docs/cases/nsq-nsclc-china/index.html bytes match origin/main at 1f44e3a45ca3c444fc52b0d92e84c76df1197fd2; this implementation does not modify either file. The test's embedded historical BRAND_BASELINE differs from current origin/main."
+    }
+  ],
+  "live_external_tests": {
+    "x_publication": "BLOCKED_NO_AUTHORIZED_STRUCTEVIDENCE_ACCOUNT",
+    "github_branch_write": "VERIFIED_D341AAF9871C2C27C6410B83437144E380796081",
+    "pages_public_body": "NOT_ATTEMPTED"
+  },
+  "secret_values_recorded": false
+}
