@@ -53,6 +53,7 @@ except ModuleNotFoundError:
 CONFIG = {
     "x": {
         "method_test_text": "Evidence states remain inspectable. Verify Your Verify. https://structurevidence.org",
+        "daily_manual_text_template": "Daily evidence watch — {date_sgt}. Evidence states remain inspectable. Verify Your Verify. https://structurevidence.org",
         "method_cutoff": "2026-10-14",
     }
 }
@@ -106,6 +107,7 @@ class AcceptanceTests(unittest.TestCase):
         self.root = Path(self.tmp.name)
         self.ledger = self.root / "x-posts.jsonl"
         self.candidate = default_candidate("2026-10-14", CONFIG)
+        self.publishable_candidate = dict(self.candidate, approval_gate="AUTO_PUBLISH")
 
     def test_A01_exactly_one_active_logical_schedule(self):
         snapshot = {"timers": [{"id": "existing", "project": "StructEvidence", "active": True, "logical_owner": "existing", "local_time": "22:00", "timezone": "Asia/Singapore"}]}
@@ -147,29 +149,32 @@ class AcceptanceTests(unittest.TestCase):
 
     def test_A07_missing_adapter_blocks_without_send(self):
         with self.assertRaises(PublisherError):
-            live_publish_once(BlockedPublisher(), self.candidate, self.ledger)
+            live_publish_once(BlockedPublisher(), self.publishable_candidate, self.ledger)
         self.assertFalse(self.ledger.exists())
 
     def test_A08_write_without_readback_is_pending(self):
-        receipt = live_publish_once(FakePublisher(readback=False), self.candidate, self.ledger)
+        receipt = live_publish_once(FakePublisher(readback=False), self.publishable_candidate, self.ledger)
         self.assertEqual(receipt["status"], "POST_ACCEPTED_VERIFICATION_PENDING")
         self.assertIsNone(receipt["post_url"])
 
     def test_A09_timeout_reconciles_before_retry(self):
         provider = FakePublisher(timeout_once=True)
-        receipt = live_publish_once(provider, self.candidate, self.ledger)
+        receipt = live_publish_once(provider, self.publishable_candidate, self.ledger)
         self.assertEqual(receipt["status"], "PUBLISHED_VERIFIED")
         self.assertEqual(provider.publish_calls, 1)
 
     def test_A10_no_fresh_evidence_method_post_is_truthful(self):
         validate_candidate(self.candidate)
         self.assertFalse(self.candidate["new_findings_existed"])
+        self.assertIn("2026-10-14", self.candidate["text"])
+        self.assertEqual(self.candidate["approval_gate"], "HUMAN_GATE_REQUIRED")
+        self.assertEqual(self.candidate["status"], "AWAITING_HUMAN_REVIEW")
         self.assertLessEqual(x_weighted_length(self.candidate["text"]), 280)
 
     def test_A11_replay_does_not_duplicate_post(self):
         provider = FakePublisher()
-        first = live_publish_once(provider, self.candidate, self.ledger)
-        second = live_publish_once(provider, self.candidate, self.ledger)
+        first = live_publish_once(provider, self.publishable_candidate, self.ledger)
+        second = live_publish_once(provider, self.publishable_candidate, self.ledger)
         self.assertEqual(first["post_id"], second["post_id"])
         self.assertTrue(second["replayed"])
         self.assertEqual(provider.publish_calls, 1)
@@ -189,6 +194,10 @@ class AcceptanceTests(unittest.TestCase):
         report = render_report(run, self.candidate, {})
         self.assertIn("StructEvidence Daily Execution Report", report)
         self.assertIn("X_PUBLISH_BLOCKED", report)
+        self.assertIn(f"Exact English text: {self.candidate['text']}", report)
+        self.assertIn(f"Content hash: {self.candidate['content_hash']}", report)
+        self.assertIn("Approval gate: HUMAN_GATE_REQUIRED", report)
+        self.assertIn("X_POST_SENT: 0", report)
         self.assertIn("Report delivered at: NONE", report)
         self.assertEqual(new_run("2026-10-18", "abc")["internal_workflows"]["sunday_weekly_synthesis"]["state"], "UNVERIFIED")
         self.assertEqual(new_run("2026-10-19", "abc")["internal_workflows"]["monday_socsm"]["state"], "UNVERIFIED")
