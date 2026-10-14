@@ -8,7 +8,7 @@
   "published_at": null,
   "verification_checked_at": null,
   "result": "NOT_ATTEMPTED",
-  "blocker": "X_PUBLISH_BLOCKED_NO_AUTHORIZED_ACCOUNT: Metricool was rejected because its X connection requires a paid plan. Configure the official X API directly with OAuth 1.0a read/write user credentials for @structevidence, run x-preflight, then execute exactly one live-x-test.",
+  "blocker": "X_AUTO_PUBLISH_PAUSED_HUMAN_REVIEW: generate the exact daily @structevidence candidate in the execution report; a human must review and publish it manually.",
   "x_post_sent": 0,
   "secret_values_recorded": false
 }

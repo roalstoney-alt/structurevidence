@@ -49,21 +49,17 @@ syndicated reposts becoming false corroboration.
 
 ## X publication
 
-The supported direct adapter uses the official X API v2. The preferred minimal
-configuration is OAuth 1.0a user context supplied at runtime as `X_API_KEY`,
-`X_API_SECRET`, `X_ACCESS_TOKEN`, and `X_ACCESS_TOKEN_SECRET`; these user tokens
-do not require an OAuth 2 refresh service. Existing OAuth 2 user access tokens
-remain supported through `X_USER_ACCESS_TOKEN`. The adapter verifies
-`/2/users/me` resolves exactly to `@structevidence`, reads recent account posts,
-checks duplication, sends at most one candidate, and reads the new post back.
-Tokens are never logged or persisted. A write response without a matching
-readback is `POST_ACCEPTED_VERIFICATION_PENDING`; an ambiguous transport result
-is `PUBLISH_OUTCOME_UNKNOWN` until provider reconciliation succeeds.
+Automatic X publication is paused. Every bounded run creates exactly one English
+candidate for `@structevidence`, but no X write interface may be called. The
+daily execution report must contain the exact final text, cited URLs, evidence
+cutoff, content hash, `HUMAN_GATE_REQUIRED`,
+`X_AUTO_PUBLISH_PAUSED_HUMAN_REVIEW`, and `X_POST_SENT=0`. A human reviews and
+publishes outside this workflow. Metricool, browser cookies, API credentials,
+and blind retries are out of scope while the pause is active.
 
-Ordinary accepted method or existing-state posts may be `AUTO_PUBLISH`.
-Accepted case-state transitions, meaningful medical conclusions, substantive
-corrections, or sensitive material are `HUMAN_GATE_REQUIRED`. External outreach
-is `HOLD`.
+All X candidates, accepted case-state transitions, meaningful medical
+conclusions, substantive corrections, and sensitive material are
+`HUMAN_GATE_REQUIRED`. External outreach is `HOLD`.
 
 ## Observability and failure delivery
 

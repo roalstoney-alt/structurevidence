@@ -504,16 +504,17 @@ def live_publish_once(
 
 
 def default_candidate(date_sgt: str, config: dict[str, Any]) -> dict[str, Any]:
-    text = canonical_post_text(config["x"]["method_test_text"])
+    template = config["x"].get("daily_manual_text_template", config["x"]["method_test_text"])
+    text = canonical_post_text(template.format(date_sgt=date_sgt))
     candidate = {
         "schema_version": "se-x-candidate-v1", "candidate_id": f"SE-X-{date_sgt}-METHOD-01",
         "day_index": None, "scheduled_date": date_sgt, "text": text,
         "source_urls": X_URL_RE.findall(text), "evidence_cutoff": config["x"]["method_cutoff"],
-        "content_hash": sha256_text(text), "approval_gate": "AUTO_PUBLISH",
+        "content_hash": sha256_text(text), "approval_gate": "HUMAN_GATE_REQUIRED",
         "material_state_transition": False, "account_identity": "@structevidence",
-        "dedup_check": "PENDING_PROVIDER_PREFLIGHT", "publish_attempt_id": None,
+        "dedup_check": "MANUAL_REVIEW_PENDING", "publish_attempt_id": None,
         "post_id": None, "public_url": None, "published_at": None,
-        "verification_checked_at": None, "status": "CANDIDATE_ONLY",
+        "verification_checked_at": None, "status": "AWAITING_HUMAN_REVIEW",
         "new_findings_existed": False, "correction_required": False,
     }
     validate_candidate(candidate)
@@ -530,7 +531,7 @@ def new_run(date_sgt: str, baseline_sha: str) -> dict[str, Any]:
         "repo_baseline_sha": baseline_sha, "repo_final_sha": None,
         "pipeline": {key: "UNVERIFIED" for key in ("scheduler", "cases", "cml_ingestion", "x_publish", "audit_persistence", "external_delivery")},
         "reviews": [],
-        "x": {"account": "@structevidence", "publication_authorized": True, "account_verified": False,
+        "x": {"account": "@structevidence", "publication_authorized": False, "account_verified": False,
               "candidate_file": None, "post_id": None, "post_url": None, "posted_at": None,
               "result": "NOT_ATTEMPTED", "blocker": None},
         "internal_workflows": {
@@ -578,7 +579,7 @@ def render_report(run: dict[str, Any], candidate: dict[str, Any], cross_project:
     lines.append(row("SE SOCSM", "Mondays", "YES", "NONE", socsm.get("artifact") or "NONE", "PRIVATE", socsm["state"], "same-run Monday check only; strict private/public wall"))
     x = run["x"]
     x_state = "PASS" if x.get("post_url") else ("BLOCKED" if x.get("blocker") else "UNVERIFIED")
-    lines.append(row("SE X official", "YES", "YES", x.get("posted_at") or "NONE", candidate["candidate_id"] + " / " + (x.get("post_id") or "NONE"), x.get("post_url") or x.get("blocker") or "NONE", x_state, x.get("blocker") or "verify idempotent replay"))
+    lines.append(row("SE X candidate", "YES", "REPORT-ONLY", "NONE", candidate["candidate_id"], x.get("blocker") or "NONE", x_state, "human review and manual publication"))
     for key, label, due in (("cml", "CML technical/FDE", "own daily plan"), ("lovetimeline", "LoveTimeline", "Mon/Tue/Fri")):
         item = cross_project.get(key, {})
         lines.append(row(label, due, str(item.get("enabled", "UNKNOWN")), item.get("last_actual_run", "NONE"), item.get("artifact", "NONE"), item.get("receipt", "draft only; OUTREACH HOLD"), item.get("state", "UNVERIFIED"), item.get("next_action", "read permission or real run evidence required")))
@@ -587,9 +588,13 @@ def render_report(run: dict[str, Any], candidate: dict[str, Any], cross_project:
     blocked = sum(1 for value in run["pipeline"].values() if value == "BLOCKED")
     lines += [
         "", "## X daily post", "", f"- Exact English text: {candidate['text']}",
-        f"- State: {'PUBLISHED' if x.get('post_url') else 'CANDIDATE'}",
+        "- State: AWAITING_HUMAN_REVIEW",
+        f"- Approval gate: {candidate['approval_gate']}",
+        f"- Content hash: {candidate['content_hash']}",
         f"- Cited URLs: {', '.join(candidate['source_urls']) or 'NONE'}",
         f"- Source cutoff: {candidate['evidence_cutoff']}",
+        f"- Automatic publication blocker: {x.get('blocker') or 'X_AUTO_PUBLISH_PAUSED_HUMAN_REVIEW'}",
+        "- X_POST_SENT: 0",
         f"- Post ID: {x.get('post_id') or 'NONE'}", f"- Verified URL: {x.get('post_url') or 'NONE'}",
         f"- Published at: {x.get('posted_at') or 'NONE'}",
         f"- New findings existed: {'YES' if candidate['new_findings_existed'] else 'NO'}",
@@ -599,7 +604,7 @@ def render_report(run: dict[str, Any], candidate: dict[str, Any], cross_project:
         f"- delivery_verified_count: {1 if x.get('post_url') else 0}", f"- blocked_count: {blocked}",
         f"- human_gate_count: {sum(1 for r in run.get('reviews', []) if r.get('result') == 'HUMAN_GATE_REQUIRED')}",
         "- next checkpoint: next bounded run at the existing single 22:00 Asia/Singapore trigger",
-        f"- confirmed platform connectivity: {'X API verified' if x.get('account_verified') else 'X write interface not verified'}",
+        "- confirmed platform connectivity: X automatic publication paused; no write interface called",
     ]
     return "\n".join(lines) + "\n"
 
@@ -686,25 +691,9 @@ def run_orchestrator(args: argparse.Namespace) -> tuple[dict[str, Any], dict[str
         else:
             run["pipeline"]["cml_ingestion"] = "UNVERIFIED"
             run["alerts"].append({"code": "OBSERVABILITY_BLOCKED", "dedupe_key": f"CROSS_PROJECT:{date_sgt}", "detail": "No verified CML/LoveTimeline run evidence was supplied."})
-        publisher = publisher_from_env(expected_handle=os.environ.get("X_EXPECTED_HANDLE", "structevidence"))
-        if args.mode == "live-x-test":
-            event(run, "WRITE_ATTEMPTED", "x_publish")
-            try:
-                receipt = live_publish_once(publisher, candidate, posts_ledger)
-                run["x"].update(account_verified=True, post_id=receipt.get("post_id"), post_url=receipt.get("post_url"), posted_at=receipt.get("published_at"), result=receipt["status"], blocker=None)
-                run["receipt_ids"].append(receipt["receipt_id"])
-                run["pipeline"]["x_publish"] = "PASS" if receipt["status"] == "PUBLISHED_VERIFIED" else "PARTIAL"
-                event(run, "DELIVERED", "x_publish", receipt["post_id"])
-                if receipt["status"] == "PUBLISHED_VERIFIED":
-                    event(run, "VERIFIED", "x_publish", receipt["post_url"])
-            except PublisherError as exc:
-                run["pipeline"]["x_publish"] = "BLOCKED"
-                run["x"].update(result="PUBLISH_OUTCOME_UNKNOWN" if exc.outcome_unknown else "BLOCKED", blocker=str(exc))
-                run["alerts"].append({"code": "X_PUBLISH_OUTCOME_UNKNOWN" if exc.outcome_unknown else "X_PUBLISH_BLOCKED", "dedupe_key": f"X:{date_sgt}:{type(exc).__name__}", "detail": str(exc)})
-        else:
-            run["pipeline"]["x_publish"] = "BLOCKED"
-            run["x"].update(result="DRY_RUN_ONLY", blocker=publisher.reason if isinstance(publisher, BlockedPublisher) else "DRY_RUN_MODE")
-            run["alerts"].append({"code": "X_PUBLISH_BLOCKED", "dedupe_key": f"X:{date_sgt}:DRY_RUN", "detail": run["x"]["blocker"]})
+        run["pipeline"]["x_publish"] = "BLOCKED"
+        run["x"].update(result="AWAITING_HUMAN_REVIEW", blocker="X_AUTO_PUBLISH_PAUSED_HUMAN_REVIEW")
+        run["alerts"].append({"code": "X_HUMAN_REVIEW_REQUIRED", "dedupe_key": f"X:{date_sgt}:HUMAN_REVIEW", "detail": run["x"]["blocker"]})
 
         run["pipeline"]["audit_persistence"] = "PASS"
         run["pipeline"]["external_delivery"] = "BLOCKED"
@@ -734,17 +723,8 @@ def main() -> int:
     parser.add_argument("--date")
     parser.add_argument("--baseline-sha")
     parser.add_argument("--cross-project-status")
-    parser.add_argument("--mode", choices=("dry-run", "x-preflight", "live-x-test"), default="dry-run")
+    parser.add_argument("--mode", choices=("report-only", "dry-run"), default="report-only")
     args = parser.parse_args()
-    if args.mode == "x-preflight":
-        try:
-            account = publisher_from_env(expected_handle=os.environ.get("X_EXPECTED_HANDLE", "structevidence")).verify_account()
-            print(canonical_json({"account": f"@{account['username']}", "account_id": account["id"], "result": "X_AUTH_VERIFIED", "write_interface": account["write_interface"]}))
-            return 0
-        except PublisherError as exc:
-            error = f"X_API_HTTP_{exc.status}" if exc.status else str(exc)
-            print(canonical_json({"account": "@structevidence", "result": "X_AUTH_BLOCKED", "error": error}))
-            return 2
     run, _ = run_orchestrator(args)
     print(canonical_json({"run_id": run["run_id"], "outcome": run["outcome"], "x_result": run["x"]["result"]}))
     return 0 if run["outcome"] in {"PASS", "PARTIAL"} else 2

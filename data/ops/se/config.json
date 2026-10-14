@@ -12,18 +12,14 @@
   "x": {
     "expected_handle": "@structevidence",
     "method_test_text": "AI makes answers cheap. Evidence still has a cost. StructEvidence tracks what is supported, what remains unknown, and when evidence changes the picture. Verify Your Verify. https://structurevidence.org",
+    "daily_manual_text_template": "StructEvidence daily evidence watch — {date_sgt}. AI makes answers cheap. Evidence still has a cost. We track what is supported, what remains unknown, and when evidence changes the picture. Verify Your Verify. https://structurevidence.org",
     "method_cutoff": "2026-10-14",
-    "preferred_auth": "OAUTH1_USER_CONTEXT",
-    "credential_envs": [
-      "X_API_KEY",
-      "X_API_SECRET",
-      "X_ACCESS_TOKEN",
-      "X_ACCESS_TOKEN_SECRET"
-    ],
-    "oauth2_compatibility_env": "X_USER_ACCESS_TOKEN"
+    "publication_mode": "HUMAN_REVIEW_ONLY",
+    "automatic_publication": "PAUSED",
+    "daily_report_requires_exact_candidate": true
   },
   "authorization": {
-    "ordinary_method_posts": "AUTO_PUBLISH",
+    "ordinary_method_posts": "HUMAN_GATE_REQUIRED",
     "material_case_state_transition": "HUMAN_GATE_REQUIRED",
     "external_outreach": "HOLD"
   }
