@@ -1,0 +1,23 @@
+{
+  "schema_version": "se-unified-config-v1",
+  "project": "StructEvidence",
+  "runbook": "SE-UNIFIED-SCHEDULE-X-v1.0",
+  "baseline_main_sha": "1f44e3a45ca3c444fc52b0d92e84c76df1197fd2",
+  "schedule": {
+    "logical_task_id": "6aba2674e6448191867d0890ad2cc1ed",
+    "local_time": "22:00",
+    "timezone": "Asia/Singapore",
+    "semantics": "START_AT_22_REPORT_AFTER_BOUNDED_RUN"
+  },
+  "x": {
+    "expected_handle": "@structevidence",
+    "method_test_text": "AI makes answers cheap. Evidence still has a cost. StructEvidence tracks what is supported, what remains unknown, and when evidence changes the picture. Verify Your Verify. https://structurevidence.org",
+    "method_cutoff": "2026-10-14",
+    "credential_env": "X_USER_ACCESS_TOKEN"
+  },
+  "authorization": {
+    "ordinary_method_posts": "AUTO_PUBLISH",
+    "material_case_state_transition": "HUMAN_GATE_REQUIRED",
+    "external_outreach": "HOLD"
+  }
+}

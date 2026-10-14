@@ -1,0 +1,11 @@
+{
+  "schema_version": "se-deploy-verify-v1",
+  "checked_at": null,
+  "github_commit_sha": null,
+  "github_pages_deploy_id": null,
+  "http_status": null,
+  "expected_body_marker": null,
+  "body_marker_verified": false,
+  "result": "NOT_ATTEMPTED",
+  "blocker": "Implementation has not been merged or deployed. HTTP 200 alone will not be accepted."
+}

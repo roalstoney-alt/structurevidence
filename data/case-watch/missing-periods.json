@@ -1,0 +1,33 @@
+{
+  "schema_version": "se-case-watch-missing-periods-v1",
+  "recorded_at": "2026-10-14T17:59:24+08:00",
+  "periods": [
+    {
+      "case_id": "CML-PDRE-001",
+      "period_id": "2026-W41",
+      "start": "2026-10-05",
+      "end": "2026-10-11",
+      "status": "NOT_YET_REVIEWED",
+      "review_id": null,
+      "reason": "No genuine bounded weekly backfill was recorded."
+    },
+    {
+      "case_id": "SE-BESS-SODIUM-001",
+      "period_id": "2026-W41",
+      "start": "2026-10-05",
+      "end": "2026-10-11",
+      "status": "NOT_YET_REVIEWED",
+      "review_id": null,
+      "reason": "No genuine bounded weekly backfill was recorded."
+    },
+    {
+      "case_id": "SE-ONC-NSQNSCLC-CN-001",
+      "period_id": "2026-W41",
+      "start": "2026-10-05",
+      "end": "2026-10-11",
+      "status": "NOT_YET_REVIEWED",
+      "review_id": null,
+      "reason": "No genuine bounded weekly backfill was recorded; NSCLC remains folded."
+    }
+  ]
+}

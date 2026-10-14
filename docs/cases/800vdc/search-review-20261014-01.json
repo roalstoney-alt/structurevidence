@@ -1,0 +1,39 @@
+{
+  "schema_version": "se-case-review-v1",
+  "case_id": "CML-PDRE-001",
+  "review_id": "SE-800V-REVIEW-20261014-01",
+  "reviewed_at": "2026-10-14T17:59:24+08:00",
+  "result": "NO_STATE_CHANGE",
+  "review_complete": true,
+  "search_boundary": "Targeted refresh of the accepted Chindata deployment plus official Siemens/Reinhausen and Vertiv 800VDC development/deployment signals; not an exhaustive market census.",
+  "sources_checked": [
+    {
+      "url": "https://www.chindatagroup.com/media/news/533.html",
+      "publisher": "Chindata",
+      "status": "READ",
+      "retrieved_at": "2026-10-14T17:59:24+08:00",
+      "finding": "The same one-campus operator claim remains available; no independent performance or replication record is supplied."
+    },
+    {
+      "url": "https://press.siemens.com/global/en/pressrelease/siemens-and-reinhausen-develop-direct-current-power-solutions-ai-data-centers",
+      "publisher": "Siemens",
+      "status": "READ",
+      "retrieved_at": "2026-10-14T17:59:24+08:00",
+      "finding": "The official record describes technology under development and industrialization, not an attributable operating deployment."
+    },
+    {
+      "url": "https://www.vertiv.com/en-us/about/news-and-events/events/2026/dcd-power-innovation-day-2026/",
+      "publisher": "Vertiv",
+      "status": "READ",
+      "retrieved_at": "2026-10-14T17:59:24+08:00",
+      "finding": "The official event page frames 800VDC as an architecture decision topic and supplies no new named operating deployment."
+    }
+  ],
+  "old_state": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+  "new_state": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+  "new_qualifying_evidence_count": 0,
+  "new_counter_evidence_count": 0,
+  "evidence_state_as_of": "2026-09-20T10:46:47Z",
+  "last_material_change": "2026-09-20",
+  "historical_backfill": false
+}

@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "status_recorded_at": "2026-10-14T15:30:47+08:00",
+  "status_recorded_at": "2026-10-14T17:59:24+08:00",
   "timestamp_semantics": {
     "status_recorded_at": "Administrative status observation; not a scientific review timestamp.",
     "evidence_state_as_of": "Cutoff of the currently published evidence state; retained until evidence changes.",
@@ -17,10 +17,10 @@
       "last_material_change": "2026-10-10",
       "featured": true,
       "management_status": "ACTIVE",
-      "last_reviewed_at": "2026-10-14T15:30:47+08:00",
+      "last_reviewed_at": "2026-10-14T17:59:24+08:00",
       "review_result": "REVIEW_INCOMPLETE",
-      "latest_review_id": "SE-IRK-REVIEW-20261014-01",
-      "latest_review_file": "cases/irkutsk-lab-worker-death/search-review-20261014-01.json",
+      "latest_review_id": "SE-IRK-REVIEW-20261014-02",
+      "latest_review_file": "cases/irkutsk-lab-worker-death/search-review-20261014-02.json",
       "period": {
         "id": "2026-10-14",
         "start": "2026-10-14",
@@ -28,14 +28,14 @@
         "status": "REVIEW_INCOMPLETE",
         "scope": "No qualifying new evidence; regulator, procurement, patent and underlying clinical/investigation records remained inaccessible."
       },
-      "period_review_id": "SE-IRK-REVIEW-20261014-01",
+      "period_review_id": "SE-IRK-REVIEW-20261014-02",
       "monitoring": {
         "cadence": "DAILY",
         "enabled": true,
-        "configured_start_at": "2026-10-08T15:00:00+08:00",
+        "configured_start_at": "2026-10-14T22:00:00+08:00",
         "last_scheduled_run_at": null,
         "next_run_at_from_service": null,
-        "schedule_timezone": "Asia/Hong_Kong"
+        "schedule_timezone": "Asia/Singapore"
       },
       "new_qualifying_evidence_count": 0,
       "new_counter_evidence_count": 0
@@ -85,30 +85,30 @@
       "last_material_change": "2026-09-24",
       "featured": true,
       "management_status": "ACTIVE",
-      "last_reviewed_at": null,
-      "review_result": null,
-      "latest_review_id": null,
-      "latest_review_file": null,
+      "last_reviewed_at": "2026-10-14T17:59:24+08:00",
+      "review_result": "HUMAN_GATE_REQUIRED",
+      "latest_review_id": "SE-SODIUM-REVIEW-20261014-01",
+      "latest_review_file": "cases/sodium-ion-bess/search-review-20261014-01.json",
       "period": {
-        "id": "2026-W41",
-        "start": "2026-10-05",
-        "end": "2026-10-11",
-        "status": "NOT_YET_REVIEWED",
-        "scope": "Original three-case weekly review"
+        "id": "2026-10-14",
+        "start": "2026-10-14",
+        "end": "2026-10-14",
+        "status": "HUMAN_GATE_REQUIRED",
+        "scope": "Named operational-site candidate found; accepted public state remains frozen pending human review."
       },
-      "period_review_id": null,
+      "period_review_id": "SE-SODIUM-REVIEW-20261014-01",
       "monitoring": {
-        "cadence": "WEEKLY",
+        "cadence": "DAILY",
         "enabled": true,
-        "configured_start_at": "2026-10-11T19:00:00+08:00",
+        "configured_start_at": "2026-10-14T22:00:00+08:00",
         "last_scheduled_run_at": null,
         "next_run_at_from_service": null,
         "schedule_timezone": "Asia/Singapore",
         "previous_candidate": "data/case-watch/weekly/2026-W40.json",
         "previous_candidate_complete": false
       },
-      "new_qualifying_evidence_count": null,
-      "new_counter_evidence_count": null
+      "new_qualifying_evidence_count": 1,
+      "new_counter_evidence_count": 0
     },
     {
       "case_id": "CML-PDRE-001",
@@ -120,30 +120,30 @@
       "last_material_change": "2026-09-20",
       "featured": true,
       "management_status": "ACTIVE",
-      "last_reviewed_at": null,
-      "review_result": null,
-      "latest_review_id": null,
-      "latest_review_file": null,
+      "last_reviewed_at": "2026-10-14T17:59:24+08:00",
+      "review_result": "NO_STATE_CHANGE",
+      "latest_review_id": "SE-800V-REVIEW-20261014-01",
+      "latest_review_file": "cases/800vdc/search-review-20261014-01.json",
       "period": {
-        "id": "2026-W41",
-        "start": "2026-10-05",
-        "end": "2026-10-11",
-        "status": "NOT_YET_REVIEWED",
-        "scope": "Original three-case weekly review"
+        "id": "2026-10-14",
+        "start": "2026-10-14",
+        "end": "2026-10-14",
+        "status": "NO_STATE_CHANGE",
+        "scope": "Bounded official-source refresh; accepted single-instance state unchanged."
       },
-      "period_review_id": null,
+      "period_review_id": "SE-800V-REVIEW-20261014-01",
       "monitoring": {
-        "cadence": "WEEKLY",
+        "cadence": "DAILY",
         "enabled": true,
-        "configured_start_at": "2026-10-11T19:00:00+08:00",
+        "configured_start_at": "2026-10-14T22:00:00+08:00",
         "last_scheduled_run_at": null,
         "next_run_at_from_service": null,
         "schedule_timezone": "Asia/Singapore",
         "previous_candidate": "data/case-watch/weekly/2026-W40.json",
         "previous_candidate_complete": false
       },
-      "new_qualifying_evidence_count": null,
-      "new_counter_evidence_count": null
+      "new_qualifying_evidence_count": 0,
+      "new_counter_evidence_count": 0
     }
   ]
 }

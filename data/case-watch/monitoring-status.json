@@ -1,23 +1,23 @@
 {
   "schema_version": "1.0",
-  "status_recorded_at": "2026-10-14T15:30:47+08:00",
-  "observation_scope": "Actual Irkutsk review only; other cases and weekly monitoring unchanged.",
+  "status_recorded_at": "2026-10-14T17:59:24+08:00",
+  "observation_scope": "Actual bounded unified review for 800V, sodium-ion BESS and Irkutsk; sodium material candidate held behind human gate; historical NSCLC W41 remains unreviewed.",
   "cases": [
     {
       "case_id": "CML-PDRE-001",
       "period": {
-        "id": "2026-W41",
-        "start": "2026-10-05",
-        "end": "2026-10-11",
-        "status": "NOT_YET_REVIEWED",
-        "scope": "Original three-case weekly review"
+        "id": "2026-10-14",
+        "start": "2026-10-14",
+        "end": "2026-10-14",
+        "status": "NO_STATE_CHANGE",
+        "scope": "Bounded official-source refresh; accepted single-instance state unchanged."
       },
-      "period_review_id": null,
-      "latest_review_file": null,
+      "period_review_id": "SE-800V-REVIEW-20261014-01",
+      "latest_review_file": "cases/800vdc/search-review-20261014-01.json",
       "monitoring": {
-        "cadence": "WEEKLY",
+        "cadence": "DAILY",
         "enabled": true,
-        "configured_start_at": "2026-10-11T19:00:00+08:00",
+        "configured_start_at": "2026-10-14T22:00:00+08:00",
         "last_scheduled_run_at": null,
         "next_run_at_from_service": null,
         "schedule_timezone": "Asia/Singapore",
@@ -28,18 +28,18 @@
     {
       "case_id": "SE-BESS-SODIUM-001",
       "period": {
-        "id": "2026-W41",
-        "start": "2026-10-05",
-        "end": "2026-10-11",
-        "status": "NOT_YET_REVIEWED",
-        "scope": "Original three-case weekly review"
+        "id": "2026-10-14",
+        "start": "2026-10-14",
+        "end": "2026-10-14",
+        "status": "HUMAN_GATE_REQUIRED",
+        "scope": "Named operational-site candidate found; accepted public state remains frozen pending human review."
       },
-      "period_review_id": null,
-      "latest_review_file": null,
+      "period_review_id": "SE-SODIUM-REVIEW-20261014-01",
+      "latest_review_file": "cases/sodium-ion-bess/search-review-20261014-01.json",
       "monitoring": {
-        "cadence": "WEEKLY",
+        "cadence": "DAILY",
         "enabled": true,
-        "configured_start_at": "2026-10-11T19:00:00+08:00",
+        "configured_start_at": "2026-10-14T22:00:00+08:00",
         "last_scheduled_run_at": null,
         "next_run_at_from_service": null,
         "schedule_timezone": "Asia/Singapore",
@@ -78,15 +78,15 @@
         "status": "REVIEW_INCOMPLETE",
         "scope": "No qualifying new evidence; regulator, procurement, patent and underlying clinical/investigation records remained inaccessible."
       },
-      "period_review_id": "SE-IRK-REVIEW-20261014-01",
-      "latest_review_file": "cases/irkutsk-lab-worker-death/search-review-20261014-01.json",
+      "period_review_id": "SE-IRK-REVIEW-20261014-02",
+      "latest_review_file": "cases/irkutsk-lab-worker-death/search-review-20261014-02.json",
       "monitoring": {
         "cadence": "DAILY",
         "enabled": true,
-        "configured_start_at": "2026-10-08T15:00:00+08:00",
+        "configured_start_at": "2026-10-14T22:00:00+08:00",
         "last_scheduled_run_at": null,
         "next_run_at_from_service": null,
-        "schedule_timezone": "Asia/Hong_Kong"
+        "schedule_timezone": "Asia/Singapore"
       }
     }
   ],

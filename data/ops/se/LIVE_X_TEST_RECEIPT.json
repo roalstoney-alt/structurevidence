@@ -1,0 +1,14 @@
+{
+  "schema_version": "se-live-x-test-receipt-v1",
+  "attempted_at": null,
+  "account": "@structevidence",
+  "account_id": null,
+  "post_id": null,
+  "post_url": null,
+  "published_at": null,
+  "verification_checked_at": null,
+  "result": "NOT_ATTEMPTED",
+  "blocker": "X_PUBLISH_BLOCKED_NO_AUTHORIZED_ACCOUNT: connected Metricool account is not @structevidence; configure the official X account separately, then verify identity and write scope.",
+  "x_post_sent": 0,
+  "secret_values_recorded": false
+}
