@@ -75,3 +75,27 @@ Post-run verification passed:
 - `scripts/test_case_watch.py`: 5/5
 - `scripts/test_irkutsk_publication.py`: PASS
 - `scripts/test_irkutsk_alias_repair.py`: PASS
+
+## `SE-CEPE-20261014T090033Z`
+
+DISPOSITION = `ACCEPTED_WITH_EXISTING_HUMAN_REVIEW_OPEN`
+
+The scheduled runner completed 8/8 availability checks with no operational
+failures. Its postcheck found another source-byte and `Last-Modified` change
+for `SE-TECP-007`. Bounded review of the current WHO page found no new
+claim-bearing statement beyond the evidence already queued on 2026-10-13.
+Because the exact previous response body was not archived, the supplemental
+record remains `INTERPRETATION_REVIEW_REQUIRED`; it does not make a new state
+recommendation or close the existing human review.
+
+Post-run verification passed:
+
+- `scripts/test_se_cepe_001.py`: 12/12
+- `scripts/test_se_ai_data_001.py`: 7/7
+- `scripts/test_se_ai_data_001_observation_v02.py`: 10/10
+- `scripts/test_case_watch.py`: 5/5
+- `scripts/test_irkutsk_publication.py`: PASS
+- `scripts/test_irkutsk_alias_repair.py`: PASS
+
+Frozen Gold, claim hashes, source manifests, protected snapshots, publication
+and outreach gates, GTM holds, and Trust Boundary inputs remain unchanged.
