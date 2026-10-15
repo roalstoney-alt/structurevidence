@@ -97,6 +97,15 @@ class WebsiteFirstEventTests(unittest.TestCase):
         for forbidden in ("api.x.com", "X_API_SECRET", "X_ACCESS_TOKEN", "live-x-test"):
             self.assertNotIn(forbidden, source + workflow)
 
+    def test_production_receipt_unlocks_exact_persisted_candidate(self):
+        receipt = load("data/ops/se/website-publications/SE-EVENT-CML-PDRE-001-20261013-SOLAREDGE-OCP.json")
+        persisted = load("data/ops/se/x-candidates/2026-10-15.json")
+        generated = build_event_x_candidate("2026-10-15", self.event, receipt)
+        self.assertEqual(generated, persisted)
+        self.assertEqual(receipt["source_main_sha"], "d32595ca95f0d96872d2af08b2665fb8f054ea35")
+        self.assertEqual(receipt["snapshot_expected_sha256"], receipt["snapshot_observed_sha256"])
+        self.assertEqual(receipt["result"], "PUBLIC_VERIFIED")
+
 
 if __name__ == "__main__":
     unittest.main()
