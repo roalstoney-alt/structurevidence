@@ -19,7 +19,7 @@
   "x_blocker": "X_AUTO_PUBLISH_PAUSED_HUMAN_REVIEW",
   "automatic_state_changes": 0,
   "report_delivery": {
-    "state": "PENDING_CURRENT_HEARTBEAT_RESPONSE",
-    "delivered_at": null
+    "state": "DELIVERED_VIA_CURRENT_HEARTBEAT",
+    "delivered_at": "2026-10-15T06:13:40Z"
   }
 }
