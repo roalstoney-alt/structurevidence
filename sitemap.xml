@@ -16,8 +16,13 @@
 <url><loc>https://structurevidence.org/gaps/OEG-BESS-002/</loc><lastmod>2026-10-06</lastmod></url>
 <url><loc>https://structurevidence.org/gaps/OEG-ONC-001/</loc><lastmod>2026-10-06</lastmod></url>
 <url><loc>https://structurevidence.org/gaps/OEG-ONC-002/</loc><lastmod>2026-10-06</lastmod></url>
-<url><loc>https://structurevidence.org/cases/800vdc/</loc><lastmod>2026-09-20</lastmod></url>
-<url><loc>https://structurevidence.org/cases/800vdc/index.json</loc><lastmod>2026-09-20</lastmod></url>
+<url><loc>https://structurevidence.org/cases/800vdc/</loc><lastmod>2026-10-15</lastmod></url>
+<url><loc>https://structurevidence.org/cases/800vdc/index.json</loc><lastmod>2026-10-15</lastmod></url>
+<url><loc>https://structurevidence.org/cases/800vdc/events/index.json</loc><lastmod>2026-10-15</lastmod></url>
+<url><loc>https://structurevidence.org/cases/800vdc/events/solaredge-ocp-2026/</loc><lastmod>2026-10-15</lastmod></url>
+<url><loc>https://structurevidence.org/cases/800vdc/events/solaredge-ocp-2026/index.json</loc><lastmod>2026-10-15</lastmod></url>
+<url><loc>https://structurevidence.org/cases/800vdc/events/solaredge-ocp-2026/snapshot-v1.json</loc><lastmod>2026-10-15</lastmod></url>
+<url><loc>https://structurevidence.org/cases/800vdc/search-review-20261015-01.json</loc><lastmod>2026-10-15</lastmod></url>
 <url><loc>https://structurevidence.org/cases/sodium-ion-bess/</loc><lastmod>2026-09-24</lastmod></url>
 <url><loc>https://structurevidence.org/cases/sodium-ion-bess/index.json</loc><lastmod>2026-09-24</lastmod></url>
 <url><loc>https://structurevidence.org/cases/nsq-nsclc-china/</loc></url>

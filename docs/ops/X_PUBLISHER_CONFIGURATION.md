@@ -16,6 +16,16 @@ places the following in the daily report for human review and manual posting:
 - `X_AUTO_PUBLISH_PAUSED_HUMAN_REVIEW`
 - `X_POST_SENT=0`
 
+Candidate selection is website-first. It prefers a same-day verified event or
+counter-evidence page, then a newly discovered historical-evidence page with its
+historical date made explicit, and only then reviewed method content. Event
+candidates cite the permanent StructEvidence event URL; that page retains the
+original-source link and a bounded, hashed snapshot. Production HTTP 200 alone
+is insufficient: the expected event marker must be present in the response
+body. Until that succeeds, the candidate is
+`WEBSITE_PUBLICATION_BLOCKED` and contains no publishable claim that the update
+is live.
+
 The command-line and GitHub Actions entry points expose report-only execution;
 there is no live publication mode while this boundary is active.
 

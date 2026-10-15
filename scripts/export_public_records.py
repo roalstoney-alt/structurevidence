@@ -94,6 +94,7 @@ def evidence_html(case: dict, evidence: dict) -> str:
 
 def build_cases() -> dict[str, dict]:
     dc = load("cases/800vdc/state-v0.1.json")
+    dc_events = load("cases/800vdc/events/index.json")["events"]
     sodium = load("cases/sodium-ion-bess/state-v0.1.json")
     dc_evidence = [{
         "evidence_id": "L1-EV-CML-PDRE-001-FIELD-DEPLOYMENT-001",
@@ -138,6 +139,7 @@ def build_cases() -> dict[str, dict]:
             "unknowns": dc["unknowns"] + ["Industry-scale adoption."],
             "search_provenance": [{"run_date": dc["knowledge_cutoff"], "query_count": 4, "source_count": 9, "deep_review_count": 1, "boundary": "One narrow L1 field-deployment verification; no general 800V research was authorized."}],
             "history": [{"date": "2026-09-20", "previous_state": "R5_FIELD_DEPLOYED_NOT_ESTABLISHED", "new_state": "R5_ARCHITECTURE_FIELD_DEPLOYMENT_EVIDENCE_ACCEPTED_SINGLE_INSTANCE", "triggering_evidence": dc_evidence[0]["evidence_id"], "why": "Human review accepted one attributable operator record for one named commercial deployment."}],
+            "events": dc_events,
         },
         "sodium-ion-bess": {
             "case_id": sodium["case_id"],
@@ -160,7 +162,10 @@ def build_cases() -> dict[str, dict]:
 def main() -> None:
     cases = build_cases()
     for slug, case in cases.items():
-        public = {key: case[key] for key in ["case_id", "title", "canonical_url", "question", "answer", "current_state", "as_of", "last_material_change", "evidence", "counter_evidence", "unknowns", "search_provenance", "history"]}
+        public_keys = ["case_id", "title", "canonical_url", "question", "answer", "current_state", "as_of", "last_material_change", "evidence", "counter_evidence", "unknowns", "search_provenance", "history"]
+        if "events" in case:
+            public_keys.append("events")
+        public = {key: case[key] for key in public_keys}
         write_json(f"cases/{slug}/index.json", public)
         write_case_yaml(slug, public)
         for key in ["evidence", "counter_evidence", "unknowns", "search_provenance"]:

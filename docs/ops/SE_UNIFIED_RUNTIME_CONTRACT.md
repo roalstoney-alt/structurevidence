@@ -29,12 +29,17 @@ Unrun review periods remain `NOT_YET_REVIEWED`. Evidence-state cutoffs and
 material-change dates advance only after accepted qualifying evidence and any
 required human gate.
 
+Verified events and accepted stop changes are separate dimensions. A
+`NEW_EVENT` or `NEWLY_DISCOVERED_OLD_EVIDENCE` record may be published with
+`NO_STATE_CHANGE`; this never advances `evidence_state_as_of`. Event,
+publication, retrieval and review timestamps remain distinct. Public event
+artifacts and bounded source snapshots are append-only; page projections and
+indexes may be regenerated without rewriting the historical record.
+
 Each daily run has a deterministic ID and an expiring lease. JSON artifacts are
-written atomically. Run files and X receipts are append-only: replay returns the
-same completed run, and a conflicting replacement fails. X idempotency is keyed
-by account, date, and canonical content hash. Because X create-post does not
-provide a native idempotency key, the adapter reconciles provider history before
-publishing and after an ambiguous transport outcome. It never blindly resends.
+written atomically. Run files, event records, snapshots, deployment receipts and
+X candidates are append-only: replay returns the same completed run, and a
+conflicting replacement fails. X write code and credential reads are disabled.
 
 ## Case workflow
 
@@ -49,8 +54,16 @@ syndicated reposts becoming false corroboration.
 
 ## X publication
 
-Automatic X publication is paused. Every bounded run creates exactly one English
-candidate for `@structevidence`, but no X write interface may be called. The
+Automatic X publication is paused. Every bounded run creates exactly one
+candidate record for `@structevidence`, but no X write interface may be called.
+A publishable English text exists only after its cited website body is verified; a
+failed website gate produces a blocked record with no publishable text. The
+selector prefers a production-verified website event or counter-evidence update,
+then a production-verified newly discovered historical record, then reviewed
+method content. An event candidate must link to its permanent StructEvidence
+page, which links the original source and bounded snapshot. A missing or stale
+production body yields `WEBSITE_PUBLICATION_BLOCKED`, not a claim that the update
+is live. The
 daily execution report must contain the exact final text, cited URLs, evidence
 cutoff, content hash, `HUMAN_GATE_REQUIRED`,
 `X_AUTO_PUBLISH_PAUSED_HUMAN_REVIEW`, and `X_POST_SENT=0`. A human reviews and

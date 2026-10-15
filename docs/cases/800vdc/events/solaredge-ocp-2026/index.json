@@ -1,0 +1,50 @@
+{
+  "schema_version": "se-case-event-v1",
+  "event_id": "SE-EVENT-CML-PDRE-001-20261013-SOLAREDGE-OCP",
+  "case_id": "CML-PDRE-001",
+  "title": "SolarEdge presents MVAC-to-800 VDC development hardware at OCP 2026",
+  "published_at": "2026-10-13",
+  "event_at": "2026-10-12/2026-10-15",
+  "retrieved_at": "2026-10-15T15:28:53Z",
+  "originator": "SolarEdge Technologies, Inc.",
+  "publisher": "SolarEdge investor-relations newsroom via Business Wire",
+  "source_type": "PRIMARY_CORPORATE_ANNOUNCEMENT",
+  "original_url": "https://solaredge.gcs-web.com/news-releases/news-release-details/solaredge-showcases-mvac-800-vdc-ai-factory-power-technology",
+  "accessibility": "PUBLIC_HTML_AND_OFFICIAL_PDF",
+  "specific_claims": [
+    "SolarEdge announced an MVAC-to-800 VDC AI Factory Power Technology showcase at the 2026 OCP Global Summit.",
+    "The showcase included an SST cell and a 3D-printed model of a containerized data-center power architecture.",
+    "SolarEdge attributed under-load operation to a conversion stage in its engineering labs.",
+    "SolarEdge said system-level validation of the complete power path was underway."
+  ],
+  "supports": [
+    "An attributable October 2026 technology-showcase event occurred.",
+    "SolarEdge publicly described an MVAC-to-800 VDC development architecture and engineering-lab work."
+  ],
+  "does_not_support": [
+    "A named data-center field deployment or commercial operation.",
+    "Independent performance, safety or reliability validation.",
+    "Completed full-path system validation, repeat procurement, replication or industry adoption."
+  ],
+  "depends_on": [],
+  "conflicts_counter_evidence": [
+    "The displayed containerized architecture was a 3D-printed model.",
+    "The release says full-path system validation remained underway.",
+    "The release contains forward-looking limitations covering validation, reliability, availability and adoption."
+  ],
+  "verification_status": "VERIFIED_PRIMARY_SOURCE",
+  "search_boundary": "SolarEdge official HTML release, its official two-page PDF rendering, and the explicitly linked Business Wire distribution copy; no independent performance dataset or named deployment record was reviewed.",
+  "snapshot_path": "cases/800vdc/events/solaredge-ocp-2026/snapshot-v1.json",
+  "snapshot_sha256": "34fe5c45ce6eb0f9c29521c6ea7a596ce62a93af4607f56619749733385b0950",
+  "old_stop": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+  "candidate_stop": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+  "state_changed": false,
+  "review_id": "SE-800V-REVIEW-20261015-01",
+  "classifications": [
+    "NEW_EVENT",
+    "NO_STATE_CHANGE"
+  ],
+  "public_url": "https://structurevidence.org/cases/800vdc/events/solaredge-ocp-2026/",
+  "website_publication_status": "PENDING_PRODUCTION_VERIFICATION",
+  "x_candidate_text": "SolarEdge’s Oct. 13 update: an SST cell and 3D model for MVAC-to-800 VDC AI power were showcased at OCP. Full-path validation remains underway; this is not a named field deployment. Evidence update: https://structurevidence.org/cases/800vdc/events/solaredge-ocp-2026/"
+}

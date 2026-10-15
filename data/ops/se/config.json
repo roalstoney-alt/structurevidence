@@ -16,7 +16,14 @@
     "method_cutoff": "2026-10-14",
     "publication_mode": "HUMAN_REVIEW_ONLY",
     "automatic_publication": "PAUSED",
-    "daily_report_requires_exact_candidate": true
+    "daily_report_requires_exact_candidate": true,
+    "selection_priority": [
+      "PRODUCTION_VERIFIED_NEW_EVENT_OR_COUNTER_EVIDENCE",
+      "PRODUCTION_VERIFIED_NEWLY_DISCOVERED_OLD_EVIDENCE",
+      "REVIEWED_METHOD_CONTENT"
+    ],
+    "website_gate": "HTTP_200_AND_EXPECTED_BODY_MARKER",
+    "website_failure_result": "WEBSITE_PUBLICATION_BLOCKED"
   },
   "authorization": {
     "ordinary_method_posts": "HUMAN_GATE_REQUIRED",

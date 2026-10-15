@@ -7,20 +7,15 @@ It has no scheduler of its own: an existing approved scheduler invokes this file
 from __future__ import annotations
 
 import argparse
-import base64
 import contextlib
 import dataclasses
 import datetime as dt
 import fcntl
 import hashlib
-import hmac
 import json
 import os
 import re
 import tempfile
-import urllib.error
-import urllib.parse
-import urllib.request
 import uuid
 from pathlib import Path
 from typing import Any, Iterable
@@ -32,6 +27,11 @@ SGT = ZoneInfo("Asia/Singapore")
 UTC = dt.timezone.utc
 ALLOWED_STATES = {"PASS", "PARTIAL", "BLOCKED", "MISSED", "NOT_DUE", "HOLD", "UNVERIFIED"}
 REVIEW_RESULTS = {"NO_STATE_CHANGE", "REVIEW_INCOMPLETE", "HUMAN_GATE_REQUIRED"}
+EVENT_CLASSIFICATIONS = {"NEW_EVENT", "NEWLY_DISCOVERED_OLD_EVIDENCE"}
+DAILY_EVIDENCE_COUNTS = (
+    "new_sources", "new_attributed_statements", "new_independent_evidence",
+    "new_events", "newly_discovered_old_evidence", "state_changing_evidence",
+)
 EVENTS = {
     "SCHEDULED", "STARTED", "SEARCH_COMPLETED", "ARTIFACT_CREATED",
     "WRITE_ATTEMPTED", "DELIVERED", "VERIFIED",
@@ -57,15 +57,6 @@ class AppendOnlyConflict(OpsError):
 
 class GateBlocked(OpsError):
     code = "PUBLIC_TRUST_GATE_FAILED"
-
-
-class PublisherError(OpsError):
-    code = "X_PUBLISH_ERROR"
-
-    def __init__(self, message: str, *, status: int | None = None, outcome_unknown: bool = False):
-        super().__init__(message)
-        self.status = status
-        self.outcome_unknown = outcome_unknown
 
 
 def iso_now() -> str:
@@ -171,7 +162,7 @@ def validate_candidate(candidate: dict[str, Any]) -> None:
     text = canonical_post_text(candidate.get("text", ""))
     if not text or x_weighted_length(text) > 280:
         raise GateBlocked("candidate is empty or exceeds X weighted length")
-    if candidate.get("approval_gate") not in {"AUTO_PUBLISH", "HUMAN_GATE_REQUIRED", "BLOCKED"}:
+    if candidate.get("approval_gate") not in {"HUMAN_GATE_REQUIRED", "BLOCKED"}:
         raise GateBlocked("invalid approval gate")
     lower = canonical_json(candidate).lower()
     if any(term in lower for term in SENSITIVE_PUBLIC_TERMS):
@@ -194,6 +185,14 @@ def validate_review(review: dict[str, Any]) -> None:
         raise GateBlocked(f"review missing required fields: {', '.join(missing)}")
     if review["result"] not in REVIEW_RESULTS:
         raise GateBlocked("invalid review result")
+    reviewed_date = str(review["reviewed_at"])[:10]
+    if reviewed_date >= "2026-10-15":
+        missing_counts = [field for field in DAILY_EVIDENCE_COUNTS if field not in review]
+        if missing_counts:
+            raise GateBlocked(f"review missing separated daily evidence counts: {', '.join(missing_counts)}")
+    for field in DAILY_EVIDENCE_COUNTS:
+        if field in review and (not isinstance(review[field], int) or review[field] < 0):
+            raise GateBlocked(f"{field} must be a nonnegative integer")
     if review["result"] == "NO_STATE_CHANGE":
         if review["review_complete"] is not True or not review["sources_checked"]:
             raise GateBlocked("NO_STATE_CHANGE requires a completed bounded review")
@@ -252,262 +251,108 @@ def verify_public_deploy(expected_sha: str, deployed_sha: str | None, http_statu
     }
 
 
-class XPublisher:
-    def verify_account(self) -> dict[str, Any]:
-        raise NotImplementedError
-
-    def recent_posts(self, limit: int = 50) -> list[dict[str, Any]]:
-        raise NotImplementedError
-
-    def publish(self, text: str, idempotency_key: str) -> dict[str, Any]:
-        raise NotImplementedError
-
-    def fetch_post(self, post_id: str) -> dict[str, Any]:
-        raise NotImplementedError
+def _date_from_timestamp(value: str) -> dt.date:
+    return dt.date.fromisoformat(value[:10])
 
 
-class XApiPublisher(XPublisher):
-    """Official X API v2 adapter using an OAuth 2 user access token."""
-
-    def __init__(self, token: str, expected_handle: str = "structevidence", timeout: int = 20):
-        if not token:
-            raise PublisherError("X_USER_ACCESS_TOKEN is not configured")
-        self.token = token
-        self.expected_handle = expected_handle.lstrip("@").lower()
-        self.timeout = timeout
-        self.account: dict[str, Any] | None = None
-        self.last_rate_limit: dict[str, str] = {}
-
-    def _request(self, method: str, path: str, payload: dict[str, Any] | None = None) -> dict[str, Any]:
-        body = None if payload is None else canonical_json(payload).encode("utf-8")
-        request = urllib.request.Request(
-            f"https://api.x.com{path}", data=body, method=method,
-            headers={"Authorization": f"Bearer {self.token}", "Content-Type": "application/json"},
-        )
-        try:
-            with urllib.request.urlopen(request, timeout=self.timeout) as response:
-                self.last_rate_limit = {
-                    key.lower(): value for key, value in response.headers.items()
-                    if key.lower().startswith("x-rate-limit")
-                }
-                return json.loads(response.read().decode("utf-8"))
-        except urllib.error.HTTPError as exc:
-            detail = exc.read(4096).decode("utf-8", errors="replace")
-            raise PublisherError(f"X API HTTP {exc.code}: {detail[:500]}", status=exc.code) from exc
-        except (urllib.error.URLError, TimeoutError) as exc:
-            # A transport failure during POST may occur after the provider accepted it.
-            raise PublisherError(f"X API transport error: {type(exc).__name__}", outcome_unknown=(method == "POST")) from exc
-
-    def verify_account(self) -> dict[str, Any]:
-        payload = self._request("GET", "/2/users/me?user.fields=id,username,name")
-        account = payload.get("data") or {}
-        if account.get("username", "").lower() != self.expected_handle:
-            raise PublisherError("authenticated X account does not match @structevidence", status=403)
-        self.account = account
-        return {"id": account["id"], "username": account["username"], "write_interface": "X_API_V2_OAUTH2_USER"}
-
-    def recent_posts(self, limit: int = 50) -> list[dict[str, Any]]:
-        account = self.account or self.verify_account()
-        limit = max(5, min(100, limit))
-        query = urllib.parse.urlencode({"max_results": limit, "tweet.fields": "created_at,author_id,text"})
-        return self._request("GET", f"/2/users/{account['id']}/tweets?{query}").get("data", [])
-
-    def publish(self, text: str, idempotency_key: str) -> dict[str, Any]:
-        # X has no native idempotency header for create-post. Reconciliation is mandatory.
-        del idempotency_key
-        return self._request("POST", "/2/tweets", {"text": text}).get("data", {})
-
-    def fetch_post(self, post_id: str) -> dict[str, Any]:
-        query = urllib.parse.urlencode({"tweet.fields": "created_at,author_id,text"})
-        return self._request("GET", f"/2/tweets/{post_id}?{query}").get("data", {})
-
-
-class XOAuth1Publisher(XPublisher):
-    """Official X API v2 adapter using OAuth 1.0a user context."""
-
-    def __init__(self, api_key: str, api_secret: str, access_token: str, access_token_secret: str, expected_handle: str = "structevidence", timeout: int = 20):
-        values = (api_key, api_secret, access_token, access_token_secret)
-        if not all(values):
-            raise PublisherError("X OAuth 1.0a credentials are incomplete")
-        self.api_key, self.api_secret, self.access_token, self.access_token_secret = values
-        self.expected_handle = expected_handle.lstrip("@").lower()
-        self.timeout = timeout
-        self.account: dict[str, Any] | None = None
-        self.last_rate_limit: dict[str, str] = {}
-
-    @staticmethod
-    def _encode(value: str) -> str:
-        return urllib.parse.quote(str(value), safe="~-._")
-
-    def _oauth_header(self, method: str, url: str, *, nonce: str | None = None, timestamp: str | None = None) -> str:
-        parsed = urllib.parse.urlsplit(url)
-        oauth = {
-            "oauth_consumer_key": self.api_key,
-            "oauth_nonce": nonce or uuid.uuid4().hex,
-            "oauth_signature_method": "HMAC-SHA1",
-            "oauth_timestamp": timestamp or str(int(dt.datetime.now(UTC).timestamp())),
-            "oauth_token": self.access_token,
-            "oauth_version": "1.0",
-        }
-        pairs = list(urllib.parse.parse_qsl(parsed.query, keep_blank_values=True)) + list(oauth.items())
-        encoded_pairs = sorted((self._encode(key), self._encode(value)) for key, value in pairs)
-        normalized = "&".join(f"{key}={value}" for key, value in encoded_pairs)
-        base_url = urllib.parse.urlunsplit((parsed.scheme, parsed.netloc, parsed.path, "", ""))
-        signature_base = "&".join((method.upper(), self._encode(base_url), self._encode(normalized)))
-        signing_key = f"{self._encode(self.api_secret)}&{self._encode(self.access_token_secret)}"
-        digest = hmac.new(signing_key.encode(), signature_base.encode(), hashlib.sha1).digest()
-        oauth["oauth_signature"] = base64.b64encode(digest).decode()
-        return "OAuth " + ", ".join(f'{self._encode(key)}="{self._encode(value)}"' for key, value in sorted(oauth.items()))
-
-    def _request(self, method: str, path: str, payload: dict[str, Any] | None = None) -> dict[str, Any]:
-        url = f"https://api.x.com{path}"
-        body = None if payload is None else canonical_json(payload).encode("utf-8")
-        request = urllib.request.Request(
-            url, data=body, method=method,
-            headers={"Authorization": self._oauth_header(method, url), "Content-Type": "application/json"},
-        )
-        try:
-            with urllib.request.urlopen(request, timeout=self.timeout) as response:
-                self.last_rate_limit = {
-                    key.lower(): value for key, value in response.headers.items()
-                    if key.lower().startswith("x-rate-limit")
-                }
-                return json.loads(response.read().decode("utf-8"))
-        except urllib.error.HTTPError as exc:
-            detail = exc.read(4096).decode("utf-8", errors="replace")
-            raise PublisherError(f"X API HTTP {exc.code}: {detail[:500]}", status=exc.code) from exc
-        except (urllib.error.URLError, TimeoutError) as exc:
-            raise PublisherError(f"X API transport error: {type(exc).__name__}", outcome_unknown=(method == "POST")) from exc
-
-    def verify_account(self) -> dict[str, Any]:
-        payload = self._request("GET", "/2/users/me?user.fields=id,username,name")
-        account = payload.get("data") or {}
-        if account.get("username", "").lower() != self.expected_handle:
-            raise PublisherError("authenticated X account does not match @structevidence", status=403)
-        self.account = account
-        return {"id": account["id"], "username": account["username"], "write_interface": "X_API_V2_OAUTH1_USER"}
-
-    def recent_posts(self, limit: int = 50) -> list[dict[str, Any]]:
-        account = self.account or self.verify_account()
-        query = urllib.parse.urlencode({"max_results": max(5, min(100, limit)), "tweet.fields": "created_at,author_id,text"})
-        return self._request("GET", f"/2/users/{account['id']}/tweets?{query}").get("data", [])
-
-    def publish(self, text: str, idempotency_key: str) -> dict[str, Any]:
-        del idempotency_key
-        return self._request("POST", "/2/tweets", {"text": text}).get("data", {})
-
-    def fetch_post(self, post_id: str) -> dict[str, Any]:
-        query = urllib.parse.urlencode({"tweet.fields": "created_at,author_id,text"})
-        return self._request("GET", f"/2/tweets/{post_id}?{query}").get("data", {})
-
-
-def publisher_from_env(environ: dict[str, str] | None = None, expected_handle: str = "structevidence") -> XPublisher:
-    environ = os.environ if environ is None else environ
-    oauth1_names = ("X_API_KEY", "X_API_SECRET", "X_ACCESS_TOKEN", "X_ACCESS_TOKEN_SECRET")
-    if all(environ.get(name) for name in oauth1_names):
-        return XOAuth1Publisher(*(environ[name] for name in oauth1_names), expected_handle=expected_handle)
-    if any(environ.get(name) for name in oauth1_names):
-        return BlockedPublisher("X_PUBLISH_BLOCKED_INCOMPLETE_OAUTH1_CREDENTIALS")
-    if environ.get("X_USER_ACCESS_TOKEN"):
-        return XApiPublisher(environ["X_USER_ACCESS_TOKEN"], expected_handle)
-    return BlockedPublisher("X_PUBLISH_BLOCKED_NO_WRITE_INTERFACE")
-
-
-class BlockedPublisher(XPublisher):
-    def __init__(self, reason: str = "X_PUBLISH_BLOCKED_NO_WRITE_INTERFACE"):
-        self.reason = reason
-
-    def verify_account(self) -> dict[str, Any]:
-        raise PublisherError(self.reason)
-
-    def recent_posts(self, limit: int = 50) -> list[dict[str, Any]]:
-        del limit
-        raise PublisherError(self.reason)
-
-    def publish(self, text: str, idempotency_key: str) -> dict[str, Any]:
-        del text, idempotency_key
-        raise PublisherError(self.reason)
-
-    def fetch_post(self, post_id: str) -> dict[str, Any]:
-        del post_id
-        raise PublisherError(self.reason)
-
-
-def live_publish_once(
-    publisher: XPublisher,
-    candidate: dict[str, Any],
-    posts_ledger: Path,
-    *,
-    now: str | None = None,
-) -> dict[str, Any]:
-    validate_candidate(candidate)
-    if candidate["approval_gate"] != "AUTO_PUBLISH":
-        raise GateBlocked(f"candidate gate is {candidate['approval_gate']}")
-    account = publisher.verify_account()
-    expected = canonical_post_text(candidate["text"])
-    content_hash = candidate["content_hash"]
-    existing: list[dict[str, Any]] = []
-    if posts_ledger.exists():
-        existing = [json.loads(line) for line in posts_ledger.read_text(encoding="utf-8").splitlines() if line]
-    match = next((row for row in existing if row.get("account_id") == account["id"] and row.get("content_hash") == content_hash), None)
-    if match:
-        readback = publisher.fetch_post(match["post_id"])
-        if canonical_post_text(readback.get("text", "")) != expected or readback.get("author_id") != account["id"]:
-            raise PublisherError("ledger post did not verify against provider readback")
-        return {**match, "replayed": True, "verification_checked_at": now or iso_now()}
-
-    recent = publisher.recent_posts(50)
-    provider_match = next((row for row in recent if canonical_post_text(row.get("text", "")) == expected), None)
-    if provider_match:
-        receipt = {
-            "receipt_id": f"X-RECONCILED-{provider_match['id']}", "account_id": account["id"],
-            "account": f"@{account['username']}", "content_hash": content_hash,
-            "post_id": provider_match["id"], "post_url": f"https://x.com/{account['username']}/status/{provider_match['id']}",
-            "published_at": provider_match.get("created_at"), "verification_checked_at": now or iso_now(),
-            "status": "PUBLISHED_VERIFIED", "reconciled_without_resend": True,
-        }
-        append_jsonl_once(posts_ledger, receipt, "post_id")
-        return receipt
-
-    try:
-        sent = publisher.publish(expected, f"{account['id']}:{candidate['scheduled_date']}:{content_hash}")
-    except PublisherError as exc:
-        if exc.outcome_unknown:
-            # Reconcile before any caller is permitted to retry.
-            recent = publisher.recent_posts(50)
-            found = next((row for row in recent if canonical_post_text(row.get("text", "")) == expected), None)
-            if not found:
-                raise PublisherError("PUBLISH_OUTCOME_UNKNOWN; no blind retry permitted", outcome_unknown=True) from exc
-            sent = found
-        else:
-            raise
-    post_id = sent.get("id")
-    if not post_id:
-        raise PublisherError("X create-post response contained no post ID", outcome_unknown=True)
-    readback = publisher.fetch_post(post_id)
-    if canonical_post_text(readback.get("text", "")) != expected or readback.get("author_id") != account["id"]:
-        return {
-            "receipt_id": f"X-PENDING-{post_id}", "account_id": account["id"], "account": f"@{account['username']}",
-            "content_hash": content_hash, "post_id": post_id, "post_url": None,
-            "published_at": sent.get("created_at"), "verification_checked_at": now or iso_now(),
-            "status": "POST_ACCEPTED_VERIFICATION_PENDING", "replayed": False,
-        }
-    receipt = {
-        "receipt_id": f"X-VERIFIED-{post_id}", "account_id": account["id"], "account": f"@{account['username']}",
-        "content_hash": content_hash, "post_id": post_id,
-        "post_url": f"https://x.com/{account['username']}/status/{post_id}",
-        "published_at": readback.get("created_at") or sent.get("created_at"),
-        "verification_checked_at": now or iso_now(), "status": "PUBLISHED_VERIFIED", "replayed": False,
+def validate_event_record(event: dict[str, Any]) -> None:
+    required = {
+        "event_id", "case_id", "title", "published_at", "event_at", "retrieved_at",
+        "originator", "publisher", "source_type", "original_url", "accessibility",
+        "specific_claims", "supports", "does_not_support", "depends_on",
+        "conflicts_counter_evidence", "verification_status", "search_boundary",
+        "snapshot_path", "snapshot_sha256", "old_stop", "candidate_stop",
+        "state_changed", "review_id", "classifications", "public_url", "x_candidate_text",
     }
-    append_jsonl_once(posts_ledger, receipt, "post_id")
-    return receipt
+    missing = sorted(required - set(event))
+    if missing:
+        raise GateBlocked(f"event record missing required fields: {', '.join(missing)}")
+    classifications = set(event["classifications"])
+    if len(classifications & EVENT_CLASSIFICATIONS) != 1:
+        raise GateBlocked("event must be exactly NEW_EVENT or NEWLY_DISCOVERED_OLD_EVIDENCE")
+    if not classifications <= EVENT_CLASSIFICATIONS | {"NO_STATE_CHANGE", "HUMAN_GATE_REQUIRED"}:
+        raise GateBlocked("invalid event classification")
+    if event["verification_status"] != "VERIFIED_PRIMARY_SOURCE":
+        raise GateBlocked("unverified source cannot enter a verified website update")
+    if not re.fullmatch(r"[0-9a-f]{64}", event["snapshot_sha256"]):
+        raise GateBlocked("snapshot_sha256 must be a lowercase SHA-256")
+    event_start = _date_from_timestamp(str(event["event_at"]).split("/", 1)[0])
+    published = _date_from_timestamp(str(event["published_at"]))
+    retrieved = _date_from_timestamp(str(event["retrieved_at"]))
+    if published > retrieved or event_start > retrieved:
+        raise GateBlocked("event or publication date cannot be later than retrieval date")
+    if "NEWLY_DISCOVERED_OLD_EVIDENCE" in classifications and max(published, event_start) >= retrieved:
+        raise GateBlocked("historical evidence cannot be labeled as a same-day new event")
+    if event["state_changed"]:
+        if "HUMAN_GATE_REQUIRED" not in classifications:
+            raise GateBlocked("state-changing evidence requires a human gate")
+    elif event["old_stop"] != event["candidate_stop"] or "NO_STATE_CHANGE" not in classifications:
+        raise GateBlocked("unchanged stop requires identical stops and NO_STATE_CHANGE")
+    if not event["original_url"].startswith("https://") or not event["public_url"].startswith("https://structurevidence.org/"):
+        raise GateBlocked("event URLs violate the publication boundary")
+
+
+def build_event_x_candidate(date_sgt: str, event: dict[str, Any], publication_receipt: dict[str, Any] | None) -> dict[str, Any]:
+    validate_event_record(event)
+    verified = bool(
+        publication_receipt
+        and publication_receipt.get("event_id") == event["event_id"]
+        and publication_receipt.get("result") == "PUBLIC_VERIFIED"
+        and publication_receipt.get("http_status") == 200
+        and publication_receipt.get("body_marker_verified") is True
+        and publication_receipt.get("public_url") == event["public_url"]
+    )
+    if not verified:
+        return {
+            "schema_version": "se-x-candidate-v2", "candidate_id": f"SE-X-{date_sgt}-EVENT-BLOCKED",
+            "scheduled_date": date_sgt, "text": None, "source_urls": [],
+            "evidence_cutoff": event["retrieved_at"], "content_hash": None,
+            "approval_gate": "BLOCKED", "status": "WEBSITE_PUBLICATION_BLOCKED",
+            "blocker": "WEBSITE_PUBLICATION_BLOCKED", "selected_event_id": event["event_id"],
+            "factual_status": "+".join(event["classifications"]), "x_post_sent": 0,
+        }
+    text = canonical_post_text(event["x_candidate_text"])
+    candidate = {
+        "schema_version": "se-x-candidate-v2", "candidate_id": f"SE-X-{date_sgt}-EVENT-01",
+        "scheduled_date": date_sgt, "text": text, "source_urls": X_URL_RE.findall(text),
+        "evidence_cutoff": event["retrieved_at"], "content_hash": sha256_text(text),
+        "approval_gate": "HUMAN_GATE_REQUIRED", "status": "AWAITING_HUMAN_REVIEW",
+        "blocker": "X_AUTO_PUBLISH_PAUSED_HUMAN_REVIEW", "selected_event_id": event["event_id"],
+        "selection_reason": "NEW_EVENT" if "NEW_EVENT" in event["classifications"] else "NEWLY_DISCOVERED_OLD_EVIDENCE",
+        "website_url": event["public_url"], "original_url": event["original_url"],
+        "snapshot_path": event["snapshot_path"], "snapshot_sha256": event["snapshot_sha256"],
+        "factual_status": "+".join(event["classifications"]),
+        "dedup_scope": {"local_candidate_window_days": 7, "x_provider_history": "NOT_READ_X_AUTO_PUBLISH_PAUSED"},
+        "material_state_transition": event["state_changed"], "account_identity": "@structevidence",
+        "post_id": None, "public_url": None, "published_at": None,
+        "verification_checked_at": None, "new_findings_existed": True,
+        "correction_required": False, "x_post_sent": 0,
+    }
+    validate_candidate(candidate)
+    if candidate["source_urls"] != [event["public_url"]]:
+        raise GateBlocked("event X candidate must point only to its verified StructEvidence page")
+    return candidate
+
+
+def select_x_candidate(
+    date_sgt: str,
+    config: dict[str, Any],
+    events: list[dict[str, Any]],
+    publication_receipts: dict[str, dict[str, Any]],
+) -> dict[str, Any]:
+    todays = [event for event in events if str(event.get("retrieved_at", ""))[:10] == date_sgt]
+    todays.sort(key=lambda event: (0 if "NEW_EVENT" in event.get("classifications", []) else 1, event["event_id"]))
+    if todays:
+        event = todays[0]
+        return build_event_x_candidate(date_sgt, event, publication_receipts.get(event["event_id"]))
+    return default_candidate(date_sgt, config)
 
 
 def default_candidate(date_sgt: str, config: dict[str, Any]) -> dict[str, Any]:
     template = config["x"].get("daily_manual_text_template", config["x"]["method_test_text"])
     text = canonical_post_text(template.format(date_sgt=date_sgt))
     candidate = {
-        "schema_version": "se-x-candidate-v1", "candidate_id": f"SE-X-{date_sgt}-METHOD-01",
+        "schema_version": "se-x-candidate-v2", "candidate_id": f"SE-X-{date_sgt}-METHOD-01",
         "day_index": None, "scheduled_date": date_sgt, "text": text,
         "source_urls": X_URL_RE.findall(text), "evidence_cutoff": config["x"]["method_cutoff"],
         "content_hash": sha256_text(text), "approval_gate": "HUMAN_GATE_REQUIRED",
@@ -515,7 +360,10 @@ def default_candidate(date_sgt: str, config: dict[str, Any]) -> dict[str, Any]:
         "dedup_check": "MANUAL_REVIEW_PENDING", "publish_attempt_id": None,
         "post_id": None, "public_url": None, "published_at": None,
         "verification_checked_at": None, "status": "AWAITING_HUMAN_REVIEW",
-        "new_findings_existed": False, "correction_required": False,
+        "selection_reason": "REVIEWED_METHOD_FALLBACK", "factual_status": "METHOD_CONTENT",
+        "blocker": "X_AUTO_PUBLISH_PAUSED_HUMAN_REVIEW",
+        "dedup_scope": {"local_candidate_window_days": 7, "x_provider_history": "NOT_READ_X_AUTO_PUBLISH_PAUSED"},
+        "new_findings_existed": False, "correction_required": False, "x_post_sent": 0,
     }
     validate_candidate(candidate)
     return candidate
@@ -586,19 +434,24 @@ def render_report(run: dict[str, Any], candidate: dict[str, Any], cross_project:
     due_count = 5 + (1 if weekday == 6 else 0) + (1 if weekday == 0 else 0) + (1 if weekday in {0, 1, 4} else 0)
     verified = sum(1 for value in run["pipeline"].values() if value == "PASS")
     blocked = sum(1 for value in run["pipeline"].values() if value == "BLOCKED")
+    totals = {field: sum(review.get(field, 0) for review in run.get("reviews", [])) for field in DAILY_EVIDENCE_COUNTS}
     lines += [
-        "", "## X daily post", "", f"- Exact English text: {candidate['text']}",
-        "- State: AWAITING_HUMAN_REVIEW",
+        "", "## Daily evidence accounting", "",
+        *[f"- {field}: {totals[field]}" for field in DAILY_EVIDENCE_COUNTS],
+        "", "## X daily post", "", f"- Exact English text: {candidate.get('text') or 'NONE — WEBSITE_PUBLICATION_BLOCKED'}",
+        f"- State: {candidate['status']}",
         f"- Approval gate: {candidate['approval_gate']}",
-        f"- Content hash: {candidate['content_hash']}",
+        f"- Content hash: {candidate.get('content_hash') or 'NONE'}",
         f"- Cited URLs: {', '.join(candidate['source_urls']) or 'NONE'}",
         f"- Source cutoff: {candidate['evidence_cutoff']}",
-        f"- Automatic publication blocker: {x.get('blocker') or 'X_AUTO_PUBLISH_PAUSED_HUMAN_REVIEW'}",
+        f"- Factual status: {candidate.get('factual_status', 'UNSPECIFIED')}",
+        f"- Deduplication scope: {canonical_json(candidate.get('dedup_scope', {}))}",
+        f"- Automatic publication blocker: {x.get('blocker') or candidate.get('blocker') or 'X_AUTO_PUBLISH_PAUSED_HUMAN_REVIEW'}",
         "- X_POST_SENT: 0",
         f"- Post ID: {x.get('post_id') or 'NONE'}", f"- Verified URL: {x.get('post_url') or 'NONE'}",
         f"- Published at: {x.get('posted_at') or 'NONE'}",
-        f"- New findings existed: {'YES' if candidate['new_findings_existed'] else 'NO'}",
-        f"- Prior post correction needed: {'YES' if candidate['correction_required'] else 'NO'}",
+        f"- New findings existed: {'YES' if candidate.get('new_findings_existed') else 'NO'}",
+        f"- Prior post correction needed: {'YES' if candidate.get('correction_required') else 'NO'}",
         "", "## Reconciliation", "", "- 7-day missing runs: UNVERIFIED until an independent health surface supplies run history",
         f"- due_count: {due_count}", f"- execution_verified_count: {verified}",
         f"- delivery_verified_count: {1 if x.get('post_url') else 0}", f"- blocked_count: {blocked}",
@@ -619,7 +472,6 @@ def run_orchestrator(args: argparse.Namespace) -> tuple[dict[str, Any], dict[str
     run_file = state_root / "runs" / f"{date_sgt}.json"
     candidate_file = state_root / "x-candidates" / f"{date_sgt}.json"
     ledger = state_root / "ledger.jsonl"
-    posts_ledger = state_root / "x-posts.jsonl"
     alerts_file = state_root / "alerts" / f"{date_sgt}.json"
     lease = Lease(state_root / "runtime" / f"{date_sgt}.lock.json", run["run_id"])
     lease.acquire()
@@ -636,11 +488,6 @@ def run_orchestrator(args: argparse.Namespace) -> tuple[dict[str, Any], dict[str
         run["pipeline"]["scheduler"] = "PASS" if check["state"] == "PASS" else "BLOCKED"
         if check["state"] != "PASS":
             run["alerts"].append({"code": "SCHEDULE_CONFLICT", "dedupe_key": f"SCHEDULE_CONFLICT:{date_sgt}", "detail": check["reason"]})
-
-        candidate = default_candidate(date_sgt, config)
-        atomic_json(candidate_file, candidate, replace=False)
-        run["x"]["candidate_file"] = artifact_ref(candidate_file, root, state_root)
-        event(run, "ARTIFACT_CREATED", "x_candidate", run["x"]["candidate_file"])
 
         reviews_path = root / "data/ops/se/review-inputs" / f"{date_sgt}.json"
         if reviews_path.exists():
@@ -691,9 +538,29 @@ def run_orchestrator(args: argparse.Namespace) -> tuple[dict[str, Any], dict[str
         else:
             run["pipeline"]["cml_ingestion"] = "UNVERIFIED"
             run["alerts"].append({"code": "OBSERVABILITY_BLOCKED", "dedupe_key": f"CROSS_PROJECT:{date_sgt}", "detail": "No verified CML/LoveTimeline run evidence was supplied."})
+
+        event_records = []
+        for path in sorted(root.glob("cases/*/events/*/index.json")):
+            record = json.loads(path.read_text(encoding="utf-8"))
+            validate_event_record(record)
+            event_records.append(record)
+        publication_receipts = {}
+        receipts_dir = root / "data/ops/se/website-publications"
+        if receipts_dir.is_dir():
+            for path in sorted(receipts_dir.glob("*.json")):
+                receipt = json.loads(path.read_text(encoding="utf-8"))
+                if receipt.get("event_id"):
+                    publication_receipts[receipt["event_id"]] = receipt
+        candidate = select_x_candidate(date_sgt, config, event_records, publication_receipts)
+        atomic_json(candidate_file, candidate, replace=False)
+        run["x"]["candidate_file"] = artifact_ref(candidate_file, root, state_root)
+        event(run, "ARTIFACT_CREATED", "x_candidate", run["x"]["candidate_file"])
+
         run["pipeline"]["x_publish"] = "BLOCKED"
-        run["x"].update(result="AWAITING_HUMAN_REVIEW", blocker="X_AUTO_PUBLISH_PAUSED_HUMAN_REVIEW")
-        run["alerts"].append({"code": "X_HUMAN_REVIEW_REQUIRED", "dedupe_key": f"X:{date_sgt}:HUMAN_REVIEW", "detail": run["x"]["blocker"]})
+        blocker = candidate.get("blocker") or "X_AUTO_PUBLISH_PAUSED_HUMAN_REVIEW"
+        run["x"].update(result=candidate["status"], blocker=blocker)
+        alert_code = "WEBSITE_PUBLICATION_BLOCKED" if blocker == "WEBSITE_PUBLICATION_BLOCKED" else "X_HUMAN_REVIEW_REQUIRED"
+        run["alerts"].append({"code": alert_code, "dedupe_key": f"X:{date_sgt}:{alert_code}", "detail": blocker})
 
         run["pipeline"]["audit_persistence"] = "PASS"
         run["pipeline"]["external_delivery"] = "BLOCKED"
