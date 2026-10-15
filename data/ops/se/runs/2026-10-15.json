@@ -1,0 +1,234 @@
+{
+  "schema_version": "se-unified-run-v1",
+  "run_id": "SE-OPS-20261015-2200-134a690a-095f-549b-8420-b1f58ab40368",
+  "date_sgt": "2026-10-15",
+  "scheduled_at": "2026-10-15T22:00:00+08:00",
+  "started_at": "2026-10-15T06:09:40Z",
+  "ended_at": "2026-10-15T06:09:40Z",
+  "report_delivered_at": null,
+  "repo_baseline_sha": "b4fff0e5c613c88de02a1159b0685075dc1e16b5",
+  "repo_final_sha": null,
+  "pipeline": {
+    "scheduler": "PASS",
+    "cases": "PARTIAL",
+    "cml_ingestion": "UNVERIFIED",
+    "x_publish": "BLOCKED",
+    "audit_persistence": "PASS",
+    "external_delivery": "BLOCKED"
+  },
+  "reviews": [
+    {
+      "case_id": "CML-PDRE-001",
+      "review_id": "SE-800V-REVIEW-20261015-01",
+      "reviewed_at": "2026-10-15T14:08:00+08:00",
+      "result": "NO_STATE_CHANGE",
+      "review_complete": true,
+      "search_boundary": "Targeted official-source refresh; see data/case-watch/reviews/2026-10-15/CML-PDRE-001.json.",
+      "sources_checked": [
+        {
+          "url": "https://www.chindatagroup.com/media/news/533.html",
+          "status": "READ"
+        },
+        {
+          "url": "https://corporate.solaredge.com/en/news-and-media/local-announcements/dc-powertrain-ai-data-centers",
+          "status": "READ"
+        }
+      ],
+      "old_state": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+      "new_state": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+      "new_qualifying_evidence_count": 0,
+      "new_counter_evidence_count": 0
+    },
+    {
+      "case_id": "SE-BESS-SODIUM-001",
+      "review_id": "SE-SODIUM-REVIEW-20261015-01",
+      "reviewed_at": "2026-10-15T14:08:00+08:00",
+      "result": "HUMAN_GATE_REQUIRED",
+      "review_complete": true,
+      "search_boundary": "Named operational-site candidate refresh; see data/case-watch/reviews/2026-10-15/SE-BESS-SODIUM-001.json.",
+      "sources_checked": [
+        {
+          "url": "https://www.moonwatt.com/2026/06/22/moonwatt-commissions-the-first-distributed-sodium-ion-battery-system-purpose-built-for-hybrid-solar-plants/",
+          "status": "READ"
+        },
+        {
+          "url": "https://cleantechparkarnhem.nl/nieuws/moonwatt-koppelt-natrium-ionbatterij-aan-zonnepark-op-cleantech-park-arnhem/",
+          "status": "READ"
+        }
+      ],
+      "old_state": "NAMED_COMMISSIONED_SITE_NOT_ESTABLISHED",
+      "new_state": "NAMED_COMMISSIONED_SITE_NOT_ESTABLISHED",
+      "new_qualifying_evidence_count": 0,
+      "new_counter_evidence_count": 0
+    },
+    {
+      "case_id": "SE-IRK-LAB-001",
+      "review_id": "SE-IRK-REVIEW-20261015-01",
+      "reviewed_at": "2026-10-15T14:08:00+08:00",
+      "result": "REVIEW_INCOMPLETE",
+      "review_complete": false,
+      "search_boundary": "Four consolidated search groups and two webpage opens; see data/case-watch/reviews/2026-10-15/SE-IRK-LAB-001.json.",
+      "search_budget": {
+        "targeted_search_groups": 4,
+        "webpage_open_attempts": 2
+      },
+      "source_graph": [
+        {
+          "source_id": "WHO-DON620",
+          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON620",
+          "retrieved_at": "2026-10-15T14:08:00+08:00",
+          "originator": "WHO with RF IHR NFP",
+          "publisher": "WHO",
+          "source_type": "INSTITUTIONAL_ASSESSMENT_AND_RELAY",
+          "claim_ids": [
+            "cause",
+            "contacts",
+            "second_case",
+            "transmission",
+            "biosafety"
+          ],
+          "depends_on": [
+            "RF-IHR-NFP"
+          ],
+          "relation": "SUPPORT_WITH_UNCERTAINTY",
+          "verification_status": "READ",
+          "search_boundary": "WHO/IHR"
+        },
+        {
+          "source_id": "ECDC-W41-2026",
+          "url": "https://www.ecdc.europa.eu/sites/default/files/documents/communicable-disease-threats-report-week-41-2026.pdf",
+          "retrieved_at": "2026-10-15T14:08:00+08:00",
+          "originator": "ECDC with source chain",
+          "publisher": "ECDC",
+          "source_type": "INSTITUTIONAL_ASSESSMENT",
+          "claim_ids": [
+            "risk"
+          ],
+          "depends_on": [
+            "WHO-DON620"
+          ],
+          "relation": "SUPPORT_WITH_DEPENDENCY",
+          "verification_status": "READ",
+          "search_boundary": "institutional assessment"
+        },
+        {
+          "source_id": "RPN-33189",
+          "url": "https://www.rospotrebnadzor.ru/deyatelnost/epidemiological-surveillance/?ELEMENT_ID=33189",
+          "retrieved_at": "2026-10-15T14:08:00+08:00",
+          "originator": "Rospotrebnadzor",
+          "publisher": "Rospotrebnadzor",
+          "source_type": "REGULATOR_ORIGINAL",
+          "claim_ids": [
+            "cause",
+            "biosafety",
+            "contacts"
+          ],
+          "depends_on": [],
+          "relation": "UNKNOWN",
+          "verification_status": "INACCESSIBLE",
+          "search_boundary": "official regulator follow-up"
+        }
+      ],
+      "sources_checked": [
+        {
+          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON620",
+          "status": "READ"
+        },
+        {
+          "url": "https://www.ecdc.europa.eu/sites/default/files/documents/communicable-disease-threats-report-week-41-2026.pdf",
+          "status": "READ"
+        }
+      ],
+      "old_state": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+      "new_state": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+      "new_qualifying_evidence_count": 0,
+      "new_counter_evidence_count": 0
+    }
+  ],
+  "x": {
+    "account": "@structevidence",
+    "publication_authorized": false,
+    "account_verified": false,
+    "candidate_file": "data/ops/se/x-candidates/2026-10-15.json",
+    "post_id": null,
+    "post_url": null,
+    "posted_at": null,
+    "result": "AWAITING_HUMAN_REVIEW",
+    "blocker": "X_AUTO_PUBLISH_PAUSED_HUMAN_REVIEW"
+  },
+  "internal_workflows": {
+    "sunday_weekly_synthesis": {
+      "due": false,
+      "state": "NOT_DUE",
+      "artifact": null
+    },
+    "monday_socsm": {
+      "due": false,
+      "state": "NOT_DUE",
+      "artifact": null,
+      "public_projection": "PRIVATE"
+    }
+  },
+  "receipt_ids": [],
+  "alerts": [
+    {
+      "code": "OBSERVABILITY_BLOCKED",
+      "dedupe_key": "CROSS_PROJECT:2026-10-15",
+      "detail": "No verified CML/LoveTimeline run evidence was supplied."
+    },
+    {
+      "code": "X_HUMAN_REVIEW_REQUIRED",
+      "dedupe_key": "X:2026-10-15:HUMAN_REVIEW",
+      "detail": "X_AUTO_PUBLISH_PAUSED_HUMAN_REVIEW"
+    },
+    {
+      "code": "MISSING_RUN_DETECTION_NOT_INDEPENDENT",
+      "dedupe_key": "MISSING_HEARTBEAT:2026-10-15",
+      "detail": "No independent health surface has been verified."
+    }
+  ],
+  "events": [
+    {
+      "event_id": "626b53fb5ef57c64ebe524f9cdfecbc292bafc04b92a486f2d4c701185b29f9c",
+      "event": "SCHEDULED",
+      "stage": "scheduler",
+      "at": "2026-10-15T06:09:40Z",
+      "proof": "2026-10-15T22:00:00+08:00"
+    },
+    {
+      "event_id": "13d2bdcb2e6eaf368434f4db316ddc7e7a1bbcddb3ccab2d83b95c21a1e19d6b",
+      "event": "STARTED",
+      "stage": "orchestrator",
+      "at": "2026-10-15T06:09:40Z"
+    },
+    {
+      "event_id": "e5b088e95323bf91d717a2123fcc3763669f72dd12aa5aaec26ba21db16f477f",
+      "event": "ARTIFACT_CREATED",
+      "stage": "x_candidate",
+      "at": "2026-10-15T06:09:40Z",
+      "proof": "data/ops/se/x-candidates/2026-10-15.json"
+    },
+    {
+      "event_id": "60a28d93806e4015da3d1209a218e452267b59e57415ce11a85a37327b6946b9",
+      "event": "SEARCH_COMPLETED",
+      "stage": "cases",
+      "at": "2026-10-15T06:09:40Z",
+      "proof": "data/ops/se/review-inputs/2026-10-15.json"
+    },
+    {
+      "event_id": "895421a50f6208f731c3150f0368149f5f80e9ecb8c9a7e5171cc6d82269693a",
+      "event": "ARTIFACT_CREATED",
+      "stage": "alerts",
+      "at": "2026-10-15T06:09:40Z",
+      "proof": "data/ops/se/alerts/2026-10-15.json"
+    },
+    {
+      "event_id": "70e3fec29441332d7f503cbf8b26a7e7311a7b7d9be26ec05b64201f889c41ca",
+      "event": "ARTIFACT_CREATED",
+      "stage": "daily_report",
+      "at": "2026-10-15T06:09:40Z",
+      "proof": "data/ops/se/reports/2026-10-15.md"
+    }
+  ],
+  "outcome": "PARTIAL"
+}

@@ -1,0 +1,24 @@
+{
+  "schema_version": "se-x-candidate-v1",
+  "candidate_id": "SE-X-2026-10-15-METHOD-01",
+  "day_index": null,
+  "scheduled_date": "2026-10-15",
+  "text": "StructEvidence daily evidence watch — 2026-10-15. AI makes answers cheap. Evidence still has a cost. We track what is supported, what remains unknown, and when evidence changes the picture. Verify Your Verify. https://structurevidence.org",
+  "source_urls": [
+    "https://structurevidence.org"
+  ],
+  "evidence_cutoff": "2026-10-14",
+  "content_hash": "3485947734c5d34e735375f9f35eac091333db3fffc71673d514fceff5ebc201",
+  "approval_gate": "HUMAN_GATE_REQUIRED",
+  "material_state_transition": false,
+  "account_identity": "@structevidence",
+  "dedup_check": "MANUAL_REVIEW_PENDING",
+  "publish_attempt_id": null,
+  "post_id": null,
+  "public_url": null,
+  "published_at": null,
+  "verification_checked_at": null,
+  "status": "AWAITING_HUMAN_REVIEW",
+  "new_findings_existed": false,
+  "correction_required": false
+}

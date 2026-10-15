@@ -1,0 +1,25 @@
+{
+  "schema_version": "se-unified-reconciliation-v1",
+  "run_id": "SE-OPS-20261015-2200-134a690a-095f-549b-8420-b1f58ab40368",
+  "reconciled_at": "2026-10-15T06:12:24Z",
+  "issue": "TRIGGER_TIME_MISMATCH",
+  "scheduled_at": "2026-10-15T22:00:00+08:00",
+  "observed_heartbeat_at": "2026-10-15T06:02:09.176Z",
+  "observed_local_time": "2026-10-15T14:02:09.176+08:00",
+  "status": "CORRECTED_PROSPECTIVELY",
+  "correction": {
+    "automation_id": "structevidence-trust-boundary-30d",
+    "previous_rrule": "FREQ=DAILY;BYHOUR=14;BYMINUTE=0",
+    "new_rrule": "FREQ=DAILY;BYHOUR=22;BYMINUTE=0",
+    "new_timer_created": false,
+    "automation_status": "ACTIVE"
+  },
+  "current_run_disposition": "RETAINED_AS_EARLY_BOUNDED_RUN",
+  "x_post_sent": 0,
+  "x_blocker": "X_AUTO_PUBLISH_PAUSED_HUMAN_REVIEW",
+  "automatic_state_changes": 0,
+  "report_delivery": {
+    "state": "PENDING_CURRENT_HEARTBEAT_RESPONSE",
+    "delivered_at": null
+  }
+}

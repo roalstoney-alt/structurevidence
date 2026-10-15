@@ -1,0 +1,32 @@
+{
+  "schema_version": "se-case-review-v1",
+  "case_id": "CML-PDRE-001",
+  "review_id": "SE-800V-REVIEW-20261015-01",
+  "reviewed_at": "2026-10-15T14:08:00+08:00",
+  "result": "NO_STATE_CHANGE",
+  "review_complete": true,
+  "search_boundary": "Targeted official-source refresh of the accepted Chindata deployment and a current 800 VDC development/validation signal; not an exhaustive market census.",
+  "sources_checked": [
+    {
+      "url": "https://www.chindatagroup.com/media/news/533.html",
+      "publisher": "Chindata",
+      "status": "READ",
+      "retrieved_at": "2026-10-15T14:08:00+08:00",
+      "finding": "The same one-campus operator claim remains available; no independent performance or multi-entity replication record is supplied."
+    },
+    {
+      "url": "https://corporate.solaredge.com/en/news-and-media/local-announcements/dc-powertrain-ai-data-centers",
+      "publisher": "SolarEdge",
+      "status": "READ",
+      "retrieved_at": "2026-10-15T14:08:00+08:00",
+      "finding": "The official record says one medium-voltage-to-800-VDC stage is operating under load in an engineering laboratory, while the full path remains under validation and the products are not generally available; this is not an attributable operating data-center deployment or independent replication."
+    }
+  ],
+  "old_state": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+  "new_state": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+  "new_qualifying_evidence_count": 0,
+  "new_counter_evidence_count": 0,
+  "evidence_state_as_of": "2026-09-20T10:46:47Z",
+  "last_material_change": "2026-09-20",
+  "historical_backfill": false
+}
