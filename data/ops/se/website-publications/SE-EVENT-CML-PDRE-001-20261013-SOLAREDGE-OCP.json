@@ -1,0 +1,21 @@
+{
+  "schema_version": "se-website-publication-receipt-v1",
+  "receipt_id": "SE-WEB-PUBLICATION-CML-PDRE-001-20261016-01",
+  "event_id": "SE-EVENT-CML-PDRE-001-20261013-SOLAREDGE-OCP",
+  "checked_at": "2026-10-15T16:38:22Z",
+  "provider": "GITHUB_PAGES",
+  "source_main_sha": "d32595ca95f0d96872d2af08b2665fb8f054ea35",
+  "source_pull_request": "https://github.com/roalstoney-alt/structurevidence/pull/21",
+  "public_url": "https://structurevidence.org/cases/800vdc/events/solaredge-ocp-2026/",
+  "http_status": 200,
+  "expected_body_marker": "SE-EVENT-CML-PDRE-001-20261013-SOLAREDGE-OCP",
+  "body_marker_verified": true,
+  "response_last_modified": "Thu, 15 Oct 2026 16:27:37 GMT",
+  "response_content_length": 6718,
+  "snapshot_url": "https://structurevidence.org/cases/800vdc/events/solaredge-ocp-2026/snapshot-v1.json",
+  "snapshot_http_status": 200,
+  "snapshot_expected_sha256": "34fe5c45ce6eb0f9c29521c6ea7a596ce62a93af4607f56619749733385b0950",
+  "snapshot_observed_sha256": "34fe5c45ce6eb0f9c29521c6ea7a596ce62a93af4607f56619749733385b0950",
+  "result": "PUBLIC_VERIFIED",
+  "proof_boundary": "Merge success was not treated as deployment proof. The production response was fetched after merge; HTTP status, exact event marker, and downloaded snapshot hash were verified independently."
+}

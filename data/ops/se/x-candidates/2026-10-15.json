@@ -1,0 +1,34 @@
+{
+  "schema_version": "se-x-candidate-v2",
+  "candidate_id": "SE-X-2026-10-15-EVENT-01",
+  "scheduled_date": "2026-10-15",
+  "text": "SolarEdge’s Oct. 13 update: an SST cell and 3D model for MVAC-to-800 VDC AI power were showcased at OCP. Full-path validation remains underway; this is not a named field deployment. Evidence update: https://structurevidence.org/cases/800vdc/events/solaredge-ocp-2026/",
+  "source_urls": [
+    "https://structurevidence.org/cases/800vdc/events/solaredge-ocp-2026/"
+  ],
+  "evidence_cutoff": "2026-10-15T15:28:53Z",
+  "content_hash": "bd07f61924d19d308986221e2a35ac51181d8d3a75ce9ce29ce415712aa8663e",
+  "approval_gate": "HUMAN_GATE_REQUIRED",
+  "status": "AWAITING_HUMAN_REVIEW",
+  "blocker": "X_AUTO_PUBLISH_PAUSED_HUMAN_REVIEW",
+  "selected_event_id": "SE-EVENT-CML-PDRE-001-20261013-SOLAREDGE-OCP",
+  "selection_reason": "NEW_EVENT",
+  "website_url": "https://structurevidence.org/cases/800vdc/events/solaredge-ocp-2026/",
+  "original_url": "https://solaredge.gcs-web.com/news-releases/news-release-details/solaredge-showcases-mvac-800-vdc-ai-factory-power-technology",
+  "snapshot_path": "cases/800vdc/events/solaredge-ocp-2026/snapshot-v1.json",
+  "snapshot_sha256": "34fe5c45ce6eb0f9c29521c6ea7a596ce62a93af4607f56619749733385b0950",
+  "factual_status": "NEW_EVENT+NO_STATE_CHANGE",
+  "dedup_scope": {
+    "local_candidate_window_days": 7,
+    "x_provider_history": "NOT_READ_X_AUTO_PUBLISH_PAUSED"
+  },
+  "material_state_transition": false,
+  "account_identity": "@structevidence",
+  "post_id": null,
+  "public_url": null,
+  "published_at": null,
+  "verification_checked_at": null,
+  "new_findings_existed": true,
+  "correction_required": false,
+  "x_post_sent": 0
+}
