@@ -1,0 +1,17 @@
+{
+  "schema_version": "se-case-event-ledger-v1",
+  "case_id": "CML-PDRE-001",
+  "append_only": true,
+  "events": [
+    {
+      "event_id": "SE-EVENT-CML-PDRE-001-20261013-SOLAREDGE-OCP",
+      "classifications": ["NEW_EVENT", "NO_STATE_CHANGE"],
+      "published_at": "2026-10-13",
+      "event_at": "2026-10-12/2026-10-15",
+      "retrieved_at": "2026-10-15T15:28:53Z",
+      "state_changed": false,
+      "url": "https://structurevidence.org/cases/800vdc/events/solaredge-ocp-2026/",
+      "record_path": "cases/800vdc/events/solaredge-ocp-2026/index.json"
+    }
+  ]
+}

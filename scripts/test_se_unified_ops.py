@@ -8,20 +8,17 @@ from pathlib import Path
 
 try:
     from scripts.se_unified_ops import (
-        BlockedPublisher,
         GateBlocked,
-        PublisherError,
-        XOAuth1Publisher,
-        canonical_post_text,
+        build_event_x_candidate,
         check_schedule_ownership,
         classify_github_write,
         default_candidate,
-        live_publish_once,
         new_run,
-        publisher_from_env,
         render_report,
+        select_x_candidate,
         sha256_text,
         validate_candidate,
+        validate_event_record,
         validate_irkutsk_budget,
         validate_review,
         verify_public_deploy,
@@ -29,20 +26,17 @@ try:
     )
 except ModuleNotFoundError:
     from se_unified_ops import (
-        BlockedPublisher,
         GateBlocked,
-        PublisherError,
-        XOAuth1Publisher,
-        canonical_post_text,
+        build_event_x_candidate,
         check_schedule_ownership,
         classify_github_write,
         default_candidate,
-        live_publish_once,
         new_run,
-        publisher_from_env,
         render_report,
+        select_x_candidate,
         sha256_text,
         validate_candidate,
+        validate_event_record,
         validate_irkutsk_budget,
         validate_review,
         verify_public_deploy,
@@ -70,44 +64,26 @@ def review(result="NO_STATE_CHANGE", complete=True):
     }
 
 
-class FakePublisher:
-    def __init__(self, *, readback=True, timeout_once=False):
-        self.account = {"id": "42", "username": "structevidence"}
-        self.posts = []
-        self.publish_calls = 0
-        self.readback = readback
-        self.timeout_once = timeout_once
-
-    def verify_account(self):
-        return self.account
-
-    def recent_posts(self, limit=50):
-        return self.posts[:limit]
-
-    def publish(self, text, idempotency_key):
-        del idempotency_key
-        self.publish_calls += 1
-        post = {"id": "1001", "author_id": "42", "text": text, "created_at": "2026-10-14T10:00:00Z"}
-        self.posts.append(post)
-        if self.timeout_once:
-            self.timeout_once = False
-            raise PublisherError("timeout", outcome_unknown=True)
-        return post
-
-    def fetch_post(self, post_id):
-        if not self.readback:
-            return {}
-        return next(row for row in self.posts if row["id"] == post_id)
-
-
 class AcceptanceTests(unittest.TestCase):
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()
         self.addCleanup(self.tmp.cleanup)
         self.root = Path(self.tmp.name)
-        self.ledger = self.root / "x-posts.jsonl"
         self.candidate = default_candidate("2026-10-14", CONFIG)
-        self.publishable_candidate = dict(self.candidate, approval_gate="AUTO_PUBLISH")
+        self.event = {
+            "event_id": "EV-1", "case_id": "CML-PDRE-001", "title": "Verified event",
+            "published_at": "2026-10-15", "event_at": "2026-10-15", "retrieved_at": "2026-10-15T10:00:00Z",
+            "originator": "Originator", "publisher": "Publisher", "source_type": "PRIMARY_CORPORATE_ANNOUNCEMENT",
+            "original_url": "https://origin.example/event", "accessibility": "PUBLIC_HTML",
+            "specific_claims": ["A bounded claim"], "supports": ["A verified event occurred"],
+            "does_not_support": ["A state change"], "depends_on": [], "conflicts_counter_evidence": [],
+            "verification_status": "VERIFIED_PRIMARY_SOURCE", "search_boundary": "Official source only",
+            "snapshot_path": "cases/800vdc/events/ev-1/snapshot-v1.json", "snapshot_sha256": "a" * 64,
+            "old_stop": "UNCHANGED", "candidate_stop": "UNCHANGED", "state_changed": False,
+            "review_id": "REVIEW-1", "classifications": ["NEW_EVENT", "NO_STATE_CHANGE"],
+            "public_url": "https://structurevidence.org/cases/800vdc/events/ev-1/",
+            "x_candidate_text": "Verified event; the accepted stop remains unchanged. https://structurevidence.org/cases/800vdc/events/ev-1/",
+        }
 
     def test_A01_exactly_one_active_logical_schedule(self):
         snapshot = {"timers": [{"id": "existing", "project": "StructEvidence", "active": True, "logical_owner": "existing", "local_time": "22:00", "timezone": "Asia/Singapore"}]}
@@ -147,21 +123,24 @@ class AcceptanceTests(unittest.TestCase):
         with self.assertRaises(GateBlocked):
             validate_candidate(item)
 
-    def test_A07_missing_adapter_blocks_without_send(self):
-        with self.assertRaises(PublisherError):
-            live_publish_once(BlockedPublisher(), self.publishable_candidate, self.ledger)
-        self.assertFalse(self.ledger.exists())
+    def test_A07_x_write_entrypoints_are_removed(self):
+        source = (Path(__file__).with_name("se_unified_ops.py")).read_text(encoding="utf-8")
+        self.assertNotIn("api.x.com", source)
+        self.assertNotIn("X_API_SECRET", source)
+        self.assertNotIn("def live_publish_once", source)
 
-    def test_A08_write_without_readback_is_pending(self):
-        receipt = live_publish_once(FakePublisher(readback=False), self.publishable_candidate, self.ledger)
-        self.assertEqual(receipt["status"], "POST_ACCEPTED_VERIFICATION_PENDING")
-        self.assertIsNone(receipt["post_url"])
+    def test_A08_unverified_website_blocks_event_candidate(self):
+        candidate = build_event_x_candidate("2026-10-15", self.event, None)
+        self.assertEqual(candidate["status"], "WEBSITE_PUBLICATION_BLOCKED")
+        self.assertEqual(candidate["x_post_sent"], 0)
 
-    def test_A09_timeout_reconciles_before_retry(self):
-        provider = FakePublisher(timeout_once=True)
-        receipt = live_publish_once(provider, self.publishable_candidate, self.ledger)
-        self.assertEqual(receipt["status"], "PUBLISHED_VERIFIED")
-        self.assertEqual(provider.publish_calls, 1)
+    def test_A09_verified_website_yields_human_candidate(self):
+        receipt = {"event_id": "EV-1", "result": "PUBLIC_VERIFIED", "http_status": 200,
+                   "body_marker_verified": True, "public_url": self.event["public_url"]}
+        candidate = build_event_x_candidate("2026-10-15", self.event, receipt)
+        self.assertEqual(candidate["approval_gate"], "HUMAN_GATE_REQUIRED")
+        self.assertEqual(candidate["source_urls"], [self.event["public_url"]])
+        self.assertEqual(candidate["x_post_sent"], 0)
 
     def test_A10_no_fresh_evidence_method_post_is_truthful(self):
         validate_candidate(self.candidate)
@@ -171,13 +150,13 @@ class AcceptanceTests(unittest.TestCase):
         self.assertEqual(self.candidate["status"], "AWAITING_HUMAN_REVIEW")
         self.assertLessEqual(x_weighted_length(self.candidate["text"]), 280)
 
-    def test_A11_replay_does_not_duplicate_post(self):
-        provider = FakePublisher()
-        first = live_publish_once(provider, self.publishable_candidate, self.ledger)
-        second = live_publish_once(provider, self.publishable_candidate, self.ledger)
-        self.assertEqual(first["post_id"], second["post_id"])
-        self.assertTrue(second["replayed"])
-        self.assertEqual(provider.publish_calls, 1)
+    def test_A11_new_event_precedes_historical_evidence(self):
+        historical = dict(self.event, event_id="EV-OLD", published_at="2026-09-01", event_at="2026-09-01",
+                          classifications=["NEWLY_DISCOVERED_OLD_EVIDENCE", "NO_STATE_CHANGE"])
+        receipt = {"event_id": "EV-1", "result": "PUBLIC_VERIFIED", "http_status": 200,
+                   "body_marker_verified": True, "public_url": self.event["public_url"]}
+        selected = select_x_candidate("2026-10-15", CONFIG, [historical, self.event], {"EV-1": receipt})
+        self.assertEqual(selected["selected_event_id"], "EV-1")
 
     def test_A12_github_write_denied_has_no_fake_sha(self):
         result = classify_github_write(403, "invented")
@@ -218,26 +197,10 @@ class AcceptanceTests(unittest.TestCase):
         self.assertEqual(item["approval_gate"], "HUMAN_GATE_REQUIRED")
 
     def test_A18_artifacts_do_not_contain_secrets(self):
-        artifact = json.dumps({"credential_envs": ["X_API_KEY", "X_API_SECRET", "X_ACCESS_TOKEN", "X_ACCESS_TOKEN_SECRET"], "token_values": None})
+        artifact = json.dumps({"publication_mode": "HUMAN_REVIEW_ONLY", "x_post_sent": 0})
         self.assertNotIn("Bearer ", artifact)
         self.assertNotIn("oauth_token_secret", artifact.lower())
-        publisher = XOAuth1Publisher("key", "secret", "token", "token-secret")
-        header = publisher._oauth_header("GET", "https://api.x.com/2/users/me?user.fields=id", nonce="fixed", timestamp="123")
-        self.assertTrue(header.startswith("OAuth "))
-        self.assertIn('oauth_signature_method="HMAC-SHA1"', header)
-        self.assertNotIn("token-secret", header)
-        rfc_header = XOAuth1Publisher(
-            "dpf43f3p2l4k3l03", "kd94hf93k423kf44",
-            "nnch734d00sl2jdk", "pfkkdhi9sl3r4s00",
-        )._oauth_header(
-            "GET", "http://photos.example.net/photos?file=vacation.jpg&size=original",
-            nonce="kllo9940pd9333jh", timestamp="1191242096",
-        )
-        self.assertIn('oauth_signature="tR3%2BTy81lMeYAr%2FFid0kMTYa%2FWM%3D"', rfc_header)
-        self.assertIsInstance(publisher_from_env({
-            "X_API_KEY": "key", "X_API_SECRET": "secret",
-            "X_ACCESS_TOKEN": "token", "X_ACCESS_TOKEN_SECRET": "token-secret",
-        }), XOAuth1Publisher)
+        validate_event_record(self.event)
 
 
 if __name__ == "__main__":

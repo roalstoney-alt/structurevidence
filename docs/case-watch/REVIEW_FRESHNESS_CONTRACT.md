@@ -4,6 +4,13 @@
 task schedule, page render, repository audit or failed page open never advances it.
 `last_material_change` also remains unchanged when the finding is no change.
 
+Event publication is a separate clock from the accepted evidence-state cutoff.
+`NEW_EVENT` records a newly occurring or newly published verified event;
+`NEWLY_DISCOVERED_OLD_EVIDENCE` records historical material first found during
+the current review. Either may coexist with `NO_STATE_CHANGE`. A stable stop is
+not a reason to omit a verified event from the site, and retrieval time must
+never be presented as event time.
+
 `data/case-watch/monitoring-status.json` records the monitoring period and points
 to real, versioned review artifacts. `status_recorded_at` is administrative metadata,
 not a scientific review timestamp. Pending review counts are null, not invented zeros.
@@ -16,6 +23,14 @@ Result is `NO_STATE_CHANGE`, `REVIEW_INCOMPLETE` or `HUMAN_GATE_REQUIRED`.
 explicit counts. Inaccessible key sources require `REVIEW_INCOMPLETE`; candidate
 material changes retain the human gate. Review publication is not approval of a
 new substantive evidence state.
+
+For reviews from 2026-10-15 onward, reports separately count `new_sources`,
+`new_attributed_statements`, `new_independent_evidence`, `new_events`,
+`newly_discovered_old_evidence`, and `state_changing_evidence`. Search-result
+snippets do not count as verified events. A website-first event follows:
+verified source → append-only event and bounded snapshot → public event page →
+production body verification → X candidate for human review. If the public body
+cannot be verified, the candidate is `WEBSITE_PUBLICATION_BLOCKED`.
 
 Update each case's current monitoring period, `period_review_id`, and
 `latest_review_file` only from that actual artifact. Keep earlier artifacts unchanged.

@@ -1,0 +1,72 @@
+{
+  "schema_version": "se-case-review-v2",
+  "case_id": "CML-PDRE-001",
+  "review_id": "SE-800V-REVIEW-20261015-01",
+  "reviewed_at": "2026-10-15T15:28:53Z",
+  "result": "NO_STATE_CHANGE",
+  "review_complete": true,
+  "event_classifications": [
+    "NEW_EVENT",
+    "NO_STATE_CHANGE"
+  ],
+  "event_ids": [
+    "SE-EVENT-CML-PDRE-001-20261013-SOLAREDGE-OCP"
+  ],
+  "search_boundary": "SolarEdge official HTML announcement, official PDF rendering and the explicitly linked Business Wire distribution copy. No broad market census or independent performance search was performed.",
+  "sources_checked": [
+    {
+      "source_id": "solaredge-origin",
+      "url": "https://solaredge.gcs-web.com/news-releases/news-release-details/solaredge-showcases-mvac-800-vdc-ai-factory-power-technology",
+      "retrieved_at": "2026-10-15T15:28:53Z",
+      "originator": "SolarEdge Technologies, Inc.",
+      "publisher": "SolarEdge investor-relations newsroom",
+      "source_type": "PRIMARY_CORPORATE_ANNOUNCEMENT",
+      "status": "READ",
+      "depends_on": [],
+      "finding": "An October 13 announcement describes an October 12–15 technology showcase, an SST cell, a 3D-printed architecture model, engineering-lab operation and incomplete full-path validation."
+    },
+    {
+      "source_id": "solaredge-official-pdf",
+      "url": "https://solaredge.gcs-web.com/node/15356/pdf",
+      "retrieved_at": "2026-10-15T15:28:53Z",
+      "originator": "SolarEdge Technologies, Inc.",
+      "publisher": "SolarEdge investor-relations newsroom",
+      "source_type": "OFFICIAL_PDF_RENDERING",
+      "status": "READ",
+      "depends_on": ["solaredge-origin"],
+      "finding": "The two-page PDF reproduces the same corporate release and limitations."
+    },
+    {
+      "source_id": "businesswire-distribution",
+      "url": "https://www.businesswire.com/news/home/20261013444026/en/",
+      "retrieved_at": "2026-10-15T15:28:53Z",
+      "originator": "SolarEdge Technologies, Inc.",
+      "publisher": "Business Wire",
+      "source_type": "DISTRIBUTED_COPY",
+      "status": "READ",
+      "depends_on": ["solaredge-origin"],
+      "finding": "The distribution copy is derivative of the SolarEdge announcement and is not counted as independent corroboration."
+    }
+  ],
+  "source_graph": [
+    {"source_id": "solaredge-origin", "depends_on": [], "relation": "ORIGIN"},
+    {"source_id": "solaredge-official-pdf", "depends_on": ["solaredge-origin"], "relation": "OFFICIAL_RENDERING"},
+    {"source_id": "businesswire-distribution", "depends_on": ["solaredge-origin"], "relation": "DISTRIBUTED_COPY"}
+  ],
+  "new_sources": 1,
+  "new_attributed_statements": 4,
+  "new_independent_evidence": 0,
+  "new_events": 1,
+  "newly_discovered_old_evidence": 0,
+  "state_changing_evidence": 0,
+  "new_qualifying_evidence_count": 0,
+  "new_counter_evidence_count": 0,
+  "old_state": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+  "new_state": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+  "evidence_state_as_of": "2026-09-20T10:46:47Z",
+  "last_material_change": "2026-09-20",
+  "historical_backfill": false,
+  "website_update": "cases/800vdc/events/solaredge-ocp-2026/index.html",
+  "snapshot_path": "cases/800vdc/events/solaredge-ocp-2026/snapshot-v1.json",
+  "snapshot_sha256": "34fe5c45ce6eb0f9c29521c6ea7a596ce62a93af4607f56619749733385b0950"
+}

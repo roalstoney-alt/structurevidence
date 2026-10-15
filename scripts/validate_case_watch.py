@@ -121,6 +121,11 @@ def validate_protected_files() -> None:
 def validate_root_docs_parity() -> None:
     pairs = [
         ("cases/800vdc/index.html", "docs/cases/800vdc/index.html"),
+        ("cases/800vdc/events/index.json", "docs/cases/800vdc/events/index.json"),
+        ("cases/800vdc/events/solaredge-ocp-2026/index.html", "docs/cases/800vdc/events/solaredge-ocp-2026/index.html"),
+        ("cases/800vdc/events/solaredge-ocp-2026/index.json", "docs/cases/800vdc/events/solaredge-ocp-2026/index.json"),
+        ("cases/800vdc/events/solaredge-ocp-2026/snapshot-v1.json", "docs/cases/800vdc/events/solaredge-ocp-2026/snapshot-v1.json"),
+        ("cases/800vdc/search-review-20261015-01.json", "docs/cases/800vdc/search-review-20261015-01.json"),
         ("cases/800vdc/stop-v0.1.html", "docs/cases/800vdc/stop-v0.1.html"),
         ("cases/sodium-ion-bess/index.html", "docs/cases/sodium-ion-bess/index.html"),
         ("cases/sodium-ion-bess/state-v0.1.json", "docs/cases/sodium-ion-bess/state-v0.1.json"),
@@ -137,6 +142,9 @@ def validate_root_docs_parity() -> None:
         ("cases/irkutsk-lab-worker-death/search-review-v0.1.json", "docs/cases/irkutsk-lab-worker-death/search-review-v0.1.json"),
         ("zh-cn/cases/irkutsk-lab-worker-death/index.html", "docs/zh-cn/cases/irkutsk-lab-worker-death/index.html"),
         ("cases/index.html", "docs/cases/index.html"),
+        ("changes.json", "docs/changes.json"),
+        ("changes/index.html", "docs/changes/index.html"),
+        ("feed.xml", "docs/feed.xml"),
         ("sitemap.xml", "docs/sitemap.xml"),
     ]
     for root_relative, docs_relative in pairs:

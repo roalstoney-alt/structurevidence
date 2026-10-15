@@ -391,9 +391,27 @@ def build_outputs():
                 "qualifying_evidence_added": 1,
                 "unknowns_resolved": 0,
                 "state_changed": True,
+            },
+            {
+                "id": "SE-EVENT-CML-PDRE-001-20261013-SOLAREDGE-OCP",
+                "type": "VERIFIED_EVENT",
+                "date": "2026-10-13",
+                "retrieved_at": "2026-10-15T15:28:53Z",
+                "case_id": "CML-PDRE-001",
+                "case_url": "https://structurevidence.org/cases/800vdc/",
+                "event_url": "https://structurevidence.org/cases/800vdc/events/solaredge-ocp-2026/",
+                "previous_state": "R5_ARCHITECTURE_FIELD_DEPLOYMENT_EVIDENCE_ACCEPTED_SINGLE_INSTANCE",
+                "new_state": "R5_ARCHITECTURE_FIELD_DEPLOYMENT_EVIDENCE_ACCEPTED_SINGLE_INSTANCE",
+                "why": "A verified technology-showcase announcement is citable even though it does not change the accepted stop.",
+                "triggering_evidence": "SE-SNAPSHOT-CML-PDRE-001-SOLAREDGE-20261013-v1",
+                "triggering_evidence_url": "https://structurevidence.org/cases/800vdc/events/solaredge-ocp-2026/snapshot-v1.json",
+                "qualifying_evidence_added": 0,
+                "unknowns_resolved": 0,
+                "classifications": ["NEW_EVENT", "NO_STATE_CHANGE"],
+                "state_changed": False,
             }
         ],
-        "note": "Only material evidence and state changes are included. Publication baselines and cosmetic site changes are excluded.",
+        "note": "Verified events are recorded even when the accepted evidence stop does not change. Publication baselines and cosmetic site changes remain distinct.",
     }
     capabilities = {
         "provider": "StructEvidence",

@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>StructEvidence material changes</title>
+  <title>StructEvidence verified evidence updates</title>
   <id>https://structurevidence.org/feed.xml</id>
   <link href="https://structurevidence.org/feed.xml" rel="self"/>
   <link href="https://structurevidence.org/changes/"/>
-  <updated>2026-10-08T05:29:45+08:00</updated>
+  <updated>2026-10-15T23:28:53+08:00</updated>
   <author><name>StructEvidence</name></author>
+  <entry>
+    <title>SolarEdge 800 VDC OCP showcase: verified event, stop unchanged</title>
+    <id>https://structurevidence.org/cases/800vdc/events/solaredge-ocp-2026/</id>
+    <link href="https://structurevidence.org/cases/800vdc/events/solaredge-ocp-2026/"/>
+    <updated>2026-10-15T23:28:53+08:00</updated>
+    <summary>NEW_EVENT and NO_STATE_CHANGE. The source describes a technology showcase and engineering-lab work, not a named field deployment, completed full-path validation, or independent reliability validation.</summary>
+  </entry>
   <entry>
     <title>Irkutsk laboratory-worker death: first bounded public baseline</title>
     <id>https://structurevidence.org/changes/#se-irk-lab-001-2026-10-08</id>

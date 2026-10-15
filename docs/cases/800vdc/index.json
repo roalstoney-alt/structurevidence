@@ -56,5 +56,20 @@
       "triggering_evidence": "L1-EV-CML-PDRE-001-FIELD-DEPLOYMENT-001",
       "why": "Human review accepted one attributable operator record for one named commercial deployment."
     }
+  ],
+  "events": [
+    {
+      "event_id": "SE-EVENT-CML-PDRE-001-20261013-SOLAREDGE-OCP",
+      "classifications": [
+        "NEW_EVENT",
+        "NO_STATE_CHANGE"
+      ],
+      "published_at": "2026-10-13",
+      "event_at": "2026-10-12/2026-10-15",
+      "retrieved_at": "2026-10-15T15:28:53Z",
+      "state_changed": false,
+      "url": "https://structurevidence.org/cases/800vdc/events/solaredge-ocp-2026/",
+      "record_path": "cases/800vdc/events/solaredge-ocp-2026/index.json"
+    }
   ]
 }
