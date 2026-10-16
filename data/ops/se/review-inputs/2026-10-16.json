@@ -6,14 +6,14 @@
       "case_id": "CML-PDRE-001", "review_id": "SE-800V-REVIEW-20261016-01", "reviewed_at": "2026-10-16T22:45:36Z", "result": "NO_STATE_CHANGE", "review_complete": true,
       "classifications": ["NO_STATE_CHANGE"], "search_boundary": "Targeted official-source refresh; see data/case-watch/reviews/2026-10-16/CML-PDRE-001.json.",
       "sources_checked": [{"url": "https://www.chindatagroup.com/media/news/533.html", "status": "READ"}, {"url": "https://www.vertiv.com/en-ca/about/news-and-events/events/ocp-global-summit-2026/", "status": "READ"}],
-      "daily_counters": {"new_sources": 0, "new_attributed_statements": 0, "new_independent_evidence": 0, "new_events": 0, "newly_discovered_old_evidence": 0, "state_changing_evidence": 0},
+      "new_sources": 0, "new_attributed_statements": 0, "new_independent_evidence": 0, "new_events": 0, "newly_discovered_old_evidence": 0, "state_changing_evidence": 0,
       "old_state": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE", "new_state": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE", "new_qualifying_evidence_count": 0, "new_counter_evidence_count": 0
     },
     {
       "case_id": "SE-BESS-SODIUM-001", "review_id": "SE-SODIUM-REVIEW-20261016-01", "reviewed_at": "2026-10-16T22:45:36Z", "result": "HUMAN_GATE_REQUIRED", "review_complete": true,
       "classifications": ["NO_STATE_CHANGE", "HUMAN_GATE_REQUIRED"], "search_boundary": "Recheck of the already reviewed Arnhem named-site candidate; see data/case-watch/reviews/2026-10-16/SE-BESS-SODIUM-001.json.",
       "sources_checked": [{"url": "https://www.moonwatt.com/2026/06/22/moonwatt-commissions-the-first-distributed-sodium-ion-battery-system-purpose-built-for-hybrid-solar-plants/", "status": "READ"}, {"url": "https://cleantechparkarnhem.nl/nieuws/moonwatt-koppelt-natrium-ionbatterij-aan-zonnepark-op-cleantech-park-arnhem/", "status": "READ"}],
-      "daily_counters": {"new_sources": 0, "new_attributed_statements": 0, "new_independent_evidence": 0, "new_events": 0, "newly_discovered_old_evidence": 0, "state_changing_evidence": 0},
+      "new_sources": 0, "new_attributed_statements": 0, "new_independent_evidence": 0, "new_events": 0, "newly_discovered_old_evidence": 0, "state_changing_evidence": 0,
       "old_state": "NAMED_COMMISSIONED_SITE_NOT_ESTABLISHED", "new_state": "NAMED_COMMISSIONED_SITE_NOT_ESTABLISHED", "new_qualifying_evidence_count": 0, "new_counter_evidence_count": 0
     },
     {
@@ -22,7 +22,7 @@
       "search_boundary": "Two Irkutsk-specific search groups and two official-source opens; see data/case-watch/reviews/2026-10-16/SE-IRK-LAB-001.json.", "search_budget": {"targeted_search_groups": 2, "webpage_open_attempts": 2},
       "source_graph": [{"source_id": "ECDC-W42-2026", "url": "https://www.ecdc.europa.eu/sites/default/files/documents/communicable-disease-threats-report-week-42-2026.pdf", "retrieved_at": "2026-10-16T22:45:36Z", "originator": "ECDC with dependent source chain", "publisher": "ECDC", "source_type": "INSTITUTIONAL_ASSESSMENT_AND_DERIVATIVE_SUMMARY", "claim_ids": ["diagnostic_uncertainty", "eu_risk"], "depends_on": ["WHO-DON620", "RUSSIAN-IHR-NFP-ATTRIBUTION", "MEDIA-CHAIN-ECDC-W42"], "relation": "SUPPORT_WITH_DEPENDENCY", "verification_status": "VERIFIED_PRIMARY_SOURCE", "search_boundary": "institutional surveillance publication"}],
       "sources_checked": [{"url": "https://www.ecdc.europa.eu/sites/default/files/documents/communicable-disease-threats-report-week-42-2026.pdf", "status": "VERIFIED_PRIMARY_SOURCE"}],
-      "daily_counters": {"new_sources": 1, "new_attributed_statements": 4, "new_independent_evidence": 0, "new_events": 1, "newly_discovered_old_evidence": 0, "state_changing_evidence": 0},
+      "new_sources": 1, "new_attributed_statements": 4, "new_independent_evidence": 0, "new_events": 1, "newly_discovered_old_evidence": 0, "state_changing_evidence": 0,
       "old_state": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE", "new_state": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE", "new_qualifying_evidence_count": 0, "new_counter_evidence_count": 0
     }
   ]
