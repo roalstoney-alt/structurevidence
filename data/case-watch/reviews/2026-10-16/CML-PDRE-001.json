@@ -1,0 +1,41 @@
+{
+  "schema_version": "se-case-review-v1",
+  "case_id": "CML-PDRE-001",
+  "review_id": "SE-800V-REVIEW-20261016-01",
+  "reviewed_at": "2026-10-16T14:03:33Z",
+  "result": "NO_STATE_CHANGE",
+  "review_complete": true,
+  "search_boundary": "Three targeted industry queries shared with sodium; existing primary disclosure plus live StructEvidence event body and snapshot checked. No new independently attributable field operation, replication or reliability evidence found within this scope.",
+  "sources_checked": [
+    {
+      "source_id": "CHINDATA-SANGYUAN-20260702",
+      "url": "https://www.chindatagroup.com/media/news/533.html",
+      "published_at": "2026-07-02",
+      "event_at": "2026-07-02",
+      "retrieved_at": "2026-10-16T14:03:33Z",
+      "originator": "Chindata",
+      "publisher": "Chindata",
+      "source_type": "OPERATOR_DISCLOSURE",
+      "claim_ids": [
+        "named_field_deployment"
+      ],
+      "depends_on": [],
+      "relation": "SUPPORT_EXISTING_SINGLE_INSTANCE",
+      "verification_status": "READ_HTTP_200",
+      "search_boundary": "Bounded public-source refresh on 2026-10-16",
+      "finding": "Existing Sangyuan announcement; no new independent deployment or operating-duration evidence found in scoped search."
+    }
+  ],
+  "old_state": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+  "new_state": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+  "new_qualifying_evidence_count": 0,
+  "new_counter_evidence_count": 0,
+  "new_sources": 0,
+  "new_attributed_statements": 0,
+  "new_independent_evidence": 0,
+  "new_events": 0,
+  "newly_discovered_old_evidence": 0,
+  "state_changing_evidence": 0,
+  "count_scope": "New accepted evidence candidates relative to previous reviews; search snippets and unchanged previously logged materials are excluded.",
+  "state_changed": false
+}

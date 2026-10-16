@@ -1,0 +1,15 @@
+{
+  "schema_version": "se-website-publication-receipt-v1",
+  "receipt_id": "SE-WEB-RECHECK-20261016-02",
+  "event_id": "SE-EVENT-CML-PDRE-001-20261013-SOLAREDGE-OCP",
+  "checked_at": "2026-10-16T14:03:33Z",
+  "result": "PUBLIC_VERIFIED",
+  "public_url": "https://structurevidence.org/cases/800vdc/events/solaredge-ocp-2026/",
+  "http_status": 200,
+  "body_marker_verified": true,
+  "response_body_sha256": "4db090fcab2b974c885a6b736df11ab164d29b2bd333d9bcaae78bc4565c66ac",
+  "snapshot_url": "https://structurevidence.org/cases/800vdc/events/solaredge-ocp-2026/snapshot-v1.json",
+  "snapshot_observed_sha256": "34fe5c45ce6eb0f9c29521c6ea7a596ce62a93af4607f56619749733385b0950",
+  "source_main_sha": "3b1d2365c890b53f958459b98dfd44dc793a7188",
+  "proof_boundary": "Existing event rechecked, not a new event or a deployment receipt for today’s audit changes."
+}
