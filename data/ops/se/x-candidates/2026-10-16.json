@@ -1,0 +1,34 @@
+{
+  "schema_version": "se-x-candidate-v2",
+  "candidate_id": "SE-X-2026-10-16-EVENT-01",
+  "scheduled_date": "2026-10-16",
+  "text": "ECDC’s Week 42 update says the Irkutsk death remains pneumonia of unknown aetiology and the evidence is insufficient for a firm EU risk conclusion. The accepted stop is unchanged. https://structurevidence.org/cases/irkutsk-lab-worker-death/events/ecdc-week-42-2026/",
+  "source_urls": [
+    "https://structurevidence.org/cases/irkutsk-lab-worker-death/events/ecdc-week-42-2026/"
+  ],
+  "evidence_cutoff": "2026-10-16T22:45:36Z",
+  "content_hash": "2befda5b3ee96a5cbd68ab4e005c284415d9ca591f7265e878b66f26ca6cb061",
+  "approval_gate": "HUMAN_GATE_REQUIRED",
+  "status": "AWAITING_HUMAN_REVIEW",
+  "blocker": "X_AUTO_PUBLISH_PAUSED_HUMAN_REVIEW",
+  "selected_event_id": "SE-EVENT-IRK-LAB-001-20261016-ECDC-W42",
+  "selection_reason": "NEW_EVENT",
+  "website_url": "https://structurevidence.org/cases/irkutsk-lab-worker-death/events/ecdc-week-42-2026/",
+  "original_url": "https://www.ecdc.europa.eu/sites/default/files/documents/communicable-disease-threats-report-week-42-2026.pdf",
+  "snapshot_path": "cases/irkutsk-lab-worker-death/events/ecdc-week-42-2026/snapshot-v1.json",
+  "snapshot_sha256": "1ed4847133cbee992f3c7155b20c1746db1910ffe71962d5c68af4bf793c88d8",
+  "factual_status": "NEW_EVENT+NO_STATE_CHANGE+HUMAN_GATE_REQUIRED",
+  "dedup_scope": {
+    "local_candidate_window_days": 7,
+    "x_provider_history": "NOT_READ_X_AUTO_PUBLISH_PAUSED"
+  },
+  "material_state_transition": false,
+  "account_identity": "@structevidence",
+  "post_id": null,
+  "public_url": null,
+  "published_at": null,
+  "verification_checked_at": null,
+  "new_findings_existed": true,
+  "correction_required": false,
+  "x_post_sent": 0
+}

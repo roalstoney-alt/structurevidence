@@ -1,0 +1,13 @@
+{
+  "schema_version": "se-unified-delivery-reconciliation-v1",
+  "run_id": "SE-OPS-20261016-2200-b21caf38-172c-54cf-8061-e7d3aab448d4",
+  "date_sgt": "2026-10-16",
+  "report_delivered_at": "2026-10-16T22:52:03Z",
+  "delivery_channel": "CODEX_HEARTBEAT_NOTIFICATION",
+  "external_delivery": "PASS",
+  "website_publication_receipt": "data/ops/se/website-publications/SE-EVENT-IRK-LAB-001-20261016-ECDC-W42.json",
+  "website_publication_result": "PUBLIC_VERIFIED",
+  "x_post_sent": 0,
+  "x_blocker": "X_AUTO_PUBLISH_PAUSED_HUMAN_REVIEW",
+  "human_gate_required": true
+}

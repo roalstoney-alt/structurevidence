@@ -1,0 +1,21 @@
+{
+  "schema_version": "se-alerts-v1",
+  "run_id": "SE-OPS-20261016-2200-b21caf38-172c-54cf-8061-e7d3aab448d4",
+  "alerts": [
+    {
+      "code": "OBSERVABILITY_BLOCKED",
+      "dedupe_key": "CROSS_PROJECT:2026-10-16",
+      "detail": "No verified CML/LoveTimeline run evidence was supplied."
+    },
+    {
+      "code": "X_HUMAN_REVIEW_REQUIRED",
+      "dedupe_key": "X:2026-10-16:X_HUMAN_REVIEW_REQUIRED",
+      "detail": "X_AUTO_PUBLISH_PAUSED_HUMAN_REVIEW"
+    },
+    {
+      "code": "MISSING_RUN_DETECTION_NOT_INDEPENDENT",
+      "dedupe_key": "MISSING_HEARTBEAT:2026-10-16",
+      "detail": "No independent health surface has been verified."
+    }
+  ]
+}
