@@ -1,0 +1,15 @@
+{
+  "schema_version": "se-case-event-ledger-v1",
+  "case_id": "SE-IRK-LAB-001",
+  "append_only": true,
+  "events": [{
+    "event_id": "SE-EVENT-IRK-LAB-001-20261016-ECDC-W42",
+    "classifications": ["NEW_EVENT", "NO_STATE_CHANGE", "HUMAN_GATE_REQUIRED"],
+    "published_at": "2026-10-16",
+    "event_at": "2026-10-16",
+    "retrieved_at": "2026-10-16T22:45:36Z",
+    "state_changed": false,
+    "url": "https://structurevidence.org/cases/irkutsk-lab-worker-death/events/ecdc-week-42-2026/",
+    "record_path": "cases/irkutsk-lab-worker-death/events/ecdc-week-42-2026/index.json"
+  }]
+}

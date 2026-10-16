@@ -1,0 +1,27 @@
+{
+  "schema_version": "se-source-snapshot-v1",
+  "snapshot_id": "SE-SNAPSHOT-IRK-LAB-001-ECDC-W42-20261016-v1",
+  "captured_at": "2026-10-16T22:45:36Z",
+  "capture_type": "STRUCTURED_SHORT_EXCERPT_SNAPSHOT_NOT_FULL_ORIGINAL",
+  "original_url": "https://www.ecdc.europa.eu/sites/default/files/documents/communicable-disease-threats-report-week-42-2026.pdf",
+  "accessibility": "PUBLIC_PDF_READ_THROUGH_VERIFIED_READER",
+  "raw_file_saved": false,
+  "raw_file_note": "This snapshot preserves bounded excerpts, structured facts and source-chain metadata. It is not a complete copy of the ECDC report.",
+  "short_excerpts": [
+    "no high-threat pathogen was detected in any of the identified contacts",
+    "not sufficient to draw a firm conclusion about the risk"
+  ],
+  "structured_facts": [
+    {"fact_id": "F1", "statement": "ECDC published its Week 42 communicable-disease threats report for 10–16 October 2026."},
+    {"fact_id": "F2", "statement": "ECDC relays Russian-authority reporting that contact testing did not detect a high-threat pathogen."},
+    {"fact_id": "F3", "statement": "ECDC states that a confirmed diagnosis and causative agent remain unavailable and that the source and mode of exposure remain uncertain."},
+    {"fact_id": "F4", "statement": "ECDC states that the available information is insufficient for a firm conclusion about risk to the EU/EEA."},
+    {"fact_id": "F5", "statement": "The assessment depends on WHO, Russian-authority and media-source reporting and does not supply independent clinical or laboratory evidence."}
+  ],
+  "source_dependencies": ["WHO-DON620", "RUSSIAN-IHR-NFP-ATTRIBUTION", "MEDIA-CHAIN-ECDC-W42"],
+  "limitations": [
+    "Attributed statements are not independently validated laboratory results.",
+    "The report does not establish the worker's aetiological diagnosis or exclude occupational exposure."
+  ],
+  "copyright_boundary": "No full report text is reproduced. Consult the original ECDC PDF for the complete publication."
+}

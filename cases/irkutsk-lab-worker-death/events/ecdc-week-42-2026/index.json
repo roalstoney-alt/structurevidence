@@ -1,0 +1,47 @@
+{
+  "schema_version": "se-case-event-v1",
+  "event_id": "SE-EVENT-IRK-LAB-001-20261016-ECDC-W42",
+  "case_id": "SE-IRK-LAB-001",
+  "title": "ECDC publishes Week 42 follow-up on the Irkutsk pneumonia event",
+  "published_at": "2026-10-16",
+  "event_at": "2026-10-16",
+  "retrieved_at": "2026-10-16T22:45:36Z",
+  "originator": "European Centre for Disease Prevention and Control",
+  "publisher": "European Centre for Disease Prevention and Control",
+  "source_type": "PRIMARY_INSTITUTIONAL_SURVEILLANCE_PUBLICATION",
+  "original_url": "https://www.ecdc.europa.eu/sites/default/files/documents/communicable-disease-threats-report-week-42-2026.pdf",
+  "accessibility": "PUBLIC_PDF",
+  "specific_claims": [
+    "ECDC published a Week 42 follow-up covering the Irkutsk pneumonia event.",
+    "ECDC relays Russian-authority reporting that contact testing found no high-threat pathogen.",
+    "ECDC says no confirmed diagnosis or causative agent is available and the source and mode of exposure remain uncertain.",
+    "ECDC says the available information is insufficient for a firm EU/EEA risk conclusion."
+  ],
+  "supports": [
+    "A new attributable institutional surveillance publication exists.",
+    "The publication preserves uncertainty about diagnosis, causative agent and exposure."
+  ],
+  "does_not_support": [
+    "A confirmed aetiological diagnosis.",
+    "Independent validation of the reported Russian investigations.",
+    "Proof or exclusion of occupational or laboratory exposure.",
+    "A change to the accepted StructEvidence case stop."
+  ],
+  "depends_on": ["WHO-DON620", "RUSSIAN-IHR-NFP-ATTRIBUTION", "MEDIA-CHAIN-ECDC-W42"],
+  "conflicts_counter_evidence": [
+    "The report is derivative of WHO, Russian-authority and media reporting rather than independent clinical or laboratory evidence.",
+    "ECDC explicitly retains uncertainty and declines a firm risk conclusion."
+  ],
+  "verification_status": "VERIFIED_PRIMARY_SOURCE",
+  "search_boundary": "Two Irkutsk-specific targeted search groups and two official-source opens covering WHO/ECDC and Russian-regulator follow-up; no underlying clinical, laboratory or auditable biosafety-investigation records were reviewed.",
+  "snapshot_path": "cases/irkutsk-lab-worker-death/events/ecdc-week-42-2026/snapshot-v1.json",
+  "snapshot_sha256": "1ed4847133cbee992f3c7155b20c1746db1910ffe71962d5c68af4bf793c88d8",
+  "old_stop": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+  "candidate_stop": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+  "state_changed": false,
+  "review_id": "SE-IRK-REVIEW-20261016-01",
+  "classifications": ["NEW_EVENT", "NO_STATE_CHANGE", "HUMAN_GATE_REQUIRED"],
+  "public_url": "https://structurevidence.org/cases/irkutsk-lab-worker-death/events/ecdc-week-42-2026/",
+  "website_publication_status": "PENDING_PRODUCTION_VERIFICATION",
+  "x_candidate_text": "ECDC’s Week 42 update says the Irkutsk death remains pneumonia of unknown aetiology and the evidence is insufficient for a firm EU risk conclusion. The accepted stop is unchanged. https://structurevidence.org/cases/irkutsk-lab-worker-death/events/ecdc-week-42-2026/"
+}
