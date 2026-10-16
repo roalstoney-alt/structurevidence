@@ -1,0 +1,27 @@
+{
+  "schema_version": "se-x-candidate-v2",
+  "candidate_id": "SE-X-2026-10-16-METHOD-01",
+  "scheduled_date": "2026-10-16",
+  "text": "Oct 16 method note: 'Last reviewed' dates our check. It does not make an Oct 13 announcement a new event or advance the accepted evidence cutoff. Our dated source snapshot preserves that distinction: https://structurevidence.org/cases/800vdc/events/solaredge-ocp-2026/",
+  "source_urls": [
+    "https://structurevidence.org/cases/800vdc/events/solaredge-ocp-2026/"
+  ],
+  "evidence_cutoff": "2026-10-16T14:03:33Z",
+  "content_hash": "8264c2e1723ae4823203284aedeacd783f0f1585d40da3bd3b96d8bdd9db0fce",
+  "approval_gate": "HUMAN_GATE_REQUIRED",
+  "status": "AWAITING_HUMAN_REVIEW",
+  "blocker": "X_AUTO_PUBLISH_PAUSED_HUMAN_REVIEW",
+  "x_post_sent": 0,
+  "material_state_transition": false,
+  "factual_status": "METHOD_CONTENT_USING_PREVIOUSLY_PUBLISHED_EVENT",
+  "selection_reason": "No newly verified event; distinct date-semantics method angle on existing public snapshot",
+  "dedup_check": "Exact text/hash differs from repository candidates; provider history not read",
+  "dedup_scope": {
+    "local_candidate_window_days": 7,
+    "x_provider_history": "NOT_READ"
+  },
+  "website_receipt": "SE-WEB-RECHECK-20261016-02",
+  "weighted_length": 223,
+  "post_id": null,
+  "public_url": null
+}

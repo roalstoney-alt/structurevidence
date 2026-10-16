@@ -1,24 +1,24 @@
 {
   "schema_version": "1.0",
-  "status_recorded_at": "2026-10-15T23:28:53+08:00",
-  "observation_scope": "Bounded SolarEdge primary-source event verification appended for 800V; the accepted stop remains unchanged. Other case statuses retain their last recorded review artifacts.",
+  "status_recorded_at": "2026-10-16T14:03:33Z",
+  "observation_scope": "Actual bounded October 16 review; no newly qualifying events; sodium prior human gate retained; Irkutsk primary access incomplete. Accepted evidence cutoffs unchanged.",
   "cases": [
     {
       "case_id": "CML-PDRE-001",
       "period": {
-        "id": "2026-10-15",
-        "start": "2026-10-15",
-        "end": "2026-10-15",
+        "id": "2026-10-16",
+        "start": "2026-10-16",
+        "end": "2026-10-16",
         "status": "NO_STATE_CHANGE",
-        "scope": "Verified SolarEdge technology-showcase event recorded; accepted single-instance state unchanged."
+        "scope": "Three targeted industry queries shared with sodium; existing primary disclosure plus live StructEvidence event body and snapshot checked. No new independently attributable field operation, replication or reliability evidence found within this scope."
       },
-      "period_review_id": "SE-800V-REVIEW-20261015-01",
-      "latest_review_file": "cases/800vdc/search-review-20261015-01.json",
+      "period_review_id": "SE-800V-REVIEW-20261016-01",
+      "latest_review_file": "cases/800vdc/search-review-20261016-01.json",
       "monitoring": {
         "cadence": "DAILY",
         "enabled": true,
         "configured_start_at": "2026-10-14T22:00:00+08:00",
-        "last_scheduled_run_at": null,
+        "last_scheduled_run_at": "2026-10-16T14:03:33Z",
         "next_run_at_from_service": null,
         "schedule_timezone": "Asia/Singapore",
         "previous_candidate": "data/case-watch/weekly/2026-W40.json",
@@ -28,19 +28,19 @@
     {
       "case_id": "SE-BESS-SODIUM-001",
       "period": {
-        "id": "2026-10-14",
-        "start": "2026-10-14",
-        "end": "2026-10-14",
-        "status": "HUMAN_GATE_REQUIRED",
-        "scope": "Named operational-site candidate found; accepted public state remains frozen pending human review."
+        "id": "2026-10-16",
+        "start": "2026-10-16",
+        "end": "2026-10-16",
+        "status": "NO_STATE_CHANGE",
+        "scope": "Three targeted industry queries shared with 800V, CATL and host-site pages. Existing Moonwatt candidate remains pending human review; no newly qualifying delivery/commissioning or verified output found in scope."
       },
-      "period_review_id": "SE-SODIUM-REVIEW-20261014-01",
-      "latest_review_file": "cases/sodium-ion-bess/search-review-20261014-01.json",
+      "period_review_id": "SE-SODIUM-REVIEW-20261016-01",
+      "latest_review_file": "cases/sodium-ion-bess/search-review-20261016-01.json",
       "monitoring": {
         "cadence": "DAILY",
         "enabled": true,
         "configured_start_at": "2026-10-14T22:00:00+08:00",
-        "last_scheduled_run_at": null,
+        "last_scheduled_run_at": "2026-10-16T14:03:33Z",
         "next_run_at_from_service": null,
         "schedule_timezone": "Asia/Singapore",
         "previous_candidate": "data/case-watch/weekly/2026-W40.json",
@@ -72,19 +72,19 @@
     {
       "case_id": "SE-IRK-LAB-001",
       "period": {
-        "id": "2026-10-14",
-        "start": "2026-10-14",
-        "end": "2026-10-14",
+        "id": "2026-10-16",
+        "start": "2026-10-16",
+        "end": "2026-10-16",
         "status": "REVIEW_INCOMPLETE",
-        "scope": "No qualifying new evidence; regulator, procurement, patent and underlying clinical/investigation records remained inaccessible."
+        "scope": "Four search groups: WHO/IHR; Russian-language contacts/quarantine/investigation; institution procurement/budget/contracts/licensing; independent interviews. Three webpage opens (WHO, Insider, RPN). Procurement aggregators were leads only, not verified awards, payments, costs or causal evidence. No primary regulatory, clinical, contract-performance or patent files obtained; no private data collected."
       },
-      "period_review_id": "SE-IRK-REVIEW-20261014-02",
-      "latest_review_file": "cases/irkutsk-lab-worker-death/search-review-20261014-02.json",
+      "period_review_id": "SE-IRK-REVIEW-20261016-01",
+      "latest_review_file": "cases/irkutsk-lab-worker-death/search-review-20261016-01.json",
       "monitoring": {
         "cadence": "DAILY",
         "enabled": true,
         "configured_start_at": "2026-10-14T22:00:00+08:00",
-        "last_scheduled_run_at": null,
+        "last_scheduled_run_at": "2026-10-16T14:03:33Z",
         "next_run_at_from_service": null,
         "schedule_timezone": "Asia/Singapore"
       }

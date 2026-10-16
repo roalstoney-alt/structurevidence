@@ -1,0 +1,259 @@
+{
+  "reviews": [
+    {
+      "schema_version": "se-case-review-v1",
+      "case_id": "CML-PDRE-001",
+      "review_id": "SE-800V-REVIEW-20261016-01",
+      "reviewed_at": "2026-10-16T14:03:33Z",
+      "result": "NO_STATE_CHANGE",
+      "review_complete": true,
+      "search_boundary": "Three targeted industry queries shared with sodium; existing primary disclosure plus live StructEvidence event body and snapshot checked. No new independently attributable field operation, replication or reliability evidence found within this scope.",
+      "sources_checked": [
+        {
+          "source_id": "CHINDATA-SANGYUAN-20260702",
+          "url": "https://www.chindatagroup.com/media/news/533.html",
+          "published_at": "2026-07-02",
+          "event_at": "2026-07-02",
+          "retrieved_at": "2026-10-16T14:03:33Z",
+          "originator": "Chindata",
+          "publisher": "Chindata",
+          "source_type": "OPERATOR_DISCLOSURE",
+          "claim_ids": [
+            "named_field_deployment"
+          ],
+          "depends_on": [],
+          "relation": "SUPPORT_EXISTING_SINGLE_INSTANCE",
+          "verification_status": "READ_HTTP_200",
+          "search_boundary": "Bounded public-source refresh on 2026-10-16",
+          "finding": "Existing Sangyuan announcement; no new independent deployment or operating-duration evidence found in scoped search."
+        }
+      ],
+      "old_state": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+      "new_state": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+      "new_qualifying_evidence_count": 0,
+      "new_counter_evidence_count": 0,
+      "new_sources": 0,
+      "new_attributed_statements": 0,
+      "new_independent_evidence": 0,
+      "new_events": 0,
+      "newly_discovered_old_evidence": 0,
+      "state_changing_evidence": 0,
+      "count_scope": "New accepted evidence candidates relative to previous reviews; search snippets and unchanged previously logged materials are excluded.",
+      "state_changed": false
+    },
+    {
+      "schema_version": "se-case-review-v1",
+      "case_id": "SE-BESS-SODIUM-001",
+      "review_id": "SE-SODIUM-REVIEW-20261016-01",
+      "reviewed_at": "2026-10-16T14:03:33Z",
+      "result": "NO_STATE_CHANGE",
+      "review_complete": true,
+      "search_boundary": "Three targeted industry queries shared with 800V, CATL and host-site pages. Existing Moonwatt candidate remains pending human review; no newly qualifying delivery/commissioning or verified output found in scope.",
+      "sources_checked": [
+        {
+          "source_id": "CATL-TENER-20260622",
+          "url": "https://www.catl.com/en/news/6861.html",
+          "published_at": "2026-06-22",
+          "event_at": "2026-06-22",
+          "retrieved_at": "2026-10-16T14:03:33Z",
+          "originator": "CATL",
+          "publisher": "CATL",
+          "source_type": "MANUFACTURER_DISCLOSURE",
+          "claim_ids": [
+            "manufacturing",
+            "delivery"
+          ],
+          "depends_on": [],
+          "relation": "ATTRIBUTED_CLAIMS_NOT_NEW_SITE",
+          "verification_status": "READ",
+          "search_boundary": "Bounded public-source refresh on 2026-10-16",
+          "finding": "Existing production-readiness and prospective September delivery statements do not themselves prove a new named commissioned customer site."
+        },
+        {
+          "source_id": "ARNHEM-MOONWATT-HOST",
+          "url": "https://cleantechparkarnhem.nl/nieuws/moonwatt-koppelt-natrium-ionbatterij-aan-zonnepark-op-cleantech-park-arnhem/",
+          "published_at": null,
+          "event_at": null,
+          "retrieved_at": "2026-10-16T14:03:33Z",
+          "originator": "Cleantech Park Arnhem",
+          "publisher": "Cleantech Park Arnhem",
+          "source_type": "HOST_SITE_DISCLOSURE",
+          "claim_ids": [
+            "named_operational_site"
+          ],
+          "depends_on": [
+            "MOONWATT-20260622"
+          ],
+          "relation": "SUPPORT_EXISTING_PENDING_CANDIDATE",
+          "verification_status": "READ",
+          "search_boundary": "Bounded public-source refresh on 2026-10-16",
+          "finding": "Previously logged host-site candidate; no acceptance or stop transition performed. Publication/event dates not independently established in this refresh."
+        }
+      ],
+      "old_state": "NAMED_COMMISSIONED_SITE_NOT_ESTABLISHED",
+      "new_state": "NAMED_COMMISSIONED_SITE_NOT_ESTABLISHED",
+      "new_qualifying_evidence_count": 0,
+      "new_counter_evidence_count": 0,
+      "new_sources": 0,
+      "new_attributed_statements": 0,
+      "new_independent_evidence": 0,
+      "new_events": 0,
+      "newly_discovered_old_evidence": 0,
+      "state_changing_evidence": 0,
+      "count_scope": "New accepted evidence candidates relative to previous reviews; search snippets and unchanged previously logged materials are excluded.",
+      "state_changed": false,
+      "pending_human_gate": "SE-SODIUM-REVIEW-20261014-01; not resolved by this no-change refresh"
+    },
+    {
+      "schema_version": "se-case-review-v1",
+      "case_id": "SE-IRK-LAB-001",
+      "review_id": "SE-IRK-REVIEW-20261016-01",
+      "reviewed_at": "2026-10-16T14:03:33Z",
+      "result": "REVIEW_INCOMPLETE",
+      "review_complete": false,
+      "search_boundary": "Four search groups: WHO/IHR; Russian-language contacts/quarantine/investigation; institution procurement/budget/contracts/licensing; independent interviews. Three webpage opens (WHO, Insider, RPN). Procurement aggregators were leads only, not verified awards, payments, costs or causal evidence. No primary regulatory, clinical, contract-performance or patent files obtained; no private data collected.",
+      "sources_checked": [
+        {
+          "source_id": "WHO-DON620",
+          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON620",
+          "published_at": "2026-10-10",
+          "event_at": "2026-10-02/2026-10-09",
+          "retrieved_at": "2026-10-16T14:03:33Z",
+          "originator": "WHO assessment and Russian Federation IHR National Focal Point",
+          "publisher": "WHO",
+          "source_type": "INSTITUTIONAL_ASSESSMENT_AND_RELAY",
+          "claim_ids": [
+            "cause_unknown",
+            "contacts",
+            "observation_end"
+          ],
+          "depends_on": [
+            "RF-IHR-NFP"
+          ],
+          "relation": "SUPPORT_WITH_ATTRIBUTION_AND_LIMITS",
+          "verification_status": "READ",
+          "search_boundary": "Bounded public-source refresh on 2026-10-16",
+          "finding": "Diagnosis remains unconfirmed; reported contact observation completed by October 9. WHO cannot independently assess monitoring sufficiency without confirmed etiology."
+        },
+        {
+          "source_id": "INSIDER-20261008",
+          "url": "https://theins.ru/news/298056",
+          "published_at": "2026-10-08",
+          "event_at": "2026-10-08",
+          "retrieved_at": "2026-10-16T14:03:33Z",
+          "originator": "Governor statement relayed by The Insider",
+          "publisher": "The Insider",
+          "source_type": "MEDIA_RELAY",
+          "claim_ids": [
+            "observation_end"
+          ],
+          "depends_on": [
+            "GOVERNOR-20261008"
+          ],
+          "relation": "DATE_SCOPE_COMPARISON_NOT_INDEPENDENT_CORROBORATION",
+          "verification_status": "READ",
+          "search_boundary": "Bounded public-source refresh on 2026-10-16",
+          "finding": "Reports an October 8 announcement; does not establish a different population or contradict by-October-9 WHO wording on its own."
+        },
+        {
+          "source_id": "RPN-33189",
+          "url": "https://www.rospotrebnadzor.ru/deyatelnost/epidemiological-surveillance/?ELEMENT_ID=33189",
+          "published_at": null,
+          "event_at": null,
+          "retrieved_at": "2026-10-16T14:03:33Z",
+          "originator": "Rospotrebnadzor",
+          "publisher": "Rospotrebnadzor",
+          "source_type": "REGULATOR_PRIMARY",
+          "claim_ids": [
+            "investigation",
+            "contacts"
+          ],
+          "depends_on": [],
+          "relation": "UNRESOLVED_PRIMARY_SOURCE",
+          "verification_status": "INACCESSIBLE",
+          "search_boundary": "Bounded public-source refresh on 2026-10-16",
+          "finding": "Direct primary record inaccessible through reader; no bypass. Underlying investigation/clinical records not obtained."
+        }
+      ],
+      "old_state": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+      "new_state": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+      "new_qualifying_evidence_count": 0,
+      "new_counter_evidence_count": 0,
+      "new_sources": 0,
+      "new_attributed_statements": 0,
+      "new_independent_evidence": 0,
+      "new_events": 0,
+      "newly_discovered_old_evidence": 0,
+      "state_changing_evidence": 0,
+      "count_scope": "New accepted evidence candidates relative to previous reviews; search snippets and unchanged previously logged materials are excluded.",
+      "state_changed": false,
+      "search_budget": {
+        "targeted_search_groups": 4,
+        "webpage_open_attempts": 3
+      },
+      "source_graph": [
+        {
+          "source_id": "WHO-DON620",
+          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON620",
+          "published_at": "2026-10-10",
+          "event_at": "2026-10-02/2026-10-09",
+          "retrieved_at": "2026-10-16T14:03:33Z",
+          "originator": "WHO assessment and Russian Federation IHR National Focal Point",
+          "publisher": "WHO",
+          "source_type": "INSTITUTIONAL_ASSESSMENT_AND_RELAY",
+          "claim_ids": [
+            "cause_unknown",
+            "contacts",
+            "observation_end"
+          ],
+          "depends_on": [
+            "RF-IHR-NFP"
+          ],
+          "relation": "SUPPORT_WITH_ATTRIBUTION_AND_LIMITS",
+          "verification_status": "READ",
+          "search_boundary": "Bounded public-source refresh on 2026-10-16",
+          "finding": "Diagnosis remains unconfirmed; reported contact observation completed by October 9. WHO cannot independently assess monitoring sufficiency without confirmed etiology."
+        },
+        {
+          "source_id": "INSIDER-20261008",
+          "url": "https://theins.ru/news/298056",
+          "published_at": "2026-10-08",
+          "event_at": "2026-10-08",
+          "retrieved_at": "2026-10-16T14:03:33Z",
+          "originator": "Governor statement relayed by The Insider",
+          "publisher": "The Insider",
+          "source_type": "MEDIA_RELAY",
+          "claim_ids": [
+            "observation_end"
+          ],
+          "depends_on": [
+            "GOVERNOR-20261008"
+          ],
+          "relation": "DATE_SCOPE_COMPARISON_NOT_INDEPENDENT_CORROBORATION",
+          "verification_status": "READ",
+          "search_boundary": "Bounded public-source refresh on 2026-10-16",
+          "finding": "Reports an October 8 announcement; does not establish a different population or contradict by-October-9 WHO wording on its own."
+        },
+        {
+          "source_id": "RPN-33189",
+          "url": "https://www.rospotrebnadzor.ru/deyatelnost/epidemiological-surveillance/?ELEMENT_ID=33189",
+          "published_at": null,
+          "event_at": null,
+          "retrieved_at": "2026-10-16T14:03:33Z",
+          "originator": "Rospotrebnadzor",
+          "publisher": "Rospotrebnadzor",
+          "source_type": "REGULATOR_PRIMARY",
+          "claim_ids": [
+            "investigation",
+            "contacts"
+          ],
+          "depends_on": [],
+          "relation": "UNRESOLVED_PRIMARY_SOURCE",
+          "verification_status": "INACCESSIBLE",
+          "search_boundary": "Bounded public-source refresh on 2026-10-16",
+          "finding": "Direct primary record inaccessible through reader; no bypass. Underlying investigation/clinical records not obtained."
+        }
+      ]
+    }
+  ]
+}
