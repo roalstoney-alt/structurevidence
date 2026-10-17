@@ -1,0 +1,30 @@
+{
+  "schema_version": "se-case-review-v2",
+  "case_id": "SE-IRK-LAB-001",
+  "review_id": "SE-IRK-REVIEW-20261017-01",
+  "reviewed_at": "2026-10-17T14:02:37Z",
+  "result": "REVIEW_INCOMPLETE",
+  "review_complete": false,
+  "classifications": ["NO_STATE_CHANGE", "HUMAN_GATE_REQUIRED"],
+  "search_boundary": "One consolidated Irkutsk official-source search group and two official-source opens covering WHO DON620 and ECDC Week 42; public institutional records only.",
+  "search_budget": {"targeted_search_groups": 1, "webpage_open_attempts": 2, "bounded_original_document_followups": 0},
+  "sources_checked": [
+    {"url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON620/", "publisher": "World Health Organization", "status": "READ", "retrieved_at": "2026-10-17T14:02:37Z", "finding": "DON620 remains dated 10 October and preserves the missing confirmed diagnosis and exposure uncertainty."},
+    {"url": "https://www.ecdc.europa.eu/sites/default/files/documents/communicable-disease-threats-report-week-42-2026.pdf", "publisher": "European Centre for Disease Prevention and Control", "status": "READ", "retrieved_at": "2026-10-17T14:02:37Z", "finding": "The Week 42 report remains the latest verified ECDC publication and preserves diagnostic, source and exposure uncertainty; no new event was verified today."}
+  ],
+  "source_graph": [
+    {"source_id": "WHO-DON620", "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON620/", "published_at": "2026-10-10", "event_at": "2026-10-02", "retrieved_at": "2026-10-17T14:02:37Z", "originator": "WHO with Russian Federation IHR NFP statements", "publisher": "WHO", "source_type": "INSTITUTIONAL_ASSESSMENT_AND_RELAY", "claim_ids": ["cause", "contacts", "transmission", "biosafety"], "depends_on": ["RF-IHR-NFP"], "relation": "SUPPORT_WITH_UNCERTAINTY", "verification_status": "READ", "search_boundary": "WHO/IHR follow-up"},
+    {"source_id": "ECDC-W42-2026", "url": "https://www.ecdc.europa.eu/sites/default/files/documents/communicable-disease-threats-report-week-42-2026.pdf", "published_at": "2026-10-16", "event_at": "2026-10-16", "retrieved_at": "2026-10-17T14:02:37Z", "originator": "ECDC assessment with WHO, Russian-authority and media source chain", "publisher": "ECDC", "source_type": "INSTITUTIONAL_ASSESSMENT_AND_DERIVATIVE_SUMMARY", "claim_ids": ["contacts", "investigation", "eu_risk", "diagnostic_uncertainty"], "depends_on": ["WHO-DON620", "RUSSIAN-IHR-NFP-ATTRIBUTION", "MEDIA-CHAIN-ECDC-W42"], "relation": "SUPPORT_WITH_DEPENDENCY", "verification_status": "READ", "search_boundary": "institutional surveillance publication"}
+  ],
+  "daily_counters": {"new_sources": 0, "new_attributed_statements": 0, "new_independent_evidence": 0, "new_events": 0, "newly_discovered_old_evidence": 0, "state_changing_evidence": 0},
+  "old_state": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+  "new_state": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+  "new_qualifying_evidence_count": 0,
+  "new_counter_evidence_count": 0,
+  "gaps": ["Confirmed etiological diagnosis remains unavailable.", "Underlying de-identified clinical and contact records remain unavailable.", "Auditable original biosafety investigations and supervisory findings remain unavailable."],
+  "previous_review": "cases/irkutsk-lab-worker-death/search-review-20261016-01.json",
+  "evidence_state_as_of": "2026-10-11T15:01:01+08:00",
+  "last_material_change": "2026-10-10",
+  "historical_backfill": false,
+  "private_branch_excluded": true
+}

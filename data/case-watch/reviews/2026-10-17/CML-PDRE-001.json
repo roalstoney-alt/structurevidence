@@ -1,0 +1,22 @@
+{
+  "schema_version": "se-case-review-v2",
+  "case_id": "CML-PDRE-001",
+  "review_id": "SE-800V-REVIEW-20261017-01",
+  "reviewed_at": "2026-10-17T14:02:37Z",
+  "result": "NO_STATE_CHANGE",
+  "review_complete": true,
+  "classifications": ["NO_STATE_CHANGE"],
+  "search_boundary": "Targeted official-source refresh of the accepted Chindata record and Vertiv's OCP 2026 program page; not an exhaustive market census.",
+  "sources_checked": [
+    {"url": "https://www.chindatagroup.com/media/news/533.html", "publisher": "Chindata", "status": "READ", "retrieved_at": "2026-10-17T14:02:37Z", "finding": "The same one-campus operator claim remains available; no independent performance or multi-entity replication record is supplied."},
+    {"url": "https://www.vertiv.com/en-ca/about/news-and-events/events/ocp-global-summit-2026/", "publisher": "Vertiv", "status": "READ", "retrieved_at": "2026-10-17T14:02:37Z", "finding": "The official event program describes 800 VDC sessions and a reference architecture but does not establish field deployment, commercial operation or independent performance."}
+  ],
+  "daily_counters": {"new_sources": 0, "new_attributed_statements": 0, "new_independent_evidence": 0, "new_events": 0, "newly_discovered_old_evidence": 0, "state_changing_evidence": 0},
+  "old_state": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+  "new_state": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+  "new_qualifying_evidence_count": 0,
+  "new_counter_evidence_count": 0,
+  "evidence_state_as_of": "2026-09-20T10:46:47Z",
+  "last_material_change": "2026-09-20",
+  "historical_backfill": false
+}
