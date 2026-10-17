@@ -1,0 +1,37 @@
+{
+  "schema_version": "se-x-candidate-v2",
+  "candidate_id": "SE-X-2026-10-17-METHOD-01",
+  "day_index": null,
+  "scheduled_date": "2026-10-17",
+  "text": "New evidence need not change a case state. Our ECDC Week 42 record adds a verified publication while preserving the Irkutsk stop: cause not established, review incomplete. https://structurevidence.org/cases/irkutsk-lab-worker-death/events/ecdc-week-42-2026/",
+  "source_urls": [
+    "https://structurevidence.org/cases/irkutsk-lab-worker-death/events/ecdc-week-42-2026/"
+  ],
+  "evidence_cutoff": "2026-10-16T22:45:36Z",
+  "content_hash": "49176d65c832f95bf2341b84905c87aa0d86af7f152774447ca0c30f5dbf81c5",
+  "approval_gate": "HUMAN_GATE_REQUIRED",
+  "material_state_transition": false,
+  "account_identity": "@structevidence",
+  "dedup_check": "NEW_TEXT_SHARED_VERIFIED_SOURCE_HUMAN_REVIEW_PENDING",
+  "publish_attempt_id": null,
+  "post_id": null,
+  "public_url": null,
+  "published_at": null,
+  "verification_checked_at": null,
+  "status": "AWAITING_HUMAN_REVIEW",
+  "selection_reason": "REVIEWED_METHOD_CONTENT_WITH_PRODUCTION_VERIFIED_EVENT",
+  "selected_event_id": "SE-EVENT-IRK-LAB-001-20261016-ECDC-W42",
+  "website_url": "https://structurevidence.org/cases/irkutsk-lab-worker-death/events/ecdc-week-42-2026/",
+  "snapshot_path": "cases/irkutsk-lab-worker-death/events/ecdc-week-42-2026/snapshot-v1.json",
+  "snapshot_sha256": "1ed4847133cbee992f3c7155b20c1746db1910ffe71962d5c68af4bf793c88d8",
+  "production_verification_checked_at": "2026-10-17T14:04:33Z",
+  "factual_status": "METHOD_CONTENT+NO_STATE_CHANGE",
+  "blocker": "X_AUTO_PUBLISH_PAUSED_HUMAN_REVIEW",
+  "dedup_scope": {
+    "local_candidate_window_days": 7,
+    "x_provider_history": "NOT_READ_X_AUTO_PUBLISH_PAUSED"
+  },
+  "new_findings_existed": false,
+  "correction_required": false,
+  "x_post_sent": 0
+}

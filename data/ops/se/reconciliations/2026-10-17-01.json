@@ -1,0 +1,22 @@
+{
+  "schema_version": "se-unified-delivery-reconciliation-v1",
+  "run_id": "SE-OPS-20261017-2200-ae561774-05f9-5f99-9a40-a0debe62bc43",
+  "date_sgt": "2026-10-17",
+  "report_delivered_at": "2026-10-17T14:05:08Z",
+  "delivery_channel": "CODEX_HEARTBEAT_NOTIFICATION",
+  "external_delivery": "PASS",
+  "production_source_recheck": {
+    "event_id": "SE-EVENT-IRK-LAB-001-20261016-ECDC-W42",
+    "checked_at": "2026-10-17T14:04:33Z",
+    "public_url": "https://structurevidence.org/cases/irkutsk-lab-worker-death/events/ecdc-week-42-2026/",
+    "http_status": 200,
+    "body_marker_verified": true,
+    "snapshot_http_status": 200,
+    "snapshot_sha256": "1ed4847133cbee992f3c7155b20c1746db1910ffe71962d5c68af4bf793c88d8",
+    "result": "PUBLIC_VERIFIED"
+  },
+  "x_candidate_id": "SE-X-2026-10-17-METHOD-01",
+  "x_post_sent": 0,
+  "x_blocker": "X_AUTO_PUBLISH_PAUSED_HUMAN_REVIEW",
+  "human_gate_required": true
+}
