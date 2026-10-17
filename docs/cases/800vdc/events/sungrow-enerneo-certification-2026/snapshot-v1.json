@@ -1,0 +1,24 @@
+{
+  "schema_version": "se-source-snapshot-v1",
+  "snapshot_id": "SE-EVENT-CML-PDRE-001-20261015-SUNGROW-CERTIFICATION-SNAPSHOT-v1",
+  "captured_at": "2026-10-17T14:04:05Z",
+  "capture_type": "STRUCTURED_SHORT_EXCERPT_SNAPSHOT_NOT_FULL_ORIGINAL",
+  "original_url": "https://cn.sungrowpower.com/news/1749.html",
+  "accessibility": "PUBLIC_HTML_READ_THROUGH_WEB_READER",
+  "raw_file_saved": false,
+  "short_excerpts": [
+    "此次认证面向SST整机开展"
+  ],
+  "structured_facts": [
+    {
+      "statement": "Sungrow dates its corporate certification announcement 15 October 2026."
+    },
+    {
+      "statement": "The company reports a TÜV Rheinland system and component certification ceremony at OCP."
+    },
+    {
+      "statement": "Certificate scope, identifiers and independent issuer confirmation were not established in this review."
+    }
+  ],
+  "copyright_boundary": "Short excerpt and structured facts only; consult original for full text."
+}

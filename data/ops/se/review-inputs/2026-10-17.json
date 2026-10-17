@@ -1,0 +1,346 @@
+{
+  "reviews": [
+    {
+      "schema_version": "se-case-review-v2",
+      "case_id": "CML-PDRE-001",
+      "review_id": "SE-800V-REVIEW-20261017-01",
+      "reviewed_at": "2026-10-17T14:04:05Z",
+      "result": "HUMAN_GATE_REQUIRED",
+      "review_complete": true,
+      "search_boundary": "Five industry source queries, two issuer/registry queries; primary company announcement read. Source publication verified, underlying certificate/operating claims not accepted. Historical event dated October 15 newly found today.",
+      "sources_checked": [
+        {
+          "source_id": "SUNGROW-1749",
+          "url": "https://cn.sungrowpower.com/news/1749.html",
+          "published_at": "2026-10-15",
+          "event_at": "2026-10-15",
+          "retrieved_at": "2026-10-17T14:04:05Z",
+          "originator": "Sungrow",
+          "publisher": "Sungrow",
+          "source_type": "PRIMARY_CORPORATE_ANNOUNCEMENT",
+          "claim_ids": [
+            "certification"
+          ],
+          "depends_on": [],
+          "relation": "ATTRIBUTED_CLAIM_CANDIDATE",
+          "verification_status": "READ",
+          "search_boundary": "Bounded October 17 public-source review",
+          "finding": "Certification claim preserved for issuer verification, without a stop transition."
+        }
+      ],
+      "source_graph": [
+        {
+          "source_id": "SUNGROW-1749",
+          "url": "https://cn.sungrowpower.com/news/1749.html",
+          "published_at": "2026-10-15",
+          "event_at": "2026-10-15",
+          "retrieved_at": "2026-10-17T14:04:05Z",
+          "originator": "Sungrow",
+          "publisher": "Sungrow",
+          "source_type": "PRIMARY_CORPORATE_ANNOUNCEMENT",
+          "claim_ids": [
+            "certification"
+          ],
+          "depends_on": [],
+          "relation": "ATTRIBUTED_CLAIM_CANDIDATE",
+          "verification_status": "READ",
+          "search_boundary": "Bounded October 17 public-source review",
+          "finding": "Certification claim preserved for issuer verification, without a stop transition."
+        }
+      ],
+      "old_state": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+      "new_state": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+      "new_qualifying_evidence_count": 0,
+      "new_counter_evidence_count": 0,
+      "new_sources": 1,
+      "new_attributed_statements": 2,
+      "new_independent_evidence": 0,
+      "new_events": 0,
+      "newly_discovered_old_evidence": 1,
+      "state_changing_evidence": 0,
+      "daily_counters": {
+        "new_sources": 1,
+        "new_attributed_statements": 2,
+        "new_independent_evidence": 0,
+        "new_events": 0,
+        "newly_discovered_old_evidence": 1,
+        "state_changing_evidence": 0
+      },
+      "state_changed": false,
+      "private_branch_excluded": true,
+      "event_ids": [
+        "SE-EVENT-CML-PDRE-001-20261015-SUNGROW-CERTIFICATION"
+      ]
+    },
+    {
+      "schema_version": "se-case-review-v2",
+      "case_id": "SE-BESS-SODIUM-001",
+      "review_id": "SE-SODIUM-REVIEW-20261017-01",
+      "reviewed_at": "2026-10-17T14:04:05Z",
+      "result": "HUMAN_GATE_REQUIRED",
+      "review_complete": true,
+      "search_boundary": "Industry queries and existing CATL original read. No newly qualifying named sodium delivery, commissioning or output found within scope. Existing Moonwatt review gate retained.",
+      "sources_checked": [
+        {
+          "source_id": "CATL-TENER-20260622",
+          "url": "https://www.catl.com/en/news/6861.html",
+          "published_at": "2026-06-22",
+          "event_at": "2026-06-22",
+          "retrieved_at": "2026-10-17T14:04:05Z",
+          "originator": "CATL",
+          "publisher": "CATL",
+          "source_type": "MANUFACTURER_DISCLOSURE",
+          "claim_ids": [
+            "delivery",
+            "manufacturing"
+          ],
+          "depends_on": [],
+          "relation": "EXISTING_ATTRIBUTED_CLAIMS",
+          "verification_status": "READ",
+          "search_boundary": "Bounded October 17 public-source review",
+          "finding": "Existing prospective shipment and production statements; no new named sodium delivery or commissioning established."
+        }
+      ],
+      "source_graph": [
+        {
+          "source_id": "CATL-TENER-20260622",
+          "url": "https://www.catl.com/en/news/6861.html",
+          "published_at": "2026-06-22",
+          "event_at": "2026-06-22",
+          "retrieved_at": "2026-10-17T14:04:05Z",
+          "originator": "CATL",
+          "publisher": "CATL",
+          "source_type": "MANUFACTURER_DISCLOSURE",
+          "claim_ids": [
+            "delivery",
+            "manufacturing"
+          ],
+          "depends_on": [],
+          "relation": "EXISTING_ATTRIBUTED_CLAIMS",
+          "verification_status": "READ",
+          "search_boundary": "Bounded October 17 public-source review",
+          "finding": "Existing prospective shipment and production statements; no new named sodium delivery or commissioning established."
+        }
+      ],
+      "old_state": "NAMED_COMMISSIONED_SITE_NOT_ESTABLISHED",
+      "new_state": "NAMED_COMMISSIONED_SITE_NOT_ESTABLISHED",
+      "new_qualifying_evidence_count": 0,
+      "new_counter_evidence_count": 0,
+      "new_sources": 0,
+      "new_attributed_statements": 0,
+      "new_independent_evidence": 0,
+      "new_events": 0,
+      "newly_discovered_old_evidence": 0,
+      "state_changing_evidence": 0,
+      "daily_counters": {
+        "new_sources": 0,
+        "new_attributed_statements": 0,
+        "new_independent_evidence": 0,
+        "new_events": 0,
+        "newly_discovered_old_evidence": 0,
+        "state_changing_evidence": 0
+      },
+      "state_changed": false,
+      "private_branch_excluded": true
+    },
+    {
+      "schema_version": "se-case-review-v2",
+      "case_id": "SE-IRK-LAB-001",
+      "review_id": "SE-IRK-REVIEW-20261017-01",
+      "reviewed_at": "2026-10-17T14:04:05Z",
+      "result": "REVIEW_INCOMPLETE",
+      "review_complete": false,
+      "search_boundary": "Four search groups: WHO/IHR; Russian quarantine/investigation; institution/regulated operations/procurement/budget/patent; independent contacts/interviews. Four webpage opens: WHO, ECDC, Insider, regulator. No new primary clinical, investigation, payment, patent or licensing record established. Aggregate source dependencies retained.",
+      "sources_checked": [
+        {
+          "source_id": "WHO-DON620",
+          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON620",
+          "published_at": "2026-10-10",
+          "event_at": "2026-10-02/2026-10-09",
+          "retrieved_at": "2026-10-17T14:04:05Z",
+          "originator": "WHO and Russian IHR NFP",
+          "publisher": "WHO",
+          "source_type": "INSTITUTIONAL_ASSESSMENT_AND_RELAY",
+          "claim_ids": [
+            "diagnosis",
+            "contacts"
+          ],
+          "depends_on": [
+            "RF-IHR-NFP"
+          ],
+          "relation": "SUPPORT_WITH_LIMITS",
+          "verification_status": "READ",
+          "search_boundary": "Bounded October 17 public-source review",
+          "finding": "Unconfirmed diagnosis remains; reported medical observation ended by October 9."
+        },
+        {
+          "source_id": "ECDC-W42-2026",
+          "url": "https://www.ecdc.europa.eu/sites/default/files/documents/communicable-disease-threats-report-week-42-2026.pdf",
+          "published_at": "2026-10-16",
+          "event_at": "2026-10-16",
+          "retrieved_at": "2026-10-17T14:04:05Z",
+          "originator": "ECDC assessment with dependent source chain",
+          "publisher": "ECDC",
+          "source_type": "INSTITUTIONAL_ASSESSMENT_AND_RELAY",
+          "claim_ids": [
+            "risk",
+            "contacts"
+          ],
+          "depends_on": [
+            "WHO-DON620",
+            "RF-IHR-NFP"
+          ],
+          "relation": "EXISTING_DEPENDENT_ASSESSMENT",
+          "verification_status": "READ",
+          "search_boundary": "Bounded October 17 public-source review",
+          "finding": "Already published in main via PR24; not counted as a newly discovered October 17 event."
+        },
+        {
+          "source_id": "INSIDER-20261008",
+          "url": "https://theins.ru/news/298056",
+          "published_at": "2026-10-08",
+          "event_at": "2026-10-08",
+          "retrieved_at": "2026-10-17T14:04:05Z",
+          "originator": "Governor statement relayed by Insider",
+          "publisher": "The Insider",
+          "source_type": "MEDIA_RELAY",
+          "claim_ids": [
+            "observation_end"
+          ],
+          "depends_on": [
+            "GOVERNOR-20261008"
+          ],
+          "relation": "DATE_SCOPE_COMPARISON",
+          "verification_status": "READ",
+          "search_boundary": "Bounded October 17 public-source review",
+          "finding": "October 8 announcement does not alone establish different populations from WHO by-October-9 wording."
+        },
+        {
+          "source_id": "RPN-33189",
+          "url": "https://www.rospotrebnadzor.ru/deyatelnost/epidemiological-surveillance/?ELEMENT_ID=33189",
+          "published_at": null,
+          "event_at": null,
+          "retrieved_at": "2026-10-17T14:04:05Z",
+          "originator": "Rospotrebnadzor",
+          "publisher": "Rospotrebnadzor",
+          "source_type": "REGULATOR_ORIGINAL",
+          "claim_ids": [
+            "investigation"
+          ],
+          "depends_on": [],
+          "relation": "UNRESOLVED",
+          "verification_status": "INACCESSIBLE",
+          "search_boundary": "Bounded October 17 public-source review",
+          "finding": "Original regulator record unavailable; no bypass attempted."
+        }
+      ],
+      "source_graph": [
+        {
+          "source_id": "WHO-DON620",
+          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON620",
+          "published_at": "2026-10-10",
+          "event_at": "2026-10-02/2026-10-09",
+          "retrieved_at": "2026-10-17T14:04:05Z",
+          "originator": "WHO and Russian IHR NFP",
+          "publisher": "WHO",
+          "source_type": "INSTITUTIONAL_ASSESSMENT_AND_RELAY",
+          "claim_ids": [
+            "diagnosis",
+            "contacts"
+          ],
+          "depends_on": [
+            "RF-IHR-NFP"
+          ],
+          "relation": "SUPPORT_WITH_LIMITS",
+          "verification_status": "READ",
+          "search_boundary": "Bounded October 17 public-source review",
+          "finding": "Unconfirmed diagnosis remains; reported medical observation ended by October 9."
+        },
+        {
+          "source_id": "ECDC-W42-2026",
+          "url": "https://www.ecdc.europa.eu/sites/default/files/documents/communicable-disease-threats-report-week-42-2026.pdf",
+          "published_at": "2026-10-16",
+          "event_at": "2026-10-16",
+          "retrieved_at": "2026-10-17T14:04:05Z",
+          "originator": "ECDC assessment with dependent source chain",
+          "publisher": "ECDC",
+          "source_type": "INSTITUTIONAL_ASSESSMENT_AND_RELAY",
+          "claim_ids": [
+            "risk",
+            "contacts"
+          ],
+          "depends_on": [
+            "WHO-DON620",
+            "RF-IHR-NFP"
+          ],
+          "relation": "EXISTING_DEPENDENT_ASSESSMENT",
+          "verification_status": "READ",
+          "search_boundary": "Bounded October 17 public-source review",
+          "finding": "Already published in main via PR24; not counted as a newly discovered October 17 event."
+        },
+        {
+          "source_id": "INSIDER-20261008",
+          "url": "https://theins.ru/news/298056",
+          "published_at": "2026-10-08",
+          "event_at": "2026-10-08",
+          "retrieved_at": "2026-10-17T14:04:05Z",
+          "originator": "Governor statement relayed by Insider",
+          "publisher": "The Insider",
+          "source_type": "MEDIA_RELAY",
+          "claim_ids": [
+            "observation_end"
+          ],
+          "depends_on": [
+            "GOVERNOR-20261008"
+          ],
+          "relation": "DATE_SCOPE_COMPARISON",
+          "verification_status": "READ",
+          "search_boundary": "Bounded October 17 public-source review",
+          "finding": "October 8 announcement does not alone establish different populations from WHO by-October-9 wording."
+        },
+        {
+          "source_id": "RPN-33189",
+          "url": "https://www.rospotrebnadzor.ru/deyatelnost/epidemiological-surveillance/?ELEMENT_ID=33189",
+          "published_at": null,
+          "event_at": null,
+          "retrieved_at": "2026-10-17T14:04:05Z",
+          "originator": "Rospotrebnadzor",
+          "publisher": "Rospotrebnadzor",
+          "source_type": "REGULATOR_ORIGINAL",
+          "claim_ids": [
+            "investigation"
+          ],
+          "depends_on": [],
+          "relation": "UNRESOLVED",
+          "verification_status": "INACCESSIBLE",
+          "search_boundary": "Bounded October 17 public-source review",
+          "finding": "Original regulator record unavailable; no bypass attempted."
+        }
+      ],
+      "old_state": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+      "new_state": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+      "new_qualifying_evidence_count": 0,
+      "new_counter_evidence_count": 0,
+      "new_sources": 0,
+      "new_attributed_statements": 0,
+      "new_independent_evidence": 0,
+      "new_events": 0,
+      "newly_discovered_old_evidence": 0,
+      "state_changing_evidence": 0,
+      "daily_counters": {
+        "new_sources": 0,
+        "new_attributed_statements": 0,
+        "new_independent_evidence": 0,
+        "new_events": 0,
+        "newly_discovered_old_evidence": 0,
+        "state_changing_evidence": 0
+      },
+      "state_changed": false,
+      "private_branch_excluded": true,
+      "search_budget": {
+        "targeted_search_groups": 4,
+        "webpage_open_attempts": 4
+      }
+    }
+  ]
+}
