@@ -1,0 +1,71 @@
+{
+  "schema_version": "se-case-review-v2",
+  "case_id": "SE-BESS-SODIUM-001",
+  "review_id": "SE-SODIUM-REVIEW-20261017-01",
+  "reviewed_at": "2026-10-17T14:04:05Z",
+  "result": "HUMAN_GATE_REQUIRED",
+  "review_complete": true,
+  "search_boundary": "Industry queries and existing CATL original read. No newly qualifying named sodium delivery, commissioning or output found within scope. Existing Moonwatt review gate retained.",
+  "sources_checked": [
+    {
+      "source_id": "CATL-TENER-20260622",
+      "url": "https://www.catl.com/en/news/6861.html",
+      "published_at": "2026-06-22",
+      "event_at": "2026-06-22",
+      "retrieved_at": "2026-10-17T14:04:05Z",
+      "originator": "CATL",
+      "publisher": "CATL",
+      "source_type": "MANUFACTURER_DISCLOSURE",
+      "claim_ids": [
+        "delivery",
+        "manufacturing"
+      ],
+      "depends_on": [],
+      "relation": "EXISTING_ATTRIBUTED_CLAIMS",
+      "verification_status": "READ",
+      "search_boundary": "Bounded October 17 public-source review",
+      "finding": "Existing prospective shipment and production statements; no new named sodium delivery or commissioning established."
+    }
+  ],
+  "source_graph": [
+    {
+      "source_id": "CATL-TENER-20260622",
+      "url": "https://www.catl.com/en/news/6861.html",
+      "published_at": "2026-06-22",
+      "event_at": "2026-06-22",
+      "retrieved_at": "2026-10-17T14:04:05Z",
+      "originator": "CATL",
+      "publisher": "CATL",
+      "source_type": "MANUFACTURER_DISCLOSURE",
+      "claim_ids": [
+        "delivery",
+        "manufacturing"
+      ],
+      "depends_on": [],
+      "relation": "EXISTING_ATTRIBUTED_CLAIMS",
+      "verification_status": "READ",
+      "search_boundary": "Bounded October 17 public-source review",
+      "finding": "Existing prospective shipment and production statements; no new named sodium delivery or commissioning established."
+    }
+  ],
+  "old_state": "NAMED_COMMISSIONED_SITE_NOT_ESTABLISHED",
+  "new_state": "NAMED_COMMISSIONED_SITE_NOT_ESTABLISHED",
+  "new_qualifying_evidence_count": 0,
+  "new_counter_evidence_count": 0,
+  "new_sources": 0,
+  "new_attributed_statements": 0,
+  "new_independent_evidence": 0,
+  "new_events": 0,
+  "newly_discovered_old_evidence": 0,
+  "state_changing_evidence": 0,
+  "daily_counters": {
+    "new_sources": 0,
+    "new_attributed_statements": 0,
+    "new_independent_evidence": 0,
+    "new_events": 0,
+    "newly_discovered_old_evidence": 0,
+    "state_changing_evidence": 0
+  },
+  "state_changed": false,
+  "private_branch_excluded": true
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": "se-x-candidate-v2",
+  "candidate_id": "SE-X-2026-10-17-EVENT-BLOCKED",
+  "scheduled_date": "2026-10-17",
+  "text": null,
+  "source_urls": [],
+  "evidence_cutoff": "2026-10-17T14:04:05Z",
+  "content_hash": null,
+  "approval_gate": "BLOCKED",
+  "status": "WEBSITE_PUBLICATION_BLOCKED",
+  "blocker": "WEBSITE_PUBLICATION_BLOCKED",
+  "selected_event_id": "SE-EVENT-CML-PDRE-001-20261015-SUNGROW-CERTIFICATION",
+  "factual_status": "NEWLY_DISCOVERED_OLD_EVIDENCE+NO_STATE_CHANGE+HUMAN_GATE_REQUIRED",
+  "x_post_sent": 0,
+  "dedup_check": "New source/event ID compared against main and previous draft23; no provider history read",
+  "account_identity": "@structevidence",
+  "automatic_publication_blocker": "X_AUTO_PUBLISH_PAUSED_HUMAN_REVIEW"
+}
