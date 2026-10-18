@@ -1,0 +1,60 @@
+{
+  "schema_version": "se-case-event-v1",
+  "event_id": "SE-EVENT-CML-PDRE-001-20261015-SUNGROW-CERTIFICATION",
+  "case_id": "CML-PDRE-001",
+  "title": "Sungrow reports EnerNeo SST certification at OCP",
+  "published_at": "2026-10-15",
+  "event_at": "2026-10-15",
+  "retrieved_at": "2026-10-17T14:04:05Z",
+  "originator": "Sungrow / Sungrow AIDC business",
+  "publisher": "Sungrow corporate newsroom",
+  "source_type": "PRIMARY_CORPORATE_ANNOUNCEMENT",
+  "original_url": "https://cn.sungrowpower.com/news/1749.html",
+  "accessibility": "PUBLIC_HTML",
+  "specific_claims": [
+    "Company reports system and component certificates.",
+    "Company attributes the certification to TÜV Rheinland."
+  ],
+  "supports": [
+    "Verified existence and date of an attributable company announcement."
+  ],
+  "does_not_support": [
+    "Independent certificate authenticity or complete scope validation.",
+    "A newly named operating customer data center, repeat procurement, or long-term field reliability."
+  ],
+  "depends_on": [],
+  "conflicts_counter_evidence": [
+    "No matching certificate ID or issuer record located within two targeted TÜV/Certipedia search queries. This does not establish absence of a certificate.",
+    "Company publicity is not independent issuer verification."
+  ],
+  "verification_status": "VERIFIED_PRIMARY_SOURCE",
+  "verification_scope": "The company statement was read; its underlying certification claims remain attributed and unaccepted.",
+  "search_boundary": "Official Sungrow article 1749 read; article 1748 inaccessible. Two issuer/registry-domain queries yielded generic SST service material, not a matching certificate. No authenticated certificate or named customer operation was reviewed.",
+  "snapshot_path": "cases/800vdc/events/sungrow-enerneo-certification-2026/snapshot-v1.json",
+  "snapshot_sha256": "574c58de9d696546fed3f268b9fa02786e4a50ffe4e04616ddd0e06fdaf69f2a",
+  "old_stop": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+  "candidate_stop": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+  "state_changed": false,
+  "review_id": "SE-800V-REVIEW-20261017-SUPP-PR26-01",
+  "classifications": [
+    "NEWLY_DISCOVERED_OLD_EVIDENCE",
+    "NO_STATE_CHANGE",
+    "HUMAN_GATE_REQUIRED"
+  ],
+  "public_url": "https://structurevidence.org/cases/800vdc/events/sungrow-enerneo-certification-2026/",
+  "x_candidate_text": "",
+  "website_publication_status": "DRAFT_NOT_DEPLOYED",
+  "next_minimum_verification": "Find certificate identifiers and match models/scope/validity with the issuer; separately obtain attributable customer operating records. Any subsystem or accepted-state transition requires human review.",
+  "original_record": {
+    "pr": 26,
+    "commit_sha": "0c8b940c3a3a6079e6260ddde89f2af5ca354d93",
+    "path": "cases/800vdc/search-review-20261017-01.json",
+    "sha256": "86c0b8c2b41deeba4edc0241f46ae97fa5eec9a86e88cb4ab7a13622c69dbd5f",
+    "review_id": "SE-800V-REVIEW-20261017-01",
+    "publication_status": "ORIGINAL_UNPUBLISHED_CANDIDATE_PRESERVED"
+  },
+  "supplemental_review_path": "cases/800vdc/search-review-20261017-supp-pr26-01.json",
+  "reconciled_at": "2026-10-18T02:32:55.321002+00:00",
+  "source_verification_basis": "Inherited bounded source review from original PR #26, not a fresh source retrieval; issuer certification remains unverified.",
+  "source_record_path": "cases/800vdc/events/sungrow-enerneo-certification-2026/source-v1.json"
+}

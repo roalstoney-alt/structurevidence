@@ -70,6 +70,20 @@
       "state_changed": false,
       "url": "https://structurevidence.org/cases/800vdc/events/solaredge-ocp-2026/",
       "record_path": "cases/800vdc/events/solaredge-ocp-2026/index.json"
+    },
+    {
+      "event_id": "SE-EVENT-CML-PDRE-001-20261015-SUNGROW-CERTIFICATION",
+      "classifications": [
+        "NEWLY_DISCOVERED_OLD_EVIDENCE",
+        "NO_STATE_CHANGE",
+        "HUMAN_GATE_REQUIRED"
+      ],
+      "published_at": "2026-10-15",
+      "event_at": "2026-10-15",
+      "retrieved_at": "2026-10-17T14:04:05Z",
+      "state_changed": false,
+      "url": "https://structurevidence.org/cases/800vdc/events/sungrow-enerneo-certification-2026/",
+      "record_path": "cases/800vdc/events/sungrow-enerneo-certification-2026/index.json"
     }
   ]
 }
