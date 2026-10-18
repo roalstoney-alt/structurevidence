@@ -1,0 +1,21 @@
+{
+  "schema_version": "se-website-publication-receipt-v1",
+  "receipt_id": "SE-WEB-PUBLICATION-ONC-NSQNSCLC-CN-001-20261018-01",
+  "event_id": "SE-EVENT-ONC-NSQNSCLC-CN-001-202609-HARMONI",
+  "checked_at": "2026-10-18T14:11:43Z",
+  "provider": "GITHUB_PAGES",
+  "source_main_sha": "62acc0e4a6773bcf6014eb759b362978cf5efe6a",
+  "source_pull_request": "https://github.com/roalstoney-alt/structurevidence/pull/33",
+  "public_url": "https://structurevidence.org/cases/nsq-nsclc-china/events/harmoni-multinational-phase3-2026/",
+  "http_status": 200,
+  "expected_body_marker": "SE-EVENT-ONC-NSQNSCLC-CN-001-202609-HARMONI",
+  "body_marker_verified": true,
+  "response_last_modified": "Sun, 18 Oct 2026 14:11:22 GMT",
+  "response_content_length": 2227,
+  "snapshot_url": "https://structurevidence.org/cases/nsq-nsclc-china/events/harmoni-multinational-phase3-2026/snapshot-v1.json",
+  "snapshot_http_status": 200,
+  "snapshot_expected_sha256": "7f010524e1be1820b65c87b25ebcf3fb93b5d6b25d76fbfc91d053510ab7b6e3",
+  "snapshot_observed_sha256": "7f010524e1be1820b65c87b25ebcf3fb93b5d6b25d76fbfc91d053510ab7b6e3",
+  "result": "PUBLIC_VERIFIED",
+  "proof_boundary": "Merge success was not treated as deployment proof. The production response was fetched after merge; HTTP status, exact event marker, FOLDED/HUMAN_GATE_REQUIRED boundary markers, and downloaded snapshot hash were verified independently."
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": "se-x-candidate-v2",
+  "candidate_id": "SE-X-2026-10-18-EVENT-01",
+  "scheduled_date": "2026-10-18",
+  "text": "New historical evidence: a multinational phase 3 HARMONi trial reports longer PFS after third-generation EGFR-TKI progression. It does not establish personal prognosis or treatment choice. https://structurevidence.org/cases/nsq-nsclc-china/events/harmoni-multinational-phase3-2026/",
+  "source_urls": [
+    "https://structurevidence.org/cases/nsq-nsclc-china/events/harmoni-multinational-phase3-2026/"
+  ],
+  "evidence_cutoff": "2026-10-18T14:04:05Z",
+  "content_hash": "68c1c7b57d8c81fae0a4849400f5c6f6c72f24c8903e4d5d2a417bd97eee7b87",
+  "approval_gate": "HUMAN_GATE_REQUIRED",
+  "status": "AWAITING_HUMAN_REVIEW",
+  "blocker": "X_AUTO_PUBLISH_PAUSED_HUMAN_REVIEW",
+  "selected_event_id": "SE-EVENT-ONC-NSQNSCLC-CN-001-202609-HARMONI",
+  "selection_reason": "NEWLY_DISCOVERED_OLD_EVIDENCE",
+  "website_url": "https://structurevidence.org/cases/nsq-nsclc-china/events/harmoni-multinational-phase3-2026/",
+  "original_url": "https://pubmed.ncbi.nlm.nih.gov/42636833/",
+  "snapshot_path": "cases/nsq-nsclc-china/events/harmoni-multinational-phase3-2026/snapshot-v1.json",
+  "snapshot_sha256": "7f010524e1be1820b65c87b25ebcf3fb93b5d6b25d76fbfc91d053510ab7b6e3",
+  "factual_status": "NEWLY_DISCOVERED_OLD_EVIDENCE+NO_STATE_CHANGE+HUMAN_GATE_REQUIRED",
+  "dedup_scope": {
+    "local_candidate_window_days": 7,
+    "x_provider_history": "NOT_READ_X_AUTO_PUBLISH_PAUSED"
+  },
+  "material_state_transition": false,
+  "account_identity": "@structevidence",
+  "post_id": null,
+  "public_url": null,
+  "published_at": null,
+  "verification_checked_at": null,
+  "new_findings_existed": true,
+  "correction_required": false,
+  "x_post_sent": 0
+}
