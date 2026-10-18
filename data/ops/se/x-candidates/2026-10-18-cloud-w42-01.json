@@ -1,0 +1,20 @@
+{
+  "schema_version": "se-x-candidate-v2",
+  "candidate_id": "SE-X-2026-10-18-CLOUD-W42-01",
+  "scheduled_date": "2026-10-18",
+  "text": "Oct 18 evidence note: Sungrow's Oct 15 certification claim is now recorded with its original source and snapshot. Issuer verification and named field operation remain separate checks. https://structurevidence.org/cases/800vdc/events/sungrow-enerneo-certification-2026/",
+  "source_urls": [
+    "https://structurevidence.org/cases/800vdc/events/sungrow-enerneo-certification-2026/"
+  ],
+  "evidence_cutoff": "2026-10-18T14:04:01Z",
+  "content_hash": "96ce0d4e66142efe62991489313ce8835e01e381dc04d6b9767ed12f4bfaeff2",
+  "approval_gate": "HUMAN_GATE_REQUIRED",
+  "status": "AWAITING_HUMAN_REVIEW",
+  "blocker": "X_AUTO_PUBLISH_PAUSED_HUMAN_REVIEW",
+  "x_post_sent": 0,
+  "material_state_transition": false,
+  "factual_status": "PREVIOUSLY_RECORDED_SOURCE_STATEMENT_NOT_A_TODAY_EVENT",
+  "weighted_length": 207,
+  "dedup_check": "Distinct wording from October14-17 main and draft26 candidates; provider history not read",
+  "website_receipt": "SE-WEB-RECHECK-20261018-CLOUD-W42-01"
+}

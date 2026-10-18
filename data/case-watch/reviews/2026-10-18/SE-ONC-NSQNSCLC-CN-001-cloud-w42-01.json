@@ -1,0 +1,145 @@
+{
+  "schema_version": "se-case-review-v2",
+  "case_id": "SE-ONC-NSQNSCLC-CN-001",
+  "review_id": "SE-ONC-REVIEW-20261018-CLOUD-W42-01",
+  "reviewed_at": "2026-10-18T14:04:01Z",
+  "result": "REVIEW_INCOMPLETE",
+  "review_complete": false,
+  "search_boundary": "Sunday limited PubMed/NMPA screen of population, clinical evidence, regulatory state and aggregate outcomes. Index-cohort trial abstract read; two regulator originals unavailable. Squamous studies excluded; no broad review of every modality claimed. No individual prognosis, recommendation or identifiable patient record collected; ECMO remains life support, not cancer therapy.",
+  "sources_checked": [
+    {
+      "source_id": "PUBMED-42307937",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42307937/",
+      "published_at": null,
+      "event_at": "2025-04-12",
+      "retrieved_at": "2026-10-18T14:04:01Z",
+      "originator": "HARMONi-A authors",
+      "publisher": "PubMed / JAMA",
+      "source_type": "TRIAL_REPORT_ABSTRACT",
+      "claim_ids": [
+        "index_cohort",
+        "aggregate_trial_outcomes"
+      ],
+      "depends_on": [],
+      "relation": "EXISTING_CONTEXT_SPECIFIC_EVIDENCE",
+      "verification_status": "PUBLIC_ABSTRACT_READ",
+      "search_boundary": "October18 bounded daily/weekly review",
+      "finding": "Previously included final OS report in defined post-EGFR-TKI cohort; no updated result inferred. Event date here denotes study-data cutoff, not publication or treatment date. Publication timestamp not freshly extracted."
+    },
+    {
+      "source_id": "NMPA-IVONESCIMAB-20240524",
+      "url": "https://www.nmpa.gov.cn/zhuanti/cxylqx/cxypxx/20240524110617125.html",
+      "published_at": "2024-05-24",
+      "event_at": "2024-05-24",
+      "retrieved_at": "2026-10-18T14:04:01Z",
+      "originator": "NMPA",
+      "publisher": "NMPA",
+      "source_type": "REGULATOR_ORIGINAL",
+      "claim_ids": [
+        "regulatory_indication"
+      ],
+      "depends_on": [],
+      "relation": "ACCESS_LIMIT",
+      "verification_status": "INACCESSIBLE",
+      "search_boundary": "October18 bounded daily/weekly review",
+      "finding": "Known baseline regulatory URL failed direct open; current indication not independently refreshed."
+    },
+    {
+      "source_id": "NMPA-20260831-LEAD",
+      "url": "https://www.nmpa.gov.cn/zhuanti/cxylqx/cxypxx/20260831155256126.html",
+      "published_at": "2026-08-31",
+      "event_at": null,
+      "retrieved_at": "2026-10-18T14:04:01Z",
+      "originator": "NMPA",
+      "publisher": "NMPA",
+      "source_type": "SEARCH_LEAD",
+      "claim_ids": [
+        "distinct_population"
+      ],
+      "depends_on": [],
+      "relation": "SCREENED_NOT_ACCEPTED",
+      "verification_status": "SEARCH_SNIPPET_ONLY_ORIGINAL_INACCESSIBLE",
+      "search_boundary": "October18 bounded daily/weekly review",
+      "finding": "Older different-population approval lead; no verified event, treatment-effect claim or changed case state accepted from a search snippet."
+    }
+  ],
+  "source_graph": [
+    {
+      "source_id": "PUBMED-42307937",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42307937/",
+      "published_at": null,
+      "event_at": "2025-04-12",
+      "retrieved_at": "2026-10-18T14:04:01Z",
+      "originator": "HARMONi-A authors",
+      "publisher": "PubMed / JAMA",
+      "source_type": "TRIAL_REPORT_ABSTRACT",
+      "claim_ids": [
+        "index_cohort",
+        "aggregate_trial_outcomes"
+      ],
+      "depends_on": [],
+      "relation": "EXISTING_CONTEXT_SPECIFIC_EVIDENCE",
+      "verification_status": "PUBLIC_ABSTRACT_READ",
+      "search_boundary": "October18 bounded daily/weekly review",
+      "finding": "Previously included final OS report in defined post-EGFR-TKI cohort; no updated result inferred. Event date here denotes study-data cutoff, not publication or treatment date. Publication timestamp not freshly extracted."
+    },
+    {
+      "source_id": "NMPA-IVONESCIMAB-20240524",
+      "url": "https://www.nmpa.gov.cn/zhuanti/cxylqx/cxypxx/20240524110617125.html",
+      "published_at": "2024-05-24",
+      "event_at": "2024-05-24",
+      "retrieved_at": "2026-10-18T14:04:01Z",
+      "originator": "NMPA",
+      "publisher": "NMPA",
+      "source_type": "REGULATOR_ORIGINAL",
+      "claim_ids": [
+        "regulatory_indication"
+      ],
+      "depends_on": [],
+      "relation": "ACCESS_LIMIT",
+      "verification_status": "INACCESSIBLE",
+      "search_boundary": "October18 bounded daily/weekly review",
+      "finding": "Known baseline regulatory URL failed direct open; current indication not independently refreshed."
+    },
+    {
+      "source_id": "NMPA-20260831-LEAD",
+      "url": "https://www.nmpa.gov.cn/zhuanti/cxylqx/cxypxx/20260831155256126.html",
+      "published_at": "2026-08-31",
+      "event_at": null,
+      "retrieved_at": "2026-10-18T14:04:01Z",
+      "originator": "NMPA",
+      "publisher": "NMPA",
+      "source_type": "SEARCH_LEAD",
+      "claim_ids": [
+        "distinct_population"
+      ],
+      "depends_on": [],
+      "relation": "SCREENED_NOT_ACCEPTED",
+      "verification_status": "SEARCH_SNIPPET_ONLY_ORIGINAL_INACCESSIBLE",
+      "search_boundary": "October18 bounded daily/weekly review",
+      "finding": "Older different-population approval lead; no verified event, treatment-effect claim or changed case state accepted from a search snippet."
+    }
+  ],
+  "old_state": "PUBLIC_RESEARCH_PREVIEW",
+  "new_state": "PUBLIC_RESEARCH_PREVIEW",
+  "new_qualifying_evidence_count": 0,
+  "new_counter_evidence_count": 0,
+  "new_sources": 0,
+  "new_attributed_statements": 0,
+  "new_independent_evidence": 0,
+  "new_events": 0,
+  "newly_discovered_old_evidence": 0,
+  "state_changing_evidence": 0,
+  "daily_counters": {
+    "new_sources": 0,
+    "new_attributed_statements": 0,
+    "new_independent_evidence": 0,
+    "new_events": 0,
+    "newly_discovered_old_evidence": 0,
+    "state_changing_evidence": 0
+  },
+  "state_changed": false,
+  "historical_backfill": false,
+  "baseline_sha": "759ccbff7102d01d6fbf3037cfcb26312017a3ed",
+  "management_status": "FOLDED"
+}
