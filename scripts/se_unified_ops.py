@@ -349,7 +349,11 @@ def select_x_candidate(
 
 
 def default_candidate(date_sgt: str, config: dict[str, Any]) -> dict[str, Any]:
-    template = config["x"].get("daily_manual_text_template", config["x"]["method_test_text"])
+    template = config["x"].get("daily_manual_text_template")
+    if template is None:
+        template = config["x"].get("method_test_text")
+    if template is None:
+        raise GateBlocked("no reviewed method candidate template configured")
     text = canonical_post_text(template.format(date_sgt=date_sgt))
     candidate = {
         "schema_version": "se-x-candidate-v2", "candidate_id": f"SE-X-{date_sgt}-METHOD-01",
