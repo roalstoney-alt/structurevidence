@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+from copy import deepcopy
 import subprocess
 import sys
 import unittest
@@ -39,6 +40,25 @@ class PublicRecordExportTest(unittest.TestCase):
                 atomic = json.loads((route / "index.json").read_text())
                 self.assertEqual(atomic["parent_case"], record["case_id"])
                 self.assertTrue((route / "index.html").is_file())
+
+    def test_event_summary_schema_rejects_malformed_provenance(self):
+        schema = json.loads((ROOT / "schemas/case.schema.json").read_text())
+        validator = Draft202012Validator(schema["properties"]["events"], format_checker=FormatChecker())
+        events = json.loads((ROOT / "cases/800vdc/index.json").read_text())["events"]
+        self.assertEqual(list(validator.iter_errors(events)), [])
+        for field, value in [("state_changed", "false"), ("published_at", "2026-99-99"),
+                             ("retrieved_at", None), ("url", "not-a-url"),
+                             ("classifications", []), ("unexpected", True)]:
+            with self.subTest(field=field):
+                malformed = deepcopy(events)
+                malformed[0][field] = value
+                self.assertTrue(list(validator.iter_errors(malformed)))
+        for field in events[0]:
+            with self.subTest(missing=field):
+                malformed = deepcopy(events)
+                del malformed[0][field]
+                self.assertTrue(list(validator.iter_errors(malformed)))
+        self.assertFalse(schema["additionalProperties"])
 
 
 if __name__ == "__main__":

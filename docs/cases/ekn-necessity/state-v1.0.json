@@ -1,0 +1,77 @@
+{
+  "case_id": "SE-EKN-001",
+  "project_id": "EKN-001",
+  "version": "1.0",
+  "as_of": "2026-10-18T09:05:06+08:00",
+  "record_type": "RESEARCH_DECISION_AUDIT",
+  "decision": "HOLD_NEEDS_EVIDENCE",
+  "project_disposition": "FROZEN",
+  "novelty_status": "NOT_ESTABLISHED",
+  "experiment_authorized": false,
+  "g0c_executed": false,
+  "g1_authorized": false,
+  "paid_experiment_runs": 0,
+  "independent_reproductions": 0,
+  "outreach_sent": 0,
+  "ekn_deployed": false,
+  "human_gate_required": true,
+  "evidence_gaps_reported": 11,
+  "evidence_gaps_count_source": "Codex G0b full-text execution receipt; not independently reconciled with private gap register for this public release",
+  "frozen_ekn_v1_sha256": "21e0d5b95f36e4eec2622676a06684d97a355d6b03ef34654de675923bde886d",
+  "baseline_reported_se_main_sha": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+  "main_sha_semantics": "reported earlier project baseline; not publication commit",
+  "scope_limitations": [
+    "No independent reproduction",
+    "No live performance comparison",
+    "No measured full research cost",
+    "No quantified cost savings",
+    "Non-systematic literature review"
+  ],
+  "recorded_checkpoints": [
+    {
+      "at": "2026-10-18T08:00:33+08:00",
+      "phase": "G0",
+      "gaps_reported": 10,
+      "decision": "HOLD"
+    },
+    {
+      "at": "2026-10-18T08:26:06+08:00",
+      "phase": "G0b",
+      "gaps_reported": 12,
+      "decision": "HOLD_NEEDS_EVIDENCE"
+    },
+    {
+      "at": "2026-10-18T08:35:46+08:00",
+      "phase": "G0b_source_recovery",
+      "gaps_reported": 12,
+      "decision": "HOLD_NEEDS_EVIDENCE"
+    },
+    {
+      "at": "2026-10-18T09:05:06+08:00",
+      "phase": "G0b_fulltext",
+      "gaps_reported": 11,
+      "decision": "HOLD_NEEDS_EVIDENCE"
+    }
+  ],
+  "references": [
+    "https://arxiv.org/abs/2511.06309v1",
+    "https://arxiv.org/abs/2608.23691v1",
+    "https://arxiv.org/html/2606.10402v1",
+    "https://arxiv.org/html/2606.10402v2",
+    "https://arxiv.org/abs/2610.08927v1",
+    "https://arxiv.org/abs/2609.33357v1",
+    "https://doi.org/10.1016/0004-3702(79)90008-0"
+  ],
+  "reopen_only_on": [
+    "Independent documented downstream impact with provenance",
+    "Material B1 vs S1 difference and qualified gold standard",
+    "Bounded cost and fresh human authorization"
+  ],
+  "publication_does_not_authorize": [
+    "new EKN deployment",
+    "G1 experiment",
+    "paid model runs",
+    "outreach",
+    "founder submission"
+  ]
+}
