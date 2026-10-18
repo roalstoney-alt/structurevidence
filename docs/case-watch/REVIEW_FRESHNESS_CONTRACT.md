@@ -55,3 +55,7 @@ NSCLC review, with NSCLC remaining folded. Monday adds the private-wall SOCSM
 check. The earlier three-case weekly and separate Irkutsk task descriptions are
 preserved as historical schedule records only and do not authorize parallel
 production timers. See `docs/ops/SE_UNIFIED_RUNTIME_CONTRACT.md`.
+
+## Multi-branch identity rule
+
+The binding engineering standard is [SE-ENG-HISTORY-001](../engineering/SE_HISTORICAL_RECORD_IMMUTABILITY_STANDARD_v1.0.md). An older PR cannot replace an already recorded review or X candidate; conflicting IDs must be reconciled through new, linked artifacts. Protected historical records remain byte-identical while case indexes, latest-view projections and sitemaps may be regenerated.
