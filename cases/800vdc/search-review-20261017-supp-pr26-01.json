@@ -1,0 +1,92 @@
+{
+  "schema_version": "se-case-review-v2",
+  "case_id": "CML-PDRE-001",
+  "review_id": "SE-800V-REVIEW-20261017-SUPP-PR26-01",
+  "reviewed_at": "2026-10-17T14:04:05Z",
+  "result": "HUMAN_GATE_REQUIRED",
+  "review_complete": true,
+  "search_boundary": "Five industry source queries, two issuer/registry queries; primary company announcement read. Source publication verified, underlying certificate/operating claims not accepted. Historical event dated October 15 newly found today.",
+  "sources_checked": [
+    {
+      "source_id": "SUNGROW-1749",
+      "url": "https://cn.sungrowpower.com/news/1749.html",
+      "published_at": "2026-10-15",
+      "event_at": "2026-10-15",
+      "retrieved_at": "2026-10-17T14:04:05Z",
+      "originator": "Sungrow",
+      "publisher": "Sungrow",
+      "source_type": "PRIMARY_CORPORATE_ANNOUNCEMENT",
+      "claim_ids": [
+        "certification"
+      ],
+      "depends_on": [],
+      "relation": "ATTRIBUTED_CLAIM_CANDIDATE",
+      "verification_status": "READ",
+      "search_boundary": "Bounded October 17 public-source review",
+      "finding": "Certification claim preserved for issuer verification, without a stop transition."
+    }
+  ],
+  "source_graph": [
+    {
+      "source_id": "SUNGROW-1749",
+      "url": "https://cn.sungrowpower.com/news/1749.html",
+      "published_at": "2026-10-15",
+      "event_at": "2026-10-15",
+      "retrieved_at": "2026-10-17T14:04:05Z",
+      "originator": "Sungrow",
+      "publisher": "Sungrow",
+      "source_type": "PRIMARY_CORPORATE_ANNOUNCEMENT",
+      "claim_ids": [
+        "certification"
+      ],
+      "depends_on": [],
+      "relation": "ATTRIBUTED_CLAIM_CANDIDATE",
+      "verification_status": "READ",
+      "search_boundary": "Bounded October 17 public-source review",
+      "finding": "Certification claim preserved for issuer verification, without a stop transition."
+    }
+  ],
+  "old_state": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+  "new_state": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+  "new_qualifying_evidence_count": 0,
+  "new_counter_evidence_count": 0,
+  "new_sources": 1,
+  "new_attributed_statements": 2,
+  "new_independent_evidence": 0,
+  "new_events": 0,
+  "newly_discovered_old_evidence": 1,
+  "state_changing_evidence": 0,
+  "daily_counters": {
+    "new_sources": 1,
+    "new_attributed_statements": 2,
+    "new_independent_evidence": 0,
+    "new_events": 0,
+    "newly_discovered_old_evidence": 1,
+    "state_changing_evidence": 0
+  },
+  "state_changed": false,
+  "private_branch_excluded": true,
+  "event_ids": [
+    "SE-EVENT-CML-PDRE-001-20261015-SUNGROW-CERTIFICATION"
+  ],
+  "review_kind": "SUPPLEMENTAL_RECONCILIATION",
+  "reconciled_at": "2026-10-18T02:32:55.321002+00:00",
+  "not_a_new_source_review": true,
+  "original_record": {
+    "pr": 26,
+    "commit_sha": "0c8b940c3a3a6079e6260ddde89f2af5ca354d93",
+    "path": "cases/800vdc/search-review-20261017-01.json",
+    "sha256": "86c0b8c2b41deeba4edc0241f46ae97fa5eec9a86e88cb4ab7a13622c69dbd5f",
+    "review_id": "SE-800V-REVIEW-20261017-01",
+    "publication_status": "ORIGINAL_UNPUBLISHED_CANDIDATE_PRESERVED"
+  },
+  "existing_daily_review": {
+    "path": "data/case-watch/reviews/2026-10-17/CML-PDRE-001.json",
+    "review_id": "SE-800V-REVIEW-20261017-01",
+    "sha256": "f081f840fb0b8e9fe4d7b648d03785dccb966a095492f5227668bf6b49364271"
+  },
+  "evidence_state_as_of": "2026-09-20T10:46:47Z",
+  "last_material_change": "2026-09-20",
+  "historical_backfill": true,
+  "aggregation_policy": "Supplemental stream only; do not rewrite or recount the published October 17 daily report."
+}

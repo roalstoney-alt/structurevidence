@@ -1,0 +1,22 @@
+{
+  "schema_version": "se-supplemental-source-v1",
+  "source_id": "SE-SOURCE-CML-PDRE-001-SUNGROW-1749-v1",
+  "original_url": "https://cn.sungrowpower.com/news/1749.html",
+  "originator": "Sungrow / Sungrow AIDC business",
+  "publisher": "Sungrow corporate newsroom",
+  "published_at": "2026-10-15",
+  "event_at": "2026-10-15",
+  "first_observed_at": "2026-10-17T14:04:05Z",
+  "verification_status": "INHERITED_BOUNDED_PRIMARY_SOURCE_REVIEW",
+  "verification_scope": "The company statement was read; its underlying certification claims remain attributed and unaccepted.",
+  "independent_issuer_verification": "NOT_ESTABLISHED",
+  "original_pr": 26,
+  "original_commit_sha": "0c8b940c3a3a6079e6260ddde89f2af5ca354d93",
+  "original_snapshot_path": "cases/800vdc/events/sungrow-enerneo-certification-2026/snapshot-v1.json",
+  "snapshot_path": "cases/800vdc/events/sungrow-enerneo-certification-2026/snapshot-v1.json",
+  "snapshot_sha256": "574c58de9d696546fed3f268b9fa02786e4a50ffe4e04616ddd0e06fdaf69f2a",
+  "full_original_saved": false,
+  "review_id": "SE-800V-REVIEW-20261017-SUPP-PR26-01",
+  "reconciled_at": "2026-10-18T02:32:55.321002+00:00",
+  "fresh_source_retrieval": "BLOCKED_BY_NETWORK_PROXY_HTTP_403; no new retrieval timestamp asserted"
+}
