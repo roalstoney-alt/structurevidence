@@ -1,0 +1,286 @@
+{
+  "schema_version": "se-unified-run-v1",
+  "run_id": "SE-OPS-20261018-2200-faaee660-4218-54d9-9cd0-76de68fe77f2",
+  "date_sgt": "2026-10-18",
+  "scheduled_at": "2026-10-18T22:00:00+08:00",
+  "started_at": "2026-10-18T14:12:34Z",
+  "ended_at": "2026-10-18T14:12:34Z",
+  "report_delivered_at": null,
+  "repo_baseline_sha": "62acc0e4a6773bcf6014eb759b362978cf5efe6a",
+  "repo_final_sha": null,
+  "pipeline": {
+    "scheduler": "PASS",
+    "cases": "PARTIAL",
+    "cml_ingestion": "UNVERIFIED",
+    "x_publish": "BLOCKED",
+    "audit_persistence": "PASS",
+    "external_delivery": "BLOCKED"
+  },
+  "reviews": [
+    {
+      "case_id": "CML-PDRE-001",
+      "review_id": "SE-800V-REVIEW-20261018-01",
+      "reviewed_at": "2026-10-18T14:04:05Z",
+      "result": "NO_STATE_CHANGE",
+      "review_complete": true,
+      "classifications": [
+        "NO_STATE_CHANGE"
+      ],
+      "search_boundary": "Targeted official-source review; see data/case-watch/reviews/2026-10-18/CML-PDRE-001.json.",
+      "sources_checked": [
+        {
+          "url": "https://www.chindatagroup.com/media/news/533.html",
+          "status": "READ"
+        },
+        {
+          "url": "https://www.vertiv.com/en-ca/about/news-and-events/events/ocp-global-summit-2026/",
+          "status": "READ"
+        },
+        {
+          "url": "https://server-china.sungrowpower.com/news/1749.html",
+          "status": "READ_EXISTING_RECORD_REVERIFIED"
+        }
+      ],
+      "new_sources": 0,
+      "new_attributed_statements": 0,
+      "new_independent_evidence": 0,
+      "new_events": 0,
+      "newly_discovered_old_evidence": 0,
+      "state_changing_evidence": 0,
+      "old_state": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+      "new_state": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+      "new_qualifying_evidence_count": 0,
+      "new_counter_evidence_count": 0
+    },
+    {
+      "case_id": "SE-BESS-SODIUM-001",
+      "review_id": "SE-SODIUM-REVIEW-20261018-01",
+      "reviewed_at": "2026-10-18T14:04:05Z",
+      "result": "HUMAN_GATE_REQUIRED",
+      "review_complete": true,
+      "classifications": [
+        "NO_STATE_CHANGE",
+        "HUMAN_GATE_REQUIRED"
+      ],
+      "search_boundary": "Targeted official-source review; see data/case-watch/reviews/2026-10-18/SE-BESS-SODIUM-001.json.",
+      "sources_checked": [
+        {
+          "url": "https://www.moonwatt.com/2026/06/22/moonwatt-commissions-the-first-distributed-sodium-ion-battery-system-purpose-built-for-hybrid-solar-plants/",
+          "status": "READ"
+        },
+        {
+          "url": "https://cleantechparkarnhem.nl/nieuws/moonwatt-koppelt-natrium-ionbatterij-aan-zonnepark-op-cleantech-park-arnhem/",
+          "status": "READ"
+        }
+      ],
+      "new_sources": 0,
+      "new_attributed_statements": 0,
+      "new_independent_evidence": 0,
+      "new_events": 0,
+      "newly_discovered_old_evidence": 0,
+      "state_changing_evidence": 0,
+      "old_state": "NAMED_COMMISSIONED_SITE_NOT_ESTABLISHED",
+      "new_state": "NAMED_COMMISSIONED_SITE_NOT_ESTABLISHED",
+      "new_qualifying_evidence_count": 0,
+      "new_counter_evidence_count": 0
+    },
+    {
+      "case_id": "SE-IRK-LAB-001",
+      "review_id": "SE-IRK-REVIEW-20261018-01",
+      "reviewed_at": "2026-10-18T14:04:05Z",
+      "result": "REVIEW_INCOMPLETE",
+      "review_complete": false,
+      "classifications": [
+        "NO_STATE_CHANGE",
+        "HUMAN_GATE_REQUIRED"
+      ],
+      "search_boundary": "One consolidated Irkutsk search group and two institutional-source opens; see data/case-watch/reviews/2026-10-18/SE-IRK-LAB-001.json.",
+      "search_budget": {
+        "targeted_search_groups": 1,
+        "webpage_open_attempts": 2
+      },
+      "source_graph": [
+        {
+          "source_id": "WHO-DON620",
+          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON620/",
+          "retrieved_at": "2026-10-18T14:04:05Z",
+          "originator": "WHO with Russian Federation IHR National Focal Point",
+          "publisher": "WHO",
+          "source_type": "INSTITUTIONAL_ASSESSMENT_AND_RELAY",
+          "claim_ids": [
+            "cause"
+          ],
+          "depends_on": [
+            "RF-IHR-NFP"
+          ],
+          "relation": "SUPPORT_WITH_UNCERTAINTY",
+          "verification_status": "READ",
+          "search_boundary": "WHO/IHR public record"
+        },
+        {
+          "source_id": "ECDC-W42-2026",
+          "url": "https://www.ecdc.europa.eu/sites/default/files/documents/communicable-disease-threats-report-week-42-2026.pdf",
+          "retrieved_at": "2026-10-18T14:04:05Z",
+          "originator": "ECDC with dependent source chain",
+          "publisher": "ECDC",
+          "source_type": "INSTITUTIONAL_ASSESSMENT_AND_DERIVATIVE_SUMMARY",
+          "claim_ids": [
+            "diagnostic_uncertainty",
+            "eu_risk"
+          ],
+          "depends_on": [
+            "WHO-DON620",
+            "RUSSIAN-IHR-NFP-ATTRIBUTION",
+            "MEDIA-CHAIN-ECDC-W42"
+          ],
+          "relation": "SUPPORT_WITH_DEPENDENCY",
+          "verification_status": "READ",
+          "search_boundary": "institutional surveillance publication"
+        }
+      ],
+      "sources_checked": [
+        {
+          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON620/",
+          "status": "READ"
+        },
+        {
+          "url": "https://www.ecdc.europa.eu/sites/default/files/documents/communicable-disease-threats-report-week-42-2026.pdf",
+          "status": "READ"
+        }
+      ],
+      "new_sources": 0,
+      "new_attributed_statements": 0,
+      "new_independent_evidence": 0,
+      "new_events": 0,
+      "newly_discovered_old_evidence": 0,
+      "state_changing_evidence": 0,
+      "old_state": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+      "new_state": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+      "new_qualifying_evidence_count": 0,
+      "new_counter_evidence_count": 0
+    },
+    {
+      "case_id": "SE-ONC-NSQNSCLC-CN-001",
+      "review_id": "SE-NSCLC-REVIEW-20261018-01",
+      "reviewed_at": "2026-10-18T14:04:05Z",
+      "result": "HUMAN_GATE_REQUIRED",
+      "review_complete": true,
+      "classifications": [
+        "NEWLY_DISCOVERED_OLD_EVIDENCE",
+        "NO_STATE_CHANGE",
+        "HUMAN_GATE_REQUIRED"
+      ],
+      "search_boundary": "Bounded Sunday PubMed review; see data/case-watch/reviews/2026-10-18/SE-ONC-NSQNSCLC-CN-001.json.",
+      "sources_checked": [
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42636833/",
+          "status": "READ"
+        },
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42805208/",
+          "status": "METADATA_LINKED_TEXT_NOT_REVIEWED"
+        },
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42307937/",
+          "status": "READ_BASELINE_COMPARISON"
+        }
+      ],
+      "new_sources": 1,
+      "new_attributed_statements": 5,
+      "new_independent_evidence": 1,
+      "new_events": 0,
+      "newly_discovered_old_evidence": 1,
+      "state_changing_evidence": 0,
+      "old_state": "PUBLIC_RESEARCH_PREVIEW_PERSONAL_ESTIMATE_NOT_ESTABLISHED",
+      "new_state": "PUBLIC_RESEARCH_PREVIEW_PERSONAL_ESTIMATE_NOT_ESTABLISHED",
+      "new_qualifying_evidence_count": 1,
+      "new_counter_evidence_count": 0
+    }
+  ],
+  "x": {
+    "account": "@structevidence",
+    "publication_authorized": false,
+    "account_verified": false,
+    "candidate_file": "data/ops/se/x-candidates/2026-10-18.json",
+    "post_id": null,
+    "post_url": null,
+    "posted_at": null,
+    "result": "AWAITING_HUMAN_REVIEW",
+    "blocker": "X_AUTO_PUBLISH_PAUSED_HUMAN_REVIEW"
+  },
+  "internal_workflows": {
+    "sunday_weekly_synthesis": {
+      "due": true,
+      "state": "PASS",
+      "artifact": "data/case-watch/weekly/2026-W42.json"
+    },
+    "monday_socsm": {
+      "due": false,
+      "state": "NOT_DUE",
+      "artifact": null,
+      "public_projection": "PRIVATE"
+    }
+  },
+  "receipt_ids": [],
+  "alerts": [
+    {
+      "code": "OBSERVABILITY_BLOCKED",
+      "dedupe_key": "CROSS_PROJECT:2026-10-18",
+      "detail": "No verified CML/LoveTimeline run evidence was supplied."
+    },
+    {
+      "code": "X_HUMAN_REVIEW_REQUIRED",
+      "dedupe_key": "X:2026-10-18:X_HUMAN_REVIEW_REQUIRED",
+      "detail": "X_AUTO_PUBLISH_PAUSED_HUMAN_REVIEW"
+    },
+    {
+      "code": "MISSING_RUN_DETECTION_NOT_INDEPENDENT",
+      "dedupe_key": "MISSING_HEARTBEAT:2026-10-18",
+      "detail": "No independent health surface has been verified."
+    }
+  ],
+  "events": [
+    {
+      "event_id": "ebbdf124583642379afd05ef3bb1b94e42092c4a40a619a9f8f8579f85c2478b",
+      "event": "SCHEDULED",
+      "stage": "scheduler",
+      "at": "2026-10-18T14:12:34Z",
+      "proof": "2026-10-18T22:00:00+08:00"
+    },
+    {
+      "event_id": "f4a1f27c3d4ec1e6f7da07d114dd038717e1d0aa44ad5e55f2006e5d964ae94b",
+      "event": "STARTED",
+      "stage": "orchestrator",
+      "at": "2026-10-18T14:12:34Z"
+    },
+    {
+      "event_id": "dc6b16ad49a5fb847305fba0468629879ed7daa7212ecfeb29aa5ee64aa737ee",
+      "event": "SEARCH_COMPLETED",
+      "stage": "cases",
+      "at": "2026-10-18T14:12:34Z",
+      "proof": "data/ops/se/review-inputs/2026-10-18.json"
+    },
+    {
+      "event_id": "6c3d6b305e6e3ef37e920f1d71ef9fde9590ef2afdf3481d2a21ca107803a17f",
+      "event": "ARTIFACT_CREATED",
+      "stage": "x_candidate",
+      "at": "2026-10-18T14:12:34Z",
+      "proof": "data/ops/se/x-candidates/2026-10-18.json"
+    },
+    {
+      "event_id": "07cd89dff309934266d837503dd569600ea12abdc40c881757efda4e9f34636c",
+      "event": "ARTIFACT_CREATED",
+      "stage": "alerts",
+      "at": "2026-10-18T14:12:35Z",
+      "proof": "data/ops/se/alerts/2026-10-18.json"
+    },
+    {
+      "event_id": "ecc5e836b24c2758cf1bae02bb2635fa3f65a9401fc1597f307495b7e0b24ead",
+      "event": "ARTIFACT_CREATED",
+      "stage": "daily_report",
+      "at": "2026-10-18T14:12:35Z",
+      "proof": "data/ops/se/reports/2026-10-18.md"
+    }
+  ],
+  "outcome": "PARTIAL"
+}
