@@ -1,0 +1,2925 @@
+{
+  "project": "STRUCTEVIDENCE",
+  "case": "SE-EKN-001",
+  "pr": 28,
+  "as_of": "2026-10-18T01:51:35.509642+00:00",
+  "baseline_result": "FAIL_PREEXISTING_SCHEMA_EXPORT_MISMATCH",
+  "original_pr_result": "FAIL_IDENTICAL_TO_BASELINE",
+  "fixed_pr_result": "PASS_EXACT_REPRODUCTION_TEST",
+  "fix_sha": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+  "reproduction": {
+    "as_of": "2026-10-18T09:46:32.431022+08:00",
+    "results": [
+      {
+        "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+        "name": "baseline",
+        "command": [
+          "python",
+          "-m",
+          "unittest",
+          "-v",
+          "tests.test_public_record_export.PublicRecordExportTest.test_case_json_schema"
+        ],
+        "exit_code": 1,
+        "assertion": "self.assertEqual(list(validator.iter_errors(record)), [], slug)",
+        "test_path": "tests/test_public_record_export.py:32",
+        "schema_file": "schemas/case.schema.json",
+        "record_file": "cases/800vdc/index.json",
+        "schema_sha256": "42a059026cf60162aa42bffbfb82f9069e8bb012fb8f8803b6d1958686f17bc8",
+        "record_sha256": "05bdf034cc79b67eb5fa2258d6f08d544f89e2938a816620c184855aa7ed50b8",
+        "accepted_state": {
+          "current_state": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+          "as_of": "2026-09-20T10:46:47Z",
+          "last_material_change": "2026-09-20"
+        },
+        "actual_events": [
+          {
+            "event_id": "SE-EVENT-CML-PDRE-001-20261013-SOLAREDGE-OCP",
+            "classifications": [
+              "NEW_EVENT",
+              "NO_STATE_CHANGE"
+            ],
+            "published_at": "2026-10-13",
+            "event_at": "2026-10-12/2026-10-15",
+            "retrieved_at": "2026-10-15T15:28:53Z",
+            "state_changed": false,
+            "url": "https://structurevidence.org/cases/800vdc/events/solaredge-ocp-2026/",
+            "record_path": "cases/800vdc/events/solaredge-ocp-2026/index.json"
+          }
+        ],
+        "errors": [
+          {
+            "message": "Additional properties are not allowed ('events' was unexpected)",
+            "schema_path": [
+              "additionalProperties"
+            ],
+            "instance_path": [],
+            "validator": "additionalProperties",
+            "validator_value": false
+          }
+        ]
+      },
+      {
+        "revision": "1b30e917d7a975151490efbef3be5035095a5b23",
+        "name": "pr28",
+        "command": [
+          "python",
+          "-m",
+          "unittest",
+          "-v",
+          "tests.test_public_record_export.PublicRecordExportTest.test_case_json_schema"
+        ],
+        "exit_code": 1,
+        "assertion": "self.assertEqual(list(validator.iter_errors(record)), [], slug)",
+        "test_path": "tests/test_public_record_export.py:32",
+        "schema_file": "schemas/case.schema.json",
+        "record_file": "cases/800vdc/index.json",
+        "schema_sha256": "42a059026cf60162aa42bffbfb82f9069e8bb012fb8f8803b6d1958686f17bc8",
+        "record_sha256": "05bdf034cc79b67eb5fa2258d6f08d544f89e2938a816620c184855aa7ed50b8",
+        "accepted_state": {
+          "current_state": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+          "as_of": "2026-09-20T10:46:47Z",
+          "last_material_change": "2026-09-20"
+        },
+        "actual_events": [
+          {
+            "event_id": "SE-EVENT-CML-PDRE-001-20261013-SOLAREDGE-OCP",
+            "classifications": [
+              "NEW_EVENT",
+              "NO_STATE_CHANGE"
+            ],
+            "published_at": "2026-10-13",
+            "event_at": "2026-10-12/2026-10-15",
+            "retrieved_at": "2026-10-15T15:28:53Z",
+            "state_changed": false,
+            "url": "https://structurevidence.org/cases/800vdc/events/solaredge-ocp-2026/",
+            "record_path": "cases/800vdc/events/solaredge-ocp-2026/index.json"
+          }
+        ],
+        "errors": [
+          {
+            "message": "Additional properties are not allowed ('events' was unexpected)",
+            "schema_path": [
+              "additionalProperties"
+            ],
+            "instance_path": [],
+            "validator": "additionalProperties",
+            "validator_value": false
+          }
+        ]
+      }
+    ]
+  },
+  "full_regression": {
+    "baseline_files": 109,
+    "baseline_pass": 69,
+    "fixed_files": 110,
+    "fixed_pass": 71,
+    "remaining_nonpassing_files": [
+      "scripts/test_agent_api_subdomain_routing.py",
+      "scripts/test_agent_discovery.py",
+      "scripts/test_cml_ov_phase_a.py",
+      "scripts/test_cml_ov_phase_b.py",
+      "scripts/test_cml_ov_phase_b_r1.py",
+      "scripts/test_cml_pdre_001_init.py",
+      "scripts/test_cml_site_metadata.py",
+      "scripts/test_cml_v01.py",
+      "scripts/test_cml_v11_final.py",
+      "scripts/test_cml_v11_regression_harness.py",
+      "scripts/test_cml_v11_transition.py",
+      "scripts/test_commercial_domain_split.py",
+      "scripts/test_commercial_v09.py",
+      "scripts/test_customer_intake_phase_b.py",
+      "scripts/test_doi_scholarly_record_v02.py",
+      "scripts/test_english_public_surface.py",
+      "scripts/test_minimal_method_hardening_v01.py",
+      "scripts/test_monitoring_public_surface.py",
+      "scripts/test_monitoring_ui.py",
+      "scripts/test_oil_genesis_stage1.py",
+      "scripts/test_oil_genesis_stage2.py",
+      "scripts/test_oil_genesis_stage3.py",
+      "scripts/test_oil_genesis_stage3_final_outreach_execution.py",
+      "scripts/test_oil_genesis_stage3_human_review.py",
+      "scripts/test_oil_genesis_stage3_send_decision.py",
+      "scripts/test_paid_pdf_security.py",
+      "scripts/test_paid_readiness_ui.py",
+      "scripts/test_public_case_primitives_v01.py",
+      "scripts/test_question_evidence_commerce_protocol.py",
+      "scripts/test_r1_human_surface.py",
+      "scripts/test_rdl_l1_field_deployment.py",
+      "scripts/test_rdl_l1_human_review_freeze.py",
+      "scripts/test_rdl_phase2_5_allocation.py",
+      "scripts/test_rdl_phase2_5h_allocation_freeze.py",
+      "scripts/test_rdl_phase2_cml_pdre_001.py",
+      "scripts/test_rdl_research_record.py",
+      "scripts/test_temporal_state_chain_v01.py",
+      "scripts/test_timeline_r1_1a_commit_lineage.py",
+      "scripts/test_timeline_r1_1a_gate_reporting.py"
+    ],
+    "file_exit_changes": [
+      {
+        "file": "tests/test_public_record_export.py",
+        "baseline": 1,
+        "fixed": 0
+      }
+    ]
+  },
+  "runs": [
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_agent_api_subdomain_routing.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "scripts.test_agent_api_subdomain_routing"
+      ],
+      "exit_code": 1,
+      "seconds": 0.15
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_agent_discovery.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "scripts.test_agent_discovery"
+      ],
+      "exit_code": 1,
+      "seconds": 0.21
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_batch01.py",
+      "command": [
+        "python",
+        "scripts/test_batch01.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.05
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_batch01_r1.py",
+      "command": [
+        "python",
+        "scripts/test_batch01_r1.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.04
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_case_review_status.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "scripts.test_case_review_status"
+      ],
+      "exit_code": 0,
+      "seconds": 0.12
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_case_watch.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "scripts.test_case_watch"
+      ],
+      "exit_code": 0,
+      "seconds": 0.2
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_cml_dictionary_drift.py",
+      "command": [
+        "python",
+        "scripts/test_cml_dictionary_drift.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.04
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_cml_freshness_vocabulary.py",
+      "command": [
+        "python",
+        "scripts/test_cml_freshness_vocabulary.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.02
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_cml_gate_registry.py",
+      "command": [
+        "python",
+        "scripts/test_cml_gate_registry.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.02
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_cml_gdr_adapter.py",
+      "command": [
+        "python",
+        "scripts/test_cml_gdr_adapter.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.03
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_cml_ov_phase_a.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "scripts.test_cml_ov_phase_a"
+      ],
+      "exit_code": 1,
+      "seconds": 0.34
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_cml_ov_phase_b.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "scripts.test_cml_ov_phase_b"
+      ],
+      "exit_code": 1,
+      "seconds": 0.73
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_cml_ov_phase_b_r1.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "scripts.test_cml_ov_phase_b_r1"
+      ],
+      "exit_code": 1,
+      "seconds": 0.35
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_cml_ov_phase_c0.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "scripts.test_cml_ov_phase_c0"
+      ],
+      "exit_code": 0,
+      "seconds": 0.39
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_cml_pdre_001_evp_001.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "scripts.test_cml_pdre_001_evp_001"
+      ],
+      "exit_code": 0,
+      "seconds": 0.21
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_cml_pdre_001_init.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "scripts.test_cml_pdre_001_init"
+      ],
+      "exit_code": 1,
+      "seconds": 0.07
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_cml_site_metadata.py",
+      "command": [
+        "python",
+        "scripts/test_cml_site_metadata.py"
+      ],
+      "exit_code": 1,
+      "seconds": 0.02
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_cml_v01.py",
+      "command": [
+        "python",
+        "scripts/test_cml_v01.py"
+      ],
+      "exit_code": 1,
+      "seconds": 0.16
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_cml_v11_core.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "scripts.test_cml_v11_core"
+      ],
+      "exit_code": 0,
+      "seconds": 0.73
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_cml_v11_final.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "scripts.test_cml_v11_final"
+      ],
+      "exit_code": 1,
+      "seconds": 3.12
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_cml_v11_observation.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "scripts.test_cml_v11_observation"
+      ],
+      "exit_code": 0,
+      "seconds": 0.47
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_cml_v11_regression_harness.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "scripts.test_cml_v11_regression_harness"
+      ],
+      "exit_code": 1,
+      "seconds": 0.75
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_cml_v11_transition.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "scripts.test_cml_v11_transition"
+      ],
+      "exit_code": 1,
+      "seconds": 0.54
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_cml_version_history.py",
+      "command": [
+        "python",
+        "scripts/test_cml_version_history.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.02
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_commercial_domain_split.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "scripts.test_commercial_domain_split"
+      ],
+      "exit_code": 1,
+      "seconds": 0.07
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_commercial_i18n.py",
+      "command": [
+        "python",
+        "-m",
+        "pytest",
+        "-q",
+        "scripts/test_commercial_i18n.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.22
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_commercial_readiness.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "scripts.test_commercial_readiness"
+      ],
+      "exit_code": 0,
+      "seconds": 0.07
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_commercial_v09.py",
+      "command": [
+        "python",
+        "scripts/test_commercial_v09.py"
+      ],
+      "exit_code": 1,
+      "seconds": 0.03
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_customer_intake_phase_b.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "scripts.test_customer_intake_phase_b"
+      ],
+      "exit_code": 1,
+      "seconds": 0.08
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_decision_memory_v01.py",
+      "command": [
+        "python",
+        "-m",
+        "pytest",
+        "-q",
+        "scripts/test_decision_memory_v01.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.27
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_doi_scholarly_record_v02.py",
+      "command": [
+        "python",
+        "scripts/test_doi_scholarly_record_v02.py"
+      ],
+      "exit_code": 1,
+      "seconds": 0.03
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_english_public_surface.py",
+      "command": [
+        "python",
+        "scripts/test_english_public_surface.py"
+      ],
+      "exit_code": 1,
+      "seconds": 0.08
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_gdr_se.py",
+      "command": [
+        "python",
+        "scripts/test_gdr_se.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.05
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_gdr_se_aggregation_config.py",
+      "command": [
+        "python",
+        "scripts/test_gdr_se_aggregation_config.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.04
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_gdr_se_clock.py",
+      "command": [
+        "python",
+        "scripts/test_gdr_se_clock.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.06
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_gdr_se_counter_evidence.py",
+      "command": [
+        "python",
+        "scripts/test_gdr_se_counter_evidence.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.06
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_gdr_se_freshness.py",
+      "command": [
+        "python",
+        "scripts/test_gdr_se_freshness.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.03
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_gdr_se_paid_delivery.py",
+      "command": [
+        "python",
+        "scripts/test_gdr_se_paid_delivery.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.03
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_gdr_se_provenance.py",
+      "command": [
+        "python",
+        "scripts/test_gdr_se_provenance.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.06
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_gdr_se_runtime.py",
+      "command": [
+        "python",
+        "scripts/test_gdr_se_runtime.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.06
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_gdr_se_strategy_profile.py",
+      "command": [
+        "python",
+        "scripts/test_gdr_se_strategy_profile.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.05
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_global_market_nodes.py",
+      "command": [
+        "python",
+        "-m",
+        "pytest",
+        "-q",
+        "scripts/test_global_market_nodes.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.23
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_information_event_dual_axis.py",
+      "command": [
+        "python",
+        "scripts/test_information_event_dual_axis.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.03
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_irkutsk_alias_repair.py",
+      "command": [
+        "python",
+        "scripts/test_irkutsk_alias_repair.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.07
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_irkutsk_publication.py",
+      "command": [
+        "python",
+        "scripts/test_irkutsk_publication.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.03
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_minimal_method_hardening_v01.py",
+      "command": [
+        "python",
+        "scripts/test_minimal_method_hardening_v01.py"
+      ],
+      "exit_code": 1,
+      "seconds": 0.15
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_monitoring_bnb.py",
+      "command": [
+        "python",
+        "scripts/test_monitoring_bnb.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.03
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_monitoring_builder.py",
+      "command": [
+        "python",
+        "scripts/test_monitoring_builder.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.04
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_monitoring_gdr_adapter.py",
+      "command": [
+        "python",
+        "scripts/test_monitoring_gdr_adapter.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.03
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_monitoring_hash_integrity.py",
+      "command": [
+        "python",
+        "scripts/test_monitoring_hash_integrity.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.03
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_monitoring_level_delta.py",
+      "command": [
+        "python",
+        "scripts/test_monitoring_level_delta.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.03
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_monitoring_no_lookahead.py",
+      "command": [
+        "python",
+        "scripts/test_monitoring_no_lookahead.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.03
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_monitoring_provenance.py",
+      "command": [
+        "python",
+        "scripts/test_monitoring_provenance.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.03
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_monitoring_public_surface.py",
+      "command": [
+        "python",
+        "scripts/test_monitoring_public_surface.py"
+      ],
+      "exit_code": 1,
+      "seconds": 0.03
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_monitoring_schema.py",
+      "command": [
+        "python",
+        "scripts/test_monitoring_schema.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.23
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_monitoring_snapshot_pdf.py",
+      "command": [
+        "python",
+        "scripts/test_monitoring_snapshot_pdf.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.14
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_monitoring_ui.py",
+      "command": [
+        "python",
+        "scripts/test_monitoring_ui.py"
+      ],
+      "exit_code": 1,
+      "seconds": 0.04
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_oil_genesis_paused_handoff.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "scripts.test_oil_genesis_paused_handoff"
+      ],
+      "exit_code": 0,
+      "seconds": 0.08
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_oil_genesis_stage1.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "scripts.test_oil_genesis_stage1"
+      ],
+      "exit_code": 1,
+      "seconds": 0.08
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_oil_genesis_stage2.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "scripts.test_oil_genesis_stage2"
+      ],
+      "exit_code": 1,
+      "seconds": 0.07
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_oil_genesis_stage3.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "scripts.test_oil_genesis_stage3"
+      ],
+      "exit_code": 1,
+      "seconds": 0.08
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_oil_genesis_stage3_final_outreach_execution.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "scripts.test_oil_genesis_stage3_final_outreach_execution"
+      ],
+      "exit_code": 1,
+      "seconds": 0.1
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_oil_genesis_stage3_human_review.py",
+      "command": [
+        "python",
+        "scripts/test_oil_genesis_stage3_human_review.py"
+      ],
+      "exit_code": 5,
+      "seconds": 0.08
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_oil_genesis_stage3_send_decision.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "scripts.test_oil_genesis_stage3_send_decision"
+      ],
+      "exit_code": 1,
+      "seconds": 0.08
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_org_gaps_discovery.py",
+      "command": [
+        "python",
+        "scripts/test_org_gaps_discovery.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.03
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_paid_pdf.py",
+      "command": [
+        "python",
+        "scripts/test_paid_pdf.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.22
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_paid_pdf_authorization.py",
+      "command": [
+        "python",
+        "scripts/test_paid_pdf_authorization.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.14
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_paid_pdf_render.py",
+      "command": [
+        "python",
+        "scripts/test_paid_pdf_render.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.22
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_paid_pdf_security.py",
+      "command": [
+        "python",
+        "scripts/test_paid_pdf_security.py"
+      ],
+      "exit_code": 1,
+      "seconds": 0.04
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_paid_readiness_ui.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "scripts.test_paid_readiness_ui"
+      ],
+      "exit_code": 1,
+      "seconds": 0.08
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_public_case_primitives_v01.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "scripts.test_public_case_primitives_v01"
+      ],
+      "exit_code": 1,
+      "seconds": 0.31
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_public_commercial_boundary.py",
+      "command": [
+        "python",
+        "scripts/test_public_commercial_boundary.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.03
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_question_evidence_commerce_protocol.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "scripts.test_question_evidence_commerce_protocol"
+      ],
+      "exit_code": 1,
+      "seconds": 0.37
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_r1_human_surface.py",
+      "command": [
+        "python",
+        "scripts/test_r1_human_surface.py"
+      ],
+      "exit_code": 1,
+      "seconds": 0.07
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_rdl_freshness_gdr.py",
+      "command": [
+        "python",
+        "scripts/test_rdl_freshness_gdr.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.06
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_rdl_freshness_policy.py",
+      "command": [
+        "python",
+        "scripts/test_rdl_freshness_policy.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.02
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_rdl_freshness_runtime.py",
+      "command": [
+        "python",
+        "scripts/test_rdl_freshness_runtime.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.12
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_rdl_freshness_validation.py",
+      "command": [
+        "python",
+        "scripts/test_rdl_freshness_validation.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.05
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_rdl_l1_field_deployment.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "scripts.test_rdl_l1_field_deployment"
+      ],
+      "exit_code": 1,
+      "seconds": 0.77
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_rdl_l1_human_review_freeze.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "scripts.test_rdl_l1_human_review_freeze"
+      ],
+      "exit_code": 1,
+      "seconds": 0.54
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_rdl_phase2_5_allocation.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "scripts.test_rdl_phase2_5_allocation"
+      ],
+      "exit_code": 1,
+      "seconds": 0.78
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_rdl_phase2_5h_allocation_freeze.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "scripts.test_rdl_phase2_5h_allocation_freeze"
+      ],
+      "exit_code": 1,
+      "seconds": 0.87
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_rdl_phase2_cml_pdre_001.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "scripts.test_rdl_phase2_cml_pdre_001"
+      ],
+      "exit_code": 1,
+      "seconds": 0.86
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_rdl_research_record.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "scripts.test_rdl_research_record"
+      ],
+      "exit_code": 1,
+      "seconds": 1.67
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_se_event_updates.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "scripts.test_se_event_updates"
+      ],
+      "exit_code": 0,
+      "seconds": 0.09
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_se_unified_ops.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "scripts.test_se_unified_ops"
+      ],
+      "exit_code": 0,
+      "seconds": 0.09
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_temporal_state_chain_v01.py",
+      "command": [
+        "python",
+        "scripts/test_temporal_state_chain_v01.py"
+      ],
+      "exit_code": 1,
+      "seconds": 0.04
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_timeline_model.py",
+      "command": [
+        "python",
+        "scripts/test_timeline_model.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.75
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_timeline_r1_1_comparability.py",
+      "command": [
+        "python",
+        "scripts/test_timeline_r1_1_comparability.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.57
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_timeline_r1_1_level_delta.py",
+      "command": [
+        "python",
+        "scripts/test_timeline_r1_1_level_delta.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.58
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_timeline_r1_1_shift_semantics.py",
+      "command": [
+        "python",
+        "scripts/test_timeline_r1_1_shift_semantics.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.55
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_timeline_r1_1_ui.py",
+      "command": [
+        "python",
+        "scripts/test_timeline_r1_1_ui.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.16
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_timeline_r1_1a_append_simulation.py",
+      "command": [
+        "python",
+        "scripts/test_timeline_r1_1a_append_simulation.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.06
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_timeline_r1_1a_clock.py",
+      "command": [
+        "python",
+        "scripts/test_timeline_r1_1a_clock.py"
+      ],
+      "exit_code": 0,
+      "seconds": 1.61
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_timeline_r1_1a_commit_lineage.py",
+      "command": [
+        "python",
+        "scripts/test_timeline_r1_1a_commit_lineage.py"
+      ],
+      "exit_code": 1,
+      "seconds": 0.1
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_timeline_r1_1a_gate_reporting.py",
+      "command": [
+        "python",
+        "scripts/test_timeline_r1_1a_gate_reporting.py"
+      ],
+      "exit_code": 1,
+      "seconds": 2.21
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_timeline_r1_1a_prior_runtime.py",
+      "command": [
+        "python",
+        "scripts/test_timeline_r1_1a_prior_runtime.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.13
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_timeline_r1_aggregation.py",
+      "command": [
+        "python",
+        "scripts/test_timeline_r1_aggregation.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.7
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_timeline_r1_atomic.py",
+      "command": [
+        "python",
+        "scripts/test_timeline_r1_atomic.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.65
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_timeline_r1_evidence_dynamics.py",
+      "command": [
+        "python",
+        "scripts/test_timeline_r1_evidence_dynamics.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.52
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_timeline_r1_lineage.py",
+      "command": [
+        "python",
+        "scripts/test_timeline_r1_lineage.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.56
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_timeline_r1_mapping.py",
+      "command": [
+        "python",
+        "scripts/test_timeline_r1_mapping.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.51
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_timeline_r1_ui.py",
+      "command": [
+        "python",
+        "scripts/test_timeline_r1_ui.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.15
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_timeline_ui.py",
+      "command": [
+        "python",
+        "scripts/test_timeline_ui.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.07
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "scripts/test_trust_boundary_30d.py",
+      "command": [
+        "python",
+        "scripts/test_trust_boundary_30d.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.04
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "tests/test_brand_identity.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "tests.test_brand_identity"
+      ],
+      "exit_code": 0,
+      "seconds": 0.13
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "tests/test_ekn_publication.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "tests.test_ekn_publication"
+      ],
+      "exit_code": 0,
+      "seconds": 0.18
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "tests/test_public_record_export.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "tests.test_public_record_export"
+      ],
+      "exit_code": 0,
+      "seconds": 0.22
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "tests/test_seo_surface.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "tests.test_seo_surface"
+      ],
+      "exit_code": 0,
+      "seconds": 0.08
+    },
+    {
+      "revision": "0c1877b36506a735cb4a8b9c0784bd9be971bd52",
+      "label": "fixed",
+      "file": "tests/test_vortex_oil_pause_sync.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "tests.test_vortex_oil_pause_sync"
+      ],
+      "exit_code": 0,
+      "seconds": 0.07
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_agent_api_subdomain_routing.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "scripts.test_agent_api_subdomain_routing"
+      ],
+      "exit_code": 1,
+      "seconds": 0.16
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_agent_discovery.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "scripts.test_agent_discovery"
+      ],
+      "exit_code": 1,
+      "seconds": 0.22
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_batch01.py",
+      "command": [
+        "python",
+        "scripts/test_batch01.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.05
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_batch01_r1.py",
+      "command": [
+        "python",
+        "scripts/test_batch01_r1.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.04
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_case_review_status.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "scripts.test_case_review_status"
+      ],
+      "exit_code": 0,
+      "seconds": 0.12
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_case_watch.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "scripts.test_case_watch"
+      ],
+      "exit_code": 0,
+      "seconds": 0.19
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_cml_dictionary_drift.py",
+      "command": [
+        "python",
+        "scripts/test_cml_dictionary_drift.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.04
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_cml_freshness_vocabulary.py",
+      "command": [
+        "python",
+        "scripts/test_cml_freshness_vocabulary.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.02
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_cml_gate_registry.py",
+      "command": [
+        "python",
+        "scripts/test_cml_gate_registry.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.02
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_cml_gdr_adapter.py",
+      "command": [
+        "python",
+        "scripts/test_cml_gdr_adapter.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.03
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_cml_ov_phase_a.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "scripts.test_cml_ov_phase_a"
+      ],
+      "exit_code": 1,
+      "seconds": 0.34
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_cml_ov_phase_b.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "scripts.test_cml_ov_phase_b"
+      ],
+      "exit_code": 1,
+      "seconds": 0.77
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_cml_ov_phase_b_r1.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "scripts.test_cml_ov_phase_b_r1"
+      ],
+      "exit_code": 1,
+      "seconds": 0.37
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_cml_ov_phase_c0.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "scripts.test_cml_ov_phase_c0"
+      ],
+      "exit_code": 0,
+      "seconds": 0.38
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_cml_pdre_001_evp_001.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "scripts.test_cml_pdre_001_evp_001"
+      ],
+      "exit_code": 0,
+      "seconds": 0.22
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_cml_pdre_001_init.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "scripts.test_cml_pdre_001_init"
+      ],
+      "exit_code": 1,
+      "seconds": 0.07
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_cml_site_metadata.py",
+      "command": [
+        "python",
+        "scripts/test_cml_site_metadata.py"
+      ],
+      "exit_code": 1,
+      "seconds": 0.02
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_cml_v01.py",
+      "command": [
+        "python",
+        "scripts/test_cml_v01.py"
+      ],
+      "exit_code": 1,
+      "seconds": 0.16
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_cml_v11_core.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "scripts.test_cml_v11_core"
+      ],
+      "exit_code": 0,
+      "seconds": 0.72
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_cml_v11_final.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "scripts.test_cml_v11_final"
+      ],
+      "exit_code": 1,
+      "seconds": 2.81
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_cml_v11_observation.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "scripts.test_cml_v11_observation"
+      ],
+      "exit_code": 0,
+      "seconds": 0.43
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_cml_v11_regression_harness.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "scripts.test_cml_v11_regression_harness"
+      ],
+      "exit_code": 1,
+      "seconds": 0.61
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_cml_v11_transition.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "scripts.test_cml_v11_transition"
+      ],
+      "exit_code": 1,
+      "seconds": 0.52
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_cml_version_history.py",
+      "command": [
+        "python",
+        "scripts/test_cml_version_history.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.03
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_commercial_domain_split.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "scripts.test_commercial_domain_split"
+      ],
+      "exit_code": 1,
+      "seconds": 0.08
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_commercial_i18n.py",
+      "command": [
+        "python",
+        "-m",
+        "pytest",
+        "-q",
+        "scripts/test_commercial_i18n.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.25
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_commercial_readiness.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "scripts.test_commercial_readiness"
+      ],
+      "exit_code": 0,
+      "seconds": 0.07
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_commercial_v09.py",
+      "command": [
+        "python",
+        "scripts/test_commercial_v09.py"
+      ],
+      "exit_code": 1,
+      "seconds": 0.03
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_customer_intake_phase_b.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "scripts.test_customer_intake_phase_b"
+      ],
+      "exit_code": 1,
+      "seconds": 0.07
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_decision_memory_v01.py",
+      "command": [
+        "python",
+        "-m",
+        "pytest",
+        "-q",
+        "scripts/test_decision_memory_v01.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.23
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_doi_scholarly_record_v02.py",
+      "command": [
+        "python",
+        "scripts/test_doi_scholarly_record_v02.py"
+      ],
+      "exit_code": 1,
+      "seconds": 0.03
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_english_public_surface.py",
+      "command": [
+        "python",
+        "scripts/test_english_public_surface.py"
+      ],
+      "exit_code": 1,
+      "seconds": 0.08
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_gdr_se.py",
+      "command": [
+        "python",
+        "scripts/test_gdr_se.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.04
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_gdr_se_aggregation_config.py",
+      "command": [
+        "python",
+        "scripts/test_gdr_se_aggregation_config.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.03
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_gdr_se_clock.py",
+      "command": [
+        "python",
+        "scripts/test_gdr_se_clock.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.06
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_gdr_se_counter_evidence.py",
+      "command": [
+        "python",
+        "scripts/test_gdr_se_counter_evidence.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.06
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_gdr_se_freshness.py",
+      "command": [
+        "python",
+        "scripts/test_gdr_se_freshness.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.03
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_gdr_se_paid_delivery.py",
+      "command": [
+        "python",
+        "scripts/test_gdr_se_paid_delivery.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.02
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_gdr_se_provenance.py",
+      "command": [
+        "python",
+        "scripts/test_gdr_se_provenance.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.05
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_gdr_se_runtime.py",
+      "command": [
+        "python",
+        "scripts/test_gdr_se_runtime.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.06
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_gdr_se_strategy_profile.py",
+      "command": [
+        "python",
+        "scripts/test_gdr_se_strategy_profile.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.05
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_global_market_nodes.py",
+      "command": [
+        "python",
+        "-m",
+        "pytest",
+        "-q",
+        "scripts/test_global_market_nodes.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.23
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_information_event_dual_axis.py",
+      "command": [
+        "python",
+        "scripts/test_information_event_dual_axis.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.03
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_irkutsk_alias_repair.py",
+      "command": [
+        "python",
+        "scripts/test_irkutsk_alias_repair.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.07
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_irkutsk_publication.py",
+      "command": [
+        "python",
+        "scripts/test_irkutsk_publication.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.03
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_minimal_method_hardening_v01.py",
+      "command": [
+        "python",
+        "scripts/test_minimal_method_hardening_v01.py"
+      ],
+      "exit_code": 1,
+      "seconds": 0.16
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_monitoring_bnb.py",
+      "command": [
+        "python",
+        "scripts/test_monitoring_bnb.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.03
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_monitoring_builder.py",
+      "command": [
+        "python",
+        "scripts/test_monitoring_builder.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.04
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_monitoring_gdr_adapter.py",
+      "command": [
+        "python",
+        "scripts/test_monitoring_gdr_adapter.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.03
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_monitoring_hash_integrity.py",
+      "command": [
+        "python",
+        "scripts/test_monitoring_hash_integrity.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.03
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_monitoring_level_delta.py",
+      "command": [
+        "python",
+        "scripts/test_monitoring_level_delta.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.03
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_monitoring_no_lookahead.py",
+      "command": [
+        "python",
+        "scripts/test_monitoring_no_lookahead.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.03
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_monitoring_provenance.py",
+      "command": [
+        "python",
+        "scripts/test_monitoring_provenance.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.03
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_monitoring_public_surface.py",
+      "command": [
+        "python",
+        "scripts/test_monitoring_public_surface.py"
+      ],
+      "exit_code": 1,
+      "seconds": 0.03
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_monitoring_schema.py",
+      "command": [
+        "python",
+        "scripts/test_monitoring_schema.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.23
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_monitoring_snapshot_pdf.py",
+      "command": [
+        "python",
+        "scripts/test_monitoring_snapshot_pdf.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.17
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_monitoring_ui.py",
+      "command": [
+        "python",
+        "scripts/test_monitoring_ui.py"
+      ],
+      "exit_code": 1,
+      "seconds": 0.03
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_oil_genesis_paused_handoff.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "scripts.test_oil_genesis_paused_handoff"
+      ],
+      "exit_code": 0,
+      "seconds": 0.08
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_oil_genesis_stage1.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "scripts.test_oil_genesis_stage1"
+      ],
+      "exit_code": 1,
+      "seconds": 0.07
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_oil_genesis_stage2.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "scripts.test_oil_genesis_stage2"
+      ],
+      "exit_code": 1,
+      "seconds": 0.08
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_oil_genesis_stage3.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "scripts.test_oil_genesis_stage3"
+      ],
+      "exit_code": 1,
+      "seconds": 0.08
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_oil_genesis_stage3_final_outreach_execution.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "scripts.test_oil_genesis_stage3_final_outreach_execution"
+      ],
+      "exit_code": 1,
+      "seconds": 0.08
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_oil_genesis_stage3_human_review.py",
+      "command": [
+        "python",
+        "scripts/test_oil_genesis_stage3_human_review.py"
+      ],
+      "exit_code": 5,
+      "seconds": 0.07
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_oil_genesis_stage3_send_decision.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "scripts.test_oil_genesis_stage3_send_decision"
+      ],
+      "exit_code": 1,
+      "seconds": 0.08
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_org_gaps_discovery.py",
+      "command": [
+        "python",
+        "scripts/test_org_gaps_discovery.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.02
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_paid_pdf.py",
+      "command": [
+        "python",
+        "scripts/test_paid_pdf.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.21
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_paid_pdf_authorization.py",
+      "command": [
+        "python",
+        "scripts/test_paid_pdf_authorization.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.12
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_paid_pdf_render.py",
+      "command": [
+        "python",
+        "scripts/test_paid_pdf_render.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.2
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_paid_pdf_security.py",
+      "command": [
+        "python",
+        "scripts/test_paid_pdf_security.py"
+      ],
+      "exit_code": 1,
+      "seconds": 0.04
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_paid_readiness_ui.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "scripts.test_paid_readiness_ui"
+      ],
+      "exit_code": 1,
+      "seconds": 0.07
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_public_case_primitives_v01.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "scripts.test_public_case_primitives_v01"
+      ],
+      "exit_code": 1,
+      "seconds": 0.31
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_public_commercial_boundary.py",
+      "command": [
+        "python",
+        "scripts/test_public_commercial_boundary.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.03
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_question_evidence_commerce_protocol.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "scripts.test_question_evidence_commerce_protocol"
+      ],
+      "exit_code": 1,
+      "seconds": 0.37
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_r1_human_surface.py",
+      "command": [
+        "python",
+        "scripts/test_r1_human_surface.py"
+      ],
+      "exit_code": 1,
+      "seconds": 0.04
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_rdl_freshness_gdr.py",
+      "command": [
+        "python",
+        "scripts/test_rdl_freshness_gdr.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.06
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_rdl_freshness_policy.py",
+      "command": [
+        "python",
+        "scripts/test_rdl_freshness_policy.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.02
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_rdl_freshness_runtime.py",
+      "command": [
+        "python",
+        "scripts/test_rdl_freshness_runtime.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.14
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_rdl_freshness_validation.py",
+      "command": [
+        "python",
+        "scripts/test_rdl_freshness_validation.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.04
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_rdl_l1_field_deployment.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "scripts.test_rdl_l1_field_deployment"
+      ],
+      "exit_code": 1,
+      "seconds": 0.68
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_rdl_l1_human_review_freeze.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "scripts.test_rdl_l1_human_review_freeze"
+      ],
+      "exit_code": 1,
+      "seconds": 0.49
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_rdl_phase2_5_allocation.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "scripts.test_rdl_phase2_5_allocation"
+      ],
+      "exit_code": 1,
+      "seconds": 0.67
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_rdl_phase2_5h_allocation_freeze.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "scripts.test_rdl_phase2_5h_allocation_freeze"
+      ],
+      "exit_code": 1,
+      "seconds": 0.63
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_rdl_phase2_cml_pdre_001.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "scripts.test_rdl_phase2_cml_pdre_001"
+      ],
+      "exit_code": 1,
+      "seconds": 0.63
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_rdl_research_record.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "scripts.test_rdl_research_record"
+      ],
+      "exit_code": 1,
+      "seconds": 1.45
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_se_event_updates.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "scripts.test_se_event_updates"
+      ],
+      "exit_code": 0,
+      "seconds": 0.09
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_se_unified_ops.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "scripts.test_se_unified_ops"
+      ],
+      "exit_code": 0,
+      "seconds": 0.1
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_temporal_state_chain_v01.py",
+      "command": [
+        "python",
+        "scripts/test_temporal_state_chain_v01.py"
+      ],
+      "exit_code": 1,
+      "seconds": 0.03
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_timeline_model.py",
+      "command": [
+        "python",
+        "scripts/test_timeline_model.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.56
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_timeline_r1_1_comparability.py",
+      "command": [
+        "python",
+        "scripts/test_timeline_r1_1_comparability.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.59
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_timeline_r1_1_level_delta.py",
+      "command": [
+        "python",
+        "scripts/test_timeline_r1_1_level_delta.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.71
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_timeline_r1_1_shift_semantics.py",
+      "command": [
+        "python",
+        "scripts/test_timeline_r1_1_shift_semantics.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.56
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_timeline_r1_1_ui.py",
+      "command": [
+        "python",
+        "scripts/test_timeline_r1_1_ui.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.18
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_timeline_r1_1a_append_simulation.py",
+      "command": [
+        "python",
+        "scripts/test_timeline_r1_1a_append_simulation.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.07
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_timeline_r1_1a_clock.py",
+      "command": [
+        "python",
+        "scripts/test_timeline_r1_1a_clock.py"
+      ],
+      "exit_code": 0,
+      "seconds": 1.38
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_timeline_r1_1a_commit_lineage.py",
+      "command": [
+        "python",
+        "scripts/test_timeline_r1_1a_commit_lineage.py"
+      ],
+      "exit_code": 1,
+      "seconds": 0.05
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_timeline_r1_1a_gate_reporting.py",
+      "command": [
+        "python",
+        "scripts/test_timeline_r1_1a_gate_reporting.py"
+      ],
+      "exit_code": 1,
+      "seconds": 1.37
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_timeline_r1_1a_prior_runtime.py",
+      "command": [
+        "python",
+        "scripts/test_timeline_r1_1a_prior_runtime.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.07
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_timeline_r1_aggregation.py",
+      "command": [
+        "python",
+        "scripts/test_timeline_r1_aggregation.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.53
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_timeline_r1_atomic.py",
+      "command": [
+        "python",
+        "scripts/test_timeline_r1_atomic.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.51
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_timeline_r1_evidence_dynamics.py",
+      "command": [
+        "python",
+        "scripts/test_timeline_r1_evidence_dynamics.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.52
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_timeline_r1_lineage.py",
+      "command": [
+        "python",
+        "scripts/test_timeline_r1_lineage.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.51
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_timeline_r1_mapping.py",
+      "command": [
+        "python",
+        "scripts/test_timeline_r1_mapping.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.51
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_timeline_r1_ui.py",
+      "command": [
+        "python",
+        "scripts/test_timeline_r1_ui.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.16
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_timeline_ui.py",
+      "command": [
+        "python",
+        "scripts/test_timeline_ui.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.07
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "scripts/test_trust_boundary_30d.py",
+      "command": [
+        "python",
+        "scripts/test_trust_boundary_30d.py"
+      ],
+      "exit_code": 0,
+      "seconds": 0.04
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "tests/test_brand_identity.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "tests.test_brand_identity"
+      ],
+      "exit_code": 0,
+      "seconds": 0.12
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "tests/test_public_record_export.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "tests.test_public_record_export"
+      ],
+      "exit_code": 1,
+      "seconds": 0.22
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "tests/test_seo_surface.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "tests.test_seo_surface"
+      ],
+      "exit_code": 0,
+      "seconds": 0.08
+    },
+    {
+      "revision": "d435fe84144f13391a2a66fca8d0f1fe01c861d6",
+      "label": "baseline",
+      "file": "tests/test_vortex_oil_pause_sync.py",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "tests.test_vortex_oil_pause_sync"
+      ],
+      "exit_code": 0,
+      "seconds": 0.07
+    }
+  ],
+  "publication_integrity": {
+    "package_manifest_entries_verified": 12,
+    "cases_all_assets_unchanged_from_pr28": 81,
+    "docs/cases_all_assets_unchanged_from_pr28": 81,
+    "html5_strict": "PASS",
+    "sitemaps": "PASS",
+    "fix_scope": [
+      "schemas/case.schema.json",
+      "tests/test_public_record_export.py"
+    ]
+  },
+  "citation_access": [
+    {
+      "url": "https://arxiv.org/abs/2511.06309v1",
+      "observed_at": "2026-10-18T01:51:02.214427+00:00",
+      "status": "ACCESS_BLOCKED_OR_FAILED",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://arxiv.org/abs/2608.23691v1",
+      "observed_at": "2026-10-18T01:51:02.214976+00:00",
+      "status": "ACCESS_BLOCKED_OR_FAILED",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://arxiv.org/html/2606.10402v1",
+      "observed_at": "2026-10-18T01:51:02.215498+00:00",
+      "status": "ACCESS_BLOCKED_OR_FAILED",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://arxiv.org/html/2606.10402v2",
+      "observed_at": "2026-10-18T01:51:02.215924+00:00",
+      "status": "ACCESS_BLOCKED_OR_FAILED",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.08927v1",
+      "observed_at": "2026-10-18T01:51:02.216271+00:00",
+      "status": "ACCESS_BLOCKED_OR_FAILED",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://arxiv.org/abs/2609.33357v1",
+      "observed_at": "2026-10-18T01:51:02.217284+00:00",
+      "status": "ACCESS_BLOCKED_OR_FAILED",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://github.com/dualverse-ai/station/blob/f2603c817694145610b4a1057eeee7fb6f31d516/station/rooms/question.py",
+      "observed_at": "2026-10-18T01:51:02.230948+00:00",
+      "status": 200,
+      "final_url": "https://github.com/dualverse-ai/station/blob/f2603c817694145610b4a1057eeee7fb6f31d516/station/rooms/question.py"
+    },
+    {
+      "url": "https://github.com/vinid/einstein-arena/blob/9cd6fbfb4b88ca303a61963665b1b6ad20ffdb1e/web/src/db/schema.ts",
+      "observed_at": "2026-10-18T01:51:02.233537+00:00",
+      "status": 200,
+      "final_url": "https://github.com/vinid/einstein-arena/blob/9cd6fbfb4b88ca303a61963665b1b6ad20ffdb1e/web/src/db/schema.ts"
+    },
+    {
+      "url": "https://doi.org/10.1016/0004-3702(79)90008-0",
+      "observed_at": "2026-10-18T01:51:02.236927+00:00",
+      "status": "ACCESS_BLOCKED_OR_FAILED",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "url": "https://github.com/roalstoney-alt/structurevidence",
+      "observed_at": "2026-10-18T01:51:02.239530+00:00",
+      "status": 200,
+      "final_url": "https://github.com/roalstoney-alt/structurevidence"
+    },
+    {
+      "url": "https://github.com/roalstoney-alt/AGENET",
+      "observed_at": "2026-10-18T01:51:02.244783+00:00",
+      "status": 200,
+      "final_url": "https://github.com/roalstoney-alt/AGENET"
+    }
+  ],
+  "ready_to_merge": false,
+  "merge_performed": false,
+  "api_access": "Forbidden; remote review/check requirements unreadable",
+  "preserved": {
+    "G0b_DECISION": "HOLD_NEEDS_EVIDENCE",
+    "NOVELTY_STATUS": "NOT_ESTABLISHED",
+    "G0c_EXECUTED": "NO",
+    "G1_AUTHORIZED": "NO",
+    "PAID_EXPERIMENT_RUNS": 0,
+    "INDEPENDENT_REPRODUCTIONS": 0,
+    "OUTREACH_SENT": 0,
+    "EKN_DEPLOYED": "NO"
+  }
+}
