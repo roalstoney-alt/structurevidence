@@ -1,0 +1,44 @@
+{
+  "schema_version": "se-unified-review-bundle-v1",
+  "date_sgt": "2026-10-18",
+  "reviews": [
+    {
+      "case_id": "CML-PDRE-001", "review_id": "SE-800V-REVIEW-20261018-01", "reviewed_at": "2026-10-18T14:04:05Z", "result": "NO_STATE_CHANGE", "review_complete": true,
+      "classifications": ["NO_STATE_CHANGE"], "search_boundary": "Targeted official-source review; see data/case-watch/reviews/2026-10-18/CML-PDRE-001.json.",
+      "sources_checked": [{"url": "https://www.chindatagroup.com/media/news/533.html", "status": "READ"}, {"url": "https://www.vertiv.com/en-ca/about/news-and-events/events/ocp-global-summit-2026/", "status": "READ"}, {"url": "https://server-china.sungrowpower.com/news/1749.html", "status": "READ_EXISTING_RECORD_REVERIFIED"}],
+      "new_sources": 0, "new_attributed_statements": 0, "new_independent_evidence": 0, "new_events": 0, "newly_discovered_old_evidence": 0, "state_changing_evidence": 0,
+      "old_state": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE", "new_state": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE", "new_qualifying_evidence_count": 0, "new_counter_evidence_count": 0
+    },
+    {
+      "case_id": "SE-BESS-SODIUM-001", "review_id": "SE-SODIUM-REVIEW-20261018-01", "reviewed_at": "2026-10-18T14:04:05Z", "result": "HUMAN_GATE_REQUIRED", "review_complete": true,
+      "classifications": ["NO_STATE_CHANGE", "HUMAN_GATE_REQUIRED"], "search_boundary": "Targeted official-source review; see data/case-watch/reviews/2026-10-18/SE-BESS-SODIUM-001.json.",
+      "sources_checked": [{"url": "https://www.moonwatt.com/2026/06/22/moonwatt-commissions-the-first-distributed-sodium-ion-battery-system-purpose-built-for-hybrid-solar-plants/", "status": "READ"}, {"url": "https://cleantechparkarnhem.nl/nieuws/moonwatt-koppelt-natrium-ionbatterij-aan-zonnepark-op-cleantech-park-arnhem/", "status": "READ"}],
+      "new_sources": 0, "new_attributed_statements": 0, "new_independent_evidence": 0, "new_events": 0, "newly_discovered_old_evidence": 0, "state_changing_evidence": 0,
+      "old_state": "NAMED_COMMISSIONED_SITE_NOT_ESTABLISHED", "new_state": "NAMED_COMMISSIONED_SITE_NOT_ESTABLISHED", "new_qualifying_evidence_count": 0, "new_counter_evidence_count": 0
+    },
+    {
+      "case_id": "SE-IRK-LAB-001", "review_id": "SE-IRK-REVIEW-20261018-01", "reviewed_at": "2026-10-18T14:04:05Z", "result": "REVIEW_INCOMPLETE", "review_complete": false,
+      "classifications": ["NO_STATE_CHANGE", "HUMAN_GATE_REQUIRED"], "search_boundary": "One consolidated Irkutsk search group and two institutional-source opens; see data/case-watch/reviews/2026-10-18/SE-IRK-LAB-001.json.",
+      "search_budget": {"targeted_search_groups": 1, "webpage_open_attempts": 2},
+      "source_graph": [
+        {"source_id": "WHO-DON620", "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON620/", "retrieved_at": "2026-10-18T14:04:05Z", "originator": "WHO with Russian Federation IHR National Focal Point", "publisher": "WHO", "source_type": "INSTITUTIONAL_ASSESSMENT_AND_RELAY", "claim_ids": ["cause"], "depends_on": ["RF-IHR-NFP"], "relation": "SUPPORT_WITH_UNCERTAINTY", "verification_status": "READ", "search_boundary": "WHO/IHR public record"},
+        {"source_id": "ECDC-W42-2026", "url": "https://www.ecdc.europa.eu/sites/default/files/documents/communicable-disease-threats-report-week-42-2026.pdf", "retrieved_at": "2026-10-18T14:04:05Z", "originator": "ECDC with dependent source chain", "publisher": "ECDC", "source_type": "INSTITUTIONAL_ASSESSMENT_AND_DERIVATIVE_SUMMARY", "claim_ids": ["diagnostic_uncertainty", "eu_risk"], "depends_on": ["WHO-DON620", "RUSSIAN-IHR-NFP-ATTRIBUTION", "MEDIA-CHAIN-ECDC-W42"], "relation": "SUPPORT_WITH_DEPENDENCY", "verification_status": "READ", "search_boundary": "institutional surveillance publication"}
+      ],
+      "sources_checked": [{"url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON620/", "status": "READ"}, {"url": "https://www.ecdc.europa.eu/sites/default/files/documents/communicable-disease-threats-report-week-42-2026.pdf", "status": "READ"}],
+      "new_sources": 0, "new_attributed_statements": 0, "new_independent_evidence": 0, "new_events": 0, "newly_discovered_old_evidence": 0, "state_changing_evidence": 0,
+      "old_state": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE", "new_state": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE", "new_qualifying_evidence_count": 0, "new_counter_evidence_count": 0
+    },
+    {
+      "case_id": "SE-ONC-NSQNSCLC-CN-001", "review_id": "SE-NSCLC-REVIEW-20261018-01", "reviewed_at": "2026-10-18T14:04:05Z", "result": "HUMAN_GATE_REQUIRED", "review_complete": true,
+      "classifications": ["NEWLY_DISCOVERED_OLD_EVIDENCE", "NO_STATE_CHANGE", "HUMAN_GATE_REQUIRED"], "search_boundary": "Bounded Sunday PubMed review; see data/case-watch/reviews/2026-10-18/SE-ONC-NSQNSCLC-CN-001.json.",
+      "sources_checked": [{"url": "https://pubmed.ncbi.nlm.nih.gov/42636833/", "status": "READ"}, {"url": "https://pubmed.ncbi.nlm.nih.gov/42805208/", "status": "METADATA_LINKED_TEXT_NOT_REVIEWED"}, {"url": "https://pubmed.ncbi.nlm.nih.gov/42307937/", "status": "READ_BASELINE_COMPARISON"}],
+      "new_sources": 1, "new_attributed_statements": 5, "new_independent_evidence": 1, "new_events": 0, "newly_discovered_old_evidence": 1, "state_changing_evidence": 0,
+      "old_state": "PUBLIC_RESEARCH_PREVIEW_PERSONAL_ESTIMATE_NOT_ESTABLISHED", "new_state": "PUBLIC_RESEARCH_PREVIEW_PERSONAL_ESTIMATE_NOT_ESTABLISHED", "new_qualifying_evidence_count": 1, "new_counter_evidence_count": 0
+    }
+  ],
+  "sunday_weekly_addendum": {
+    "state": "PASS",
+    "nsclc_management_status": "FOLDED",
+    "artifact": "data/case-watch/weekly/2026-W42.json"
+  }
+}

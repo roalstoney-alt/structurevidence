@@ -1,0 +1,33 @@
+{
+  "schema_version": "se-source-snapshot-v1",
+  "snapshot_id": "SE-EVENT-ONC-NSQNSCLC-CN-001-202609-HARMONI-SNAPSHOT-v1",
+  "captured_at": "2026-10-18T14:04:05Z",
+  "capture_type": "STRUCTURED_BIBLIOGRAPHIC_AND_ABSTRACT_FACTS_NOT_FULL_ORIGINAL",
+  "original_url": "https://pubmed.ncbi.nlm.nih.gov/42636833/",
+  "accessibility": "PUBLIC_PUBMED_BIBLIOGRAPHIC_RECORD_AND_ABSTRACT",
+  "raw_file_saved": false,
+  "structured_facts": [
+    {
+      "statement": "PubMed indexes a September 2026 Lancet Oncology report of the multinational randomized double-blind phase 3 HARMONi trial, PMID 42636833 and DOI 10.1016/S1470-2045(26)00282-2."
+    },
+    {
+      "statement": "The abstract describes 438 participants with advanced non-squamous EGFR-mutated NSCLC after progression on a third-generation EGFR tyrosine-kinase inhibitor, randomized 219 per group at 114 centers across Asia, Europe and North America."
+    },
+    {
+      "statement": "The abstract reports median progression-free survival of 6.8 months versus 4.4 months, hazard ratio 0.52 (95% CI 0.41-0.66; p<0.0001)."
+    },
+    {
+      "statement": "The abstract reports median overall survival of 16.8 months versus 14.0 months, hazard ratio 0.79 (95% CI 0.62-1.01)."
+    },
+    {
+      "statement": "The PubMed record links an October 2026 correction, PMID 42805208; the correction text was not available in the bounded review and its substantive effect remains unverified."
+    }
+  ],
+  "limitations": [
+    "Only the public PubMed bibliographic record and abstract were reviewed; the full article was not reproduced or independently reanalyzed.",
+    "The abstract records Summit Therapeutics funding.",
+    "The linked correction has not been substantively reviewed.",
+    "This evidence does not establish an individual prognosis, hospital-specific outcome, cross-modality ranking or treatment recommendation."
+  ],
+  "copyright_boundary": "Structured facts only; consult PubMed and the publisher for the source record and full article."
+}
