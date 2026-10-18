@@ -1,0 +1,27 @@
+{
+  "schema_version": "se-case-review-v2",
+  "case_id": "SE-IRK-LAB-001",
+  "review_id": "SE-IRK-REVIEW-20261018-01",
+  "reviewed_at": "2026-10-18T14:04:05Z",
+  "result": "REVIEW_INCOMPLETE",
+  "review_complete": false,
+  "classifications": ["NO_STATE_CHANGE", "HUMAN_GATE_REQUIRED"],
+  "search_boundary": "One consolidated Irkutsk direct-and-indirect search group and two institutional-source opens; no independent primary diagnostic record was located.",
+  "search_budget": {"targeted_search_groups": 1, "webpage_open_attempts": 2},
+  "source_graph": [
+    {"source_id": "WHO-DON620", "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON620/", "retrieved_at": "2026-10-18T14:04:05Z", "originator": "WHO with Russian Federation IHR National Focal Point", "publisher": "WHO", "source_type": "INSTITUTIONAL_ASSESSMENT_AND_RELAY", "claim_ids": ["cause"], "depends_on": ["RF-IHR-NFP"], "relation": "SUPPORT_WITH_UNCERTAINTY", "verification_status": "READ", "search_boundary": "WHO/IHR public record"},
+    {"source_id": "ECDC-W42-2026", "url": "https://www.ecdc.europa.eu/sites/default/files/documents/communicable-disease-threats-report-week-42-2026.pdf", "retrieved_at": "2026-10-18T14:04:05Z", "originator": "ECDC with dependent source chain", "publisher": "ECDC", "source_type": "INSTITUTIONAL_ASSESSMENT_AND_DERIVATIVE_SUMMARY", "claim_ids": ["diagnostic_uncertainty", "eu_risk"], "depends_on": ["WHO-DON620", "RUSSIAN-IHR-NFP-ATTRIBUTION", "MEDIA-CHAIN-ECDC-W42"], "relation": "SUPPORT_WITH_DEPENDENCY", "verification_status": "READ", "search_boundary": "institutional surveillance publication"}
+  ],
+  "sources_checked": [
+    {"url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON620/", "status": "READ"},
+    {"url": "https://www.ecdc.europa.eu/sites/default/files/documents/communicable-disease-threats-report-week-42-2026.pdf", "status": "READ"}
+  ],
+  "daily_counters": {"new_sources": 0, "new_attributed_statements": 0, "new_independent_evidence": 0, "new_events": 0, "newly_discovered_old_evidence": 0, "state_changing_evidence": 0},
+  "old_state": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+  "new_state": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+  "new_qualifying_evidence_count": 0,
+  "new_counter_evidence_count": 0,
+  "evidence_state_as_of": "2026-10-11T15:01:01+08:00",
+  "last_material_change": "2026-10-10",
+  "historical_backfill": false
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": "se-case-event-ledger-v1",
+  "case_id": "SE-ONC-NSQNSCLC-CN-001",
+  "append_only": true,
+  "events": [
+    {
+      "event_id": "SE-EVENT-ONC-NSQNSCLC-CN-001-202609-HARMONI",
+      "classifications": ["NEWLY_DISCOVERED_OLD_EVIDENCE", "NO_STATE_CHANGE", "HUMAN_GATE_REQUIRED"],
+      "published_at": "2026-09-01",
+      "publication_date_precision": "MONTH",
+      "event_at": "2026-09-01/2026-09-30",
+      "retrieved_at": "2026-10-18T14:04:05Z",
+      "state_changed": false,
+      "url": "https://structurevidence.org/cases/nsq-nsclc-china/events/harmoni-multinational-phase3-2026/",
+      "record_path": "cases/nsq-nsclc-china/events/harmoni-multinational-phase3-2026/index.json"
+    }
+  ]
+}

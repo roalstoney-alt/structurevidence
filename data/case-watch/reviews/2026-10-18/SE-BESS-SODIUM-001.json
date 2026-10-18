@@ -1,0 +1,22 @@
+{
+  "schema_version": "se-case-review-v2",
+  "case_id": "SE-BESS-SODIUM-001",
+  "review_id": "SE-SODIUM-REVIEW-20261018-01",
+  "reviewed_at": "2026-10-18T14:04:05Z",
+  "result": "HUMAN_GATE_REQUIRED",
+  "review_complete": true,
+  "classifications": ["NO_STATE_CHANGE", "HUMAN_GATE_REQUIRED"],
+  "search_boundary": "One targeted official-source group covering Moonwatt and the Cleantech Park Arnhem host record; not an exhaustive market census.",
+  "sources_checked": [
+    {"url": "https://www.moonwatt.com/2026/06/22/moonwatt-commissions-the-first-distributed-sodium-ion-battery-system-purpose-built-for-hybrid-solar-plants/", "publisher": "Moonwatt", "status": "READ", "retrieved_at": "2026-10-18T14:04:05Z", "finding": "The existing attributed commissioning claim remains available; no new material record was identified today."},
+    {"url": "https://cleantechparkarnhem.nl/nieuws/moonwatt-koppelt-natrium-ionbatterij-aan-zonnepark-op-cleantech-park-arnhem/", "publisher": "Cleantech Park Arnhem", "status": "READ", "retrieved_at": "2026-10-18T14:04:05Z", "finding": "The host-site record remains available and supports a named-site candidate, but accepted-state treatment remains human-gated."}
+  ],
+  "daily_counters": {"new_sources": 0, "new_attributed_statements": 0, "new_independent_evidence": 0, "new_events": 0, "newly_discovered_old_evidence": 0, "state_changing_evidence": 0},
+  "old_state": "NAMED_COMMISSIONED_SITE_NOT_ESTABLISHED",
+  "new_state": "NAMED_COMMISSIONED_SITE_NOT_ESTABLISHED",
+  "new_qualifying_evidence_count": 0,
+  "new_counter_evidence_count": 0,
+  "evidence_state_as_of": "2026-09-24",
+  "last_material_change": "2026-09-24",
+  "historical_backfill": false
+}

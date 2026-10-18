@@ -1,0 +1,59 @@
+{
+  "schema_version": "se-case-event-v1",
+  "event_id": "SE-EVENT-ONC-NSQNSCLC-CN-001-202609-HARMONI",
+  "case_id": "SE-ONC-NSQNSCLC-CN-001",
+  "title": "Multinational HARMONi phase 3 trial record indexed in Lancet Oncology",
+  "published_at": "2026-09-01",
+  "publication_date_precision": "MONTH",
+  "event_at": "2026-09-01/2026-09-30",
+  "retrieved_at": "2026-10-18T14:04:05Z",
+  "originator": "HARMONi investigators",
+  "publisher": "Lancet Oncology record indexed by PubMed",
+  "source_type": "PRIMARY_PEER_REVIEWED_RANDOMIZED_PHASE_3_TRIAL_RECORD",
+  "original_url": "https://pubmed.ncbi.nlm.nih.gov/42636833/",
+  "accessibility": "PUBLIC_PUBMED_BIBLIOGRAPHIC_RECORD_AND_ABSTRACT",
+  "specific_claims": [
+    "The abstract describes a multinational randomized double-blind phase 3 comparison in 438 participants with advanced non-squamous EGFR-mutated NSCLC after third-generation EGFR-TKI progression.",
+    "The abstract reports median progression-free survival of 6.8 months versus 4.4 months, hazard ratio 0.52 (95% CI 0.41-0.66; p<0.0001).",
+    "The abstract reports median overall survival of 16.8 months versus 14.0 months, hazard ratio 0.79 (95% CI 0.62-1.01).",
+    "The PubMed parent record links an October 2026 correction whose substantive content was not reviewed."
+  ],
+  "supports": [
+    "Existence and bounded abstract-level results of a distinct multinational HARMONi phase 3 trial.",
+    "A historical clinical evidence record for human review alongside, not in place of, the frozen HARMONi-A baseline."
+  ],
+  "does_not_support": [
+    "An individual prognosis, hospital-specific outcome or treatment recommendation.",
+    "A cross-modality ranking or inference outside the enrolled population.",
+    "Automatic change to the frozen public research state or patient-specific stop point."
+  ],
+  "depends_on": [
+    "PUBMED-42636833",
+    "LANCET-DOI-10.1016/S1470-2045(26)00282-2"
+  ],
+  "conflicts_counter_evidence": [
+    "The public abstract was reviewed without full-text reanalysis.",
+    "The abstract records Summit Therapeutics funding.",
+    "A linked correction exists but its substantive effect was not established in this bounded review."
+  ],
+  "verification_status": "VERIFIED_PRIMARY_SOURCE",
+  "verification_scope": "PubMed bibliographic record and abstract read; linked correction identified from the parent record but not substantively reviewed.",
+  "search_boundary": "Bounded Sunday PubMed review of PMID 42636833, linked correction metadata and existing baseline PMID 42307937; no full-text or patient-level data review.",
+  "snapshot_path": "cases/nsq-nsclc-china/events/harmoni-multinational-phase3-2026/snapshot-v1.json",
+  "snapshot_sha256": "7f010524e1be1820b65c87b25ebcf3fb93b5d6b25d76fbfc91d053510ab7b6e3",
+  "old_stop": "PUBLIC_RESEARCH_PREVIEW_PERSONAL_ESTIMATE_NOT_ESTABLISHED",
+  "candidate_stop": "PUBLIC_RESEARCH_PREVIEW_PERSONAL_ESTIMATE_NOT_ESTABLISHED",
+  "state_changed": false,
+  "review_id": "SE-NSCLC-REVIEW-20261018-01",
+  "classifications": [
+    "NEWLY_DISCOVERED_OLD_EVIDENCE",
+    "NO_STATE_CHANGE",
+    "HUMAN_GATE_REQUIRED"
+  ],
+  "public_url": "https://structurevidence.org/cases/nsq-nsclc-china/events/harmoni-multinational-phase3-2026/",
+  "x_candidate_text": "New historical evidence: a multinational phase 3 HARMONi trial reports longer PFS after third-generation EGFR-TKI progression. It does not establish personal prognosis or treatment choice. https://structurevidence.org/cases/nsq-nsclc-china/events/harmoni-multinational-phase3-2026/",
+  "website_publication_status": "PENDING_PRODUCTION_VERIFICATION",
+  "medical_interpretation_status": "HUMAN_GATE_REQUIRED",
+  "management_status": "FOLDED",
+  "next_minimum_verification": "Review the correction text and full article before any substantive medical interpretation; preserve the patient-specific stop and frozen public evidence boundary."
+}

@@ -1,0 +1,60 @@
+{
+  "week_id": "2026-W42",
+  "generated_at": "2026-10-18T14:04:05Z",
+  "review_period": {"start": "2026-10-12", "end": "2026-10-18", "complete": true},
+  "candidate_only": true,
+  "reviews": [
+    {
+      "case_id": "CML-PDRE-001",
+      "review_period": {"start": "2026-10-12", "end": "2026-10-18", "complete": true},
+      "previous_version": "v0.1",
+      "records_screened": 2,
+      "relevant_records": 2,
+      "state_changing_records": 0,
+      "counter_evidence_records": 0,
+      "proposed_decision": "NO_STATE_CHANGE",
+      "proposed_next_version": null,
+      "reason": "SolarEdge and Sungrow company publications were appended with bounded provenance. Neither establishes a second independent deployment, named operating customer, repeat procurement or independently verified field performance; Sungrow issuer-side certificate verification remains open.",
+      "minimum_missing_evidence": ["Independent named operating deployment or multi-entity replication", "Issuer-side certificate identifiers and scope verification"],
+      "decision_that_could_change": "Replication and independent-validation status",
+      "recommended_rdl_level": "NONE",
+      "human_decision": "PENDING",
+      "publication_approved": false
+    },
+    {
+      "case_id": "SE-BESS-SODIUM-001",
+      "review_period": {"start": "2026-10-12", "end": "2026-10-18", "complete": true},
+      "previous_version": "v0.1",
+      "records_screened": 2,
+      "relevant_records": 1,
+      "state_changing_records": 0,
+      "counter_evidence_records": 0,
+      "proposed_decision": "NO_STATE_CHANGE",
+      "proposed_next_version": null,
+      "reason": "The Moonwatt and host-site records continue to support a named-site candidate, but no new material evidence was found this week and accepted-state treatment remains human-gated.",
+      "minimum_missing_evidence": ["Human adjudication of the named commissioned-site candidate", "Independent field-performance evidence"],
+      "decision_that_could_change": "Named commissioned-site status",
+      "recommended_rdl_level": "NONE",
+      "human_decision": "PENDING",
+      "publication_approved": false
+    },
+    {
+      "case_id": "SE-ONC-NSQNSCLC-CN-001",
+      "review_period": {"start": "2026-10-12", "end": "2026-10-18", "complete": true},
+      "previous_version": "v0.1",
+      "records_screened": 3,
+      "relevant_records": 2,
+      "state_changing_records": 0,
+      "counter_evidence_records": 0,
+      "proposed_decision": "NO_STATE_CHANGE",
+      "proposed_next_version": null,
+      "reason": "A September 2026 multinational HARMONi trial record and linked correction metadata were newly discovered. They are appended for human review, do not overwrite HARMONi-A, and do not establish an individual prognosis or justify an automatic public-state change.",
+      "minimum_missing_evidence": ["Substantive review of the linked correction", "Human medical interpretation within the frozen public boundary"],
+      "decision_that_could_change": "Bounded comparative evidence summary only; patient-specific probability remains not established",
+      "recommended_rdl_level": "NONE",
+      "human_decision": "PENDING",
+      "publication_approved": false,
+      "management_status": "FOLDED"
+    }
+  ]
+}

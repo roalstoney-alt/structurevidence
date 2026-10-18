@@ -1,0 +1,23 @@
+{
+  "schema_version": "se-case-review-v2",
+  "case_id": "CML-PDRE-001",
+  "review_id": "SE-800V-REVIEW-20261018-01",
+  "reviewed_at": "2026-10-18T14:04:05Z",
+  "result": "NO_STATE_CHANGE",
+  "review_complete": true,
+  "classifications": ["NO_STATE_CHANGE"],
+  "search_boundary": "One targeted official-source group covering Chindata, Vertiv and the already appended Sungrow corporate record; not an exhaustive market census or certificate-registry audit.",
+  "sources_checked": [
+    {"url": "https://www.chindatagroup.com/media/news/533.html", "publisher": "Chindata", "status": "READ", "retrieved_at": "2026-10-18T14:04:05Z", "finding": "The same one-campus operator claim remains available; no second independent deployment or operating-performance record was found."},
+    {"url": "https://www.vertiv.com/en-ca/about/news-and-events/events/ocp-global-summit-2026/", "publisher": "Vertiv", "status": "READ", "retrieved_at": "2026-10-18T14:04:05Z", "finding": "The official event page describes an 800 VDC program and reference architecture, not a named operating deployment."},
+    {"url": "https://server-china.sungrowpower.com/news/1749.html", "publisher": "Sungrow", "status": "READ_EXISTING_RECORD_REVERIFIED", "retrieved_at": "2026-10-18T14:04:05Z", "finding": "The 15 October company announcement is readable and attributable; issuer-side certificate verification and customer operation remain unestablished. This source was already appended before today's run."}
+  ],
+  "daily_counters": {"new_sources": 0, "new_attributed_statements": 0, "new_independent_evidence": 0, "new_events": 0, "newly_discovered_old_evidence": 0, "state_changing_evidence": 0},
+  "old_state": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+  "new_state": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+  "new_qualifying_evidence_count": 0,
+  "new_counter_evidence_count": 0,
+  "evidence_state_as_of": "2026-09-20T10:46:47Z",
+  "last_material_change": "2026-09-20",
+  "historical_backfill": false
+}
