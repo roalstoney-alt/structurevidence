@@ -1,0 +1,246 @@
+{
+  "schema_version": "se-unified-run-v1",
+  "run_id": "SE-OPS-20261019-2200-5afb677f-9ece-5066-889e-62ad49ed78d1",
+  "date_sgt": "2026-10-19",
+  "scheduled_at": "2026-10-19T22:00:00+08:00",
+  "started_at": "2026-10-19T14:06:13Z",
+  "ended_at": "2026-10-19T14:06:13Z",
+  "report_delivered_at": null,
+  "repo_baseline_sha": "c8c7e76afa35ba68ec1b3cdc5075111156b2bbcb",
+  "repo_final_sha": null,
+  "pipeline": {
+    "scheduler": "PASS",
+    "cases": "PARTIAL",
+    "cml_ingestion": "UNVERIFIED",
+    "x_publish": "BLOCKED",
+    "audit_persistence": "PASS",
+    "external_delivery": "BLOCKED"
+  },
+  "reviews": [
+    {
+      "case_id": "CML-PDRE-001",
+      "review_id": "SE-800V-REVIEW-20261019-01",
+      "reviewed_at": "2026-10-19T14:04:25Z",
+      "result": "REVIEW_INCOMPLETE",
+      "review_complete": false,
+      "classifications": [
+        "NO_STATE_CHANGE",
+        "HUMAN_GATE_REQUIRED"
+      ],
+      "search_boundary": "Targeted official-source review; see data/case-watch/reviews/2026-10-19/CML-PDRE-001.json.",
+      "sources_checked": [
+        {
+          "url": "https://www.chindatagroup.com/media/news/533.html",
+          "status": "READ"
+        },
+        {
+          "url": "https://www.vertiv.com/en-ca/about/news-and-events/events/ocp-global-summit-2026/",
+          "status": "READ"
+        },
+        {
+          "url": "https://cn.sungrowpower.com/news/1748.html",
+          "status": "SOURCE_UNAVAILABLE_HTTP_404"
+        }
+      ],
+      "new_sources": 0,
+      "new_attributed_statements": 0,
+      "new_independent_evidence": 0,
+      "new_events": 0,
+      "newly_discovered_old_evidence": 0,
+      "state_changing_evidence": 0,
+      "old_state": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+      "new_state": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+      "new_qualifying_evidence_count": 0,
+      "new_counter_evidence_count": 0
+    },
+    {
+      "case_id": "SE-BESS-SODIUM-001",
+      "review_id": "SE-SODIUM-REVIEW-20261019-01",
+      "reviewed_at": "2026-10-19T14:04:25Z",
+      "result": "HUMAN_GATE_REQUIRED",
+      "review_complete": true,
+      "classifications": [
+        "NO_STATE_CHANGE",
+        "HUMAN_GATE_REQUIRED"
+      ],
+      "search_boundary": "Targeted official-source review; see data/case-watch/reviews/2026-10-19/SE-BESS-SODIUM-001.json.",
+      "sources_checked": [
+        {
+          "url": "https://www.moonwatt.com/2026/06/22/moonwatt-commissions-the-first-distributed-sodium-ion-battery-system-purpose-built-for-hybrid-solar-plants/",
+          "status": "READ"
+        }
+      ],
+      "new_sources": 0,
+      "new_attributed_statements": 0,
+      "new_independent_evidence": 0,
+      "new_events": 0,
+      "newly_discovered_old_evidence": 0,
+      "state_changing_evidence": 0,
+      "old_state": "NAMED_COMMISSIONED_SITE_NOT_ESTABLISHED",
+      "new_state": "NAMED_COMMISSIONED_SITE_NOT_ESTABLISHED",
+      "new_qualifying_evidence_count": 0,
+      "new_counter_evidence_count": 0
+    },
+    {
+      "case_id": "SE-IRK-LAB-001",
+      "review_id": "SE-IRK-REVIEW-20261019-01",
+      "reviewed_at": "2026-10-19T14:04:25Z",
+      "result": "REVIEW_INCOMPLETE",
+      "review_complete": false,
+      "classifications": [
+        "NO_STATE_CHANGE",
+        "HUMAN_GATE_REQUIRED"
+      ],
+      "search_boundary": "One consolidated Irkutsk search group and two institutional-source checks; see data/case-watch/reviews/2026-10-19/SE-IRK-LAB-001.json.",
+      "search_budget": {
+        "targeted_search_groups": 1,
+        "webpage_open_attempts": 2
+      },
+      "source_graph": [
+        {
+          "source_id": "WHO-DON620",
+          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON620/",
+          "retrieved_at": "2026-10-19T14:04:25Z",
+          "originator": "WHO with Russian Federation IHR National Focal Point",
+          "publisher": "WHO",
+          "source_type": "INSTITUTIONAL_ASSESSMENT_AND_RELAY",
+          "claim_ids": [
+            "cause"
+          ],
+          "depends_on": [
+            "RF-IHR-NFP"
+          ],
+          "relation": "SUPPORT_WITH_UNCERTAINTY",
+          "verification_status": "SEARCHED_NO_NEW_RECORD",
+          "search_boundary": "WHO/IHR public record"
+        },
+        {
+          "source_id": "ECDC-W42-2026",
+          "url": "https://www.ecdc.europa.eu/sites/default/files/documents/communicable-disease-threats-report-week-42-2026.pdf",
+          "retrieved_at": "2026-10-19T14:04:25Z",
+          "originator": "ECDC with dependent source chain",
+          "publisher": "ECDC",
+          "source_type": "INSTITUTIONAL_ASSESSMENT_AND_DERIVATIVE_SUMMARY",
+          "claim_ids": [
+            "diagnostic_uncertainty",
+            "eu_risk"
+          ],
+          "depends_on": [
+            "WHO-DON620",
+            "RUSSIAN-IHR-NFP-ATTRIBUTION",
+            "MEDIA-CHAIN-ECDC-W42"
+          ],
+          "relation": "SUPPORT_WITH_DEPENDENCY",
+          "verification_status": "READ",
+          "search_boundary": "institutional surveillance publication"
+        }
+      ],
+      "sources_checked": [
+        {
+          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON620/",
+          "status": "SEARCHED_NO_NEW_RECORD"
+        },
+        {
+          "url": "https://www.ecdc.europa.eu/sites/default/files/documents/communicable-disease-threats-report-week-42-2026.pdf",
+          "status": "READ_NO_NEW_MATERIAL_CHANGE"
+        }
+      ],
+      "new_sources": 0,
+      "new_attributed_statements": 0,
+      "new_independent_evidence": 0,
+      "new_events": 0,
+      "newly_discovered_old_evidence": 0,
+      "state_changing_evidence": 0,
+      "old_state": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+      "new_state": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+      "new_qualifying_evidence_count": 0,
+      "new_counter_evidence_count": 0
+    }
+  ],
+  "x": {
+    "account": "@structevidence",
+    "publication_authorized": false,
+    "account_verified": false,
+    "candidate_file": "data/ops/se/x-candidates/2026-10-19.json",
+    "post_id": null,
+    "post_url": null,
+    "posted_at": null,
+    "result": "AWAITING_HUMAN_REVIEW",
+    "blocker": "X_AUTO_PUBLISH_PAUSED_HUMAN_REVIEW"
+  },
+  "internal_workflows": {
+    "sunday_weekly_synthesis": {
+      "due": false,
+      "state": "NOT_DUE",
+      "artifact": null
+    },
+    "monday_socsm": {
+      "due": true,
+      "state": "HOLD",
+      "artifact": "SOCSM-SEIRK-20261019-01",
+      "public_projection": "PRIVATE"
+    }
+  },
+  "receipt_ids": [],
+  "alerts": [
+    {
+      "code": "OBSERVABILITY_BLOCKED",
+      "dedupe_key": "CROSS_PROJECT:2026-10-19",
+      "detail": "No verified CML/LoveTimeline run evidence was supplied."
+    },
+    {
+      "code": "X_HUMAN_REVIEW_REQUIRED",
+      "dedupe_key": "X:2026-10-19:X_HUMAN_REVIEW_REQUIRED",
+      "detail": "X_AUTO_PUBLISH_PAUSED_HUMAN_REVIEW"
+    },
+    {
+      "code": "MISSING_RUN_DETECTION_NOT_INDEPENDENT",
+      "dedupe_key": "MISSING_HEARTBEAT:2026-10-19",
+      "detail": "No independent health surface has been verified."
+    }
+  ],
+  "events": [
+    {
+      "event_id": "8ca4ebf84a9bfa66508629f9caea4655fde90f225e98d3db3746432a90763b4e",
+      "event": "SCHEDULED",
+      "stage": "scheduler",
+      "at": "2026-10-19T14:06:13Z",
+      "proof": "2026-10-19T22:00:00+08:00"
+    },
+    {
+      "event_id": "92dbbb3238c6442b2cd3ba218f697947bc336792a4a29871278544f917bf1aa5",
+      "event": "STARTED",
+      "stage": "orchestrator",
+      "at": "2026-10-19T14:06:13Z"
+    },
+    {
+      "event_id": "ca73dda43f3a74a8278260c8094ac478a5a330721a8544a1d6cc77c19190f39e",
+      "event": "SEARCH_COMPLETED",
+      "stage": "cases",
+      "at": "2026-10-19T14:06:13Z",
+      "proof": "data/ops/se/review-inputs/2026-10-19.json"
+    },
+    {
+      "event_id": "2691d783ab3834f41f8a9fd332b9ed6670ef1bbe9b1161a1511124833b1db178",
+      "event": "ARTIFACT_CREATED",
+      "stage": "x_candidate",
+      "at": "2026-10-19T14:06:13Z",
+      "proof": "data/ops/se/x-candidates/2026-10-19.json"
+    },
+    {
+      "event_id": "4aef1c569f5d9a4b74e1788ca11616c9965e5d3ae30e8eaaeaaaeddaea3df864",
+      "event": "ARTIFACT_CREATED",
+      "stage": "alerts",
+      "at": "2026-10-19T14:06:13Z",
+      "proof": "data/ops/se/alerts/2026-10-19.json"
+    },
+    {
+      "event_id": "f0cb8499b9fb79a298a4e374b63da4c3e87ad9b76c070e4bfb6888df6bf8cece",
+      "event": "ARTIFACT_CREATED",
+      "stage": "daily_report",
+      "at": "2026-10-19T14:06:13Z",
+      "proof": "data/ops/se/reports/2026-10-19.md"
+    }
+  ],
+  "outcome": "PARTIAL"
+}
