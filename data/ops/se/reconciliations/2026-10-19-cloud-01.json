@@ -1,0 +1,114 @@
+{
+  "schema_version": "se-ops-supplement-v1",
+  "audit_id": "SE-OPS-20261019-CLOUD-RECON-01",
+  "reviewed_at": "2026-10-19T14:44:31Z",
+  "baseline_sha": "e060d78edfa6ef3b51914bc68ab2d7cb93b1bd81",
+  "derived_from": [
+    "data/ops/se/runs/2026-10-19.json",
+    "data/ops/se/reports/2026-10-19.md"
+  ],
+  "existing_daily_review_ids": [
+    "SE-800V-REVIEW-20261019-01",
+    "SE-SODIUM-REVIEW-20261019-01",
+    "SE-IRK-REVIEW-20261019-01"
+  ],
+  "original_records_changed": 0,
+  "accepted_stop_changed": false,
+  "review_id_collisions_new": 0,
+  "research_outcome": "No newly qualifying public evidence found within inherited and supplementary boundaries; not proof of nonexistence.",
+  "new_sources": 0,
+  "new_attributed_statements": 0,
+  "new_independent_evidence": 0,
+  "new_events": 0,
+  "newly_discovered_old_evidence": 0,
+  "state_changing_evidence": 0,
+  "shared_irkutsk_budget": {
+    "inherited_search_groups": 1,
+    "supplementary_search_groups": 3,
+    "total_search_groups": 4,
+    "inherited_opens": 2,
+    "supplementary_opens": 5,
+    "total_webpage_open_attempts": 7
+  },
+  "public_source_graph": [
+    {
+      "source_id": "WHO-DON620",
+      "published_at": "2026-10-10",
+      "event_at": "2026-10-02/2026-10-09",
+      "retrieved_at": "2026-10-19T14:44:31Z",
+      "originator": "WHO with Russian Federation IHR NFP",
+      "publisher": "WHO",
+      "source_type": "INSTITUTIONAL_ASSESSMENT_AND_RELAY",
+      "claim_ids": [
+        "diagnostic_uncertainty",
+        "observation_completion"
+      ],
+      "depends_on": [
+        "RF-IHR-NFP"
+      ],
+      "relation": "SUPPORT_WITH_ATTRIBUTION_AND_LIMITS",
+      "verification_status": "READ",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON620",
+      "search_boundary": "Existing main institutional-source review plus limited supplemental source check; no new independent clinical original."
+    },
+    {
+      "source_id": "RPN-33189",
+      "published_at": null,
+      "event_at": null,
+      "retrieved_at": "2026-10-19T14:44:31Z",
+      "originator": "Rospotrebnadzor",
+      "publisher": "Rospotrebnadzor",
+      "source_type": "REGULATOR_ORIGINAL",
+      "claim_ids": [
+        "investigation"
+      ],
+      "depends_on": [],
+      "relation": "UNKNOWN",
+      "verification_status": "INACCESSIBLE",
+      "url": "https://www.rospotrebnadzor.ru/deyatelnost/epidemiological-surveillance/?ELEMENT_ID=33189",
+      "search_boundary": "Direct reader open unavailable; no bypass."
+    }
+  ],
+  "private_socsm": {
+    "opaque_linkage_id": "SOCSM-SEIRK-20261019-CLOUD-SUPP-01",
+    "executed": true,
+    "state": "PARTIAL",
+    "cost_state": "COST_NOT_ESTABLISHED",
+    "private_details_published": false
+  },
+  "cml_readonly": {
+    "platform_last_run_time": "2026-10-19T01:24:38.800592Z",
+    "dated_artifact_exists": true,
+    "dated_artifact_read": true,
+    "consecutive_artifact_dates": [
+      "2026-10-15",
+      "2026-10-16",
+      "2026-10-17",
+      "2026-10-18",
+      "2026-10-19"
+    ],
+    "public_commit_or_deployment_receipt": "NOT_ESTABLISHED",
+    "notification_receipts": "UNKNOWN",
+    "outreach": "HOLD"
+  },
+  "lovetimeline_readonly": {
+    "platform_last_run_time": "2026-10-19T00:09:52.465502Z",
+    "enabled": true,
+    "dated_execution_artifact": "NOT_FOUND_IN_DEFINED_ARTIFACT_SEARCH",
+    "pin_receipt": "UNKNOWN",
+    "email_receipt": "UNKNOWN",
+    "publishing_approval": "HUMAN_REQUIRED"
+  },
+  "candidate_correction": {
+    "conflicting_record_id": null,
+    "original_record_ref": {
+      "path": "data/ops/se/x-candidates/2026-10-19.json",
+      "commit": "e060d78edfa6ef3b51914bc68ab2d7cb93b1bd81",
+      "sha256": "ab9f5139ac2ab9e1f06ecd4c0a72b0c365bd95d31a816f0135ccac28fbbdaca8"
+    },
+    "reason": "THEMATIC_DUPLICATE_OF_OCT14_METHOD_CONTENT: same cheap-answers/evidence-cost message; date prefix and rephrasing do not supply a new angle.",
+    "resolution": "Preserve original bytes; append proposed replacement for human review; present one recommended text, send zero posts.",
+    "candidate_record_ref": "data/ops/se/x-candidates/2026-10-19-cloud-correction-01.json"
+  },
+  "production_result": "Existing ECDC event verified; new audit remains draft until separately merged/deployed"
+}
