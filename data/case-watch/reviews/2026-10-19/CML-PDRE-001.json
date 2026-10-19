@@ -1,0 +1,50 @@
+{
+  "schema_version": "se-case-review-v2",
+  "case_id": "CML-PDRE-001",
+  "review_id": "SE-800V-REVIEW-20261019-01",
+  "reviewed_at": "2026-10-19T14:04:25Z",
+  "result": "REVIEW_INCOMPLETE",
+  "review_complete": false,
+  "classifications": ["NO_STATE_CHANGE", "HUMAN_GATE_REQUIRED"],
+  "search_boundary": "One targeted official-source search group and three primary-page checks covering Chindata, Vertiv and Sungrow; not an exhaustive market census. A search-index lead for Sungrow article 1748 was not counted because both official URLs returned HTTP 404 and the body could not be verified.",
+  "sources_checked": [
+    {
+      "url": "https://www.chindatagroup.com/media/news/533.html",
+      "publisher": "Chindata",
+      "status": "READ",
+      "retrieved_at": "2026-10-19T14:04:25Z",
+      "finding": "The July 2 one-campus operator claim remains available; no second independent deployment or multi-entity replication record is supplied."
+    },
+    {
+      "url": "https://www.vertiv.com/en-ca/about/news-and-events/events/ocp-global-summit-2026/",
+      "publisher": "Vertiv",
+      "status": "READ",
+      "retrieved_at": "2026-10-19T14:04:25Z",
+      "finding": "The official event page documents 800 VDC sessions and reference architectures, not a named operating deployment or independently verified field performance."
+    },
+    {
+      "url": "https://cn.sungrowpower.com/news/1748.html",
+      "publisher": "Sungrow",
+      "status": "SOURCE_UNAVAILABLE_HTTP_404",
+      "retrieved_at": "2026-10-19T14:04:03Z",
+      "finding": "A current search index exposed potentially material attributed claims concerning commercial delivery and loaded operation, but the official page and content-host URL both returned HTTP 404. Search text alone is not verified evidence and is not counted or published."
+    }
+  ],
+  "daily_counters": {
+    "new_sources": 0,
+    "new_attributed_statements": 0,
+    "new_independent_evidence": 0,
+    "new_events": 0,
+    "newly_discovered_old_evidence": 0,
+    "state_changing_evidence": 0
+  },
+  "old_state": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+  "new_state": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+  "new_qualifying_evidence_count": 0,
+  "new_counter_evidence_count": 0,
+  "evidence_state_as_of": "2026-09-20T10:46:47Z",
+  "last_material_change": "2026-09-20",
+  "historical_backfill": false,
+  "blocker": "SOURCE_UNAVAILABLE_NEW",
+  "next_action": "Recheck the official Sungrow article in a future bounded run; do not infer or publish its indexed claims until the primary body is readable."
+}
