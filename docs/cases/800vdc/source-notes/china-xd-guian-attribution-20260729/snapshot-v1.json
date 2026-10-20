@@ -1,0 +1,22 @@
+{
+  "schema_version": "se-source-note-snapshot-v1",
+  "snapshot_id": "SE-SOURCE-NOTE-CML-PDRE-001-20260729-XD-GUIAN-SNAPSHOT-01",
+  "captured_at": "2026-10-20T14:07:29Z",
+  "capture_type": "STRUCTURED_FACT_SNAPSHOT_NOT_FULL_ORIGINAL",
+  "source_url": "https://stock.stockstar.com/RB2026072900020566.shtml",
+  "purported_upstream_origin": "Shanghai Stock Exchange e-interaction / China XD investor response",
+  "upstream_record_url": null,
+  "published_at": "2026-07-29T15:33:28+08:00",
+  "event_at": null,
+  "event_at_note": "Application date not established; July29 is the report/attribution date, not commissioning.",
+  "accessibility": "PUBLIC_HTML_READ",
+  "structured_facts": [
+    "Stockstar published a July29 report attributing a Guian 800V SST application statement to China XD.",
+    "The report labels its information as sourced from SSE e-interaction. The exact upstream answer was not recovered."
+  ],
+  "does_not_establish": [
+    "A second named operating customer, commissioning date, acceptance record or reliability history.",
+    "Independent verification of the reported equipment application."
+  ],
+  "copyright_boundary": "Own concise paraphrase only; no complete article or original answer reproduced."
+}

@@ -1,0 +1,68 @@
+{
+  "schema_version": "se-case-review-v2",
+  "case_id": "SE-BESS-SODIUM-001",
+  "old_state": "NAMED_COMMISSIONED_SITE_NOT_ESTABLISHED",
+  "new_state": "NAMED_COMMISSIONED_SITE_NOT_ESTABLISHED",
+  "evidence_state_as_of": "2026-09-24",
+  "last_material_change": "2026-09-24",
+  "review_id": "SE-SODIUM-REVIEW-20261020-CLOUD-01",
+  "reviewed_at": "2026-10-20T14:07:29Z",
+  "result": "HUMAN_GATE_REQUIRED",
+  "review_complete": true,
+  "search_boundary": "English sodium-ion/BESS and Chinese commissioning searches; official Moonwatt June22 source body rechecked. No new qualifying delivery, grid acceptance or reproducible mass-production record located within this bounded scope.",
+  "sources_checked": [
+    {
+      "source_id": "MOONWATT-JUN22",
+      "url": "https://www.moonwatt.com/2026/06/22/moonwatt-commissions-the-first-distributed-sodium-ion-battery-system-purpose-built-for-hybrid-solar-plants/",
+      "publisher": "Moonwatt",
+      "originator": "Moonwatt",
+      "source_type": "PUBLIC_SOURCE_RECHECK",
+      "published_at": "2026-06-22",
+      "event_at": null,
+      "retrieved_at": "2026-10-20T14:07:29Z",
+      "accessibility": "PUBLIC_HTML_READ",
+      "verification_status": "PUBLIC_HTML_READ",
+      "claim_ids": [
+        "MOONWATT-JUN22"
+      ],
+      "depends_on": [],
+      "relation": "RECHECK_NOT_NEW",
+      "search_boundary": "Bounded public page check; no exhaustive search asserted.",
+      "finding": "Existing June22 commissioned-site candidate rechecked; not new October20 delivery."
+    }
+  ],
+  "source_graph": [
+    {
+      "source_id": "MOONWATT-JUN22",
+      "url": "https://www.moonwatt.com/2026/06/22/moonwatt-commissions-the-first-distributed-sodium-ion-battery-system-purpose-built-for-hybrid-solar-plants/",
+      "publisher": "Moonwatt",
+      "originator": "Moonwatt",
+      "source_type": "PUBLIC_SOURCE_RECHECK",
+      "published_at": "2026-06-22",
+      "event_at": null,
+      "retrieved_at": "2026-10-20T14:07:29Z",
+      "accessibility": "PUBLIC_HTML_READ",
+      "verification_status": "PUBLIC_HTML_READ",
+      "claim_ids": [
+        "MOONWATT-JUN22"
+      ],
+      "depends_on": [],
+      "relation": "RECHECK_NOT_NEW",
+      "search_boundary": "Bounded public page check; no exhaustive search asserted.",
+      "finding": "Existing June22 commissioned-site candidate rechecked; not new October20 delivery."
+    }
+  ],
+  "daily_counters": {
+    "new_sources": 0,
+    "new_attributed_statements": 0,
+    "new_independent_evidence": 0,
+    "new_events": 0,
+    "newly_discovered_old_evidence": 0,
+    "state_changing_evidence": 0
+  },
+  "new_qualifying_evidence_count": 0,
+  "new_counter_evidence_count": 0,
+  "historical_backfill": false,
+  "accepted_stop_changed": false,
+  "minimum_next_verification": "Resolve original-source and operator-record gaps; existing material candidate remains HUMAN_GATE_REQUIRED."
+}

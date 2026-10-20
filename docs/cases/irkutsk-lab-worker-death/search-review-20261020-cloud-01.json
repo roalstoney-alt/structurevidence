@@ -1,0 +1,152 @@
+{
+  "schema_version": "se-case-review-v2",
+  "case_id": "SE-IRK-LAB-001",
+  "old_state": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+  "new_state": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+  "evidence_state_as_of": "2026-10-11T15:01:01+08:00",
+  "last_material_change": "2026-10-10",
+  "review_id": "SE-IRK-REVIEW-20261020-CLOUD-01",
+  "reviewed_at": "2026-10-20T14:07:29Z",
+  "result": "REVIEW_INCOMPLETE",
+  "review_complete": false,
+  "search_boundary": "Four targeted query groups: latest direct incident/RPN; WHO/IHR; institute governance/cooperation/patents; Oct8/9 observation timing. Three source opens. Budget/contract aggregator snippets only as unaccepted leads; no private financial findings published. No diagnostic, causal, wrongdoing or dangerous-method inference.",
+  "sources_checked": [
+    {
+      "source_id": "WHO-DON620",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON620",
+      "publisher": "WHO",
+      "originator": "WHO with RF IHR NFP attribution",
+      "source_type": "PUBLIC_SOURCE_RECHECK",
+      "published_at": "2026-10-10",
+      "event_at": null,
+      "retrieved_at": "2026-10-20T14:07:29Z",
+      "accessibility": "PUBLIC_HTML_READ",
+      "verification_status": "PUBLIC_HTML_READ",
+      "claim_ids": [
+        "WHO-DON620"
+      ],
+      "depends_on": [
+        "RF-IHR-NFP"
+      ],
+      "relation": "RECHECK_NOT_NEW",
+      "search_boundary": "Bounded public page check; no exhaustive search asserted.",
+      "finding": "October10 record remains dependent on Russian NFP for attributed factual reports; cause remains unestablished. Oct8/9 timing not resolved by fresh original."
+    },
+    {
+      "source_id": "RPN-33189",
+      "url": "https://www.rospotrebnadzor.ru/deyatelnost/epidemiological-surveillance/?ELEMENT_ID=33189",
+      "publisher": "Rospotrebnadzor",
+      "originator": "Rospotrebnadzor",
+      "source_type": "PUBLIC_SOURCE_RECHECK",
+      "published_at": null,
+      "event_at": null,
+      "retrieved_at": "2026-10-20T14:07:29Z",
+      "accessibility": "SOURCE_UNAVAILABLE",
+      "verification_status": "SOURCE_UNAVAILABLE",
+      "claim_ids": [
+        "RPN-33189"
+      ],
+      "depends_on": [],
+      "relation": "RECHECK_NOT_NEW",
+      "search_boundary": "Bounded public page check; no exhaustive search asserted.",
+      "finding": "Original inaccessible. No new claim or independent evidence counted."
+    },
+    {
+      "source_id": "IRK-INSTITUTE-EN",
+      "url": "https://irknipchi.ru/index_eng.htm",
+      "publisher": "Institute",
+      "originator": "Institute",
+      "source_type": "PUBLIC_SOURCE_RECHECK",
+      "published_at": null,
+      "event_at": null,
+      "retrieved_at": "2026-10-20T14:07:29Z",
+      "accessibility": "PUBLIC_HTML_READ",
+      "verification_status": "PUBLIC_HTML_READ",
+      "claim_ids": [
+        "IRK-INSTITUTE-EN"
+      ],
+      "depends_on": [],
+      "relation": "RECHECK_NOT_NEW",
+      "search_boundary": "Bounded public page check; no exhaustive search asserted.",
+      "finding": "Undated institutional landing page alone cannot establish current staffing, uninterrupted operation or investigation outcome."
+    }
+  ],
+  "source_graph": [
+    {
+      "source_id": "WHO-DON620",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON620",
+      "publisher": "WHO",
+      "originator": "WHO with RF IHR NFP attribution",
+      "source_type": "PUBLIC_SOURCE_RECHECK",
+      "published_at": "2026-10-10",
+      "event_at": null,
+      "retrieved_at": "2026-10-20T14:07:29Z",
+      "accessibility": "PUBLIC_HTML_READ",
+      "verification_status": "PUBLIC_HTML_READ",
+      "claim_ids": [
+        "WHO-DON620"
+      ],
+      "depends_on": [
+        "RF-IHR-NFP"
+      ],
+      "relation": "RECHECK_NOT_NEW",
+      "search_boundary": "Bounded public page check; no exhaustive search asserted.",
+      "finding": "October10 record remains dependent on Russian NFP for attributed factual reports; cause remains unestablished. Oct8/9 timing not resolved by fresh original."
+    },
+    {
+      "source_id": "RPN-33189",
+      "url": "https://www.rospotrebnadzor.ru/deyatelnost/epidemiological-surveillance/?ELEMENT_ID=33189",
+      "publisher": "Rospotrebnadzor",
+      "originator": "Rospotrebnadzor",
+      "source_type": "PUBLIC_SOURCE_RECHECK",
+      "published_at": null,
+      "event_at": null,
+      "retrieved_at": "2026-10-20T14:07:29Z",
+      "accessibility": "SOURCE_UNAVAILABLE",
+      "verification_status": "SOURCE_UNAVAILABLE",
+      "claim_ids": [
+        "RPN-33189"
+      ],
+      "depends_on": [],
+      "relation": "RECHECK_NOT_NEW",
+      "search_boundary": "Bounded public page check; no exhaustive search asserted.",
+      "finding": "Original inaccessible. No new claim or independent evidence counted."
+    },
+    {
+      "source_id": "IRK-INSTITUTE-EN",
+      "url": "https://irknipchi.ru/index_eng.htm",
+      "publisher": "Institute",
+      "originator": "Institute",
+      "source_type": "PUBLIC_SOURCE_RECHECK",
+      "published_at": null,
+      "event_at": null,
+      "retrieved_at": "2026-10-20T14:07:29Z",
+      "accessibility": "PUBLIC_HTML_READ",
+      "verification_status": "PUBLIC_HTML_READ",
+      "claim_ids": [
+        "IRK-INSTITUTE-EN"
+      ],
+      "depends_on": [],
+      "relation": "RECHECK_NOT_NEW",
+      "search_boundary": "Bounded public page check; no exhaustive search asserted.",
+      "finding": "Undated institutional landing page alone cannot establish current staffing, uninterrupted operation or investigation outcome."
+    }
+  ],
+  "daily_counters": {
+    "new_sources": 0,
+    "new_attributed_statements": 0,
+    "new_independent_evidence": 0,
+    "new_events": 0,
+    "newly_discovered_old_evidence": 0,
+    "state_changing_evidence": 0
+  },
+  "new_qualifying_evidence_count": 0,
+  "new_counter_evidence_count": 0,
+  "historical_backfill": false,
+  "accepted_stop_changed": false,
+  "minimum_next_verification": "Resolve original-source and operator-record gaps; existing material candidate remains HUMAN_GATE_REQUIRED.",
+  "search_budget": {
+    "targeted_search_groups": 4,
+    "webpage_open_attempts": 3
+  }
+}

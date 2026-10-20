@@ -1,0 +1,20 @@
+{
+  "candidate_id": "SE-X-2026-10-20-CLOUD-01",
+  "date": "2026-10-20",
+  "status": "WEBSITE_PUBLICATION_BLOCKED",
+  "secondary_blocker": "UPSTREAM_ORIGINAL_NOT_RECOVERED",
+  "text": null,
+  "content_sha256": null,
+  "evidence_cutoff": "2026-10-20T14:07:29Z",
+  "proposed_site_url": "https://structurevidence.org/cases/800vdc/source-notes/china-xd-guian-attribution-20260729/",
+  "source_urls": [
+    "https://stock.stockstar.com/RB2026072900020566.shtml"
+  ],
+  "fact_status": "NEWLY_DISCOVERED_OLD_SECONDARY_ATTRIBUTION_NOT_PRIMARY_VERIFIED_EVENT",
+  "deduplication": "No competing October20 candidate in baseline main or inspected open PRs; no provider history accessed. Guian attribution first discovered in today’s private CML report, one public candidate record only.",
+  "approval_gate": "HUMAN_GATE_REQUIRED",
+  "blocker": "X_AUTO_PUBLISH_PAUSED_HUMAN_REVIEW",
+  "X_POST_SENT": 0,
+  "x_post_sent": 0,
+  "reason": "New source-note route not yet published and production body not verified; do not produce ready-to-post text or substitute a generic methodology post."
+}

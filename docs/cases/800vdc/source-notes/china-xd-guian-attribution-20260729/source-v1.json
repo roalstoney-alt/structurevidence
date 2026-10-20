@@ -1,0 +1,32 @@
+{
+  "source_id": "SE-SOURCE-NOTE-CML-PDRE-001-20260729-XD-GUIAN",
+  "published_at": "2026-07-29T15:33:28+08:00",
+  "event_at": null,
+  "retrieved_at": "2026-10-20T14:07:29Z",
+  "originator": "China XD (attribution by Stockstar; upstream unverified)",
+  "publisher": "Stockstar / 证星互动追踪",
+  "source_type": "SECONDARY_REPORT_OF_ISSUER_RESPONSE",
+  "url": "https://stock.stockstar.com/RB2026072900020566.shtml",
+  "claim_ids": [
+    "XD-GUIAN-APPLICATION-ATTRIBUTION"
+  ],
+  "depends_on": [
+    "CHINA-XD-SSE-ANSWER-20260729-NOT-RECOVERED"
+  ],
+  "relation": "ATTRIBUTED_REPORT_NOT_INDEPENDENT_FIELD_CONFIRMATION",
+  "verification_status": "VERIFIED_SECONDARY_REPORT_ONLY",
+  "accessibility": "PUBLIC_HTML_READ",
+  "search_boundary": "Report body read; targeted official-domain searches and SSE public landing page did not recover the exact original answer. Other reposts not counted as independent confirmation.",
+  "supports": [
+    "Existence and wording scope of a dated attributed media report."
+  ],
+  "does_not_support": [
+    "A second named operating customer, commissioning date, acceptance record or reliability history.",
+    "Independent verification of the reported equipment application."
+  ],
+  "conflicts": [
+    "750V Xi’an energy-park operation is a different application, not a second 800V data-center operator."
+  ],
+  "minimum_next_verification": "Recover exact issuer answer with stable URL/date; match named operator, site, energization/acceptance and operating logs.",
+  "snapshot_sha256": "7aa9b9f9ced2666ad9787a5127d4e6e17bf6e7d24074b3e6cf1f932f229c213d"
+}

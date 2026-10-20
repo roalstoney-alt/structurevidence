@@ -1,0 +1,247 @@
+{
+  "schema_version": "se-case-review-v2",
+  "case_id": "CML-PDRE-001",
+  "old_state": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+  "new_state": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+  "evidence_state_as_of": "2026-09-20T10:46:47Z",
+  "last_material_change": "2026-09-20",
+  "review_id": "SE-800V-REVIEW-20261020-CLOUD-01",
+  "reviewed_at": "2026-10-20T14:07:29Z",
+  "result": "REVIEW_INCOMPLETE",
+  "review_complete": false,
+  "search_boundary": "English/Chinese deployment searches; official-domain issuer searches; public page reads. New secondary historical attribution preserved as candidate, exact upstream answer and key Sungrow body unavailable.",
+  "sources_checked": [
+    {
+      "source_id": "CHINDATA-533",
+      "url": "https://www.chindatagroup.com/media/news/533.html",
+      "publisher": "Chindata",
+      "originator": "Chindata",
+      "source_type": "PUBLIC_SOURCE_RECHECK",
+      "published_at": "2026-07-02",
+      "event_at": null,
+      "retrieved_at": "2026-10-20T14:07:29Z",
+      "accessibility": "PUBLIC_HTML_READ",
+      "verification_status": "PUBLIC_HTML_READ",
+      "claim_ids": [
+        "CHINDATA-533"
+      ],
+      "depends_on": [],
+      "relation": "RECHECK_NOT_NEW",
+      "search_boundary": "Bounded public page check; no exhaustive search asserted.",
+      "finding": "Prior July2 single campus company announcement; no new operator or operating logs."
+    },
+    {
+      "source_id": "SUNGROW-1748",
+      "url": "https://cn.sungrowpower.com/news/1748.html",
+      "publisher": "Sungrow",
+      "originator": "Sungrow",
+      "source_type": "PUBLIC_SOURCE_RECHECK",
+      "published_at": null,
+      "event_at": null,
+      "retrieved_at": "2026-10-20T14:07:29Z",
+      "accessibility": "SOURCE_UNAVAILABLE_HTTP_404",
+      "verification_status": "SOURCE_UNAVAILABLE_HTTP_404",
+      "claim_ids": [
+        "SUNGROW-1748"
+      ],
+      "depends_on": [],
+      "relation": "RECHECK_NOT_NEW",
+      "search_boundary": "Bounded public page check; no exhaustive search asserted.",
+      "finding": "Primary body still unavailable; indexed claims not accepted."
+    },
+    {
+      "source_id": "SOLAREDGE-DC-PAGE",
+      "url": "https://www.solaredge.com/us/data-centers",
+      "publisher": "SolarEdge",
+      "originator": "SolarEdge",
+      "source_type": "PUBLIC_SOURCE_RECHECK",
+      "published_at": null,
+      "event_at": null,
+      "retrieved_at": "2026-10-20T14:07:29Z",
+      "accessibility": "PUBLIC_HTML_READ",
+      "verification_status": "PUBLIC_HTML_READ",
+      "claim_ids": [
+        "SOLAREDGE-DC-PAGE"
+      ],
+      "depends_on": [],
+      "relation": "RECHECK_NOT_NEW",
+      "search_boundary": "Bounded public page check; no exhaustive search asserted.",
+      "finding": "Undated preliminary vendor product page; certification pathway/design claims are not field acceptance or second-site commissioning."
+    },
+    {
+      "source_id": "DELLORO-OCP-LEAD",
+      "url": "https://www.delloro.com/inside-ocp-global-summit-2026-cold-plates-800-vdc-sidecars-and-a-buildout-at-full-steam/",
+      "publisher": "Dell’Oro",
+      "originator": "Dell’Oro",
+      "source_type": "PUBLIC_SOURCE_RECHECK",
+      "published_at": null,
+      "event_at": null,
+      "retrieved_at": "2026-10-20T14:07:29Z",
+      "accessibility": "SOURCE_UNAVAILABLE",
+      "verification_status": "SOURCE_UNAVAILABLE",
+      "claim_ids": [
+        "DELLORO-OCP-LEAD"
+      ],
+      "depends_on": [],
+      "relation": "RECHECK_NOT_NEW",
+      "search_boundary": "Bounded public page check; no exhaustive search asserted.",
+      "finding": "Search index dated today; body unavailable, not admitted as verified new event."
+    },
+    {
+      "source_id": "SE-SOURCE-NOTE-CML-PDRE-001-20260729-XD-GUIAN",
+      "published_at": "2026-07-29T15:33:28+08:00",
+      "event_at": null,
+      "retrieved_at": "2026-10-20T14:07:29Z",
+      "originator": "China XD (attribution by Stockstar; upstream unverified)",
+      "publisher": "Stockstar / 证星互动追踪",
+      "source_type": "SECONDARY_REPORT_OF_ISSUER_RESPONSE",
+      "url": "https://stock.stockstar.com/RB2026072900020566.shtml",
+      "claim_ids": [
+        "XD-GUIAN-APPLICATION-ATTRIBUTION"
+      ],
+      "depends_on": [
+        "CHINA-XD-SSE-ANSWER-20260729-NOT-RECOVERED"
+      ],
+      "relation": "ATTRIBUTED_REPORT_NOT_INDEPENDENT_FIELD_CONFIRMATION",
+      "verification_status": "VERIFIED_SECONDARY_REPORT_ONLY",
+      "accessibility": "PUBLIC_HTML_READ",
+      "search_boundary": "Report body read; targeted official-domain searches and SSE public landing page did not recover the exact original answer. Other reposts not counted as independent confirmation.",
+      "supports": [
+        "Existence and wording scope of a dated attributed media report."
+      ],
+      "does_not_support": [
+        "A second named operating customer, commissioning date, acceptance record or reliability history.",
+        "Independent verification of the reported equipment application."
+      ],
+      "conflicts": [
+        "750V Xi’an energy-park operation is a different application, not a second 800V data-center operator."
+      ],
+      "minimum_next_verification": "Recover exact issuer answer with stable URL/date; match named operator, site, energization/acceptance and operating logs.",
+      "snapshot_sha256": "7aa9b9f9ced2666ad9787a5127d4e6e17bf6e7d24074b3e6cf1f932f229c213d"
+    }
+  ],
+  "source_graph": [
+    {
+      "source_id": "CHINDATA-533",
+      "url": "https://www.chindatagroup.com/media/news/533.html",
+      "publisher": "Chindata",
+      "originator": "Chindata",
+      "source_type": "PUBLIC_SOURCE_RECHECK",
+      "published_at": "2026-07-02",
+      "event_at": null,
+      "retrieved_at": "2026-10-20T14:07:29Z",
+      "accessibility": "PUBLIC_HTML_READ",
+      "verification_status": "PUBLIC_HTML_READ",
+      "claim_ids": [
+        "CHINDATA-533"
+      ],
+      "depends_on": [],
+      "relation": "RECHECK_NOT_NEW",
+      "search_boundary": "Bounded public page check; no exhaustive search asserted.",
+      "finding": "Prior July2 single campus company announcement; no new operator or operating logs."
+    },
+    {
+      "source_id": "SUNGROW-1748",
+      "url": "https://cn.sungrowpower.com/news/1748.html",
+      "publisher": "Sungrow",
+      "originator": "Sungrow",
+      "source_type": "PUBLIC_SOURCE_RECHECK",
+      "published_at": null,
+      "event_at": null,
+      "retrieved_at": "2026-10-20T14:07:29Z",
+      "accessibility": "SOURCE_UNAVAILABLE_HTTP_404",
+      "verification_status": "SOURCE_UNAVAILABLE_HTTP_404",
+      "claim_ids": [
+        "SUNGROW-1748"
+      ],
+      "depends_on": [],
+      "relation": "RECHECK_NOT_NEW",
+      "search_boundary": "Bounded public page check; no exhaustive search asserted.",
+      "finding": "Primary body still unavailable; indexed claims not accepted."
+    },
+    {
+      "source_id": "SOLAREDGE-DC-PAGE",
+      "url": "https://www.solaredge.com/us/data-centers",
+      "publisher": "SolarEdge",
+      "originator": "SolarEdge",
+      "source_type": "PUBLIC_SOURCE_RECHECK",
+      "published_at": null,
+      "event_at": null,
+      "retrieved_at": "2026-10-20T14:07:29Z",
+      "accessibility": "PUBLIC_HTML_READ",
+      "verification_status": "PUBLIC_HTML_READ",
+      "claim_ids": [
+        "SOLAREDGE-DC-PAGE"
+      ],
+      "depends_on": [],
+      "relation": "RECHECK_NOT_NEW",
+      "search_boundary": "Bounded public page check; no exhaustive search asserted.",
+      "finding": "Undated preliminary vendor product page; certification pathway/design claims are not field acceptance or second-site commissioning."
+    },
+    {
+      "source_id": "DELLORO-OCP-LEAD",
+      "url": "https://www.delloro.com/inside-ocp-global-summit-2026-cold-plates-800-vdc-sidecars-and-a-buildout-at-full-steam/",
+      "publisher": "Dell’Oro",
+      "originator": "Dell’Oro",
+      "source_type": "PUBLIC_SOURCE_RECHECK",
+      "published_at": null,
+      "event_at": null,
+      "retrieved_at": "2026-10-20T14:07:29Z",
+      "accessibility": "SOURCE_UNAVAILABLE",
+      "verification_status": "SOURCE_UNAVAILABLE",
+      "claim_ids": [
+        "DELLORO-OCP-LEAD"
+      ],
+      "depends_on": [],
+      "relation": "RECHECK_NOT_NEW",
+      "search_boundary": "Bounded public page check; no exhaustive search asserted.",
+      "finding": "Search index dated today; body unavailable, not admitted as verified new event."
+    },
+    {
+      "source_id": "SE-SOURCE-NOTE-CML-PDRE-001-20260729-XD-GUIAN",
+      "published_at": "2026-07-29T15:33:28+08:00",
+      "event_at": null,
+      "retrieved_at": "2026-10-20T14:07:29Z",
+      "originator": "China XD (attribution by Stockstar; upstream unverified)",
+      "publisher": "Stockstar / 证星互动追踪",
+      "source_type": "SECONDARY_REPORT_OF_ISSUER_RESPONSE",
+      "url": "https://stock.stockstar.com/RB2026072900020566.shtml",
+      "claim_ids": [
+        "XD-GUIAN-APPLICATION-ATTRIBUTION"
+      ],
+      "depends_on": [
+        "CHINA-XD-SSE-ANSWER-20260729-NOT-RECOVERED"
+      ],
+      "relation": "ATTRIBUTED_REPORT_NOT_INDEPENDENT_FIELD_CONFIRMATION",
+      "verification_status": "VERIFIED_SECONDARY_REPORT_ONLY",
+      "accessibility": "PUBLIC_HTML_READ",
+      "search_boundary": "Report body read; targeted official-domain searches and SSE public landing page did not recover the exact original answer. Other reposts not counted as independent confirmation.",
+      "supports": [
+        "Existence and wording scope of a dated attributed media report."
+      ],
+      "does_not_support": [
+        "A second named operating customer, commissioning date, acceptance record or reliability history.",
+        "Independent verification of the reported equipment application."
+      ],
+      "conflicts": [
+        "750V Xi’an energy-park operation is a different application, not a second 800V data-center operator."
+      ],
+      "minimum_next_verification": "Recover exact issuer answer with stable URL/date; match named operator, site, energization/acceptance and operating logs.",
+      "snapshot_sha256": "7aa9b9f9ced2666ad9787a5127d4e6e17bf6e7d24074b3e6cf1f932f229c213d"
+    }
+  ],
+  "daily_counters": {
+    "new_sources": 1,
+    "new_attributed_statements": 1,
+    "new_independent_evidence": 0,
+    "new_events": 0,
+    "newly_discovered_old_evidence": 1,
+    "state_changing_evidence": 0
+  },
+  "new_qualifying_evidence_count": 0,
+  "new_counter_evidence_count": 0,
+  "historical_backfill": false,
+  "accepted_stop_changed": false,
+  "minimum_next_verification": "Resolve original-source and operator-record gaps; existing material candidate remains HUMAN_GATE_REQUIRED.",
+  "candidate_source_note": "cases/800vdc/source-notes/china-xd-guian-attribution-20260729/index.json"
+}
