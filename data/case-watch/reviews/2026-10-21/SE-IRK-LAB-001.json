@@ -1,0 +1,22 @@
+{
+  "schema_version": "se-case-review-v2",
+  "case_id": "SE-IRK-LAB-001",
+  "review_id": "SE-IRK-REVIEW-20261021-CLOUD-01",
+  "reviewed_at": "2026-10-21T14:08:00Z",
+  "result": "REVIEW_INCOMPLETE",
+  "review_complete": false,
+  "classifications": ["NO_NEW_EVIDENCE", "NO_STATE_CHANGE", "HUMAN_GATE_REQUIRED"],
+  "search_boundary": "One consolidated targeted query group and two institutional/news-source checks, within the four-query/eight-open ceiling. Focus: WHO/IHR follow-up, anonymous contact-observation aggregate, 8–9 October release timing and denominators, institutional operation and public remediation/procurement/cooperation records.",
+  "search_budget": {"targeted_search_groups":1,"webpage_open_attempts":2},
+  "source_graph": [{"source_id":"WHO-DON620","url":"https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON620","published_at":"2026-10-10","event_at":"2026-10-02","retrieved_at":"2026-10-21T14:08:00Z","originator":"WHO with Russian Federation IHR National Focal Point","publisher":"WHO","source_type":"INSTITUTIONAL_ASSESSMENT_AND_RELAY","claim_ids":["cause","contacts","risk"],"depends_on":["RF-IHR-NFP"],"relation":"SUPPORT_WITH_UNCERTAINTY","verification_status":"READ_NO_NEW_RECORD","search_boundary":"WHO/IHR public record"},{"source_id":"REUTERS-20261006-IRK","url":"https://www.reuters.com/business/healthcare-pharmaceuticals/who-says-no-signs-further-russian-infections-after-plague-lab-worker-dies-2026-10-06/","published_at":"2026-10-06","event_at":"2026-10-06","retrieved_at":"2026-10-21T14:08:00Z","originator":"WHO briefing and Russian official response","publisher":"Reuters","source_type":"INDEPENDENT_NEWS_REPORT_WITH_ATTRIBUTED_SOURCES","claim_ids":["contacts","dangerous_pathogen_tests","diagnostic_uncertainty"],"depends_on":["WHO-BRIEFING","RF-IHR-NFP"],"relation":"SUPPORT_WITH_DEPENDENCY","verification_status":"READ_NO_NEW_MATERIAL_CHANGE","search_boundary":"Independent report of attributed official statements"}],
+  "sources_checked": [{"url":"https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON620","status":"READ_NO_NEW_RECORD"},{"url":"https://www.reuters.com/business/healthcare-pharmaceuticals/who-says-no-signs-further-russian-infections-after-plague-lab-worker-dies-2026-10-06/","status":"READ_NO_NEW_MATERIAL_CHANGE"}],
+  "daily_counters": {"new_sources":0,"new_attributed_statements":0,"new_independent_evidence":0,"new_events":0,"newly_discovered_old_evidence":0,"state_changing_evidence":0},
+  "old_state": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+  "new_state": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+  "new_qualifying_evidence_count": 0,
+  "new_counter_evidence_count": 0,
+  "evidence_state_as_of": "2026-10-11T15:01:01+08:00",
+  "last_material_change": "2026-10-10",
+  "historical_backfill": false,
+  "next_action": "Seek a direct public investigation result and denominator-defined aggregate follow-up. Do not infer cause, exposure, illegality or procurement causality."
+}
