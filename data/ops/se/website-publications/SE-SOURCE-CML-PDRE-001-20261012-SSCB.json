@@ -4,11 +4,11 @@
   "checked_at": "2026-10-21T14:08:00Z",
   "public_url": "https://structurevidence.org/cases/800vdc/source-notes/power-integrations-ideal-power-sscb-20261012/",
   "expected_body_marker": "Supplier collaboration on an 800 VDC solid-state circuit breaker",
-  "http_status": 404,
+  "http_status": null,
   "body_marker_verified": false,
   "source_main_sha": "e060d78edfa6ef3b51914bc68ab2d7cb93b1bd81",
   "snapshot_expected_sha256": "bc53bc00c4a66d044af3e69d461ba6c0d2164a8625939be56e90dc4f6b9c2ed9",
   "snapshot_observed_sha256": null,
   "result": "WEBSITE_PUBLICATION_BLOCKED",
-  "reason": "Source note exists only in the draft change set; production URL and expected body were not available."
+  "reason": "The proposed production URL was not accessible to the verification tool and the expected body marker could not be verified; the note exists only in the draft change set."
 }
