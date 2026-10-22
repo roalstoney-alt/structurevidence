@@ -1,0 +1,17 @@
+{
+  "schema_version": "se-information-event-v1",
+  "event_id": "SE-EVENT-CML-PDRE-001-20261021-VANTAGE-HERON",
+  "case_id": "CML-PDRE-001",
+  "event_at": "2026-10-21",
+  "published_at": "2026-10-21",
+  "retrieved_at": "2026-10-22T14:02:00Z",
+  "original_url": "https://vantage-dc.com/news/vantage-and-heron-power-electronics-announce-gigawatt-scale-800-vdc-agreement-to-accelerate-ai-infrastructure-delivery/",
+  "public_url": "https://structurevidence.org/cases/800vdc/events/vantage-heron-capacity-agreement-2026/",
+  "snapshot_file": "snapshot-v1.json",
+  "snapshot_sha256": "69b61c5ea87e5adf9ec8e272e8f07c47bceaccc159600be2854952096a73adda",
+  "verification_status": "PRIMARY_SOURCE_READ",
+  "classifications": ["NEW_EVENT", "NO_STATE_CHANGE", "HUMAN_GATE_REQUIRED"],
+  "old_stop": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+  "candidate_stop": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+  "state_changed": false
+}

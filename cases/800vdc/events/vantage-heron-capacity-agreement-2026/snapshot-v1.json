@@ -1,0 +1,22 @@
+{
+  "schema_version": "se-event-snapshot-v1",
+  "event_id": "SE-EVENT-CML-PDRE-001-20261021-VANTAGE-HERON",
+  "case_id": "CML-PDRE-001",
+  "event_at": "2026-10-21",
+  "published_at": "2026-10-21",
+  "retrieved_at": "2026-10-22T14:02:00Z",
+  "originator": ["Vantage Data Centers", "Heron Power Electronics"],
+  "publisher": "Vantage Data Centers",
+  "source_type": "PRIMARY_OPERATOR_AND_SUPPLIER_JOINT_RELEASE",
+  "original_url": "https://vantage-dc.com/news/vantage-and-heron-power-electronics-announce-gigawatt-scale-800-vdc-agreement-to-accelerate-ai-infrastructure-delivery/",
+  "accessibility": "PUBLIC_HTML_READ",
+  "structured_facts": [
+    "Vantage and Heron announced a strategic manufacturing-capacity agreement.",
+    "Vantage says it secured more than 1 GW of manufacturing capacity for Heron Link solid-state transformers intended for hyperscale data-center campuses.",
+    "The release does not identify a commissioned campus, units delivered, acceptance-test records, operating hours, price or independently measured field performance.",
+    "Heron's separate factory announcement says mass production is planned for late 2027, so reserved capacity is not current produced output."
+  ],
+  "relation": "SUPPORTS_NAMED_FUTURE_CAPACITY_RESERVATION_NOT_FIELD_COMMISSIONING",
+  "verification_status": "PRIMARY_SOURCE_READ",
+  "copyright_note": "Short structured factual snapshot only; not a copy of either source article."
+}
