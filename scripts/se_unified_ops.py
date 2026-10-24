@@ -256,6 +256,39 @@ def _date_from_timestamp(value: str) -> dt.date:
 
 
 def validate_event_record(event: dict[str, Any]) -> None:
+    if event.get("schema_version") == "se-information-event-v1":
+        required = {
+            "event_id", "case_id", "published_at", "event_at", "retrieved_at",
+            "original_url", "public_url", "snapshot_file", "snapshot_sha256",
+            "verification_status", "classifications", "old_stop", "candidate_stop",
+            "state_changed",
+        }
+        missing = sorted(required - set(event))
+        if missing:
+            raise GateBlocked(f"information event record missing required fields: {', '.join(missing)}")
+        classifications = set(event["classifications"])
+        if len(classifications & EVENT_CLASSIFICATIONS) != 1:
+            raise GateBlocked("information event must be exactly NEW_EVENT or NEWLY_DISCOVERED_OLD_EVIDENCE")
+        if not classifications <= EVENT_CLASSIFICATIONS | {"NO_STATE_CHANGE", "HUMAN_GATE_REQUIRED"}:
+            raise GateBlocked("invalid information event classification")
+        if event["verification_status"] not in {"PRIMARY_SOURCE_READ", "VERIFIED_PRIMARY_SOURCE"}:
+            raise GateBlocked("unverified source cannot enter an information event record")
+        if not re.fullmatch(r"[0-9a-f]{64}", event["snapshot_sha256"]):
+            raise GateBlocked("snapshot_sha256 must be a lowercase SHA-256")
+        event_start = _date_from_timestamp(str(event["event_at"]).split("/", 1)[0])
+        published = _date_from_timestamp(str(event["published_at"]))
+        retrieved = _date_from_timestamp(str(event["retrieved_at"]))
+        if published > retrieved or event_start > retrieved:
+            raise GateBlocked("event or publication date cannot be later than retrieval date")
+        if event["state_changed"]:
+            if "HUMAN_GATE_REQUIRED" not in classifications:
+                raise GateBlocked("state-changing evidence requires a human gate")
+        elif event["old_stop"] != event["candidate_stop"] or "NO_STATE_CHANGE" not in classifications:
+            raise GateBlocked("unchanged stop requires identical stops and NO_STATE_CHANGE")
+        if not event["original_url"].startswith("https://") or not event["public_url"].startswith("https://structurevidence.org/"):
+            raise GateBlocked("event URLs violate the publication boundary")
+        return
+
     required = {
         "event_id", "case_id", "title", "published_at", "event_at", "retrieved_at",
         "originator", "publisher", "source_type", "original_url", "accessibility",
@@ -509,7 +542,10 @@ def run_orchestrator(args: argparse.Namespace) -> tuple[dict[str, Any], dict[str
             if weekly["due"]:
                 addendum = review_bundle.get("sunday_weekly_addendum")
                 if addendum and addendum.get("nsclc_management_status") == "FOLDED" and addendum.get("artifact"):
-                    weekly.update(state="PASS", artifact=addendum["artifact"])
+                    weekly_state = addendum.get("state", "PASS")
+                    if weekly_state not in {"PASS", "PARTIAL", "HOLD"}:
+                        raise ValueError(f"unsupported Sunday weekly state: {weekly_state}")
+                    weekly.update(state=weekly_state, artifact=addendum["artifact"])
                 else:
                     weekly["state"] = "BLOCKED"
                     run["alerts"].append({"code": "SOURCE_BLOCKED_NEW", "dedupe_key": f"SUNDAY_ADDENDUM:{date_sgt}", "detail": "Sunday weekly synthesis with folded NSCLC was due but no validated addendum was supplied."})

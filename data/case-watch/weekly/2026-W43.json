@@ -1,0 +1,66 @@
+{
+  "week_id": "2026-W43",
+  "generated_at": "2026-10-24T21:34:51Z",
+  "review_period": {
+    "start": "2026-10-19",
+    "end": "2026-10-25",
+    "complete": false,
+    "missing_review_dates": ["2026-10-20", "2026-10-24"],
+    "missing_unified_run_receipt_dates": ["2026-10-20", "2026-10-22", "2026-10-24"]
+  },
+  "candidate_only": true,
+  "reviews": [
+    {
+      "case_id": "CML-PDRE-001",
+      "review_period": {"start": "2026-10-19", "end": "2026-10-25", "complete": false},
+      "previous_version": "v0.1",
+      "records_screened": 4,
+      "relevant_records": 2,
+      "state_changing_records": 0,
+      "counter_evidence_records": 1,
+      "proposed_decision": "NO_STATE_CHANGE",
+      "proposed_next_version": null,
+      "reason": "The Power Integrations–Ideal Power supplier collaboration and Vantage–Heron future capacity agreement expand the component and commercial-intent record. Neither establishes delivered units, a newly commissioned campus, replicated operation or independently measured field performance. Heron's late-2027 production plan limits present-tense deployment inference.",
+      "minimum_missing_evidence": ["Named commissioned campus using the new equipment", "Acceptance tests and attributable operating hours", "Independent performance or replicated deployment evidence"],
+      "decision_that_could_change": "Replication and independent-validation status",
+      "recommended_rdl_level": "NONE",
+      "human_decision": "PENDING",
+      "publication_approved": false
+    },
+    {
+      "case_id": "SE-BESS-SODIUM-001",
+      "review_period": {"start": "2026-10-19", "end": "2026-10-25", "complete": false},
+      "previous_version": "v0.1",
+      "records_screened": 2,
+      "relevant_records": 0,
+      "state_changing_records": 0,
+      "counter_evidence_records": 0,
+      "proposed_decision": "NO_STATE_CHANGE",
+      "proposed_next_version": null,
+      "reason": "Current CATL product, capacity and delivery statements do not add a newly named commissioned stationary-storage site or an independently checkable operating dataset. The append-only provenance corrections for incomplete October 22–23 reviews remain in force.",
+      "minimum_missing_evidence": ["Named grid-connected commissioned project", "Attributable operating record", "Independent field-performance evidence"],
+      "decision_that_could_change": "Named commissioned-site and independent field-performance status",
+      "recommended_rdl_level": "NONE",
+      "human_decision": "PENDING",
+      "publication_approved": false
+    },
+    {
+      "case_id": "SE-ONC-NSQNSCLC-CN-001",
+      "review_period": {"start": "2026-10-19", "end": "2026-10-25", "complete": false},
+      "previous_version": "v0.1",
+      "records_screened": 2,
+      "relevant_records": 1,
+      "state_changing_records": 0,
+      "counter_evidence_records": 0,
+      "proposed_decision": "NO_STATE_CHANGE",
+      "proposed_next_version": null,
+      "reason": "The multinational HARMONi trial record remains relevant historical evidence. No new qualifying evidence or substantive correction text was established this week, and no individual prognosis or cross-modality ranking is supported.",
+      "minimum_missing_evidence": ["Substantive review of the linked correction", "Human medical interpretation within the frozen public boundary"],
+      "decision_that_could_change": "Bounded comparative evidence summary only; patient-specific probability remains not established",
+      "recommended_rdl_level": "NONE",
+      "human_decision": "PENDING",
+      "publication_approved": false,
+      "management_status": "FOLDED"
+    }
+  ]
+}

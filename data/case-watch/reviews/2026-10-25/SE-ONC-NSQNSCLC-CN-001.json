@@ -1,0 +1,40 @@
+{
+  "schema_version": "se-case-review-v2",
+  "case_id": "SE-ONC-NSQNSCLC-CN-001",
+  "review_id": "SE-NSCLC-REVIEW-20261025-01",
+  "reviewed_at": "2026-10-24T21:34:51Z",
+  "result": "HUMAN_GATE_REQUIRED",
+  "review_complete": true,
+  "classifications": ["NO_STATE_CHANGE", "HUMAN_GATE_REQUIRED"],
+  "search_boundary": "Bounded Sunday PubMed review of the multinational HARMONi record, linked correction metadata and the existing HARMONi-A comparison record. No full-text reanalysis, patient-specific inference or cross-modality ranking.",
+  "sources_checked": [
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42636833/",
+      "publisher": "PubMed / Lancet Oncology",
+      "status": "READ_NO_NEW_MATERIAL_CHANGE",
+      "retrieved_at": "2026-10-24T21:34:51Z",
+      "finding": "The September 2026 multinational phase 3 record remains available. Its linked correction is still identified by metadata, but no substantive correction text was established in this bounded review."
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42307937/",
+      "publisher": "PubMed / JAMA",
+      "status": "READ_BASELINE_COMPARISON",
+      "retrieved_at": "2026-10-24T21:34:51Z",
+      "finding": "The frozen HARMONi-A baseline remains a distinct study and was not overwritten."
+    }
+  ],
+  "new_sources": 0,
+  "new_attributed_statements": 0,
+  "new_independent_evidence": 0,
+  "new_events": 0,
+  "newly_discovered_old_evidence": 0,
+  "state_changing_evidence": 0,
+  "old_state": "PUBLIC_RESEARCH_PREVIEW_PERSONAL_ESTIMATE_NOT_ESTABLISHED",
+  "new_state": "PUBLIC_RESEARCH_PREVIEW_PERSONAL_ESTIMATE_NOT_ESTABLISHED",
+  "new_qualifying_evidence_count": 0,
+  "new_counter_evidence_count": 0,
+  "evidence_state_as_of": "2026-09-28",
+  "last_material_change": "2026-09-28",
+  "management_status": "FOLDED",
+  "human_gate_reason": "Substantive medical interpretation and the unresolved correction text remain human-gated; no individual prognosis or treatment recommendation is authorized."
+}

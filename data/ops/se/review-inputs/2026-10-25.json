@@ -1,0 +1,110 @@
+{
+  "schema_version": "se-unified-review-bundle-v1",
+  "date_sgt": "2026-10-25",
+  "reviews": [
+    {
+      "case_id": "CML-PDRE-001",
+      "review_id": "SE-800V-REVIEW-20261025-01",
+      "reviewed_at": "2026-10-24T21:34:51Z",
+      "result": "NO_STATE_CHANGE",
+      "review_complete": true,
+      "classifications": ["NO_STATE_CHANGE"],
+      "search_boundary": "Targeted official-source review; see data/case-watch/reviews/2026-10-25/CML-PDRE-001.json.",
+      "sources_checked": [
+        {"url": "https://vantage-dc.com/news/vantage-and-heron-power-electronics-announce-gigawatt-scale-800-vdc-agreement-to-accelerate-ai-infrastructure-delivery/", "status": "READ_EXISTING_EVENT_REVERIFIED"},
+        {"url": "https://investors.power.com/news/news-details/2026/Power-Integrations-and-Ideal-Power-Collaborate-on-Efficient-Always-On-Solid-State-Circuit-Breakers-for-800-VDC-AI-Data-Centers/default.aspx", "status": "READ_EXISTING_SOURCE_NOTE_REVERIFIED"}
+      ],
+      "new_sources": 0,
+      "new_attributed_statements": 0,
+      "new_independent_evidence": 0,
+      "new_events": 0,
+      "newly_discovered_old_evidence": 0,
+      "state_changing_evidence": 0,
+      "old_state": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+      "new_state": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+      "new_qualifying_evidence_count": 0,
+      "new_counter_evidence_count": 0
+    },
+    {
+      "case_id": "SE-BESS-SODIUM-001",
+      "review_id": "SE-SODIUM-REVIEW-20261025-01",
+      "reviewed_at": "2026-10-24T21:34:51Z",
+      "result": "NO_STATE_CHANGE",
+      "review_complete": true,
+      "classifications": ["NO_STATE_CHANGE"],
+      "search_boundary": "Targeted official-source review; see data/case-watch/reviews/2026-10-25/SE-BESS-SODIUM-001.json.",
+      "sources_checked": [
+        {"url": "https://www.catl.com/en/news/6861.html", "status": "READ_NO_NEW_MATERIAL_CHANGE"}
+      ],
+      "new_sources": 0,
+      "new_attributed_statements": 0,
+      "new_independent_evidence": 0,
+      "new_events": 0,
+      "newly_discovered_old_evidence": 0,
+      "state_changing_evidence": 0,
+      "old_state": "NAMED_COMMISSIONED_SITE_NOT_ESTABLISHED",
+      "new_state": "NAMED_COMMISSIONED_SITE_NOT_ESTABLISHED",
+      "new_qualifying_evidence_count": 0,
+      "new_counter_evidence_count": 0
+    },
+    {
+      "case_id": "SE-IRK-LAB-001",
+      "review_id": "SE-IRK-REVIEW-20261025-01",
+      "reviewed_at": "2026-10-24T21:34:51Z",
+      "result": "REVIEW_INCOMPLETE",
+      "review_complete": false,
+      "classifications": ["NO_STATE_CHANGE", "HUMAN_GATE_REQUIRED"],
+      "search_boundary": "One consolidated Irkutsk search group and two institutional primary-page reads; see data/case-watch/reviews/2026-10-25/SE-IRK-LAB-001.json.",
+      "search_budget": {"targeted_search_groups": 1, "webpage_open_attempts": 2},
+      "source_graph": [
+        {"source_id": "WHO-DON620", "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON620", "retrieved_at": "2026-10-24T21:34:51Z", "originator": "WHO with Russian Federation IHR National Focal Point", "publisher": "WHO", "source_type": "INSTITUTIONAL_ASSESSMENT_AND_RELAY", "claim_ids": ["cause", "contacts", "risk"], "depends_on": ["RF-IHR-NFP"], "relation": "SUPPORT_WITH_UNCERTAINTY", "verification_status": "READ_NO_NEW_RECORD", "search_boundary": "WHO/IHR public record"},
+        {"source_id": "ECDC-EIP-00034-20261009", "url": "https://www.ecdc.europa.eu/en/public-health-events/2026-eip-00034/2026-10-09", "retrieved_at": "2026-10-24T21:34:51Z", "originator": "ECDC with WHO and attributed Russian-authority inputs", "publisher": "ECDC", "source_type": "INSTITUTIONAL_ASSESSMENT_AND_DERIVATIVE_SUMMARY", "claim_ids": ["diagnostic_uncertainty", "risk"], "depends_on": ["WHO-DON620", "RF-IHR-NFP"], "relation": "SUPPORT_WITH_DEPENDENCY", "verification_status": "READ_NO_NEW_MATERIAL_CHANGE", "search_boundary": "ECDC public event page"}
+      ],
+      "sources_checked": [
+        {"url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON620", "status": "READ_NO_NEW_RECORD"},
+        {"url": "https://www.ecdc.europa.eu/en/public-health-events/2026-eip-00034/2026-10-09", "status": "READ_NO_NEW_MATERIAL_CHANGE"}
+      ],
+      "new_sources": 0,
+      "new_attributed_statements": 0,
+      "new_independent_evidence": 0,
+      "new_events": 0,
+      "newly_discovered_old_evidence": 0,
+      "state_changing_evidence": 0,
+      "old_state": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+      "new_state": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+      "new_qualifying_evidence_count": 0,
+      "new_counter_evidence_count": 0
+    },
+    {
+      "case_id": "SE-ONC-NSQNSCLC-CN-001",
+      "review_id": "SE-NSCLC-REVIEW-20261025-01",
+      "reviewed_at": "2026-10-24T21:34:51Z",
+      "result": "HUMAN_GATE_REQUIRED",
+      "review_complete": true,
+      "classifications": ["NO_STATE_CHANGE", "HUMAN_GATE_REQUIRED"],
+      "search_boundary": "Bounded Sunday PubMed review; see data/case-watch/reviews/2026-10-25/SE-ONC-NSQNSCLC-CN-001.json.",
+      "sources_checked": [
+        {"url": "https://pubmed.ncbi.nlm.nih.gov/42636833/", "status": "READ_NO_NEW_MATERIAL_CHANGE"},
+        {"url": "https://pubmed.ncbi.nlm.nih.gov/42307937/", "status": "READ_BASELINE_COMPARISON"}
+      ],
+      "new_sources": 0,
+      "new_attributed_statements": 0,
+      "new_independent_evidence": 0,
+      "new_events": 0,
+      "newly_discovered_old_evidence": 0,
+      "state_changing_evidence": 0,
+      "old_state": "PUBLIC_RESEARCH_PREVIEW_PERSONAL_ESTIMATE_NOT_ESTABLISHED",
+      "new_state": "PUBLIC_RESEARCH_PREVIEW_PERSONAL_ESTIMATE_NOT_ESTABLISHED",
+      "new_qualifying_evidence_count": 0,
+      "new_counter_evidence_count": 0
+    }
+  ],
+  "sunday_weekly_addendum": {
+    "state": "PARTIAL",
+    "nsclc_management_status": "FOLDED",
+    "artifact": "data/case-watch/weekly/2026-W43.json",
+    "historical_missing_periods_preserved": true,
+    "missing_review_dates": ["2026-10-20", "2026-10-24"],
+    "missing_unified_run_receipt_dates": ["2026-10-20", "2026-10-22", "2026-10-24"]
+  }
+}
