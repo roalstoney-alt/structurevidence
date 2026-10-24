@@ -1,0 +1,59 @@
+{
+  "schema_version": "se-six-case-review-v1",
+  "case_id": "SE-IRK-LAB-001",
+  "review_id": "SE-IRK-REVIEW-20261024-CLOUD-01",
+  "reviewed_at": "2026-10-24T14:15:00Z",
+  "knowledge_cutoff": "2026-10-24T14:15:00Z",
+  "result": "REVIEW_INCOMPLETE",
+  "review_complete": false,
+  "review_status": [
+    "REVIEW_INCOMPLETE",
+    "NO_STATE_CHANGE_NOT_ASSERTED"
+  ],
+  "source_url": [
+    "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON620"
+  ],
+  "source_id": [
+    "WHO-DON620"
+  ],
+  "source_speaker": [
+    "WHO"
+  ],
+  "claimed_subject": "SE-IRK-LAB-001",
+  "claim_ids": [],
+  "event_at": null,
+  "published_at": null,
+  "observed_at": "2026-10-24T14:15:00Z",
+  "source_access": [
+    {
+      "source_id": "WHO-DON620",
+      "access": "SEARCH_RESULT_TEXT; EXISTING PRIMARY RECORD"
+    }
+  ],
+  "raw_hash_or_UNAVAILABLE": "UNAVAILABLE",
+  "search_query": [
+    "site:who.int Irkutsk laboratory worker death October 2026 update",
+    "Irkutsk anti-plague institute worker death investigation October 23 2026"
+  ],
+  "search_boundary": "Two targeted query groups within the four-query/eight-open ceiling; WHO DON remained the latest primary record found. No new direct investigation result was verified.",
+  "old_stop_point": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+  "proposed_stop_point": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+  "daily_counters": {
+    "new_sources": 0,
+    "new_attributed_statements": 0,
+    "new_independent_evidence": 0,
+    "new_events": 0,
+    "newly_discovered_old_evidence": 0,
+    "state_changing_evidence": 0
+  },
+  "contradictions": [
+    "Public commentary alleges opacity; it is not evidence of cause, infection, illegality or a laboratory incident."
+  ],
+  "decision_relevant_unknown": [
+    "Cause of death, occupational link, denominator-defined contact outcome and final investigation remain unestablished."
+  ],
+  "next_observable": "Direct regulator/investigation report or denominator-defined aggregate follow-up.",
+  "notes": [
+    "No identifiable-case data collected. No dangerous laboratory methods recorded."
+  ]
+}
