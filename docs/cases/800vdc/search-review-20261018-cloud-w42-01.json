@@ -1,0 +1,70 @@
+{
+  "schema_version": "se-case-review-v2",
+  "case_id": "CML-PDRE-001",
+  "review_id": "SE-800V-REVIEW-20261018-CLOUD-W42-01",
+  "reviewed_at": "2026-10-18T14:04:01Z",
+  "result": "NO_STATE_CHANGE",
+  "review_complete": true,
+  "search_boundary": "Bounded 800V/SST official-source and field-deployment search; Sungrow original read and live site/snapshot independently checked. No newly qualifying independently attributable field operation, replication or reliability record found in scope.",
+  "sources_checked": [
+    {
+      "source_id": "SUNGROW-1749",
+      "url": "https://cn.sungrowpower.com/news/1749.html",
+      "published_at": "2026-10-15",
+      "event_at": "2026-10-15",
+      "retrieved_at": "2026-10-18T14:04:01Z",
+      "originator": "Sungrow",
+      "publisher": "Sungrow",
+      "source_type": "PRIMARY_CORPORATE_ANNOUNCEMENT",
+      "claim_ids": [
+        "certification"
+      ],
+      "depends_on": [],
+      "relation": "EXISTING_ATTRIBUTED_CLAIM",
+      "verification_status": "READ",
+      "search_boundary": "October18 bounded daily/weekly review",
+      "finding": "Existing company announcement preserved through PR31 reconciliation; no fresh issuer confirmation or new operating site established. Not recounted as new."
+    }
+  ],
+  "source_graph": [
+    {
+      "source_id": "SUNGROW-1749",
+      "url": "https://cn.sungrowpower.com/news/1749.html",
+      "published_at": "2026-10-15",
+      "event_at": "2026-10-15",
+      "retrieved_at": "2026-10-18T14:04:01Z",
+      "originator": "Sungrow",
+      "publisher": "Sungrow",
+      "source_type": "PRIMARY_CORPORATE_ANNOUNCEMENT",
+      "claim_ids": [
+        "certification"
+      ],
+      "depends_on": [],
+      "relation": "EXISTING_ATTRIBUTED_CLAIM",
+      "verification_status": "READ",
+      "search_boundary": "October18 bounded daily/weekly review",
+      "finding": "Existing company announcement preserved through PR31 reconciliation; no fresh issuer confirmation or new operating site established. Not recounted as new."
+    }
+  ],
+  "old_state": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+  "new_state": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+  "new_qualifying_evidence_count": 0,
+  "new_counter_evidence_count": 0,
+  "new_sources": 0,
+  "new_attributed_statements": 0,
+  "new_independent_evidence": 0,
+  "new_events": 0,
+  "newly_discovered_old_evidence": 0,
+  "state_changing_evidence": 0,
+  "daily_counters": {
+    "new_sources": 0,
+    "new_attributed_statements": 0,
+    "new_independent_evidence": 0,
+    "new_events": 0,
+    "newly_discovered_old_evidence": 0,
+    "state_changing_evidence": 0
+  },
+  "state_changed": false,
+  "historical_backfill": false,
+  "baseline_sha": "759ccbff7102d01d6fbf3037cfcb26312017a3ed"
+}

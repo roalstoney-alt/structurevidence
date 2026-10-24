@@ -1,0 +1,160 @@
+{
+  "schema_version": "se-case-review-v2",
+  "case_id": "SE-IRK-LAB-001",
+  "review_id": "SE-IRK-REVIEW-20261018-CLOUD-W42-01",
+  "reviewed_at": "2026-10-18T14:04:01Z",
+  "result": "REVIEW_INCOMPLETE",
+  "review_complete": false,
+  "search_boundary": "Four targeted query groups covering WHO/IHR; Russian contacts/quarantine/investigation; institution procurement/budget/regulation/patents/licensing; independent interviews. Three webpage opens (WHO,ECDC,RPN). No new independent clinical, investigation, contract-performance or rights evidence verified. October8 announcement/by-October9 completion remain scoped dependent statements; no population equivalence inferred.",
+  "sources_checked": [
+    {
+      "source_id": "WHO-DON620",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON620",
+      "published_at": "2026-10-10",
+      "event_at": "2026-10-02/2026-10-09",
+      "retrieved_at": "2026-10-18T14:04:01Z",
+      "originator": "WHO with Russian IHR NFP",
+      "publisher": "WHO",
+      "source_type": "INSTITUTIONAL_ASSESSMENT_AND_RELAY",
+      "claim_ids": [
+        "cause_unknown",
+        "contacts"
+      ],
+      "depends_on": [
+        "RF-IHR-NFP"
+      ],
+      "relation": "SUPPORT_WITH_LIMITS",
+      "verification_status": "READ",
+      "search_boundary": "October18 bounded daily/weekly review",
+      "finding": "Confirmed diagnosis remains unavailable; contact observation completion is attributed to national authorities."
+    },
+    {
+      "source_id": "ECDC-W42-2026",
+      "url": "https://www.ecdc.europa.eu/sites/default/files/documents/communicable-disease-threats-report-week-42-2026.pdf",
+      "published_at": "2026-10-16",
+      "event_at": "2026-10-16",
+      "retrieved_at": "2026-10-18T14:04:01Z",
+      "originator": "ECDC with dependent source chain",
+      "publisher": "ECDC",
+      "source_type": "INSTITUTIONAL_ASSESSMENT",
+      "claim_ids": [
+        "risk",
+        "contacts"
+      ],
+      "depends_on": [
+        "WHO-DON620",
+        "RF-IHR-NFP"
+      ],
+      "relation": "EXISTING_DEPENDENT_ASSESSMENT",
+      "verification_status": "READ",
+      "search_boundary": "October18 bounded daily/weekly review",
+      "finding": "Previously published Week42 assessment, not new independent clinical or investigation evidence."
+    },
+    {
+      "source_id": "RPN-33189",
+      "url": "https://www.rospotrebnadzor.ru/deyatelnost/epidemiological-surveillance/?ELEMENT_ID=33189",
+      "published_at": null,
+      "event_at": null,
+      "retrieved_at": "2026-10-18T14:04:01Z",
+      "originator": "Rospotrebnadzor",
+      "publisher": "Rospotrebnadzor",
+      "source_type": "REGULATOR_ORIGINAL",
+      "claim_ids": [
+        "investigation"
+      ],
+      "depends_on": [],
+      "relation": "UNKNOWN",
+      "verification_status": "INACCESSIBLE",
+      "search_boundary": "October18 bounded daily/weekly review",
+      "finding": "Original source unavailable through reader; no bypass. Procurement/payment/patent/licensing originals not verified in scoped search."
+    }
+  ],
+  "source_graph": [
+    {
+      "source_id": "WHO-DON620",
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON620",
+      "published_at": "2026-10-10",
+      "event_at": "2026-10-02/2026-10-09",
+      "retrieved_at": "2026-10-18T14:04:01Z",
+      "originator": "WHO with Russian IHR NFP",
+      "publisher": "WHO",
+      "source_type": "INSTITUTIONAL_ASSESSMENT_AND_RELAY",
+      "claim_ids": [
+        "cause_unknown",
+        "contacts"
+      ],
+      "depends_on": [
+        "RF-IHR-NFP"
+      ],
+      "relation": "SUPPORT_WITH_LIMITS",
+      "verification_status": "READ",
+      "search_boundary": "October18 bounded daily/weekly review",
+      "finding": "Confirmed diagnosis remains unavailable; contact observation completion is attributed to national authorities."
+    },
+    {
+      "source_id": "ECDC-W42-2026",
+      "url": "https://www.ecdc.europa.eu/sites/default/files/documents/communicable-disease-threats-report-week-42-2026.pdf",
+      "published_at": "2026-10-16",
+      "event_at": "2026-10-16",
+      "retrieved_at": "2026-10-18T14:04:01Z",
+      "originator": "ECDC with dependent source chain",
+      "publisher": "ECDC",
+      "source_type": "INSTITUTIONAL_ASSESSMENT",
+      "claim_ids": [
+        "risk",
+        "contacts"
+      ],
+      "depends_on": [
+        "WHO-DON620",
+        "RF-IHR-NFP"
+      ],
+      "relation": "EXISTING_DEPENDENT_ASSESSMENT",
+      "verification_status": "READ",
+      "search_boundary": "October18 bounded daily/weekly review",
+      "finding": "Previously published Week42 assessment, not new independent clinical or investigation evidence."
+    },
+    {
+      "source_id": "RPN-33189",
+      "url": "https://www.rospotrebnadzor.ru/deyatelnost/epidemiological-surveillance/?ELEMENT_ID=33189",
+      "published_at": null,
+      "event_at": null,
+      "retrieved_at": "2026-10-18T14:04:01Z",
+      "originator": "Rospotrebnadzor",
+      "publisher": "Rospotrebnadzor",
+      "source_type": "REGULATOR_ORIGINAL",
+      "claim_ids": [
+        "investigation"
+      ],
+      "depends_on": [],
+      "relation": "UNKNOWN",
+      "verification_status": "INACCESSIBLE",
+      "search_boundary": "October18 bounded daily/weekly review",
+      "finding": "Original source unavailable through reader; no bypass. Procurement/payment/patent/licensing originals not verified in scoped search."
+    }
+  ],
+  "old_state": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+  "new_state": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+  "new_qualifying_evidence_count": 0,
+  "new_counter_evidence_count": 0,
+  "new_sources": 0,
+  "new_attributed_statements": 0,
+  "new_independent_evidence": 0,
+  "new_events": 0,
+  "newly_discovered_old_evidence": 0,
+  "state_changing_evidence": 0,
+  "daily_counters": {
+    "new_sources": 0,
+    "new_attributed_statements": 0,
+    "new_independent_evidence": 0,
+    "new_events": 0,
+    "newly_discovered_old_evidence": 0,
+    "state_changing_evidence": 0
+  },
+  "state_changed": false,
+  "historical_backfill": false,
+  "baseline_sha": "759ccbff7102d01d6fbf3037cfcb26312017a3ed",
+  "search_budget": {
+    "targeted_search_groups": 4,
+    "webpage_open_attempts": 3
+  }
+}

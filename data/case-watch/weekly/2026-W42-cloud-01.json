@@ -1,0 +1,49 @@
+{
+  "schema_version": "se-bounded-weekly-synthesis-v1",
+  "review_id": "SE-WEEKLY-2026-W42-CLOUD-01",
+  "period": {
+    "start": "2026-10-12",
+    "end": "2026-10-18"
+  },
+  "reviewed_at": "2026-10-18T14:04:01Z",
+  "baseline_sha": "759ccbff7102d01d6fbf3037cfcb26312017a3ed",
+  "complete": false,
+  "case_review_ids": [
+    "SE-800V-REVIEW-20261018-CLOUD-W42-01",
+    "SE-SODIUM-REVIEW-20261018-CLOUD-W42-01",
+    "SE-IRK-REVIEW-20261018-CLOUD-W42-01",
+    "SE-ONC-REVIEW-20261018-CLOUD-W42-01"
+  ],
+  "state_changed": false,
+  "clinical_review_required": true,
+  "scope": "Current bounded refresh plus recorded main history; missing daily intervals not reconstructed.",
+  "historical_events": [
+    {
+      "source_event": "SolarEdge OCP announcement",
+      "published_at": "2026-10-13",
+      "independent_field_evidence": false
+    },
+    {
+      "source_event": "ECDC Week42 publication",
+      "published_at": "2026-10-16",
+      "depends_on": [
+        "WHO-DON620",
+        "RF-IHR-NFP"
+      ]
+    },
+    {
+      "source_event": "Sungrow certificate statement",
+      "published_at": "2026-10-15",
+      "reconciled_at": "2026-10-18",
+      "issuer_confirmation": "NOT_ESTABLISHED"
+    }
+  ],
+  "unknowns_resolved": 0,
+  "unknowns_remaining": [
+    "Independent field reliability and replication",
+    "Acceptance of named sodium operational candidate",
+    "Confirmed Irkutsk diagnosis and primary investigations",
+    "Complete regulatory refresh and clinical interpretation"
+  ],
+  "publication_result": "DRAFT_AUDIT_NOT_DEPLOYED"
+}

@@ -1,0 +1,23 @@
+{
+  "receipt_id": "SE-WEB-RECHECK-20261018-CLOUD-W42-01",
+  "checked_at": "2026-10-18T14:04:01Z",
+  "result": "PUBLIC_VERIFIED",
+  "source_main_sha": "759ccbff7102d01d6fbf3037cfcb26312017a3ed",
+  "checks": [
+    {
+      "url": "https://structurevidence.org/cases/800vdc/events/sungrow-enerneo-certification-2026/",
+      "http_status": 200,
+      "sha256": "0c6b7fcdcb880ce3898aad180f9905ac407ed2d66ba818a686132417a279bc5d",
+      "marker_verified": true,
+      "original_url_present": true
+    },
+    {
+      "url": "https://structurevidence.org/cases/800vdc/events/sungrow-enerneo-certification-2026/snapshot-v1.json",
+      "http_status": 200,
+      "sha256": "574c58de9d696546fed3f268b9fa02786e4a50ffe4e04616ddd0e06fdaf69f2a",
+      "marker_verified": true,
+      "original_url_present": true
+    }
+  ],
+  "proof_boundary": "Existing PR31 event rechecked; not proof of deployment of this new daily/weekly audit."
+}

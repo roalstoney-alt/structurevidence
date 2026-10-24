@@ -1,19 +1,19 @@
 {
   "schema_version": "1.0",
-  "status_recorded_at": "2026-10-15T23:28:53+08:00",
-  "observation_scope": "Bounded SolarEdge primary-source event verification appended for 800V; the accepted stop remains unchanged. Other case statuses retain their last recorded review artifacts.",
+  "status_recorded_at": "2026-10-18T14:04:01Z",
+  "observation_scope": "Actual bounded October18 daily and W42 Sunday reviews. Source histories retained; no accepted stop/cutoff change; inaccessible regulator originals remain explicit.",
   "cases": [
     {
       "case_id": "CML-PDRE-001",
       "period": {
-        "id": "2026-10-15",
-        "start": "2026-10-15",
-        "end": "2026-10-15",
+        "id": "2026-10-18",
+        "start": "2026-10-18",
+        "end": "2026-10-18",
         "status": "NO_STATE_CHANGE",
-        "scope": "Verified SolarEdge technology-showcase event recorded; accepted single-instance state unchanged."
+        "scope": "Bounded 800V/SST official-source and field-deployment search; Sungrow original read and live site/snapshot independently checked. No newly qualifying independently attributable field operation, replication or reliability record found in scope."
       },
-      "period_review_id": "SE-800V-REVIEW-20261015-01",
-      "latest_review_file": "cases/800vdc/search-review-20261015-01.json",
+      "period_review_id": "SE-800V-REVIEW-20261018-CLOUD-W42-01",
+      "latest_review_file": "cases/800vdc/search-review-20261018-cloud-w42-01.json",
       "monitoring": {
         "cadence": "DAILY",
         "enabled": true,
@@ -28,14 +28,14 @@
     {
       "case_id": "SE-BESS-SODIUM-001",
       "period": {
-        "id": "2026-10-14",
-        "start": "2026-10-14",
-        "end": "2026-10-14",
+        "id": "2026-10-18",
+        "start": "2026-10-18",
+        "end": "2026-10-18",
         "status": "HUMAN_GATE_REQUIRED",
-        "scope": "Named operational-site candidate found; accepted public state remains frozen pending human review."
+        "scope": "Bounded sodium commissioning/delivery search and CATL original. No new qualifying evidence in scope. Previously recorded Moonwatt candidate remains subject to human review; this refresh does not resolve that gate."
       },
-      "period_review_id": "SE-SODIUM-REVIEW-20261014-01",
-      "latest_review_file": "cases/sodium-ion-bess/search-review-20261014-01.json",
+      "period_review_id": "SE-SODIUM-REVIEW-20261018-CLOUD-W42-01",
+      "latest_review_file": "cases/sodium-ion-bess/search-review-20261018-cloud-w42-01.json",
       "monitoring": {
         "cadence": "DAILY",
         "enabled": true,
@@ -50,14 +50,14 @@
     {
       "case_id": "SE-ONC-NSQNSCLC-CN-001",
       "period": {
-        "id": "2026-W41",
-        "start": "2026-10-05",
-        "end": "2026-10-11",
-        "status": "NOT_YET_REVIEWED",
-        "scope": "Original three-case weekly review"
+        "id": "2026-W42",
+        "start": "2026-10-12",
+        "end": "2026-10-18",
+        "status": "REVIEW_INCOMPLETE",
+        "scope": "Sunday limited PubMed/NMPA screen of population, clinical evidence, regulatory state and aggregate outcomes. Index-cohort trial abstract read; two regulator originals unavailable. Squamous studies excluded; no broad review of every modality claimed. No individual prognosis, recommendation or identifiable patient record collected; ECMO remains life support, not cancer therapy."
       },
-      "period_review_id": null,
-      "latest_review_file": null,
+      "period_review_id": "SE-ONC-REVIEW-20261018-CLOUD-W42-01",
+      "latest_review_file": "cases/nsq-nsclc-china/search-review-20261018-cloud-w42-01.json",
       "monitoring": {
         "cadence": "WEEKLY",
         "enabled": true,
@@ -72,14 +72,14 @@
     {
       "case_id": "SE-IRK-LAB-001",
       "period": {
-        "id": "2026-10-14",
-        "start": "2026-10-14",
-        "end": "2026-10-14",
+        "id": "2026-10-18",
+        "start": "2026-10-18",
+        "end": "2026-10-18",
         "status": "REVIEW_INCOMPLETE",
-        "scope": "No qualifying new evidence; regulator, procurement, patent and underlying clinical/investigation records remained inaccessible."
+        "scope": "Four targeted query groups covering WHO/IHR; Russian contacts/quarantine/investigation; institution procurement/budget/regulation/patents/licensing; independent interviews. Three webpage opens (WHO,ECDC,RPN). No new independent clinical, investigation, contract-performance or rights evidence verified. October8 announcement/by-October9 completion remain scoped dependent statements; no population equivalence inferred."
       },
-      "period_review_id": "SE-IRK-REVIEW-20261014-02",
-      "latest_review_file": "cases/irkutsk-lab-worker-death/search-review-20261014-02.json",
+      "period_review_id": "SE-IRK-REVIEW-20261018-CLOUD-W42-01",
+      "latest_review_file": "cases/irkutsk-lab-worker-death/search-review-20261018-cloud-w42-01.json",
       "monitoring": {
         "cadence": "DAILY",
         "enabled": true,
