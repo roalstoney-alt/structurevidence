@@ -1,0 +1,20 @@
+{
+  "schema_version": "se-case-review-v2",
+  "case_id": "SE-BESS-SODIUM-001",
+  "review_id": "SE-SODIUM-REVIEW-20261021-CLOUD-01",
+  "reviewed_at": "2026-10-21T14:08:00Z",
+  "result": "NO_STATE_CHANGE",
+  "review_complete": true,
+  "classifications": ["NO_NEW_EVIDENCE", "NO_STATE_CHANGE"],
+  "search_boundary": "One targeted search covering named delivery, grid commissioning, public field operation and verifiable mass production since the previous bounded review; not an exhaustive market census.",
+  "sources_checked": [{"url":"https://www.catl.com/en/news/6861.html","publisher":"CATL","published_at":"2026-06-22","retrieved_at":"2026-10-21T14:08:00Z","status":"READ_NO_NEW_MATERIAL_CHANGE","finding":"Delivery and shipment forecasts remain company claims and do not provide a newly named commissioned stationary-storage site with field-operation evidence."}],
+  "daily_counters": {"new_sources":0,"new_attributed_statements":0,"new_independent_evidence":0,"new_events":0,"newly_discovered_old_evidence":0,"state_changing_evidence":0},
+  "old_state": "NAMED_COMMISSIONED_SITE_NOT_ESTABLISHED",
+  "new_state": "NAMED_COMMISSIONED_SITE_NOT_ESTABLISHED",
+  "new_qualifying_evidence_count": 0,
+  "new_counter_evidence_count": 0,
+  "evidence_state_as_of": "2026-09-24",
+  "last_material_change": "2026-09-24",
+  "historical_backfill": false,
+  "next_action": "Continue seeking a named, grid-connected commissioned project with attributable operating records and independently checkable delivery or production evidence."
+}
