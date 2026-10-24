@@ -146,6 +146,16 @@
     {
       "id": "AGENT_READS_ACTOR_DECIDES",
       "statement": "Agents may retrieve, compare, explain and trace evidence states; the responsible actor owns the final decision."
+    },
+    {
+      "id": "SE-APPEND-ONLY-CORRECTION-001",
+      "statement": "We can be wrong. We must remain auditable.",
+      "scope": "All current and future evidence cases, observations and public research projections.",
+      "governance_document": "docs/engineering/SE_APPEND_ONLY_CORRECTION_001.md",
+      "additive_to": "SE-ENG-HISTORY-001",
+      "original_records_rewritten": false,
+      "corrections_append_only": true,
+      "existing_state_enum_changed": false
     }
   ],
   "required_claim_fields": [

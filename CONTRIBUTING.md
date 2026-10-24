@@ -29,3 +29,9 @@ python3 -m unittest tests.test_seo_surface tests.test_public_record_export
 ## Engineering standard: immutable evidence history
 
 All contributors, Codex workflows and agents must follow [SE-ENG-HISTORY-001](docs/engineering/SE_HISTORICAL_RECORD_IMMUTABILITY_STANDARD_v1.0.md): **Historical records are immutable. New knowledge is appended, reconciled, and linked—not substituted.** Logical review and event identifiers cannot be reassigned to different observations. Diverged PRs must be reconciled against latest main before merging. The PR history guard rejects protected historical byte changes and conflicting new identities. Derived indexes may be regenerated from canonical source records.
+
+## Append-only corrections — SE-APPEND-ONLY-CORRECTION-001
+
+> **We can be wrong. We must remain auditable.**
+
+This [owner-confirmed supplementary principle](docs/engineering/SE_APPEND_ONLY_CORRECTION_001.md) applies to all ongoing observations, provisional/folded research, and future new cases. Do not erase an earlier factual error, inference, incomplete source search or publication failure. Preserve the original record and reasoning; append a uniquely identified, linked correction with its true observation date, source limitations, remaining unknowns and any human-controlled stop-point reassessment. A good-faith, bounded error does not halt unrelated research or justified publishing; it also does not bypass privacy, evidence, legal or website-first approval boundaries. New cases should cite the principle at intake; existing case states and immutable records remain untouched.
