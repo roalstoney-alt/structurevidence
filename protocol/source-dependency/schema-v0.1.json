@@ -1,0 +1,142 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://structurevidence.org/protocol/source-dependency/schema-v0.1.json",
+  "title": "StructEvidence source dependency row v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "source_row_id",
+    "claim_id",
+    "gap_id",
+    "immutable_source",
+    "originator_id",
+    "originator_role",
+    "authored_by_evidence",
+    "originating_evidence_lineage",
+    "author_issuer_relationship_evidence",
+    "dependency_class",
+    "dependency_rationale",
+    "evidence_level",
+    "evidence_facets",
+    "evidence_rationale",
+    "qualification_rule_id",
+    "qualification_status",
+    "qualification_reason",
+    "source_access_status",
+    "search_run_id",
+    "search_scope",
+    "evidence_cutoff",
+    "last_checked_at",
+    "reviewed_at",
+    "rubric_version",
+    "reviewers",
+    "reviewer_disagreement",
+    "supersession",
+    "event_timestamp",
+    "record_hash"
+  ],
+  "properties": {
+    "schema_version": {"const": "se-source-dependency-row-v0.1"},
+    "source_row_id": {"type": "string", "pattern": "^SE-SOURCE-ROW-[A-Z0-9][A-Z0-9._-]*$"},
+    "claim_id": {"type": "string", "minLength": 1},
+    "gap_id": {"type": ["string", "null"], "minLength": 1},
+    "immutable_source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["url", "title", "publisher_host", "capture"],
+      "properties": {
+        "url": {"type": "string", "format": "uri", "pattern": "^https?://"},
+        "title": {"type": "string", "minLength": 1},
+        "publisher_host": {"type": "string", "minLength": 1},
+        "capture": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["capture_type", "captured_at", "sha256", "failure_reason"],
+          "properties": {
+            "capture_type": {"type": "string", "enum": ["STRUCTURED_SNAPSHOT", "DOCUMENT_HASH", "REFERENCE_ONLY"]},
+            "captured_at": {"type": ["string", "null"], "format": "date-time"},
+            "sha256": {"type": ["string", "null"], "pattern": "^[0-9a-f]{64}$"},
+            "failure_reason": {"type": ["string", "null"]}
+          }
+        }
+      }
+    },
+    "originator_id": {"type": "string", "minLength": 1},
+    "originator_role": {"type": "string", "enum": ["OPERATOR", "SUPPLIER", "CUSTOMER", "REGULATOR", "RESEARCHER", "MEDIA", "OTHER", "UNKNOWN"]},
+    "authored_by_evidence": {"$ref": "#/$defs/non_empty_string_array"},
+    "originating_evidence_lineage": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^SE-SOURCE-ROW-[A-Z0-9][A-Z0-9._-]*$"}},
+    "author_issuer_relationship_evidence": {"$ref": "#/$defs/non_empty_string_array"},
+    "dependency_class": {"$ref": "#/$defs/dependency_class"},
+    "dependency_rationale": {"type": "string", "minLength": 1},
+    "evidence_level": {"$ref": "#/$defs/evidence_level"},
+    "evidence_facets": {"type": "array", "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "evidence_rationale": {"type": "string", "minLength": 1},
+    "qualification_rule_id": {"type": "string", "minLength": 1},
+    "qualification_status": {"$ref": "#/$defs/qualification_status"},
+    "qualification_reason": {"type": "string", "minLength": 1},
+    "source_access_status": {"type": "string", "enum": ["READ_FULL", "READ_PARTIAL", "ABSTRACT_ONLY", "PAYWALLED", "UNAVAILABLE", "CORRUPT", "UNKNOWN"]},
+    "search_run_id": {"type": "string", "minLength": 1},
+    "search_scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["query", "inclusion_scope", "exclusion_scope", "blocked_sources"],
+      "properties": {
+        "query": {"type": "string"},
+        "inclusion_scope": {"type": "string"},
+        "exclusion_scope": {"type": "string"},
+        "blocked_sources": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "evidence_cutoff": {"type": "string", "format": "date-time"},
+    "last_checked_at": {"type": "string", "format": "date-time"},
+    "reviewed_at": {"type": "string", "format": "date-time"},
+    "rubric_version": {"type": "string", "minLength": 1},
+    "reviewers": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 2,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["reviewer_id", "reviewed_at", "dependency_class", "evidence_level", "qualification_status", "note"],
+        "properties": {
+          "reviewer_id": {"type": "string", "minLength": 1},
+          "reviewed_at": {"type": "string", "format": "date-time"},
+          "dependency_class": {"$ref": "#/$defs/dependency_class"},
+          "evidence_level": {"$ref": "#/$defs/evidence_level"},
+          "qualification_status": {"$ref": "#/$defs/qualification_status"},
+          "note": {"type": "string"}
+        }
+      }
+    },
+    "reviewer_disagreement": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["detected", "fields", "resolution_status", "resolution_note"],
+      "properties": {
+        "detected": {"type": "boolean"},
+        "fields": {"type": "array", "uniqueItems": true, "items": {"type": "string", "enum": ["dependency_class", "evidence_level", "qualification_status"]}},
+        "resolution_status": {"type": "string", "enum": ["NOT_APPLICABLE", "UNRESOLVED", "RESOLVED"]},
+        "resolution_note": {"type": ["string", "null"]}
+      }
+    },
+    "supersession": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["predecessor_source_row_id", "reason"],
+      "properties": {
+        "predecessor_source_row_id": {"type": ["string", "null"], "pattern": "^SE-SOURCE-ROW-[A-Z0-9][A-Z0-9._-]*$"},
+        "reason": {"type": ["string", "null"]}
+      }
+    },
+    "event_timestamp": {"type": "string", "format": "date-time"},
+    "record_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  },
+  "$defs": {
+    "non_empty_string_array": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+    "dependency_class": {"type": "string", "enum": ["ISSUER_AUTHORED", "DERIVED", "PARTIALLY_DEPENDENT", "INDEPENDENT", "UNKNOWN"]},
+    "evidence_level": {"type": "string", "enum": ["E0", "E1", "E2", "E3", "E4", "E5"]},
+    "qualification_status": {"type": "string", "enum": ["QUALIFIED", "NOT_QUALIFIED", "NOT_ASSESSED", "INSUFFICIENT_DATA"]}
+  }
+}
