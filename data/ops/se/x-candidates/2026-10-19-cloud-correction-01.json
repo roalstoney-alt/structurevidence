@@ -1,0 +1,23 @@
+{
+  "schema_version": "se-x-candidate-v2",
+  "candidate_id": "SE-X-2026-10-19-CLOUD-CORRECTION-01",
+  "scheduled_date": "2026-10-19",
+  "text": "Oct 19 method note: ECDC's Irkutsk update cites WHO and Russian authorities. Repeated reporting does not create independent confirmation. Our record keeps that dependency visible: https://structurevidence.org/cases/irkutsk-lab-worker-death/events/ecdc-week-42-2026/",
+  "source_urls": [
+    "https://structurevidence.org/cases/irkutsk-lab-worker-death/events/ecdc-week-42-2026/"
+  ],
+  "evidence_cutoff": "2026-10-19T14:44:31Z",
+  "source_publication_date": "2026-10-16",
+  "content_hash": "59c774d35ad3a635d026a366208c7b423ca9e8effacda37ba8f48dc098aae4b5",
+  "approval_gate": "HUMAN_GATE_REQUIRED",
+  "status": "AWAITING_HUMAN_REVIEW",
+  "blocker": "X_AUTO_PUBLISH_PAUSED_HUMAN_REVIEW",
+  "x_post_sent": 0,
+  "material_state_transition": false,
+  "factual_status": "METHOD_CONTENT_BASED_ON_PREVIOUSLY_PUBLISHED_EVENT",
+  "weighted_length": 203,
+  "supersedes": "SE-X-2026-10-19-METHOD-01",
+  "supersedes_scope": "Proposed manual-review recommendation only; original immutable candidate remains preserved. This is the sole recommended candidate in this supplement, not a second post or automatic write.",
+  "dedup_check": "No exact match in current main candidate texts; source-dependency angle differs from prior event/date-semantics candidates. X provider history not read.",
+  "website_receipt": "SE-WEB-RECHECK-20261019-CLOUD-01"
+}
