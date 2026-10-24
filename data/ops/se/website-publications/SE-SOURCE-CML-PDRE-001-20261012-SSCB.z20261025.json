@@ -1,0 +1,21 @@
+{
+  "schema_version": "se-website-publication-receipt-v1",
+  "receipt_id": "SE-WEB-PUBLICATION-CML-PDRE-001-20261025-SSCB-01",
+  "note_id": "SE-SOURCE-CML-PDRE-001-20261012-SSCB",
+  "checked_at": "2026-10-24T21:34:04Z",
+  "provider": "GITHUB_PAGES",
+  "source_main_sha": "f09bee956bdcb22aece9552e86093a47e137fad1",
+  "public_url": "https://structurevidence.org/cases/800vdc/source-notes/power-integrations-ideal-power-sscb-20261012/",
+  "http_status": 200,
+  "expected_body_marker": "Supplier collaboration on an 800 VDC solid-state circuit breaker",
+  "body_marker_verified": true,
+  "response_last_modified": "Sat, 24 Oct 2026 21:18:22 GMT",
+  "response_content_length": 1820,
+  "snapshot_url": "https://structurevidence.org/cases/800vdc/source-notes/power-integrations-ideal-power-sscb-20261012/snapshot-v1.json",
+  "snapshot_http_status": 200,
+  "snapshot_expected_sha256": "bc53bc00c4a66d044af3e69d461ba6c0d2164a8625939be56e90dc4f6b9c2ed9",
+  "snapshot_observed_sha256": "bc53bc00c4a66d044af3e69d461ba6c0d2164a8625939be56e90dc4f6b9c2ed9",
+  "result": "PUBLIC_VERIFIED",
+  "supersedes_operational_result": "data/ops/se/website-publications/SE-SOURCE-CML-PDRE-001-20261012-SSCB.json",
+  "proof_boundary": "The original blocked receipt remains immutable. This later production response was fetched after the page reached main; HTTP status, exact body marker and downloaded snapshot hash were independently verified."
+}

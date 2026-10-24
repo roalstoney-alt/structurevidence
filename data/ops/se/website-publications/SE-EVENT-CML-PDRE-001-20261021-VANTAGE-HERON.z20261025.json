@@ -1,0 +1,21 @@
+{
+  "schema_version": "se-website-publication-receipt-v1",
+  "receipt_id": "SE-WEB-PUBLICATION-CML-PDRE-001-20261025-VANTAGE-HERON-01",
+  "event_id": "SE-EVENT-CML-PDRE-001-20261021-VANTAGE-HERON",
+  "checked_at": "2026-10-24T21:34:03Z",
+  "provider": "GITHUB_PAGES",
+  "source_main_sha": "f09bee956bdcb22aece9552e86093a47e137fad1",
+  "public_url": "https://structurevidence.org/cases/800vdc/events/vantage-heron-capacity-agreement-2026/",
+  "http_status": 200,
+  "expected_body_marker": "Vantage reserves Heron 800 VDC SST manufacturing capacity",
+  "body_marker_verified": true,
+  "response_last_modified": "Sat, 24 Oct 2026 21:18:22 GMT",
+  "response_content_length": 1981,
+  "snapshot_url": "https://structurevidence.org/cases/800vdc/events/vantage-heron-capacity-agreement-2026/snapshot-v1.json",
+  "snapshot_http_status": 200,
+  "snapshot_expected_sha256": "69b61c5ea87e5adf9ec8e272e8f07c47bceaccc159600be2854952096a73adda",
+  "snapshot_observed_sha256": "69b61c5ea87e5adf9ec8e272e8f07c47bceaccc159600be2854952096a73adda",
+  "result": "PUBLIC_VERIFIED",
+  "supersedes_operational_result": "data/ops/se/website-publications/SE-EVENT-CML-PDRE-001-20261021-VANTAGE-HERON.json",
+  "proof_boundary": "The original blocked receipt remains immutable. This later production response was fetched after the page reached main; HTTP status, exact body marker and downloaded snapshot hash were independently verified."
+}
