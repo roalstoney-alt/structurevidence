@@ -1,0 +1,18 @@
+{
+  "schema_version": "se-source-note-v1",
+  "note_id": "SE-SOURCE-CML-PDRE-001-20261012-SSCB",
+  "case_id": "CML-PDRE-001",
+  "published_at": "2026-10-12",
+  "event_at": "2026-10-12",
+  "retrieved_at": "2026-10-21T14:08:00Z",
+  "original_url": "https://investors.power.com/news/news-details/2026/Power-Integrations-and-Ideal-Power-Collaborate-on-Efficient-Always-On-Solid-State-Circuit-Breakers-for-800-VDC-AI-Data-Centers/default.aspx",
+  "public_url": "https://structurevidence.org/cases/800vdc/source-notes/power-integrations-ideal-power-sscb-20261012/",
+  "snapshot_file": "snapshot-v1.json",
+  "snapshot_sha256": "bc53bc00c4a66d044af3e69d461ba6c0d2164a8625939be56e90dc4f6b9c2ed9",
+  "accessibility": "PUBLIC_HTML_READ",
+  "classifications": ["NEWLY_DISCOVERED_OLD_EVIDENCE", "NO_STATE_CHANGE"],
+  "old_stop": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+  "candidate_stop": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+  "state_changed": false,
+  "human_gate_required": true
+}

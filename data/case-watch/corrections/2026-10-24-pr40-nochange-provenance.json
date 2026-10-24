@@ -1,0 +1,30 @@
+{
+  "schema_version": "se-review-provenance-correction-v1",
+  "correction_id": "SE-CORR-20261024-PR40-NOCHANGE-01",
+  "recorded_at_date": "2026-10-24",
+  "case_stops_modified": false,
+  "originals_modified": false,
+  "items": [
+    {
+      "review_id": "SE-800V-REVIEW-20261023-CLOUD-01",
+      "original": "data/case-watch/reviews/2026-10-23/CML-PDRE-001.json",
+      "issue": "review_complete=true / NO_STATE_CHANGE yet sources_checked=[]",
+      "correction": "REVIEW_INCOMPLETE_FOR_PROVENANCE; date/time and search scope alone do not establish that source checks were completed"
+    },
+    {
+      "review_id": "SE-SODIUM-REVIEW-20261023-CLOUD-01",
+      "original": "data/case-watch/reviews/2026-10-23/SE-BESS-SODIUM-001.json",
+      "issue": "review_complete=true / NO_STATE_CHANGE yet sources_checked=[]",
+      "correction": "REVIEW_INCOMPLETE_FOR_PROVENANCE; absence of recorded source access cannot support a complete no-change review"
+    },
+    {
+      "review_id": "SE-IRK-REVIEW-20261023-CLOUD-01",
+      "original": "data/case-watch/reviews/2026-10-23/SE-IRK-LAB-001.json",
+      "issue": "record is already REVIEW_INCOMPLETE and sources_checked=[]",
+      "correction": "REVIEW_INCOMPLETE retained; keep old review, avoid recasting search silence as evidence of no causal link"
+    }
+  ],
+  "next_action": "Perform a new time-bounded review with exact observed source URLs, retrieval status and new review IDs. Preserve original bytes and counterevidence; do not silently rewrite history.",
+  "original_operational_receipts": "Historical X text null and site verification BLOCKED are preserved as-at-run; not reclassified as published by later website deployment.",
+  "publication_gate": "HUMAN_GATE_REQUIRED"
+}

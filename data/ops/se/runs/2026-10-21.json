@@ -1,0 +1,15 @@
+{
+  "schema_version": "se-unified-run-v1",
+  "run_id": "SE-OPS-20261021-2200-CLOUD-01",
+  "date_sgt": "2026-10-21",
+  "scheduled_at": "2026-10-21T22:00:00+08:00",
+  "started_at": "2026-10-21T14:00:53Z",
+  "ended_at": "2026-10-21T14:08:00Z",
+  "repo_baseline_sha": "e060d78edfa6ef3b51914bc68ab2d7cb93b1bd81",
+  "repo_final_sha": null,
+  "pipeline": {"scheduler":"PASS","cases":"PASS","cml_ingestion":"PASS","website_publication":"BLOCKED","x_publish":"BLOCKED","audit_persistence":"PASS","external_delivery":"UNKNOWN"},
+  "reviews": ["SE-800V-REVIEW-20261021-CLOUD-01","SE-SODIUM-REVIEW-20261021-CLOUD-01","SE-IRK-REVIEW-20261021-CLOUD-01"],
+  "evidence_counts": {"new_sources":1,"new_attributed_statements":1,"new_independent_evidence":0,"new_events":0,"newly_discovered_old_evidence":1,"state_changing_evidence":0},
+  "x": {"account":"@structevidence","publication_authorized":false,"candidate_file":"data/ops/se/x-candidates/2026-10-21.json","result":"WEBSITE_PUBLICATION_BLOCKED","x_post_sent":0},
+  "cross_project": {"cml_daily_artifact":"CML_DAILY_OBSERVATION_2026-10-21.md","cml_artifact_verified":true,"cml_public_delivery":"NONE","cml_fde":"HOLD","lovetimeline_task_enabled":false,"lovetimeline_due":false,"lovetimeline_output":"NOT_DUE"}
+}

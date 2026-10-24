@@ -1,0 +1,29 @@
+{
+  "schema_version": "se-source-snapshot-v1",
+  "source_id": "PI-IPWR-SSCB-20261012",
+  "case_id": "CML-PDRE-001",
+  "title": "Power Integrations and Ideal Power announce 800 VDC SSCB collaboration",
+  "published_at": "2026-10-12",
+  "event_at": "2026-10-12",
+  "retrieved_at": "2026-10-21T14:08:00Z",
+  "originator": ["Power Integrations", "Ideal Power"],
+  "publisher": "Power Integrations",
+  "source_type": "PRIMARY_SUPPLIER_PRESS_RELEASE",
+  "original_url": "https://investors.power.com/news/news-details/2026/Power-Integrations-and-Ideal-Power-Collaborate-on-Efficient-Always-On-Solid-State-Circuit-Breakers-for-800-VDC-AI-Data-Centers/default.aspx",
+  "accessibility": "PUBLIC_HTML_READ",
+  "structured_facts": [
+    "The companies announced a collaboration concerning a solid-state circuit-breaker solution for emerging 800 VDC AI-data-center infrastructure.",
+    "The release describes a working prototype and supplier-reported component characteristics.",
+    "The release does not identify a customer field deployment, independent operating dataset, replicated installation, or long-duration reliability record."
+  ],
+  "claim_ids": [
+    "CML-PDRE-001.ARCHITECTURE_POSSIBILITY",
+    "CML-PDRE-001.SYSTEM_VALIDATION",
+    "CML-PDRE-001.NAMED_FIELD_DEPLOYMENT",
+    "CML-PDRE-001.LONG_OPERATING_HISTORY",
+    "CML-PDRE-001.MULTI_ENTITY_REPLICATION"
+  ],
+  "relation": "SUPPORTS_COMPONENT_ECOSYSTEM_NOT_FIELD_ADOPTION",
+  "verification_status": "PRIMARY_SOURCE_READ",
+  "copyright_note": "This is a short structured factual snapshot, not a copy of the source article."
+}

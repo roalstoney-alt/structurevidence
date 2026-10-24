@@ -1,0 +1,15 @@
+{
+  "schema_version": "se-review-provenance-correction-v1",
+  "correction_id": "SE-CORR-20261024-PR39-SODIUM-01",
+  "recorded_at_date": "2026-10-24",
+  "original_review_id": "SE-SODIUM-REVIEW-20261022-CLOUD-01",
+  "original_path": "data/case-watch/reviews/2026-10-22/SE-BESS-SODIUM-001.json",
+  "original_fields_retained_unchanged": true,
+  "observed_issue": "The review marks review_complete=true and result=NO_STATE_CHANGE while sources_checked is empty; a described search query is not an auditable list of sources actually examined.",
+  "correction": "Treat this specific historical review's no-change finding as insufficiently evidenced for a completed bounded source review. REVALIDATION_REQUIRED / REVIEW_INCOMPLETE_FOR_PROVENANCE; do not infer new material evidence, state change, or nonexistent field sites.",
+  "original_case_stop_point_preserved": "NAMED_COMMISSIONED_SITE_NOT_ESTABLISHED",
+  "new_factual_source_assertions": 0,
+  "audit_procedure": "Append-only correction. Preserve the original review bytes and review ID; run a fresh bounded source check with dated actual sources and new review ID.",
+  "scope": "Only review-provenance completeness; not a revision of the accepted case's scientific state.",
+  "publication_gate": "HUMAN_GATE_REQUIRED"
+}
