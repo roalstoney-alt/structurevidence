@@ -1,0 +1,28 @@
+{
+  "schema_version": "se-candidate-source-note-v1",
+  "record_id": "SE-SOURCE-NOTE-CML-PDRE-001-20260729-XD-GUIAN",
+  "case_id": "CML-PDRE-001",
+  "title": "Historical media attribution of a China XD Guian SST application",
+  "published_at": "2026-07-29T15:33:28+08:00",
+  "event_at": null,
+  "retrieved_at": "2026-10-20T14:07:29Z",
+  "verification_status": "VERIFIED_SECONDARY_REPORT_ONLY",
+  "source_record_path": "cases/800vdc/source-notes/china-xd-guian-attribution-20260729/source-v1.json",
+  "snapshot_path": "cases/800vdc/source-notes/china-xd-guian-attribution-20260729/snapshot-v1.json",
+  "snapshot_sha256": "7aa9b9f9ced2666ad9787a5127d4e6e17bf6e7d24074b3e6cf1f932f229c213d",
+  "original_report_url": "https://stock.stockstar.com/RB2026072900020566.shtml",
+  "upstream_original_url": null,
+  "classifications": [
+    "NEWLY_DISCOVERED_OLD_EVIDENCE",
+    "NO_STATE_CHANGE",
+    "HUMAN_GATE_REQUIRED"
+  ],
+  "old_stop": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+  "candidate_stop": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+  "state_changed": false,
+  "public_url": "https://structurevidence.org/cases/800vdc/source-notes/china-xd-guian-attribution-20260729/",
+  "website_publication_status": "DRAFT_NOT_DEPLOYED",
+  "evidence_state_as_of": "2026-09-20T10:46:47Z",
+  "next_minimum_verification": "Recover exact issuer answer with stable URL/date; match named operator, site, energization/acceptance and operating logs.",
+  "not_a_verified_primary_event": true
+}

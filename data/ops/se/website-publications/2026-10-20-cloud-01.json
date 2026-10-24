@@ -1,0 +1,16 @@
+{
+  "receipt_id": "SE-WEBSITE-CHECK-20261020-CLOUD-01",
+  "record_id": "SE-SOURCE-NOTE-CML-PDRE-001-20260729-XD-GUIAN",
+  "public_url": "https://structurevidence.org/cases/800vdc/source-notes/china-xd-guian-attribution-20260729/",
+  "checked_at": null,
+  "recorded_at": "2026-10-20T14:11:53Z",
+  "check_window": "2026-10-20T14:10:58Z/2026-10-20T14:11:53Z",
+  "check_time_precision": "Exact network-check timestamp not captured; actual check occurred within this window, not an evidence cutoff",
+  "http_status": 404,
+  "body_marker_verified": false,
+  "result": "WEBSITE_PUBLICATION_BLOCKED",
+  "new_pr_deployed": false,
+  "source_main_sha": "e060d78edfa6ef3b51914bc68ab2d7cb93b1bd81",
+  "snapshot_expected_sha256": "7aa9b9f9ced2666ad9787a5127d4e6e17bf6e7d24074b3e6cf1f932f229c213d",
+  "snapshot_observed_sha256": null
+}

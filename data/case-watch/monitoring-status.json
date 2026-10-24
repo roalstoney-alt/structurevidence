@@ -1,19 +1,19 @@
 {
   "schema_version": "1.0",
-  "status_recorded_at": "2026-10-15T23:28:53+08:00",
-  "observation_scope": "Bounded SolarEdge primary-source event verification appended for 800V; the accepted stop remains unchanged. Other case statuses retain their last recorded review artifacts.",
+  "status_recorded_at": "2026-10-20T14:07:29Z",
+  "observation_scope": "Actual bounded October20 reviews; accepted state cutoffs unchanged. NSCLC prior history retained; not due today.",
   "cases": [
     {
       "case_id": "CML-PDRE-001",
       "period": {
-        "id": "2026-10-15",
-        "start": "2026-10-15",
-        "end": "2026-10-15",
-        "status": "NO_STATE_CHANGE",
-        "scope": "Verified SolarEdge technology-showcase event recorded; accepted single-instance state unchanged."
+        "id": "2026-10-20",
+        "start": "2026-10-20",
+        "end": "2026-10-20",
+        "status": "REVIEW_INCOMPLETE",
+        "scope": "English/Chinese deployment searches; official-domain issuer searches; public page reads. New secondary historical attribution preserved as candidate, exact upstream answer and key Sungrow body unavailable."
       },
-      "period_review_id": "SE-800V-REVIEW-20261015-01",
-      "latest_review_file": "cases/800vdc/search-review-20261015-01.json",
+      "period_review_id": "SE-800V-REVIEW-20261020-CLOUD-01",
+      "latest_review_file": "cases/800vdc/search-review-20261020-cloud-01.json",
       "monitoring": {
         "cadence": "DAILY",
         "enabled": true,
@@ -28,14 +28,14 @@
     {
       "case_id": "SE-BESS-SODIUM-001",
       "period": {
-        "id": "2026-10-14",
-        "start": "2026-10-14",
-        "end": "2026-10-14",
+        "id": "2026-10-20",
+        "start": "2026-10-20",
+        "end": "2026-10-20",
         "status": "HUMAN_GATE_REQUIRED",
-        "scope": "Named operational-site candidate found; accepted public state remains frozen pending human review."
+        "scope": "English sodium-ion/BESS and Chinese commissioning searches; official Moonwatt June22 source body rechecked. No new qualifying delivery, grid acceptance or reproducible mass-production record located within this bounded scope."
       },
-      "period_review_id": "SE-SODIUM-REVIEW-20261014-01",
-      "latest_review_file": "cases/sodium-ion-bess/search-review-20261014-01.json",
+      "period_review_id": "SE-SODIUM-REVIEW-20261020-CLOUD-01",
+      "latest_review_file": "cases/sodium-ion-bess/search-review-20261020-cloud-01.json",
       "monitoring": {
         "cadence": "DAILY",
         "enabled": true,
@@ -72,14 +72,14 @@
     {
       "case_id": "SE-IRK-LAB-001",
       "period": {
-        "id": "2026-10-14",
-        "start": "2026-10-14",
-        "end": "2026-10-14",
+        "id": "2026-10-20",
+        "start": "2026-10-20",
+        "end": "2026-10-20",
         "status": "REVIEW_INCOMPLETE",
-        "scope": "No qualifying new evidence; regulator, procurement, patent and underlying clinical/investigation records remained inaccessible."
+        "scope": "Four targeted query groups: latest direct incident/RPN; WHO/IHR; institute governance/cooperation/patents; Oct8/9 observation timing. Three source opens. Budget/contract aggregator snippets only as unaccepted leads; no private financial findings published. No diagnostic, causal, wrongdoing or dangerous-method inference."
       },
-      "period_review_id": "SE-IRK-REVIEW-20261014-02",
-      "latest_review_file": "cases/irkutsk-lab-worker-death/search-review-20261014-02.json",
+      "period_review_id": "SE-IRK-REVIEW-20261020-CLOUD-01",
+      "latest_review_file": "cases/irkutsk-lab-worker-death/search-review-20261020-cloud-01.json",
       "monitoring": {
         "cadence": "DAILY",
         "enabled": true,

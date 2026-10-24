@@ -1,0 +1,12 @@
+{
+  "record_id": "SE-800V-SOURCE-NOTE-INDEX-20261020-01",
+  "append_only": true,
+  "candidate_source_notes": [
+    {
+      "record_id": "SE-SOURCE-NOTE-CML-PDRE-001-20260729-XD-GUIAN",
+      "url": "https://structurevidence.org/cases/800vdc/source-notes/china-xd-guian-attribution-20260729/",
+      "record_path": "cases/800vdc/source-notes/china-xd-guian-attribution-20260729/index.json",
+      "not_a_verified_primary_event": true
+    }
+  ]
+}

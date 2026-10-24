@@ -1,0 +1,28 @@
+{
+  "run_id": "SE-OPS-20261020-CLOUD-01",
+  "baseline_sha": "e060d78edfa6ef3b51914bc68ab2d7cb93b1bd81",
+  "recorded_at": "2026-10-20T14:07:29Z",
+  "review_ids": [
+    "SE-800V-REVIEW-20261020-CLOUD-01",
+    "SE-SODIUM-REVIEW-20261020-CLOUD-01",
+    "SE-IRK-REVIEW-20261020-CLOUD-01"
+  ],
+  "daily_counters": {
+    "new_sources": 1,
+    "new_attributed_statements": 1,
+    "new_independent_evidence": 0,
+    "new_events": 0,
+    "newly_discovered_old_evidence": 1,
+    "state_changing_evidence": 0
+  },
+  "accepted_stop_changed": false,
+  "original_records_changed": 0,
+  "task_configuration_changed": false,
+  "website_rule_configuration_present": true,
+  "new_website_content": "DRAFT_NOT_DEPLOYED",
+  "x_post_sent": 0,
+  "external_delivery_receipt": "UNKNOWN",
+  "CML": "PRIVATE_TODAY_ARTIFACT_READ; public commit NONE; notification receipt UNKNOWN; outreach HOLD",
+  "LoveTimeline": "TASK_DISABLED_AFTER_TODAY_RECORDED_RUN; output/notification UNKNOWN; do not restart",
+  "prior_open_pr_36": "PRESERVED_NOT_IMPORTED; proposed current projection refresh supersedes only stale administrative pointers, not historical records"
+}
