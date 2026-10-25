@@ -1,0 +1,65 @@
+{
+  "schema_version": "se-six-case-review-v1",
+  "case_id": "SE-NEW-BUSINESS-001",
+  "review_id": "SE-NEW-BUSINESS-REVIEW-20261025-CLOUD-01",
+  "reviewed_at": "2026-10-25T14:16:00Z",
+  "knowledge_cutoff": "2026-10-25T14:16:00Z",
+  "result": "REVIEW_INCOMPLETE",
+  "review_complete": false,
+  "review_status": [
+    "REVIEW_INCOMPLETE",
+    "NO_STATE_CHANGE_NOT_ASSERTED"
+  ],
+  "source_url": [
+    "https://github.com/roalstoney-alt/se-dual-case-public/blob/main/SE-NEW-BUSINESS-001.md"
+  ],
+  "source_id": [
+    "PUBLIC-PROJECTION-ACC2033"
+  ],
+  "source_speaker": [
+    "StructEvidence public projection"
+  ],
+  "claimed_subject": "IREN AI Cloud transition",
+  "claim_ids": [
+    "I-S01",
+    "I-S02",
+    "I-S03",
+    "I-S04",
+    "I-S05",
+    "I-S06",
+    "I-S07",
+    "I-S08",
+    "I-S09"
+  ],
+  "event_at": null,
+  "published_at": null,
+  "observed_at": "2026-10-25T14:16:00Z",
+  "source_access": [
+    {
+      "source_id": "PUBLIC-PROJECTION-ACC2033",
+      "access": "FULL_GITHUB_TEXT"
+    }
+  ],
+  "raw_hash_or_UNAVAILABLE": "4e1f11c4a1c89ec3321e0a1041c7b57871fa51a3",
+  "search_query": [
+    "site:iren.com/investors/news OR site:sec.gov/Archives/edgar/data/1878848 IREN October 25 2026 Horizon Microsoft revenue"
+  ],
+  "search_boundary": "Latest public projection was read in full and one issuer/SEC query was run; no qualifying current result was returned. Raw issuer bytes and Source Bridge authenticity gaps remain unresolved.",
+  "old_stop_point": "PUBLIC PROJECTION / LOCAL_PROVISIONAL_v0.1 / CANONICAL_RDL_NOT_RUN",
+  "proposed_stop_point": "PUBLIC PROJECTION / LOCAL_PROVISIONAL_v0.1 / CANONICAL_RDL_NOT_RUN",
+  "new_sources": 0,
+  "new_attributed_statements": 0,
+  "new_independent_evidence": 0,
+  "new_events": 0,
+  "newly_discovered_old_evidence": 0,
+  "state_changing_evidence": 0,
+  "contradictions": [],
+  "decision_relevant_unknown": [
+    "Microsoft-authored acceptance, Horizon 2-4 delivery, commissioned IT load, GAAP revenue, operating economics, financing and Badajoz execution remain distinct and incomplete."
+  ],
+  "next_observable": "Customer-authored acceptance, SEC-filed recognized revenue/segment economics, or commissioned capacity evidence.",
+  "notes": [
+    "Oct 21 Badajoz 300MW planning/license and Oct 22 earnings-date notice were pre-identified and not counted as new today.",
+    "Canonical RDL NOT_RUN; no nonexistent validator invoked."
+  ]
+}
