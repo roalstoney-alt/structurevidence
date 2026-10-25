@@ -1,0 +1,862 @@
+{
+  "schema_version": "se-decision-conditions-package-v0.1",
+  "protocol_version": "SE-DECISION-CONDITIONS-v0.1",
+  "project": "SE-DUAL-SITE-UPGRADE-002",
+  "phase": "C",
+  "baseline_main_sha": "bbced95da00ed259e942aa63ebd89d93f70c54a0",
+  "generated_from_review_time": "2026-10-25T02:59:00Z",
+  "content_hash_algorithm": "SHA-256 over RFC-8785-style sorted compact JSON; snapshot_sha256 excluded from its own input",
+  "public_capability_status": "ILLUSTRATIVE_PUBLIC_EXPORT",
+  "commercial_integration_status": "PROPOSED_NOT_LIVE",
+  "conditions": [
+    {
+      "decision_condition_id": "SE-DC-CML-PDRE-001-OEG-CML-001-v0.1",
+      "version": "v0.1",
+      "previous_snapshot_sha256": null,
+      "supersedes_decision_condition_id": null,
+      "stable_urls": {
+        "html": "https://structurevidence.org/cases/800vdc/decision-conditions/#SE-DC-CML-PDRE-001-OEG-CML-001-v0.1",
+        "json": "https://structurevidence.org/cases/800vdc/decision-conditions-v0.1.json",
+        "markdown": "https://structurevidence.org/cases/800vdc/decision-conditions-v0.1.md#se-dc-cml-pdre-001-oeg-cml-001-v0.1",
+        "gap": "https://structurevidence.org/gaps/OEG-CML-001/"
+      },
+      "case_id": "CML-PDRE-001",
+      "gap_id": "OEG-CML-001",
+      "claim_id": "CML-PDRE-001.INDEPENDENT_VALIDATION",
+      "decision_type": "ILLUSTRATIVE_TECHNICAL_QUALIFICATION",
+      "decision_context_status": "PUBLIC_ILLUSTRATION_NOT_CLIENT_ADOPTION",
+      "scope": {
+        "question": "Does an independent attributable field record validate the named 800VDC deployment claim under the active rule?",
+        "bounded_sample": "Nine actual URLs in the bounded repository source packets; not a market census.",
+        "reviewed_url_count": 9,
+        "distinct_lineage_count": 7,
+        "authority_status": "TIME_BOUNDED_REVIEW_RESULT_NOT_AUTHORITATIVE_TRUTH"
+      },
+      "current_evidence_state": {
+        "case_state": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+        "case_state_as_of": "2026-09-20T10:46:47Z",
+        "state_changed_by_export": false,
+        "interpretation": "A time-bounded reviewed state, not authoritative truth and not a client action."
+      },
+      "time_boundary": {
+        "evidence_cutoff": "2026-10-22T14:02:00Z",
+        "last_source_check_at": "2026-10-22T14:02:00Z",
+        "reviewed_at": "2026-10-25T02:59:00Z"
+      },
+      "source_evidence_rule": {
+        "qualification_rule_id": "SE-SD-QR-OEG-CML-001-INDEPENDENT-VALIDATION-v0.2",
+        "rubric_version": "SE-SOURCE-DEPENDENCY-RUBRIC-v0.2",
+        "minimum_evidence_level": "E4",
+        "permitted_dependency_classes": [
+          "ISSUER_AUTHORED",
+          "PARTIALLY_DEPENDENT",
+          "INDEPENDENT"
+        ],
+        "permitted_originator_roles": [
+          "OPERATOR",
+          "REGULATOR",
+          "RESEARCHER",
+          "OTHER"
+        ],
+        "required_evidence_facets": [
+          "NAMED_SITE",
+          "OBSERVATION_PERIOD",
+          "OPERATING_CONDITIONS",
+          "METHODOLOGY",
+          "RESPONSIBLE_ORGANIZATION"
+        ],
+        "rule_text": "Qualifying evidence must be an independently attributable operating or test record tied to the named site with observation period, conditions, method, and responsible organization. An operator record can qualify only when its attributable methodology is present; dependency remains separately visible.",
+        "exact_closure_test": "A source row qualifies only if its evidence level is E4 or higher; its dependency class is one of ISSUER_AUTHORED, PARTIALLY_DEPENDENT, INDEPENDENT; its originator role is one of OPERATOR, REGULATOR, RESEARCHER, OTHER; and it contains every required evidence facet: NAMED_SITE, OBSERVATION_PERIOD, OPERATING_CONDITIONS, METHODOLOGY, RESPONSIBLE_ORGANIZATION.",
+        "acceptable_source_types": {
+          "originator_roles": [
+            "OPERATOR",
+            "REGULATOR",
+            "RESEARCHER",
+            "OTHER"
+          ],
+          "dependency_classes": [
+            "ISSUER_AUTHORED",
+            "PARTIALLY_DEPENDENT",
+            "INDEPENDENT"
+          ],
+          "minimum_level": "E4",
+          "all_required_facets_must_be_present": true
+        }
+      },
+      "source_evidence_result": {
+        "qualification_outcome": "NOT_QUALIFIED_WITHIN_BOUNDED_REVIEW",
+        "qualifying_evidence_present": false,
+        "qualifying_evidence": [],
+        "nonqualifying_evidence": [
+          {
+            "source_row_id": "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-CHINDATA-533-V2",
+            "source_record_hash": "4952ec928a5e3e8ece9353baf970a68432c04d7148e2771f38dadac55201bbcc",
+            "title": "Chindata commercial-operation announcement for Sangyuan campus",
+            "url": "https://www.chindatagroup.com/media/news/533.html",
+            "capture_sha256": "57e1ede12822f29e973c66d11db60a2e55a429cd4b7a4fea4bcc44d1c8aa1918",
+            "originator_id": "ORIGINATOR-CHINDATA",
+            "originator_role": "OPERATOR",
+            "dependency_class": "ISSUER_AUTHORED",
+            "originating_evidence_lineage": [],
+            "evidence_level": "E3",
+            "evidence_facets": [
+              "NAMED_OPERATOR",
+              "NAMED_SITE",
+              "MATERIALLY_COMPARABLE_ARCHITECTURE",
+              "COMMISSIONED_OR_OPERATING",
+              "EVENT_DATE",
+              "RESPONSIBLE_ORGANIZATION"
+            ],
+            "qualification_status": "NOT_QUALIFIED",
+            "qualification_reason": "E3 is below the rule minimum E4.",
+            "source_access_status": "READ_PARTIAL",
+            "supersedes_source_row_id": "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-CHINDATA-533-V1"
+          },
+          {
+            "source_row_id": "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-PI-IDEAL-SSCB-20261012-V1",
+            "source_record_hash": "22945d3d35754e9aa50f1c870a83080009b39293932fb8c605a16e2b067eec90",
+            "title": "Power Integrations and Ideal Power 800 VDC SSCB collaboration",
+            "url": "https://investors.power.com/news/news-details/2026/Power-Integrations-and-Ideal-Power-Collaborate-on-Efficient-Always-On-Solid-State-Circuit-Breakers-for-800-VDC-AI-Data-Centers/default.aspx",
+            "capture_sha256": "bc53bc00c4a66d044af3e69d461ba6c0d2164a8625939be56e90dc4f6b9c2ed9",
+            "originator_id": "ORIGINATOR-POWER-INTEGRATIONS-IDEAL-POWER",
+            "originator_role": "SUPPLIER",
+            "dependency_class": "ISSUER_AUTHORED",
+            "originating_evidence_lineage": [],
+            "evidence_level": "E2",
+            "evidence_facets": [
+              "RESPONSIBLE_ORGANIZATION",
+              "EVENT_DATE"
+            ],
+            "qualification_status": "NOT_QUALIFIED",
+            "qualification_reason": "E2 is below the rule minimum E4.",
+            "source_access_status": "READ_PARTIAL",
+            "supersedes_source_row_id": null
+          },
+          {
+            "source_row_id": "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-SIEMENS-REINHAUSEN-2026-V1",
+            "source_record_hash": "c59361d911cb6712c03a5e4e9321c02890876984f01386f9c9c63fa054bf46cf",
+            "title": "Siemens and Reinhausen develop DC power solutions for AI data centers",
+            "url": "https://press.siemens.com/global/en/pressrelease/siemens-and-reinhausen-develop-direct-current-power-solutions-ai-data-centers",
+            "capture_sha256": "8f7827b87ec928420c44e012492416e3f08940d1aeb106f9ce8210014a9a0fdc",
+            "originator_id": "ORIGINATOR-SIEMENS-REINHAUSEN",
+            "originator_role": "SUPPLIER",
+            "dependency_class": "ISSUER_AUTHORED",
+            "originating_evidence_lineage": [],
+            "evidence_level": "E1",
+            "evidence_facets": [
+              "MATERIALLY_COMPARABLE_ARCHITECTURE",
+              "RESPONSIBLE_ORGANIZATION",
+              "EVENT_DATE"
+            ],
+            "qualification_status": "NOT_QUALIFIED",
+            "qualification_reason": "E1 is below the rule minimum E4.",
+            "source_access_status": "READ_PARTIAL",
+            "supersedes_source_row_id": null
+          },
+          {
+            "source_row_id": "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-SOLAREDGE-BUSINESSWIRE-20261013-V1",
+            "source_record_hash": "3c10e7ff1d0a28f9c7f00f2cb8bad19a7037e0367d24fd45f4cf39d1a0575c04",
+            "title": "Business Wire distribution copy of the SolarEdge announcement",
+            "url": "https://www.businesswire.com/news/home/20261013444026/en/",
+            "capture_sha256": "34fe5c45ce6eb0f9c29521c6ea7a596ce62a93af4607f56619749733385b0950",
+            "originator_id": "ORIGINATOR-SOLAREDGE",
+            "originator_role": "SUPPLIER",
+            "dependency_class": "DERIVED",
+            "originating_evidence_lineage": [
+              "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-SOLAREDGE-ORIGIN-20261013-V1"
+            ],
+            "evidence_level": "E2",
+            "evidence_facets": [
+              "MATERIALLY_COMPARABLE_ARCHITECTURE",
+              "RESPONSIBLE_ORGANIZATION",
+              "EVENT_DATE"
+            ],
+            "qualification_status": "NOT_QUALIFIED",
+            "qualification_reason": "E2 is below the rule minimum E4.",
+            "source_access_status": "READ_PARTIAL",
+            "supersedes_source_row_id": null
+          },
+          {
+            "source_row_id": "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-SOLAREDGE-ORIGIN-20261013-V1",
+            "source_record_hash": "4357702468ee88b6e5e861a8f60340944fbf7564c52b0c3d8cddfc8517214443",
+            "title": "SolarEdge MVAC-to-800 VDC technology showcase announcement",
+            "url": "https://solaredge.gcs-web.com/news-releases/news-release-details/solaredge-showcases-mvac-800-vdc-ai-factory-power-technology",
+            "capture_sha256": "34fe5c45ce6eb0f9c29521c6ea7a596ce62a93af4607f56619749733385b0950",
+            "originator_id": "ORIGINATOR-SOLAREDGE",
+            "originator_role": "SUPPLIER",
+            "dependency_class": "ISSUER_AUTHORED",
+            "originating_evidence_lineage": [],
+            "evidence_level": "E2",
+            "evidence_facets": [
+              "MATERIALLY_COMPARABLE_ARCHITECTURE",
+              "RESPONSIBLE_ORGANIZATION",
+              "EVENT_DATE"
+            ],
+            "qualification_status": "NOT_QUALIFIED",
+            "qualification_reason": "E2 is below the rule minimum E4.",
+            "source_access_status": "READ_PARTIAL",
+            "supersedes_source_row_id": null
+          },
+          {
+            "source_row_id": "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-SOLAREDGE-PDF-20261013-V1",
+            "source_record_hash": "71c2ab6305954c4ec9cdf260d9f7ed71a498fd96b7edbfa9078836104c4ccbac",
+            "title": "Official PDF rendering of the SolarEdge OCP announcement",
+            "url": "https://solaredge.gcs-web.com/node/15356/pdf",
+            "capture_sha256": "34fe5c45ce6eb0f9c29521c6ea7a596ce62a93af4607f56619749733385b0950",
+            "originator_id": "ORIGINATOR-SOLAREDGE",
+            "originator_role": "SUPPLIER",
+            "dependency_class": "DERIVED",
+            "originating_evidence_lineage": [
+              "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-SOLAREDGE-ORIGIN-20261013-V1"
+            ],
+            "evidence_level": "E2",
+            "evidence_facets": [
+              "MATERIALLY_COMPARABLE_ARCHITECTURE",
+              "RESPONSIBLE_ORGANIZATION",
+              "EVENT_DATE"
+            ],
+            "qualification_status": "NOT_QUALIFIED",
+            "qualification_reason": "E2 is below the rule minimum E4.",
+            "source_access_status": "READ_PARTIAL",
+            "supersedes_source_row_id": null
+          },
+          {
+            "source_row_id": "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-SUNGROW-1749-V1",
+            "source_record_hash": "5ac07c480268eebc7d0db6b6ad3a49aab6384b6eafe71dc83aeefe660a877639",
+            "title": "Sungrow EnerNeo SST certification announcement",
+            "url": "https://cn.sungrowpower.com/news/1749.html",
+            "capture_sha256": "574c58de9d696546fed3f268b9fa02786e4a50ffe4e04616ddd0e06fdaf69f2a",
+            "originator_id": "ORIGINATOR-SUNGROW",
+            "originator_role": "SUPPLIER",
+            "dependency_class": "ISSUER_AUTHORED",
+            "originating_evidence_lineage": [],
+            "evidence_level": "E2",
+            "evidence_facets": [
+              "RESPONSIBLE_ORGANIZATION",
+              "EVENT_DATE"
+            ],
+            "qualification_status": "NOT_QUALIFIED",
+            "qualification_reason": "E2 is below the rule minimum E4.",
+            "source_access_status": "READ_PARTIAL",
+            "supersedes_source_row_id": null
+          },
+          {
+            "source_row_id": "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-VANTAGE-HERON-20261021-V1",
+            "source_record_hash": "d1d9810962555b852e32592fb7af5fabde2b68acdb378e689add28a6e7e97ce7",
+            "title": "Vantage and Heron 800 VDC manufacturing-capacity agreement",
+            "url": "https://vantage-dc.com/news/vantage-and-heron-power-electronics-announce-gigawatt-scale-800-vdc-agreement-to-accelerate-ai-infrastructure-delivery/",
+            "capture_sha256": "69b61c5ea87e5adf9ec8e272e8f07c47bceaccc159600be2854952096a73adda",
+            "originator_id": "ORIGINATOR-VANTAGE-HERON",
+            "originator_role": "CUSTOMER",
+            "dependency_class": "PARTIALLY_DEPENDENT",
+            "originating_evidence_lineage": [],
+            "evidence_level": "E0",
+            "evidence_facets": [
+              "NAMED_OPERATOR",
+              "RESPONSIBLE_ORGANIZATION",
+              "EVENT_DATE"
+            ],
+            "qualification_status": "NOT_QUALIFIED",
+            "qualification_reason": "E0 is below the rule minimum E4.",
+            "source_access_status": "READ_PARTIAL",
+            "supersedes_source_row_id": null
+          },
+          {
+            "source_row_id": "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-VERTIV-DCD-2026-V1",
+            "source_record_hash": "f7b084cacc43288601eb74e02eef2114bbae18615d500818b5c2e336337b57d1",
+            "title": "Vertiv DCD Power Innovation Day 800VDC architecture topic",
+            "url": "https://www.vertiv.com/en-us/about/news-and-events/events/2026/dcd-power-innovation-day-2026/",
+            "capture_sha256": "8f7827b87ec928420c44e012492416e3f08940d1aeb106f9ce8210014a9a0fdc",
+            "originator_id": "ORIGINATOR-VERTIV",
+            "originator_role": "SUPPLIER",
+            "dependency_class": "ISSUER_AUTHORED",
+            "originating_evidence_lineage": [],
+            "evidence_level": "E0",
+            "evidence_facets": [
+              "MATERIALLY_COMPARABLE_ARCHITECTURE",
+              "RESPONSIBLE_ORGANIZATION",
+              "EVENT_DATE"
+            ],
+            "qualification_status": "NOT_QUALIFIED",
+            "qualification_reason": "E0 is below the rule minimum E4.",
+            "source_access_status": "READ_PARTIAL",
+            "supersedes_source_row_id": null
+          }
+        ],
+        "qualifying_counterevidence": [],
+        "counterevidence_status": "NO_QUALIFYING_CONTRADICTION_ESTABLISHED_WITHIN_BOUNDED_PACKET",
+        "inaccessible_sources": [],
+        "source_access_limitations": [
+          {
+            "source_row_id": "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-CHINDATA-533-V2",
+            "source_access_status": "READ_PARTIAL",
+            "capture_failure_or_limit": "The repository preserves a bounded structured packet, not a complete raw copy of the external publication.",
+            "blocked_sources_or_limits": [
+              "No full raw external page capture is stored; the hash covers the bounded atomic evidence record."
+            ]
+          },
+          {
+            "source_row_id": "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-PI-IDEAL-SSCB-20261012-V1",
+            "source_access_status": "READ_PARTIAL",
+            "capture_failure_or_limit": "The repository preserves a bounded structured packet, not a complete raw copy of the external publication.",
+            "blocked_sources_or_limits": [
+              "Only a structured factual snapshot is stored; no independent performance dataset is included."
+            ]
+          },
+          {
+            "source_row_id": "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-SIEMENS-REINHAUSEN-2026-V1",
+            "source_access_status": "READ_PARTIAL",
+            "capture_failure_or_limit": "The repository preserves a bounded structured packet, not a complete raw copy of the external publication.",
+            "blocked_sources_or_limits": [
+              "No source-specific raw file is stored; the hash covers the bounded three-source review packet."
+            ]
+          },
+          {
+            "source_row_id": "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-SOLAREDGE-BUSINESSWIRE-20261013-V1",
+            "source_access_status": "READ_PARTIAL",
+            "capture_failure_or_limit": "The repository preserves a bounded structured packet, not a complete raw copy of the external publication.",
+            "blocked_sources_or_limits": [
+              "No full raw distribution copy is stored; the bounded structured snapshot records the review."
+            ]
+          },
+          {
+            "source_row_id": "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-SOLAREDGE-ORIGIN-20261013-V1",
+            "source_access_status": "READ_PARTIAL",
+            "capture_failure_or_limit": "The repository preserves a bounded structured packet, not a complete raw copy of the external publication.",
+            "blocked_sources_or_limits": [
+              "The origin returned HTTP 403 to direct retrieval; only the bounded structured snapshot is stored."
+            ]
+          },
+          {
+            "source_row_id": "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-SOLAREDGE-PDF-20261013-V1",
+            "source_access_status": "READ_PARTIAL",
+            "capture_failure_or_limit": "The repository preserves a bounded structured packet, not a complete raw copy of the external publication.",
+            "blocked_sources_or_limits": [
+              "No full raw PDF is stored; the bounded structured snapshot records the review."
+            ]
+          },
+          {
+            "source_row_id": "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-SUNGROW-1749-V1",
+            "source_access_status": "READ_PARTIAL",
+            "capture_failure_or_limit": "The repository preserves a bounded structured packet, not a complete raw copy of the external publication.",
+            "blocked_sources_or_limits": [
+              "Fresh retrieval was blocked by network proxy HTTP 403; no matching certificate ID or issuer record was established."
+            ]
+          },
+          {
+            "source_row_id": "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-VANTAGE-HERON-20261021-V1",
+            "source_access_status": "READ_PARTIAL",
+            "capture_failure_or_limit": "The repository preserves a bounded structured packet, not a complete raw copy of the external publication.",
+            "blocked_sources_or_limits": [
+              "The separate factory announcement is summarized in the packet; no delivered-unit or commissioning record is present."
+            ]
+          },
+          {
+            "source_row_id": "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-VERTIV-DCD-2026-V1",
+            "source_access_status": "READ_PARTIAL",
+            "capture_failure_or_limit": "The repository preserves a bounded structured packet, not a complete raw copy of the external publication.",
+            "blocked_sources_or_limits": [
+              "No source-specific raw file is stored; the hash covers the bounded three-source review packet."
+            ]
+          }
+        ],
+        "search_scope_limits": [
+          "Architecture discussion and future pilots are not counted as commissioning or field operation.",
+          "Distribution copies are not counted as independent corroboration.",
+          "No broad market census, independent dataset, or named deployment search was performed.",
+          "No certificate authenticity, complete scope, customer operation, or reliability claim is inferred.",
+          "No general market census and no inference beyond the single operator-reported campus.",
+          "No unnamed pipeline, plan, or industrialization statement is treated as field operation.",
+          "Prototype characteristics are not generalized to system commissioning, deployment, or adoption.",
+          "Reserved manufacturing capacity is not treated as produced output, commissioning, procurement completion, or field operation.",
+          "The rendering is not counted as independent corroboration."
+        ],
+        "zero_interpretation": "Zero qualifying or independent rows means zero within these nine reviewed URLs and seven originating lineages, not proof that no evidence exists elsewhere."
+      },
+      "preserved_uncertainty": {
+        "unknown": [
+          "Independent field validation and a second independently controlled operating instance remain unestablished within the nine reviewed URLs."
+        ],
+        "unresolved": [
+          {
+            "issue": "CHINDATA_E3_E4",
+            "status": "UNRESOLVED",
+            "active_level": "E3",
+            "caveat": "E3 is a conservative ceiling and an imperfect label, not a claim that authorship is unattributed; the rubric lacks a separate label for attributable field assertions missing period/method."
+          }
+        ],
+        "unsupported": [
+          {
+            "capability": "SECOND_REAL_HUMAN_REVIEW",
+            "status": "UNSUPPORTED",
+            "capability_status": "UNSUPPORTED_REAL_SECOND_REVIEW",
+            "effect": "NO_EVIDENCE_OR_CASE_STATE_CHANGE"
+          }
+        ]
+      },
+      "client_action_condition": {
+        "ownership": "CLIENT_DEFINED",
+        "selected_action": "UNSPECIFIED",
+        "allowed_client_vocabulary": [
+          "PROCEED",
+          "HOLD",
+          "EXIT",
+          "REVIEW"
+        ],
+        "decision_trigger": "UNSPECIFIED",
+        "review_date": "UNSPECIFIED",
+        "fallback": "UNSPECIFIED",
+        "exposure_threshold": "UNSPECIFIED",
+        "status": "NO_CLIENT_DECISION_RECORDED",
+        "separation_from_evidence_rule": "A source qualification result never selects a client action."
+      },
+      "source_supersession_links": [
+        {
+          "active_source_row_id": "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-CHINDATA-533-V2",
+          "predecessor_source_row_id": "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-CHINDATA-533-V1"
+        }
+      ],
+      "challenge_boundary": {
+        "url": "https://structurevidence.org/gaps/OEG-CML-001/",
+        "submission_effect": "SUBMISSION_PRIVATE_UNTIL_HUMAN_REVIEW; NO_AUTOMATIC_STATE_CHANGE",
+        "automatic_condition_or_state_change": false
+      },
+      "not_a_decision_recommendation": "StructEvidence reports a time-bounded evidence condition. It does not recommend an investment, purchase, architecture, deployment, rejection, or client action.",
+      "record_sha256": "d035ef2a296a9a2712ff6385b1f2d3703580e153ea5e96b137604d49759b1a1c"
+    },
+    {
+      "decision_condition_id": "SE-DC-CML-PDRE-001-OEG-CML-002-v0.1",
+      "version": "v0.1",
+      "previous_snapshot_sha256": null,
+      "supersedes_decision_condition_id": null,
+      "stable_urls": {
+        "html": "https://structurevidence.org/cases/800vdc/decision-conditions/#SE-DC-CML-PDRE-001-OEG-CML-002-v0.1",
+        "json": "https://structurevidence.org/cases/800vdc/decision-conditions-v0.1.json",
+        "markdown": "https://structurevidence.org/cases/800vdc/decision-conditions-v0.1.md#se-dc-cml-pdre-001-oeg-cml-002-v0.1",
+        "gap": "https://structurevidence.org/gaps/OEG-CML-002/"
+      },
+      "case_id": "CML-PDRE-001",
+      "gap_id": "OEG-CML-002",
+      "claim_id": "CML-PDRE-001.MULTI_ENTITY_REPLICATION",
+      "decision_type": "ILLUSTRATIVE_DEPLOYMENT_REPLICATION_REVIEW",
+      "decision_context_status": "PUBLIC_ILLUSTRATION_NOT_CLIENT_ADOPTION",
+      "scope": {
+        "question": "Does an additional operator or independently controlled site satisfy the active replication rule?",
+        "bounded_sample": "Nine actual URLs in the bounded repository source packets; not a market census.",
+        "reviewed_url_count": 9,
+        "distinct_lineage_count": 7,
+        "authority_status": "TIME_BOUNDED_REVIEW_RESULT_NOT_AUTHORITATIVE_TRUTH"
+      },
+      "current_evidence_state": {
+        "case_state": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+        "case_state_as_of": "2026-09-20T10:46:47Z",
+        "state_changed_by_export": false,
+        "interpretation": "A time-bounded reviewed state, not authoritative truth and not a client action."
+      },
+      "time_boundary": {
+        "evidence_cutoff": "2026-10-22T14:02:00Z",
+        "last_source_check_at": "2026-10-22T14:02:00Z",
+        "reviewed_at": "2026-10-25T02:59:00Z"
+      },
+      "source_evidence_rule": {
+        "qualification_rule_id": "SE-SD-QR-OEG-CML-002-REPLICATION-v0.2",
+        "rubric_version": "SE-SOURCE-DEPENDENCY-RUBRIC-v0.2",
+        "minimum_evidence_level": "E4",
+        "permitted_dependency_classes": [
+          "ISSUER_AUTHORED",
+          "PARTIALLY_DEPENDENT",
+          "INDEPENDENT"
+        ],
+        "permitted_originator_roles": [
+          "OPERATOR",
+          "CUSTOMER",
+          "REGULATOR",
+          "RESEARCHER"
+        ],
+        "required_evidence_facets": [
+          "NAMED_OPERATOR",
+          "NAMED_SITE",
+          "MATERIALLY_COMPARABLE_ARCHITECTURE",
+          "COMMISSIONED_OR_OPERATING",
+          "EVENT_DATE",
+          "ADDITIONAL_ENTITY_OR_SITE"
+        ],
+        "rule_text": "Qualifying evidence must identify an additional attributable operator or independently controlled site with a materially comparable deployed architecture and operating status. The ADDITIONAL_ENTITY_OR_SITE facet prevents the accepted baseline instance from qualifying as its own replication. An E4 operator-owned record may qualify; E5 is not a universal minimum.",
+        "exact_closure_test": "A qualifying row must also establish ADDITIONAL_ENTITY_OR_SITE using operator, site, and control identity rather than publisher host.",
+        "acceptable_source_types": {
+          "originator_roles": [
+            "OPERATOR",
+            "CUSTOMER",
+            "REGULATOR",
+            "RESEARCHER"
+          ],
+          "dependency_classes": [
+            "ISSUER_AUTHORED",
+            "PARTIALLY_DEPENDENT",
+            "INDEPENDENT"
+          ],
+          "minimum_level": "E4",
+          "all_required_facets_must_be_present": true
+        }
+      },
+      "source_evidence_result": {
+        "qualification_outcome": "NOT_QUALIFIED_WITHIN_BOUNDED_REVIEW",
+        "qualifying_evidence_present": false,
+        "qualifying_evidence": [],
+        "nonqualifying_evidence": [
+          {
+            "source_row_id": "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-CHINDATA-533-V2",
+            "source_record_hash": "c2297da97f328b5ad095a518d2da9625b7e1019460fec53f7ba30f53b06f18c3",
+            "title": "Chindata commercial-operation announcement for Sangyuan campus",
+            "url": "https://www.chindatagroup.com/media/news/533.html",
+            "capture_sha256": "57e1ede12822f29e973c66d11db60a2e55a429cd4b7a4fea4bcc44d1c8aa1918",
+            "originator_id": "ORIGINATOR-CHINDATA",
+            "originator_role": "OPERATOR",
+            "dependency_class": "ISSUER_AUTHORED",
+            "originating_evidence_lineage": [],
+            "evidence_level": "E3",
+            "evidence_facets": [
+              "NAMED_OPERATOR",
+              "NAMED_SITE",
+              "MATERIALLY_COMPARABLE_ARCHITECTURE",
+              "COMMISSIONED_OR_OPERATING",
+              "EVENT_DATE",
+              "RESPONSIBLE_ORGANIZATION"
+            ],
+            "qualification_status": "NOT_QUALIFIED",
+            "qualification_reason": "E3 is below the rule minimum E4.",
+            "source_access_status": "READ_PARTIAL",
+            "supersedes_source_row_id": "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-CHINDATA-533-V1"
+          },
+          {
+            "source_row_id": "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-PI-IDEAL-SSCB-20261012-V1",
+            "source_record_hash": "c8ea405b393f92dc14d12968c32cd204e9613c94de3af60487bf6b7be28a1156",
+            "title": "Power Integrations and Ideal Power 800 VDC SSCB collaboration",
+            "url": "https://investors.power.com/news/news-details/2026/Power-Integrations-and-Ideal-Power-Collaborate-on-Efficient-Always-On-Solid-State-Circuit-Breakers-for-800-VDC-AI-Data-Centers/default.aspx",
+            "capture_sha256": "bc53bc00c4a66d044af3e69d461ba6c0d2164a8625939be56e90dc4f6b9c2ed9",
+            "originator_id": "ORIGINATOR-POWER-INTEGRATIONS-IDEAL-POWER",
+            "originator_role": "SUPPLIER",
+            "dependency_class": "ISSUER_AUTHORED",
+            "originating_evidence_lineage": [],
+            "evidence_level": "E2",
+            "evidence_facets": [
+              "RESPONSIBLE_ORGANIZATION",
+              "EVENT_DATE"
+            ],
+            "qualification_status": "NOT_QUALIFIED",
+            "qualification_reason": "E2 is below the rule minimum E4.",
+            "source_access_status": "READ_PARTIAL",
+            "supersedes_source_row_id": null
+          },
+          {
+            "source_row_id": "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-SIEMENS-REINHAUSEN-2026-V1",
+            "source_record_hash": "cd4a42e8dce4b52f9a1f9791bb83deb4336f90567d638f925e461446b17a34db",
+            "title": "Siemens and Reinhausen develop DC power solutions for AI data centers",
+            "url": "https://press.siemens.com/global/en/pressrelease/siemens-and-reinhausen-develop-direct-current-power-solutions-ai-data-centers",
+            "capture_sha256": "8f7827b87ec928420c44e012492416e3f08940d1aeb106f9ce8210014a9a0fdc",
+            "originator_id": "ORIGINATOR-SIEMENS-REINHAUSEN",
+            "originator_role": "SUPPLIER",
+            "dependency_class": "ISSUER_AUTHORED",
+            "originating_evidence_lineage": [],
+            "evidence_level": "E1",
+            "evidence_facets": [
+              "MATERIALLY_COMPARABLE_ARCHITECTURE",
+              "RESPONSIBLE_ORGANIZATION",
+              "EVENT_DATE"
+            ],
+            "qualification_status": "NOT_QUALIFIED",
+            "qualification_reason": "E1 is below the rule minimum E4.",
+            "source_access_status": "READ_PARTIAL",
+            "supersedes_source_row_id": null
+          },
+          {
+            "source_row_id": "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-SOLAREDGE-BUSINESSWIRE-20261013-V1",
+            "source_record_hash": "ab98adc075e3fbb7afc05528473a03d87e5babb8a4274334956b6d19436c37ae",
+            "title": "Business Wire distribution copy of the SolarEdge announcement",
+            "url": "https://www.businesswire.com/news/home/20261013444026/en/",
+            "capture_sha256": "34fe5c45ce6eb0f9c29521c6ea7a596ce62a93af4607f56619749733385b0950",
+            "originator_id": "ORIGINATOR-SOLAREDGE",
+            "originator_role": "SUPPLIER",
+            "dependency_class": "DERIVED",
+            "originating_evidence_lineage": [
+              "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-SOLAREDGE-ORIGIN-20261013-V1"
+            ],
+            "evidence_level": "E2",
+            "evidence_facets": [
+              "MATERIALLY_COMPARABLE_ARCHITECTURE",
+              "RESPONSIBLE_ORGANIZATION",
+              "EVENT_DATE"
+            ],
+            "qualification_status": "NOT_QUALIFIED",
+            "qualification_reason": "E2 is below the rule minimum E4.",
+            "source_access_status": "READ_PARTIAL",
+            "supersedes_source_row_id": null
+          },
+          {
+            "source_row_id": "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-SOLAREDGE-ORIGIN-20261013-V1",
+            "source_record_hash": "2815a6058643baac711e07e62b1c55864a3f88ad8d354cad3fac7f668334c00b",
+            "title": "SolarEdge MVAC-to-800 VDC technology showcase announcement",
+            "url": "https://solaredge.gcs-web.com/news-releases/news-release-details/solaredge-showcases-mvac-800-vdc-ai-factory-power-technology",
+            "capture_sha256": "34fe5c45ce6eb0f9c29521c6ea7a596ce62a93af4607f56619749733385b0950",
+            "originator_id": "ORIGINATOR-SOLAREDGE",
+            "originator_role": "SUPPLIER",
+            "dependency_class": "ISSUER_AUTHORED",
+            "originating_evidence_lineage": [],
+            "evidence_level": "E2",
+            "evidence_facets": [
+              "MATERIALLY_COMPARABLE_ARCHITECTURE",
+              "RESPONSIBLE_ORGANIZATION",
+              "EVENT_DATE"
+            ],
+            "qualification_status": "NOT_QUALIFIED",
+            "qualification_reason": "E2 is below the rule minimum E4.",
+            "source_access_status": "READ_PARTIAL",
+            "supersedes_source_row_id": null
+          },
+          {
+            "source_row_id": "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-SOLAREDGE-PDF-20261013-V1",
+            "source_record_hash": "b0b893f31a97d5f629d8f4ab7a931c87876d53ba25be97353e71d9e55cbf14aa",
+            "title": "Official PDF rendering of the SolarEdge OCP announcement",
+            "url": "https://solaredge.gcs-web.com/node/15356/pdf",
+            "capture_sha256": "34fe5c45ce6eb0f9c29521c6ea7a596ce62a93af4607f56619749733385b0950",
+            "originator_id": "ORIGINATOR-SOLAREDGE",
+            "originator_role": "SUPPLIER",
+            "dependency_class": "DERIVED",
+            "originating_evidence_lineage": [
+              "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-SOLAREDGE-ORIGIN-20261013-V1"
+            ],
+            "evidence_level": "E2",
+            "evidence_facets": [
+              "MATERIALLY_COMPARABLE_ARCHITECTURE",
+              "RESPONSIBLE_ORGANIZATION",
+              "EVENT_DATE"
+            ],
+            "qualification_status": "NOT_QUALIFIED",
+            "qualification_reason": "E2 is below the rule minimum E4.",
+            "source_access_status": "READ_PARTIAL",
+            "supersedes_source_row_id": null
+          },
+          {
+            "source_row_id": "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-SUNGROW-1749-V1",
+            "source_record_hash": "13a3c0a69504657ad2947037df288085728a2576ee938b53c4db77303cee8c11",
+            "title": "Sungrow EnerNeo SST certification announcement",
+            "url": "https://cn.sungrowpower.com/news/1749.html",
+            "capture_sha256": "574c58de9d696546fed3f268b9fa02786e4a50ffe4e04616ddd0e06fdaf69f2a",
+            "originator_id": "ORIGINATOR-SUNGROW",
+            "originator_role": "SUPPLIER",
+            "dependency_class": "ISSUER_AUTHORED",
+            "originating_evidence_lineage": [],
+            "evidence_level": "E2",
+            "evidence_facets": [
+              "RESPONSIBLE_ORGANIZATION",
+              "EVENT_DATE"
+            ],
+            "qualification_status": "NOT_QUALIFIED",
+            "qualification_reason": "E2 is below the rule minimum E4.",
+            "source_access_status": "READ_PARTIAL",
+            "supersedes_source_row_id": null
+          },
+          {
+            "source_row_id": "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-VANTAGE-HERON-20261021-V1",
+            "source_record_hash": "bdab573c7cb45be24f127d735f6c592652208091f9517dc8a9641b66c2950bf1",
+            "title": "Vantage and Heron 800 VDC manufacturing-capacity agreement",
+            "url": "https://vantage-dc.com/news/vantage-and-heron-power-electronics-announce-gigawatt-scale-800-vdc-agreement-to-accelerate-ai-infrastructure-delivery/",
+            "capture_sha256": "69b61c5ea87e5adf9ec8e272e8f07c47bceaccc159600be2854952096a73adda",
+            "originator_id": "ORIGINATOR-VANTAGE-HERON",
+            "originator_role": "CUSTOMER",
+            "dependency_class": "PARTIALLY_DEPENDENT",
+            "originating_evidence_lineage": [],
+            "evidence_level": "E0",
+            "evidence_facets": [
+              "NAMED_OPERATOR",
+              "RESPONSIBLE_ORGANIZATION",
+              "EVENT_DATE"
+            ],
+            "qualification_status": "NOT_QUALIFIED",
+            "qualification_reason": "E0 is below the rule minimum E4.",
+            "source_access_status": "READ_PARTIAL",
+            "supersedes_source_row_id": null
+          },
+          {
+            "source_row_id": "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-VERTIV-DCD-2026-V1",
+            "source_record_hash": "ab3cd191115762ff760fbb832eb360fe4c14ebd9d49279e7beb3ff253da8aea5",
+            "title": "Vertiv DCD Power Innovation Day 800VDC architecture topic",
+            "url": "https://www.vertiv.com/en-us/about/news-and-events/events/2026/dcd-power-innovation-day-2026/",
+            "capture_sha256": "8f7827b87ec928420c44e012492416e3f08940d1aeb106f9ce8210014a9a0fdc",
+            "originator_id": "ORIGINATOR-VERTIV",
+            "originator_role": "SUPPLIER",
+            "dependency_class": "ISSUER_AUTHORED",
+            "originating_evidence_lineage": [],
+            "evidence_level": "E0",
+            "evidence_facets": [
+              "MATERIALLY_COMPARABLE_ARCHITECTURE",
+              "RESPONSIBLE_ORGANIZATION",
+              "EVENT_DATE"
+            ],
+            "qualification_status": "NOT_QUALIFIED",
+            "qualification_reason": "E0 is below the rule minimum E4.",
+            "source_access_status": "READ_PARTIAL",
+            "supersedes_source_row_id": null
+          }
+        ],
+        "qualifying_counterevidence": [],
+        "counterevidence_status": "NO_QUALIFYING_CONTRADICTION_ESTABLISHED_WITHIN_BOUNDED_PACKET",
+        "inaccessible_sources": [],
+        "source_access_limitations": [
+          {
+            "source_row_id": "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-CHINDATA-533-V2",
+            "source_access_status": "READ_PARTIAL",
+            "capture_failure_or_limit": "The repository preserves a bounded structured packet, not a complete raw copy of the external publication.",
+            "blocked_sources_or_limits": [
+              "No full raw external page capture is stored; the hash covers the bounded atomic evidence record."
+            ]
+          },
+          {
+            "source_row_id": "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-PI-IDEAL-SSCB-20261012-V1",
+            "source_access_status": "READ_PARTIAL",
+            "capture_failure_or_limit": "The repository preserves a bounded structured packet, not a complete raw copy of the external publication.",
+            "blocked_sources_or_limits": [
+              "Only a structured factual snapshot is stored; no independent performance dataset is included."
+            ]
+          },
+          {
+            "source_row_id": "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-SIEMENS-REINHAUSEN-2026-V1",
+            "source_access_status": "READ_PARTIAL",
+            "capture_failure_or_limit": "The repository preserves a bounded structured packet, not a complete raw copy of the external publication.",
+            "blocked_sources_or_limits": [
+              "No source-specific raw file is stored; the hash covers the bounded three-source review packet."
+            ]
+          },
+          {
+            "source_row_id": "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-SOLAREDGE-BUSINESSWIRE-20261013-V1",
+            "source_access_status": "READ_PARTIAL",
+            "capture_failure_or_limit": "The repository preserves a bounded structured packet, not a complete raw copy of the external publication.",
+            "blocked_sources_or_limits": [
+              "No full raw distribution copy is stored; the bounded structured snapshot records the review."
+            ]
+          },
+          {
+            "source_row_id": "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-SOLAREDGE-ORIGIN-20261013-V1",
+            "source_access_status": "READ_PARTIAL",
+            "capture_failure_or_limit": "The repository preserves a bounded structured packet, not a complete raw copy of the external publication.",
+            "blocked_sources_or_limits": [
+              "The origin returned HTTP 403 to direct retrieval; only the bounded structured snapshot is stored."
+            ]
+          },
+          {
+            "source_row_id": "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-SOLAREDGE-PDF-20261013-V1",
+            "source_access_status": "READ_PARTIAL",
+            "capture_failure_or_limit": "The repository preserves a bounded structured packet, not a complete raw copy of the external publication.",
+            "blocked_sources_or_limits": [
+              "No full raw PDF is stored; the bounded structured snapshot records the review."
+            ]
+          },
+          {
+            "source_row_id": "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-SUNGROW-1749-V1",
+            "source_access_status": "READ_PARTIAL",
+            "capture_failure_or_limit": "The repository preserves a bounded structured packet, not a complete raw copy of the external publication.",
+            "blocked_sources_or_limits": [
+              "Fresh retrieval was blocked by network proxy HTTP 403; no matching certificate ID or issuer record was established."
+            ]
+          },
+          {
+            "source_row_id": "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-VANTAGE-HERON-20261021-V1",
+            "source_access_status": "READ_PARTIAL",
+            "capture_failure_or_limit": "The repository preserves a bounded structured packet, not a complete raw copy of the external publication.",
+            "blocked_sources_or_limits": [
+              "The separate factory announcement is summarized in the packet; no delivered-unit or commissioning record is present."
+            ]
+          },
+          {
+            "source_row_id": "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-VERTIV-DCD-2026-V1",
+            "source_access_status": "READ_PARTIAL",
+            "capture_failure_or_limit": "The repository preserves a bounded structured packet, not a complete raw copy of the external publication.",
+            "blocked_sources_or_limits": [
+              "No source-specific raw file is stored; the hash covers the bounded three-source review packet."
+            ]
+          }
+        ],
+        "search_scope_limits": [
+          "Architecture discussion and future pilots are not counted as commissioning or field operation.",
+          "Distribution copies are not counted as independent corroboration.",
+          "No broad market census, independent dataset, or named deployment search was performed.",
+          "No certificate authenticity, complete scope, customer operation, or reliability claim is inferred.",
+          "No general market census and no inference beyond the single operator-reported campus.",
+          "No unnamed pipeline, plan, or industrialization statement is treated as field operation.",
+          "Prototype characteristics are not generalized to system commissioning, deployment, or adoption.",
+          "Reserved manufacturing capacity is not treated as produced output, commissioning, procurement completion, or field operation.",
+          "The rendering is not counted as independent corroboration."
+        ],
+        "zero_interpretation": "Zero qualifying or independent rows means zero within these nine reviewed URLs and seven originating lineages, not proof that no evidence exists elsewhere."
+      },
+      "preserved_uncertainty": {
+        "unknown": [
+          "Independent field validation and a second independently controlled operating instance remain unestablished within the nine reviewed URLs."
+        ],
+        "unresolved": [
+          {
+            "issue": "CHINDATA_E3_E4",
+            "status": "UNRESOLVED",
+            "active_level": "E3",
+            "caveat": "E3 is a conservative ceiling and an imperfect label, not a claim that authorship is unattributed; the rubric lacks a separate label for attributable field assertions missing period/method."
+          }
+        ],
+        "unsupported": [
+          {
+            "capability": "SECOND_REAL_HUMAN_REVIEW",
+            "status": "UNSUPPORTED",
+            "capability_status": "UNSUPPORTED_REAL_SECOND_REVIEW",
+            "effect": "NO_EVIDENCE_OR_CASE_STATE_CHANGE"
+          }
+        ]
+      },
+      "client_action_condition": {
+        "ownership": "CLIENT_DEFINED",
+        "selected_action": "UNSPECIFIED",
+        "allowed_client_vocabulary": [
+          "PROCEED",
+          "HOLD",
+          "EXIT",
+          "REVIEW"
+        ],
+        "decision_trigger": "UNSPECIFIED",
+        "review_date": "UNSPECIFIED",
+        "fallback": "UNSPECIFIED",
+        "exposure_threshold": "UNSPECIFIED",
+        "status": "NO_CLIENT_DECISION_RECORDED",
+        "separation_from_evidence_rule": "A source qualification result never selects a client action."
+      },
+      "source_supersession_links": [
+        {
+          "active_source_row_id": "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-CHINDATA-533-V2",
+          "predecessor_source_row_id": "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-CHINDATA-533-V1"
+        }
+      ],
+      "challenge_boundary": {
+        "url": "https://structurevidence.org/gaps/OEG-CML-002/",
+        "submission_effect": "SUBMISSION_PRIVATE_UNTIL_HUMAN_REVIEW; NO_AUTOMATIC_STATE_CHANGE",
+        "automatic_condition_or_state_change": false
+      },
+      "not_a_decision_recommendation": "StructEvidence reports a time-bounded evidence condition. It does not recommend an investment, purchase, architecture, deployment, rejection, or client action.",
+      "record_sha256": "bb2b6840c9f59c6f7bf2175309d8b0b229634ff76b039362fa511dea4050bb0f"
+    }
+  ],
+  "provenance": {
+    "source_dependency_view": "cases/800vdc/source-dependency-v0.1.json",
+    "source_review_matrix": "cases/800vdc/source-dependency-review-matrix-v0.1.json",
+    "source_registry": "protocol/source-dependency/registry-v0.1.json",
+    "qualification_rules": "protocol/source-dependency/qualification-rules-v0.2.json",
+    "source_dependency_view_sha256": "9038817ab15e1202ea5ae8ca374f515f5381b6480fce22f2ff137d3267cd7705",
+    "source_review_matrix_sha256": "1cdd2fd6816ca6b8e9518958cd757098f41a44e04f88854cb9604e25c3ab86f0",
+    "source_registry_sha256": "172172ccc1c9fe8587224c1dcf51ae8354be74d951603da6b5f96b1e7fa68203",
+    "qualification_rules_sha256": "2f35a425eabf05d7e9893617f60a1faa97ffda62ac7a0e093adc6b9fdcbb6dce"
+  },
+  "append_only_versioning": {
+    "version": "v0.1",
+    "previous_snapshot_sha256": null,
+    "update_policy": "Future changes create a new version that cites this snapshot digest; this export is never overwritten in place."
+  },
+  "case_state_changed": false,
+  "client_decision_recorded": false,
+  "snapshot_sha256": "1aa90c414d4eee5f98adc1a35adcad304543eb30bfd57946fd7a998a37a1dea1"
+}
