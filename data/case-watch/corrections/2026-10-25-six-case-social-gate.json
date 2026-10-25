@@ -1,0 +1,26 @@
+{
+  "schema_version": "se-append-only-operational-correction-v1",
+  "correction_id": "SE-CORR-20261025-SIX-CASE-SOCIAL-GATE-01",
+  "principle_id": "SE-APPEND-ONLY-CORRECTION-001",
+  "detected_at": "2026-10-25T14:16:00Z",
+  "corrects": [
+    {
+      "record_id": "SE-OPS-20261025-2200-11dedde6-6e27-5019-9020-8d5d2a34147f",
+      "path": "data/ops/se/runs/2026-10-25.json",
+      "issue": "Run covers four case reviews, not the six cases required by the updated task."
+    },
+    {
+      "record_id": "SE-X-2026-10-25-METHOD-01",
+      "path": "data/ops/se/x-candidates/2026-10-25.json",
+      "issue": "Candidate was marked AWAITING_HUMAN_REVIEW without a recorded independent production-body verification and does not follow ONE QUESTION + ONE BOUNDARY + ONE LINK."
+    }
+  ],
+  "originals_modified": false,
+  "correction_statement": "Preserve both originals. Add reviews for the two independent public projections, keep all six stop-points unchanged, and treat the X candidate as NOT_RELEASE_READY / WEBSITE_PUBLICATION_BLOCKED. Add a LinkedIn blocked record. No social text is approved in this supplement.",
+  "old_stop_point": "UNCHANGED",
+  "proposed_stop_point": "UNCHANGED",
+  "website_verified": false,
+  "x_post_sent": 0,
+  "linkedin_post_sent": 0,
+  "approval_gate": "HUMAN_GATE_REQUIRED"
+}
