@@ -1,0 +1,17 @@
+{
+  "protocol_version": "SE-DECISION-BOUNDARY-PILOT-v0.1",
+  "pilot_id": "SE-DBP-FIXTURE-001",
+  "classification": "PUBLIC_ILLUSTRATION_NOT_CUSTOMER_PILOT",
+  "test_fixture_only": true,
+  "real_customer_authorization": "NOT_GRANTED",
+  "human_scope_approval": "NOT_APPLICABLE_TEST_FIXTURE",
+  "data_boundary": "PUBLIC_TEST_FIXTURE_ONLY",
+  "case_state_changed": false,
+  "evidence_records_changed": false,
+  "second_real_human_review": "UNSUPPORTED",
+  "customer_identity_collected": false,
+  "public_decision_condition_ids": [
+    "SE-DC-CML-PDRE-001-OEG-CML-001-v0.1",
+    "SE-DC-CML-PDRE-001-OEG-CML-002-v0.1"
+  ]
+}
