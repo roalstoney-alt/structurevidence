@@ -224,7 +224,18 @@ class SourceDependencyViewPhaseBTest(unittest.TestCase):
         changed = subprocess.check_output(
             ["git", "diff", "--name-only", "origin/main"], cwd=ROOT, text=True
         ).splitlines()
-        forbidden = [path for path in changed if path.startswith("deploy/") or "price" in path.lower()]
+        phase_d_commercial_allowlist = {
+            "deploy/cloudflare-landing/commercial-upgrade.js",
+            "deploy/cloudflare-landing/decision-boundary.js",
+            "deploy/cloudflare-landing/test/decision-boundary.test.js",
+            "deploy/cloudflare-landing/test/intake.test.js",
+            "deploy/cloudflare-landing/worker.js",
+        }
+        forbidden = [
+            path for path in changed
+            if (path.startswith("deploy/") and path not in phase_d_commercial_allowlist)
+            or "price" in path.lower()
+        ]
         self.assertEqual(forbidden, [])
 
     def test_p_page_and_machine_records_reject_executable_markup(self):

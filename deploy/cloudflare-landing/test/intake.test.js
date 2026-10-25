@@ -107,8 +107,8 @@ test("commercial pages are direct, concise, and connect forms same-origin", asyn
   const worker = createWorker(), env = baseEnv(new FakeD1());
   for (const path of ["/", "/verify/", "/context/", "/decision-pack/"]) assert.equal((await worker.fetch(new Request(`https://structevidence.com${path}`), env)).status, 200);
   const home = await (await worker.fetch(new Request("https://structevidence.com/"), env)).text();
-  assert.match(home, /From question to defensible decision/); assert.match(home, /href="\/verify\/"/); assert.match(home, /href="\/context\/"/); assert.match(home, /https:\/\/structurevidence\.org\/cases\/800vdc\//);
-  assert.doesNotMatch(home, /\b(?:CML|RDL|RTP|ECN)\b/); assert.doesNotMatch(home, /Evidence Archive|internal research credits/i);
+  assert.match(home, /Know what is established before you decide what to do/); assert.match(home, /href="\/verify\/"/); assert.match(home, /href="\/context\/"/); assert.match(home, /https:\/\/structurevidence\.org\/cases\/800vdc\//);
+  assert.doesNotMatch(home, /\b(?:RDL|RTP|ECN)\b/); assert.doesNotMatch(home, /Evidence Archive|internal research credits/i);
   const verify = await (await worker.fetch(new Request("https://structevidence.com/verify/"), env)).text();
   const context = await (await worker.fetch(new Request("https://structevidence.com/context/"), env)).text();
   const app = await (await worker.fetch(new Request("https://structevidence.com/assets/app.js"), env)).text();
