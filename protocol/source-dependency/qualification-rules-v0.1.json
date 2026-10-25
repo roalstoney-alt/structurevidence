@@ -1,0 +1,27 @@
+{
+  "schema_version": "se-source-qualification-rules-v0.1",
+  "rules": [
+    {
+      "qualification_rule_id": "SE-SD-QR-OEG-CML-001-INDEPENDENT-VALIDATION-v0.1",
+      "gap_id": "OEG-CML-001",
+      "claim_id": "CML-PDRE-001.INDEPENDENT_VALIDATION",
+      "minimum_evidence_level": "E4",
+      "permitted_dependency_classes": ["ISSUER_AUTHORED", "PARTIALLY_DEPENDENT", "INDEPENDENT"],
+      "permitted_originator_roles": ["OPERATOR", "REGULATOR", "RESEARCHER", "OTHER"],
+      "required_evidence_facets": ["NAMED_SITE", "OBSERVATION_PERIOD", "OPERATING_CONDITIONS", "METHODOLOGY", "RESPONSIBLE_ORGANIZATION"],
+      "rule_text": "Qualifying evidence must be an independently attributable operating or test record tied to the named site with observation period, conditions, method, and responsible organization. An operator record can qualify only when its attributable methodology is present; dependency remains separately visible.",
+      "rubric_version": "SE-SOURCE-DEPENDENCY-RUBRIC-v0.1"
+    },
+    {
+      "qualification_rule_id": "SE-SD-QR-OEG-CML-002-REPLICATION-v0.1",
+      "gap_id": "OEG-CML-002",
+      "claim_id": "CML-PDRE-001.MULTI_ENTITY_REPLICATION",
+      "minimum_evidence_level": "E4",
+      "permitted_dependency_classes": ["ISSUER_AUTHORED", "PARTIALLY_DEPENDENT", "INDEPENDENT"],
+      "permitted_originator_roles": ["OPERATOR", "CUSTOMER", "REGULATOR", "RESEARCHER"],
+      "required_evidence_facets": ["NAMED_OPERATOR", "NAMED_SITE", "MATERIALLY_COMPARABLE_ARCHITECTURE", "COMMISSIONED_OR_OPERATING", "EVENT_DATE"],
+      "rule_text": "Qualifying evidence must identify another attributable operator or independently controlled site with a materially comparable deployed architecture and operating status. An E4 operator-owned record may qualify; E5 is not a universal minimum.",
+      "rubric_version": "SE-SOURCE-DEPENDENCY-RUBRIC-v0.1"
+    }
+  ]
+}
