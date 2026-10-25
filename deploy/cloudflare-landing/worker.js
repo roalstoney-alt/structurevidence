@@ -3,7 +3,7 @@ import { ADMIN_APP_JS, ADMIN_HTML } from "./admin-ui.js";
 import { CAPABILITIES } from "./capabilities.js";
 import { COMMERCIAL_APP_JS_UPGRADE as COMMERCIAL_APP_JS, COMMERCIAL_CSS_V2 as COMMERCIAL_CSS, COMMERCIAL_PAGES_V2 as COMMERCIAL_PAGES } from "./commercial-upgrade.js";
 import { handleGapAdminApi, handleGapApi } from "./gap-service.js";
-import { GAP_APP_JS, GAP_CSS, findGap, renderGapChangeLog, renderGapDetail, renderGapIndex } from "./gaps.js";
+import { GAP_APP_JS, GAP_CSS, OPEN_EVIDENCE_GAPS, findGap, renderGapChangeLog, renderGapDetail, renderGapIndex } from "./gaps.js";
 
 const MAX_BODY_BYTES = 65_536;
 const REQUEST_STATUSES = new Set(["SUBMITTED", "UNDER_REVIEW", "SCOPE_PROPOSED", "AWAITING_CUSTOMER", "AUTHORIZED", "IN_PROGRESS", "DELIVERED", "CLOSED"]);
@@ -17,6 +17,14 @@ const securityHeaders = {
 };
 const jsonHeaders = { "content-type": "application/json; charset=utf-8", "cache-control": "no-store", ...securityHeaders };
 const json = (body, status = 200, extra = {}) => new Response(JSON.stringify(body), { status, headers: { ...jsonHeaders, ...extra } });
+const sitemapPaths = Object.freeze([...new Set([
+  ...Object.keys(COMMERCIAL_PAGES),
+  "/gaps/",
+  "/gaps/changes/",
+  ...OPEN_EVIDENCE_GAPS.map(({ gap_id }) => `/gaps/${gap_id}/`)
+])]);
+const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapPaths.map((path) => `  <url><loc>https://structevidence.com${path}</loc></url>`).join("\n")}\n</urlset>\n`;
+const robotsTxt = "User-agent: *\nAllow: /\nDisallow: /admin/\nDisallow: /api/admin/\nSitemap: https://structevidence.com/sitemap.xml\n";
 const now = () => new Date().toISOString();
 const externalId = (prefix) => `${prefix}-${crypto.randomUUID().replaceAll("-", "").slice(0, 20).toUpperCase()}`;
 const clean = (value, max) => {
@@ -154,6 +162,8 @@ function commercialRoute(request, url) {
   if (!new Set(["GET", "HEAD"]).has(request.method)) return new Response("Method not allowed", { status: 405, headers: { allow: "GET, HEAD", ...securityHeaders } });
   const path = url.pathname === "/index.html" ? "/" : url.pathname;
   if (path === "/gaps") return Response.redirect(`${url.origin}/gaps/`, 308);
+  if (path === "/robots.txt") return new Response(request.method === "HEAD" ? null : robotsTxt, { headers: { "content-type": "text/plain; charset=utf-8", "cache-control": "public, max-age=3600", ...securityHeaders } });
+  if (path === "/sitemap.xml") return new Response(request.method === "HEAD" ? null : sitemapXml, { headers: { "content-type": "application/xml; charset=utf-8", "cache-control": "public, max-age=3600", ...securityHeaders } });
   if (path === "/gaps/") return htmlResponse(request, renderGapIndex());
   if (path === "/gaps/changes/") return htmlResponse(request, renderGapChangeLog());
   const gapMatch = path.match(/^\/gaps\/([^/]+)\/$/);

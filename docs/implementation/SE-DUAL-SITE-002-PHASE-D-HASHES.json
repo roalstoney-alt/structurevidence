@@ -1,0 +1,77 @@
+{
+  "project": "SE-DUAL-SITE-UPGRADE-002",
+  "phase": "D",
+  "baseline_main_sha": "f267f9dbe506cb30f95a2f21543b72b4fc31c388",
+  "implementation_commit_sha": "cd35840bedcacbc0c431877b42fa0edcb96ed196",
+  "generated_at": "2026-10-25T13:34:33Z",
+  "original_records_changed": 0,
+  "case_state_changed": false,
+  "client_decision_recorded": false,
+  "pricing_changed": false,
+  "d1_schema_changed": false,
+  "production_deployed": false,
+  "org_canonical_drift": "NONE",
+  "commercial_feature_availability": {
+    "PUBLIC_EVIDENCE_AND_READ_APIS": "LIVE",
+    "PRIVATE_INTAKE_AND_REQUEST_HISTORY": "LIVE",
+    "SCOPED_PRIVATE_DECISION_RECORD": "AVAILABLE_WITH_HUMAN_SCOPE",
+    "PRIVATE_MANAGED_GAP_REGISTER": "AVAILABLE_WITH_HUMAN_SCOPE",
+    "EVIDENCE_NOTIFICATIONS": "PROPOSED_NOT_LIVE",
+    "RECURRING_SUBSCRIPTIONS": "PROPOSED_NOT_LIVE",
+    "CUSTOMER_DECISION_BOUNDARY_API": "PROPOSED_NOT_LIVE"
+  },
+  "protected_org_sha256": {
+    "cases/800vdc/source-dependency/index.html": "e42b94dcbce09900c9b79bc2374bf09b53ace2d1b9e897a50fb544715272ba38",
+    "cases/800vdc/source-dependency-v0.1.json": "9038817ab15e1202ea5ae8ca374f515f5381b6480fce22f2ff137d3267cd7705",
+    "cases/800vdc/decision-conditions/index.html": "a50ab5f0985decd60aab105b90365ea3c10f4c0e5195d8c779c544649fd4d581",
+    "cases/800vdc/decision-conditions-v0.1.json": "c451662988a44c9907c906e6e245b1ee64e5c204fc5dca7b4d06c26f4b49f040",
+    "cases/800vdc/decision-conditions-v0.1.md": "bafe2695ee79f6cc0a9b5ed033546d1a36a84071d7a447f9ffed247eb6fe9fea"
+  },
+  "protected_commercial_boundary_sha256": {
+    "deploy/cloudflare-landing/migrations/0001_customer_intake.sql": "156cea56e8278abc280315c10b98af03616cc9c2f71a5bc8a2b02a358c47b851",
+    "deploy/cloudflare-landing/locales/en.json": "b85af98ab67ad66bc05f0d90c01e6030a2577a37199f4de9ce022393b84c6cfe",
+    "deploy/cloudflare-landing/locales/zh-CN.json": "1dab213b5f6f1356d70cf2d4ec551af4aef822f2ff43d22cbc1baa0d1683e310",
+    "deploy/cloudflare-landing/locales/es.json": "89d74f1e785c59927f20f92ca6cf19d1bc55d0300eeedd76a2463ada2b2b58af"
+  },
+  "phase_d_artifact_sha256": {
+    "deploy/cloudflare-landing/commercial-upgrade.js": "ba9c40d562ac5ccf4c032475bb5b7222fecebb12a0275d12685281aeee33e758",
+    "deploy/cloudflare-landing/decision-boundary.js": "39401129b2663221c4804c4aacc28ee26c711441620194bd6f699bbc6e023e1a",
+    "deploy/cloudflare-landing/worker.js": "8a2cc618c439e1fcb0289eebb1b0a8e599b063951ef4187c624ec509a99247f1",
+    "deploy/cloudflare-landing/test/decision-boundary.test.js": "4c0da7c9d6cd14cb75cfff3f0e79a51959c4f934d9bbd2bac83ead5586244d1d",
+    "docs/implementation/SE-DUAL-SITE-002-PHASE-D-INVENTORY.md": "b08cae1f20a37b4a72d7e7dd17f110fb7eca87a64d580ceeffcb8d11fdeae4fa",
+    "scripts/test_source_dependency_view_phase_b.py": "9e597b82c555bb9cc791b6e685fe6d17d9255e89eb0a45880adc606d301432eb",
+    "tests/test_pr26_append_only.py": "e055e444328ba35d295c9b5dd2b85f49461c2865022f008d9419f9f47ea94869"
+  },
+  "live_read_only_observation": {
+    "observed_at": "2026-10-25T13:17:47Z",
+    "commercial_home_http": 200,
+    "commercial_capabilities_http": 200,
+    "commercial_gap_http": 200,
+    "org_case_and_export_http": 200,
+    "commercial_home_sha256": "7cc7dbc365d9cd9b2527e473563ea532bf09c4fc3f3997fd493fc84e1743bf02",
+    "commercial_capabilities_sha256": "76ff3ed99cfc3fb103c6948d942f660a31ddcfe2c0f2f0a74757a18bafb461fd",
+    "cloudflare_deployment_id_status": "UNAVAILABLE_NO_API_TOKEN",
+    "writes_performed": false
+  },
+  "test_results": {
+    "commercial_worker": "39/39 PASS",
+    "phase_b_source_dependency": "21/21 PASS",
+    "phase_c_decision_conditions": "26/26 PASS",
+    "phase_b_public_case_primitives": "9 tests / 3 baseline failures / 0 new failures",
+    "commercial_i18n": "9/9 PASS",
+    "public_commercial_boundary": "PASS",
+    "brand_seo_history_focused": "16/16 PASS",
+    "public_record_drift": "PASS in isolated writable copy",
+    "internal_links": "0 broken / 0 orphan",
+    "worker_dry_run": "PASS; no deployment",
+    "tests_suite": "41 tests / 11 baseline failures / 0 new failures",
+    "scripts_suite": "479 tests / 37 baseline failures / 11 baseline errors / 0 new failures",
+    "git_diff_check": "PASS",
+    "new_regression_count": 0
+  },
+  "preserved_statuses": {
+    "chindata_e3_e4": "UNRESOLVED",
+    "second_real_human_review": "UNSUPPORTED",
+    "client_action": "UNSPECIFIED"
+  }
+}

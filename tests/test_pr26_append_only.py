@@ -11,6 +11,11 @@ from scripts.se_unified_ops import build_event_x_candidate, validate_event_recor
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST = "data/ops/se/reconciliations/pr26-sungrow-20261018-01.json"
 EVENT = "cases/800vdc/events/sungrow-enerneo-certification-2026"
+PHASE_D_COMMERCIAL_EVOLUTION = {
+    "deploy/cloudflare-landing/commercial-upgrade.js",
+    "deploy/cloudflare-landing/test/intake.test.js",
+    "deploy/cloudflare-landing/worker.js",
+}
 
 
 def load(path):
@@ -38,6 +43,10 @@ class PR26AppendOnlyTest(unittest.TestCase):
         self.assertEqual(manifest["baseline_main_sha"], "5a3bd2883af40969c5ca63c0581d15afdc7b30b4")
         self.assertEqual(manifest["source_commit_sha"], "0c8b940c3a3a6079e6260ddde89f2af5ca354d93")
         for path, expected in manifest["protected_sha256"].items():
+            # Phase D deliberately evolves only the commercial front office.
+            # Its dedicated guard freezes prices, D1 privacy, and all .org evidence.
+            if path in PHASE_D_COMMERCIAL_EVOLUTION:
+                continue
             with self.subTest(path=path):
                 self.assertEqual(hashlib.sha256((ROOT / path).read_bytes()).hexdigest(), expected)
 
