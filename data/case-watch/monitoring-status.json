@@ -1,19 +1,19 @@
 {
   "schema_version": "1.0",
-  "status_recorded_at": "2026-10-15T23:28:53+08:00",
-  "observation_scope": "Bounded SolarEdge primary-source event verification appended for 800V; the accepted stop remains unchanged. Other case statuses retain their last recorded review artifacts.",
+  "status_recorded_at": "2026-10-19T14:44:31Z",
+  "observation_scope": "Administrative projection reconciliation to existing October19 immutable reviews; no new research clock, no source or accepted-stop transition. Supplement keeps original run/report/candidate bytes unchanged.",
   "cases": [
     {
       "case_id": "CML-PDRE-001",
       "period": {
-        "id": "2026-10-15",
-        "start": "2026-10-15",
-        "end": "2026-10-15",
-        "status": "NO_STATE_CHANGE",
-        "scope": "Verified SolarEdge technology-showcase event recorded; accepted single-instance state unchanged."
+        "id": "2026-10-19",
+        "start": "2026-10-19",
+        "end": "2026-10-19",
+        "status": "REVIEW_INCOMPLETE",
+        "scope": "One targeted official-source search group and three primary-page checks covering Chindata, Vertiv and Sungrow; not an exhaustive market census. A search-index lead for Sungrow article 1748 was not counted because both official URLs returned HTTP 404 and the body could not be verified."
       },
-      "period_review_id": "SE-800V-REVIEW-20261015-01",
-      "latest_review_file": "cases/800vdc/search-review-20261015-01.json",
+      "period_review_id": "SE-800V-REVIEW-20261019-01",
+      "latest_review_file": "cases/800vdc/search-review-20261019-01.json",
       "monitoring": {
         "cadence": "DAILY",
         "enabled": true,
@@ -28,14 +28,14 @@
     {
       "case_id": "SE-BESS-SODIUM-001",
       "period": {
-        "id": "2026-10-14",
-        "start": "2026-10-14",
-        "end": "2026-10-14",
+        "id": "2026-10-19",
+        "start": "2026-10-19",
+        "end": "2026-10-19",
         "status": "HUMAN_GATE_REQUIRED",
-        "scope": "Named operational-site candidate found; accepted public state remains frozen pending human review."
+        "scope": "One targeted official-source search group and a primary Moonwatt page review; not an exhaustive market census or independent performance audit."
       },
-      "period_review_id": "SE-SODIUM-REVIEW-20261014-01",
-      "latest_review_file": "cases/sodium-ion-bess/search-review-20261014-01.json",
+      "period_review_id": "SE-SODIUM-REVIEW-20261019-01",
+      "latest_review_file": "cases/sodium-ion-bess/search-review-20261019-01.json",
       "monitoring": {
         "cadence": "DAILY",
         "enabled": true,
@@ -72,14 +72,14 @@
     {
       "case_id": "SE-IRK-LAB-001",
       "period": {
-        "id": "2026-10-14",
-        "start": "2026-10-14",
-        "end": "2026-10-14",
+        "id": "2026-10-19",
+        "start": "2026-10-19",
+        "end": "2026-10-19",
         "status": "REVIEW_INCOMPLETE",
-        "scope": "No qualifying new evidence; regulator, procurement, patent and underlying clinical/investigation records remained inaccessible."
+        "scope": "One consolidated Irkutsk direct-and-indirect search group and two institutional-source checks; no independent primary diagnostic or incident record was located."
       },
-      "period_review_id": "SE-IRK-REVIEW-20261014-02",
-      "latest_review_file": "cases/irkutsk-lab-worker-death/search-review-20261014-02.json",
+      "period_review_id": "SE-IRK-REVIEW-20261019-01",
+      "latest_review_file": "cases/irkutsk-lab-worker-death/search-review-20261019-01.json",
       "monitoring": {
         "cadence": "DAILY",
         "enabled": true,

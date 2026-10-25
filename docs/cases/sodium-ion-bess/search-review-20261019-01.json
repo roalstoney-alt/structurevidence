@@ -1,0 +1,34 @@
+{
+  "schema_version": "se-case-review-v2",
+  "case_id": "SE-BESS-SODIUM-001",
+  "review_id": "SE-SODIUM-REVIEW-20261019-01",
+  "reviewed_at": "2026-10-19T14:04:25Z",
+  "result": "HUMAN_GATE_REQUIRED",
+  "review_complete": true,
+  "classifications": ["NO_STATE_CHANGE", "HUMAN_GATE_REQUIRED"],
+  "search_boundary": "One targeted official-source search group and a primary Moonwatt page review; not an exhaustive market census or independent performance audit.",
+  "sources_checked": [
+    {
+      "url": "https://www.moonwatt.com/2026/06/22/moonwatt-commissions-the-first-distributed-sodium-ion-battery-system-purpose-built-for-hybrid-solar-plants/",
+      "publisher": "Moonwatt",
+      "status": "READ",
+      "retrieved_at": "2026-10-19T14:04:25Z",
+      "finding": "The existing attributed Arnhem commissioning and operation claims remain available. No new source or material change was identified today; accepted-state treatment remains human-gated."
+    }
+  ],
+  "daily_counters": {
+    "new_sources": 0,
+    "new_attributed_statements": 0,
+    "new_independent_evidence": 0,
+    "new_events": 0,
+    "newly_discovered_old_evidence": 0,
+    "state_changing_evidence": 0
+  },
+  "old_state": "NAMED_COMMISSIONED_SITE_NOT_ESTABLISHED",
+  "new_state": "NAMED_COMMISSIONED_SITE_NOT_ESTABLISHED",
+  "new_qualifying_evidence_count": 0,
+  "new_counter_evidence_count": 0,
+  "evidence_state_as_of": "2026-09-24",
+  "last_material_change": "2026-09-24",
+  "historical_backfill": false
+}

@@ -1,0 +1,24 @@
+{
+  "schema_version": "se-website-publication-receipt-v1",
+  "receipt_id": "SE-WEB-RECHECK-20261019-CLOUD-01",
+  "checked_at": "2026-10-19T14:44:31Z",
+  "result": "PUBLIC_VERIFIED",
+  "source_main_sha": "e060d78edfa6ef3b51914bc68ab2d7cb93b1bd81",
+  "checks": [
+    {
+      "url": "https://structurevidence.org/cases/irkutsk-lab-worker-death/events/ecdc-week-42-2026/",
+      "http_status": 200,
+      "sha256": "e533e4feea4937f67c4272da40a60d4e98fb3247e2f3159b6d460915e84a907e",
+      "marker_verified": true,
+      "original_link_present": true
+    },
+    {
+      "url": "https://structurevidence.org/cases/irkutsk-lab-worker-death/events/ecdc-week-42-2026/snapshot-v1.json",
+      "http_status": 200,
+      "sha256": "1ed4847133cbee992f3c7155b20c1746db1910ffe71962d5c68af4bf793c88d8",
+      "marker_verified": false,
+      "original_link_present": true
+    }
+  ],
+  "proof_boundary": "Independent recheck of existing ECDC event body and snapshot; not a deployment receipt for this supplementary audit."
+}
