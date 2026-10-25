@@ -1,0 +1,63 @@
+{
+  "schema_version": "se-decision-boundary-pilot-report-v0.1",
+  "protocol_version": "SE-DECISION-BOUNDARY-PILOT-v0.1",
+  "project": "SE-DUAL-SITE-UPGRADE-002",
+  "phase": "E",
+  "pilot_id": "SE-DBP-FIXTURE-001",
+  "classification": "PUBLIC_ILLUSTRATION_NOT_CUSTOMER_PILOT",
+  "event_count": 9,
+  "event_chain_head_sha256": "a19cef0809dbaed43991435abc1538dc3eab106645caedb2e3916b50dfcf78fd",
+  "event_ledger_sha256": "6854df6fcd94b35ef3908150f5415ffb4043a04efa1e219fe012eda4a2c964d5",
+  "observed_telemetry": {
+    "status": "NO_REAL_CUSTOMER_OBSERVATIONS",
+    "values": null
+  },
+  "simulation_telemetry": {
+    "researcher_minutes": 125,
+    "reviewer_touch_minutes": 50,
+    "source_acquisition_cost_minor_units": 2000,
+    "review_rounds": 1,
+    "net_new_qualifying_sources": 1,
+    "clarifications": 1,
+    "challenge_submissions": 1,
+    "decision_condition_citations": 2,
+    "revisions_supersessions": 1,
+    "currency": "USD"
+  },
+  "baseline_comparison": {
+    "status": "INSUFFICIENT_DATA",
+    "reason": "No independently authorized customer pilot with an actual comparable baseline and outcome has been recorded.",
+    "observed_before": null,
+    "observed_after": null,
+    "causal_attribution": "NOT_ESTABLISHED",
+    "roi_status": "NOT_EVALUATED"
+  },
+  "simulation_diagnostics": {
+    "classification": "TEST_FIXTURE_ONLY_NOT_EVIDENCE",
+    "fixture_time_difference_minutes": -125,
+    "fixture_cost_difference_minor_units": -10000,
+    "interpretation": "Arithmetic for deterministic test coverage only; not a customer result, causal estimate, saving, or ROI claim."
+  },
+  "missing_data": [
+    "INDEPENDENT_REAL_CUSTOMER_AUTHORIZATION",
+    "ACTUAL_COMPARABLE_BASELINE",
+    "CLIENT_SUPPLIED_DECISION",
+    "INDEPENDENTLY_OBSERVED_PERMITTED_OUTCOME",
+    "CAUSAL_COUNTERFACTUAL"
+  ],
+  "causal_limitations": [
+    "Synthetic work units cannot establish customer time or cost effects.",
+    "A before/after difference alone would not establish causation.",
+    "No avoided-loss value is estimated.",
+    "StructEvidence does not convert an evidence boundary into a client recommendation."
+  ],
+  "preserved_boundaries": {
+    "case_state_changed": false,
+    "evidence_records_changed": false,
+    "client_decision_recorded": false,
+    "outcome_observed": false,
+    "second_real_human_review": "UNSUPPORTED",
+    "production_deployed": false
+  },
+  "report_sha256": "154e2d414eb8fbdf38a64eb88c51a55c9c51b58245e8536f55b9ff25b4fc7abd"
+}

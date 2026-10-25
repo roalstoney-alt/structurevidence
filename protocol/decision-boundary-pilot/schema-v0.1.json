@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://structurevidence.org/protocol/decision-boundary-pilot/schema-v0.1.json",
+  "title": "StructEvidence Decision Boundary Pilot append-only event v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "protocol_version",
+    "pilot_id",
+    "event_id",
+    "sequence",
+    "event_type",
+    "occurred_at",
+    "recorded_at",
+    "data_classification",
+    "previous_event_sha256",
+    "payload",
+    "event_sha256"
+  ],
+  "properties": {
+    "schema_version": {"const": "se-decision-boundary-pilot-event-v0.1"},
+    "protocol_version": {"const": "SE-DECISION-BOUNDARY-PILOT-v0.1"},
+    "pilot_id": {"type": "string", "minLength": 1},
+    "event_id": {"type": "string", "minLength": 1},
+    "sequence": {"type": "integer", "minimum": 1},
+    "event_type": {
+      "enum": [
+        "BASELINE_FROZEN",
+        "REVIEW_STARTED",
+        "EVIDENCE_ADDED",
+        "EVIDENCE_REJECTED",
+        "CHALLENGE_RECEIVED",
+        "RULE_CHECKED",
+        "STOP_POINT_EMITTED",
+        "CLIENT_DECISION_RECORDED",
+        "OUTCOME_OBSERVED",
+        "SUPERSEDED"
+      ]
+    },
+    "occurred_at": {"type": "string", "format": "date-time"},
+    "recorded_at": {"type": "string", "format": "date-time"},
+    "data_classification": {
+      "enum": ["PUBLIC_TEST_FIXTURE_ONLY", "PRIVATE_CUSTOMER_RECORD_NOT_PUBLIC_EXPORT"]
+    },
+    "previous_event_sha256": {
+      "oneOf": [
+        {"type": "null"},
+        {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      ]
+    },
+    "payload": {
+      "type": "object",
+      "required": ["work_units"],
+      "properties": {
+        "work_units": {"$ref": "#/$defs/work_units"}
+      }
+    },
+    "event_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  },
+  "$defs": {
+    "work_units": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "researcher_minutes",
+        "reviewer_touch_minutes",
+        "source_acquisition_cost_minor_units",
+        "review_rounds",
+        "net_new_qualifying_sources",
+        "clarifications",
+        "challenge_submissions",
+        "decision_condition_citations",
+        "revisions_supersessions",
+        "currency"
+      ],
+      "properties": {
+        "researcher_minutes": {"type": "integer", "minimum": 0},
+        "reviewer_touch_minutes": {"type": "integer", "minimum": 0},
+        "source_acquisition_cost_minor_units": {"type": "integer", "minimum": 0},
+        "review_rounds": {"type": "integer", "minimum": 0},
+        "net_new_qualifying_sources": {"type": "integer", "minimum": 0},
+        "clarifications": {"type": "integer", "minimum": 0},
+        "challenge_submissions": {"type": "integer", "minimum": 0},
+        "decision_condition_citations": {"type": "integer", "minimum": 0},
+        "revisions_supersessions": {"type": "integer", "minimum": 0},
+        "currency": {"type": "string", "minLength": 3, "maxLength": 3}
+      }
+    }
+  }
+}
