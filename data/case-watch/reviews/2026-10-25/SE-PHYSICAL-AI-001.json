@@ -1,0 +1,62 @@
+{
+  "schema_version": "se-six-case-review-v1",
+  "case_id": "SE-PHYSICAL-AI-001",
+  "review_id": "SE-PHYSICAL-AI-REVIEW-20261025-CLOUD-01",
+  "reviewed_at": "2026-10-25T14:16:00Z",
+  "knowledge_cutoff": "2026-10-25T14:16:00Z",
+  "result": "REVIEW_INCOMPLETE",
+  "review_complete": false,
+  "review_status": [
+    "REVIEW_INCOMPLETE",
+    "NO_STATE_CHANGE_NOT_ASSERTED"
+  ],
+  "source_url": [
+    "https://github.com/roalstoney-alt/se-dual-case-public/blob/main/SE-PHYSICAL-AI-001.md"
+  ],
+  "source_id": [
+    "PUBLIC-PROJECTION-ACC2033"
+  ],
+  "source_speaker": [
+    "StructEvidence public projection"
+  ],
+  "claimed_subject": "Figure AI Figure 02/03 at BMW",
+  "claim_ids": [
+    "F-S01",
+    "F-S02",
+    "F-S03",
+    "F-S04",
+    "F-S05",
+    "F-S06"
+  ],
+  "event_at": null,
+  "published_at": null,
+  "observed_at": "2026-10-25T14:16:00Z",
+  "source_access": [
+    {
+      "source_id": "PUBLIC-PROJECTION-ACC2033",
+      "access": "FULL_GITHUB_TEXT"
+    }
+  ],
+  "raw_hash_or_UNAVAILABLE": "e58f052c0f76fd476604afc44d4100b7ce57a817",
+  "search_query": [
+    "site:figure.ai/news OR site:bmwgroup.com Figure 03 BMW October 25 2026 reliability decommission"
+  ],
+  "search_boundary": "Latest public projection was read in full and one current official-domain query was run; no qualifying current result was returned. This is not a complete market census.",
+  "old_stop_point": "PUBLIC PROJECTION / LOCAL_PROVISIONAL_v0.1",
+  "proposed_stop_point": "PUBLIC PROJECTION / LOCAL_PROVISIONAL_v0.1",
+  "new_sources": 0,
+  "new_attributed_statements": 0,
+  "new_independent_evidence": 0,
+  "new_events": 0,
+  "newly_discovered_old_evidence": 0,
+  "state_changing_evidence": 0,
+  "contradictions": [],
+  "decision_relevant_unknown": [
+    "Figure 03 acceptance, achieved reliability distribution, intervention rate, MTBF/MTTR, operating economics and independent validation remain unestablished."
+  ],
+  "next_observable": "BMW-authored Figure 03 acceptance or attributable sustained-operation/reliability record.",
+  "notes": [
+    "Figure 02 decommission dated 2026-09-30 was already known and was not counted as a 2026-10-25 event.",
+    "Private se2cases sources were not accessed or disclosed."
+  ]
+}
