@@ -66,7 +66,7 @@
           "RESPONSIBLE_ORGANIZATION"
         ],
         "rule_text": "Qualifying evidence must be an independently attributable operating or test record tied to the named site with observation period, conditions, method, and responsible organization. An operator record can qualify only when its attributable methodology is present; dependency remains separately visible.",
-        "exact_closure_test": "A qualifying row must meet the active dependency-class, E4-or-higher, operator/site/architecture/operation/date, and attributable-method requirements.",
+        "exact_closure_test": "A source row qualifies only if its evidence level is E4 or higher; its dependency class is one of ISSUER_AUTHORED, PARTIALLY_DEPENDENT, INDEPENDENT; its originator role is one of OPERATOR, REGULATOR, RESEARCHER, OTHER; and it contains every required evidence facet: NAMED_SITE, OBSERVATION_PERIOD, OPERATING_CONDITIONS, METHODOLOGY, RESPONSIBLE_ORGANIZATION.",
         "acceptable_source_types": {
           "originator_roles": [
             "OPERATOR",
@@ -422,7 +422,7 @@
         "automatic_condition_or_state_change": false
       },
       "not_a_decision_recommendation": "StructEvidence reports a time-bounded evidence condition. It does not recommend an investment, purchase, architecture, deployment, rejection, or client action.",
-      "record_sha256": "f8aac65c7792ae6b65e8a2212b9b04b6883a3b62b8ada87d858d1289eee9d3d6"
+      "record_sha256": "d035ef2a296a9a2712ff6385b1f2d3703580e153ea5e96b137604d49759b1a1c"
     },
     {
       "decision_condition_id": "SE-DC-CML-PDRE-001-OEG-CML-002-v0.1",
@@ -858,5 +858,5 @@
   },
   "case_state_changed": false,
   "client_decision_recorded": false,
-  "snapshot_sha256": "93229acac8150a1f57b2a7e34387098a736adec479ec2fb10ebcfcedf9436b36"
+  "snapshot_sha256": "1aa90c414d4eee5f98adc1a35adcad304543eb30bfd57946fd7a998a37a1dea1"
 }

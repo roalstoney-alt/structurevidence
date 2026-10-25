@@ -164,6 +164,20 @@ def _access_limit(row: dict[str, Any]) -> dict[str, Any]:
     }
 
 
+def _oeg_cml_001_closure_from_rule(rule: dict[str, Any]) -> str:
+    """Render OEG-CML-001 only from its active rule, never another gap's prose."""
+    if rule.get("gap_id") != "OEG-CML-001":
+        raise DecisionConditionError("OEG-CML-001 closure received a cross-gap rule")
+    dependencies = ", ".join(rule["permitted_dependency_classes"])
+    roles = ", ".join(rule["permitted_originator_roles"])
+    facets = ", ".join(rule["required_evidence_facets"])
+    return (
+        "A source row qualifies only if its evidence level is "
+        f"{rule['minimum_evidence_level']} or higher; its dependency class is one of {dependencies}; "
+        f"its originator role is one of {roles}; and it contains every required evidence facet: {facets}."
+    )
+
+
 def _condition(
     gap_id: str,
     view: dict[str, Any],
@@ -188,7 +202,11 @@ def _condition(
     ]
     metric = view["metrics"][gap_id]
     question = view["decision_boundary"]["scoped_questions"][gap_id]
-    closure = view["decision_boundary"]["closure_conditions"][gap_id]
+    closure = (
+        _oeg_cml_001_closure_from_rule(rule)
+        if gap_id == "OEG-CML-001"
+        else view["decision_boundary"]["closure_conditions"][gap_id]
+    )
     condition = {
         "decision_condition_id": CONDITION_IDS[gap_id],
         "version": "v0.1",

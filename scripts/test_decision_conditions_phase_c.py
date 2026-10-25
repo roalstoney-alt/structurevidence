@@ -82,10 +82,41 @@ class DecisionConditionsPhaseC(unittest.TestCase):
             self.assertFalse(any(row["source_row_id"].endswith("CHINDATA-533-V1") for row in rows))
             self.assertEqual(len(condition["source_supersession_links"]), 1)
 
+    def test_06b_oeg_001_closure_exactly_tracks_its_active_v02_rule(self):
+        condition = self.build()["conditions"][0]
+        rule = next(rule for rule in self.rules["rules"] if rule["gap_id"] == "OEG-CML-001")
+        closure = condition["source_evidence_rule"]["exact_closure_test"]
+        self.assertIn(f"{rule['minimum_evidence_level']} or higher", closure)
+        for value in rule["permitted_dependency_classes"] + rule["permitted_originator_roles"] + rule["required_evidence_facets"]:
+            self.assertIn(value, closure)
+        for replication_only in ("NAMED_OPERATOR", "MATERIALLY_COMPARABLE_ARCHITECTURE", "COMMISSIONED_OR_OPERATING", "EVENT_DATE", "ADDITIONAL_ENTITY_OR_SITE"):
+            self.assertNotIn(replication_only, closure)
+
+    def test_06c_oeg_001_cannot_reuse_oeg_002_closure_text(self):
+        view = copy.deepcopy(self.view)
+        view["decision_boundary"]["closure_conditions"]["OEG-CML-001"] = view["decision_boundary"]["closure_conditions"]["OEG-CML-002"]
+        conditions = {item["gap_id"]: item for item in self.build(view=view)["conditions"]}
+        first = conditions["OEG-CML-001"]["source_evidence_rule"]["exact_closure_test"]
+        second = conditions["OEG-CML-002"]["source_evidence_rule"]["exact_closure_test"]
+        self.assertNotEqual(first, second)
+        self.assertNotIn("ADDITIONAL_ENTITY_OR_SITE", first)
+        self.assertIn("ADDITIONAL_ENTITY_OR_SITE", second)
+
     def test_07_original_phase_b_inputs_have_not_drifted(self):
         for path, expected in EXPECTED_INPUT_HASHES.items():
             actual = hashlib.sha256((ROOT / path).read_bytes()).hexdigest()
             self.assertEqual(actual, expected, path)
+
+    def test_07b_hash_report_matches_current_exports(self):
+        package = load(JSON_PATH)
+        report = load("docs/implementation/SE-DUAL-SITE-002-PHASE-C-HASHES.json")
+        self.assertEqual(report["snapshot_sha256"], package["snapshot_sha256"])
+        self.assertEqual(
+            report["decision_condition_record_sha256"],
+            {item["decision_condition_id"]: item["record_sha256"] for item in package["conditions"]},
+        )
+        for path, expected in report["generated_artifact_sha256"].items():
+            self.assertEqual(hashlib.sha256((ROOT / path).read_bytes()).hexdigest(), expected, path)
 
     def test_08_json_markdown_html_semantics_agree(self):
         package = load(JSON_PATH)
