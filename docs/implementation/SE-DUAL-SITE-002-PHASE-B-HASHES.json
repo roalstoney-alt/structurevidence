@@ -1,0 +1,25 @@
+{
+  "project": "SE-DUAL-SITE-UPGRADE-002",
+  "phase": "B",
+  "baseline_main_sha": "f89f5dbba30c3f504833418d643786680d5769ca",
+  "generated_at": "2026-10-25T02:59:00Z",
+  "protected_original_manifest": "docs/implementation/SE-DUAL-SITE-002-BASELINE-SHA256.json",
+  "protected_originals_changed": [],
+  "source_packet_sha256": {
+    "e/L1-EV-CML-PDRE-001-FIELD-DEPLOYMENT-001/index.json": "57e1ede12822f29e973c66d11db60a2e55a429cd4b7a4fea4bcc44d1c8aa1918",
+    "cases/800vdc/search-review-20261014-01.json": "8f7827b87ec928420c44e012492416e3f08940d1aeb106f9ce8210014a9a0fdc",
+    "cases/800vdc/events/solaredge-ocp-2026/snapshot-v1.json": "34fe5c45ce6eb0f9c29521c6ea7a596ce62a93af4607f56619749733385b0950",
+    "cases/800vdc/events/sungrow-enerneo-certification-2026/snapshot-v1.json": "574c58de9d696546fed3f268b9fa02786e4a50ffe4e04616ddd0e06fdaf69f2a",
+    "cases/800vdc/source-notes/power-integrations-ideal-power-sscb-20261012/snapshot-v1.json": "bc53bc00c4a66d044af3e69d461ba6c0d2164a8625939be56e90dc4f6b9c2ed9",
+    "cases/800vdc/events/vantage-heron-capacity-agreement-2026/snapshot-v1.json": "69b61c5ea87e5adf9ec8e272e8f07c47bceaccc159600be2854952096a73adda"
+  },
+  "source_packet_hash_mismatches": [],
+  "generated_artifact_sha256": {
+    "protocol/source-dependency/registry-v0.1.json": "b71397c24cf0e5cab6987930c50e0a1c07ee41a310d2189044267acd8a865316",
+    "cases/800vdc/source-dependency-v0.1.json": "a0efeb691e0ad4ea292c559ee2ab5d221a2a1776c1dddc5b2a5d8966307423e1",
+    "cases/800vdc/source-dependency/index.html": "a135d4f794887c186e1ed5fb3688b5344cc46965b8ad2ea3906e7183514fe510",
+    "assets/source-dependency.css": "a361773974822e8f7a61ec17d9672bc28ae61375afb1114d6dfc5013726b5f5f",
+    "protocol/source-dependency/qualification-rules-v0.1.json": "46301ea80334b3c043e3ef2c9de493734c3c4f20520de10f575393d04c4270ec",
+    "protocol/source-dependency/qualification-rules-v0.2.json": "2f35a425eabf05d7e9893617f60a1faa97ffda62ac7a0e093adc6b9fdcbb6dce"
+  }
+}

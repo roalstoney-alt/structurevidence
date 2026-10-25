@@ -265,6 +265,7 @@ class SourceDependencyV01Test(unittest.TestCase):
         scope = {"gap_id": "OEG-CML-002", "sample": "three reviewed rows"}
         result = deterministic_metrics(registry(first, second, third), scope)
         self.assertEqual(result["reviewed_urls"]["value"], 2)
+        self.assertEqual(result["distinct_evidence_lineages"]["value"], 3)
         self.assertEqual(result["distinct_originators"]["value"], 2)
         self.assertEqual(result["independent_originators"]["value"], 1)
         self.assertEqual(result["qualified_evidence_rows"]["value"], 3)
@@ -275,6 +276,7 @@ class SourceDependencyV01Test(unittest.TestCase):
         result = deterministic_metrics(registry(), {"gap_id": "OEG-CML-002"})
         self.assertEqual(result["classification_coverage"]["status"], "INSUFFICIENT_DATA")
         self.assertIsNone(result["classification_coverage"]["percentage"])
+        self.assertEqual(result["distinct_evidence_lineages"]["value"], 0)
 
 
 if __name__ == "__main__":

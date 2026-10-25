@@ -404,8 +404,31 @@ def deterministic_metrics(registry: dict[str, Any], scope: dict[str, str]) -> di
     unknown = [row["source_row_id"] for row in rows if row["dependency_class"] == "UNKNOWN"]
     partial = [row["source_row_id"] for row in rows if row["dependency_class"] == "PARTIALLY_DEPENDENT"]
     classified = [row["source_row_id"] for row in rows if row["dependency_class"] != "UNKNOWN"]
+
+    lineage_by_id = {
+        row["source_row_id"]: row["originating_evidence_lineage"] for row in rows
+    }
+
+    def lineage_roots(row_id: str, trail: frozenset[str] = frozenset()) -> set[str]:
+        """Return originating rows so renderings never inflate evidence counts."""
+        if row_id in trail:
+            _fail("source dependency lineage contains a cycle")
+        parents = lineage_by_id.get(row_id, [])
+        if not parents:
+            return {row_id}
+        roots: set[str] = set()
+        for parent in parents:
+            roots.update(lineage_roots(parent, trail | {row_id}))
+        return roots
+
+    lineage_root_ids = sorted({
+        root
+        for row_id in row_ids
+        for root in lineage_roots(row_id)
+    })
     return {
         "reviewed_urls": metric(len(normalized_urls), [row_id for ids in normalized_urls.values() for row_id in ids]),
+        "distinct_evidence_lineages": metric(len(lineage_root_ids), lineage_root_ids),
         "distinct_originators": metric(len(originators), [row_id for ids in originators.values() for row_id in ids]),
         "independent_originators": metric(len(independent), [row_id for ids in independent.values() for row_id in ids]),
         "qualified_evidence_rows": metric(len(qualified), qualified),

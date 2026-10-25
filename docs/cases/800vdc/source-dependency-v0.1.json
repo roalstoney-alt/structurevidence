@@ -1,0 +1,674 @@
+{
+  "schema_version": "se-source-dependency-view-v0.1",
+  "project": "SE-DUAL-SITE-UPGRADE-002",
+  "phase": "B",
+  "case_id": "CML-PDRE-001",
+  "canonical_case_url": "https://structurevidence.org/cases/800vdc/",
+  "case_state": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+  "case_state_as_of": "2026-09-20T10:46:47Z",
+  "case_state_changed": false,
+  "reviewed_at": "2026-10-25T02:59:00Z",
+  "evidence_cutoff": "2026-10-22T14:02:00Z",
+  "rubric_version": "SE-SOURCE-DEPENDENCY-RUBRIC-v0.2",
+  "registry_path": "protocol/source-dependency/registry-v0.1.json",
+  "active_rules_path": "protocol/source-dependency/qualification-rules-v0.2.json",
+  "review_policy": {
+    "actual_reviewer_records": 1,
+    "second_review_status": "PENDING_HUMAN_REVIEW",
+    "reviewer_id": "SE-PHASE-B-CODEX-REVIEW-20261025-01"
+  },
+  "rule_discrepancy": {
+    "status": "RESOLVED_BY_APPEND_ONLY_RULE_VERSION",
+    "preserved_rule_path": "protocol/source-dependency/qualification-rules-v0.1.json",
+    "active_rule_path": "protocol/source-dependency/qualification-rules-v0.2.json",
+    "reason": "The frozen OEG-CML-002 standard requires another operator or independently controlled site. v0.2 adds ADDITIONAL_ENTITY_OR_SITE so the accepted Chindata baseline cannot qualify as its own replication."
+  },
+  "metrics": {
+    "OEG-CML-001": {
+      "reviewed_urls": {
+        "value": 9,
+        "source_row_ids": [
+          "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-CHINDATA-533-V1",
+          "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-PI-IDEAL-SSCB-20261012-V1",
+          "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-SIEMENS-REINHAUSEN-2026-V1",
+          "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-SOLAREDGE-BUSINESSWIRE-20261013-V1",
+          "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-SOLAREDGE-ORIGIN-20261013-V1",
+          "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-SOLAREDGE-PDF-20261013-V1",
+          "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-SUNGROW-1749-V1",
+          "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-VANTAGE-HERON-20261021-V1",
+          "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-VERTIV-DCD-2026-V1"
+        ],
+        "scope": {
+          "case_id": "CML-PDRE-001",
+          "gap_id": "OEG-CML-001",
+          "claim_id": "CML-PDRE-001.INDEPENDENT_VALIDATION",
+          "evidence_cutoff": "2026-10-22T14:02:00Z",
+          "sample": "Nine actual URLs in the bounded repository source packets; not a market census."
+        }
+      },
+      "distinct_evidence_lineages": {
+        "value": 7,
+        "source_row_ids": [
+          "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-CHINDATA-533-V1",
+          "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-PI-IDEAL-SSCB-20261012-V1",
+          "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-SIEMENS-REINHAUSEN-2026-V1",
+          "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-SOLAREDGE-ORIGIN-20261013-V1",
+          "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-SUNGROW-1749-V1",
+          "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-VANTAGE-HERON-20261021-V1",
+          "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-VERTIV-DCD-2026-V1"
+        ],
+        "scope": {
+          "case_id": "CML-PDRE-001",
+          "gap_id": "OEG-CML-001",
+          "claim_id": "CML-PDRE-001.INDEPENDENT_VALIDATION",
+          "evidence_cutoff": "2026-10-22T14:02:00Z",
+          "sample": "Nine actual URLs in the bounded repository source packets; not a market census."
+        }
+      },
+      "distinct_originators": {
+        "value": 7,
+        "source_row_ids": [
+          "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-CHINDATA-533-V1",
+          "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-PI-IDEAL-SSCB-20261012-V1",
+          "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-SIEMENS-REINHAUSEN-2026-V1",
+          "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-SOLAREDGE-BUSINESSWIRE-20261013-V1",
+          "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-SOLAREDGE-ORIGIN-20261013-V1",
+          "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-SOLAREDGE-PDF-20261013-V1",
+          "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-SUNGROW-1749-V1",
+          "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-VANTAGE-HERON-20261021-V1",
+          "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-VERTIV-DCD-2026-V1"
+        ],
+        "scope": {
+          "case_id": "CML-PDRE-001",
+          "gap_id": "OEG-CML-001",
+          "claim_id": "CML-PDRE-001.INDEPENDENT_VALIDATION",
+          "evidence_cutoff": "2026-10-22T14:02:00Z",
+          "sample": "Nine actual URLs in the bounded repository source packets; not a market census."
+        }
+      },
+      "independent_originators": {
+        "value": 0,
+        "source_row_ids": [],
+        "scope": {
+          "case_id": "CML-PDRE-001",
+          "gap_id": "OEG-CML-001",
+          "claim_id": "CML-PDRE-001.INDEPENDENT_VALIDATION",
+          "evidence_cutoff": "2026-10-22T14:02:00Z",
+          "sample": "Nine actual URLs in the bounded repository source packets; not a market census."
+        }
+      },
+      "qualified_evidence_rows": {
+        "value": 0,
+        "source_row_ids": [],
+        "scope": {
+          "case_id": "CML-PDRE-001",
+          "gap_id": "OEG-CML-001",
+          "claim_id": "CML-PDRE-001.INDEPENDENT_VALIDATION",
+          "evidence_cutoff": "2026-10-22T14:02:00Z",
+          "sample": "Nine actual URLs in the bounded repository source packets; not a market census."
+        }
+      },
+      "unknown_dependency_rows": {
+        "value": 0,
+        "source_row_ids": [],
+        "scope": {
+          "case_id": "CML-PDRE-001",
+          "gap_id": "OEG-CML-001",
+          "claim_id": "CML-PDRE-001.INDEPENDENT_VALIDATION",
+          "evidence_cutoff": "2026-10-22T14:02:00Z",
+          "sample": "Nine actual URLs in the bounded repository source packets; not a market census."
+        }
+      },
+      "partially_dependent_rows": {
+        "value": 1,
+        "source_row_ids": [
+          "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-VANTAGE-HERON-20261021-V1"
+        ],
+        "scope": {
+          "case_id": "CML-PDRE-001",
+          "gap_id": "OEG-CML-001",
+          "claim_id": "CML-PDRE-001.INDEPENDENT_VALIDATION",
+          "evidence_cutoff": "2026-10-22T14:02:00Z",
+          "sample": "Nine actual URLs in the bounded repository source packets; not a market census."
+        }
+      },
+      "classification_coverage": {
+        "status": "AVAILABLE",
+        "classified_row_count": 9,
+        "total_row_count": 9,
+        "source_row_ids": [
+          "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-CHINDATA-533-V1",
+          "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-PI-IDEAL-SSCB-20261012-V1",
+          "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-SIEMENS-REINHAUSEN-2026-V1",
+          "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-SOLAREDGE-BUSINESSWIRE-20261013-V1",
+          "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-SOLAREDGE-ORIGIN-20261013-V1",
+          "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-SOLAREDGE-PDF-20261013-V1",
+          "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-SUNGROW-1749-V1",
+          "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-VANTAGE-HERON-20261021-V1",
+          "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-VERTIV-DCD-2026-V1"
+        ],
+        "scope": {
+          "case_id": "CML-PDRE-001",
+          "gap_id": "OEG-CML-001",
+          "claim_id": "CML-PDRE-001.INDEPENDENT_VALIDATION",
+          "evidence_cutoff": "2026-10-22T14:02:00Z",
+          "sample": "Nine actual URLs in the bounded repository source packets; not a market census."
+        },
+        "percentage": 100.0
+      }
+    },
+    "OEG-CML-002": {
+      "reviewed_urls": {
+        "value": 9,
+        "source_row_ids": [
+          "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-CHINDATA-533-V1",
+          "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-PI-IDEAL-SSCB-20261012-V1",
+          "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-SIEMENS-REINHAUSEN-2026-V1",
+          "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-SOLAREDGE-BUSINESSWIRE-20261013-V1",
+          "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-SOLAREDGE-ORIGIN-20261013-V1",
+          "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-SOLAREDGE-PDF-20261013-V1",
+          "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-SUNGROW-1749-V1",
+          "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-VANTAGE-HERON-20261021-V1",
+          "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-VERTIV-DCD-2026-V1"
+        ],
+        "scope": {
+          "case_id": "CML-PDRE-001",
+          "gap_id": "OEG-CML-002",
+          "claim_id": "CML-PDRE-001.MULTI_ENTITY_REPLICATION",
+          "evidence_cutoff": "2026-10-22T14:02:00Z",
+          "sample": "Nine actual URLs in the bounded repository source packets; not a market census."
+        }
+      },
+      "distinct_evidence_lineages": {
+        "value": 7,
+        "source_row_ids": [
+          "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-CHINDATA-533-V1",
+          "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-PI-IDEAL-SSCB-20261012-V1",
+          "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-SIEMENS-REINHAUSEN-2026-V1",
+          "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-SOLAREDGE-ORIGIN-20261013-V1",
+          "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-SUNGROW-1749-V1",
+          "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-VANTAGE-HERON-20261021-V1",
+          "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-VERTIV-DCD-2026-V1"
+        ],
+        "scope": {
+          "case_id": "CML-PDRE-001",
+          "gap_id": "OEG-CML-002",
+          "claim_id": "CML-PDRE-001.MULTI_ENTITY_REPLICATION",
+          "evidence_cutoff": "2026-10-22T14:02:00Z",
+          "sample": "Nine actual URLs in the bounded repository source packets; not a market census."
+        }
+      },
+      "distinct_originators": {
+        "value": 7,
+        "source_row_ids": [
+          "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-CHINDATA-533-V1",
+          "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-PI-IDEAL-SSCB-20261012-V1",
+          "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-SIEMENS-REINHAUSEN-2026-V1",
+          "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-SOLAREDGE-BUSINESSWIRE-20261013-V1",
+          "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-SOLAREDGE-ORIGIN-20261013-V1",
+          "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-SOLAREDGE-PDF-20261013-V1",
+          "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-SUNGROW-1749-V1",
+          "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-VANTAGE-HERON-20261021-V1",
+          "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-VERTIV-DCD-2026-V1"
+        ],
+        "scope": {
+          "case_id": "CML-PDRE-001",
+          "gap_id": "OEG-CML-002",
+          "claim_id": "CML-PDRE-001.MULTI_ENTITY_REPLICATION",
+          "evidence_cutoff": "2026-10-22T14:02:00Z",
+          "sample": "Nine actual URLs in the bounded repository source packets; not a market census."
+        }
+      },
+      "independent_originators": {
+        "value": 0,
+        "source_row_ids": [],
+        "scope": {
+          "case_id": "CML-PDRE-001",
+          "gap_id": "OEG-CML-002",
+          "claim_id": "CML-PDRE-001.MULTI_ENTITY_REPLICATION",
+          "evidence_cutoff": "2026-10-22T14:02:00Z",
+          "sample": "Nine actual URLs in the bounded repository source packets; not a market census."
+        }
+      },
+      "qualified_evidence_rows": {
+        "value": 0,
+        "source_row_ids": [],
+        "scope": {
+          "case_id": "CML-PDRE-001",
+          "gap_id": "OEG-CML-002",
+          "claim_id": "CML-PDRE-001.MULTI_ENTITY_REPLICATION",
+          "evidence_cutoff": "2026-10-22T14:02:00Z",
+          "sample": "Nine actual URLs in the bounded repository source packets; not a market census."
+        }
+      },
+      "unknown_dependency_rows": {
+        "value": 0,
+        "source_row_ids": [],
+        "scope": {
+          "case_id": "CML-PDRE-001",
+          "gap_id": "OEG-CML-002",
+          "claim_id": "CML-PDRE-001.MULTI_ENTITY_REPLICATION",
+          "evidence_cutoff": "2026-10-22T14:02:00Z",
+          "sample": "Nine actual URLs in the bounded repository source packets; not a market census."
+        }
+      },
+      "partially_dependent_rows": {
+        "value": 1,
+        "source_row_ids": [
+          "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-VANTAGE-HERON-20261021-V1"
+        ],
+        "scope": {
+          "case_id": "CML-PDRE-001",
+          "gap_id": "OEG-CML-002",
+          "claim_id": "CML-PDRE-001.MULTI_ENTITY_REPLICATION",
+          "evidence_cutoff": "2026-10-22T14:02:00Z",
+          "sample": "Nine actual URLs in the bounded repository source packets; not a market census."
+        }
+      },
+      "classification_coverage": {
+        "status": "AVAILABLE",
+        "classified_row_count": 9,
+        "total_row_count": 9,
+        "source_row_ids": [
+          "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-CHINDATA-533-V1",
+          "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-PI-IDEAL-SSCB-20261012-V1",
+          "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-SIEMENS-REINHAUSEN-2026-V1",
+          "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-SOLAREDGE-BUSINESSWIRE-20261013-V1",
+          "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-SOLAREDGE-ORIGIN-20261013-V1",
+          "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-SOLAREDGE-PDF-20261013-V1",
+          "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-SUNGROW-1749-V1",
+          "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-VANTAGE-HERON-20261021-V1",
+          "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-VERTIV-DCD-2026-V1"
+        ],
+        "scope": {
+          "case_id": "CML-PDRE-001",
+          "gap_id": "OEG-CML-002",
+          "claim_id": "CML-PDRE-001.MULTI_ENTITY_REPLICATION",
+          "evidence_cutoff": "2026-10-22T14:02:00Z",
+          "sample": "Nine actual URLs in the bounded repository source packets; not a market census."
+        },
+        "percentage": 100.0
+      }
+    }
+  },
+  "sources": [
+    {
+      "source_key": "CHINDATA-533",
+      "title": "Chindata commercial-operation announcement for Sangyuan campus",
+      "url": "https://www.chindatagroup.com/media/news/533.html",
+      "originator": "Chindata",
+      "originator_role": "OPERATOR",
+      "dependency_class": "ISSUER_AUTHORED",
+      "dependency_rationale": "This is attributable operator evidence, not independent validation of the operator's own deployment claim.",
+      "evidence_level": "E4",
+      "evidence_rationale": "The record attributes commercial operation of a materially relevant 10kV AC to SST to 800VDC system to one named operator and campus; it does not contain an attributable observation period, operating conditions, or methodology.",
+      "source_access_status": "READ_PARTIAL",
+      "capture_packet_path": "e/L1-EV-CML-PDRE-001-FIELD-DEPLOYMENT-001/index.json",
+      "capture_sha256": "57e1ede12822f29e973c66d11db60a2e55a429cd4b7a4fea4bcc44d1c8aa1918",
+      "search_run_id": "SE-800V-L1-REVIEW-20260920-01",
+      "search_scope": {
+        "query": "800VDC field deployment",
+        "inclusion_scope": "The accepted named 800VDC field-deployment record and its October 14 availability check.",
+        "exclusion_scope": "No general market census and no inference beyond the single operator-reported campus.",
+        "blocked_sources": [
+          "No full raw external page capture is stored; the hash covers the bounded atomic evidence record."
+        ]
+      },
+      "evidence_cutoff": "2026-10-22T14:02:00Z",
+      "last_checked_at": "2026-10-14T09:59:24Z",
+      "rubric_version": "SE-SOURCE-DEPENDENCY-RUBRIC-v0.2",
+      "gap_assessments": {
+        "OEG-CML-001": {
+          "source_row_id": "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-CHINDATA-533-V1",
+          "qualification_status": "NOT_QUALIFIED",
+          "qualification_reason": "Required facets are missing: METHODOLOGY, OBSERVATION_PERIOD, OPERATING_CONDITIONS.",
+          "record_hash": "e7367b08cafa5b4ced4247a0255cce304ef119dd2493d69ec46c52770bd6cda4"
+        },
+        "OEG-CML-002": {
+          "source_row_id": "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-CHINDATA-533-V1",
+          "qualification_status": "NOT_QUALIFIED",
+          "qualification_reason": "Required facets are missing: ADDITIONAL_ENTITY_OR_SITE.",
+          "record_hash": "1eff9877eb5cb0fd1e7ac05531a82fe7e4a6cedb21a93eec1a52438a0af8f1d1"
+        }
+      }
+    },
+    {
+      "source_key": "SIEMENS-REINHAUSEN-2026",
+      "title": "Siemens and Reinhausen develop DC power solutions for AI data centers",
+      "url": "https://press.siemens.com/global/en/pressrelease/siemens-and-reinhausen-develop-direct-current-power-solutions-ai-data-centers",
+      "originator": "Siemens and Maschinenfabrik Reinhausen",
+      "originator_role": "SUPPLIER",
+      "dependency_class": "ISSUER_AUTHORED",
+      "dependency_rationale": "The source is attributable supplier-authored development evidence and is not an independent operating observation.",
+      "evidence_level": "E1",
+      "evidence_rationale": "The source describes technology development and industrialization, not a commissioned or operating deployment.",
+      "source_access_status": "READ_PARTIAL",
+      "capture_packet_path": "cases/800vdc/search-review-20261014-01.json",
+      "capture_sha256": "8f7827b87ec928420c44e012492416e3f08940d1aeb106f9ce8210014a9a0fdc",
+      "search_run_id": "SE-800V-REVIEW-20261014-01",
+      "search_scope": {
+        "query": "official Siemens Reinhausen 800VDC development deployment",
+        "inclusion_scope": "Official Siemens/Reinhausen development signals reviewed in the targeted October 14 refresh.",
+        "exclusion_scope": "No unnamed pipeline, plan, or industrialization statement is treated as field operation.",
+        "blocked_sources": [
+          "No source-specific raw file is stored; the hash covers the bounded three-source review packet."
+        ]
+      },
+      "evidence_cutoff": "2026-10-22T14:02:00Z",
+      "last_checked_at": "2026-10-14T09:59:24Z",
+      "rubric_version": "SE-SOURCE-DEPENDENCY-RUBRIC-v0.2",
+      "gap_assessments": {
+        "OEG-CML-001": {
+          "source_row_id": "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-SIEMENS-REINHAUSEN-2026-V1",
+          "qualification_status": "NOT_QUALIFIED",
+          "qualification_reason": "E1 is below the rule minimum E4.",
+          "record_hash": "c59361d911cb6712c03a5e4e9321c02890876984f01386f9c9c63fa054bf46cf"
+        },
+        "OEG-CML-002": {
+          "source_row_id": "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-SIEMENS-REINHAUSEN-2026-V1",
+          "qualification_status": "NOT_QUALIFIED",
+          "qualification_reason": "E1 is below the rule minimum E4.",
+          "record_hash": "cd4a42e8dce4b52f9a1f9791bb83deb4336f90567d638f925e461446b17a34db"
+        }
+      }
+    },
+    {
+      "source_key": "VERTIV-DCD-2026",
+      "title": "Vertiv DCD Power Innovation Day 800VDC architecture topic",
+      "url": "https://www.vertiv.com/en-us/about/news-and-events/events/2026/dcd-power-innovation-day-2026/",
+      "originator": "Vertiv",
+      "originator_role": "SUPPLIER",
+      "dependency_class": "ISSUER_AUTHORED",
+      "dependency_rationale": "This supplier event page is an attributable architecture signal, not independent deployment evidence.",
+      "evidence_level": "E0",
+      "evidence_rationale": "The page frames 800VDC as an architecture decision topic and supplies no named operating deployment.",
+      "source_access_status": "READ_PARTIAL",
+      "capture_packet_path": "cases/800vdc/search-review-20261014-01.json",
+      "capture_sha256": "8f7827b87ec928420c44e012492416e3f08940d1aeb106f9ce8210014a9a0fdc",
+      "search_run_id": "SE-800V-REVIEW-20261014-01",
+      "search_scope": {
+        "query": "official Vertiv 800VDC deployment event",
+        "inclusion_scope": "Official Vertiv architecture/deployment signals reviewed in the targeted October 14 refresh.",
+        "exclusion_scope": "Architecture discussion and future pilots are not counted as commissioning or field operation.",
+        "blocked_sources": [
+          "No source-specific raw file is stored; the hash covers the bounded three-source review packet."
+        ]
+      },
+      "evidence_cutoff": "2026-10-22T14:02:00Z",
+      "last_checked_at": "2026-10-14T09:59:24Z",
+      "rubric_version": "SE-SOURCE-DEPENDENCY-RUBRIC-v0.2",
+      "gap_assessments": {
+        "OEG-CML-001": {
+          "source_row_id": "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-VERTIV-DCD-2026-V1",
+          "qualification_status": "NOT_QUALIFIED",
+          "qualification_reason": "E0 is below the rule minimum E4.",
+          "record_hash": "f7b084cacc43288601eb74e02eef2114bbae18615d500818b5c2e336337b57d1"
+        },
+        "OEG-CML-002": {
+          "source_row_id": "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-VERTIV-DCD-2026-V1",
+          "qualification_status": "NOT_QUALIFIED",
+          "qualification_reason": "E0 is below the rule minimum E4.",
+          "record_hash": "ab3cd191115762ff760fbb832eb360fe4c14ebd9d49279e7beb3ff253da8aea5"
+        }
+      }
+    },
+    {
+      "source_key": "SOLAREDGE-ORIGIN-20261013",
+      "title": "SolarEdge MVAC-to-800 VDC technology showcase announcement",
+      "url": "https://solaredge.gcs-web.com/news-releases/news-release-details/solaredge-showcases-mvac-800-vdc-ai-factory-power-technology",
+      "originator": "SolarEdge Technologies, Inc.",
+      "originator_role": "SUPPLIER",
+      "dependency_class": "ISSUER_AUTHORED",
+      "dependency_rationale": "The origin record is supplier-authored; separate PDF and Business Wire URLs reproduce this same originating evidence.",
+      "evidence_level": "E2",
+      "evidence_rationale": "The record supports engineering-lab work and a showcase model while stating that full-path validation was underway; it is not field deployment.",
+      "source_access_status": "READ_PARTIAL",
+      "capture_packet_path": "cases/800vdc/events/solaredge-ocp-2026/snapshot-v1.json",
+      "capture_sha256": "34fe5c45ce6eb0f9c29521c6ea7a596ce62a93af4607f56619749733385b0950",
+      "search_run_id": "SE-800V-REVIEW-20261015-01",
+      "search_scope": {
+        "query": "SolarEdge official MVAC 800 VDC OCP announcement",
+        "inclusion_scope": "SolarEdge official HTML, official PDF rendering, and explicitly linked Business Wire distribution copy.",
+        "exclusion_scope": "No broad market census, independent dataset, or named deployment search was performed.",
+        "blocked_sources": [
+          "The origin returned HTTP 403 to direct retrieval; only the bounded structured snapshot is stored."
+        ]
+      },
+      "evidence_cutoff": "2026-10-22T14:02:00Z",
+      "last_checked_at": "2026-10-15T15:28:53Z",
+      "rubric_version": "SE-SOURCE-DEPENDENCY-RUBRIC-v0.2",
+      "gap_assessments": {
+        "OEG-CML-001": {
+          "source_row_id": "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-SOLAREDGE-ORIGIN-20261013-V1",
+          "qualification_status": "NOT_QUALIFIED",
+          "qualification_reason": "E2 is below the rule minimum E4.",
+          "record_hash": "4357702468ee88b6e5e861a8f60340944fbf7564c52b0c3d8cddfc8517214443"
+        },
+        "OEG-CML-002": {
+          "source_row_id": "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-SOLAREDGE-ORIGIN-20261013-V1",
+          "qualification_status": "NOT_QUALIFIED",
+          "qualification_reason": "E2 is below the rule minimum E4.",
+          "record_hash": "2815a6058643baac711e07e62b1c55864a3f88ad8d354cad3fac7f668334c00b"
+        }
+      }
+    },
+    {
+      "source_key": "SOLAREDGE-PDF-20261013",
+      "title": "Official PDF rendering of the SolarEdge OCP announcement",
+      "url": "https://solaredge.gcs-web.com/node/15356/pdf",
+      "originator": "SolarEdge Technologies, Inc.",
+      "originator_role": "SUPPLIER",
+      "dependency_class": "DERIVED",
+      "dependency_rationale": "This is another rendering of the SolarEdge announcement, not an additional observation or originator.",
+      "evidence_level": "E2",
+      "evidence_rationale": "The PDF carries the same engineering-lab and incomplete-validation content as the origin record.",
+      "source_access_status": "READ_PARTIAL",
+      "capture_packet_path": "cases/800vdc/events/solaredge-ocp-2026/snapshot-v1.json",
+      "capture_sha256": "34fe5c45ce6eb0f9c29521c6ea7a596ce62a93af4607f56619749733385b0950",
+      "search_run_id": "SE-800V-REVIEW-20261015-01",
+      "search_scope": {
+        "query": "SolarEdge official MVAC 800 VDC OCP PDF",
+        "inclusion_scope": "The official PDF rendering explicitly linked from the SolarEdge source review.",
+        "exclusion_scope": "The rendering is not counted as independent corroboration.",
+        "blocked_sources": [
+          "No full raw PDF is stored; the bounded structured snapshot records the review."
+        ]
+      },
+      "evidence_cutoff": "2026-10-22T14:02:00Z",
+      "last_checked_at": "2026-10-15T15:28:53Z",
+      "rubric_version": "SE-SOURCE-DEPENDENCY-RUBRIC-v0.2",
+      "gap_assessments": {
+        "OEG-CML-001": {
+          "source_row_id": "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-SOLAREDGE-PDF-20261013-V1",
+          "qualification_status": "NOT_QUALIFIED",
+          "qualification_reason": "E2 is below the rule minimum E4.",
+          "record_hash": "71c2ab6305954c4ec9cdf260d9f7ed71a498fd96b7edbfa9078836104c4ccbac"
+        },
+        "OEG-CML-002": {
+          "source_row_id": "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-SOLAREDGE-PDF-20261013-V1",
+          "qualification_status": "NOT_QUALIFIED",
+          "qualification_reason": "E2 is below the rule minimum E4.",
+          "record_hash": "b0b893f31a97d5f629d8f4ab7a931c87876d53ba25be97353e71d9e55cbf14aa"
+        }
+      }
+    },
+    {
+      "source_key": "SOLAREDGE-BUSINESSWIRE-20261013",
+      "title": "Business Wire distribution copy of the SolarEdge announcement",
+      "url": "https://www.businesswire.com/news/home/20261013444026/en/",
+      "originator": "SolarEdge Technologies, Inc.",
+      "originator_role": "SUPPLIER",
+      "dependency_class": "DERIVED",
+      "dependency_rationale": "A press-distribution host does not create a second evidence lineage; this row depends on the SolarEdge origin.",
+      "evidence_level": "E2",
+      "evidence_rationale": "The copy carries the same engineering-lab and incomplete-validation claims as the origin release.",
+      "source_access_status": "READ_PARTIAL",
+      "capture_packet_path": "cases/800vdc/events/solaredge-ocp-2026/snapshot-v1.json",
+      "capture_sha256": "34fe5c45ce6eb0f9c29521c6ea7a596ce62a93af4607f56619749733385b0950",
+      "search_run_id": "SE-800V-REVIEW-20261015-01",
+      "search_scope": {
+        "query": "SolarEdge Business Wire 800 VDC distribution copy",
+        "inclusion_scope": "The explicitly linked Business Wire copy in the bounded SolarEdge source graph.",
+        "exclusion_scope": "Distribution copies are not counted as independent corroboration.",
+        "blocked_sources": [
+          "No full raw distribution copy is stored; the bounded structured snapshot records the review."
+        ]
+      },
+      "evidence_cutoff": "2026-10-22T14:02:00Z",
+      "last_checked_at": "2026-10-15T15:28:53Z",
+      "rubric_version": "SE-SOURCE-DEPENDENCY-RUBRIC-v0.2",
+      "gap_assessments": {
+        "OEG-CML-001": {
+          "source_row_id": "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-SOLAREDGE-BUSINESSWIRE-20261013-V1",
+          "qualification_status": "NOT_QUALIFIED",
+          "qualification_reason": "E2 is below the rule minimum E4.",
+          "record_hash": "3c10e7ff1d0a28f9c7f00f2cb8bad19a7037e0367d24fd45f4cf39d1a0575c04"
+        },
+        "OEG-CML-002": {
+          "source_row_id": "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-SOLAREDGE-BUSINESSWIRE-20261013-V1",
+          "qualification_status": "NOT_QUALIFIED",
+          "qualification_reason": "E2 is below the rule minimum E4.",
+          "record_hash": "ab98adc075e3fbb7afc05528473a03d87e5babb8a4274334956b6d19436c37ae"
+        }
+      }
+    },
+    {
+      "source_key": "SUNGROW-1749",
+      "title": "Sungrow EnerNeo SST certification announcement",
+      "url": "https://cn.sungrowpower.com/news/1749.html",
+      "originator": "Sungrow / Sungrow AIDC business",
+      "originator_role": "SUPPLIER",
+      "dependency_class": "ISSUER_AUTHORED",
+      "dependency_rationale": "The reviewed evidence is Sungrow's own announcement and cannot be treated as an independent TÜV record.",
+      "evidence_level": "E2",
+      "evidence_rationale": "The packet preserves an attributed system/component certification claim but no authenticated certificate, named operating customer, or field dataset.",
+      "source_access_status": "READ_PARTIAL",
+      "capture_packet_path": "cases/800vdc/events/sungrow-enerneo-certification-2026/snapshot-v1.json",
+      "capture_sha256": "574c58de9d696546fed3f268b9fa02786e4a50ffe4e04616ddd0e06fdaf69f2a",
+      "search_run_id": "SE-800V-REVIEW-20261017-SUPP-PR26-01",
+      "search_scope": {
+        "query": "Sungrow EnerNeo SST certificate and issuer registry",
+        "inclusion_scope": "Official Sungrow article 1749 plus two bounded issuer/registry queries inherited from the reconciled review.",
+        "exclusion_scope": "No certificate authenticity, complete scope, customer operation, or reliability claim is inferred.",
+        "blocked_sources": [
+          "Fresh retrieval was blocked by network proxy HTTP 403; no matching certificate ID or issuer record was established."
+        ]
+      },
+      "evidence_cutoff": "2026-10-22T14:02:00Z",
+      "last_checked_at": "2026-10-17T14:04:05Z",
+      "rubric_version": "SE-SOURCE-DEPENDENCY-RUBRIC-v0.2",
+      "gap_assessments": {
+        "OEG-CML-001": {
+          "source_row_id": "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-SUNGROW-1749-V1",
+          "qualification_status": "NOT_QUALIFIED",
+          "qualification_reason": "E2 is below the rule minimum E4.",
+          "record_hash": "5ac07c480268eebc7d0db6b6ad3a49aab6384b6eafe71dc83aeefe660a877639"
+        },
+        "OEG-CML-002": {
+          "source_row_id": "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-SUNGROW-1749-V1",
+          "qualification_status": "NOT_QUALIFIED",
+          "qualification_reason": "E2 is below the rule minimum E4.",
+          "record_hash": "13a3c0a69504657ad2947037df288085728a2576ee938b53c4db77303cee8c11"
+        }
+      }
+    },
+    {
+      "source_key": "PI-IDEAL-SSCB-20261012",
+      "title": "Power Integrations and Ideal Power 800 VDC SSCB collaboration",
+      "url": "https://investors.power.com/news/news-details/2026/Power-Integrations-and-Ideal-Power-Collaborate-on-Efficient-Always-On-Solid-State-Circuit-Breakers-for-800-VDC-AI-Data-Centers/default.aspx",
+      "originator": "Power Integrations and Ideal Power",
+      "originator_role": "SUPPLIER",
+      "dependency_class": "ISSUER_AUTHORED",
+      "dependency_rationale": "This is supplier-authored component evidence, not an independently observed system deployment.",
+      "evidence_level": "E2",
+      "evidence_rationale": "A working solid-state circuit-breaker prototype supports component development only; the packet identifies no customer field deployment or replicated installation.",
+      "source_access_status": "READ_PARTIAL",
+      "capture_packet_path": "cases/800vdc/source-notes/power-integrations-ideal-power-sscb-20261012/snapshot-v1.json",
+      "capture_sha256": "bc53bc00c4a66d044af3e69d461ba6c0d2164a8625939be56e90dc4f6b9c2ed9",
+      "search_run_id": "SE-SOURCE-CML-PDRE-001-20261012-SSCB",
+      "search_scope": {
+        "query": "800 VDC AI data center solid-state circuit breaker collaboration",
+        "inclusion_scope": "The public supplier release and its bounded structured source snapshot.",
+        "exclusion_scope": "Prototype characteristics are not generalized to system commissioning, deployment, or adoption.",
+        "blocked_sources": [
+          "Only a structured factual snapshot is stored; no independent performance dataset is included."
+        ]
+      },
+      "evidence_cutoff": "2026-10-22T14:02:00Z",
+      "last_checked_at": "2026-10-21T14:08:00Z",
+      "rubric_version": "SE-SOURCE-DEPENDENCY-RUBRIC-v0.2",
+      "gap_assessments": {
+        "OEG-CML-001": {
+          "source_row_id": "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-PI-IDEAL-SSCB-20261012-V1",
+          "qualification_status": "NOT_QUALIFIED",
+          "qualification_reason": "E2 is below the rule minimum E4.",
+          "record_hash": "22945d3d35754e9aa50f1c870a83080009b39293932fb8c605a16e2b067eec90"
+        },
+        "OEG-CML-002": {
+          "source_row_id": "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-PI-IDEAL-SSCB-20261012-V1",
+          "qualification_status": "NOT_QUALIFIED",
+          "qualification_reason": "E2 is below the rule minimum E4.",
+          "record_hash": "c8ea405b393f92dc14d12968c32cd204e9613c94de3af60487bf6b7be28a1156"
+        }
+      }
+    },
+    {
+      "source_key": "VANTAGE-HERON-20261021",
+      "title": "Vantage and Heron 800 VDC manufacturing-capacity agreement",
+      "url": "https://vantage-dc.com/news/vantage-and-heron-power-electronics-announce-gigawatt-scale-800-vdc-agreement-to-accelerate-ai-infrastructure-delivery/",
+      "originator": "Vantage Data Centers and Heron Power Electronics",
+      "originator_role": "CUSTOMER",
+      "dependency_class": "PARTIALLY_DEPENDENT",
+      "dependency_rationale": "The joint customer/supplier authorship is attributable but commercially dependent; it is not an independent operating observation.",
+      "evidence_level": "E0",
+      "evidence_rationale": "The source records future capacity reservation and planned late-2027 production, not delivered equipment, a commissioned campus, or operating history.",
+      "source_access_status": "READ_PARTIAL",
+      "capture_packet_path": "cases/800vdc/events/vantage-heron-capacity-agreement-2026/snapshot-v1.json",
+      "capture_sha256": "69b61c5ea87e5adf9ec8e272e8f07c47bceaccc159600be2854952096a73adda",
+      "search_run_id": "SE-EVENT-CML-PDRE-001-20261021-VANTAGE-HERON",
+      "search_scope": {
+        "query": "Vantage Heron 800 VDC agreement deployment commissioning",
+        "inclusion_scope": "The joint public announcement and bounded event snapshot.",
+        "exclusion_scope": "Reserved manufacturing capacity is not treated as produced output, commissioning, procurement completion, or field operation.",
+        "blocked_sources": [
+          "The separate factory announcement is summarized in the packet; no delivered-unit or commissioning record is present."
+        ]
+      },
+      "evidence_cutoff": "2026-10-22T14:02:00Z",
+      "last_checked_at": "2026-10-22T14:02:00Z",
+      "rubric_version": "SE-SOURCE-DEPENDENCY-RUBRIC-v0.2",
+      "gap_assessments": {
+        "OEG-CML-001": {
+          "source_row_id": "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-VANTAGE-HERON-20261021-V1",
+          "qualification_status": "NOT_QUALIFIED",
+          "qualification_reason": "E0 is below the rule minimum E4.",
+          "record_hash": "d1d9810962555b852e32592fb7af5fabde2b68acdb378e689add28a6e7e97ce7"
+        },
+        "OEG-CML-002": {
+          "source_row_id": "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-VANTAGE-HERON-20261021-V1",
+          "qualification_status": "NOT_QUALIFIED",
+          "qualification_reason": "E0 is below the rule minimum E4.",
+          "record_hash": "bdab573c7cb45be24f127d735f6c592652208091f9517dc8a9641b66c2950bf1"
+        }
+      }
+    }
+  ],
+  "challenge_routes": {
+    "OEG-CML-001": {
+      "url": "https://structurevidence.org/gaps/OEG-CML-001/",
+      "status": "OPERATIONAL_REFERENCE_ROUTE",
+      "effect": "HUMAN_REVIEW_REQUIRED; NO_AUTOMATIC_STATE_CHANGE"
+    },
+    "OEG-CML-002": {
+      "url": "https://structurevidence.org/gaps/OEG-CML-002/",
+      "status": "OPERATIONAL_REFERENCE_ROUTE",
+      "effect": "HUMAN_REVIEW_REQUIRED; NO_AUTOMATIC_STATE_CHANGE"
+    }
+  },
+  "zero_interpretation": "Zero qualifying or independent rows means zero within these nine reviewed URLs and seven originating lineages, not proof that no evidence exists elsewhere.",
+  "locales_preserved": [
+    "en",
+    "zh-CN",
+    "es"
+  ]
+}
