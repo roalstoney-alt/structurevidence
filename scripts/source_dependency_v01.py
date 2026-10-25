@@ -187,6 +187,25 @@ def evaluate_qualification(row: dict[str, Any], rule: dict[str, Any]) -> tuple[s
     return "QUALIFIED", "The row meets this explicit gap-specific rule; this does not establish truth or change case state."
 
 
+def is_additional_entity_or_site(
+    baseline_identity: dict[str, str],
+    candidate_identity: dict[str, str],
+) -> bool:
+    """Evaluate the replication identity boundary without relying on URL host."""
+    required = {"operator_id", "site_id", "control_id"}
+    for name, identity in (("baseline", baseline_identity), ("candidate", candidate_identity)):
+        if not isinstance(identity, dict) or not required <= set(identity):
+            _fail(f"{name} replication identity is incomplete")
+        if not all(isinstance(identity[key], str) and identity[key] for key in required):
+            _fail(f"{name} replication identity fields must be non-empty strings")
+    another_operator = candidate_identity["operator_id"] != baseline_identity["operator_id"]
+    independently_controlled_site = (
+        candidate_identity["site_id"] != baseline_identity["site_id"]
+        and candidate_identity["control_id"] != baseline_identity["control_id"]
+    )
+    return another_operator or independently_controlled_site
+
+
 def _require_exact_keys(value: Any, required: set[str], name: str) -> None:
     if not isinstance(value, dict) or set(value) != required:
         _fail(f"{name} fields do not match v0.1")
@@ -355,6 +374,27 @@ def validate_registry(registry: dict[str, Any], rules_document: dict[str, Any]) 
     for row_id in sorted(registry_ids):
         visit(row_id)
 
+    successor_by_predecessor: dict[str, str] = {}
+    supersession_by_id = {
+        row["source_row_id"]: row["supersession"]["predecessor_source_row_id"]
+        for row in rows
+    }
+    for row_id, predecessor in supersession_by_id.items():
+        if predecessor is None:
+            continue
+        if predecessor == row_id:
+            _fail("a source row cannot supersede itself")
+        if predecessor in successor_by_predecessor:
+            _fail("a source row cannot have multiple direct supersession successors")
+        successor_by_predecessor[predecessor] = row_id
+        trail: set[str] = {row_id}
+        cursor = predecessor
+        while cursor is not None:
+            if cursor in trail:
+                _fail("source supersession contains a cycle")
+            trail.add(cursor)
+            cursor = supersession_by_id.get(cursor)
+
 
 def migrate_registry(document: dict[str, Any]) -> dict[str, Any]:
     """Idempotently wrap an empty/new static registry without reclassifying rows."""
@@ -384,8 +424,19 @@ def assert_append_only(previous: dict[str, Any], current: dict[str, Any]) -> Non
             _fail("a correction must supersede a row from the prior registry")
 
 
+def current_rows(registry: dict[str, Any]) -> list[dict[str, Any]]:
+    """Return unsuperseded rows without altering the immutable event ledger."""
+    rows = registry.get("rows", [])
+    superseded = {
+        row["supersession"]["predecessor_source_row_id"]
+        for row in rows
+        if row["supersession"]["predecessor_source_row_id"] is not None
+    }
+    return [row for row in rows if row["source_row_id"] not in superseded]
+
+
 def deterministic_metrics(registry: dict[str, Any], scope: dict[str, str]) -> dict[str, Any]:
-    rows = sorted(registry.get("rows", []), key=lambda row: row["source_row_id"])
+    rows = sorted(current_rows(registry), key=lambda row: row["source_row_id"])
     row_ids = [row["source_row_id"] for row in rows]
 
     def metric(value: int, members: list[str]) -> dict[str, Any]:
@@ -404,8 +455,31 @@ def deterministic_metrics(registry: dict[str, Any], scope: dict[str, str]) -> di
     unknown = [row["source_row_id"] for row in rows if row["dependency_class"] == "UNKNOWN"]
     partial = [row["source_row_id"] for row in rows if row["dependency_class"] == "PARTIALLY_DEPENDENT"]
     classified = [row["source_row_id"] for row in rows if row["dependency_class"] != "UNKNOWN"]
+
+    lineage_by_id = {
+        row["source_row_id"]: row["originating_evidence_lineage"] for row in rows
+    }
+
+    def lineage_roots(row_id: str, trail: frozenset[str] = frozenset()) -> set[str]:
+        """Return originating rows so renderings never inflate evidence counts."""
+        if row_id in trail:
+            _fail("source dependency lineage contains a cycle")
+        parents = lineage_by_id.get(row_id, [])
+        if not parents:
+            return {row_id}
+        roots: set[str] = set()
+        for parent in parents:
+            roots.update(lineage_roots(parent, trail | {row_id}))
+        return roots
+
+    lineage_root_ids = sorted({
+        root
+        for row_id in row_ids
+        for root in lineage_roots(row_id)
+    })
     return {
         "reviewed_urls": metric(len(normalized_urls), [row_id for ids in normalized_urls.values() for row_id in ids]),
+        "distinct_evidence_lineages": metric(len(lineage_root_ids), lineage_root_ids),
         "distinct_originators": metric(len(originators), [row_id for ids in originators.values() for row_id in ids]),
         "independent_originators": metric(len(independent), [row_id for ids in independent.values() for row_id in ids]),
         "qualified_evidence_rows": metric(len(qualified), qualified),
