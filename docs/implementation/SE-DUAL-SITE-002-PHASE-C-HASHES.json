@@ -1,0 +1,50 @@
+{
+  "project": "SE-DUAL-SITE-UPGRADE-002",
+  "phase": "C",
+  "baseline_main_sha": "bbced95da00ed259e942aa63ebd89d93f70c54a0",
+  "generated_at": "2026-10-25T09:16:32Z",
+  "decision_conditions_created": 2,
+  "original_records_changed": 0,
+  "case_state_changed": false,
+  "client_decision_recorded": false,
+  "production_deployed": false,
+  "snapshot_sha256": "93229acac8150a1f57b2a7e34387098a736adec479ec2fb10ebcfcedf9436b36",
+  "decision_condition_record_sha256": {
+    "SE-DC-CML-PDRE-001-OEG-CML-001-v0.1": "f8aac65c7792ae6b65e8a2212b9b04b6883a3b62b8ada87d858d1289eee9d3d6",
+    "SE-DC-CML-PDRE-001-OEG-CML-002-v0.1": "bb2b6840c9f59c6f7bf2175309d8b0b229634ff76b039362fa511dea4050bb0f"
+  },
+  "protected_phase_b_input_sha256": {
+    "cases/800vdc/source-dependency-v0.1.json": "9038817ab15e1202ea5ae8ca374f515f5381b6480fce22f2ff137d3267cd7705",
+    "cases/800vdc/source-dependency-review-matrix-v0.1.json": "1cdd2fd6816ca6b8e9518958cd757098f41a44e04f88854cb9604e25c3ab86f0",
+    "protocol/source-dependency/registry-v0.1.json": "172172ccc1c9fe8587224c1dcf51ae8354be74d951603da6b5f96b1e7fa68203",
+    "protocol/source-dependency/qualification-rules-v0.2.json": "2f35a425eabf05d7e9893617f60a1faa97ffda62ac7a0e093adc6b9fdcbb6dce"
+  },
+  "generated_artifact_sha256": {
+    "cases/800vdc/decision-conditions-v0.1.json": "e21260e60dea002a2a41236908297bf162d948084053a2740488ce5b9086e67f",
+    "cases/800vdc/decision-conditions-v0.1.md": "f4b1256b509cae46147b70bd24d2f27fee48cbeb181743538fe081b5956b1976",
+    "cases/800vdc/decision-conditions/index.html": "e7d6cfee5f6f3947981138ed736f2b8196de998ea52d9418e1371db1654fa476",
+    "protocol/decision-conditions/schema-v0.1.json": "f058329aace57f26cf35029f6ab13563465398428bc31e0632f5f1a6f51fb2dd",
+    "decision-conditions-sitemap.xml": "92a384835b785123367046224d82e03f48b42bd1dca4a818ecf6edbb2246ccf1",
+    "assets/decision-conditions.js": "24b5bc3214a7ed479a64b5627647374936b51ddf7ab67c004f1d1ce4c3411b56",
+    "assets/decision-conditions.css": "24b7a6f80d7d7e9c2e72897d24ea38f95f82bacc19f1663a4c67c46826b2eb96"
+  },
+  "test_results": {
+    "phase_c_decision_conditions": "23/23 PASS",
+    "phase_b_source_dependency_model": "20/20 PASS",
+    "phase_b_decision_boundary": "21/21 PASS",
+    "challenge_security_privacy": "16/16 PASS",
+    "brand_seo_history_focused": "16/16 PASS",
+    "public_record_drift": "PASS",
+    "history_immutability": "PASS",
+    "internal_links": "0 broken / 0 orphan",
+    "tests_suite": "41 tests / 11 baseline failures / 0 new failures",
+    "scripts_suite_baseline": "453 tests / 37 baseline failures / 11 baseline errors",
+    "scripts_suite_phase_c": "476 tests / 37 baseline failures / 11 baseline errors",
+    "new_regression_count": 0
+  },
+  "preserved_statuses": {
+    "chindata_e3_e4": "UNRESOLVED",
+    "second_real_human_review": "UNSUPPORTED",
+    "client_action": "UNSPECIFIED"
+  }
+}

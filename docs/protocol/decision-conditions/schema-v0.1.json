@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://structurevidence.org/protocol/decision-conditions/schema-v0.1.json",
+  "title": "StructEvidence Decision Conditions package v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "protocol_version",
+    "project",
+    "phase",
+    "baseline_main_sha",
+    "generated_from_review_time",
+    "content_hash_algorithm",
+    "public_capability_status",
+    "commercial_integration_status",
+    "conditions",
+    "provenance",
+    "append_only_versioning",
+    "case_state_changed",
+    "client_decision_recorded",
+    "snapshot_sha256"
+  ],
+  "properties": {
+    "schema_version": {"const": "se-decision-conditions-package-v0.1"},
+    "protocol_version": {"const": "SE-DECISION-CONDITIONS-v0.1"},
+    "project": {"const": "SE-DUAL-SITE-UPGRADE-002"},
+    "phase": {"const": "C"},
+    "baseline_main_sha": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+    "generated_from_review_time": {"type": "string", "format": "date-time"},
+    "content_hash_algorithm": {"type": "string"},
+    "public_capability_status": {"const": "ILLUSTRATIVE_PUBLIC_EXPORT"},
+    "commercial_integration_status": {"const": "PROPOSED_NOT_LIVE"},
+    "conditions": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "items": {"$ref": "#/$defs/condition"}
+    },
+    "provenance": {"type": "object", "additionalProperties": {"type": "string"}},
+    "append_only_versioning": {
+      "type": "object",
+      "required": ["version", "previous_snapshot_sha256", "update_policy"],
+      "properties": {
+        "version": {"const": "v0.1"},
+        "previous_snapshot_sha256": {"type": "null"},
+        "update_policy": {"type": "string"}
+      }
+    },
+    "case_state_changed": {"const": false},
+    "client_decision_recorded": {"const": false},
+    "snapshot_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  },
+  "$defs": {
+    "condition": {
+      "type": "object",
+      "required": [
+        "decision_condition_id", "version", "stable_urls", "case_id", "gap_id", "claim_id",
+        "decision_type", "decision_context_status", "scope", "current_evidence_state", "time_boundary", "source_evidence_rule",
+        "source_evidence_result", "preserved_uncertainty", "client_action_condition",
+        "source_supersession_links", "challenge_boundary", "not_a_decision_recommendation", "record_sha256"
+      ],
+      "properties": {
+        "decision_condition_id": {"type": "string", "pattern": "^SE-DC-CML-PDRE-001-OEG-CML-00[12]-v0\\.1$"},
+        "version": {"const": "v0.1"},
+        "gap_id": {"enum": ["OEG-CML-001", "OEG-CML-002"]},
+        "case_id": {"const": "CML-PDRE-001"},
+        "decision_context_status": {"const": "PUBLIC_ILLUSTRATION_NOT_CLIENT_ADOPTION"},
+        "current_evidence_state": {
+          "type": "object",
+          "required": ["case_state", "case_state_as_of", "state_changed_by_export", "interpretation"],
+          "properties": {"state_changed_by_export": {"const": false}}
+        },
+        "source_evidence_result": {
+          "type": "object",
+          "required": ["qualification_outcome", "qualifying_evidence_present", "qualifying_evidence", "nonqualifying_evidence", "inaccessible_sources", "source_access_limitations", "search_scope_limits", "zero_interpretation"]
+        },
+        "preserved_uncertainty": {
+          "type": "object",
+          "required": ["unknown", "unresolved", "unsupported"]
+        },
+        "client_action_condition": {
+          "type": "object",
+          "required": ["ownership", "selected_action", "decision_trigger", "review_date", "fallback", "exposure_threshold", "status"],
+          "properties": {
+            "ownership": {"const": "CLIENT_DEFINED"},
+            "selected_action": {"const": "UNSPECIFIED"},
+            "decision_trigger": {"enum": ["UNSPECIFIED", "CLIENT_DEFINED"]},
+            "review_date": {"enum": ["UNSPECIFIED", "CLIENT_DEFINED"]},
+            "fallback": {"enum": ["UNSPECIFIED", "CLIENT_DEFINED"]},
+            "exposure_threshold": {"enum": ["UNSPECIFIED", "CLIENT_DEFINED"]},
+            "status": {"const": "NO_CLIENT_DECISION_RECORDED"}
+          }
+        },
+        "record_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      }
+    }
+  }
+}
