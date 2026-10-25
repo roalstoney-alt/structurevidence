@@ -4,6 +4,7 @@
   "phase": "B_SUPPLEMENTAL_REVIEW",
   "case_id": "CML-PDRE-001",
   "reviewed_at": "2026-10-25T03:34:00Z",
+  "decision_boundary_recorded_at": "2026-10-25T08:23:19Z",
   "evidence_cutoff": "2026-10-22T14:02:00Z",
   "matrix_scope": "Nine actual URLs already present in the bounded Phase B repository packets; not a new search or market census.",
   "source_count": 9,
@@ -17,9 +18,15 @@
   },
   "initial_registry_sha256": "b71397c24cf0e5cab6987930c50e0a1c07ee41a310d2189044267acd8a865316",
   "append_only_correction_count": 2,
-  "second_review_status": "PENDING_HUMAN_REVIEW",
+  "second_real_human_review": "UNSUPPORTED",
+  "second_review_capability_status": "UNSUPPORTED_REAL_SECOND_REVIEW",
   "human_review_claimed": false,
+  "engineering_gate_effect": "NONBLOCKING",
+  "acceptance_baseline_path": "docs/implementation/SE-DECISION-BOUNDARY-001-PHASE-B-ACCEPTANCE.md",
   "case_state_changed": false,
+  "engineering_acceptance_status": "READY_FOR_OWNER_MERGE_REVIEW",
+  "merge_authorized": false,
+  "production_deployment_authorized": false,
   "replication_identity_contract_cases": [
     {
       "fixture_id": "TRUE-SECOND-INDEPENDENT-SITE-POSITIVE",
@@ -153,7 +160,7 @@
         "second_human_reviewer"
       ],
       "correction": {
-        "status": "SUPERSEDED_APPEND_ONLY_PENDING_HUMAN_REVIEW",
+        "status": "SUPERSEDED_APPEND_ONLY_UNRESOLVED_E3_E4",
         "predecessor_source_row_ids": [
           "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-CHINDATA-533-V1",
           "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-CHINDATA-533-V1"
@@ -167,7 +174,19 @@
           "1eff9877eb5cb0fd1e7ac05531a82fe7e4a6cedb21a93eec1a52438a0af8f1d1"
         ]
       },
-      "review_status": "PENDING_HUMAN_REVIEW"
+      "review_status": "UNSUPPORTED_REAL_SECOND_REVIEW",
+      "review_status_history": [
+        {
+          "recorded_at": "2026-10-25T03:34:00Z",
+          "status": "PENDING_HUMAN_REVIEW",
+          "note": "Historical request state; no second real reviewer was claimed."
+        },
+        {
+          "recorded_at": "2026-10-25T08:23:19Z",
+          "status": "UNSUPPORTED_REAL_SECOND_REVIEW",
+          "note": "Current capability status; engineering review is nonblocking and evidence state is unchanged."
+        }
+      ]
     },
     {
       "source_key": "SIEMENS-REINHAUSEN-2026",
@@ -216,7 +235,19 @@
         "second_human_reviewer"
       ],
       "correction": null,
-      "review_status": "PENDING_HUMAN_REVIEW"
+      "review_status": "UNSUPPORTED_REAL_SECOND_REVIEW",
+      "review_status_history": [
+        {
+          "recorded_at": "2026-10-25T03:34:00Z",
+          "status": "PENDING_HUMAN_REVIEW",
+          "note": "Historical request state; no second real reviewer was claimed."
+        },
+        {
+          "recorded_at": "2026-10-25T08:23:19Z",
+          "status": "UNSUPPORTED_REAL_SECOND_REVIEW",
+          "note": "Current capability status; engineering review is nonblocking and evidence state is unchanged."
+        }
+      ]
     },
     {
       "source_key": "VERTIV-DCD-2026",
@@ -265,7 +296,19 @@
         "second_human_reviewer"
       ],
       "correction": null,
-      "review_status": "PENDING_HUMAN_REVIEW"
+      "review_status": "UNSUPPORTED_REAL_SECOND_REVIEW",
+      "review_status_history": [
+        {
+          "recorded_at": "2026-10-25T03:34:00Z",
+          "status": "PENDING_HUMAN_REVIEW",
+          "note": "Historical request state; no second real reviewer was claimed."
+        },
+        {
+          "recorded_at": "2026-10-25T08:23:19Z",
+          "status": "UNSUPPORTED_REAL_SECOND_REVIEW",
+          "note": "Current capability status; engineering review is nonblocking and evidence state is unchanged."
+        }
+      ]
     },
     {
       "source_key": "SOLAREDGE-ORIGIN-20261013",
@@ -314,7 +357,19 @@
         "second_human_reviewer"
       ],
       "correction": null,
-      "review_status": "PENDING_HUMAN_REVIEW"
+      "review_status": "UNSUPPORTED_REAL_SECOND_REVIEW",
+      "review_status_history": [
+        {
+          "recorded_at": "2026-10-25T03:34:00Z",
+          "status": "PENDING_HUMAN_REVIEW",
+          "note": "Historical request state; no second real reviewer was claimed."
+        },
+        {
+          "recorded_at": "2026-10-25T08:23:19Z",
+          "status": "UNSUPPORTED_REAL_SECOND_REVIEW",
+          "note": "Current capability status; engineering review is nonblocking and evidence state is unchanged."
+        }
+      ]
     },
     {
       "source_key": "SOLAREDGE-PDF-20261013",
@@ -366,7 +421,19 @@
         "second_human_reviewer"
       ],
       "correction": null,
-      "review_status": "PENDING_HUMAN_REVIEW"
+      "review_status": "UNSUPPORTED_REAL_SECOND_REVIEW",
+      "review_status_history": [
+        {
+          "recorded_at": "2026-10-25T03:34:00Z",
+          "status": "PENDING_HUMAN_REVIEW",
+          "note": "Historical request state; no second real reviewer was claimed."
+        },
+        {
+          "recorded_at": "2026-10-25T08:23:19Z",
+          "status": "UNSUPPORTED_REAL_SECOND_REVIEW",
+          "note": "Current capability status; engineering review is nonblocking and evidence state is unchanged."
+        }
+      ]
     },
     {
       "source_key": "SOLAREDGE-BUSINESSWIRE-20261013",
@@ -418,7 +485,19 @@
         "second_human_reviewer"
       ],
       "correction": null,
-      "review_status": "PENDING_HUMAN_REVIEW"
+      "review_status": "UNSUPPORTED_REAL_SECOND_REVIEW",
+      "review_status_history": [
+        {
+          "recorded_at": "2026-10-25T03:34:00Z",
+          "status": "PENDING_HUMAN_REVIEW",
+          "note": "Historical request state; no second real reviewer was claimed."
+        },
+        {
+          "recorded_at": "2026-10-25T08:23:19Z",
+          "status": "UNSUPPORTED_REAL_SECOND_REVIEW",
+          "note": "Current capability status; engineering review is nonblocking and evidence state is unchanged."
+        }
+      ]
     },
     {
       "source_key": "SUNGROW-1749",
@@ -468,7 +547,19 @@
         "second_human_reviewer"
       ],
       "correction": null,
-      "review_status": "PENDING_HUMAN_REVIEW"
+      "review_status": "UNSUPPORTED_REAL_SECOND_REVIEW",
+      "review_status_history": [
+        {
+          "recorded_at": "2026-10-25T03:34:00Z",
+          "status": "PENDING_HUMAN_REVIEW",
+          "note": "Historical request state; no second real reviewer was claimed."
+        },
+        {
+          "recorded_at": "2026-10-25T08:23:19Z",
+          "status": "UNSUPPORTED_REAL_SECOND_REVIEW",
+          "note": "Current capability status; engineering review is nonblocking and evidence state is unchanged."
+        }
+      ]
     },
     {
       "source_key": "PI-IDEAL-SSCB-20261012",
@@ -517,7 +608,19 @@
         "second_human_reviewer"
       ],
       "correction": null,
-      "review_status": "PENDING_HUMAN_REVIEW"
+      "review_status": "UNSUPPORTED_REAL_SECOND_REVIEW",
+      "review_status_history": [
+        {
+          "recorded_at": "2026-10-25T03:34:00Z",
+          "status": "PENDING_HUMAN_REVIEW",
+          "note": "Historical request state; no second real reviewer was claimed."
+        },
+        {
+          "recorded_at": "2026-10-25T08:23:19Z",
+          "status": "UNSUPPORTED_REAL_SECOND_REVIEW",
+          "note": "Current capability status; engineering review is nonblocking and evidence state is unchanged."
+        }
+      ]
     },
     {
       "source_key": "VANTAGE-HERON-20261021",
@@ -566,7 +669,19 @@
         "second_human_reviewer"
       ],
       "correction": null,
-      "review_status": "PENDING_HUMAN_REVIEW"
+      "review_status": "UNSUPPORTED_REAL_SECOND_REVIEW",
+      "review_status_history": [
+        {
+          "recorded_at": "2026-10-25T03:34:00Z",
+          "status": "PENDING_HUMAN_REVIEW",
+          "note": "Historical request state; no second real reviewer was claimed."
+        },
+        {
+          "recorded_at": "2026-10-25T08:23:19Z",
+          "status": "UNSUPPORTED_REAL_SECOND_REVIEW",
+          "note": "Current capability status; engineering review is nonblocking and evidence state is unchanged."
+        }
+      ]
     }
   ]
 }

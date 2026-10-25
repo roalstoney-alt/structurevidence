@@ -23,9 +23,14 @@ from source_dependency_v01 import (
 ROOT = Path(__file__).resolve().parents[1]
 RULES_PATH = ROOT / "protocol/source-dependency/qualification-rules-v0.2.json"
 BASELINE_PATH = ROOT / "docs/implementation/SE-DUAL-SITE-002-BASELINE-SHA256.json"
+ACCEPTANCE_PATH = ROOT / "docs/implementation/SE-DECISION-BOUNDARY-001-PHASE-B-ACCEPTANCE.md"
+REVIEW_BOUNDARY_PATH = ROOT / "docs/implementation/SE-DUAL-SITE-002-PHASE-B-REVIEW-BOUNDARY.md"
+OPEN_CHALLENGE_PATH = ROOT / "docs/implementation/SE-DUAL-SITE-002-OPEN-CHALLENGE-v0.1.md"
 REVIEWED_AT = "2026-10-25T02:59:00Z"
 SUPPLEMENT_REVIEWED_AT = "2026-10-25T03:34:00Z"
+ACCEPTANCE_RECORDED_AT = "2026-10-25T08:23:19Z"
 EVIDENCE_CUTOFF = "2026-10-22T14:02:00Z"
+LAST_SOURCE_CHECK_AT = "2026-10-22T14:02:00Z"
 RUBRIC = "SE-SOURCE-DEPENDENCY-RUBRIC-v0.2"
 REVIEWER_ID = "SE-PHASE-B-CODEX-REVIEW-20261025-01"
 INITIAL_REGISTRY_SHA256 = "b71397c24cf0e5cab6987930c50e0a1c07ee41a310d2189044267acd8a865316"
@@ -491,8 +496,10 @@ def build_view(registry: dict[str, Any]) -> dict[str, Any]:
             "originator_role": spec["originator_role"],
             "dependency_class": spec["dependency_class"],
             "dependency_rationale": spec["dependency_rationale"],
-            "evidence_level": spec["evidence_level"],
-            "evidence_rationale": spec["evidence_rationale"],
+            "lineage_root_source_key": spec["lineage_key"] or spec["key"],
+            "originating_evidence_lineage": gap_rows["OEG-CML-001"]["originating_evidence_lineage"],
+            "evidence_level": gap_rows["OEG-CML-001"]["evidence_level"],
+            "evidence_rationale": gap_rows["OEG-CML-001"]["evidence_rationale"],
             "source_access_status": "READ_PARTIAL",
             "capture_packet_path": spec["packet_path"],
             "capture_sha256": spec["packet_sha256"],
@@ -520,25 +527,88 @@ def build_view(registry: dict[str, Any]) -> dict[str, Any]:
         "case_state": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
         "case_state_as_of": "2026-09-20T10:46:47Z",
         "case_state_changed": False,
+        "engineering_acceptance_status": "READY_FOR_OWNER_MERGE_REVIEW",
+        "merge_authorized": False,
+        "production_deployment_authorized": False,
         "reviewed_at": REVIEWED_AT,
+        "decision_boundary_recorded_at": ACCEPTANCE_RECORDED_AT,
         "evidence_cutoff": EVIDENCE_CUTOFF,
+        "last_source_check_at": LAST_SOURCE_CHECK_AT,
         "rubric_version": RUBRIC,
         "registry_path": "protocol/source-dependency/registry-v0.1.json",
         "active_rules_path": "protocol/source-dependency/qualification-rules-v0.2.json",
         "review_policy": {
             "actual_reviewer_records": 1,
-            "second_review_status": "PENDING_HUMAN_REVIEW",
+            "second_real_human_review": "UNSUPPORTED",
+            "second_review_capability_status": "UNSUPPORTED_REAL_SECOND_REVIEW",
             "reviewer_id": REVIEWER_ID,
             "classification_supersessions": 2,
+            "engineering_gate_effect": "NONBLOCKING",
+            "evidence_state_effect": "NONE",
+            "status_history": [
+                {
+                    "recorded_at": SUPPLEMENT_REVIEWED_AT,
+                    "status": "PENDING_HUMAN_REVIEW",
+                    "note": "Historical request state preserved; it did not establish that a second-review service existed.",
+                },
+                {
+                    "recorded_at": ACCEPTANCE_RECORDED_AT,
+                    "status": "UNSUPPORTED_REAL_SECOND_REVIEW",
+                    "note": "Current audited capability: no second independent human reviewer has been identified, engaged, or evidenced.",
+                },
+            ],
         },
         "chindata_e4_consistency_review": {
-            "status": "MATERIAL_INCONSISTENCY_CORRECTED_BY_SUPERSESSION_PENDING_HUMAN_REVIEW",
+            "status": "UNRESOLVED_E3_E4",
             "canonical_definition": EVIDENCE_LEVEL_DEFINITIONS["E4"],
             "missing_from_bounded_packet": ["observation_period", "methodology"],
             "retained_facts": ["attributable_operator", "named_site", "reported_commercial_operation", "materially_relevant_architecture"],
             "active_level": "E3",
             "active_level_caveat": "E3 is a conservative ceiling and an imperfect label, not a claim that authorship is unattributed; the rubric lacks a separate label for attributable field assertions missing period/method.",
-            "second_review_status": "PENDING_HUMAN_REVIEW",
+            "adjudication_status": "UNRESOLVED",
+            "second_real_human_review": "UNSUPPORTED",
+            "classification_history": [
+                {
+                    "event_timestamp": REVIEWED_AT,
+                    "level": "E4",
+                    "row_version": "V1",
+                    "status": "SUPERSEDED_PRESERVED",
+                    "note": "Original machine-assisted classification; both V1 rows and hashes remain preserved.",
+                },
+                {
+                    "event_timestamp": SUPPLEMENT_REVIEWED_AT,
+                    "level": "E3",
+                    "row_version": "V2",
+                    "status": "ACTIVE_CONSERVATIVE_CEILING_CONTESTED",
+                    "note": "Append-only successor classification; it does not resolve the E3/E4 taxonomy dispute.",
+                },
+                {
+                    "event_timestamp": ACCEPTANCE_RECORDED_AT,
+                    "level": None,
+                    "row_version": None,
+                    "status": "UNRESOLVED_RECORDED",
+                    "note": "Acceptance baseline records the dispute and prohibits upgrading either gap from this ambiguity.",
+                },
+            ],
+        },
+        "decision_boundary": {
+            "principle": "Evidence evolves. Decisions remain accountable.",
+            "authority_status": "TIME_BOUNDED_REVIEW_RESULT_NOT_AUTHORITATIVE_TRUTH",
+            "scoped_questions": {
+                "OEG-CML-001": "Does an independent attributable field record validate the named 800VDC deployment claim under the active rule?",
+                "OEG-CML-002": "Does an additional operator or independently controlled site satisfy the active replication rule?",
+            },
+            "current_state": {
+                "support": "One operator-authored Chindata record reports a named deployment; supplier records provide design, laboratory, certification-publicity, prototype, or future-agreement signals.",
+                "contradiction": "No qualifying contradiction was established within the bounded packet.",
+                "unknown": "Independent field validation and a second independently controlled operating instance remain unestablished within the nine reviewed URLs.",
+            },
+            "closure_conditions": {
+                "OEG-CML-001": "A qualifying row must meet the active dependency-class, E4-or-higher, operator/site/architecture/operation/date, and attributable-method requirements.",
+                "OEG-CML-002": "A qualifying row must also establish ADDITIONAL_ENTITY_OR_SITE using operator, site, and control identity rather than publisher host.",
+            },
+            "decision_use_boundary": "This view does not recommend an investment, purchase, architecture, deployment, or rejection. A customer owns the decision and must apply its own exposure and thresholds.",
+            "acceptance_baseline_path": "docs/implementation/SE-DECISION-BOUNDARY-001-PHASE-B-ACCEPTANCE.md",
         },
         "rule_discrepancy": {
             "status": "RESOLVED_BY_APPEND_ONLY_RULE_VERSION",
@@ -551,11 +621,49 @@ def build_view(registry: dict[str, Any]) -> dict[str, Any]:
         "challenge_routes": {
             gap_id: {
                 "url": gap["challenge_url"],
-                "status": "OPERATIONAL_REFERENCE_ROUTE",
-                "effect": "HUMAN_REVIEW_REQUIRED; NO_AUTOMATIC_STATE_CHANGE",
+                "status": "EXISTING_GAP_SPECIFIC_PUBLIC_CHALLENGE_ENTRY",
+                "post_target": f"https://structevidence.com/api/gaps/{gap_id}/challenge",
+                "effect": "SUBMISSION_PRIVATE_UNTIL_HUMAN_REVIEW; NO_AUTOMATIC_STATE_CHANGE",
             }
             for gap_id, gap in GAPS.items()
         },
+        "open_challenge": {
+            "status": "EXISTING_GAP_SPECIFIC_INTAKE_AVAILABLE_BROADER_V0_1_NOT_LAUNCHED",
+            "public_intake_available": True,
+            "intake_scope": "Existing OEG-CML-001 and OEG-CML-002 reference-only challenge forms; no file uploads and no automatic state change.",
+            "safe_entry_paths": ["/gaps/OEG-CML-001/#challenge", "/gaps/OEG-CML-002/#challenge"],
+            "proposal_path": "docs/implementation/SE-DUAL-SITE-002-OPEN-CHALLENGE-v0.1.md",
+            "broader_v0_1_status": "NOT_LAUNCHED_NO_NEW_PRODUCTION_AUTHORIZATION",
+            "production_read_only_check": {
+                "checked_at": "2026-10-25T08:34:04Z",
+                "org_gap_page_http_status": 200,
+                "canonical_gap_api_get_available": True,
+                "challenge_post_exercised": False,
+            },
+            "privacy_boundary": "Submit public URLs or document references only. Do not submit files, private records, credentials, personal health information, or other sensitive data; optional contact email remains private until reviewed.",
+        },
+        "fact_evolution_history": [
+            {
+                "event_timestamp": "2026-09-20T10:46:47Z",
+                "event": "ORIGINAL_OBSERVATION_ACCEPTED",
+                "note": "The preserved case recorded one operator-reported Chindata deployment; this is not independent validation.",
+            },
+            {
+                "event_timestamp": REVIEWED_AT,
+                "event": "BOUNDED_SOURCE_DEPENDENCY_REVIEW",
+                "note": "Nine URLs resolved to seven lineages; both gap qualification counts were zero within that bounded packet.",
+            },
+            {
+                "event_timestamp": SUPPLEMENT_REVIEWED_AT,
+                "event": "CHINDATA_V2_SUPERSESSION_APPENDED",
+                "note": "Two V2 E3 successor rows were appended; V1 E4 rows were preserved and the E3/E4 dispute remained open.",
+            },
+            {
+                "event_timestamp": ACCEPTANCE_RECORDED_AT,
+                "event": "DECISION_BOUNDARY_ACCEPTANCE_RECORDED",
+                "note": "Second real human review was recorded as unsupported and engineering-nonblocking; no evidence or case state changed.",
+            },
+        ],
         "zero_interpretation": "Zero qualifying or independent rows means zero within these nine reviewed URLs and seven originating lineages, not proof that no evidence exists elsewhere.",
         "locales_preserved": ["en", "zh-CN", "es"],
     }
@@ -634,7 +742,7 @@ def build_review_matrix(registry: dict[str, Any], rules_document: dict[str, Any]
         correction = None
         if version == 2:
             correction = {
-                "status": "SUPERSEDED_APPEND_ONLY_PENDING_HUMAN_REVIEW",
+                "status": "SUPERSEDED_APPEND_ONLY_UNRESOLVED_E3_E4",
                 "predecessor_source_row_ids": [row_id(gap_id, spec["key"], 1) for gap_id in GAPS],
                 "successor_source_row_ids": [row_id(gap_id, spec["key"], 2) for gap_id in GAPS],
                 "predecessor_record_hashes": [all_by_id[row_id(gap_id, spec["key"], 1)]["record_hash"] for gap_id in GAPS],
@@ -669,7 +777,19 @@ def build_review_matrix(registry: dict[str, Any], rules_document: dict[str, Any]
             "counterevidence_or_limitation": COUNTEREVIDENCE[spec["key"]],
             "fields_pending_confirmation": PENDING_FIELDS[spec["key"]],
             "correction": correction,
-            "review_status": "PENDING_HUMAN_REVIEW",
+            "review_status": "UNSUPPORTED_REAL_SECOND_REVIEW",
+            "review_status_history": [
+                {
+                    "recorded_at": SUPPLEMENT_REVIEWED_AT,
+                    "status": "PENDING_HUMAN_REVIEW",
+                    "note": "Historical request state; no second real reviewer was claimed.",
+                },
+                {
+                    "recorded_at": ACCEPTANCE_RECORDED_AT,
+                    "status": "UNSUPPORTED_REAL_SECOND_REVIEW",
+                    "note": "Current capability status; engineering review is nonblocking and evidence state is unchanged.",
+                },
+            ],
         })
     return {
         "schema_version": "se-source-dependency-review-matrix-v0.1",
@@ -677,15 +797,22 @@ def build_review_matrix(registry: dict[str, Any], rules_document: dict[str, Any]
         "phase": "B_SUPPLEMENTAL_REVIEW",
         "case_id": "CML-PDRE-001",
         "reviewed_at": SUPPLEMENT_REVIEWED_AT,
+        "decision_boundary_recorded_at": ACCEPTANCE_RECORDED_AT,
         "evidence_cutoff": EVIDENCE_CUTOFF,
         "matrix_scope": "Nine actual URLs already present in the bounded Phase B repository packets; not a new search or market census.",
         "source_count": len(matrix_rows),
         "evidence_level_definitions": EVIDENCE_LEVEL_DEFINITIONS,
         "initial_registry_sha256": INITIAL_REGISTRY_SHA256,
         "append_only_correction_count": 2,
-        "second_review_status": "PENDING_HUMAN_REVIEW",
+        "second_real_human_review": "UNSUPPORTED",
+        "second_review_capability_status": "UNSUPPORTED_REAL_SECOND_REVIEW",
         "human_review_claimed": False,
+        "engineering_gate_effect": "NONBLOCKING",
+        "acceptance_baseline_path": "docs/implementation/SE-DECISION-BOUNDARY-001-PHASE-B-ACCEPTANCE.md",
         "case_state_changed": False,
+        "engineering_acceptance_status": "READY_FOR_OWNER_MERGE_REVIEW",
+        "merge_authorized": False,
+        "production_deployment_authorized": False,
         "replication_identity_contract_cases": build_replication_contract_cases(rules_document),
         "rows": matrix_rows,
     }
@@ -697,11 +824,11 @@ def render_supplemental_review(matrix: dict[str, Any]) -> bytes:
         "",
         f"Reviewed at: `{matrix['reviewed_at']}`. Evidence cutoff: `{matrix['evidence_cutoff']}`.",
         "",
-        "Status: `PENDING_HUMAN_REVIEW`. This is an independently checkable matrix, not a claim that a second human review occurred.",
+        "Status: `SECOND_REAL_HUMAN_REVIEW=UNSUPPORTED` (`UNSUPPORTED_REAL_SECOND_REVIEW`). This is an independently checkable matrix, not a claim that a second human review occurred. The limitation is engineering-nonblocking and has no evidence-state effect.",
         "",
         "## Chindata E4 consistency",
         "",
-        "The canonical proposal defines E4 as an attributable field record with site, period, and method. The bounded Chindata packet identifies the operator, site, architecture, and reported commercial operation, but it does not supply an observation period or methodology. The two V1 E4 rows remain byte-identical. Two V2 rows append a conservative E3 ceiling through explicit supersession links. E3 is also imperfect because the source is attributable; that residual taxonomy dispute remains open for the second human reviewer.",
+        "The canonical proposal defines E4 as an attributable field record with site, period, and method. The bounded Chindata packet identifies the operator, site, architecture, and reported commercial operation, but it does not supply an observation period or methodology. The two V1 E4 rows remain byte-identical. Two V2 rows append a conservative E3 ceiling through explicit supersession links. E3 is also imperfect because the source is attributable. The taxonomy dispute is `UNRESOLVED`; unsupported second-review capability does not authorize promoting the claim.",
         "",
         "## ADDITIONAL_ENTITY_OR_SITE contract",
         "",
@@ -731,7 +858,7 @@ def render_supplemental_review(matrix: dict[str, Any]) -> bytes:
         "",
         "## Approval gate",
         "",
-        "A second real reviewer must inspect every row, the Chindata E3 ceiling, and the positive/negative replication fixtures before the review status can change. No automatic case-state write, merge, or production deployment is authorized.",
+        "Engineering status: `READY_FOR_OWNER_MERGE_REVIEW`. A second real human review is currently unsupported, not merely pending. That limitation does not block owner code/content merge review, but it cannot change any evidence state. Owner authorization remains required for merge, and separate authorization plus privacy/security gates remain required before any new production challenge intake or deployment.",
         "",
     ])
     return "\n".join(lines).encode("utf-8")
@@ -739,11 +866,13 @@ def render_supplemental_review(matrix: dict[str, Any]) -> bytes:
 
 def render_source_dependency_page() -> bytes:
     fragment = (ROOT / "scripts/templates/source-dependency-section-v0.1.html").read_text(encoding="utf-8").rstrip()
+    lineage_section = '''<section class="product-section" id="lineage-map" aria-labelledby="lineage-map-title"><div class="section-head"><div><p class="eyebrow">Lineage map</p><h2 id="lineage-map-title">Seven origins behind nine URLs</h2></div><p>Lineage is an authorship and dependency map, not a truth score.</p></div><div class="dependency-boundary"><ul><li><code>CHINDATA-533</code> — operator-authored deployment assertion.</li><li><code>SIEMENS-REINHAUSEN-2026</code> — supplier development release.</li><li><code>VERTIV-DCD-2026</code> — supplier architecture-event page.</li><li><code>SOLAREDGE-ORIGIN-20261013</code> — origin for the official HTML, official PDF and Business Wire rendering; three URLs count as one lineage.</li><li><code>SUNGROW-1749</code> — supplier certification publicity.</li><li><code>PI-IDEAL-SSCB-20261012</code> — supplier prototype release.</li><li><code>VANTAGE-HERON-20261021</code> — joint future-capacity agreement.</li></ul><p><a href="/cases/800vdc/source-dependency-review-matrix-v0.1.json">Inspect the row-level lineage, authorship and counterevidence matrix</a>.</p></div></section>'''
     page = f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>800V DC Source Dependency View | StructEvidence</title><meta name="description" content="Auditable source lineage, dependency class, E0-E5 evidence level and gap qualification for the public 800V DC evidence packet."><link rel="canonical" href="https://structurevidence.org/cases/800vdc/source-dependency/"><link rel="alternate" type="application/json" href="https://structurevidence.org/cases/800vdc/source-dependency-v0.1.json"><meta property="og:title" content="800V DC Source Dependency View"><meta property="og:description" content="Nine reviewed URLs, seven evidence lineages, and explicit gap-specific qualification results."><meta property="og:type" content="article"><meta property="og:url" content="https://structurevidence.org/cases/800vdc/source-dependency/"><link rel="stylesheet" href="/assets/product.css?v=20261001-gravity"><link rel="stylesheet" href="/assets/source-dependency.css?v=20261025-phase-b"></head><body class="product-site"><a class="skip-link" href="#main">Skip to content</a>
 <header class="product-header"><nav class="product-nav" aria-label="Primary navigation"><a class="product-brand" href="/"><span>SE</span><strong>StructEvidence</strong></a><div class="locale-switcher" aria-label="Language"><a href="/" lang="en">EN</a><a href="/zh-cn/" lang="zh-CN">简中</a><a href="/es/" lang="es">ES</a></div><button class="product-nav-toggle" type="button" aria-expanded="false" aria-controls="product-links" data-product-nav-toggle>Menu</button><div class="product-links" id="product-links"><a aria-current="page" href="/cases/800vdc/">800V DC case</a><a href="/gaps/">Open Evidence Gaps</a><a href="/method.html">Method</a></div></nav></header>
-<main class="product-main" id="main"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">StructEvidence</a><span>›</span><a href="/cases/">Cases</a><span>›</span><a href="/cases/800vdc/">800V DC</a><span>›</span><span aria-current="page">Source dependency</span></nav><section class="page-hero case-hero" aria-labelledby="page-title"><p class="eyebrow">CML-PDRE-001 · append-only Phase B review</p><h1 id="page-title">800V DC Source Dependency View</h1><p class="lead">An independently checkable ledger of who originated each reviewed record, what evidence level it reaches, and whether it qualifies the two open evidence gaps.</p><div class="actions"><a class="button" href="/cases/800vdc/">Return to preserved case record</a><a class="button secondary" href="/cases/800vdc/source-dependency-v0.1.json">Machine-readable view</a><a class="button secondary" href="/cases/800vdc/source-dependency-review-matrix-v0.1.json">Nine-source review matrix</a><a class="button secondary" href="/gaps/OEG-CML-001/">Independent-validation gap</a><a class="button secondary" href="/gaps/OEG-CML-002/">Replication gap</a></div></section>
+<main class="product-main" id="main"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">StructEvidence</a><span>›</span><a href="/cases/">Cases</a><span>›</span><a href="/cases/800vdc/">800V DC</a><span>›</span><span aria-current="page">Source dependency</span></nav><section class="page-hero case-hero" aria-labelledby="page-title"><p class="eyebrow">CML-PDRE-001 · append-only Phase B review</p><h1 id="page-title">800V DC Source Dependency View</h1><p class="lead">A time-bounded, independently checkable decision-boundary record: who originated each reviewed source, how its classification evolved, and what remains unknown. It is not an authoritative truth claim or a decision recommendation.</p><div class="actions"><a class="button" href="/cases/800vdc/">Return to preserved case record</a><a class="button secondary" href="/cases/800vdc/source-dependency-v0.1.json">Machine-readable view</a><a class="button secondary" href="/cases/800vdc/source-dependency-review-matrix-v0.1.json">Nine-source review matrix</a><a class="button secondary" href="/gaps/OEG-CML-001/">Independent-validation gap</a><a class="button secondary" href="/gaps/OEG-CML-002/">Replication gap</a></div></section>
 {fragment}
+{lineage_section}
 </main><footer class="product-footer"><div class="product-wrap footer-grid"><strong>StructEvidence</strong><a href="/cases/800vdc/">Preserved case record</a><a href="/gaps/">Open Evidence Gaps</a><a href="/method.html">Method</a><a href="/privacy.html">Privacy</a><span>Source lineage is separate from evidence truth and case state.</span></div></footer><script src="/assets/product.js"></script></body></html>
 '''
     return page.encode("utf-8")
@@ -773,8 +902,11 @@ def build_hash_report(
     return {
         "project": "SE-DUAL-SITE-UPGRADE-002",
         "phase": "B",
+        "engineering_acceptance_status": "READY_FOR_OWNER_MERGE_REVIEW",
+        "merge_authorized": False,
+        "production_deployment_authorized": False,
         "baseline_main_sha": "f89f5dbba30c3f504833418d643786680d5769ca",
-        "generated_at": SUPPLEMENT_REVIEWED_AT,
+        "generated_at": ACCEPTANCE_RECORDED_AT,
         "protected_original_manifest": str(BASELINE_PATH.relative_to(ROOT)),
         "protected_originals_changed": changed,
         "source_packet_sha256": packet_hashes,
@@ -784,7 +916,13 @@ def build_hash_report(
             "initial_registry_reconstructed_sha256": reconstructed_initial_registry_sha256,
             "initial_registry_unchanged": reconstructed_initial_registry_sha256 == INITIAL_REGISTRY_SHA256,
             "supersession_rows_added": 2,
-            "second_review_status": "PENDING_HUMAN_REVIEW",
+            "second_real_human_review": "UNSUPPORTED",
+            "second_review_capability_status": "UNSUPPORTED_REAL_SECOND_REVIEW",
+        },
+        "acceptance_traceability": {
+            "docs/implementation/SE-DECISION-BOUNDARY-001-PHASE-B-ACCEPTANCE.md": sha256_file(str(ACCEPTANCE_PATH.relative_to(ROOT))),
+            "docs/implementation/SE-DUAL-SITE-002-PHASE-B-REVIEW-BOUNDARY.md": sha256_file(str(REVIEW_BOUNDARY_PATH.relative_to(ROOT))),
+            "docs/implementation/SE-DUAL-SITE-002-OPEN-CHALLENGE-v0.1.md": sha256_file(str(OPEN_CHALLENGE_PATH.relative_to(ROOT))),
         },
         "generated_artifact_sha256": {
             "protocol/source-dependency/registry-v0.1.json": sha256_bytes(registry_bytes),

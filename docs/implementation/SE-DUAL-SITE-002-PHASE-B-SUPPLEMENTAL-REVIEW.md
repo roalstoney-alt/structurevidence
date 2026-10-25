@@ -2,11 +2,11 @@
 
 Reviewed at: `2026-10-25T03:34:00Z`. Evidence cutoff: `2026-10-22T14:02:00Z`.
 
-Status: `PENDING_HUMAN_REVIEW`. This is an independently checkable matrix, not a claim that a second human review occurred.
+Status: `SECOND_REAL_HUMAN_REVIEW=UNSUPPORTED` (`UNSUPPORTED_REAL_SECOND_REVIEW`). This is an independently checkable matrix, not a claim that a second human review occurred. The limitation is engineering-nonblocking and has no evidence-state effect.
 
 ## Chindata E4 consistency
 
-The canonical proposal defines E4 as an attributable field record with site, period, and method. The bounded Chindata packet identifies the operator, site, architecture, and reported commercial operation, but it does not supply an observation period or methodology. The two V1 E4 rows remain byte-identical. Two V2 rows append a conservative E3 ceiling through explicit supersession links. E3 is also imperfect because the source is attributable; that residual taxonomy dispute remains open for the second human reviewer.
+The canonical proposal defines E4 as an attributable field record with site, period, and method. The bounded Chindata packet identifies the operator, site, architecture, and reported commercial operation, but it does not supply an observation period or methodology. The two V1 E4 rows remain byte-identical. Two V2 rows append a conservative E3 ceiling through explicit supersession links. E3 is also imperfect because the source is attributable. The taxonomy dispute is `UNRESOLVED`; unsupported second-review capability does not authorize promoting the claim.
 
 ## ADDITIONAL_ENTITY_OR_SITE contract
 
@@ -32,4 +32,4 @@ These are test fixtures only and are not new case evidence.
 
 ## Approval gate
 
-A second real reviewer must inspect every row, the Chindata E3 ceiling, and the positive/negative replication fixtures before the review status can change. No automatic case-state write, merge, or production deployment is authorized.
+Engineering status: `READY_FOR_OWNER_MERGE_REVIEW`. A second real human review is currently unsupported, not merely pending. That limitation does not block owner code/content merge review, but it cannot change any evidence state. Owner authorization remains required for merge, and separate authorization plus privacy/security gates remain required before any new production challenge intake or deployment.

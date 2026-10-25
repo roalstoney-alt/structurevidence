@@ -83,8 +83,15 @@ class SourceDependencyViewPhaseBTest(unittest.TestCase):
         self.assertTrue(all(row["dependency_class"] == "ISSUER_AUTHORED" for row in rows))
         self.assertTrue(all(row["qualification_status"] == "NOT_QUALIFIED" for row in rows))
         self.assertTrue(all(row["supersession"]["predecessor_source_row_id"] for row in active))
-        self.assertEqual(self.view["chindata_e4_consistency_review"]["second_review_status"], "PENDING_HUMAN_REVIEW")
+        self.assertEqual(self.view["chindata_e4_consistency_review"]["status"], "UNRESOLVED_E3_E4")
+        self.assertEqual(self.view["chindata_e4_consistency_review"]["second_real_human_review"], "UNSUPPORTED")
         self.assertIn("imperfect label", self.view["chindata_e4_consistency_review"]["active_level_caveat"])
+        history = self.view["chindata_e4_consistency_review"]["classification_history"]
+        self.assertEqual([event["status"] for event in history], [
+            "SUPERSEDED_PRESERVED",
+            "ACTIVE_CONSERVATIVE_CEILING_CONTESTED",
+            "UNRESOLVED_RECORDED",
+        ])
 
     def test_f_v02_closes_replication_self_count_without_rewriting_v01(self):
         old = ROOT / "protocol/source-dependency/qualification-rules-v0.1.json"
@@ -112,9 +119,16 @@ class SourceDependencyViewPhaseBTest(unittest.TestCase):
             self.assertEqual(len(metrics["reviewed_urls"]["source_row_ids"]), 9)
             self.assertEqual(metrics["reviewed_urls"]["scope"]["evidence_cutoff"], "2026-10-22T14:02:00Z")
 
-    def test_i_one_actual_reviewer_is_recorded_without_double_review_claim(self):
+    def test_i_one_actual_reviewer_and_unsupported_second_review_are_truthful(self):
         self.assertEqual(self.view["review_policy"]["actual_reviewer_records"], 1)
-        self.assertEqual(self.view["review_policy"]["second_review_status"], "PENDING_HUMAN_REVIEW")
+        self.assertEqual(self.view["review_policy"]["second_real_human_review"], "UNSUPPORTED")
+        self.assertEqual(self.view["review_policy"]["second_review_capability_status"], "UNSUPPORTED_REAL_SECOND_REVIEW")
+        self.assertEqual(self.view["review_policy"]["engineering_gate_effect"], "NONBLOCKING")
+        self.assertEqual(self.view["review_policy"]["evidence_state_effect"], "NONE")
+        self.assertEqual(
+            [event["status"] for event in self.view["review_policy"]["status_history"]],
+            ["PENDING_HUMAN_REVIEW", "UNSUPPORTED_REAL_SECOND_REVIEW"],
+        )
         self.assertTrue(all(len(row["reviewers"]) == 1 for row in self.rows))
         self.assertTrue(all(row["reviewer_disagreement"]["detected"] is False for row in self.rows))
 
@@ -154,6 +168,15 @@ class SourceDependencyViewPhaseBTest(unittest.TestCase):
         css = (ROOT / "assets/source-dependency.css").read_text(encoding="utf-8")
         self.assertIn('id="source-dependency-view" aria-labelledby="source-dependency-title"', page)
         self.assertIn("Who is actually saying this?", page)
+        self.assertIn("Time-bounded result, not authoritative truth", page)
+        self.assertIn("SECOND_REAL_HUMAN_REVIEW=UNSUPPORTED", page)
+        self.assertIn("Chindata E3/E4:", page)
+        self.assertIn("Fact and classification evolution", page)
+        self.assertIn("Seven origins behind nine URLs", page)
+        self.assertIn("Decision boundary", page)
+        self.assertIn("Evidence cutoff:", page)
+        self.assertIn("Last source check:", page)
+        self.assertIn("SE-SOURCE-DEPENDENCY-RUBRIC-v0.2", page)
         self.assertIn("<caption>", page)
         self.assertEqual(page.count('scope="col"'), 4)
         self.assertEqual(page.count("<tbody>"), 1)
@@ -165,13 +188,37 @@ class SourceDependencyViewPhaseBTest(unittest.TestCase):
         frozen_case = (ROOT / "cases/800vdc/index.html").read_text(encoding="utf-8")
         self.assertNotIn("SE-SOURCE-DEPENDENCY-VIEW:BEGIN", frozen_case)
 
-    def test_n_challenge_routes_are_human_gated_and_no_state_write_is_exposed(self):
+    def test_n_challenge_entry_is_existing_safe_gap_intake_and_broader_v01_is_not_launched(self):
         page = (ROOT / "cases/800vdc/source-dependency/index.html").read_text(encoding="utf-8")
         for gap_id in ("OEG-CML-001", "OEG-CML-002"):
             route = self.view["challenge_routes"][gap_id]
-            self.assertEqual(route["effect"], "HUMAN_REVIEW_REQUIRED; NO_AUTOMATIC_STATE_CHANGE")
+            self.assertEqual(route["status"], "EXISTING_GAP_SPECIFIC_PUBLIC_CHALLENGE_ENTRY")
+            self.assertEqual(route["post_target"], f"https://structevidence.com/api/gaps/{gap_id}/challenge")
+            self.assertEqual(route["effect"], "SUBMISSION_PRIVATE_UNTIL_HUMAN_REVIEW; NO_AUTOMATIC_STATE_CHANGE")
             self.assertIn(f'/gaps/{gap_id}/', page)
-        self.assertIn("cannot automatically change a claim or case state", page)
+            gap_page = (ROOT / f"gaps/{gap_id}/index.html").read_text(encoding="utf-8")
+            self.assertEqual(gap_page, (ROOT / f"docs/gaps/{gap_id}/index.html").read_text(encoding="utf-8"))
+            self.assertIn(f'action="https://structevidence.com/api/gaps/{gap_id}/challenge"', gap_page)
+            self.assertIn("Submission does not automatically change the claim state", gap_page)
+            self.assertNotIn('type="file"', gap_page)
+        challenge = self.view["open_challenge"]
+        self.assertEqual(challenge["status"], "EXISTING_GAP_SPECIFIC_INTAKE_AVAILABLE_BROADER_V0_1_NOT_LAUNCHED")
+        self.assertTrue(challenge["public_intake_available"])
+        self.assertEqual(challenge["broader_v0_1_status"], "NOT_LAUNCHED_NO_NEW_PRODUCTION_AUTHORIZATION")
+        self.assertFalse(challenge["production_read_only_check"]["challenge_post_exercised"])
+        self.assertIn("Challenge the evidence", page)
+        self.assertIn("Broader Open Challenge v0.1:", page)
+        self.assertIn("Do not submit files, private records, credentials, personal health information", page)
+        self.assertNotIn("<form", page.lower())
+        self.assertNotIn("type=\"file\"", page.lower())
+        self.assertNotIn("mailto:", page.lower())
+        service = (ROOT / "deploy/cloudflare-landing/gap-service.js").read_text(encoding="utf-8")
+        migration = (ROOT / "deploy/cloudflare-landing/migrations/0002_open_evidence_gaps.sql").read_text(encoding="utf-8")
+        self.assertIn("MAX_BODY_BYTES", service)
+        self.assertIn("publicOrigins", service)
+        self.assertIn("gap_challenge_rate_limited", service)
+        self.assertIn("gap_challenge_events_no_update", migration)
+        self.assertIn("gap_challenge_events_no_delete", migration)
 
     def test_o_no_commercial_private_or_price_files_are_changed(self):
         changed = subprocess.check_output(
@@ -212,10 +259,12 @@ class SourceDependencyViewPhaseBTest(unittest.TestCase):
         derived = fixtures["SECOND-HOST-SAME-LINEAGE-NEGATIVE"]
         self.assertEqual(derived["actual_status"], "NOT_QUALIFIED")
 
-    def test_s_nine_source_matrix_is_complete_and_pending_human_review(self):
+    def test_s_nine_source_matrix_is_complete_and_second_review_is_unsupported(self):
         self.assertEqual(self.matrix["source_count"], 9)
         self.assertEqual(len(self.matrix["rows"]), 9)
-        self.assertEqual(self.matrix["second_review_status"], "PENDING_HUMAN_REVIEW")
+        self.assertEqual(self.matrix["second_real_human_review"], "UNSUPPORTED")
+        self.assertEqual(self.matrix["second_review_capability_status"], "UNSUPPORTED_REAL_SECOND_REVIEW")
+        self.assertEqual(self.matrix["engineering_gate_effect"], "NONBLOCKING")
         self.assertFalse(self.matrix["human_review_claimed"])
         required = {
             "lineage_root_source_key", "author_relationship", "dependency_class",
@@ -225,8 +274,44 @@ class SourceDependencyViewPhaseBTest(unittest.TestCase):
         for row in self.matrix["rows"]:
             self.assertTrue(required <= set(row), row["source_key"])
             self.assertTrue(row["fields_pending_confirmation"], row["source_key"])
-            self.assertEqual(row["review_status"], "PENDING_HUMAN_REVIEW")
+            self.assertEqual(row["review_status"], "UNSUPPORTED_REAL_SECOND_REVIEW")
+            self.assertEqual(
+                [event["status"] for event in row["review_status_history"]],
+                ["PENDING_HUMAN_REVIEW", "UNSUPPORTED_REAL_SECOND_REVIEW"],
+            )
             self.assertEqual(set(row["gap_qualification"]), {"OEG-CML-001", "OEG-CML-002"})
+
+    def test_t_decision_boundary_is_scoped_non_authoritative_and_append_only(self):
+        self.assertEqual(self.view["engineering_acceptance_status"], "READY_FOR_OWNER_MERGE_REVIEW")
+        self.assertFalse(self.view["merge_authorized"])
+        self.assertFalse(self.view["production_deployment_authorized"])
+        boundary = self.view["decision_boundary"]
+        self.assertEqual(boundary["authority_status"], "TIME_BOUNDED_REVIEW_RESULT_NOT_AUTHORITATIVE_TRUTH")
+        self.assertEqual(set(boundary["scoped_questions"]), {"OEG-CML-001", "OEG-CML-002"})
+        self.assertEqual(set(boundary["current_state"]), {"support", "contradiction", "unknown"})
+        self.assertIn("does not recommend", boundary["decision_use_boundary"])
+        history = self.view["fact_evolution_history"]
+        self.assertEqual(len(history), 4)
+        self.assertEqual(history[-1]["event"], "DECISION_BOUNDARY_ACCEPTANCE_RECORDED")
+        self.assertTrue(all(history[index]["event_timestamp"] <= history[index + 1]["event_timestamp"] for index in range(len(history) - 1)))
+        chindata = next(source for source in self.view["sources"] if source["source_key"] == "CHINDATA-533")
+        self.assertEqual(chindata["evidence_level"], "E3")
+        self.assertEqual(chindata["lineage_root_source_key"], "CHINDATA-533")
+
+    def test_u_acceptance_traceability_and_temporal_fields_are_reproducible(self):
+        report = load("docs/implementation/SE-DUAL-SITE-002-PHASE-B-HASHES.json")
+        traced = report["acceptance_traceability"]
+        expected_paths = {
+            "docs/implementation/SE-DECISION-BOUNDARY-001-PHASE-B-ACCEPTANCE.md",
+            "docs/implementation/SE-DUAL-SITE-002-PHASE-B-REVIEW-BOUNDARY.md",
+            "docs/implementation/SE-DUAL-SITE-002-OPEN-CHALLENGE-v0.1.md",
+        }
+        self.assertEqual(set(traced), expected_paths)
+        for relative, expected_hash in traced.items():
+            self.assertEqual(hashlib.sha256((ROOT / relative).read_bytes()).hexdigest(), expected_hash)
+        self.assertEqual(self.view["evidence_cutoff"], "2026-10-22T14:02:00Z")
+        self.assertEqual(self.view["last_source_check_at"], "2026-10-22T14:02:00Z")
+        self.assertEqual(self.view["rubric_version"], "SE-SOURCE-DEPENDENCY-RUBRIC-v0.2")
 
 
 if __name__ == "__main__":

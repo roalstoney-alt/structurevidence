@@ -7,19 +7,39 @@
   "case_state": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
   "case_state_as_of": "2026-09-20T10:46:47Z",
   "case_state_changed": false,
+  "engineering_acceptance_status": "READY_FOR_OWNER_MERGE_REVIEW",
+  "merge_authorized": false,
+  "production_deployment_authorized": false,
   "reviewed_at": "2026-10-25T02:59:00Z",
+  "decision_boundary_recorded_at": "2026-10-25T08:23:19Z",
   "evidence_cutoff": "2026-10-22T14:02:00Z",
+  "last_source_check_at": "2026-10-22T14:02:00Z",
   "rubric_version": "SE-SOURCE-DEPENDENCY-RUBRIC-v0.2",
   "registry_path": "protocol/source-dependency/registry-v0.1.json",
   "active_rules_path": "protocol/source-dependency/qualification-rules-v0.2.json",
   "review_policy": {
     "actual_reviewer_records": 1,
-    "second_review_status": "PENDING_HUMAN_REVIEW",
+    "second_real_human_review": "UNSUPPORTED",
+    "second_review_capability_status": "UNSUPPORTED_REAL_SECOND_REVIEW",
     "reviewer_id": "SE-PHASE-B-CODEX-REVIEW-20261025-01",
-    "classification_supersessions": 2
+    "classification_supersessions": 2,
+    "engineering_gate_effect": "NONBLOCKING",
+    "evidence_state_effect": "NONE",
+    "status_history": [
+      {
+        "recorded_at": "2026-10-25T03:34:00Z",
+        "status": "PENDING_HUMAN_REVIEW",
+        "note": "Historical request state preserved; it did not establish that a second-review service existed."
+      },
+      {
+        "recorded_at": "2026-10-25T08:23:19Z",
+        "status": "UNSUPPORTED_REAL_SECOND_REVIEW",
+        "note": "Current audited capability: no second independent human reviewer has been identified, engaged, or evidenced."
+      }
+    ]
   },
   "chindata_e4_consistency_review": {
-    "status": "MATERIAL_INCONSISTENCY_CORRECTED_BY_SUPERSESSION_PENDING_HUMAN_REVIEW",
+    "status": "UNRESOLVED_E3_E4",
     "canonical_definition": "attributable field record with site, period, and method",
     "missing_from_bounded_packet": [
       "observation_period",
@@ -33,7 +53,50 @@
     ],
     "active_level": "E3",
     "active_level_caveat": "E3 is a conservative ceiling and an imperfect label, not a claim that authorship is unattributed; the rubric lacks a separate label for attributable field assertions missing period/method.",
-    "second_review_status": "PENDING_HUMAN_REVIEW"
+    "adjudication_status": "UNRESOLVED",
+    "second_real_human_review": "UNSUPPORTED",
+    "classification_history": [
+      {
+        "event_timestamp": "2026-10-25T02:59:00Z",
+        "level": "E4",
+        "row_version": "V1",
+        "status": "SUPERSEDED_PRESERVED",
+        "note": "Original machine-assisted classification; both V1 rows and hashes remain preserved."
+      },
+      {
+        "event_timestamp": "2026-10-25T03:34:00Z",
+        "level": "E3",
+        "row_version": "V2",
+        "status": "ACTIVE_CONSERVATIVE_CEILING_CONTESTED",
+        "note": "Append-only successor classification; it does not resolve the E3/E4 taxonomy dispute."
+      },
+      {
+        "event_timestamp": "2026-10-25T08:23:19Z",
+        "level": null,
+        "row_version": null,
+        "status": "UNRESOLVED_RECORDED",
+        "note": "Acceptance baseline records the dispute and prohibits upgrading either gap from this ambiguity."
+      }
+    ]
+  },
+  "decision_boundary": {
+    "principle": "Evidence evolves. Decisions remain accountable.",
+    "authority_status": "TIME_BOUNDED_REVIEW_RESULT_NOT_AUTHORITATIVE_TRUTH",
+    "scoped_questions": {
+      "OEG-CML-001": "Does an independent attributable field record validate the named 800VDC deployment claim under the active rule?",
+      "OEG-CML-002": "Does an additional operator or independently controlled site satisfy the active replication rule?"
+    },
+    "current_state": {
+      "support": "One operator-authored Chindata record reports a named deployment; supplier records provide design, laboratory, certification-publicity, prototype, or future-agreement signals.",
+      "contradiction": "No qualifying contradiction was established within the bounded packet.",
+      "unknown": "Independent field validation and a second independently controlled operating instance remain unestablished within the nine reviewed URLs."
+    },
+    "closure_conditions": {
+      "OEG-CML-001": "A qualifying row must meet the active dependency-class, E4-or-higher, operator/site/architecture/operation/date, and attributable-method requirements.",
+      "OEG-CML-002": "A qualifying row must also establish ADDITIONAL_ENTITY_OR_SITE using operator, site, and control identity rather than publisher host."
+    },
+    "decision_use_boundary": "This view does not recommend an investment, purchase, architecture, deployment, or rejection. A customer owns the decision and must apply its own exposure and thresholds.",
+    "acceptance_baseline_path": "docs/implementation/SE-DECISION-BOUNDARY-001-PHASE-B-ACCEPTANCE.md"
   },
   "rule_discrepancy": {
     "status": "RESOLVED_BY_APPEND_ONLY_RULE_VERSION",
@@ -318,8 +381,10 @@
       "originator_role": "OPERATOR",
       "dependency_class": "ISSUER_AUTHORED",
       "dependency_rationale": "This is attributable operator evidence, not independent validation of the operator's own deployment claim.",
-      "evidence_level": "E4",
-      "evidence_rationale": "The record attributes commercial operation of a materially relevant 10kV AC to SST to 800VDC system to one named operator and campus; it does not contain an attributable observation period, operating conditions, or methodology.",
+      "lineage_root_source_key": "CHINDATA-533",
+      "originating_evidence_lineage": [],
+      "evidence_level": "E3",
+      "evidence_rationale": "Conservative E3 ceiling: the record is attributable and names a site, but the canonical E4 definition also requires a field period and method, which the bounded packet does not supply. E3 is itself an imperfect label because attribution exists; second-human-review adjudication remains pending.",
       "source_access_status": "READ_PARTIAL",
       "capture_packet_path": "e/L1-EV-CML-PDRE-001-FIELD-DEPLOYMENT-001/index.json",
       "capture_sha256": "57e1ede12822f29e973c66d11db60a2e55a429cd4b7a4fea4bcc44d1c8aa1918",
@@ -358,6 +423,8 @@
       "originator_role": "SUPPLIER",
       "dependency_class": "ISSUER_AUTHORED",
       "dependency_rationale": "The source is attributable supplier-authored development evidence and is not an independent operating observation.",
+      "lineage_root_source_key": "SIEMENS-REINHAUSEN-2026",
+      "originating_evidence_lineage": [],
       "evidence_level": "E1",
       "evidence_rationale": "The source describes technology development and industrialization, not a commissioned or operating deployment.",
       "source_access_status": "READ_PARTIAL",
@@ -398,6 +465,8 @@
       "originator_role": "SUPPLIER",
       "dependency_class": "ISSUER_AUTHORED",
       "dependency_rationale": "This supplier event page is an attributable architecture signal, not independent deployment evidence.",
+      "lineage_root_source_key": "VERTIV-DCD-2026",
+      "originating_evidence_lineage": [],
       "evidence_level": "E0",
       "evidence_rationale": "The page frames 800VDC as an architecture decision topic and supplies no named operating deployment.",
       "source_access_status": "READ_PARTIAL",
@@ -438,6 +507,8 @@
       "originator_role": "SUPPLIER",
       "dependency_class": "ISSUER_AUTHORED",
       "dependency_rationale": "The origin record is supplier-authored; separate PDF and Business Wire URLs reproduce this same originating evidence.",
+      "lineage_root_source_key": "SOLAREDGE-ORIGIN-20261013",
+      "originating_evidence_lineage": [],
       "evidence_level": "E2",
       "evidence_rationale": "The record supports engineering-lab work and a showcase model while stating that full-path validation was underway; it is not field deployment.",
       "source_access_status": "READ_PARTIAL",
@@ -478,6 +549,10 @@
       "originator_role": "SUPPLIER",
       "dependency_class": "DERIVED",
       "dependency_rationale": "This is another rendering of the SolarEdge announcement, not an additional observation or originator.",
+      "lineage_root_source_key": "SOLAREDGE-ORIGIN-20261013",
+      "originating_evidence_lineage": [
+        "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-SOLAREDGE-ORIGIN-20261013-V1"
+      ],
       "evidence_level": "E2",
       "evidence_rationale": "The PDF carries the same engineering-lab and incomplete-validation content as the origin record.",
       "source_access_status": "READ_PARTIAL",
@@ -518,6 +593,10 @@
       "originator_role": "SUPPLIER",
       "dependency_class": "DERIVED",
       "dependency_rationale": "A press-distribution host does not create a second evidence lineage; this row depends on the SolarEdge origin.",
+      "lineage_root_source_key": "SOLAREDGE-ORIGIN-20261013",
+      "originating_evidence_lineage": [
+        "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-SOLAREDGE-ORIGIN-20261013-V1"
+      ],
       "evidence_level": "E2",
       "evidence_rationale": "The copy carries the same engineering-lab and incomplete-validation claims as the origin release.",
       "source_access_status": "READ_PARTIAL",
@@ -558,6 +637,8 @@
       "originator_role": "SUPPLIER",
       "dependency_class": "ISSUER_AUTHORED",
       "dependency_rationale": "The reviewed evidence is Sungrow's own announcement and cannot be treated as an independent TÜV record.",
+      "lineage_root_source_key": "SUNGROW-1749",
+      "originating_evidence_lineage": [],
       "evidence_level": "E2",
       "evidence_rationale": "The packet preserves an attributed system/component certification claim but no authenticated certificate, named operating customer, or field dataset.",
       "source_access_status": "READ_PARTIAL",
@@ -598,6 +679,8 @@
       "originator_role": "SUPPLIER",
       "dependency_class": "ISSUER_AUTHORED",
       "dependency_rationale": "This is supplier-authored component evidence, not an independently observed system deployment.",
+      "lineage_root_source_key": "PI-IDEAL-SSCB-20261012",
+      "originating_evidence_lineage": [],
       "evidence_level": "E2",
       "evidence_rationale": "A working solid-state circuit-breaker prototype supports component development only; the packet identifies no customer field deployment or replicated installation.",
       "source_access_status": "READ_PARTIAL",
@@ -638,6 +721,8 @@
       "originator_role": "CUSTOMER",
       "dependency_class": "PARTIALLY_DEPENDENT",
       "dependency_rationale": "The joint customer/supplier authorship is attributable but commercially dependent; it is not an independent operating observation.",
+      "lineage_root_source_key": "VANTAGE-HERON-20261021",
+      "originating_evidence_lineage": [],
       "evidence_level": "E0",
       "evidence_rationale": "The source records future capacity reservation and planned late-2027 production, not delivered equipment, a commissioned campus, or operating history.",
       "source_access_status": "READ_PARTIAL",
@@ -674,15 +759,57 @@
   "challenge_routes": {
     "OEG-CML-001": {
       "url": "https://structurevidence.org/gaps/OEG-CML-001/",
-      "status": "OPERATIONAL_REFERENCE_ROUTE",
-      "effect": "HUMAN_REVIEW_REQUIRED; NO_AUTOMATIC_STATE_CHANGE"
+      "status": "EXISTING_GAP_SPECIFIC_PUBLIC_CHALLENGE_ENTRY",
+      "post_target": "https://structevidence.com/api/gaps/OEG-CML-001/challenge",
+      "effect": "SUBMISSION_PRIVATE_UNTIL_HUMAN_REVIEW; NO_AUTOMATIC_STATE_CHANGE"
     },
     "OEG-CML-002": {
       "url": "https://structurevidence.org/gaps/OEG-CML-002/",
-      "status": "OPERATIONAL_REFERENCE_ROUTE",
-      "effect": "HUMAN_REVIEW_REQUIRED; NO_AUTOMATIC_STATE_CHANGE"
+      "status": "EXISTING_GAP_SPECIFIC_PUBLIC_CHALLENGE_ENTRY",
+      "post_target": "https://structevidence.com/api/gaps/OEG-CML-002/challenge",
+      "effect": "SUBMISSION_PRIVATE_UNTIL_HUMAN_REVIEW; NO_AUTOMATIC_STATE_CHANGE"
     }
   },
+  "open_challenge": {
+    "status": "EXISTING_GAP_SPECIFIC_INTAKE_AVAILABLE_BROADER_V0_1_NOT_LAUNCHED",
+    "public_intake_available": true,
+    "intake_scope": "Existing OEG-CML-001 and OEG-CML-002 reference-only challenge forms; no file uploads and no automatic state change.",
+    "safe_entry_paths": [
+      "/gaps/OEG-CML-001/#challenge",
+      "/gaps/OEG-CML-002/#challenge"
+    ],
+    "proposal_path": "docs/implementation/SE-DUAL-SITE-002-OPEN-CHALLENGE-v0.1.md",
+    "broader_v0_1_status": "NOT_LAUNCHED_NO_NEW_PRODUCTION_AUTHORIZATION",
+    "production_read_only_check": {
+      "checked_at": "2026-10-25T08:34:04Z",
+      "org_gap_page_http_status": 200,
+      "canonical_gap_api_get_available": true,
+      "challenge_post_exercised": false
+    },
+    "privacy_boundary": "Submit public URLs or document references only. Do not submit files, private records, credentials, personal health information, or other sensitive data; optional contact email remains private until reviewed."
+  },
+  "fact_evolution_history": [
+    {
+      "event_timestamp": "2026-09-20T10:46:47Z",
+      "event": "ORIGINAL_OBSERVATION_ACCEPTED",
+      "note": "The preserved case recorded one operator-reported Chindata deployment; this is not independent validation."
+    },
+    {
+      "event_timestamp": "2026-10-25T02:59:00Z",
+      "event": "BOUNDED_SOURCE_DEPENDENCY_REVIEW",
+      "note": "Nine URLs resolved to seven lineages; both gap qualification counts were zero within that bounded packet."
+    },
+    {
+      "event_timestamp": "2026-10-25T03:34:00Z",
+      "event": "CHINDATA_V2_SUPERSESSION_APPENDED",
+      "note": "Two V2 E3 successor rows were appended; V1 E4 rows were preserved and the E3/E4 dispute remained open."
+    },
+    {
+      "event_timestamp": "2026-10-25T08:23:19Z",
+      "event": "DECISION_BOUNDARY_ACCEPTANCE_RECORDED",
+      "note": "Second real human review was recorded as unsupported and engineering-nonblocking; no evidence or case state changed."
+    }
+  ],
   "zero_interpretation": "Zero qualifying or independent rows means zero within these nine reviewed URLs and seven originating lineages, not proof that no evidence exists elsewhere.",
   "locales_preserved": [
     "en",
