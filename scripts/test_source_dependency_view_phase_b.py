@@ -10,7 +10,7 @@ import unittest
 from collections import Counter
 from pathlib import Path
 
-from source_dependency_v01 import deterministic_metrics, validate_registry
+from source_dependency_v01 import current_rows, deterministic_metrics, validate_registry
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -26,7 +26,9 @@ class SourceDependencyViewPhaseBTest(unittest.TestCase):
         cls.registry = load("protocol/source-dependency/registry-v0.1.json")
         cls.rules = load("protocol/source-dependency/qualification-rules-v0.2.json")
         cls.view = load("cases/800vdc/source-dependency-v0.1.json")
+        cls.matrix = load("cases/800vdc/source-dependency-review-matrix-v0.1.json")
         cls.rows = cls.registry["rows"]
+        cls.active_rows = current_rows(cls.registry)
 
     def test_a_deterministic_build_is_clean(self):
         result = subprocess.run(
@@ -40,7 +42,8 @@ class SourceDependencyViewPhaseBTest(unittest.TestCase):
 
     def test_b_registry_is_valid_and_every_record_hash_is_unique(self):
         validate_registry(self.registry, self.rules)
-        self.assertEqual(len(self.rows), 18)
+        self.assertEqual(len(self.rows), 20)
+        self.assertEqual(len(self.active_rows), 18)
         hashes = [row["record_hash"] for row in self.rows]
         self.assertEqual(len(hashes), len(set(hashes)))
         self.assertTrue(all(len(value) == 64 for value in hashes))
@@ -58,25 +61,30 @@ class SourceDependencyViewPhaseBTest(unittest.TestCase):
             "https://vantage-dc.com/news/vantage-and-heron-power-electronics-announce-gigawatt-scale-800-vdc-agreement-to-accelerate-ai-infrastructure-delivery/",
         }
         for gap_id in ("OEG-CML-001", "OEG-CML-002"):
-            rows = [row for row in self.rows if row["gap_id"] == gap_id]
+            rows = [row for row in self.active_rows if row["gap_id"] == gap_id]
             self.assertEqual({row["immutable_source"]["url"] for row in rows}, expected_urls)
+            self.assertEqual(len(rows), 9)
 
     def test_d_evidence_levels_and_dependency_classes_are_grounded(self):
-        rows = [row for row in self.rows if row["gap_id"] == "OEG-CML-001"]
-        self.assertEqual(Counter(row["evidence_level"] for row in rows), Counter({"E2": 5, "E0": 2, "E4": 1, "E1": 1}))
+        rows = [row for row in self.active_rows if row["gap_id"] == "OEG-CML-001"]
+        self.assertEqual(Counter(row["evidence_level"] for row in rows), Counter({"E2": 5, "E0": 2, "E3": 1, "E1": 1}))
         self.assertEqual(Counter(row["dependency_class"] for row in rows), Counter({"ISSUER_AUTHORED": 6, "DERIVED": 2, "PARTIALLY_DEPENDENT": 1}))
         self.assertNotIn("INDEPENDENT", {row["dependency_class"] for row in rows})
         self.assertNotIn("UNKNOWN", {row["dependency_class"] for row in rows})
 
     def test_e_chindata_e4_does_not_qualify_for_either_gap(self):
         rows = [row for row in self.rows if "CHINDATA-533" in row["source_row_id"]]
-        self.assertEqual(len(rows), 2)
-        self.assertTrue(all(row["evidence_level"] == "E4" for row in rows))
+        active = [row for row in self.active_rows if "CHINDATA-533" in row["source_row_id"]]
+        predecessors = [row for row in rows if row["source_row_id"].endswith("-V1")]
+        self.assertEqual(len(rows), 4)
+        self.assertEqual(len(active), 2)
+        self.assertTrue(all(row["evidence_level"] == "E4" for row in predecessors))
+        self.assertTrue(all(row["evidence_level"] == "E3" for row in active))
         self.assertTrue(all(row["dependency_class"] == "ISSUER_AUTHORED" for row in rows))
         self.assertTrue(all(row["qualification_status"] == "NOT_QUALIFIED" for row in rows))
-        reasons = " ".join(row["qualification_reason"] for row in rows)
-        self.assertIn("OBSERVATION_PERIOD", reasons)
-        self.assertIn("ADDITIONAL_ENTITY_OR_SITE", reasons)
+        self.assertTrue(all(row["supersession"]["predecessor_source_row_id"] for row in active))
+        self.assertEqual(self.view["chindata_e4_consistency_review"]["second_review_status"], "PENDING_HUMAN_REVIEW")
+        self.assertIn("imperfect label", self.view["chindata_e4_consistency_review"]["active_level_caveat"])
 
     def test_f_v02_closes_replication_self_count_without_rewriting_v01(self):
         old = ROOT / "protocol/source-dependency/qualification-rules-v0.1.json"
@@ -87,7 +95,7 @@ class SourceDependencyViewPhaseBTest(unittest.TestCase):
 
     def test_g_derived_copies_share_one_solaredge_lineage(self):
         for gap_id in ("OEG-CML-001", "OEG-CML-002"):
-            rows = [row for row in self.rows if row["gap_id"] == gap_id]
+            rows = [row for row in self.active_rows if row["gap_id"] == gap_id]
             solar = [row for row in rows if row["originator_id"] == "ORIGINATOR-SOLAREDGE"]
             self.assertEqual(Counter(row["dependency_class"] for row in solar), Counter({"DERIVED": 2, "ISSUER_AUTHORED": 1}))
             registry = {"schema_version": self.registry["schema_version"], "rubric_version": self.registry["rubric_version"], "rows": rows}
@@ -131,6 +139,7 @@ class SourceDependencyViewPhaseBTest(unittest.TestCase):
             ("cases/800vdc/index.html", "docs/cases/800vdc/index.html"),
             ("cases/800vdc/source-dependency/index.html", "docs/cases/800vdc/source-dependency/index.html"),
             ("cases/800vdc/source-dependency-v0.1.json", "docs/cases/800vdc/source-dependency-v0.1.json"),
+            ("cases/800vdc/source-dependency-review-matrix-v0.1.json", "docs/cases/800vdc/source-dependency-review-matrix-v0.1.json"),
             ("assets/source-dependency.css", "docs/assets/source-dependency.css"),
             ("protocol/source-dependency/registry-v0.1.json", "docs/protocol/source-dependency/registry-v0.1.json"),
             ("protocol/source-dependency/qualification-rules-v0.1.json", "docs/protocol/source-dependency/qualification-rules-v0.1.json"),
@@ -178,6 +187,46 @@ class SourceDependencyViewPhaseBTest(unittest.TestCase):
         serialized = json.dumps(self.registry).lower()
         self.assertNotIn("<script", serialized)
         self.assertNotIn("javascript:", serialized)
+
+    def test_q_initial_registry_rows_are_byte_stable_and_corrections_are_append_only(self):
+        initial = {
+            "schema_version": self.registry["schema_version"],
+            "rubric_version": self.registry["rubric_version"],
+            "rows": [row for row in self.rows if row["supersession"]["predecessor_source_row_id"] is None],
+        }
+        initial_bytes = (json.dumps(initial, ensure_ascii=False, indent=2) + "\n").encode("utf-8")
+        self.assertEqual(hashlib.sha256(initial_bytes).hexdigest(), "b71397c24cf0e5cab6987930c50e0a1c07ee41a310d2189044267acd8a865316")
+        successors = [row for row in self.rows if row["supersession"]["predecessor_source_row_id"]]
+        self.assertEqual(len(successors), 2)
+        self.assertTrue(all(row["source_row_id"].endswith("-V2") for row in successors))
+
+    def test_r_replication_identity_contract_has_positive_and_negative_cases(self):
+        fixtures = {item["fixture_id"]: item for item in self.matrix["replication_identity_contract_cases"]}
+        positive = fixtures["TRUE-SECOND-INDEPENDENT-SITE-POSITIVE"]
+        self.assertEqual(positive["actual_status"], "QUALIFIED")
+        self.assertIn("ADDITIONAL_ENTITY_OR_SITE", positive["tested_evidence_facets"])
+        negative = fixtures["BASELINE-SITE-SELF-COUNT-NEGATIVE"]
+        self.assertEqual(negative["actual_status"], "NOT_QUALIFIED")
+        self.assertNotIn("ADDITIONAL_ENTITY_OR_SITE", negative["tested_evidence_facets"])
+        self.assertIn("ADDITIONAL_ENTITY_OR_SITE", negative["qualification_reason"])
+        derived = fixtures["SECOND-HOST-SAME-LINEAGE-NEGATIVE"]
+        self.assertEqual(derived["actual_status"], "NOT_QUALIFIED")
+
+    def test_s_nine_source_matrix_is_complete_and_pending_human_review(self):
+        self.assertEqual(self.matrix["source_count"], 9)
+        self.assertEqual(len(self.matrix["rows"]), 9)
+        self.assertEqual(self.matrix["second_review_status"], "PENDING_HUMAN_REVIEW")
+        self.assertFalse(self.matrix["human_review_claimed"])
+        required = {
+            "lineage_root_source_key", "author_relationship", "dependency_class",
+            "evidence_level", "gap_qualification", "counterevidence_or_limitation",
+            "fields_pending_confirmation", "review_status",
+        }
+        for row in self.matrix["rows"]:
+            self.assertTrue(required <= set(row), row["source_key"])
+            self.assertTrue(row["fields_pending_confirmation"], row["source_key"])
+            self.assertEqual(row["review_status"], "PENDING_HUMAN_REVIEW")
+            self.assertEqual(set(row["gap_qualification"]), {"OEG-CML-001", "OEG-CML-002"})
 
 
 if __name__ == "__main__":

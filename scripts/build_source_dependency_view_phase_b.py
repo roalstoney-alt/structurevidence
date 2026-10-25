@@ -10,8 +10,10 @@ from pathlib import Path
 from typing import Any
 
 from source_dependency_v01 import (
+    current_rows,
     deterministic_metrics,
     evaluate_qualification,
+    is_additional_entity_or_site,
     load_rules,
     seal_record,
     validate_registry,
@@ -22,9 +24,44 @@ ROOT = Path(__file__).resolve().parents[1]
 RULES_PATH = ROOT / "protocol/source-dependency/qualification-rules-v0.2.json"
 BASELINE_PATH = ROOT / "docs/implementation/SE-DUAL-SITE-002-BASELINE-SHA256.json"
 REVIEWED_AT = "2026-10-25T02:59:00Z"
+SUPPLEMENT_REVIEWED_AT = "2026-10-25T03:34:00Z"
 EVIDENCE_CUTOFF = "2026-10-22T14:02:00Z"
 RUBRIC = "SE-SOURCE-DEPENDENCY-RUBRIC-v0.2"
 REVIEWER_ID = "SE-PHASE-B-CODEX-REVIEW-20261025-01"
+INITIAL_REGISTRY_SHA256 = "b71397c24cf0e5cab6987930c50e0a1c07ee41a310d2189044267acd8a865316"
+
+EVIDENCE_LEVEL_DEFINITIONS = {
+    "E0": "intent",
+    "E1": "design",
+    "E2": "simulation or laboratory evidence",
+    "E3": "unattributed field claim",
+    "E4": "attributable field record with site, period, and method",
+    "E5": "independent attributable field record",
+}
+
+COUNTEREVIDENCE = {
+    "CHINDATA-533": "The packet is operator-authored and explicitly does not establish independent performance validation, long operating history, or multi-entity replication.",
+    "SIEMENS-REINHAUSEN-2026": "The source describes development and industrialization; it does not identify commissioned or operating equipment.",
+    "VERTIV-DCD-2026": "The event page is an architecture discussion signal and identifies no named operating deployment.",
+    "SOLAREDGE-ORIGIN-20261013": "The snapshot describes engineering-lab work and says full-path validation was underway rather than complete.",
+    "SOLAREDGE-PDF-20261013": "This PDF is another rendering of the SolarEdge origin record and contributes no additional observation.",
+    "SOLAREDGE-BUSINESSWIRE-20261013": "Business Wire distributes the SolarEdge release; a second host is not a second evidence lineage.",
+    "SUNGROW-1749": "The certification announcement lacks an independently authenticated certificate record and a named operating customer or site.",
+    "PI-IDEAL-SSCB-20261012": "The source reports a working component prototype, not a commissioned 800VDC system deployment.",
+    "VANTAGE-HERON-20261021": "The agreement reserves future capacity and does not establish delivered units, commissioning, or operation.",
+}
+
+PENDING_FIELDS = {
+    "CHINDATA-533": ["observation_period", "operating_conditions", "methodology", "independent_observer", "second_human_reviewer"],
+    "SIEMENS-REINHAUSEN-2026": ["named_operator", "named_site", "commissioning_status", "operating_record", "second_human_reviewer"],
+    "VERTIV-DCD-2026": ["named_operator", "named_site", "deployment_status", "observation_method", "second_human_reviewer"],
+    "SOLAREDGE-ORIGIN-20261013": ["named_operator", "named_site", "full_path_validation_result", "commissioning_status", "second_human_reviewer"],
+    "SOLAREDGE-PDF-20261013": ["independent_originator", "independent_observation", "field_operation", "second_human_reviewer"],
+    "SOLAREDGE-BUSINESSWIRE-20261013": ["independent_originator", "independent_observation", "field_operation", "second_human_reviewer"],
+    "SUNGROW-1749": ["certificate_id", "certificate_issuer_record", "complete_certification_scope", "named_customer", "named_operating_site", "second_human_reviewer"],
+    "PI-IDEAL-SSCB-20261012": ["system_level_integration", "named_operator", "named_site", "commissioning_status", "second_human_reviewer"],
+    "VANTAGE-HERON-20261021": ["delivered_units", "commissioned_site", "operating_status", "independent_observation", "second_human_reviewer"],
+}
 
 GAPS = {
     "OEG-CML-001": {
@@ -296,8 +333,8 @@ def sha256_file(relative: str) -> str:
     return hashlib.sha256((ROOT / relative).read_bytes()).hexdigest()
 
 
-def row_id(gap_id: str, key: str) -> str:
-    return f"SE-SOURCE-ROW-CML-PDRE-001-{GAPS[gap_id]['slug']}-{key}-V1"
+def row_id(gap_id: str, key: str, version: int = 1) -> str:
+    return f"SE-SOURCE-ROW-CML-PDRE-001-{GAPS[gap_id]['slug']}-{key}-V{version}"
 
 
 def build_registry(rules_document: dict[str, Any]) -> dict[str, Any]:
@@ -372,6 +409,49 @@ def build_registry(rules_document: dict[str, Any]) -> dict[str, Any]:
             row["qualification_reason"] = reason
             row["reviewers"][0]["qualification_status"] = status
             rows.append(seal_record(row))
+
+    # The proposal's canonical E4 definition requires site, period, and method.
+    # The Chindata packet has an attributable site and operation claim but lacks
+    # an observation period and methodology. Preserve both V1 rows exactly and
+    # append conservative V2 corrections; do not rewrite the original events.
+    rows_by_id = {row["source_row_id"]: row for row in rows}
+    for gap_id, gap in GAPS.items():
+        predecessor_id = row_id(gap_id, "CHINDATA-533")
+        successor = json.loads(json.dumps(rows_by_id[predecessor_id]))
+        successor["source_row_id"] = row_id(gap_id, "CHINDATA-533", 2)
+        successor["evidence_level"] = "E3"
+        successor["evidence_rationale"] = (
+            "Conservative E3 ceiling: the record is attributable and names a site, "
+            "but the canonical E4 definition also requires a field period and method, "
+            "which the bounded packet does not supply. E3 is itself an imperfect label "
+            "because attribution exists; second-human-review adjudication remains pending."
+        )
+        successor["reviewed_at"] = SUPPLEMENT_REVIEWED_AT
+        successor["event_timestamp"] = SUPPLEMENT_REVIEWED_AT
+        successor["reviewers"] = [{
+            "reviewer_id": REVIEWER_ID,
+            "reviewed_at": SUPPLEMENT_REVIEWED_AT,
+            "dependency_class": successor["dependency_class"],
+            "evidence_level": "E3",
+            "qualification_status": "NOT_ASSESSED",
+            "note": "Append-only evidence-level correction after checking the canonical E0-E5 definition. A second human reviewer has not completed review.",
+        }]
+        successor["reviewer_disagreement"] = {
+            "detected": False,
+            "fields": [],
+            "resolution_status": "NOT_APPLICABLE",
+            "resolution_note": "PENDING_HUMAN_REVIEW; no second reviewer record is claimed.",
+        }
+        successor["supersession"] = {
+            "predecessor_source_row_id": predecessor_id,
+            "reason": "The V1 E4 label conflicts with the canonical requirement for site, period, and method; V2 applies a conservative E3 ceiling while preserving the attributable-authorship caveat.",
+        }
+        successor["record_hash"] = ""
+        status, reason = evaluate_qualification(successor, rules[gap["rule_id"]])
+        successor["qualification_status"] = status
+        successor["qualification_reason"] = reason
+        successor["reviewers"][0]["qualification_status"] = status
+        rows.append(seal_record(successor))
     registry = {
         "schema_version": "se-source-dependency-registry-v0.1",
         "rubric_version": RUBRIC,
@@ -382,13 +462,14 @@ def build_registry(rules_document: dict[str, Any]) -> dict[str, Any]:
 
 
 def build_view(registry: dict[str, Any]) -> dict[str, Any]:
-    rows_by_id = {row["source_row_id"]: row for row in registry["rows"]}
+    active = current_rows(registry)
+    rows_by_id = {row["source_row_id"]: row for row in active}
     metrics: dict[str, Any] = {}
     for gap_id, gap in GAPS.items():
         gap_registry = {
             "schema_version": registry["schema_version"],
             "rubric_version": registry["rubric_version"],
-            "rows": [row for row in registry["rows"] if row["gap_id"] == gap_id],
+            "rows": [row for row in active if row["gap_id"] == gap_id],
         }
         metrics[gap_id] = deterministic_metrics(gap_registry, {
             "case_id": "CML-PDRE-001",
@@ -400,7 +481,8 @@ def build_view(registry: dict[str, Any]) -> dict[str, Any]:
 
     sources = []
     for spec in SOURCE_SPECS:
-        gap_rows = {gap_id: rows_by_id[row_id(gap_id, spec["key"])] for gap_id in GAPS}
+        version = 2 if spec["key"] == "CHINDATA-533" else 1
+        gap_rows = {gap_id: rows_by_id[row_id(gap_id, spec["key"], version)] for gap_id in GAPS}
         sources.append({
             "source_key": spec["key"],
             "title": spec["title"],
@@ -447,6 +529,16 @@ def build_view(registry: dict[str, Any]) -> dict[str, Any]:
             "actual_reviewer_records": 1,
             "second_review_status": "PENDING_HUMAN_REVIEW",
             "reviewer_id": REVIEWER_ID,
+            "classification_supersessions": 2,
+        },
+        "chindata_e4_consistency_review": {
+            "status": "MATERIAL_INCONSISTENCY_CORRECTED_BY_SUPERSESSION_PENDING_HUMAN_REVIEW",
+            "canonical_definition": EVIDENCE_LEVEL_DEFINITIONS["E4"],
+            "missing_from_bounded_packet": ["observation_period", "methodology"],
+            "retained_facts": ["attributable_operator", "named_site", "reported_commercial_operation", "materially_relevant_architecture"],
+            "active_level": "E3",
+            "active_level_caveat": "E3 is a conservative ceiling and an imperfect label, not a claim that authorship is unattributed; the rubric lacks a separate label for attributable field assertions missing period/method.",
+            "second_review_status": "PENDING_HUMAN_REVIEW",
         },
         "rule_discrepancy": {
             "status": "RESOLVED_BY_APPEND_ONLY_RULE_VERSION",
@@ -469,39 +561,238 @@ def build_view(registry: dict[str, Any]) -> dict[str, Any]:
     }
 
 
+def build_replication_contract_cases(rules_document: dict[str, Any]) -> list[dict[str, Any]]:
+    rule = load_rules(rules_document)[GAPS["OEG-CML-002"]["rule_id"]]
+    base = {
+        "gap_id": "OEG-CML-002",
+        "claim_id": "CML-PDRE-001.MULTI_ENTITY_REPLICATION",
+        "source_access_status": "READ_FULL",
+        "evidence_level": "E4",
+        "dependency_class": "INDEPENDENT",
+        "originator_role": "OPERATOR",
+        "evidence_facets": [
+            "NAMED_OPERATOR",
+            "NAMED_SITE",
+            "MATERIALLY_COMPARABLE_ARCHITECTURE",
+            "COMMISSIONED_OR_OPERATING",
+            "EVENT_DATE",
+        ],
+    }
+    fixtures = [
+        {
+            "fixture_id": "TRUE-SECOND-INDEPENDENT-SITE-POSITIVE",
+            "evidence_status": "TEST_FIXTURE_ONLY_NOT_CASE_EVIDENCE",
+            "baseline_identity": {"operator_id": "ORIGINATOR-CHINDATA", "site_id": "SITE-SANGYUAN", "control_id": "CONTROL-CHINDATA"},
+            "candidate_identity": {"operator_id": "ORIGINATOR-OPERATOR-B", "site_id": "SITE-B", "control_id": "CONTROL-OPERATOR-B"},
+            "row": dict(base),
+            "expected_status": "QUALIFIED",
+            "boundary": "A genuinely different attributable operator/site with every required E4 facet passes the replication rule; this fixture does not assert that such evidence has been found.",
+        },
+        {
+            "fixture_id": "BASELINE-SITE-SELF-COUNT-NEGATIVE",
+            "evidence_status": "TEST_FIXTURE_ONLY_NOT_CASE_EVIDENCE",
+            "baseline_identity": {"operator_id": "ORIGINATOR-CHINDATA", "site_id": "SITE-SANGYUAN", "control_id": "CONTROL-CHINDATA"},
+            "candidate_identity": {"operator_id": "ORIGINATOR-CHINDATA", "site_id": "SITE-SANGYUAN", "control_id": "CONTROL-CHINDATA"},
+            "row": dict(base),
+            "expected_status": "NOT_QUALIFIED",
+            "boundary": "The accepted baseline operator/site cannot count as an additional replication even when every other E4 facet is present.",
+        },
+        {
+            "fixture_id": "SECOND-HOST-SAME-LINEAGE-NEGATIVE",
+            "evidence_status": "TEST_FIXTURE_ONLY_NOT_CASE_EVIDENCE",
+            "baseline_identity": {"operator_id": "ORIGINATOR-CHINDATA", "site_id": "SITE-SANGYUAN", "control_id": "CONTROL-CHINDATA"},
+            "candidate_identity": {"operator_id": "ORIGINATOR-CHINDATA", "site_id": "SITE-SANGYUAN", "control_id": "CONTROL-CHINDATA", "publisher_host": "distribution.example"},
+            "row": {**base, "dependency_class": "DERIVED"},
+            "expected_status": "NOT_QUALIFIED",
+            "boundary": "A second host or rendering of the same operator/site record is not a second entity or independently controlled site.",
+        },
+    ]
+    for fixture in fixtures:
+        if is_additional_entity_or_site(fixture["baseline_identity"], fixture["candidate_identity"]):
+            fixture["row"]["evidence_facets"] = [*fixture["row"]["evidence_facets"], "ADDITIONAL_ENTITY_OR_SITE"]
+        status, reason = evaluate_qualification(fixture["row"], rule)
+        fixture["tested_dependency_class"] = fixture["row"]["dependency_class"]
+        fixture["tested_evidence_level"] = fixture["row"]["evidence_level"]
+        fixture["tested_evidence_facets"] = fixture["row"]["evidence_facets"]
+        fixture["actual_status"] = status
+        fixture["qualification_reason"] = reason
+        fixture.pop("row")
+    return fixtures
+
+
+def build_review_matrix(registry: dict[str, Any], rules_document: dict[str, Any]) -> dict[str, Any]:
+    active = current_rows(registry)
+    active_by_id = {row["source_row_id"]: row for row in active}
+    all_by_id = {row["source_row_id"]: row for row in registry["rows"]}
+    matrix_rows = []
+    for spec in SOURCE_SPECS:
+        version = 2 if spec["key"] == "CHINDATA-533" else 1
+        gap_rows = {
+            gap_id: active_by_id[row_id(gap_id, spec["key"], version)]
+            for gap_id in GAPS
+        }
+        correction = None
+        if version == 2:
+            correction = {
+                "status": "SUPERSEDED_APPEND_ONLY_PENDING_HUMAN_REVIEW",
+                "predecessor_source_row_ids": [row_id(gap_id, spec["key"], 1) for gap_id in GAPS],
+                "successor_source_row_ids": [row_id(gap_id, spec["key"], 2) for gap_id in GAPS],
+                "predecessor_record_hashes": [all_by_id[row_id(gap_id, spec["key"], 1)]["record_hash"] for gap_id in GAPS],
+            }
+        matrix_rows.append({
+            "source_key": spec["key"],
+            "title": spec["title"],
+            "url": spec["url"],
+            "source_packet_path": spec["packet_path"],
+            "source_packet_sha256": spec["packet_sha256"],
+            "lineage_root_source_key": spec["lineage_key"] or spec["key"],
+            "originating_evidence_lineage": {
+                gap_id: row["originating_evidence_lineage"] for gap_id, row in gap_rows.items()
+            },
+            "originator_id": spec["originator_id"],
+            "originator_role": spec["originator_role"],
+            "author_relationship": spec["relationship_evidence"],
+            "dependency_class": spec["dependency_class"],
+            "dependency_rationale": spec["dependency_rationale"],
+            "evidence_level": gap_rows["OEG-CML-001"]["evidence_level"],
+            "evidence_level_rationale": gap_rows["OEG-CML-001"]["evidence_rationale"],
+            "active_source_row_ids": {gap_id: row["source_row_id"] for gap_id, row in gap_rows.items()},
+            "gap_qualification": {
+                gap_id: {
+                    "status": row["qualification_status"],
+                    "reason": row["qualification_reason"],
+                    "rule_id": row["qualification_rule_id"],
+                    "record_hash": row["record_hash"],
+                }
+                for gap_id, row in gap_rows.items()
+            },
+            "counterevidence_or_limitation": COUNTEREVIDENCE[spec["key"]],
+            "fields_pending_confirmation": PENDING_FIELDS[spec["key"]],
+            "correction": correction,
+            "review_status": "PENDING_HUMAN_REVIEW",
+        })
+    return {
+        "schema_version": "se-source-dependency-review-matrix-v0.1",
+        "project": "SE-DUAL-SITE-UPGRADE-002",
+        "phase": "B_SUPPLEMENTAL_REVIEW",
+        "case_id": "CML-PDRE-001",
+        "reviewed_at": SUPPLEMENT_REVIEWED_AT,
+        "evidence_cutoff": EVIDENCE_CUTOFF,
+        "matrix_scope": "Nine actual URLs already present in the bounded Phase B repository packets; not a new search or market census.",
+        "source_count": len(matrix_rows),
+        "evidence_level_definitions": EVIDENCE_LEVEL_DEFINITIONS,
+        "initial_registry_sha256": INITIAL_REGISTRY_SHA256,
+        "append_only_correction_count": 2,
+        "second_review_status": "PENDING_HUMAN_REVIEW",
+        "human_review_claimed": False,
+        "case_state_changed": False,
+        "replication_identity_contract_cases": build_replication_contract_cases(rules_document),
+        "rows": matrix_rows,
+    }
+
+
+def render_supplemental_review(matrix: dict[str, Any]) -> bytes:
+    lines = [
+        "# SE-DUAL-SITE-002 Phase B Supplemental Review",
+        "",
+        f"Reviewed at: `{matrix['reviewed_at']}`. Evidence cutoff: `{matrix['evidence_cutoff']}`.",
+        "",
+        "Status: `PENDING_HUMAN_REVIEW`. This is an independently checkable matrix, not a claim that a second human review occurred.",
+        "",
+        "## Chindata E4 consistency",
+        "",
+        "The canonical proposal defines E4 as an attributable field record with site, period, and method. The bounded Chindata packet identifies the operator, site, architecture, and reported commercial operation, but it does not supply an observation period or methodology. The two V1 E4 rows remain byte-identical. Two V2 rows append a conservative E3 ceiling through explicit supersession links. E3 is also imperfect because the source is attributable; that residual taxonomy dispute remains open for the second human reviewer.",
+        "",
+        "## ADDITIONAL_ENTITY_OR_SITE contract",
+        "",
+    ]
+    for fixture in matrix["replication_identity_contract_cases"]:
+        lines.append(f"- `{fixture['fixture_id']}`: expected `{fixture['expected_status']}`, actual `{fixture['actual_status']}` — {fixture['boundary']}")
+    lines.extend([
+        "",
+        "These are test fixtures only and are not new case evidence.",
+        "",
+        "## Nine-source review matrix",
+        "",
+        "| Source | Lineage root | Author relationship | Class | E-level | OEG-001 | OEG-002 | Counterevidence / limitation | Pending confirmation |",
+        "|---|---|---|---|---:|---|---|---|---|",
+    ])
+    for row in matrix["rows"]:
+        relationship = " ".join(row["author_relationship"]).replace("|", "\\|")
+        limitation = row["counterevidence_or_limitation"].replace("|", "\\|")
+        pending = ", ".join(f"`{field}`" for field in row["fields_pending_confirmation"])
+        lines.append(
+            f"| [{row['source_key']}]({row['url']}) | `{row['lineage_root_source_key']}` | {relationship} | "
+            f"`{row['dependency_class']}` | `{row['evidence_level']}` | "
+            f"`{row['gap_qualification']['OEG-CML-001']['status']}` | "
+            f"`{row['gap_qualification']['OEG-CML-002']['status']}` | {limitation} | {pending} |"
+        )
+    lines.extend([
+        "",
+        "## Approval gate",
+        "",
+        "A second real reviewer must inspect every row, the Chindata E3 ceiling, and the positive/negative replication fixtures before the review status can change. No automatic case-state write, merge, or production deployment is authorized.",
+        "",
+    ])
+    return "\n".join(lines).encode("utf-8")
+
+
 def render_source_dependency_page() -> bytes:
     fragment = (ROOT / "scripts/templates/source-dependency-section-v0.1.html").read_text(encoding="utf-8").rstrip()
     page = f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>800V DC Source Dependency View | StructEvidence</title><meta name="description" content="Auditable source lineage, dependency class, E0-E5 evidence level and gap qualification for the public 800V DC evidence packet."><link rel="canonical" href="https://structurevidence.org/cases/800vdc/source-dependency/"><link rel="alternate" type="application/json" href="https://structurevidence.org/cases/800vdc/source-dependency-v0.1.json"><meta property="og:title" content="800V DC Source Dependency View"><meta property="og:description" content="Nine reviewed URLs, seven evidence lineages, and explicit gap-specific qualification results."><meta property="og:type" content="article"><meta property="og:url" content="https://structurevidence.org/cases/800vdc/source-dependency/"><link rel="stylesheet" href="/assets/product.css?v=20261001-gravity"><link rel="stylesheet" href="/assets/source-dependency.css?v=20261025-phase-b"></head><body class="product-site"><a class="skip-link" href="#main">Skip to content</a>
 <header class="product-header"><nav class="product-nav" aria-label="Primary navigation"><a class="product-brand" href="/"><span>SE</span><strong>StructEvidence</strong></a><div class="locale-switcher" aria-label="Language"><a href="/" lang="en">EN</a><a href="/zh-cn/" lang="zh-CN">简中</a><a href="/es/" lang="es">ES</a></div><button class="product-nav-toggle" type="button" aria-expanded="false" aria-controls="product-links" data-product-nav-toggle>Menu</button><div class="product-links" id="product-links"><a aria-current="page" href="/cases/800vdc/">800V DC case</a><a href="/gaps/">Open Evidence Gaps</a><a href="/method.html">Method</a></div></nav></header>
-<main class="product-main" id="main"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">StructEvidence</a><span>›</span><a href="/cases/">Cases</a><span>›</span><a href="/cases/800vdc/">800V DC</a><span>›</span><span aria-current="page">Source dependency</span></nav><section class="page-hero case-hero" aria-labelledby="page-title"><p class="eyebrow">CML-PDRE-001 · append-only Phase B review</p><h1 id="page-title">800V DC Source Dependency View</h1><p class="lead">An independently checkable ledger of who originated each reviewed record, what evidence level it reaches, and whether it qualifies the two open evidence gaps.</p><div class="actions"><a class="button" href="/cases/800vdc/">Return to preserved case record</a><a class="button secondary" href="/cases/800vdc/source-dependency-v0.1.json">Machine-readable view</a><a class="button secondary" href="/gaps/OEG-CML-001/">Independent-validation gap</a><a class="button secondary" href="/gaps/OEG-CML-002/">Replication gap</a></div></section>
+<main class="product-main" id="main"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">StructEvidence</a><span>›</span><a href="/cases/">Cases</a><span>›</span><a href="/cases/800vdc/">800V DC</a><span>›</span><span aria-current="page">Source dependency</span></nav><section class="page-hero case-hero" aria-labelledby="page-title"><p class="eyebrow">CML-PDRE-001 · append-only Phase B review</p><h1 id="page-title">800V DC Source Dependency View</h1><p class="lead">An independently checkable ledger of who originated each reviewed record, what evidence level it reaches, and whether it qualifies the two open evidence gaps.</p><div class="actions"><a class="button" href="/cases/800vdc/">Return to preserved case record</a><a class="button secondary" href="/cases/800vdc/source-dependency-v0.1.json">Machine-readable view</a><a class="button secondary" href="/cases/800vdc/source-dependency-review-matrix-v0.1.json">Nine-source review matrix</a><a class="button secondary" href="/gaps/OEG-CML-001/">Independent-validation gap</a><a class="button secondary" href="/gaps/OEG-CML-002/">Replication gap</a></div></section>
 {fragment}
 </main><footer class="product-footer"><div class="product-wrap footer-grid"><strong>StructEvidence</strong><a href="/cases/800vdc/">Preserved case record</a><a href="/gaps/">Open Evidence Gaps</a><a href="/method.html">Method</a><a href="/privacy.html">Privacy</a><span>Source lineage is separate from evidence truth and case state.</span></div></footer><script src="/assets/product.js"></script></body></html>
 '''
     return page.encode("utf-8")
 
 
-def build_hash_report(registry_bytes: bytes, view_bytes: bytes, page_bytes: bytes, css_bytes: bytes) -> dict[str, Any]:
+def build_hash_report(
+    registry: dict[str, Any],
+    registry_bytes: bytes,
+    view_bytes: bytes,
+    page_bytes: bytes,
+    css_bytes: bytes,
+    matrix_bytes: bytes,
+    supplemental_review_bytes: bytes,
+) -> dict[str, Any]:
     baseline = json.loads(BASELINE_PATH.read_text(encoding="utf-8"))
     current = {path: sha256_file(path) for path in baseline["protected_paths"]}
     changed = [path for path, digest in current.items() if digest != baseline["protected_paths"][path]]
     packet_hashes = {spec["packet_path"]: sha256_file(spec["packet_path"]) for spec in SOURCE_SPECS}
     expected_packet_hashes = {spec["packet_path"]: spec["packet_sha256"] for spec in SOURCE_SPECS}
     packet_mismatches = [path for path, digest in packet_hashes.items() if digest != expected_packet_hashes[path]]
+    initial_registry = {
+        "schema_version": registry["schema_version"],
+        "rubric_version": registry["rubric_version"],
+        "rows": [row for row in registry["rows"] if row["supersession"]["predecessor_source_row_id"] is None],
+    }
+    reconstructed_initial_registry_sha256 = sha256_bytes(json_bytes(initial_registry))
     return {
         "project": "SE-DUAL-SITE-UPGRADE-002",
         "phase": "B",
         "baseline_main_sha": "f89f5dbba30c3f504833418d643786680d5769ca",
-        "generated_at": REVIEWED_AT,
+        "generated_at": SUPPLEMENT_REVIEWED_AT,
         "protected_original_manifest": str(BASELINE_PATH.relative_to(ROOT)),
         "protected_originals_changed": changed,
         "source_packet_sha256": packet_hashes,
         "source_packet_hash_mismatches": packet_mismatches,
+        "append_only_reconciliation": {
+            "initial_registry_expected_sha256": INITIAL_REGISTRY_SHA256,
+            "initial_registry_reconstructed_sha256": reconstructed_initial_registry_sha256,
+            "initial_registry_unchanged": reconstructed_initial_registry_sha256 == INITIAL_REGISTRY_SHA256,
+            "supersession_rows_added": 2,
+            "second_review_status": "PENDING_HUMAN_REVIEW",
+        },
         "generated_artifact_sha256": {
             "protocol/source-dependency/registry-v0.1.json": sha256_bytes(registry_bytes),
             "cases/800vdc/source-dependency-v0.1.json": sha256_bytes(view_bytes),
             "cases/800vdc/source-dependency/index.html": sha256_bytes(page_bytes),
             "assets/source-dependency.css": sha256_bytes(css_bytes),
+            "cases/800vdc/source-dependency-review-matrix-v0.1.json": sha256_bytes(matrix_bytes),
+            "docs/implementation/SE-DUAL-SITE-002-PHASE-B-SUPPLEMENTAL-REVIEW.md": sha256_bytes(supplemental_review_bytes),
             "protocol/source-dependency/qualification-rules-v0.1.json": sha256_file("protocol/source-dependency/qualification-rules-v0.1.json"),
             "protocol/source-dependency/qualification-rules-v0.2.json": sha256_file("protocol/source-dependency/qualification-rules-v0.2.json"),
         },
@@ -512,22 +803,36 @@ def outputs() -> dict[str, bytes]:
     rules_document = json.loads(RULES_PATH.read_text(encoding="utf-8"))
     registry = build_registry(rules_document)
     view = build_view(registry)
+    matrix = build_review_matrix(registry, rules_document)
     registry_bytes = json_bytes(registry)
     view_bytes = json_bytes(view)
+    matrix_bytes = json_bytes(matrix)
+    supplemental_review_bytes = render_supplemental_review(matrix)
     page_bytes = render_source_dependency_page()
     css_bytes = (ROOT / "assets/source-dependency.css").read_bytes()
-    hashes = build_hash_report(registry_bytes, view_bytes, page_bytes, css_bytes)
+    hashes = build_hash_report(
+        registry,
+        registry_bytes,
+        view_bytes,
+        page_bytes,
+        css_bytes,
+        matrix_bytes,
+        supplemental_review_bytes,
+    )
     return {
         "protocol/source-dependency/registry-v0.1.json": registry_bytes,
         "docs/protocol/source-dependency/registry-v0.1.json": registry_bytes,
         "cases/800vdc/source-dependency-v0.1.json": view_bytes,
         "docs/cases/800vdc/source-dependency-v0.1.json": view_bytes,
+        "cases/800vdc/source-dependency-review-matrix-v0.1.json": matrix_bytes,
+        "docs/cases/800vdc/source-dependency-review-matrix-v0.1.json": matrix_bytes,
         "cases/800vdc/source-dependency/index.html": page_bytes,
         "docs/cases/800vdc/source-dependency/index.html": page_bytes,
         "docs/assets/source-dependency.css": css_bytes,
         "docs/protocol/source-dependency/qualification-rules-v0.1.json": (ROOT / "protocol/source-dependency/qualification-rules-v0.1.json").read_bytes(),
         "docs/protocol/source-dependency/qualification-rules-v0.2.json": RULES_PATH.read_bytes(),
         "docs/protocol/source-dependency/schema-v0.1.json": (ROOT / "protocol/source-dependency/schema-v0.1.json").read_bytes(),
+        "docs/implementation/SE-DUAL-SITE-002-PHASE-B-SUPPLEMENTAL-REVIEW.md": supplemental_review_bytes,
         "docs/implementation/SE-DUAL-SITE-002-PHASE-B-HASHES.json": json_bytes(hashes),
     }
 

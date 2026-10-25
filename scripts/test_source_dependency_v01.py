@@ -12,8 +12,10 @@ from source_dependency_v01 import (
     REGISTRY_SCHEMA_VERSION,
     SourceDependencyError,
     assert_append_only,
+    current_rows,
     deterministic_metrics,
     evaluate_qualification,
+    is_additional_entity_or_site,
     load_rules,
     migrate_registry,
     seal_record,
@@ -27,6 +29,11 @@ RULES_DOCUMENT = json.loads(
 )
 RULES = load_rules(RULES_DOCUMENT)
 RULE_ID = "SE-SD-QR-OEG-CML-002-REPLICATION-v0.1"
+RULES_DOCUMENT_V02 = json.loads(
+    (ROOT / "protocol/source-dependency/qualification-rules-v0.2.json").read_text(encoding="utf-8")
+)
+RULES_V02 = load_rules(RULES_DOCUMENT_V02)
+RULE_ID_V02 = "SE-SD-QR-OEG-CML-002-REPLICATION-v0.2"
 
 
 def registry(*rows):
@@ -179,6 +186,63 @@ class SourceDependencyV01Test(unittest.TestCase):
         self.assertEqual(evaluate_qualification(item, RULES[RULE_ID])[0], "QUALIFIED")
         validate_registry(registry(item), RULES_DOCUMENT)
 
+    def test_v02_true_second_independent_site_qualifies(self):
+        item = row(
+            "TRUE-SECOND-SITE",
+            originator="ORIGINATOR-OPERATOR-B",
+            role="OPERATOR",
+            dependency="INDEPENDENT",
+            facets=[
+                "NAMED_OPERATOR",
+                "NAMED_SITE",
+                "MATERIALLY_COMPARABLE_ARCHITECTURE",
+                "COMMISSIONED_OR_OPERATING",
+                "EVENT_DATE",
+                "ADDITIONAL_ENTITY_OR_SITE",
+            ],
+        )
+        item["qualification_rule_id"] = RULE_ID_V02
+        item["rubric_version"] = "SE-SOURCE-DEPENDENCY-RUBRIC-v0.2"
+        status, reason = evaluate_qualification(item, RULES_V02[RULE_ID_V02])
+        item["qualification_status"] = status
+        item["qualification_reason"] = reason
+        item["reviewers"][0]["qualification_status"] = status
+        item = seal_record(item)
+        self.assertEqual(status, "QUALIFIED")
+        validate_registry({"schema_version": REGISTRY_SCHEMA_VERSION, "rubric_version": "SE-SOURCE-DEPENDENCY-RUBRIC-v0.2", "rows": [item]}, RULES_DOCUMENT_V02)
+
+    def test_v02_baseline_site_cannot_count_as_its_own_replication(self):
+        item = row("BASELINE-SITE-SELF-COUNT")
+        item["qualification_rule_id"] = RULE_ID_V02
+        item["rubric_version"] = "SE-SOURCE-DEPENDENCY-RUBRIC-v0.2"
+        status, reason = evaluate_qualification(item, RULES_V02[RULE_ID_V02])
+        item["qualification_status"] = status
+        item["qualification_reason"] = reason
+        item["reviewers"][0]["qualification_status"] = status
+        item = seal_record(item)
+        self.assertEqual(status, "NOT_QUALIFIED")
+        self.assertIn("ADDITIONAL_ENTITY_OR_SITE", reason)
+        validate_registry({"schema_version": REGISTRY_SCHEMA_VERSION, "rubric_version": "SE-SOURCE-DEPENDENCY-RUBRIC-v0.2", "rows": [item]}, RULES_DOCUMENT_V02)
+
+    def test_additional_entity_or_site_uses_operator_and_control_identity_not_host(self):
+        baseline = {"operator_id": "OPERATOR-A", "site_id": "SITE-A", "control_id": "CONTROL-A"}
+        self.assertTrue(is_additional_entity_or_site(
+            baseline,
+            {"operator_id": "OPERATOR-B", "site_id": "SITE-B", "control_id": "CONTROL-B"},
+        ))
+        self.assertTrue(is_additional_entity_or_site(
+            baseline,
+            {"operator_id": "OPERATOR-A", "site_id": "SITE-B", "control_id": "CONTROL-B"},
+        ))
+        self.assertFalse(is_additional_entity_or_site(
+            baseline,
+            {"operator_id": "OPERATOR-A", "site_id": "SITE-A", "control_id": "CONTROL-A", "publisher_host": "second-host.invalid"},
+        ))
+        self.assertFalse(is_additional_entity_or_site(
+            baseline,
+            {"operator_id": "OPERATOR-A", "site_id": "SITE-B", "control_id": "CONTROL-A"},
+        ))
+
     def test_missing_provenance_is_rejected(self):
         item = row("MISSING-PROVENANCE")
         item["authored_by_evidence"] = []
@@ -226,6 +290,22 @@ class SourceDependencyV01Test(unittest.TestCase):
         current = registry(original, successor)
         validate_registry(current, RULES_DOCUMENT)
         assert_append_only(previous, current)
+
+    def test_metrics_use_unsuperseded_rows_without_deleting_history(self):
+        original = row("ACTIVE-CORRECTION-001")
+        successor = row("ACTIVE-CORRECTION-002", level="E3", status="NOT_QUALIFIED", facets=[])
+        successor["supersession"] = {
+            "predecessor_source_row_id": original["source_row_id"],
+            "reason": "Append-only evidence-level correction.",
+        }
+        successor = seal_record(successor)
+        document = registry(original, successor)
+        validate_registry(document, RULES_DOCUMENT)
+        self.assertEqual([item["source_row_id"] for item in current_rows(document)], [successor["source_row_id"]])
+        metrics = deterministic_metrics(document, {"gap_id": "OEG-CML-002"})
+        self.assertEqual(metrics["reviewed_urls"]["value"], 1)
+        self.assertEqual(metrics["qualified_evidence_rows"]["value"], 0)
+        self.assertEqual(metrics["reviewed_urls"]["source_row_ids"], [successor["source_row_id"]])
 
     def test_registry_migration_is_idempotent_and_never_reclassifies(self):
         legacy_container = {"rows": []}

@@ -21,8 +21,12 @@ miscounted as its own replication.
 
 Evidence levels are `E0` intent, `E1` design/specification, `E2` simulation/lab,
 `E3` unattributed field-operation assertion, `E4` attributable field operation
-or commissioning with the required context, and `E5` independent attributable
-field evidence. Evidence level alone never determines truth or state. The
+with site, period, and method, and `E5` independent attributable field evidence.
+The Phase B supplemental review preserves the original Chindata E4 rows and
+appends V2 supersession rows with a conservative E3 ceiling because the bounded
+packet lacks period/method. E3 is explicitly flagged as an imperfect label
+because the source is attributable; human adjudication remains pending.
+Evidence level alone never determines truth or state. The
 versioned gap rule controls qualification; E5 is not a universal minimum.
 
 `scripts/source_dependency_v01.py` validates rows, hashes immutable events,

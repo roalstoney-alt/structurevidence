@@ -1345,6 +1345,162 @@
       },
       "event_timestamp": "2026-10-25T02:59:00Z",
       "record_hash": "bdab573c7cb45be24f127d735f6c592652208091f9517dc8a9641b66c2950bf1"
+    },
+    {
+      "schema_version": "se-source-dependency-row-v0.1",
+      "source_row_id": "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-CHINDATA-533-V2",
+      "claim_id": "CML-PDRE-001.INDEPENDENT_VALIDATION",
+      "gap_id": "OEG-CML-001",
+      "immutable_source": {
+        "url": "https://www.chindatagroup.com/media/news/533.html",
+        "title": "Chindata commercial-operation announcement for Sangyuan campus",
+        "publisher_host": "www.chindatagroup.com",
+        "capture": {
+          "capture_type": "STRUCTURED_SNAPSHOT",
+          "captured_at": "2026-09-20T10:46:47Z",
+          "sha256": "57e1ede12822f29e973c66d11db60a2e55a429cd4b7a4fea4bcc44d1c8aa1918",
+          "failure_reason": "The repository preserves a bounded structured packet, not a complete raw copy of the external publication."
+        }
+      },
+      "originator_id": "ORIGINATOR-CHINDATA",
+      "originator_role": "OPERATOR",
+      "authored_by_evidence": [
+        "The accepted atomic evidence record identifies Chindata as publisher and links the Chindata corporate-newsroom URL.",
+        "The 2026-10-14 bounded review records the page as the same Chindata operator claim."
+      ],
+      "originating_evidence_lineage": [],
+      "author_issuer_relationship_evidence": [
+        "The source is the named operator's own publication about its Sangyuan Cloud Computing Campus."
+      ],
+      "dependency_class": "ISSUER_AUTHORED",
+      "dependency_rationale": "This is attributable operator evidence, not independent validation of the operator's own deployment claim.",
+      "evidence_level": "E3",
+      "evidence_facets": [
+        "NAMED_OPERATOR",
+        "NAMED_SITE",
+        "MATERIALLY_COMPARABLE_ARCHITECTURE",
+        "COMMISSIONED_OR_OPERATING",
+        "EVENT_DATE",
+        "RESPONSIBLE_ORGANIZATION"
+      ],
+      "evidence_rationale": "Conservative E3 ceiling: the record is attributable and names a site, but the canonical E4 definition also requires a field period and method, which the bounded packet does not supply. E3 is itself an imperfect label because attribution exists; second-human-review adjudication remains pending.",
+      "qualification_rule_id": "SE-SD-QR-OEG-CML-001-INDEPENDENT-VALIDATION-v0.2",
+      "qualification_status": "NOT_QUALIFIED",
+      "qualification_reason": "E3 is below the rule minimum E4.",
+      "source_access_status": "READ_PARTIAL",
+      "search_run_id": "SE-800V-L1-REVIEW-20260920-01",
+      "search_scope": {
+        "query": "800VDC field deployment",
+        "inclusion_scope": "The accepted named 800VDC field-deployment record and its October 14 availability check.",
+        "exclusion_scope": "No general market census and no inference beyond the single operator-reported campus.",
+        "blocked_sources": [
+          "No full raw external page capture is stored; the hash covers the bounded atomic evidence record."
+        ]
+      },
+      "evidence_cutoff": "2026-10-22T14:02:00Z",
+      "last_checked_at": "2026-10-14T09:59:24Z",
+      "reviewed_at": "2026-10-25T03:34:00Z",
+      "rubric_version": "SE-SOURCE-DEPENDENCY-RUBRIC-v0.2",
+      "reviewers": [
+        {
+          "reviewer_id": "SE-PHASE-B-CODEX-REVIEW-20261025-01",
+          "reviewed_at": "2026-10-25T03:34:00Z",
+          "dependency_class": "ISSUER_AUTHORED",
+          "evidence_level": "E3",
+          "qualification_status": "NOT_QUALIFIED",
+          "note": "Append-only evidence-level correction after checking the canonical E0-E5 definition. A second human reviewer has not completed review."
+        }
+      ],
+      "reviewer_disagreement": {
+        "detected": false,
+        "fields": [],
+        "resolution_status": "NOT_APPLICABLE",
+        "resolution_note": "PENDING_HUMAN_REVIEW; no second reviewer record is claimed."
+      },
+      "supersession": {
+        "predecessor_source_row_id": "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-CHINDATA-533-V1",
+        "reason": "The V1 E4 label conflicts with the canonical requirement for site, period, and method; V2 applies a conservative E3 ceiling while preserving the attributable-authorship caveat."
+      },
+      "event_timestamp": "2026-10-25T03:34:00Z",
+      "record_hash": "4952ec928a5e3e8ece9353baf970a68432c04d7148e2771f38dadac55201bbcc"
+    },
+    {
+      "schema_version": "se-source-dependency-row-v0.1",
+      "source_row_id": "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-CHINDATA-533-V2",
+      "claim_id": "CML-PDRE-001.MULTI_ENTITY_REPLICATION",
+      "gap_id": "OEG-CML-002",
+      "immutable_source": {
+        "url": "https://www.chindatagroup.com/media/news/533.html",
+        "title": "Chindata commercial-operation announcement for Sangyuan campus",
+        "publisher_host": "www.chindatagroup.com",
+        "capture": {
+          "capture_type": "STRUCTURED_SNAPSHOT",
+          "captured_at": "2026-09-20T10:46:47Z",
+          "sha256": "57e1ede12822f29e973c66d11db60a2e55a429cd4b7a4fea4bcc44d1c8aa1918",
+          "failure_reason": "The repository preserves a bounded structured packet, not a complete raw copy of the external publication."
+        }
+      },
+      "originator_id": "ORIGINATOR-CHINDATA",
+      "originator_role": "OPERATOR",
+      "authored_by_evidence": [
+        "The accepted atomic evidence record identifies Chindata as publisher and links the Chindata corporate-newsroom URL.",
+        "The 2026-10-14 bounded review records the page as the same Chindata operator claim."
+      ],
+      "originating_evidence_lineage": [],
+      "author_issuer_relationship_evidence": [
+        "The source is the named operator's own publication about its Sangyuan Cloud Computing Campus."
+      ],
+      "dependency_class": "ISSUER_AUTHORED",
+      "dependency_rationale": "This is attributable operator evidence, not independent validation of the operator's own deployment claim.",
+      "evidence_level": "E3",
+      "evidence_facets": [
+        "NAMED_OPERATOR",
+        "NAMED_SITE",
+        "MATERIALLY_COMPARABLE_ARCHITECTURE",
+        "COMMISSIONED_OR_OPERATING",
+        "EVENT_DATE",
+        "RESPONSIBLE_ORGANIZATION"
+      ],
+      "evidence_rationale": "Conservative E3 ceiling: the record is attributable and names a site, but the canonical E4 definition also requires a field period and method, which the bounded packet does not supply. E3 is itself an imperfect label because attribution exists; second-human-review adjudication remains pending.",
+      "qualification_rule_id": "SE-SD-QR-OEG-CML-002-REPLICATION-v0.2",
+      "qualification_status": "NOT_QUALIFIED",
+      "qualification_reason": "E3 is below the rule minimum E4.",
+      "source_access_status": "READ_PARTIAL",
+      "search_run_id": "SE-800V-L1-REVIEW-20260920-01",
+      "search_scope": {
+        "query": "800VDC field deployment",
+        "inclusion_scope": "The accepted named 800VDC field-deployment record and its October 14 availability check.",
+        "exclusion_scope": "No general market census and no inference beyond the single operator-reported campus.",
+        "blocked_sources": [
+          "No full raw external page capture is stored; the hash covers the bounded atomic evidence record."
+        ]
+      },
+      "evidence_cutoff": "2026-10-22T14:02:00Z",
+      "last_checked_at": "2026-10-14T09:59:24Z",
+      "reviewed_at": "2026-10-25T03:34:00Z",
+      "rubric_version": "SE-SOURCE-DEPENDENCY-RUBRIC-v0.2",
+      "reviewers": [
+        {
+          "reviewer_id": "SE-PHASE-B-CODEX-REVIEW-20261025-01",
+          "reviewed_at": "2026-10-25T03:34:00Z",
+          "dependency_class": "ISSUER_AUTHORED",
+          "evidence_level": "E3",
+          "qualification_status": "NOT_QUALIFIED",
+          "note": "Append-only evidence-level correction after checking the canonical E0-E5 definition. A second human reviewer has not completed review."
+        }
+      ],
+      "reviewer_disagreement": {
+        "detected": false,
+        "fields": [],
+        "resolution_status": "NOT_APPLICABLE",
+        "resolution_note": "PENDING_HUMAN_REVIEW; no second reviewer record is claimed."
+      },
+      "supersession": {
+        "predecessor_source_row_id": "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-CHINDATA-533-V1",
+        "reason": "The V1 E4 label conflicts with the canonical requirement for site, period, and method; V2 applies a conservative E3 ceiling while preserving the attributable-authorship caveat."
+      },
+      "event_timestamp": "2026-10-25T03:34:00Z",
+      "record_hash": "c2297da97f328b5ad095a518d2da9625b7e1019460fec53f7ba30f53b06f18c3"
     }
   ]
 }

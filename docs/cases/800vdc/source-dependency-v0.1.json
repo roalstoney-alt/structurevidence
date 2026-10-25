@@ -15,7 +15,25 @@
   "review_policy": {
     "actual_reviewer_records": 1,
     "second_review_status": "PENDING_HUMAN_REVIEW",
-    "reviewer_id": "SE-PHASE-B-CODEX-REVIEW-20261025-01"
+    "reviewer_id": "SE-PHASE-B-CODEX-REVIEW-20261025-01",
+    "classification_supersessions": 2
+  },
+  "chindata_e4_consistency_review": {
+    "status": "MATERIAL_INCONSISTENCY_CORRECTED_BY_SUPERSESSION_PENDING_HUMAN_REVIEW",
+    "canonical_definition": "attributable field record with site, period, and method",
+    "missing_from_bounded_packet": [
+      "observation_period",
+      "methodology"
+    ],
+    "retained_facts": [
+      "attributable_operator",
+      "named_site",
+      "reported_commercial_operation",
+      "materially_relevant_architecture"
+    ],
+    "active_level": "E3",
+    "active_level_caveat": "E3 is a conservative ceiling and an imperfect label, not a claim that authorship is unattributed; the rubric lacks a separate label for attributable field assertions missing period/method.",
+    "second_review_status": "PENDING_HUMAN_REVIEW"
   },
   "rule_discrepancy": {
     "status": "RESOLVED_BY_APPEND_ONLY_RULE_VERSION",
@@ -28,7 +46,7 @@
       "reviewed_urls": {
         "value": 9,
         "source_row_ids": [
-          "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-CHINDATA-533-V1",
+          "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-CHINDATA-533-V2",
           "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-PI-IDEAL-SSCB-20261012-V1",
           "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-SIEMENS-REINHAUSEN-2026-V1",
           "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-SOLAREDGE-BUSINESSWIRE-20261013-V1",
@@ -49,7 +67,7 @@
       "distinct_evidence_lineages": {
         "value": 7,
         "source_row_ids": [
-          "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-CHINDATA-533-V1",
+          "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-CHINDATA-533-V2",
           "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-PI-IDEAL-SSCB-20261012-V1",
           "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-SIEMENS-REINHAUSEN-2026-V1",
           "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-SOLAREDGE-ORIGIN-20261013-V1",
@@ -68,7 +86,7 @@
       "distinct_originators": {
         "value": 7,
         "source_row_ids": [
-          "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-CHINDATA-533-V1",
+          "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-CHINDATA-533-V2",
           "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-PI-IDEAL-SSCB-20261012-V1",
           "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-SIEMENS-REINHAUSEN-2026-V1",
           "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-SOLAREDGE-BUSINESSWIRE-20261013-V1",
@@ -137,7 +155,7 @@
         "classified_row_count": 9,
         "total_row_count": 9,
         "source_row_ids": [
-          "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-CHINDATA-533-V1",
+          "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-CHINDATA-533-V2",
           "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-PI-IDEAL-SSCB-20261012-V1",
           "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-SIEMENS-REINHAUSEN-2026-V1",
           "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-SOLAREDGE-BUSINESSWIRE-20261013-V1",
@@ -161,7 +179,7 @@
       "reviewed_urls": {
         "value": 9,
         "source_row_ids": [
-          "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-CHINDATA-533-V1",
+          "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-CHINDATA-533-V2",
           "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-PI-IDEAL-SSCB-20261012-V1",
           "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-SIEMENS-REINHAUSEN-2026-V1",
           "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-SOLAREDGE-BUSINESSWIRE-20261013-V1",
@@ -182,7 +200,7 @@
       "distinct_evidence_lineages": {
         "value": 7,
         "source_row_ids": [
-          "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-CHINDATA-533-V1",
+          "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-CHINDATA-533-V2",
           "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-PI-IDEAL-SSCB-20261012-V1",
           "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-SIEMENS-REINHAUSEN-2026-V1",
           "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-SOLAREDGE-ORIGIN-20261013-V1",
@@ -201,7 +219,7 @@
       "distinct_originators": {
         "value": 7,
         "source_row_ids": [
-          "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-CHINDATA-533-V1",
+          "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-CHINDATA-533-V2",
           "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-PI-IDEAL-SSCB-20261012-V1",
           "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-SIEMENS-REINHAUSEN-2026-V1",
           "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-SOLAREDGE-BUSINESSWIRE-20261013-V1",
@@ -270,7 +288,7 @@
         "classified_row_count": 9,
         "total_row_count": 9,
         "source_row_ids": [
-          "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-CHINDATA-533-V1",
+          "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-CHINDATA-533-V2",
           "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-PI-IDEAL-SSCB-20261012-V1",
           "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-SIEMENS-REINHAUSEN-2026-V1",
           "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-SOLAREDGE-BUSINESSWIRE-20261013-V1",
@@ -319,16 +337,16 @@
       "rubric_version": "SE-SOURCE-DEPENDENCY-RUBRIC-v0.2",
       "gap_assessments": {
         "OEG-CML-001": {
-          "source_row_id": "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-CHINDATA-533-V1",
+          "source_row_id": "SE-SOURCE-ROW-CML-PDRE-001-INDEPENDENT-VALIDATION-CHINDATA-533-V2",
           "qualification_status": "NOT_QUALIFIED",
-          "qualification_reason": "Required facets are missing: METHODOLOGY, OBSERVATION_PERIOD, OPERATING_CONDITIONS.",
-          "record_hash": "e7367b08cafa5b4ced4247a0255cce304ef119dd2493d69ec46c52770bd6cda4"
+          "qualification_reason": "E3 is below the rule minimum E4.",
+          "record_hash": "4952ec928a5e3e8ece9353baf970a68432c04d7148e2771f38dadac55201bbcc"
         },
         "OEG-CML-002": {
-          "source_row_id": "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-CHINDATA-533-V1",
+          "source_row_id": "SE-SOURCE-ROW-CML-PDRE-001-REPLICATION-CHINDATA-533-V2",
           "qualification_status": "NOT_QUALIFIED",
-          "qualification_reason": "Required facets are missing: ADDITIONAL_ENTITY_OR_SITE.",
-          "record_hash": "1eff9877eb5cb0fd1e7ac05531a82fe7e4a6cedb21a93eec1a52438a0af8f1d1"
+          "qualification_reason": "E3 is below the rule minimum E4.",
+          "record_hash": "c2297da97f328b5ad095a518d2da9625b7e1019460fec53f7ba30f53b06f18c3"
         }
       }
     },
