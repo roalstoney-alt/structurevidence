@@ -1,0 +1,115 @@
+{
+  "project": "SE-IREN-P0-STAGING-FINAL-ACCEPTANCE-002",
+  "date": "2026-10-27",
+  "timezone": "Asia/Shanghai",
+  "supersedes_gate_status_only": "SE-IREN-P0-STAGING-ACCEPTANCE-001",
+  "historical_report_overwritten": false,
+  "locked_head_sha": "fc0615d0e6e2799909d72baaa743dd1bfb3f20cd",
+  "pr": {
+    "number": 54,
+    "draft": true,
+    "merged": false,
+    "branch": "codex/se-iren-intake-hardening-v01"
+  },
+  "staging": {
+    "worker": "structevidence-commercial-staging",
+    "d1_name": "structurevidence-customer-cases-staging",
+    "d1_id": "65dc6680-0832-401d-8772-6a082b68673c",
+    "url": "https://structevidence-commercial-staging.roalstoney.workers.dev",
+    "synthetic_records_only": true,
+    "request_count": 4
+  },
+  "cloudflare_access": {
+    "evidence_class": "REAL_PROVIDER_OBSERVED",
+    "endpoint": "/api/admin/requests",
+    "http_status": 200,
+    "result": "PASS",
+    "target_request": {
+      "request_id": "SE-REQ-E56EABAB6D574DC3BC7C",
+      "status": "SUBMITTED",
+      "privacy_class": "CUSTOMER_PRIVATE",
+      "research_authorization_status": "NOT_AUTHORIZED",
+      "human_owner": null,
+      "matches_staging_d1": true
+    },
+    "jwt_persisted": false,
+    "otp_persisted": false,
+    "identity_persisted": false,
+    "authentication_bypassed": false
+  },
+  "turnstile": {
+    "result": "PASS_LAYERED",
+    "real_provider_observed": [
+      {
+        "case": "valid_challenge",
+        "observations": 2,
+        "http_status": 201,
+        "result": "PASS"
+      },
+      {
+        "case": "invalid_token",
+        "http_status": 400,
+        "error": "Human verification failed",
+        "d1_write": false,
+        "result": "PASS"
+      }
+    ],
+    "deterministic_fault_injection": [
+      { "case": "missing_token", "http_status": 400, "d1_write": false, "result": "PASS" },
+      { "case": "expired_token", "http_status": 400, "d1_write": false, "result": "PASS" },
+      { "case": "replayed_token", "first_status": 201, "replay_status": 400, "logical_writes": 1, "result": "PASS" },
+      { "case": "wrong_hostname", "http_status": 400, "d1_write": false, "result": "PASS" },
+      { "case": "wrong_action", "http_status": 400, "d1_write": false, "result": "PASS" },
+      { "case": "provider_error", "http_status": 503, "d1_write": false, "result": "PASS" },
+      { "case": "provider_timeout", "http_status": 503, "d1_write": false, "result": "PASS" }
+    ],
+    "deterministic_cases_claimed_as_real_provider": false
+  },
+  "d1_recheck": {
+    "target_request_count": 1,
+    "target_event_count": 1,
+    "target_consent_count": 1,
+    "target_idempotency_count": 1,
+    "consent_version": "SE-CUSTOMER-PRIVACY-v1",
+    "consent_accepted": true,
+    "idempotency_active_at_check": true,
+    "append_only_triggers_present": 4,
+    "event_noop_update_rejected": true,
+    "consent_noop_update_rejected": true,
+    "result": "PASS"
+  },
+  "production_isolation": {
+    "production_worker_changed": false,
+    "production_d1_changed": false,
+    "production_post_count": 0,
+    "production_pending_migrations": ["0003_intake_hardening.sql"],
+    "production_latest_deployment_at": "2026-10-08T05:23:20.397Z",
+    "result": "PASS"
+  },
+  "gates": {
+    "access_authorized_admin_read": "PASS",
+    "layered_turnstile_acceptance": "PASS",
+    "consent_audit": "PASS",
+    "idempotency": "PASS",
+    "append_only": "PASS",
+    "privacy": "PASS",
+    "production_isolation": "PASS"
+  },
+  "tests": {
+    "cloudflare_worker": { "passed": 56, "failed": 0 },
+    "turnstile_focused": { "passed": 4, "failed": 0 },
+    "staging_rejection_matrix": { "passed": 9, "failed": 0 },
+    "staging_frontend": { "passed": 6, "failed": 0 },
+    "staging_idempotency_transport": "PASS",
+    "public_record_drift": "PASS",
+    "internal_links": { "broken": 0, "orphan": 0 },
+    "repository_python": { "total": 41, "passed": 30, "pre_existing_failures": 11, "new_failures": 0 },
+    "git_diff_check": "PASS",
+    "new_regression_count": 0
+  },
+  "risk_acceptance_authority": "OWNER_ONLY",
+  "ready_for_owner_production_review": true,
+  "merge_authorized": false,
+  "production_deployment_authorized": false,
+  "public_pilot_authorized": false
+}
