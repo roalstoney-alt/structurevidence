@@ -1,0 +1,99 @@
+{
+  "project": "SE-IREN-P0-STAGING-ACCEPTANCE-001",
+  "date": "2026-10-27",
+  "timezone": "Asia/Shanghai",
+  "base_main_sha": "56f8e345ddfc697855c8eb9492dc0b49d24c6fcc",
+  "head_sha": "cfda41c4b9f66fc987488d82bb62f79704a22294",
+  "pr_number": 54,
+  "pr_draft": true,
+  "staging": {
+    "worker": "structevidence-commercial-staging",
+    "worker_version_id": "19f0ef29-c7c0-4cd0-b628-a68d860ec203",
+    "url": "https://structevidence-commercial-staging.roalstoney.workers.dev",
+    "d1_name": "structurevidence-customer-cases-staging",
+    "d1_id": "65dc6680-0832-401d-8772-6a082b68673c",
+    "d1_schema_sha256": "92776469b985558cb44427a55d4a4234fa30cb8c7b2cf965cb064741053cdf5b",
+    "rate_limit_namespace_id": "842054",
+    "turnstile_expected_hostname": "structevidence-commercial-staging.roalstoney.workers.dev",
+    "turnstile_expected_action": "public-intake",
+    "access_api_app_id": "debb1428-4311-465d-a8dd-44cba4de0408",
+    "access_api_policy_id": "6219ceeb-9708-49ac-ba8c-7defd4aa62eb",
+    "access_ui_app_id": "3dc32aeb-3e9d-4636-b2f0-981804d58e03",
+    "access_ui_policy_id": "a137e064-be11-4f20-9eaf-00dc1b43aa9c",
+    "synthetic_logical_records": 4
+  },
+  "production": {
+    "worker_changed": false,
+    "d1_changed": false,
+    "post_count": 0,
+    "pending_migrations": ["0003_intake_hardening.sql"],
+    "deployment": false,
+    "public_pilot_started": false,
+    "social_post_sent": 0
+  },
+  "gates": {
+    "migrations": "PASS",
+    "real_turnstile": "BLOCKED",
+    "staging_http_e2e": "BLOCKED",
+    "idempotency_concurrency": "PASS",
+    "consent_audit": "PASS",
+    "append_only": "PASS",
+    "three_language_forms": "PASS",
+    "admin_access": "BLOCKED",
+    "privacy_and_logging": "PASS",
+    "public_record_drift": "PASS",
+    "internal_links": "PASS"
+  },
+  "real_turnstile_boundary": {
+    "valid_challenge_count": 2,
+    "valid_challenge_http_201": true,
+    "invalid_token_http_400": true,
+    "missing_token_fail_closed": true,
+    "real_expired_replayed_wrong_hostname_wrong_action_timeout_matrix_complete": false,
+    "deterministic_fail_closed_coverage": [
+      "missing",
+      "invalid",
+      "expired",
+      "replayed",
+      "wrong_hostname",
+      "wrong_action",
+      "provider_error",
+      "timeout"
+    ]
+  },
+  "admin_access_boundary": {
+    "unauthorized_redirected_to_access": true,
+    "distinct_ui_and_api_audiences": true,
+    "authorized_http_200_read": false,
+    "blocker": "Cloudflare identity-provider login remained at loading state in the in-app browser; no assertion or bypass was attempted."
+  },
+  "tests": {
+    "node": { "passed": 54, "failed": 0 },
+    "targeted_intake_and_staging": { "passed": 23, "failed": 0 },
+    "local_d1_e2e": "PASS",
+    "staging_frontend_checks": { "passed": 6, "failed": 0 },
+    "staging_rejection_matrix": { "passed": 9, "failed": 0 },
+    "staging_idempotency_transport": "PASS",
+    "repository_python": { "total": 41, "passed": 30, "pre_existing_failures": 11, "new_failures": 0 },
+    "new_regression_count": 0,
+    "git_diff_check": "PASS"
+  },
+  "retention": {
+    "idempotency_ttl_seconds": 86400,
+    "append_only_history_deleted": false,
+    "cleanup_executed": false,
+    "controlled_cleanup_requirement": "A separately reviewed retention operation must preserve append-only audit meaning; silent history rewrite is prohibited."
+  },
+  "source_hashes": {
+    "deploy/cloudflare-landing/wrangler.staging.jsonc": "bab9d6461b0500fda6a4d12b55356dae00ccae0d73e6dc9686f323385af77fd1",
+    "deploy/cloudflare-landing/staging-worker.js": "0037795ec2a4d77102410b4103fb82a0bb360c8ca326004852ca0712bda1335b",
+    "deploy/cloudflare-landing/scripts/validate-staging-manifest.mjs": "900dcd2a8b105eb108425d86ebf77b44db3f0c3ed8aeae905acaa0eda1269e39",
+    "deploy/cloudflare-landing/scripts/check-staging-frontends.mjs": "ee26f9fcf0e1b8447c44613c0d845f6ef26f16cd044fc60f5bbf02555be0e001",
+    "deploy/cloudflare-landing/scripts/run-staging-rejection-matrix.mjs": "fcf4f43ba65cad1936eae18c0cb2ec126187957a84f266701566abad94f6c932",
+    "deploy/cloudflare-landing/scripts/run-staging-idempotency-fixture.mjs": "efb23e63a0392de76f781aed06a28b9cb942f8837b7303c0c7ec65f82613a4fa",
+    "deploy/cloudflare-landing/test/staging-boundary.test.js": "9fa7ffc5b432c9c5a03f02ff8fb0de8d3d91270b15ab8e9358197cfe12c464fe",
+    "deploy/cloudflare-landing/migrations/0003_intake_hardening.sql": "fd31df9a29343319f8a5787f8e2ee5689b9668b2808cdc0c3b907b29908b0df6"
+  },
+  "ready_for_owner_production_review": false,
+  "merge_authorized": false
+}
