@@ -1,0 +1,112 @@
+{
+  "project": "SE-IREN-P0-R2-ISOLATED-RESTORE-DRILL-001",
+  "repository": "roalstoney-alt/structurevidence",
+  "pr_number": 54,
+  "locked_head_sha": "0b95ff5db2d299a4b6db6b1a3ce79f36da74d0ff",
+  "authorization": "R2_AUTHORIZED",
+  "observation_window_utc": {
+    "bookmark_query_start": "2026-10-26T23:42:59.814Z",
+    "bookmark_query_end": "2026-10-26T23:43:12.388Z",
+    "database_info_start": "2026-10-26T23:43:21.790Z",
+    "database_info_end": "2026-10-26T23:43:32.330Z"
+  },
+  "source_database": {
+    "name": "structurevidence-customer-cases",
+    "database_id": "aee10591-536a-47af-8ee0-957551ba2360",
+    "created_at_utc": "2026-09-23T13:51:09.274Z",
+    "running_in_region": "APAC",
+    "read_replication_mode": "auto",
+    "database_size_bytes": 147456,
+    "reported_table_count": 9
+  },
+  "native_capability_preflight": {
+    "d1_info_read": "PASS",
+    "time_travel_bookmark_read": "PASS",
+    "bookmark_present": true,
+    "bookmark_value_stored": false,
+    "bookmark_sha256": "d90ea6e1361082a6ad1cefe0ab5a0e96f23c4a420fd44abf495de3c57ba4d697",
+    "time_travel_enabled_for_source": true,
+    "isolated_clone_or_fork_supported": false,
+    "restore_semantics": "IN_PLACE_OVERWRITE_ONLY",
+    "official_capability_source": "https://developers.cloudflare.com/d1/reference/time-travel/",
+    "official_api_source": "https://developers.cloudflare.com/api/resources/d1/subresources/database/subresources/time_travel/",
+    "documented_retention": "PLAN_DEPENDENT_7_OR_30_DAYS",
+    "account_specific_retention": "UNVERIFIED"
+  },
+  "permissions": {
+    "authenticated_d1_metadata_read": "PASS",
+    "authenticated_time_travel_bookmark_read": "PASS",
+    "d1_create_permission": "NOT_TESTED_STOP_GATE",
+    "d1_restore_write_permission": "NOT_TESTED_STOP_GATE",
+    "secret_or_token_value_retrieved": false,
+    "operator_identity_stored": false
+  },
+  "isolation_gate": {
+    "required_target": "NEW_INDEPENDENT_D1_WITH_NO_WORKER_OR_ROUTE_BINDING",
+    "result": "BLOCKED_UNSUPPORTED_NATIVE_ISOLATED_RESTORE",
+    "reason": "Current Cloudflare D1 Time Travel cannot clone or fork an existing database to a new database. The only documented restore operation overwrites the named database in place, which is prohibited for the production source.",
+    "stop_before_database_create": true,
+    "stop_before_restore": true
+  },
+  "execution": {
+    "result": "STOPPED_BLOCKED_BEFORE_MUTATION",
+    "native_backup_created": false,
+    "new_restore_database_created": false,
+    "in_place_restore_invoked": false,
+    "export_invoked": false,
+    "import_invoked": false,
+    "staging_copy_created": false,
+    "local_copy_created": false,
+    "target_worker_binding_created": false,
+    "target_public_route_created": false,
+    "target_aggregate_counts_checked": false,
+    "target_migrations_checked": false,
+    "target_schema_metadata_checked": false,
+    "target_indexes_checked": false,
+    "target_foreign_keys_checked": false,
+    "target_append_only_triggers_checked": false
+  },
+  "recovery_measurement": {
+    "rpo": "NOT_MEASURED_NO_ISOLATED_RESTORE",
+    "rto": "NOT_MEASURED_NO_ISOLATED_RESTORE",
+    "restore_duration_seconds": null,
+    "recoverability": "UNKNOWN"
+  },
+  "retention_and_cleanup": {
+    "restore_target_retention": "NOT_APPLICABLE_NO_TARGET_CREATED",
+    "cleanup_status": "NOT_APPLICABLE_NO_TARGET_CREATED",
+    "production_bookmarks_modified": false
+  },
+  "prohibited_actions": {
+    "production_d1_write_count": 0,
+    "migration_0003_applied": false,
+    "worker_deployed": false,
+    "production_post_count": 0,
+    "pr_merged": false,
+    "public_pilot_started": false
+  },
+  "privacy": {
+    "customer_rows_retrieved": false,
+    "private_identifiers_retrieved": false,
+    "bookmark_value_committed": false,
+    "secret_values_retrieved": false,
+    "jwt_retrieved": false,
+    "otp_retrieved": false
+  },
+  "validation": {
+    "r2_stop_gate": { "tests": 2, "passed": 2, "failed": 0 },
+    "cloudflare_landing_node": { "tests": 60, "passed": 60, "failed": 0 },
+    "repository_python": { "tests": 41, "passed": 30, "pre_existing_failures": 11, "new_failures": 0 },
+    "public_record_drift": "PASS",
+    "internal_link_audit": {
+      "result": "PASS",
+      "orphan_pages": 0,
+      "broken_internal_links": 0,
+      "cases_without_state": 0,
+      "evidence_without_parent": 0
+    },
+    "new_regression_count": 0
+  },
+  "r2_result": "BLOCKED",
+  "ready_for_owner_production_release": false
+}
