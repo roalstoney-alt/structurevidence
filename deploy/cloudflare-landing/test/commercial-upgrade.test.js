@@ -16,7 +16,8 @@ test("Decision Pack has a dedicated privacy-safe scope form", async () => {
   assert.match(html, /data-request-form data-request-type="CONTEXT"/);
   assert.match(html, /name="requested_output" value="DECISION_PACK"/);
   assert.match(html, /What would change the decision\?/);
-  assert.match(html, /name="confidentiality_ack" type="checkbox" required/);
+  assert.match(html, /name="consent_accepted" type="checkbox" required/);
+  assert.match(html, /class="cf-turnstile"/);
   assert.doesNotMatch(html, /type="file"/);
 });
 

@@ -1,0 +1,18 @@
+{
+  "$schema": "../node_modules/wrangler/config-schema.json",
+  "name": "structevidence-intake-local-e2e-never-deploy",
+  "main": "local-e2e-worker.js",
+  "compatibility_date": "2026-09-12",
+  "compatibility_flags": ["nodejs_compat"],
+  "vars": {
+    "PUBLIC_ORIGINS": "https://structevidence.com",
+    "IDEMPOTENCY_TTL_SECONDS": "86400"
+  },
+  "d1_databases": [
+    {
+      "binding": "CUSTOMER_CASES_DB",
+      "database_name": "structurevidence-customer-cases",
+      "database_id": "aee10591-536a-47af-8ee0-957551ba2360"
+    }
+  ]
+}
