@@ -210,9 +210,17 @@ test("default Turnstile verifier calls Siteverify and validates hostname/action 
     const rejectedDb = new FakeD1(), rejectedEnv = { ...baseEnv(rejectedDb), TURNSTILE_SECRET_KEY: "local-test-secret" };
     assert.equal((await createWorker().fetch(publicPost(basePayload({ turnstile_token: "wrong-host" }), { key: "77777777777777777777" }), rejectedEnv)).status, 400); assert.equal(rejectedDb.requests.length, 0);
 
+    globalThis.fetch = async () => new Response(JSON.stringify({ success: true, hostname: "structevidence.com", action: "wrong-action" }), { headers: { "content-type": "application/json" } });
+    const actionDb = new FakeD1(), actionEnv = { ...baseEnv(actionDb), TURNSTILE_SECRET_KEY: "local-test-secret" };
+    assert.equal((await createWorker().fetch(publicPost(basePayload({ turnstile_token: "wrong-action" }), { key: "79797979797979797979" }), actionEnv)).status, 400); assert.equal(actionDb.requests.length, 0);
+
     globalThis.fetch = async () => { throw new Error("provider unavailable"); };
     const failedDb = new FakeD1(), failedEnv = { ...baseEnv(failedDb), TURNSTILE_SECRET_KEY: "local-test-secret" };
     assert.equal((await createWorker().fetch(publicPost(basePayload({ turnstile_token: "provider-down" }), { key: "88888888888888888888" }), failedEnv)).status, 503); assert.equal(failedDb.requests.length, 0);
+
+    globalThis.fetch = async (_url, { signal }) => new Promise((_resolve, reject) => signal.addEventListener("abort", () => reject(new DOMException("aborted", "AbortError")), { once: true }));
+    const timeoutDb = new FakeD1(), timeoutEnv = { ...baseEnv(timeoutDb), TURNSTILE_SECRET_KEY: "local-test-secret", TURNSTILE_TIMEOUT_MS: "10" };
+    assert.equal((await createWorker().fetch(publicPost(basePayload({ turnstile_token: "provider-timeout" }), { key: "89898989898989898989" }), timeoutEnv)).status, 503); assert.equal(timeoutDb.requests.length, 0);
   } finally { globalThis.fetch = originalFetch; }
 });
 

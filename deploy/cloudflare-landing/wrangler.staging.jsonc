@@ -1,0 +1,44 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "structevidence-commercial-staging",
+  "main": "staging-worker.js",
+  "compatibility_date": "2026-09-12",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": true,
+  "preview_urls": false,
+  "keep_vars": true,
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 1
+  },
+  "vars": {
+    "DEPLOYMENT_ENVIRONMENT": "staging",
+    "STAGING_TEST_ONLY": "true",
+    "PUBLIC_ORIGINS": "https://structevidence-commercial-staging.roalstoney.workers.dev",
+    "TEAM_DOMAIN": "https://structevidence.cloudflareaccess.com",
+    "ADMIN_UI_AUD": "9cf7b0f8fdcfa8aed8c4a4769d8a2f3aa0fb048fd301b101a48e99fa2348ca28",
+    "ADMIN_API_AUD": "3196db5037ea3eb9881feea41d741153fb3128b03782c4e3e7feb0360d12ce04",
+    "TURNSTILE_SITE_KEY": "0x4AAAAAAFmnDsU1J6J2iR8u",
+    "TURNSTILE_EXPECTED_HOSTNAMES": "structevidence-commercial-staging.roalstoney.workers.dev",
+    "TURNSTILE_EXPECTED_ACTION": "public-intake",
+    "IDEMPOTENCY_TTL_SECONDS": "86400"
+  },
+  "d1_databases": [
+    {
+      "binding": "CUSTOMER_CASES_DB",
+      "database_name": "structurevidence-customer-cases-staging",
+      "database_id": "65dc6680-0832-401d-8772-6a082b68673c",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "ratelimits": [
+    {
+      "name": "PUBLIC_INTAKE_RATE_LIMITER",
+      "namespace_id": "842054",
+      "simple": {
+        "limit": 5,
+        "period": 10
+      }
+    }
+  ]
+}

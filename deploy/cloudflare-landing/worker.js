@@ -140,7 +140,9 @@ async function defaultTurnstileVerifier(token, request, env) {
   form.set("secret", secret); form.set("response", token);
   const remoteIp = request.headers.get("cf-connecting-ip");
   if (remoteIp) form.set("remoteip", remoteIp);
-  const controller = new AbortController(), timeout = setTimeout(() => controller.abort(), 5000);
+  const configuredTimeout = Number(env.TURNSTILE_TIMEOUT_MS || 5000);
+  const timeoutMs = Number.isFinite(configuredTimeout) ? Math.min(Math.max(configuredTimeout, 10), 10_000) : 5000;
+  const controller = new AbortController(), timeout = setTimeout(() => controller.abort(), timeoutMs);
   let result;
   try {
     const response = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", { method: "POST", body: form, signal: controller.signal });
