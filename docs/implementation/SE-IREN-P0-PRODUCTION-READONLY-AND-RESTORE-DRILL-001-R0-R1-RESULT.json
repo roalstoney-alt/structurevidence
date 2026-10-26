@@ -1,0 +1,137 @@
+{
+  "project": "SE-IREN-P0-PRODUCTION-READONLY-AND-RESTORE-DRILL-001",
+  "phases": ["R0", "R1"],
+  "observation_window_utc": {
+    "start": "2026-10-26T23:15:00Z",
+    "end": "2026-10-26T23:22:00Z"
+  },
+  "repository": {
+    "pr_number": 54,
+    "pr_head": "ff1083d319c4171add34191d63413a68e0fb968d",
+    "base_branch": "main",
+    "base_sha": "56f8e345ddfc697855c8eb9492dc0b49d24c6fcc",
+    "draft": true,
+    "merged": false
+  },
+  "r0": {
+    "result": "PASS",
+    "staging_worker_version": "19f0ef29-c7c0-4cd0-b628-a68d860ec203",
+    "staging_worker_percentage": 100,
+    "staging_evidence_changed": false
+  },
+  "r1": {
+    "result": "PARTIAL",
+    "production_worker": {
+      "name": "structevidence-commercial",
+      "deployment_id": "391419b5-b526-437b-b1d6-3e7c40d27fce",
+      "version_id": "d2525a27-12bc-49a6-9328-f11af90ea7d8",
+      "percentage": 100,
+      "version_created_at_utc": "2026-10-08T05:23:19.285972Z",
+      "deployment_created_at_utc": "2026-10-08T05:23:20.397785Z",
+      "compatibility_date": "2026-09-12",
+      "plain_text_variable_names": ["PUBLIC_ORIGINS", "TEAM_DOMAIN"],
+      "secret_names": ["ADMIN_API_AUD", "ADMIN_EMAILS", "ADMIN_UI_AUD", "GAP_RATE_LIMIT_SALT"],
+      "d1_binding": {
+        "name": "CUSTOMER_CASES_DB",
+        "database_id": "aee10591-536a-47af-8ee0-957551ba2360"
+      },
+      "rate_limit_binding": {
+        "name": "PUBLIC_INTAKE_RATE_LIMITER",
+        "namespace_id": "842001"
+      },
+      "turnstile_site_key_binding_present": false,
+      "turnstile_secret_name_present": false,
+      "turnstile_expected_hostname_binding_present": false,
+      "turnstile_expected_action_binding_present": false
+    },
+    "routes": {
+      "edge_observation": "PASS",
+      "structevidence_com": { "status": 200 },
+      "www_structevidence_com": { "status": 308, "safe_location": "https://structevidence.com/" },
+      "control_plane_inventory": "BLOCKED",
+      "blocker": "The authenticated dashboard settings surface did not expose route content and this Wrangler version has no read-only route-list command. Edge behavior was observed, but exact control-plane route inventory is not claimed."
+    },
+    "production_d1": {
+      "name": "structurevidence-customer-cases",
+      "database_id": "aee10591-536a-47af-8ee0-957551ba2360",
+      "region_observed": "APAC",
+      "migration_0003": "PENDING_NOT_APPLIED",
+      "existing_tables": ["customers", "requests", "request_events"],
+      "absent_tables": ["request_idempotency", "request_consent_receipts"],
+      "aggregate_counts": {
+        "customers": 3,
+        "requests": 3,
+        "request_events": 5
+      },
+      "indexes": [
+        "idx_customers_email",
+        "idx_requests_created_at",
+        "idx_requests_status",
+        "idx_requests_customer",
+        "idx_request_events_request"
+      ],
+      "foreign_keys": [
+        "requests.customer_id -> customers.customer_id",
+        "request_events.request_id -> requests.request_id"
+      ],
+      "foreign_key_violations": 0,
+      "triggers": ["request_events_no_update", "request_events_no_delete"],
+      "table_info": "PASS",
+      "sqlite_master_ddl": "BLOCKED",
+      "ddl_blocker": "Cloudflare D1 rejected sqlite_master.sql retrieval with SQLITE_AUTH. Field metadata, indexes, foreign keys, trigger names, aggregate counts, and table absence were verified through narrower read-only queries."
+    },
+    "http": [
+      { "at_utc": "2026-10-26T23:21:34.015Z", "method": "GET", "path": "/", "status": 200, "bytes": 7127, "sha256": "7cc7dbc365d9cd9b2527e473563ea532bf09c4fc3f3997fd493fc84e1743bf02" },
+      { "at_utc": "2026-10-26T23:21:34.554Z", "method": "GET", "path": "/verify/", "status": 200, "bytes": 7877, "sha256": "cc99bbe5cc46458df6758def9d5dada35d2d7aae1cccad0372141364d03b5401" },
+      { "at_utc": "2026-10-26T23:21:34.630Z", "method": "GET", "path": "/context/", "status": 200, "bytes": 7268, "sha256": "0655411efa695a2c1ecf63349a8ccd55105b99f1aec1ab6db7c659cf4dbc2eea" },
+      { "at_utc": "2026-10-26T23:21:34.699Z", "method": "GET", "path": "/decision-pack/", "status": 200, "bytes": 7755, "sha256": "cefce2a3ea6ea63d93b7f8cfd2de12a7bc7b7fe57bf229949092850eb5a0be9d" },
+      { "at_utc": "2026-10-26T23:21:34.760Z", "method": "GET", "path": "/assets/app.js", "status": 200, "bytes": 3727, "sha256": "0bd3bf36bbc62a3f61d29afd027c4bf5978e7600d9583312f35b93dde2342524" },
+      { "at_utc": "2026-10-26T23:21:35.492Z", "method": "OPTIONS", "path": "/api/requests", "status": 204, "allow_origin": "https://structevidence.com", "allow_methods": "POST, OPTIONS", "allow_headers": "content-type" },
+      { "at_utc": "2026-10-26T23:21:35.556Z", "method": "GET", "path": "/api/admin/requests", "status": 302, "safe_location": "https://structevidence.cloudflareaccess.com/cdn-cgi/access/login/structevidence.com" },
+      { "at_utc": "2026-10-26T23:21:35.731Z", "method": "GET", "path": "/admin/requests/", "status": 302, "safe_location": "https://structevidence.cloudflareaccess.com/cdn-cgi/access/login/structevidence.com" }
+    ],
+    "compatibility_observation": {
+      "current_options_allows_idempotency_key": false,
+      "current_deployed_turnstile_bindings_present": false,
+      "pr54_worker_and_frontend_deployable_separately": false,
+      "result": "NOT_READY_FOR_RELEASE"
+    }
+  },
+  "privacy": {
+    "customer_rows_retrieved": false,
+    "private_identifiers_retrieved": false,
+    "secret_values_retrieved": false,
+    "jwt_retrieved": false,
+    "otp_retrieved": false,
+    "report_contains_only_aggregate_counts": true
+  },
+  "prohibited_actions": {
+    "backup_run": false,
+    "export_run": false,
+    "restore_target_created": false,
+    "migration_applied": false,
+    "worker_deployed": false,
+    "production_post_count": 0,
+    "pr_merged": false,
+    "public_pilot_started": false
+  },
+  "validation": {
+    "production_report_guard": { "tests": 2, "passed": 2, "failed": 0 },
+    "cloudflare_landing_node": { "tests": 58, "passed": 58, "failed": 0 },
+    "repository_python": { "tests": 41, "passed": 30, "pre_existing_failures": 11, "new_failures": 0 },
+    "scripts_python": { "tests": 520, "passed": 470, "pre_existing_failures": 39, "pre_existing_errors": 11, "new_failures_or_errors": 0 },
+    "public_record_drift": "PASS",
+    "internal_link_audit": {
+      "result": "PASS",
+      "orphan_pages": 0,
+      "broken_internal_links": 0,
+      "cases_without_state": 0,
+      "evidence_without_parent": 0
+    },
+    "new_regression_count": 0
+  },
+  "r2_restore_drill": "NOT_AUTHORIZED_NOT_PERFORMED",
+  "production_backup_recoverability": "UNKNOWN",
+  "human_privacy_review": "PENDING",
+  "ready_for_owner_production_release": false
+}
