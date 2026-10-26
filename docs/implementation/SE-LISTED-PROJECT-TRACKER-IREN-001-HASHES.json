@@ -1,0 +1,38 @@
+{
+  "baseline_main_sha": "305bbef43f2ccdef9d025ac802dfca6b6ad6a8df",
+  "bet_register_snapshot_sha256": "9adba96066c435695c9dce510583fead21bd44ae08b209e8a41210555027ae90",
+  "case_state_changed": false,
+  "claims_not_established": 8,
+  "claims_supported_as_attributed": 13,
+  "event_head_sha256": "93841b3a9cf9fd04bdbf83aed90f40acea656d0efa81bd3f330b33695dcc704b",
+  "evidence_cutoff": "2026-10-26",
+  "files": {
+    "research/internal/listed-projects/iren/change-events-v0.1.jsonl": "3f6c3fbc0bbcf5448837daf788166276d1e867ec20c75cc739f40cc218dd0cda",
+    "research/internal/listed-projects/iren/corporate-bet-register-v0.1.json": "7caa1270fb7e5f59b34187235d4a5b49a090d037382985bb98fcf1d2ef097f72",
+    "research/internal/listed-projects/iren/eight-week-pilot-protocol-v0.1.md": "5affb340cf57c540ceed48a771e7726ca71ad7793a62f0bd356e62bd2bd4cb05",
+    "research/internal/listed-projects/iren/neutrality-conflicts-policy-v0.1.md": "a7927ab94570125ace3c4c5a5fa414aab33898f2dc9f744cb8e2a16ded5ae54f",
+    "research/internal/listed-projects/iren/source-inventory-v0.1.json": "78c093562dd494d0f7129ebd53cc4001fd6190ca91ca3017e8cd4093ec75bfe1",
+    "research/internal/listed-projects/iren/source-inventory-v0.1.md": "0dfd20b72b2c7c1077681ff19765ad3e1770d17778a894f566be1d0b7c713387",
+    "research/internal/listed-projects/iren/tracker-v0.1.json": "1e32711d1f3dedc15f8a4e9238f4e97f24e2e9a9000a87df3f11697a32b79cb1",
+    "research/internal/listed-projects/iren/tracker-v0.1.md": "3f2a9acabca93021fd8fd83c66ea2a0297ee970e0f5fa5ff64c293fc19b8f338",
+    "research/internal/listed-projects/iren/weekly-digest-template-v0.1.md": "352b7d239f17a39f52cb60de7471bc2d4af3ee2e9ab1f09a89cb773c2aa81e4e"
+  },
+  "generated_at": "2026-10-26T01:56:24Z",
+  "implementation_files": {
+    "protocol/listed-project-tracker/README.md": "1a8b89f2fcc39925583dc3faf7f64ff72962e23865ec92dd261d78c0245ac049",
+    "protocol/listed-project-tracker/schema-v0.1.json": "4421c262cd2564c7fefbb191554871fa48cb4f37ff87a90e7d2ca228c85a2c85",
+    "scripts/build_listed_project_tracker_iren_v01.py": "fb2ed57096279f840b5c4f08d6994909b34ae9e2c1cf6bbae8ab9fcce7854e15",
+    "scripts/listed_project_tracker_iren_v01.py": "dcd8b4e091c4a6343646adbb395980491c96382ec2f40d1117a759beab4b02db",
+    "scripts/test_listed_project_tracker_iren_v01.py": "d6f7362083681c41239d36041740e3872163db93d5d5a2abdd76e91ca476ba98"
+  },
+  "original_records_changed": 0,
+  "prior_case_sha256": "96507322272876e5b6dba8e788e626ac9fdc0fd9b6a29485783d072e90f5176d",
+  "production_deploy": false,
+  "project": "SE-LISTED-PROJECT-TRACKER-IREN-001",
+  "public_pilot_started": false,
+  "report_sha256": "9543e69c4112cbeb620fa6899b73e8b1d3649505d41fd3d3239705b6d39f883a",
+  "source_content_reviewed_count": 11,
+  "source_count": 11,
+  "source_raw_capture_failed_count": 9,
+  "tracker_snapshot_sha256": "aa024f1967de044e2e818c9207f3bfd3cd300179c0fa8d508947aee2ca4a9fae"
+}
