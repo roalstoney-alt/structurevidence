@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://structurevidence.org/protocol/listed-project-tracker/schema-v0.1.json",
+  "title": "Listed-project financial evidence attribute v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "source_dependency",
+    "liability_regime",
+    "assurance",
+    "assurance_scope",
+    "disclosure_stages"
+  ],
+  "properties": {
+    "source_dependency": {
+      "enum": ["ISSUER_AUTHORED", "DERIVED", "PARTIALLY_DEPENDENT", "INDEPENDENT", "UNKNOWN"]
+    },
+    "liability_regime": {
+      "enum": ["FILED", "FURNISHED", "UNFILED", "UNDETERMINED"]
+    },
+    "assurance": {
+      "enum": ["AUDITED_FINANCIAL_STATEMENT", "REVIEWED_INTERIM", "UNAUDITED_DISCLOSURE", "PROMOTIONAL", "NOT_APPLICABLE", "UNKNOWN"]
+    },
+    "assurance_scope": {"type": "string", "minLength": 1},
+    "disclosure_stages": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {"enum": ["D0", "D1", "D2", "D3", "D4a", "D4b"]}
+    }
+  }
+}

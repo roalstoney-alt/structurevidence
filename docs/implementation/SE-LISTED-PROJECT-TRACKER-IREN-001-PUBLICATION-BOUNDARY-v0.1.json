@@ -1,0 +1,146 @@
+{
+  "project": "SE-LISTED-PROJECT-TRACKER-IREN-001",
+  "record_version": "v0.1",
+  "audited_at": "2026-10-26T03:00:00Z",
+  "classification_definitions": {
+    "PUBLIC_SAFE": "Content reviewed as safe for a public repository and root Pages artifact; this does not itself authorize publication.",
+    "INTERNAL_DRAFT_NOT_APPROVED_FOR_PUBLICATION": "Non-private working material that lacks publication approval and must not be tracked in this public repository or included in its Pages artifact.",
+    "PRIVATE_RESTRICTED": "Customer, credential, contractual, personal, security-sensitive, or otherwise restricted material requiring authenticated least-privilege storage; never permitted in this repository or Pages artifact."
+  },
+  "repository_boundary": {
+    "repository": "roalstoney-alt/structurevidence",
+    "visibility": "PUBLIC",
+    "default_branch": "main",
+    "effect": "Every tracked object and reachable commit is repository-public independently of GitHub Pages."
+  },
+  "pages_boundary": {
+    "source_branch": "main",
+    "artifact_path": ".",
+    "source_scope": "REPOSITORY_ROOT",
+    "evidence_run_id": 40198754542,
+    "evidence_document": "docs/implementation/SE-DUAL-SITE-002-PHASE-E-PAGES-AUDIT.md",
+    "upload_action": "actions/upload-pages-artifact@v3",
+    "default_hidden_file_behavior": "EXCLUDED_UNLESS_INCLUDE_HIDDEN_FILES_TRUE",
+    "always_excluded": [".git", ".github"],
+    "non_hidden_tracked_file_effect": "INCLUDED_IN_PAGES_ARTIFACT",
+    "nojekyll_effect": "DISABLES_JEKYLL_PROCESSING; DOES_NOT_CREATE_ACCESS_CONTROL",
+    "robots_or_noindex_effect": "CRAWLER_HINT_ONLY; DOES_NOT_CREATE_ACCESS_CONTROL"
+  },
+  "historical_exposure": {
+    "public_commit": "51bdf7831fe0682c2e709074448cb7704f6a9e46",
+    "status": "PUBLIC_REPOSITORY_EXPOSURE_OCCURRED",
+    "pages_deployment_status": "NOT_DEPLOYED_FROM_THIS_PR",
+    "reversibility": "A later deletion prevents inclusion from the remediated HEAD but cannot make a public commit or pull-request history secret.",
+    "history_rewrite_performed": false,
+    "content_sensitivity_review": "No PRIVATE_RESTRICTED customer data, credentials, personal data, or proprietary source bytes were identified in the reviewed IREN draft payload."
+  },
+  "non_public_historical_files": [
+    {
+      "path": "docs/implementation/SE-LISTED-PROJECT-TRACKER-IREN-001-PILOT-HANDOFF.md",
+      "classification": "INTERNAL_DRAFT_NOT_APPROVED_FOR_PUBLICATION",
+      "sha256": "d611cba1d629588b4022f7eff03a6c76d993e16a5f44f890ce18bfc561a7b827",
+      "pages_url_if_present_on_main": "https://structurevidence.org/docs/implementation/SE-LISTED-PROJECT-TRACKER-IREN-001-PILOT-HANDOFF.md",
+      "remediated_head_status": "ABSENT"
+    },
+    {
+      "path": "scripts/build_listed_project_tracker_iren_v01.py",
+      "classification": "INTERNAL_DRAFT_NOT_APPROVED_FOR_PUBLICATION",
+      "sha256": "fb2ed57096279f840b5c4f08d6994909b34ae9e2c1cf6bbae8ab9fcce7854e15",
+      "pages_url_if_present_on_main": "https://structurevidence.org/scripts/build_listed_project_tracker_iren_v01.py",
+      "remediated_head_status": "ABSENT"
+    },
+    {
+      "path": "research/internal/listed-projects/iren/change-events-v0.1.jsonl",
+      "classification": "INTERNAL_DRAFT_NOT_APPROVED_FOR_PUBLICATION",
+      "sha256": "3f6c3fbc0bbcf5448837daf788166276d1e867ec20c75cc739f40cc218dd0cda",
+      "pages_url_if_present_on_main": "https://structurevidence.org/research/internal/listed-projects/iren/change-events-v0.1.jsonl",
+      "remediated_head_status": "ABSENT"
+    },
+    {
+      "path": "research/internal/listed-projects/iren/corporate-bet-register-v0.1.json",
+      "classification": "INTERNAL_DRAFT_NOT_APPROVED_FOR_PUBLICATION",
+      "sha256": "7caa1270fb7e5f59b34187235d4a5b49a090d037382985bb98fcf1d2ef097f72",
+      "pages_url_if_present_on_main": "https://structurevidence.org/research/internal/listed-projects/iren/corporate-bet-register-v0.1.json",
+      "remediated_head_status": "ABSENT"
+    },
+    {
+      "path": "research/internal/listed-projects/iren/eight-week-pilot-protocol-v0.1.md",
+      "classification": "INTERNAL_DRAFT_NOT_APPROVED_FOR_PUBLICATION",
+      "sha256": "5affb340cf57c540ceed48a771e7726ca71ad7793a62f0bd356e62bd2bd4cb05",
+      "pages_url_if_present_on_main": "https://structurevidence.org/research/internal/listed-projects/iren/eight-week-pilot-protocol-v0.1.md",
+      "remediated_head_status": "ABSENT"
+    },
+    {
+      "path": "research/internal/listed-projects/iren/neutrality-conflicts-policy-v0.1.md",
+      "classification": "INTERNAL_DRAFT_NOT_APPROVED_FOR_PUBLICATION",
+      "sha256": "a7927ab94570125ace3c4c5a5fa414aab33898f2dc9f744cb8e2a16ded5ae54f",
+      "pages_url_if_present_on_main": "https://structurevidence.org/research/internal/listed-projects/iren/neutrality-conflicts-policy-v0.1.md",
+      "remediated_head_status": "ABSENT"
+    },
+    {
+      "path": "research/internal/listed-projects/iren/source-inventory-v0.1.json",
+      "classification": "INTERNAL_DRAFT_NOT_APPROVED_FOR_PUBLICATION",
+      "sha256": "78c093562dd494d0f7129ebd53cc4001fd6190ca91ca3017e8cd4093ec75bfe1",
+      "pages_url_if_present_on_main": "https://structurevidence.org/research/internal/listed-projects/iren/source-inventory-v0.1.json",
+      "remediated_head_status": "ABSENT"
+    },
+    {
+      "path": "research/internal/listed-projects/iren/source-inventory-v0.1.md",
+      "classification": "INTERNAL_DRAFT_NOT_APPROVED_FOR_PUBLICATION",
+      "sha256": "0dfd20b72b2c7c1077681ff19765ad3e1770d17778a894f566be1d0b7c713387",
+      "pages_url_if_present_on_main": "https://structurevidence.org/research/internal/listed-projects/iren/source-inventory-v0.1.md",
+      "remediated_head_status": "ABSENT"
+    },
+    {
+      "path": "research/internal/listed-projects/iren/tracker-v0.1.json",
+      "classification": "INTERNAL_DRAFT_NOT_APPROVED_FOR_PUBLICATION",
+      "sha256": "1e32711d1f3dedc15f8a4e9238f4e97f24e2e9a9000a87df3f11697a32b79cb1",
+      "pages_url_if_present_on_main": "https://structurevidence.org/research/internal/listed-projects/iren/tracker-v0.1.json",
+      "remediated_head_status": "ABSENT"
+    },
+    {
+      "path": "research/internal/listed-projects/iren/tracker-v0.1.md",
+      "classification": "INTERNAL_DRAFT_NOT_APPROVED_FOR_PUBLICATION",
+      "sha256": "3f2a9acabca93021fd8fd83c66ea2a0297ee970e0f5fa5ff64c293fc19b8f338",
+      "pages_url_if_present_on_main": "https://structurevidence.org/research/internal/listed-projects/iren/tracker-v0.1.md",
+      "remediated_head_status": "ABSENT"
+    },
+    {
+      "path": "research/internal/listed-projects/iren/weekly-digest-template-v0.1.md",
+      "classification": "INTERNAL_DRAFT_NOT_APPROVED_FOR_PUBLICATION",
+      "sha256": "352b7d239f17a39f52cb60de7471bc2d4af3ee2e9ab1f09a89cb773c2aa81e4e",
+      "pages_url_if_present_on_main": "https://structurevidence.org/research/internal/listed-projects/iren/weekly-digest-template-v0.1.md",
+      "remediated_head_status": "ABSENT"
+    }
+  ],
+  "public_safe_head_files": [
+    "docs/implementation/SE-EVIDENCE-STRUCTURE-NEUTRALITY-001.md",
+    "docs/implementation/SE-NO-RATING-NO-DECISION-001.md",
+    "docs/implementation/SE-LISTED-PROJECT-TRACKER-IREN-001-HASHES.json",
+    "docs/implementation/SE-LISTED-PROJECT-TRACKER-IREN-001-PUBLICATION-BOUNDARY-v0.1.json",
+    "docs/implementation/SE-LISTED-PROJECT-TRACKER-IREN-001-PUBLICATION-BOUNDARY-v0.1.md",
+    "protocol/listed-project-tracker/README.md",
+    "protocol/listed-project-tracker/schema-v0.1.json",
+    "scripts/listed_project_tracker_iren_v01.py",
+    "scripts/test_listed_project_tracker_iren_v01.py"
+  ],
+  "public_safe_repo_only_files": [],
+  "private_restricted_files": [],
+  "raw_capture_boundary": {
+    "sec_source_count": 9,
+    "status": "RAW_CAPTURE_FAILED",
+    "source_byte_sha256": null,
+    "rule": "No remote-source byte hash may be inferred from a URL, parsed browser text, record digest, or derived packet hash."
+  },
+  "restricted_storage_plan": {
+    "status": "PROPOSED_NOT_PROVISIONED",
+    "internal_draft_store": "A separate private GitHub repository with Pages disabled, explicit collaborator/team allowlist, required 2FA/SSO where available, branch protection, audit logging, and no public fork permission.",
+    "private_restricted_store": "A private object bucket with public access disabled, encryption at rest, authenticated Cloudflare Access-protected Worker retrieval, least-privilege identity/service-token allowlists, short-lived downloads, and access logs.",
+    "public_repository_rule": "Only a reviewed public-safe release plus a content digest and release decision may be copied into this repository."
+  },
+  "production_actions": {
+    "merge": false,
+    "pages_deploy": false,
+    "public_pilot_start": false
+  }
+}
