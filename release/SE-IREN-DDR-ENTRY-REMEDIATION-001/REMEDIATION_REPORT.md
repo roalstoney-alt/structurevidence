@@ -23,6 +23,7 @@ DESKTOP_BROWSER = NOT_OBSERVED
 MOBILE_BROWSER = NOT_OBSERVED
 KEYBOARD_BROWSER = NOT_OBSERVED
 CTA_BROWSER_NAVIGATION = NOT_OBSERVED
+BROWSER_RETRY_2026_10_28 = NOT_OBSERVED
 IREN_TESTS = 17/17 PASS
 HISTORY_AND_SEO = 12/12 PASS
 CASE_REVIEW_STATUS = 6/6 PASS
@@ -53,7 +54,7 @@ The current `.com` client script reads `params.get("case")`, creates a hidden `c
 
 ## Browser observation boundary
 
-The real in-app browser again timed out while enabling focus emulation for the existing localhost tab. Desktop layout, mobile viewport, keyboard navigation, and live CTA navigation are therefore recorded as `NOT_OBSERVED`, not PASS. Static HTML, accessibility hooks, responsive source, link structure, and tests passed, but they are not represented as substitutes for the missing browser observation.
+After the prior tabs were closed, a fresh in-app browser tab was created for the local preview and the preview endpoint returned HTTP 200. The browser controller still timed out while enabling focus emulation before either the DOM or accessibility tree could be observed, including after switching the browser to background mode and retrying the fresh tab. Desktop layout, mobile viewport, keyboard navigation, live CTA navigation, and runtime inspection of `case_reference` therefore remain `NOT_OBSERVED`, not PASS. Static HTML, accessibility hooks, responsive source, link structure, and tests passed, but they are not represented as substitutes for the missing browser observation. No form was submitted.
 
 ## Evidence boundary
 
