@@ -1,0 +1,194 @@
+{
+  "directive": "SE-IREN-P0-R3-FULL-FORM-LOCALIZATION-003",
+  "completed_at_utc": "2026-10-27T10:11:08Z",
+  "repository": "roalstoney-alt/structurevidence",
+  "branch": "codex/se-iren-intake-hardening-v01",
+  "pull_request": 54,
+  "pull_request_draft": true,
+  "input_head_sha": "871b07474af08508a3c5470f953af75dc152c854",
+  "deployed_code_sha": "00a77cf15c7c6da23bec948e781804459794cea5",
+  "environment": {
+    "worker": "structevidence-commercial-staging",
+    "config": "deploy/cloudflare-landing/wrangler.staging.jsonc",
+    "workers_dev_only": true,
+    "production_routes": [],
+    "staging_d1_id": "65dc6680-0832-401d-8772-6a082b68673c",
+    "rate_limiter_namespace": "842054",
+    "worker_version_before": "64a10491-6cf2-40b9-ac6e-a7aca364d149",
+    "worker_version_after": "07358cc6-f01c-4ee3-8dc3-3a60b1559ee1",
+    "production_worker_changed": false,
+    "production_d1_changed": false
+  },
+  "localization": {
+    "paths": [
+      "/verify/",
+      "/context/",
+      "/decision-pack/"
+    ],
+    "locales": [
+      "en",
+      "zh-CN",
+      "es"
+    ],
+    "actual_dom_journeys": 9,
+    "actual_dom_passed": 9,
+    "verified_surfaces": [
+      "document title",
+      "html lang",
+      "form and boundary lang",
+      "field labels and label-control associations",
+      "help text",
+      "select display labels",
+      "submit buttons",
+      "Consent copy",
+      "Turnstile help",
+      "missing-verification errors",
+      "success confirmation",
+      "Research Boundary copy"
+    ],
+    "api_field_names_changed": false,
+    "select_api_values_changed": false,
+    "consent_version": "SE-CUSTOMER-PRIVACY-v1",
+    "consent_meaning_changed": false,
+    "intentional_english_tokens": [
+      "SUPPORTED",
+      "CONTRADICTED",
+      "NOT ESTABLISHED",
+      "UNKNOWN",
+      "VERIFICATION REQUIRED",
+      "SUBMITTED",
+      "CUSTOMER_PRIVATE",
+      "NOT_AUTHORIZED"
+    ],
+    "provider_controlled_copy": "The Cloudflare Turnstile checkbox label remained provider-controlled English in all three browser journeys.",
+    "scope_boundary": "The full intake form, Research Boundary, navigation labels, and intake confirmation are localized. Shared-route marketing narrative outside the form remains English and was not represented as translated."
+  },
+  "staging_browser_acceptance": {
+    "turnstile_evidence_class": "REAL_PROVIDER_OBSERVED",
+    "locales": {
+      "en": {
+        "path": "/verify/",
+        "create_status": 201,
+        "replay_status": 200,
+        "conflict_status": 409,
+        "request_id_sha256": "6ffb08e4aa23aef77dc410b1228c8c458a1005c09f2aa19786a91dbbf5883494",
+        "success_copy_localized": true
+      },
+      "zh-CN": {
+        "path": "/context/",
+        "create_status": 201,
+        "replay_status": 200,
+        "conflict_status": 409,
+        "request_id_sha256": "0928ed5d9149371ac4c14e4ee90e0f54e7a27512ef3f266fe0687a89e3f0ef3a",
+        "success_copy_localized": true
+      },
+      "es": {
+        "path": "/decision-pack/",
+        "create_status": 201,
+        "replay_status": 200,
+        "conflict_status": 409,
+        "request_id_sha256": "49a1dcc426d3c7043d0e410cb102592d759e81c5cf5afbd0f5679e571137c4a2",
+        "success_copy_localized": true
+      }
+    },
+    "raw_request_ids_committed": false,
+    "raw_idempotency_keys_committed": false,
+    "turnstile_tokens_committed": false,
+    "synthetic_payloads_committed": false
+  },
+  "staging_d1": {
+    "migrations_pending": 0,
+    "aggregate_counts_before": {
+      "customers": 7,
+      "requests": 7,
+      "request_events": 7,
+      "request_consent_receipts": 7,
+      "request_idempotency": 7
+    },
+    "aggregate_counts_after": {
+      "customers": 10,
+      "requests": 10,
+      "request_events": 10,
+      "request_consent_receipts": 10,
+      "request_idempotency": 10
+    },
+    "new_synthetic_records": {
+      "customers": 3,
+      "requests": 3,
+      "request_events": 3,
+      "request_consent_receipts": 3,
+      "request_idempotency": 3,
+      "bounded_private_not_authorized_unassigned": 3,
+      "valid_frozen_consents": 3
+    },
+    "append_only_trigger_count": 4,
+    "append_only_probes": {
+      "request_event_update": "REJECTED_SQLITE_CONSTRAINT_TRIGGER",
+      "request_event_delete": "REJECTED_SQLITE_CONSTRAINT_TRIGGER",
+      "consent_update": "REJECTED_SQLITE_CONSTRAINT_TRIGGER",
+      "consent_delete": "REJECTED_SQLITE_CONSTRAINT_TRIGGER"
+    },
+    "foreign_key_violations": 0
+  },
+  "access_and_cors": {
+    "unauthenticated_admin_get": 302,
+    "authenticated_browser_admin_read": "PASS_REQUEST_ARRAY_RETURNED",
+    "authenticated_synthetic_records_seen": 3,
+    "administrator_identity_committed": false,
+    "allowed_origin_options_status": 204,
+    "allowed_headers": [
+      "content-type",
+      "idempotency-key"
+    ],
+    "disallowed_origin_options_status": 204,
+    "disallowed_origin_allow_header_present": false,
+    "browser_cross_origin_options": "CORS_BLOCKED",
+    "browser_cross_origin_post_sent": false,
+    "same_origin_form_preflight": "NOT_APPLICABLE"
+  },
+  "hashes_sha256": {
+    "commercial_upgrade_js": "4f9af20c5c36b8d47090cc14c68266c7ea529bc78d549f0709726f0b5c074ada",
+    "worker_js": "8a01b397a92bcf9a6183fc79f6ca7c4f1ef54ed576c157f3c4368969e8f309bd",
+    "staging_worker_js": "0037795ec2a4d77102410b4103fb82a0bb360c8ca326004852ca0712bda1335b",
+    "wrangler_staging_jsonc": "bab9d6461b0500fda6a4d12b55356dae00ccae0d73e6dc9686f323385af77fd1",
+    "full_form_localization_test_js": "eeebca8fe483362b2fc63cdf23c51a002258b4e07f36ee88efd1d14ed4a4fd78",
+    "wrangler_dry_run_bundle": "727a0f37fa58c604c55cc902839d986c6541d016aec2e5462dc0af47701b4363"
+  },
+  "tests": {
+    "module_and_embedded_script_compile": "PASS",
+    "wrangler_staging_dry_run": "PASS",
+    "worker_suite": {
+      "passed": 75,
+      "failed": 0
+    },
+    "public_record_drift": "PASS",
+    "internal_links": {
+      "broken": 0,
+      "orphan": 0
+    },
+    "legacy_phase_b_guard": {
+      "passed": 2,
+      "failed": 1,
+      "classification": "PRE_EXISTING_ROOT_CTA_EXPECTATION_UNCHANGED"
+    },
+    "new_regression_count": 0,
+    "git_diff_check": "PASS"
+  },
+  "release_gates": {
+    "staging_acceptance": "PASS",
+    "human_privacy_legal_signoff": "PENDING",
+    "production_recoverability": "UNKNOWN",
+    "ready_for_owner_production_review": "NO",
+    "remaining_gate_count": 2
+  },
+  "prohibited_actions": {
+    "pull_request_merged": false,
+    "production_migration": false,
+    "production_worker_deploy": false,
+    "production_post_count": 0,
+    "public_pilot_started": false,
+    "social_publication": false,
+    "billing": false,
+    "outreach": false
+  }
+}
