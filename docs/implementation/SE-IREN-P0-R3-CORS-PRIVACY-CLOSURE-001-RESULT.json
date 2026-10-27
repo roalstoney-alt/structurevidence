@@ -1,0 +1,95 @@
+{
+  "schema_version": "SE-IREN-P0-R3-CORS-PRIVACY-CLOSURE-001-RESULT-v1",
+  "recorded_at_utc": "2026-10-27T00:54:12.638Z",
+  "repository": "roalstoney-alt/structurevidence",
+  "pull_request": 54,
+  "pull_request_state_required": "DRAFT_UNMERGED",
+  "locked_input_head": "081c5f29833427c6f140492d89a94c79678663a2",
+  "environment": "STAGING_ONLY",
+  "cors": {
+    "endpoint": "https://structevidence-commercial-staging.roalstoney.workers.dev/api/requests",
+    "allowed_origin_http_options": {
+      "observed_at_utc": "2026-10-27T00:54:01Z",
+      "origin": "https://structevidence-commercial-staging.roalstoney.workers.dev",
+      "status": 204,
+      "allow_origin_exact_match": true,
+      "allow_methods": ["POST", "OPTIONS"],
+      "allow_headers": ["content-type", "idempotency-key"],
+      "vary_origin": true,
+      "result": "PASS"
+    },
+    "disallowed_origin_http_options": {
+      "observed_at_utc": "2026-10-27T00:54:02Z",
+      "origin_class": "ISOLATED_LOCAL_TEST_ORIGIN",
+      "status": 204,
+      "allow_origin_present": false,
+      "allow_methods_present": false,
+      "allow_headers_present": false,
+      "result": "PASS_WITHHELD_CORS_APPROVAL"
+    },
+    "same_origin_form": {
+      "observed_at_utc": "2026-10-27T00:51:21.951Z",
+      "page_origin_equals_api_origin": true,
+      "automatic_browser_preflight_applicable": false,
+      "result": "BROWSER_PREFLIGHT_NOT_APPLICABLE_SAME_ORIGIN"
+    },
+    "cross_origin_browser": {
+      "observed_at_utc": "2026-10-27T00:54:12.638Z",
+      "origin_class": "ISOLATED_LOCAL_TEST_ORIGIN",
+      "requested_headers": ["content-type", "idempotency-key"],
+      "browser_outcome": "PREFLIGHT_REJECTED_BEFORE_POST",
+      "browser_error_name": "TypeError",
+      "staging_post_sent": false,
+      "result": "PASS_FAIL_CLOSED"
+    },
+    "real_staging_result": "PASS"
+  },
+  "live_locale_baseline": {
+    "observed_at_utc": "2026-10-27T00:57:51Z/2026-10-27T00:57:52Z",
+    "en_home": { "http_status": 200, "html_lang": "en", "sha256": "12fef2307160cb68bf0f2b10d59a03f1e762920e3521805eb8b1cf428f32adaa" },
+    "zh_cn_home": { "http_status": 200, "html_lang": "zh-CN", "sha256": "af408d57d7ff2ede47a7bb5ef161523b98d8c9d966dd902892ffd31c2cd51208" },
+    "es_home": { "http_status": 200, "html_lang": "es", "sha256": "0ca75e72dbeef88f7af3a0b2c2a57fa812775f9260ece09fd11992aec415f585" },
+    "verify_form": { "http_status": 200, "html_lang": "en", "sha256": "3749a63d723a2aa46173df8013b306e85f3624e136dc5b8caaea0c12e8ec1aff" },
+    "localized_shared_consent_before_patch_deploy": "INCOMPLETE_ENGLISH_ONLY",
+    "production_observation": "NOT_PERFORMED"
+  },
+  "localization_patch": {
+    "deployment_status": "SOURCE_ONLY_NOT_DEPLOYED",
+    "consent_version": "SE-CUSTOMER-PRIVACY-v1",
+    "locales": ["en", "zh-CN", "es"],
+    "privacy_meaning_changed": false,
+    "research_authorization_meaning_changed": false,
+    "publication_authorization_meaning_changed": false,
+    "localized_surfaces": ["consent", "turnstile_guidance", "validation_and_failure_status", "success_boundary"],
+    "commercial_upgrade_sha256": "1ce655d7167a7ac45682d1b924f4c1cf2a9c152ef7b09371085f2dd3e904cd4f",
+    "worker_sha256": "2218d1dbbeb182b21edb989b48f399c6841c8f247d19cd79f9a48bbd7736f21e"
+  },
+  "privacy_review": {
+    "checklist": "docs/implementation/SE-IREN-P0-R3-PRIVACY-LEGAL-SIGNOFF-CHECKLIST.md",
+    "assistant_signed": false,
+    "human_privacy_legal_signoff": "PENDING",
+    "signed_record_required_location": "RESTRICTED_INTERNAL_SYSTEM",
+    "public_repository_contains_signature_or_identity": false
+  },
+  "prohibited_actions": {
+    "production_post_count": 0,
+    "production_migration": false,
+    "production_worker_deploy": false,
+    "staging_worker_deploy": false,
+    "pull_request_merged": false,
+    "public_pilot_started": false,
+    "social_publication": false
+  },
+  "gates": {
+    "staging_cors_http_options": "PASS",
+    "staging_cross_origin_browser_fail_closed": "PASS",
+    "same_origin_preflight": "NOT_APPLICABLE",
+    "localized_copy_source_and_tests": "PASS_66_OF_66_WORKER_TESTS",
+    "public_record_drift": "PASS",
+    "internal_link_audit": "PASS_ZERO_BROKEN_ZERO_ORPHAN",
+    "wrangler_dry_run": "PASS_NO_DEPLOY",
+    "new_regression_count": 0,
+    "human_privacy_legal_signoff": "PENDING",
+    "ready_for_owner_production_release": "NO"
+  }
+}

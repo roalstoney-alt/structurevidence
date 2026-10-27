@@ -2,8 +2,67 @@ import { COMMERCIAL_CSS, COMMERCIAL_PAGES, page } from "./commercial-ui.js";
 import { renderDecisionBoundaryHome, withCommercialHomepageSeo } from "./decision-boundary.js";
 
 const field = (id, label, input, helper = "", wide = false) => `<label class="field${wide ? " wide" : ""}" for="${id}"><span>${label}</span>${input}${helper ? `<small>${helper}</small>` : ""}</label>`;
-const acknowledgement = (id) => `<label class="consent wide" for="${id}"><input id="${id}" name="consent_accepted" type="checkbox" required><span>I understand that this submission remains customer-private, does not authorize research, and will not be published without separate written authorization.</span></label>`;
-const turnstileChallenge = `<div class="turnstile-boundary wide"><div class="cf-turnstile" data-sitekey="__TURNSTILE_SITE_KEY__" data-action="public-intake" data-response-field-name="cf-turnstile-response"></div><p>Human verification is required before anything is recorded. If it cannot load, no request is submitted; use the email fallback or try again later.</p></div><script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>`;
+export const INTAKE_COPY = Object.freeze({
+  en: Object.freeze({
+    consent: "I understand that this submission remains customer-private, does not authorize research, and will not be published without separate written authorization.",
+    turnstileHelp: "Human verification is required before anything is recorded. If it cannot load, no request is submitted; use the email fallback or try again later.",
+    verificationRequired: "Complete human verification before submitting.",
+    verificationUnavailable: "Human verification is unavailable. Nothing was recorded; use the email fallback or try again later.",
+    recording: "Recording request…",
+    reviewFields: "Please review the submitted fields.",
+    conflict: "This idempotency key was already used for different request content. Nothing new was recorded; please submit again.",
+    requestTooLarge: "The request is too large. Nothing was recorded; reduce the submitted content and try again.",
+    verificationFailed: "Human verification failed. Nothing was recorded; complete a new verification and try again.",
+    serviceUnavailable: "The secure request service is unavailable. Nothing was recorded.",
+    emailFallback: "Use email fallback",
+    requestReceived: "Request received",
+    status: "Status",
+    privacy: "Privacy",
+    researchAuthorization: "Research authorization",
+    successDetail: "A human will review whether the question is bounded enough to scope. You will receive either a written scope or a request to narrow it. No research starts from this form.",
+    returnHome: "Return to StructEvidence →"
+  }),
+  "zh-CN": Object.freeze({
+    consent: "我理解：本次提交内容将保持为客户私有信息；本次提交不授权开展研究；未经另行书面授权，提交内容不会公开发布。",
+    turnstileHelp: "在记录任何内容之前，必须完成人机验证。如果无法加载验证，本次请求不会提交；请改用电子邮件备用方式或稍后重试。",
+    verificationRequired: "请在提交前完成人机验证。",
+    verificationUnavailable: "人机验证当前不可用。未记录任何内容；请改用电子邮件备用方式或稍后重试。",
+    recording: "正在记录请求……",
+    reviewFields: "请检查所提交的字段。",
+    conflict: "此幂等键已用于不同的请求内容。未新增任何记录；请重新提交。",
+    requestTooLarge: "请求内容过大。未记录任何内容；请减少提交内容后重试。",
+    verificationFailed: "人机验证失败。未记录任何内容；请重新完成人机验证后再试。",
+    serviceUnavailable: "安全请求服务当前不可用。未记录任何内容。",
+    emailFallback: "改用电子邮件备用方式",
+    requestReceived: "已收到请求",
+    status: "状态",
+    privacy: "隐私",
+    researchAuthorization: "研究授权",
+    successDetail: "人工将审核该问题是否足够明确，可进入范围界定。您将收到书面范围说明或缩小问题范围的请求。本表单不会启动任何研究。",
+    returnHome: "返回 StructEvidence →"
+  }),
+  es: Object.freeze({
+    consent: "Entiendo que este envío permanecerá privado para el cliente, no autoriza la realización de ninguna investigación y no se publicará sin una autorización escrita independiente.",
+    turnstileHelp: "Se requiere la verificación humana antes de registrar cualquier dato. Si no puede cargarse, no se envía ninguna solicitud; use la alternativa por correo electrónico o vuelva a intentarlo más tarde.",
+    verificationRequired: "Complete la verificación humana antes de enviar la solicitud.",
+    verificationUnavailable: "La verificación humana no está disponible. No se registró ningún dato; use la alternativa por correo electrónico o vuelva a intentarlo más tarde.",
+    recording: "Registrando la solicitud…",
+    reviewFields: "Revise los campos enviados.",
+    conflict: "Esta clave de idempotencia ya se utilizó con un contenido de solicitud diferente. No se registró nada nuevo; vuelva a enviar la solicitud.",
+    requestTooLarge: "La solicitud es demasiado grande. No se registró ningún dato; reduzca el contenido y vuelva a intentarlo.",
+    verificationFailed: "La verificación humana falló. No se registró ningún dato; complete una nueva verificación y vuelva a intentarlo.",
+    serviceUnavailable: "El servicio seguro de solicitudes no está disponible. No se registró ningún dato.",
+    emailFallback: "Usar la alternativa por correo electrónico",
+    requestReceived: "Solicitud recibida",
+    status: "Estado",
+    privacy: "Privacidad",
+    researchAuthorization: "Autorización de investigación",
+    successDetail: "Una persona revisará si la pregunta está suficientemente delimitada para definir el alcance. Recibirá un alcance por escrito o una solicitud para acotar la pregunta. Este formulario no inicia ninguna investigación.",
+    returnHome: "Volver a StructEvidence →"
+  })
+});
+const acknowledgement = (id) => `<label class="consent wide" for="${id}"><input id="${id}" name="consent_accepted" type="checkbox" required><span data-intake-copy="consent">${INTAKE_COPY.en.consent}</span></label>`;
+const turnstileChallenge = `<div class="turnstile-boundary wide"><div class="cf-turnstile" data-sitekey="__TURNSTILE_SITE_KEY__" data-action="public-intake" data-response-field-name="cf-turnstile-response"></div><p data-intake-copy="turnstileHelp">${INTAKE_COPY.en.turnstileHelp}</p></div><script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>`;
 const successBoundary = `<aside class="boundary-card"><p class="kicker">Research boundary</p><h2>Submission starts human review.</h2><p>It does not authorize research, publish customer information, or create a finding.</p><ol><li>We test whether the question is bounded.</li><li>We match existing evidence first.</li><li>You receive a written scope or a request to narrow the question.</li><li>Research begins only after separate written authorization.</li></ol><div class="outcomes"><span>SUPPORTED</span><span>CONTRADICTED</span><span>NOT ESTABLISHED</span><span>UNKNOWN</span><span>VERIFICATION REQUIRED</span></div></aside>`;
 const cycleBoundary = `<p class="scope-note"><strong>Evidence cut-off:</strong> each engagement is delivered against an explicit cut-off timestamp on the delivery date. No free revision rounds are included. Evidence published after that timestamp requires a separately purchased collection cycle. When a subsequent cycle is purchased, qualifying new evidence is incorporated and any superseded state is corrected as part of that cycle.</p>`;
 
@@ -32,7 +91,10 @@ const localizeChrome = (html, locale) => {
     .replace('>Research<','>公开研究<')
     .replace('Technical evidence for consequential decisions.','为关键决策提供可追溯技术证据。')
     .replace('Customer submissions remain separate from public research. No BOM, internal document, or company context is published without separate written authorization.','客户提交内容与公开研究严格分离。未经单独书面授权，不公开 BOM、内部文件或公司决策背景。')
-    .replace('Research service only. Not investment advice, legal assurance, a credit rating, health score, or trading signal.','仅提供研究服务；不构成投资建议、法律保证、信用评级、健康评分或交易信号。');
+    .replace('Research service only. Not investment advice, legal assurance, a credit rating, health score, or trading signal.','仅提供研究服务；不构成投资建议、法律保证、信用评级、健康评分或交易信号。')
+    .replaceAll('href="/verify/"','href="/verify/?lang=zh-CN"')
+    .replaceAll('href="/context/"','href="/context/?lang=zh-CN"')
+    .replaceAll('href="/decision-pack/"','href="/decision-pack/?lang=zh-CN"');
   if (locale === "es") return html
     .replace('<html lang="en">','<html lang="es">')
     .replace('>Skip to content<','>Ir al contenido<')
@@ -44,7 +106,10 @@ const localizeChrome = (html, locale) => {
     .replace('>Research<','>Investigación pública<')
     .replace('Technical evidence for consequential decisions.','Evidencia técnica trazable para decisiones importantes.')
     .replace('Customer submissions remain separate from public research. No BOM, internal document, or company context is published without separate written authorization.','Los datos del cliente permanecen separados de la investigación pública. No se publica ningún BOM, documento interno o contexto empresarial sin autorización escrita independiente.')
-    .replace('Research service only. Not investment advice, legal assurance, a credit rating, health score, or trading signal.','Servicio de investigación únicamente. No constituye asesoramiento de inversión, garantía legal, calificación crediticia ni señal de trading.');
+    .replace('Research service only. Not investment advice, legal assurance, a credit rating, health score, or trading signal.','Servicio de investigación únicamente. No constituye asesoramiento de inversión, garantía legal, calificación crediticia ni señal de trading.')
+    .replaceAll('href="/verify/"','href="/verify/?lang=es"')
+    .replaceAll('href="/context/"','href="/context/?lang=es"')
+    .replaceAll('href="/decision-pack/"','href="/decision-pack/?lang=es"');
   return html;
 };
 
@@ -70,6 +135,15 @@ export const COMMERCIAL_PAGES_V2 = {
 export const COMMERCIAL_APP_JS_UPGRADE = `
 const params = new URLSearchParams(location.search);
 const CONSENT_VERSION = "SE-CUSTOMER-PRIVACY-v1";
+const INTAKE_COPY = ${JSON.stringify(INTAKE_COPY)};
+const requestedLocale = params.get("lang");
+const intakeLocale = requestedLocale === "zh-CN" || requestedLocale === "zh-cn" ? "zh-CN" : requestedLocale === "es" ? "es" : "en";
+const intakeCopy = INTAKE_COPY[intakeLocale];
+for (const element of document.querySelectorAll("[data-intake-copy]")) {
+  const key = element.dataset.intakeCopy;
+  if (intakeCopy[key]) element.textContent = intakeCopy[key];
+  element.lang = intakeLocale;
+}
 const output = document.querySelector('[name="requested_output"]');
 if (output && params.get("intent")) output.value = params.get("intent");
 const prefill = (name, key) => {
@@ -103,7 +177,9 @@ function resetChallenge(form) {
 }
 function showSuccess(status, id) {
   status.classList.add("confirmation-panel");
-  status.innerHTML = '<p class="kicker">Request received</p><h3>' + id + '</h3><dl><div><dt>Status</dt><dd>SUBMITTED</dd></div><div><dt>Privacy</dt><dd>CUSTOMER_PRIVATE</dd></div><div><dt>Research authorization</dt><dd>NOT_AUTHORIZED</dd></div></dl><p>A human will review whether the question is bounded enough to scope. You will receive either a written scope or a request to narrow it. No research starts from this form.</p><a class="text-link" href="/">Return to StructEvidence →</a>';
+  status.lang = intakeLocale;
+  const authorizationBoundary = intakeLocale === "en" ? '<dt>Research authorization</dt><dd>NOT_AUTHORIZED</dd>' : '<dt>' + intakeCopy.researchAuthorization + '</dt><dd>NOT_AUTHORIZED</dd>';
+  status.innerHTML = '<p class="kicker">' + intakeCopy.requestReceived + '</p><h3>' + id + '</h3><dl><div><dt>' + intakeCopy.status + '</dt><dd>SUBMITTED</dd></div><div><dt>' + intakeCopy.privacy + '</dt><dd>CUSTOMER_PRIVATE</dd></div><div>' + authorizationBoundary + '</div></dl><p>' + intakeCopy.successDetail + '</p><a class="text-link" href="/">' + intakeCopy.returnHome + '</a>';
 }
 for (const form of document.querySelectorAll("[data-request-form]")) {
   const caseRef = params.get("case"), gap = params.get("gap");
@@ -116,14 +192,15 @@ for (const form of document.querySelectorAll("[data-request-form]")) {
     event.preventDefault();
     if (!form.reportValidity()) return;
     const status = form.querySelector("[data-form-status]"), button = form.querySelector('button[type="submit"]');
+    status.lang = intakeLocale;
     const siteKey = form.querySelector(".cf-turnstile")?.dataset.sitekey;
     const body = payload(form);
     if (!siteKey || !body.turnstile_token) {
-      status.textContent = siteKey ? "Complete human verification before submitting." : "Human verification is unavailable. Nothing was recorded; use the email fallback or try again later.";
+      status.textContent = siteKey ? intakeCopy.verificationRequired : intakeCopy.verificationUnavailable;
       return;
     }
     form.dataset.idempotencyKey ||= crypto.randomUUID().replaceAll("-", "");
-    status.classList.remove("confirmation-panel"); status.textContent = "Recording request…"; button.disabled = true;
+    status.classList.remove("confirmation-panel"); status.textContent = intakeCopy.recording; button.disabled = true;
     try {
       const response = await fetch("/api/requests", { method: "POST", headers: { "content-type": "application/json", "idempotency-key": form.dataset.idempotencyKey }, body: JSON.stringify(body) });
       const result = await response.json().catch(() => ({}));
@@ -131,13 +208,13 @@ for (const form of document.querySelectorAll("[data-request-form]")) {
         if (response.status === 409) delete form.dataset.idempotencyKey;
         resetChallenge(form);
         if (response.status >= 500) throw new Error("unavailable");
-        status.textContent = result.error || "Please review the submitted fields."; return;
+        status.textContent = response.status === 409 ? intakeCopy.conflict : response.status === 413 ? intakeCopy.requestTooLarge : /Human verification/i.test(result.error || "") ? intakeCopy.verificationFailed : intakeCopy.reviewFields; return;
       }
       delete form.dataset.idempotencyKey; form.reset(); showSuccess(status, result.request_id);
     } catch {
       resetChallenge(form);
       const fallback = "mailto:support@structevidence.com?subject=" + encodeURIComponent("StructEvidence request fallback");
-      status.innerHTML = 'The secure request service is unavailable. Nothing was recorded. <a href="' + fallback + '">Use email fallback</a>.';
+      status.innerHTML = intakeCopy.serviceUnavailable + ' <a href="' + fallback + '">' + intakeCopy.emailFallback + '</a>.';
     } finally { button.disabled = false; }
   });
 }`;

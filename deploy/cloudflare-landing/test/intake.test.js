@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import test from "node:test";
+import { INTAKE_COPY } from "../commercial-upgrade.js";
 import { createWorker } from "../worker.js";
 
 const CONSENT_VERSION = "SE-CUSTOMER-PRIVACY-v1";
@@ -304,6 +305,41 @@ test("commercial forms ship consent, Turnstile, stable idempotency, graceful err
   assert.doesNotMatch(verify + app, /TURNSTILE_SECRET_KEY|secret.*siteverify/i);
   const unconfigured = await (await worker.fetch(new Request("https://structevidence.com/verify/"), { ...env, TURNSTILE_SITE_KEY: "CONFIGURE_TURNSTILE_SITE_KEY" })).text();
   assert.match(unconfigured, /data-sitekey=""/);
+});
+
+test("EN, zh-CN, and ES consent and intake errors preserve the frozen privacy boundary", async () => {
+  const expectedConsent = {
+    en: "I understand that this submission remains customer-private, does not authorize research, and will not be published without separate written authorization.",
+    "zh-CN": "我理解：本次提交内容将保持为客户私有信息；本次提交不授权开展研究；未经另行书面授权，提交内容不会公开发布。",
+    es: "Entiendo que este envío permanecerá privado para el cliente, no autoriza la realización de ninguna investigación y no se publicará sin una autorización escrita independiente."
+  };
+  for (const locale of ["en", "zh-CN", "es"]) {
+    const copy = INTAKE_COPY[locale];
+    assert.equal(copy.consent, expectedConsent[locale]);
+    assert.match(copy.verificationUnavailable, /Nothing was recorded|未记录任何内容|No se registró ningún dato/);
+    assert.match(copy.verificationFailed, /Nothing was recorded|未记录任何内容|No se registró ningún dato/);
+    assert.match(copy.serviceUnavailable, /Nothing was recorded|未记录任何内容|No se registró ningún dato/);
+    assert.match(copy.successDetail, /No research starts|不会启动任何研究|no inicia ninguna investigación/i);
+  }
+  assert.match(INTAKE_COPY.en.consent, /does not authorize research/);
+  assert.match(INTAKE_COPY["zh-CN"].consent, /不授权开展研究/);
+  assert.match(INTAKE_COPY.es.consent, /no autoriza la realización de ninguna investigación/);
+
+  const { worker } = testWorker(), env = baseEnv(new FakeD1());
+  const [zhHome, esHome, verify, app] = await Promise.all([
+    worker.fetch(new Request("https://structevidence.com/zh-cn/"), env).then((response) => response.text()),
+    worker.fetch(new Request("https://structevidence.com/es/"), env).then((response) => response.text()),
+    worker.fetch(new Request("https://structevidence.com/verify/"), env).then((response) => response.text()),
+    worker.fetch(new Request("https://structevidence.com/assets/app.js"), env).then((response) => response.text())
+  ]);
+  assert.match(zhHome, /href="\/verify\/\?lang=zh-CN"/);
+  assert.match(esHome, /href="\/verify\/\?lang=es"/);
+  assert.match(verify, /data-intake-copy="consent"/);
+  assert.match(verify, /data-intake-copy="turnstileHelp"/);
+  assert.match(app, /const CONSENT_VERSION = "SE-CUSTOMER-PRIVACY-v1"/);
+  assert.match(app, /requestedLocale === "zh-CN"/);
+  assert.match(app, /requestedLocale === "es"/);
+  assert.doesNotMatch(app, /consent_version\s*=\s*["'](?!SE-CUSTOMER-PRIVACY-v1)/);
 });
 
 test("commercial language routes, public research links, prices, and redirects remain unchanged", async () => {
