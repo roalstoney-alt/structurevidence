@@ -83,6 +83,8 @@ class IrenTrackerTest(unittest.TestCase):
             self.assertTrue(set(row["source_ids"]) <= set(self.sources))
             self.assertTrue(row["next_check"])
             self.assertIn(row["last_event_id"], event_ids)
+            self.assertTrue(row["pinpoint_locators"])
+            self.assertIn(row["reading_check"], self.tracker["reading_check_policy"]["result_vocabulary"])
             self.assertIn(f'id="{row["row_id"]}"', self.page)
 
     def test_supported_rows_are_attributed_and_use_captured_sources(self):
@@ -97,12 +99,12 @@ class IrenTrackerTest(unittest.TestCase):
                 self.assertIn("issuer_authored", source["dependency_class"])
 
     def test_furnished_exhibits_are_not_mislabeled_filed(self):
-        for source_id in ("I-S05", "I-S08", "I-S09", "I-S11"):
+        for source_id in ("I-S01", "I-S05", "I-S06", "I-S07", "I-S08", "I-S09", "I-S11"):
             self.assertEqual(self.sources[source_id]["liability"], "furnished_not_filed")
 
     def test_retrieval_failures_are_not_promoted(self):
         incomplete = {source["source_id"] for source in self.registry["sources"] if "INCOMPLETE" in source["access_state"]}
-        self.assertEqual(incomplete, {"I-S01", "I-S06", "I-S07", "I-S10"})
+        self.assertEqual(incomplete, {"I-S10"})
         supported_sources = {
             source_id for row in self.tracker["rows"] if row["state"] == "SUPPORTED_AS_ATTRIBUTED"
             for source_id in row["source_ids"]
@@ -150,7 +152,8 @@ class IrenTrackerTest(unittest.TestCase):
             previous = event["event_digest"]
         original = load("events-v0.1.json")["events"]
         self.assertEqual(self.ledger["events"][:len(original)], original)
-        self.assertEqual(self.ledger["events"][-1]["event_type"], "OWNER_PUBLICATION_AUTHORIZED")
+        self.assertEqual(self.ledger["events"][-1]["event_type"], "EDITORIAL_VERIFICATION_UPDATE")
+        self.assertEqual(self.tracker["current_page_revision"], "IREN-EV-005")
 
     def test_public_export_is_allowlisted_and_private_safe(self):
         allowed_source_keys = {
@@ -174,7 +177,7 @@ class IrenTrackerTest(unittest.TestCase):
         self.assertEqual(self.parser.canonical, "https://structurevidence.org/cases/iren-ai-cloud-transition/")
         sitemap = (ROOT / "sitemap.xml").read_text()
         ET.fromstring(sitemap)
-        for suffix in ("", "index.json", "source-registry-v0.1.json", "events-v0.2.json"):
+        for suffix in ("", "index.json", "source-registry-v0.1.json", "events-v0.3.json"):
             self.assertIn("https://structurevidence.org/cases/iren-ai-cloud-transition/" + suffix, sitemap)
         self.assertNotIn("hreflang=\"zh-CN\" href=\"https://structurevidence.org/zh-cn/cases/iren-ai-cloud-transition/", sitemap)
         index = (ROOT / "cases" / "index.html").read_text()
@@ -190,6 +193,19 @@ class IrenTrackerTest(unittest.TestCase):
         self.assertIn('aria-label="IREN source registry"', self.page)
         self.assertIn('aria-label="Research disclaimer"', self.page)
         self.assertIn("not investment, legal, accounting, tax", self.page)
+
+    def test_verify_your_verify_summary_subscription_and_policies(self):
+        for text in (
+            "30-second read", "$9.7bn headline", "$128.8m FY26", "Not established",
+            "Pinpoint", "Check method", "documented automated primary text and boundary second pass",
+            "Reading checked", "Subscribe via Atom", "USD 4,999",
+            "Selection, conflicts, and corrections", "No counsel-review attestation is claimed",
+        ):
+            self.assertIn(text, self.page)
+        self.assertIn("128.8 / 707.0 × 100 = 18.2%", self.page)
+        self.assertIn("D0–D4 rubric remains proposed", self.page)
+        self.assertIn("Figure AI among recent signings", self.page)
+        self.assertIn("right to invest up to $2.1bn", self.page)
 
     def test_no_production_worker_or_historic_case_drift(self):
         names = subprocess.check_output(
