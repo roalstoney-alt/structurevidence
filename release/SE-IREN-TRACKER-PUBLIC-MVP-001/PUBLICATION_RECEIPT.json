@@ -1,0 +1,50 @@
+{
+  "schema_version": "SE-PUBLICATION-RECEIPT-v0.1",
+  "receipt_id": "SE-IREN-PUBLICATION-RECEIPT-20261028-01",
+  "project": "SE-IREN-TRACKER-PUBLIC-MVP-001",
+  "case_id": "SE-IREN-AI-CLOUD-001",
+  "authorization_id": "SE-IREN-PUBLICATION-20261028-01",
+  "approved_candidate_head_sha": "1523c8688dfa5dd6ff7b1ae85e3a54b8412c3c8a",
+  "publication_transition_sha": "0158d1349af15c04b3729a3ce0f5adba16c91897",
+  "merge_sha": "7d9e1b73fdf2ccf5a10068f880266f6c3a7d48f2",
+  "deployed_and_verified_at_utc": "2026-10-27T20:15:54Z",
+  "canonical_url": "https://structurevidence.org/cases/iren-ai-cloud-transition/",
+  "deployment_result": "PASS",
+  "live_checks": {
+    "canonical_page_http": 200,
+    "public_snapshot_http": 200,
+    "source_registry_http": 200,
+    "events_v0_1_http": 200,
+    "events_v0_2_http": 200,
+    "publication_authorization_http": 200,
+    "case_index_http": 200,
+    "sitemap_http": 200,
+    "expected_missing_path_http": 404,
+    "case_index_entry_present": true,
+    "sitemap_events_v0_2_entry_present": true,
+    "footer_research_disclaimer_present": true,
+    "owner_authorization_marker_present": true
+  },
+  "live_sha256": {
+    "index.html": "e43bc870c049934d7c4c57e041a25b47ad1a198432faabdc7fe786485de40b37",
+    "index.json": "18312970ee49d6e8baf538e410b467b3372c08d4e28678c0b20da5a3c48c79b0",
+    "source-registry-v0.1.json": "394ad2910de8ea425f44a23002b1f17810aa0f5db84aadbf1652c1efbc82aa9c",
+    "events-v0.1.json": "3e8cbc7379f53d799dcd0832952253f9cb2f19cae1e25828dda8fd28e6c37ef8",
+    "events-v0.2.json": "193cd8b7587b98028760f79dd3acd9432100907f56d6ca7dcd20a26d9bd8f715",
+    "publication-approval-v0.1.json": "e2c46843ee0b469963545e3364f1c6bacaefa010796f3be9442ef3760bc58c9b"
+  },
+  "byte_match_against_merge": "PASS_ALL_SIX_PUBLIC_ARTIFACTS",
+  "history_standard": "SE-ENG-HISTORY-001/v1.0",
+  "immutable_record_mutations": 0,
+  "original_records_changed": 0,
+  "root_docs_parity": "PASS",
+  "pr_checks": {
+    "case_review_freshness": "SUCCESS",
+    "historical_record_immutability": "SUCCESS"
+  },
+  "visual_qa_note": "Live bytes match the tested merge exactly. A repeat browser screenshot was blocked by the local browser URL policy; disclaimer presence, semantic role, responsive CSS, and live body text were verified programmatically.",
+  "independent_role_attestations_recorded": false,
+  "x_post_sent": 0,
+  "commercial_worker_deployed": false,
+  "rollback_boundary": "Revert the merge through a reviewed change to regenerable projections. Preserve the authorization record, both event-ledger versions, reconciliation record, and this receipt as immutable history."
+}
