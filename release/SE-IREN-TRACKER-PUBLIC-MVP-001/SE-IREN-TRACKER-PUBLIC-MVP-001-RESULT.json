@@ -3,7 +3,7 @@
   "result": "READY_FOR_HUMAN_PUBLICATION_REVIEW",
   "feature_branch": "codex/se-iren-tracker-public-mvp-001",
   "base_sha": "a3264420664a5c471fbc33829fc203429ca0f814",
-  "candidate_source_sha": "TO_BE_RECORDED_AFTER_FREEZE_COMMIT",
+  "candidate_source_sha": "40df202bb17897c08c3fa0667ef7ff6d5763974a",
   "tracker_data_version": "v0.1-rc1",
   "evidence_cutoff": "2026-10-22",
   "last_source_check": "2026-10-27T19:38:39Z",
