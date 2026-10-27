@@ -18,12 +18,13 @@ SOURCE_GENERATION_CONSISTENCY = PASS
 DDR_CTA = https://structevidence.com/decision-pack/?case=SE-IREN-AI-CLOUD-001
 CASE_REFERENCE_PROTOCOL = PASS_STATIC
 CASE_REFERENCE_EXPECTED_VALUE = SE-IREN-AI-CLOUD-001
-CASE_REFERENCE_BROWSER_RUNTIME = NOT_OBSERVED
-DESKTOP_BROWSER = NOT_OBSERVED
-MOBILE_BROWSER = NOT_OBSERVED
-KEYBOARD_BROWSER = NOT_OBSERVED
-CTA_BROWSER_NAVIGATION = NOT_OBSERVED
-BROWSER_RETRY_2026_10_28 = NOT_OBSERVED
+CASE_REFERENCE_BROWSER_RUNTIME = PASS_LOCAL_PREVIEW
+DESKTOP_BROWSER = PASS_LOCAL_PREVIEW, 1440x1000
+MOBILE_BROWSER = PASS_LOCAL_PREVIEW, 390x844
+KEYBOARD_BROWSER = PASS_LOCAL_PREVIEW, TAB_REACHABLE_AND_ENTER_ACTIVATED
+CTA_BROWSER_NAVIGATION = PASS_LOCAL_PREVIEW
+BROWSER_RETRY_2026_10_28 = PASS_LOCAL_PREVIEW
+PRODUCTION_BROWSER = NOT_RUN
 IREN_TESTS = 17/17 PASS
 HISTORY_AND_SEO = 12/12 PASS
 CASE_REVIEW_STATUS = 6/6 PASS
@@ -54,7 +55,11 @@ The current `.com` client script reads `params.get("case")`, creates a hidden `c
 
 ## Browser observation boundary
 
-After the prior tabs were closed, a fresh in-app browser tab was created for the local preview and the preview endpoint returned HTTP 200. The browser controller still timed out while enabling focus emulation before either the DOM or accessibility tree could be observed, including after switching the browser to background mode and retrying the fresh tab. Desktop layout, mobile viewport, keyboard navigation, live CTA navigation, and runtime inspection of `case_reference` therefore remain `NOT_OBSERVED`, not PASS. Static HTML, accessibility hooks, responsive source, link structure, and tests passed, but they are not represented as substitutes for the missing browser observation. No form was submitted.
+After the prior tabs were closed, a fresh in-app browser tab was created for the local preview and the preview endpoint returned HTTP 200. The in-app browser controller still timed out while enabling focus emulation before either the DOM or accessibility tree could be observed, including after switching the browser to background mode and retrying the fresh tab.
+
+The acceptance was then completed against the same local `docs/` preview with the installed Google Chrome in headless mode through Playwright. This was a real browser run, not a static-source substitute. At 1440x1000 and 390x844 the DDR module and CTA were visible, horizontal overflow was 0 px, and no browser-console errors were recorded. The four evidence-block headings and Challenge section remained present. Sequential Tab navigation reached the DDR CTA after 81 Tab presses; Enter activated it and navigated to the exact `.com` Decision Pack URL. The destination page created `case_reference=SE-IREN-AI-CLOUD-001`. No form was submitted.
+
+These results are recorded as `PASS_LOCAL_PREVIEW`. They do not claim production deployment or production-page acceptance; `PRODUCTION_BROWSER` remains `NOT_RUN` while the PR remains Draft.
 
 ## Evidence boundary
 
