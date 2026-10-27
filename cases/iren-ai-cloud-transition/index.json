@@ -2,9 +2,9 @@
   "schema_version": "SE-IREN-PUBLIC-SNAPSHOT-v0.1",
   "case_id": "SE-IREN-AI-CLOUD-001",
   "current_state": "SUPPORTED_AS_ATTRIBUTED_WITH_OPEN_BOUNDARIES",
-  "tracker_data_version": "v0.1",
+  "tracker_data_version": "v0.2",
   "evidence_cutoff": "2026-10-22",
-  "last_source_check_utc": "2026-10-27T19:38:39Z",
+  "last_source_check_utc": "2026-10-27T20:34:45Z",
   "next_source_check": "2026-11-05",
   "reviewer_status": "OWNER_AUTHORIZED_PUBLICATION",
   "reviewed_by": "AUTHENTICATED_TASK_OWNER",
@@ -31,7 +31,11 @@
       "source_ids": [
         "I-S04"
       ],
-      "last_event_id": "IREN-EV-004",
+      "pinpoint_locators": [
+        "I-S04 · Form 10-K, Item 7, p.115, Results of Operations table; p.116, AI Cloud Services revenue"
+      ],
+      "reading_check": "AGREED_WITH_SOURCE_NATIVE_WORDING_AND_BOUNDARY",
+      "last_event_id": "IREN-EV-005",
       "next_check": "Compare with the next filed quarterly report on or after 2026-11-05.",
       "challenge_url": "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001&claim_id=IREN-R001"
     },
@@ -46,7 +50,11 @@
       "source_ids": [
         "I-S04"
       ],
-      "last_event_id": "IREN-EV-004",
+      "pinpoint_locators": [
+        "I-S04 · Form 10-K, Item 7, p.116, Impairment of assets; Note 14, p.F-34"
+      ],
+      "reading_check": "AGREED_WITH_SOURCE_NATIVE_WORDING_AND_BOUNDARY",
+      "last_event_id": "IREN-EV-005",
       "next_check": "Review subsequent filed impairment and asset-disposition notes.",
       "challenge_url": "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001&claim_id=IREN-R002"
     },
@@ -61,7 +69,11 @@
       "source_ids": [
         "I-S05"
       ],
-      "last_event_id": "IREN-EV-004",
+      "pinpoint_locators": [
+        "I-S05 · Form 8-K, Item 1.01, Commercial Agreement with Microsoft, paragraphs 1–5"
+      ],
+      "reading_check": "AGREED_WITH_SOURCE_NATIVE_WORDING_AND_BOUNDARY",
+      "last_event_id": "IREN-EV-005",
       "next_check": "Review any amendment, termination, delivery, revenue-recognition, or collection disclosure.",
       "challenge_url": "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001&claim_id=IREN-R003"
     },
@@ -77,7 +89,12 @@
         "I-S08",
         "I-S09"
       ],
-      "last_event_id": "IREN-EV-004",
+      "pinpoint_locators": [
+        "I-S08 · Exhibit 99.1, headline and opening paragraph",
+        "I-S09 · FY26 Results Exhibit 99.1, p.1, Horizon 1 highlight"
+      ],
+      "reading_check": "AGREED_WITH_SOURCE_NATIVE_WORDING_AND_BOUNDARY",
+      "last_event_id": "IREN-EV-005",
       "next_check": "Seek a customer-authored or independently attributable acceptance artifact.",
       "challenge_url": "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001&claim_id=IREN-R004"
     },
@@ -92,7 +109,11 @@
       "source_ids": [
         "I-S09"
       ],
-      "last_event_id": "IREN-EV-004",
+      "pinpoint_locators": [
+        "I-S09 · FY26 Results Exhibit 99.1, pp.1 and 4, ARR highlights and Assumptions and Notes 1–2"
+      ],
+      "reading_check": "AGREED_WITH_SOURCE_NATIVE_WORDING_AND_BOUNDARY",
+      "last_event_id": "IREN-EV-005",
       "next_check": "Check the Q1 FY27 release and filing for changed definitions and realized GAAP revenue.",
       "challenge_url": "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001&claim_id=IREN-R005"
     },
@@ -107,7 +128,11 @@
       "source_ids": [
         "I-S09"
       ],
-      "last_event_id": "IREN-EV-004",
+      "pinpoint_locators": [
+        "I-S09 · FY26 Results Exhibit 99.1, p.2, Capital-efficient GPU financing"
+      ],
+      "reading_check": "AGREED_WITH_SOURCE_NATIVE_WORDING_AND_BOUNDARY",
+      "last_event_id": "IREN-EV-005",
       "next_check": "Review filed debt, collateral, drawdown, fee, covenant, and repayment disclosures.",
       "challenge_url": "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001&claim_id=IREN-R006"
     },
@@ -122,7 +147,12 @@
       "source_ids": [
         "I-S08"
       ],
-      "last_event_id": "IREN-EV-004",
+      "pinpoint_locators": [
+        "I-S08 · Exhibit 99.1, headline and opening paragraph; registry scope I-S01–I-S12 contains no Microsoft-authored acceptance artifact"
+      ],
+      "plain_language": "Not shown in the sources reviewed: the acceptance wording is IREN-authored.",
+      "reading_check": "AGREED_WITH_BOUNDED_ABSENCE_STATE",
+      "last_event_id": "IREN-EV-005",
       "next_check": "Check official Microsoft publications and future IREN filings for an attributable customer record.",
       "challenge_url": "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001&claim_id=IREN-R007"
     },
@@ -130,14 +160,21 @@
       "row_id": "IREN-R008",
       "section": "NOT_ESTABLISHED",
       "claim": "Horizons 2, 3, and 4 had been delivered and accepted by the evidence cutoff.",
-      "boundary": "IREN reported Horizon 2 commissioning and Horizons 3–4 in late-stage construction, targeting Q4 2026 delivery. A target is not a completed acceptance event.",
+      "boundary": "IREN reported Horizon 2 commissioning and Horizons 3–4 in late-stage construction, targeting Q4 2026 delivery. Its Form 10-K says contractual delivery grace periods extend from mid-Q4 2026 to the beginning of Q2 2027. A target or outer bound is not a completed acceptance event.",
       "state": "NOT_ESTABLISHED",
       "assurance": "unaudited",
       "liability": "furnished_not_filed",
       "source_ids": [
+        "I-S04",
         "I-S09"
       ],
-      "last_event_id": "IREN-EV-004",
+      "pinpoint_locators": [
+        "I-S09 · FY26 Results Exhibit 99.1, p.1, Horizon 2–4 status",
+        "I-S04 · Form 10-K, Item 7, pp.109–110, AI Cloud Services Contracts"
+      ],
+      "plain_language": "Not shown in the sources reviewed by the cutoff: completed delivery and acceptance for Horizons 2–4.",
+      "reading_check": "AGREED_WITH_BOUNDED_ABSENCE_STATE",
+      "last_event_id": "IREN-EV-005",
       "next_check": "2026-11-05 Q1 FY27 results, then any later 8-K or customer-authored acceptance record.",
       "challenge_url": "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001&claim_id=IREN-R008"
     },
@@ -154,7 +191,14 @@
         "I-S09",
         "I-S11"
       ],
-      "last_event_id": "IREN-EV-004",
+      "pinpoint_locators": [
+        "I-S04 · Form 10-K, Note 4, pp.F-27–F-28, Revenue",
+        "I-S09 · FY26 Results Exhibit 99.1, p.4, Assumptions and Notes 1–2",
+        "I-S11 · Exhibit 99.1, Assumptions and Notes 1–2"
+      ],
+      "plain_language": "Not shown in the sources reviewed: contracted ARR converting dollar-for-dollar into GAAP revenue.",
+      "reading_check": "AGREED_WITH_BOUNDED_ABSENCE_STATE",
+      "last_event_id": "IREN-EV-005",
       "next_check": "Compare subsequent filed AI Cloud revenue and notes with the exact ARR definition then in use.",
       "challenge_url": "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001&claim_id=IREN-R009"
     },
@@ -170,7 +214,13 @@
         "I-S04",
         "I-S05"
       ],
-      "last_event_id": "IREN-EV-004",
+      "pinpoint_locators": [
+        "I-S05 · Form 8-K, Item 1.01, payment terms and delivery acceptance process",
+        "I-S04 · Form 10-K, Note 4, Contract Balances; Note 20, Deferred revenue"
+      ],
+      "plain_language": "Not shown in the sources reviewed: collection of the full $9.7bn headline value in cash.",
+      "reading_check": "AGREED_WITH_BOUNDED_ABSENCE_STATE",
+      "last_event_id": "IREN-EV-005",
       "next_check": "Review filed cash-flow, deferred-revenue, receivable, and contract-liability disclosures.",
       "challenge_url": "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001&claim_id=IREN-R010"
     },
@@ -187,7 +237,14 @@
         "I-S09",
         "I-S12"
       ],
-      "last_event_id": "IREN-EV-004",
+      "pinpoint_locators": [
+        "I-S04 · Form 10-K, Item 7, pp.109–116; Notes 4, 14 and 20",
+        "I-S09 · FY26 Results Exhibit 99.1, pp.1–4",
+        "I-S12 · Definitive Proxy, pp.12–14, Fiscal 2026 highlights"
+      ],
+      "plain_language": "Not shown in the sources reviewed: a completed transition with positive full-life returns after all costs and capital.",
+      "reading_check": "AGREED_WITH_BOUNDED_ABSENCE_STATE",
+      "last_event_id": "IREN-EV-005",
       "next_check": "Review subsequent segment results, costs, capex, impairment, operating capacity, and transition language.",
       "challenge_url": "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001&claim_id=IREN-R011"
     }
@@ -206,12 +263,12 @@
     {
       "watch_id": "IREN-W002",
       "item": "Horizons 2–4 delivery and acceptance",
-      "date_or_window": "Q4 2026 target; contractual outer bounds require primary-text review",
+      "date_or_window": "Q4 2026 target; contractual grace periods extend from mid-Q4 2026 to the beginning of Q2 2027",
       "status": "TARGET_NOT_COMPLETION",
       "source_ids": [
         "I-S09"
       ],
-      "what_to_check": "Separate construction, commissioning, delivery, issuer-reported acceptance, and customer-authored acceptance."
+      "what_to_check": "Form 10-K, Item 7, pp.109–110. Separate construction, commissioning, delivery, issuer-reported acceptance, and customer-authored acceptance."
     },
     {
       "watch_id": "IREN-W003",
@@ -227,16 +284,16 @@
       "source_id": "I-S01",
       "publisher": "IREN Limited (then Iris Energy Limited)",
       "title": "September 2023 Monthly Investor Update",
-      "url": "https://iren.gcs-web.com/news-releases/news-release-details/iris-energy-announces-monthly-investor-update-september-2023",
-      "accession": null,
+      "url": "https://www.sec.gov/Archives/edgar/data/1878848/000114036123047077/ef20012021_ex99-1.htm",
+      "accession": "0001140361-23-047077",
       "publication_date": "2023-10-05",
-      "source_type": "issuer_ir_release",
-      "dependency_class": "issuer_authored",
+      "source_type": "sec_exhibit_99_1_form_6_k",
+      "dependency_class": "issuer_authored_sec_hosted",
       "assurance": "promotional",
-      "liability": "unfiled",
-      "access_state": "RETRIEVAL_INCOMPLETE_HTTP_403",
-      "capture_utc": "2026-10-27T19:31:00Z",
-      "sha256": null,
+      "liability": "furnished_not_filed",
+      "access_state": "CAPTURED",
+      "capture_utc": "2026-10-27T20:34:45Z",
+      "sha256": "7bc96a453e01316cc683cf8280fe61d302334fd633408c2bc4f7476d13eda531",
       "review_state": "PENDING_HUMAN_REVIEW"
     },
     {
@@ -307,32 +364,32 @@
       "source_id": "I-S06",
       "publisher": "IREN Limited",
       "title": "Q2 FY26 Results and GPU financing announcement",
-      "url": "https://iren.gcs-web.com/news-releases/news-release-details/iren-reports-q2-fy26-results",
-      "accession": null,
+      "url": "https://www.sec.gov/Archives/edgar/data/1878848/000187884826000014/a991irenreportsq2fy26res.htm",
+      "accession": "0001878848-26-000014",
       "publication_date": "2026-02-05",
-      "source_type": "issuer_ir_release",
-      "dependency_class": "issuer_authored",
+      "source_type": "sec_exhibit_99_1_item_2_02",
+      "dependency_class": "issuer_authored_sec_hosted",
       "assurance": "unaudited",
-      "liability": "unknown",
-      "access_state": "RETRIEVAL_INCOMPLETE_HTTP_403",
-      "capture_utc": "2026-10-27T19:34:00Z",
-      "sha256": null,
+      "liability": "furnished_not_filed",
+      "access_state": "CAPTURED",
+      "capture_utc": "2026-10-27T20:34:45Z",
+      "sha256": "17a054d4cba68e30f394e0bdf362d0f23bea6eacc588311cb31b8144b10aad44",
       "review_state": "PENDING_HUMAN_REVIEW"
     },
     {
       "source_id": "I-S07",
       "publisher": "IREN Limited",
       "title": "Business Update and Q3 FY26 Results",
-      "url": "https://iren.gcs-web.com/news-releases/news-release-details/iren-business-update-and-q3-fy26-results",
-      "accession": null,
+      "url": "https://www.sec.gov/Archives/edgar/data/1878848/000187884826000025/irenreportsq3fy26results.htm",
+      "accession": "0001878848-26-000025",
       "publication_date": "2026-05-07",
-      "source_type": "issuer_ir_release",
-      "dependency_class": "issuer_authored",
+      "source_type": "sec_exhibit_99_1_item_2_02",
+      "dependency_class": "issuer_authored_sec_hosted",
       "assurance": "unaudited",
-      "liability": "unknown",
-      "access_state": "RETRIEVAL_INCOMPLETE_HTTP_403",
-      "capture_utc": "2026-10-27T19:34:00Z",
-      "sha256": null,
+      "liability": "furnished_not_filed",
+      "access_state": "CAPTURED",
+      "capture_utc": "2026-10-27T20:34:45Z",
+      "sha256": "80a435f99848da25c656b5fa4911ec03ffa7ca614d5f9ee92e3fe62f531ccab6",
       "review_state": "PENDING_HUMAN_REVIEW"
     },
     {
@@ -494,13 +551,39 @@
       "review_state": "OWNER_AUTHORIZED_PUBLICATION",
       "publication_authorization_id": "SE-IREN-PUBLICATION-20261028-01",
       "event_digest": "sha256:fb50373f63321964eb0a75076b75d82288a263494c3b245c259c6b07bf227d77"
+    },
+    {
+      "event_id": "IREN-EV-005",
+      "recorded_at_utc": "2026-10-27T20:34:45Z",
+      "event_type": "EDITORIAL_VERIFICATION_UPDATE",
+      "affected_row_ids": [
+        "IREN-R001",
+        "IREN-R002",
+        "IREN-R003",
+        "IREN-R004",
+        "IREN-R005",
+        "IREN-R006",
+        "IREN-R007",
+        "IREN-R008",
+        "IREN-R009",
+        "IREN-R010",
+        "IREN-R011"
+      ],
+      "reason": "After owner-directed review of CC feedback, add a first-screen evidence ladder, pinpoint locators, documented second-pass checks, plain-language absence wording, a traceable 18.2% calculation, remediated SEC-hosted source captures, and bounded context notes. No row evidence state changes; D0-D4 remains proposed and is not applied to rows.",
+      "previous_event_digest": "sha256:fb50373f63321964eb0a75076b75d82288a263494c3b245c259c6b07bf227d77",
+      "supersedes_event_id": null,
+      "evidence_digest": "sha256:e699dbd165bc6835830223fb1b5964e329071b3503d0f3c6af5137bab0f23434",
+      "review_state": "OWNER_AUTHORIZED_PUBLICATION",
+      "change_authorization": "AUTHENTICATED_TASK_OWNER_REQUEST_2026-10-28",
+      "event_digest": "sha256:7ca94dbd85ebe405178457489028dbf17fd099d6bf5506e034bbde2a8fd68d72"
     }
   ],
   "history": [
     "IREN-EV-001",
     "IREN-EV-002",
     "IREN-EV-003",
-    "IREN-EV-004"
+    "IREN-EV-004",
+    "IREN-EV-005"
   ],
   "commercial_boundary": {
     "verify_url": "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001",
@@ -512,5 +595,53 @@
     "privacy_notice": "Customer content is private. Submission does not authorize research or public release. Challenges never update the tracker automatically.",
     "production_post_authorized": false
   },
-  "content_digest": "sha256:77396bd123399b7a6cac601793af60a8f993bd9b19794393084932da1bb658b8"
+  "current_page_revision": "IREN-EV-005",
+  "editorial_update_authorization": "AUTHENTICATED_TASK_OWNER_REQUEST_2026-10-28",
+  "editorial_updated_at_utc": "2026-10-27T20:34:45Z",
+  "reading_check_policy": {
+    "method": "DOCUMENTED_AUTOMATED_PRIMARY_TEXT_AND_BOUNDARY_SECOND_PASS",
+    "checked_at_utc": "2026-10-27T20:34:45Z",
+    "result_vocabulary": [
+      "AGREED_WITH_SOURCE_NATIVE_WORDING_AND_BOUNDARY",
+      "AGREED_WITH_BOUNDED_ABSENCE_STATE"
+    ],
+    "independence_boundary": "This second pass is not an external endorsement or independent financial, legal, accounting, or customer review."
+  },
+  "computed_metrics": [
+    {
+      "metric_id": "IREN-M001",
+      "label": "AI Cloud share of FY26 total revenue",
+      "formula": "128.8 / 707.0 × 100",
+      "value": "18.2%",
+      "source_ids": [
+        "I-S04"
+      ],
+      "locator": "Form 10-K, Item 7, p.115, Results of Operations table",
+      "boundary": "StructEvidence calculation from rounded issuer-reported figures. It is not a measure of transition completion, profitability, or Microsoft-contract revenue."
+    }
+  ],
+  "context_notes": [
+    {
+      "context_id": "IREN-C001",
+      "title": "Conditional NVIDIA investment right",
+      "statement": "IREN reported granting NVIDIA a right to invest up to $2.1bn in ordinary shares, subject to delivery of up to 600,000 GPUs and certain regulatory conditions.",
+      "source_ids": [
+        "I-S04"
+      ],
+      "locator": "Form 10-K, Item 7, p.109, Recent Developments; Note 24, p.F-50, Investment Rights",
+      "boundary": "This is an issuer-reported conditional right linked to GPU supply, not a completed $2.1bn investment. The 10-K says it is accounted for separately from the NVIDIA cloud-services customer contract."
+    },
+    {
+      "context_id": "IREN-C002",
+      "title": "Figure AI named in IREN customer disclosures",
+      "statement": "IREN included Figure AI among recent signings and within its disclosed customer base.",
+      "source_ids": [
+        "I-S09",
+        "I-S11"
+      ],
+      "locator": "FY26 Results Exhibit 99.1, p.1, Highlights; July 20, 2026 Exhibit 99.1, opening customer-base paragraph",
+      "boundary": "This issuer-attributed customer mention does not identify contract value, deployed capacity, workload, operating outcome, or any relationship to the separate Figure AI × BMW evidence study."
+    }
+  ],
+  "content_digest": "sha256:b9f5d0f55c95bfd131d7a9388cdf95b17ed164003665db362b7daa1f5687f074"
 }
