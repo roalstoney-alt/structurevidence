@@ -20,7 +20,7 @@
   "com_readonly_cta": "PASS_HTTP_200",
   "historical_record_drift": "PASS",
   "tests": {"targeted_passed": 25, "targeted_run": 25, "full_discovery_passed": 31, "full_discovery_run": 42, "preexisting_failures": 11, "new_regression_count": 0},
-  "draft_pr_url": null,
+  "draft_pr_url": "https://github.com/roalstoney-alt/structurevidence/pull/57",
   "owner_publication_approval": "NOT_GIVEN",
   "org_published": false,
   "com_worker_deploy": false,
