@@ -207,6 +207,21 @@ class IrenTrackerTest(unittest.TestCase):
         self.assertIn("Figure AI among recent signings", self.page)
         self.assertIn("right to invest up to $2.1bn", self.page)
 
+    def test_decision_dependency_entry_is_private_and_case_bound(self):
+        section_start = self.page.index('id="decision-dependency"')
+        challenge_start = self.page.index('id="challenge"')
+        self.assertLess(section_start, challenge_start)
+        section = self.page[section_start:challenge_start]
+        self.assertIn("Map this evidence to your decision", section)
+        self.assertIn(
+            "https://structevidence.com/decision-pack/?case=SE-IREN-AI-CLOUD-001",
+            section,
+        )
+        self.assertNotIn("case_id=", section)
+        self.assertIn("private human-scope request", section)
+        self.assertIn("does not authorize research, publication, investment advice", section)
+        self.assertIn("No score, rating, forecast or recommendation", section)
+
     def test_no_production_worker_or_historic_case_drift(self):
         names = subprocess.check_output(
             ["git", "diff", "--name-only", BASE_SHA], cwd=ROOT, text=True
