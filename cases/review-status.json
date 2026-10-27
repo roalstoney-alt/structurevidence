@@ -8,6 +8,35 @@
   },
   "cases": [
     {
+      "case_id": "SE-IREN-AI-CLOUD-001",
+      "title": "IREN Limited: AI Cloud transition",
+      "canonical_path": "/cases/iren-ai-cloud-transition/",
+      "question": "Which milestones are supported by dated issuer disclosures, and where do contract value, delivery, acceptance, ARR, recognized revenue, cash collection, and returns remain distinct?",
+      "current_public_state": "SUPPORTED_AS_ATTRIBUTED_WITH_OPEN_BOUNDARIES",
+      "evidence_state_as_of": "2026-10-22",
+      "last_material_change": "2026-10-22",
+      "featured": true,
+      "management_status": "ACTIVE",
+      "last_reviewed_at": "2026-10-27T20:06:55Z",
+      "review_result": "PUBLICATION_AUTHORIZED",
+      "latest_review_id": "SE-IREN-PUBLICATION-20261028-01",
+      "latest_review_file": "cases/iren-ai-cloud-transition/publication-approval-v0.1.json",
+      "period": {
+        "id": "2026-10-28",
+        "start": "2026-10-28",
+        "end": "2026-10-28",
+        "status": "PUBLICATION_AUTHORIZED",
+        "scope": "Owner-authorized publication of the exact reviewed candidate; separate reviewer identities are not claimed."
+      },
+      "period_review_id": "SE-IREN-PUBLICATION-20261028-01",
+      "monitoring": {
+        "cadence": "EVENT_DRIVEN",
+        "enabled": true
+      },
+      "new_qualifying_evidence_count": 0,
+      "new_counter_evidence_count": 0
+    },
+    {
       "case_id": "SE-IRK-LAB-001",
       "title": "Irkutsk laboratory-worker death evidence tracker",
       "canonical_path": "/cases/irkutsk-lab-worker-death/",
