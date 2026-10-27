@@ -1,0 +1,130 @@
+{
+  "artifacts": [
+    {
+      "path": "assets/iren-tracker.css",
+      "sha256": "b7a1a92d288b056781b2724d71dd6c323543d993b2bf830046be1b47454a8c07"
+    },
+    {
+      "path": "docs/assets/iren-tracker.css",
+      "sha256": "b7a1a92d288b056781b2724d71dd6c323543d993b2bf830046be1b47454a8c07"
+    },
+    {
+      "path": "docs/cases/index.html",
+      "sha256": "acaeb845c2bc80950f4a27a704dc387da8d9d7fc7f8ab5458de2c8b556c4f316"
+    },
+    {
+      "path": "scripts/build_iren_public_tracker.py",
+      "sha256": "617982048fb5fd9844096c414344801e983cdccece54441d4ada3e5c8e8eeeec"
+    },
+    {
+      "path": "scripts/test_iren_public_tracker.py",
+      "sha256": "58928990f7c04a8588e82c64750164c37db52b2e5bb2d40b37fb8732357c777a"
+    },
+    {
+      "path": "scripts/guard_history_immutability.py",
+      "sha256": "899bd863f9a52147bcfa8864794ce66991d8472c8b600e1255dae4d313f05f6b"
+    },
+    {
+      "path": "tests/test_history_immutability.py",
+      "sha256": "91898d7b6ed2ddaf9e527d3c2372aebee05f1511a56fd1664fb86e0bb9c4b6b6"
+    },
+    {
+      "path": "cases/iren-ai-cloud-transition/events-v0.1.json",
+      "sha256": "3e8cbc7379f53d799dcd0832952253f9cb2f19cae1e25828dda8fd28e6c37ef8"
+    },
+    {
+      "path": "cases/iren-ai-cloud-transition/index.html",
+      "sha256": "adcce27052b1f8884bcaf712d2792db25faa6c293de597273ad13951b7cfa86c"
+    },
+    {
+      "path": "cases/iren-ai-cloud-transition/index.json",
+      "sha256": "ce435fa05aa6a7c4e2747428793e42c3ee07676d6278acc0601022405f3f984e"
+    },
+    {
+      "path": "cases/iren-ai-cloud-transition/source-registry-v0.1.json",
+      "sha256": "394ad2910de8ea425f44a23002b1f17810aa0f5db84aadbf1652c1efbc82aa9c"
+    },
+    {
+      "path": "cases/iren-ai-cloud-transition/tracker-schema-v0.1.json",
+      "sha256": "50e31ce58aa92c9840d6547d7d0ec15992a4b56169e5a884eb2e6bb862114a92"
+    },
+    {
+      "path": "cases/iren-ai-cloud-transition/tracker-v0.1.json",
+      "sha256": "971d86b8e76cf1c7e5b389a65a2ad0b2d383c04a39979efd981048b02e4edc68"
+    },
+    {
+      "path": "docs/cases/iren-ai-cloud-transition/events-v0.1.json",
+      "sha256": "3e8cbc7379f53d799dcd0832952253f9cb2f19cae1e25828dda8fd28e6c37ef8"
+    },
+    {
+      "path": "docs/cases/iren-ai-cloud-transition/index.html",
+      "sha256": "adcce27052b1f8884bcaf712d2792db25faa6c293de597273ad13951b7cfa86c"
+    },
+    {
+      "path": "docs/cases/iren-ai-cloud-transition/index.json",
+      "sha256": "ce435fa05aa6a7c4e2747428793e42c3ee07676d6278acc0601022405f3f984e"
+    },
+    {
+      "path": "docs/cases/iren-ai-cloud-transition/source-registry-v0.1.json",
+      "sha256": "394ad2910de8ea425f44a23002b1f17810aa0f5db84aadbf1652c1efbc82aa9c"
+    },
+    {
+      "path": "docs/cases/iren-ai-cloud-transition/tracker-schema-v0.1.json",
+      "sha256": "50e31ce58aa92c9840d6547d7d0ec15992a4b56169e5a884eb2e6bb862114a92"
+    },
+    {
+      "path": "docs/cases/iren-ai-cloud-transition/tracker-v0.1.json",
+      "sha256": "971d86b8e76cf1c7e5b389a65a2ad0b2d383c04a39979efd981048b02e4edc68"
+    },
+    {
+      "path": "release/SE-IREN-TRACKER-PUBLIC-MVP-001/BROWSER_QA.md",
+      "sha256": "afdc5f019aa2efaaa1a9854ba456bbb4e64de00e3f62ab69e682b901190aaa49"
+    },
+    {
+      "path": "release/SE-IREN-TRACKER-PUBLIC-MVP-001/HUMAN_REVIEW_CHECKLIST.md",
+      "sha256": "b5e050751926486dd5ab0e6601d1f44f3b07723ae141ba519117924fb0d0efc1"
+    },
+    {
+      "path": "release/SE-IREN-TRACKER-PUBLIC-MVP-001/PUBLICATION_WIRING_PLAN.md",
+      "sha256": "f53aa8a61c46b67c3bff0a25470998ba2137a8646890caaa4464d085ab662cc7"
+    },
+    {
+      "path": "release/SE-IREN-TRACKER-PUBLIC-MVP-001/SOURCE_CAPTURE_LOG.md",
+      "sha256": "3e171f59b685afd6a9e6dec39d015b6140fcf1cd3f42c9c3e44b092782c36c79"
+    },
+    {
+      "path": "release/SE-IREN-TRACKER-PUBLIC-MVP-001/TEST_RESULTS.md",
+      "sha256": "df5ec4af82d028866b9bd0b149d84a399953a3070bcb4d08d7f2f6b86861157a"
+    },
+    {
+      "path": "release/SE-IREN-TRACKER-PUBLIC-MVP-001/UNTESTED_LIVE_PATHS.md",
+      "sha256": "2465b929bef0e977607a2b436868711a1f021a491bc70219b2cdd0234c063587"
+    },
+    {
+      "path": "release/SE-IREN-TRACKER-PUBLIC-MVP-001/WEEKLY_EDITORIAL_DIGEST_DRAFT.md",
+      "sha256": "d0ef756752340b14aa3e7808b0300b4fa05da3a26f24cd13807c98691b5a4cf2"
+    },
+    {
+      "path": "release/SE-IREN-TRACKER-PUBLIC-MVP-001/screenshots/iren-tracker-desktop-1440x1200.png",
+      "sha256": "df92bbff2f62d9eb17c509b35b98c9d68e82a2e514212ceeb9594cc97bdf38fd"
+    },
+    {
+      "path": "release/SE-IREN-TRACKER-PUBLIC-MVP-001/screenshots/iren-tracker-mobile-390x844.png",
+      "sha256": "ec6f8b0c58ce8d29d893b966bcf944b5b0b6fffd998a4f93df4908106fe6c8f5"
+    },
+    {
+      "path": "release/SE-IREN-TRACKER-PUBLIC-MVP-001/screenshots/iren-tracker-mobile-500x900.png",
+      "sha256": "1b09df51a14bf68be1565e67b01cd9ae02033b44de06295b5f7c6733de8c9663"
+    }
+  ],
+  "base_sha": "a3264420664a5c471fbc33829fc203429ca0f814",
+  "evidence_cutoff": "2026-10-22",
+  "feature_branch": "codex/se-iren-tracker-public-mvp-001",
+  "last_source_check_utc": "2026-10-27T19:38:39Z",
+  "phase0_handoff_manifest_sha256": "36ba18248eb53ec0b02927d3991840f88f89940557382e3a209dea4c2932fa86",
+  "project": "SE-IREN-TRACKER-PUBLIC-MVP-001",
+  "publication_approved": false,
+  "reviewer_status": "PENDING_HUMAN_REVIEW",
+  "schema_version": "SE-IREN-RELEASE-FREEZE-v0.1",
+  "source_contract_sha256": "4cef5b37089eb0b85efe97304678ddeb32d6073b21d289c57dec8c2764432aed"
+}

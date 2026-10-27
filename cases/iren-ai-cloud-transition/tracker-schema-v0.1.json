@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://structurevidence.org/cases/iren-ai-cloud-transition/tracker-schema-v0.1.json",
+  "title": "StructEvidence IREN public tracker",
+  "type": "object",
+  "required": ["schema_version", "case_id", "evidence_cutoff", "last_source_check_utc", "next_source_check", "reviewer_status", "publication_status", "rows", "watch_items", "commercial_boundary"],
+  "properties": {
+    "case_id": {"const": "SE-IREN-AI-CLOUD-001"},
+    "reviewer_status": {"enum": ["PENDING_HUMAN_REVIEW", "APPROVED_WITH_RECORD"]},
+    "publication_status": {"enum": ["READY_FOR_HUMAN_PUBLICATION_REVIEW", "APPROVED_FOR_EXACT_SHA"]},
+    "rows": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["row_id", "section", "claim", "boundary", "state", "source_ids", "last_event_id", "next_check", "challenge_url"],
+        "properties": {
+          "row_id": {"pattern": "^IREN-R[0-9]{3}$"},
+          "section": {"enum": ["SUPPORTED_AS_ATTRIBUTED", "NOT_ESTABLISHED"]},
+          "state": {"enum": ["SUPPORTED_AS_ATTRIBUTED", "NOT_ESTABLISHED", "RETRIEVAL_INCOMPLETE"]},
+          "source_ids": {"type": "array", "items": {"pattern": "^I-S[0-9]{2}$"}},
+          "challenge_url": {"pattern": "^https://structevidence\\.com/verify/\\?case_id=SE-IREN-AI-CLOUD-001&claim_id=IREN-R[0-9]{3}$"}
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}

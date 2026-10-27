@@ -51,3 +51,9 @@ class HistoryGuardTest(unittest.TestCase):
         self.base=self.cmd("rev-parse","HEAD")
         self.write("cases/800vdc/events/b/index.json",{"event_id":"EV1"})
         self.assertIn("EVENT_ID_REUSED",str(self.check()))
+    def test_block_iren_aggregate_event_ledger_mutation(self):
+        self.write("cases/iren-ai-cloud-transition/events-v0.1.json", {"events": []})
+        self.cmd("add", "."); self.cmd("commit", "-qm", "iren ledger baseline")
+        self.base = self.cmd("rev-parse", "HEAD")
+        self.write("cases/iren-ai-cloud-transition/events-v0.1.json", {"events": [{"event_id": "changed"}]})
+        self.assertIn("IMMUTABLE_RECORD_MUTATION", str(self.check()))
