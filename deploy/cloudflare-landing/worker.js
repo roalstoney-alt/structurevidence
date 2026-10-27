@@ -1,7 +1,7 @@
 import { createRemoteJWKSet, jwtVerify } from "jose";
 import { ADMIN_APP_JS, ADMIN_HTML } from "./admin-ui.js";
 import { CAPABILITIES } from "./capabilities.js";
-import { COMMERCIAL_APP_JS_UPGRADE as COMMERCIAL_APP_JS, COMMERCIAL_CSS_V2 as COMMERCIAL_CSS, COMMERCIAL_PAGES_V2 as COMMERCIAL_PAGES } from "./commercial-upgrade.js";
+import { COMMERCIAL_APP_JS_UPGRADE as COMMERCIAL_APP_JS, COMMERCIAL_CSS_V2 as COMMERCIAL_CSS, COMMERCIAL_PAGES_V2 as COMMERCIAL_PAGES, localizeIntakePage } from "./commercial-upgrade.js";
 import { handleGapAdminApi, handleGapApi } from "./gap-service.js";
 import { GAP_APP_JS, GAP_CSS, OPEN_EVIDENCE_GAPS, findGap, renderGapChangeLog, renderGapDetail, renderGapIndex } from "./gaps.js";
 
@@ -298,7 +298,11 @@ function commercialRoute(request, url, env) {
   if (path === "/assets/app.js") return new Response(COMMERCIAL_APP_JS, { headers: { "content-type": "application/javascript; charset=utf-8", "cache-control": "public, max-age=3600", ...securityHeaders } });
   if (path === "/assets/gaps.js") return new Response(GAP_APP_JS, { headers: { "content-type": "application/javascript; charset=utf-8", "cache-control": "public, max-age=3600", ...securityHeaders } });
   const siteKey = safeTurnstileSiteKey(env);
-  const html = COMMERCIAL_PAGES[path]?.replaceAll("__TURNSTILE_SITE_KEY__", siteKey);
+  const sourceHtml = COMMERCIAL_PAGES[path];
+  const localizedHtml = new Set(["/verify/", "/context/", "/decision-pack/"]).has(path)
+    ? localizeIntakePage(sourceHtml, url.searchParams.get("lang"))
+    : sourceHtml;
+  const html = localizedHtml?.replaceAll("__TURNSTILE_SITE_KEY__", siteKey);
   if (!html) return new Response("Not found", { status: 404, headers: { "content-type": "text/plain; charset=utf-8", ...securityHeaders } });
   return htmlResponse(request, html);
 }
