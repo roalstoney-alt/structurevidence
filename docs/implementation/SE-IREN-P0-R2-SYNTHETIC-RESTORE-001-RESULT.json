@@ -1,0 +1,161 @@
+{
+  "project": "SE-IREN-P0-R2-SYNTHETIC-RESTORE-001",
+  "repository": "roalstoney-alt/structurevidence",
+  "pr_number": 54,
+  "locked_head_sha": "dfa72a5935e9c5cb6e1cb06a2fd4042c5ad7ac55",
+  "authorization": "SYNTHETIC_ONLY_EXPORT_IMPORT_AUTHORIZED",
+  "result": "PASS_SYNTHETIC_ONLY_UNMODIFIED_ROUNDTRIP",
+  "resources": {
+    "source": {
+      "name": "se-iren-r2-synthetic-source-20261027-a7c9",
+      "database_id_sha256": "03634f5dacb51fe920caac070d38cb2b70f55a82d76c91b2806690fd8a2cb7ea",
+      "created_start_utc": "2026-10-26T23:55:50.765Z",
+      "created_end_utc": "2026-10-26T23:56:01.710Z",
+      "deleted_start_utc": "2026-10-27T00:05:47.783Z",
+      "deleted_end_utc": "2026-10-27T00:05:59.864Z",
+      "deletion_confirmed": true
+    },
+    "target": {
+      "name": "se-iren-r2-synthetic-target-20261027-a7c9",
+      "database_id_sha256": "f7559ee22237c09d8c8a8b9a306f38e2d662c1d351ba54753d9eacefc122e24c",
+      "created_start_utc": "2026-10-26T23:56:09.650Z",
+      "created_end_utc": "2026-10-26T23:56:18.999Z",
+      "deleted_start_utc": "2026-10-27T00:05:35.705Z",
+      "deleted_end_utc": "2026-10-27T00:05:47.783Z",
+      "deletion_confirmed": true
+    },
+    "ids_distinct": true,
+    "production_or_staging_id_used": false,
+    "worker_binding_created": false,
+    "public_route_created": false,
+    "synthetic_worker_deployment_found": false,
+    "cleanup_confirmed_utc": "2026-10-27T00:06:57.820Z"
+  },
+  "source_setup": {
+    "migrations_start_utc": "2026-10-26T23:57:42.506Z",
+    "migrations_end_utc": "2026-10-26T23:57:54.530Z",
+    "migrations": [
+      "0001_customer_intake.sql",
+      "0002_open_evidence_gaps.sql",
+      "0003_intake_hardening.sql"
+    ],
+    "seed_start_utc": "2026-10-26T23:58:43.832Z",
+    "seed_end_utc": "2026-10-26T23:58:58.696Z",
+    "synthetic_only": true,
+    "real_customer_data_used": false
+  },
+  "export": {
+    "method": "wrangler d1 export --remote",
+    "started_utc": "2026-10-27T00:01:18.006Z",
+    "ended_utc": "2026-10-27T00:01:35.059Z",
+    "duration_seconds": 17.053,
+    "sql_bytes": 13825,
+    "sql_sha256": "d9f39c97d711972b079f12de95989f0e709ae82e853a9e6f6cf7022c367e94b0",
+    "sql_transformed": false,
+    "contains_cf_kv_ddl": false,
+    "temporary_sql_committed": false,
+    "temporary_sql_deleted": true
+  },
+  "import": {
+    "method": "wrangler d1 execute --remote --file",
+    "started_utc": "2026-10-27T00:02:14.847Z",
+    "ended_utc": "2026-10-27T00:02:27.608Z",
+    "duration_seconds": 12.761,
+    "target_pre_migrated": false,
+    "unmodified_export_used": true,
+    "result": "PASS"
+  },
+  "integrity": {
+    "initial_validation_start_utc": "2026-10-27T00:02:53.103Z",
+    "initial_validation_end_utc": "2026-10-27T00:03:14.874Z",
+    "initial_validation_duration_seconds": 21.771,
+    "append_only_guard_validation_start_utc": "2026-10-27T00:03:28.069Z",
+    "append_only_guard_validation_end_utc": "2026-10-27T00:04:10.568Z",
+    "append_only_guard_validation_duration_seconds": 42.499,
+    "integrity_ready_utc": "2026-10-27T00:05:09.045Z",
+    "five_business_tables": [
+      "customers",
+      "requests",
+      "request_events",
+      "request_consent_receipts",
+      "request_idempotency"
+    ],
+    "counts": {
+      "customers": 3,
+      "requests": 3,
+      "request_events": 5,
+      "request_consent_receipts": 3,
+      "request_idempotency": 3
+    },
+    "source_fixture_sha256": "3f2c7c299bb7037be4d686dc95bb97e006804cd89c66a15814268e5c09b95696",
+    "target_fixture_sha256": "3f2c7c299bb7037be4d686dc95bb97e006804cd89c66a15814268e5c09b95696",
+    "fixture_hash_match": true,
+    "source_schema_metadata_sha256": "03b84ba7f1dfb20fb846018370e67d23046496e95ba3c98bd48c063b42a4be38",
+    "target_schema_metadata_sha256": "03b84ba7f1dfb20fb846018370e67d23046496e95ba3c98bd48c063b42a4be38",
+    "schema_metadata_hash_match": true,
+    "required_indexes_present": true,
+    "foreign_key_relations_present": true,
+    "foreign_key_violations": 0,
+    "migration_ledger_match": true,
+    "consent_valid": true,
+    "idempotency_valid": true,
+    "private_defaults_valid": true,
+    "append_only_triggers_present": [
+      "request_events_no_update",
+      "request_events_no_delete",
+      "request_consent_receipts_no_update",
+      "request_consent_receipts_no_delete"
+    ],
+    "append_only_update_delete_attempts": 4,
+    "append_only_attempts_rejected": 4,
+    "source_unchanged_after_export": true,
+    "target_unchanged_after_guard_tests": true,
+    "d1_internal_cf_kv_identified": true
+  },
+  "recovery_measurement": {
+    "simulated_outage_marker_utc": "2026-10-27T00:01:18.006Z",
+    "rto_synthetic_observed_seconds": 231.039,
+    "rto_definition": "Synthetic export start through final target integrity-ready check, including export, import, semantic validation and append-only guard validation.",
+    "rpo_synthetic": "ZERO_IN_STATIC_FIXTURE_ONLY",
+    "rpo_definition": "No synthetic fixture writes occurred after the export cutoff marker.",
+    "production_rpo_inferred": false,
+    "production_rto_inferred": false,
+    "total_drill_to_cleanup_confirmation_seconds": 667.055
+  },
+  "cleanup": {
+    "retention_policy": "DELETE_AFTER_VALIDATION",
+    "source_database_deleted": true,
+    "target_database_deleted": true,
+    "source_and_target_absent_after_delete": true,
+    "production_database_still_present": true,
+    "staging_database_still_present": true,
+    "temporary_sql_deleted": true,
+    "temporary_seed_deleted": true,
+    "temporary_config_deleted": true
+  },
+  "prohibited_actions": {
+    "production_customer_data_read": false,
+    "production_customer_data_exported": false,
+    "production_d1_mutated": false,
+    "production_migration_0003_applied": false,
+    "production_worker_modified": false,
+    "production_post_count": 0,
+    "pr_merged": false,
+    "public_pilot_started": false
+  },
+  "validation": {
+    "synthetic_restore_report_guard": { "tests": 2, "passed": 2, "failed": 0 },
+    "cloudflare_landing_node": { "tests": 62, "passed": 62, "failed": 0 },
+    "repository_python": { "tests": 41, "passed": 30, "pre_existing_failures": 11, "new_failures": 0 },
+    "public_record_drift": "PASS",
+    "internal_link_audit": {
+      "result": "PASS",
+      "orphan_pages": 0,
+      "broken_internal_links": 0,
+      "cases_without_state": 0,
+      "evidence_without_parent": 0
+    },
+    "new_regression_count": 0
+  },
+  "ready_for_owner_production_release": false
+}

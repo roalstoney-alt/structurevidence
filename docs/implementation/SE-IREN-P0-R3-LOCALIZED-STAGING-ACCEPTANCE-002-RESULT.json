@@ -1,0 +1,227 @@
+{
+  "schema_version": "SE-IREN-P0-R3-LOCALIZED-STAGING-ACCEPTANCE-002-RESULT-v1",
+  "project": "SE-IREN-P0-R3-LOCALIZED-STAGING-ACCEPTANCE-002",
+  "date": "2026-10-27",
+  "timezone": "Asia/Shanghai",
+  "observed_at_utc": "2026-10-27T01:37:15Z",
+  "append_only": true,
+  "historical_reports_overwritten": false,
+  "locked_input_head": "da0421429a98e8c3d5dec96506b80cdc98fd1f35",
+  "execution_spec_head": "5647d491ddd84071ee5cdb9bd3682d39bee24b22",
+  "final_head_sha": "GIT_COMMIT_CONTAINING_THIS_RESULT",
+  "final_head_resolution": "Reported in PR and final handoff; not embedded to avoid a self-referential Git hash.",
+  "pr": {
+    "number": 54,
+    "branch": "codex/se-iren-intake-hardening-v01",
+    "draft": true,
+    "merged": false
+  },
+  "staging_deployment": {
+    "result": "PASS",
+    "worker": "structevidence-commercial-staging",
+    "url": "https://structevidence-commercial-staging.roalstoney.workers.dev",
+    "config": "deploy/cloudflare-landing/wrangler.staging.jsonc",
+    "workers_dev": true,
+    "custom_routes": [],
+    "version_before": "19f0ef29-c7c0-4cd0-b628-a68d860ec203",
+    "version_after": "64a10491-6cf2-40b9-ac6e-a7aca364d149",
+    "version_after_traffic_percent": 100,
+    "started_at_utc": "2026-10-27T01:13:36Z",
+    "completed_at_utc": "2026-10-27T01:13:46Z",
+    "d1": {
+      "name": "structurevidence-customer-cases-staging",
+      "id": "65dc6680-0832-401d-8772-6a082b68673c"
+    },
+    "rate_limiter_namespace": "842054",
+    "staging_test_only": true,
+    "turnstile_hostname": "structevidence-commercial-staging.roalstoney.workers.dev",
+    "turnstile_action": "public-intake"
+  },
+  "sha256": {
+    "commercial_upgrade_source": "1ce655d7167a7ac45682d1b924f4c1cf2a9c152ef7b09371085f2dd3e904cd4f",
+    "worker_source": "2218d1dbbeb182b21edb989b48f399c6841c8f247d19cd79f9a48bbd7736f21e",
+    "staging_wrapper_source": "0037795ec2a4d77102410b4103fb82a0bb360c8ca326004852ca0712bda1335b",
+    "staging_config": "bab9d6461b0500fda6a4d12b55356dae00ccae0d73e6dc9686f323385af77fd1",
+    "dry_run_bundle": "d7d988cc621bc66605cdbc215c401773f1aeec4457890f71e3414c9e47d85e40"
+  },
+  "browser_acceptance": {
+    "evidence_class": "REAL_BROWSER_REAL_PROVIDER",
+    "result": "PASS_CRITICAL_SURFACES_WITH_DOCUMENT_LANGUAGE_GAP",
+    "turnstile_tokens_persisted": false,
+    "locales": [
+      {
+        "locale": "en",
+        "route": "/verify/?lang=en",
+        "http_status": 200,
+        "document_html_lang": "en",
+        "critical_copy_lang": "en",
+        "consent_boundary": "PASS",
+        "missing_challenge_copy": "PASS",
+        "turnstile_valid": true,
+        "create_http": 201,
+        "replay_http": 200,
+        "conflict_http": 409,
+        "request_id_sha256": "a6bc54c87d4930e4c5b864b66d2fefb495200896eceb023087c1fd1ecce10005",
+        "success_status": "SUBMITTED",
+        "privacy_class": "CUSTOMER_PRIVATE",
+        "research_authorization": "NOT_AUTHORIZED"
+      },
+      {
+        "locale": "zh-CN",
+        "route": "/verify/?lang=zh-CN",
+        "http_status": 200,
+        "document_html_lang": "en",
+        "critical_copy_lang": "zh-CN",
+        "consent_boundary": "PASS",
+        "missing_challenge_copy": "PASS",
+        "turnstile_valid": true,
+        "create_http": 201,
+        "replay_http": 200,
+        "conflict_http": 409,
+        "request_id_sha256": "38b5ff351268ca34c1b16f380e000dde149ce568b837af92d8fefde10a3d6eb5",
+        "success_status": "SUBMITTED",
+        "privacy_class": "CUSTOMER_PRIVATE",
+        "research_authorization": "NOT_AUTHORIZED"
+      },
+      {
+        "locale": "es",
+        "route": "/verify/?lang=es",
+        "http_status": 200,
+        "document_html_lang": "en",
+        "critical_copy_lang": "es",
+        "consent_boundary": "PASS",
+        "missing_challenge_copy": "PASS",
+        "turnstile_valid": true,
+        "create_http": 201,
+        "replay_http": 200,
+        "conflict_http": 409,
+        "request_id_sha256": "408cd6a97d55f2caa81cb70b4aa279574c6e70e511f5ded4aae262a13be4320f",
+        "success_status": "SUBMITTED",
+        "privacy_class": "CUSTOMER_PRIVATE",
+        "research_authorization": "NOT_AUTHORIZED"
+      }
+    ],
+    "localized_surfaces": [
+      "consent",
+      "turnstile_guidance",
+      "missing_challenge_status",
+      "error_dictionary",
+      "success_confirmation"
+    ],
+    "full_form_localization": "NOT_IMPLEMENTED",
+    "document_language_metadata": "FAIL_ZH_CN_AND_ES_REMAIN_EN"
+  },
+  "turnstile": {
+    "real_provider_observed": {
+      "valid_browser_challenges": 3,
+      "valid_results": [201, 201, 201],
+      "invalid_token_http": 400,
+      "invalid_token_error": "Human verification failed",
+      "invalid_token_d1_write": false
+    },
+    "deterministic_fault_injection": {
+      "missing": "PASS_FAIL_CLOSED_400",
+      "expired": "PASS_FAIL_CLOSED_400",
+      "replayed_single_use_token": "PASS_FAIL_CLOSED_400",
+      "wrong_hostname": "PASS_FAIL_CLOSED_400",
+      "wrong_action": "PASS_FAIL_CLOSED_400",
+      "provider_error": "PASS_FAIL_CLOSED_503",
+      "provider_timeout": "PASS_FAIL_CLOSED_503",
+      "rate_limit": "PASS_FAIL_CLOSED_429",
+      "oversized_body": "PASS_FAIL_CLOSED_413"
+    },
+    "deterministic_cases_claimed_as_real_provider": false
+  },
+  "d1_integrity": {
+    "totals_before": {
+      "customers": 4,
+      "requests": 4,
+      "request_events": 4,
+      "request_consent_receipts": 4,
+      "request_idempotency": 4
+    },
+    "totals_after": {
+      "customers": 7,
+      "requests": 7,
+      "request_events": 7,
+      "request_consent_receipts": 7,
+      "request_idempotency": 7
+    },
+    "per_locale_exact_counts": {
+      "customers": 1,
+      "requests": 1,
+      "events": 1,
+      "consents": 1,
+      "idempotency_mappings": 1
+    },
+    "consent_version": "SE-CUSTOMER-PRIVACY-v1",
+    "foreign_key_violations": 0,
+    "append_only_triggers": 4,
+    "event_update_rejected": true,
+    "event_delete_rejected": true,
+    "consent_update_rejected": true,
+    "consent_delete_rejected": true,
+    "applied_migrations": [
+      "0001_customer_intake.sql",
+      "0002_open_evidence_gaps.sql",
+      "0003_intake_hardening.sql"
+    ]
+  },
+  "cors": {
+    "allowlisted_options_http": 204,
+    "allow_origin_exact": true,
+    "allow_methods": "POST, OPTIONS",
+    "allow_headers": "content-type, idempotency-key",
+    "vary_origin": true,
+    "disallowed_options_http": 204,
+    "disallowed_origin_approved": false,
+    "browser_preflight": "NOT_APPLICABLE_SAME_ORIGIN"
+  },
+  "access": {
+    "unauthenticated_ui_http": 302,
+    "unauthenticated_api_http": 302,
+    "redirect_targets_distinct": true,
+    "authenticated_admin_http": 200,
+    "synthetic_records_only": true,
+    "authentication_bypassed": false,
+    "credential_or_identity_persisted": false
+  },
+  "tests": {
+    "predeploy_config_guard": "PASS",
+    "wrangler_staging_dry_run": "PASS",
+    "cloudflare_worker_predeploy": { "passed": 66, "failed": 0 },
+    "focused_intake_privacy_predeploy": { "passed": 29, "failed": 0 },
+    "cloudflare_worker_post_acceptance": { "passed": 66, "failed": 0 },
+    "staging_transport_matrix": { "passed": 9, "failed": 0 },
+    "localized_browser_status_and_success": { "passed": 6, "failed": 0 },
+    "public_record_drift": "PASS",
+    "internal_links": { "broken": 0, "orphan": 0 },
+    "legacy_customer_intake_guard": {
+      "passed": 2,
+      "pre_existing_failures": 1,
+      "new_failures": 0
+    },
+    "git_diff_check": "PASS",
+    "new_regression_count": 0
+  },
+  "gates": {
+    "staging_deployed": "YES",
+    "staging_real_browser_e2e": "PASS_CRITICAL_SURFACES_WITH_DOCUMENT_LANGUAGE_GAP",
+    "localized_critical_intake_copy": "PASS",
+    "full_form_localization": "NOT_IMPLEMENTED",
+    "human_privacy_legal_signoff": "PENDING",
+    "production_recoverability": "UNKNOWN",
+    "ready_for_owner_production_release": "NO"
+  },
+  "prohibited_actions": {
+    "production_worker_changed": false,
+    "production_d1_changed": false,
+    "production_post_count": 0,
+    "production_migration_0003_applied": false,
+    "pr_merged": false,
+    "public_pilot_started": false,
+    "social_published": false,
+    "charging_started": false,
+    "outreach_started": false
+  }
+}
