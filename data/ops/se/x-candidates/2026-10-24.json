@@ -1,0 +1,17 @@
+{
+  "schema_version": "se-x-candidate-v3",
+  "candidate_id": "SE-X-2026-10-24-WEBSITE-BLOCKED-01",
+  "scheduled_date": "2026-10-24",
+  "text": null,
+  "unicode_character_count": null,
+  "source_urls": [],
+  "approved_public_page": null,
+  "evidence_cutoff": "2026-10-24T14:15:00Z",
+  "content_sha256": null,
+  "dedup_check": "NOT_APPLICABLE_NO_TEXT",
+  "factual_status": "NO_NEW_VERIFIED_EVENT_WITHIN_BOUNDED_REVIEW",
+  "status": "WEBSITE_PUBLICATION_BLOCKED",
+  "approval_gate": "HUMAN_GATE_REQUIRED",
+  "secondary_gate": "X_AUTO_PUBLISH_PAUSED_HUMAN_REVIEW",
+  "x_post_sent": 0
+}
