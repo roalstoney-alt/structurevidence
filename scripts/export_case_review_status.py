@@ -91,6 +91,40 @@ def build(root: Path) -> dict:
                      'latest_review_id': review_id, 'latest_review_file': review_file,
                      'period': period, 'period_review_id': settings.get('period_review_id'),
                      'monitoring': settings['monitoring'], **counts})
+    iren_tracker = root / 'cases/iren-ai-cloud-transition/tracker-v0.1.json'
+    if iren_tracker.is_file():
+        tracker = load(root, 'cases/iren-ai-cloud-transition/tracker-v0.1.json')
+        if tracker.get('publication_status') == 'PUBLICATION_AUTHORIZED_FOR_EXACT_SHA':
+            approval_path = 'cases/iren-ai-cloud-transition/' + tracker['approval_record']
+            approval = load(root, approval_path)
+            assert approval['publication_authorized'] is True
+            rows.append({
+                'case_id': tracker['case_id'],
+                'title': tracker['title'],
+                'canonical_path': '/cases/iren-ai-cloud-transition/',
+                'question': ('Which milestones are supported by dated issuer disclosures, and where do contract value, '
+                             'delivery, acceptance, ARR, recognized revenue, cash collection, and returns remain distinct?'),
+                'current_public_state': 'SUPPORTED_AS_ATTRIBUTED_WITH_OPEN_BOUNDARIES',
+                'evidence_state_as_of': tracker['evidence_cutoff'],
+                'last_material_change': tracker['evidence_cutoff'],
+                'featured': True,
+                'management_status': 'ACTIVE',
+                'last_reviewed_at': approval['authorized_at_utc'],
+                'review_result': approval['decision'],
+                'latest_review_id': approval['approval_id'],
+                'latest_review_file': approval_path,
+                'period': {
+                    'id': '2026-10-28',
+                    'start': '2026-10-28',
+                    'end': '2026-10-28',
+                    'status': 'PUBLICATION_AUTHORIZED',
+                    'scope': 'Owner-authorized publication of the exact reviewed candidate; separate reviewer identities are not claimed.'
+                },
+                'period_review_id': approval['approval_id'],
+                'monitoring': {'cadence': 'EVENT_DRIVEN', 'enabled': True},
+                'new_qualifying_evidence_count': 0,
+                'new_counter_evidence_count': 0,
+            })
     rows.sort(key=lambda row: (row['last_material_change'], row['case_id']), reverse=True)
     return {'schema_version': '1.0', 'status_recorded_at': status['status_recorded_at'],
             'timestamp_semantics': {'status_recorded_at': 'Administrative status observation; not a scientific review timestamp.',
@@ -118,6 +152,8 @@ def render_row(row: dict) -> str:
     klass = 'not-established' if 'NOT ESTABLISHED' in label and 'INCOMPLETE' not in label else 'pending'
     if row['case_id'] == 'CML-PDRE-001':
         klass = 'observed'
+    elif row['case_id'] == 'SE-IREN-AI-CLOUD-001':
+        klass = 'supported'
     period = row['period']
     if period['status'] == 'NOT_YET_REVIEWED':
         review = f'<strong>Pending review · {esc(period["id"])}</strong><br><small>No completed review recorded for this period.</small>'

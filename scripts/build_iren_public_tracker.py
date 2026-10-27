@@ -47,8 +47,14 @@ def validate(tracker: dict, registry: dict, ledger: dict) -> None:
         assert query["case_id"] == [tracker["case_id"]]
         assert query["claim_id"] == [row["row_id"]]
         assert row["next_check"].strip()
-    assert tracker["reviewer_status"] == "PENDING_HUMAN_REVIEW"
-    assert tracker["publication_status"] == "READY_FOR_HUMAN_PUBLICATION_REVIEW"
+    allowed_release_states = {
+        ("PENDING_HUMAN_REVIEW", "READY_FOR_HUMAN_PUBLICATION_REVIEW"),
+        ("OWNER_AUTHORIZED_PUBLICATION", "PUBLICATION_AUTHORIZED_FOR_EXACT_SHA"),
+    }
+    assert (tracker["reviewer_status"], tracker["publication_status"]) in allowed_release_states
+    if tracker["reviewer_status"] == "OWNER_AUTHORIZED_PUBLICATION":
+        assert tracker.get("approval_record")
+        assert (CASE / tracker["approval_record"]).is_file()
     assert ledger["append_only"] is True
 
 
@@ -73,7 +79,7 @@ def render_source_links(source_ids: list[str], sources: dict[str, dict]) -> str:
     return " · ".join(links)
 
 
-def render_row(row: dict, sources: dict[str, dict]) -> str:
+def render_row(row: dict, sources: dict[str, dict], reviewer_status: str) -> str:
     state_class = "supported" if row["state"] == "SUPPORTED_AS_ATTRIBUTED" else "not-established"
     hashes = []
     for source_id in row["source_ids"]:
@@ -88,7 +94,7 @@ def render_row(row: dict, sources: dict[str, dict]) -> str:
           <div><dt>Sources</dt><dd>{render_source_links(row['source_ids'], sources)}</dd></div>
           <div><dt>Assurance / liability</dt><dd>{html.escape(row['assurance'])} / {html.escape(row['liability'])}</dd></div>
           <div><dt>Capture</dt><dd>{html.escape(' · '.join(hashes))}</dd></div>
-          <div><dt>Revision</dt><dd>{html.escape(row['last_event_id'])} · PENDING HUMAN REVIEW</dd></div>
+          <div><dt>Revision</dt><dd>{html.escape(row['last_event_id'])} · {html.escape(reviewer_status.replace('_', ' '))}</dd></div>
           <div><dt>Next check</dt><dd>{html.escape(row['next_check'])}</dd></div>
         </dl>
         <a class="challenge-link" href="{html.escape(row['challenge_url'])}">Challenge {html.escape(row['row_id'])}</a>
@@ -98,7 +104,7 @@ def render_row(row: dict, sources: dict[str, dict]) -> str:
 def build() -> None:
     tracker = load("tracker-v0.1.json")
     registry = load("source-registry-v0.1.json")
-    ledger = load("events-v0.1.json")
+    ledger = load(tracker.get("event_ledger", "events-v0.1.json"))
     validate(tracker, registry, ledger)
 
     sources = {source["source_id"]: source for source in registry["sources"]}
@@ -106,17 +112,23 @@ def build() -> None:
     snapshot = {
         "schema_version": "SE-IREN-PUBLIC-SNAPSHOT-v0.1",
         "case_id": tracker["case_id"],
+        "current_state": "SUPPORTED_AS_ATTRIBUTED_WITH_OPEN_BOUNDARIES",
         "tracker_data_version": tracker["tracker_data_version"],
         "evidence_cutoff": tracker["evidence_cutoff"],
         "last_source_check_utc": tracker["last_source_check_utc"],
         "next_source_check": tracker["next_source_check"],
         "reviewer_status": tracker["reviewer_status"],
+        "reviewed_by": tracker.get("reviewed_by"),
+        "reviewed_at_utc": tracker.get("reviewed_at_utc"),
         "publication_status": tracker["publication_status"],
+        "approval_record": tracker.get("approval_record"),
+        "approved_candidate_head_sha": tracker.get("approved_candidate_head_sha"),
         "notices": tracker["notices"],
         "rows": tracker["rows"],
         "watch_items": tracker["watch_items"],
         "sources": public_sources,
         "events": ledger["events"],
+        "history": [event["event_id"] for event in ledger["events"]],
         "commercial_boundary": tracker["commercial_boundary"],
     }
     snapshot["content_digest"] = "sha256:" + canonical_sha256(snapshot)
@@ -125,10 +137,12 @@ def build() -> None:
     )
 
     supported = "".join(
-        render_row(row, sources) for row in tracker["rows"] if row["section"] == "SUPPORTED_AS_ATTRIBUTED"
+        render_row(row, sources, tracker["reviewer_status"])
+        for row in tracker["rows"] if row["section"] == "SUPPORTED_AS_ATTRIBUTED"
     )
     not_established = "".join(
-        render_row(row, sources) for row in tracker["rows"] if row["section"] == "NOT_ESTABLISHED"
+        render_row(row, sources, tracker["reviewer_status"])
+        for row in tracker["rows"] if row["section"] == "NOT_ESTABLISHED"
     )
     watch = "".join(
         f"<tr><td><code>{html.escape(item['watch_id'])}</code></td><td>{html.escape(item['item'])}</td>"
@@ -173,16 +187,16 @@ def build() -> None:
   <meta property="og:url" content="https://structurevidence.org/cases/iren-ai-cloud-transition/">
   <script type="application/ld+json">{jsonld}</script>
   <link rel="stylesheet" href="/assets/product.css?v=20261001-gravity">
-  <link rel="stylesheet" href="/assets/iren-tracker.css?v=20261028-rc1">
+  <link rel="stylesheet" href="/assets/iren-tracker.css?v=20261028-publication">
 </head>
 <body class="product-site iren-tracker"><a class="skip-link" href="#main">Skip to content</a>
 <header class="product-header"><nav class="product-nav" aria-label="Primary navigation"><a class="product-brand" href="/"><span>SE</span><strong>StructEvidence</strong></a><button class="product-nav-toggle" type="button" aria-expanded="false" aria-controls="product-links" data-product-nav-toggle>Menu</button><div class="product-links" id="product-links"><a aria-current="page" href="/cases/">Evidence Cases</a><a href="/gaps/">Open Evidence Gaps</a><a href="https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001">Verify a Claim</a><a href="https://structevidence.com/decision-pack/?case_id=SE-IREN-AI-CLOUD-001">Decision Pack</a><a href="/method.html">Method</a></div></nav></header>
 <main class="product-main" id="main"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">StructEvidence</a><span>›</span><a href="/cases/">Cases</a><span>›</span><span aria-current="page">IREN AI Cloud transition</span></nav>
   <section class="page-hero case-hero tracker-hero" aria-labelledby="case-title">
-    <p class="eyebrow">Release candidate · {html.escape(tracker['case_id'])} · {html.escape(tracker['tracker_data_version'])}</p>
+    <p class="eyebrow">Public research tracker · {html.escape(tracker['case_id'])} · {html.escape(tracker['tracker_data_version'])}</p>
     <h1 id="case-title">IREN Limited: AI Cloud transition, without collapsing the evidence chain.</h1>
     <p class="lead">Which milestones are supported by dated issuer disclosures—and where do contract value, delivery, customer acceptance, ARR, recognized revenue, cash collection, and economic returns remain distinct?</p>
-    <div class="review-hold" role="status"><strong>Publication hold:</strong> PENDING HUMAN REVIEW. This candidate has no named human reviewer and is not approved for publication.</div>
+    <div class="review-hold review-authorized" role="status"><strong>Publication authorization:</strong> The authenticated task owner approved the exact reviewed candidate for public release. Separate financial, legal, privacy, and row-level reviewer identities are not claimed by the public authorization record.</div>
     <dl class="case-facts">
       <div><dt>Evidence cutoff</dt><dd>{html.escape(tracker['evidence_cutoff'])}</dd></div>
       <div><dt>Last source check</dt><dd>{html.escape(tracker['last_source_check_utc'])}</dd></div>
@@ -203,15 +217,15 @@ def build() -> None:
 
   <section class="product-section tracker-block" id="watch" aria-labelledby="watch-title"><div class="section-head"><div><p class="eyebrow">Block 3</p><h2 id="watch-title">What would change this / dated watch items</h2></div><p>A scheduled check does not predict an outcome. Silence does not prove no change.</p></div><div class="table-scroll" tabindex="0" aria-label="Dated IREN watch items"><table class="watch-table"><thead><tr><th>ID</th><th>Item</th><th>Date or window</th><th>Current state</th><th>What to check</th></tr></thead><tbody>{watch}</tbody></table></div></section>
 
-  <section class="product-section tracker-block" id="change-log" aria-labelledby="change-log-title"><div class="section-head"><div><p class="eyebrow">Block 4</p><h2 id="change-log-title">Append-only change log</h2></div><p>Event digests chain to the prior event. Corrections must append a supersession; earlier records remain addressable.</p></div><ol class="event-log">{events}</ol><div class="actions"><a class="button secondary" href="events-v0.1.json">Open event ledger</a></div></section>
+  <section class="product-section tracker-block" id="change-log" aria-labelledby="change-log-title"><div class="section-head"><div><p class="eyebrow">Block 4</p><h2 id="change-log-title">Append-only change log</h2></div><p>Event digests chain to the prior event. Corrections must append a supersession; earlier records remain addressable.</p></div><ol class="event-log">{events}</ol><div class="actions"><a class="button secondary" href="{html.escape(tracker.get('event_ledger', 'events-v0.1.json'))}">Open current event ledger</a><a class="button secondary" href="events-v0.1.json">Open original candidate ledger</a></div></section>
 
-  <section class="product-section" id="provenance" aria-labelledby="provenance-title"><div class="section-head"><div><p class="eyebrow">Source provenance</p><h2 id="provenance-title">Source access, dependency, and capture state</h2></div><p>SEC-hosted exhibits remain issuer-authored. HTTP 403 is recorded as a retrieval limitation and is never evidence of absence. No private source bytes are included.</p></div><div class="table-scroll" tabindex="0" aria-label="IREN source registry"><table class="watch-table source-table"><thead><tr><th>ID</th><th>Document</th><th>Dependency</th><th>Liability</th><th>Access</th><th>SHA-256</th></tr></thead><tbody>{provenance}</tbody></table></div><p class="notice">Assurance, liability, and D0–D4 are proposed experimental disclosure attributes. D0–D4 is not adopted or applied to rows in this release candidate. Cash collection and customer-authored confirmation remain distinct.</p></section>
+  <section class="product-section" id="provenance" aria-labelledby="provenance-title"><div class="section-head"><div><p class="eyebrow">Source provenance</p><h2 id="provenance-title">Source access, dependency, and capture state</h2></div><p>SEC-hosted exhibits remain issuer-authored. HTTP 403 is recorded as a retrieval limitation and is never evidence of absence. No private source bytes are included.</p></div><div class="table-scroll" tabindex="0" aria-label="IREN source registry"><table class="watch-table source-table"><thead><tr><th>ID</th><th>Document</th><th>Dependency</th><th>Liability</th><th>Access</th><th>SHA-256</th></tr></thead><tbody>{provenance}</tbody></table></div><p class="notice">Assurance, liability, and D0–D4 are proposed experimental disclosure attributes. D0–D4 is not adopted or applied to rows in this public release. Cash collection and customer-authored confirmation remain distinct.</p></section>
 
   <section class="product-section" id="challenge" aria-labelledby="challenge-title"><div class="proof-card"><div class="proof-main"><p class="eyebrow">Human review boundary</p><h2 id="challenge-title">A challenge never changes a public state automatically.</h2><p>Only fixed public identifiers are sent to the existing private intake. Do not put evidence text, identity, thesis, or non-public context in the URL. Customer content remains private; submission does not authorize research or public release.</p><div class="actions"><a class="button" href="https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001">Challenge or verify a claim</a><a class="button secondary" href="https://structevidence.com/decision-pack/?case_id=SE-IREN-AI-CLOUD-001">Request a Decision Pack</a></div></div><aside class="proof-aside"><p class="field-label">Do not equate</p><p>CONTRACTED ARR ≠ OPERATING ARR</p><p>ARR ≠ GAAP REVENUE</p><p>REVENUE ≠ CASH COLLECTION</p><p>ISSUER ACCEPTANCE CLAIM ≠ CUSTOMER-AUTHORED PROOF</p></aside></div></section>
 
   <section class="product-section related-context" aria-labelledby="related-title"><h2 id="related-title">Related evidence context stays separate</h2><p><a href="https://github.com/roalstoney-alt/se-dual-case-public/blob/main/SE-PHYSICAL-AI-001.md" rel="noopener noreferrer">Figure AI × BMW provisional research ↗</a> is a separate issuer/dependent evidence study. It does not corroborate IREN delivery, customer acceptance, revenue, or cash collection.</p></section>
 </main>
-<footer class="product-footer"><div class="product-wrap footer-grid"><strong>StructEvidence</strong><a href="/cases/">Evidence cases</a><a href="/changes/">Recorded changes</a><a href="/method.html">Method</a><a href="/privacy.html">Privacy</a><span>Release candidate · human publication approval not given.</span></div></footer><script src="/assets/product.js"></script></body></html>
+<footer class="product-footer"><div class="product-wrap"><div class="footer-grid"><strong>StructEvidence</strong><a href="/cases/">Evidence cases</a><a href="/changes/">Recorded changes</a><a href="/method.html">Method</a><a href="/privacy.html">Privacy</a><span>Owner-authorized public research projection.</span></div><div class="research-disclaimer" role="note" aria-label="Research disclaimer"><strong>Research disclaimer.</strong> This website presents time-bounded public-source research for inspection and challenge. It is not investment, legal, accounting, tax, technical-certification, or other professional advice; it is not a recommendation, rating, forecast, or assurance of future performance. Issuer-authored statements remain attributed claims, missing evidence is not proof of non-existence, and readers should verify primary sources and obtain qualified advice before acting.</div></div></footer><script src="/assets/product.js"></script></body></html>
 """
     (CASE / "index.html").write_text(page, encoding="utf-8")
     docs_case = ROOT / "docs" / "cases" / "iren-ai-cloud-transition"

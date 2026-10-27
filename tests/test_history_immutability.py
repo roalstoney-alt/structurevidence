@@ -57,3 +57,9 @@ class HistoryGuardTest(unittest.TestCase):
         self.base = self.cmd("rev-parse", "HEAD")
         self.write("cases/iren-ai-cloud-transition/events-v0.1.json", {"events": [{"event_id": "changed"}]})
         self.assertIn("IMMUTABLE_RECORD_MUTATION", str(self.check()))
+    def test_block_iren_publication_approval_mutation(self):
+        self.write("cases/iren-ai-cloud-transition/publication-approval-v0.1.json", {"approval_id": "A1"})
+        self.cmd("add", "."); self.cmd("commit", "-qm", "iren approval baseline")
+        self.base = self.cmd("rev-parse", "HEAD")
+        self.write("cases/iren-ai-cloud-transition/publication-approval-v0.1.json", {"approval_id": "changed"})
+        self.assertIn("IMMUTABLE_RECORD_MUTATION", str(self.check()))

@@ -55,18 +55,22 @@ class IrenTrackerTest(unittest.TestCase):
     def setUpClass(cls):
         cls.tracker = load("tracker-v0.1.json")
         cls.registry = load("source-registry-v0.1.json")
-        cls.ledger = load("events-v0.1.json")
+        cls.ledger = load(cls.tracker.get("event_ledger", "events-v0.1.json"))
         cls.snapshot = load("index.json")
         cls.page = (CASE / "index.html").read_text(encoding="utf-8")
         cls.parser = PageParser()
         cls.parser.feed(cls.page)
         cls.sources = {source["source_id"]: source for source in cls.registry["sources"]}
 
-    def test_four_blocks_and_review_hold_are_visible(self):
+    def test_four_blocks_and_owner_authorization_are_visible(self):
         self.assertTrue({"supported", "not-established", "watch", "change-log"} <= self.parser.ids)
-        self.assertIn("PENDING HUMAN REVIEW", self.page)
-        self.assertIn("not approved for publication", self.page)
-        self.assertEqual(self.tracker["publication_status"], "READY_FOR_HUMAN_PUBLICATION_REVIEW")
+        self.assertIn("Publication authorization", self.page)
+        self.assertIn("Separate financial, legal, privacy, and row-level reviewer identities are not claimed", self.page)
+        self.assertEqual(self.tracker["reviewer_status"], "OWNER_AUTHORIZED_PUBLICATION")
+        self.assertEqual(self.tracker["publication_status"], "PUBLICATION_AUTHORIZED_FOR_EXACT_SHA")
+        approval = load(self.tracker["approval_record"])
+        self.assertTrue(approval["publication_authorized"])
+        self.assertFalse(approval["independent_role_attestations_recorded"])
 
     def test_all_rows_have_stable_ids_sources_next_checks_and_events(self):
         rows = self.tracker["rows"]
@@ -144,6 +148,9 @@ class IrenTrackerTest(unittest.TestCase):
             self.assertEqual(event["event_digest"], "sha256:" + digest(core))
             self.assertRegex(event["evidence_digest"], r"^sha256:[0-9a-f]{64}$")
             previous = event["event_digest"]
+        original = load("events-v0.1.json")["events"]
+        self.assertEqual(self.ledger["events"][:len(original)], original)
+        self.assertEqual(self.ledger["events"][-1]["event_type"], "OWNER_PUBLICATION_AUTHORIZED")
 
     def test_public_export_is_allowlisted_and_private_safe(self):
         allowed_source_keys = {
@@ -167,10 +174,11 @@ class IrenTrackerTest(unittest.TestCase):
         self.assertEqual(self.parser.canonical, "https://structurevidence.org/cases/iren-ai-cloud-transition/")
         sitemap = (ROOT / "sitemap.xml").read_text()
         ET.fromstring(sitemap)
-        self.assertNotIn("https://structurevidence.org/cases/iren-ai-cloud-transition/", sitemap)
+        for suffix in ("", "index.json", "source-registry-v0.1.json", "events-v0.2.json"):
+            self.assertIn("https://structurevidence.org/cases/iren-ai-cloud-transition/" + suffix, sitemap)
         self.assertNotIn("hreflang=\"zh-CN\" href=\"https://structurevidence.org/zh-cn/cases/iren-ai-cloud-transition/", sitemap)
         index = (ROOT / "cases" / "index.html").read_text()
-        self.assertNotIn("/cases/iren-ai-cloud-transition/", index)
+        self.assertIn("/cases/iren-ai-cloud-transition/", index)
         self.assertEqual((CASE / "index.html").read_bytes(), (ROOT / "docs" / "cases" / "iren-ai-cloud-transition" / "index.html").read_bytes())
 
     def test_mobile_and_accessibility_hooks(self):
@@ -180,6 +188,8 @@ class IrenTrackerTest(unittest.TestCase):
         self.assertIn('class="skip-link"', self.page)
         self.assertIn('aria-label="Dated IREN watch items"', self.page)
         self.assertIn('aria-label="IREN source registry"', self.page)
+        self.assertIn('aria-label="Research disclaimer"', self.page)
+        self.assertIn("not investment, legal, accounting, tax", self.page)
 
     def test_no_production_worker_or_historic_case_drift(self):
         names = subprocess.check_output(

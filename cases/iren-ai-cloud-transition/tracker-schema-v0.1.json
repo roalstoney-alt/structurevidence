@@ -6,8 +6,8 @@
   "required": ["schema_version", "case_id", "evidence_cutoff", "last_source_check_utc", "next_source_check", "reviewer_status", "publication_status", "rows", "watch_items", "commercial_boundary"],
   "properties": {
     "case_id": {"const": "SE-IREN-AI-CLOUD-001"},
-    "reviewer_status": {"enum": ["PENDING_HUMAN_REVIEW", "APPROVED_WITH_RECORD"]},
-    "publication_status": {"enum": ["READY_FOR_HUMAN_PUBLICATION_REVIEW", "APPROVED_FOR_EXACT_SHA"]},
+    "reviewer_status": {"enum": ["PENDING_HUMAN_REVIEW", "OWNER_AUTHORIZED_PUBLICATION"]},
+    "publication_status": {"enum": ["READY_FOR_HUMAN_PUBLICATION_REVIEW", "PUBLICATION_AUTHORIZED_FOR_EXACT_SHA"]},
     "rows": {
       "type": "array",
       "minItems": 1,

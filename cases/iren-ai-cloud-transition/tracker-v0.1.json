@@ -3,14 +3,18 @@
   "case_id": "SE-IREN-AI-CLOUD-001",
   "slug": "iren-ai-cloud-transition",
   "title": "IREN Limited: AI Cloud transition",
-  "tracker_data_version": "v0.1-rc1",
+  "tracker_data_version": "v0.1",
   "evidence_cutoff": "2026-10-22",
   "last_source_check_utc": "2026-10-27T19:38:39Z",
   "next_source_check": "2026-11-05",
   "rubric_version": "SE-IREN-DISCLOSURE-BOUNDARY-v0.1-proposed",
-  "reviewer_status": "PENDING_HUMAN_REVIEW",
-  "reviewed_by": null,
-  "publication_status": "READY_FOR_HUMAN_PUBLICATION_REVIEW",
+  "reviewer_status": "OWNER_AUTHORIZED_PUBLICATION",
+  "reviewed_by": "AUTHENTICATED_TASK_OWNER",
+  "reviewed_at_utc": "2026-10-27T20:06:55Z",
+  "publication_status": "PUBLICATION_AUTHORIZED_FOR_EXACT_SHA",
+  "approval_record": "publication-approval-v0.1.json",
+  "approved_candidate_head_sha": "1523c8688dfa5dd6ff7b1ae85e3a54b8412c3c8a",
+  "event_ledger": "events-v0.2.json",
   "notices": [
     "Not a recommendation, forecast, rating, certification, or securities analysis.",
     "Issuer assertions remain speaker-attributed. SEC hosting is not independent confirmation.",
@@ -33,7 +37,7 @@
       "assurance": "audited_financial_statements",
       "liability": "filed",
       "source_ids": ["I-S04"],
-      "last_event_id": "IREN-EV-001",
+      "last_event_id": "IREN-EV-004",
       "next_check": "Compare with the next filed quarterly report on or after 2026-11-05.",
       "challenge_url": "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001&claim_id=IREN-R001"
     },
@@ -46,7 +50,7 @@
       "assurance": "audited_financial_statements",
       "liability": "filed",
       "source_ids": ["I-S04"],
-      "last_event_id": "IREN-EV-001",
+      "last_event_id": "IREN-EV-004",
       "next_check": "Review subsequent filed impairment and asset-disposition notes.",
       "challenge_url": "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001&claim_id=IREN-R002"
     },
@@ -59,7 +63,7 @@
       "assurance": "unaudited",
       "liability": "furnished_not_filed",
       "source_ids": ["I-S05"],
-      "last_event_id": "IREN-EV-001",
+      "last_event_id": "IREN-EV-004",
       "next_check": "Review any amendment, termination, delivery, revenue-recognition, or collection disclosure.",
       "challenge_url": "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001&claim_id=IREN-R003"
     },
@@ -72,7 +76,7 @@
       "assurance": "unaudited",
       "liability": "furnished_not_filed",
       "source_ids": ["I-S08", "I-S09"],
-      "last_event_id": "IREN-EV-001",
+      "last_event_id": "IREN-EV-004",
       "next_check": "Seek a customer-authored or independently attributable acceptance artifact.",
       "challenge_url": "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001&claim_id=IREN-R004"
     },
@@ -85,7 +89,7 @@
       "assurance": "unaudited_non_gaap_operating_metric",
       "liability": "furnished_not_filed",
       "source_ids": ["I-S09"],
-      "last_event_id": "IREN-EV-001",
+      "last_event_id": "IREN-EV-004",
       "next_check": "Check the Q1 FY27 release and filing for changed definitions and realized GAAP revenue.",
       "challenge_url": "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001&claim_id=IREN-R005"
     },
@@ -98,7 +102,7 @@
       "assurance": "unaudited",
       "liability": "furnished_not_filed",
       "source_ids": ["I-S09"],
-      "last_event_id": "IREN-EV-001",
+      "last_event_id": "IREN-EV-004",
       "next_check": "Review filed debt, collateral, drawdown, fee, covenant, and repayment disclosures.",
       "challenge_url": "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001&claim_id=IREN-R006"
     },
@@ -111,7 +115,7 @@
       "assurance": "unknown",
       "liability": "unknown",
       "source_ids": ["I-S08"],
-      "last_event_id": "IREN-EV-001",
+      "last_event_id": "IREN-EV-004",
       "next_check": "Check official Microsoft publications and future IREN filings for an attributable customer record.",
       "challenge_url": "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001&claim_id=IREN-R007"
     },
@@ -124,7 +128,7 @@
       "assurance": "unaudited",
       "liability": "furnished_not_filed",
       "source_ids": ["I-S09"],
-      "last_event_id": "IREN-EV-001",
+      "last_event_id": "IREN-EV-004",
       "next_check": "2026-11-05 Q1 FY27 results, then any later 8-K or customer-authored acceptance record.",
       "challenge_url": "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001&claim_id=IREN-R008"
     },
@@ -137,7 +141,7 @@
       "assurance": "unknown",
       "liability": "unknown",
       "source_ids": ["I-S04", "I-S09", "I-S11"],
-      "last_event_id": "IREN-EV-002",
+      "last_event_id": "IREN-EV-004",
       "next_check": "Compare subsequent filed AI Cloud revenue and notes with the exact ARR definition then in use.",
       "challenge_url": "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001&claim_id=IREN-R009"
     },
@@ -150,7 +154,7 @@
       "assurance": "unknown",
       "liability": "unknown",
       "source_ids": ["I-S04", "I-S05"],
-      "last_event_id": "IREN-EV-001",
+      "last_event_id": "IREN-EV-004",
       "next_check": "Review filed cash-flow, deferred-revenue, receivable, and contract-liability disclosures.",
       "challenge_url": "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001&claim_id=IREN-R010"
     },
@@ -163,7 +167,7 @@
       "assurance": "unknown",
       "liability": "unknown",
       "source_ids": ["I-S04", "I-S09", "I-S12"],
-      "last_event_id": "IREN-EV-001",
+      "last_event_id": "IREN-EV-004",
       "next_check": "Review subsequent segment results, costs, capex, impairment, operating capacity, and transition language.",
       "challenge_url": "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001&claim_id=IREN-R011"
     }

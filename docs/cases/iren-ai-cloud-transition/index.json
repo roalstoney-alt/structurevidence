@@ -1,12 +1,17 @@
 {
   "schema_version": "SE-IREN-PUBLIC-SNAPSHOT-v0.1",
   "case_id": "SE-IREN-AI-CLOUD-001",
-  "tracker_data_version": "v0.1-rc1",
+  "current_state": "SUPPORTED_AS_ATTRIBUTED_WITH_OPEN_BOUNDARIES",
+  "tracker_data_version": "v0.1",
   "evidence_cutoff": "2026-10-22",
   "last_source_check_utc": "2026-10-27T19:38:39Z",
   "next_source_check": "2026-11-05",
-  "reviewer_status": "PENDING_HUMAN_REVIEW",
-  "publication_status": "READY_FOR_HUMAN_PUBLICATION_REVIEW",
+  "reviewer_status": "OWNER_AUTHORIZED_PUBLICATION",
+  "reviewed_by": "AUTHENTICATED_TASK_OWNER",
+  "reviewed_at_utc": "2026-10-27T20:06:55Z",
+  "publication_status": "PUBLICATION_AUTHORIZED_FOR_EXACT_SHA",
+  "approval_record": "publication-approval-v0.1.json",
+  "approved_candidate_head_sha": "1523c8688dfa5dd6ff7b1ae85e3a54b8412c3c8a",
   "notices": [
     "Not a recommendation, forecast, rating, certification, or securities analysis.",
     "Issuer assertions remain speaker-attributed. SEC hosting is not independent confirmation.",
@@ -26,7 +31,7 @@
       "source_ids": [
         "I-S04"
       ],
-      "last_event_id": "IREN-EV-001",
+      "last_event_id": "IREN-EV-004",
       "next_check": "Compare with the next filed quarterly report on or after 2026-11-05.",
       "challenge_url": "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001&claim_id=IREN-R001"
     },
@@ -41,7 +46,7 @@
       "source_ids": [
         "I-S04"
       ],
-      "last_event_id": "IREN-EV-001",
+      "last_event_id": "IREN-EV-004",
       "next_check": "Review subsequent filed impairment and asset-disposition notes.",
       "challenge_url": "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001&claim_id=IREN-R002"
     },
@@ -56,7 +61,7 @@
       "source_ids": [
         "I-S05"
       ],
-      "last_event_id": "IREN-EV-001",
+      "last_event_id": "IREN-EV-004",
       "next_check": "Review any amendment, termination, delivery, revenue-recognition, or collection disclosure.",
       "challenge_url": "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001&claim_id=IREN-R003"
     },
@@ -72,7 +77,7 @@
         "I-S08",
         "I-S09"
       ],
-      "last_event_id": "IREN-EV-001",
+      "last_event_id": "IREN-EV-004",
       "next_check": "Seek a customer-authored or independently attributable acceptance artifact.",
       "challenge_url": "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001&claim_id=IREN-R004"
     },
@@ -87,7 +92,7 @@
       "source_ids": [
         "I-S09"
       ],
-      "last_event_id": "IREN-EV-001",
+      "last_event_id": "IREN-EV-004",
       "next_check": "Check the Q1 FY27 release and filing for changed definitions and realized GAAP revenue.",
       "challenge_url": "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001&claim_id=IREN-R005"
     },
@@ -102,7 +107,7 @@
       "source_ids": [
         "I-S09"
       ],
-      "last_event_id": "IREN-EV-001",
+      "last_event_id": "IREN-EV-004",
       "next_check": "Review filed debt, collateral, drawdown, fee, covenant, and repayment disclosures.",
       "challenge_url": "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001&claim_id=IREN-R006"
     },
@@ -117,7 +122,7 @@
       "source_ids": [
         "I-S08"
       ],
-      "last_event_id": "IREN-EV-001",
+      "last_event_id": "IREN-EV-004",
       "next_check": "Check official Microsoft publications and future IREN filings for an attributable customer record.",
       "challenge_url": "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001&claim_id=IREN-R007"
     },
@@ -132,7 +137,7 @@
       "source_ids": [
         "I-S09"
       ],
-      "last_event_id": "IREN-EV-001",
+      "last_event_id": "IREN-EV-004",
       "next_check": "2026-11-05 Q1 FY27 results, then any later 8-K or customer-authored acceptance record.",
       "challenge_url": "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001&claim_id=IREN-R008"
     },
@@ -149,7 +154,7 @@
         "I-S09",
         "I-S11"
       ],
-      "last_event_id": "IREN-EV-002",
+      "last_event_id": "IREN-EV-004",
       "next_check": "Compare subsequent filed AI Cloud revenue and notes with the exact ARR definition then in use.",
       "challenge_url": "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001&claim_id=IREN-R009"
     },
@@ -165,7 +170,7 @@
         "I-S04",
         "I-S05"
       ],
-      "last_event_id": "IREN-EV-001",
+      "last_event_id": "IREN-EV-004",
       "next_check": "Review filed cash-flow, deferred-revenue, receivable, and contract-liability disclosures.",
       "challenge_url": "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001&claim_id=IREN-R010"
     },
@@ -182,7 +187,7 @@
         "I-S09",
         "I-S12"
       ],
-      "last_event_id": "IREN-EV-001",
+      "last_event_id": "IREN-EV-004",
       "next_check": "Review subsequent segment results, costs, capex, impairment, operating capacity, and transition language.",
       "challenge_url": "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001&claim_id=IREN-R011"
     }
@@ -464,7 +469,38 @@
       "evidence_digest": "sha256:aa6e1a9125c8ab8c57343889fa2cd912a3c9bffc7637b3e9661180c1c6a1db7c",
       "review_state": "PENDING_HUMAN_REVIEW",
       "event_digest": "sha256:9846bd1f2d8852464f047c490310dcf0caff81a6565105cf1e94f58971bedc83"
+    },
+    {
+      "event_id": "IREN-EV-004",
+      "recorded_at_utc": "2026-10-27T20:06:55Z",
+      "event_type": "OWNER_PUBLICATION_AUTHORIZED",
+      "affected_row_ids": [
+        "IREN-R001",
+        "IREN-R002",
+        "IREN-R003",
+        "IREN-R004",
+        "IREN-R005",
+        "IREN-R006",
+        "IREN-R007",
+        "IREN-R008",
+        "IREN-R009",
+        "IREN-R010",
+        "IREN-R011"
+      ],
+      "reason": "The authenticated task owner authorized publication of the exact reviewed candidate and requested a research disclaimer at the bottom of the page. No separate reviewer identities are inferred.",
+      "previous_event_digest": "sha256:9846bd1f2d8852464f047c490310dcf0caff81a6565105cf1e94f58971bedc83",
+      "supersedes_event_id": null,
+      "evidence_digest": "sha256:e2c46843ee0b469963545e3364f1c6bacaefa010796f3be9442ef3760bc58c9b",
+      "review_state": "OWNER_AUTHORIZED_PUBLICATION",
+      "publication_authorization_id": "SE-IREN-PUBLICATION-20261028-01",
+      "event_digest": "sha256:fb50373f63321964eb0a75076b75d82288a263494c3b245c259c6b07bf227d77"
     }
+  ],
+  "history": [
+    "IREN-EV-001",
+    "IREN-EV-002",
+    "IREN-EV-003",
+    "IREN-EV-004"
   ],
   "commercial_boundary": {
     "verify_url": "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001",
@@ -476,5 +512,5 @@
     "privacy_notice": "Customer content is private. Submission does not authorize research or public release. Challenges never update the tracker automatically.",
     "production_post_authorized": false
   },
-  "content_digest": "sha256:96238643923b6f50d458ba8a869870cb93317bf10b648cd22ef30f3f5416856e"
+  "content_digest": "sha256:77396bd123399b7a6cac601793af60a8f993bd9b19794393084932da1bb658b8"
 }
