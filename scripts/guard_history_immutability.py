@@ -25,6 +25,7 @@ PATTERNS = (
     "docs/cases/iren-ai-cloud-transition/events-v*.json",
     "cases/iren-ai-cloud-transition/publication-approval-v*.json",
     "docs/cases/iren-ai-cloud-transition/publication-approval-v*.json",
+    "release/SE-IREN-TRACKER-PUBLIC-MVP-001/PUBLICATION_RECEIPT*.json",
     "cases/ekn-necessity/case.md",
     "docs/cases/ekn-necessity/case.md",
 )

@@ -63,3 +63,9 @@ class HistoryGuardTest(unittest.TestCase):
         self.base = self.cmd("rev-parse", "HEAD")
         self.write("cases/iren-ai-cloud-transition/publication-approval-v0.1.json", {"approval_id": "changed"})
         self.assertIn("IMMUTABLE_RECORD_MUTATION", str(self.check()))
+    def test_block_iren_publication_receipt_mutation(self):
+        self.write("release/SE-IREN-TRACKER-PUBLIC-MVP-001/PUBLICATION_RECEIPT.json", {"receipt_id": "R1"})
+        self.cmd("add", "."); self.cmd("commit", "-qm", "iren receipt baseline")
+        self.base = self.cmd("rev-parse", "HEAD")
+        self.write("release/SE-IREN-TRACKER-PUBLIC-MVP-001/PUBLICATION_RECEIPT.json", {"receipt_id": "changed"})
+        self.assertIn("IMMUTABLE_RECORD_MUTATION", str(self.check()))
