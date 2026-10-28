@@ -1,0 +1,38 @@
+{
+  "schema_version": "se-case-observation-v2",
+  "observation_id": "SE-ONC-NSQNSCLC-CN-001-OBS-20261028-CLOUD-01",
+  "observed_at": "2026-10-28T22:02:00+08:00",
+  "knowledge_cutoff": "2026-10-28T22:02:00+08:00",
+  "review_id": null,
+  "review_status": "REVIEW_INCOMPLETE",
+  "new_sources": 1,
+  "new_attributed_statements": 1,
+  "new_independent_evidence": 0,
+  "new_events": 1,
+  "newly_discovered_old_evidence": 0,
+  "state_changing_evidence": 0,
+  "proposed_stop_point": "UNCHANGED",
+  "contradictions": [],
+  "external_feedback": {
+    "customer": "SOURCE_NOT_ACCESSIBLE",
+    "relevant_person": "NO_VERIFIED_PUBLIC_SIGNAL_WITHIN_BOUNDARY",
+    "organization": "NO_VERIFIED_PUBLIC_SIGNAL_WITHIN_BOUNDARY"
+  },
+  "case_id": "SE-ONC-NSQNSCLC-CN-001",
+  "source_url": "https://www.investegate.co.uk/announcement/rns/hutchmed-china-limited--hcm/sanovo-phase-iii-data-at-esmo/9840991",
+  "source_id": "HUTCHMED-SANOVO-ESMO-2026-10-26-CANDIDATE",
+  "source_speaker": "HUTCHMED company announcement republished by Investegate",
+  "claimed_subject": "SANOVO Phase III reported PFS benefit in treatment-naive EGFR-mutated, MET-overexpressing locally advanced/metastatic NSCLC",
+  "claim_ids": [
+    "NSCLC-SANOVO-PHASE3-RESULT-CANDIDATE"
+  ],
+  "event_at": "2026-10-26",
+  "published_at": "2026-10-26",
+  "source_access": "SEARCH_RESULT_BODY_READ_SECONDARY_PUBLISHER",
+  "raw_hash_or_UNAVAILABLE": "UNAVAILABLE_SEARCH_SERVICE_NORMALIZED",
+  "search_query": "2026 October non-squamous NSCLC China regulatory clinical evidence update",
+  "search_boundary": "Lightweight daily check only; issuer original, congress abstract/full paper and current NMPA indication not independently opened.",
+  "old_stop_point": "FOLDED / PUBLIC_RESEARCH_PREVIEW",
+  "decision_relevant_unknown": "Full protocol/abstract, mature OS, safety, peer review and regulatory status; no individual inference.",
+  "next_observable": "Issuer original plus ESMO abstract/full paper and NMPA indication record; Sunday/clinical human review required."
+}
