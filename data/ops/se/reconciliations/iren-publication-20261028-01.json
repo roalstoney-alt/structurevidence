@@ -1,0 +1,37 @@
+{
+  "schema_version": "SE-IREN-PUBLICATION-RECONCILIATION-v0.1",
+  "reconciliation_id": "SE-IREN-PUBLICATION-20261028-01",
+  "project": "SE-IREN-TRACKER-PUBLIC-MVP-001",
+  "recorded_at_utc": "2026-10-27T20:06:55Z",
+  "baseline_sha": "1523c8688dfa5dd6ff7b1ae85e3a54b8412c3c8a",
+  "approved_candidate_source_sha": "40df202bb17897c08c3fa0667ef7ff6d5763974a",
+  "authorization_record": "cases/iren-ai-cloud-transition/publication-approval-v0.1.json",
+  "authorization_id": "SE-IREN-PUBLICATION-20261028-01",
+  "authorization_scope": "Owner-authorized publication of the exact reviewed candidate with a bottom-of-page research disclaimer; no separate reviewer identities are claimed.",
+  "history_standard": "SE-ENG-HISTORY-001/v1.0",
+  "immutable_record_mutations": 0,
+  "original_records_changed": 0,
+  "new_records_appended": [
+    "cases/iren-ai-cloud-transition/publication-approval-v0.1.json",
+    "cases/iren-ai-cloud-transition/events-v0.2.json",
+    "data/ops/se/reconciliations/iren-publication-20261028-01.json"
+  ],
+  "preserved_records": {
+    "cases/iren-ai-cloud-transition/events-v0.1.json": "3e8cbc7379f53d799dcd0832952253f9cb2f19cae1e25828dda8fd28e6c37ef8"
+  },
+  "projection_sha256": {
+    "cases/index.html": "f835ce8ee0dcbfcbecbdb17548945857cdfc20eeac92c1990c9757c8d3d3afeb",
+    "cases/review-status.json": "d8cafe0f8070c86a02b399a2ad458ede4539d549890df366cb09fe0cac67910b",
+    "sitemap.xml": "ddd7ac6c1b91dcf1c1a602409364cd10e3f98e73e98d373de1bc4642104b8c95",
+    "cases/iren-ai-cloud-transition/index.html": "e43bc870c049934d7c4c57e041a25b47ad1a198432faabdc7fe786485de40b37",
+    "cases/iren-ai-cloud-transition/index.json": "18312970ee49d6e8baf538e410b467b3372c08d4e28678c0b20da5a3c48c79b0",
+    "cases/iren-ai-cloud-transition/tracker-v0.1.json": "fee3cfbd80cb2dbdc175262fed42d43af96c80f85df5be8f6bff83ee07f368ad",
+    "cases/iren-ai-cloud-transition/events-v0.2.json": "193cd8b7587b98028760f79dd3acd9432100907f56d6ca7dcd20a26d9bd8f715",
+    "cases/iren-ai-cloud-transition/publication-approval-v0.1.json": "e2c46843ee0b469963545e3364f1c6bacaefa010796f3be9442ef3760bc58c9b"
+  },
+  "root_docs_parity": "PASS",
+  "pr_diff_history_guard": "PASS",
+  "x_post_sent": 0,
+  "production_deployment_status": "PENDING_MERGE_AND_LIVE_VERIFICATION",
+  "rollback_boundary": "Revert only regenerable publication projections and restore the previous main commit; never delete or rewrite the authorization, v0.1 event ledger, v0.2 event ledger, or this reconciliation record."
+}

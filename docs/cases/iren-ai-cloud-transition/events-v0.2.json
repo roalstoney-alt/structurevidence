@@ -1,0 +1,58 @@
+{
+  "schema_version": "SE-IREN-APPEND-ONLY-EVENTS-v0.2",
+  "case_id": "SE-IREN-AI-CLOUD-001",
+  "digest_algorithm": "sha256(canonical JSON of event excluding event_digest)",
+  "append_only": true,
+  "supersedes_projection": "events-v0.1.json",
+  "events": [
+    {
+      "event_id": "IREN-EV-001",
+      "recorded_at_utc": "2026-10-27T19:38:39Z",
+      "event_type": "INITIAL_PUBLIC_SAFE_SNAPSHOT",
+      "affected_row_ids": ["IREN-R001", "IREN-R002", "IREN-R003", "IREN-R004", "IREN-R005", "IREN-R006", "IREN-R007", "IREN-R008", "IREN-R010", "IREN-R011"],
+      "reason": "Create a bounded release candidate from captured official sources without human approval or publication.",
+      "previous_event_digest": null,
+      "supersedes_event_id": null,
+      "evidence_digest": "sha256:4c9eac8cd59ebd4585e499972c0781c1db37c7b677473c7a62abfcdb9f33ba35",
+      "review_state": "PENDING_HUMAN_REVIEW",
+      "event_digest": "sha256:a669101bb4544c714e6ad82c846194dbaa27b06cc0d3b5612afead4972cdadb2"
+    },
+    {
+      "event_id": "IREN-EV-002",
+      "recorded_at_utc": "2026-10-27T19:38:39Z",
+      "event_type": "DEFINITION_DRIFT_RECORDED",
+      "affected_row_ids": ["IREN-R005", "IREN-R009"],
+      "reason": "The July 20 release described an ARR target over $4bn with about 85% under contract; the August 27 release described $4bn contracted ARR for 2026 capacity and $1bn operating ARR. Preserve them as different source-native measures until reconciled.",
+      "previous_event_digest": "sha256:a669101bb4544c714e6ad82c846194dbaa27b06cc0d3b5612afead4972cdadb2",
+      "supersedes_event_id": null,
+      "evidence_digest": "sha256:76d3c5a264551e414694400376f2be1eac8da44d4447fea6ffdd5811893251ad",
+      "review_state": "PENDING_HUMAN_REVIEW",
+      "event_digest": "sha256:29c1154030da4be71f3a59d5168da2081d0a68b7a5f4b1eb72e29425c2fe96b5"
+    },
+    {
+      "event_id": "IREN-EV-003",
+      "recorded_at_utc": "2026-10-27T19:38:39Z",
+      "event_type": "NEXT_CHECK_CONFIRMED",
+      "affected_row_ids": ["IREN-R008", "IREN-R009"],
+      "reason": "Official IREN investor news index listed Q1 FY27 results for November 5, 2026; direct body download remained HTTP 403.",
+      "previous_event_digest": "sha256:29c1154030da4be71f3a59d5168da2081d0a68b7a5f4b1eb72e29425c2fe96b5",
+      "supersedes_event_id": null,
+      "evidence_digest": "sha256:aa6e1a9125c8ab8c57343889fa2cd912a3c9bffc7637b3e9661180c1c6a1db7c",
+      "review_state": "PENDING_HUMAN_REVIEW",
+      "event_digest": "sha256:9846bd1f2d8852464f047c490310dcf0caff81a6565105cf1e94f58971bedc83"
+    },
+    {
+      "event_id": "IREN-EV-004",
+      "recorded_at_utc": "2026-10-27T20:06:55Z",
+      "event_type": "OWNER_PUBLICATION_AUTHORIZED",
+      "affected_row_ids": ["IREN-R001", "IREN-R002", "IREN-R003", "IREN-R004", "IREN-R005", "IREN-R006", "IREN-R007", "IREN-R008", "IREN-R009", "IREN-R010", "IREN-R011"],
+      "reason": "The authenticated task owner authorized publication of the exact reviewed candidate and requested a research disclaimer at the bottom of the page. No separate reviewer identities are inferred.",
+      "previous_event_digest": "sha256:9846bd1f2d8852464f047c490310dcf0caff81a6565105cf1e94f58971bedc83",
+      "supersedes_event_id": null,
+      "evidence_digest": "sha256:e2c46843ee0b469963545e3364f1c6bacaefa010796f3be9442ef3760bc58c9b",
+      "review_state": "OWNER_AUTHORIZED_PUBLICATION",
+      "publication_authorization_id": "SE-IREN-PUBLICATION-20261028-01",
+      "event_digest": "sha256:fb50373f63321964eb0a75076b75d82288a263494c3b245c259c6b07bf227d77"
+    }
+  ]
+}

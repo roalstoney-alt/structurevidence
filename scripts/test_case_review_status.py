@@ -102,6 +102,8 @@ class ReviewStatusTest(unittest.TestCase):
         self.assertIn('RECORDED REVIEW / PERIOD', page)
         self.assertIn('Pending review · 2026-W41', page)
         self.assertIn('FOLDED FROM HOMEPAGE', page)
+        self.assertIn('SE-IREN-AI-CLOUD-001', page)
+        self.assertIn('PUBLICATION AUTHORIZED', page)
 
 
 if __name__ == '__main__':

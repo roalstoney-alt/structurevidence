@@ -104,10 +104,10 @@ class FrozenResearchPublicationTest(unittest.TestCase):
         index = (ROOT / "cases/index.html").read_text()
         self.assertEqual(index.count(f'href="/cases/{SLUG}/"'), 1)
         self.assertIn("Frozen research decision audit", index)
-        self.assertIn("Four evidence trackers", index)
+        self.assertIn("Five evidence trackers", index)
         table = index.split('<table class="watch-table case-index">', 1)[1].split("</table>", 1)[0]
         self.assertNotIn("SE-EKN-001", table)
-        self.assertEqual(table.count("data-case-id="), 4)
+        self.assertEqual(table.count("data-case-id="), 5)
         for file in ("cases/review-status.json", "data/case-watch/monitoring-status.json"):
             self.assertNotIn("SE-EKN-001", (ROOT / file).read_text())
         tree = ET.fromstring((ROOT / "sitemap.xml").read_text())

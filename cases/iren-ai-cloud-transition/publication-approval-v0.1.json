@@ -1,0 +1,27 @@
+{
+  "schema_version": "SE-PUBLICATION-AUTHORIZATION-v0.1",
+  "approval_id": "SE-IREN-PUBLICATION-20261028-01",
+  "case_id": "SE-IREN-AI-CLOUD-001",
+  "authorized_at_utc": "2026-10-27T20:06:55Z",
+  "authorized_by": "AUTHENTICATED_TASK_OWNER",
+  "authorization_channel": "DIRECT_USER_INSTRUCTION_IN_BOUND_CODEX_TASK",
+  "approved_candidate_head_sha": "1523c8688dfa5dd6ff7b1ae85e3a54b8412c3c8a",
+  "approved_candidate_source_sha": "40df202bb17897c08c3fa0667ef7ff6d5763974a",
+  "approved_candidate_snapshot_digest": "sha256:96238643923b6f50d458ba8a869870cb93317bf10b648cd22ef30f3f5416856e",
+  "approved_freeze_manifest_sha256": "d3363c76c23c1b284691a2a3f2d42397bf041feca3d27c7bdf7ddf577b54f5f2",
+  "decision": "PUBLICATION_AUTHORIZED",
+  "authorization_scope": [
+    "Publish the reviewed IREN research candidate on the StructEvidence research website.",
+    "Add the case-index and English-only sitemap projections.",
+    "Display a research disclaimer at the bottom of the IREN page."
+  ],
+  "independent_role_attestations_recorded": false,
+  "row_by_row_reviewer_identity_recorded": false,
+  "limitations": [
+    "This record documents owner publication authorization; it does not invent or claim separate financial, legal, privacy, or row-level reviewer identities.",
+    "Publication does not upgrade issuer-attributed evidence into independent confirmation.",
+    "D0-D4 remains proposed and unapplied.",
+    "No securities recommendation, automated accusation, customer-authored acceptance inference, or commercial production POST is authorized."
+  ],
+  "publication_authorized": true
+}
