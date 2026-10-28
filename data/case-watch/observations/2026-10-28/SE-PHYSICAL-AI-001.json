@@ -1,0 +1,38 @@
+{
+  "schema_version": "se-case-observation-v2",
+  "observation_id": "SE-PHYSICAL-AI-001-OBS-20261028-CLOUD-01",
+  "observed_at": "2026-10-28T22:02:00+08:00",
+  "knowledge_cutoff": "2026-10-28T22:02:00+08:00",
+  "review_id": null,
+  "review_status": "REVIEW_INCOMPLETE",
+  "new_sources": 0,
+  "new_attributed_statements": 0,
+  "new_independent_evidence": 0,
+  "new_events": 0,
+  "newly_discovered_old_evidence": 0,
+  "state_changing_evidence": 0,
+  "proposed_stop_point": "UNCHANGED",
+  "contradictions": [],
+  "external_feedback": {
+    "customer": "SOURCE_NOT_ACCESSIBLE",
+    "relevant_person": "NO_VERIFIED_PUBLIC_SIGNAL_WITHIN_BOUNDARY",
+    "organization": "NO_VERIFIED_PUBLIC_SIGNAL_WITHIN_BOUNDARY"
+  },
+  "case_id": "SE-PHYSICAL-AI-001",
+  "source_url": "https://www.figure.ai/news",
+  "source_id": "FIGURE-NEWS-INDEX-OBS-2026-10-28",
+  "source_speaker": "Figure AI",
+  "claimed_subject": "Latest listed public item remains the historical 2026-09-30 Figure 02 decommission; no newer Figure 03 BMW acceptance/reliability item found",
+  "claim_ids": [
+    "FIGURE-GENERATION-SEPARATION"
+  ],
+  "event_at": null,
+  "published_at": null,
+  "source_access": "SEARCH_RESULT_BODY_READ",
+  "raw_hash_or_UNAVAILABLE": "UNAVAILABLE_SEARCH_SERVICE_NORMALIZED",
+  "search_query": "site:figure.ai/news October 2026 BMW Figure 03 deployment reliability decommission",
+  "search_boundary": "One issuer-domain query plus current public-projection file; no BMW independent acceptance body opened.",
+  "old_stop_point": "PUBLIC PROJECTION / LOCAL_PROVISIONAL_v0.1",
+  "decision_relevant_unknown": "Figure 03 site acceptance, duty cycle, interventions, downtime, failures and continued operation.",
+  "next_observable": "BMW-attributed acceptance or operational reliability record for Figure 03."
+}
