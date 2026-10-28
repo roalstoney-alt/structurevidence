@@ -1,0 +1,15 @@
+{
+  "schema_version": "se-trigger-continuity-receipt-v1",
+  "receipt_id": "SE-OPS-20261028-TRIGGER-CONTINUITY-01",
+  "run_id": "SE-OPS-20261028-2200-ea952911-3b94-554b-803a-43b5e15845e0",
+  "date_sgt": "2026-10-28",
+  "heartbeat_observed_at": "2026-10-27T18:19:13Z",
+  "heartbeat_observed_at_sgt": "2026-10-28T02:19:13+08:00",
+  "configured_trigger_at_sgt": "2026-10-28T22:00:00+08:00",
+  "classification": "SCHEDULE_DELIVERY_TIME_MISMATCH",
+  "missing_unified_run_receipt_dates": ["2026-10-26", "2026-10-27"],
+  "historical_backfill_performed": false,
+  "missing_periods_classified_as_no_state_change": false,
+  "additional_timer_created": false,
+  "additional_timer_invoked": false
+}
