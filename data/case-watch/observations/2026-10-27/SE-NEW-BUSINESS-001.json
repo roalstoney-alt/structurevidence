@@ -1,0 +1,56 @@
+{
+  "schema_version": "se-six-case-observation-v1",
+  "case_id": "SE-NEW-BUSINESS-001",
+  "observation_id": "SE-NEW-BUSINESS-001-OBS-20261027-CLOUD-01",
+  "review_id": null,
+  "observed_at": "2026-10-27T14:12:00Z",
+  "knowledge_cutoff": "2026-10-27T14:12:00Z",
+  "review_status": "REVIEW_INCOMPLETE",
+  "source_url": [
+    "https://github.com/roalstoney-alt/se-dual-case-public/blob/main/SE-NEW-BUSINESS-001.md"
+  ],
+  "source_id": [
+    "PUBLIC-PROJECTION-ACC2033"
+  ],
+  "source_speaker": [
+    "StructEvidence public projection"
+  ],
+  "claimed_subject": "IREN AI Cloud transition",
+  "claim_ids": [
+    "MICROSOFT_CONFIRMATION",
+    "HORIZON_2_4",
+    "GAAP_REVENUE",
+    "ARR",
+    "COMMISSIONED_MW",
+    "COST",
+    "FINANCING"
+  ],
+  "event_at": null,
+  "published_at": null,
+  "source_access": [
+    {
+      "source_id": "PUBLIC-PROJECTION-ACC2033",
+      "access": "FULL_GITHUB_TEXT",
+      "raw_hash": "4e1f11c4a1c89ec3321e0a1041c7b57871fa51a3"
+    }
+  ],
+  "raw_hash_or_UNAVAILABLE": "UNAVAILABLE",
+  "search_query": [
+    "site:iren.com/investors/news OR site:sec.gov/Archives/edgar/data/1878848 IREN October 26 2026 October 27 2026 Microsoft Horizon revenue"
+  ],
+  "search_boundary": "Latest public projection read in full; one issuer/SEC query returned no current result. Raw-byte and Source Bridge authenticity gaps remain.",
+  "old_stop_point": "PUBLIC PROJECTION / LOCAL_PROVISIONAL_v0.1 / CANONICAL_RDL_NOT_RUN",
+  "proposed_stop_point": "PUBLIC PROJECTION / LOCAL_PROVISIONAL_v0.1 / CANONICAL_RDL_NOT_RUN",
+  "new_sources": 0,
+  "new_attributed_statements": 0,
+  "new_independent_evidence": 0,
+  "new_events": 0,
+  "newly_discovered_old_evidence": 0,
+  "state_changing_evidence": 0,
+  "contradictions": [],
+  "decision_relevant_unknown": [
+    "Microsoft-authored acceptance, Horizon 2-4 delivery, commissioned IT load, GAAP revenue, operating economics and financing remain distinct and incomplete."
+  ],
+  "next_observable": "Customer-authored acceptance, SEC-filed recognized revenue/economics, or commissioned-capacity evidence.",
+  "notes": "Oct 21 Badajoz planning/license and Oct 22 earnings notice were pre-identified; not re-counted. Main PR #54 intake engineering is a product-workflow change, not IREN business evidence. Canonical RDL NOT_RUN."
+}

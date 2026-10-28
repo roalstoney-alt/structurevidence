@@ -1,0 +1,41 @@
+{
+  "schema_version": "se-six-case-observation-v1",
+  "case_id": "SE-ONC-NSQNSCLC-CN-001",
+  "observation_id": "SE-ONC-NSQNSCLC-CN-001-OBS-20261027-CLOUD-01",
+  "review_id": null,
+  "observed_at": "2026-10-27T14:12:00Z",
+  "knowledge_cutoff": "2026-10-27T14:12:00Z",
+  "review_status": "REVIEW_INCOMPLETE",
+  "source_url": [],
+  "source_id": [],
+  "source_speaker": [],
+  "claimed_subject": "China non-squamous NSCLC public evidence availability",
+  "claim_ids": [
+    "POPULATION",
+    "REGULATORY_STATUS",
+    "TRIAL",
+    "AGGREGATE_OUTCOME"
+  ],
+  "event_at": null,
+  "published_at": null,
+  "source_access": [],
+  "raw_hash_or_UNAVAILABLE": "UNAVAILABLE",
+  "search_query": [
+    "site:nmpa.gov.cn OR site:pubmed.ncbi.nlm.nih.gov nonsquamous NSCLC China October 26 2026 October 27 2026"
+  ],
+  "search_boundary": "Daily lightweight official/regulatory-literature query returned no current result. Sunday deep-review cadence remains unchanged.",
+  "old_stop_point": "FOLDED / PUBLIC_RESEARCH_PREVIEW",
+  "proposed_stop_point": "FOLDED / PUBLIC_RESEARCH_PREVIEW",
+  "new_sources": 0,
+  "new_attributed_statements": 0,
+  "new_independent_evidence": 0,
+  "new_events": 0,
+  "newly_discovered_old_evidence": 0,
+  "state_changing_evidence": 0,
+  "contradictions": [],
+  "decision_relevant_unknown": [
+    "No newly verified regulator decision, population-matched trial update or aggregate outcome source."
+  ],
+  "next_observable": "NMPA label/decision plus population-matched trial or aggregate outcome record.",
+  "notes": "FOLDED retained; no diagnosis, treatment recommendation, personal success-rate estimate or external medical conclusion."
+}

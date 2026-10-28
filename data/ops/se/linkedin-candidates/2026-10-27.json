@@ -1,0 +1,17 @@
+{
+  "schema_version": "se-linkedin-candidate-v1",
+  "candidate_id": "SE-LINKEDIN-2026-10-27-NO-VERIFIABLE-01",
+  "scheduled_date": "2026-10-27",
+  "text": null,
+  "word_count": null,
+  "source_urls": [],
+  "approved_public_page": null,
+  "evidence_cutoff": "2026-10-27T14:12:00Z",
+  "content_sha256": null,
+  "dedup_check": "NOT_APPLICABLE_NO_TEXT",
+  "factual_status": "NO_NEW_VERIFIED_EVENT_WITHIN_INCOMPLETE_BOUNDED_REVIEW",
+  "status": "NO_VERIFIABLE_POST_CANDIDATE",
+  "secondary_status": "WEBSITE_PUBLICATION_BLOCKED",
+  "approval_gate": "HUMAN_GATE_REQUIRED",
+  "linkedin_post_sent": 0
+}
