@@ -1,0 +1,20 @@
+{
+  "schema_version": "se-x-candidate-v3",
+  "candidate_id": "SE-X-2026-10-29-NO-VERIFIABLE-01",
+  "scheduled_date": "2026-10-29",
+  "text": null,
+  "unicode_character_count": null,
+  "source_urls": [
+    "https://www.energetica-india.net/news/jvvnl-and-global-energy-alliance-plan-indias-first-sodium-ion-bess-pilot"
+  ],
+  "approved_public_page": null,
+  "evidence_cutoff": "2026-10-29T22:00:00+08:00",
+  "content_sha256": null,
+  "dedup_check": "NOT_APPLICABLE_NO_TEXT",
+  "factual_status": "NEW_SECONDARY_SOURCE_CANDIDATE_NOT_YET_PUBLISHED_ON_APPROVED_SITE",
+  "status": "NO_VERIFIABLE_POST_CANDIDATE",
+  "secondary_status": "WEBSITE_PUBLICATION_BLOCKED",
+  "approval_gate": "HUMAN_GATE_REQUIRED",
+  "x_auto_publish_paused_human_review": true,
+  "x_post_sent": 0
+}
