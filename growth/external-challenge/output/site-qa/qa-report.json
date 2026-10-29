@@ -1,7 +1,7 @@
 {
   "schema_version": "SE-SITE-QA-v0.1",
   "checked_at": "2026-10-29",
-  "target": "local-only",
+  "target": "http://127.0.0.1:8765",
   "checks": [
     {
       "name": "desktop-case",
@@ -14,8 +14,13 @@
       "title": "IREN AI Cloud Evidence Tracker | StructEvidence",
       "horizontal_overflow": false,
       "challenge_cards": 3,
+      "challenge_controls": 3,
       "challenge_workbench_visible": true,
       "decision_sample_visible": false,
+      "ddr_navigation_visible": true,
+      "source_cutoff_visible": true,
+      "active_element": "A",
+      "focus_indicator_visible": true,
       "verify_links": [
         "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001",
         "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001&claim_id=IREN-R001",
@@ -33,6 +38,69 @@
         "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001&claim_id=IREN-R004",
         "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001&claim_id=IREN-R009",
         "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001"
+      ],
+      "decision_pack_links": [
+        "https://structevidence.com/decision-pack/?case=SE-IREN-AI-CLOUD-001",
+        "https://structevidence.com/decision-pack/?case=SE-IREN-AI-CLOUD-001",
+        "https://structevidence.com/decision-pack/?case=SE-IREN-AI-CLOUD-001"
+      ],
+      "internal_link_results": [
+        {
+          "href": "/",
+          "status": 200
+        },
+        {
+          "href": "/cases/",
+          "status": 200
+        },
+        {
+          "href": "/gaps/",
+          "status": 200
+        },
+        {
+          "href": "/method.html",
+          "status": 200
+        },
+        {
+          "href": "/feed.xml",
+          "status": 200
+        },
+        {
+          "href": "index.json",
+          "status": 200
+        },
+        {
+          "href": "/changes/",
+          "status": 200
+        },
+        {
+          "href": "events-v0.3.json",
+          "status": 200
+        },
+        {
+          "href": "events-v0.1.json",
+          "status": 200
+        },
+        {
+          "href": "source-registry-v0.1.json",
+          "status": 200
+        },
+        {
+          "href": "/research-scope.html",
+          "status": 200
+        },
+        {
+          "href": "/about.html",
+          "status": 200
+        },
+        {
+          "href": "ddr-sample.html",
+          "status": 200
+        },
+        {
+          "href": "/privacy.html",
+          "status": 200
+        }
       ]
     },
     {
@@ -46,8 +114,13 @@
       "title": "IREN AI Cloud Evidence Tracker | StructEvidence",
       "horizontal_overflow": false,
       "challenge_cards": 3,
+      "challenge_controls": 3,
       "challenge_workbench_visible": true,
       "decision_sample_visible": false,
+      "ddr_navigation_visible": true,
+      "source_cutoff_visible": true,
+      "active_element": "A",
+      "focus_indicator_visible": true,
       "verify_links": [
         "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001",
         "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001&claim_id=IREN-R001",
@@ -65,6 +138,69 @@
         "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001&claim_id=IREN-R004",
         "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001&claim_id=IREN-R009",
         "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001"
+      ],
+      "decision_pack_links": [
+        "https://structevidence.com/decision-pack/?case=SE-IREN-AI-CLOUD-001",
+        "https://structevidence.com/decision-pack/?case=SE-IREN-AI-CLOUD-001",
+        "https://structevidence.com/decision-pack/?case=SE-IREN-AI-CLOUD-001"
+      ],
+      "internal_link_results": [
+        {
+          "href": "/",
+          "status": 200
+        },
+        {
+          "href": "/cases/",
+          "status": 200
+        },
+        {
+          "href": "/gaps/",
+          "status": 200
+        },
+        {
+          "href": "/method.html",
+          "status": 200
+        },
+        {
+          "href": "/feed.xml",
+          "status": 200
+        },
+        {
+          "href": "index.json",
+          "status": 200
+        },
+        {
+          "href": "/changes/",
+          "status": 200
+        },
+        {
+          "href": "events-v0.3.json",
+          "status": 200
+        },
+        {
+          "href": "events-v0.1.json",
+          "status": 200
+        },
+        {
+          "href": "source-registry-v0.1.json",
+          "status": 200
+        },
+        {
+          "href": "/research-scope.html",
+          "status": 200
+        },
+        {
+          "href": "/about.html",
+          "status": 200
+        },
+        {
+          "href": "ddr-sample.html",
+          "status": 200
+        },
+        {
+          "href": "/privacy.html",
+          "status": 200
+        }
       ]
     },
     {
@@ -78,9 +214,35 @@
       "title": "Illustrative IREN Decision Dependency Record | StructEvidence",
       "horizontal_overflow": false,
       "challenge_cards": 0,
+      "challenge_controls": 0,
       "challenge_workbench_visible": false,
       "decision_sample_visible": true,
-      "verify_links": []
+      "ddr_navigation_visible": true,
+      "source_cutoff_visible": true,
+      "active_element": "A",
+      "focus_indicator_visible": true,
+      "verify_links": [],
+      "decision_pack_links": [
+        "https://structevidence.com/decision-pack/?case=SE-IREN-AI-CLOUD-001"
+      ],
+      "internal_link_results": [
+        {
+          "href": "/",
+          "status": 200
+        },
+        {
+          "href": "/cases/iren-ai-cloud-transition/",
+          "status": 200
+        },
+        {
+          "href": "/method.html",
+          "status": 200
+        },
+        {
+          "href": "/cases/iren-ai-cloud-transition/#IREN-R009",
+          "status": 200
+        }
+      ]
     }
   ],
   "console_errors": [],

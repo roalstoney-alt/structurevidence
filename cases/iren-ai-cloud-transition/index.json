@@ -587,8 +587,9 @@
   ],
   "commercial_boundary": {
     "verify_url": "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001",
-    "decision_pack_url": "https://structevidence.com/decision-pack/?case_id=SE-IREN-AI-CLOUD-001",
+    "decision_pack_url": "https://structevidence.com/decision-pack/?case=SE-IREN-AI-CLOUD-001",
     "allowed_query_keys": [
+      "case",
       "case_id",
       "claim_id"
     ],
@@ -643,5 +644,5 @@
       "boundary": "This issuer-attributed customer mention does not identify contract value, deployed capacity, workload, operating outcome, or any relationship to the separate Figure AI × BMW evidence study."
     }
   ],
-  "content_digest": "sha256:b9f5d0f55c95bfd131d7a9388cdf95b17ed164003665db362b7daa1f5687f074"
+  "content_digest": "sha256:980531ade39b968dd9588368eb656143fa760e3f6502846a25527ba4e6c06036"
 }

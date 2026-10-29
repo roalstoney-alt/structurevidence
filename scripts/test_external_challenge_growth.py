@@ -13,6 +13,8 @@ import unittest
 from pathlib import Path
 from urllib.parse import parse_qs, urlparse
 
+from jsonschema import Draft202012Validator, FormatChecker
+
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = ROOT / "growth" / "external-challenge"
@@ -53,6 +55,15 @@ class ExternalChallengeGrowthTest(unittest.TestCase):
         recorded = body.pop("content_sha256")
         self.assertEqual(recorded, canonical_digest(body))
         self.assertEqual(self.export["publication_status"], "DO_NOT_PUBLISH_UNTIL_HUMAN_REVIEW")
+
+    def test_json_schemas_accept_release_artifacts(self):
+        export_schema = load(BASE / "evidence-export.schema.json")
+        export_errors = list(Draft202012Validator(export_schema, format_checker=FormatChecker()).iter_errors(self.export))
+        self.assertEqual(export_errors, [])
+        ledger_schema = load(BASE / "feedback-ledger" / "event.schema.json")
+        fixture = load(BASE / "tests" / "fixtures" / "internal-synthetic.json")
+        ledger_errors = list(Draft202012Validator(ledger_schema, format_checker=FormatChecker()).iter_errors(fixture))
+        self.assertEqual(ledger_errors, [])
 
     def test_claim_export_has_required_provenance(self):
         for claim in self.export["claims"]:
@@ -162,6 +173,9 @@ class ExternalChallengeGrowthTest(unittest.TestCase):
         self.assertIn('id="challenge-workbench"', page)
         self.assertIn("Challenge the boundary—not the person", page)
         self.assertEqual(page.count("Submit a precise challenge"), 3)
+        self.assertEqual(page.count("Source and cutoff"), 3)
+        challenge_section = page.split('id="challenge-workbench"', 1)[1].split('id="decision-dependency"', 1)[0]
+        self.assertEqual(challenge_section.count(self.tracker["evidence_cutoff"]), 3)
         self.assertIn("ddr-sample.html", page)
         ddr = (CASE / "ddr-sample.html").read_text(encoding="utf-8")
         self.assertIn('content="noindex,nofollow"', ddr)
@@ -185,6 +199,16 @@ class ExternalChallengeGrowthTest(unittest.TestCase):
         contract = (BASE / "FUNNEL_VERIFICATION.md").read_text(encoding="utf-8")
         self.assertIn("PRODUCTION_POSTS=0", contract)
         self.assertIn("WORKER_CHANGES=0", contract)
+        decision_hrefs = re.findall(r'href="(https://structevidence\.com/decision-pack/\?[^\"]+)"', page)
+        self.assertTrue(decision_hrefs)
+        for href in decision_hrefs:
+            query = parse_qs(urlparse(href.replace("&amp;", "&")).query)
+            self.assertEqual(query, {"case": ["SE-IREN-AI-CLOUD-001"]})
+        self.assertEqual(
+            self.tracker["commercial_boundary"]["decision_pack_url"],
+            "https://structevidence.com/decision-pack/?case=SE-IREN-AI-CLOUD-001",
+        )
+        self.assertEqual(set(self.tracker["commercial_boundary"]["allowed_query_keys"]), {"case", "case_id", "claim_id"})
 
     def test_no_worker_migration_or_social_send_changes(self):
         names = subprocess.check_output(["git", "diff", "--name-only", "HEAD"], cwd=ROOT, text=True).splitlines()

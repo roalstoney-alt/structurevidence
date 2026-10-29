@@ -18,12 +18,12 @@ Social publication: not performed
 - Local browser QA passed at 1440px desktop and 390px mobile, plus the illustrative DDR page; no horizontal overflow or console error was observed.
 - 13 public-source challenger candidates and five review-only invitation drafts are included without invented emails.
 - The append-only feedback-ledger digest chain, `INTERNAL_SYNTHETIC`, and `ACCESS_BLOCKED` behavior are covered by integration tests.
-- 29 growth-pilot and pre-existing IREN regression tests passed.
+- 31 growth-pilot and pre-existing IREN regression tests passed.
 
 ```text
 EVIDENCE_EXPORT = PASS (11 claims; RETRIEVAL_INCOMPLETE; 0 qualifying changes)
 VISUAL_ENGINE = PASS (6 assets; DO_NOT_PUBLISH; SHA-256 manifest verified)
-FUNNEL_VERIFIED = PASS (read-only GET; 0 production POST; existing contract unchanged)
+FUNNEL_VERIFIED = PASS (read-only GET; 0 production POST; Decision Pack links use the existing `case` contract)
 CHALLENGERS_RESEARCHED = 13
 OUTREACH_DRAFTS_READY = 5
 OUTREACH_SENT = 0

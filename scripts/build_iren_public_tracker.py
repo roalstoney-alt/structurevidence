@@ -140,7 +140,7 @@ def render_row(row: dict, sources: dict[str, dict], reading_policy: dict) -> str
       </article>"""
 
 
-def render_challenge_card(row: dict, sources: dict[str, dict], unknown: str) -> str:
+def render_challenge_card(row: dict, sources: dict[str, dict], unknown: str, evidence_cutoff: str) -> str:
     state_class = "supported" if row["state"] == "SUPPORTED_AS_ATTRIBUTED" else "not-established"
     return f"""
       <article class="challenge-workbench-card" aria-labelledby="challenge-{html.escape(row['row_id'])}">
@@ -150,7 +150,7 @@ def render_challenge_card(row: dict, sources: dict[str, dict], unknown: str) -> 
           <div><dt>Evidence boundary</dt><dd>{html.escape(row['boundary'])}</dd></div>
           <div><dt>What remains unknown</dt><dd>{html.escape(unknown)}</dd></div>
           <div><dt>What would change it</dt><dd>{html.escape(row['next_check'])}</dd></div>
-          <div><dt>Source and cutoff</dt><dd>{render_source_links(row['source_ids'], sources)} · {html.escape(row['row_id'])}</dd></div>
+          <div><dt>Source and cutoff</dt><dd>{render_source_links(row['source_ids'], sources)} · {html.escape(evidence_cutoff)} · {html.escape(row['row_id'])}</dd></div>
         </dl>
         <div class="actions"><a class="button" href="{html.escape(row['challenge_url'])}">Submit a precise challenge</a><a class="button secondary" href="#{html.escape(row['row_id'])}">Inspect full row</a></div>
       </article>"""
@@ -239,7 +239,7 @@ def build() -> None:
         "IREN-R009": "The timing and amount of conversion from contracted or operating ARR into GAAP revenue remain unresolved.",
     }
     challenge_cards = "".join(
-        render_challenge_card(rows_by_id[row_id], sources, challenge_unknowns[row_id])
+        render_challenge_card(rows_by_id[row_id], sources, challenge_unknowns[row_id], tracker["evidence_cutoff"])
         for row_id in ("IREN-R003", "IREN-R004", "IREN-R009")
     )
     jsonld = json.dumps({
@@ -271,7 +271,7 @@ def build() -> None:
   <link rel="stylesheet" href="/assets/iren-tracker.css?v=20261029-external-challenge">
 </head>
 <body class="product-site iren-tracker"><a class="skip-link" href="#main">Skip to content</a>
-<header class="product-header"><nav class="product-nav" aria-label="Primary navigation"><a class="product-brand" href="/"><span>SE</span><strong>StructEvidence</strong></a><button class="product-nav-toggle" type="button" aria-expanded="false" aria-controls="product-links" data-product-nav-toggle>Menu</button><div class="product-links" id="product-links"><a aria-current="page" href="/cases/">Evidence Cases</a><a href="/gaps/">Open Evidence Gaps</a><a href="https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001">Verify a Claim</a><a href="https://structevidence.com/decision-pack/?case_id=SE-IREN-AI-CLOUD-001">Decision Pack</a><a href="/method.html">Method</a></div></nav></header>
+<header class="product-header"><nav class="product-nav" aria-label="Primary navigation"><a class="product-brand" href="/"><span>SE</span><strong>StructEvidence</strong></a><button class="product-nav-toggle" type="button" aria-expanded="false" aria-controls="product-links" data-product-nav-toggle>Menu</button><div class="product-links" id="product-links"><a aria-current="page" href="/cases/">Evidence Cases</a><a href="/gaps/">Open Evidence Gaps</a><a href="https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001">Verify a Claim</a><a href="https://structevidence.com/decision-pack/?case=SE-IREN-AI-CLOUD-001">Decision Pack</a><a href="/method.html">Method</a></div></nav></header>
 <main class="product-main" id="main"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">StructEvidence</a><span>›</span><a href="/cases/">Cases</a><span>›</span><span aria-current="page">IREN AI Cloud transition</span></nav>
   <section class="page-hero case-hero tracker-hero" aria-labelledby="case-title">
     <p class="eyebrow">Public research tracker · {html.escape(tracker['case_id'])} · {html.escape(tracker['tracker_data_version'])}</p>
@@ -316,7 +316,7 @@ def build() -> None:
 
   <section class="product-section" id="decision-dependency" aria-labelledby="decision-dependency-title"><div class="proof-card"><div class="proof-main"><p class="eyebrow">Decision Dependency Record · private request</p><h2 id="decision-dependency-title">Map this evidence to your decision</h2><p>Identify one assumption that your own decision depends on. We can map that assumption to a dated, attributed evidence state, its unresolved conditions, and what would require a new check. The decision and judgment remain yours.</p><p>Open a private human-scope request. Do not include a confidential thesis, personal data, or unpublished evidence in the URL; this link passes only a fixed public case identifier. Submitting does not authorize research, publication, investment advice, or an automatic evidence-state change.</p><div class="actions"><a class="button" href="https://structevidence.com/decision-pack/?case=SE-IREN-AI-CLOUD-001">Map this evidence to your decision</a><a class="button secondary" href="#challenge">Challenge a public evidence row</a></div></div><aside class="proof-aside"><p class="field-label">Potential record fields · scope not yet authorized</p><p>YOUR DECISION ASSUMPTION</p><p>EVIDENCE STATE + CUTOFF</p><p>DEPENDENCIES + UNKNOWN CONDITIONS</p><p>NEXT VERIFICATION TRIGGER</p><p>VERSIONED CITATION</p><p>No score, rating, forecast or recommendation.</p></aside></div></section>
 
-  <section class="product-section" id="challenge" aria-labelledby="challenge-title"><div class="proof-card"><div class="proof-main"><p class="eyebrow">Human review boundary</p><h2 id="challenge-title">A challenge never changes a public state automatically.</h2><p>Only fixed public identifiers are sent to the existing private intake. Do not put evidence text, identity, thesis, or non-public context in the URL. Customer content remains private; submission does not authorize research or public release.</p><div class="actions"><a class="button" href="https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001">Challenge or verify a claim</a><a class="button secondary" href="https://structevidence.com/decision-pack/?case_id=SE-IREN-AI-CLOUD-001">Request a Decision Pack</a></div></div><aside class="proof-aside"><p class="field-label">Do not equate</p><p>CONTRACTED ARR ≠ OPERATING ARR</p><p>ARR ≠ GAAP REVENUE</p><p>REVENUE ≠ CASH COLLECTION</p><p>ISSUER ACCEPTANCE CLAIM ≠ CUSTOMER-AUTHORED PROOF</p></aside></div></section>
+  <section class="product-section" id="challenge" aria-labelledby="challenge-title"><div class="proof-card"><div class="proof-main"><p class="eyebrow">Human review boundary</p><h2 id="challenge-title">A challenge never changes a public state automatically.</h2><p>Only fixed public identifiers are sent to the existing private intake. Do not put evidence text, identity, thesis, or non-public context in the URL. Customer content remains private; submission does not authorize research or public release.</p><div class="actions"><a class="button" href="https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001">Challenge or verify a claim</a><a class="button secondary" href="https://structevidence.com/decision-pack/?case=SE-IREN-AI-CLOUD-001">Request a Decision Pack</a></div></div><aside class="proof-aside"><p class="field-label">Do not equate</p><p>CONTRACTED ARR ≠ OPERATING ARR</p><p>ARR ≠ GAAP REVENUE</p><p>REVENUE ≠ CASH COLLECTION</p><p>ISSUER ACCEPTANCE CLAIM ≠ CUSTOMER-AUTHORED PROOF</p></aside></div></section>
 
   <section class="product-section related-context" aria-labelledby="related-title"><h2 id="related-title">Related evidence context stays separate</h2><p>IREN named Figure AI among recent signings in its FY26 Results release and among its customer base in the July 20, 2026 release. That issuer-attributed mention does not identify scope or performance and does not corroborate the separate <a href="https://github.com/roalstoney-alt/se-dual-case-public/blob/main/SE-PHYSICAL-AI-001.md" rel="noopener noreferrer">Figure AI × BMW provisional research ↗</a>.</p></section>
 </main>

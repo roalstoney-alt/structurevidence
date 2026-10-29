@@ -18,14 +18,14 @@ Nothing in this package sends outreach, publishes social content, changes the pr
 ```bash
 python3 scripts/build_external_challenge_growth.py --date 2026-10-29
 python3 scripts/build_iren_public_tracker.py
-PLAYWRIGHT_MODULE=/Users/roal/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright \
-PLAYWRIGHT_BROWSER_EXECUTABLE='/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' \
-  /Users/roal/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node \
+PLAYWRIGHT_MODULE=/absolute/path/to/playwright \
+PLAYWRIGHT_BROWSER_EXECUTABLE=/absolute/path/to/chrome \
+  node \
   scripts/render_external_challenge_cards.mjs
 
-PLAYWRIGHT_MODULE=/Users/roal/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright \
-PLAYWRIGHT_BROWSER_EXECUTABLE='/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' \
-  /Users/roal/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node \
+PLAYWRIGHT_MODULE=/absolute/path/to/playwright \
+PLAYWRIGHT_BROWSER_EXECUTABLE=/absolute/path/to/chrome \
+  node \
   scripts/qa_external_challenge_site.mjs
 ```
 
