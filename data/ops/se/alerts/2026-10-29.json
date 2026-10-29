@@ -1,0 +1,16 @@
+{
+  "schema_version": "se-alerts-v1",
+  "run_id": "SE-OPS-20261029-2200-687b9dff-39f7-5ff4-ba72-4fea2bb2499d",
+  "alerts": [
+    {
+      "code": "X_HUMAN_REVIEW_REQUIRED",
+      "dedupe_key": "X:2026-10-29:X_HUMAN_REVIEW_REQUIRED",
+      "detail": "X_AUTO_PUBLISH_PAUSED_HUMAN_REVIEW"
+    },
+    {
+      "code": "MISSING_RUN_DETECTION_NOT_INDEPENDENT",
+      "dedupe_key": "MISSING_HEARTBEAT:2026-10-29",
+      "detail": "No independent health surface has been verified."
+    }
+  ]
+}
