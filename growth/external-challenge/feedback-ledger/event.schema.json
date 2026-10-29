@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://structurevidence.org/schemas/external-feedback-event-v0.1.json",
+  "title": "External feedback ledger event",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["event_id", "event_type", "observed_at", "case_id", "claim_id", "source_url", "privacy_class", "verification_status", "previous_event_digest", "event_digest"],
+  "properties": {
+    "event_id": {"type": "string", "pattern": "^SE-EFL-[0-9]{8}-[0-9]{3}$"},
+    "event_type": {"enum": ["EXTERNAL_CHALLENGE", "EXTERNAL_CITATION", "INBOUND_DECISION_REQUEST", "INTERNAL_SYNTHETIC", "ACCESS_BLOCKED"]},
+    "observed_at": {"type": "string", "format": "date-time"},
+    "case_id": {"const": "SE-IREN-AI-CLOUD-001"},
+    "claim_id": {"type": ["string", "null"], "pattern": "^IREN-R[0-9]{3}$"},
+    "source_url": {"type": ["string", "null"]},
+    "privacy_class": {"enum": ["PUBLIC_SAFE", "PRIVATE_RESTRICTED", "INTERNAL_SYNTHETIC"]},
+    "verification_status": {"enum": ["CONFIRMED", "PENDING_HUMAN_REVIEW", "ACCESS_BLOCKED", "SYNTHETIC_TEST_ONLY"]},
+    "summary": {"type": "string", "minLength": 1},
+    "previous_event_digest": {"type": ["string", "null"], "pattern": "^sha256:[0-9a-f]{64}$"},
+    "event_digest": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}
+  }
+}

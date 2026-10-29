@@ -1,0 +1,13 @@
+{
+  "event_id": "SE-EFL-20261029-001",
+  "event_type": "INTERNAL_SYNTHETIC",
+  "observed_at": "2026-10-29T00:00:00Z",
+  "case_id": "SE-IREN-AI-CLOUD-001",
+  "claim_id": "IREN-R003",
+  "source_url": null,
+  "privacy_class": "INTERNAL_SYNTHETIC",
+  "verification_status": "SYNTHETIC_TEST_ONLY",
+  "summary": "Synthetic fixture used only to test append-only digest validation.",
+  "previous_event_digest": null,
+  "event_digest": "sha256:9fe49bf87983ac48ed7f021f47777d8fde50e377043060091f587dc308cc2872"
+}

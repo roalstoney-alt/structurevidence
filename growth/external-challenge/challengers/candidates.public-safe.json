@@ -1,0 +1,159 @@
+{
+  "schema_version": "SE-QUALIFIED-CHALLENGER-RESEARCH-v0.1",
+  "researched_at": "2026-10-29",
+  "privacy_boundary": "Public professional relevance and public channel availability only. No private profile data, inferred email, or restricted-profile scraping.",
+  "source_verification": {
+    "checked_at": "2026-10-29",
+    "official_source_available_count": 12,
+    "access_blocked_count": 1,
+    "access_blocked_candidates": [
+      "Uptime Institute technical consulting"
+    ],
+    "private_channels_checked": false,
+    "contact_details_stored": false,
+    "boundary": "ACCESS_BLOCKED is not counted as zero channel availability and no access restriction was bypassed."
+  },
+  "candidates": [
+    {
+      "priority": 1,
+      "candidate": "Andrew Beale",
+      "organization": "Arete Research",
+      "relevance": "Listed by IREN as an analyst covering the company; suitable for challenging the separation between headline contract value, ARR, GAAP revenue, and cash.",
+      "professional_source_url": "https://www.iren.com/investors/analysts",
+      "source_boundary": "Issuer-maintained analyst coverage list; listing does not imply endorsement of StructEvidence or any IREN conclusion.",
+      "challenge_question": "What filed evidence would be sufficient to connect IREN-R003's headline contract value to recognized revenue and cash without conflating those measures?",
+      "contact_channel_availability": "PUBLIC_PROFESSIONAL_CONTACT_LISTED_ON_SOURCE_PAGE",
+      "contact_details_stored": false
+    },
+    {
+      "priority": 2,
+      "candidate": "Gautam Chhugani",
+      "organization": "Bernstein",
+      "relevance": "Listed by IREN as an analyst covering the company; relevant to securities disclosure and revenue-quality boundaries.",
+      "professional_source_url": "https://www.iren.com/investors/analysts",
+      "source_boundary": "Issuer-maintained analyst coverage list; listing does not imply endorsement.",
+      "challenge_question": "Does IREN-R009 state the ARR-to-GAAP-revenue boundary precisely enough for an investor workflow, and which filed line items would change it?",
+      "contact_channel_availability": "PUBLIC_PROFESSIONAL_CONTACT_LISTED_ON_SOURCE_PAGE",
+      "contact_details_stored": false
+    },
+    {
+      "priority": 3,
+      "candidate": "Gregory Lewis",
+      "organization": "BTIG",
+      "relevance": "Listed by IREN as an analyst covering the company; relevant to contract, financing, and reported operating-metric analysis.",
+      "professional_source_url": "https://www.iren.com/investors/analysts",
+      "source_boundary": "Issuer-maintained analyst coverage list; listing does not imply endorsement.",
+      "challenge_question": "Which disclosure would most efficiently falsify or refine IREN-R010's current cash-collection boundary?",
+      "contact_channel_availability": "PUBLIC_PROFESSIONAL_CONTACT_LISTED_ON_SOURCE_PAGE",
+      "contact_details_stored": false
+    },
+    {
+      "priority": 4,
+      "candidate": "Brett Knoblauch",
+      "organization": "Cantor Fitzgerald",
+      "relevance": "Listed by IREN as an analyst covering the company; relevant to capital-markets interpretation of IREN's AI Cloud disclosures.",
+      "professional_source_url": "https://www.iren.com/investors/analysts",
+      "source_boundary": "Issuer-maintained analyst coverage list; listing does not imply endorsement.",
+      "challenge_question": "Are the evidence boundaries between contracted ARR, operating ARR, recognized revenue, deferred revenue, and cash complete enough in IREN-R005 and IREN-R009?",
+      "contact_channel_availability": "PUBLIC_PROFESSIONAL_CONTACT_LISTED_ON_SOURCE_PAGE",
+      "contact_details_stored": false
+    },
+    {
+      "priority": 5,
+      "candidate": "Michael Ng",
+      "organization": "Goldman Sachs",
+      "relevance": "Listed by IREN as an analyst covering the company; relevant to financial disclosure and infrastructure-investment interpretation.",
+      "professional_source_url": "https://www.iren.com/investors/analysts",
+      "source_boundary": "Issuer-maintained analyst coverage list; listing does not imply endorsement.",
+      "challenge_question": "What evidence would distinguish financing availability in IREN-R006 from full funding, drawdown, and positive project economics?",
+      "contact_channel_availability": "PUBLIC_PROFESSIONAL_CONTACT_LISTED_ON_SOURCE_PAGE",
+      "contact_details_stored": false
+    },
+    {
+      "priority": 6,
+      "candidate": "Jonathan Petersen",
+      "organization": "Jefferies",
+      "relevance": "Listed by IREN as an analyst covering the company; relevant to infrastructure and securities analysis.",
+      "professional_source_url": "https://www.iren.com/investors/analysts",
+      "source_boundary": "Issuer-maintained analyst coverage list; listing does not imply endorsement.",
+      "challenge_question": "Which operating and financial observations would be required before IREN-R011 could move beyond a bounded not-established state?",
+      "contact_channel_availability": "PUBLIC_PROFESSIONAL_CONTACT_LISTED_ON_SOURCE_PAGE",
+      "contact_details_stored": false
+    },
+    {
+      "priority": 7,
+      "candidate": "Richard Choe",
+      "organization": "JPMorgan",
+      "relevance": "Listed by IREN as an analyst covering the company; relevant to financial-statement and contract-economics review.",
+      "professional_source_url": "https://www.iren.com/investors/analysts",
+      "source_boundary": "Issuer-maintained analyst coverage list; listing does not imply endorsement.",
+      "challenge_question": "What additional public filing evidence would let a reviewer connect the Microsoft agreement to segment revenue while preserving attribution and timing?",
+      "contact_channel_availability": "PUBLIC_PROFESSIONAL_CONTACT_LISTED_ON_SOURCE_PAGE",
+      "contact_details_stored": false
+    },
+    {
+      "priority": 8,
+      "candidate": "Paul Golding",
+      "organization": "Macquarie",
+      "relevance": "Listed by IREN as an analyst covering the company; relevant to infrastructure financing and transition-economics analysis.",
+      "professional_source_url": "https://www.iren.com/investors/analysts",
+      "source_boundary": "Issuer-maintained analyst coverage list; listing does not imply endorsement.",
+      "challenge_question": "Does IREN-R002 adequately separate non-cash impairment from conversion cost, cash expenditure, and future economics?",
+      "contact_channel_availability": "PUBLIC_PROFESSIONAL_CONTACT_LISTED_ON_SOURCE_PAGE",
+      "contact_details_stored": false
+    },
+    {
+      "priority": 9,
+      "candidate": "John Todaro",
+      "organization": "Needham",
+      "relevance": "Listed by IREN as an analyst covering the company; relevant to digital-infrastructure and public-equity research.",
+      "professional_source_url": "https://www.iren.com/investors/analysts",
+      "source_boundary": "Issuer-maintained analyst coverage list; listing does not imply endorsement.",
+      "challenge_question": "Which next-quarter disclosures would materially change the current IREN-R005 ARR boundary rather than merely repeat a target?",
+      "contact_channel_availability": "PUBLIC_PROFESSIONAL_CONTACT_LISTED_ON_SOURCE_PAGE",
+      "contact_details_stored": false
+    },
+    {
+      "priority": 10,
+      "candidate": "SemiAnalysis research desk",
+      "organization": "SemiAnalysis",
+      "relevance": "The firm's public materials describe research on GPU cloud providers, capacity deployments, customer contracts, financing, datacenter economics, TCO, and technical due diligence.",
+      "professional_source_url": "https://semianalysis.com/consulting/",
+      "contact_source_url": "https://semianalysis.com/consulting/",
+      "challenge_question": "Which capacity, utilization, performance, pricing, and cost evidence would distinguish contracted or operating ARR from durable GPU-cloud economics?",
+      "contact_channel_availability": "PUBLIC_ORGANIZATION_CONTACT_PAGE",
+      "contact_details_stored": false
+    },
+    {
+      "priority": 11,
+      "candidate": "Uptime Institute technical consulting",
+      "organization": "Uptime Institute",
+      "relevance": "Its official contact page describes data center certification, training, and IT consulting through a global consultant network.",
+      "professional_source_url": "https://uptimeinstitute.com/contact",
+      "challenge_question": "What commissioning and operational-readiness artifacts would distinguish construction, commissioning, delivery, and accepted operation for IREN-R008?",
+      "contact_channel_availability": "ACCESS_BLOCKED_PUBLIC_SOURCE_NOT_TREATED_AS_ZERO",
+      "contact_details_stored": false
+    },
+    {
+      "priority": 12,
+      "candidate": "Data Center Facility Project",
+      "organization": "Open Compute Project Foundation",
+      "relevance": "The official project scope covers facility power, cooling, layout, monitoring, operations, automation, and OCP Ready data-center recognition.",
+      "professional_source_url": "https://www.opencompute.org/projects/data-center-facility/",
+      "contact_source_url": "https://www.opencompute.org/contact/",
+      "challenge_question": "Which public facility-level records would make a claim of commissioned GPU-cloud capacity technically inspectable without implying customer acceptance?",
+      "contact_channel_availability": "PUBLIC_PROJECT_AND_ORGANIZATION_CONTACT_CHANNELS",
+      "contact_details_stored": false
+    },
+    {
+      "priority": 13,
+      "candidate": "Artificial Analysis",
+      "organization": "Artificial Analysis",
+      "relevance": "Its official contact page describes independent AI provider metadata, pricing, latency and throughput benchmarks, advisory work, and custom benchmarking.",
+      "professional_source_url": "https://artificialanalysis.ai/contact",
+      "challenge_question": "What independently reproducible performance and availability observations would establish delivered GPU-cloud capability without overreaching into contract economics?",
+      "contact_channel_availability": "PUBLIC_ORGANIZATION_CONTACT_PAGE",
+      "contact_details_stored": false
+    }
+  ]
+}

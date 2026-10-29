@@ -1,0 +1,61 @@
+{
+  "schema_version": "SE-SOCIAL-CARD-MANIFEST-v0.1",
+  "generated_at": "2026-10-29",
+  "publication_status": "DO_NOT_PUBLISH",
+  "assets": [
+    {
+      "format": "x",
+      "claim_id": "IREN-R003",
+      "path": "growth/external-challenge/output/cards/x/IREN-R003.png",
+      "sha256": "750266f3d6ab94e864298bd043528f09b80c8ebaf6662b5c82517675d5ba6fe6",
+      "width": 1600,
+      "height": 900,
+      "approval": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "format": "x",
+      "claim_id": "IREN-R004",
+      "path": "growth/external-challenge/output/cards/x/IREN-R004.png",
+      "sha256": "e82bf7f6a2d0f7a7e2e5e521845559245311aee9042a94d2a860eada611904bd",
+      "width": 1600,
+      "height": 900,
+      "approval": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "format": "x",
+      "claim_id": "IREN-R009",
+      "path": "growth/external-challenge/output/cards/x/IREN-R009.png",
+      "sha256": "785f2ee5d6fa134101421c42628945b35fe3d0435eee65393a72ce3460896af7",
+      "width": 1600,
+      "height": 900,
+      "approval": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "format": "linkedin",
+      "claim_id": "IREN-R003",
+      "path": "growth/external-challenge/output/cards/linkedin/IREN-R003.png",
+      "sha256": "cd608ffd83363c079b0cb724863e5d8011a7ad8ac0929c74e363122c356950f1",
+      "width": 1200,
+      "height": 627,
+      "approval": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "format": "linkedin",
+      "claim_id": "IREN-R004",
+      "path": "growth/external-challenge/output/cards/linkedin/IREN-R004.png",
+      "sha256": "4a22d3d84aa79078c74669221ceb16735cc9f9ecef98dd64fa9c60516c59b384",
+      "width": 1200,
+      "height": 627,
+      "approval": "PENDING_HUMAN_REVIEW"
+    },
+    {
+      "format": "linkedin",
+      "claim_id": "IREN-R009",
+      "path": "growth/external-challenge/output/cards/linkedin/IREN-R009.png",
+      "sha256": "44007ec158548cc741a4b725968ae20a22f160cedb559762a30d75156fb5dd1b",
+      "width": 1200,
+      "height": 627,
+      "approval": "PENDING_HUMAN_REVIEW"
+    }
+  ]
+}

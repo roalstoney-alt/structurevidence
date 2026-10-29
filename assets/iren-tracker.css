@@ -224,17 +224,83 @@
 
 .research-disclaimer strong { color: #fff; }
 
+.challenge-workbench {
+  background: linear-gradient(145deg, #f4faf8, #edf6f5 58%, #f8f2e4);
+  border: 1px solid var(--iren-line);
+  border-radius: 1.25rem;
+  margin-top: 2rem;
+  padding: clamp(1.25rem, 3vw, 2.25rem);
+}
+
+.challenge-workbench-layout {
+  align-items: start;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: minmax(0, 1fr) minmax(16rem, .34fr);
+}
+
+.challenge-workbench-grid { display: grid; gap: 1rem; }
+
+.challenge-workbench-card {
+  background: #fff;
+  border: 1px solid var(--iren-line);
+  border-left: .35rem solid var(--iren-blue);
+  border-radius: 1rem;
+  box-shadow: 0 .45rem 1.5rem rgba(23, 41, 47, .06);
+  padding: 1.2rem;
+}
+
+.challenge-workbench-card h3 { color: var(--iren-ink); font-size: 1.18rem; line-height: 1.45; }
+.challenge-workbench-card dl { display: grid; gap: .7rem; margin: 1rem 0; }
+.challenge-workbench-card dl div { border-top: 1px solid var(--iren-line); display: grid; gap: .45rem; grid-template-columns: 11rem minmax(0, 1fr); padding-top: .7rem; }
+.challenge-workbench-card dt { color: #5e7076; font-size: .75rem; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; }
+.challenge-workbench-card dd { margin: 0; }
+
+.challenge-checklist {
+  background: var(--iren-ink);
+  border-radius: 1rem;
+  color: #fff;
+  padding: 1.35rem;
+  position: sticky;
+  top: 5.5rem;
+}
+
+.challenge-checklist .eyebrow { color: #8fded7; }
+.challenge-checklist h3 { color: #fff; }
+.challenge-checklist li { margin: .55rem 0; }
+.challenge-checklist a { color: #aee9e2; }
+
+.ddr-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.ddr-grid article {
+  background: #fff;
+  border: 1px solid var(--iren-line);
+  border-radius: 1rem;
+  padding: 1.25rem;
+}
+
+.ddr-grid h3 { color: var(--iren-ink); margin-top: 0; }
+.ddr-grid li { margin: .45rem 0; }
+
 @media (max-width: 820px) {
   .tracker-hero .case-facts,
   .tracker-grid,
   .tracker-principle,
   .tracker-summary,
+  .challenge-workbench-layout,
+  .ddr-grid,
   .context-grid,
   .policy-grid,
   .quick-read-copy { grid-template-columns: 1fr; }
   .evidence-ladder { grid-template-columns: 1fr; }
   .evidence-ladder i { transform: rotate(90deg); justify-self: center; }
   .row-meta div { grid-template-columns: 1fr; }
+  .challenge-workbench-card dl div { grid-template-columns: 1fr; }
+  .challenge-checklist { position: static; }
 }
 
 @media (prefers-reduced-motion: reduce) {

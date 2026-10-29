@@ -265,8 +265,8 @@
   ],
   "commercial_boundary": {
     "verify_url": "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001",
-    "decision_pack_url": "https://structevidence.com/decision-pack/?case_id=SE-IREN-AI-CLOUD-001",
-    "allowed_query_keys": ["case_id", "claim_id"],
+    "decision_pack_url": "https://structevidence.com/decision-pack/?case=SE-IREN-AI-CLOUD-001",
+    "allowed_query_keys": ["case", "case_id", "claim_id"],
     "privacy_notice": "Customer content is private. Submission does not authorize research or public release. Challenges never update the tracker automatically.",
     "production_post_authorized": false
   }

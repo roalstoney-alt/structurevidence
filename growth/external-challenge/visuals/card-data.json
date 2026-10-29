@@ -1,0 +1,59 @@
+{
+  "schema_version": "SE-SOCIAL-CARD-DATA-v0.1",
+  "cards": [
+    {
+      "card_id": "SE-CARD-IREN-R003",
+      "claim_id": "IREN-R003",
+      "public_claim": "IREN disclosed a five-year Microsoft GPU-cloud agreement with an approximately $9.7bn headline contract value.",
+      "evidence_boundary": "The disclosure was furnished by IREN. Headline contract value is not recognized revenue or cash collected.",
+      "what_remains_unknown": "The boundary remains unresolved in the reviewed source set.",
+      "what_would_change_it": "Review any amendment, termination, delivery, revenue-recognition, or collection disclosure.",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1878848/000114036125040072/ef20058139_8k.htm",
+      "source_ids": [
+        "I-S05"
+      ],
+      "cutoff": "2026-10-22",
+      "version": "v0.2",
+      "identity": "StructEvidence · Verify Your Verify",
+      "state": "SUPPORTED_AS_ATTRIBUTED",
+      "publication_status": "DO_NOT_PUBLISH"
+    },
+    {
+      "card_id": "SE-CARD-IREN-R004",
+      "claim_id": "IREN-R004",
+      "public_claim": "IREN stated that Horizon 1 was delivered to and accepted by Microsoft in August 2026 and that NVIDIA Exemplar Cloud status was achieved on GB300 NVL72.",
+      "evidence_boundary": "This is issuer-reported acceptance in a furnished exhibit, not a Microsoft-authored acceptance record or independent NVIDIA certification record captured by this tracker.",
+      "what_remains_unknown": "The boundary remains unresolved in the reviewed source set.",
+      "what_would_change_it": "Seek a customer-authored or independently attributable acceptance artifact.",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1878848/000114036126032638/ef20080141_ex99-1.htm",
+      "source_ids": [
+        "I-S08",
+        "I-S09"
+      ],
+      "cutoff": "2026-10-22",
+      "version": "v0.2",
+      "identity": "StructEvidence · Verify Your Verify",
+      "state": "SUPPORTED_AS_ATTRIBUTED",
+      "publication_status": "DO_NOT_PUBLISH"
+    },
+    {
+      "card_id": "SE-CARD-IREN-R009",
+      "claim_id": "IREN-R009",
+      "public_claim": "Contracted ARR has converted into the same amount of GAAP recognized revenue.",
+      "evidence_boundary": "Contracted ARR, operating ARR, recognized revenue, deferred revenue, prepayments, and cash are different measures.",
+      "what_remains_unknown": "Not shown in the sources reviewed: contracted ARR converting dollar-for-dollar into GAAP revenue.",
+      "what_would_change_it": "Compare subsequent filed AI Cloud revenue and notes with the exact ARR definition then in use.",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1878848/000187884826000052/iren-20260630.htm",
+      "source_ids": [
+        "I-S04",
+        "I-S09",
+        "I-S11"
+      ],
+      "cutoff": "2026-10-22",
+      "version": "v0.2",
+      "identity": "StructEvidence · Verify Your Verify",
+      "state": "NOT_ESTABLISHED",
+      "publication_status": "DO_NOT_PUBLISH"
+    }
+  ]
+}
