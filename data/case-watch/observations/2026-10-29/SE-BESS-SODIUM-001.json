@@ -1,0 +1,38 @@
+{
+  "schema_version": "se-case-observation-v2",
+  "observation_id": "SE-BESS-SODIUM-001-OBS-20261029-CLOUD-01",
+  "observed_at": "2026-10-29T22:00:00+08:00",
+  "knowledge_cutoff": "2026-10-29T22:00:00+08:00",
+  "review_id": null,
+  "review_status": "REVIEW_INCOMPLETE",
+  "new_sources": 1,
+  "new_attributed_statements": 2,
+  "new_independent_evidence": 0,
+  "new_events": 1,
+  "newly_discovered_old_evidence": 0,
+  "state_changing_evidence": 0,
+  "proposed_stop_point": "UNCHANGED",
+  "contradictions": [],
+  "external_feedback": {
+    "customer": "SOURCE_NOT_ACCESSIBLE",
+    "relevant_person": "NO_VERIFIED_PUBLIC_SIGNAL_WITHIN_BOUNDARY",
+    "organization": "NO_VERIFIED_PUBLIC_SIGNAL_WITHIN_BOUNDARY"
+  },
+  "case_id": "SE-BESS-SODIUM-001",
+  "source_url": "https://www.energetica-india.net/news/jvvnl-and-global-energy-alliance-plan-indias-first-sodium-ion-bess-pilot",
+  "source_id": "ENERGETICA-JVVNL-GEAPP-SODIUM-PILOT-2026-10-29-CANDIDATE",
+  "source_speaker": "Energetica India reporting JVVNL and Global Energy Alliance",
+  "claimed_subject": "MoU and RFP for a planned 250kW/250kWh sodium-ion BESS pilot at K.L. Saini Stadium, Jaipur",
+  "claim_ids": [
+    "SODIUM-JVVNL-PLANNED-PILOT-RFP"
+  ],
+  "event_at": "2026-10-29",
+  "published_at": "2026-10-29",
+  "source_access": "SECONDARY_ARTICLE_BODY_READ",
+  "raw_hash_or_UNAVAILABLE": "UNAVAILABLE_SEARCH_SERVICE_NORMALIZED",
+  "search_query": "October 29 2026 sodium-ion BESS commissioned grid connected named project operational; site:geapp.org JVVNL sodium ion BESS Jaipur",
+  "search_boundary": "Fresh secondary report read; no matching JVVNL/GEAPP primary announcement, awarded supplier, delivery, commissioning or operating record located.",
+  "old_stop_point": "NAMED_COMMISSIONED_SITE_NOT_ESTABLISHED",
+  "decision_relevant_unknown": "Primary MoU/RFP, awarded vendor, delivered system, grid connection, acceptance and operating data.",
+  "next_observable": "JVVNL/GEAPP primary tender or award, then commissioning and distribution-utility operating record."
+}
