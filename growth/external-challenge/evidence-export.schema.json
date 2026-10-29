@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://structurevidence.org/schemas/external-challenge-evidence-export-v0.1.json",
+  "title": "StructEvidence external challenge daily evidence export",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "export_id",
+    "case_id",
+    "generated_for_date",
+    "evidence_cutoff",
+    "tracker_version",
+    "status",
+    "qualifying_change_count",
+    "claims",
+    "review_status",
+    "publication_status"
+  ],
+  "properties": {
+    "schema_version": {"const": "SE-EXTERNAL-CHALLENGE-EVIDENCE-EXPORT-v0.1"},
+    "export_id": {"type": "string", "pattern": "^SE-IREN-EXPORT-[0-9]{8}$"},
+    "case_id": {"const": "SE-IREN-AI-CLOUD-001"},
+    "generated_for_date": {"type": "string", "format": "date"},
+    "evidence_cutoff": {"type": "string", "format": "date"},
+    "tracker_version": {"type": "string", "minLength": 1},
+    "source_check_utc": {"type": "string", "minLength": 1},
+    "status": {"enum": ["QUALIFYING_CHANGE", "NO_QUALIFYING_CHANGE", "RETRIEVAL_INCOMPLETE"]},
+    "status_reason": {"type": "string", "minLength": 1},
+    "qualifying_change_count": {"type": "integer", "minimum": 0},
+    "changed_conditions": {"type": "array", "items": {"type": "string"}},
+    "claims": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["claim_id", "public_claim", "speaker_attribution", "evidence_state", "evidence_boundary", "source_references", "availability", "evidence_cutoff", "capture_hashes", "changed_conditions", "review_status"],
+        "properties": {
+          "claim_id": {"type": "string", "pattern": "^IREN-R[0-9]{3}$"},
+          "public_claim": {"type": "string", "minLength": 1},
+          "speaker_attribution": {"type": "string", "minLength": 1},
+          "evidence_state": {"enum": ["SUPPORTED_AS_ATTRIBUTED", "NOT_ESTABLISHED"]},
+          "evidence_boundary": {"type": "string", "minLength": 1},
+          "source_references": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+          "availability": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+          "evidence_cutoff": {"type": "string", "format": "date"},
+          "capture_hashes": {"type": "object", "additionalProperties": {"type": ["string", "null"]}},
+          "changed_conditions": {"type": "array", "items": {"type": "string"}},
+          "review_status": {"type": "string", "minLength": 1},
+          "what_would_change_it": {"type": "string", "minLength": 1}
+        }
+      }
+    },
+    "review_status": {"type": "string", "minLength": 1},
+    "publication_status": {"const": "DO_NOT_PUBLISH_UNTIL_HUMAN_REVIEW"},
+    "content_sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}
+  }
+}

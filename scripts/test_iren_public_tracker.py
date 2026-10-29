@@ -127,7 +127,9 @@ class IrenTrackerTest(unittest.TestCase):
         self.assertNotRegex(lowered, r"\b(score|grade)\s*[:=]")
 
     def test_challenge_urls_are_fixed_and_public_safe(self):
-        self.assertEqual(len(self.tracker["rows"]), len(self.parser.challenge_hrefs))
+        # The external challenge workbench may repeat a row's fixed intake URL;
+        # the public contract still exposes exactly one unique URL per row.
+        self.assertEqual(len(self.tracker["rows"]), len(set(self.parser.challenge_hrefs)))
         for row in self.tracker["rows"]:
             parsed = urlparse(row["challenge_url"])
             query = parse_qs(parsed.query)

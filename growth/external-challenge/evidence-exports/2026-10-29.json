@@ -1,0 +1,259 @@
+{
+  "schema_version": "SE-EXTERNAL-CHALLENGE-EVIDENCE-EXPORT-v0.1",
+  "export_id": "SE-IREN-EXPORT-20261029",
+  "case_id": "SE-IREN-AI-CLOUD-001",
+  "generated_for_date": "2026-10-29",
+  "evidence_cutoff": "2026-10-22",
+  "tracker_version": "v0.2",
+  "source_check_utc": "2026-10-27T20:34:45Z",
+  "status": "RETRIEVAL_INCOMPLETE",
+  "status_reason": "No qualifying state-changing event is recorded after the current page revision; source retrieval remains incomplete for I-S10.",
+  "qualifying_change_count": 0,
+  "changed_conditions": [],
+  "claims": [
+    {
+      "claim_id": "IREN-R001",
+      "public_claim": "IREN reported FY26 total revenue of $707.0m, AI Cloud Services revenue of $128.8m, and net loss of $702.6m.",
+      "speaker_attribution": "IREN Limited — issuer-authored disclosure",
+      "evidence_state": "SUPPORTED_AS_ATTRIBUTED",
+      "evidence_boundary": "Historic issuer financial statement amounts. They do not establish future revenue, cash collection, or AI Cloud profitability.",
+      "source_references": [
+        "I-S04"
+      ],
+      "availability": [
+        "I-S04:CAPTURED"
+      ],
+      "evidence_cutoff": "2026-10-22",
+      "capture_hashes": {
+        "I-S04": "5a60f2b7900db295725eb83bb68c7e1cdf9460679d613495a91753bad8467fe3"
+      },
+      "changed_conditions": [],
+      "review_status": "AGREED_WITH_SOURCE_NATIVE_WORDING_AND_BOUNDARY",
+      "what_would_change_it": "Compare with the next filed quarterly report on or after 2026-11-05."
+    },
+    {
+      "claim_id": "IREN-R002",
+      "public_claim": "IREN reported FY26 non-cash impairment of assets of $638.8m, primarily related to decommissioning Bitcoin mining hardware as sites were converted for AI Cloud growth.",
+      "speaker_attribution": "IREN Limited — issuer-authored disclosure",
+      "evidence_state": "SUPPORTED_AS_ATTRIBUTED",
+      "evidence_boundary": "An impairment is an accounting charge and is not equivalent to cash expenditure or total conversion cost.",
+      "source_references": [
+        "I-S04"
+      ],
+      "availability": [
+        "I-S04:CAPTURED"
+      ],
+      "evidence_cutoff": "2026-10-22",
+      "capture_hashes": {
+        "I-S04": "5a60f2b7900db295725eb83bb68c7e1cdf9460679d613495a91753bad8467fe3"
+      },
+      "changed_conditions": [],
+      "review_status": "AGREED_WITH_SOURCE_NATIVE_WORDING_AND_BOUNDARY",
+      "what_would_change_it": "Review subsequent filed impairment and asset-disposition notes."
+    },
+    {
+      "claim_id": "IREN-R003",
+      "public_claim": "IREN disclosed a five-year Microsoft GPU-cloud agreement with an approximately $9.7bn headline contract value.",
+      "speaker_attribution": "IREN Limited — issuer-authored disclosure",
+      "evidence_state": "SUPPORTED_AS_ATTRIBUTED",
+      "evidence_boundary": "The disclosure was furnished by IREN. Headline contract value is not recognized revenue or cash collected.",
+      "source_references": [
+        "I-S05"
+      ],
+      "availability": [
+        "I-S05:CAPTURED"
+      ],
+      "evidence_cutoff": "2026-10-22",
+      "capture_hashes": {
+        "I-S05": "34b1bec30f65483aa268d021bac8e681020d3bfaf73047bb79c48435a91a20d7"
+      },
+      "changed_conditions": [],
+      "review_status": "AGREED_WITH_SOURCE_NATIVE_WORDING_AND_BOUNDARY",
+      "what_would_change_it": "Review any amendment, termination, delivery, revenue-recognition, or collection disclosure."
+    },
+    {
+      "claim_id": "IREN-R004",
+      "public_claim": "IREN stated that Horizon 1 was delivered to and accepted by Microsoft in August 2026 and that NVIDIA Exemplar Cloud status was achieved on GB300 NVL72.",
+      "speaker_attribution": "IREN Limited — issuer-authored disclosure",
+      "evidence_state": "SUPPORTED_AS_ATTRIBUTED",
+      "evidence_boundary": "This is issuer-reported acceptance in a furnished exhibit, not a Microsoft-authored acceptance record or independent NVIDIA certification record captured by this tracker.",
+      "source_references": [
+        "I-S08",
+        "I-S09"
+      ],
+      "availability": [
+        "I-S08:CAPTURED",
+        "I-S09:CAPTURED"
+      ],
+      "evidence_cutoff": "2026-10-22",
+      "capture_hashes": {
+        "I-S08": "718701c44d8ef05ec202af7abc3737b3917e458f986f650a66ee3518fa8c973a",
+        "I-S09": "12488ee3919900286143fb2fdb21f620f49132826ffdfa9d6e31884c6a424004"
+      },
+      "changed_conditions": [],
+      "review_status": "AGREED_WITH_SOURCE_NATIVE_WORDING_AND_BOUNDARY",
+      "what_would_change_it": "Seek a customer-authored or independently attributable acceptance artifact."
+    },
+    {
+      "claim_id": "IREN-R005",
+      "public_claim": "IREN reported $4bn contracted ARR for 2026 capacity and $1bn operating ARR as of August 26, 2026.",
+      "speaker_attribution": "IREN Limited — issuer-authored disclosure",
+      "evidence_state": "SUPPORTED_AS_ATTRIBUTED",
+      "evidence_boundary": "IREN defines ARR from contracted GPU-hour pricing for commissioned GPUs multiplied by 8,760 hours plus storage and ancillaries. ARR is non-GAAP and recognized revenue may be materially lower.",
+      "source_references": [
+        "I-S09"
+      ],
+      "availability": [
+        "I-S09:CAPTURED"
+      ],
+      "evidence_cutoff": "2026-10-22",
+      "capture_hashes": {
+        "I-S09": "12488ee3919900286143fb2fdb21f620f49132826ffdfa9d6e31884c6a424004"
+      },
+      "changed_conditions": [],
+      "review_status": "AGREED_WITH_SOURCE_NATIVE_WORDING_AND_BOUNDARY",
+      "what_would_change_it": "Check the Q1 FY27 release and filing for changed definitions and realized GAAP revenue."
+    },
+    {
+      "claim_id": "IREN-R006",
+      "public_claim": "IREN reported $3.6bn of investment-grade GPU financing for the Microsoft contract at a 6.0% weighted-average interest rate, excluding fees.",
+      "speaker_attribution": "IREN Limited — issuer-authored disclosure",
+      "evidence_state": "SUPPORTED_AS_ATTRIBUTED",
+      "evidence_boundary": "An issuer financing disclosure does not by itself establish full project funding, future drawdown, repayment economics, or returns.",
+      "source_references": [
+        "I-S09"
+      ],
+      "availability": [
+        "I-S09:CAPTURED"
+      ],
+      "evidence_cutoff": "2026-10-22",
+      "capture_hashes": {
+        "I-S09": "12488ee3919900286143fb2fdb21f620f49132826ffdfa9d6e31884c6a424004"
+      },
+      "changed_conditions": [],
+      "review_status": "AGREED_WITH_SOURCE_NATIVE_WORDING_AND_BOUNDARY",
+      "what_would_change_it": "Review filed debt, collateral, drawdown, fee, covenant, and repayment disclosures."
+    },
+    {
+      "claim_id": "IREN-R007",
+      "public_claim": "A Microsoft-authored Horizon 1 acceptance record is present in the reviewed source set.",
+      "speaker_attribution": "StructEvidence — bounded state derived from the reviewed source set",
+      "evidence_state": "NOT_ESTABLISHED",
+      "evidence_boundary": "The reviewed acceptance statement is authored by IREN. Missing customer-authored evidence is a gap, not evidence that acceptance did not occur.",
+      "source_references": [
+        "I-S08"
+      ],
+      "availability": [
+        "I-S08:CAPTURED"
+      ],
+      "evidence_cutoff": "2026-10-22",
+      "capture_hashes": {
+        "I-S08": "718701c44d8ef05ec202af7abc3737b3917e458f986f650a66ee3518fa8c973a"
+      },
+      "changed_conditions": [],
+      "review_status": "AGREED_WITH_BOUNDED_ABSENCE_STATE",
+      "what_would_change_it": "Check official Microsoft publications and future IREN filings for an attributable customer record."
+    },
+    {
+      "claim_id": "IREN-R008",
+      "public_claim": "Horizons 2, 3, and 4 had been delivered and accepted by the evidence cutoff.",
+      "speaker_attribution": "StructEvidence — bounded state derived from the reviewed source set",
+      "evidence_state": "NOT_ESTABLISHED",
+      "evidence_boundary": "IREN reported Horizon 2 commissioning and Horizons 3–4 in late-stage construction, targeting Q4 2026 delivery. Its Form 10-K says contractual delivery grace periods extend from mid-Q4 2026 to the beginning of Q2 2027. A target or outer bound is not a completed acceptance event.",
+      "source_references": [
+        "I-S04",
+        "I-S09"
+      ],
+      "availability": [
+        "I-S04:CAPTURED",
+        "I-S09:CAPTURED"
+      ],
+      "evidence_cutoff": "2026-10-22",
+      "capture_hashes": {
+        "I-S04": "5a60f2b7900db295725eb83bb68c7e1cdf9460679d613495a91753bad8467fe3",
+        "I-S09": "12488ee3919900286143fb2fdb21f620f49132826ffdfa9d6e31884c6a424004"
+      },
+      "changed_conditions": [],
+      "review_status": "AGREED_WITH_BOUNDED_ABSENCE_STATE",
+      "what_would_change_it": "2026-11-05 Q1 FY27 results, then any later 8-K or customer-authored acceptance record."
+    },
+    {
+      "claim_id": "IREN-R009",
+      "public_claim": "Contracted ARR has converted into the same amount of GAAP recognized revenue.",
+      "speaker_attribution": "StructEvidence — bounded state derived from the reviewed source set",
+      "evidence_state": "NOT_ESTABLISHED",
+      "evidence_boundary": "Contracted ARR, operating ARR, recognized revenue, deferred revenue, prepayments, and cash are different measures.",
+      "source_references": [
+        "I-S04",
+        "I-S09",
+        "I-S11"
+      ],
+      "availability": [
+        "I-S04:CAPTURED",
+        "I-S09:CAPTURED",
+        "I-S11:CAPTURED"
+      ],
+      "evidence_cutoff": "2026-10-22",
+      "capture_hashes": {
+        "I-S04": "5a60f2b7900db295725eb83bb68c7e1cdf9460679d613495a91753bad8467fe3",
+        "I-S09": "12488ee3919900286143fb2fdb21f620f49132826ffdfa9d6e31884c6a424004",
+        "I-S11": "fd4ef1caf35a496340e8976b3b148f3c0bab8dc7d26d621e59a5f87948c29a8c"
+      },
+      "changed_conditions": [],
+      "review_status": "AGREED_WITH_BOUNDED_ABSENCE_STATE",
+      "what_would_change_it": "Compare subsequent filed AI Cloud revenue and notes with the exact ARR definition then in use."
+    },
+    {
+      "claim_id": "IREN-R010",
+      "public_claim": "The approximately $9.7bn Microsoft headline contract value has been collected in cash.",
+      "speaker_attribution": "StructEvidence — bounded state derived from the reviewed source set",
+      "evidence_state": "NOT_ESTABLISHED",
+      "evidence_boundary": "The reviewed materials disclose contract value, prepayments, deferred revenue, and financing but do not establish collection of the full headline value.",
+      "source_references": [
+        "I-S04",
+        "I-S05"
+      ],
+      "availability": [
+        "I-S04:CAPTURED",
+        "I-S05:CAPTURED"
+      ],
+      "evidence_cutoff": "2026-10-22",
+      "capture_hashes": {
+        "I-S04": "5a60f2b7900db295725eb83bb68c7e1cdf9460679d613495a91753bad8467fe3",
+        "I-S05": "34b1bec30f65483aa268d021bac8e681020d3bfaf73047bb79c48435a91a20d7"
+      },
+      "changed_conditions": [],
+      "review_status": "AGREED_WITH_BOUNDED_ABSENCE_STATE",
+      "what_would_change_it": "Review filed cash-flow, deferred-revenue, receivable, and contract-liability disclosures."
+    },
+    {
+      "claim_id": "IREN-R011",
+      "public_claim": "The mining-to-AI transition is complete and produces positive returns after operating costs, financing, and capital investment.",
+      "speaker_attribution": "StructEvidence — bounded state derived from the reviewed source set",
+      "evidence_state": "NOT_ESTABLISHED",
+      "evidence_boundary": "Historic revenue growth, one reported acceptance event, impairment, financing, and construction targets do not establish completion or full-life economic returns.",
+      "source_references": [
+        "I-S04",
+        "I-S09",
+        "I-S12"
+      ],
+      "availability": [
+        "I-S04:CAPTURED",
+        "I-S09:CAPTURED",
+        "I-S12:CAPTURED"
+      ],
+      "evidence_cutoff": "2026-10-22",
+      "capture_hashes": {
+        "I-S04": "5a60f2b7900db295725eb83bb68c7e1cdf9460679d613495a91753bad8467fe3",
+        "I-S09": "12488ee3919900286143fb2fdb21f620f49132826ffdfa9d6e31884c6a424004",
+        "I-S12": "c2d7c049e8fa802722f3766750ec3d3bb74e54de958f380e586f555d885ca9b3"
+      },
+      "changed_conditions": [],
+      "review_status": "AGREED_WITH_BOUNDED_ABSENCE_STATE",
+      "what_would_change_it": "Review subsequent segment results, costs, capex, impairment, operating capacity, and transition language."
+    }
+  ],
+  "review_status": "OWNER_AUTHORIZED_PUBLICATION",
+  "publication_status": "DO_NOT_PUBLISH_UNTIL_HUMAN_REVIEW",
+  "content_sha256": "sha256:308809e4cf0792463ff6b946df32959ac02cff4aa1c19afca8d188267dcedf09"
+}

@@ -1,0 +1,88 @@
+{
+  "schema_version": "SE-SITE-QA-v0.1",
+  "checked_at": "2026-10-29",
+  "target": "local-only",
+  "checks": [
+    {
+      "name": "desktop-case",
+      "pathname": "/cases/iren-ai-cloud-transition/",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "http_status": 200,
+      "title": "IREN AI Cloud Evidence Tracker | StructEvidence",
+      "horizontal_overflow": false,
+      "challenge_cards": 3,
+      "challenge_workbench_visible": true,
+      "decision_sample_visible": false,
+      "verify_links": [
+        "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001",
+        "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001&claim_id=IREN-R001",
+        "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001&claim_id=IREN-R002",
+        "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001&claim_id=IREN-R003",
+        "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001&claim_id=IREN-R004",
+        "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001&claim_id=IREN-R005",
+        "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001&claim_id=IREN-R006",
+        "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001&claim_id=IREN-R007",
+        "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001&claim_id=IREN-R008",
+        "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001&claim_id=IREN-R009",
+        "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001&claim_id=IREN-R010",
+        "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001&claim_id=IREN-R011",
+        "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001&claim_id=IREN-R003",
+        "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001&claim_id=IREN-R004",
+        "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001&claim_id=IREN-R009",
+        "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001"
+      ]
+    },
+    {
+      "name": "mobile-case",
+      "pathname": "/cases/iren-ai-cloud-transition/",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "http_status": 200,
+      "title": "IREN AI Cloud Evidence Tracker | StructEvidence",
+      "horizontal_overflow": false,
+      "challenge_cards": 3,
+      "challenge_workbench_visible": true,
+      "decision_sample_visible": false,
+      "verify_links": [
+        "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001",
+        "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001&claim_id=IREN-R001",
+        "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001&claim_id=IREN-R002",
+        "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001&claim_id=IREN-R003",
+        "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001&claim_id=IREN-R004",
+        "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001&claim_id=IREN-R005",
+        "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001&claim_id=IREN-R006",
+        "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001&claim_id=IREN-R007",
+        "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001&claim_id=IREN-R008",
+        "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001&claim_id=IREN-R009",
+        "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001&claim_id=IREN-R010",
+        "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001&claim_id=IREN-R011",
+        "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001&claim_id=IREN-R003",
+        "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001&claim_id=IREN-R004",
+        "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001&claim_id=IREN-R009",
+        "https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001"
+      ]
+    },
+    {
+      "name": "desktop-ddr",
+      "pathname": "/cases/iren-ai-cloud-transition/ddr-sample.html",
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "http_status": 200,
+      "title": "Illustrative IREN Decision Dependency Record | StructEvidence",
+      "horizontal_overflow": false,
+      "challenge_cards": 0,
+      "challenge_workbench_visible": false,
+      "decision_sample_visible": true,
+      "verify_links": []
+    }
+  ],
+  "console_errors": [],
+  "result": "PASS"
+}

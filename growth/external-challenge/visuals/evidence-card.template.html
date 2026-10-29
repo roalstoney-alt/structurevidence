@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+    :root { color-scheme: dark; --ink:#071218; --panel:#10242c; --line:#2a525d; --white:#eef8f8; --muted:#a8bdc1; --cyan:#52d8d6; --amber:#f2b54b; }
+    * { box-sizing: border-box; }
+    html, body { width: {{WIDTH}}px; height: {{HEIGHT}}px; margin: 0; overflow: hidden; }
+    body { background: radial-gradient(circle at 78% 12%, #173b46 0, #071218 39%, #050d12 100%); color: var(--white); font-family: Arial, Helvetica, sans-serif; }
+    .frame { display: grid; grid-template-rows: auto 1fr auto; height: 100%; padding: {{PAD}}px; position: relative; }
+    .frame::before { border: 1px solid rgba(82,216,214,.18); content:""; inset: {{INSET}}px; pointer-events:none; position:absolute; }
+    header { align-items: center; display:flex; justify-content:space-between; }
+    .brand { align-items:center; display:flex; font-size:{{BRAND}}px; font-weight:800; gap:18px; }
+    .mark { background:var(--white); color:var(--ink); display:grid; height:54px; place-items:center; width:54px; }
+    .gate { border:1px solid var(--amber); color:var(--amber); font-size:{{SMALL}}px; font-weight:800; letter-spacing:.08em; padding:10px 14px; text-transform:uppercase; }
+    main { align-content:center; display:grid; gap:{{GAP}}px; grid-template-columns:1.12fr .88fr; }
+    .claim h1 { font-size:{{TITLE}}px; letter-spacing:-.025em; line-height:1.03; margin:14px 0 22px; }
+    .eyebrow { color:var(--cyan); font-size:{{SMALL}}px; font-weight:800; letter-spacing:.1em; margin:0; text-transform:uppercase; }
+    .state { border-left:7px solid var(--amber); color:var(--muted); font-size:{{BODY}}px; line-height:1.45; margin:0; padding:4px 0 4px 20px; }
+    .grid { display:grid; gap:14px; }
+    .cell { background:rgba(16,36,44,.88); border:1px solid var(--line); padding:{{CELL}}px; }
+    .cell h2 { color:var(--cyan); font-size:{{LABEL}}px; letter-spacing:.06em; margin:0 0 9px; text-transform:uppercase; }
+    .cell p { font-size:{{CELLBODY}}px; line-height:1.34; margin:0; }
+    footer { align-items:end; display:grid; gap:16px; grid-template-columns:1fr auto; }
+    .source { color:var(--muted); font-size:{{FOOT}}px; line-height:1.45; }
+    .source strong { color:var(--white); }
+    .identity { color:var(--cyan); font-size:{{FOOT}}px; font-weight:800; text-align:right; }
+  </style>
+</head>
+<body>
+  <article class="frame" aria-label="{{ALT}}">
+    <header><div class="brand"><span class="mark">SE</span><span>StructEvidence</span></div><div class="gate">DO NOT PUBLISH · HUMAN REVIEW</div></header>
+    <main>
+      <section class="claim"><p class="eyebrow">{{CLAIM_ID}} · {{STATE}}</p><h1>{{PUBLIC_CLAIM}}</h1><p class="state">{{EVIDENCE_BOUNDARY}}</p></section>
+      <section class="grid">
+        <div class="cell"><h2>What remains unknown</h2><p>{{WHAT_REMAINS_UNKNOWN}}</p></div>
+        <div class="cell"><h2>What would change it</h2><p>{{WHAT_WOULD_CHANGE_IT}}</p></div>
+      </section>
+    </main>
+    <footer><div class="source"><strong>Source:</strong> {{SOURCE_IDS}} · cutoff {{CUTOFF}} · {{VERSION}}<br>{{SOURCE_URL}}</div><div class="identity">Verify Your Verify.<br>structurevidence.org</div></footer>
+  </article>
+</body>
+</html>

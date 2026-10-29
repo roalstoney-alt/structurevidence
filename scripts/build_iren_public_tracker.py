@@ -140,6 +140,22 @@ def render_row(row: dict, sources: dict[str, dict], reading_policy: dict) -> str
       </article>"""
 
 
+def render_challenge_card(row: dict, sources: dict[str, dict], unknown: str) -> str:
+    state_class = "supported" if row["state"] == "SUPPORTED_AS_ATTRIBUTED" else "not-established"
+    return f"""
+      <article class="challenge-workbench-card" aria-labelledby="challenge-{html.escape(row['row_id'])}">
+        <div class="row-head"><code>{html.escape(row['row_id'])}</code><span class="state {state_class}">{html.escape(row['state'].replace('_', ' '))}</span></div>
+        <h3 id="challenge-{html.escape(row['row_id'])}">{html.escape(row['claim'])}</h3>
+        <dl>
+          <div><dt>Evidence boundary</dt><dd>{html.escape(row['boundary'])}</dd></div>
+          <div><dt>What remains unknown</dt><dd>{html.escape(unknown)}</dd></div>
+          <div><dt>What would change it</dt><dd>{html.escape(row['next_check'])}</dd></div>
+          <div><dt>Source and cutoff</dt><dd>{render_source_links(row['source_ids'], sources)} · {html.escape(row['row_id'])}</dd></div>
+        </dl>
+        <div class="actions"><a class="button" href="{html.escape(row['challenge_url'])}">Submit a precise challenge</a><a class="button secondary" href="#{html.escape(row['row_id'])}">Inspect full row</a></div>
+      </article>"""
+
+
 def build() -> None:
     tracker = load("tracker-v0.1.json")
     registry = load("source-registry-v0.1.json")
@@ -216,6 +232,16 @@ def build() -> None:
         for note in tracker["context_notes"]
     )
     metric = tracker["computed_metrics"][0]
+    rows_by_id = {row["row_id"]: row for row in tracker["rows"]}
+    challenge_unknowns = {
+        "IREN-R003": "Recognized revenue, customer-attributable revenue, and cash collection connected to the headline contract value are not established by this row.",
+        "IREN-R004": "A Microsoft-authored acceptance record and an independently attributable NVIDIA certification record are not present in the reviewed set.",
+        "IREN-R009": "The timing and amount of conversion from contracted or operating ARR into GAAP revenue remain unresolved.",
+    }
+    challenge_cards = "".join(
+        render_challenge_card(rows_by_id[row_id], sources, challenge_unknowns[row_id])
+        for row_id in ("IREN-R003", "IREN-R004", "IREN-R009")
+    )
     jsonld = json.dumps({
         "@context": "https://schema.org",
         "@type": "Dataset",
@@ -242,7 +268,7 @@ def build() -> None:
   <script type="application/ld+json">{jsonld}</script>
   <link rel="stylesheet" href="/assets/product.css?v=20261001-gravity">
   <link rel="alternate" type="application/atom+xml" title="StructEvidence material-change feed" href="/feed.xml">
-  <link rel="stylesheet" href="/assets/iren-tracker.css?v=20261028-verify-your-verify">
+  <link rel="stylesheet" href="/assets/iren-tracker.css?v=20261029-external-challenge">
 </head>
 <body class="product-site iren-tracker"><a class="skip-link" href="#main">Skip to content</a>
 <header class="product-header"><nav class="product-nav" aria-label="Primary navigation"><a class="product-brand" href="/"><span>SE</span><strong>StructEvidence</strong></a><button class="product-nav-toggle" type="button" aria-expanded="false" aria-controls="product-links" data-product-nav-toggle>Menu</button><div class="product-links" id="product-links"><a aria-current="page" href="/cases/">Evidence Cases</a><a href="/gaps/">Open Evidence Gaps</a><a href="https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001">Verify a Claim</a><a href="https://structevidence.com/decision-pack/?case_id=SE-IREN-AI-CLOUD-001">Decision Pack</a><a href="/method.html">Method</a></div></nav></header>
@@ -262,7 +288,7 @@ def build() -> None:
       <div><dt>Data digest</dt><dd><code>{html.escape(snapshot['content_digest'])}</code></dd></div>
     </dl></details>
     <p class="notice">Not a recommendation, forecast, rating, certification, or securities analysis. Issuer assertions remain speaker-attributed. SEC hosting is not independent confirmation.</p>
-    <div class="actions"><a class="button" href="#supported">Inspect evidence rows</a><a class="button secondary" href="/feed.xml">Subscribe to changes</a><a class="button secondary" href="index.json">Machine-readable snapshot</a></div>
+    <div class="actions"><a class="button" href="#challenge-workbench">Challenge an evidence boundary</a><a class="button secondary" href="#supported">Inspect evidence rows</a><a class="button secondary" href="/feed.xml">Subscribe to changes</a><a class="button secondary" href="index.json">Machine-readable snapshot</a></div>
   </section>
 
   <section class="tracker-principle" aria-label="Method statement"><p><strong>We can be wrong. We must remain auditable.</strong></p><p>Every row now shows a pinpoint locator and a documented second reading. A capture hash shows bytes stayed fixed; the reading check tests whether the row matches those bytes and its stated boundary.</p></section>
@@ -283,6 +309,11 @@ def build() -> None:
 
   <section class="product-section research-policies" id="policies" aria-labelledby="policies-title"><div class="section-head"><div><p class="eyebrow">Research policies</p><h2 id="policies-title">Selection, conflicts, and corrections.</h2></div><p>Only claims supported by the public case record are made here.</p></div><div class="policy-grid"><article><h3>Selection</h3><p>Cases are selected for public-interest and evidence-boundary usefulness. Coverage is not an endorsement, recommendation, rating, or a claim of completeness.</p></article><article><h3>Conflicts and payment</h3><p>No issuer-sponsored scope or issuer payment is recorded for this case. The public record contains no team securities-position attestation, so this page does not claim that positions are absent; any material conflict identified later must be disclosed.</p></article><article><h3>Corrections</h3><p>Material corrections and superseding evidence append a new event and preserve the prior record. Challenges enter human review and never update a public state automatically.</p></article><article><h3>Professional review</h3><p>No counsel-review attestation is claimed for the disclaimer or this research page. Readers should obtain qualified legal, accounting, tax, technical, or investment advice before acting.</p></article></div><p><a href="/research-scope.html">Research scope →</a> · <a href="/about.html">Authorship and conflict boundary →</a> · <a href="/changes/">Correction record →</a></p></section>
 
+  <section class="product-section challenge-workbench" id="challenge-workbench" aria-labelledby="challenge-workbench-title">
+    <div class="section-head"><div><p class="eyebrow">External validation · preview candidate</p><h2 id="challenge-workbench-title">Challenge the boundary—not the person.</h2></div><p>Choose one exact public row. Show the source, scope, timing, or dependency that should change it. Every challenge remains pending human review.</p></div>
+    <div class="challenge-workbench-layout"><div class="challenge-workbench-grid">{challenge_cards}</div><aside class="challenge-checklist"><p class="eyebrow">A qualifying challenge includes</p><h3>Make it inspectable.</h3><ol><li>One stable claim ID.</li><li>A public professional source URL.</li><li>The exact sentence, table, filing item, or technical artifact.</li><li>Why it changes the evidence boundary.</li><li>The relevant date and scope.</li></ol><p>Do not send confidential evidence through a public URL. A submission does not authorize research, publication, or an automatic state change.</p><p><a href="ddr-sample.html">Inspect an illustrative Decision Dependency Record →</a></p></aside></div>
+  </section>
+
   <section class="product-section" id="decision-dependency" aria-labelledby="decision-dependency-title"><div class="proof-card"><div class="proof-main"><p class="eyebrow">Decision Dependency Record · private request</p><h2 id="decision-dependency-title">Map this evidence to your decision</h2><p>Identify one assumption that your own decision depends on. We can map that assumption to a dated, attributed evidence state, its unresolved conditions, and what would require a new check. The decision and judgment remain yours.</p><p>Open a private human-scope request. Do not include a confidential thesis, personal data, or unpublished evidence in the URL; this link passes only a fixed public case identifier. Submitting does not authorize research, publication, investment advice, or an automatic evidence-state change.</p><div class="actions"><a class="button" href="https://structevidence.com/decision-pack/?case=SE-IREN-AI-CLOUD-001">Map this evidence to your decision</a><a class="button secondary" href="#challenge">Challenge a public evidence row</a></div></div><aside class="proof-aside"><p class="field-label">Potential record fields · scope not yet authorized</p><p>YOUR DECISION ASSUMPTION</p><p>EVIDENCE STATE + CUTOFF</p><p>DEPENDENCIES + UNKNOWN CONDITIONS</p><p>NEXT VERIFICATION TRIGGER</p><p>VERSIONED CITATION</p><p>No score, rating, forecast or recommendation.</p></aside></div></section>
 
   <section class="product-section" id="challenge" aria-labelledby="challenge-title"><div class="proof-card"><div class="proof-main"><p class="eyebrow">Human review boundary</p><h2 id="challenge-title">A challenge never changes a public state automatically.</h2><p>Only fixed public identifiers are sent to the existing private intake. Do not put evidence text, identity, thesis, or non-public context in the URL. Customer content remains private; submission does not authorize research or public release.</p><div class="actions"><a class="button" href="https://structevidence.com/verify/?case_id=SE-IREN-AI-CLOUD-001">Challenge or verify a claim</a><a class="button secondary" href="https://structevidence.com/decision-pack/?case_id=SE-IREN-AI-CLOUD-001">Request a Decision Pack</a></div></div><aside class="proof-aside"><p class="field-label">Do not equate</p><p>CONTRACTED ARR ≠ OPERATING ARR</p><p>ARR ≠ GAAP REVENUE</p><p>REVENUE ≠ CASH COLLECTION</p><p>ISSUER ACCEPTANCE CLAIM ≠ CUSTOMER-AUTHORED PROOF</p></aside></div></section>
@@ -292,6 +323,15 @@ def build() -> None:
 <footer class="product-footer"><div class="product-wrap"><div class="footer-grid"><strong>StructEvidence</strong><a href="/cases/">Evidence cases</a><a href="/changes/">Recorded changes</a><a href="/feed.xml">Subscribe</a><a href="#policies">Policies</a><a href="/method.html">Method</a><a href="/privacy.html">Privacy</a><span>Owner-authorized public research projection.</span></div><div class="research-disclaimer" role="note" aria-label="Research disclaimer"><strong>Research disclaimer.</strong> This website presents time-bounded public-source research for inspection and challenge. It is not investment, legal, accounting, tax, technical-certification, or other professional advice; it is not a recommendation, rating, forecast, or assurance of future performance. Issuer-authored statements remain attributed claims, missing evidence is not proof of non-existence, and readers should verify primary sources and obtain qualified advice before acting. No counsel-review attestation is claimed.</div></div></footer><script src="/assets/product.js"></script></body></html>
 """
     (CASE / "index.html").write_text(page, encoding="utf-8")
+    ddr_row = rows_by_id["IREN-R009"]
+    ddr_page = f"""<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Illustrative IREN Decision Dependency Record | StructEvidence</title><link rel="canonical" href="https://structurevidence.org/cases/iren-ai-cloud-transition/ddr-sample.html"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/assets/product.css?v=20261001-gravity"><link rel="stylesheet" href="/assets/iren-tracker.css?v=20261029-external-challenge"></head>
+<body class="product-site iren-tracker"><a class="skip-link" href="#main">Skip to content</a><header class="product-header"><nav class="product-nav" aria-label="Primary navigation"><a class="product-brand" href="/"><span>SE</span><strong>StructEvidence</strong></a><div class="product-links"><a href="/cases/iren-ai-cloud-transition/">IREN tracker</a><a href="/method.html">Method</a></div></nav></header>
+<main class="product-main" id="main"><nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">StructEvidence</a><span>›</span><a href="/cases/iren-ai-cloud-transition/">IREN tracker</a><span>›</span><span aria-current="page">Illustrative DDR</span></nav>
+<section class="page-hero tracker-hero"><p class="eyebrow">Illustrative sample · not a client record · do not publish without human review</p><h1>Map one decision assumption to its evidence boundary.</h1><p class="lead">This sample demonstrates the Decision Dependency Record format using only the approved public IREN case. It is not advice, a recommendation, or evidence that any person or organization holds this assumption.</p></section>
+<section class="product-section ddr-sample" aria-labelledby="ddr-title"><div class="section-head"><div><p class="eyebrow">DDR-SAMPLE-IREN-001</p><h2 id="ddr-title">Decision assumption</h2></div><p>Illustrative only</p></div><div class="ddr-grid"><article><h3>Assumption being tested</h3><p>Planning assumes that headline contracted ARR will translate into realized GAAP revenue on the decision timeline.</p></article><article><h3>Current public evidence state</h3><p><code>{html.escape(ddr_row['row_id'])}</code> · {html.escape(ddr_row['state'].replace('_', ' '))}</p><p>{html.escape(ddr_row['boundary'])}</p></article><article><h3>Dependencies and unknown conditions</h3><ul><li>Commissioned and revenue-generating GPU capacity.</li><li>Service delivery and applicable acceptance conditions.</li><li>Revenue-recognition timing and customer attribution.</li><li>Deferred revenue, receivables, prepayments, and cash collection.</li><li>Operating costs, financing, and capital expenditure.</li></ul></article><article><h3>Next verification trigger</h3><p>{html.escape(ddr_row['next_check'])}</p><p><strong>Cutoff:</strong> {html.escape(tracker['evidence_cutoff'])} · <strong>Version:</strong> {html.escape(tracker['tracker_data_version'])}</p></article></div><div class="review-hold"><strong>Decision boundary:</strong> This record organizes evidence for a human decision. It does not make the decision, score the company, or authorize research or publication.</div><div class="actions"><a class="button" href="https://structevidence.com/decision-pack/?case=SE-IREN-AI-CLOUD-001">Request private human scoping</a><a class="button secondary" href="/cases/iren-ai-cloud-transition/#IREN-R009">Return to the source row</a></div></section></main>
+<footer class="product-footer"><div class="product-wrap"><strong>StructEvidence</strong><div class="research-disclaimer" aria-label="Research disclaimer">Illustrative public-safe sample. No customer identity, private research, recommendation, rating, forecast, or approval is implied.</div></div></footer><script src="/assets/product.js"></script></body></html>"""
+    (CASE / "ddr-sample.html").write_text(ddr_page, encoding="utf-8")
     docs_case = ROOT / "docs" / "cases" / "iren-ai-cloud-transition"
     docs_case.mkdir(parents=True, exist_ok=True)
     for source in CASE.iterdir():
