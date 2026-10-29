@@ -93,6 +93,11 @@ class ExternalChallengeGrowthTest(unittest.TestCase):
         candidates = self.candidates["candidates"]
         self.assertGreaterEqual(len(candidates), 10)
         self.assertLessEqual(len(candidates), 15)
+        verification = self.candidates["source_verification"]
+        self.assertEqual(verification["official_source_available_count"], 12)
+        self.assertEqual(verification["access_blocked_count"], 1)
+        self.assertFalse(verification["private_channels_checked"])
+        self.assertFalse(verification["contact_details_stored"])
         serialized = json.dumps(candidates)
         self.assertNotIn("@", serialized)
         for candidate in candidates:
@@ -100,6 +105,8 @@ class ExternalChallengeGrowthTest(unittest.TestCase):
             self.assertTrue(candidate["relevance"])
             self.assertTrue(candidate["challenge_question"].endswith("?"))
             self.assertFalse(candidate["contact_details_stored"])
+        uptime = next(candidate for candidate in candidates if candidate["organization"] == "Uptime Institute")
+        self.assertEqual(uptime["contact_channel_availability"], "ACCESS_BLOCKED_PUBLIC_SOURCE_NOT_TREATED_AS_ZERO")
 
     def test_outreach_is_draft_only_and_not_sent(self):
         drafts = (BASE / "outreach" / "OWNER_REVIEW_DRAFTS.md").read_text(encoding="utf-8")

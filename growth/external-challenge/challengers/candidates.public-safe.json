@@ -2,6 +2,17 @@
   "schema_version": "SE-QUALIFIED-CHALLENGER-RESEARCH-v0.1",
   "researched_at": "2026-10-29",
   "privacy_boundary": "Public professional relevance and public channel availability only. No private profile data, inferred email, or restricted-profile scraping.",
+  "source_verification": {
+    "checked_at": "2026-10-29",
+    "official_source_available_count": 12,
+    "access_blocked_count": 1,
+    "access_blocked_candidates": [
+      "Uptime Institute technical consulting"
+    ],
+    "private_channels_checked": false,
+    "contact_details_stored": false,
+    "boundary": "ACCESS_BLOCKED is not counted as zero channel availability and no access restriction was bypassed."
+  },
   "candidates": [
     {
       "priority": 1,
@@ -107,7 +118,7 @@
       "candidate": "SemiAnalysis research desk",
       "organization": "SemiAnalysis",
       "relevance": "The firm's public materials describe research on GPU cloud providers, capacity deployments, customer contracts, financing, datacenter economics, TCO, and technical due diligence.",
-      "professional_source_url": "https://semianalysis.com/semianalysis-careers/",
+      "professional_source_url": "https://semianalysis.com/consulting/",
       "contact_source_url": "https://semianalysis.com/consulting/",
       "challenge_question": "Which capacity, utilization, performance, pricing, and cost evidence would distinguish contracted or operating ARR from durable GPU-cloud economics?",
       "contact_channel_availability": "PUBLIC_ORGANIZATION_CONTACT_PAGE",
@@ -120,7 +131,7 @@
       "relevance": "Its official contact page describes data center certification, training, and IT consulting through a global consultant network.",
       "professional_source_url": "https://uptimeinstitute.com/contact",
       "challenge_question": "What commissioning and operational-readiness artifacts would distinguish construction, commissioning, delivery, and accepted operation for IREN-R008?",
-      "contact_channel_availability": "PUBLIC_ORGANIZATION_CONTACT_FORM",
+      "contact_channel_availability": "ACCESS_BLOCKED_PUBLIC_SOURCE_NOT_TREATED_AS_ZERO",
       "contact_details_stored": false
     },
     {
@@ -128,7 +139,7 @@
       "candidate": "Data Center Facility Project",
       "organization": "Open Compute Project Foundation",
       "relevance": "The official project scope covers facility power, cooling, layout, monitoring, operations, automation, and OCP Ready data-center recognition.",
-      "professional_source_url": "https://www.opencompute.org/community/data-center-facility",
+      "professional_source_url": "https://www.opencompute.org/projects/data-center-facility/",
       "contact_source_url": "https://www.opencompute.org/contact/",
       "challenge_question": "Which public facility-level records would make a claim of commissioned GPU-cloud capacity technically inspectable without implying customer acceptance?",
       "contact_channel_availability": "PUBLIC_PROJECT_AND_ORGANIZATION_CONTACT_CHANNELS",
