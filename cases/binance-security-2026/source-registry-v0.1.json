@@ -1,0 +1,135 @@
+{
+  "case_id": "SE-BINANCE-SECURITY-001",
+  "version": "0.1",
+  "evidence_cutoff": "2026-10-30T07:39:26Z",
+  "hash_algorithm": "SHA-256",
+  "source_count": 8,
+  "independent_originator_count": 3,
+  "independence_note": "TRM, Bitquery and the Ethereum public ledger are counted as non-operator originators. Eastmoney is a syndicated 财联社 report and is not counted as an additional independent originator. Multiple analytics using the same chain are not independent observations of root cause or attribution.",
+  "sources": [
+    {
+      "source_id": "BSEC-S001",
+      "title": "Security Incident Update",
+      "canonical_url": "https://www.binance.com/en/support/announcement/detail/c5a8729a97ac486d963784d96c5642d7",
+      "published_at": "2026-10-30T02:23:00Z",
+      "observed_at": "2026-10-30T07:35:48Z",
+      "content_sha256": "b088b8c5fade6e6e6e6166c09ec550cd74bff734dfa3a87d9e32f8a107d66245",
+      "hash_scope": "NORMALIZED_PUBLIC_RENDER_CAPTURE",
+      "capture_path": "cases/binance-security-2026/source-captures/BSEC-S001.normalized.txt",
+      "dependency_class": "OPERATOR_PRIMARY",
+      "issuer_role": "INCIDENT_OPERATOR",
+      "access_status": "SEARCH_INDEX_CAPTURE_DIRECT_TLS_UNAVAILABLE_NO_BYPASS",
+      "public_safe": true
+    },
+    {
+      "source_id": "BSEC-S002",
+      "title": "North Korea Steals USD 6.36 Billion From Binance in the Largest Hack in History",
+      "canonical_url": "https://www.trmlabs.com/resources/blog/north-korea-steals-usd-6-36-billion-from-binance-in-the-largest-hack-in-history",
+      "published_at": "2026-10-30T02:10:00Z",
+      "observed_at": "2026-10-30T07:35:48Z",
+      "content_sha256": "2c560c0fb66bbcfe42814389ff97a728640700785a6baaf54313a48eb1485658",
+      "hash_scope": "RAW_HTTP_RESPONSE_BODY",
+      "dependency_class": "ANALYTIC_PROVIDER",
+      "issuer_role": "BLOCKCHAIN_INTELLIGENCE_ANALYST",
+      "access_status": "ACCESSIBLE",
+      "public_safe": true
+    },
+    {
+      "source_id": "BSEC-S003",
+      "title": "Binance Hack: $6.3B Drained on 9 Chains, $2.7B Frozen",
+      "canonical_url": "https://bitquery.io/investigations/binance-hack",
+      "published_at": "2026-10-30T06:30:00Z",
+      "modified_at": "2026-10-30T07:12:00Z",
+      "observed_at": "2026-10-30T07:35:48Z",
+      "content_sha256": "efbbd82ef54aa202e0abe4364742228e7b586c5540b779be254fd04e33f7c623",
+      "hash_scope": "RAW_HTTP_RESPONSE_BODY",
+      "dependency_class": "ANALYTIC_PROVIDER",
+      "issuer_role": "BLOCKCHAIN_DATA_ANALYST",
+      "access_status": "ACCESSIBLE",
+      "public_safe": true
+    },
+    {
+      "source_id": "BSEC-S004",
+      "title": "币安疑遭史上最大黑客盗窃案：超30亿美元资产‘被冻’ 加密货币齐跌！",
+      "canonical_url": "https://finance.eastmoney.com/a/202610303915893593.html",
+      "published_at": "2026-10-30T02:17:00Z",
+      "observed_at": "2026-10-30T07:35:48Z",
+      "content_sha256": "46b3c962ec1cf56d5222261df87ffe1c41496facb0dc4bac15ca2acddee553c3",
+      "hash_scope": "RAW_HTTP_RESPONSE_BODY",
+      "dependency_class": "MEDIA_SYNDICATION",
+      "issuer_role": "SECONDARY_REPORTER_SYNDICATED_FROM_财联社",
+      "access_status": "ACCESSIBLE",
+      "public_safe": true
+    },
+    {
+      "source_id": "BSEC-S005",
+      "title": "Proof of Reserves",
+      "canonical_url": "https://www.binance.com/en/proof-of-reserves",
+      "published_at": null,
+      "observed_at": "2026-10-30T07:35:48Z",
+      "content_sha256": "0845b96473161f4b74cbb6df7e1adab50930c131b3b36d206b04b8b7e6f49b01",
+      "hash_scope": "NORMALIZED_PUBLIC_RENDER_CAPTURE",
+      "capture_path": "cases/binance-security-2026/source-captures/BSEC-S005.normalized.txt",
+      "dependency_class": "OPERATOR_PRIMARY_METHOD",
+      "issuer_role": "RESERVE_REPORTING_OPERATOR",
+      "access_status": "DYNAMIC_FIELDS_NOT_EXPOSED_IN_CAPTURE",
+      "public_safe": true
+    },
+    {
+      "source_id": "BSEC-S006",
+      "title": "Ethereum transaction object for 0x53bd…e2f3",
+      "canonical_url": "https://etherscan.io/tx/0x53bd38b816c23e74134786c29a8c18d792777998a3b9326047b583100e88e2f3",
+      "published_at": "2026-10-29T20:24:23Z",
+      "observed_at": "2026-10-30T07:39:26Z",
+      "content_sha256": "675c0db785a27bb8fd002d5ed9c487af7ec6fc93c964fc70627882aba5e86a8e",
+      "hash_scope": "RAW_JSON_RPC_RESPONSE_BODY",
+      "dependency_class": "PUBLIC_LEDGER_NODE",
+      "issuer_role": "ETHEREUM_TRANSACTION_RECORD",
+      "access_status": "ACCESSIBLE_BY_PUBLIC_JSON_RPC",
+      "public_safe": true
+    },
+    {
+      "source_id": "BSEC-S007",
+      "title": "Ethereum receipt for 0x53bd…e2f3",
+      "canonical_url": "https://etherscan.io/tx/0x53bd38b816c23e74134786c29a8c18d792777998a3b9326047b583100e88e2f3#eventlog",
+      "published_at": "2026-10-29T20:24:23Z",
+      "observed_at": "2026-10-30T07:39:26Z",
+      "content_sha256": "71c9f554761e5645c3087d537d6fe42668925ffe4d91e2a5631853bd998984a4",
+      "hash_scope": "RAW_JSON_RPC_RESPONSE_BODY",
+      "dependency_class": "PUBLIC_LEDGER_NODE",
+      "issuer_role": "ETHEREUM_EXECUTION_RECEIPT",
+      "access_status": "ACCESSIBLE_BY_PUBLIC_JSON_RPC",
+      "public_safe": true
+    },
+    {
+      "source_id": "BSEC-S008",
+      "title": "Ethereum block 26300770",
+      "canonical_url": "https://etherscan.io/block/26300770",
+      "published_at": "2026-10-29T20:24:23Z",
+      "observed_at": "2026-10-30T07:39:26Z",
+      "content_sha256": "44f5982adca790e4685c060b27fc155ab6ec9533ceb3de41d3660304a706b66b",
+      "hash_scope": "RAW_JSON_RPC_RESPONSE_BODY",
+      "dependency_class": "PUBLIC_LEDGER_NODE",
+      "issuer_role": "ETHEREUM_BLOCK_RECORD",
+      "access_status": "ACCESSIBLE_BY_PUBLIC_JSON_RPC",
+      "public_safe": true
+    }
+  ],
+  "source_gaps": [
+    {
+      "gap_id": "BSEC-SG001",
+      "status": "OPEN",
+      "description": "The original pre-incident Binance proof-of-reserves address bundle, audit time, Merkle root and asset/liability table were not exposed in the accessible public rendering. No login, anti-bot bypass or private account access was attempted."
+    },
+    {
+      "gap_id": "BSEC-SG002",
+      "status": "OPEN",
+      "description": "Binance promised a post-remediation proof-of-reserves update and technical post-mortem; neither was available by the evidence cutoff."
+    },
+    {
+      "gap_id": "BSEC-SG003",
+      "status": "OPEN",
+      "description": "Only one Ethereum transaction, receipt and block anchor were independently queried. The full nine- or ten-chain transfer set and freeze set were not independently replayed in this candidate."
+    }
+  ]
+}

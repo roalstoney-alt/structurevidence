@@ -1,0 +1,6 @@
+Source: Binance Security Incident Update
+Canonical URL: https://www.binance.com/en/support/announcement/detail/c5a8729a97ac486d963784d96c5642d7
+Published: 2026-10-30 02:23 UTC
+Observed: 2026-10-30 07:35:48 UTC
+Capture basis: public search-index rendering because direct HTTPS retrieval failed without bypass.
+Normalized facts: Binance described its investigation as initial; said a compromised DevOps laptop may have enabled access to a service container and unauthorized withdrawals; reported no evidence of a wallet private-key leak; estimated total impact around USD 6.3 billion; said around USD 3 billion was frozen on-chain; promised to cover losses using SAFU and company funds; promised an updated proof of reserves and a later technical post-mortem.

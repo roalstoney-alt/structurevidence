@@ -1,0 +1,109 @@
+{
+  "case_id": "SE-BINANCE-SECURITY-001",
+  "version": "0.1",
+  "evidence_cutoff": "2026-10-30T07:39:26Z",
+  "supported_claim_count": 4,
+  "open_claim_count": 6,
+  "claims": [
+    {
+      "claim_id": "BSEC-R001",
+      "state": "SUPPORTED_AS_OPERATOR_ATTRIBUTED",
+      "claim": "Binance published an incident update and described its root-cause account as an initial investigation.",
+      "speaker_attribution": "Binance",
+      "source_ids": ["BSEC-S001"],
+      "counter_evidence": [],
+      "boundary": "This supports that Binance made the statement; it does not independently establish the root cause.",
+      "closure_test": "Replace preliminary wording only after a dated technical post-mortem with reproducible incident evidence is captured."
+    },
+    {
+      "claim_id": "BSEC-R002",
+      "state": "SUPPORTED_AS_SEPARATE_ESTIMATES",
+      "claim": "The reviewed sources report incident-scale estimates near USD 6.3 billion, but the exact figures and chain inclusion rules remain source-specific.",
+      "speaker_attribution": "Binance: around USD 6.3B impact; TRM: USD 6.36B across ten chains; Bitquery: USD 6.3B across nine chains at theft-time prices.",
+      "source_ids": ["BSEC-S001", "BSEC-S002", "BSEC-S003"],
+      "counter_evidence": ["BSEC-S004 reports a different USD 5.3B Glassnode figure in a syndicated article."],
+      "boundary": "Impact, stolen value and attacker holdings are not interchangeable. Values depend on chain set, token set, price time and attribution rule.",
+      "closure_test": "Reconcile every included transfer to a public transaction, declared price timestamp and stable chain-inclusion rule."
+    },
+    {
+      "claim_id": "BSEC-R003",
+      "state": "OPEN_METRIC_RECONCILIATION",
+      "claim": "The amount frozen is not yet a single reconciled number in this packet.",
+      "speaker_attribution": "Binance: approximately USD 3B frozen; TRM and Bitquery: approximately USD 2.7B independently matched under their methods.",
+      "source_ids": ["BSEC-S001", "BSEC-S002", "BSEC-S003", "BSEC-S004"],
+      "counter_evidence": ["The sources use different cutoffs and definitions; some include issuer freezes and Arbitrum rescue while media reports may repeat earlier estimates."],
+      "boundary": "Frozen does not mean recovered, returned, compensated or permanently unavailable to an attacker.",
+      "closure_test": "Produce a transaction-level freeze ledger with asset, amount, chain, authority, timestamp, current status and double-count controls."
+    },
+    {
+      "claim_id": "BSEC-R004",
+      "state": "OPEN_EXECUTION_NOT_OBSERVED",
+      "claim": "Binance promised to cover all losses from SAFU and company funds.",
+      "speaker_attribution": "Binance",
+      "source_ids": ["BSEC-S001"],
+      "counter_evidence": [],
+      "boundary": "A compensation promise is not evidence of completed compensation, final loss size, source-of-funds execution or user-level restoration.",
+      "closure_test": "Capture dated completion evidence and reconcile compensated amounts to eligible losses without counting frozen or recovered assets twice."
+    },
+    {
+      "claim_id": "BSEC-R005",
+      "state": "OPEN_ROOT_CAUSE",
+      "claim": "Binance said a compromised DevOps laptop may have enabled unauthorized withdrawals and said it had found no evidence of a wallet private-key leak.",
+      "speaker_attribution": "Binance preliminary investigation",
+      "source_ids": ["BSEC-S001", "BSEC-S003"],
+      "counter_evidence": ["A valid on-chain signature shows authorization at the chain layer; it cannot identify the off-chain requester or exclude every key-compromise scenario."],
+      "boundary": "Chain data can be compatible with the operator account but cannot independently establish the laptop compromise or prove a negative about key leakage.",
+      "closure_test": "Capture the technical post-mortem, affected trust boundaries, key custody evidence, audit logs and an independently reviewable chronology."
+    },
+    {
+      "claim_id": "BSEC-R006",
+      "state": "SUPPORTED_ON_CHAIN",
+      "claim": "Ethereum recorded a successful transaction at 2026-10-29T20:24:23Z from 0x7c86…b5ca0 to 0x28c6…d60 in block 26300770; the receipt status is success and contains 64 logs.",
+      "speaker_attribution": "Ethereum public ledger observation",
+      "source_ids": ["BSEC-S006", "BSEC-S007", "BSEC-S008"],
+      "counter_evidence": [],
+      "boundary": "This verifies the transaction object, execution receipt and block timestamp only. It does not by itself establish wallet ownership, total stolen value, root cause or attribution.",
+      "closure_test": "No closure required for the recorded object; any interpretation must separately prove address labels and decode transfers."
+    },
+    {
+      "claim_id": "BSEC-R007",
+      "state": "OPEN_ATTRIBUTION",
+      "claim": "TRM attributes the incident to TraderTraitor / North Korea with high confidence.",
+      "speaker_attribution": "TRM analytic judgment",
+      "source_ids": ["BSEC-S002"],
+      "counter_evidence": ["Binance named no actor in the captured notice; Bitquery states that the chain does not show who requested the signatures."],
+      "boundary": "Behavioral similarity, funding patterns and undisclosed intelligence are analytic inputs, not independently reproduced attribution in this packet.",
+      "closure_test": "Require attributable primary evidence or multiple independently reviewable intelligence disclosures that expose the reasoning and rule out material alternatives."
+    },
+    {
+      "claim_id": "BSEC-R008",
+      "state": "OPEN_SCOPE_RECONCILIATION",
+      "claim": "The reviewed analytics disagree on whether the incident set spans nine or ten chains.",
+      "speaker_attribution": "TRM and Bitquery",
+      "source_ids": ["BSEC-S002", "BSEC-S003"],
+      "counter_evidence": ["TRM includes Avalanche; the reviewed Bitquery count lists nine chains and treats some links as inference from timing, construction and Binance totals."],
+      "boundary": "A shared headline total can conceal different inclusion rules.",
+      "closure_test": "Publish a chain-by-chain inclusion matrix with transaction identifiers, address-label basis and explicit reasons for including inferred clusters."
+    },
+    {
+      "claim_id": "BSEC-R009",
+      "state": "OPEN_DECISION_EVIDENCE_GAP",
+      "claim": "The public packet does not establish post-incident reserve coverage, liability coverage, compensation completion or solvency.",
+      "speaker_attribution": "StructEvidence evidence-boundary assessment",
+      "source_ids": ["BSEC-S001", "BSEC-S005"],
+      "counter_evidence": ["Binance states that user funds are safe and promises an updated proof of reserves, but the promised update was not available by the cutoff."],
+      "boundary": "Proof of reserves is point-in-time and does not alone establish all liabilities, liquidity, loss absorption, off-chain obligations or solvency.",
+      "closure_test": "Obtain the original pre-incident snapshot and address bundle, an explicit post-remediation snapshot, liability methodology, incident adjustments and independently reproducible reconciliation."
+    },
+    {
+      "claim_id": "BSEC-R010",
+      "state": "SUPPORTED_AS_SECONDARY_REPORT",
+      "claim": "A dated Eastmoney page syndicated from 财联社 reported market reaction and repeated differing incident and freeze estimates.",
+      "speaker_attribution": "Eastmoney / 财联社 secondary reporting",
+      "source_ids": ["BSEC-S004"],
+      "counter_evidence": ["Its USD 5.3B figure differs from the operator and two analytics; its underlying Glassnode material was not captured as an original source."],
+      "boundary": "This supports what the media page reported, not the truth of each repeated figure or any causal market claim.",
+      "closure_test": "Capture each underlying original source and align timestamps before using its figures as event evidence."
+    }
+  ]
+}
