@@ -1,0 +1,104 @@
+{
+  "review_id": "SE-BINANCE-SOURCE-REVIEW-20261030-02",
+  "case_id": "SE-BINANCE-SECURITY-001",
+  "reviewed_at_utc": "2026-10-30T08:18:22Z",
+  "prior_evidence_cutoff_utc": "2026-10-30T07:39:26Z",
+  "evidence_cutoff_utc": "2026-10-30T08:18:22Z",
+  "prior_registry": "source-registry-v0.1.json",
+  "append_only": true,
+  "prior_records_modified": false,
+  "material_change_detected": false,
+  "claim_state_changed": false,
+  "supported_claim_count": 4,
+  "open_claim_count": 6,
+  "hash_algorithm": "SHA-256",
+  "observations": [
+    {
+      "source_id": "BSEC-S001",
+      "canonical_url": "https://www.binance.com/en/support/announcement/detail/c5a8729a97ac486d963784d96c5642d7",
+      "observed_at_utc": "2026-10-30T08:18:22Z",
+      "capture_path": "cases/binance-security-2026/source-captures/BSEC-S001-20261030T081822Z.normalized.txt",
+      "content_sha256": "fd6fe96c9b5f376c1fdeb8c7e7cde0acbfd292656019159e664741128a597a56",
+      "hash_scope": "NORMALIZED_PUBLIC_SEARCH_INDEX_CAPTURE",
+      "access_status": "SEARCH_INDEX_ACCESSIBLE_DIRECT_TLS_UNAVAILABLE_NO_BYPASS",
+      "change_from_v0_1": "NO_MATERIAL_CHANGE",
+      "boundary": "Accepted normalized operator statement; not a raw-page capture and not independent root-cause, loss, freeze, compensation or reserve verification."
+    },
+    {
+      "source_id": "BSEC-S002",
+      "canonical_url": "https://www.trmlabs.com/resources/blog/north-korea-steals-usd-6-36-billion-from-binance-in-the-largest-hack-in-history",
+      "observed_at_utc": "2026-10-30T08:18:22Z",
+      "content_sha256": "2c560c0fb66bbcfe42814389ff97a728640700785a6baaf54313a48eb1485658",
+      "hash_scope": "RAW_HTTP_RESPONSE_BODY",
+      "access_status": "ACCESSIBLE",
+      "change_from_v0_1": "BYTE_IDENTICAL",
+      "boundary": "TRM remains an independent analytic originator; its attribution inputs were not independently reproduced."
+    },
+    {
+      "source_id": "BSEC-S003",
+      "canonical_url": "https://bitquery.io/investigations/binance-hack",
+      "observed_at_utc": "2026-10-30T08:18:22Z",
+      "content_sha256": "efbbd82ef54aa202e0abe4364742228e7b586c5540b779be254fd04e33f7c623",
+      "hash_scope": "RAW_HTTP_RESPONSE_BODY",
+      "access_status": "ACCESSIBLE",
+      "change_from_v0_1": "BYTE_IDENTICAL",
+      "boundary": "Bitquery remains an independent analytic originator with its own nine-chain scope and stated cutoffs."
+    },
+    {
+      "source_id": "BSEC-S004",
+      "canonical_url": "https://finance.eastmoney.com/a/202610303915893593.html",
+      "observed_at_utc": "2026-10-30T08:18:22Z",
+      "content_sha256": "78c11a124a4e3a13c3ad6741ed7a01266c070ef3ab5295180bc8c4e23f87898f",
+      "hash_scope": "RAW_HTTP_RESPONSE_BODY",
+      "stable_article_extract_sha256": "8ed10b4c14522d369dccd8661911754e810c1a25df0988c501492dbb145a3d64",
+      "access_status": "ACCESSIBLE",
+      "change_from_v0_1": "DYNAMIC_WRAPPER_CHANGED_ARTICLE_EXTRACT_IDENTICAL",
+      "boundary": "Eastmoney republishes 财联社 reporting and is not an additional independent originator; the underlying Glassnode record remains uncaptured."
+    },
+    {
+      "source_id": "BSEC-S005",
+      "canonical_url": "https://www.binance.com/en/proof-of-reserves",
+      "observed_at_utc": "2026-10-30T08:18:22Z",
+      "capture_path": "cases/binance-security-2026/source-captures/BSEC-S005-20261030T081822Z.normalized.txt",
+      "content_sha256": "106bff5ddf5333048e693e5cdafd9d7a18084cdd1ceda85e0790c3f43b66a658",
+      "hash_scope": "NORMALIZED_PUBLIC_RENDER_CAPTURE",
+      "access_status": "ACCESSIBLE_DYNAMIC_SNAPSHOT_VALUES_NOT_EXPOSED",
+      "change_from_v0_1": "NO_QUALIFYING_INCIDENT_SPECIFIC_UPDATE",
+      "boundary": "Same operator lineage as BSEC-S001; no raw incident-time or post-remediation PoR snapshot was verified."
+    },
+    {
+      "source_id": "BSEC-S006",
+      "canonical_url": "https://etherscan.io/tx/0x53bd38b816c23e74134786c29a8c18d792777998a3b9326047b583100e88e2f3",
+      "observed_at_utc": "2026-10-30T08:18:22Z",
+      "content_sha256": "675c0db785a27bb8fd002d5ed9c487af7ec6fc93c964fc70627882aba5e86a8e",
+      "hash_scope": "RAW_PUBLIC_JSON_RPC_RESPONSE_BODY",
+      "access_status": "ACCESSIBLE_BY_PUBLIC_JSON_RPC",
+      "change_from_v0_1": "BYTE_IDENTICAL",
+      "boundary": "One immutable transaction object; it does not establish wallet ownership, incident total, root cause or attribution."
+    },
+    {
+      "source_id": "BSEC-S007",
+      "canonical_url": "https://etherscan.io/tx/0x53bd38b816c23e74134786c29a8c18d792777998a3b9326047b583100e88e2f3#eventlog",
+      "observed_at_utc": "2026-10-30T08:18:22Z",
+      "content_sha256": "567854a96ea4bc03396c2d844f96bb8950e8c68f54cb04fe39e61aad1b7cf7c3",
+      "hash_scope": "RAW_PUBLIC_JSON_RPC_RESPONSE_BODY",
+      "access_status": "ACCESSIBLE_BY_PUBLIC_JSON_RPC",
+      "change_from_v0_1": "RPC_SERIALIZATION_CHANGED_SEMANTIC_FIELDS_UNCHANGED",
+      "verified_fields": {"status": "0x1", "log_count": 64, "block_number_hex": "0x1915162", "block_hash": "0x087c33a63526887180f40a8fa2b66658fa0a3e83565ab5de0c956ffdd8eab727"},
+      "boundary": "Receipt semantics are unchanged; the changed raw-response hash is not treated as an evidence-state change."
+    },
+    {
+      "source_id": "BSEC-S008",
+      "canonical_url": "https://etherscan.io/block/26300770",
+      "observed_at_utc": "2026-10-30T08:18:22Z",
+      "content_sha256": "6c5953e4d9036db07ea5773da3658fd9284a4d05cef3e55d58f4bef22f4c357e",
+      "hash_scope": "RAW_PUBLIC_JSON_RPC_RESPONSE_BODY",
+      "access_status": "ACCESSIBLE_BY_PUBLIC_JSON_RPC",
+      "change_from_v0_1": "RPC_SERIALIZATION_CHANGED_SEMANTIC_FIELDS_UNCHANGED",
+      "verified_fields": {"block_number_decimal": 26300770, "block_number_hex": "0x1915162", "block_hash": "0x087c33a63526887180f40a8fa2b66658fa0a3e83565ab5de0c956ffdd8eab727", "timestamp_utc": "2026-10-29T20:24:23Z"},
+      "boundary": "Block semantics are unchanged; the changed raw-response hash is not treated as an evidence-state change."
+    }
+  ],
+  "decision": "NO_MATERIAL_CHANGE_RETAIN_ALL_OPEN_CLAIMS",
+  "public_safe": true
+}

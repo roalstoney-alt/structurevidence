@@ -1,0 +1,26 @@
+{
+  "case_id": "SE-BINANCE-SECURITY-001",
+  "title": "Binance October 29–30, 2026 security incident",
+  "question": "What is publicly established about the incident's impact, transferred assets, freezes, recovery, compensation, root cause, attribution and post-incident reserve coverage?",
+  "canonical_url": "https://structurevidence.org/cases/binance-security-2026/",
+  "publication_status": "PUBLICATION_AUTHORIZED_WITH_OPEN_CLAIMS",
+  "publication_approval": "publication-approval-v0.1.json",
+  "evidence_cutoff_utc": "2026-10-30T08:18:22Z",
+  "last_material_change_utc": "2026-10-30T07:39:26Z",
+  "last_source_review": "source-review-20261030-02.json",
+  "history": [
+    "source-registry-v0.1.json",
+    "claims-v0.1.json",
+    "state-transitions-v0.1.json",
+    "source-review-20261030-02.json",
+    "publication-approval-v0.1.json"
+  ],
+  "source_registry": "source-registry-v0.1.json",
+  "claims": "claims-v0.1.json",
+  "state_transitions": "state-transitions-v0.1.json",
+  "supported_claim_count": 4,
+  "open_claim_count": 6,
+  "independent_originator_count": 3,
+  "current_state": "TIME_BOUNDED_PUBLIC_RECORD_WITH_SIX_OPEN_CLAIMS",
+  "public_safe": true
+}

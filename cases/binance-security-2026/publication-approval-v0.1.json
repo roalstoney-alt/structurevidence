@@ -1,0 +1,30 @@
+{
+  "approval_id": "SE-BINANCE-PUB-20261030-01",
+  "case_id": "SE-BINANCE-SECURITY-001",
+  "decision": "APPROVE_CONDITIONAL_PUBLICATION",
+  "recorded_at_utc": "2026-10-30T08:18:22Z",
+  "approved_baseline_sha": "ea1dff9e53725e49d64d595d362b3baa63fe7047",
+  "approved_research_head_sha": "07c8c26562f4ea96d20519181d60d02fa8ecc390",
+  "target_pr": 67,
+  "publication_authorized": true,
+  "merge_authorized_if_all_gates_pass": true,
+  "conditions": [
+    "Fresh source review finds no material evidence change that invalidates the reviewed statements.",
+    "All six open claims remain open unless their existing closure tests are independently satisfied.",
+    "Normalized Binance announcement capture limitations remain explicit.",
+    "No financial, accounting, legal, cybersecurity, solvency or criminal-attribution certification is implied.",
+    "Protected baseline, append-only, privacy, legal, SEO, link and regression gates pass on the exact publication commit."
+  ],
+  "prohibited_actions": [
+    "AUTO_SOCIAL_POSTING",
+    "EXTERNAL_OUTREACH",
+    "FEE_COLLECTION",
+    "CLOUDFLARE_DEPLOYMENT",
+    "SPECULATIVE_SOLVENCY_INFERENCE",
+    "UNSUPPORTED_CRIMINAL_ATTRIBUTION",
+    "HISTORY_REWRITE",
+    "DUPLICATE_AUTOMATION",
+    "UNRELATED_CASE_CHANGE"
+  ],
+  "social_publication": "HUMAN_GATE_REQUIRED"
+}

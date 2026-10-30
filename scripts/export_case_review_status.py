@@ -125,6 +125,39 @@ def build(root: Path) -> dict:
                 'new_qualifying_evidence_count': 0,
                 'new_counter_evidence_count': 0,
             })
+    binance_index = root / 'cases/binance-security-2026/index.json'
+    if binance_index.is_file():
+        record = load(root, 'cases/binance-security-2026/index.json')
+        approval_path = 'cases/binance-security-2026/' + record['publication_approval']
+        approval = load(root, approval_path)
+        assert approval['publication_authorized'] is True
+        assert record['publication_status'] == 'PUBLICATION_AUTHORIZED_WITH_OPEN_CLAIMS'
+        rows.append({
+            'case_id': record['case_id'],
+            'title': record['title'],
+            'canonical_path': '/cases/binance-security-2026/',
+            'question': record['question'],
+            'current_public_state': record['current_state'],
+            'evidence_state_as_of': record['evidence_cutoff_utc'],
+            'last_material_change': record['last_material_change_utc'],
+            'featured': True,
+            'management_status': 'ACTIVE',
+            'last_reviewed_at': approval['recorded_at_utc'],
+            'review_result': approval['decision'],
+            'latest_review_id': approval['approval_id'],
+            'latest_review_file': approval_path,
+            'period': {
+                'id': '2026-10-30',
+                'start': '2026-10-30',
+                'end': '2026-10-30',
+                'status': 'CONDITIONAL_PUBLICATION_APPROVED',
+                'scope': 'Time-bounded public record; four bounded supports and six unresolved claims remain visible.'
+            },
+            'period_review_id': approval['approval_id'],
+            'monitoring': {'cadence': 'EVENT_DRIVEN', 'enabled': True},
+            'new_qualifying_evidence_count': 0,
+            'new_counter_evidence_count': 0,
+        })
     rows.sort(key=lambda row: (row['last_material_change'], row['case_id']), reverse=True)
     return {'schema_version': '1.0', 'status_recorded_at': status['status_recorded_at'],
             'timestamp_semantics': {'status_recorded_at': 'Administrative status observation; not a scientific review timestamp.',
@@ -152,7 +185,7 @@ def render_row(row: dict) -> str:
     klass = 'not-established' if 'NOT ESTABLISHED' in label and 'INCOMPLETE' not in label else 'pending'
     if row['case_id'] == 'CML-PDRE-001':
         klass = 'observed'
-    elif row['case_id'] == 'SE-IREN-AI-CLOUD-001':
+    elif row['case_id'] in {'SE-IREN-AI-CLOUD-001', 'SE-BINANCE-SECURITY-001'}:
         klass = 'supported'
     period = row['period']
     if period['status'] == 'NOT_YET_REVIEWED':
