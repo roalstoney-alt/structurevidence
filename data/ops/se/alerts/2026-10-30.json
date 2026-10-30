@@ -1,0 +1,16 @@
+{
+  "schema_version": "se-alerts-v1",
+  "run_id": "SE-OPS-20261030-2200-4a4d76a8-e6da-5407-8379-0c17b2a85b18",
+  "alerts": [
+    {
+      "code": "WEBSITE_PUBLICATION_BLOCKED",
+      "dedupe_key": "X:2026-10-30:WEBSITE_PUBLICATION_BLOCKED",
+      "detail": "WEBSITE_PUBLICATION_BLOCKED"
+    },
+    {
+      "code": "MISSING_RUN_DETECTION_NOT_INDEPENDENT",
+      "dedupe_key": "MISSING_HEARTBEAT:2026-10-30",
+      "detail": "No independent health surface has been verified."
+    }
+  ]
+}

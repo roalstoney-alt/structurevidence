@@ -1,0 +1,49 @@
+{
+  "schema_version": "se-case-event-v1",
+  "event_id": "SE-EVENT-BESS-SODIUM-001-20261027-INTILION-CATL-MOU",
+  "case_id": "SE-BESS-SODIUM-001",
+  "title": "CATL–INTILION 3 GWh TENER memorandum",
+  "published_at": "2026-10-27",
+  "event_at": "2026-10-27",
+  "retrieved_at": "2026-10-30T15:16:52Z",
+  "originator": "Contemporary Amperex Technology Co., Limited (CATL)",
+  "publisher": "Contemporary Amperex Technology Co., Limited (CATL)",
+  "source_type": "PRIMARY_SUPPLIER_PUBLICATION",
+  "original_url": "https://www.catl.com/news/10337.html",
+  "accessibility": "PUBLIC_HTML",
+  "specific_claims": [
+    "CATL and INTILION signed a memorandum concerning 3 GWh of TENER storage systems over five years in Germany, Switzerland and Austria.",
+    "CATL says the parties have deployed more than 30 storage projects in Germany since 2022.",
+    "CATL says the parties expect to promote sodium-ion and lithium-ion routes in parallel."
+  ],
+  "supports": [
+    "A named supplier and integrator publicly describe an expanded storage-system cooperation in the DACH region.",
+    "The publication is relevant to current sodium-ion market observation because its title and forward-looking discussion expressly reference sodium-ion storage."
+  ],
+  "does_not_support": [
+    "That the 3 GWh TENER tranche uses sodium-ion chemistry.",
+    "A named commissioned sodium-ion stationary-storage site.",
+    "Delivery, customer acceptance, operating history or independently measured field performance."
+  ],
+  "depends_on": [
+    "CATL-PRESS-20261027",
+    "INTILION-PRESS-20250508-CONTEXT"
+  ],
+  "conflicts_counter_evidence": [],
+  "verification_status": "VERIFIED_PRIMARY_SOURCE",
+  "search_boundary": "One targeted official-source search group, the CATL primary page and an older INTILION contextual release; not an exhaustive market census.",
+  "snapshot_path": "cases/sodium-ion-bess/events/intilion-catl-mou-2026/snapshot-v1.json",
+  "snapshot_sha256": "c6a1d1db49386e028611bc2e4502aad7d73f404857be1e8f1db8522938c92c9f",
+  "old_stop": "NAMED_COMMISSIONED_SITE_NOT_ESTABLISHED",
+  "candidate_stop": "NAMED_COMMISSIONED_SITE_NOT_ESTABLISHED",
+  "state_changed": false,
+  "review_id": "SE-SODIUM-REVIEW-20261030-01",
+  "classifications": [
+    "NEWLY_DISCOVERED_OLD_EVIDENCE",
+    "NO_STATE_CHANGE",
+    "HUMAN_GATE_REQUIRED"
+  ],
+  "public_url": "https://structurevidence.org/cases/sodium-ion-bess/events/intilion-catl-mou-2026/",
+  "website_publication_status": "PENDING_PRODUCTION_VERIFICATION",
+  "x_candidate_text": "CATL published an INTILION MOU for 3 GWh of TENER storage in DACH. The release does not establish a commissioned sodium-ion site or independent field data. Stop unchanged. https://structurevidence.org/cases/sodium-ion-bess/events/intilion-catl-mou-2026/"
+}
