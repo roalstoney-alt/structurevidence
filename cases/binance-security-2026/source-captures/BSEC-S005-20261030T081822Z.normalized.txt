@@ -1,0 +1,6 @@
+Source: Binance Proof of Reserves landing page
+Canonical URL: https://www.binance.com/en/proof-of-reserves
+Observed: 2026-10-30 08:18:22 UTC
+Capture basis: Fresh public rendering.
+Normalized facts: The page continued to describe proof of reserves as a point-in-time operator method involving address ownership checks, a user-balance snapshot, zk-SNARK proof generation and a Merkle tree. The rendering showed labels for audit time, verification mechanism, Merkle root and address download, but did not expose their dynamic values.
+Change assessment: No qualifying post-incident snapshot or incident-specific liability reconciliation was visible. This capture does not establish incident-time reserves, liabilities, compensation completion, solvency or certification.

@@ -8,6 +8,35 @@
   },
   "cases": [
     {
+      "case_id": "SE-BINANCE-SECURITY-001",
+      "title": "Binance October 29–30, 2026 security incident",
+      "canonical_path": "/cases/binance-security-2026/",
+      "question": "What is publicly established about the incident's impact, transferred assets, freezes, recovery, compensation, root cause, attribution and post-incident reserve coverage?",
+      "current_public_state": "TIME_BOUNDED_PUBLIC_RECORD_WITH_SIX_OPEN_CLAIMS",
+      "evidence_state_as_of": "2026-10-30T08:18:22Z",
+      "last_material_change": "2026-10-30T07:39:26Z",
+      "featured": true,
+      "management_status": "ACTIVE",
+      "last_reviewed_at": "2026-10-30T08:18:22Z",
+      "review_result": "APPROVE_CONDITIONAL_PUBLICATION",
+      "latest_review_id": "SE-BINANCE-PUB-20261030-01",
+      "latest_review_file": "cases/binance-security-2026/publication-approval-v0.1.json",
+      "period": {
+        "id": "2026-10-30",
+        "start": "2026-10-30",
+        "end": "2026-10-30",
+        "status": "CONDITIONAL_PUBLICATION_APPROVED",
+        "scope": "Time-bounded public record; four bounded supports and six unresolved claims remain visible."
+      },
+      "period_review_id": "SE-BINANCE-PUB-20261030-01",
+      "monitoring": {
+        "cadence": "EVENT_DRIVEN",
+        "enabled": true
+      },
+      "new_qualifying_evidence_count": 0,
+      "new_counter_evidence_count": 0
+    },
+    {
       "case_id": "SE-IREN-AI-CLOUD-001",
       "title": "IREN Limited: AI Cloud transition",
       "canonical_path": "/cases/iren-ai-cloud-transition/",

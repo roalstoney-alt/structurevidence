@@ -1,0 +1,15 @@
+{
+  "case_id": "SE-BINANCE-SECURITY-001",
+  "baseline_main_sha": "ea1dff9e53725e49d64d595d362b3baa63fe7047",
+  "branch": "codex/se-binance-evidence-pilot-v01",
+  "captured_at": "2026-10-30T07:39:26Z",
+  "protected_baseline_registry": "data/case-watch/protected-baseline-sha256.json",
+  "protected_baseline_registry_sha256": "5a06542c494883f4b23f4936ba7f73b05c00503ee4a5e4ced3069e3348c9b3ca",
+  "protected_file_count": 24,
+  "preflight_validation": [
+    "python3 scripts/validate_case_watch.py: PASS",
+    "python3 scripts/test_irkutsk_publication.py: PASS"
+  ],
+  "append_only_rule": "Existing evidence records and protected baseline bytes are immutable. This candidate adds new files only.",
+  "release_boundary": "NO_DEPLOY_NO_MERGE_NO_PUBLICATION"
+}

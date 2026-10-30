@@ -1,0 +1,121 @@
+{
+  "case_id": "SE-BINANCE-SECURITY-001",
+  "version": "0.1",
+  "append_only": true,
+  "evidence_cutoff": "2026-10-30T07:39:26Z",
+  "events": [
+    {
+      "sequence": 1,
+      "event_id": "BSEC-EV-001",
+      "event_time": "2026-10-29T14:54:00Z",
+      "state": "PRECURSOR_OBSERVED_BY_ANALYST",
+      "description": "Bitquery reports that a wallet later associated with the transaction sequence received about 1 ETH from Tornado Cash.",
+      "source_ids": ["BSEC-S003"],
+      "boundary": "A funding path does not establish actor identity."
+    },
+    {
+      "sequence": 2,
+      "event_id": "BSEC-EV-002",
+      "event_time": "2026-10-29T20:04:00Z",
+      "state": "MULTICHAIN_OUTFLOWS_BEGIN",
+      "description": "Bitquery places the first included outflow on the XRP Ledger at 20:04 UTC; TRM uses approximately 20:05 UTC.",
+      "source_ids": ["BSEC-S002", "BSEC-S003"],
+      "boundary": "The one-minute difference is preserved rather than collapsed."
+    },
+    {
+      "sequence": 3,
+      "event_id": "BSEC-EV-003",
+      "event_time": "2026-10-29T20:24:23Z",
+      "state": "ETHEREUM_EXECUTION_CONFIRMED",
+      "description": "A public Ethereum node returns a successful transaction and receipt in block 26300770 with 64 logs.",
+      "source_ids": ["BSEC-S006", "BSEC-S007", "BSEC-S008"],
+      "boundary": "The observation is not a decoded incident total or actor attribution."
+    },
+    {
+      "sequence": 4,
+      "event_id": "BSEC-EV-004",
+      "event_time": "2026-10-29T20:57:00Z",
+      "state": "FIRST_REPORTED_FREEZE_ACTION",
+      "description": "Bitquery reports a World Liberty token freeze at 20:57 UTC, followed by Tether and Circle actions at 21:01 and 21:04 UTC.",
+      "source_ids": ["BSEC-S003"],
+      "boundary": "Freeze totals depend on asset, authority, address state and cutoff."
+    },
+    {
+      "sequence": 5,
+      "event_id": "BSEC-EV-005",
+      "event_time": "2026-10-29T22:33:00Z",
+      "state": "WITHDRAWAL_PAUSE_REPORTED",
+      "description": "Bitquery records a withdrawal pause at approximately 22:33 UTC based on press reports.",
+      "source_ids": ["BSEC-S003"],
+      "boundary": "This packet did not capture the original pause notice with an exact timestamp."
+    },
+    {
+      "sequence": 6,
+      "event_id": "BSEC-EV-006",
+      "event_time": "2026-10-29T23:56:00Z",
+      "state": "LAST_ETHEREUM_OUTFLOW_IN_ANALYST_WINDOW",
+      "description": "Bitquery and TRM describe later Ethereum activity through 23:56 UTC.",
+      "source_ids": ["BSEC-S002", "BSEC-S003"],
+      "boundary": "This is the end of the reviewed analyst window, not proof of no later incident-related movement."
+    },
+    {
+      "sequence": 7,
+      "event_id": "BSEC-EV-007",
+      "event_time": "2026-10-30T00:10:35Z",
+      "state": "ETHEREUM_AUTHORIZATION_REVOKED_REPORTED",
+      "description": "Bitquery reports the relevant Ethereum authorization was revoked at 00:10:35 UTC.",
+      "source_ids": ["BSEC-S003"],
+      "boundary": "The revocation transaction was not independently queried in this candidate."
+    },
+    {
+      "sequence": 8,
+      "event_id": "BSEC-EV-008",
+      "event_time": "2026-10-30T00:18:00Z",
+      "state": "ARBITRUM_RESCUE_REPORTED",
+      "description": "Bitquery reports that Arbitrum's Security Council moved affected assets into a locked wallet.",
+      "source_ids": ["BSEC-S003"],
+      "boundary": "Rescued and frozen are tracked separately from recovered, returned and compensated."
+    },
+    {
+      "sequence": 9,
+      "event_id": "BSEC-EV-009",
+      "event_time": "2026-10-30T02:23:00Z",
+      "state": "OPERATOR_PRELIMINARY_NOTICE",
+      "description": "Binance publishes its initial incident account, around USD 6.3B estimated impact, around USD 3B frozen, a compensation promise and future-report commitments.",
+      "source_ids": ["BSEC-S001"],
+      "boundary": "Operator statement; post-mortem and updated proof of reserves still pending."
+    },
+    {
+      "sequence": 10,
+      "event_id": "BSEC-EV-010",
+      "event_time": "2026-10-30T06:30:00Z",
+      "state": "PUBLIC_ANALYTIC_RECONCILIATION_AVAILABLE",
+      "description": "Bitquery publishes a nine-chain analysis with transaction identifiers and an approximately USD 2.7B frozen estimate; TRM separately publishes a ten-chain USD 6.36B analysis and attribution judgment.",
+      "source_ids": ["BSEC-S002", "BSEC-S003"],
+      "boundary": "Analytic agreement on scale does not erase chain-count, cutoff, methodology or attribution differences."
+    },
+    {
+      "sequence": 11,
+      "event_id": "BSEC-EV-011",
+      "event_time": "2026-10-30T07:39:26Z",
+      "state": "RESEARCH_CUTOFF_OPEN",
+      "description": "StructEvidence freezes this candidate with reserve, root-cause, attribution, freeze-reconciliation and compensation gaps open.",
+      "source_ids": ["BSEC-S001", "BSEC-S002", "BSEC-S003", "BSEC-S004", "BSEC-S005", "BSEC-S006", "BSEC-S007", "BSEC-S008"],
+      "boundary": "No publication, solvency conclusion or external action is authorized."
+    }
+  ],
+  "decision_gap": {
+    "gap_id": "BSEC-DG001",
+    "question": "Does public evidence establish that user liabilities were fully covered after the incident and that promised compensation was completed?",
+    "status": "OPEN_INSUFFICIENT_PUBLIC_EVIDENCE",
+    "closure_tests": [
+      "Capture the original pre-incident proof-of-reserves audit time, Merkle root, address bundle and asset/liability table with hashes.",
+      "Reconcile incident outflows, issuer freezes, protocol rescues, recoveries, returns and compensation without double counting.",
+      "Capture the promised post-remediation proof-of-reserves snapshot and technical post-mortem.",
+      "Reproduce material chain balances at declared cutoffs using public nodes and documented address-label provenance.",
+      "Obtain independently reviewable liability scope and exclusions; proof of assets alone does not close the test.",
+      "Record evidence of completed user restoration rather than relying on a promise."
+    ],
+    "prohibited_inference": "No solvency, insolvency, safety, negligence, criminal or actor conclusion may be derived from the current open state."
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "case_id": "SE-BINANCE-SECURITY-001",
+  "observation_id": "BSEC-CHAIN-ETH-001",
+  "observed_at": "2026-10-30T07:39:26Z",
+  "rpc_method_set": ["eth_getTransactionByHash", "eth_getTransactionReceipt", "eth_getBlockByNumber"],
+  "rpc_provider": "https://ethereum-rpc.publicnode.com",
+  "chain_id_hex": "0x1",
+  "transaction_hash": "0x53bd38b816c23e74134786c29a8c18d792777998a3b9326047b583100e88e2f3",
+  "block_number_hex": "0x1915162",
+  "block_number_decimal": 26300770,
+  "block_hash": "0x087c33a63526887180f40a8fa2b66658fa0a3e83565ab5de0c956ffdd8eab727",
+  "block_timestamp": "2026-10-29T20:24:23Z",
+  "from": "0x7c8601d4645b93cea45f71e118a729332e6b5ca0",
+  "to": "0x28c6c06298d514db089934071355e5743bf21d60",
+  "native_value_hex": "0x0",
+  "transaction_type_hex": "0x2",
+  "input_prefix": "0x8a179be400000000",
+  "receipt_status_hex": "0x1",
+  "gas_used_hex": "0x257735",
+  "receipt_log_count": 64,
+  "raw_response_sha256": {
+    "transaction": "675c0db785a27bb8fd002d5ed9c487af7ec6fc93c964fc70627882aba5e86a8e",
+    "receipt": "71c9f554761e5645c3087d537d6fe42668925ffe4d91e2a5631853bd998984a4",
+    "block": "44f5982adca790e4685c060b27fc155ab6ec9533ceb3de41d3660304a706b66b"
+  },
+  "verified": [
+    "The transaction object exists on Ethereum mainnet.",
+    "The transaction and receipt point to the same block.",
+    "The receipt reports successful execution.",
+    "The block timestamp anchors the transaction at 2026-10-29T20:24:23Z."
+  ],
+  "not_verified": [
+    "Address ownership or control",
+    "Total value transferred by decoded token logs",
+    "The total incident amount across chains",
+    "Root cause, intent or actor attribution",
+    "Frozen, recovered, returned or compensated amounts"
+  ]
+}

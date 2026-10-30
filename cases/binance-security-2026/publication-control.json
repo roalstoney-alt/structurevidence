@@ -1,0 +1,15 @@
+{
+  "case_id": "SE-BINANCE-SECURITY-001",
+  "status": "NON_PUBLIC_RESEARCH_DRAFT",
+  "public_route_present": false,
+  "draft_preview": "cases/binance-security-2026/index.draft.html",
+  "robots": "noindex,nofollow,noarchive",
+  "listed_in_cases_index": false,
+  "listed_in_sitemap": false,
+  "production_deployment_authorized": false,
+  "social_publication_authorized": false,
+  "external_outreach_authorized": false,
+  "paid_offering_authorized": false,
+  "merge_authorized": false,
+  "required_next_gate": "EXPLICIT_HUMAN_PUBLICATION_APPROVAL"
+}
