@@ -1,0 +1,44 @@
+{
+  "schema_version": "se-ops-reconciliation-v1",
+  "date_sgt": "2026-10-30",
+  "recorded_at": "2026-10-30T15:25:30Z",
+  "type": "DELIVERY_RECEIPT",
+  "authoritative_main_sha": "440b3ae7e2ff2ad1b28577b401cce55d67ed0a09",
+  "branch": "codex/se-unified-ops-20261030",
+  "report_content_commit": "aebbcaf57754d86130ad5050f2d71aae4ce7d0ef",
+  "pull_request": {
+    "number": 70,
+    "url": "https://github.com/roalstoney-alt/structurevidence/pull/70",
+    "created_at": "2026-10-30T15:25:30Z",
+    "state": "OPEN_DRAFT"
+  },
+  "delivery_state": "PR_CREATED_HUMAN_MERGE_REQUIRED",
+  "report_delivered_at": "2026-10-30T15:25:30Z",
+  "merge_executed": false,
+  "blocker": "EXPLICIT_HUMAN_MERGE_APPROVAL_REQUIRED",
+  "website_publication": {
+    "state": "WEBSITE_PUBLICATION_BLOCKED",
+    "event_id": "SE-EVENT-BESS-SODIUM-001-20261027-INTILION-CATL-MOU",
+    "reason": "The event page is not on authoritative main and has not been production-body verified."
+  },
+  "test_comparison": {
+    "scripts_branch": {"tests": 567, "failures": 36, "errors": 11},
+    "scripts_authoritative_main": {"tests": 567, "failures": 34, "errors": 11},
+    "tests_branch": {"tests": 48, "failures": 18},
+    "tests_authoritative_main": {"tests": 44, "failures": 18},
+    "new_cross_phase_guard_failure_count": 2,
+    "new_failure_tests": [
+      "test_binance_security_candidate.BinanceSecurityCandidateTest.test_changes_are_append_only_and_allowlisted",
+      "test_iren_public_tracker.IrenTrackerTest.test_no_production_worker_or_historic_case_drift"
+    ],
+    "assessment": "Legacy cross-phase allowlists reject today's append-only ledger, event and sitemap paths; targeted unified, information-event, history-immutability and diff checks pass."
+  },
+  "x_post_sent": 0,
+  "notes": [
+    "A CATL publication dated 2026-10-27 was recorded as newly discovered old evidence.",
+    "The accepted sodium-ion stop remains unchanged.",
+    "No X text was generated because website-first production verification is not complete.",
+    "No X write interface, outreach, deployment, merge or case-state mutation occurred.",
+    "The original dirty checkout was not modified."
+  ]
+}

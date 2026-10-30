@@ -1,0 +1,53 @@
+{
+  "schema_version": "se-source-snapshot-v1",
+  "snapshot_id": "SE-SNAPSHOT-BESS-SODIUM-001-INTILION-CATL-MOU-20261027-v1",
+  "captured_at": "2026-10-30T15:16:52Z",
+  "capture_type": "STRUCTURED_FACT_SNAPSHOT_NOT_FULL_ORIGINAL",
+  "original_url": "https://www.catl.com/news/10337.html",
+  "accessibility": "PUBLIC_HTML_READ",
+  "raw_file_saved": false,
+  "raw_file_note": "Bounded structured facts only; not a copy of the article.",
+  "structured_facts": [
+    {
+      "fact_id": "F1",
+      "statement": "CATL published the page on 27 October 2026; its title describes sodium-ion storage scaling internationally."
+    },
+    {
+      "fact_id": "F2",
+      "statement": "CATL attributes a memorandum with INTILION covering 3 GWh of TENER storage systems over five years in Germany, Switzerland and Austria for grid-scale and commercial and industrial uses."
+    },
+    {
+      "fact_id": "F3",
+      "statement": "CATL says the parties have deployed more than 30 storage projects in Germany since 2022."
+    },
+    {
+      "fact_id": "F4",
+      "statement": "CATL says the parties expect to advance sodium-ion and lithium-ion routes in parallel."
+    },
+    {
+      "fact_id": "F5",
+      "statement": "The body does not identify the chemistry of the 3 GWh tranche, a commissioned sodium-ion site, delivery or acceptance records, or independently measured field performance."
+    },
+    {
+      "fact_id": "F6",
+      "statement": "INTILION's 8 May 2025 release describes an earlier up-to-10-GWh TENER partnership and serves only as context; no same-date INTILION counterpart was established in this bounded review."
+    }
+  ],
+  "source_dependencies": [
+    "CATL-PRESS-20261027",
+    "INTILION-PRESS-20250508"
+  ],
+  "context_sources": [
+    {
+      "url": "https://intilion.com/pressemitteilungen/catl-und-intilion-vertiefen-partnerschaft-10-gwh-als-zielmarke-in-der-dach-region",
+      "role": "OLDER_OPERATOR_CONTEXT_NOT_INDEPENDENT_COMMISSIONING_EVIDENCE"
+    }
+  ],
+  "limitations": [
+    "The CATL page is a supplier-authored announcement and is not independent performance evidence.",
+    "The page does not establish that the 3 GWh tranche uses sodium-ion chemistry.",
+    "No named commissioned sodium-ion site, acceptance record or operating dataset is supplied.",
+    "No full article text or image is reproduced."
+  ],
+  "copyright_boundary": "Structured factual summary only; consult the original source."
+}
