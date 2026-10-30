@@ -1,0 +1,33 @@
+{
+  "schema_version": "se-case-observation-v2",
+  "observation_id": "SE-PHYSICAL-AI-001-OBS-20261030-CLOUD-01",
+  "observed_at": "2026-10-30T22:00:00+08:00",
+  "knowledge_cutoff": "2026-10-30T22:00:00+08:00",
+  "review_id": null,
+  "review_status": "REVIEW_INCOMPLETE",
+  "new_sources": 0,
+  "new_attributed_statements": 0,
+  "new_independent_evidence": 0,
+  "new_events": 0,
+  "newly_discovered_old_evidence": 0,
+  "state_changing_evidence": 0,
+  "proposed_stop_point": "UNCHANGED",
+  "contradictions": [],
+  "case_id": "SE-PHYSICAL-AI-001",
+  "source_url": "https://www.press.bmwgroup.com/global/article/detail/T0458778EN?language=en",
+  "source_id": "BMW-F03-PROJECT-RECHECK-2026-10-30",
+  "source_speaker": "BMW Group",
+  "claimed_subject": "BMW describes Figure 03 as starting a logistics sequencing project, without recurring runtime or acceptance metrics",
+  "claim_ids": [
+    "FIGURE-F03-DEMONSTRATION-NOT-RELIABILITY"
+  ],
+  "event_at": "2026-06-25",
+  "published_at": "2026-06-25",
+  "source_access": "BMW_BODY_READ_VIA_SEARCH",
+  "raw_hash_or_UNAVAILABLE": "UNAVAILABLE_SEARCH_SERVICE_NORMALIZED",
+  "search_query": "October 30 2026 Figure AI BMW Figure 03 reliability acceptance operations",
+  "search_boundary": "One fresh query plus public projection; no newer customer acceptance, shift, intervention or downtime disclosure.",
+  "old_stop_point": "PUBLIC PROJECTION / LOCAL_PROVISIONAL_v0.1",
+  "decision_relevant_unknown": "Recurring shifts, runtime, throughput, interventions, downtime, maintenance and customer acceptance.",
+  "next_observable": "BMW-attributed Figure 03 fixed-window operating and acceptance record."
+}
