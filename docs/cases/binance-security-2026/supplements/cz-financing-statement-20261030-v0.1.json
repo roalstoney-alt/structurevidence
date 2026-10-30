@@ -1,0 +1,75 @@
+{
+  "case_id": "SE-BINANCE-SECURITY-001",
+  "supplement_id": "BSEC-SUPP-20261030-CZ-001",
+  "version": "0.1",
+  "record_type": "APPEND_ONLY_SUPPLEMENT",
+  "event_date_utc": "2026-10-30",
+  "observation_date_utc": "2026-10-30",
+  "exact_post_timestamp_utc": null,
+  "exact_x_status_url": null,
+  "source_class": "PUBLIC_FIGURE_STATEMENT_AS_REPORTED",
+  "author": "@cz_binance",
+  "source_evidence": [
+    {
+      "role": "USER_SUPPLIED_SCREENSHOT",
+      "description": "Screenshot supplied by case owner, showing @cz_binance text; no original status ID or verified capture timestamp",
+      "status": "VISUAL_COPY_NOT_ORIGINAL_POST"
+    },
+    {
+      "role": "PUBLIC_SOCIAL_MIRROR",
+      "url": "https://www.sotwe.com/cz_binance",
+      "status": "TEXT_CORROBORATES_SCREENSHOT; MIRROR_NOT_PRIMARY"
+    },
+    {
+      "role": "DERIVATIVE_MEDIA",
+      "url": "https://www.tradingview.com/news/coinpedia%3A380d89167094b%3A0-cz-says-binance-could-use-its-1-billion-spacex-stake-to-cover-hack-losses/",
+      "status": "DERIVATIVE_REPORT_NOT_INDEPENDENT_VERIFICATION"
+    },
+    {
+      "role": "OPERATOR_ANNOUNCEMENT",
+      "url": "https://www.binance.com/en/support/announcement/detail/c5a8729a97ac486d963784d96c5642d7",
+      "status": "PREVIOUS_OPERATOR_ESTIMATES; DOES_NOT_VERIFY_CZ_FINANCING_ARITHMETIC"
+    },
+    {
+      "role": "OPERATOR_FOLLOWUP_AS_REPORTED",
+      "url": "https://decrypt.co/382203/binance-finds-additional-points-of-breach-in-6-3b-hack",
+      "status": "REPORTS_ADDITIONAL_BREACH_POINTS; PRIMARY_POST_TO_BE_CAPTURED"
+    }
+  ],
+  "new_claims": [
+    {
+      "id": "BSEC-CZ-001",
+      "state": "SUPPORTED_AS_ATTRIBUTED_SECONDARY_CORROBORATED",
+      "claim": "CZ publicly presented rough arithmetic of ~$6.xB incident impact, ~$3B frozen, ~$1.xB SAFU, and ~$2B estimated remaining gap.",
+      "boundary": "Records attributed estimate only; no audit of freeze recoverability, fund segregation, double-counting, liabilities, or realized deficit.",
+      "closure_test": "Capture unique original X status, timestamp and independent reconciled line-item financing evidence."
+    },
+    {
+      "id": "BSEC-CZ-002",
+      "state": "OPEN_ASSET_OWNERSHIP_LIQUIDITY",
+      "claim": "CZ stated 'we have $1.x billion in SPCX alone'.",
+      "boundary": "Ownership entity, valuation timestamp, restrictions, pledge, liquidity, and availability for compensation are unverified; social statement is not asset proof.",
+      "closure_test": "Identify controlling legal entity and audited holding, applicable liquidity or transfer restrictions, financing proceeds if used, and actual loss coverage."
+    },
+    {
+      "id": "BSEC-ROOT-UPDATE-001",
+      "state": "OPEN_ROOT_CAUSE_SUPPLEMENT",
+      "claim": "Later Binance statements, as reported, reference additional points of breach beyond initial compromised-laptop hypothesis.",
+      "boundary": "Subsequent reported preliminary position, not final technical root cause.",
+      "closure_test": "Capture original issuer update and reviewable post-mortem; retain the earlier initial hypothesis without overwriting."
+    }
+  ],
+  "impact_on_existing_states": {
+    "supported_claims": 4,
+    "open_claims": 6,
+    "decision_condition_status": "OPEN_INSUFFICIENT_PUBLIC_EVIDENCE",
+    "compensation_completed": "NOT_ESTABLISHED",
+    "post_incident_reserve_liability_coverage": "NOT_ESTABLISHED",
+    "root_cause": "OPEN",
+    "actor_attribution": "OPEN"
+  },
+  "publication_gate": "HUMAN_REVIEW_REQUIRED",
+  "merge_authorized": false,
+  "social_publication_authorized": false,
+  "notes": "Numbers are rough and may not share an accounting cutoff. Frozen assets are not necessarily recovered; SAFU gross value is not evidence of available incremental liquidity; SPCX value is not compensation evidence. Do not infer final solvency."
+}
