@@ -1,0 +1,49 @@
+{
+  "schema_version": "se-case-review-v2",
+  "case_id": "SE-BESS-SODIUM-001",
+  "review_id": "SE-SODIUM-REVIEW-20261031-01",
+  "reviewed_at": "2026-10-31T14:03:29Z",
+  "result": "NO_STATE_CHANGE",
+  "review_complete": true,
+  "classifications": ["NO_STATE_CHANGE"],
+  "search_boundary": "One targeted official-source search group and three official pages covering named delivery, grid commissioning, chemistry attribution, customer acceptance and public field performance; not an exhaustive market census.",
+  "sources_checked": [
+    {
+      "url": "https://www.catl.com/news/",
+      "publisher": "CATL",
+      "status": "READ_NO_NEW_ITEM_AFTER_2026-10-27",
+      "retrieved_at": "2026-10-31T14:03:29Z",
+      "finding": "The current Chinese news index lists the 27 October INTILION memorandum as the latest item and supplies no later sodium-ion commissioning record."
+    },
+    {
+      "url": "https://www.catl.com/news/10337.html",
+      "publisher": "CATL",
+      "status": "READ_PRIOR_PENDING_EVENT_NOT_DUPLICATED",
+      "published_at": "2026-10-27",
+      "event_at": "2026-10-27",
+      "retrieved_at": "2026-10-31T14:03:29Z",
+      "finding": "The supplier announcement was already bounded in draft PR 70. Its title references sodium scale-up, but its body does not establish that the 3 GWh tranche uses sodium-ion chemistry or identify a commissioned sodium-ion site."
+    },
+    {
+      "url": "https://intilion.com/pressemitteilungen",
+      "publisher": "INTILION",
+      "status": "READ_NO_SAME_DATE_COUNTERPART_OR_NEW_SODIUM_COMMISSIONING_RECORD",
+      "retrieved_at": "2026-10-31T14:03:29Z",
+      "finding": "The current press index does not supply a 27 October counterpart or a new sodium-ion commissioning, acceptance or operating record."
+    }
+  ],
+  "new_sources": 0,
+  "new_attributed_statements": 0,
+  "new_independent_evidence": 0,
+  "new_events": 0,
+  "newly_discovered_old_evidence": 0,
+  "state_changing_evidence": 0,
+  "old_state": "NAMED_COMMISSIONED_SITE_NOT_ESTABLISHED",
+  "new_state": "NAMED_COMMISSIONED_SITE_NOT_ESTABLISHED",
+  "new_qualifying_evidence_count": 0,
+  "new_counter_evidence_count": 0,
+  "evidence_state_as_of": "2026-09-24",
+  "last_material_change": "2026-09-24",
+  "historical_backfill": false,
+  "pending_prior_record": "https://github.com/roalstoney-alt/structurevidence/pull/70"
+}

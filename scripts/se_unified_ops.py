@@ -372,17 +372,19 @@ def select_x_candidate(
     config: dict[str, Any],
     events: list[dict[str, Any]],
     publication_receipts: dict[str, dict[str, Any]],
+    reviewed_method_event: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     todays = [event for event in events if str(event.get("retrieved_at", ""))[:10] == date_sgt]
     todays.sort(key=lambda event: (0 if "NEW_EVENT" in event.get("classifications", []) else 1, event["event_id"]))
     if todays:
         event = todays[0]
         return build_event_x_candidate(date_sgt, event, publication_receipts.get(event["event_id"]))
-    return default_candidate(date_sgt, config)
+    return default_candidate(date_sgt, config, reviewed_method_event)
 
 
-def default_candidate(date_sgt: str, config: dict[str, Any]) -> dict[str, Any]:
-    template = config["x"].get("daily_manual_text_template")
+def default_candidate(date_sgt: str, config: dict[str, Any], reviewed_method_event: dict[str, Any] | None = None) -> dict[str, Any]:
+    reviewed_event_template = reviewed_method_event.get("template") if reviewed_method_event else None
+    template = reviewed_event_template or config["x"].get("daily_manual_text_template")
     if template is None:
         template = config["x"].get("method_test_text")
     if template is None:
@@ -391,7 +393,8 @@ def default_candidate(date_sgt: str, config: dict[str, Any]) -> dict[str, Any]:
     candidate = {
         "schema_version": "se-x-candidate-v2", "candidate_id": f"SE-X-{date_sgt}-METHOD-01",
         "day_index": None, "scheduled_date": date_sgt, "text": text,
-        "source_urls": X_URL_RE.findall(text), "evidence_cutoff": config["x"]["method_cutoff"],
+        "source_urls": X_URL_RE.findall(text),
+        "evidence_cutoff": reviewed_method_event["evidence_cutoff"] if reviewed_method_event else config["x"]["method_cutoff"],
         "content_hash": sha256_text(text), "approval_gate": "HUMAN_GATE_REQUIRED",
         "material_state_transition": False, "account_identity": "@structevidence",
         "dedup_check": "MANUAL_REVIEW_PENDING", "publish_attempt_id": None,
@@ -402,6 +405,20 @@ def default_candidate(date_sgt: str, config: dict[str, Any]) -> dict[str, Any]:
         "dedup_scope": {"local_candidate_window_days": 7, "x_provider_history": "NOT_READ_X_AUTO_PUBLISH_PAUSED"},
         "new_findings_existed": False, "correction_required": False, "x_post_sent": 0,
     }
+    if reviewed_event_template:
+        event_url = candidate["source_urls"][0] if candidate["source_urls"] else None
+        if not event_url or candidate["source_urls"] != [event_url] or not event_url.startswith("https://structurevidence.org/cases/"):
+            raise GateBlocked("reviewed method candidate must cite exactly one StructEvidence event URL")
+        snapshot_sha = reviewed_method_event.get("snapshot_sha256", "")
+        if not re.fullmatch(r"[0-9a-f]{64}", snapshot_sha):
+            raise GateBlocked("reviewed method candidate requires an event snapshot SHA-256")
+        candidate.update({
+            "selected_event_id": reviewed_method_event["event_id"],
+            "website_url": event_url,
+            "snapshot_path": reviewed_method_event["snapshot_path"],
+            "snapshot_sha256": snapshot_sha,
+            "factual_status": "METHOD_CONTENT+NO_STATE_CHANGE",
+        })
     validate_candidate(candidate)
     return candidate
 
@@ -479,6 +496,7 @@ def render_report(run: dict[str, Any], candidate: dict[str, Any], cross_project:
         f"- State: {candidate['status']}",
         f"- Approval gate: {candidate['approval_gate']}",
         f"- Content hash: {candidate.get('content_hash') or 'NONE'}",
+        f"- Evidence snapshot SHA-256: {candidate.get('snapshot_sha256') or 'NONE'}",
         f"- Cited URLs: {', '.join(candidate['source_urls']) or 'NONE'}",
         f"- Source cutoff: {candidate['evidence_cutoff']}",
         f"- Factual status: {candidate.get('factual_status', 'UNSPECIFIED')}",
@@ -527,6 +545,7 @@ def run_orchestrator(args: argparse.Namespace) -> tuple[dict[str, Any], dict[str
             run["alerts"].append({"code": "SCHEDULE_CONFLICT", "dedupe_key": f"SCHEDULE_CONFLICT:{date_sgt}", "detail": check["reason"]})
 
         reviews_path = root / "data/ops/se/review-inputs" / f"{date_sgt}.json"
+        review_bundle: dict[str, Any] = {}
         if reviews_path.exists():
             review_bundle = json.loads(reviews_path.read_text(encoding="utf-8"))
             reviews = review_bundle["reviews"]
@@ -591,7 +610,13 @@ def run_orchestrator(args: argparse.Namespace) -> tuple[dict[str, Any], dict[str
                 receipt = json.loads(path.read_text(encoding="utf-8"))
                 if receipt.get("event_id"):
                     publication_receipts[receipt["event_id"]] = receipt
-        candidate = select_x_candidate(date_sgt, config, event_records, publication_receipts)
+        candidate = select_x_candidate(
+            date_sgt,
+            config,
+            event_records,
+            publication_receipts,
+            review_bundle.get("reviewed_method_event_candidate"),
+        )
         atomic_json(candidate_file, candidate, replace=False)
         run["x"]["candidate_file"] = artifact_ref(candidate_file, root, state_root)
         event(run, "ARTIFACT_CREATED", "x_candidate", run["x"]["candidate_file"])

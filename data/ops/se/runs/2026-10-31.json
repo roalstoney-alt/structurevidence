@@ -1,0 +1,255 @@
+{
+  "schema_version": "se-unified-run-v1",
+  "run_id": "SE-OPS-20261031-2200-73ddc910-1d0d-5230-a675-4ee2633daef6",
+  "date_sgt": "2026-10-31",
+  "scheduled_at": "2026-10-31T22:00:00+08:00",
+  "started_at": "2026-10-31T14:04:34Z",
+  "ended_at": "2026-10-31T14:04:34Z",
+  "report_delivered_at": null,
+  "repo_baseline_sha": "440b3ae7e2ff2ad1b28577b401cce55d67ed0a09",
+  "repo_final_sha": null,
+  "pipeline": {
+    "scheduler": "PASS",
+    "cases": "PARTIAL",
+    "cml_ingestion": "PASS",
+    "x_publish": "BLOCKED",
+    "audit_persistence": "PASS",
+    "external_delivery": "BLOCKED"
+  },
+  "reviews": [
+    {
+      "case_id": "CML-PDRE-001",
+      "review_id": "SE-800V-REVIEW-20261031-01",
+      "reviewed_at": "2026-10-31T14:03:29Z",
+      "result": "NO_STATE_CHANGE",
+      "review_complete": true,
+      "classifications": [
+        "NO_STATE_CHANGE"
+      ],
+      "search_boundary": "Targeted official-source review; see data/case-watch/reviews/2026-10-31/CML-PDRE-001.json.",
+      "sources_checked": [
+        {
+          "url": "https://vantage-dc.com/company/news-events/",
+          "status": "INDEX_REVIEWED_NO_NEW_800V_RECORD_AFTER_2026-10-21"
+        },
+        {
+          "url": "https://investors.power.com/news/news-details/2026/Power-Integrations-and-Ideal-Power-Collaborate-on-Efficient-Always-On-Solid-State-Circuit-Breakers-for-800-VDC-AI-Data-Centers/default.aspx",
+          "status": "READ_EXISTING_SOURCE_NOTE_REVERIFIED"
+        }
+      ],
+      "new_sources": 0,
+      "new_attributed_statements": 0,
+      "new_independent_evidence": 0,
+      "new_events": 0,
+      "newly_discovered_old_evidence": 0,
+      "state_changing_evidence": 0,
+      "old_state": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+      "new_state": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+      "new_qualifying_evidence_count": 0,
+      "new_counter_evidence_count": 0
+    },
+    {
+      "case_id": "SE-BESS-SODIUM-001",
+      "review_id": "SE-SODIUM-REVIEW-20261031-01",
+      "reviewed_at": "2026-10-31T14:03:29Z",
+      "result": "NO_STATE_CHANGE",
+      "review_complete": true,
+      "classifications": [
+        "NO_STATE_CHANGE"
+      ],
+      "search_boundary": "Targeted official-source review; see data/case-watch/reviews/2026-10-31/SE-BESS-SODIUM-001.json.",
+      "sources_checked": [
+        {
+          "url": "https://www.catl.com/news/",
+          "status": "READ_NO_NEW_ITEM_AFTER_2026-10-27"
+        },
+        {
+          "url": "https://www.catl.com/news/10337.html",
+          "status": "READ_PRIOR_PENDING_EVENT_NOT_DUPLICATED"
+        },
+        {
+          "url": "https://intilion.com/pressemitteilungen",
+          "status": "READ_NO_SAME_DATE_COUNTERPART_OR_NEW_SODIUM_COMMISSIONING_RECORD"
+        }
+      ],
+      "new_sources": 0,
+      "new_attributed_statements": 0,
+      "new_independent_evidence": 0,
+      "new_events": 0,
+      "newly_discovered_old_evidence": 0,
+      "state_changing_evidence": 0,
+      "old_state": "NAMED_COMMISSIONED_SITE_NOT_ESTABLISHED",
+      "new_state": "NAMED_COMMISSIONED_SITE_NOT_ESTABLISHED",
+      "new_qualifying_evidence_count": 0,
+      "new_counter_evidence_count": 0
+    },
+    {
+      "case_id": "SE-IRK-LAB-001",
+      "review_id": "SE-IRK-REVIEW-20261031-01",
+      "reviewed_at": "2026-10-31T14:03:29Z",
+      "result": "REVIEW_INCOMPLETE",
+      "review_complete": false,
+      "classifications": [
+        "NO_STATE_CHANGE",
+        "HUMAN_GATE_REQUIRED"
+      ],
+      "search_boundary": "One consolidated Irkutsk search group and three institutional page reads; see data/case-watch/reviews/2026-10-31/SE-IRK-LAB-001.json.",
+      "search_budget": {
+        "targeted_search_groups": 1,
+        "webpage_open_attempts": 3
+      },
+      "source_graph": [
+        {
+          "source_id": "WHO-DON620",
+          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON620",
+          "retrieved_at": "2026-10-31T14:03:29Z",
+          "originator": "WHO with Russian Federation IHR National Focal Point",
+          "publisher": "WHO",
+          "source_type": "INSTITUTIONAL_ASSESSMENT_AND_RELAY",
+          "claim_ids": [
+            "cause",
+            "contacts",
+            "transmission",
+            "occupational_exposure"
+          ],
+          "depends_on": [
+            "RF-IHR-NFP"
+          ],
+          "relation": "SUPPORT_WITH_UNCERTAINTY",
+          "verification_status": "READ_NO_NEW_RECORD",
+          "search_boundary": "WHO/IHR public record"
+        },
+        {
+          "source_id": "ECDC-EIP-00034-20261012",
+          "url": "https://www.ecdc.europa.eu/en/public-health-events/2026-eip-00034/2026-10-12",
+          "retrieved_at": "2026-10-31T14:03:29Z",
+          "originator": "ECDC assessment with WHO, Russian-authority and media-source dependencies",
+          "publisher": "ECDC",
+          "source_type": "INSTITUTIONAL_ASSESSMENT_AND_DERIVATIVE_SUMMARY",
+          "claim_ids": [
+            "diagnostic_uncertainty",
+            "contacts",
+            "biosafety",
+            "eu_risk"
+          ],
+          "depends_on": [
+            "WHO-DON620",
+            "RF-IHR-NFP",
+            "MEDIA-CHAIN-ECDC-EIP-00034"
+          ],
+          "relation": "DUPLICATE_SUPPORT_WITH_DEPENDENCY",
+          "verification_status": "READ_DEDUPLICATED_AGAINST_ECDC-W42-2026",
+          "search_boundary": "ECDC public event page"
+        }
+      ],
+      "sources_checked": [
+        {
+          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON620",
+          "status": "READ_NO_NEW_RECORD"
+        },
+        {
+          "url": "https://www.ecdc.europa.eu/en/public-health-events/2026-eip-00034/2026-10-12",
+          "status": "READ_DEDUPLICATED_NO_NEW_MATERIAL_CHANGE"
+        }
+      ],
+      "new_sources": 0,
+      "new_attributed_statements": 0,
+      "new_independent_evidence": 0,
+      "new_events": 0,
+      "newly_discovered_old_evidence": 0,
+      "state_changing_evidence": 0,
+      "old_state": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+      "new_state": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+      "new_qualifying_evidence_count": 0,
+      "new_counter_evidence_count": 0
+    }
+  ],
+  "x": {
+    "account": "@structevidence",
+    "publication_authorized": false,
+    "account_verified": false,
+    "candidate_file": "data/ops/se/x-candidates/2026-10-31.json",
+    "post_id": null,
+    "post_url": null,
+    "posted_at": null,
+    "result": "AWAITING_HUMAN_REVIEW",
+    "blocker": "X_AUTO_PUBLISH_PAUSED_HUMAN_REVIEW"
+  },
+  "internal_workflows": {
+    "sunday_weekly_synthesis": {
+      "due": false,
+      "state": "NOT_DUE",
+      "artifact": null
+    },
+    "monday_socsm": {
+      "due": false,
+      "state": "NOT_DUE",
+      "artifact": null,
+      "public_projection": "PRIVATE"
+    }
+  },
+  "receipt_ids": [],
+  "alerts": [
+    {
+      "code": "X_HUMAN_REVIEW_REQUIRED",
+      "dedupe_key": "X:2026-10-31:X_HUMAN_REVIEW_REQUIRED",
+      "detail": "X_AUTO_PUBLISH_PAUSED_HUMAN_REVIEW"
+    },
+    {
+      "code": "MISSING_RUN_DETECTION_NOT_INDEPENDENT",
+      "dedupe_key": "MISSING_HEARTBEAT:2026-10-31",
+      "detail": "No independent health surface has been verified."
+    }
+  ],
+  "events": [
+    {
+      "event_id": "37de46c8b59a9bd98d84832afcef27768103a6c7aa9a5eee4eacce48ce068b3c",
+      "event": "SCHEDULED",
+      "stage": "scheduler",
+      "at": "2026-10-31T14:04:34Z",
+      "proof": "2026-10-31T22:00:00+08:00"
+    },
+    {
+      "event_id": "a8afc120472177ea7a02a82004dc193d613d4bcbafcab6f3bdb32a5813008909",
+      "event": "STARTED",
+      "stage": "orchestrator",
+      "at": "2026-10-31T14:04:34Z"
+    },
+    {
+      "event_id": "2a8fa97b263f12e0bd54b6fe3ae0137670932cac7cfeaa5b2ede2d444f750ded",
+      "event": "SEARCH_COMPLETED",
+      "stage": "cases",
+      "at": "2026-10-31T14:04:34Z",
+      "proof": "data/ops/se/review-inputs/2026-10-31.json"
+    },
+    {
+      "event_id": "64d329af27a8d8777ea63156f0488ab111aeda9a5d16dad20a76fff76d25ab8c",
+      "event": "ARTIFACT_CREATED",
+      "stage": "cross_project_read_only",
+      "at": "2026-10-31T14:04:34Z",
+      "proof": "se-cross-project-20261031.json"
+    },
+    {
+      "event_id": "cc6e3b50dcc4f2a9c2478185c4707386e8e328af5888c23920e53e6836335384",
+      "event": "ARTIFACT_CREATED",
+      "stage": "x_candidate",
+      "at": "2026-10-31T14:04:34Z",
+      "proof": "data/ops/se/x-candidates/2026-10-31.json"
+    },
+    {
+      "event_id": "d822156c6ebf47a72dd177e199bb8cbb8467d60cbb61d6d94e033239dcf81e23",
+      "event": "ARTIFACT_CREATED",
+      "stage": "alerts",
+      "at": "2026-10-31T14:04:34Z",
+      "proof": "data/ops/se/alerts/2026-10-31.json"
+    },
+    {
+      "event_id": "b088ce577133f31829e206573f6f85345d7e621d65f6ca348424cb02ac336310",
+      "event": "ARTIFACT_CREATED",
+      "stage": "daily_report",
+      "at": "2026-10-31T14:04:34Z",
+      "proof": "data/ops/se/reports/2026-10-31.md"
+    }
+  ],
+  "outcome": "PARTIAL"
+}
