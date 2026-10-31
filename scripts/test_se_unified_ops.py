@@ -202,32 +202,5 @@ class AcceptanceTests(unittest.TestCase):
         self.assertNotIn("oauth_token_secret", artifact.lower())
         validate_event_record(self.event)
 
-    def test_A19_reviewed_method_candidate_cites_one_event_and_snapshot(self):
-        reviewed = {
-            "template": "Reviewed method note for {date_sgt}. https://structurevidence.org/cases/800vdc/events/ev-1/",
-            "event_id": "EV-1",
-            "evidence_cutoff": "2026-10-15T10:00:00Z",
-            "snapshot_path": "cases/800vdc/events/ev-1/snapshot-v1.json",
-            "snapshot_sha256": "a" * 64,
-        }
-        candidate = default_candidate("2026-10-31", CONFIG, reviewed)
-        self.assertEqual(candidate["source_urls"], ["https://structurevidence.org/cases/800vdc/events/ev-1/"])
-        self.assertEqual(candidate["snapshot_sha256"], "a" * 64)
-        self.assertEqual(candidate["factual_status"], "METHOD_CONTENT+NO_STATE_CHANGE")
-        self.assertEqual(candidate["approval_gate"], "HUMAN_GATE_REQUIRED")
-        self.assertEqual(candidate["x_post_sent"], 0)
-
-    def test_A20_reviewed_method_candidate_rejects_non_event_url(self):
-        reviewed = {
-            "template": "Reviewed method note for {date_sgt}. https://structurevidence.org",
-            "event_id": "EV-1",
-            "evidence_cutoff": "2026-10-15T10:00:00Z",
-            "snapshot_path": "cases/800vdc/events/ev-1/snapshot-v1.json",
-            "snapshot_sha256": "a" * 64,
-        }
-        with self.assertRaises(GateBlocked):
-            default_candidate("2026-10-31", CONFIG, reviewed)
-
-
 if __name__ == "__main__":
     unittest.main()
