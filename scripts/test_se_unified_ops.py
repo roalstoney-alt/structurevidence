@@ -202,5 +202,6 @@ class AcceptanceTests(unittest.TestCase):
         self.assertNotIn("oauth_token_secret", artifact.lower())
         validate_event_record(self.event)
 
+
 if __name__ == "__main__":
     unittest.main()
