@@ -1,0 +1,53 @@
+{
+  "case_id": "SE-BINANCE-SECURITY-001",
+  "event_id": "BSEC-20261031-REPLENISHMENT-UPDATE-003",
+  "record_type": "APPEND_ONLY_MATERIAL_CHANGE_CANDIDATE",
+  "published_at_source": "2026-10-31 14:24 (publisher time zone not confirmed)",
+  "as_of_utc": "2026-10-31T00:00:00Z (PoR snapshot only)",
+  "observed_at_utc": "2026-11-01 (review date; exact UTC not captured)",
+  "primary_source": {
+    "publisher": "Binance",
+    "url": "https://www.binance.com/en-GB/support/announcement/security-incident-recovery-update-3-90-of-stolen-assets-replenished-proof-of-reserves-snapshot-provided-2026-10-31-1fdf1f61559c401da0435895ffcccb62",
+    "title": "Security Incident | Recovery Update #3: 90% of Stolen Assets Replenished; Proof of Reserves Snapshot Provided (2026-10-31)"
+  },
+  "corroborating_source": {
+    "publisher": "Reuters",
+    "url": "https://www.reuters.com/legal/government/binance-says-90-stolen-assets-replenished-2026-10-31/"
+  },
+  "claim_updates": [
+    {
+      "id": "BSEC-NEW-REPLENISH-90",
+      "status": "SUPPORTED_AS_OPERATOR_REPORTED",
+      "claim": "Binance reports affected-token replenishment increased from ~80% to 90%; ten listed tokens have 100% backing under issuer assertion",
+      "not_proven": "independently reconciled reserves, completed customer restoration or incident net loss"
+    },
+    {
+      "id": "BSEC-NEW-POR-SNAPSHOT",
+      "status": "SUPPORTED_AS_OPERATOR_REPORTED",
+      "claim": "Binance states a new proof-of-reserves snapshot at 2026-10-31T00:00:00Z is posted",
+      "not_proven": "complete user-verifiable ZK proof or comprehensive liabilities coverage"
+    },
+    {
+      "id": "BSEC-NEW-POR-PROOF",
+      "status": "PENDING_FUTURE_EVIDENCE",
+      "claim": "full ZK proof expected 2026-11-03 (UTC)",
+      "closure_test": "retrieve complete verifiable proof and independently test exact balances and methodology"
+    },
+    {
+      "id": "BSEC-NEW-WITHDRAWALS",
+      "status": "SCHEDULED_NOT_OBSERVED",
+      "claim": "withdrawal services planned for 2026-11-01",
+      "closure_test": "independent observation of actual withdrawal function and scope by asset/network"
+    }
+  ],
+  "unchanged_original_claim_count": {
+    "supported": 4,
+    "open": 6
+  },
+  "unchanged_original_evidence_cutoff": "2026-10-30T08:18:22Z",
+  "decision_evidence_gap": "OPEN_INSUFFICIENT_PUBLIC_EVIDENCE",
+  "provenance_notice": "Issuer account and Reuters report of issuer disclosures are not independent verification of 90% asset coverage. User screenshots match the official notice content; original email headers not verified.",
+  "publication_gate": "HUMAN_REVIEW_REQUIRED",
+  "social_gate": "MANUAL_ONLY",
+  "source_content_hash": "NOT_COMPUTED_DO_NOT_INVENT"
+}
