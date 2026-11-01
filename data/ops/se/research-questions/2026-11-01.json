@@ -1,0 +1,17 @@
+{
+  "schema_version": "se-public-research-question-v1",
+  "date": "2026-11-01",
+  "priority": "SUNDAY_WEEKLY",
+  "question": "What minimum owner- or operator-authored evidence should convert a named technology deployment from 'planned/commissioned' into decision-grade operating evidence?",
+  "why_it_matters": "Across 800VDC/SST, sodium-ion BESS and physical AI, vendor announcements repeatedly establish intent or commissioning while leaving acceptance, observation period, operating conditions, interventions and reliability unobserved.",
+  "falsifiable_answer_requirements": [
+    "named site and responsible operator",
+    "acceptance or commissioning record",
+    "defined observation period",
+    "operating conditions and load profile",
+    "availability/downtime/intervention data",
+    "methodology and accountable source"
+  ],
+  "status": "PUBLIC_QUESTION_CANDIDATE_HUMAN_REVIEW",
+  "publication_authorized": false
+}
