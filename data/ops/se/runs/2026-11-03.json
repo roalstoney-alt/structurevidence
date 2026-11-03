@@ -1,0 +1,254 @@
+{
+  "schema_version": "se-unified-run-v1",
+  "run_id": "SE-OPS-20261103-2200-5c25e3b7-6351-54ae-84bf-627b49ebb003",
+  "date_sgt": "2026-11-03",
+  "scheduled_at": "2026-11-03T22:00:00+08:00",
+  "started_at": "2026-11-03T15:05:45Z",
+  "ended_at": "2026-11-03T15:05:45Z",
+  "report_delivered_at": null,
+  "repo_baseline_sha": "9a5884c8b8dea90b9bd61bdc7cca1ee2353a2dd3",
+  "repo_final_sha": null,
+  "pipeline": {
+    "scheduler": "PASS",
+    "cases": "PARTIAL",
+    "cml_ingestion": "PASS",
+    "x_publish": "BLOCKED",
+    "audit_persistence": "PASS",
+    "external_delivery": "BLOCKED"
+  },
+  "reviews": [
+    {
+      "case_id": "CML-PDRE-001",
+      "review_id": "SE-800V-REVIEW-20261103-01",
+      "reviewed_at": "2026-11-03T15:03:48Z",
+      "result": "NO_STATE_CHANGE",
+      "review_complete": true,
+      "classifications": [
+        "NO_STATE_CHANGE"
+      ],
+      "search_boundary": "Targeted official-source review; see data/case-watch/reviews/2026-11-03/CML-PDRE-001.json.",
+      "sources_checked": [
+        {
+          "url": "https://vantage-dc.com/news/vantage-and-heron-power-electronics-announce-gigawatt-scale-800-vdc-agreement-to-accelerate-ai-infrastructure-delivery/",
+          "status": "READ_EXISTING_EVENT_REVERIFIED"
+        },
+        {
+          "url": "https://blogs.nvidia.com/blog/ocp-global-summit-vera-rubin-scale-ai-factories/",
+          "status": "READ_NO_NEW_MATERIAL_CHANGE"
+        }
+      ],
+      "new_sources": 0,
+      "new_attributed_statements": 0,
+      "new_independent_evidence": 0,
+      "new_events": 0,
+      "newly_discovered_old_evidence": 0,
+      "state_changing_evidence": 0,
+      "old_state": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+      "new_state": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+      "new_qualifying_evidence_count": 0,
+      "new_counter_evidence_count": 0
+    },
+    {
+      "case_id": "SE-BESS-SODIUM-001",
+      "review_id": "SE-SODIUM-REVIEW-20261103-01",
+      "reviewed_at": "2026-11-03T15:03:48Z",
+      "result": "NO_STATE_CHANGE",
+      "review_complete": true,
+      "classifications": [
+        "NO_STATE_CHANGE"
+      ],
+      "search_boundary": "Targeted official-source review; see data/case-watch/reviews/2026-11-03/SE-BESS-SODIUM-001.json.",
+      "sources_checked": [
+        {
+          "url": "https://www.catl.com/en/news/7044.html",
+          "status": "READ_LATEST_INDEX_ITEM_OUT_OF_CASE_SCOPE"
+        },
+        {
+          "url": "https://www.catl.com/news/10337.html",
+          "status": "READ_KNOWN_PENDING_EVENT_PR70"
+        },
+        {
+          "url": "https://intilion.com/pressemitteilungen",
+          "status": "READ_NO_COUNTERPART_RECORD"
+        }
+      ],
+      "new_sources": 0,
+      "new_attributed_statements": 0,
+      "new_independent_evidence": 0,
+      "new_events": 0,
+      "newly_discovered_old_evidence": 0,
+      "state_changing_evidence": 0,
+      "old_state": "NAMED_COMMISSIONED_SITE_NOT_ESTABLISHED",
+      "new_state": "NAMED_COMMISSIONED_SITE_NOT_ESTABLISHED",
+      "new_qualifying_evidence_count": 0,
+      "new_counter_evidence_count": 0
+    },
+    {
+      "case_id": "SE-IRK-LAB-001",
+      "review_id": "SE-IRK-REVIEW-20261103-01",
+      "reviewed_at": "2026-11-03T15:03:48Z",
+      "result": "REVIEW_INCOMPLETE",
+      "review_complete": false,
+      "classifications": [
+        "NO_STATE_CHANGE",
+        "HUMAN_GATE_REQUIRED"
+      ],
+      "search_boundary": "One consolidated Irkutsk search group and two institutional primary-page reads; see data/case-watch/reviews/2026-11-03/SE-IRK-LAB-001.json.",
+      "search_budget": {
+        "targeted_search_groups": 1,
+        "webpage_open_attempts": 2
+      },
+      "source_graph": [
+        {
+          "source_id": "WHO-DON620",
+          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON620",
+          "retrieved_at": "2026-11-03T15:03:48Z",
+          "originator": "WHO with Russian Federation IHR National Focal Point",
+          "publisher": "WHO",
+          "source_type": "INSTITUTIONAL_ASSESSMENT_AND_RELAY",
+          "claim_ids": [
+            "cause",
+            "contacts",
+            "risk",
+            "exposure"
+          ],
+          "depends_on": [
+            "RF-IHR-NFP"
+          ],
+          "relation": "SUPPORT_WITH_UNCERTAINTY",
+          "verification_status": "READ_NO_NEW_RECORD",
+          "search_boundary": "WHO/IHR public record"
+        },
+        {
+          "source_id": "ECDC-EIP-00034-20261012",
+          "url": "https://www.ecdc.europa.eu/en/public-health-events/2026-eip-00034/2026-10-12",
+          "retrieved_at": "2026-11-03T15:03:48Z",
+          "originator": "ECDC with WHO and attributed Russian-authority inputs",
+          "publisher": "ECDC",
+          "source_type": "INSTITUTIONAL_ASSESSMENT_AND_DERIVATIVE_SUMMARY",
+          "claim_ids": [
+            "diagnostic_uncertainty",
+            "risk",
+            "exposure"
+          ],
+          "depends_on": [
+            "WHO-DON620",
+            "RF-IHR-NFP",
+            "MEDIA-CHAIN-ECDC"
+          ],
+          "relation": "SUPPORT_WITH_DEPENDENCY",
+          "verification_status": "READ_NO_NEW_MATERIAL_CHANGE",
+          "search_boundary": "ECDC public event page"
+        }
+      ],
+      "sources_checked": [
+        {
+          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON620",
+          "status": "READ_NO_NEW_RECORD"
+        },
+        {
+          "url": "https://www.ecdc.europa.eu/en/public-health-events/2026-eip-00034/2026-10-12",
+          "status": "READ_NO_NEW_MATERIAL_CHANGE"
+        }
+      ],
+      "new_sources": 0,
+      "new_attributed_statements": 0,
+      "new_independent_evidence": 0,
+      "new_events": 0,
+      "newly_discovered_old_evidence": 0,
+      "state_changing_evidence": 0,
+      "old_state": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+      "new_state": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+      "new_qualifying_evidence_count": 0,
+      "new_counter_evidence_count": 0
+    }
+  ],
+  "x": {
+    "account": "@structevidence",
+    "publication_authorized": false,
+    "account_verified": false,
+    "candidate_file": "data/ops/se/x-candidates/2026-11-03.json",
+    "post_id": null,
+    "post_url": null,
+    "posted_at": null,
+    "result": "AWAITING_HUMAN_REVIEW",
+    "blocker": "X_AUTO_PUBLISH_PAUSED_HUMAN_REVIEW"
+  },
+  "internal_workflows": {
+    "sunday_weekly_synthesis": {
+      "due": false,
+      "state": "NOT_DUE",
+      "artifact": null
+    },
+    "monday_socsm": {
+      "due": false,
+      "state": "NOT_DUE",
+      "artifact": null,
+      "public_projection": "PRIVATE"
+    }
+  },
+  "receipt_ids": [],
+  "alerts": [
+    {
+      "code": "X_HUMAN_REVIEW_REQUIRED",
+      "dedupe_key": "X:2026-11-03:X_HUMAN_REVIEW_REQUIRED",
+      "detail": "X_AUTO_PUBLISH_PAUSED_HUMAN_REVIEW"
+    },
+    {
+      "code": "MISSING_RUN_DETECTION_NOT_INDEPENDENT",
+      "dedupe_key": "MISSING_HEARTBEAT:2026-11-03",
+      "detail": "No independent health surface has been verified."
+    }
+  ],
+  "events": [
+    {
+      "event_id": "004d89260dacf0e52279f963c57df71d7c36f8bb558fb71da2c7bd4c4bfe4c97",
+      "event": "SCHEDULED",
+      "stage": "scheduler",
+      "at": "2026-11-03T15:05:45Z",
+      "proof": "2026-11-03T22:00:00+08:00"
+    },
+    {
+      "event_id": "ecf8f930ee1c872359aa91cb25c1374ef51d6233df43b97fc33b4c0e82c85e70",
+      "event": "STARTED",
+      "stage": "orchestrator",
+      "at": "2026-11-03T15:05:45Z"
+    },
+    {
+      "event_id": "d6b5bb1975e641b4fa87a4169fd2a1b68d42cc084c05c9956c66b0d33b2499b3",
+      "event": "SEARCH_COMPLETED",
+      "stage": "cases",
+      "at": "2026-11-03T15:05:45Z",
+      "proof": "data/ops/se/review-inputs/2026-11-03.json"
+    },
+    {
+      "event_id": "3ae80fee1602189568979a3f801e51d99fb3bc7e23eeac19d9bae52800d6080f",
+      "event": "ARTIFACT_CREATED",
+      "stage": "cross_project_read_only",
+      "at": "2026-11-03T15:05:45Z",
+      "proof": "se-cross-project-20261103.json"
+    },
+    {
+      "event_id": "ccd076186caba01805a6e4946b9d0e30525c57d33c9e5b7cc62a7379ef69b577",
+      "event": "ARTIFACT_CREATED",
+      "stage": "x_candidate",
+      "at": "2026-11-03T15:05:45Z",
+      "proof": "data/ops/se/x-candidates/2026-11-03.json"
+    },
+    {
+      "event_id": "9bdee65482d1566e0d23a10865ce8b29154b2bbcfd6f26ec5a19d4df2262a746",
+      "event": "ARTIFACT_CREATED",
+      "stage": "alerts",
+      "at": "2026-11-03T15:05:45Z",
+      "proof": "data/ops/se/alerts/2026-11-03.json"
+    },
+    {
+      "event_id": "9b35b0674c72666e14ec3c7b1261a1868ce95508e6fa70c805e256cb6afdd45d",
+      "event": "ARTIFACT_CREATED",
+      "stage": "daily_report",
+      "at": "2026-11-03T15:05:45Z",
+      "proof": "data/ops/se/reports/2026-11-03.md"
+    }
+  ],
+  "outcome": "PARTIAL"
+}

@@ -1,0 +1,51 @@
+{
+  "schema_version": "se-case-review-v2",
+  "case_id": "SE-BESS-SODIUM-001",
+  "review_id": "SE-SODIUM-REVIEW-20261103-01",
+  "reviewed_at": "2026-11-03T15:03:48Z",
+  "result": "NO_STATE_CHANGE",
+  "review_complete": true,
+  "classifications": ["NO_STATE_CHANGE"],
+  "search_boundary": "Two targeted official-source search groups and three primary-source reads covering named sodium-ion delivery, grid commissioning, customer acceptance and public field performance; not an exhaustive market census.",
+  "sources_checked": [
+    {
+      "url": "https://www.catl.com/en/news/7044.html",
+      "publisher": "CATL",
+      "status": "READ_LATEST_INDEX_ITEM_OUT_OF_CASE_SCOPE",
+      "published_at": "2026-10-31",
+      "event_at": "2026-10-31",
+      "retrieved_at": "2026-11-03T15:03:48Z",
+      "finding": "CATL's latest English news item is a general innovation speech. It does not establish a named sodium-ion BESS delivery, commissioned site, acceptance result or field-performance record."
+    },
+    {
+      "url": "https://www.catl.com/news/10337.html",
+      "publisher": "CATL",
+      "status": "READ_KNOWN_PENDING_EVENT_PR70",
+      "published_at": "2026-10-27",
+      "event_at": "2026-10-27",
+      "retrieved_at": "2026-11-03T15:03:48Z",
+      "finding": "The page reports a five-year 3 GWh INTILION memorandum and says sodium and lithium routes will advance in parallel. It does not attribute the full tranche to sodium-ion chemistry or establish a named commissioned sodium-ion site, customer acceptance result, operating record or independent performance evidence. Open draft PR 70 already contains the append-only event draft."
+    },
+    {
+      "url": "https://intilion.com/pressemitteilungen",
+      "publisher": "INTILION",
+      "status": "READ_NO_COUNTERPART_RECORD",
+      "retrieved_at": "2026-11-03T15:03:48Z",
+      "finding": "INTILION's press-release index did not expose a matching 27 October announcement or newer sodium-ion commissioning record."
+    }
+  ],
+  "new_sources": 0,
+  "new_attributed_statements": 0,
+  "new_independent_evidence": 0,
+  "new_events": 0,
+  "newly_discovered_old_evidence": 0,
+  "state_changing_evidence": 0,
+  "old_state": "NAMED_COMMISSIONED_SITE_NOT_ESTABLISHED",
+  "new_state": "NAMED_COMMISSIONED_SITE_NOT_ESTABLISHED",
+  "new_qualifying_evidence_count": 0,
+  "new_counter_evidence_count": 0,
+  "evidence_state_as_of": "2026-09-24",
+  "last_material_change": "2026-09-24",
+  "historical_backfill": false,
+  "provenance_note": "Open draft PR 70 remains the append-only record for the 27 October CATL-INTILION item. This review does not duplicate, overwrite or treat that pending record as newly discovered today."
+}
