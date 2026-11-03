@@ -1,0 +1,21 @@
+{
+  "schema_version": "se-case-event-ledger-v1",
+  "case_id": "SE-BESS-SODIUM-001",
+  "append_only": true,
+  "events": [
+    {
+      "event_id": "SE-EVENT-BESS-SODIUM-001-20261027-INTILION-CATL-MOU",
+      "classifications": [
+        "NEWLY_DISCOVERED_OLD_EVIDENCE",
+        "NO_STATE_CHANGE",
+        "HUMAN_GATE_REQUIRED"
+      ],
+      "published_at": "2026-10-27",
+      "event_at": "2026-10-27",
+      "retrieved_at": "2026-10-30T15:16:52Z",
+      "state_changed": false,
+      "url": "https://structurevidence.org/cases/sodium-ion-bess/events/intilion-catl-mou-2026/",
+      "record_path": "cases/sodium-ion-bess/events/intilion-catl-mou-2026/index.json"
+    }
+  ]
+}

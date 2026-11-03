@@ -1,0 +1,15 @@
+{
+  "schema_version": "se-x-candidate-v2",
+  "candidate_id": "SE-X-2026-10-30-EVENT-BLOCKED",
+  "scheduled_date": "2026-10-30",
+  "text": null,
+  "source_urls": [],
+  "evidence_cutoff": "2026-10-30T15:16:52Z",
+  "content_hash": null,
+  "approval_gate": "BLOCKED",
+  "status": "WEBSITE_PUBLICATION_BLOCKED",
+  "blocker": "WEBSITE_PUBLICATION_BLOCKED",
+  "selected_event_id": "SE-EVENT-BESS-SODIUM-001-20261027-INTILION-CATL-MOU",
+  "factual_status": "NEWLY_DISCOVERED_OLD_EVIDENCE+NO_STATE_CHANGE+HUMAN_GATE_REQUIRED",
+  "x_post_sent": 0
+}
