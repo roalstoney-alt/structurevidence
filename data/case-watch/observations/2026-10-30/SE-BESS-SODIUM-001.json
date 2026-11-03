@@ -1,0 +1,41 @@
+{
+  "schema_version": "se-case-observation-v2",
+  "observation_id": "SE-BESS-SODIUM-001-OBS-20261030-CLOUD-01",
+  "observed_at": "2026-10-30T22:00:00+08:00",
+  "knowledge_cutoff": "2026-10-30T22:00:00+08:00",
+  "review_id": null,
+  "review_status": "REVIEW_INCOMPLETE",
+  "new_sources": 2,
+  "new_attributed_statements": 2,
+  "new_independent_evidence": 0,
+  "new_events": 0,
+  "newly_discovered_old_evidence": 1,
+  "state_changing_evidence": 0,
+  "proposed_stop_point": "UNCHANGED",
+  "contradictions": [],
+  "case_id": "SE-BESS-SODIUM-001",
+  "source_url": "https://energyalliance.org/india-first-sodium-ion-battery-storage-pilot-jaipur/",
+  "source_id": "GEAPP-JVVNL-SODIUM-PILOT-2026-10-29",
+  "source_speaker": "Global Energy Alliance for People and Planet with attributed JVVNL statements",
+  "claimed_subject": "Primary institutional announcement confirms MoU and RFP for a planned 250kW/250kWh Jaipur sodium-ion distribution pilot",
+  "claim_ids": [
+    "SODIUM-JVVNL-PLANNED-PILOT-RFP",
+    "SODIUM-SHANDONG-GRID-CONNECTION-VENDOR-CLAIM"
+  ],
+  "event_at": "2026-10-29",
+  "published_at": "2026-10-29",
+  "source_access": "PRIMARY_INSTITUTION_BODY_READ_VIA_SEARCH_PLUS_VENDOR_BODY",
+  "raw_hash_or_UNAVAILABLE": "UNAVAILABLE_SEARCH_SERVICE_NORMALIZED",
+  "search_query": "October 30 2026 sodium-ion BESS commissioned grid connected operational project",
+  "search_boundary": "Primary GEAPP announcement read. Separately, BENAN vendor page dated Oct 23 claims a named 2.5MW/5MWh sodium-ion subsystem completed grid-connection commissioning in a Heze 200MW/400MWh station; owner/grid-operator confirmation and operating data not found.",
+  "old_stop_point": "NAMED_COMMISSIONED_SITE_NOT_ESTABLISHED",
+  "decision_relevant_unknown": "JVVNL award/delivery/commissioning; for Heze, owner/grid confirmation, acceptance, sodium subsystem scope and operating performance.",
+  "next_observable": "Primary tender award and commissioning record for Jaipur; Heze owner/grid-operator commissioning and runtime record.",
+  "additional_sources": [
+    {
+      "url": "https://www.benanenergy.com/site/news-detail/191",
+      "source_id": "BENAN-HEZE-SODIUM-GRID-CONNECTION-2026-10-23",
+      "status": "VENDOR_ATTRIBUTED_NEWLY_DISCOVERED_OLD_EVIDENCE"
+    }
+  ]
+}

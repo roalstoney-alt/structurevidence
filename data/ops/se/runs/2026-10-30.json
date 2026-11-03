@@ -1,0 +1,93 @@
+{
+  "schema_version": "se-unified-run-v2",
+  "date": "2026-10-30",
+  "task_id": "6aba2674e6448191867d0890ad2cc1ed",
+  "observed_at": "2026-10-30T22:00:00+08:00",
+  "main_sha": "440b3ae7e2ff2ad1b28577b401cce55d67ed0a09",
+  "dual_case_main_sha": "acc203395d46e6a6c74a6bca5ec77404ab0c3e68",
+  "stages": {
+    "scheduled": "PASS",
+    "enabled": "PASS",
+    "started": "PASS",
+    "search_completed": "PASS",
+    "artifact_created": "PASS",
+    "delivered": "PENDING_PR",
+    "verified": "BLOCKED_PRODUCTION_BODY_NOT_INDEPENDENTLY_VERIFIED"
+  },
+  "external_feedback": {
+    "challenges": "UNKNOWN_ACCESS_BLOCKED",
+    "decision_citations": "UNKNOWN_ACCESS_BLOCKED",
+    "inbound_decision_requests": "UNKNOWN_ACCESS_BLOCKED",
+    "other_external_interaction_candidates": 1,
+    "internal_synthetic_excluded": true,
+    "privacy_safe": true
+  },
+  "case_results": {
+    "CML-PDRE-001": {
+      "review_status": "REVIEW_INCOMPLETE",
+      "new_events": 1,
+      "state_changed": false
+    },
+    "SE-BESS-SODIUM-001": {
+      "review_status": "REVIEW_INCOMPLETE",
+      "new_events": 0,
+      "state_changed": false
+    },
+    "SE-IRK-LAB-001": {
+      "review_status": "REVIEW_INCOMPLETE",
+      "new_events": 0,
+      "state_changed": false
+    },
+    "SE-ONC-NSQNSCLC-CN-001": {
+      "review_status": "REVIEW_INCOMPLETE",
+      "new_events": 1,
+      "state_changed": false
+    },
+    "SE-PHYSICAL-AI-001": {
+      "review_status": "REVIEW_INCOMPLETE",
+      "new_events": 0,
+      "state_changed": false
+    },
+    "SE-NEW-BUSINESS-001": {
+      "review_status": "REVIEW_INCOMPLETE",
+      "new_events": 0,
+      "state_changed": false
+    }
+  },
+  "adjacent_publication": {
+    "case_id": "SE-BINANCE-SECURITY-001",
+    "status": "PUBLISHED_ON_MAIN_SEPARATE_FROM_SIX_CASE_REGISTER",
+    "production_http_from_owner_receipt": "200_NOT_REVERIFIED_THIS_RUN",
+    "main_commit": "13b68672e444312da24fe4fcbf2fe287089761d3"
+  },
+  "cross_project": {
+    "cml_technical_radar": "PLATFORM_LAST_RUN_OBSERVED_2026-10-30T09:21+08_ARTIFACT_LIBRARY_RECEIPT_EXISTS_BUT_NOT_READ_IN_THIS_RUN",
+    "cml_fde": "HOLD",
+    "lovetimeline": "JOB_NOT_RUNNING_OR_NOT_CONNECTED",
+    "pinterest": "RECEIPT_UNKNOWN"
+  },
+  "growth_metrics": {
+    "artifact_opens": "UNKNOWN",
+    "qualified_dialogues": "UNKNOWN",
+    "written_scopes": "UNKNOWN",
+    "paid_verifications": "UNKNOWN",
+    "retrieval_time_cost": "UNKNOWN",
+    "reuse_rate": "UNKNOWN",
+    "correction_latency": "UNKNOWN",
+    "downstream_citations": "UNKNOWN"
+  },
+  "hypothesis_targets": {
+    "artifact_opens": 20,
+    "qualified_dialogues": 8,
+    "written_scopes": 2,
+    "paid_verifications": 1
+  },
+  "prohibitions_confirmed": {
+    "no_social_write": true,
+    "no_credentials_read": true,
+    "no_outreach": true,
+    "no_merge": true,
+    "no_deploy": true,
+    "no_new_automation": true
+  }
+}
