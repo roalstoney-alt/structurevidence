@@ -1,0 +1,33 @@
+{
+  "schema_version": "se-case-observation-v2",
+  "observation_id": "SE-BESS-SODIUM-001-OBS-20261101-CLOUD-01",
+  "observed_at": "2026-11-01T22:00:00+08:00",
+  "knowledge_cutoff": "2026-11-01T22:00:00+08:00",
+  "review_id": null,
+  "review_status": "REVIEW_INCOMPLETE",
+  "case_id": "SE-BESS-SODIUM-001",
+  "source_url": "https://rss.globenewswire.com/news-release/2026/10/29/3391632/0/en/emerald-battery-labs-partners-with-city-of-issaquah-to-deliver-safe-cost-effective-sustainable-battery-storage-for-pickering-barn-resiliency-project.html",
+  "source_id": "SODIUM-WEEKLY-DEDUP-2026-11-01",
+  "source_speaker": "bounded weekly review",
+  "claimed_subject": "No new event beyond the Pickering Barn planned-deployment candidate already recorded in Draft PR #72; plan, supply agreement or vendor commissioning claim does not establish independently verified operation.",
+  "claim_ids": [
+    "SODIUM-NAMED-OPERATION-NOT-ESTABLISHED"
+  ],
+  "event_at": "2026-10-29",
+  "published_at": "2026-10-29",
+  "source_access": "SOURCE_BODY_AND_PENDING_PR_READ",
+  "raw_hash_or_UNAVAILABLE": "UNAVAILABLE_SEARCH_SERVICE_NORMALIZED",
+  "search_query": "November 1 2026 sodium ion BESS commissioned operational owner utility",
+  "search_boundary": "One fresh query plus pending PR #72/#70 deduplication. No independent owner/grid runtime record established.",
+  "old_stop_point": "NAMED_COMMISSIONED_SITE_NOT_ESTABLISHED",
+  "proposed_stop_point": "UNCHANGED",
+  "new_sources": 0,
+  "new_attributed_statements": 0,
+  "new_independent_evidence": 0,
+  "new_events": 0,
+  "newly_discovered_old_evidence": 0,
+  "state_changing_evidence": 0,
+  "contradictions": [],
+  "decision_relevant_unknown": "Executed procurement, chemistry confirmation, commissioning, acceptance, runtime, availability and safety performance.",
+  "next_observable": "Owner/grid-authored commissioning and fixed-window operating report."
+}
