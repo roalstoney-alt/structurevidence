@@ -1,0 +1,33 @@
+{
+  "schema_version": "se-case-observation-v2",
+  "observation_id": "SE-IRK-LAB-001-OBS-20261031-CLOUD-01",
+  "observed_at": "2026-10-31T22:00:00+08:00",
+  "knowledge_cutoff": "2026-10-31T22:00:00+08:00",
+  "review_id": null,
+  "review_status": "REVIEW_INCOMPLETE",
+  "case_id": "SE-IRK-LAB-001",
+  "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON620",
+  "source_id": "WHO-DON620-RECHECK-2026-10-31",
+  "source_speaker": "WHO relaying Russian Federation NFP information",
+  "claimed_subject": "WHO record remains unchanged: cause is pneumonia of undetermined etiology; no confirmed diagnosis and no evidence of ongoing transmission identified from information provided.",
+  "claim_ids": [
+    "IRK-CAUSE-NOT-ESTABLISHED"
+  ],
+  "event_at": "2026-10-02",
+  "published_at": "2026-10-10",
+  "source_access": "WHO_BODY_READ",
+  "raw_hash_or_UNAVAILABLE": "UNAVAILABLE_SEARCH_SERVICE_NORMALIZED",
+  "search_query": "October 31 2026 Irkutsk laboratory worker death WHO update regulator investigation",
+  "search_boundary": "One targeted query group and two authoritative bodies surfaced (WHO/ECDC); no newly dated regulator original or investigation report. No private, personal or pathogen-operation data collected.",
+  "old_stop_point": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+  "proposed_stop_point": "UNCHANGED",
+  "new_sources": 0,
+  "new_attributed_statements": 0,
+  "new_independent_evidence": 0,
+  "new_events": 0,
+  "newly_discovered_old_evidence": 0,
+  "state_changing_evidence": 0,
+  "contradictions": [],
+  "decision_relevant_unknown": "Confirmed diagnosis and independently accessible investigation original.",
+  "next_observable": "Dated WHO/regulator revision or primary investigation report."
+}

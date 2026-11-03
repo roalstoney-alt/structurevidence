@@ -1,0 +1,20 @@
+{
+  "schema_version": "se-linkedin-candidate-v1",
+  "candidate_id": "SE-LINKEDIN-2026-10-31-NO-VERIFIABLE-01",
+  "scheduled_date": "2026-10-31",
+  "text": null,
+  "unicode_character_count": null,
+  "source_urls": [
+    "https://rss.globenewswire.com/news-release/2026/10/29/3391632/0/en/emerald-battery-labs-partners-with-city-of-issaquah-to-deliver-safe-cost-effective-sustainable-battery-storage-for-pickering-barn-resiliency-project.html"
+  ],
+  "approved_public_page": null,
+  "evidence_cutoff": "2026-10-31T22:00:00+08:00",
+  "content_sha256": null,
+  "dedup_check": "NOT_APPLICABLE_NO_TEXT",
+  "factual_status": "NEW_EVENT_CANDIDATE_NOT_PUBLISHED_ON_APPROVED_STRUCTEVIDENCE_PAGE",
+  "status": "NO_VERIFIABLE_POST_CANDIDATE",
+  "secondary_status": "WEBSITE_PUBLICATION_BLOCKED",
+  "approval_gate": "HUMAN_GATE_REQUIRED",
+  "x_auto_publish_paused_human_review": false,
+  "linkedin_post_sent": 0
+}
