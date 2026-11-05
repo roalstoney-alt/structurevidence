@@ -1,0 +1,39 @@
+{
+  "schema_version": "se-case-review-v2",
+  "case_id": "CML-PDRE-001",
+  "review_id": "SE-800V-REVIEW-20261105-01",
+  "reviewed_at": "2026-11-05T15:07:56Z",
+  "result": "NO_STATE_CHANGE",
+  "review_complete": true,
+  "classifications": ["NO_STATE_CHANGE"],
+  "search_boundary": "Two targeted official-source search groups and two official news indexes covering named delivery, commissioning, customer acceptance, replicated deployment, independent field performance and component maturity; not an exhaustive market census.",
+  "sources_checked": [
+    {
+      "url": "https://vantage-dc.com/company/news-events/",
+      "publisher": "Vantage Data Centers",
+      "status": "READ_OFFICIAL_INDEX_NO_NEWER_CASE_SCOPE_RECORD_DIRECT_CURL_403",
+      "retrieved_at": "2026-11-05T15:07:56Z",
+      "finding": "The 4 November item is a CISO appointment and outside the 800 VDC evidence boundary. The latest listed 800 VDC record remains the 21 October Vantage-Heron manufacturing-capacity agreement; no shipment, commissioned campus, customer acceptance, operating record or independent field validation was established."
+    },
+    {
+      "url": "https://heronpower.com/news",
+      "publisher": "Heron Power Electronics",
+      "status": "HTTP_200_READ_NO_NEWER_800V_RECORD",
+      "retrieved_at": "2026-11-05T15:07:56Z",
+      "finding": "Heron's official news index still shows the 21 October Vantage agreement as its newest 800 VDC item and no later delivery, commissioning, acceptance or field-performance record."
+    }
+  ],
+  "new_sources": 0,
+  "new_attributed_statements": 0,
+  "new_independent_evidence": 0,
+  "new_events": 0,
+  "newly_discovered_old_evidence": 0,
+  "state_changing_evidence": 0,
+  "old_state": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+  "new_state": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+  "new_qualifying_evidence_count": 0,
+  "new_counter_evidence_count": 0,
+  "evidence_state_as_of": "2026-09-20T10:46:47Z",
+  "last_material_change": "2026-09-20",
+  "historical_backfill": false
+}
