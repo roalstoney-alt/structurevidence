@@ -1,0 +1,33 @@
+{
+  "schema_version": "se-case-observation-v2",
+  "observed_at": "2026-11-05T22:03:00+08:00",
+  "knowledge_cutoff": "2026-11-05T22:03:00+08:00",
+  "review_id": null,
+  "review_status": "REVIEW_INCOMPLETE",
+  "event_at": null,
+  "published_at": null,
+  "raw_hash_or_UNAVAILABLE": "UNAVAILABLE_SEARCH_SERVICE_NORMALIZED",
+  "proposed_stop_point": "UNCHANGED",
+  "new_sources": 0,
+  "new_attributed_statements": 0,
+  "new_independent_evidence": 0,
+  "new_events": 0,
+  "newly_discovered_old_evidence": 0,
+  "state_changing_evidence": 0,
+  "contradictions": [],
+  "observation_id": "SE-NEW-BUSINESS-001-OBS-20261105-CLOUD-01",
+  "case_id": "SE-NEW-BUSINESS-001",
+  "source_url": "https://www.iren.com/investors/news",
+  "source_id": "IREN-Q1-FY27-PRE-RELEASE-CHECK-2026-11-05",
+  "source_speaker": "IREN issuer investor-relations indexes",
+  "claimed_subject": "At the 22:03 SGT cutoff, the issuer news index still listed only the Oct 22 release schedule and the presentation index marked the Nov 5 call Upcoming; Q1 FY27 results were not yet observed.",
+  "claim_ids": [
+    "IREN-Q1-FY27-NOT-YET-OBSERVED-AT-CUTOFF"
+  ],
+  "source_access": "ISSUER_NEWS_AND_PRESENTATION_INDEX_READ",
+  "search_query": "IREN Q1 FY27 results November 5 2026 official",
+  "search_boundary": "Issuer IR news and presentation indexes read at 22:03 SGT, before the announced 5:00 p.m. ET call; absence is time-bounded, not a claim that results will not be released.",
+  "old_stop_point": "LOCAL_PROVISIONAL_v0.1 / Canonical RDL NOT_RUN",
+  "decision_relevant_unknown": "Q1 FY27 GAAP revenue, Horizon 2-4 acceptance, cash collection and Microsoft-authored confirmation.",
+  "next_observable": "Issuer/SEC result after the announced release window and customer-authored confirmation."
+}
