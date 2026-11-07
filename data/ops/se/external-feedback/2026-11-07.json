@@ -1,0 +1,28 @@
+{
+  "report_date": "2026-11-07",
+  "observed_at": "2026-11-07T22:00:00+08:00",
+  "privacy_safe": true,
+  "internal_synthetic_excluded": true,
+  "metrics": {
+    "VERIFIED_EXTERNAL_CHALLENGES": {
+      "today": "UNKNOWN_ACCESS_BLOCKED",
+      "cumulative": "UNKNOWN_ACCESS_BLOCKED"
+    },
+    "VERIFIED_DECISION_CITATIONS": {
+      "today": "UNKNOWN_ACCESS_BLOCKED",
+      "cumulative": "UNKNOWN_ACCESS_BLOCKED"
+    },
+    "VERIFIED_INBOUND_DECISION_REQUESTS": {
+      "today": "UNKNOWN_ACCESS_BLOCKED",
+      "cumulative": "UNKNOWN_ACCESS_BLOCKED"
+    }
+  },
+  "accessible_boundaries": [
+    "Public GitHub issues/PRs and public web search were checked.",
+    "Cloudflare D1/Admin, private intake and third-party private message channels were not accessible."
+  ],
+  "carried_unverified_interactions": 1,
+  "events": [],
+  "ledger_status": "NO_NEW_LEDGER_EVENT; PRIVATE_CHANNELS_SOURCE_NOT_ACCESSIBLE",
+  "note": "The carried interaction remains unverified and is not counted as verified traction."
+}
