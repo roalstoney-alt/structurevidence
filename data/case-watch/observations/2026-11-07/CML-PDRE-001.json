@@ -1,0 +1,48 @@
+{
+  "case_id": "CML-PDRE-001",
+  "source_url": "https://structurevidence.org/cases/800vdc/",
+  "source_id": "SE-OBS-2026-11-07-CML-PDRE-001",
+  "source_speaker": "StructEvidence production page and bounded public-source search",
+  "claimed_subject": "800VDC/SST field deployment, acceptance, operating data, repeat deployment",
+  "claim_ids": [
+    "named-production",
+    "third-party-acceptance",
+    "operating-data",
+    "repeat-deployment"
+  ],
+  "event_at": null,
+  "published_at": null,
+  "source_access": "PRODUCTION_URL_NOT_ACCESSIBLE; PUBLIC_SEARCH_PARTIAL",
+  "raw_hash_or_UNAVAILABLE": "UNAVAILABLE",
+  "search_query": [
+    "800V DC SST data center deployment commissioning reliability",
+    "Vantage Heron 800V manufacturing capacity agreement"
+  ],
+  "search_boundary": "Public web and issuer/industry-source search through cutoff; PR #39 checked for deduplication.",
+  "old_stop_point": "Single-instance evidence accepted; repeat deployment, independent acceptance and reliability remain unestablished.",
+  "proposed_stop_point": "UNCHANGED",
+  "new_sources": 0,
+  "new_attributed_statements": 0,
+  "new_independent_evidence": 0,
+  "new_events": 0,
+  "newly_discovered_old_evidence": 0,
+  "contradictions": [],
+  "decision_relevant_unknown": [
+    "Independent site acceptance",
+    "Attributable operating reliability",
+    "Replicated deployment"
+  ],
+  "next_observable": "Named commissioning or customer/third-party acceptance with site, date and operating scope.",
+  "observed_at": "2026-11-07T22:00:00+08:00",
+  "knowledge_cutoff": "2026-11-07T22:00:00+08:00",
+  "review_status": "REVIEW_INCOMPLETE",
+  "review_id": null,
+  "evidence_state_as_of_advanced": false,
+  "state_changing_evidence": 0,
+  "proposed_stop_point_change": false,
+  "production_verification": "SOURCE_NOT_ACCESSIBLE",
+  "notes": [
+    "Bounded public-source check completed; private intake/admin channels were not accessible.",
+    "No accepted stop point was changed."
+  ]
+}
