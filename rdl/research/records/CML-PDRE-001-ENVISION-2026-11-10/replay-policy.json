@@ -1,0 +1,17 @@
+{
+  "policy_id": "CML-PDRE-001-ENVISION-REPLAY-v1",
+  "canonical_serialization": "UTF8_JSON_SORT_KEYS_COMPACT_SEPARATORS",
+  "hash_algorithm": "SHA-256",
+  "event_identity_fields": [
+    "case_id",
+    "claim_type",
+    "site",
+    "location",
+    "canonical_primary_source_url"
+  ],
+  "canonical_primary_source_url": "https://www.prnewswire.com/news-releases/envision-achieves-worlds-first-commercial-deployment-of-integrated-800v-dc-sst-based-power-system-in-large-scale-ai-data-center-302926109.html",
+  "expected_deduplication_key": "sha256:1bc5550bdcd426cb0423181239e0bca550b2130b06edf5575e77814e4ac5b3ea",
+  "same_source_replay_result": "DUPLICATE_NOOP",
+  "previous_event_hash_linkage": "NOT_SUPPORTED_BY_EXISTING_CML_CASE_ARCHITECTURE",
+  "compatibility_boundary": "No incompatible hash-chain field was added to the frozen canonical CML case files."
+}

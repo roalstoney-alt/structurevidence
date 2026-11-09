@@ -1,0 +1,19 @@
+{
+  "delta_id": "CML-PDRE-001-DAILY-DELTA-20261110-001",
+  "local_report_date": "2026-11-10",
+  "schedule_timezone": "Asia/Singapore",
+  "TRACK": "CML_PDRE_800VDC_SST",
+  "EVENT_TYPE": "NEW_OPERATOR_REPORTED_FIELD_DEPLOYMENT",
+  "EVIDENCE_ADMITTED": "YES",
+  "STATE_CHANGE": "YES",
+  "INDEPENDENT_ACCEPTANCE": "UNKNOWN",
+  "NEXT_OBSERVABLE": "COMMISSIONING / PROTECTION / MEASURED_LOAD / OPERATING_DATA",
+  "evidence_event_ref": "CML-PDRE-001-EV-ENVISION-20261108-001",
+  "daily_observation_ref": "data/case-watch/daily/2026/11/2026-11-10.jsonl#SE-CW-CML-PDRE-001-20261110-ENVISION-001",
+  "automation_change": "NONE",
+  "existing_schedule_fingerprint_sha256": "bdced838ae1612ee8739637f4fa6b2df4c6c13f31985b82334fe2158b0070188",
+  "automatic_procurement_recommendation": false,
+  "automatic_outreach": false,
+  "automatic_social_publication": false,
+  "public_state_mutated": false
+}

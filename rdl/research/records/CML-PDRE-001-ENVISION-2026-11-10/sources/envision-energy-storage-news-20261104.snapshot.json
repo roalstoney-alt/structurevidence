@@ -1,0 +1,33 @@
+{
+  "snapshot_schema": "SE_PUBLIC_SOURCE_TEXT_EXTRACTION_v1",
+  "source_id": "CML-PDRE-001-SRC-ENVISION-ESN-20261104",
+  "source_url": "https://www.energy-storage.news/industry-updates/envision-achieves-worlds-first-commercial-deployment-of-integrated-800v-dc-sst-based-power-system-in-large-scale-ai-data-centre/",
+  "canonical_url": "https://www.energy-storage.news/industry-updates/envision-achieves-worlds-first-commercial-deployment-of-integrated-800v-dc-sst-based-power-system-in-large-scale-ai-data-centre/",
+  "issuer": "Envision",
+  "publisher": "Energy-Storage.News",
+  "byline": "Envision",
+  "source_role": "OPERATOR_AUTHORED",
+  "page_title": "Envision achieves world's first commercial deployment of integrated 800V DC SST-based power system in large-scale AI data centre",
+  "published_at": "2026-11-04",
+  "retrieved_at": "2026-11-09T21:54:45Z",
+  "capture_method": "FIRECRAWL_LIVE_PAGE_STRUCTURED_EXTRACTION_AND_TARGETED_DIRECT_QUOTE",
+  "http_status": 200,
+  "snapshot_status": "CAPTURED_TEXT_EXTRACTION",
+  "original_response_bytes_stored": false,
+  "verbatim_locator_excerpt": "the system now powering live computing workloads at the company's Galaxy AI data centre campus in Ulanqab, China",
+  "normalized_facts": {
+    "named_site": "Galaxy AI Data Center",
+    "location": "Ulanqab, China",
+    "architecture": "SST conversion from 10 kV medium-voltage AC to an 800V DC bus, integrated with battery storage and controls",
+    "operating_load": "AI_COMPUTING_LOAD_OPERATOR_REPORTED",
+    "campus_opening": "2026-08",
+    "sst_800vdc_commissioning_date": "UNKNOWN",
+    "planned_capacity": "3GW_PLANNED_NOT_COMMISSIONED_LOAD",
+    "independent_acceptance": "UNKNOWN",
+    "installed_it_load_mw": "UNKNOWN",
+    "protection_test_results": "UNKNOWN",
+    "long_duration_operation": "UNKNOWN",
+    "measured_capex_opex": "UNKNOWN"
+  },
+  "capture_boundary": "This is a bounded text extraction, not the original HTTP response body. It preserves source identity, one short locator excerpt, and normalized facts used by the evidence record."
+}

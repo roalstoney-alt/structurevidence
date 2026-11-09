@@ -1,0 +1,74 @@
+{
+  "report_id": "CML-PDRE-001-ENVISION-REPLAY-VERIFY-20261110-001",
+  "verified_at": "2026-11-09T21:54:45Z",
+  "baseline_git_sha": "9a5884c8b8dea90b9bd61bdc7cca1ee2353a2dd3",
+  "result": "PASS_WITH_BASELINE_FAILURES_RETAINED",
+  "idempotent_replay": "PASS",
+  "same_source_second_replay": "DUPLICATE_NOOP",
+  "duplicate_event_count": 0,
+  "source_to_claim_resolution": "PASS",
+  "claim_to_state_transition_resolution": "PASS",
+  "source_snapshot_hash_verification": "PASS",
+  "missing_source_bytes_fabricated_hash_guard": "PASS",
+  "independent_verification_admission_boundary": "PASS",
+  "economic_benefits_unknown": "PASS",
+  "chindata_history_unchanged": "PASS",
+  "canonical_case_unchanged": "PASS",
+  "public_state_mutated": false,
+  "new_regression_count": 0,
+  "test_runs": [
+    {
+      "command": "python3 -B scripts/test_cml_pdre_001_envision_append.py",
+      "result": "PASS",
+      "tests": "15/15"
+    },
+    {
+      "command": "python3 -B scripts/validate_case_watch.py",
+      "result": "PASS",
+      "groups": "9/9"
+    },
+    {
+      "command": "python3 -B scripts/test_cml_pdre_001_evp_001.py",
+      "result": "PASS",
+      "tests": "12/12"
+    },
+    {
+      "command": "python3 -B scripts/test_case_watch.py",
+      "result": "PASS",
+      "tests": "5/5"
+    }
+  ],
+  "retained_baseline_failures": [
+    {
+      "command": "python3 -B scripts/test_cml_pdre_001_init.py",
+      "branch_result": "8/10",
+      "origin_main_result": "8/10",
+      "cause": "origin/main already contains publication-control.json, while the older test expects an exact seven-file container and no URL."
+    },
+    {
+      "command": "python3 -B scripts/test_rdl_l1_field_deployment.py",
+      "branch_result": "10/11",
+      "origin_main_result": "10/11",
+      "cause": "The historical-mutation helper already reports scripts/publish_cml_v01.py and technical-risk/request-analysis/index.html on origin/main."
+    },
+    {
+      "command": "python3 -B scripts/test_rdl_l1_human_review_freeze.py",
+      "branch_result": "8/9",
+      "origin_main_result": "8/9",
+      "cause": "Same pre-existing historical-mutation helper result as origin/main."
+    },
+    {
+      "command": "python3 -B scripts/test_public_case_primitives_v01.py",
+      "branch_result": "7/9",
+      "origin_main_result": "7/9",
+      "cause": "origin/main already has a cases/docs NSCLC projection mismatch."
+    }
+  ],
+  "hash_chain_verified": "NOT_APPLICABLE_EXISTING_ARCHITECTURE_HAS_NO_PREVIOUS_EVENT_HASH_CHAIN",
+  "schedule_observation": {
+    "workflow_text_expected": "09:00 Asia/Singapore",
+    "repository_active_owner": "22:00 Asia/Singapore",
+    "action_taken": "NONE",
+    "status": "SPEC_REPOSITORY_BASELINE_DISCREPANCY_RETAINED"
+  }
+}
