@@ -1,0 +1,58 @@
+{
+  "manifest_id": "CML-PDRE-001-ENVISION-SOURCE-MANIFEST-20261110-001",
+  "workflow_id": "CML-PDRE-001-ENVISION-APPEND-20261108",
+  "case_id": "CML-PDRE-001",
+  "created_at": "2026-11-09T21:54:45Z",
+  "sources": [
+    {
+      "source_id": "CML-PDRE-001-SRC-ENVISION-PRN-20261102",
+      "issuer": "Envision",
+      "publisher": "Cision PR Newswire",
+      "source_role": "OPERATOR_AUTHORED",
+      "canonical_url": "https://www.prnewswire.com/news-releases/envision-achieves-worlds-first-commercial-deployment-of-integrated-800v-dc-sst-based-power-system-in-large-scale-ai-data-center-302926109.html",
+      "event_at": "2026-11-02",
+      "published_at": "2026-11-02T07:42:00Z",
+      "observed_at": "2026-11-09T21:54:45Z",
+      "retrieved_at": "2026-11-09T21:54:45Z",
+      "access_boundary": "PUBLIC_WEB_HTTP_200",
+      "content_sha256": "8ef86099d6f3549807c140c8dcf69e1f5681d51d1a545847280895322d0f1461",
+      "snapshot_path": "rdl/research/records/CML-PDRE-001-ENVISION-2026-11-10/sources/envision-prnewswire-20261102.snapshot.json",
+      "snapshot_status": "CAPTURED_TEXT_EXTRACTION",
+      "original_source_bytes_stored": false,
+      "canonical_status": "ORIGINAL_OPERATOR_AUTHORED_DISTRIBUTION_LOCATED"
+    },
+    {
+      "source_id": "CML-PDRE-001-SRC-ENVISION-ESN-20261104",
+      "issuer": "Envision",
+      "publisher": "Energy-Storage.News",
+      "source_role": "OPERATOR_AUTHORED",
+      "canonical_url": "https://www.energy-storage.news/industry-updates/envision-achieves-worlds-first-commercial-deployment-of-integrated-800v-dc-sst-based-power-system-in-large-scale-ai-data-centre/",
+      "event_at": "2026-11-02",
+      "published_at": "2026-11-04",
+      "observed_at": "2026-11-09T21:54:45Z",
+      "retrieved_at": "2026-11-09T21:54:45Z",
+      "access_boundary": "PUBLIC_WEB_HTTP_200",
+      "content_sha256": "5bbc767959427c796e582328456be939f96f3898dbba6f0fa99192c9ee27ff50",
+      "snapshot_path": "rdl/research/records/CML-PDRE-001-ENVISION-2026-11-10/sources/envision-energy-storage-news-20261104.snapshot.json",
+      "snapshot_status": "CAPTURED_TEXT_EXTRACTION",
+      "original_source_bytes_stored": false,
+      "canonical_status": "USER_SPECIFIED_OPERATOR_AUTHORED_INDUSTRY_UPDATE"
+    }
+  ],
+  "retrieval_attempts": [
+    {
+      "attempt": 1,
+      "result": "CONFIGURATION_ERROR",
+      "error": "ZERO_DATA_RETENTION_NOT_ENABLED",
+      "source_access_result": "NOT_EVALUATED",
+      "note": "The capture request was rejected before source access; no source absence was inferred."
+    },
+    {
+      "attempt": 2,
+      "result": "SUCCESS",
+      "source_access_result": "HTTP_200_BOTH_SOURCES",
+      "capture_boundary": "Bounded text extractions stored; original HTTP response bodies not stored."
+    }
+  ],
+  "source_interpretation_boundary": "These records establish what Envision publicly reported. They do not independently establish commissioning acceptance, installed IT load, protection-test results, long-duration operation, or measured economic performance."
+}

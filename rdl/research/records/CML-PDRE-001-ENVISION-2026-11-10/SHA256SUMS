@@ -1,0 +1,13 @@
+2b92f143e73d10c15fa028c093cb678168070c15fc79280d8255d0f12e586541  rdl/research/records/CML-PDRE-001-ENVISION-2026-11-10/README.md
+cd26f8f5af45b537418969d2d03ed8d1af68e2b5b1cede22dd99eed4b1d729a0  rdl/research/records/CML-PDRE-001-ENVISION-2026-11-10/claim-ledger.jsonl
+94849cd15b9018dc99ea3dcac4327bd72dbdfad8884ef6121db5b6229857c690  rdl/research/records/CML-PDRE-001-ENVISION-2026-11-10/daily-report-delta.json
+8576cc34fe3bad9d77fdcd02b891a3c5bcfaa53d2af81d197dc61dbf24c43e3c  rdl/research/records/CML-PDRE-001-ENVISION-2026-11-10/evidence-event.json
+b95862388d2e4bfdf7089da7f747dd38a78432bb658cc9ffc381ac2d522a3bcc  rdl/research/records/CML-PDRE-001-ENVISION-2026-11-10/historical-integrity-report.json
+7e4e1942b5234db8d80ef72b33addcaf19c356b766c3b467fd55303909a76e07  rdl/research/records/CML-PDRE-001-ENVISION-2026-11-10/replay-policy.json
+6c019beb33ec2fcd54062f35f580a67d55b2c9be6a13884a46c31b17b9afd602  rdl/research/records/CML-PDRE-001-ENVISION-2026-11-10/replay-verification.json
+59d3368800572de18bf42bd2bd0164f6bc21690468e4eb8b9acad926d506bb8d  rdl/research/records/CML-PDRE-001-ENVISION-2026-11-10/source-acquisition-manifest.json
+5bbc767959427c796e582328456be939f96f3898dbba6f0fa99192c9ee27ff50  rdl/research/records/CML-PDRE-001-ENVISION-2026-11-10/sources/envision-energy-storage-news-20261104.snapshot.json
+8ef86099d6f3549807c140c8dcf69e1f5681d51d1a545847280895322d0f1461  rdl/research/records/CML-PDRE-001-ENVISION-2026-11-10/sources/envision-prnewswire-20261102.snapshot.json
+fc98a2f07b25037ea621aa5d50f547d85c175c3f65e0f174a682b09c2cd730af  rdl/research/records/CML-PDRE-001-ENVISION-2026-11-10/state-transition.jsonl
+76f1f7781024a704c67a13ad253db0683bdc74103fd820f19b62a28a1dba8887  data/case-watch/daily/2026/11/2026-11-10.jsonl
+d014bc937759090fffb83d551efa69153dfaea1190ad4ba1105ae7dc2eef13c2  scripts/test_cml_pdre_001_envision_append.py

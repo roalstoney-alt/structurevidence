@@ -1,0 +1,35 @@
+{
+  "report_id": "CML-PDRE-001-ENVISION-HISTORY-INTEGRITY-20261110-001",
+  "baseline_git_sha": "9a5884c8b8dea90b9bd61bdc7cca1ee2353a2dd3",
+  "verified_at": "2026-11-09T21:54:45Z",
+  "result": "PASS",
+  "historical_records_changed": 0,
+  "comparison": "EXACT_BYTE_SHA256_BEFORE_AND_AFTER",
+  "records": {
+    "rdl/research/records/CML-PDRE-001-L1-FIELD-DEPLOYMENT-2026-09-20/field-deployment-evidence.json": "2f94a1925a4f6ec19fedf5d6c1d78c4edeba15380ecc2319d3d3ef2d067ba427",
+    "rdl/research/records/CML-PDRE-001-L1-FIELD-DEPLOYMENT-2026-09-20/human-review-freeze.json": "78a518cfb87ed008a0a391b2f65ca6625f454f3dcc9e965c7db08fcc480235f6",
+    "rdl/research/records/CML-PDRE-001-L1-FIELD-DEPLOYMENT-2026-09-20/research-capital-observation.json": "db83fa5d677c287068d44045533ea316cd32ca2bc4c6a41708bb8729b5562bd9",
+    "rdl/research/records/CML-PDRE-001-L1-FIELD-DEPLOYMENT-2026-09-20/research-record.json": "435f7ebb2634c48d6abed4a2a5a0b3fd8403d55817e320076ecca6a88e4acbe8",
+    "rdl/research/records/CML-PDRE-001-L1-FIELD-DEPLOYMENT-2026-09-20/source-classification.json": "5eaf29bf79d4e71e1745af75e278866a84426f5a08fa385f46bf965a3dc573be",
+    "cases/800vdc/evidence.json": "ce37b5b9b6d3d365e2fe7cd0267d583d6a1aaa9f458154be561fe22354da4a94",
+    "cases/800vdc/state_history.json": "ef9e0e715da67e5aab3833c43957ca6be695228028f00db7fec16087510113d1",
+    "technical-risk/cml-v1.1/pdre/CML-PDRE-001/CASE.json": "8a91f9886d1c7791f59cf85404c905f1f6d67df91a96cff6121f57b9019d0cdb",
+    "technical-risk/cml-v1.1/pdre/CML-PDRE-001/README.md": "39dd795ccf0e27c2327e70ff2c4c36a6dee6f7f697e88aea323adee4fb32bb05",
+    "technical-risk/cml-v1.1/pdre/CML-PDRE-001/dependency-transfer.json": "00ff6526ed61d9d6d5c359d836548f3465519c5b91f602ae83c37d9e4c756cc6",
+    "technical-risk/cml-v1.1/pdre/CML-PDRE-001/evidence-index.jsonl": "ce71d6e8f554703ccd1d99dbcb67eadb72a99e8d055949f97584023bf107f282",
+    "technical-risk/cml-v1.1/pdre/CML-PDRE-001/pdre-record.json": "a4b86464b0ec9bd09fa7fe54a93c1fe2912fcc255a77d48f527e984d006b4fe8",
+    "technical-risk/cml-v1.1/pdre/CML-PDRE-001/publication-control.json": "1e4d4f3684c09f8759ee128adecb602491e9ec78054db47a2c69693e45cb5e5b",
+    "technical-risk/cml-v1.1/pdre/CML-PDRE-001/state-history.jsonl": "d8b1591fbfb5898f998bf4553a533d30b6650d5567193c9b48d5e640904b5629",
+    "technical-risk/cml-v1.1/pdre/CML-PDRE-001/timeline.jsonl": "4d5535cd4e619d0ac71ba0590beaa0cc392e1883e278e28423d00b3384318c16",
+    "data/ops/se/SCHEDULE_OWNERSHIP.json": "bdced838ae1612ee8739637f4fa6b2df4c6c13f31985b82334fe2158b0070188"
+  },
+  "chindata_history": "PRESERVED_BYTE_IDENTICAL",
+  "canonical_case": "PRESERVED_BYTE_IDENTICAL",
+  "public_projection": "PRESERVED_BYTE_IDENTICAL",
+  "schedule_configuration": "PRESERVED_BYTE_IDENTICAL",
+  "append_only_additions": [
+    "rdl/research/records/CML-PDRE-001-ENVISION-2026-11-10/",
+    "data/case-watch/daily/2026/11/2026-11-10.jsonl",
+    "scripts/test_cml_pdre_001_envision_append.py"
+  ]
+}
