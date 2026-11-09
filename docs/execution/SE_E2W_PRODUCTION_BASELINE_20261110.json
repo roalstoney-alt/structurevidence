@@ -1,0 +1,48 @@
+{
+  "project": "SE-E2W-RELEASE-20261110",
+  "recorded_date_asia_jakarta": "2026-11-10",
+  "repository": "roalstoney-alt/structurevidence",
+  "baseline_main_sha": "4a57c5fb5cb2aef682058c0902d83c727f5610f1",
+  "production": {
+    "url": "https://structurevidence.org/",
+    "provider": "GitHub Pages",
+    "source": "main:/docs",
+    "deployment_id": 7667743321,
+    "deployment_sha": "4a57c5fb5cb2aef682058c0902d83c727f5610f1",
+    "deployment_environment": "github-pages",
+    "deployment_created_at": "2026-11-09T22:23:37Z",
+    "deployment_completed_at": "2026-11-09T22:24:57Z",
+    "credentials_and_permissions": "VERIFIED_WITHOUT_SECRET_DISCLOSURE"
+  },
+  "live_baseline": [
+    {
+      "url": "https://structurevidence.org/",
+      "http": 200,
+      "sha256": "ec02fccc51782b481493d815133d89dd200a863af57ff2a038be9bd9dee76975",
+      "matches_repository_path": "docs/index.html"
+    },
+    {
+      "url": "https://structurevidence.org/cases/",
+      "http": 200,
+      "sha256": "b2352adc0815cc363b35de24b2a0e24c55908a69557fa1f4b9a5a0d1b2232132",
+      "matches_repository_path": "docs/cases/index.html"
+    },
+    {
+      "url": "https://structurevidence.org/sitemap.xml",
+      "http": 200,
+      "sha256": "54a4b424494db9a47e9c7eef3632667937e3c14d44131e2429c15c4c289b448b",
+      "matches_repository_path": "docs/sitemap.xml"
+    },
+    {
+      "url": "https://structurevidence.org/cases/800vdc/",
+      "http": 200,
+      "sha256": "06c69bfdbca2ccb5bce25c487319d04ecd5067eea7ff54d2c9228f5f42222cfa",
+      "matches_repository_path": "docs/cases/800vdc/index.html"
+    }
+  ],
+  "rollback": {
+    "mechanism": "Revert the website release merge commit on main; GitHub Pages redeploys the prior docs tree.",
+    "prior_version_identified": true,
+    "production_worker_or_database_change_required": false
+  }
+}

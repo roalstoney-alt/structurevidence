@@ -29,6 +29,34 @@
       "state_changed": false,
       "url": "https://structurevidence.org/cases/800vdc/events/sungrow-enerneo-certification-2026/",
       "record_path": "cases/800vdc/events/sungrow-enerneo-certification-2026/index.json"
+    },
+    {
+      "event_id": "SE-EVENT-CML-PDRE-001-20261021-VANTAGE-HERON",
+      "classifications": [
+        "NEW_EVENT",
+        "NO_STATE_CHANGE",
+        "HUMAN_GATE_REQUIRED"
+      ],
+      "published_at": "2026-10-21",
+      "event_at": "2026-10-21",
+      "retrieved_at": "2026-10-22T14:02:00Z",
+      "state_changed": false,
+      "url": "https://structurevidence.org/cases/800vdc/events/vantage-heron-capacity-agreement-2026/",
+      "record_path": "cases/800vdc/events/vantage-heron-capacity-agreement-2026/index.json"
+    },
+    {
+      "event_id": "CML-PDRE-001-EV-ENVISION-20261108-001",
+      "classifications": [
+        "NEW_EVIDENCE_EVENT",
+        "STRENGTHENS_EXISTING_STATE",
+        "PUBLIC_STATE_UNCHANGED"
+      ],
+      "published_at": "2026-11-02T07:42:00Z",
+      "event_at": "2026-11-02",
+      "retrieved_at": "2026-11-09T21:54:45Z",
+      "state_changed": false,
+      "url": "https://structurevidence.org/cases/800vdc/events/envision-galaxy-800vdc-2026/",
+      "record_path": "cases/800vdc/events/envision-galaxy-800vdc-2026/index.json"
     }
   ]
 }
