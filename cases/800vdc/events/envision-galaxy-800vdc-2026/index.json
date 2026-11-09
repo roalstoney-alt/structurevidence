@@ -20,6 +20,7 @@
     "PUBLIC_STATE_UNCHANGED"
   ],
   "state_changed": false,
+  "case_index_visible": true,
   "public_url": "https://structurevidence.org/cases/800vdc/events/envision-galaxy-800vdc-2026/",
   "github_record_url": "https://github.com/roalstoney-alt/structurevidence/tree/main/rdl/research/records/CML-PDRE-001-ENVISION-2026-11-10",
   "evidence_ref": "CML-PDRE-001-EV-ENVISION-20261108-001",

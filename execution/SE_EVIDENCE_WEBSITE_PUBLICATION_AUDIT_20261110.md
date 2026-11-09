@@ -63,7 +63,7 @@ Independent third-party verification was not required to publish an attributable
 ## Pre-release verification
 
 - All ten existing public case/research routes returned HTTP 200 on 2026-11-10.
-- The new event page, machine-readable projection and case-index link were exercised in a real local browser preview.
+- The new event page, machine-readable projection and case-index link were exercised in a real local browser preview. The index link is generated from the event projection's explicit `case_index_visible` flag; deterministic regeneration preserves the prior review clock.
 - The PR Newswire source and complete GitHub evidence-record links returned HTTP 200. The Energy-Storage.news URL returned HTTP 403 to a non-browser `curl` request but loaded successfully in the real browser; this retrieval behavior is not treated as evidence absence.
 - Internal-link audit: zero broken links, zero orphan pages, zero cases without state and zero evidence pages without a parent.
 - Release-specific tests: 7/7 PASS. Envision append/integrity tests: 15/15 PASS. Source-dependency tests: 21/21 PASS. History/SEO unit tests: 12/12 PASS. Case-watch validation groups: 9/9 PASS.
@@ -72,7 +72,7 @@ Independent third-party verification was not required to publish an attributable
 
 ## Production architecture and rollback
 
-Production is GitHub Pages from `main:/docs`. The baseline deployment ID is `7667743321`. The release changes only a new mirrored event projection, the CML row in the existing case index, the append-only event ledger, sitemap entries, release tests and public audit receipts. The protected v0.1 case HTML and JSON remain byte-for-byte unchanged. The index addition links the new event and explicitly says the canonical state is unchanged. The release does not modify Cloudflare Workers, D1, commercial workflows, schedules or the evidence-chain source records.
+Production is GitHub Pages from `main:/docs`. The baseline deployment ID is `7667743321`. The release changes only a new mirrored event projection, the existing case-index generator and its generated CML row, the append-only event ledger, sitemap entries, release tests and public audit receipts. The protected v0.1 case HTML and JSON remain byte-for-byte unchanged. The index addition links the new event, explicitly says the canonical state is unchanged and does not advance the prior review clock. The release does not modify Cloudflare Workers, D1, commercial workflows, schedules or the evidence-chain source records.
 
 Rollback is a normal Git revert of the website release merge commit followed by the existing GitHub Pages deployment. No database or Worker rollback is required.
 

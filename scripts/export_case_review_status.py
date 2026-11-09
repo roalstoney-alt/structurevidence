@@ -50,6 +50,28 @@ def build(root: Path) -> dict:
             state_file = registered['audit']['state_file']
 
         settings = inputs[cid]
+        latest_public_event = None
+        event_index_path = root / rel / 'events/index.json'
+        if event_index_path.is_file():
+            event_index = load(root, rel + '/events/index.json')
+            visible_events = []
+            for event in event_index.get('events', []):
+                event_record = load(root, event['record_path'])
+                if event_record.get('case_index_visible') is True:
+                    visible_events.append((event, event_record))
+            if visible_events:
+                latest, event_record = max(
+                    visible_events,
+                    key=lambda item: item[0].get('retrieved_at') or item[0].get('published_at') or item[0].get('event_at') or '',
+                )
+                latest_public_event = {
+                    'event_id': latest['event_id'],
+                    'subject': event_record.get('subject', latest['event_id']),
+                    'url': latest['url'],
+                    'claim_status': event_record.get('claim_status'),
+                    'state_changed': latest['state_changed'],
+                    'retrieved_at': latest.get('retrieved_at'),
+                }
         reviewed_at = None
         review_result = None
         review_id = None
@@ -89,6 +111,7 @@ def build(root: Path) -> dict:
                      'featured': registered['featured'], 'management_status': registered['management_status'],
                      'last_reviewed_at': reviewed_at, 'review_result': review_result,
                      'latest_review_id': review_id, 'latest_review_file': review_file,
+                     'latest_public_event': latest_public_event,
                      'period': period, 'period_review_id': settings.get('period_review_id'),
                      'monitoring': settings['monitoring'], **counts})
     iren_tracker = root / 'cases/iren-ai-cloud-transition/tracker-v0.1.json'
@@ -198,6 +221,12 @@ def render_row(row: dict) -> str:
         review += f'<br><small>{esc(period["id"])} · {esc(period["scope"])}</small>'
     if row['latest_review_file']:
         review += f'<br><a href="/{esc(row["latest_review_file"])}">Review record</a>'
+    public_event = row.get('latest_public_event')
+    if public_event:
+        boundary = 'canonical state changed' if public_event['state_changed'] else 'canonical state unchanged'
+        claim_status = public_event.get('claim_status') or 'ATTRIBUTED PUBLIC EVENT'
+        review += (f'<br><small>Latest public evidence event: <a href="{esc(public_event["url"])}">'
+                   f'{esc(public_event["subject"])}</a> · {esc(claim_status)} · {esc(boundary)}</small>')
     return (f'<tr data-case-id="{esc(row["case_id"])}"><td><a href="{esc(path)}"><strong>{esc(row["title"])}</strong></a>'
             f'<br><small>{esc(row["case_id"])}{extra}</small></td><td>{esc(row["question"])}</td>'
             f'<td><span class="state {klass}">{esc(label)}</span></td>'

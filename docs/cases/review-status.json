@@ -79,6 +79,7 @@
       "review_result": "REVIEW_INCOMPLETE",
       "latest_review_id": "SE-IRK-REVIEW-20261014-02",
       "latest_review_file": "cases/irkutsk-lab-worker-death/search-review-20261014-02.json",
+      "latest_public_event": null,
       "period": {
         "id": "2026-10-14",
         "start": "2026-10-14",
@@ -112,6 +113,7 @@
       "review_result": null,
       "latest_review_id": null,
       "latest_review_file": null,
+      "latest_public_event": null,
       "period": {
         "id": "2026-W41",
         "start": "2026-10-05",
@@ -147,6 +149,7 @@
       "review_result": "HUMAN_GATE_REQUIRED",
       "latest_review_id": "SE-SODIUM-REVIEW-20261014-01",
       "latest_review_file": "cases/sodium-ion-bess/search-review-20261014-01.json",
+      "latest_public_event": null,
       "period": {
         "id": "2026-10-14",
         "start": "2026-10-14",
@@ -182,6 +185,14 @@
       "review_result": "NO_STATE_CHANGE",
       "latest_review_id": "SE-800V-REVIEW-20261015-01",
       "latest_review_file": "cases/800vdc/search-review-20261015-01.json",
+      "latest_public_event": {
+        "event_id": "CML-PDRE-001-EV-ENVISION-20261108-001",
+        "subject": "Envision 800VDC/SST deployment",
+        "url": "https://structurevidence.org/cases/800vdc/events/envision-galaxy-800vdc-2026/",
+        "claim_status": "OPERATOR_REPORTED_LIVE_DEPLOYMENT",
+        "state_changed": false,
+        "retrieved_at": "2026-11-09T21:54:45Z"
+      },
       "period": {
         "id": "2026-10-15",
         "start": "2026-10-15",

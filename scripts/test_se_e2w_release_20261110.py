@@ -25,6 +25,7 @@ class EvidenceWebsiteReleaseTests(unittest.TestCase):
     def test_root_docs_projection_parity(self):
         for relative in (
             "cases/index.html",
+            "cases/review-status.json",
             "cases/800vdc/index.html",
             "cases/800vdc/index.json",
             "cases/800vdc/events/index.json",
@@ -43,6 +44,7 @@ class EvidenceWebsiteReleaseTests(unittest.TestCase):
         self.assertEqual(event["claim_ref"], "ENVISION_GALAXY_800VDC_LIVE_DEPLOYMENT")
         self.assertEqual(event["claim_status"], "OPERATOR_REPORTED_LIVE_DEPLOYMENT")
         self.assertEqual(event["source_role"], "OPERATOR_AUTHORED")
+        self.assertTrue(event["case_index_visible"])
         self.assertFalse(event["state_changed"])
         self.assertFalse(event["historical_transition"]["canonical_readiness_changed"])
         self.assertFalse(event["historical_transition"]["public_state_mutated"])
@@ -121,7 +123,7 @@ class EvidenceWebsiteReleaseTests(unittest.TestCase):
         self.assertIn("/cases/800vdc/events/envision-galaxy-800vdc-2026/index.json", sitemap)
         case_index = (ROOT / "cases/index.html").read_text(encoding="utf-8")
         self.assertIn("/cases/800vdc/events/envision-galaxy-800vdc-2026/", case_index)
-        self.assertIn("CANONICAL STATE UNCHANGED", case_index)
+        self.assertIn("canonical state unchanged", case_index)
         audit = (ROOT / "execution/SE_EVIDENCE_WEBSITE_PUBLICATION_AUDIT_20261110.md").read_text(encoding="utf-8")
         self.assertIn("Merged PRs audited: **57**", audit)
         self.assertIn("`RDL-DOD-BEAM-001`", audit)
