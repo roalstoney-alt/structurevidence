@@ -4,7 +4,7 @@
 <url><loc>https://structurevidence.org/en/</loc><xhtml:link rel="alternate" hreflang="x-default" href="https://structurevidence.org/"/><xhtml:link rel="alternate" hreflang="en" href="https://structurevidence.org/en/"/><xhtml:link rel="alternate" hreflang="zh-CN" href="https://structurevidence.org/zh-cn/"/><xhtml:link rel="alternate" hreflang="es" href="https://structurevidence.org/es/"/></url>
 <url><loc>https://structurevidence.org/zh-cn/</loc><xhtml:link rel="alternate" hreflang="x-default" href="https://structurevidence.org/"/><xhtml:link rel="alternate" hreflang="en" href="https://structurevidence.org/en/"/><xhtml:link rel="alternate" hreflang="zh-CN" href="https://structurevidence.org/zh-cn/"/><xhtml:link rel="alternate" hreflang="es" href="https://structurevidence.org/es/"/></url>
 <url><loc>https://structurevidence.org/es/</loc><xhtml:link rel="alternate" hreflang="x-default" href="https://structurevidence.org/"/><xhtml:link rel="alternate" hreflang="en" href="https://structurevidence.org/en/"/><xhtml:link rel="alternate" hreflang="zh-CN" href="https://structurevidence.org/zh-cn/"/><xhtml:link rel="alternate" hreflang="es" href="https://structurevidence.org/es/"/></url>
-<url><loc>https://structurevidence.org/cases/</loc><lastmod>2026-10-08</lastmod></url>
+<url><loc>https://structurevidence.org/cases/</loc><lastmod>2026-11-10</lastmod></url>
 <url><loc>https://structurevidence.org/onepager/decision-cn.pdf</loc><lastmod>2026-10-07</lastmod></url>
 <url><loc>https://structurevidence.org/onepager/decision-en.pdf</loc><lastmod>2026-10-07</lastmod></url>
 <url><loc>https://structurevidence.org/onepager/investor-cn.pdf</loc><lastmod>2026-10-07</lastmod></url>
@@ -18,7 +18,7 @@
 <url><loc>https://structurevidence.org/gaps/OEG-ONC-002/</loc><lastmod>2026-10-06</lastmod></url>
 <url><loc>https://structurevidence.org/cases/800vdc/</loc><lastmod>2026-10-15</lastmod></url>
 <url><loc>https://structurevidence.org/cases/800vdc/index.json</loc><lastmod>2026-10-15</lastmod></url>
-<url><loc>https://structurevidence.org/cases/800vdc/events/index.json</loc><lastmod>2026-10-15</lastmod></url>
+<url><loc>https://structurevidence.org/cases/800vdc/events/index.json</loc><lastmod>2026-11-10</lastmod></url>
 <url><loc>https://structurevidence.org/cases/800vdc/events/solaredge-ocp-2026/</loc><lastmod>2026-10-15</lastmod></url>
 <url><loc>https://structurevidence.org/cases/800vdc/events/solaredge-ocp-2026/index.json</loc><lastmod>2026-10-15</lastmod></url>
 <url><loc>https://structurevidence.org/cases/800vdc/events/solaredge-ocp-2026/snapshot-v1.json</loc><lastmod>2026-10-15</lastmod></url>
@@ -108,6 +108,8 @@
 <url><loc>https://structurevidence.org/cases/800vdc/events/vantage-heron-capacity-agreement-2026/</loc><lastmod>2026-10-22</lastmod></url>
 <url><loc>https://structurevidence.org/cases/800vdc/events/vantage-heron-capacity-agreement-2026/index.json</loc><lastmod>2026-10-22</lastmod></url>
 <url><loc>https://structurevidence.org/cases/800vdc/events/vantage-heron-capacity-agreement-2026/snapshot-v1.json</loc><lastmod>2026-10-22</lastmod></url>
+<url><loc>https://structurevidence.org/cases/800vdc/events/envision-galaxy-800vdc-2026/</loc><lastmod>2026-11-10</lastmod></url>
+<url><loc>https://structurevidence.org/cases/800vdc/events/envision-galaxy-800vdc-2026/index.json</loc><lastmod>2026-11-10</lastmod></url>
 <url><loc>https://structurevidence.org/cases/iren-ai-cloud-transition/</loc><lastmod>2026-10-28</lastmod></url>
 <url><loc>https://structurevidence.org/cases/iren-ai-cloud-transition/index.json</loc><lastmod>2026-10-28</lastmod></url>
 <url><loc>https://structurevidence.org/cases/iren-ai-cloud-transition/source-registry-v0.1.json</loc><lastmod>2026-10-28</lastmod></url>

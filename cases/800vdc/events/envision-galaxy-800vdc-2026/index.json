@@ -1,0 +1,55 @@
+{
+  "schema_version": "se-information-event-v1",
+  "event_id": "CML-PDRE-001-EV-ENVISION-20261108-001",
+  "case_id": "CML-PDRE-001",
+  "subject": "Envision 800VDC/SST deployment",
+  "named_site": "Galaxy AI Data Center, Ulanqab, China",
+  "architecture": "10kV AC -> SST -> 800VDC",
+  "event_at": "2026-11-02",
+  "published_at": "2026-11-02T07:42:00Z",
+  "observed_at": "2026-11-09T21:54:45Z",
+  "retrieved_at": "2026-11-09T21:54:45Z",
+  "last_reviewed_at": "2026-11-10",
+  "evidence_cutoff": "2026-11-09T21:54:45Z",
+  "claim": "Envision publicly reports that an integrated SST-based 800VDC system is deployed at its named Galaxy AI Data Center and powers live AI computing workloads.",
+  "source_role": "OPERATOR_AUTHORED",
+  "claim_status": "OPERATOR_REPORTED_LIVE_DEPLOYMENT",
+  "classifications": [
+    "NEW_EVIDENCE_EVENT",
+    "STRENGTHENS_EXISTING_STATE",
+    "PUBLIC_STATE_UNCHANGED"
+  ],
+  "state_changed": false,
+  "case_index_visible": true,
+  "public_url": "https://structurevidence.org/cases/800vdc/events/envision-galaxy-800vdc-2026/",
+  "github_record_url": "https://github.com/roalstoney-alt/structurevidence/tree/main/rdl/research/records/CML-PDRE-001-ENVISION-2026-11-10",
+  "evidence_ref": "CML-PDRE-001-EV-ENVISION-20261108-001",
+  "claim_ref": "ENVISION_GALAXY_800VDC_LIVE_DEPLOYMENT",
+  "source_refs": [
+    {
+      "source_id": "CML-PDRE-001-SRC-ENVISION-PRN-20261102",
+      "url": "https://www.prnewswire.com/news-releases/envision-achieves-worlds-first-commercial-deployment-of-integrated-800v-dc-sst-based-power-system-in-large-scale-ai-data-center-302926109.html",
+      "capture_sha256": "8ef86099d6f3549807c140c8dcf69e1f5681d51d1a545847280895322d0f1461"
+    },
+    {
+      "source_id": "CML-PDRE-001-SRC-ENVISION-ESN-20261104",
+      "url": "https://www.energy-storage.news/industry-updates/envision-achieves-worlds-first-commercial-deployment-of-integrated-800v-dc-sst-based-power-system-in-large-scale-ai-data-centre/",
+      "capture_sha256": "5bbc767959427c796e582328456be939f96f3898dbba6f0fa99192c9ee27ff50"
+    }
+  ],
+  "historical_transition": {
+    "previous_recorded_state": "R5_ARCHITECTURE_FIELD_DEPLOYMENT_EVIDENCE_ACCEPTED_SINGLE_INSTANCE",
+    "new_evidence_state": "OPERATOR_REPORTED_LIVE_DEPLOYMENT_RECORDED",
+    "canonical_readiness_changed": false,
+    "public_state_mutated": false
+  },
+  "unknowns": {
+    "independent_acceptance": "UNKNOWN",
+    "installed_it_load_mw": "UNKNOWN",
+    "protection_test_results": "UNKNOWN",
+    "long_duration_operation": "UNKNOWN",
+    "measured_economic_benefits": "UNKNOWN"
+  },
+  "planned_capacity_boundary": "The announced 3GW campus capacity is planned capacity, not commissioned IT load.",
+  "redistribution_boundary": "Source URLs, metadata, hashes and independently authored claim extraction only; complete third-party articles are not reproduced."
+}
