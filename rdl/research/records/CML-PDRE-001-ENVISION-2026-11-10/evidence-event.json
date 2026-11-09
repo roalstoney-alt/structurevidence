@@ -2,6 +2,7 @@
   "event_id": "CML-PDRE-001-EV-ENVISION-20261108-001",
   "case_id": "CML-PDRE-001",
   "record_kind": "EVIDENCE_EVENT",
+  "evidence_chain_classification": "PUBLIC_EVIDENCE_CHAIN",
   "source_refs": [
     "CML-PDRE-001-SRC-ENVISION-PRN-20261102",
     "CML-PDRE-001-SRC-ENVISION-ESN-20261104"

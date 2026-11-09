@@ -1,0 +1,60 @@
+{
+  "inspection_id": "CML-PDRE-001-ENVISION-PUBLIC-RELEASE-20261110-001",
+  "decision": "APPROVE_PUBLIC_EVIDENCE_PREPARATION",
+  "classification": "PUBLIC_EVIDENCE_CHAIN",
+  "baseline_sha": "9a5884c8b8dea90b9bd61bdc7cca1ee2353a2dd3",
+  "inspected_parent_sha": "c0789020e814d059eee9e732ff44fed6bfc52781",
+  "scope": "ENVISION_EVIDENCE_CHAIN_ONLY",
+  "publication_layers": {
+    "public_evidence_layer": [
+      "PUBLIC_SOURCE_IDENTITY",
+      "EVENT_PUBLICATION_OBSERVATION_AND_RETRIEVAL_TIMES",
+      "SOURCE_EXTRACTION_HASHES",
+      "BOUNDED_CLAIM",
+      "EVIDENCE_RELATIONSHIPS",
+      "STATE_TRANSITION",
+      "REPRODUCIBLE_VERIFICATION"
+    ],
+    "restricted_commercial_operations_layer": [
+      "CUSTOMER_CONTACT_LEDGER",
+      "EMAIL_ADDRESSES",
+      "INQUIRIES",
+      "QUOTATIONS",
+      "CONTRACTS",
+      "COMMERCIAL_NEGOTIATIONS",
+      "AUTHORIZATION_CREDENTIALS",
+      "INTERNAL_ACQUISITION_SCORING"
+    ]
+  },
+  "disclosure_checks": {
+    "credentials_tokens_secrets": "PASS_NONE_FOUND",
+    "customer_contact_details": "PASS_NONE_FOUND",
+    "private_business_records": "PASS_NONE_FOUND",
+    "internal_only_or_restricted_material": "PASS_NONE_FOUND",
+    "absolute_local_filesystem_paths": "PASS_NONE_FOUND",
+    "unrelated_historical_files": "PASS_NONE_INCLUDED",
+    "unrelated_commits": "PASS_NONE_INCLUDED",
+    "binary_or_embedded_payloads": "PASS_NONE_FOUND"
+  },
+  "source_redistribution": {
+    "result": "PASS_BOUNDED_EXTRACTIONS_ONLY",
+    "original_http_response_bodies_included": false,
+    "full_third_party_articles_included": false,
+    "published_material": "Source URLs, retrieval metadata, hashes, normalized facts and one short locator excerpt per source.",
+    "prnewswire_snapshot_sha256": "8ef86099d6f3549807c140c8dcf69e1f5681d51d1a545847280895322d0f1461",
+    "energy_storage_news_snapshot_sha256": "5bbc767959427c796e582328456be939f96f3898dbba6f0fa99192c9ee27ff50"
+  },
+  "claim_integrity": {
+    "source_role": "OPERATOR_AUTHORED",
+    "claim_status": "OPERATOR_REPORTED_LIVE_DEPLOYMENT",
+    "independent_acceptance": "UNKNOWN",
+    "measured_it_load": "UNKNOWN",
+    "economic_benefits": "UNKNOWN",
+    "claim_changed_for_publication": false
+  },
+  "publication_result": "PASS",
+  "push_authorized": false,
+  "pr_creation_authorized": false,
+  "merge_authorized": false,
+  "deployment_authorized": false
+}

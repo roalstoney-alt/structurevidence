@@ -2,6 +2,7 @@
   "manifest_id": "CML-PDRE-001-ENVISION-SOURCE-MANIFEST-20261110-001",
   "workflow_id": "CML-PDRE-001-ENVISION-APPEND-20261108",
   "case_id": "CML-PDRE-001",
+  "publication_classification": "PUBLIC_EVIDENCE_CHAIN",
   "created_at": "2026-11-09T21:54:45Z",
   "sources": [
     {

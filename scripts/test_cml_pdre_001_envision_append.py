@@ -86,6 +86,7 @@ class EnvisionAppendTests(unittest.TestCase):
         cls.claim = load_jsonl(RECORD_DIR / "claim-ledger.jsonl")[0]
         cls.transition = load_jsonl(RECORD_DIR / "state-transition.jsonl")[0]
         cls.replay_policy = load_json(RECORD_DIR / "replay-policy.json")
+        cls.public_inspection = load_json(RECORD_DIR / "public-release-inspection.json")
         cls.daily = load_jsonl(DAILY_PATH)[0]
 
     def test_source_snapshots_are_exactly_hash_bound(self):
@@ -162,6 +163,24 @@ class EnvisionAppendTests(unittest.TestCase):
     def test_existing_architecture_hash_chain_limitation_is_explicit(self):
         self.assertEqual(self.transition["hash_chain_status"], "NOT_SUPPORTED_BY_EXISTING_CML_CASE_ARCHITECTURE")
         self.assertEqual(self.replay_policy["previous_event_hash_linkage"], "NOT_SUPPORTED_BY_EXISTING_CML_CASE_ARCHITECTURE")
+
+    def test_public_evidence_classification_does_not_change_claim_boundaries(self):
+        self.assertEqual(self.manifest["publication_classification"], "PUBLIC_EVIDENCE_CHAIN")
+        self.assertEqual(self.event["evidence_chain_classification"], "PUBLIC_EVIDENCE_CHAIN")
+        self.assertEqual(self.event["source_role"], "OPERATOR_AUTHORED")
+        self.assertEqual(self.event["claim_status"], "OPERATOR_REPORTED_LIVE_DEPLOYMENT")
+        self.assertEqual(self.event["independent_acceptance"], "UNKNOWN")
+        self.assertEqual(self.event["installed_IT_load_MW"], "UNKNOWN")
+        self.assertEqual(self.transition["explicit_unchanged_uncertainties"]["economic_benefits"], "UNKNOWN")
+
+    def test_public_release_contains_bounded_extractions_not_full_articles(self):
+        self.assertEqual(self.public_inspection["publication_result"], "PASS")
+        redistribution = self.public_inspection["source_redistribution"]
+        self.assertFalse(redistribution["original_http_response_bodies_included"])
+        self.assertFalse(redistribution["full_third_party_articles_included"])
+        for source in self.manifest["sources"]:
+            snapshot = load_json(ROOT / source["snapshot_path"])
+            self.assertLessEqual(len(snapshot["verbatim_locator_excerpt"].split()), 25)
 
 
 if __name__ == "__main__":
