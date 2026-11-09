@@ -1,0 +1,85 @@
+{
+  "schema_version": "se-production-verification-v1",
+  "project": "SE-E2W-RELEASE-20261110",
+  "verified_at_utc": "2026-11-09T23:03:31Z",
+  "release_pr": 89,
+  "release_merge_sha": "64bab7e87d51b1a96134a1a0cd74c0f6b1b5e554",
+  "pages_deployment_id": 7668361028,
+  "pages_workflow_run_id": 42716111884,
+  "pages_deployment_status": "success",
+  "pages_completed_at_utc": "2026-11-09T23:00:54Z",
+  "production_origin": "https://structurevidence.org/",
+  "http_and_hash_verification": [
+    {
+      "url": "https://structurevidence.org/cases/800vdc/events/envision-galaxy-800vdc-2026/",
+      "http_status": 200,
+      "sha256": "2281616777b2982ce5c10ad9a5835141bb11d0f0e3bee7de2deb06d085c4115c",
+      "matches_deployed_docs": true
+    },
+    {
+      "url": "https://structurevidence.org/cases/800vdc/events/envision-galaxy-800vdc-2026/index.json",
+      "http_status": 200,
+      "sha256": "36108ac9dd9d58cc80f58811ba9f490ce9f2ea1988b27ff369bd6a1a80353150",
+      "matches_deployed_docs": true
+    },
+    {
+      "url": "https://structurevidence.org/cases/",
+      "http_status": 200,
+      "sha256": "47f7d21e500c7d3faf403d2f8660215747086493a6c3b8dd60e0bfbdc66faa5e",
+      "matches_deployed_docs": true
+    },
+    {
+      "url": "https://structurevidence.org/cases/800vdc/events/index.json",
+      "http_status": 200,
+      "sha256": "06b4f6123245a644da713a4550bb1297a38fe522730251ca3c7a790e7c768cce",
+      "matches_deployed_docs": true
+    },
+    {
+      "url": "https://structurevidence.org/cases/review-status.json",
+      "http_status": 200,
+      "sha256": "e330b0650c12ab9663939228de0255daa04b7034f2fdd902fa8928ff3d26b960",
+      "matches_deployed_docs": true
+    },
+    {
+      "url": "https://structurevidence.org/sitemap.xml",
+      "http_status": 200,
+      "sha256": "6796ee96d1b3849b7426baed23f4bfa96c8e8444100238237e4d585800170ac7",
+      "matches_deployed_docs": true
+    }
+  ],
+  "unchanged_page_verification": [
+    {
+      "url": "https://structurevidence.org/cases/800vdc/",
+      "http_status": 200,
+      "sha256": "06c69bfdbca2ccb5bce25c487319d04ecd5067eea7ff54d2c9228f5f42222cfa",
+      "matches_pre_release_baseline": true
+    },
+    {
+      "url": "https://structurevidence.org/",
+      "http_status": 200,
+      "sha256": "ec02fccc51782b481493d815133d89dd200a863af57ff2a038be9bd9dee76975",
+      "matches_pre_release_baseline": true
+    }
+  ],
+  "real_browser_verification": {
+    "event_page_observed": true,
+    "case_index_visibility_observed": true,
+    "machine_projection_link_observed": true,
+    "source_and_github_links_present": true
+  },
+  "evidence_boundary_verified": {
+    "case_id": "CML-PDRE-001",
+    "claim_status": "OPERATOR_REPORTED_LIVE_DEPLOYMENT",
+    "independent_acceptance": "UNKNOWN",
+    "commissioned_it_load_mw": "UNKNOWN",
+    "protection_test_results": "UNKNOWN",
+    "long_term_operating_data": "UNKNOWN",
+    "measured_economic_benefits": "UNKNOWN",
+    "planned_3gw_not_treated_as_commissioned": true,
+    "canonical_state_changed": false
+  },
+  "new_regression_count": 0,
+  "historical_records_changed": 0,
+  "unrelated_website_changes": 0,
+  "production_status": "VERIFIED_LIVE"
+}
