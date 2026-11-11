@@ -1,0 +1,19 @@
+{
+  "schema_version": "se-linkedin-candidate-v1",
+  "candidate_id": "SE-LINKEDIN-2026-11-02-WEBSITE-BLOCKED-01",
+  "scheduled_date": "2026-11-02",
+  "text": null,
+  "unicode_character_count": null,
+  "source_urls": [
+    "https://www.newswire.ca/news-releases/envision-achieves-world-s-first-commercial-deployment-of-integrated-800v-dc-sst-based-power-system-in-large-scale-ai-data-center-833964609.html"
+  ],
+  "approved_public_page": null,
+  "evidence_cutoff": "2026-11-02T22:00:00+08:00",
+  "content_sha256": null,
+  "dedup_check": "NOT_APPLICABLE_NO_TEXT",
+  "factual_status": "NEW_EVENT_VERIFIED_AT_ATTRIBUTION_LEVEL_BUT_NOT_PUBLISHED_ON_APPROVED_SITE",
+  "status": "WEBSITE_PUBLICATION_BLOCKED",
+  "approval_gate": "HUMAN_GATE_REQUIRED",
+  "x_auto_publish_paused_human_review": false,
+  "linkedin_post_sent": 0
+}
