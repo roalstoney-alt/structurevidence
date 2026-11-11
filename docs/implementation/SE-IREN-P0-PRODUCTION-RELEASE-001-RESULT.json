@@ -1,0 +1,145 @@
+{
+  "schema_version": "0.1",
+  "project": "SE-IREN-P0-PRODUCTION-RELEASE-001",
+  "completed_at": "2026-10-27T18:33:19Z",
+  "repository": "roalstoney-alt/structurevidence",
+  "source": {
+    "locked_head_sha": "3615333d03b7df995265b3d58f66b94a60e2bb54",
+    "pre_merge_main_sha": "56f8e345ddfc697855c8eb9492dc0b49d24c6fcc",
+    "main_merge_sha": "a3264420664a5c471fbc33829fc203429ca0f814",
+    "merge_time": "2026-10-27T19:48:35+08:00",
+    "owner_directive_sha256": "d21a1779ed5eea4c6a991635a43ac6c8b3b89fa0fcc5e344719c59ab151c1990"
+  },
+  "production": {
+    "worker": "structevidence-commercial",
+    "domains": [
+      "structevidence.com",
+      "www.structevidence.com"
+    ],
+    "d1_name": "structurevidence-customer-cases",
+    "d1_id": "aee10591-536a-47af-8ee0-957551ba2360",
+    "rate_limit_namespace": "842001",
+    "worker_before": "817ba11d-37b1-4ef9-8f5c-7f4ac232ea3a",
+    "last_pre_release_application_version": "d2525a27-12bc-49a6-9328-f11af90ea7d8",
+    "worker_after": "56dd16eb-4dbf-43e1-8724-2927a60652f2",
+    "deployment_id": "56dd16eb-4dbf-43e1-8724-2927a60652f2",
+    "deployment_time": "2026-10-27T11:55:49.159Z",
+    "traffic_percent": 100,
+    "source_main_sha": "a3264420664a5c471fbc33829fc203429ca0f814"
+  },
+  "turnstile": {
+    "status": "PASS",
+    "mode": "Managed",
+    "hostname_count": 2,
+    "expected_action": "public-intake",
+    "secret_name_present": true,
+    "secret_value_recorded": false,
+    "real_human_verification_accepted": true
+  },
+  "recovery": {
+    "recoverability": "UNKNOWN",
+    "bookmark_present": true,
+    "bookmark_observed_at": "2026-10-27T11:51:03.950Z",
+    "bookmark_response_sha256": "4981475a95ba698a4ed42315e82b73fa1e9a166aee21510bb648b4596760bb11",
+    "raw_bookmark_recorded": false,
+    "production_rpo": "UNMEASURED",
+    "production_rto": "UNMEASURED",
+    "in_place_restore_attempted": false
+  },
+  "migration": {
+    "name": "0003_intake_hardening.sql",
+    "status": "PASS",
+    "pending_after": 0,
+    "foreign_key_violations": 0,
+    "pre_counts": {
+      "customers": 3,
+      "requests": 3,
+      "request_events": 5,
+      "request_consent_receipts": 0,
+      "request_idempotency": 0
+    },
+    "post_migration_counts": {
+      "customers": 3,
+      "requests": 3,
+      "request_events": 5,
+      "request_consent_receipts": 0,
+      "request_idempotency": 0
+    },
+    "final_counts": {
+      "customers": 4,
+      "requests": 4,
+      "request_events": 6,
+      "request_consent_receipts": 1,
+      "request_idempotency": 1
+    }
+  },
+  "smoke": {
+    "root_http": 200,
+    "verify_http": 200,
+    "context_http": 200,
+    "decision_pack_http": 200,
+    "asset_http": 200,
+    "options_requests_http": 204,
+    "cors_allow_origin_exact": true,
+    "cors_allow_headers": [
+      "content-type",
+      "idempotency-key"
+    ],
+    "unauthorized_admin_http": 302,
+    "authorized_admin_read": "PASS",
+    "three_language_frontend": "PASS"
+  },
+  "synthetic_submission": {
+    "logical_request_count": 1,
+    "request_count": 1,
+    "event_count": 1,
+    "consent_receipt_count": 1,
+    "idempotency_mapping_count": 1,
+    "status": "SUBMITTED",
+    "privacy_class": "CUSTOMER_PRIVATE",
+    "research_authorization": "NOT_AUTHORIZED",
+    "human_owner": null,
+    "first_submission": "ACCEPTED_NEW_WRITE_DIRECT_HTTP_STATUS_NOT_CAPTURED",
+    "same_key_same_payload": "NOT_OBSERVED_IN_PRODUCTION",
+    "same_request_id": "NOT_OBSERVED_IN_PRODUCTION",
+    "same_key_different_payload": "NOT_OBSERVED_IN_PRODUCTION",
+    "raw_request_id_recorded": false,
+    "raw_idempotency_key_recorded": false,
+    "production_synthetic_post": "PARTIAL",
+    "idempotency": "PARTIAL"
+  },
+  "append_only": {
+    "status": "PASS",
+    "request_event_update_rejected": true,
+    "consent_receipt_update_rejected": true,
+    "constraint": "SQLITE_CONSTRAINT_TRIGGER"
+  },
+  "hashes": {
+    "worker_source_sha256": "8a01b397a92bcf9a6183fc79f6ca7c4f1ef54ed576c157f3c4368969e8f309bd",
+    "commercial_upgrade_source_sha256": "4f9af20c5c36b8d47090cc14c68266c7ea529bc78d549f0709726f0b5c074ada",
+    "live_app_asset_sha256": "429b1c6fc476ae8cf9bd18c895d2cb890785a2f9141e6a40a75df8708fbc7953",
+    "live_en_verify_sha256": "412755a531b8842fce240606612e34ea17900d5b7252f37d05d08e7a45f23530",
+    "live_zh_context_sha256": "61a7c6a69723777d99491a1ace9f63bca172fb202f5af8f0ea9ee6d610ea30ad",
+    "live_es_decision_pack_sha256": "c91a660cea42c6e747aea2e8c826e596e59f38ce36646d673c37e37123464713"
+  },
+  "tests": {
+    "worker": "75/75 PASS",
+    "production_bundle_dry_run": "PASS",
+    "public_record_drift": "PASS",
+    "internal_links": "0 broken / 0 orphan",
+    "repository_python": "41 tests / 11 known pre-existing failures",
+    "new_regression_count": 0
+  },
+  "governance": {
+    "historical_record_drift": "PASS",
+    "human_privacy_legal_signoff": "PENDING",
+    "customer_intake_enabled": true,
+    "ready_for_customer_intake": false,
+    "public_case_auto_publish": false,
+    "social_auto_publish": false,
+    "outreach_started": false,
+    "charging_started": false,
+    "public_pilot_started": false
+  },
+  "remaining_gate": "Capture the raw idempotency key before a separately authorized production exercise, then observe same-key HTTP 200 replay and different-payload HTTP 409 without creating more than one logical request."
+}
