@@ -1,0 +1,38 @@
+{
+  "schema_version": "se-case-observation-v2",
+  "observation_id": "CML-PDRE-001-OBS-20261028-CLOUD-01",
+  "observed_at": "2026-10-28T22:02:00+08:00",
+  "knowledge_cutoff": "2026-10-28T22:02:00+08:00",
+  "review_id": null,
+  "review_status": "REVIEW_INCOMPLETE",
+  "new_sources": 0,
+  "new_attributed_statements": 0,
+  "new_independent_evidence": 0,
+  "new_events": 0,
+  "newly_discovered_old_evidence": 0,
+  "state_changing_evidence": 0,
+  "proposed_stop_point": "UNCHANGED",
+  "contradictions": [],
+  "external_feedback": {
+    "customer": "SOURCE_NOT_ACCESSIBLE",
+    "relevant_person": "NO_VERIFIED_PUBLIC_SIGNAL_WITHIN_BOUNDARY",
+    "organization": "NO_VERIFIED_PUBLIC_SIGNAL_WITHIN_BOUNDARY"
+  },
+  "case_id": "CML-PDRE-001",
+  "source_url": "https://vantage-dc.com/news/vantage-and-heron-power-electronics-announce-gigawatt-scale-800-vdc-agreement-to-accelerate-ai-infrastructure-delivery/",
+  "source_id": "VANTAGE-HERON-2026-10-21",
+  "source_speaker": "Vantage Data Centers and Heron Power Electronics",
+  "claimed_subject": "Over 1GW Heron Link manufacturing-capacity reservation for future hyperscale campuses",
+  "claim_ids": [
+    "CML-800V-CAPACITY-RESERVATION"
+  ],
+  "event_at": "2026-10-21",
+  "published_at": "2026-10-21",
+  "source_access": "SEARCH_RESULT_BODY_READ",
+  "raw_hash_or_UNAVAILABLE": "UNAVAILABLE_SEARCH_SERVICE_NORMALIZED",
+  "search_query": "2026 October 800V DC SST data center deployment Vantage Heron operations reliability",
+  "search_boundary": "One targeted fresh web query plus live main/PR dedup; production custom-domain body inaccessible.",
+  "old_stop_point": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+  "decision_relevant_unknown": "Named delivered campus, third-party acceptance, runtime, repeat deployment and reliability remain unestablished.",
+  "next_observable": "Named Vantage campus delivery/commissioning record or independent operating data."
+}

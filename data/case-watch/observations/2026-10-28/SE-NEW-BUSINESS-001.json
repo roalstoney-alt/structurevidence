@@ -1,0 +1,39 @@
+{
+  "schema_version": "se-case-observation-v2",
+  "observation_id": "SE-NEW-BUSINESS-001-OBS-20261028-CLOUD-01",
+  "observed_at": "2026-10-28T22:02:00+08:00",
+  "knowledge_cutoff": "2026-10-28T22:02:00+08:00",
+  "review_id": null,
+  "review_status": "REVIEW_INCOMPLETE",
+  "new_sources": 0,
+  "new_attributed_statements": 0,
+  "new_independent_evidence": 0,
+  "new_events": 0,
+  "newly_discovered_old_evidence": 0,
+  "state_changing_evidence": 0,
+  "proposed_stop_point": "UNCHANGED",
+  "contradictions": [],
+  "external_feedback": {
+    "customer": "SOURCE_NOT_ACCESSIBLE",
+    "relevant_person": "NO_VERIFIED_PUBLIC_SIGNAL_WITHIN_BOUNDARY",
+    "organization": "NO_VERIFIED_PUBLIC_SIGNAL_WITHIN_BOUNDARY"
+  },
+  "case_id": "SE-NEW-BUSINESS-001",
+  "source_url": "https://www.iren.com/investors/news",
+  "source_id": "IREN-INVESTOR-NEWS-OBS-2026-10-28",
+  "source_speaker": "IREN",
+  "claimed_subject": "Badajoz remains planned; Q1 FY27 results scheduled for 2026-11-05",
+  "claim_ids": [
+    "IREN-BADAJOZ-PLANNED-NOT-OPERATING",
+    "IREN-EARNINGS-CALENDAR"
+  ],
+  "event_at": null,
+  "published_at": "2026-10-22",
+  "source_access": "SEARCH_RESULT_BODY_READ_PARTIAL",
+  "raw_hash_or_UNAVAILABLE": "UNAVAILABLE_SEARCH_SERVICE_NORMALIZED",
+  "search_query": "site:iren.com/investors October 2026 Microsoft AI cloud Horizon 2 3 4 Badajoz revenue",
+  "search_boundary": "One issuer-domain query, current public projection and live structurevidence main; no SEC filing body or Microsoft reverse-confirmation opened.",
+  "old_stop_point": "LOCAL_PROVISIONAL_v0.1 / Canonical RDL NOT_RUN",
+  "decision_relevant_unknown": "Horizon 2-4 acceptance, recognized GAAP revenue, cash collection, operational ARR, financing and Microsoft confirmation.",
+  "next_observable": "Nov 5 issuer filing/results with segment revenue and delivery/acceptance details."
+}
