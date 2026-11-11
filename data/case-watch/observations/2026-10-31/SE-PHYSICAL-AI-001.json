@@ -1,0 +1,33 @@
+{
+  "schema_version": "se-case-observation-v2",
+  "observation_id": "SE-PHYSICAL-AI-001-OBS-20261031-CLOUD-01",
+  "observed_at": "2026-10-31T22:00:00+08:00",
+  "knowledge_cutoff": "2026-10-31T22:00:00+08:00",
+  "review_id": null,
+  "review_status": "REVIEW_INCOMPLETE",
+  "case_id": "SE-PHYSICAL-AI-001",
+  "source_url": "https://github.com/roalstoney-alt/se-dual-case-public/blob/main/SE-PHYSICAL-AI-001.md",
+  "source_id": "PHYSICAL-AI-PUBLIC-PROJECTION-RECHECK-2026-10-31",
+  "source_speaker": "Approved public projection plus bounded fresh search",
+  "claimed_subject": "No new BMW-attributed Figure 03 acceptance, recurring runtime, intervention, downtime or reliability disclosure was established.",
+  "claim_ids": [
+    "FIGURE-F03-RELIABILITY-NOT-ESTABLISHED"
+  ],
+  "event_at": null,
+  "published_at": null,
+  "source_access": "GITHUB_PUBLIC_PROJECTION_READ_AND_SEARCH_RESULTS",
+  "raw_hash_or_UNAVAILABLE": "UNAVAILABLE_SEARCH_SERVICE_NORMALIZED",
+  "search_query": "October 31 2026 Figure AI BMW Figure 03 operations acceptance reliability",
+  "search_boundary": "One fresh query plus approved public projection; source universe incomplete and private se2cases not accessed.",
+  "old_stop_point": "PUBLIC_PROJECTION / LOCAL_PROVISIONAL_v0.1",
+  "proposed_stop_point": "UNCHANGED",
+  "new_sources": 0,
+  "new_attributed_statements": 0,
+  "new_independent_evidence": 0,
+  "new_events": 0,
+  "newly_discovered_old_evidence": 0,
+  "state_changing_evidence": 0,
+  "contradictions": [],
+  "decision_relevant_unknown": "Recurring shifts, runtime, throughput, interventions, downtime, maintenance and customer acceptance.",
+  "next_observable": "BMW-attributed fixed-window Figure 03 operations and acceptance record."
+}
