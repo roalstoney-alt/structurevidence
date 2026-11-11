@@ -1,0 +1,254 @@
+{
+  "schema_version": "se-unified-run-v1",
+  "run_id": "SE-OPS-20261104-2200-f0a429f5-e29e-58d6-af66-5058a890cb8d",
+  "date_sgt": "2026-11-04",
+  "scheduled_at": "2026-11-04T22:00:00+08:00",
+  "started_at": "2026-11-04T15:00:36Z",
+  "ended_at": "2026-11-04T15:00:36Z",
+  "report_delivered_at": null,
+  "repo_baseline_sha": "9a5884c8b8dea90b9bd61bdc7cca1ee2353a2dd3",
+  "repo_final_sha": null,
+  "pipeline": {
+    "scheduler": "PASS",
+    "cases": "PARTIAL",
+    "cml_ingestion": "PASS",
+    "x_publish": "BLOCKED",
+    "audit_persistence": "PASS",
+    "external_delivery": "BLOCKED"
+  },
+  "reviews": [
+    {
+      "case_id": "CML-PDRE-001",
+      "review_id": "SE-800V-REVIEW-20261104-01",
+      "reviewed_at": "2026-11-04T14:57:36Z",
+      "result": "NO_STATE_CHANGE",
+      "review_complete": true,
+      "classifications": [
+        "NO_STATE_CHANGE"
+      ],
+      "search_boundary": "Targeted official-source review; see data/case-watch/reviews/2026-11-04/CML-PDRE-001.json.",
+      "sources_checked": [
+        {
+          "url": "https://vantage-dc.com/company/news-events/",
+          "status": "READ_NEWS_INDEX_NO_NEWER_800V_RECORD"
+        },
+        {
+          "url": "https://heronpower.com/news",
+          "status": "READ_NEWS_INDEX_NO_NEWER_800V_RECORD"
+        },
+        {
+          "url": "https://blogs.nvidia.com/blog/ocp-global-summit-vera-rubin-scale-ai-factories/",
+          "status": "READ_NO_NEW_MATERIAL_CHANGE"
+        }
+      ],
+      "new_sources": 0,
+      "new_attributed_statements": 0,
+      "new_independent_evidence": 0,
+      "new_events": 0,
+      "newly_discovered_old_evidence": 0,
+      "state_changing_evidence": 0,
+      "old_state": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+      "new_state": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+      "new_qualifying_evidence_count": 0,
+      "new_counter_evidence_count": 0
+    },
+    {
+      "case_id": "SE-BESS-SODIUM-001",
+      "review_id": "SE-SODIUM-REVIEW-20261104-01",
+      "reviewed_at": "2026-11-04T14:57:36Z",
+      "result": "NO_STATE_CHANGE",
+      "review_complete": true,
+      "classifications": [
+        "NO_STATE_CHANGE"
+      ],
+      "search_boundary": "Targeted official-source review; see data/case-watch/reviews/2026-11-04/SE-BESS-SODIUM-001.json.",
+      "sources_checked": [
+        {
+          "url": "https://www.catl.com/en/news/",
+          "status": "READ_INDEX_NO_NEWER_CASE_SCOPE_RECORD"
+        },
+        {
+          "url": "https://intilion.com/pressemitteilungen",
+          "status": "READ_NO_SODIUM_COMMISSIONING_RECORD"
+        }
+      ],
+      "new_sources": 0,
+      "new_attributed_statements": 0,
+      "new_independent_evidence": 0,
+      "new_events": 0,
+      "newly_discovered_old_evidence": 0,
+      "state_changing_evidence": 0,
+      "old_state": "NAMED_COMMISSIONED_SITE_NOT_ESTABLISHED",
+      "new_state": "NAMED_COMMISSIONED_SITE_NOT_ESTABLISHED",
+      "new_qualifying_evidence_count": 0,
+      "new_counter_evidence_count": 0
+    },
+    {
+      "case_id": "SE-IRK-LAB-001",
+      "review_id": "SE-IRK-REVIEW-20261104-01",
+      "reviewed_at": "2026-11-04T14:57:36Z",
+      "result": "REVIEW_INCOMPLETE",
+      "review_complete": false,
+      "classifications": [
+        "NO_STATE_CHANGE",
+        "HUMAN_GATE_REQUIRED"
+      ],
+      "search_boundary": "One consolidated Irkutsk search group and two institutional primary-page reads; see data/case-watch/reviews/2026-11-04/SE-IRK-LAB-001.json.",
+      "search_budget": {
+        "targeted_search_groups": 1,
+        "webpage_open_attempts": 2
+      },
+      "source_graph": [
+        {
+          "source_id": "WHO-DON620",
+          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON620",
+          "retrieved_at": "2026-11-04T14:57:36Z",
+          "originator": "WHO with Russian Federation IHR National Focal Point",
+          "publisher": "WHO",
+          "source_type": "INSTITUTIONAL_ASSESSMENT_AND_RELAY",
+          "claim_ids": [
+            "cause",
+            "contacts",
+            "risk",
+            "exposure"
+          ],
+          "depends_on": [
+            "RF-IHR-NFP"
+          ],
+          "relation": "SUPPORT_WITH_UNCERTAINTY",
+          "verification_status": "READ_NO_NEW_RECORD",
+          "search_boundary": "WHO/IHR public record"
+        },
+        {
+          "source_id": "ECDC-EIP-00034-20261012",
+          "url": "https://www.ecdc.europa.eu/en/public-health-events/2026-eip-00034/2026-10-12",
+          "retrieved_at": "2026-11-04T14:57:36Z",
+          "originator": "ECDC with WHO and attributed Russian-authority inputs",
+          "publisher": "ECDC",
+          "source_type": "INSTITUTIONAL_ASSESSMENT_AND_DERIVATIVE_SUMMARY",
+          "claim_ids": [
+            "diagnostic_uncertainty",
+            "risk",
+            "exposure"
+          ],
+          "depends_on": [
+            "WHO-DON620",
+            "RF-IHR-NFP",
+            "MEDIA-CHAIN-ECDC"
+          ],
+          "relation": "SUPPORT_WITH_DEPENDENCY",
+          "verification_status": "READ_NO_NEW_MATERIAL_CHANGE",
+          "search_boundary": "ECDC public event page"
+        }
+      ],
+      "sources_checked": [
+        {
+          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON620",
+          "status": "READ_NO_NEW_RECORD"
+        },
+        {
+          "url": "https://www.ecdc.europa.eu/en/public-health-events/2026-eip-00034/2026-10-12",
+          "status": "READ_NO_NEW_MATERIAL_CHANGE"
+        }
+      ],
+      "new_sources": 0,
+      "new_attributed_statements": 0,
+      "new_independent_evidence": 0,
+      "new_events": 0,
+      "newly_discovered_old_evidence": 0,
+      "state_changing_evidence": 0,
+      "old_state": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+      "new_state": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+      "new_qualifying_evidence_count": 0,
+      "new_counter_evidence_count": 0
+    }
+  ],
+  "x": {
+    "account": "@structevidence",
+    "publication_authorized": false,
+    "account_verified": false,
+    "candidate_file": "data/ops/se/x-candidates/2026-11-04.json",
+    "post_id": null,
+    "post_url": null,
+    "posted_at": null,
+    "result": "AWAITING_HUMAN_REVIEW",
+    "blocker": "X_AUTO_PUBLISH_PAUSED_HUMAN_REVIEW"
+  },
+  "internal_workflows": {
+    "sunday_weekly_synthesis": {
+      "due": false,
+      "state": "NOT_DUE",
+      "artifact": null
+    },
+    "monday_socsm": {
+      "due": false,
+      "state": "NOT_DUE",
+      "artifact": null,
+      "public_projection": "PRIVATE"
+    }
+  },
+  "receipt_ids": [],
+  "alerts": [
+    {
+      "code": "X_HUMAN_REVIEW_REQUIRED",
+      "dedupe_key": "X:2026-11-04:X_HUMAN_REVIEW_REQUIRED",
+      "detail": "X_AUTO_PUBLISH_PAUSED_HUMAN_REVIEW"
+    },
+    {
+      "code": "MISSING_RUN_DETECTION_NOT_INDEPENDENT",
+      "dedupe_key": "MISSING_HEARTBEAT:2026-11-04",
+      "detail": "No independent health surface has been verified."
+    }
+  ],
+  "events": [
+    {
+      "event_id": "86cdaa1e27fbd9de15a2f65a0748ce1eba7bf016d11b987f5ecd38e5220b753a",
+      "event": "SCHEDULED",
+      "stage": "scheduler",
+      "at": "2026-11-04T15:00:36Z",
+      "proof": "2026-11-04T22:00:00+08:00"
+    },
+    {
+      "event_id": "37afb80e308b06e5488f9d8b9f7455864f6207604573c0d9491552c3cd9d3dd7",
+      "event": "STARTED",
+      "stage": "orchestrator",
+      "at": "2026-11-04T15:00:36Z"
+    },
+    {
+      "event_id": "d09c30ec84c0c0e2c928341793daf1bdd400566a681f18981fd48367bc61b11f",
+      "event": "SEARCH_COMPLETED",
+      "stage": "cases",
+      "at": "2026-11-04T15:00:36Z",
+      "proof": "data/ops/se/review-inputs/2026-11-04.json"
+    },
+    {
+      "event_id": "6612d82e5ddffc4c7e0923bb5cab71459b47ea75fcd9291aef8f19f3de0f6693",
+      "event": "ARTIFACT_CREATED",
+      "stage": "cross_project_read_only",
+      "at": "2026-11-04T15:00:36Z",
+      "proof": "se-cross-project-20261104.json"
+    },
+    {
+      "event_id": "8e6faac9aefaff3be1dc8a0f810b883dfcdcab105ec4be9ebe425cd2dc8b8bed",
+      "event": "ARTIFACT_CREATED",
+      "stage": "x_candidate",
+      "at": "2026-11-04T15:00:36Z",
+      "proof": "data/ops/se/x-candidates/2026-11-04.json"
+    },
+    {
+      "event_id": "7d006747c637f7c537c508580bf10f9dd18d77ecd65cc56b085d085471856550",
+      "event": "ARTIFACT_CREATED",
+      "stage": "alerts",
+      "at": "2026-11-04T15:00:36Z",
+      "proof": "data/ops/se/alerts/2026-11-04.json"
+    },
+    {
+      "event_id": "e03222134e0db872f9c672b452863604805971750f70103d885012986204127e",
+      "event": "ARTIFACT_CREATED",
+      "stage": "daily_report",
+      "at": "2026-11-04T15:00:36Z",
+      "proof": "data/ops/se/reports/2026-11-04.md"
+    }
+  ],
+  "outcome": "PARTIAL"
+}
