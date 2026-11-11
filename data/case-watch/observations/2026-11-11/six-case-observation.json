@@ -1,0 +1,208 @@
+{
+  "report_date": "2026-11-11",
+  "observed_at": "2026-11-11T14:07:05Z",
+  "timezone": "Asia/Singapore",
+  "base_sha": "64bab7e87d51b1a96134a1a0cd74c0f6b1b5e554",
+  "records": [
+    {
+      "case_id": "CML-PDRE-001",
+      "source_url": "https://thedatacenterengineer.com/news/solidultra-raises-e3m-to-develop-800vdc-solid-state-transformers-for-ai-data-centers/",
+      "source_id": "web-20261110-solidultra",
+      "source_speaker": "SolidUltra / secondary report",
+      "claimed_subject": "800VDC SST development funding and 2028 target",
+      "claim_ids": [
+        "CML-PDRE-001-C-800VDC-SST-DEVELOPMENT"
+      ],
+      "event_at": "2026-11-10",
+      "published_at": "2026-11-10",
+      "observed_at": "2026-11-11T14:07:05Z",
+      "knowledge_cutoff": "2026-11-11T14:07:05Z",
+      "source_access": "PUBLIC_PARTIAL",
+      "raw_hash_or_UNAVAILABLE": "UNAVAILABLE",
+      "search_query": "November 10 2026 800VDC SST data center deployment acceptance reliability",
+      "search_boundary": "Public web; source and production page checked",
+      "old_stop_point": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+      "proposed_stop_point": "UNCHANGED",
+      "new_sources": 1,
+      "new_attributed_statements": 1,
+      "new_independent_evidence": 0,
+      "new_events": 1,
+      "newly_discovered_old_evidence": 0,
+      "state_changing_evidence": 0,
+      "contradictions": [],
+      "decision_relevant_unknown": [
+        "No named deployment, acceptance, reliability or operating data"
+      ],
+      "next_observable": "Named commissioning or independent acceptance",
+      "review_status": "NO_STATE_CHANGE"
+    },
+    {
+      "case_id": "SE-BESS-SODIUM-001",
+      "source_url": "https://news.smm.cn/live/detail/E3UGAXMQ7RMJBBWNBJCVY7FWELGNSKMJMBWRDUY",
+      "source_id": "smm-20261030-heze-puyuan",
+      "source_speaker": "SMM report citing project disclosures",
+      "claimed_subject": "Heze Puyuan 200MW/400MWh hybrid station; 2.5MW/5MWh sodium-ion subsystem grid-connected",
+      "claim_ids": [
+        "SE-BESS-SODIUM-001-C-NAMED-GRID-CONNECTION"
+      ],
+      "event_at": "2026-10-21",
+      "published_at": "2026-10-30",
+      "observed_at": "2026-11-11T14:07:05Z",
+      "knowledge_cutoff": "2026-11-11T14:07:05Z",
+      "source_access": "PUBLIC_FULL_TEXT",
+      "raw_hash_or_UNAVAILABLE": "UNAVAILABLE",
+      "search_query": "site:sdchina.com 2026-11-09 菏泽 普源 200MW 400MWh 钠离子 并网",
+      "search_boundary": "Public web; secondary and contractor-linked reports found; primary acceptance package not obtained",
+      "old_stop_point": "NAMED COMMISSIONED SITE NOT ESTABLISHED",
+      "proposed_stop_point": "HUMAN_REVIEW_STATE_CHANGE_CANDIDATE",
+      "new_sources": 3,
+      "new_attributed_statements": 3,
+      "new_independent_evidence": 0,
+      "new_events": 0,
+      "newly_discovered_old_evidence": 1,
+      "state_changing_evidence": 0,
+      "contradictions": [
+        "Live production page cutoff 2026-09-24 predates reported 2026-10-21 grid connection"
+      ],
+      "decision_relevant_unknown": [
+        "Commissioning/acceptance original record",
+        "Sodium subsystem separate operating data",
+        "Independent validation and sustained operation"
+      ],
+      "next_observable": "Original grid-connection/commissioning record and post-commissioning sodium subsystem data",
+      "review_status": "REVIEW_INCOMPLETE"
+    },
+    {
+      "case_id": "SE-IRK-LAB-001",
+      "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON620",
+      "source_id": "WHO-DON620",
+      "source_speaker": "WHO summarizing Russian IHR NFP response",
+      "claimed_subject": "Pneumonia of undetermined etiology; no established cause or ongoing transmission",
+      "claim_ids": [
+        "SE-IRK-LAB-001-C-CAUSE",
+        "SE-IRK-LAB-001-C-TRANSMISSION"
+      ],
+      "event_at": "2026-10-02",
+      "published_at": "2026-10-10",
+      "observed_at": "2026-11-11T14:07:05Z",
+      "knowledge_cutoff": "2026-11-11T14:07:05Z",
+      "source_access": "PUBLIC_FULL_TEXT",
+      "raw_hash_or_UNAVAILABLE": "UNAVAILABLE",
+      "search_query": "November 10 2026 Irkutsk laboratory worker death WHO IHR regulator update",
+      "search_boundary": "1 targeted query; WHO, ECDC and bounded public results reviewed; within 4-query/8-open limit",
+      "old_stop_point": "DEATH REPORTED; CAUSE NOT ESTABLISHED; REVIEW INCOMPLETE",
+      "proposed_stop_point": "UNCHANGED",
+      "new_sources": 0,
+      "new_attributed_statements": 0,
+      "new_independent_evidence": 0,
+      "new_events": 0,
+      "newly_discovered_old_evidence": 0,
+      "state_changing_evidence": 0,
+      "contradictions": [],
+      "decision_relevant_unknown": [
+        "Causative agent remains unidentified",
+        "No independent original investigation package"
+      ],
+      "next_observable": "WHO/IHR revision or regulator original document",
+      "review_status": "NO_STATE_CHANGE"
+    },
+    {
+      "case_id": "SE-ONC-NSQNSCLC-CN-001",
+      "source_url": "https://structurevidence.org/cases/nsq-nsclc-china/",
+      "source_id": "production-page-20261111",
+      "source_speaker": "StructEvidence public projection",
+      "claimed_subject": "Source availability and public-state check",
+      "claim_ids": [
+        "SE-ONC-NSQNSCLC-CN-001-C-PUBLIC-AVAILABILITY"
+      ],
+      "event_at": "2026-11-11",
+      "published_at": null,
+      "observed_at": "2026-11-11T14:07:05Z",
+      "knowledge_cutoff": "2026-11-11T14:07:05Z",
+      "source_access": "PUBLIC_HTTP_200",
+      "raw_hash_or_UNAVAILABLE": "UNAVAILABLE",
+      "search_query": "November 10 2026 China NSCLC guideline regulatory source update",
+      "search_boundary": "Light public-source availability check; deep review reserved for Sunday",
+      "old_stop_point": "PUBLIC RESEARCH PREVIEW; PERSONAL ESTIMATE NOT ESTABLISHED; FOLDED",
+      "proposed_stop_point": "UNCHANGED",
+      "new_sources": 0,
+      "new_attributed_statements": 0,
+      "new_independent_evidence": 0,
+      "new_events": 0,
+      "newly_discovered_old_evidence": 0,
+      "state_changing_evidence": 0,
+      "contradictions": [],
+      "decision_relevant_unknown": [
+        "No hospital-specific outcome dataset reviewed"
+      ],
+      "next_observable": "Sunday deep review or authoritative NSCLC-specific update",
+      "review_status": "NO_STATE_CHANGE"
+    },
+    {
+      "case_id": "SE-PHYSICAL-AI-001",
+      "source_url": "https://github.com/roalstoney-alt/se-dual-case-public/blob/main/SE-PHYSICAL-AI-001.md",
+      "source_id": "dual-case-public-acc2033",
+      "source_speaker": "Approved public projection",
+      "claimed_subject": "Figure AI x BMW generation/task/site boundaries",
+      "claim_ids": [
+        "SE-PHYSICAL-AI-001-C-PUBLIC-PROJECTION"
+      ],
+      "event_at": null,
+      "published_at": null,
+      "observed_at": "2026-11-11T14:07:05Z",
+      "knowledge_cutoff": "2026-11-11T14:07:05Z",
+      "source_access": "PUBLIC_FULL_TEXT",
+      "raw_hash_or_UNAVAILABLE": "acc203395d46e6a6c74a6bca5ec77404ab0c3e68",
+      "search_query": "November 10 2026 Figure AI BMW robot production reliability decommission",
+      "search_boundary": "Public web plus approved public projection; private se2cases not accessed or disclosed",
+      "old_stop_point": "LOCAL_PROVISIONAL_v0.1",
+      "proposed_stop_point": "UNCHANGED",
+      "new_sources": 0,
+      "new_attributed_statements": 0,
+      "new_independent_evidence": 0,
+      "new_events": 0,
+      "newly_discovered_old_evidence": 0,
+      "state_changing_evidence": 0,
+      "contradictions": [],
+      "decision_relevant_unknown": [
+        "Figure 03 acceptance and reliability not inherited from Figure 02"
+      ],
+      "next_observable": "Named Figure 03 task acceptance, uptime, stop or retirement evidence",
+      "review_status": "NO_STATE_CHANGE"
+    },
+    {
+      "case_id": "SE-NEW-BUSINESS-001",
+      "source_url": "https://github.com/roalstoney-alt/se-dual-case-public/blob/main/SE-NEW-BUSINESS-001.md",
+      "source_id": "dual-case-public-acc2033",
+      "source_speaker": "Approved public projection",
+      "claimed_subject": "IREN AI Cloud public projection and post-results source check",
+      "claim_ids": [
+        "SE-NEW-BUSINESS-001-C-PUBLIC-PROJECTION"
+      ],
+      "event_at": "2026-11-05",
+      "published_at": "2026-11-05",
+      "observed_at": "2026-11-11T14:07:05Z",
+      "knowledge_cutoff": "2026-11-11T14:07:05Z",
+      "source_access": "PUBLIC_PARTIAL",
+      "raw_hash_or_UNAVAILABLE": "acc203395d46e6a6c74a6bca5ec77404ab0c3e68",
+      "search_query": "November 10 2026 IREN AI Cloud Microsoft Horizon GAAP revenue financing",
+      "search_boundary": "Public web plus approved public projection; November 5 results already represented in open PR #86 and not duplicated",
+      "old_stop_point": "LOCAL_PROVISIONAL_v0.1; Canonical RDL NOT_RUN",
+      "proposed_stop_point": "UNCHANGED",
+      "new_sources": 0,
+      "new_attributed_statements": 0,
+      "new_independent_evidence": 0,
+      "new_events": 0,
+      "newly_discovered_old_evidence": 0,
+      "state_changing_evidence": 0,
+      "contradictions": [],
+      "decision_relevant_unknown": [
+        "Microsoft reverse confirmation",
+        "GAAP revenue versus operating ARR",
+        "Horizon 2-4 delivery and financing"
+      ],
+      "next_observable": "Issuer filing plus counterparty confirmation and realized GAAP revenue",
+      "review_status": "NO_STATE_CHANGE"
+    }
+  ]
+}
