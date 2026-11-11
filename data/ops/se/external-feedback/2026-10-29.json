@@ -1,0 +1,72 @@
+{
+  "schema_version": "se-external-feedback-ledger-v1",
+  "date": "2026-10-29",
+  "observed_at": "2026-10-29T22:00:00+08:00",
+  "privacy_safe": true,
+  "internal_synthetic_excluded": true,
+  "metrics": {
+    "VERIFIED_EXTERNAL_CHALLENGES": {
+      "today": "UNKNOWN_ACCESS_BLOCKED",
+      "cumulative": "UNKNOWN_ACCESS_BLOCKED",
+      "boundary": "Public web, repository issue keywords and PR #61 comments yielded no verified signal; private intake/admin/D1/direct-message channels inaccessible."
+    },
+    "VERIFIED_DECISION_CITATIONS": {
+      "today": "UNKNOWN_ACCESS_BLOCKED",
+      "cumulative": "UNKNOWN_ACCESS_BLOCKED",
+      "boundary": "No verifiable public decision-material citation found; views, clicks, internal reviews and agent output excluded."
+    },
+    "VERIFIED_INBOUND_DECISION_REQUESTS": {
+      "today": "UNKNOWN_ACCESS_BLOCKED",
+      "cumulative": "UNKNOWN_ACCESS_BLOCKED",
+      "boundary": "No verified public request found; intake/admin/D1 and direct messages inaccessible."
+    }
+  },
+  "events": [],
+  "channel_checks": [
+    {
+      "channel": "PUBLIC_WEB",
+      "status": "CHECKED_BOUNDED",
+      "result": "NO_VERIFIED_SIGNAL_WITHIN_BOUNDARY"
+    },
+    {
+      "channel": "GITHUB_ISSUES_AND_PR_COMMENTS",
+      "status": "CHECKED_BOUNDED",
+      "result": "NO_VERIFIED_SIGNAL_WITHIN_BOUNDARY",
+      "details": "Keyword issue searches returned no records; PR #61 had no comments."
+    },
+    {
+      "channel": "CUSTOMER_PRIVATE_INTAKE_D1_ADMIN",
+      "status": "SOURCE_NOT_ACCESSIBLE",
+      "result": "UNKNOWN"
+    },
+    {
+      "channel": "EMAIL_OR_DIRECT_MESSAGES",
+      "status": "SOURCE_NOT_ACCESSIBLE",
+      "result": "UNKNOWN"
+    },
+    {
+      "channel": "CASE_PAGE_FEEDBACK_BACKEND",
+      "status": "SOURCE_NOT_ACCESSIBLE",
+      "result": "UNKNOWN"
+    }
+  ],
+  "required_event_fields": [
+    "feedback_event_id",
+    "first_observed_at",
+    "channel",
+    "case_id",
+    "feedback_type",
+    "external_actor_verification",
+    "evidence_reference_or_RESTRICTED",
+    "public_safe_source_url_or_PRIVATE",
+    "linked_claim_id",
+    "source_cutoff",
+    "private_access_boundary",
+    "review_status",
+    "decision_dependency",
+    "action_needed",
+    "outcome",
+    "next_followup_at",
+    "duplicate_of"
+  ]
+}

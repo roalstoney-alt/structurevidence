@@ -1,0 +1,38 @@
+{
+  "schema_version": "se-case-observation-v2",
+  "observation_id": "CML-PDRE-001-OBS-20261029-CLOUD-01",
+  "observed_at": "2026-10-29T22:00:00+08:00",
+  "knowledge_cutoff": "2026-10-29T22:00:00+08:00",
+  "review_id": null,
+  "review_status": "REVIEW_INCOMPLETE",
+  "new_sources": 0,
+  "new_attributed_statements": 0,
+  "new_independent_evidence": 0,
+  "new_events": 0,
+  "newly_discovered_old_evidence": 0,
+  "state_changing_evidence": 0,
+  "proposed_stop_point": "UNCHANGED",
+  "contradictions": [],
+  "external_feedback": {
+    "customer": "SOURCE_NOT_ACCESSIBLE",
+    "relevant_person": "NO_VERIFIED_PUBLIC_SIGNAL_WITHIN_BOUNDARY",
+    "organization": "NO_VERIFIED_PUBLIC_SIGNAL_WITHIN_BOUNDARY"
+  },
+  "case_id": "CML-PDRE-001",
+  "source_url": "https://www.chindatagroup.com/media/news/533.html",
+  "source_id": "CHINDATA-COMMERCIAL-OPERATION-2026-07-02-RECHECK",
+  "source_speaker": "Chindata",
+  "claimed_subject": "Previously accepted single-site commercial-operation statement remains the most specific named deployment found",
+  "claim_ids": [
+    "CML-800V-SINGLE-INSTANCE"
+  ],
+  "event_at": "2026-07-02",
+  "published_at": "2026-07-02",
+  "source_access": "SEARCH_RESULT_BODY_READ",
+  "raw_hash_or_UNAVAILABLE": "UNAVAILABLE_SEARCH_SERVICE_NORMALIZED",
+  "search_query": "October 29 2026 800V DC SST data center deployment field operation reliability",
+  "search_boundary": "One fresh query; historical Chindata issuer body and new third-party summary surfaced, but no new named replication or reliability dataset.",
+  "old_stop_point": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+  "decision_relevant_unknown": "Independent acceptance, operating period, conditions, failure/downtime data and second named deployment.",
+  "next_observable": "Independent operating report or another named commissioned data-center site."
+}

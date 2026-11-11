@@ -1,0 +1,39 @@
+{
+  "schema_version": "se-case-observation-v2",
+  "observation_id": "SE-NEW-BUSINESS-001-OBS-20261029-CLOUD-01",
+  "observed_at": "2026-10-29T22:00:00+08:00",
+  "knowledge_cutoff": "2026-10-29T22:00:00+08:00",
+  "review_id": null,
+  "review_status": "REVIEW_INCOMPLETE",
+  "new_sources": 0,
+  "new_attributed_statements": 0,
+  "new_independent_evidence": 0,
+  "new_events": 0,
+  "newly_discovered_old_evidence": 0,
+  "state_changing_evidence": 0,
+  "proposed_stop_point": "UNCHANGED",
+  "contradictions": [],
+  "external_feedback": {
+    "customer": "SOURCE_NOT_ACCESSIBLE",
+    "relevant_person": "NO_VERIFIED_PUBLIC_SIGNAL_WITHIN_BOUNDARY",
+    "organization": "NO_VERIFIED_PUBLIC_SIGNAL_WITHIN_BOUNDARY"
+  },
+  "case_id": "SE-NEW-BUSINESS-001",
+  "source_url": "https://www.sec.gov/Archives/edgar/data/1878848/000187884826000051/irenreportsfy26results.htm",
+  "source_id": "IREN-FY26-SEC-RECHECK-2026-10-29",
+  "source_speaker": "IREN SEC-filed FY26 results",
+  "claimed_subject": "Historical Horizon 1 delivery and operating ARR disclosures remain distinct from Horizon 2-4 acceptance and GAAP revenue",
+  "claim_ids": [
+    "IREN-HORIZON1-DELIVERED",
+    "IREN-ARR-NONGAAP-BOUNDARY"
+  ],
+  "event_at": "2026-08-27",
+  "published_at": "2026-08-27",
+  "source_access": "SEC_BODY_READ_VIA_SEARCH",
+  "raw_hash_or_UNAVAILABLE": "UNAVAILABLE_SEARCH_SERVICE_NORMALIZED",
+  "search_query": "October 29 2026 IREN AI cloud Microsoft Horizon revenue SEC update",
+  "search_boundary": "One fresh query; historical SEC body surfaced, no Oct 29 issuer/SEC update or Microsoft reverse-confirmation found.",
+  "old_stop_point": "LOCAL_PROVISIONAL_v0.1 / Canonical RDL NOT_RUN",
+  "decision_relevant_unknown": "Horizon 2-4 acceptance, current GAAP revenue/cash collection and Microsoft confirmation.",
+  "next_observable": "Nov 5 Q1 FY27 filing/results with delivery, acceptance and segment-revenue detail."
+}

@@ -1,0 +1,38 @@
+{
+  "schema_version": "se-case-observation-v2",
+  "observation_id": "SE-ONC-NSQNSCLC-CN-001-OBS-20261029-CLOUD-01",
+  "observed_at": "2026-10-29T22:00:00+08:00",
+  "knowledge_cutoff": "2026-10-29T22:00:00+08:00",
+  "review_id": null,
+  "review_status": "REVIEW_INCOMPLETE",
+  "new_sources": 0,
+  "new_attributed_statements": 0,
+  "new_independent_evidence": 0,
+  "new_events": 0,
+  "newly_discovered_old_evidence": 0,
+  "state_changing_evidence": 0,
+  "proposed_stop_point": "UNCHANGED",
+  "contradictions": [],
+  "external_feedback": {
+    "customer": "SOURCE_NOT_ACCESSIBLE",
+    "relevant_person": "NO_VERIFIED_PUBLIC_SIGNAL_WITHIN_BOUNDARY",
+    "organization": "NO_VERIFIED_PUBLIC_SIGNAL_WITHIN_BOUNDARY"
+  },
+  "case_id": "SE-ONC-NSQNSCLC-CN-001",
+  "source_url": "https://www.investegate.co.uk/announcement/rns/hutchmed-china-limited--hcm/sanovo-phase-iii-data-at-esmo/9840991",
+  "source_id": "HUTCHMED-SANOVO-2026-10-26-DEDUP-2026-10-29",
+  "source_speaker": "HUTCHMED announcement republished by Investegate",
+  "claimed_subject": "Prior-day SANOVO Phase III source candidate remains pending clinical human review",
+  "claim_ids": [
+    "NSCLC-SANOVO-PHASE3-RESULT-CANDIDATE"
+  ],
+  "event_at": "2026-10-26",
+  "published_at": "2026-10-26",
+  "source_access": "NOT_REOPENED_DEDUP_FROM_PR61",
+  "raw_hash_or_UNAVAILABLE": "UNAVAILABLE",
+  "search_query": "Light daily source-availability check and repository dedup",
+  "search_boundary": "No new medical source promoted; the Oct 26 candidate is already recorded in Draft PR #61 and is not recounted.",
+  "old_stop_point": "FOLDED / PUBLIC_RESEARCH_PREVIEW",
+  "decision_relevant_unknown": "Issuer original, congress paper, mature OS/safety and NMPA status.",
+  "next_observable": "Human clinical review of primary materials; Sunday deep review cadence."
+}
