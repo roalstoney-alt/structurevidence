@@ -1,0 +1,21 @@
+{
+  "schema_version": "se-website-publication-receipt-v1",
+  "receipt_id": "SE-WEB-PUBLICATION-IRK-LAB-001-20261031-REVERIFY-01",
+  "event_id": "SE-EVENT-IRK-LAB-001-20261016-ECDC-W42",
+  "checked_at": "2026-10-31T14:03:29Z",
+  "provider": "GITHUB_PAGES",
+  "source_main_sha": "440b3ae7e2ff2ad1b28577b401cce55d67ed0a09",
+  "source_pull_request": "https://github.com/roalstoney-alt/structurevidence/pull/24",
+  "public_url": "https://structurevidence.org/cases/irkutsk-lab-worker-death/events/ecdc-week-42-2026/",
+  "http_status": 200,
+  "expected_body_marker": "SE-EVENT-IRK-LAB-001-20261016-ECDC-W42",
+  "body_marker_verified": true,
+  "response_last_modified": "Fri, 30 Oct 2026 08:32:50 GMT",
+  "response_content_length": 4740,
+  "snapshot_url": "https://structurevidence.org/cases/irkutsk-lab-worker-death/events/ecdc-week-42-2026/snapshot-v1.json",
+  "snapshot_http_status": 200,
+  "snapshot_expected_sha256": "1ed4847133cbee992f3c7155b20c1746db1910ffe71962d5c68af4bf793c88d8",
+  "snapshot_observed_sha256": "1ed4847133cbee992f3c7155b20c1746db1910ffe71962d5c68af4bf793c88d8",
+  "result": "PUBLIC_VERIFIED",
+  "proof_boundary": "Read-only production re-verification before method-candidate generation: HTTP 200, exact event marker and downloaded snapshot SHA-256 all matched. No site write was required."
+}
