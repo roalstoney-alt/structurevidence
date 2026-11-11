@@ -1,0 +1,73 @@
+{
+  "record_id": "RDL-AI-PLATFORM-COST-2026-10-30-GEMINI-PRO-001",
+  "schema_version": "RDL_PLATFORM_COST_OBSERVATION_v0.1",
+  "record_class": "ACCOUNT_QUOTA_AND_SUBSCRIPTION_SNAPSHOT",
+  "observation_date": "2026-10-30",
+  "local_timezone": "Asia/Jakarta",
+  "screenshot_capture_time_local": "2026-10-30T09:02:59+07:00",
+  "screenshot_capture_time_provenance": "USER_UPLOAD_FILENAME_ONLY_NOT_EXIF_VERIFIED",
+  "provider": "Google",
+  "product": "Gemini",
+  "plan": "Google AI Pro / Gemini Pro (interface label: PRO)",
+  "source_page": "https://gemini.google.com/usage",
+  "project_context": "MYKIDSNEST-GATEKEEPER-001; account-level usage is NOT attributable solely to this project or to Antigravity",
+  "subscription": {
+    "quoted_monthly_price_idr": 74000,
+    "currency": "IDR",
+    "period": "MONTH",
+    "promotion": "HALF_PRICE",
+    "price_evidence_status": "USER_REPORTED",
+    "actual_payment_receipt": "UNKNOWN",
+    "actual_billed_amount": "UNKNOWN",
+    "promotion_expiry": "UNKNOWN",
+    "undiscounted_price": "UNKNOWN"
+  },
+  "usage_snapshot": {
+    "current_quota_used_percent": 100,
+    "current_reset_display": "12:13",
+    "current_reset_date": "UNKNOWN_NOT_DISPLAYED",
+    "weekly_quota_used_percent": 9,
+    "weekly_reset_display": "11月4日9:13",
+    "weekly_reset_year_context": 2026,
+    "quota_units": "PERCENTAGE_OF_UNDISCLOSED_QUOTA",
+    "quota_denominator": "UNKNOWN",
+    "time_reset_timezone_source": "LOCAL_BROWSER_CONTEXT_NOT_EXPLICITLY_SHOWN_IN_WIDGET",
+    "source": "USER_PROVIDED_GEMINI_USAGE_SCREENSHOT"
+  },
+  "research_cost_telemetry": {
+    "observed_input_tokens": "UNKNOWN",
+    "observed_output_tokens": "UNKNOWN",
+    "estimated_total_tokens": "UNKNOWN",
+    "model_calls": "UNKNOWN",
+    "actual_api_cost_idr": "UNKNOWN",
+    "incremental_per_task_cost_idr": "UNKNOWN",
+    "attributed_mykidsnest_cost_idr": "UNKNOWN",
+    "antigravity_quota_used_percent": "UNKNOWN",
+    "quota_current_used_percent_is_not_token_count": true,
+    "account_subscription_cost_is_not_inference_usage_cost": true
+  },
+  "raw_evidence": {
+    "visibility": "PRIVATE_GOOGLE_DRIVE",
+    "drive_file_id": "1Zhw5Fc6N7Z7BuoZbcUEZOEx9C8rKHuZ8",
+    "drive_folder_id": "16vfBYvMo295sGN9NLuBk5W1QINy8qzmC",
+    "filename": "GEMINI_PRO_USAGE_20261030_090259_ASIA_JAKARTA.png",
+    "size_bytes": 358254,
+    "sha256": "ba6a194daa0940a535b69878a7e54864d1327935e252834caf5c165a47c0ca95",
+    "public_distribution_allowed": false
+  },
+  "comparability": {
+    "earlier_baseline_ref": "rdl/research/records/CML-PDRE-001-L1-FIELD-DEPLOYMENT-2026-09-20/research-capital-observation.json",
+    "earlier_baseline_unit": "ACCOUNT_CREDIT_BALANCE_DELTA",
+    "current_unit": "SUBSCRIPTION_IDR_PER_MONTH_PLUS_QUOTA_PERCENT",
+    "direct_cost_per_credit_comparison_allowed": false,
+    "cost_per_token_comparison_allowed": false,
+    "note": "No tokens, monetary burn rate, or task-level attribution were provided by this account-level screenshot. Preserve UNKNOWN rather than inferring from quota percentages."
+  },
+  "record_policy": {
+    "append_only": true,
+    "change_mode": "NEW_OBSERVATION_NO_REWRITE_OF_EXISTING_BASELINES",
+    "status": "SOURCE_RECORDED_MEASUREMENT_LIMITED",
+    "correction_rule": "Append a separate correction record linking record_id; do not silently overwrite source data.",
+    "human_review_required": true
+  }
+}
