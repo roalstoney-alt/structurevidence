@@ -1,0 +1,63 @@
+{
+  "schema_version": "se-six-case-review-v1",
+  "case_id": "SE-NEW-BUSINESS-001",
+  "review_id": "SE-NEW-BUSINESS-REVIEW-20261024-CLOUD-01",
+  "reviewed_at": "2026-10-24T14:15:00Z",
+  "knowledge_cutoff": "2026-10-24T14:15:00Z",
+  "result": "REVIEW_INCOMPLETE",
+  "review_complete": false,
+  "review_status": [
+    "REVIEW_INCOMPLETE",
+    "NO_STATE_CHANGE_NOT_ASSERTED"
+  ],
+  "source_url": [
+    "https://github.com/roalstoney-alt/se-dual-case-public/blob/main/SE-NEW-BUSINESS-001.md",
+    "https://www.globenewswire.com/news-release/2026/10/21/3385423/0/en/iren-to-advance-europe-s-sovereign-ai-ambitions-with-300mw-spanish-campus.html"
+  ],
+  "source_id": [
+    "PUBLIC-PROJECTION",
+    "IREN-BADAJOZ-20261021"
+  ],
+  "source_speaker": [
+    "StructEvidence public projection",
+    "IREN"
+  ],
+  "claimed_subject": "SE-NEW-BUSINESS-001",
+  "claim_ids": [],
+  "event_at": null,
+  "published_at": "2026-10-21",
+  "observed_at": "2026-10-24T14:15:00Z",
+  "source_access": [
+    {
+      "source_id": "PUBLIC-PROJECTION",
+      "access": "FULL_GITHUB_TEXT"
+    },
+    {
+      "source_id": "IREN-BADAJOZ-20261021",
+      "access": "SEARCH_RESULT_TEXT; ISSUER_RELEASE"
+    }
+  ],
+  "raw_hash_or_UNAVAILABLE": "UNAVAILABLE",
+  "search_query": [
+    "IREN Badajoz 300MW Spain permit October 21 2026 earnings October 22 2026 Horizon Microsoft"
+  ],
+  "search_boundary": "Read the latest public projection and ran one targeted current-web query. Oct 21 Badajoz planning/license and Oct 22 earnings-date announcement were pre-identified candidates and not recounted as today's discovery.",
+  "old_stop_point": "PUBLIC PROJECTION / LOCAL_PROVISIONAL_v0.1 / CANONICAL_RDL_NOT_RUN",
+  "proposed_stop_point": "PUBLIC PROJECTION / LOCAL_PROVISIONAL_v0.1 / CANONICAL_RDL_NOT_RUN",
+  "daily_counters": {
+    "new_sources": 0,
+    "new_attributed_statements": 0,
+    "new_independent_evidence": 0,
+    "new_events": 0,
+    "newly_discovered_old_evidence": 0,
+    "state_changing_evidence": 0
+  },
+  "contradictions": [],
+  "decision_relevant_unknown": [
+    "License scope and effective status, construction/delivery, commissioned MW, Horizon 2–4 acceptance, Microsoft-authored confirmation, GAAP revenue, economics and financing remain distinct and incomplete."
+  ],
+  "next_observable": "Permit primary record, commissioned/accepted IT load, customer confirmation, or audited segment economics.",
+  "notes": [
+    "Planned 300MW with 2028 target is not operating capacity or recognized revenue. Canonical RDL NOT_RUN; no nonexistent validator invoked."
+  ]
+}

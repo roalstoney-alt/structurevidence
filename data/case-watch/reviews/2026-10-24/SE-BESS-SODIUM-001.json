@@ -1,0 +1,54 @@
+{
+  "schema_version": "se-six-case-review-v1",
+  "case_id": "SE-BESS-SODIUM-001",
+  "review_id": "SE-SODIUM-REVIEW-20261024-CLOUD-01",
+  "reviewed_at": "2026-10-24T14:15:00Z",
+  "knowledge_cutoff": "2026-10-24T14:15:00Z",
+  "result": "REVIEW_INCOMPLETE",
+  "review_complete": false,
+  "review_status": [
+    "REVIEW_INCOMPLETE",
+    "NO_STATE_CHANGE_NOT_ASSERTED"
+  ],
+  "source_url": [
+    "https://www.moonwatt.com/2026/06/22/moonwatt-commissions-the-first-distributed-sodium-ion-battery-system-purpose-built-for-hybrid-solar-plants/"
+  ],
+  "source_id": [
+    "SE-SODIUM-HIST-MOONWATT"
+  ],
+  "source_speaker": [
+    "Moonwatt"
+  ],
+  "claimed_subject": "SE-BESS-SODIUM-001",
+  "claim_ids": [],
+  "event_at": null,
+  "published_at": null,
+  "observed_at": "2026-10-24T14:15:00Z",
+  "source_access": [
+    {
+      "source_id": "SE-SODIUM-HIST-MOONWATT",
+      "access": "SEARCH_RESULT_ONLY; HISTORICAL"
+    }
+  ],
+  "raw_hash_or_UNAVAILABLE": "UNAVAILABLE",
+  "search_query": [
+    "sodium ion BESS grid commissioned delivery October 23 2026 October 24 2026 named project"
+  ],
+  "search_boundary": "One targeted current-web query. Results were historical/project announcements; no primary page was newly opened and verified today.",
+  "old_stop_point": "NAMED_COMMISSIONED_SITE_NOT_ESTABLISHED",
+  "proposed_stop_point": "NAMED_COMMISSIONED_SITE_NOT_ESTABLISHED",
+  "daily_counters": {
+    "new_sources": 0,
+    "new_attributed_statements": 0,
+    "new_independent_evidence": 0,
+    "new_events": 0,
+    "newly_discovered_old_evidence": 0,
+    "state_changing_evidence": 0
+  },
+  "contradictions": [],
+  "decision_relevant_unknown": [
+    "Named commissioning party, grid-connection evidence, acceptance date and operating record remain unverified in this run."
+  ],
+  "next_observable": "Primary commissioning/acceptance document or attributable operating data.",
+  "notes": []
+}

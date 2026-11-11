@@ -1,0 +1,63 @@
+{
+  "schema_version": "se-six-case-review-v1",
+  "case_id": "SE-PHYSICAL-AI-001",
+  "review_id": "SE-PHYSICAL-AI-REVIEW-20261024-CLOUD-01",
+  "reviewed_at": "2026-10-24T14:15:00Z",
+  "knowledge_cutoff": "2026-10-24T14:15:00Z",
+  "result": "REVIEW_INCOMPLETE",
+  "review_complete": false,
+  "review_status": [
+    "REVIEW_INCOMPLETE",
+    "NO_STATE_CHANGE_NOT_ASSERTED"
+  ],
+  "source_url": [
+    "https://github.com/roalstoney-alt/se-dual-case-public/blob/main/SE-PHYSICAL-AI-001.md",
+    "https://www.figure.ai/news/f-02-decommission"
+  ],
+  "source_id": [
+    "PUBLIC-PROJECTION",
+    "FIGURE-F02-DECOMMISSION-20260930"
+  ],
+  "source_speaker": [
+    "StructEvidence public projection",
+    "Figure AI"
+  ],
+  "claimed_subject": "SE-PHYSICAL-AI-001",
+  "claim_ids": [],
+  "event_at": null,
+  "published_at": "2026-09-30",
+  "observed_at": "2026-10-24T14:15:00Z",
+  "source_access": [
+    {
+      "source_id": "PUBLIC-PROJECTION",
+      "access": "FULL_GITHUB_TEXT"
+    },
+    {
+      "source_id": "FIGURE-F02-DECOMMISSION-20260930",
+      "access": "SEARCH_RESULT_TEXT; HISTORICAL"
+    }
+  ],
+  "raw_hash_or_UNAVAILABLE": "UNAVAILABLE",
+  "search_query": [
+    "Figure AI BMW Figure 02 Figure 03 October 23 2026 October 24 2026 decommission reliability production"
+  ],
+  "search_boundary": "Read the latest public projection at se-dual-case-public main and ran one targeted current-web query. Historical decommission material was already named in the task and was not counted as today's event.",
+  "old_stop_point": "PUBLIC PROJECTION / LOCAL_PROVISIONAL_v0.1",
+  "proposed_stop_point": "PUBLIC PROJECTION / LOCAL_PROVISIONAL_v0.1",
+  "daily_counters": {
+    "new_sources": 0,
+    "new_attributed_statements": 0,
+    "new_independent_evidence": 0,
+    "new_events": 0,
+    "newly_discovered_old_evidence": 0,
+    "state_changing_evidence": 0
+  },
+  "contradictions": [],
+  "decision_relevant_unknown": [
+    "Figure 03 production acceptance, achieved reliability distribution, intervention frequency, MTBF/MTTR, economics and independent audit remain unestablished."
+  ],
+  "next_observable": "BMW-authored acceptance/reliability record for Figure 03, separately scoped from Figure 02.",
+  "notes": [
+    "Figure 02 decommission is historical and not counted as a new event. Private se2cases material was not accessed or disclosed."
+  ]
+}
