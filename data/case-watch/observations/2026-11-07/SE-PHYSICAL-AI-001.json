@@ -1,0 +1,49 @@
+{
+  "case_id": "SE-PHYSICAL-AI-001",
+  "source_url": "https://github.com/roalstoney-alt/se-dual-case-public/blob/main/SE-PHYSICAL-AI-001.md",
+  "source_id": "SE-OBS-2026-11-07-SE-PHYSICAL-AI-001",
+  "source_speaker": "Approved public projection and bounded public-source search",
+  "claimed_subject": "Figure 02/03 generation, task, site, acceptance, retirement and reliability",
+  "claim_ids": [
+    "robot-generation",
+    "site-task",
+    "acceptance",
+    "decommission",
+    "reliability"
+  ],
+  "event_at": null,
+  "published_at": null,
+  "source_access": "PUBLIC_PROJECTION_READABLE; PUBLIC_SEARCH_PARTIAL",
+  "raw_hash_or_UNAVAILABLE": "PUBLIC_REPO_MAIN_acc203395d46e6a6c74a6bca5ec77404ab0c3e68",
+  "search_query": [
+    "Figure AI BMW Figure 03 acceptance reliability November 2026",
+    "BMW Figure 02 decommission September 30 2026"
+  ],
+  "search_boundary": "Approved public projection and public sources through cutoff; private se2cases material excluded.",
+  "old_stop_point": "PUBLIC PROJECTION / LOCAL_PROVISIONAL_v0.1; generation, task and site claims require scoped acceptance and reliability evidence.",
+  "proposed_stop_point": "UNCHANGED",
+  "new_sources": 0,
+  "new_attributed_statements": 0,
+  "new_independent_evidence": 0,
+  "new_events": 0,
+  "newly_discovered_old_evidence": 0,
+  "contradictions": [],
+  "decision_relevant_unknown": [
+    "Figure 03 site acceptance",
+    "Attributable uptime/reliability",
+    "Task and generation continuity"
+  ],
+  "next_observable": "BMW or independent acceptance and operating record tied to robot generation, site and task.",
+  "observed_at": "2026-11-07T22:00:00+08:00",
+  "knowledge_cutoff": "2026-11-07T22:00:00+08:00",
+  "review_status": "REVIEW_INCOMPLETE",
+  "review_id": null,
+  "evidence_state_as_of_advanced": false,
+  "state_changing_evidence": 0,
+  "proposed_stop_point_change": false,
+  "production_verification": "SOURCE_NOT_ACCESSIBLE",
+  "notes": [
+    "Bounded public-source check completed; private intake/admin channels were not accessible.",
+    "No accepted stop point was changed."
+  ]
+}
