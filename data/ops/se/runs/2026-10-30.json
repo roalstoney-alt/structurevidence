@@ -1,0 +1,249 @@
+{
+  "schema_version": "se-unified-run-v1",
+  "run_id": "SE-OPS-20261030-2200-4a4d76a8-e6da-5407-8379-0c17b2a85b18",
+  "date_sgt": "2026-10-30",
+  "scheduled_at": "2026-10-30T22:00:00+08:00",
+  "started_at": "2026-10-30T15:19:03Z",
+  "ended_at": "2026-10-30T15:19:03Z",
+  "report_delivered_at": null,
+  "repo_baseline_sha": "440b3ae7e2ff2ad1b28577b401cce55d67ed0a09",
+  "repo_final_sha": null,
+  "pipeline": {
+    "scheduler": "PASS",
+    "cases": "PARTIAL",
+    "cml_ingestion": "PASS",
+    "x_publish": "BLOCKED",
+    "audit_persistence": "PASS",
+    "external_delivery": "BLOCKED"
+  },
+  "reviews": [
+    {
+      "case_id": "CML-PDRE-001",
+      "review_id": "SE-800V-REVIEW-20261030-01",
+      "reviewed_at": "2026-10-30T15:16:52Z",
+      "result": "NO_STATE_CHANGE",
+      "review_complete": true,
+      "classifications": [
+        "NO_STATE_CHANGE"
+      ],
+      "search_boundary": "Targeted official-source review; see data/case-watch/reviews/2026-10-30/CML-PDRE-001.json.",
+      "sources_checked": [
+        {
+          "url": "https://vantage-dc.com/news/vantage-and-heron-power-electronics-announce-gigawatt-scale-800-vdc-agreement-to-accelerate-ai-infrastructure-delivery/",
+          "status": "READ_EXISTING_EVENT_REVERIFIED"
+        },
+        {
+          "url": "https://investors.power.com/news/news-details/2026/Power-Integrations-and-Ideal-Power-Collaborate-on-Efficient-Always-On-Solid-State-Circuit-Breakers-for-800-VDC-AI-Data-Centers/default.aspx",
+          "status": "READ_EXISTING_SOURCE_NOTE_REVERIFIED"
+        }
+      ],
+      "new_sources": 0,
+      "new_attributed_statements": 0,
+      "new_independent_evidence": 0,
+      "new_events": 0,
+      "newly_discovered_old_evidence": 0,
+      "state_changing_evidence": 0,
+      "old_state": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+      "new_state": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+      "new_qualifying_evidence_count": 0,
+      "new_counter_evidence_count": 0
+    },
+    {
+      "case_id": "SE-BESS-SODIUM-001",
+      "review_id": "SE-SODIUM-REVIEW-20261030-01",
+      "reviewed_at": "2026-10-30T15:16:52Z",
+      "result": "NO_STATE_CHANGE",
+      "review_complete": true,
+      "classifications": [
+        "NEWLY_DISCOVERED_OLD_EVIDENCE",
+        "NO_STATE_CHANGE",
+        "HUMAN_GATE_REQUIRED"
+      ],
+      "search_boundary": "Targeted official-source review; see data/case-watch/reviews/2026-10-30/SE-BESS-SODIUM-001.json.",
+      "sources_checked": [
+        {
+          "url": "https://www.catl.com/news/10337.html",
+          "status": "NEWLY_DISCOVERED_PRIMARY_SOURCE_READ"
+        },
+        {
+          "url": "https://intilion.com/pressemitteilungen/catl-und-intilion-vertiefen-partnerschaft-10-gwh-als-zielmarke-in-der-dach-region",
+          "status": "OLDER_CONTEXT_READ"
+        }
+      ],
+      "new_sources": 2,
+      "new_attributed_statements": 4,
+      "new_independent_evidence": 0,
+      "new_events": 0,
+      "newly_discovered_old_evidence": 1,
+      "state_changing_evidence": 0,
+      "old_state": "NAMED_COMMISSIONED_SITE_NOT_ESTABLISHED",
+      "new_state": "NAMED_COMMISSIONED_SITE_NOT_ESTABLISHED",
+      "new_qualifying_evidence_count": 0,
+      "new_counter_evidence_count": 0
+    },
+    {
+      "case_id": "SE-IRK-LAB-001",
+      "review_id": "SE-IRK-REVIEW-20261030-01",
+      "reviewed_at": "2026-10-30T15:16:52Z",
+      "result": "REVIEW_INCOMPLETE",
+      "review_complete": false,
+      "classifications": [
+        "NO_STATE_CHANGE",
+        "HUMAN_GATE_REQUIRED"
+      ],
+      "search_boundary": "One consolidated Irkutsk search group and two institutional primary-page reads; see data/case-watch/reviews/2026-10-30/SE-IRK-LAB-001.json.",
+      "search_budget": {
+        "targeted_search_groups": 1,
+        "webpage_open_attempts": 2
+      },
+      "source_graph": [
+        {
+          "source_id": "WHO-DON620",
+          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON620",
+          "retrieved_at": "2026-10-30T15:16:52Z",
+          "originator": "WHO with Russian Federation IHR National Focal Point",
+          "publisher": "WHO",
+          "source_type": "INSTITUTIONAL_ASSESSMENT_AND_RELAY",
+          "claim_ids": [
+            "cause",
+            "contacts",
+            "risk"
+          ],
+          "depends_on": [
+            "RF-IHR-NFP"
+          ],
+          "relation": "SUPPORT_WITH_UNCERTAINTY",
+          "verification_status": "READ_NO_NEW_RECORD",
+          "search_boundary": "WHO/IHR public record"
+        },
+        {
+          "source_id": "ECDC-EIP-00034-20261009",
+          "url": "https://www.ecdc.europa.eu/en/public-health-events/2026-eip-00034/2026-10-09",
+          "retrieved_at": "2026-10-30T15:16:52Z",
+          "originator": "ECDC with WHO and attributed Russian-authority inputs",
+          "publisher": "ECDC",
+          "source_type": "INSTITUTIONAL_ASSESSMENT_AND_DERIVATIVE_SUMMARY",
+          "claim_ids": [
+            "diagnostic_uncertainty",
+            "risk"
+          ],
+          "depends_on": [
+            "WHO-DON620",
+            "RF-IHR-NFP"
+          ],
+          "relation": "SUPPORT_WITH_DEPENDENCY",
+          "verification_status": "READ_NO_NEW_MATERIAL_CHANGE",
+          "search_boundary": "ECDC public event page"
+        }
+      ],
+      "sources_checked": [
+        {
+          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON620",
+          "status": "READ_NO_NEW_RECORD"
+        },
+        {
+          "url": "https://www.ecdc.europa.eu/en/public-health-events/2026-eip-00034/2026-10-09",
+          "status": "READ_NO_NEW_MATERIAL_CHANGE"
+        }
+      ],
+      "new_sources": 0,
+      "new_attributed_statements": 0,
+      "new_independent_evidence": 0,
+      "new_events": 0,
+      "newly_discovered_old_evidence": 0,
+      "state_changing_evidence": 0,
+      "old_state": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+      "new_state": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+      "new_qualifying_evidence_count": 0,
+      "new_counter_evidence_count": 0
+    }
+  ],
+  "x": {
+    "account": "@structevidence",
+    "publication_authorized": false,
+    "account_verified": false,
+    "candidate_file": "data/ops/se/x-candidates/2026-10-30.json",
+    "post_id": null,
+    "post_url": null,
+    "posted_at": null,
+    "result": "WEBSITE_PUBLICATION_BLOCKED",
+    "blocker": "WEBSITE_PUBLICATION_BLOCKED"
+  },
+  "internal_workflows": {
+    "sunday_weekly_synthesis": {
+      "due": false,
+      "state": "NOT_DUE",
+      "artifact": null
+    },
+    "monday_socsm": {
+      "due": false,
+      "state": "NOT_DUE",
+      "artifact": null,
+      "public_projection": "PRIVATE"
+    }
+  },
+  "receipt_ids": [],
+  "alerts": [
+    {
+      "code": "WEBSITE_PUBLICATION_BLOCKED",
+      "dedupe_key": "X:2026-10-30:WEBSITE_PUBLICATION_BLOCKED",
+      "detail": "WEBSITE_PUBLICATION_BLOCKED"
+    },
+    {
+      "code": "MISSING_RUN_DETECTION_NOT_INDEPENDENT",
+      "dedupe_key": "MISSING_HEARTBEAT:2026-10-30",
+      "detail": "No independent health surface has been verified."
+    }
+  ],
+  "events": [
+    {
+      "event_id": "74fb74fa113f0d1874da97d4917d12cb94ed7ca57284f765b094b9dd0976162e",
+      "event": "SCHEDULED",
+      "stage": "scheduler",
+      "at": "2026-10-30T15:19:03Z",
+      "proof": "2026-10-30T22:00:00+08:00"
+    },
+    {
+      "event_id": "9c70aa7d63892b867be5747b9bba2db2120b5c158383456358c36126d4beafae",
+      "event": "STARTED",
+      "stage": "orchestrator",
+      "at": "2026-10-30T15:19:03Z"
+    },
+    {
+      "event_id": "070c0922d97ab508ea9b2b4bdb6120f8c67b0eed5f714ef1d3d67f08b0b87a21",
+      "event": "SEARCH_COMPLETED",
+      "stage": "cases",
+      "at": "2026-10-30T15:19:03Z",
+      "proof": "data/ops/se/review-inputs/2026-10-30.json"
+    },
+    {
+      "event_id": "49bd6bc8a0b068566a08395db6436821578ee0c85108d16257f941d7dfe884ce",
+      "event": "ARTIFACT_CREATED",
+      "stage": "cross_project_read_only",
+      "at": "2026-10-30T15:19:03Z",
+      "proof": "se-cross-project-20261030.json"
+    },
+    {
+      "event_id": "7d4102cd3e072f0779ebd1aa1c83e2be026d085a7d1655e436c07a020de813fa",
+      "event": "ARTIFACT_CREATED",
+      "stage": "x_candidate",
+      "at": "2026-10-30T15:19:03Z",
+      "proof": "data/ops/se/x-candidates/2026-10-30.json"
+    },
+    {
+      "event_id": "c028e913b87ca0a6e6174e645031eccd555f57dbf0b38fd8682d09957a890c75",
+      "event": "ARTIFACT_CREATED",
+      "stage": "alerts",
+      "at": "2026-10-30T15:19:03Z",
+      "proof": "data/ops/se/alerts/2026-10-30.json"
+    },
+    {
+      "event_id": "7a78010df93e5af88efd62e449a7f03a01dc17fc4dcd2e8a5a7d4ecbd9e90f87",
+      "event": "ARTIFACT_CREATED",
+      "stage": "daily_report",
+      "at": "2026-10-30T15:19:03Z",
+      "proof": "data/ops/se/reports/2026-10-30.md"
+    }
+  ],
+  "outcome": "PARTIAL"
+}
