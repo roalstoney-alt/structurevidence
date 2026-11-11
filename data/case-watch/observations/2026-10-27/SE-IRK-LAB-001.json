@@ -1,0 +1,41 @@
+{
+  "schema_version": "se-six-case-observation-v1",
+  "case_id": "SE-IRK-LAB-001",
+  "observation_id": "SE-IRK-LAB-001-OBS-20261027-CLOUD-01",
+  "review_id": null,
+  "observed_at": "2026-10-27T14:12:00Z",
+  "knowledge_cutoff": "2026-10-27T14:12:00Z",
+  "review_status": "REVIEW_INCOMPLETE",
+  "source_url": [],
+  "source_id": [],
+  "source_speaker": [],
+  "claimed_subject": "Irkutsk laboratory-worker death and public-health follow-up",
+  "claim_ids": [
+    "CAUSE",
+    "OCCUPATIONAL_LINK",
+    "CONTACT_OUTCOMES",
+    "INVESTIGATION"
+  ],
+  "event_at": null,
+  "published_at": null,
+  "source_access": [],
+  "raw_hash_or_UNAVAILABLE": "UNAVAILABLE",
+  "search_query": [
+    "site:who.int Irkutsk laboratory worker death October 26 2026 October 27 2026 update"
+  ],
+  "search_boundary": "One targeted WHO-domain query, within the four-query/eight-open ceiling, returned no new result. No regulator/investigation original was opened today.",
+  "old_stop_point": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+  "proposed_stop_point": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+  "new_sources": 0,
+  "new_attributed_statements": 0,
+  "new_independent_evidence": 0,
+  "new_events": 0,
+  "newly_discovered_old_evidence": 0,
+  "state_changing_evidence": 0,
+  "contradictions": [],
+  "decision_relevant_unknown": [
+    "Cause, occupational relationship, denominator-defined contact outcome and final investigation remain unestablished."
+  ],
+  "next_observable": "Direct WHO/IHR or regulator revision, final investigation report, or denominator-defined aggregate follow-up.",
+  "notes": "No causal, infection, accident, illegality or procurement inference; no identifiable personal or dangerous-procedure data collected."
+}

@@ -1,0 +1,55 @@
+{
+  "schema_version": "se-six-case-observation-v1",
+  "case_id": "SE-PHYSICAL-AI-001",
+  "observation_id": "SE-PHYSICAL-AI-001-OBS-20261027-CLOUD-01",
+  "review_id": null,
+  "observed_at": "2026-10-27T14:12:00Z",
+  "knowledge_cutoff": "2026-10-27T14:12:00Z",
+  "review_status": "REVIEW_INCOMPLETE",
+  "source_url": [
+    "https://github.com/roalstoney-alt/se-dual-case-public/blob/main/SE-PHYSICAL-AI-001.md"
+  ],
+  "source_id": [
+    "PUBLIC-PROJECTION-ACC2033"
+  ],
+  "source_speaker": [
+    "StructEvidence public projection"
+  ],
+  "claimed_subject": "Figure 02/03 at BMW",
+  "claim_ids": [
+    "GENERATION",
+    "TASK",
+    "SITE",
+    "ACCEPTANCE",
+    "DECOMMISSION",
+    "RELIABILITY"
+  ],
+  "event_at": null,
+  "published_at": null,
+  "source_access": [
+    {
+      "source_id": "PUBLIC-PROJECTION-ACC2033",
+      "access": "FULL_GITHUB_TEXT",
+      "raw_hash": "e58f052c0f76fd476604afc44d4100b7ce57a817"
+    }
+  ],
+  "raw_hash_or_UNAVAILABLE": "UNAVAILABLE",
+  "search_query": [
+    "site:figure.ai/news OR site:bmwgroup.com Figure 03 BMW October 26 2026 October 27 2026"
+  ],
+  "search_boundary": "Latest public projection read in full; one official-domain query returned no current result. Private se2cases material was not accessed.",
+  "old_stop_point": "PUBLIC PROJECTION / LOCAL_PROVISIONAL_v0.1",
+  "proposed_stop_point": "PUBLIC PROJECTION / LOCAL_PROVISIONAL_v0.1",
+  "new_sources": 0,
+  "new_attributed_statements": 0,
+  "new_independent_evidence": 0,
+  "new_events": 0,
+  "newly_discovered_old_evidence": 0,
+  "state_changing_evidence": 0,
+  "contradictions": [],
+  "decision_relevant_unknown": [
+    "Figure 03 acceptance, sustained reliability, intervention denominator, MTBF/MTTR, economics and independent validation remain unestablished."
+  ],
+  "next_observable": "BMW/customer-authored Figure 03 acceptance or attributable sustained-operation/reliability record.",
+  "notes": "Figure 02 decommission dated 2026-09-30 was already known and not re-counted."
+}

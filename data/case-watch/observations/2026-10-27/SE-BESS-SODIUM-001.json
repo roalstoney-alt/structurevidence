@@ -1,0 +1,53 @@
+{
+  "schema_version": "se-six-case-observation-v1",
+  "case_id": "SE-BESS-SODIUM-001",
+  "observation_id": "SE-BESS-SODIUM-001-OBS-20261027-CLOUD-01",
+  "review_id": null,
+  "observed_at": "2026-10-27T14:12:00Z",
+  "knowledge_cutoff": "2026-10-27T14:12:00Z",
+  "review_status": "REVIEW_INCOMPLETE",
+  "source_url": [
+    "https://www.energy-storage.news/tag/battery/page/2/"
+  ],
+  "source_id": [
+    "SEARCH-RESULT-AGGREGATOR-20261027"
+  ],
+  "source_speaker": [
+    "Energy-Storage.news index"
+  ],
+  "claimed_subject": "Named sodium-ion stationary-storage delivery and operation",
+  "claim_ids": [
+    "CUSTOMER",
+    "LOCATION",
+    "GRID_CONNECTION",
+    "COMMISSIONING",
+    "OPERATING_DATA"
+  ],
+  "event_at": null,
+  "published_at": null,
+  "source_access": [
+    {
+      "source_id": "SEARCH-RESULT-AGGREGATOR-20261027",
+      "access": "SEARCH_RESULT_ONLY"
+    }
+  ],
+  "raw_hash_or_UNAVAILABLE": "UNAVAILABLE",
+  "search_query": [
+    "sodium ion BESS commissioned named project October 26 2026 October 27 2026"
+  ],
+  "search_boundary": "One targeted query returned historical/aggregated results, including prior supplier deployment coverage, but no newly opened primary commissioning or operating record.",
+  "old_stop_point": "NAMED_COMMISSIONED_SITE_NOT_ESTABLISHED",
+  "proposed_stop_point": "NAMED_COMMISSIONED_SITE_NOT_ESTABLISHED",
+  "new_sources": 0,
+  "new_attributed_statements": 0,
+  "new_independent_evidence": 0,
+  "new_events": 0,
+  "newly_discovered_old_evidence": 0,
+  "state_changing_evidence": 0,
+  "contradictions": [],
+  "decision_relevant_unknown": [
+    "Named customer acceptance, grid connection, commissioning date and attributable field dataset remain unverified in this run."
+  ],
+  "next_observable": "Primary owner/operator commissioning document with site, date, configuration and operating data.",
+  "notes": "Supplier claims and syndicated listings were not promoted to independent evidence; no review_id issued."
+}

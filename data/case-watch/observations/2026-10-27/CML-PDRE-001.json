@@ -1,0 +1,43 @@
+{
+  "schema_version": "se-six-case-observation-v1",
+  "case_id": "CML-PDRE-001",
+  "observation_id": "CML-PDRE-001-OBS-20261027-CLOUD-01",
+  "review_id": null,
+  "observed_at": "2026-10-27T14:12:00Z",
+  "knowledge_cutoff": "2026-10-27T14:12:00Z",
+  "review_status": "REVIEW_INCOMPLETE",
+  "source_url": [],
+  "source_id": [],
+  "source_speaker": [],
+  "claimed_subject": "800VDC/SST named field deployment",
+  "claim_ids": [
+    "NAMED_SITE",
+    "COMMISSIONING",
+    "ACCEPTANCE",
+    "OPERATING_HOURS",
+    "RELIABILITY",
+    "REPLICATION"
+  ],
+  "event_at": null,
+  "published_at": null,
+  "source_access": [],
+  "raw_hash_or_UNAVAILABLE": "UNAVAILABLE",
+  "search_query": [
+    "site:vantage-dc.com OR site:heronpower.com 800 VDC SST data center October 26 2026 October 27 2026 commissioned deployment"
+  ],
+  "search_boundary": "One targeted official-domain query returned no current result. Existing merged material was not re-counted; production body could not be independently opened.",
+  "old_stop_point": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+  "proposed_stop_point": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+  "new_sources": 0,
+  "new_attributed_statements": 0,
+  "new_independent_evidence": 0,
+  "new_events": 0,
+  "newly_discovered_old_evidence": 0,
+  "state_changing_evidence": 0,
+  "contradictions": [],
+  "decision_relevant_unknown": [
+    "No newly verified named commissioning, third-party acceptance, operating dataset, reliability denominator or replicated deployment."
+  ],
+  "next_observable": "Attributable commissioned second site or customer/third-party operating acceptance record.",
+  "notes": "No review_id issued because the bounded source verification was incomplete."
+}
