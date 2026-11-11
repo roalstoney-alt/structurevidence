@@ -1,0 +1,36 @@
+{
+  "schema_version": "se-x-candidate-v2",
+  "candidate_id": "SE-X-2026-10-28-METHOD-01",
+  "day_index": null,
+  "scheduled_date": "2026-10-28",
+  "text": "StructEvidence daily evidence watch — 2026-10-28. Evidence can change while a case stop does not. This verified record separates attributable findings from unresolved diagnosis and exposure. https://structurevidence.org/cases/irkutsk-lab-worker-death/events/ecdc-week-42-2026/",
+  "source_urls": [
+    "https://structurevidence.org/cases/irkutsk-lab-worker-death/events/ecdc-week-42-2026/"
+  ],
+  "evidence_cutoff": "2026-10-16T22:45:36Z",
+  "content_hash": "eae70e2f9d713e223b47b4c56ba29b03a1f23a9d14ca9719d8cdf1a32fd4d8ad",
+  "approval_gate": "HUMAN_GATE_REQUIRED",
+  "material_state_transition": false,
+  "account_identity": "@structevidence",
+  "dedup_check": "MANUAL_REVIEW_PENDING",
+  "publish_attempt_id": null,
+  "post_id": null,
+  "public_url": null,
+  "published_at": null,
+  "verification_checked_at": null,
+  "status": "AWAITING_HUMAN_REVIEW",
+  "selection_reason": "REVIEWED_METHOD_FALLBACK",
+  "factual_status": "METHOD_CONTENT+NO_STATE_CHANGE",
+  "blocker": "X_AUTO_PUBLISH_PAUSED_HUMAN_REVIEW",
+  "dedup_scope": {
+    "local_candidate_window_days": 7,
+    "x_provider_history": "NOT_READ_X_AUTO_PUBLISH_PAUSED"
+  },
+  "new_findings_existed": false,
+  "correction_required": false,
+  "x_post_sent": 0,
+  "selected_event_id": "SE-EVENT-IRK-LAB-001-20261016-ECDC-W42",
+  "website_url": "https://structurevidence.org/cases/irkutsk-lab-worker-death/events/ecdc-week-42-2026/",
+  "snapshot_path": "cases/irkutsk-lab-worker-death/events/ecdc-week-42-2026/snapshot-v1.json",
+  "snapshot_sha256": "1ed4847133cbee992f3c7155b20c1746db1910ffe71962d5c68af4bf793c88d8"
+}
