@@ -8,7 +8,7 @@
     "started": "2026-11-11T14:07:05Z",
     "search_completed": true,
     "artifact_created": true,
-    "delivered": "PENDING_DRAFT_PR_AND_REPORT",
+    "delivered": "DRAFT_PR_91_CREATED",
     "verified": "PARTIAL"
   },
   "controls": {
@@ -29,7 +29,8 @@
       "/cases/irkutsk-lab-worker-death/",
       "/cases/nsq-nsclc-china/"
     ],
-    "existing_pr_90": "OPEN_NON_DRAFT_PRODUCTION_VERIFICATION_RECEIPT; NOT_MERGED_BY_THIS_RUN"
+    "existing_pr_90": "OPEN_NON_DRAFT_PRODUCTION_VERIFICATION_RECEIPT; NOT_MERGED_BY_THIS_RUN",
+    "draft_pr_91": "OPEN_DRAFT; NOT_MERGED"
   },
   "social": {
     "x": "NO_NEW_NON_DUPLICATE_POST_CANDIDATE",
