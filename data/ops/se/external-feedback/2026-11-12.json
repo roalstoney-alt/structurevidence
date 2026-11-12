@@ -1,0 +1,33 @@
+{
+  "report_date": "2026-11-12",
+  "first_observed_at": "2026-11-12T14:06:16Z",
+  "privacy_safe": true,
+  "internal_synthetic_excluded": true,
+  "metrics": {
+    "VERIFIED_EXTERNAL_CHALLENGES": {
+      "today": "UNKNOWN_ACCESS_BLOCKED",
+      "cumulative": "UNKNOWN_ACCESS_BLOCKED"
+    },
+    "VERIFIED_DECISION_CITATIONS": {
+      "today": "UNKNOWN_ACCESS_BLOCKED",
+      "cumulative": "UNKNOWN_ACCESS_BLOCKED"
+    },
+    "VERIFIED_INBOUND_DECISION_REQUESTS": {
+      "today": "UNKNOWN_ACCESS_BLOCKED",
+      "cumulative": "UNKNOWN_ACCESS_BLOCKED"
+    }
+  },
+  "checked_channels": [
+    "public GitHub issues/PR metadata",
+    "public web references to structurevidence.org",
+    "live public case pages"
+  ],
+  "private_access_boundary": [
+    "Cloudflare D1/Admin unavailable",
+    "customer-private intake not accessible in this run",
+    "direct/private messages not accessible"
+  ],
+  "review_status": "PUBLIC_CHANNEL_CHECK_COMPLETE_PRIVATE_CHANNELS_ACCESS_BLOCKED",
+  "entries": [],
+  "note": "No qualifying public event found. Inaccessible channels are not recorded as zero and no synthetic actor is counted."
+}
