@@ -1,0 +1,50 @@
+{
+  "task_id": "6aba2674e6448191867d0890ad2cc1ed",
+  "run_date": "2026-11-12",
+  "timezone": "Asia/Singapore",
+  "phases": {
+    "scheduled": "OBSERVED_EXISTING_TASK_CONTEXT",
+    "enabled": "OBSERVED_EXISTING_TASK_CONTEXT",
+    "started": "2026-11-12T14:06:16Z",
+    "search_completed": true,
+    "artifact_created": true,
+    "delivered": "PENDING_DRAFT_PR",
+    "verified": "PARTIAL_PUBLIC_ONLY"
+  },
+  "controls": {
+    "new_automation_created": false,
+    "website_merge_or_deploy": false,
+    "x_post_sent": 0,
+    "linkedin_post_sent": 0,
+    "outreach_sent": 0,
+    "rdl_status": "NOT_RUN",
+    "medical_human_gate": true
+  },
+  "receipts": {
+    "structurevidence_main_sha": "64bab7e87d51b1a96134a1a0cd74c0f6b1b5e554",
+    "dual_case_public_main_sha": "acc203395d46e6a6c74a6bca5ec77404ab0c3e68",
+    "production_status_code_200": [
+      "/cases/800vdc/",
+      "/cases/800vdc/events/envision-galaxy-800vdc-2026/",
+      "/cases/sodium-ion-bess/",
+      "/cases/irkutsk-lab-worker-death/",
+      "/cases/nsq-nsclc-china/"
+    ],
+    "open_pr_38_39_40": "READ_STATUS_IN_OPEN_PR_INVENTORY; NOT_MODIFIED",
+    "pr_90": "OPEN_NON_DRAFT; NOT_MODIFIED",
+    "pr_91": "OPEN_DRAFT_MERGEABLE; NOT_MODIFIED"
+  },
+  "social": {
+    "x": "NO_VERIFIABLE_POST_CANDIDATE",
+    "linkedin": "NO_VERIFIABLE_POST_CANDIDATE",
+    "reason": "Medical old evidence is human-gated and not yet published to an approved updated case page; no non-duplicate verified website angle selected",
+    "gate": "HUMAN_GATE_REQUIRED"
+  },
+  "cross_project": {
+    "cml_technical_radar": "2026-11-12 artifact breadcrumb observed: CML_DAILY_INCREMENTAL_2026-11-12.json; content and hash not read in this run",
+    "fde": "SE-GTM-005 HOLD; NO_OUTREACH",
+    "lovetimeline_pinterest": "UNKNOWN_NO_RECEIPT_READ"
+  },
+  "decision": "PAUSE_GTM_EXPANSION; CONTINUE_BOUNDED_EVIDENCE_MONITORING",
+  "cepe": "PILOT_END_DATE_2026-11-10_PASSED; CLOSURE_OUTCOME_NOT_ESTABLISHED"
+}
