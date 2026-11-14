@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0",
+  "date": "2026-11-14",
+  "observed_at": "2026-11-14T14:00:33Z",
+  "privacy_safe": true,
+  "internal_synthetic_excluded": true,
+  "metrics": {
+    "VERIFIED_EXTERNAL_CHALLENGES": {
+      "today": "UNKNOWN",
+      "cumulative": "UNKNOWN",
+      "unknown_or_access_blocked": "ACCESS_BLOCKED",
+      "boundary": "Public web and GitHub issues checked; D1/Admin, private intake and private messages SOURCE_NOT_ACCESSIBLE"
+    },
+    "VERIFIED_DECISION_CITATIONS": {
+      "today": "UNKNOWN",
+      "cumulative": "UNKNOWN",
+      "unknown_or_access_blocked": "ACCESS_BLOCKED",
+      "boundary": "No qualifying public decision citation found; private decision materials SOURCE_NOT_ACCESSIBLE"
+    },
+    "VERIFIED_INBOUND_DECISION_REQUESTS": {
+      "today": "UNKNOWN",
+      "cumulative": "UNKNOWN",
+      "unknown_or_access_blocked": "ACCESS_BLOCKED",
+      "boundary": "No qualifying public request found; private intake/messages SOURCE_NOT_ACCESSIBLE"
+    }
+  },
+  "ledger_events": [],
+  "search_result": "NO_QUALIFYING_PUBLIC_EXTERNAL_FEEDBACK_FOUND_WITHIN_BOUNDED_SEARCH; NOT_ZERO",
+  "duplicate_handling": "No new event appended; internal/employee/agent content excluded"
+}
