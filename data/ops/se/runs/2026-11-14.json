@@ -10,7 +10,7 @@
     "started": "2026-11-14T14:00:33Z",
     "search_completed": "COMPLETED_BOUNDED_PUBLIC_SEARCH",
     "artifact_created": "BRANCH_FILES_CREATED",
-    "delivered": "PENDING_DRAFT_PR",
+    "delivered": "DRAFT_PR_94_CREATED",
     "verified": "PRODUCTION_URLS_HTTP_200_SEPARATE_FROM_GITHUB_SHA"
   },
   "gates": {
@@ -39,5 +39,11 @@
   "weekly_subflows": {
     "sunday": "NOT_DUE",
     "monday": "NOT_DUE"
+  },
+  "delivery_receipt": {
+    "url": "https://github.com/roalstoney-alt/structurevidence/pull/94",
+    "state": "OPEN_DRAFT",
+    "merged": false,
+    "created_at": "2026-11-14T14:02:33Z"
   }
 }
