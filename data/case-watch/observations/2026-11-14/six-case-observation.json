@@ -1,0 +1,268 @@
+{
+  "schema_version": "1.0",
+  "date": "2026-11-14",
+  "timezone": "Asia/Singapore",
+  "repository_main_sha": "64bab7e87d51b1a96134a1a0cd74c0f6b1b5e554",
+  "dual_case_public_main_sha": "acc203395d46e6a6c74a6bca5ec77404ab0c3e68",
+  "records": [
+    {
+      "case_id": "CML-PDRE-001",
+      "source_url": [
+        "https://www.prnewswire.com/news-releases/envision-achieves-worlds-first-commercial-deployment-of-integrated-800v-dc-sst-based-power-system-in-large-scale-ai-data-center-302926109.html",
+        "https://www.datacenterdynamics.com/en/news/envision-claims-to-be-running-the-worlds-first-800vdc-data-center-in-ulanqab-china/"
+      ],
+      "source_id": [
+        "ENVISION-2026-11-02",
+        "DCD-2026-11-02"
+      ],
+      "source_speaker": [
+        "Envision",
+        "Data Center Dynamics"
+      ],
+      "claimed_subject": "Galaxy 800VDC/SST live workload deployment",
+      "claim_ids": [
+        "CML-PDRE-001:single_instance_deployment"
+      ],
+      "event_at": "2026-11-02",
+      "published_at": "2026-11-02",
+      "observed_at": "2026-11-14T14:00:33Z",
+      "knowledge_cutoff": "2026-11-14T14:00:33Z",
+      "source_access": "PUBLIC_SOURCE_READ; production/public projection separately verified",
+      "raw_hash_or_UNAVAILABLE": "UNAVAILABLE",
+      "search_query": "2026-11-13 through 2026-11-14 targeted public-source change check",
+      "search_boundary": "Public web, official/issuer sources and approved public projections; inaccessible private channels excluded",
+      "old_stop_point": "Single operator-reported instance accepted; independent acceptance, long-run data and replication unresolved",
+      "proposed_stop_point": "UNCHANGED",
+      "new_sources": [],
+      "new_attributed_statements": [],
+      "new_independent_evidence": [],
+      "new_events": [],
+      "newly_discovered_old_evidence": [],
+      "state_changing_evidence": [],
+      "contradictions": [],
+      "decision_relevant_unknown": [
+        "Independent acceptance",
+        "Operating history",
+        "Repeat deployment"
+      ],
+      "next_observable": "Named third-party acceptance, operating dataset or repeat deployment",
+      "review_status": "NO_STATE_CHANGE_BOUNDED_REVIEW_COMPLETED"
+    },
+    {
+      "case_id": "SE-BESS-SODIUM-001",
+      "source_url": [
+        "https://news.cctv.com/2026/11/08/ARTIENpYEgD9jRMQyC2jFwUD261108.shtml",
+        "https://www.evebattery.com/news-971"
+      ],
+      "source_id": [
+        "CCTV-2026-11-08",
+        "EVE-NEWS-971"
+      ],
+      "source_speaker": [
+        "CCTV",
+        "EVE Energy"
+      ],
+      "claimed_subject": "Jingmen lithium-sodium hybrid / sodium storage commissioning claims",
+      "claim_ids": [
+        "SE-BESS-SODIUM-001:named_commissioned_site"
+      ],
+      "event_at": "2026-11-08",
+      "published_at": [
+        "2026-11-08",
+        "DATE_NOT_CAPTURED"
+      ],
+      "observed_at": "2026-11-14T14:00:33Z",
+      "knowledge_cutoff": "2026-11-14T14:00:33Z",
+      "source_access": "PUBLIC_SOURCE_READ; production/public projection separately verified",
+      "raw_hash_or_UNAVAILABLE": "UNAVAILABLE",
+      "search_query": "2026-11-13 through 2026-11-14 targeted public-source change check",
+      "search_boundary": "Public web, official/issuer sources and approved public projections; inaccessible private channels excluded",
+      "old_stop_point": "NAMED_COMMISSIONED_SITE_NOT_ESTABLISHED; PR #91 and #93 remain unmerged candidates",
+      "proposed_stop_point": "UNCHANGED",
+      "new_sources": [],
+      "new_attributed_statements": [],
+      "new_independent_evidence": [],
+      "new_events": [],
+      "newly_discovered_old_evidence": [],
+      "state_changing_evidence": [],
+      "contradictions": [],
+      "decision_relevant_unknown": [
+        "Project identity reconciliation",
+        "Named customer/commissioner",
+        "Actual operation after debugging"
+      ],
+      "next_observable": "Commissioning certificate, named customer acceptance, grid-operation or telemetry evidence",
+      "review_status": "NO_STATE_CHANGE_COMPLETE_BOUNDED_RECHECK; HUMAN_REVIEW_CANDIDATES_UNCHANGED"
+    },
+    {
+      "case_id": "SE-IRK-LAB-001",
+      "source_url": [
+        "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON620/",
+        "https://www.ecdc.europa.eu/en/public-health-events/2026-eip-00034/2026-10-12"
+      ],
+      "source_id": [
+        "WHO-DON620",
+        "ECDC-2026-EIP-00034"
+      ],
+      "source_speaker": [
+        "WHO",
+        "ECDC"
+      ],
+      "claimed_subject": "Irkutsk laboratory-worker death and public-health follow-up",
+      "claim_ids": [
+        "SE-IRK-LAB-001:cause",
+        "SE-IRK-LAB-001:transmission"
+      ],
+      "event_at": "2026-10-02",
+      "published_at": [
+        "2026-10-10",
+        "2026-10-12"
+      ],
+      "observed_at": "2026-11-14T14:00:33Z",
+      "knowledge_cutoff": "2026-11-14T14:00:33Z",
+      "source_access": "PUBLIC_SOURCE_READ; production/public projection separately verified",
+      "raw_hash_or_UNAVAILABLE": "UNAVAILABLE",
+      "search_query": "2026-11-13 through 2026-11-14 targeted public-source change check",
+      "search_boundary": "1 targeted query group; 2 relevant public pages; approved public whitelist only; below 4-query/8-open cap",
+      "old_stop_point": "Death reported; cause, infection, occupational link and illegality not established",
+      "proposed_stop_point": "UNCHANGED",
+      "new_sources": [],
+      "new_attributed_statements": [],
+      "new_independent_evidence": [],
+      "new_events": [],
+      "newly_discovered_old_evidence": [],
+      "state_changing_evidence": [],
+      "contradictions": [],
+      "decision_relevant_unknown": [
+        "Confirmed diagnosis",
+        "Public investigation revision"
+      ],
+      "next_observable": "WHO/IHR or competent regulator revision",
+      "review_status": "NO_STATE_CHANGE_BOUNDED_REVIEW_COMPLETED; PUBLIC_WHITELIST_ONLY"
+    },
+    {
+      "case_id": "SE-ONC-NSQNSCLC-CN-001",
+      "source_url": [
+        "https://www.bayer.com/media/en-us/sevabertinib-approved-in-china-as-first-line-treatment-for-patients-with-her2-mutant-non-small-cell-lung-cancer"
+      ],
+      "source_id": [
+        "BAYER-2026-11-04"
+      ],
+      "source_speaker": [
+        "Bayer"
+      ],
+      "claimed_subject": "China sevabertinib approval disclosure",
+      "claim_ids": [
+        "SE-ONC-NSQNSCLC-CN-001:regulatory_change"
+      ],
+      "event_at": "2026-11-04",
+      "published_at": "2026-11-04",
+      "observed_at": "2026-11-14T14:00:33Z",
+      "knowledge_cutoff": "2026-11-14T14:00:33Z",
+      "source_access": "PUBLIC_SOURCE_READ; production/public projection separately verified",
+      "raw_hash_or_UNAVAILABLE": "UNAVAILABLE",
+      "search_query": "2026-11-13 through 2026-11-14 targeted public-source change check",
+      "search_boundary": "Public web, official/issuer sources and approved public projections; inaccessible private channels excluded",
+      "old_stop_point": "FOLDED; PR #92 remains unmerged and human medical review required",
+      "proposed_stop_point": "UNCHANGED",
+      "new_sources": [],
+      "new_attributed_statements": [],
+      "new_independent_evidence": [],
+      "new_events": [],
+      "newly_discovered_old_evidence": [],
+      "state_changing_evidence": [],
+      "contradictions": [],
+      "decision_relevant_unknown": [
+        "NMPA primary label",
+        "Scope fit",
+        "Patient-specific conclusions prohibited"
+      ],
+      "next_observable": "NMPA primary record/label and Sunday deep review",
+      "review_status": "LIGHT_DAILY_CHECK_COMPLETED_FOLDED; HUMAN_MEDICAL_REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "SE-PHYSICAL-AI-001",
+      "source_url": [
+        "https://www.press.bmwgroup.com/global/article/detail/T0458778EN/bmw-group-advances-the-use-of-physical-ai-in-production-with-figure-03-project-in-spartanburg"
+      ],
+      "source_id": [
+        "BMW-2026-06-25"
+      ],
+      "source_speaker": [
+        "BMW Group"
+      ],
+      "claimed_subject": "Figure 02 completed pilot and planned Figure 03 logistics deployment",
+      "claim_ids": [
+        "SE-PHYSICAL-AI-001:figure03_deployment"
+      ],
+      "event_at": "2026-06-25",
+      "published_at": "2026-06-25",
+      "observed_at": "2026-11-14T14:00:33Z",
+      "knowledge_cutoff": "2026-11-14T14:00:33Z",
+      "source_access": "PUBLIC_SOURCE_READ; production/public projection separately verified",
+      "raw_hash_or_UNAVAILABLE": "UNAVAILABLE",
+      "search_query": "2026-11-13 through 2026-11-14 targeted public-source change check",
+      "search_boundary": "Public web, official/issuer sources and approved public projections; inaccessible private channels excluded",
+      "old_stop_point": "PUBLIC PROJECTION · LOCAL_PROVISIONAL_v0.1; generations/tasks/acceptance remain distinct",
+      "proposed_stop_point": "UNCHANGED",
+      "new_sources": [],
+      "new_attributed_statements": [],
+      "new_independent_evidence": [],
+      "new_events": [],
+      "newly_discovered_old_evidence": [],
+      "state_changing_evidence": [],
+      "contradictions": [],
+      "decision_relevant_unknown": [
+        "Figure 03 actual deployment/acceptance",
+        "Reliability/downtime",
+        "Figure 02 retirement boundary"
+      ],
+      "next_observable": "BMW-authored Figure 03 actual deployment, acceptance, downtime or reliability record",
+      "review_status": "NO_STATE_CHANGE_BOUNDED_REVIEW_COMPLETED"
+    },
+    {
+      "case_id": "SE-NEW-BUSINESS-001",
+      "source_url": [
+        "https://www.sec.gov/Archives/edgar/data/1878848/000187884826000066/0001878848-26-000066-index.htm",
+        "https://iren.gcs-web.com/static-files/67ed720a-021d-471a-8d9c-ea109edec817"
+      ],
+      "source_id": [
+        "SEC-IREN-10Q-2026Q1",
+        "IREN-10Q-2026-11-05"
+      ],
+      "source_speaker": [
+        "IREN filing with SEC",
+        "IREN"
+      ],
+      "claimed_subject": "AI Cloud GAAP revenue and Horizon delivery status",
+      "claim_ids": [
+        "SE-NEW-BUSINESS-001:gaap_revenue",
+        "SE-NEW-BUSINESS-001:horizon1_service"
+      ],
+      "event_at": "2026-09-30",
+      "published_at": "2026-11-05",
+      "observed_at": "2026-11-14T14:00:33Z",
+      "knowledge_cutoff": "2026-11-14T14:00:33Z",
+      "source_access": "PUBLIC_SOURCE_READ; production/public projection separately verified",
+      "raw_hash_or_UNAVAILABLE": "UNAVAILABLE",
+      "search_query": "2026-11-13 through 2026-11-14 targeted public-source change check",
+      "search_boundary": "Public web, official/issuer sources and approved public projections; inaccessible private channels excluded",
+      "old_stop_point": "LOCAL_PROVISIONAL_v0.1; RDL NOT_RUN; Microsoft reverse confirmation and H2-4 acceptance unresolved",
+      "proposed_stop_point": "UNCHANGED",
+      "new_sources": [],
+      "new_attributed_statements": [],
+      "new_independent_evidence": [],
+      "new_events": [],
+      "newly_discovered_old_evidence": [],
+      "state_changing_evidence": [],
+      "contradictions": [],
+      "decision_relevant_unknown": [
+        "Microsoft reverse confirmation",
+        "Horizon 2-4 acceptance",
+        "Revenue-to-cash and durable returns"
+      ],
+      "next_observable": "Microsoft-authored confirmation or later accepted H2-4 and segment-economics record",
+      "review_status": "NO_STATE_CHANGE_BOUNDED_REVIEW_COMPLETED"
+    }
+  ]
+}
