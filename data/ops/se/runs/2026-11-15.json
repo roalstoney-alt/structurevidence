@@ -31,11 +31,13 @@
       ]
     },
     "delivered": {
-      "status": "PENDING_DRAFT_PR"
+      "status": "DRAFT_PR_CREATED",
+      "pr_number": 95,
+      "url": "https://github.com/roalstoney-alt/structurevidence/pull/95"
     },
     "verified": {
-      "status": "PARTIAL",
-      "evidence": "Artifact branch writes verified; no merge, deployment, website publication, social publication, outreach, or RDL run"
+      "status": "VERIFIED_ARTIFACT_DELIVERY_ONLY",
+      "evidence": "Draft PR #95 is open and unmerged; no merge, deployment, website publication, social publication, outreach, or RDL run"
     }
   },
   "receipts": {
@@ -63,7 +65,8 @@
     "rdl": "NOT_RUN",
     "merge": "NOT_PERFORMED",
     "deploy": "NOT_PERFORMED",
-    "outreach": "HOLD"
+    "outreach": "HOLD",
+    "draft_pr": 95
   },
   "operational_metrics_since_2026_10_08": {
     "artifact_opens": "UNKNOWN",
