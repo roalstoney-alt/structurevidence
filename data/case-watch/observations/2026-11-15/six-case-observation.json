@@ -1,0 +1,228 @@
+{
+  "schema_version": "1.0",
+  "date": "2026-11-15",
+  "timezone": "Asia/Singapore",
+  "repository_main_sha": "64bab7e87d51b1a96134a1a0cd74c0f6b1b5e554",
+  "dual_case_main_sha": "acc203395d46e6a6c74a6bca5ec77404ab0c3e68",
+  "production_verified_separately": true,
+  "records": [
+    {
+      "observed_at": "2026-11-15T13:59:28Z",
+      "knowledge_cutoff": "2026-11-15T13:59:28Z",
+      "source_access": "PUBLIC_HTTP_200",
+      "review_status": "NO_STATE_CHANGE",
+      "new_sources": [],
+      "new_attributed_statements": [],
+      "new_independent_evidence": [],
+      "new_events": [],
+      "newly_discovered_old_evidence": [],
+      "state_changing_evidence": [],
+      "contradictions": [],
+      "case_id": "CML-PDRE-001",
+      "source_url": "https://structurevidence.org/cases/800vdc/",
+      "source_id": "production-case-page",
+      "source_speaker": "StructEvidence public case",
+      "claimed_subject": "800VDC/SST deployment evidence",
+      "claim_ids": [
+        "single-instance",
+        "replication"
+      ],
+      "event_at": null,
+      "published_at": null,
+      "raw_hash_or_UNAVAILABLE": "UNAVAILABLE",
+      "search_query": "800VDC SST named deployment commissioning acceptance operations",
+      "search_boundary": "Public web; production page; existing PR #39 deduplicated",
+      "old_stop_point": "Accepted single operating instance; repeated deployment and independent acceptance not established",
+      "proposed_stop_point": "UNCHANGED",
+      "decision_relevant_unknown": [
+        "Whether Sangyuan and Envision are separate independently accepted operating deployments",
+        "Third-party acceptance and operating telemetry"
+      ],
+      "next_observable": "Dated operator/customer commissioning record plus site-specific telemetry"
+    },
+    {
+      "observed_at": "2026-11-15T13:59:28Z",
+      "knowledge_cutoff": "2026-11-15T13:59:28Z",
+      "source_access": "PUBLIC_HTTP_200",
+      "review_status": "NO_STATE_CHANGE",
+      "new_sources": [],
+      "new_attributed_statements": [],
+      "new_independent_evidence": [],
+      "new_events": [],
+      "newly_discovered_old_evidence": [],
+      "state_changing_evidence": [],
+      "contradictions": [],
+      "case_id": "SE-BESS-SODIUM-001",
+      "source_url": "https://structurevidence.org/cases/sodium-ion-bess/",
+      "source_id": "production-case-page",
+      "source_speaker": "StructEvidence public case",
+      "claimed_subject": "Named commissioned sodium-ion BESS",
+      "claim_ids": [
+        "commissioning",
+        "operations"
+      ],
+      "event_at": null,
+      "published_at": null,
+      "raw_hash_or_UNAVAILABLE": "UNAVAILABLE",
+      "search_query": "sodium-ion BESS named customer site grid commissioning operating evidence",
+      "search_boundary": "Public web and production page",
+      "old_stop_point": "Issuer-reported shipment/unnamed operation is not independent verification",
+      "proposed_stop_point": "UNCHANGED",
+      "decision_relevant_unknown": [
+        "Named commissioning party",
+        "Grid connection and operating evidence"
+      ],
+      "next_observable": "Operator or grid-party commissioning/operations record"
+    },
+    {
+      "observed_at": "2026-11-15T13:59:28Z",
+      "knowledge_cutoff": "2026-11-15T13:59:28Z",
+      "source_access": "PUBLIC_HTTP_200",
+      "review_status": "NO_STATE_CHANGE",
+      "new_sources": [],
+      "new_attributed_statements": [],
+      "new_independent_evidence": [],
+      "new_events": [],
+      "newly_discovered_old_evidence": [],
+      "state_changing_evidence": [],
+      "contradictions": [],
+      "case_id": "SE-IRK-LAB-001",
+      "source_url": "https://structurevidence.org/cases/irkutsk-lab-worker-death/",
+      "source_id": "production-case-page",
+      "source_speaker": "StructEvidence public case",
+      "claimed_subject": "Public regulatory and WHO timeline",
+      "claim_ids": [
+        "public-timeline"
+      ],
+      "event_at": null,
+      "published_at": null,
+      "raw_hash_or_UNAVAILABLE": "UNAVAILABLE",
+      "search_query": "Irkutsk laboratory worker death WHO IHR regulator public update",
+      "search_boundary": "Authorized public whitelist; 1 of max 4 targeted query groups; no sensitive/private sources",
+      "old_stop_point": "Public timeline only; no inference on cause, infection, or illegality",
+      "proposed_stop_point": "UNCHANGED",
+      "decision_relevant_unknown": [
+        "New regulator original or revision",
+        "WHO/IHR update"
+      ],
+      "next_observable": "Dated regulator original/revision or WHO notice"
+    },
+    {
+      "observed_at": "2026-11-15T13:59:28Z",
+      "knowledge_cutoff": "2026-11-15T13:59:28Z",
+      "source_access": "PUBLIC_HTTP_200",
+      "review_status": "NO_STATE_CHANGE",
+      "new_sources": [],
+      "new_attributed_statements": [],
+      "new_independent_evidence": [],
+      "new_events": [],
+      "newly_discovered_old_evidence": [],
+      "state_changing_evidence": [],
+      "contradictions": [],
+      "case_id": "SE-ONC-NSQNSCLC-CN-001",
+      "source_url": "https://structurevidence.org/cases/nsq-nsclc-china/",
+      "source_id": "production-case-page",
+      "source_speaker": "StructEvidence public case",
+      "claimed_subject": "China NSCLC public-source availability",
+      "claim_ids": [
+        "china-primary-source",
+        "folded-review"
+      ],
+      "event_at": null,
+      "published_at": null,
+      "raw_hash_or_UNAVAILABLE": "UNAVAILABLE",
+      "search_query": "site:nmpa.gov.cn NSCLC China sevabertinib approval label",
+      "search_boundary": "Sunday folded review; public sources only; no diagnosis or treatment inference",
+      "old_stop_point": "FOLDED; issuer-attributed old evidence; China primary approval record/label not captured",
+      "proposed_stop_point": "UNCHANGED",
+      "decision_relevant_unknown": [
+        "NMPA primary approval record and label",
+        "Medical human review"
+      ],
+      "next_observable": "NMPA primary document captured and human-reviewed"
+    },
+    {
+      "observed_at": "2026-11-15T13:59:28Z",
+      "knowledge_cutoff": "2026-11-15T13:59:28Z",
+      "source_access": "PUBLIC_HTTP_200",
+      "review_status": "NO_STATE_CHANGE",
+      "new_sources": [],
+      "new_attributed_statements": [],
+      "new_independent_evidence": [],
+      "new_events": [],
+      "newly_discovered_old_evidence": [],
+      "state_changing_evidence": [],
+      "contradictions": [],
+      "case_id": "SE-PHYSICAL-AI-001",
+      "source_url": "https://github.com/roalstoney-alt/se-dual-case-public/blob/main/SE-PHYSICAL-AI-001.md",
+      "source_id": "dual-case-public-main",
+      "source_speaker": "Public projection",
+      "claimed_subject": "Figure 02/03 BMW deployment and reliability",
+      "claim_ids": [
+        "generation-identity",
+        "acceptance",
+        "reliability"
+      ],
+      "event_at": null,
+      "published_at": null,
+      "raw_hash_or_UNAVAILABLE": "acc203395d46e6a6c74a6bca5ec77404ab0c3e68",
+      "search_query": "Figure 03 BMW acceptance reliability downtime decommission",
+      "search_boundary": "Public web plus approved public projection; private se2cases excluded",
+      "old_stop_point": "LOCAL_PROVISIONAL_v0.1; generation/task/site acceptance and reliability gaps remain",
+      "proposed_stop_point": "UNCHANGED",
+      "decision_relevant_unknown": [
+        "Independent acceptance",
+        "Runtime reliability/downtime",
+        "Figure 02 vs 03 identity"
+      ],
+      "next_observable": "BMW/operator acceptance and dated runtime record"
+    },
+    {
+      "observed_at": "2026-11-15T13:59:28Z",
+      "knowledge_cutoff": "2026-11-15T13:59:28Z",
+      "source_access": "PUBLIC_HTTP_200",
+      "review_status": "NO_STATE_CHANGE",
+      "new_sources": [],
+      "new_attributed_statements": [],
+      "new_independent_evidence": [],
+      "new_events": [],
+      "newly_discovered_old_evidence": [],
+      "state_changing_evidence": [],
+      "contradictions": [],
+      "case_id": "SE-NEW-BUSINESS-001",
+      "source_url": "https://github.com/roalstoney-alt/se-dual-case-public/blob/main/SE-NEW-BUSINESS-001.md",
+      "source_id": "dual-case-public-main",
+      "source_speaker": "Public projection",
+      "claimed_subject": "IREN AI Cloud contracts, capacity, and revenue",
+      "claim_ids": [
+        "horizon-2-4",
+        "microsoft-confirmation",
+        "gaap-revenue",
+        "arr-mw"
+      ],
+      "event_at": null,
+      "published_at": null,
+      "raw_hash_or_UNAVAILABLE": "acc203395d46e6a6c74a6bca5ec77404ab0c3e68",
+      "search_query": "IREN Horizon 2 3 4 Microsoft confirmation GAAP revenue AI Cloud MW financing",
+      "search_boundary": "Public issuer/SEC/Microsoft sources; Badajoz and earnings candidates deduplicated",
+      "old_stop_point": "LOCAL_PROVISIONAL_v0.1; Canonical RDL NOT_RUN; issuer claims and bridge gaps retained",
+      "proposed_stop_point": "UNCHANGED",
+      "decision_relevant_unknown": [
+        "Microsoft reverse confirmation",
+        "Horizon 2-4 operation",
+        "Actual GAAP revenue and contract/operating ARR",
+        "MW basis, costs and financing"
+      ],
+      "next_observable": "Counterparty or filed operational/revenue evidence"
+    }
+  ],
+  "sunday": {
+    "weekly_cases": [
+      "CML-PDRE-001",
+      "SE-BESS-SODIUM-001",
+      "SE-IRK-LAB-001"
+    ],
+    "nsclc_folded_review": "COMPLETED_NO_STATE_CHANGE_HUMAN_MEDICAL_REVIEW_REQUIRED",
+    "public_research_question": "Are Chindata's Sangyuan commercial SST-to-800VDC system and Envision's Galaxy deployment genuinely separate, independently accepted operating deployments—and what dated operator/customer/commissioning records and telemetry would establish multi-entity replication rather than two issuer claims?"
+  }
+}
