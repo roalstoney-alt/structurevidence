@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "date": "2026-11-20",
+  "timezone": "Asia/Singapore",
+  "observed_at": "2026-11-20T14:01:52Z",
+  "metrics": {
+    "VERIFIED_EXTERNAL_CHALLENGES": {
+      "today": "UNKNOWN",
+      "cumulative": "UNKNOWN",
+      "unknown_access_blocked": [
+        "Cloudflare D1/Admin",
+        "private customer intake",
+        "private receiving messages"
+      ]
+    },
+    "VERIFIED_DECISION_CITATIONS": {
+      "today": "UNKNOWN",
+      "cumulative": "UNKNOWN",
+      "unknown_access_blocked": [
+        "private investment/procurement/board/research materials"
+      ]
+    },
+    "VERIFIED_INBOUND_DECISION_REQUESTS": {
+      "today": "UNKNOWN",
+      "cumulative": "UNKNOWN",
+      "unknown_access_blocked": [
+        "private intake and receiving channels"
+      ]
+    }
+  },
+  "flags": [
+    "INTERNAL_SYNTHETIC_EXCLUDED",
+    "PRIVACY_SAFE"
+  ],
+  "public_checks": {
+    "github_issues": "NO_QUALIFYING_PUBLIC_EVENT_FOUND",
+    "web_search": "NO_QUALIFYING_PUBLIC_EVENT_FOUND",
+    "search_limit": "Public search cannot establish absence in inaccessible channels"
+  },
+  "ledger_events": [],
+  "access_boundary": "No private identity, email, intent or document content accessed or disclosed. Inaccessible channels remain UNKNOWN, not zero.",
+  "required_fields": [
+    "feedback_event_id",
+    "first_observed_at",
+    "channel",
+    "case_id",
+    "feedback_type",
+    "external_actor_verification",
+    "evidence_reference_or_RESTRICTED",
+    "public_safe_source_url_or_PRIVATE",
+    "linked_claim_id",
+    "source_cutoff",
+    "private_access_boundary",
+    "review_status",
+    "decision_dependency",
+    "action_needed",
+    "outcome",
+    "next_followup_at",
+    "duplicate_of"
+  ]
+}
