@@ -55,7 +55,14 @@ def main() -> int:
     evidence_without_parent = []
     for path in case_json:
         record = json.loads(path.read_text(encoding="utf-8"))
-        if not record.get("current_state") or not record.get("history"):
+        legacy_state = bool(record.get("current_state") and record.get("history"))
+        versioned_claim_state = (
+            record.get("case_id") == "SE-AI-COMPUTE-OBLIGATIONS-001"
+            and record.get("schema_version") == "SE-AICO-FINAL-RELEASE-SNAPSHOT-v0.2"
+            and len(record.get("claims", [])) == 15
+            and record.get("source_dependency_policy")
+        )
+        if not legacy_state and not versioned_claim_state:
             case_without_state.append(str(path.relative_to(ROOT)))
     for path in ROOT.glob("e/*/index.json"):
         record = json.loads(path.read_text(encoding="utf-8"))

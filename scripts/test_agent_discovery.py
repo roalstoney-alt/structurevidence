@@ -20,6 +20,7 @@ CASES = {
     "SE-BESS-SODIUM-001": "sodium-ion-bess",
     "SE-ONC-NSQNSCLC-CN-001": "nsq-nsclc-china",
 }
+DISCOVERY_CASES = set(CASES) | {"SE-AI-COMPUTE-OBLIGATIONS-001"}
 PRIMITIVES = [
     "cases/800vdc/index.html",
     "cases/800vdc/state-v0.1.json",
@@ -93,8 +94,14 @@ class AgentDiscoveryTest(unittest.TestCase):
     def test_b_discovery_manifest_existence(self):
         manifest = load(".well-known/structurevidence.json")
         self.assertEqual(manifest["type"], "temporal_evidence_resolution_layer")
-        self.assertEqual(set(manifest["public_cases"]), set(CASES))
+        self.assertEqual(set(manifest["public_cases"]), DISCOVERY_CASES)
         self.assertEqual(manifest["resolve_endpoint"], "https://api.structurevidence.org/resolve")
+        adapter = manifest["versioned_case_adapters"][0]
+        self.assertEqual(adapter["case_id"], "SE-AI-COMPUTE-OBLIGATIONS-001")
+        self.assertEqual(adapter["claim_count"], 15)
+        self.assertIsNone(adapter["structevidence_date_published"])
+        index_adapter = load("claims/index.json")["versioned_adapters"][0]
+        self.assertEqual(index_adapter, adapter)
 
     def test_c_method_contract_validation(self):
         contract = load("method-contract.json")

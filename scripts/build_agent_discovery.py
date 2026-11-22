@@ -22,6 +22,38 @@ SNAPSHOT_COMMIT = "58c7c4fe9fa334e030080cf7ab352c222b326ec2"
 SNAPSHOT_REPOSITORY = "https://github.com/roalstoney-alt/structurevidence"
 SNAPSHOT_PERMALINK = f"{SNAPSHOT_REPOSITORY}/tree/{SNAPSHOT_COMMIT}"
 UNRESOLVED = {"UNKNOWN", "NOT_ESTABLISHED", "VERIFICATION_REQUIRED"}
+AICO_CASE_ID = "SE-AI-COMPUTE-OBLIGATIONS-001"
+AICO_CASE_PATH = "cases/anthropic-compute-obligations/index.json"
+
+
+def aico_adapter():
+    path = ROOT / AICO_CASE_PATH
+    if not path.is_file():
+        return None
+    record = json.loads(path.read_text(encoding="utf-8"))
+    if record.get("case_id") != AICO_CASE_ID:
+        raise ValueError("Anthropic public adapter case identity mismatch")
+    if len(record.get("claims", [])) != 15:
+        raise ValueError("Anthropic public adapter claim count mismatch")
+    return {
+        "case_id": AICO_CASE_ID,
+        "version": "v0.2",
+        "case_url": "https://structurevidence.org/cases/anthropic-compute-obligations/",
+        "case_record": "https://structurevidence.org/cases/anthropic-compute-obligations/index.json",
+        "claims": "https://structurevidence.org/cases/anthropic-compute-obligations/claims-v0.2.jsonl",
+        "source_registry": "https://structurevidence.org/cases/anthropic-compute-obligations/source-registry-public-v0.2.json",
+        "agent_corpus": "https://structurevidence.org/agent-discovery/corpora/se-ai-compute-obligations-001-v0.2.jsonl",
+        "citation_resolvability": "https://structurevidence.org/agent-discovery/citation-resolvability-se-ai-compute-obligations-001-v0.2.json",
+        "temporal_semantics": "https://structurevidence.org/agent-discovery/temporal-semantics-se-ai-compute-obligations-001-v0.2.json",
+        "claim_count": 15,
+        "claim_record_author": "StructEvidence",
+        "source_speaker": "Anthropic, PBC",
+        "source_dependency": "ISSUER_STATEMENT_SEC_HOSTED_NOT_INDEPENDENTLY_VALIDATED",
+        "source_sha256": "0c3a6faad0e1bddc30b108054ec318a0ed5ea509b0ff1d6c8f16a8bdf234424b",
+        "prospectus_dated_at": "2026-11-18",
+        "sec_filed_at": "2026-11-19",
+        "structevidence_date_published": None,
+    }
 
 
 def load(relative: str):
@@ -303,7 +335,16 @@ def method_contract():
             "history_policy": "APPEND_DONT_ERASE",
             "required_fields_when_transition_exists": ["claim_id", "from_state", "to_state", "from_as_of", "to_as_of", "protocol_version", "transition_evidence", "published_at", "snapshot_commit", "supersedes"],
         },
-        "principles": [{"id": key, "statement": statement} for key, statement in principles],
+        "principles": [{"id": key, "statement": statement} for key, statement in principles] + [{
+            "id": "SE-APPEND-ONLY-CORRECTION-001",
+            "statement": "We can be wrong. We must remain auditable.",
+            "scope": "All current and future evidence cases, observations and public research projections.",
+            "governance_document": "docs/engineering/SE_APPEND_ONLY_CORRECTION_001.md",
+            "additive_to": "SE-ENG-HISTORY-001",
+            "original_records_rewritten": False,
+            "corrections_append_only": True,
+            "existing_state_enum_changed": False,
+        }],
         "required_claim_fields": ["claim_id", "case_id", "statement", "state", "as_of", "supports", "does_not_support", "unknowns", "provenance", "next_observable", "canonical_url"],
     }
 
@@ -342,6 +383,9 @@ def build_outputs():
             for claim in claims
         ],
     }
+    adapter = aico_adapter()
+    if adapter:
+        index["versioned_adapters"] = [adapter]
     discovery = {
         "name": "StructEvidence",
         "version": "0.1",
@@ -370,9 +414,11 @@ def build_outputs():
             "concept_doi_url": CONCEPT_DOI_URL,
             "zenodo_record": ZENODO_RECORD,
         },
-        "public_cases": list(registry["cases"]),
+        "public_cases": list(registry["cases"]) + ([AICO_CASE_ID] if adapter else []),
         "principles": ["EVENT_TIME_NE_KNOWLEDGE_TIME", "NOT_FOUND_NE_DOES_NOT_EXIST", "SINGLE_INSTANCE_NE_INDUSTRY_ADOPTION", "SOURCE_STATEMENT_NE_INDEPENDENT_VALIDATION", "UNKNOWN_MUST_NOT_BE_INFERRED"],
     }
+    if adapter:
+        discovery["versioned_case_adapters"] = [adapter]
     changes = {
         "version": "0.1",
         "generated_at": registry["generated_at"],

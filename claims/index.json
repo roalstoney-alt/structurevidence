@@ -210,5 +210,26 @@
       "as_of": "2026-09-28",
       "canonical_url": "https://structurevidence.org/claims/SE-ONC-NSQNSCLC-CN-001.CROSS_MODALITY_RANKING.json"
     }
+  ],
+  "versioned_adapters": [
+    {
+      "case_id": "SE-AI-COMPUTE-OBLIGATIONS-001",
+      "version": "v0.2",
+      "case_url": "https://structurevidence.org/cases/anthropic-compute-obligations/",
+      "case_record": "https://structurevidence.org/cases/anthropic-compute-obligations/index.json",
+      "claims": "https://structurevidence.org/cases/anthropic-compute-obligations/claims-v0.2.jsonl",
+      "source_registry": "https://structurevidence.org/cases/anthropic-compute-obligations/source-registry-public-v0.2.json",
+      "agent_corpus": "https://structurevidence.org/agent-discovery/corpora/se-ai-compute-obligations-001-v0.2.jsonl",
+      "citation_resolvability": "https://structurevidence.org/agent-discovery/citation-resolvability-se-ai-compute-obligations-001-v0.2.json",
+      "temporal_semantics": "https://structurevidence.org/agent-discovery/temporal-semantics-se-ai-compute-obligations-001-v0.2.json",
+      "claim_count": 15,
+      "claim_record_author": "StructEvidence",
+      "source_speaker": "Anthropic, PBC",
+      "source_dependency": "ISSUER_STATEMENT_SEC_HOSTED_NOT_INDEPENDENTLY_VALIDATED",
+      "source_sha256": "0c3a6faad0e1bddc30b108054ec318a0ed5ea509b0ff1d6c8f16a8bdf234424b",
+      "prospectus_dated_at": "2026-11-18",
+      "sec_filed_at": "2026-11-19",
+      "structevidence_date_published": null
+    }
   ]
 }

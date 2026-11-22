@@ -181,6 +181,45 @@ def build(root: Path) -> dict:
             'new_qualifying_evidence_count': 0,
             'new_counter_evidence_count': 0,
         })
+    aico_index = root / 'cases/anthropic-compute-obligations/index.json'
+    if aico_index.is_file():
+        record = load(root, 'cases/anthropic-compute-obligations/index.json')
+        assert record['case_id'] == 'SE-AI-COMPUTE-OBLIGATIONS-001'
+        assert record['claim_role_counts'] == {
+            'ISSUER_DISCLOSURE': 9,
+            'REJECTED_OR_UNSUPPORTED_INFERENCE': 5,
+            'SE_DERIVED_CALCULATION': 1,
+        }
+        assert record['prospectus_dated_at'] == '2026-11-18'
+        assert record['sec_filed_at'] == '2026-11-19'
+        assert record['structevidence_publication_date'] is None
+        rows.append({
+            'case_id': record['case_id'],
+            'title': 'Anthropic compute obligations',
+            'canonical_path': '/cases/anthropic-compute-obligations/',
+            'question': ('What do Anthropic\'s issuer-authored, unaudited SEC disclosures establish about compute '
+                         'commitments, timing, liquidity and the limits of debt or cash-burn inference?'),
+            'current_public_state': 'ISSUER_ATTRIBUTED_DISCLOSURES_WITH_OPEN_BOUNDARIES',
+            'evidence_state_as_of': record['prospectus_dated_at'],
+            'last_material_change': record['sec_filed_at'],
+            'featured': True,
+            'management_status': 'ACTIVE',
+            'last_reviewed_at': None,
+            'review_result': None,
+            'latest_review_id': None,
+            'latest_review_file': None,
+            'period': {
+                'id': 'OWNER_REVIEW_OF_EXACT_MINIMAL_PR_DIFF',
+                'start': '2026-11-22',
+                'end': '2026-11-22',
+                'status': 'NOT_YET_REVIEWED',
+                'scope': 'Exact minimal public-release integration diff; publication remains unauthorized.',
+            },
+            'period_review_id': None,
+            'monitoring': {'cadence': 'NOT_CONFIGURED', 'enabled': False},
+            'new_qualifying_evidence_count': None,
+            'new_counter_evidence_count': None,
+        })
     rows.sort(key=lambda row: (row['last_material_change'], row['case_id']), reverse=True)
     return {'schema_version': '1.0', 'status_recorded_at': status['status_recorded_at'],
             'timestamp_semantics': {'status_recorded_at': 'Administrative status observation; not a scientific review timestamp.',
@@ -208,7 +247,7 @@ def render_row(row: dict) -> str:
     klass = 'not-established' if 'NOT ESTABLISHED' in label and 'INCOMPLETE' not in label else 'pending'
     if row['case_id'] == 'CML-PDRE-001':
         klass = 'observed'
-    elif row['case_id'] in {'SE-IREN-AI-CLOUD-001', 'SE-BINANCE-SECURITY-001'}:
+    elif row['case_id'] in {'SE-IREN-AI-CLOUD-001', 'SE-BINANCE-SECURITY-001', 'SE-AI-COMPUTE-OBLIGATIONS-001'}:
         klass = 'supported'
     period = row['period']
     if period['status'] == 'NOT_YET_REVIEWED':

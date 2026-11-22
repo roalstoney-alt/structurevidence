@@ -104,6 +104,11 @@ class ReviewStatusTest(unittest.TestCase):
         self.assertIn('FOLDED FROM HOMEPAGE', page)
         self.assertIn('SE-IREN-AI-CLOUD-001', page)
         self.assertIn('PUBLICATION AUTHORIZED', page)
+        self.assertIn('SE-AI-COMPUTE-OBLIGATIONS-001', page)
+        aico = next(row for row in export(self.root)['cases'] if row['case_id'] == 'SE-AI-COMPUTE-OBLIGATIONS-001')
+        self.assertIsNone(aico['last_reviewed_at'])
+        self.assertEqual(aico['period']['status'], 'NOT_YET_REVIEWED')
+        self.assertEqual(aico['evidence_state_as_of'], '2026-11-18')
 
 
 if __name__ == '__main__':
