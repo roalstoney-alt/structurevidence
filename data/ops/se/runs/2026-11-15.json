@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.0",
+  "task_id": "6aba2674e6448191867d0890ad2cc1ed",
+  "date": "2026-11-15",
+  "timezone": "Asia/Singapore",
+  "started_at": "2026-11-15T13:59:28Z",
+  "phases": {
+    "scheduled": {
+      "status": "OBSERVED",
+      "evidence": "Current scheduled-run context; not proof of future execution"
+    },
+    "enabled": {
+      "status": "OBSERVED",
+      "evidence": "Existing task context only; no task created or duplicated"
+    },
+    "started": {
+      "status": "VERIFIED",
+      "at": "2026-11-15T13:59:28Z"
+    },
+    "search_completed": {
+      "status": "VERIFIED",
+      "scope": "Six-case bounded public search, production pages, GitHub state, public traction search"
+    },
+    "artifact_created": {
+      "status": "VERIFIED",
+      "paths": [
+        "data/case-watch/observations/2026-11-15/six-case-observation.json",
+        "data/ops/se/external-feedback/2026-11-15.json",
+        "data/ops/se/runs/2026-11-15.json",
+        "docs/ops/reports/SE_DAILY_2026-11-15.md"
+      ]
+    },
+    "delivered": {
+      "status": "DRAFT_PR_CREATED",
+      "pr_number": 95,
+      "url": "https://github.com/roalstoney-alt/structurevidence/pull/95"
+    },
+    "verified": {
+      "status": "VERIFIED_ARTIFACT_DELIVERY_ONLY",
+      "evidence": "Draft PR #95 is open and unmerged; no merge, deployment, website publication, social publication, outreach, or RDL run"
+    }
+  },
+  "receipts": {
+    "github_main_sha": "64bab7e87d51b1a96134a1a0cd74c0f6b1b5e554",
+    "dual_case_main_sha": "acc203395d46e6a6c74a6bca5ec77404ab0c3e68",
+    "production_http": [
+      "800vdc:200",
+      "800vdc-event:200",
+      "sodium-ion-bess:200",
+      "irkutsk:200",
+      "nsq-nsclc-china:200"
+    ],
+    "open_prs_reviewed": [
+      38,
+      39,
+      40,
+      90,
+      91,
+      92,
+      93,
+      94
+    ],
+    "x_post_sent": 0,
+    "linkedin_post_sent": 0,
+    "rdl": "NOT_RUN",
+    "merge": "NOT_PERFORMED",
+    "deploy": "NOT_PERFORMED",
+    "outreach": "HOLD",
+    "draft_pr": 95
+  },
+  "operational_metrics_since_2026_10_08": {
+    "artifact_opens": "UNKNOWN",
+    "qualified_dialogues": "UNKNOWN",
+    "written_scopes": "UNKNOWN",
+    "paid_verifications": "UNKNOWN",
+    "original_hypothesis_targets": {
+      "artifact_opens": ">=20",
+      "qualified_dialogues": ">=8",
+      "written_scopes": ">=2",
+      "paid_verifications": ">=1"
+    },
+    "verified_search_time_cost": "UNKNOWN_NO_MEASURED_BASELINE",
+    "material_reuse_rate": "UNKNOWN",
+    "correction_latency": "UNKNOWN",
+    "decision_material_citations": "UNKNOWN_ACCESS_BLOCKED",
+    "cost_reduction_claim": "NOT_ESTABLISHED"
+  },
+  "cross_project": {
+    "cml_technical_radar": "BREADCRUMB_ONLY_NO_EXECUTION_RECEIPT_READ",
+    "fde_internal_research": "HOLD",
+    "love_timeline": "UNKNOWN",
+    "pinterest": "UNKNOWN",
+    "internal_b2b_trial": "INTERNAL_SYNTHETIC_EXCLUDED"
+  },
+  "day30_decision": {
+    "date": "2026-11-06",
+    "status": "PAUSE",
+    "basis": "No verified external challenge/citation/inbound request or paid verification was established from accessible evidence; freeze and monitoring remain in force.",
+    "effect": "DO_NOT_UNFREEZE_OR_STOP_MONITORING"
+  }
+}

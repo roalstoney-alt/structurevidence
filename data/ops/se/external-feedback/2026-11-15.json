@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0",
+  "date": "2026-11-15",
+  "timezone": "Asia/Singapore",
+  "observed_at": "2026-11-15T13:59:28Z",
+  "metrics": {
+    "VERIFIED_EXTERNAL_CHALLENGES": {
+      "today": "UNKNOWN",
+      "cumulative": "UNKNOWN",
+      "boundary": "PUBLIC_SEARCH_COMPLETED; PRIVATE_INTAKE_AND_ADMIN_SOURCE_NOT_ACCESSIBLE"
+    },
+    "VERIFIED_DECISION_CITATIONS": {
+      "today": "UNKNOWN",
+      "cumulative": "UNKNOWN",
+      "boundary": "PUBLIC_SEARCH_COMPLETED; PRIVATE_DECISION_MATERIALS_SOURCE_NOT_ACCESSIBLE"
+    },
+    "VERIFIED_INBOUND_DECISION_REQUESTS": {
+      "today": "UNKNOWN",
+      "cumulative": "UNKNOWN",
+      "boundary": "PUBLIC_SEARCH_COMPLETED; PRIVATE_MESSAGES_AND_INTAKE_SOURCE_NOT_ACCESSIBLE"
+    }
+  },
+  "flags": [
+    "INTERNAL_SYNTHETIC_EXCLUDED",
+    "PRIVACY_SAFE"
+  ],
+  "ledger_events": [],
+  "excluded": [
+    {
+      "item": "SE_B2B_PHASE0_READONLY_RECEIPT_20261115.json and related kickoff artifacts",
+      "reason": "INTERNAL_SYNTHETIC",
+      "external_actor_verification": "INTERNAL_SYNTHETIC",
+      "counted": false
+    }
+  ],
+  "access_boundary": "Public GitHub/issues and public-web search read. Cloudflare D1/Admin, customer private intake, third-party private decision materials and private receiving channels were not accessible; absence cannot be recorded as zero.",
+  "required_fields": [
+    "feedback_event_id",
+    "first_observed_at",
+    "channel",
+    "case_id",
+    "feedback_type",
+    "external_actor_verification",
+    "evidence_reference_or_RESTRICTED",
+    "public_safe_source_url_or_PRIVATE",
+    "linked_claim_id",
+    "source_cutoff",
+    "private_access_boundary",
+    "review_status",
+    "decision_dependency",
+    "action_needed",
+    "outcome",
+    "next_followup_at",
+    "duplicate_of"
+  ]
+}
