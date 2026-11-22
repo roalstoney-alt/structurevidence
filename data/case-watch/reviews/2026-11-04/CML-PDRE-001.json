@@ -1,0 +1,47 @@
+{
+  "schema_version": "se-case-review-v2",
+  "case_id": "CML-PDRE-001",
+  "review_id": "SE-800V-REVIEW-20261104-01",
+  "reviewed_at": "2026-11-04T14:57:36Z",
+  "result": "NO_STATE_CHANGE",
+  "review_complete": true,
+  "classifications": ["NO_STATE_CHANGE"],
+  "search_boundary": "Two targeted official-source search groups and three official pages covering named delivery, commissioning, customer acceptance, replicated deployment, independent field performance and component maturity; not an exhaustive market census.",
+  "sources_checked": [
+    {
+      "url": "https://vantage-dc.com/company/news-events/",
+      "publisher": "Vantage Data Centers",
+      "status": "READ_NEWS_INDEX_NO_NEWER_800V_RECORD",
+      "retrieved_at": "2026-11-04T14:57:36Z",
+      "finding": "The latest listed 800 VDC record remains the 21 October Vantage-Heron manufacturing-capacity agreement. It does not establish shipped units, a commissioned campus, customer acceptance, operating hours or independently measured field performance."
+    },
+    {
+      "url": "https://heronpower.com/news",
+      "publisher": "Heron Power Electronics",
+      "status": "READ_NEWS_INDEX_NO_NEWER_800V_RECORD",
+      "retrieved_at": "2026-11-04T14:57:36Z",
+      "finding": "Heron's news index likewise shows no post-21 October delivery, commissioning, acceptance or field-performance record for the announced Vantage capacity."
+    },
+    {
+      "url": "https://blogs.nvidia.com/blog/ocp-global-summit-vera-rubin-scale-ai-factories/",
+      "publisher": "NVIDIA",
+      "status": "READ_NO_NEW_MATERIAL_CHANGE",
+      "published_at": "2026-10-12",
+      "retrieved_at": "2026-11-04T14:57:36Z",
+      "finding": "The page still describes the future-facing K-1 design and deployable architecture, not a named commissioned facility, customer acceptance result, replicated operating record or independent field validation."
+    }
+  ],
+  "new_sources": 0,
+  "new_attributed_statements": 0,
+  "new_independent_evidence": 0,
+  "new_events": 0,
+  "newly_discovered_old_evidence": 0,
+  "state_changing_evidence": 0,
+  "old_state": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+  "new_state": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+  "new_qualifying_evidence_count": 0,
+  "new_counter_evidence_count": 0,
+  "evidence_state_as_of": "2026-09-20T10:46:47Z",
+  "last_material_change": "2026-09-20",
+  "historical_backfill": false
+}

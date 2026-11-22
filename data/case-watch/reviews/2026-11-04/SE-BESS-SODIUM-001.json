@@ -1,0 +1,40 @@
+{
+  "schema_version": "se-case-review-v2",
+  "case_id": "SE-BESS-SODIUM-001",
+  "review_id": "SE-SODIUM-REVIEW-20261104-01",
+  "reviewed_at": "2026-11-04T14:57:36Z",
+  "result": "NO_STATE_CHANGE",
+  "review_complete": true,
+  "classifications": ["NO_STATE_CHANGE"],
+  "search_boundary": "Two targeted official-source search groups and two official news indexes covering named sodium-ion delivery, grid commissioning, customer acceptance and public field performance; not an exhaustive market census.",
+  "sources_checked": [
+    {
+      "url": "https://www.catl.com/en/news/",
+      "publisher": "CATL",
+      "status": "READ_INDEX_NO_NEWER_CASE_SCOPE_RECORD",
+      "retrieved_at": "2026-11-04T14:57:36Z",
+      "finding": "CATL's latest English news item remains dated 31 October and is outside the sodium-ion BESS commissioning boundary. The 27 October INTILION memorandum remains the newest listed sodium-ion item and is already captured in open draft PR 70; it does not establish a named commissioned sodium-ion site."
+    },
+    {
+      "url": "https://intilion.com/pressemitteilungen",
+      "publisher": "INTILION",
+      "status": "READ_NO_SODIUM_COMMISSIONING_RECORD",
+      "retrieved_at": "2026-11-04T14:57:36Z",
+      "finding": "INTILION's press index exposes no sodium-ion delivery, commissioning, acceptance or field-performance record. Its listed commissioned systems are not identified as sodium-ion."
+    }
+  ],
+  "new_sources": 0,
+  "new_attributed_statements": 0,
+  "new_independent_evidence": 0,
+  "new_events": 0,
+  "newly_discovered_old_evidence": 0,
+  "state_changing_evidence": 0,
+  "old_state": "NAMED_COMMISSIONED_SITE_NOT_ESTABLISHED",
+  "new_state": "NAMED_COMMISSIONED_SITE_NOT_ESTABLISHED",
+  "new_qualifying_evidence_count": 0,
+  "new_counter_evidence_count": 0,
+  "evidence_state_as_of": "2026-09-24",
+  "last_material_change": "2026-09-24",
+  "historical_backfill": false,
+  "provenance_note": "Open draft PR 70 remains the append-only record for the 27 October CATL-INTILION item. This review does not duplicate, overwrite or treat that pending record as newly discovered today."
+}
