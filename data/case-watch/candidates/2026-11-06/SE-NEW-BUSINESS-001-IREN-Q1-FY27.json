@@ -1,0 +1,36 @@
+{
+  "schema_version": "se-case-change-candidate-v1",
+  "candidate_id": "IREN-Q1-FY27-CANDIDATE-20261106-01",
+  "case_id": "SE-NEW-BUSINESS-001",
+  "event_at": "2026-11-05",
+  "published_at": "2026-11-05",
+  "observed_at": "2026-11-06T22:00:00+08:00",
+  "knowledge_cutoff": "2026-11-06T22:00:00+08:00",
+  "source_urls": [
+    "https://iren.gcs-web.com/news-releases/news-release-details/iren-reports-q1-fy27-results",
+    "https://www.iren.com/investors/sec-filings"
+  ],
+  "source_access": [
+    "ISSUER_RELEASE_FULL_TEXT",
+    "SEC_INDEX_READ"
+  ],
+  "raw_hash_or_UNAVAILABLE": "UNAVAILABLE_SEARCH_SERVICE_NORMALIZED",
+  "snapshot_sha256": "UNAVAILABLE_NO_RAW_BYTES",
+  "structured_facts": {
+    "total_revenue_usd_m": 228,
+    "total_ai_cloud_revenue_usd_m": 200,
+    "net_loss_usd_m": -263,
+    "horizon_1": "ISSUER_REPORTED_IN_SERVICE_FOR_MICROSOFT",
+    "horizon_2_4": "ISSUER_REPORTED_LATE_STAGE_CONSTRUCTION"
+  },
+  "boundaries": [
+    "ARR_IS_NOT_GAAP_REVENUE",
+    "NO_MICROSOFT_AUTHORED_ACCEPTANCE_CAPTURED",
+    "SEC_BODY_RAW_BYTES_NOT_CAPTURED",
+    "HUMAN_GATE_REQUIRED"
+  ],
+  "old_stop_point": "LOCAL_PROVISIONAL_v0.1 / Canonical RDL NOT_RUN",
+  "proposed_stop_point": "TIME_BOUNDED_Q1_UPDATE_PENDING_HUMAN_REVIEW",
+  "website_publication_status": "NOT_PUBLISHED",
+  "review_status": "HUMAN_GATE_REQUIRED"
+}

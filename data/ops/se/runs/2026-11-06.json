@@ -1,0 +1,37 @@
+{
+  "schema_version": "se-unified-run-v1",
+  "run_id": "SE-OPS-20261106-2200-CLOUD-01",
+  "date_sgt": "2026-11-06",
+  "scheduled_at": "2026-11-06T22:00:00+08:00",
+  "started_at": "2026-11-06T21:55:23+08:00",
+  "knowledge_cutoff": "2026-11-06T22:00:00+08:00",
+  "repo_baseline_sha": "9a5884c8b8dea90b9bd61bdc7cca1ee2353a2dd3",
+  "dual_case_baseline_sha": "acc203395d46e6a6c74a6bca5ec77404ab0c3e68",
+  "stages": {
+    "scheduled": "PASS",
+    "enabled": "PASS",
+    "started": "PASS",
+    "search_completed": "PASS_BOUNDED",
+    "artifact_created": "PASS_DRAFT_BRANCH",
+    "delivered": "PENDING_DRAFT_PR",
+    "verified": "PARTIAL_PRODUCTION_URLS_INACCESSIBLE"
+  },
+  "results": {
+    "cases": "PARTIAL_ONE_MATERIAL_CANDIDATE",
+    "external_feedback": "SOURCE_NOT_ACCESSIBLE_PRIVATE_CHANNELS",
+    "website": "WEBSITE_PUBLICATION_BLOCKED",
+    "x": "BLOCKED",
+    "linkedin": "BLOCKED",
+    "day30": "PAUSE_GTM_EXPANSION_CONTINUE_MONITORING"
+  },
+  "cross_project": {
+    "cml_technical_radar": "PASS_ARTIFACT_NAME_OBSERVED_CONTENT_NOT_READ",
+    "cml_fde": "HOLD",
+    "lovetimeline": "UNKNOWN_NO_RECEIPT",
+    "pinterest": "UNKNOWN_NO_RECEIPT"
+  },
+  "no_outreach": true,
+  "no_social_publish": true,
+  "no_merge": true,
+  "no_deploy": true
+}
