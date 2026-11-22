@@ -1,0 +1,14 @@
+{
+  "report_date": "2026-11-07",
+  "status": "WEBSITE_PUBLICATION_BLOCKED",
+  "candidate_text": null,
+  "utf8_sha256": null,
+  "unicode_char_count": 0,
+  "duplicate_check": "NOT_RUN_NO_CANDIDATE",
+  "content_cutoff": "2026-11-07T22:00:00+08:00",
+  "human_gate_required": true,
+  "reason": "No newly approved and independently verified production event page was available.",
+  "source_urls": [],
+  "X_AUTO_PUBLISH_PAUSED_HUMAN_REVIEW": true,
+  "X_POST_SENT": 0
+}

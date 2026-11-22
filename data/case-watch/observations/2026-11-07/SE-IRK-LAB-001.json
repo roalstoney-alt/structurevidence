@@ -1,0 +1,48 @@
+{
+  "case_id": "SE-IRK-LAB-001",
+  "source_url": "https://structurevidence.org/cases/irkutsk-lab-worker-death/",
+  "source_id": "SE-OBS-2026-11-07-SE-IRK-LAB-001",
+  "source_speaker": "StructEvidence production page; WHO/IHR, regulator and bounded public-source search",
+  "claimed_subject": "Publicly attributable timeline, regulatory action and institutional status",
+  "claim_ids": [
+    "public-timeline",
+    "WHO-IHR",
+    "regulatory-action",
+    "institutional-operation"
+  ],
+  "event_at": null,
+  "published_at": null,
+  "source_access": "PRODUCTION_URL_NOT_ACCESSIBLE; PUBLIC_SEARCH_PARTIAL",
+  "raw_hash_or_UNAVAILABLE": "UNAVAILABLE",
+  "search_query": [
+    "WHO Irkutsk laboratory worker death update November 2026",
+    "Irkutsk laboratory regulator investigation update November 2026"
+  ],
+  "search_boundary": "Four-query/eight-open cap not exceeded; public whitelist only. Private financial, contractual, personal and pathogen-operation material excluded.",
+  "old_stop_point": "Public record does not establish cause of death, infection, wrongdoing or procurement causality.",
+  "proposed_stop_point": "UNCHANGED",
+  "new_sources": 0,
+  "new_attributed_statements": 0,
+  "new_independent_evidence": 0,
+  "new_events": 0,
+  "newly_discovered_old_evidence": 0,
+  "contradictions": [],
+  "decision_relevant_unknown": [
+    "Authoritative cause and scope, if publicly released",
+    "Regulatory disposition",
+    "Auditable institutional remediation"
+  ],
+  "next_observable": "Dated WHO/IHR or regulator primary record within the public whitelist.",
+  "observed_at": "2026-11-07T22:00:00+08:00",
+  "knowledge_cutoff": "2026-11-07T22:00:00+08:00",
+  "review_status": "REVIEW_INCOMPLETE",
+  "review_id": null,
+  "evidence_state_as_of_advanced": false,
+  "state_changing_evidence": 0,
+  "proposed_stop_point_change": false,
+  "production_verification": "SOURCE_NOT_ACCESSIBLE",
+  "notes": [
+    "Bounded public-source check completed; private intake/admin channels were not accessible.",
+    "No accepted stop point was changed."
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "report_date": "2026-11-07",
+  "task_id": "6aba2674e6448191867d0890ad2cc1ed",
+  "repository_baselines": {
+    "structurevidence_main": "9a5884c8b8dea90b9bd61bdc7cca1ee2353a2dd3",
+    "se_dual_case_public_main": "acc203395d46e6a6c74a6bca5ec77404ab0c3e68"
+  },
+  "stages": {
+    "scheduled": "PASS",
+    "enabled": "PASS",
+    "started": "PASS",
+    "search_completed": "PASS",
+    "artifact_created": "PASS",
+    "delivered": "PENDING_DRAFT_PR",
+    "verified": "PARTIAL_PRODUCTION_SOURCE_NOT_ACCESSIBLE"
+  },
+  "pr_checks": {
+    "38": "checked_existing",
+    "39": "checked_existing_no_duplicate",
+    "40": "checked_existing",
+    "84": "checked_existing",
+    "86": {
+      "state": "OPEN_DRAFT",
+      "merged": false,
+      "head_sha": "493bc8f465c2976fa3e2820ff3f7364eabf6074d"
+    }
+  },
+  "release_actions": {
+    "merged": false,
+    "deployed": false,
+    "x_sent": 0,
+    "linkedin_sent": 0,
+    "outreach_sent": 0
+  },
+  "day30_boundary": "PAUSE_GTM_EXPANSION; CONTINUE_BOUNDED_EVIDENCE_MONITORING",
+  "external_channels": "SOURCE_NOT_ACCESSIBLE",
+  "cml_technical_radar": {
+    "run_observed": "2026-11-07T01:20:00Z",
+    "artifact_receipt": "UNKNOWN"
+  },
+  "fde_outreach": "HOLD",
+  "lovetimeline_pinterest": "UNKNOWN_NO_RECEIPT"
+}
