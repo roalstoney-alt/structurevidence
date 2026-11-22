@@ -1,0 +1,33 @@
+{
+  "schema_version": "se-case-observation-v2",
+  "observation_id": "CML-PDRE-001-OBS-20261030-CLOUD-01",
+  "observed_at": "2026-10-30T22:00:00+08:00",
+  "knowledge_cutoff": "2026-10-30T22:00:00+08:00",
+  "review_id": null,
+  "review_status": "REVIEW_INCOMPLETE",
+  "new_sources": 1,
+  "new_attributed_statements": 1,
+  "new_independent_evidence": 0,
+  "new_events": 1,
+  "newly_discovered_old_evidence": 0,
+  "state_changing_evidence": 0,
+  "proposed_stop_point": "UNCHANGED",
+  "contradictions": [],
+  "case_id": "CML-PDRE-001",
+  "source_url": "https://enphaseenergy.gcs-web.com/news-releases/news-release-details/enphase-energy-successfully-demonstrates-iq-solid-state",
+  "source_id": "ENPHASE-IQ-SST-LAB-DEMO-2026-10-27",
+  "source_speaker": "Enphase Energy",
+  "claimed_subject": "Issuer-reported 13.8kV AC to 800VDC laboratory demonstration using 132 modules under simulated AI-rack load steps",
+  "claim_ids": [
+    "CML-800V-LAB-DEMONSTRATION"
+  ],
+  "event_at": "2026-10-27",
+  "published_at": "2026-10-27",
+  "source_access": "ISSUER_BODY_READ_VIA_SEARCH",
+  "raw_hash_or_UNAVAILABLE": "UNAVAILABLE_SEARCH_SERVICE_NORMALIZED",
+  "search_query": "October 30 2026 800V DC SST data center deployment field reliability",
+  "search_boundary": "One fresh query; issuer laboratory body read. No customer site, field commissioning, independent acceptance or reliability window.",
+  "old_stop_point": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+  "decision_relevant_unknown": "Customer deployment, operating conditions, observation period, failure/downtime and responsible accepting organization.",
+  "next_observable": "Named field deployment and third-party/customer acceptance with runtime."
+}

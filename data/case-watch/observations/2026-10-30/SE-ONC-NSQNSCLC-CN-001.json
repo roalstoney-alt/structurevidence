@@ -1,0 +1,40 @@
+{
+  "schema_version": "se-case-observation-v2",
+  "observation_id": "SE-ONC-NSQNSCLC-CN-001-OBS-20261030-CLOUD-01",
+  "observed_at": "2026-10-30T22:00:00+08:00",
+  "knowledge_cutoff": "2026-10-30T22:00:00+08:00",
+  "review_id": null,
+  "review_status": "REVIEW_INCOMPLETE",
+  "new_sources": 2,
+  "new_attributed_statements": 1,
+  "new_independent_evidence": 0,
+  "new_events": 1,
+  "newly_discovered_old_evidence": 0,
+  "state_changing_evidence": 0,
+  "proposed_stop_point": "UNCHANGED",
+  "contradictions": [],
+  "case_id": "SE-ONC-NSQNSCLC-CN-001",
+  "source_url": "https://en.kelun-biotech.com/newsCenter.aspx?mid=18",
+  "source_id": "KELUN-SACTMT-NMPA-ACCEPTANCE-2026-10-28-CANDIDATE",
+  "source_speaker": "Sichuan Kelun-Biotech",
+  "claimed_subject": "Issuer says NMPA accepted a first-line indication application for sac-TMT plus pembrolizumab in a narrowly defined PD-L1-negative, EGFR/ALK-negative locally advanced/metastatic non-squamous NSCLC population",
+  "claim_ids": [
+    "NSCLC-SACTMT-NMPA-APPLICATION-ACCEPTED-CANDIDATE"
+  ],
+  "event_at": "2026-10-27",
+  "published_at": "2026-10-28",
+  "source_access": "ISSUER_INDEX_BODY_AND_PUBMED_RECORD_READ_VIA_SEARCH",
+  "raw_hash_or_UNAVAILABLE": "UNAVAILABLE_SEARCH_SERVICE_NORMALIZED",
+  "search_query": "October 30 2026 China non-squamous NSCLC NMPA clinical trial results update; site:kelun-biotech.com",
+  "search_boundary": "Light daily check. Issuer newsroom and PubMed record found; CDE/NMPA original acceptance record and full paper not independently opened. No individual treatment inference.",
+  "old_stop_point": "FOLDED / PUBLIC_RESEARCH_PREVIEW",
+  "decision_relevant_unknown": "CDE acceptance number/status, full eligibility/safety/OS, peer review details and eventual approval; application acceptance is not approval.",
+  "next_observable": "CDE/NMPA original plus Sunday clinical human review.",
+  "additional_sources": [
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42929694/",
+      "source_id": "PUBMED-42929694",
+      "status": "PUBLICATION_METADATA_ONLY"
+    }
+  ]
+}
