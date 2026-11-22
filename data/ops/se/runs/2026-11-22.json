@@ -12,7 +12,7 @@
     "started": "VERIFIED",
     "search_completed": "VERIFIED",
     "artifact_created": "VERIFIED",
-    "delivered": "PENDING_DRAFT_PR",
+    "delivered": "DRAFT_PR_98_CREATED",
     "verified": "PRODUCTION_AND_ARTIFACT_CHECKS_COMPLETE"
   },
   "publication": {
@@ -46,5 +46,11 @@
     "lovetimeline": "NOT_DUE",
     "pinterest": "NOT_DUE"
   },
-  "draft_pr": null
+  "draft_pr": {
+    "number": 98,
+    "url": "https://github.com/roalstoney-alt/structurevidence/pull/98",
+    "state": "OPEN",
+    "draft": true,
+    "merged": false
+  }
 }
