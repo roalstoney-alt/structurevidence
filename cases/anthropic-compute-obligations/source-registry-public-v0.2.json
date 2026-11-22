@@ -122,6 +122,7 @@
       "canonical_url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026074944/anthropicpbc-424b4.htm",
       "capture_utc": "2026-11-21T13:49:42Z",
       "cik": "2130357",
+      "confirmed_sec_public_filing_date": "2026-11-19",
       "datePublished": "2026-11-19",
       "filing_date": "2026-11-19",
       "financial_amount_boundaries": [
@@ -152,6 +153,7 @@
       "issuer": "Anthropic, PBC",
       "known_at": "2026-11-21T13:49:42Z",
       "legacy_source_publication_date_v01": "2026-11-18",
+      "legacy_source_publication_date_v01_semantics": "PROSPECTUS_DATED_AT_NOT_CONFIRMED_PUBLIC_AVAILABILITY",
       "normalized_sha256": "e901e76706b3a8aceaa01e67213b7b01d1e9fff72704b70c6cac0e0b71d922d8",
       "pinpoints": [
         {

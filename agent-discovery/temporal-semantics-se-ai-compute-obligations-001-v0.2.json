@@ -1,7 +1,14 @@
 {
+  "confirmed_sec_public_filing_date": "2026-11-19",
   "datePublished": "2026-11-19",
   "date_published_basis_for_sec_document": "SEC_FILED_PUBLIC_ARCHIVE_DATE",
   "frozen_history_rewritten": false,
+  "legacy_date_alias": {
+    "alias": "prospectus_dated_at",
+    "field": "source_document_published_at",
+    "not_public_availability_evidence": true,
+    "value": "2026-11-18"
+  },
   "prospectus_dated_at": "2026-11-18",
   "schema_version": "SE-AICO-TEMPORAL-SEMANTICS-RECEIPT-v0.2",
   "sec_accepted_at": "2026-11-19T06:05:50-05:00",

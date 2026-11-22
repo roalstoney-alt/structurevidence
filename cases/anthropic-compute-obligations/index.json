@@ -30,6 +30,7 @@
       "claim_record_created_at": "2026-11-22",
       "claim_record_published_at": null,
       "claim_role": "ISSUER_DISCLOSURE",
+      "confirmed_sec_public_filing_date": "2026-11-19",
       "counter_evidence": [
         "Contractual commitment does not automatically equal recognized debt or cash already paid."
       ],
@@ -56,6 +57,7 @@
       "source_authority": "ISSUER_STATEMENT_SEC_HOSTED_NOT_INDEPENDENTLY_VALIDATED",
       "source_availability": "PUBLIC_SEC_ARCHIVE_CAPTURED",
       "source_document_published_at": "2026-11-18",
+      "source_document_published_at_legacy_semantics": "PROSPECTUS_DATED_AT_NOT_CONFIRMED_PUBLIC_AVAILABILITY",
       "source_ids": [
         "AICO-S001"
       ],
@@ -63,6 +65,7 @@
       "source_publication_date_basis": "SEC_FILED_PUBLIC_ARCHIVE_DATE",
       "source_published_at": "2026-11-19",
       "source_published_at_original_v02": "2026-11-18",
+      "source_published_at_original_v02_semantics": "LEGACY_PROSPECTUS_DATE_NOT_CONFIRMED_PUBLIC_AVAILABILITY",
       "source_refs": [
         {
           "canonical_url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026074944/anthropicpbc-424b4.htm",
@@ -107,6 +110,7 @@
       "claim_record_created_at": "2026-11-22",
       "claim_record_published_at": null,
       "claim_role": "ISSUER_DISCLOSURE",
+      "confirmed_sec_public_filing_date": "2026-11-19",
       "counter_evidence": [
         "The remainder band is described as substantially all, not a complete year-by-year schedule."
       ],
@@ -135,6 +139,7 @@
       "source_authority": "ISSUER_STATEMENT_SEC_HOSTED_NOT_INDEPENDENTLY_VALIDATED",
       "source_availability": "PUBLIC_SEC_ARCHIVE_CAPTURED",
       "source_document_published_at": "2026-11-18",
+      "source_document_published_at_legacy_semantics": "PROSPECTUS_DATED_AT_NOT_CONFIRMED_PUBLIC_AVAILABILITY",
       "source_ids": [
         "AICO-S001"
       ],
@@ -142,6 +147,7 @@
       "source_publication_date_basis": "SEC_FILED_PUBLIC_ARCHIVE_DATE",
       "source_published_at": "2026-11-19",
       "source_published_at_original_v02": "2026-11-18",
+      "source_published_at_original_v02_semantics": "LEGACY_PROSPECTUS_DATE_NOT_CONFIRMED_PUBLIC_AVAILABILITY",
       "source_refs": [
         {
           "canonical_url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026074944/anthropicpbc-424b4.htm",
@@ -186,6 +192,7 @@
       "claim_record_created_at": "2026-11-22",
       "claim_record_published_at": null,
       "claim_role": "ISSUER_DISCLOSURE",
+      "confirmed_sec_public_filing_date": "2026-11-19",
       "counter_evidence": [
         "AICO-R004 is included and cannot be added again."
       ],
@@ -214,6 +221,7 @@
       "source_authority": "ISSUER_STATEMENT_SEC_HOSTED_NOT_INDEPENDENTLY_VALIDATED",
       "source_availability": "PUBLIC_SEC_ARCHIVE_CAPTURED",
       "source_document_published_at": "2026-11-18",
+      "source_document_published_at_legacy_semantics": "PROSPECTUS_DATED_AT_NOT_CONFIRMED_PUBLIC_AVAILABILITY",
       "source_ids": [
         "AICO-S001"
       ],
@@ -221,6 +229,7 @@
       "source_publication_date_basis": "SEC_FILED_PUBLIC_ARCHIVE_DATE",
       "source_published_at": "2026-11-19",
       "source_published_at_original_v02": "2026-11-18",
+      "source_published_at_original_v02_semantics": "LEGACY_PROSPECTUS_DATE_NOT_CONFIRMED_PUBLIC_AVAILABILITY",
       "source_refs": [
         {
           "canonical_url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026074944/anthropicpbc-424b4.htm",
@@ -265,6 +274,7 @@
       "claim_record_created_at": "2026-11-22",
       "claim_record_published_at": null,
       "claim_role": "ISSUER_DISCLOSURE",
+      "confirmed_sec_public_filing_date": "2026-11-19",
       "counter_evidence": [
         "A termination right may be limited; a contingency may be satisfied or waived."
       ],
@@ -293,6 +303,7 @@
       "source_authority": "ISSUER_STATEMENT_SEC_HOSTED_NOT_INDEPENDENTLY_VALIDATED",
       "source_availability": "PUBLIC_SEC_ARCHIVE_CAPTURED",
       "source_document_published_at": "2026-11-18",
+      "source_document_published_at_legacy_semantics": "PROSPECTUS_DATED_AT_NOT_CONFIRMED_PUBLIC_AVAILABILITY",
       "source_ids": [
         "AICO-S001"
       ],
@@ -300,6 +311,7 @@
       "source_publication_date_basis": "SEC_FILED_PUBLIC_ARCHIVE_DATE",
       "source_published_at": "2026-11-19",
       "source_published_at_original_v02": "2026-11-18",
+      "source_published_at_original_v02_semantics": "LEGACY_PROSPECTUS_DATE_NOT_CONFIRMED_PUBLIC_AVAILABILITY",
       "source_refs": [
         {
           "canonical_url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026074944/anthropicpbc-424b4.htm",
@@ -343,6 +355,7 @@
       "claim_record_created_at": "2026-11-22",
       "claim_record_published_at": null,
       "claim_role": "ISSUER_DISCLOSURE",
+      "confirmed_sec_public_filing_date": "2026-11-19",
       "counter_evidence": [
         "The filing does not characterize the complement as legally irrevocable debt."
       ],
@@ -370,6 +383,7 @@
       "source_authority": "ISSUER_STATEMENT_SEC_HOSTED_NOT_INDEPENDENTLY_VALIDATED",
       "source_availability": "PUBLIC_SEC_ARCHIVE_CAPTURED",
       "source_document_published_at": "2026-11-18",
+      "source_document_published_at_legacy_semantics": "PROSPECTUS_DATED_AT_NOT_CONFIRMED_PUBLIC_AVAILABILITY",
       "source_ids": [
         "AICO-S001"
       ],
@@ -377,6 +391,7 @@
       "source_publication_date_basis": "SEC_FILED_PUBLIC_ARCHIVE_DATE",
       "source_published_at": "2026-11-19",
       "source_published_at_original_v02": "2026-11-18",
+      "source_published_at_original_v02_semantics": "LEGACY_PROSPECTUS_DATE_NOT_CONFIRMED_PUBLIC_AVAILABILITY",
       "source_refs": [
         {
           "canonical_url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026074944/anthropicpbc-424b4.htm",
@@ -424,6 +439,7 @@
       "claim_record_created_at": "2026-11-22",
       "claim_record_published_at": null,
       "claim_role": "ISSUER_DISCLOSURE",
+      "confirmed_sec_public_filing_date": "2026-11-19",
       "counter_evidence": [
         "The estimate is excluded from the aggregate and lacks a fixed-dollar commitment."
       ],
@@ -451,6 +467,7 @@
       "source_authority": "ISSUER_STATEMENT_SEC_HOSTED_NOT_INDEPENDENTLY_VALIDATED",
       "source_availability": "PUBLIC_SEC_ARCHIVE_CAPTURED",
       "source_document_published_at": "2026-11-18",
+      "source_document_published_at_legacy_semantics": "PROSPECTUS_DATED_AT_NOT_CONFIRMED_PUBLIC_AVAILABILITY",
       "source_ids": [
         "AICO-S001"
       ],
@@ -458,6 +475,7 @@
       "source_publication_date_basis": "SEC_FILED_PUBLIC_ARCHIVE_DATE",
       "source_published_at": "2026-11-19",
       "source_published_at_original_v02": "2026-11-18",
+      "source_published_at_original_v02_semantics": "LEGACY_PROSPECTUS_DATE_NOT_CONFIRMED_PUBLIC_AVAILABILITY",
       "source_refs": [
         {
           "canonical_url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026074944/anthropicpbc-424b4.htm",
@@ -506,6 +524,7 @@
         "short_term_investments": "36.3",
         "undrawn_credit_availability": "14.8"
       },
+      "confirmed_sec_public_filing_date": "2026-11-19",
       "counter_evidence": [
         "The credit component was undrawn availability, not cash on hand."
       ],
@@ -532,6 +551,7 @@
       "source_authority": "ISSUER_STATEMENT_SEC_HOSTED_NOT_INDEPENDENTLY_VALIDATED",
       "source_availability": "PUBLIC_SEC_ARCHIVE_CAPTURED",
       "source_document_published_at": "2026-11-18",
+      "source_document_published_at_legacy_semantics": "PROSPECTUS_DATED_AT_NOT_CONFIRMED_PUBLIC_AVAILABILITY",
       "source_ids": [
         "AICO-S001"
       ],
@@ -539,6 +559,7 @@
       "source_publication_date_basis": "SEC_FILED_PUBLIC_ARCHIVE_DATE",
       "source_published_at": "2026-11-19",
       "source_published_at_original_v02": "2026-11-18",
+      "source_published_at_original_v02_semantics": "LEGACY_PROSPECTUS_DATE_NOT_CONFIRMED_PUBLIC_AVAILABILITY",
       "source_refs": [
         {
           "canonical_url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026074944/anthropicpbc-424b4.htm",
@@ -582,6 +603,7 @@
       "claim_record_created_at": "2026-11-22",
       "claim_record_published_at": null,
       "claim_role": "ISSUER_DISCLOSURE",
+      "confirmed_sec_public_filing_date": "2026-11-19",
       "counter_evidence": [
         "The prospectus uses forward-looking language and schedules settlement after the prospectus date."
       ],
@@ -608,6 +630,7 @@
       "source_authority": "ISSUER_STATEMENT_SEC_HOSTED_NOT_INDEPENDENTLY_VALIDATED",
       "source_availability": "PUBLIC_SEC_ARCHIVE_CAPTURED",
       "source_document_published_at": "2026-11-18",
+      "source_document_published_at_legacy_semantics": "PROSPECTUS_DATED_AT_NOT_CONFIRMED_PUBLIC_AVAILABILITY",
       "source_ids": [
         "AICO-S001"
       ],
@@ -615,6 +638,7 @@
       "source_publication_date_basis": "SEC_FILED_PUBLIC_ARCHIVE_DATE",
       "source_published_at": "2026-11-19",
       "source_published_at_original_v02": "2026-11-18",
+      "source_published_at_original_v02_semantics": "LEGACY_PROSPECTUS_DATE_NOT_CONFIRMED_PUBLIC_AVAILABILITY",
       "source_refs": [
         {
           "canonical_url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026074944/anthropicpbc-424b4.htm",
@@ -658,6 +682,7 @@
       "claim_record_created_at": "2026-11-22",
       "claim_record_published_at": null,
       "claim_role": "ISSUER_DISCLOSURE",
+      "confirmed_sec_public_filing_date": "2026-11-19",
       "counter_evidence": [
         "Some customers have non-cancelable annual or multi-year minimum spend commitments; the filing does not state that all revenue is uncommitted."
       ],
@@ -684,6 +709,7 @@
       "source_authority": "ISSUER_STATEMENT_SEC_HOSTED_NOT_INDEPENDENTLY_VALIDATED",
       "source_availability": "PUBLIC_SEC_ARCHIVE_CAPTURED",
       "source_document_published_at": "2026-11-18",
+      "source_document_published_at_legacy_semantics": "PROSPECTUS_DATED_AT_NOT_CONFIRMED_PUBLIC_AVAILABILITY",
       "source_ids": [
         "AICO-S001"
       ],
@@ -691,6 +717,7 @@
       "source_publication_date_basis": "SEC_FILED_PUBLIC_ARCHIVE_DATE",
       "source_published_at": "2026-11-19",
       "source_published_at_original_v02": "2026-11-18",
+      "source_published_at_original_v02_semantics": "LEGACY_PROSPECTUS_DATE_NOT_CONFIRMED_PUBLIC_AVAILABILITY",
       "source_refs": [
         {
           "canonical_url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026074944/anthropicpbc-424b4.htm",
@@ -735,6 +762,7 @@
       "claim_record_created_at": "2026-11-22",
       "claim_record_published_at": null,
       "claim_role": "SE_DERIVED_CALCULATION",
+      "confirmed_sec_public_filing_date": "2026-11-19",
       "counter_evidence": [
         "Rounding can explain the $0.1bn difference."
       ],
@@ -764,6 +792,7 @@
       "source_authority": "ISSUER_INPUTS_SEC_HOSTED_NOT_INDEPENDENTLY_VALIDATED",
       "source_availability": "PUBLIC_SEC_ARCHIVE_CAPTURED",
       "source_document_published_at": "2026-11-18",
+      "source_document_published_at_legacy_semantics": "PROSPECTUS_DATED_AT_NOT_CONFIRMED_PUBLIC_AVAILABILITY",
       "source_ids": [
         "AICO-S001"
       ],
@@ -771,6 +800,7 @@
       "source_publication_date_basis": "SEC_FILED_PUBLIC_ARCHIVE_DATE",
       "source_published_at": "2026-11-19",
       "source_published_at_original_v02": "2026-11-18",
+      "source_published_at_original_v02_semantics": "LEGACY_PROSPECTUS_DATE_NOT_CONFIRMED_PUBLIC_AVAILABILITY",
       "source_refs": [
         {
           "canonical_url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026074944/anthropicpbc-424b4.htm",
@@ -815,6 +845,7 @@
       "claim_record_created_at": "2026-11-22",
       "claim_record_published_at": null,
       "claim_role": "REJECTED_OR_UNSUPPORTED_INFERENCE",
+      "confirmed_sec_public_filing_date": "2026-11-19",
       "counter_evidence": [
         "The issuer labels the figure contractual obligations and commitments, not a single debt balance."
       ],
@@ -842,6 +873,7 @@
       "source_authority": "ISSUER_INPUTS_SEC_HOSTED_NOT_INDEPENDENTLY_VALIDATED",
       "source_availability": "PUBLIC_SEC_ARCHIVE_CAPTURED",
       "source_document_published_at": "2026-11-18",
+      "source_document_published_at_legacy_semantics": "PROSPECTUS_DATED_AT_NOT_CONFIRMED_PUBLIC_AVAILABILITY",
       "source_ids": [
         "AICO-S001"
       ],
@@ -849,6 +881,7 @@
       "source_publication_date_basis": "SEC_FILED_PUBLIC_ARCHIVE_DATE",
       "source_published_at": "2026-11-19",
       "source_published_at_original_v02": "2026-11-18",
+      "source_published_at_original_v02_semantics": "LEGACY_PROSPECTUS_DATE_NOT_CONFIRMED_PUBLIC_AVAILABILITY",
       "source_refs": [
         {
           "canonical_url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026074944/anthropicpbc-424b4.htm",
@@ -894,6 +927,7 @@
       "claim_record_created_at": "2026-11-22",
       "claim_record_published_at": null,
       "claim_role": "REJECTED_OR_UNSUPPORTED_INFERENCE",
+      "confirmed_sec_public_filing_date": "2026-11-19",
       "counter_evidence": [
         "The source does not call the complement irrevocable or debt."
       ],
@@ -921,6 +955,7 @@
       "source_authority": "ISSUER_INPUTS_SEC_HOSTED_NOT_INDEPENDENTLY_VALIDATED",
       "source_availability": "PUBLIC_SEC_ARCHIVE_CAPTURED",
       "source_document_published_at": "2026-11-18",
+      "source_document_published_at_legacy_semantics": "PROSPECTUS_DATED_AT_NOT_CONFIRMED_PUBLIC_AVAILABILITY",
       "source_ids": [
         "AICO-S001"
       ],
@@ -928,6 +963,7 @@
       "source_publication_date_basis": "SEC_FILED_PUBLIC_ARCHIVE_DATE",
       "source_published_at": "2026-11-19",
       "source_published_at_original_v02": "2026-11-18",
+      "source_published_at_original_v02_semantics": "LEGACY_PROSPECTUS_DATE_NOT_CONFIRMED_PUBLIC_AVAILABILITY",
       "source_refs": [
         {
           "canonical_url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026074944/anthropicpbc-424b4.htm",
@@ -973,6 +1009,7 @@
       "claim_record_created_at": "2026-11-22",
       "claim_record_published_at": null,
       "claim_role": "REJECTED_OR_UNSUPPORTED_INFERENCE",
+      "confirmed_sec_public_filing_date": "2026-11-19",
       "counter_evidence": [
         "The source explicitly excludes the estimate from the fixed/minimum aggregate."
       ],
@@ -1000,6 +1037,7 @@
       "source_authority": "ISSUER_INPUTS_SEC_HOSTED_NOT_INDEPENDENTLY_VALIDATED",
       "source_availability": "PUBLIC_SEC_ARCHIVE_CAPTURED",
       "source_document_published_at": "2026-11-18",
+      "source_document_published_at_legacy_semantics": "PROSPECTUS_DATED_AT_NOT_CONFIRMED_PUBLIC_AVAILABILITY",
       "source_ids": [
         "AICO-S001"
       ],
@@ -1007,6 +1045,7 @@
       "source_publication_date_basis": "SEC_FILED_PUBLIC_ARCHIVE_DATE",
       "source_published_at": "2026-11-19",
       "source_published_at_original_v02": "2026-11-18",
+      "source_published_at_original_v02_semantics": "LEGACY_PROSPECTUS_DATE_NOT_CONFIRMED_PUBLIC_AVAILABILITY",
       "source_refs": [
         {
           "canonical_url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026074944/anthropicpbc-424b4.htm",
@@ -1052,6 +1091,7 @@
       "claim_record_created_at": "2026-11-22",
       "claim_record_published_at": null,
       "claim_role": "REJECTED_OR_UNSUPPORTED_INFERENCE",
+      "confirmed_sec_public_filing_date": "2026-11-19",
       "counter_evidence": [
         "The filing says the concurrent placement was scheduled after the offering closing."
       ],
@@ -1079,6 +1119,7 @@
       "source_authority": "ISSUER_INPUTS_SEC_HOSTED_NOT_INDEPENDENTLY_VALIDATED",
       "source_availability": "PUBLIC_SEC_ARCHIVE_CAPTURED",
       "source_document_published_at": "2026-11-18",
+      "source_document_published_at_legacy_semantics": "PROSPECTUS_DATED_AT_NOT_CONFIRMED_PUBLIC_AVAILABILITY",
       "source_ids": [
         "AICO-S001"
       ],
@@ -1086,6 +1127,7 @@
       "source_publication_date_basis": "SEC_FILED_PUBLIC_ARCHIVE_DATE",
       "source_published_at": "2026-11-19",
       "source_published_at_original_v02": "2026-11-18",
+      "source_published_at_original_v02_semantics": "LEGACY_PROSPECTUS_DATE_NOT_CONFIRMED_PUBLIC_AVAILABILITY",
       "source_refs": [
         {
           "canonical_url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026074944/anthropicpbc-424b4.htm",
@@ -1131,6 +1173,7 @@
       "claim_record_created_at": "2026-11-22",
       "claim_record_published_at": null,
       "claim_role": "REJECTED_OR_UNSUPPORTED_INFERENCE",
+      "confirmed_sec_public_filing_date": "2026-11-19",
       "counter_evidence": [
         "Risk-factor language describes contingencies; it is not a realized default finding."
       ],
@@ -1157,6 +1200,7 @@
       "source_authority": "ISSUER_INPUTS_SEC_HOSTED_NOT_INDEPENDENTLY_VALIDATED",
       "source_availability": "PUBLIC_SEC_ARCHIVE_CAPTURED",
       "source_document_published_at": "2026-11-18",
+      "source_document_published_at_legacy_semantics": "PROSPECTUS_DATED_AT_NOT_CONFIRMED_PUBLIC_AVAILABILITY",
       "source_ids": [
         "AICO-S001"
       ],
@@ -1164,6 +1208,7 @@
       "source_publication_date_basis": "SEC_FILED_PUBLIC_ARCHIVE_DATE",
       "source_published_at": "2026-11-19",
       "source_published_at_original_v02": "2026-11-18",
+      "source_published_at_original_v02_semantics": "LEGACY_PROSPECTUS_DATE_NOT_CONFIRMED_PUBLIC_AVAILABILITY",
       "source_refs": [
         {
           "canonical_url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026074944/anthropicpbc-424b4.htm",
@@ -1189,6 +1234,14 @@
       "version_id": "v0.2"
     }
   ],
+  "client_source_date_policy": {
+    "confirmed_public_availability_date": "2026-11-19",
+    "confirmed_public_availability_field": "sec_filed_at",
+    "legacy_field": "source_document_published_at",
+    "legacy_field_alias": "prospectus_dated_at",
+    "must_not_infer_public_availability_from_legacy_field": true
+  },
+  "confirmed_sec_public_filing_date": "2026-11-19",
   "deployment_state": "NOT_APPLIED",
   "frozen_semantics_head": "417f0b910155878a1c2aed33f07c296d6780a04d",
   "invalid_inference_guard_ids": [
@@ -1280,6 +1333,7 @@
   "sec_filed_at": "2026-11-19",
   "source_dependency_policy": "ISSUER_STATEMENT_SEC_HOSTED_NOT_INDEPENDENTLY_VALIDATED",
   "source_document_published_at": "2026-11-18",
+  "source_document_published_at_legacy_semantics": "PROSPECTUS_DATED_AT_NOT_CONFIRMED_PUBLIC_AVAILABILITY",
   "source_publication_date_basis": "SEC_FILED_PUBLIC_ARCHIVE_DATE",
   "sources": [
     {

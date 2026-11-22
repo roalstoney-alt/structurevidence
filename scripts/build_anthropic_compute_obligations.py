@@ -33,6 +33,18 @@ PUBLIC_HASHES = {
     "cases/anthropic-compute-obligations/structured-metadata-v0.2.json": "91c4501af9e6f53f4460ac224b0eccc3bcd33b2d1590c3d195c19a2d76c11144",
 }
 
+AUTHORIZED_CORRECTION_HASHES = {
+    "agent-discovery/temporal-semantics-se-ai-compute-obligations-001-v0.2.json": "3bfa84f986fa87c9df1731c281508ec1d3a055466eb85cbad05e4aeac0bada7f",
+    "cases/anthropic-compute-obligations/claims-v0.2.jsonl": "8952849a7841a443daee63052649e61aa1d556919205afa3ad5905edb9f5c2b6",
+    "cases/anthropic-compute-obligations/index.json": "5c0aeb946e3c91941691827b3c1761fba3ff365d74c7335959e2c14a02505c4e",
+    "cases/anthropic-compute-obligations/source-registry-public-v0.2.json": "8683e29fe0ceb0b93973db24ba5739fd07af2166fba4b7f00a02a7aac49f41e1",
+}
+
+ACTIVATION_FILES = (
+    "cases/anthropic-compute-obligations/activation-projection-v0.2.json",
+    "cases/anthropic-compute-obligations/publication-receipt-template-v0.2.json",
+)
+
 SITEMAP_URLS = [
     "https://structurevidence.org/cases/anthropic-compute-obligations/",
     "https://structurevidence.org/cases/anthropic-compute-obligations/index.json",
@@ -65,7 +77,13 @@ def verify_reviewed_files() -> None:
     for relative, expected in PUBLIC_HASHES.items():
         root_path = ROOT / relative
         docs_path = ROOT / "docs" / relative
-        if not root_path.is_file() or digest(root_path) != expected:
+        if not root_path.is_file():
+            raise AssertionError(f"reviewed public file missing: {relative}")
+        actual = digest(root_path)
+        allowed_hashes = {expected}
+        if relative in AUTHORIZED_CORRECTION_HASHES:
+            allowed_hashes.add(AUTHORIZED_CORRECTION_HASHES[relative])
+        if actual not in allowed_hashes:
             raise AssertionError(f"reviewed public file hash mismatch: {relative}")
         if not docs_path.is_file() or docs_path.read_bytes() != root_path.read_bytes():
             raise AssertionError(f"root/docs mirror mismatch: {relative}")
@@ -89,6 +107,8 @@ def with_sitemap_urls(value: bytes) -> bytes:
 def update_case_index_intro(value: bytes) -> bytes:
     text = value.decode("utf-8")
     replacements = {
+        "Six on-site evidence trackers and one separately hosted provisional evidence study, plus an open inquiry and a frozen decision audit, each with explicit evidence boundaries.":
+            "Seven on-site evidence trackers and one separately hosted provisional evidence study, plus an open inquiry and a frozen decision audit, each with explicit evidence boundaries.",
         "Six on-site evidence trackers, plus one external research study, one open inquiry, and one decision audit.":
             "Seven on-site evidence trackers, plus one external research study, one open inquiry, and one decision audit.",
         "Explore six on-site evidence trackers, including the owner-authorized IREN AI Cloud and time-bounded Binance security records.":
@@ -105,8 +125,155 @@ def update_case_index_intro(value: bytes) -> bytes:
     return text.encode("utf-8")
 
 
+def json_bytes(value: object) -> bytes:
+    return (json.dumps(value, ensure_ascii=False, sort_keys=True, indent=2) + "\n").encode("utf-8")
+
+
+def jsonl_bytes(rows: list[dict]) -> bytes:
+    return ("\n".join(json.dumps(row, ensure_ascii=False, sort_keys=True, separators=(",", ":")) for row in rows) + "\n").encode("utf-8")
+
+
+def activation_projection() -> dict:
+    return {
+        "schema_version": "SE-AICO-GATED-ACTIVATION-PROJECTION-v0.2",
+        "case_id": CASE_ID,
+        "status": "GATED_ACTIVATION_PROJECTION_NOT_APPLIED",
+        "current_candidate_state": {
+            "creative_work_status": "PROPOSED_FINAL_RELEASE_NOT_PUBLISHED",
+            "deployment_state": "NOT_APPLIED",
+            "publication_authorized": False,
+            "claim_record_published_at": None,
+        },
+        "activation_preconditions": [
+            "OWNER_APPROVES_EXACT_PR_HEAD",
+            "MERGE_AUTHORIZED_SEPARATELY",
+            "DEPLOYMENT_AUTHORIZED_SEPARATELY",
+            "ACTIVATED_COMMIT_LINKED_TO_DEPLOYMENT",
+            "LIVE_CANONICAL_URL_RETURNS_EXPECTED_CASE",
+        ],
+        "proposed_append_only_event": {
+            "event_id": None,
+            "event_type": "PUBLICATION_ACTIVATION",
+            "publication_event_at": None,
+            "activated_commit_sha": None,
+            "deployment_receipt_url": None,
+            "live_case_url": "https://structurevidence.org/cases/anthropic-compute-obligations/",
+            "supersedes_prepublication_records": False,
+        },
+        "activation_writes_only_after_event": {
+            "structevidence_date_published": None,
+            "claim_record_published_at": None,
+            "deployment_state": "AWAIT_ACTUAL_EVENT",
+            "publication_authorized": "AWAIT_SEPARATE_OWNER_AUTHORIZATION",
+        },
+        "history_policy": "APPEND_NEW_EVENT_AND_RECEIPT_DO_NOT_REWRITE_PREPUBLICATION_ROWS",
+        "merge_authorized": False,
+        "deployment_authorized": False,
+        "external_agent_trial_authorized": False,
+    }
+
+
+def publication_receipt_template() -> dict:
+    return {
+        "schema_version": "SE-AICO-PUBLICATION-RECEIPT-TEMPLATE-v0.2",
+        "case_id": CASE_ID,
+        "status": "TEMPLATE_NOT_A_PUBLICATION_RECEIPT",
+        "receipt_id": None,
+        "publication_event_at": None,
+        "activated_commit_sha": None,
+        "deployment_id": None,
+        "live_case_url": "https://structurevidence.org/cases/anthropic-compute-obligations/",
+        "live_url_verified_at": None,
+        "canonical_verified": False,
+        "claim_anchor_count_verified": None,
+        "root_docs_hashes_verified": False,
+        "prepublication_history_rewritten": False,
+        "append_only": True,
+        "population_rule": "POPULATE_ONLY_AFTER_SEPARATELY_AUTHORIZED_DEPLOYMENT_AND_LIVE_URL_VERIFICATION",
+    }
+
+
+def write_release_blockers() -> None:
+    case = ROOT / "cases/anthropic-compute-obligations"
+    snapshot = json.loads((case / "index.json").read_text(encoding="utf-8"))
+    snapshot["confirmed_sec_public_filing_date"] = "2026-11-19"
+    snapshot["source_document_published_at_legacy_semantics"] = "PROSPECTUS_DATED_AT_NOT_CONFIRMED_PUBLIC_AVAILABILITY"
+    snapshot["client_source_date_policy"] = {
+        "confirmed_public_availability_field": "sec_filed_at",
+        "confirmed_public_availability_date": "2026-11-19",
+        "legacy_field": "source_document_published_at",
+        "legacy_field_alias": "prospectus_dated_at",
+        "must_not_infer_public_availability_from_legacy_field": True,
+    }
+    for claim in snapshot["claims"]:
+        claim["confirmed_sec_public_filing_date"] = "2026-11-19"
+        claim["source_document_published_at_legacy_semantics"] = "PROSPECTUS_DATED_AT_NOT_CONFIRMED_PUBLIC_AVAILABILITY"
+        claim["source_published_at_original_v02_semantics"] = "LEGACY_PROSPECTUS_DATE_NOT_CONFIRMED_PUBLIC_AVAILABILITY"
+    claims = [json.loads(line) for line in (case / "claims-v0.2.jsonl").read_text(encoding="utf-8").splitlines() if line]
+    for claim in claims:
+        claim["confirmed_sec_public_filing_date"] = "2026-11-19"
+        claim["source_document_published_at_legacy_semantics"] = "PROSPECTUS_DATED_AT_NOT_CONFIRMED_PUBLIC_AVAILABILITY"
+        claim["source_published_at_original_v02_semantics"] = "LEGACY_PROSPECTUS_DATE_NOT_CONFIRMED_PUBLIC_AVAILABILITY"
+    registry = json.loads((case / "source-registry-public-v0.2.json").read_text(encoding="utf-8"))
+    source = registry["sources"][0]
+    source["confirmed_sec_public_filing_date"] = "2026-11-19"
+    source["legacy_source_publication_date_v01_semantics"] = "PROSPECTUS_DATED_AT_NOT_CONFIRMED_PUBLIC_AVAILABILITY"
+    temporal_path = ROOT / "agent-discovery/temporal-semantics-se-ai-compute-obligations-001-v0.2.json"
+    temporal = json.loads(temporal_path.read_text(encoding="utf-8"))
+    temporal["confirmed_sec_public_filing_date"] = "2026-11-19"
+    temporal["legacy_date_alias"] = {
+        "field": "source_document_published_at",
+        "alias": "prospectus_dated_at",
+        "value": "2026-11-18",
+        "not_public_availability_evidence": True,
+    }
+    outputs = {
+        "cases/anthropic-compute-obligations/index.json": json_bytes(snapshot),
+        "cases/anthropic-compute-obligations/claims-v0.2.jsonl": jsonl_bytes(claims),
+        "cases/anthropic-compute-obligations/source-registry-public-v0.2.json": json_bytes(registry),
+        "agent-discovery/temporal-semantics-se-ai-compute-obligations-001-v0.2.json": json_bytes(temporal),
+        ACTIVATION_FILES[0]: json_bytes(activation_projection()),
+        ACTIVATION_FILES[1]: json_bytes(publication_receipt_template()),
+    }
+    for relative, content in outputs.items():
+        (ROOT / relative).parent.mkdir(parents=True, exist_ok=True)
+        (ROOT / relative).write_bytes(content)
+        (ROOT / "docs" / relative).parent.mkdir(parents=True, exist_ok=True)
+        (ROOT / "docs" / relative).write_bytes(content)
+
+
+def verify_release_blockers() -> None:
+    snapshot = json.loads((ROOT / "cases/anthropic-compute-obligations/index.json").read_text(encoding="utf-8"))
+    if snapshot["deployment_state"] != "NOT_APPLIED" or snapshot["publication_authorized"] is not False:
+        raise AssertionError("pre-publication snapshot state was activated")
+    if snapshot["claim_record_published_at"] is not None or snapshot["structevidence_publication_date"] is not None:
+        raise AssertionError("publication timestamp was invented")
+    if snapshot["client_source_date_policy"]["confirmed_public_availability_date"] != "2026-11-19":
+        raise AssertionError("confirmed SEC public date policy missing")
+    if not snapshot["client_source_date_policy"]["must_not_infer_public_availability_from_legacy_field"]:
+        raise AssertionError("legacy-date inference guard missing")
+    for claim in snapshot["claims"]:
+        if claim["source_document_published_at"] != "2026-11-18" or claim["confirmed_sec_public_filing_date"] != "2026-11-19":
+            raise AssertionError(f"date alias mismatch: {claim['claim_id']}")
+        if claim["source_document_published_at_legacy_semantics"] != "PROSPECTUS_DATED_AT_NOT_CONFIRMED_PUBLIC_AVAILABILITY":
+            raise AssertionError(f"legacy date semantics missing: {claim['claim_id']}")
+    metadata = json.loads((ROOT / "cases/anthropic-compute-obligations/structured-metadata-v0.2.json").read_text(encoding="utf-8"))
+    if metadata["creativeWorkStatus"] != "PROPOSED_FINAL_RELEASE_NOT_PUBLISHED" or metadata["datePublished"] is not None:
+        raise AssertionError("structured metadata no longer represents a draft")
+    activation = json.loads((ROOT / ACTIVATION_FILES[0]).read_text(encoding="utf-8"))
+    receipt = json.loads((ROOT / ACTIVATION_FILES[1]).read_text(encoding="utf-8"))
+    if activation["proposed_append_only_event"]["publication_event_at"] is not None or activation["merge_authorized"]:
+        raise AssertionError("activation projection invents an event or authorization")
+    if receipt["status"] != "TEMPLATE_NOT_A_PUBLICATION_RECEIPT" or receipt["publication_event_at"] is not None:
+        raise AssertionError("receipt template masquerades as a publication receipt")
+    for relative in ACTIVATION_FILES:
+        if (ROOT / relative).read_bytes() != (ROOT / "docs" / relative).read_bytes():
+            raise AssertionError(f"activation root/docs mirror mismatch: {relative}")
+
+
 def write_outputs() -> None:
     verify_reviewed_files()
+    write_release_blockers()
     case_index = update_case_index_intro((ROOT / "cases/index.html").read_bytes())
     (ROOT / "cases/index.html").write_bytes(case_index)
     (ROOT / "docs/cases/index.html").write_bytes(case_index)
@@ -124,11 +291,14 @@ def write_outputs() -> None:
 
 def check_outputs() -> None:
     verify_reviewed_files()
+    verify_release_blockers()
     page = (ROOT / "cases/index.html").read_text(encoding="utf-8")
     if CASE_ID not in page or "/cases/anthropic-compute-obligations/" not in page:
         raise AssertionError("case index integration missing")
     if "Seven on-site evidence trackers" not in page or "seven-tracker review-status feed" not in page:
         raise AssertionError("case-index inventory copy is stale")
+    if 'meta name="description" content="Seven on-site evidence trackers' not in page:
+        raise AssertionError("case-index SEO description count is stale")
     status = json.loads((ROOT / "cases/review-status.json").read_text(encoding="utf-8"))
     row = next((item for item in status["cases"] if item["case_id"] == CASE_ID), None)
     if not row or row["last_reviewed_at"] is not None or row["period"]["status"] != "NOT_YET_REVIEWED":

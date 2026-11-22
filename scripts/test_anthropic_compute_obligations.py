@@ -61,7 +61,7 @@ class AnthropicPublicReleaseTest(unittest.TestCase):
         cls.registry = load("cases/anthropic-compute-obligations/source-registry-public-v0.2.json")
         cls.html = (CASE / "index.html").read_text(encoding="utf-8")
 
-    def test_01_exact_reviewed_public_hashes_and_mirrors(self):
+    def test_01_reviewed_hashes_or_authorized_corrections_and_mirrors(self):
         builder().verify_reviewed_files()
 
     def test_02_claim_roles_and_count(self):
@@ -86,6 +86,16 @@ class AnthropicPublicReleaseTest(unittest.TestCase):
         metadata = load("cases/anthropic-compute-obligations/structured-metadata-v0.2.json")
         self.assertIsNone(metadata["datePublished"])
         self.assertEqual(metadata["isBasedOn"]["datePublished"], "2026-11-19")
+
+    def test_04b_legacy_source_date_is_explicitly_aliased(self):
+        policy = self.snapshot["client_source_date_policy"]
+        self.assertEqual(policy["legacy_field_alias"], "prospectus_dated_at")
+        self.assertEqual(policy["confirmed_public_availability_date"], "2026-11-19")
+        self.assertTrue(policy["must_not_infer_public_availability_from_legacy_field"])
+        for claim in self.claims:
+            self.assertEqual(claim["source_document_published_at"], "2026-11-18")
+            self.assertEqual(claim["confirmed_sec_public_filing_date"], "2026-11-19")
+            self.assertEqual(claim["source_document_published_at_legacy_semantics"], "PROSPECTUS_DATED_AT_NOT_CONFIRMED_PUBLIC_AVAILABILITY")
 
     def test_05_financial_boundaries(self):
         amounts = {row["amount_usd_billions"] for row in self.registry["sources"][0]["financial_amount_boundaries"]}
@@ -115,6 +125,8 @@ class AnthropicPublicReleaseTest(unittest.TestCase):
     def test_09_case_index_review_status_and_sitemap(self):
         page = (ROOT / "cases/index.html").read_text(encoding="utf-8")
         self.assertIn(CASE_ID, page)
+        self.assertIn('meta name="description" content="Seven on-site evidence trackers', page)
+        self.assertNotIn('meta name="description" content="Six on-site evidence trackers', page)
         status = next(row for row in load("cases/review-status.json")["cases"] if row["case_id"] == CASE_ID)
         self.assertIsNone(status["last_reviewed_at"])
         self.assertEqual(status["period"]["status"], "NOT_YET_REVIEWED")
@@ -145,6 +157,18 @@ class AnthropicPublicReleaseTest(unittest.TestCase):
 
     def test_13_deterministic_builder_check(self):
         builder().check_outputs()
+
+    def test_14_activation_projection_and_receipt_are_unpopulated(self):
+        activation = load("cases/anthropic-compute-obligations/activation-projection-v0.2.json")
+        receipt = load("cases/anthropic-compute-obligations/publication-receipt-template-v0.2.json")
+        self.assertEqual(activation["status"], "GATED_ACTIVATION_PROJECTION_NOT_APPLIED")
+        self.assertIsNone(activation["proposed_append_only_event"]["publication_event_at"])
+        self.assertFalse(activation["merge_authorized"])
+        self.assertFalse(activation["deployment_authorized"])
+        self.assertEqual(receipt["status"], "TEMPLATE_NOT_A_PUBLICATION_RECEIPT")
+        self.assertIsNone(receipt["publication_event_at"])
+        self.assertTrue(receipt["append_only"])
+        self.assertFalse(receipt["prepublication_history_rewritten"])
 
 
 if __name__ == "__main__":
