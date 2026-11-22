@@ -1,0 +1,30 @@
+{
+  "schema_version": "se-external-feedback-ledger-v1",
+  "date_sgt": "2026-11-05",
+  "knowledge_cutoff": "2026-11-05T22:03:00+08:00",
+  "privacy_safe": true,
+  "internal_synthetic_excluded": true,
+  "metrics": {
+    "VERIFIED_EXTERNAL_CHALLENGES": {
+      "today": "UNKNOWN_ACCESS_BLOCKED",
+      "cumulative": "UNKNOWN_ACCESS_BLOCKED"
+    },
+    "VERIFIED_DECISION_CITATIONS": {
+      "today": "UNKNOWN_ACCESS_BLOCKED",
+      "cumulative": "UNKNOWN_ACCESS_BLOCKED"
+    },
+    "VERIFIED_INBOUND_DECISION_REQUESTS": {
+      "today": "UNKNOWN_ACCESS_BLOCKED",
+      "cumulative": "UNKNOWN_ACCESS_BLOCKED"
+    }
+  },
+  "public_checks": {
+    "github_issue_search": "NO_MATCHES_FOUND_WITHIN_QUERY",
+    "public_web_exact_search": "NO_VERIFIED_EXTERNAL_TRACTION_FOUND_WITHIN_QUERY",
+    "private_intake": "SOURCE_NOT_ACCESSIBLE",
+    "cloudflare_admin": "SOURCE_NOT_ACCESSIBLE"
+  },
+  "carried_unverified_external_interactions": 1,
+  "note": "A previously recorded external interaction is carried only as a privacy-safe unverified aggregate and is not promoted to any verified metric.",
+  "entries": []
+}
