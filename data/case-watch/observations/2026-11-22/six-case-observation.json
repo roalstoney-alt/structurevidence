@@ -1,0 +1,262 @@
+{
+  "schema_version": "se-six-case-observation-v1",
+  "date_sgt": "2026-11-22",
+  "github_baselines": {
+    "structurevidence_main": "0c65ba830e28db694bb627ca6602648f64d4a491",
+    "dual_case_public_main": "acc203395d46e6a6c74a6bca5ec77404ab0c3e68"
+  },
+  "production_body_checks": {
+    "anthropic_compute_obligations": "HTTP_BODY_VISIBLE_2026-11-22",
+    "cml_800vdc": "HTTP_BODY_VISIBLE_2026-11-22",
+    "sodium_ion_bess": "HTTP_BODY_VISIBLE_2026-11-22",
+    "irkutsk": "HTTP_BODY_VISIBLE_2026-11-22",
+    "nsclc": "HTTP_BODY_VISIBLE_2026-11-22"
+  },
+  "adjacent_publication_event": {
+    "case_id": "SE-AI-COMPUTE-OBLIGATIONS-001",
+    "classification": "PUBLICATION_LIVE_VERIFIED_NOT_EXTERNAL_TRACTION",
+    "github_merge_pr": 97,
+    "production_url": "https://structurevidence.org/cases/anthropic-compute-obligations/",
+    "boundary": "Issuer-authored unaudited disclosure; not independent confirmation, debt classification, insolvency finding or decision recommendation."
+  },
+  "weekly_sunday": {
+    "three_case_summary": [
+      "CML-PDRE-001: accepted single-instance stop unchanged",
+      "SE-BESS-SODIUM-001: one product-launch event; commissioned named site still not established",
+      "SE-IRK-LAB-001: cause and occupational link remain unestablished; review incomplete"
+    ],
+    "nsclc_folded_review": "Completed bounded source-availability review; vendor announcement readable, NMPA primary label not captured; FOLDED retained.",
+    "public_research_question": "What minimum public evidence should distinguish a product launch or future delivery schedule from a commissioned, decision-grade stationary-storage deployment?"
+  },
+  "cases": [
+    {
+      "case_id": "CML-PDRE-001",
+      "source_url": "https://www.energy-storage.news/industry-updates/envision-achieves-worlds-first-commercial-deployment-of-integrated-800v-dc-sst-based-power-system-in-large-scale-ai-data-centre/",
+      "source_id": "ENVISION-800V-20261104-DEDUPE",
+      "source_speaker": "Envision via Energy-Storage.news industry update",
+      "claimed_subject": "Galaxy AI campus integrated 800VDC/SST deployment",
+      "claim_ids": [
+        "NAMED_FIELD_DEPLOYMENT",
+        "INDEPENDENT_VALIDATION",
+        "REPLICATION",
+        "LONG_OPERATING_HISTORY"
+      ],
+      "event_at": "2026-11-02/04",
+      "published_at": "2026-11-04",
+      "search_query": "800 VDC SST data center named deployment November 2026",
+      "old_stop_point": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+      "proposed_stop_point": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+      "new_sources": 0,
+      "new_attributed_statements": 0,
+      "new_independent_evidence": 0,
+      "new_events": 0,
+      "newly_discovered_old_evidence": 0,
+      "state_changing_evidence": 0,
+      "contradictions": [],
+      "decision_relevant_unknown": [
+        "independent acceptance",
+        "measured reliability",
+        "repeat deployment",
+        "operating economics"
+      ],
+      "next_observable": "Named third-party acceptance or repeated commissioned deployment with operating data.",
+      "review_status": "NO_STATE_CHANGE",
+      "observed_at": "2026-11-22T14:08:00Z",
+      "knowledge_cutoff": "2026-11-22T14:08:00Z",
+      "source_access": "PUBLIC_WEB_AND_GITHUB_READ; PRIVATE_INTAKE_ADMIN_MESSAGES_SOURCE_NOT_ACCESSIBLE",
+      "raw_hash_or_UNAVAILABLE": "UNAVAILABLE_FOR_WEB_SEARCH_RESULTS",
+      "search_boundary": "Bounded public-source and production-body review; not an exhaustive market census."
+    },
+    {
+      "case_id": "SE-BESS-SODIUM-001",
+      "source_url": "https://www.ess-news.com/2026/11/20/new-sodium-ion-energy-storage-solution-for-data-centers-from-californias-proper-voltage-and-unigrid/",
+      "source_id": "ESS-NEWS-PROPER-VOLTAGE-UNIGRID-20261120",
+      "source_speaker": "Proper Voltage and Unigrid, reported by ESS News",
+      "claimed_subject": "Salt Vault sodium-ion UPS cabinet launch and scheduled future deliveries",
+      "claim_ids": [
+        "PRODUCT_LAUNCH",
+        "DELIVERY",
+        "NAMED_CUSTOMER",
+        "COMMISSIONING",
+        "FIELD_OPERATION"
+      ],
+      "event_at": "2026-11-20",
+      "published_at": "2026-11-20",
+      "search_query": "sodium ion BESS commissioned operational November 2026",
+      "old_stop_point": "NAMED_COMMISSIONED_SITE_NOT_ESTABLISHED",
+      "proposed_stop_point": "NAMED_COMMISSIONED_SITE_NOT_ESTABLISHED",
+      "new_sources": 1,
+      "new_attributed_statements": 1,
+      "new_independent_evidence": 0,
+      "new_events": 1,
+      "newly_discovered_old_evidence": 0,
+      "state_changing_evidence": 0,
+      "contradictions": [],
+      "decision_relevant_unknown": [
+        "unnamed early adopters",
+        "deliveries scheduled April 2027",
+        "no commissioning or field runtime"
+      ],
+      "next_observable": "Named delivered customer, grid/UPS acceptance and attributable operating record.",
+      "review_status": "NO_STATE_CHANGE",
+      "observed_at": "2026-11-22T14:08:00Z",
+      "knowledge_cutoff": "2026-11-22T14:08:00Z",
+      "source_access": "PUBLIC_WEB_AND_GITHUB_READ; PRIVATE_INTAKE_ADMIN_MESSAGES_SOURCE_NOT_ACCESSIBLE",
+      "raw_hash_or_UNAVAILABLE": "UNAVAILABLE_FOR_WEB_SEARCH_RESULTS",
+      "search_boundary": "Bounded public-source and production-body review; not an exhaustive market census."
+    },
+    {
+      "case_id": "SE-IRK-LAB-001",
+      "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON620",
+      "source_id": "WHO-DON620-RECHECK-20261122",
+      "source_speaker": "WHO relaying Russian Federation IHR National Focal Point",
+      "claimed_subject": "Irkutsk worker death and undetermined pneumonia",
+      "claim_ids": [
+        "CAUSE",
+        "OCCUPATIONAL_LINK",
+        "LAB_INCIDENT",
+        "SECOND_CASE",
+        "CONTACT_FOLLOWUP"
+      ],
+      "event_at": "2026-10-02",
+      "published_at": "2026-10-10",
+      "search_query": "Irkutsk laboratory worker death WHO IHR regulator update November 2026",
+      "old_stop_point": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+      "proposed_stop_point": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+      "new_sources": 0,
+      "new_attributed_statements": 0,
+      "new_independent_evidence": 0,
+      "new_events": 0,
+      "newly_discovered_old_evidence": 0,
+      "state_changing_evidence": 0,
+      "contradictions": [],
+      "decision_relevant_unknown": [
+        "direct investigation result",
+        "cause",
+        "occupational link",
+        "denominator-defined follow-up"
+      ],
+      "next_observable": "Direct public investigation result or regulator revision.",
+      "review_status": "REVIEW_INCOMPLETE",
+      "search_boundary": "Bounded public-source and production-body review; not an exhaustive market census.",
+      "observed_at": "2026-11-22T14:08:00Z",
+      "knowledge_cutoff": "2026-11-22T14:08:00Z",
+      "source_access": "PUBLIC_WEB_AND_GITHUB_READ; PRIVATE_INTAKE_ADMIN_MESSAGES_SOURCE_NOT_ACCESSIBLE",
+      "raw_hash_or_UNAVAILABLE": "UNAVAILABLE_FOR_WEB_SEARCH_RESULTS"
+    },
+    {
+      "case_id": "SE-ONC-NSQNSCLC-CN-001",
+      "source_url": "https://www.bayer.com/media/en-us/sevabertinib-approved-in-china-as-first-line-treatment-for-patients-with-her2-mutant-non-small-cell-lung-cancer",
+      "source_id": "BAYER-SEVABERTINIB-CHINA-20261104-DEDUPE",
+      "source_speaker": "Bayer",
+      "claimed_subject": "China first-line marketing authorization for HER2-mutant NSCLC",
+      "claim_ids": [
+        "NMPA_APPROVAL",
+        "INDICATION",
+        "PRIMARY_LABEL",
+        "CLINICAL_EVIDENCE"
+      ],
+      "event_at": "2026-11-04",
+      "published_at": "2026-11-04",
+      "search_query": "China NMPA non-squamous NSCLC approval label November 2026 sevabertinib official",
+      "old_stop_point": "FOLDED / PUBLIC_RESEARCH_PREVIEW",
+      "proposed_stop_point": "FOLDED / PUBLIC_RESEARCH_PREVIEW",
+      "new_sources": 0,
+      "new_attributed_statements": 0,
+      "new_independent_evidence": 0,
+      "new_events": 0,
+      "newly_discovered_old_evidence": 0,
+      "state_changing_evidence": 0,
+      "contradictions": [],
+      "decision_relevant_unknown": [
+        "NMPA primary approval record and label not captured",
+        "hospital-level outcomes not established"
+      ],
+      "next_observable": "NMPA primary approval/label and human medical review.",
+      "review_status": "REVIEW_INCOMPLETE",
+      "search_boundary": "Bounded public-source and production-body review; not an exhaustive market census.",
+      "observed_at": "2026-11-22T14:08:00Z",
+      "knowledge_cutoff": "2026-11-22T14:08:00Z",
+      "source_access": "PUBLIC_WEB_AND_GITHUB_READ; PRIVATE_INTAKE_ADMIN_MESSAGES_SOURCE_NOT_ACCESSIBLE",
+      "raw_hash_or_UNAVAILABLE": "UNAVAILABLE_FOR_WEB_SEARCH_RESULTS"
+    },
+    {
+      "case_id": "SE-PHYSICAL-AI-001",
+      "source_url": "https://www.figure.ai/news/f-02-decommission",
+      "source_id": "FIGURE-F02-DECOMMISSION-20260930-DEDUPE",
+      "source_speaker": "Figure AI",
+      "claimed_subject": "Figure 02 fleet decommission and Figure 03 transition",
+      "claim_ids": [
+        "F02_DECOMMISSION",
+        "F03_BMW",
+        "RELIABILITY",
+        "ACCEPTANCE"
+      ],
+      "event_at": "2026-09-30",
+      "published_at": "2026-09-30",
+      "search_query": "Figure AI BMW Figure 02 03 deployment decommission November 2026",
+      "old_stop_point": "LOCAL_PROVISIONAL_v0.1",
+      "proposed_stop_point": "LOCAL_PROVISIONAL_v0.1",
+      "new_sources": 0,
+      "new_attributed_statements": 0,
+      "new_independent_evidence": 0,
+      "new_events": 0,
+      "newly_discovered_old_evidence": 0,
+      "state_changing_evidence": 0,
+      "contradictions": [],
+      "decision_relevant_unknown": [
+        "Figure 03 sustained performance",
+        "acceptance",
+        "MTBF/MTTR",
+        "economics"
+      ],
+      "next_observable": "Generation-specific customer acceptance and attributable reliability record.",
+      "review_status": "NO_STATE_CHANGE",
+      "observed_at": "2026-11-22T14:08:00Z",
+      "knowledge_cutoff": "2026-11-22T14:08:00Z",
+      "source_access": "PUBLIC_WEB_AND_GITHUB_READ; PRIVATE_INTAKE_ADMIN_MESSAGES_SOURCE_NOT_ACCESSIBLE",
+      "raw_hash_or_UNAVAILABLE": "UNAVAILABLE_FOR_WEB_SEARCH_RESULTS",
+      "search_boundary": "Bounded public-source and production-body review; not an exhaustive market census."
+    },
+    {
+      "case_id": "SE-NEW-BUSINESS-001",
+      "source_url": "https://iren.gcs-web.com/static-files/67ed720a-021d-471a-8d9c-ea109edec817",
+      "source_id": "IREN-10Q-20261105-DEDUPE-PR93",
+      "source_speaker": "IREN Limited SEC filing",
+      "claimed_subject": "Horizon 1 acceptance, Horizon 2-4 delivery changes, AI Cloud capacity and revenue distinctions",
+      "claim_ids": [
+        "HORIZON1_ACCEPTANCE",
+        "HORIZON2_4",
+        "GAAP_REVENUE",
+        "ARR",
+        "MW",
+        "FINANCING"
+      ],
+      "event_at": "2026-11-05",
+      "published_at": "2026-11-05",
+      "search_query": "IREN Microsoft Horizon AI Cloud November 2026",
+      "old_stop_point": "LOCAL_PROVISIONAL_v0.1",
+      "proposed_stop_point": "LOCAL_PROVISIONAL_v0.1",
+      "new_sources": 0,
+      "new_attributed_statements": 0,
+      "new_independent_evidence": 0,
+      "new_events": 0,
+      "newly_discovered_old_evidence": 0,
+      "state_changing_evidence": 0,
+      "contradictions": [],
+      "decision_relevant_unknown": [
+        "Microsoft-authored confirmation",
+        "Horizon 2-4 acceptance",
+        "GAAP/ARR bridge",
+        "cost and financing"
+      ],
+      "next_observable": "Customer-authored acceptance and subsequent GAAP/operating reconciliation.",
+      "review_status": "NO_STATE_CHANGE; RDL_NOT_RUN",
+      "observed_at": "2026-11-22T14:08:00Z",
+      "knowledge_cutoff": "2026-11-22T14:08:00Z",
+      "source_access": "PUBLIC_WEB_AND_GITHUB_READ; PRIVATE_INTAKE_ADMIN_MESSAGES_SOURCE_NOT_ACCESSIBLE",
+      "raw_hash_or_UNAVAILABLE": "UNAVAILABLE_FOR_WEB_SEARCH_RESULTS",
+      "search_boundary": "Bounded public-source and production-body review; not an exhaustive market census."
+    }
+  ]
+}
