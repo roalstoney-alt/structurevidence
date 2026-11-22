@@ -1,0 +1,243 @@
+{
+  "schema_version": "1.0",
+  "date": "2026-11-20",
+  "timezone": "Asia/Singapore",
+  "repository_main_sha": "64bab7e87d51b1a96134a1a0cd74c0f6b1b5e554",
+  "dual_case_main_sha": "acc203395d46e6a6c74a6bca5ec77404ab0c3e68",
+  "production_verification": {
+    "method": "INDEPENDENT_CLOUD_BROWSER",
+    "verified_urls": [
+      "https://structurevidence.org/cases/800vdc/",
+      "https://structurevidence.org/cases/800vdc/events/envision-galaxy-800vdc-2026/",
+      "https://structurevidence.org/cases/sodium-ion-bess/",
+      "https://structurevidence.org/cases/irkutsk-lab-worker-death/",
+      "https://structurevidence.org/cases/nsq-nsclc-china/"
+    ]
+  },
+  "records": [
+    {
+      "observed_at": "2026-11-20T14:01:52Z",
+      "knowledge_cutoff": "2026-11-20T14:01:52Z",
+      "new_independent_evidence": [],
+      "new_events": [],
+      "state_changing_evidence": [],
+      "contradictions": [],
+      "case_id": "CML-PDRE-001",
+      "source_url": "https://structurevidence.org/cases/800vdc/",
+      "source_id": "production-case-page",
+      "source_speaker": "StructEvidence public projection",
+      "claimed_subject": "800VDC/SST field deployment",
+      "claim_ids": [
+        "single-instance",
+        "independent-validation",
+        "replication"
+      ],
+      "event_at": null,
+      "published_at": null,
+      "source_access": "BROWSER_BODY_VERIFIED",
+      "raw_hash_or_UNAVAILABLE": "UNAVAILABLE_BROWSER_TEXT",
+      "search_query": "800VDC SST named deployment commissioning acceptance operations November 2026",
+      "search_boundary": "Public web, live production body, main repository and open PR deduplication",
+      "old_stop_point": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+      "proposed_stop_point": "UNCHANGED",
+      "new_sources": [],
+      "new_attributed_statements": [],
+      "newly_discovered_old_evidence": [],
+      "decision_relevant_unknown": [
+        "Independent acceptance",
+        "Long operating history",
+        "Multi-entity replication",
+        "Repeat procurement"
+      ],
+      "next_observable": "Dated independent acceptance or operator telemetry for a separately attributable deployment",
+      "review_status": "NO_STATE_CHANGE"
+    },
+    {
+      "observed_at": "2026-11-20T14:01:52Z",
+      "knowledge_cutoff": "2026-11-20T14:01:52Z",
+      "new_independent_evidence": [],
+      "new_events": [],
+      "state_changing_evidence": [],
+      "contradictions": [],
+      "case_id": "SE-BESS-SODIUM-001",
+      "source_url": "https://www.catl.com/en/news/6861.html",
+      "source_id": "CATL-20260622-TENER-SODIUM",
+      "source_speaker": "CATL",
+      "claimed_subject": "TENER Sodium product validation, manufacturing readiness and planned deliveries",
+      "claim_ids": [
+        "product-validation-claim",
+        "shipment-plan",
+        "named-commissioned-site"
+      ],
+      "event_at": "2026-06-22",
+      "published_at": "2026-06-22",
+      "source_access": "PUBLIC_PRIMARY_BODY_READ",
+      "raw_hash_or_UNAVAILABLE": "UNAVAILABLE_SEARCH_RETRIEVAL",
+      "search_query": "sodium-ion BESS named customer site grid commissioning operating evidence November 2026",
+      "search_boundary": "Public web and production case body; existing Heze candidate in PR #91 preserved",
+      "old_stop_point": "NAMED_COMMISSIONED_SITE_NOT_ESTABLISHED",
+      "proposed_stop_point": "UNCHANGED",
+      "new_sources": [
+        "CATL-20260622-TENER-SODIUM"
+      ],
+      "new_attributed_statements": [
+        "CATL calls TENER Sodium field-validated and states future delivery/shipment targets and commissioned production lines"
+      ],
+      "newly_discovered_old_evidence": [
+        "CATL-20260622-TENER-SODIUM"
+      ],
+      "decision_relevant_unknown": [
+        "Named commissioning party and site",
+        "Grid connection",
+        "Independent operating evidence",
+        "Actual shipments versus targets"
+      ],
+      "next_observable": "Named customer/operator commissioning record with grid and runtime evidence",
+      "review_status": "NO_STATE_CHANGE"
+    },
+    {
+      "observed_at": "2026-11-20T14:01:52Z",
+      "knowledge_cutoff": "2026-11-20T14:01:52Z",
+      "new_independent_evidence": [],
+      "new_events": [],
+      "state_changing_evidence": [],
+      "contradictions": [],
+      "case_id": "SE-IRK-LAB-001",
+      "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON620/",
+      "source_id": "WHO-DON620",
+      "source_speaker": "WHO reporting national IHR focal-point information",
+      "claimed_subject": "Irkutsk laboratory-worker death public-health timeline",
+      "claim_ids": [
+        "cause-not-established",
+        "ongoing-transmission",
+        "public-timeline"
+      ],
+      "event_at": "2026-10-02",
+      "published_at": "2026-10-10",
+      "source_access": "PUBLIC_PRIMARY_BODY_READ",
+      "raw_hash_or_UNAVAILABLE": "UNAVAILABLE_SEARCH_RETRIEVAL",
+      "search_query": "Irkutsk laboratory worker death WHO IHR regulator November 2026 update",
+      "search_boundary": "One targeted query group and one page body; authorized public sources only; within 4-query/8-open cap",
+      "old_stop_point": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+      "proposed_stop_point": "UNCHANGED",
+      "new_sources": [],
+      "new_attributed_statements": [],
+      "newly_discovered_old_evidence": [],
+      "decision_relevant_unknown": [
+        "Confirmed etiology",
+        "Public regulator original/revision",
+        "Source and exposure mode"
+      ],
+      "next_observable": "Dated WHO or regulator revision with clinical, epidemiological or laboratory detail",
+      "review_status": "NO_STATE_CHANGE"
+    },
+    {
+      "observed_at": "2026-11-20T14:01:52Z",
+      "knowledge_cutoff": "2026-11-20T14:01:52Z",
+      "new_independent_evidence": [],
+      "new_events": [],
+      "state_changing_evidence": [],
+      "contradictions": [],
+      "case_id": "SE-ONC-NSQNSCLC-CN-001",
+      "source_url": "https://structurevidence.org/cases/nsq-nsclc-china/",
+      "source_id": "production-case-page",
+      "source_speaker": "StructEvidence public research preview",
+      "claimed_subject": "China NSCLC source availability",
+      "claim_ids": [
+        "folded-state",
+        "sevabertinib-primary-regulatory-source"
+      ],
+      "event_at": null,
+      "published_at": null,
+      "source_access": "BROWSER_BODY_VERIFIED",
+      "raw_hash_or_UNAVAILABLE": "UNAVAILABLE_BROWSER_TEXT",
+      "search_query": "China NSCLC NMPA sevabertinib November 2026 approval label",
+      "search_boundary": "Daily lightweight public-source availability check; Bayer 2026-11-04 candidate deduplicated against PR #92; not Sunday deep review",
+      "old_stop_point": "FOLDED / PUBLIC_RESEARCH_PREVIEW",
+      "proposed_stop_point": "UNCHANGED",
+      "new_sources": [],
+      "new_attributed_statements": [],
+      "newly_discovered_old_evidence": [],
+      "decision_relevant_unknown": [
+        "NMPA original approval record and label",
+        "Human medical review"
+      ],
+      "next_observable": "NMPA primary document captured and medically reviewed",
+      "review_status": "NO_STATE_CHANGE"
+    },
+    {
+      "observed_at": "2026-11-20T14:01:52Z",
+      "knowledge_cutoff": "2026-11-20T14:01:52Z",
+      "new_independent_evidence": [],
+      "new_events": [],
+      "state_changing_evidence": [],
+      "contradictions": [],
+      "case_id": "SE-PHYSICAL-AI-001",
+      "source_url": "https://github.com/roalstoney-alt/se-dual-case-public/blob/main/SE-PHYSICAL-AI-001.md",
+      "source_id": "dual-case-public-main",
+      "source_speaker": "Public projection",
+      "claimed_subject": "Figure 02/03 BMW deployment",
+      "claim_ids": [
+        "generation-identity",
+        "production-acceptance",
+        "reliability"
+      ],
+      "event_at": null,
+      "published_at": null,
+      "source_access": "GITHUB_BODY_VERIFIED",
+      "raw_hash_or_UNAVAILABLE": "e58f052c0f76fd476604afc44d4100b7ce57a817",
+      "search_query": "Figure AI BMW Figure 03 November 2026 acceptance reliability decommission",
+      "search_boundary": "Public web and approved public projection; private se2cases excluded",
+      "old_stop_point": "LOCAL_PROVISIONAL_v0.1",
+      "proposed_stop_point": "UNCHANGED",
+      "new_sources": [],
+      "new_attributed_statements": [],
+      "newly_discovered_old_evidence": [],
+      "decision_relevant_unknown": [
+        "Independent acceptance",
+        "MTBF/MTTR and intervention distribution",
+        "Figure 02/03 task and generation separation"
+      ],
+      "next_observable": "BMW/operator acceptance and dated runtime reliability record",
+      "review_status": "NO_STATE_CHANGE"
+    },
+    {
+      "observed_at": "2026-11-20T14:01:52Z",
+      "knowledge_cutoff": "2026-11-20T14:01:52Z",
+      "new_independent_evidence": [],
+      "new_events": [],
+      "state_changing_evidence": [],
+      "contradictions": [],
+      "case_id": "SE-NEW-BUSINESS-001",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1878848/000187884826000065/irenreportsq1-fy27result.htm",
+      "source_id": "IREN-Q1-FY27-EX99.1-20261105",
+      "source_speaker": "IREN SEC-filed issuer exhibit",
+      "claimed_subject": "Q1 FY27 AI Cloud revenue and Horizon progress",
+      "claim_ids": [
+        "gaap-revenue",
+        "operating-arr",
+        "contracted-arr",
+        "horizon-2-4"
+      ],
+      "event_at": "2026-11-05",
+      "published_at": "2026-11-05",
+      "source_access": "SEC_BODY_READ",
+      "raw_hash_or_UNAVAILABLE": "UNAVAILABLE_SEARCH_RETRIEVAL",
+      "search_query": "IREN AI Cloud Horizon Microsoft November 2026 SEC revenue",
+      "search_boundary": "Public SEC/issuer sources; deduplicated against PR #93; Microsoft-authored acceptance not found",
+      "old_stop_point": "LOCAL_PROVISIONAL_v0.1 / Canonical RDL NOT_RUN",
+      "proposed_stop_point": "UNCHANGED",
+      "new_sources": [],
+      "new_attributed_statements": [],
+      "newly_discovered_old_evidence": [],
+      "decision_relevant_unknown": [
+        "Microsoft reverse confirmation",
+        "Horizon 2-4 acceptance",
+        "GAAP revenue versus ARR bridge",
+        "Cost, financing and sustainable returns"
+      ],
+      "next_observable": "Counterparty acceptance or later filed operational/revenue evidence",
+      "review_status": "NO_STATE_CHANGE"
+    }
+  ]
+}

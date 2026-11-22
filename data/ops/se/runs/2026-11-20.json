@@ -1,0 +1,96 @@
+{
+  "schema_version": "1.0",
+  "task_id": "6aba2674e6448191867d0890ad2cc1ed",
+  "date": "2026-11-20",
+  "timezone": "Asia/Singapore",
+  "started_at": "2026-11-20T14:01:52Z",
+  "phases": {
+    "scheduled": {
+      "status": "OBSERVED",
+      "evidence": "Current run context only; not proof of future execution"
+    },
+    "enabled": {
+      "status": "OBSERVED",
+      "evidence": "Existing task only; no duplicate automation created"
+    },
+    "started": {
+      "status": "VERIFIED",
+      "at": "2026-11-20T14:01:52Z"
+    },
+    "search_completed": {
+      "status": "VERIFIED",
+      "scope": "Six-case bounded public search, GitHub state, production browser bodies and public traction search"
+    },
+    "artifact_created": {
+      "status": "VERIFIED",
+      "paths": [
+        "data/case-watch/observations/2026-11-20/six-case-observation.json",
+        "data/ops/se/external-feedback/2026-11-20.json",
+        "data/ops/se/runs/2026-11-20.json",
+        "docs/ops/reports/SE_DAILY_2026-11-20.md"
+      ]
+    },
+    "delivered": {
+      "status": "DRAFT_PR_CREATED",
+      "pr_number": 96,
+      "url": "https://github.com/roalstoney-alt/structurevidence/pull/96"
+    },
+    "verified": {
+      "status": "VERIFIED_ARTIFACT_DELIVERY_ONLY",
+      "evidence": "Draft PR #96 is open and unmerged; no merge, deployment, publication, outreach or RDL run"
+    }
+  },
+  "receipts": {
+    "github_main_sha": "64bab7e87d51b1a96134a1a0cd74c0f6b1b5e554",
+    "dual_case_main_sha": "acc203395d46e6a6c74a6bca5ec77404ab0c3e68",
+    "production_body_verification": "INDEPENDENT_BROWSER_VERIFIED_5_URLS",
+    "firecrawl": "SOURCE_UNAVAILABLE_INSUFFICIENT_CREDITS; BROWSER_FALLBACK_USED",
+    "open_prs_preserved": [
+      38,
+      39,
+      40,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95
+    ],
+    "x_post_sent": 0,
+    "linkedin_post_sent": 0,
+    "rdl": "NOT_RUN",
+    "merge": "NOT_PERFORMED",
+    "deploy": "NOT_PERFORMED",
+    "outreach": "HOLD",
+    "draft_pr": 96
+  },
+  "operational_metrics_since_2026_10_08": {
+    "artifact_opens": "UNKNOWN",
+    "qualified_dialogues": "UNKNOWN",
+    "written_scopes": "UNKNOWN",
+    "paid_verifications": "UNKNOWN",
+    "original_hypothesis_targets": {
+      "artifact_opens": ">=20",
+      "qualified_dialogues": ">=8",
+      "written_scopes": ">=2",
+      "paid_verifications": ">=1"
+    },
+    "verified_search_time_cost": "UNKNOWN_NO_BASELINE",
+    "material_reuse_rate": "UNKNOWN",
+    "correction_latency": "UNKNOWN",
+    "decision_material_citations": "UNKNOWN_ACCESS_BLOCKED",
+    "cost_reduction_claim": "NOT_ESTABLISHED"
+  },
+  "cross_project": {
+    "cml_technical_radar": "RECEIPT_CONTEXT_ONLY_OUTPUT_NOT_INDEPENDENTLY_READ",
+    "fde_internal_research": "HOLD",
+    "love_timeline": "RECEIPT_CONTEXT_ONLY_OUTPUT_NOT_INDEPENDENTLY_READ",
+    "pinterest": "UNKNOWN"
+  },
+  "day30_decision": {
+    "date": "2026-11-06",
+    "status": "PAUSE",
+    "basis": "Accessible evidence did not establish the original demand targets or verified external traction.",
+    "effect": "CONTINUE_BOUNDED_MONITORING; DO_NOT_UNFREEZE"
+  }
+}
