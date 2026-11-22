@@ -10,14 +10,15 @@ GitHub Pages publishes repository root `/` automatically from `main`. A merge is
 
 The verifier does not accept a caller-supplied decision string, IDs, timestamps or hashes as proof. In actual mode it must independently fetch and check:
 
-- an immutable GitHub issue/PR comment authored by repository owner `roalstoney-alt`, including the exact comment-body SHA256;
+- an immutable GitHub comment authored by repository owner `roalstoney-alt`, bound by GitHub `issue_url` to PR #97 and by exact comment-body SHA256;
 - PR #97 head/base/merged state and GitHub-recorded merge result;
 - current `main` HEAD and merge or squash topology;
-- the exact Actions run, Pages deployment and deployment-status objects;
+- the exact native Pages run (`event=dynamic`, `path=dynamic/pages/pages-build-deployment`, `name=pages-build-deployment`), Pages deployment and deployment-status objects;
 - successful `github-pages` production status and its timestamp;
-- HTTP 200 responses and SHA256 of raw bytes for canonical HTML, `index.json` and `claims-v0.2.jsonl`.
+- HTTP 200 responses, final canonical URLs and SHA256 of raw bytes for canonical HTML, `index.json` and `claims-v0.2.jsonl`;
+- the same three repository files fetched from GitHub Contents at the exact authenticated deployed SHA, with byte-for-byte live-to-tree equality and case/schema identity checks.
 
-Test transports and `test_fixture=true` records are rejected by the actual CLI gate.
+The production API origin is pinned to `https://api.github.com`; there is no production CLI origin override. Test transports and `test_fixture=true` records are rejected by the actual CLI gate. The authorization comment's effective update time must precede the PR merge time, which must precede the Pages workflow start.
 
 ## Phase 1 — owner-authorized initial deployment
 
@@ -60,10 +61,11 @@ python3 -B scripts/prepare_anthropic_publication_activation.py prepare-overlay \
   --request /absolute/path/initial-observation-request.json \
   --receipt-output /absolute/path/initial-pages-deployment-receipt-v0.3.json \
   --output-dir /absolute/path/empty-overlay \
+  --source-root /absolute/path/clean-worktree-at-deployed-main \
   --apply-to /absolute/path/clean-main-worktree
 ```
 
-Application requires a clean worktree whose HEAD equals the actual deployed `main` SHA, not the pre-merge PR SHA. Merge and squash policies are both verified: merge requires candidate ancestry; squash requires the deployed tree to equal the authorized candidate tree.
+The source root is mandatory. Its clean Git HEAD must equal the verified deployed `main` SHA, and every source file used to construct the overlay must equal `git show <deployed-sha>:<path>`. The apply target must independently have the same deployed HEAD. Merge and squash policies are both verified: merge requires candidate ancestry; squash requires the deployed tree to equal the authorized candidate tree.
 
 The application is transactional. All inputs are hash-checked and all existing destinations are backed up before replacement. Any write or post-write verification failure restores every touched path. Inspect the diff, run all gates, and create one reviewable overlay commit. Do not push it yet.
 
@@ -100,6 +102,6 @@ The resulting `SE-AICO-FINAL-LIVE-VERIFICATION-RECEIPT-v0.3` contains hashes fet
 
 ## Stop conditions
 
-Stop without merge, push or activation if any authorization field is missing, GitHub cannot be queried, `main` moved, a SHA relationship fails, Pages source/environment differs, a deployment is unsuccessful or future-dated, a canonical resource is not HTTP 200, a live hash differs, the source digest changes, root/docs diverge or any frozen record changes.
+Stop without merge, push or activation if any authorization field is missing, the comment is not on PR #97 or was finalized after merge, GitHub cannot be queried at the pinned origin, `main` moved, a SHA relationship fails, the native Pages workflow identity or source/environment differs, a deployment is unsuccessful or future-dated, a canonical resource is not HTTP 200, a final URL changes, live bytes differ from the exact deployed Git tree, the source worktree is on another commit or dirty, the source digest changes, root/docs diverge or any frozen record changes.
 
 Never force-push, rewrite evidence history, infer authorization from this runbook or promote the case while the public state is pending verification.

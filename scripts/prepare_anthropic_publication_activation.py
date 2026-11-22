@@ -9,6 +9,7 @@ of that overlay creates the final live-verification receipt.
 from __future__ import annotations
 
 import argparse
+import base64
 import hashlib
 import json
 import os
@@ -17,6 +18,7 @@ import shutil
 import subprocess
 import tempfile
 import urllib.error
+import urllib.parse
 import urllib.request
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -31,6 +33,10 @@ CASE_SLUG = "cases/anthropic-compute-obligations"
 CANONICAL_URL = "https://structurevidence.org/cases/anthropic-compute-obligations/"
 SOURCE_SHA256 = "0c3a6faad0e1bddc30b108054ec318a0ed5ea509b0ff1d6c8f16a8bdf234424b"
 OWNER_LOGIN = "roalstoney-alt"
+GITHUB_API_ORIGIN = "https://api.github.com"
+PAGES_WORKFLOW_EVENT = "dynamic"
+PAGES_WORKFLOW_PATH = "dynamic/pages/pages-build-deployment"
+PAGES_WORKFLOW_NAME = "pages-build-deployment"
 INITIAL_DECISION = "APPROVE_VERIFIABLE_TWO_PHASE_RELEASE_AND_AUTO_DEPLOY"
 OVERLAY_DECISION = "APPROVE_ACTIVATION_OVERLAY_AND_AUTO_DEPLOY"
 SHA_RE = re.compile(r"^[0-9a-f]{40}$")
@@ -41,6 +47,23 @@ LIVE_RESOURCES = {
     "case_index_json": CANONICAL_URL + "index.json",
     "claims_jsonl": CANONICAL_URL + "claims-v0.2.jsonl",
 }
+LIVE_REPOSITORY_PATHS = {
+    "case_html": CASE_SLUG + "/index.html",
+    "case_index_json": CASE_SLUG + "/index.json",
+    "claims_jsonl": CASE_SLUG + "/claims-v0.2.jsonl",
+}
+OVERLAY_SOURCE_PATHS = (
+    CASE_SLUG + "/index.html",
+    CASE_SLUG + "/index.json",
+    CASE_SLUG + "/structured-metadata-v0.2.json",
+    CASE_SLUG + "/events-v0.2.jsonl",
+    CASE_SLUG + "/claims-v0.2.jsonl",
+    CASE_SLUG + "/source-registry-public-v0.2.json",
+    ".well-known/structurevidence.json",
+    "claims/index.json",
+    "cases/review-status.json",
+    "cases/index.html",
+)
 
 
 def json_bytes(value: object) -> bytes:
@@ -75,8 +98,13 @@ def utc_text(value: datetime) -> str:
 class GitHubClient:
     is_test_transport = False
 
-    def __init__(self, token: str | None = None, api_base: str = "https://api.github.com"):
-        self.token, self.api_base = token, api_base.rstrip("/")
+    def __init__(self, token: str | None = None, *, api_base: str = GITHUB_API_ORIGIN, test_mode: bool = False):
+        api_base = api_base.rstrip("/")
+        if api_base != GITHUB_API_ORIGIN:
+            if not test_mode:
+                raise ValueError("production GitHub API origin is pinned to https://api.github.com")
+            self.is_test_transport = True
+        self.token, self.api_base = token, api_base
 
     def get(self, path: str):
         headers = {"Accept": "application/vnd.github+json", "User-Agent": "se-aico-verifier-v0.3",
@@ -91,13 +119,13 @@ class GitHubClient:
             raise ValueError(f"GitHub verification failed for {path}: HTTP {exc.code}") from exc
 
 
-def fetch_live(url: str) -> tuple[int, bytes]:
+def fetch_live(url: str) -> tuple[int, bytes, str]:
     request = urllib.request.Request(url, headers={"User-Agent": "se-aico-live-verifier-v0.3"})
     try:
         with urllib.request.urlopen(request, timeout=30) as response:
-            return response.status, response.read()
+            return response.status, response.read(), response.geturl()
     except urllib.error.HTTPError as exc:
-        return exc.code, exc.read()
+        return exc.code, exc.read(), exc.geturl()
 
 
 def _fixture_guard(value: dict, allow: bool, noun: str) -> None:
@@ -140,6 +168,9 @@ def verify_owner_authorization(record: dict, client, *, allow_test_fixture: bool
     comment = client.get(f"/repos/{REPOSITORY}/issues/comments/{record['github_comment_id']}")
     if comment.get("user", {}).get("login") != OWNER_LOGIN or comment.get("author_association") != "OWNER":
         raise ValueError("authorization comment is not repository-owner-authored")
+    expected_issue_url = f"{GITHUB_API_ORIGIN}/repos/{REPOSITORY}/issues/{PR_NUMBER}"
+    if comment.get("issue_url") != expected_issue_url:
+        raise ValueError("authorization comment is not bound to PR #97")
     body = comment.get("body", "")
     if digest_bytes(body.encode()) != record["github_comment_body_sha256"]:
         raise ValueError("authorization comment digest mismatch")
@@ -162,11 +193,17 @@ def verify_owner_authorization(record: dict, client, *, allow_test_fixture: bool
     if wrong:
         raise ValueError(f"owner authorization is incomplete or mismatched: {wrong}")
     created_at = comment.get("created_at")
+    updated_at = comment.get("updated_at")
     parse_time(created_at, "owner comment created_at")
+    parse_time(updated_at, "owner comment updated_at")
+    if parse_time(updated_at, "owner comment updated_at") < parse_time(created_at, "owner comment created_at"):
+        raise ValueError("owner comment update time precedes creation")
     return {"comment_id": comment["id"], "comment_url": comment.get("html_url"),
             "comment_body_sha256": record["github_comment_body_sha256"], "owner_login": OWNER_LOGIN,
             "author_association": "OWNER", "decision": required["OWNER_DECISION"],
-            "authorized_at": created_at, "phase": record["phase"]}
+            "authorized_at": updated_at, "comment_created_at": created_at,
+            "comment_updated_at": updated_at, "issue_url": expected_issue_url,
+            "phase": record["phase"]}
 
 
 def validate_observation_request(request: dict, *, allow_test_fixture: bool = False) -> None:
@@ -211,6 +248,57 @@ def verify_merge_topology(request: dict, pr: dict, deployed_commit: dict, candid
         raise ValueError("squash result tree differs from authorized candidate")
 
 
+def repository_bytes_at(client, deployed_sha: str, path: str) -> tuple[bytes, str]:
+    encoded_path = urllib.parse.quote(path, safe="/")
+    content = client.get(f"/repos/{REPOSITORY}/contents/{encoded_path}?ref={deployed_sha}")
+    if content.get("type") != "file" or content.get("encoding") != "base64" or not content.get("sha"):
+        raise ValueError(f"GitHub contents response is not an exact file: {path}")
+    try:
+        raw = base64.b64decode(content["content"], validate=False)
+    except (ValueError, TypeError) as exc:
+        raise ValueError(f"GitHub contents response is invalid base64: {path}") from exc
+    return raw, content["sha"]
+
+
+def validate_live_semantics(name: str, raw: bytes) -> None:
+    if name == "case_html":
+        text = raw.decode("utf-8")
+        if CASE_ID not in text or CANONICAL_URL not in text:
+            raise ValueError("live case HTML does not identify the case and canonical URL")
+    elif name == "case_index_json":
+        record = json.loads(raw)
+        if record.get("case_id") != CASE_ID or not isinstance(record.get("claims"), list) or len(record["claims"]) != 15:
+            raise ValueError("live case index has wrong case identity or claim count")
+    else:
+        rows = [json.loads(line) for line in raw.splitlines() if line]
+        if len(rows) != 15 or any(not str(row.get("claim_id", "")).startswith("AICO-R") for row in rows):
+            raise ValueError("live claims JSONL has wrong case identity or row count")
+
+
+def verify_source_root(source_root: Path, deployed_sha: str) -> dict[str, str]:
+    source_root = source_root.resolve()
+    try:
+        head = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=source_root, text=True).strip()
+        status = subprocess.check_output(["git", "status", "--porcelain"], cwd=source_root, text=True).strip()
+    except (FileNotFoundError, subprocess.CalledProcessError) as exc:
+        raise ValueError("source root is not a Git worktree") from exc
+    if head != deployed_sha:
+        raise ValueError(f"source root HEAD {head} does not match verified deployed main SHA {deployed_sha}")
+    if status:
+        raise ValueError("source root worktree is not clean")
+    hashes = {}
+    for path in OVERLAY_SOURCE_PATHS:
+        working = (source_root / path).read_bytes()
+        try:
+            committed = subprocess.check_output(["git", "show", f"{deployed_sha}:{path}"], cwd=source_root)
+        except subprocess.CalledProcessError as exc:
+            raise ValueError(f"source path is absent from verified deployed commit: {path}") from exc
+        if working != committed:
+            raise ValueError(f"source path differs from verified deployed commit: {path}")
+        hashes[path] = digest_bytes(committed)
+    return hashes
+
+
 def verify_deployment_observation(request: dict, authorization: dict, client,
                                   live_fetcher: Callable[[str], tuple[int, bytes]] = fetch_live, *,
                                   now: datetime | None = None, allow_test_fixture: bool = False) -> dict:
@@ -240,29 +328,50 @@ def verify_deployment_observation(request: dict, authorization: dict, client,
         comparison = client.get(f"{repo}/compare/{authorization['initial_deployed_sha']}...{deployed}")
         if comparison.get("status") not in ("ahead", "identical"):
             raise ValueError("overlay is unrelated to initial deployment")
-    if (run.get("head_sha"), run.get("head_branch"), run.get("event"), run.get("status"), run.get("conclusion")) != (deployed, "main", "push", "completed", "success"):
-        raise ValueError("Actions run is not a successful deployed-main push")
+    if (run.get("head_sha"), run.get("head_branch"), run.get("event"), run.get("path"),
+            run.get("name"), run.get("status"), run.get("conclusion")) != (
+                deployed, "main", PAGES_WORKFLOW_EVENT, PAGES_WORKFLOW_PATH,
+                PAGES_WORKFLOW_NAME, "completed", "success"):
+        raise ValueError("Actions run is not the pinned successful native Pages workflow")
     if (deployment.get("sha"), deployment.get("ref"), deployment.get("environment")) != (deployed, "main", "github-pages"):
         raise ValueError("Pages deployment does not bind expected SHA/environment")
     status = next((row for row in statuses if row.get("id") == request["pages_deployment_status_id"]), None)
     if not status or status.get("state") != "success" or status.get("environment_url") != "https://structurevidence.org/":
         raise ValueError("Pages status is not observed production success")
     clock = now or datetime.now(timezone.utc)
-    authorized_at, run_at = parse_time(auth["authorized_at"], "authorized_at"), parse_time(run.get("created_at"), "run created_at")
+    authorized_at = parse_time(auth["authorized_at"], "authorized_at")
+    run_at = parse_time(run.get("created_at"), "run created_at")
     succeeded_at = parse_time(status.get("created_at"), "deployment succeeded_at")
-    if not authorized_at <= run_at <= succeeded_at:
-        raise ValueError("authorization/run/deployment times are out of order")
+    if request["stage"] == "INITIAL_PAGES_DEPLOYMENT":
+        merged_at = parse_time(pr.get("merged_at"), "PR merged_at")
+        if not authorized_at <= merged_at <= run_at <= succeeded_at:
+            raise ValueError("authorization/merge/workflow/deployment times are out of order")
+    elif not authorized_at <= run_at <= succeeded_at:
+        raise ValueError("overlay authorization/workflow/deployment times are out of order")
     if succeeded_at > clock + timedelta(minutes=5):
         raise ValueError("deployment success is in the future")
     retrieved_at, resources = utc_text(clock), {}
     for name, url in LIVE_RESOURCES.items():
-        http_status, raw = live_fetcher(url)
+        fetched = live_fetcher(url)
+        if len(fetched) != 3:
+            raise ValueError("live fetcher must report HTTP status, raw bytes and final URL")
+        http_status, raw, final_url = fetched
         if http_status != 200:
             raise ValueError(f"live {name} returned HTTP {http_status}")
+        if final_url != url:
+            raise ValueError(f"live {name} resolved to an unexpected final URL")
+        validate_live_semantics(name, raw)
+        repository_path = LIVE_REPOSITORY_PATHS[name]
+        committed_raw, blob_sha = repository_bytes_at(client, deployed, repository_path)
+        if raw != committed_raw:
+            raise ValueError(f"live {name} bytes differ from deployed Git tree")
         sha = digest_bytes(raw)
         if name in (request.get("expected_live_sha256") or {}) and sha != request["expected_live_sha256"][name]:
             raise ValueError(f"live {name} hash differs from overlay")
-        resources[name] = {"url": url, "http_status": 200, "sha256": sha, "bytes": len(raw), "retrieved_at": retrieved_at}
+        resources[name] = {"url": url, "final_url": final_url, "http_status": 200, "sha256": sha,
+                           "bytes": len(raw), "retrieved_at": retrieved_at, "repository_path": repository_path,
+                           "repository_blob_sha": blob_sha, "repository_sha256": digest_bytes(committed_raw),
+                           "live_matches_deployed_git_tree": True}
     initial = request["stage"] == "INITIAL_PAGES_DEPLOYMENT"
     return {
         "schema_version": "SE-AICO-INITIAL-PAGES-DEPLOYMENT-RECEIPT-v0.3" if initial else "SE-AICO-FINAL-LIVE-VERIFICATION-RECEIPT-v0.3",
@@ -272,7 +381,8 @@ def verify_deployment_observation(request: dict, authorization: dict, client,
         "candidate_head_sha": request["candidate_head_sha"], "deployed_sha": deployed,
         "merge_policy": request["merge_policy"], "owner_authorization": auth,
         "github": {"workflow_run_id": request["pages_workflow_run_id"], "workflow_name": run.get("name"),
-                   "workflow_event": "push", "workflow_conclusion": "success",
+                   "workflow_event": PAGES_WORKFLOW_EVENT, "workflow_path": PAGES_WORKFLOW_PATH,
+                   "workflow_conclusion": "success",
                    "deployment_id": request["pages_deployment_id"], "deployment_status_id": request["pages_deployment_status_id"],
                    "deployment_environment": "github-pages", "deployment_succeeded_at": status["created_at"],
                    "environment_url": "https://structurevidence.org/", "main_head_sha": deployed},
@@ -447,25 +557,32 @@ def main() -> None:
         command.add_argument("--authorization", type=Path, required=True)
         command.add_argument("--request", type=Path, required=True)
         command.add_argument("--receipt-output", type=Path, required=True)
-        command.add_argument("--github-api-base", default="https://api.github.com")
         if name == "prepare-overlay":
             command.add_argument("--output-dir", type=Path, required=True)
-            command.add_argument("--source-root", type=Path, default=ROOT)
+            command.add_argument("--source-root", type=Path, required=True)
             command.add_argument("--apply-to", type=Path)
     args = parser.parse_args()
     auth, request = json.loads(args.authorization.read_text()), json.loads(args.request.read_text())
-    receipt = verify_deployment_observation(request, auth, GitHubClient(os.environ.get("GITHUB_TOKEN"), args.github_api_base))
-    args.receipt_output.parent.mkdir(parents=True, exist_ok=True)
-    args.receipt_output.write_bytes(json_bytes(receipt))
+    receipt = verify_deployment_observation(request, auth, GitHubClient(os.environ.get("GITHUB_TOKEN")))
     if args.command == "prepare-overlay":
         if receipt["stage"] != "INITIAL_PAGES_DEPLOYMENT":
             raise ValueError("only verified initial deployment can prepare overlay")
+        source_hashes = verify_source_root(args.source_root, receipt["deployed_sha"])
+        receipt["overlay_source_binding"] = {
+            "source_root_head_sha": receipt["deployed_sha"],
+            "paths": source_hashes,
+            "matches_verified_deployed_main": True,
+        }
         overlay = build_pending_overlay(args.source_root, receipt)
         write_overlay(args.output_dir, overlay, receipt)
         if args.apply_to:
             apply_overlay_transactional(args.apply_to, args.output_dir, receipt)
+        args.receipt_output.parent.mkdir(parents=True, exist_ok=True)
+        args.receipt_output.write_bytes(json_bytes(receipt))
         print(f"PASS: wrote {len(overlay)} pending overlay files; applied={bool(args.apply_to)}")
     else:
+        args.receipt_output.parent.mkdir(parents=True, exist_ok=True)
+        args.receipt_output.write_bytes(json_bytes(receipt))
         print(f"PASS: wrote verified {receipt['stage']} receipt")
 
 

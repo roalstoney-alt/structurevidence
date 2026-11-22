@@ -2,6 +2,7 @@
 """Fail-closed tests for the verifiable two-phase activation mechanism."""
 from __future__ import annotations
 
+import base64
 import copy
 import importlib.util
 import json
@@ -26,7 +27,7 @@ def module():
 A = module()
 CANDIDATE, DEPLOYED = "1" * 40, "2" * 40
 NOW = datetime(2026, 11, 22, 12, 0, 0, tzinfo=timezone.utc)
-LIVE_BYTES = {name: ("live-" + name).encode() for name in A.LIVE_RESOURCES}
+LIVE_BYTES = {name: (ROOT / A.LIVE_REPOSITORY_PATHS[name]).read_bytes() for name in A.LIVE_RESOURCES}
 
 
 def authorization(phase="INITIAL_RELEASE", *, fixture=True):
@@ -74,11 +75,15 @@ class FakeClient:
         self.data = {
             f"{repo}/issues/comments/9001": {"id": 9001, "body": auth_body, "html_url": "https://example/comment",
                                                      "user": {"login": A.OWNER_LOGIN}, "author_association": "OWNER",
-                                                     "created_at": "2026-11-22T10:00:00Z"},
+                                                     "issue_url": f"{A.GITHUB_API_ORIGIN}/repos/{A.REPOSITORY}/issues/{A.PR_NUMBER}",
+                                                     "created_at": "2026-11-22T10:00:00Z",
+                                                     "updated_at": "2026-11-22T10:00:00Z"},
             f"{repo}/pulls/{A.PR_NUMBER}": {"head": {"sha": CANDIDATE}, "base": {"sha": A.BASE_SHA},
-                                              "merged": True, "merge_commit_sha": DEPLOYED},
-            f"{repo}/actions/runs/1001": {"name": "pages-build-deployment", "head_sha": deployed, "head_branch": "main",
-                                           "event": "push", "status": "completed", "conclusion": "success",
+                                              "merged": True, "merge_commit_sha": DEPLOYED,
+                                              "merged_at": "2026-11-22T10:03:00Z"},
+            f"{repo}/actions/runs/1001": {"name": A.PAGES_WORKFLOW_NAME, "head_sha": deployed, "head_branch": "main",
+                                           "event": A.PAGES_WORKFLOW_EVENT, "path": A.PAGES_WORKFLOW_PATH,
+                                           "status": "completed", "conclusion": "success",
                                            "created_at": "2026-11-22T10:05:00Z"},
             f"{repo}/deployments/1002": {"sha": deployed, "ref": "main", "environment": "github-pages"},
             f"{repo}/deployments/1002/statuses": [{"id": 1003, "state": "success",
@@ -90,6 +95,12 @@ class FakeClient:
             f"{repo}/compare/{CANDIDATE}...{DEPLOYED}": {"status": "ahead"},
             f"{repo}/compare/{DEPLOYED}...{'3' * 40}": {"status": "ahead"},
         }
+        for name, path in A.LIVE_REPOSITORY_PATHS.items():
+            encoded = A.urllib.parse.quote(path, safe="/")
+            self.data[f"{repo}/contents/{encoded}?ref={deployed}"] = {
+                "type": "file", "encoding": "base64", "sha": (name[0] * 40),
+                "content": base64.b64encode(LIVE_BYTES[name]).decode(),
+            }
 
     def get(self, path):
         if path not in self.data:
@@ -99,7 +110,7 @@ class FakeClient:
 
 def live_fetch(url):
     name = next(name for name, expected in A.LIVE_RESOURCES.items() if expected == url)
-    return 200, LIVE_BYTES[name]
+    return 200, LIVE_BYTES[name], url
 
 
 def verified_receipt(policy="merge"):
@@ -210,6 +221,58 @@ class AnthropicPublicationActivationTest(unittest.TestCase):
             self.assertEqual((repo / "one.txt").read_text(), "old-one")
             self.assertEqual((repo / "two.txt").read_text(), "old-two")
             self.assertEqual(subprocess.check_output(["git", "status", "--porcelain"], cwd=repo, text=True), "")
+
+    def test_13_real_native_pages_dynamic_workflow_is_pinned(self):
+        receipt = verified_receipt()
+        self.assertEqual(receipt["github"]["workflow_event"], "dynamic")
+        self.assertEqual(receipt["github"]["workflow_path"], "dynamic/pages/pages-build-deployment")
+
+    def test_14_arbitrary_workflow_event_or_path_fails_closed(self):
+        auth, body = authorization(); client = FakeClient(body)
+        run = client.data[f"/repos/{A.REPOSITORY}/actions/runs/1001"]
+        run["event"], run["path"] = "push", ".github/workflows/forged.yml"
+        with self.assertRaisesRegex(ValueError, "pinned successful native Pages"):
+            A.verify_deployment_observation(request(), auth, client, live_fetch, now=NOW, allow_test_fixture=True)
+
+    def test_15_fake_github_api_origin_is_rejected_before_use(self):
+        with self.assertRaisesRegex(ValueError, "pinned to https://api.github.com"):
+            A.GitHubClient("must-not-be-sent", api_base="http://127.0.0.1:8000")
+
+    def test_16_stale_but_http_200_live_bytes_fail_closed(self):
+        auth, body = authorization(); client = FakeClient(body)
+        def stale_fetch(url):
+            name = next(name for name, expected in A.LIVE_RESOURCES.items() if expected == url)
+            raw = LIVE_BYTES[name] + (b" " if name == "case_html" else b"")
+            return 200, raw, url
+        with self.assertRaisesRegex(ValueError, "differ from deployed Git tree"):
+            A.verify_deployment_observation(request(), auth, client, stale_fetch, now=NOW, allow_test_fixture=True)
+
+    def test_17_mismatched_deployed_tree_bytes_fail_closed(self):
+        auth, body = authorization(); client = FakeClient(body)
+        path = A.LIVE_REPOSITORY_PATHS["case_index_json"]
+        key = f"/repos/{A.REPOSITORY}/contents/{A.urllib.parse.quote(path, safe='/')}?ref={DEPLOYED}"
+        client.data[key]["content"] = base64.b64encode(LIVE_BYTES["case_index_json"] + b" ").decode()
+        with self.assertRaisesRegex(ValueError, "differ from deployed Git tree"):
+            A.verify_deployment_observation(request(), auth, client, live_fetch, now=NOW, allow_test_fixture=True)
+
+    def test_18_owner_comment_on_different_issue_fails_closed(self):
+        auth, body = authorization(); client = FakeClient(body)
+        client.data[f"/repos/{A.REPOSITORY}/issues/comments/9001"]["issue_url"] = (
+            f"{A.GITHUB_API_ORIGIN}/repos/{A.REPOSITORY}/issues/96"
+        )
+        with self.assertRaisesRegex(ValueError, "not bound to PR #97"):
+            A.verify_owner_authorization(auth, client, allow_test_fixture=True)
+
+    def test_19_owner_approval_after_merge_fails_closed(self):
+        auth, body = authorization(); client = FakeClient(body)
+        comment = client.data[f"/repos/{A.REPOSITORY}/issues/comments/9001"]
+        comment["created_at"] = comment["updated_at"] = "2026-11-22T10:04:00Z"
+        with self.assertRaisesRegex(ValueError, "out of order"):
+            A.verify_deployment_observation(request(), auth, client, live_fetch, now=NOW, allow_test_fixture=True)
+
+    def test_20_overlay_source_root_on_wrong_commit_fails_closed(self):
+        with self.assertRaisesRegex(ValueError, "does not match verified deployed main SHA"):
+            A.verify_source_root(ROOT, "f" * 40)
 
 
 if __name__ == "__main__":

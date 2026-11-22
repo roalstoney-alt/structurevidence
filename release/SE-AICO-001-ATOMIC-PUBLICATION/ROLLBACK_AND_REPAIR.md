@@ -8,7 +8,7 @@ Never delete or rewrite the prepublication evidence history. Repair current pres
 
 If any check fails, do nothing to `main`. Keep PR #97 draft, record the failed gate, correct the branch and obtain a fresh review of the new exact HEAD.
 
-The actual verifier must be able to retrieve the owner-authored GitHub authorization comment, PR topology, current `main`, workflow run, deployment/status objects and live bytes. A local JSON file, plausible ID or literal decision string is never sufficient authority.
+The actual verifier must retrieve the PR #97-bound owner authorization comment from the pinned `https://api.github.com` origin, PR topology, current `main`, the native dynamic Pages workflow, deployment/status objects, exact deployed-tree files and live bytes. A local JSON file, plausible ID, fake API origin or literal decision string is never sufficient authority.
 
 ## Local overlay application fails
 
@@ -18,6 +18,8 @@ The v0.3 applicator backs up every existing destination before replacing any fil
 2. compare every manifest destination with the pre-application HEAD;
 3. do not commit or push a partially applied overlay;
 4. retain the failure log and correct the applicator or input in a new reviewed branch commit.
+
+If the source root HEAD is not the verified deployed `main` SHA, or any source byte differs from `git show <deployed-sha>:<path>`, stop before generating or applying the overlay. Create a clean worktree at the deployed SHA; do not copy source files from the verifier branch.
 
 If automatic rollback itself cannot be proven complete, discard that disposable worktree and create a clean worktree at the same deployed `main` SHA. Never use force-push or rewrite a shared worktree.
 
@@ -31,11 +33,12 @@ If automatic rollback itself cannot be proven complete, discard that disposable 
 ## Route is live but bytes or semantics are wrong
 
 1. Capture the actual deployment ID, affected URL, HTTP status and byte hashes.
-2. Stop sitemap, Agent and social promotion.
-3. Revert the activation commit with a normal revert commit, or apply a narrowly scoped repair commit if reverting would remove unrelated authorized work.
-4. Let the revert/repair deploy through the same Pages trigger.
-5. Verify the canonical route and record an append-only `PUBLICATION_REPAIR` or `PUBLICATION_ROLLBACK` event. The event must reference both the faulty and repairing commit/deployment IDs.
-6. Preserve the original activation receipt; add a superseding receipt rather than editing it.
+2. Capture the exact repository path, Git blob SHA and SHA256 at the deployed commit; classify live-to-tree mismatch explicitly.
+3. Stop sitemap, Agent and social promotion.
+4. Revert the activation commit with a normal revert commit, or apply a narrowly scoped repair commit if reverting would remove unrelated authorized work.
+5. Let the revert/repair deploy through the same Pages trigger.
+6. Verify the canonical route and record an append-only `PUBLICATION_REPAIR` or `PUBLICATION_ROLLBACK` event. The event must reference both the faulty and repairing commit/deployment IDs.
+7. Preserve the original activation receipt; add a superseding receipt rather than editing it.
 
 Initial deployment hashes, activation-overlay hashes and final live-verification hashes are separate immutable observations. Never copy an earlier deployment's hashes into the current-state fields after later bytes have been deployed.
 
