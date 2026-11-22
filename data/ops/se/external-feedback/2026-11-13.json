@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "date": "2026-11-13",
+  "observed_at": "2026-11-13T14:06:11Z",
+  "privacy_safe": true,
+  "internal_synthetic_excluded": true,
+  "metrics": {
+    "VERIFIED_EXTERNAL_CHALLENGES": {
+      "today": "UNKNOWN",
+      "cumulative": "UNKNOWN",
+      "access_boundary": "Public web and GitHub issue surface checked; private intake/Admin/third-party inboxes SOURCE_NOT_ACCESSIBLE"
+    },
+    "VERIFIED_DECISION_CITATIONS": {
+      "today": "UNKNOWN",
+      "cumulative": "UNKNOWN",
+      "access_boundary": "No qualifying public citation found; private decision materials SOURCE_NOT_ACCESSIBLE"
+    },
+    "VERIFIED_INBOUND_DECISION_REQUESTS": {
+      "today": "UNKNOWN",
+      "cumulative": "UNKNOWN",
+      "access_boundary": "Public GitHub issue surface checked; private intake/messages SOURCE_NOT_ACCESSIBLE"
+    }
+  },
+  "ledger_events": [],
+  "excluded_observations": [
+    {
+      "channel": "internal_workspace",
+      "feedback_type": "OTHER",
+      "external_actor_verification": "INTERNAL_SYNTHETIC",
+      "evidence_reference_or_RESTRICTED": "StructEvidence_B2B_Evidence_Challenge_Article_EN_2026-11-13.md",
+      "review_status": "EXCLUDED_NOT_EXTERNAL",
+      "outcome": "Not counted in Q1/Q2/Q3"
+    }
+  ]
+}
