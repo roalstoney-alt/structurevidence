@@ -1,0 +1,36 @@
+{
+  "schema_version": "se-social-candidates-v1",
+  "date_sgt": "2026-11-22",
+  "topic": "SE-AI-COMPUTE-OBLIGATIONS-001 production publication",
+  "website_publication": {
+    "url": "https://structurevidence.org/cases/anthropic-compute-obligations/",
+    "body_verified_at": "2026-11-22T14:05:00Z",
+    "status": "PRODUCTION_BODY_VERIFIED"
+  },
+  "source_url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026074944/anthropicpbc-424b4.htm",
+  "content_cutoff": "2026-11-22T14:08:00Z",
+  "dedup_check": "NEW_METHOD_AND_CASE_ANGLE; NOT_COMPARED_TO_PRIVATE_ACCOUNT_HISTORY",
+  "x": {
+    "text": "Is Anthropic’s reported $900.9B compute commitment debt—or a mix of contracts, leases, timing bands and conditions? Boundary: issuer-authored, unaudited disclosure; not an insolvency finding. Challenge the gaps: https://structurevidence.org/cases/anthropic-compute-obligations/",
+    "unicode_characters": 277,
+    "utf8_sha256": "c171b0857728392f5b9d162834a4e16371d5217f699ae2357f504014ea81ee00",
+    "format": "ONE_QUESTION_ONE_BOUNDARY_ONE_LINK",
+    "status": "HUMAN_GATE_REQUIRED",
+    "sent": 0
+  },
+  "linkedin": {
+    "text": "Anthropic’s prospectus reports about $900.9 billion of aggregate compute and infrastructure commitments. The decision-relevant question is not whether the number is large, but what the number actually contains.\n\nThe reviewed source supports an issuer-attributed aggregate spanning commitments, leases, timing bands and conditional arrangements. It does not establish that the full amount is current debt, immediately payable cash, an insolvency finding or a quantified default probability. It also does not independently verify Anthropic’s disclosures.\n\nThe next verification points are legal obligation categories, payment timing, termination economics, subsequent closing evidence and independently reconciled cash-flow assumptions.\n\nStructEvidence records what a judgment is supported by, where that support stops, and what evidence could change the stop point.\n\nReview the cited records and challenge a specific claim or gap: https://structurevidence.org/cases/anthropic-compute-obligations/",
+    "word_count": 125,
+    "utf8_sha256": "876197700b93d48410a9f97aa9631670bd1fb16144d5e9d0f5295f2b759ace52",
+    "status": "HUMAN_GATE_REQUIRED",
+    "sent": 0
+  },
+  "controls": [
+    "X_AUTO_PUBLISH_PAUSED_HUMAN_REVIEW",
+    "X_POST_SENT=0",
+    "LINKEDIN_POST_SENT=0",
+    "NO_METRICOOL_CALL",
+    "NO_CREDENTIAL_READ",
+    "NO_OUTREACH"
+  ]
+}
