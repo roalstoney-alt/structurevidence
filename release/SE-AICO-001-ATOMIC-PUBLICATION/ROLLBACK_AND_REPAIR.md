@@ -8,6 +8,19 @@ Never delete or rewrite the prepublication evidence history. Repair current pres
 
 If any check fails, do nothing to `main`. Keep PR #97 draft, record the failed gate, correct the branch and obtain a fresh review of the new exact HEAD.
 
+The actual verifier must be able to retrieve the owner-authored GitHub authorization comment, PR topology, current `main`, workflow run, deployment/status objects and live bytes. A local JSON file, plausible ID or literal decision string is never sufficient authority.
+
+## Local overlay application fails
+
+The v0.3 applicator backs up every existing destination before replacing any file and restores all touched paths if a replacement or post-write hash check fails. After a reported failure:
+
+1. run `git status --short` and confirm the worktree is clean;
+2. compare every manifest destination with the pre-application HEAD;
+3. do not commit or push a partially applied overlay;
+4. retain the failure log and correct the applicator or input in a new reviewed branch commit.
+
+If automatic rollback itself cannot be proven complete, discard that disposable worktree and create a clean worktree at the same deployed `main` SHA. Never use force-push or rewrite a shared worktree.
+
 ## Automatic Pages deployment fails
 
 1. Do not create a successful publication receipt.
@@ -24,9 +37,11 @@ If any check fails, do nothing to `main`. Keep PR #97 draft, record the failed g
 5. Verify the canonical route and record an append-only `PUBLICATION_REPAIR` or `PUBLICATION_ROLLBACK` event. The event must reference both the faulty and repairing commit/deployment IDs.
 6. Preserve the original activation receipt; add a superseding receipt rather than editing it.
 
+Initial deployment hashes, activation-overlay hashes and final live-verification hashes are separate immutable observations. Never copy an earlier deployment's hashes into the current-state fields after later bytes have been deployed.
+
 ## Metadata-only contradiction
 
-If content is correct but current metadata still says `NOT_PUBLISHED`, apply the verified activation overlay as a new commit after owner approval. Confirm that claim/source rows remain byte-identical and only current-state projections, the appended event and receipt change.
+If content is correct but current metadata says `DEPLOYED_PENDING_LIVE_VERIFICATION`, do not relabel it as published from an earlier receipt. Observe the activation-overlay deployment, verify current raw live bytes, write a separate final-live-verification receipt, and obtain review of any append-only public finalization commit.
 
 ## Source or evidence integrity failure
 

@@ -44,6 +44,9 @@ ACTIVATION_FILES = (
     "cases/anthropic-compute-obligations/activation-projection-v0.2.json",
     "cases/anthropic-compute-obligations/publication-receipt-template-v0.2.json",
     "cases/anthropic-compute-obligations/publication-activation-event-template-v0.2.json",
+    "cases/anthropic-compute-obligations/two-phase-owner-authorization-template-v0.3.json",
+    "cases/anthropic-compute-obligations/initial-deployment-observation-request-template-v0.3.json",
+    "cases/anthropic-compute-obligations/overlay-deployment-observation-request-template-v0.3.json",
 )
 
 SITEMAP_URLS = [
@@ -227,6 +230,49 @@ def publication_activation_event_template() -> dict:
     }
 
 
+def two_phase_owner_authorization_template() -> dict:
+    return {
+        "schema_version": "SE-AICO-TWO-PHASE-OWNER-AUTHORIZATION-v0.3",
+        "case_id": CASE_ID,
+        "pr_number": 97,
+        "phase": None,
+        "base_sha": BASE_SHA,
+        "candidate_head_sha": None,
+        "initial_deployed_sha": None,
+        "overlay_head_sha": None,
+        "owner_login": "roalstoney-alt",
+        "github_comment_id": None,
+        "github_comment_body_sha256": None,
+        "test_fixture": False,
+        "template_status": "UNPOPULATED_NOT_AUTHORIZATION",
+        "verification_rule": "FETCH_COMMENT_AND_REQUIRE_REPOSITORY_OWNER_AUTHORSHIP_EXACT_FIELDS_AND_BODY_SHA256",
+    }
+
+
+def deployment_observation_request_template(stage: str) -> dict:
+    value = {
+        "schema_version": "SE-AICO-GITHUB-DEPLOYMENT-OBSERVATION-REQUEST-v0.3",
+        "case_id": CASE_ID,
+        "pr_number": 97,
+        "stage": stage,
+        "candidate_head_sha": None,
+        "deployed_sha": None,
+        "merge_policy": None,
+        "pages_workflow_run_id": None,
+        "pages_deployment_id": None,
+        "pages_deployment_status_id": None,
+        "test_fixture": False,
+        "template_status": "UNPOPULATED_NOT_A_DEPLOYMENT_OBSERVATION",
+    }
+    if stage == "ACTIVATION_OVERLAY_DEPLOYMENT":
+        value["expected_live_sha256"] = {
+            "case_html": None,
+            "case_index_json": None,
+            "claims_jsonl": None,
+        }
+    return value
+
+
 def write_release_blockers() -> None:
     case = ROOT / "cases/anthropic-compute-obligations"
     snapshot = json.loads((case / "index.json").read_text(encoding="utf-8"))
@@ -269,6 +315,9 @@ def write_release_blockers() -> None:
         ACTIVATION_FILES[0]: json_bytes(activation_projection()),
         ACTIVATION_FILES[1]: json_bytes(publication_receipt_template()),
         ACTIVATION_FILES[2]: json_bytes(publication_activation_event_template()),
+        ACTIVATION_FILES[3]: json_bytes(two_phase_owner_authorization_template()),
+        ACTIVATION_FILES[4]: json_bytes(deployment_observation_request_template("INITIAL_PAGES_DEPLOYMENT")),
+        ACTIVATION_FILES[5]: json_bytes(deployment_observation_request_template("ACTIVATION_OVERLAY_DEPLOYMENT")),
     }
     for relative, content in outputs.items():
         (ROOT / relative).parent.mkdir(parents=True, exist_ok=True)
@@ -298,6 +347,9 @@ def verify_release_blockers() -> None:
     activation = json.loads((ROOT / ACTIVATION_FILES[0]).read_text(encoding="utf-8"))
     receipt = json.loads((ROOT / ACTIVATION_FILES[1]).read_text(encoding="utf-8"))
     event_template = json.loads((ROOT / ACTIVATION_FILES[2]).read_text(encoding="utf-8"))
+    owner_template = json.loads((ROOT / ACTIVATION_FILES[3]).read_text(encoding="utf-8"))
+    initial_request = json.loads((ROOT / ACTIVATION_FILES[4]).read_text(encoding="utf-8"))
+    overlay_request = json.loads((ROOT / ACTIVATION_FILES[5]).read_text(encoding="utf-8"))
     if activation["proposed_append_only_event"]["publication_event_at"] is not None or activation["merge_authorized"]:
         raise AssertionError("activation projection invents an event or authorization")
     if receipt["status"] != "TEMPLATE_NOT_A_PUBLICATION_RECEIPT" or receipt["publication_event_at"] is not None:
@@ -311,6 +363,20 @@ def verify_release_blockers() -> None:
         "live_index_sha256", "live_claims_sha256", "live_verified_at",
     )):
         raise AssertionError("activation event template contains invented event or deployment data")
+    if owner_template["template_status"] != "UNPOPULATED_NOT_AUTHORIZATION":
+        raise AssertionError("owner template masquerades as authorization")
+    if any(owner_template[field] is not None for field in (
+        "phase", "candidate_head_sha", "github_comment_id", "github_comment_body_sha256",
+    )):
+        raise AssertionError("owner template contains invented authorization")
+    if initial_request["stage"] != "INITIAL_PAGES_DEPLOYMENT" or overlay_request["stage"] != "ACTIVATION_OVERLAY_DEPLOYMENT":
+        raise AssertionError("two-phase observation templates are mislabeled")
+    for request in (initial_request, overlay_request):
+        if any(request[field] is not None for field in (
+            "candidate_head_sha", "deployed_sha", "merge_policy", "pages_workflow_run_id",
+            "pages_deployment_id", "pages_deployment_status_id",
+        )):
+            raise AssertionError("observation template contains invented deployment facts")
     for relative in ACTIVATION_FILES:
         if (ROOT / relative).read_bytes() != (ROOT / "docs" / relative).read_bytes():
             raise AssertionError(f"activation root/docs mirror mismatch: {relative}")

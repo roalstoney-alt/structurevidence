@@ -192,8 +192,35 @@ def build(root: Path) -> dict:
         }
         assert record['prospectus_dated_at'] == '2026-11-18'
         assert record['sec_filed_at'] == '2026-11-19'
+        pending_path = root / 'cases/anthropic-compute-obligations/publication-current-state-v0.3.json'
         activation_path = root / 'cases/anthropic-compute-obligations/publication-current-state-v0.2.json'
-        if activation_path.is_file():
+        if pending_path.is_file():
+            activation = load(root, 'cases/anthropic-compute-obligations/publication-current-state-v0.3.json')
+            assert activation['case_id'] == record['case_id']
+            assert activation['status'] == 'DEPLOYED_PENDING_LIVE_VERIFICATION'
+            assert activation['publication_event_at'] is None
+            assert activation['date_published'] is None
+            assert activation['external_promotion_authorized'] is False
+            assert activation['activation_overlay_deployment'] is None
+            assert activation['final_live_verification'] is None
+            assert activation['historical_prepublication_rows_rewritten'] is False
+            assert activation['source_sha256'] == '0c3a6faad0e1bddc30b108054ec318a0ed5ea509b0ff1d6c8f16a8bdf234424b'
+            assert record['deployment_state'] == 'DEPLOYED_PENDING_LIVE_VERIFICATION'
+            assert record['structevidence_publication_date'] is None
+            initial = activation['initial_pages_deployment']
+            reviewed_at = initial['live_verified_at']
+            review_result = 'TWO_PHASE_RELEASE_DEPLOYED_FINAL_VERIFICATION_PENDING'
+            review_id = initial['github']['deployment_id']
+            review_file = 'cases/anthropic-compute-obligations/initial-pages-deployment-receipt-v0.3.json'
+            period = {
+                'id': 'VERIFIABLE_TWO_PHASE_ACTIVATION',
+                'start': initial['owner_authorization']['authorized_at'][:10],
+                'end': initial['live_verified_at'][:10],
+                'status': 'DEPLOYED_PENDING_LIVE_VERIFICATION',
+                'scope': 'Initial deployment observed; activation overlay and final live verification remain required.',
+            }
+            period_review_id = review_id
+        elif activation_path.is_file():
             activation = load(root, 'cases/anthropic-compute-obligations/publication-current-state-v0.2.json')
             assert activation['case_id'] == record['case_id']
             assert activation['status'] == 'PUBLISHED_AND_LIVE_VERIFIED'

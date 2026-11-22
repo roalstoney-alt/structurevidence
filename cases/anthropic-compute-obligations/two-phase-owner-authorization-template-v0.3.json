@@ -1,0 +1,16 @@
+{
+  "base_sha": "64bab7e87d51b1a96134a1a0cd74c0f6b1b5e554",
+  "candidate_head_sha": null,
+  "case_id": "SE-AI-COMPUTE-OBLIGATIONS-001",
+  "github_comment_body_sha256": null,
+  "github_comment_id": null,
+  "initial_deployed_sha": null,
+  "overlay_head_sha": null,
+  "owner_login": "roalstoney-alt",
+  "phase": null,
+  "pr_number": 97,
+  "schema_version": "SE-AICO-TWO-PHASE-OWNER-AUTHORIZATION-v0.3",
+  "template_status": "UNPOPULATED_NOT_AUTHORIZATION",
+  "test_fixture": false,
+  "verification_rule": "FETCH_COMMENT_AND_REQUIRE_REPOSITORY_OWNER_AUTHORSHIP_EXACT_FIELDS_AND_BODY_SHA256"
+}

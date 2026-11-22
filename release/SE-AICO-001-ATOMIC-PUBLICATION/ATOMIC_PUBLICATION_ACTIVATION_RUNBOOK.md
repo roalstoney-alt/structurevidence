@@ -1,103 +1,105 @@
-# SE-AICO-001 atomic publication activation runbook
+# SE-AICO-001 verifiable two-phase activation runbook
 
 ## Current gate
 
-`PR_HEAD_INTEGRITY_ACCEPTED_MERGE_HOLD`. This runbook and its tooling are review material, not publication authority.
+`HOLD_MERGE_AND_AUTO_DEPLOY`. This mechanism is review material only. It does not authorize a merge, push to `main`, Pages deployment, publication claim or social promotion.
 
-The verified GitHub Pages configuration publishes the repository root from `main` through GitHub's dynamic `pages-build-deployment` workflow. Every push to `main`, including a PR merge commit, starts a production Pages build. Therefore merge and deployment are operationally coupled and must be covered by one explicit owner decision.
+GitHub Pages publishes repository root `/` automatically from `main`. A merge is therefore also a production-deployment action and requires one explicit owner authorization covering both effects.
 
-## Atomicity finding
+## Corrected trust boundary
 
-A deployment's success ID and actual public-availability time do not exist before the deployment succeeds. They cannot truthfully be embedded in the same static branch-source commit that triggers that deployment. A strict single-deployment transition from unpublished candidate to “live and verified” is therefore not achievable with the current branch-source Pages configuration.
+The verifier does not accept a caller-supplied decision string, IDs, timestamps or hashes as proof. In actual mode it must independently fetch and check:
 
-Two truthful choices remain:
+- an immutable GitHub issue/PR comment authored by repository owner `roalstoney-alt`, including the exact comment-body SHA256;
+- PR #97 head/base/merged state and GitHub-recorded merge result;
+- current `main` HEAD and merge or squash topology;
+- the exact Actions run, Pages deployment and deployment-status objects;
+- successful `github-pages` production status and its timestamp;
+- HTTP 200 responses and SHA256 of raw bytes for canonical HTML, `index.json` and `claims-v0.2.jsonl`.
 
-1. **Recommended strict gate:** change Pages to a controlled GitHub Actions artifact workflow, deploy an explicit activation artifact only after an owner-approved gate, and append the live-verification receipt after the environment reports success. Changing Pages configuration is itself a production action and requires separate owner authorization.
-2. **Branch-source two-phase gate:** merge only after one decision explicitly authorizes both merge and automatic Pages deployment. Treat that first deployment as `DEPLOYED_PENDING_LIVE_VERIFICATION`, with no social or Agent outreach. After observing the actual successful deployment and live hashes, append the activation event and receipt in one repair commit. This is truthful but not a strict single-deployment activation.
+Test transports and `test_fixture=true` records are rejected by the actual CLI gate.
 
-Until the owner selects and authorizes one of those choices, PR #97 must remain unmerged.
+## Phase 1 — owner-authorized initial deployment
 
-## Required owner authorization
+The owner must first post a GitHub comment containing these exact lines, with the final reviewed HEAD substituted:
 
-The activation generator accepts only the literal decision:
-
-`APPROVE_ATOMIC_PUBLICATION_ACTIVATION_AND_AUTO_DEPLOY`
-
-That decision must identify the exact final candidate HEAD and acknowledge that merging to `main` automatically triggers GitHub Pages. The current `PR_HEAD_INTEGRITY_ACCEPTED_MERGE_HOLD` decision is deliberately rejected by the tool.
-
-## Pre-merge checks
-
-1. Confirm the PR remains based on `64bab7e87d51b1a96134a1a0cd74c0f6b1b5e554` or obtain a fresh owner review if `main` moved.
-2. Confirm the exact final PR HEAD, clean changed-file inventory, root/docs mirrors, source digest and 15 frozen claim rows.
-3. Run the scoped matrix and both PR checks. Report known baseline failures by identity.
-4. Confirm no source capture, private review log, credential or personal path is in the PR.
-5. Record the new explicit merge+automatic-deploy owner decision. Do not infer it from this runbook.
-
-## Actual event capture
-
-After the authorized Pages deployment reports success, populate `publication-activation-event-template-v0.2.json` only with observed values:
-
-- final candidate and merge commit SHAs;
-- owner authorization ID and UTC time;
-- Pages workflow run, deployment and deployment-status IDs;
-- Pages success timestamp, used as `publication_event_at`;
-- HTTP 200 observations and SHA256 values for the canonical HTML, `index.json`, and claims JSONL;
-- live-verification UTC timestamp;
-- the carried-forward SEC source SHA256.
-
-Do not use a planned time, commit author time, workflow start time or prospectus date as the publication event.
-
-Generate the overlay:
-
-```sh
-python3 -B scripts/prepare_anthropic_publication_activation.py \
-  --event /absolute/path/actual-activation-event.json \
-  --output-dir /absolute/path/empty-activation-overlay
+```text
+CASE_ID=SE-AI-COMPUTE-OBLIGATIONS-001
+PR_NUMBER=97
+BASE_SHA=64bab7e87d51b1a96134a1a0cd74c0f6b1b5e554
+CANDIDATE_HEAD_SHA=<EXACT_REVIEWED_HEAD>
+OWNER_DECISION=APPROVE_VERIFIABLE_TWO_PHASE_RELEASE_AND_AUTO_DEPLOY
+MERGE_AUTHORIZED=YES
+AUTOMATIC_PAGES_DEPLOYMENT_AUTHORIZED=YES
+SOCIAL_PUBLISH_AUTHORIZED=NO
+NEXT_GATE=VERIFIABLE_ACTIVATION_OVERLAY_REVIEW
 ```
 
-The generator rejects missing facts, the current merge hold, failed deployments, wrong URLs, wrong Pages source semantics, altered source hashes and out-of-order timestamps.
+Record its GitHub comment ID and exact UTF-8 body SHA256 in `two-phase-owner-authorization-template-v0.3.json`. The verifier fetches the comment and requires GitHub `author_association=OWNER`; a copied local string is insufficient.
 
-## Append-only projection
+Only after that new authorization may PR #97 be merged. No such authorization exists at the current gate.
 
-The overlay:
-
-- leaves `claims-v0.2.jsonl` and `source-registry-public-v0.2.json` byte-identical;
-- appends one `PUBLICATION_ACTIVATION_VERIFIED` event to `events-v0.2.jsonl`;
-- adds `publication-current-state-v0.2.json` and an actual `publication-receipt-v0.2.json`;
-- updates mutable current projections (`index.json`, JSON-LD, discovery adapter and review-status presentation);
-- replaces the obsolete pending-review label with `OWNER_REVIEW_OF_ATOMIC_PUBLICATION_ACTIVATION`;
-- maintains byte-identical root/docs output pairs;
-- writes a SHA256 activation manifest.
-
-The original prepublication candidate remains recoverable at commit `f195d44e464e7c27c23d1a1eb5b9858687166dfc`; no earlier claim or source row is rewritten.
-
-## Applying a verified overlay
-
-Application is intentionally guarded. It requires a clean worktree whose HEAD equals the event's exact candidate SHA, and it refuses test fixtures:
+After the automatic Pages deployment, populate `initial-deployment-observation-request-template-v0.3.json` with the observed IDs and deployed SHA, then run:
 
 ```sh
-python3 -B scripts/prepare_anthropic_publication_activation.py \
-  --event /absolute/path/actual-activation-event.json \
-  --output-dir /absolute/path/empty-activation-overlay \
-  --apply-to /absolute/path/clean/repository
+python3 -B scripts/prepare_anthropic_publication_activation.py verify \
+  --authorization /absolute/path/initial-owner-authorization.json \
+  --request /absolute/path/initial-observation-request.json \
+  --receipt-output /absolute/path/initial-pages-deployment-receipt-v0.3.json
 ```
 
-After application, inspect the full diff, rerun all gates, commit every projected file in one commit, and obtain any additional authorization required by the selected Pages strategy. Never force-push or rewrite the prepublication commits.
+The initial receipt preserves only initial-deployment hashes. It never presents them as hashes of a later overlay deployment.
 
-## Post-deploy verification
+## Phase 2 — prepare and separately authorize the overlay
 
-Verify all of the following before declaring publication complete:
+Re-run the live verification while generating the overlay:
 
-- Pages deployment environment is `github-pages` and status is `success`;
-- deployed SHA equals the authorized commit;
-- canonical HTML, JSON, JSONL and source registry return HTTP 200;
-- all 15 anchors resolve;
-- live bytes match the receipt hashes;
-- current metadata says `PUBLISHED_VERIFIED`, not `NOT_PUBLISHED`;
-- the prior draft record and its SHA remain in Git history;
-- cases index, sitemap and Agent discovery point to the verified live route;
-- no social post or external Agent test runs without separate authorization.
+```sh
+python3 -B scripts/prepare_anthropic_publication_activation.py prepare-overlay \
+  --authorization /absolute/path/initial-owner-authorization.json \
+  --request /absolute/path/initial-observation-request.json \
+  --receipt-output /absolute/path/initial-pages-deployment-receipt-v0.3.json \
+  --output-dir /absolute/path/empty-overlay \
+  --apply-to /absolute/path/clean-main-worktree
+```
+
+Application requires a clean worktree whose HEAD equals the actual deployed `main` SHA, not the pre-merge PR SHA. Merge and squash policies are both verified: merge requires candidate ancestry; squash requires the deployed tree to equal the authorized candidate tree.
+
+The application is transactional. All inputs are hash-checked and all existing destinations are backed up before replacement. Any write or post-write verification failure restores every touched path. Inspect the diff, run all gates, and create one reviewable overlay commit. Do not push it yet.
+
+The overlay is intentionally truthful and conservative:
+
+- `DEPLOYED_PENDING_LIVE_VERIFICATION`;
+- `datePublished=null` and no made-up publication time;
+- `external_promotion_authorized=false`;
+- initial deployment, activation-overlay deployment and final live verification occupy separate fields;
+- frozen claims, source registry and SEC digest are unchanged;
+- the initial deployment event is appended rather than rewriting prepublication history.
+
+## Overlay deployment authorization and final observation
+
+After reviewing the exact overlay commit, the owner must separately post:
+
+```text
+CASE_ID=SE-AI-COMPUTE-OBLIGATIONS-001
+PR_NUMBER=97
+BASE_SHA=64bab7e87d51b1a96134a1a0cd74c0f6b1b5e554
+CANDIDATE_HEAD_SHA=<ORIGINAL_REVIEWED_PR_HEAD>
+OWNER_DECISION=APPROVE_ACTIVATION_OVERLAY_AND_AUTO_DEPLOY
+INITIAL_DEPLOYED_SHA=<OBSERVED_INITIAL_MAIN_SHA>
+OVERLAY_HEAD_SHA=<EXACT_OVERLAY_COMMIT_SHA>
+MERGE_AUTHORIZED=NO
+AUTOMATIC_PAGES_DEPLOYMENT_AUTHORIZED=YES
+SOCIAL_PUBLISH_AUTHORIZED=NO
+NEXT_GATE=FINAL_LIVE_VERIFICATION
+```
+
+Only then may the overlay commit be pushed to `main`. After deployment, calculate expected hashes from the reviewed overlay files, populate `overlay-deployment-observation-request-template-v0.3.json`, and run `verify` again with the overlay authorization.
+
+The resulting `SE-AICO-FINAL-LIVE-VERIFICATION-RECEIPT-v0.3` contains hashes fetched from the final live bytes. A wrong expected hash, fabricated ID, future deployment, unrelated HEAD or incomplete approval fails closed. The public state remains pending until a separately reviewed append-only finalization step; the verifier never prematurely emits `PUBLISHED_VERIFIED`.
 
 ## Stop conditions
 
-Stop without activation if `main` moved, Pages source changed, any live byte hash differs, the deployment failed, the canonical route is not 200, the source digest changed, root/docs diverge, or owner authorization does not cover both merge and automatic deployment.
+Stop without merge, push or activation if any authorization field is missing, GitHub cannot be queried, `main` moved, a SHA relationship fails, Pages source/environment differs, a deployment is unsuccessful or future-dated, a canonical resource is not HTTP 200, a live hash differs, the source digest changes, root/docs diverge or any frozen record changes.
+
+Never force-push, rewrite evidence history, infer authorization from this runbook or promote the case while the public state is pending verification.
