@@ -1,0 +1,18 @@
+{
+  "schema_version": "se-website-publication-receipt-v1",
+  "receipt_id": "SE-WEB-REVERIFY-IRK-LAB-001-20261105-01",
+  "event_id": "SE-EVENT-IRK-LAB-001-20261016-ECDC-W42",
+  "checked_at": "2026-11-05T15:07:56Z",
+  "provider": "GITHUB_PAGES",
+  "source_main_sha": "9a5884c8b8dea90b9bd61bdc7cca1ee2353a2dd3",
+  "public_url": "https://structurevidence.org/cases/irkutsk-lab-worker-death/events/ecdc-week-42-2026/",
+  "http_status": 200,
+  "expected_body_marker": "SE-EVENT-IRK-LAB-001-20261016-ECDC-W42",
+  "body_marker_verified": true,
+  "snapshot_url": "https://structurevidence.org/cases/irkutsk-lab-worker-death/events/ecdc-week-42-2026/snapshot-v1.json",
+  "snapshot_http_status": 200,
+  "snapshot_expected_sha256": "1ed4847133cbee992f3c7155b20c1746db1910ffe71962d5c68af4bf793c88d8",
+  "snapshot_observed_sha256": "1ed4847133cbee992f3c7155b20c1746db1910ffe71962d5c68af4bf793c88d8",
+  "result": "PUBLIC_VERIFIED",
+  "proof_boundary": "The production event body returned HTTP 200 and contained the exact event marker. The separately downloaded production snapshot returned HTTP 200 and matched the frozen SHA-256. No website write or deployment was performed."
+}

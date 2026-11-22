@@ -1,0 +1,40 @@
+{
+  "schema_version": "se-case-review-v2",
+  "case_id": "SE-BESS-SODIUM-001",
+  "review_id": "SE-SODIUM-REVIEW-20261105-01",
+  "reviewed_at": "2026-11-05T15:07:56Z",
+  "result": "NO_STATE_CHANGE",
+  "review_complete": true,
+  "classifications": ["NO_STATE_CHANGE"],
+  "search_boundary": "Two targeted official-source search groups and two official news indexes covering named sodium-ion delivery, grid commissioning, customer acceptance and public field performance; not an exhaustive market census.",
+  "sources_checked": [
+    {
+      "url": "https://www.catl.com/en/news/",
+      "publisher": "CATL",
+      "status": "READ_OFFICIAL_INDEX_NO_POST_31_OCTOBER_CASE_SCOPE_RECORD_DIRECT_CURL_403",
+      "retrieved_at": "2026-11-05T15:07:56Z",
+      "finding": "CATL's official English index contains no post-31 October case-scope item. The 27 October INTILION memorandum remains the newest listed sodium-ion item and does not establish a named commissioned sodium-ion site."
+    },
+    {
+      "url": "https://intilion.com/pressemitteilungen",
+      "publisher": "INTILION",
+      "status": "HTTP_200_READ_NO_SODIUM_COMMISSIONING_RECORD",
+      "retrieved_at": "2026-11-05T15:07:56Z",
+      "finding": "INTILION's official press index exposes no sodium-ion delivery, commissioning, acceptance or field-performance record. Its listed commissioned systems are not identified as sodium-ion."
+    }
+  ],
+  "new_sources": 0,
+  "new_attributed_statements": 0,
+  "new_independent_evidence": 0,
+  "new_events": 0,
+  "newly_discovered_old_evidence": 0,
+  "state_changing_evidence": 0,
+  "old_state": "NAMED_COMMISSIONED_SITE_NOT_ESTABLISHED",
+  "new_state": "NAMED_COMMISSIONED_SITE_NOT_ESTABLISHED",
+  "new_qualifying_evidence_count": 0,
+  "new_counter_evidence_count": 0,
+  "evidence_state_as_of": "2026-09-24",
+  "last_material_change": "2026-09-24",
+  "historical_backfill": false,
+  "provenance_note": "The 27 October CATL-INTILION memorandum remains a pending append-only record outside authoritative main. This review does not duplicate, overwrite or treat it as newly discovered today."
+}
