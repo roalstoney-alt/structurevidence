@@ -192,7 +192,42 @@ def build(root: Path) -> dict:
         }
         assert record['prospectus_dated_at'] == '2026-11-18'
         assert record['sec_filed_at'] == '2026-11-19'
-        assert record['structevidence_publication_date'] is None
+        activation_path = root / 'cases/anthropic-compute-obligations/publication-current-state-v0.2.json'
+        if activation_path.is_file():
+            activation = load(root, 'cases/anthropic-compute-obligations/publication-current-state-v0.2.json')
+            assert activation['case_id'] == record['case_id']
+            assert activation['status'] == 'PUBLISHED_AND_LIVE_VERIFIED'
+            assert activation['historical_prepublication_rows_rewritten'] is False
+            assert activation['source_sha256'] == '0c3a6faad0e1bddc30b108054ec318a0ed5ea509b0ff1d6c8f16a8bdf234424b'
+            assert record['deployment_state'] == 'APPLIED_AND_LIVE_VERIFIED'
+            assert record['publication_authorized'] is True
+            assert record['structevidence_publication_date'] == activation['publication_event_at'][:10]
+            reviewed_at = activation['live_verified_at']
+            review_result = 'PUBLICATION_ACTIVATION_APPROVED'
+            review_id = activation['event_id']
+            review_file = 'cases/anthropic-compute-obligations/publication-receipt-v0.2.json'
+            period = {
+                'id': 'OWNER_REVIEW_OF_ATOMIC_PUBLICATION_ACTIVATION',
+                'start': activation['publication_event_at'][:10],
+                'end': activation['live_verified_at'][:10],
+                'status': review_result,
+                'scope': 'Exact commit deployment and canonical live URL verified; evidence conclusions unchanged.',
+            }
+            period_review_id = review_id
+        else:
+            assert record['structevidence_publication_date'] is None
+            reviewed_at = None
+            review_result = None
+            review_id = None
+            review_file = None
+            period = {
+                'id': 'OWNER_REVIEW_OF_EXACT_MINIMAL_PR_DIFF',
+                'start': '2026-11-22',
+                'end': '2026-11-22',
+                'status': 'NOT_YET_REVIEWED',
+                'scope': 'Exact minimal public-release integration diff; publication remains unauthorized.',
+            }
+            period_review_id = None
         rows.append({
             'case_id': record['case_id'],
             'title': 'Anthropic compute obligations',
@@ -204,18 +239,12 @@ def build(root: Path) -> dict:
             'last_material_change': record['sec_filed_at'],
             'featured': True,
             'management_status': 'ACTIVE',
-            'last_reviewed_at': None,
-            'review_result': None,
-            'latest_review_id': None,
-            'latest_review_file': None,
-            'period': {
-                'id': 'OWNER_REVIEW_OF_EXACT_MINIMAL_PR_DIFF',
-                'start': '2026-11-22',
-                'end': '2026-11-22',
-                'status': 'NOT_YET_REVIEWED',
-                'scope': 'Exact minimal public-release integration diff; publication remains unauthorized.',
-            },
-            'period_review_id': None,
+            'last_reviewed_at': reviewed_at,
+            'review_result': review_result,
+            'latest_review_id': review_id,
+            'latest_review_file': review_file,
+            'period': period,
+            'period_review_id': period_review_id,
             'monitoring': {'cadence': 'NOT_CONFIGURED', 'enabled': False},
             'new_qualifying_evidence_count': None,
             'new_counter_evidence_count': None,

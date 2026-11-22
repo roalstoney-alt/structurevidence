@@ -150,7 +150,8 @@ class AnthropicPublicReleaseTest(unittest.TestCase):
         changed = subprocess.check_output(["git", "diff", "--name-only", BASE_SHA], cwd=ROOT, text=True).splitlines()
         allowed = (
             ".well-known/structurevidence.json", "agent-discovery/", "cases/anthropic-compute-obligations/",
-            "cases/index.html", "cases/review-status.json", "claims/index.json", "docs/", "scripts/", "sitemap.xml",
+            "cases/index.html", "cases/review-status.json", "claims/index.json", "docs/",
+            "release/SE-AICO-001-ATOMIC-PUBLICATION/", "scripts/", "sitemap.xml",
         )
         self.assertTrue(changed)
         self.assertFalse([path for path in changed if not any(path == prefix or path.startswith(prefix) for prefix in allowed)])
