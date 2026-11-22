@@ -1,0 +1,33 @@
+{
+  "schema_version": "se-case-observation-v2",
+  "observation_id": "SE-BESS-SODIUM-001-OBS-20261031-CLOUD-01",
+  "observed_at": "2026-10-31T22:00:00+08:00",
+  "knowledge_cutoff": "2026-10-31T22:00:00+08:00",
+  "review_id": null,
+  "review_status": "REVIEW_INCOMPLETE",
+  "case_id": "SE-BESS-SODIUM-001",
+  "source_url": "https://rss.globenewswire.com/news-release/2026/10/29/3391632/0/en/emerald-battery-labs-partners-with-city-of-issaquah-to-deliver-safe-cost-effective-sustainable-battery-storage-for-pickering-barn-resiliency-project.html",
+  "source_id": "EMERALD-ISSAQUAH-PICKERING-BARN-2026-10-29-CANDIDATE",
+  "source_speaker": "Emerald Battery Labs press release, quoting City of Issaquah mayor",
+  "claimed_subject": "A named municipal resilience project plans development and deployment of a 60-kWh sodium-ion BESS at Pickering Barn, supported by a $671,000 grant; design, certification, permitting and procurement remain future steps.",
+  "claim_ids": [
+    "SODIUM-PICKERING-BARN-PLANNED-DEPLOYMENT"
+  ],
+  "event_at": "2026-10-29",
+  "published_at": "2026-10-29",
+  "source_access": "PRESS_RELEASE_BODY_READ_AND_CITY_AGENDA_CORROBORATION",
+  "raw_hash_or_UNAVAILABLE": "UNAVAILABLE_SEARCH_SERVICE_NORMALIZED",
+  "search_query": "October 31 2026 sodium ion energy storage commissioned grid connected named project owner utility",
+  "search_boundary": "Fresh query found the vendor release; City website independently establishes Pickering Barn, solar installation and an Oct 5 council agenda item for a TransAlta battery-storage grant, but no city page inspected here confirms sodium chemistry, award execution, installation or operation.",
+  "old_stop_point": "NAMED_COMMISSIONED_SITE_NOT_ESTABLISHED",
+  "proposed_stop_point": "UNCHANGED",
+  "new_sources": 2,
+  "new_attributed_statements": 1,
+  "new_independent_evidence": 0,
+  "new_events": 1,
+  "newly_discovered_old_evidence": 0,
+  "state_changing_evidence": 0,
+  "contradictions": [],
+  "decision_relevant_unknown": "Executed procurement, chemistry confirmation in city records, certifications, permit, installation, commissioning, grid/islanding acceptance and runtime.",
+  "next_observable": "City procurement/award or commissioning record identifying sodium-ion chemistry and operational acceptance."
+}
