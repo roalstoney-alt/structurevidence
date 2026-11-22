@@ -1,0 +1,11 @@
+{
+  "schema_version": "se-irkutsk-socsm-monday-v1",
+  "date": "2026-11-02",
+  "observed_at": "2026-11-02T22:00:00+08:00",
+  "privacy_safe": true,
+  "economic_cost_status": "COST_NOT_ESTABLISHED",
+  "public_search_boundary": "One targeted public query group covering attributable budget, procurement, contract performance and regulatory records; no qualifying original was established.",
+  "restricted_material_accessed": false,
+  "private_finance_contract_patent_personal_pathogen_details_committed": false,
+  "next_observable": "Public budget line, procurement award, signed contract/performance record or audited cost statement attributable to the monitored institution/event."
+}

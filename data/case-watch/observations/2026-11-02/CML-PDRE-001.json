@@ -1,0 +1,37 @@
+{
+  "schema_version": "se-case-observation-v2",
+  "observed_at": "2026-11-02T22:00:00+08:00",
+  "knowledge_cutoff": "2026-11-02T22:00:00+08:00",
+  "review_id": null,
+  "review_status": "REVIEW_INCOMPLETE",
+  "event_at": "2026-11-02",
+  "published_at": "2026-11-02",
+  "raw_hash_or_UNAVAILABLE": "UNAVAILABLE_SEARCH_SERVICE_NORMALIZED",
+  "proposed_stop_point": "UNCHANGED",
+  "new_sources": 1,
+  "new_attributed_statements": 3,
+  "new_independent_evidence": 0,
+  "new_events": 1,
+  "newly_discovered_old_evidence": 0,
+  "state_changing_evidence": 0,
+  "contradictions": [
+    "The release calls the deployment commercial/world-first; the existing evidence stop point requires independently attributable acceptance, observation period and operating/reliability data before advancing."
+  ],
+  "observation_id": "CML-PDRE-001-OBS-20261102-CLOUD-01",
+  "case_id": "CML-PDRE-001",
+  "source_url": "https://www.newswire.ca/news-releases/envision-achieves-world-s-first-commercial-deployment-of-integrated-800v-dc-sst-based-power-system-in-large-scale-ai-data-center-833964609.html",
+  "source_id": "ENVISION-ULANQAB-800V-SST-2026-11-02",
+  "source_speaker": "Envision Energy / Envision Digital press release",
+  "claimed_subject": "Envision states that an integrated 800VDC/SST system at its Ulanqab Galaxy AI data-center campus is powering live computing workloads; this is a named second-site deployment claim, not independent acceptance or reliability evidence.",
+  "claim_ids": [
+    "CML-800V-SECOND-NAMED-SITE-CANDIDATE",
+    "CML-800V-INDEPENDENT-ACCEPTANCE-NOT-ESTABLISHED",
+    "CML-800V-RELIABILITY-NOT-ESTABLISHED"
+  ],
+  "source_access": "SEARCH_RESULT_FULL_SUMMARY; ORIGIN_PAGE_FETCH_DISABLED",
+  "search_query": "November 2 2026 800V DC SST data center deployment reliability named site",
+  "search_boundary": "One fresh targeted query; the publisher result supplied dated attributable claims, but direct origin-page retrieval was disabled and no third-party acceptance/runtime record was found.",
+  "old_stop_point": "HUMAN_REVIEWED_SINGLE_INSTANCE_EVIDENCE",
+  "decision_relevant_unknown": "Independent commissioning/acceptance, fixed observation window, availability, downtime, interventions, failures and repeatability.",
+  "next_observable": "Owner/customer or third-party acceptance record plus fixed-window runtime and reliability data."
+}
