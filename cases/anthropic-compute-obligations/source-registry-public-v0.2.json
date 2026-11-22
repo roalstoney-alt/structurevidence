@@ -1,0 +1,264 @@
+{
+  "case_id": "SE-AI-COMPUTE-OBLIGATIONS-001",
+  "claim_targets": [
+    {
+      "claim_canonical_url": "https://structurevidence.org/cases/anthropic-compute-obligations/#AICO-R001",
+      "claim_id": "AICO-R001",
+      "pinpoint_locator": "Compute Investments, printed p.143; Liquidity and Capital Resources—Contractual Obligations, printed pp.177–178",
+      "source_id": "AICO-S001",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026074944/anthropicpbc-424b4.htm"
+    },
+    {
+      "claim_canonical_url": "https://structurevidence.org/cases/anthropic-compute-obligations/#AICO-R002",
+      "claim_id": "AICO-R002",
+      "pinpoint_locator": "Compute Investments, printed p.143; Risk Factors, printed pp.39–40",
+      "source_id": "AICO-S001",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026074944/anthropicpbc-424b4.htm"
+    },
+    {
+      "claim_canonical_url": "https://structurevidence.org/cases/anthropic-compute-obligations/#AICO-R003",
+      "claim_id": "AICO-R003",
+      "pinpoint_locator": "Liquidity and Capital Resources—Contractual Obligations, printed p.178",
+      "source_id": "AICO-S001",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026074944/anthropicpbc-424b4.htm"
+    },
+    {
+      "claim_canonical_url": "https://structurevidence.org/cases/anthropic-compute-obligations/#AICO-R004",
+      "claim_id": "AICO-R004",
+      "pinpoint_locator": "Liquidity and Capital Resources—Contractual Obligations, printed p.178",
+      "source_id": "AICO-S001",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026074944/anthropicpbc-424b4.htm"
+    },
+    {
+      "claim_canonical_url": "https://structurevidence.org/cases/anthropic-compute-obligations/#AICO-R005",
+      "claim_id": "AICO-R005",
+      "pinpoint_locator": "Liquidity and Capital Resources—Contractual Obligations, printed p.177",
+      "source_id": "AICO-S001",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026074944/anthropicpbc-424b4.htm"
+    },
+    {
+      "claim_canonical_url": "https://structurevidence.org/cases/anthropic-compute-obligations/#AICO-R006",
+      "claim_id": "AICO-R006",
+      "pinpoint_locator": "Liquidity and Capital Resources—Contractual Obligations, printed p.177; Infrastructure Service Arrangements, printed p.179",
+      "source_id": "AICO-S001",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026074944/anthropicpbc-424b4.htm"
+    },
+    {
+      "claim_canonical_url": "https://structurevidence.org/cases/anthropic-compute-obligations/#AICO-R007",
+      "claim_id": "AICO-R007",
+      "pinpoint_locator": "Compute Investments, printed p.143; Liquidity and Capital Resources, printed p.168",
+      "source_id": "AICO-S001",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026074944/anthropicpbc-424b4.htm"
+    },
+    {
+      "claim_canonical_url": "https://structurevidence.org/cases/anthropic-compute-obligations/#AICO-R008",
+      "claim_id": "AICO-R008",
+      "pinpoint_locator": "Prospectus Summary—Use of Proceeds, printed p.20; Compute Investments, printed p.143",
+      "source_id": "AICO-S001",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026074944/anthropicpbc-424b4.htm"
+    },
+    {
+      "claim_canonical_url": "https://structurevidence.org/cases/anthropic-compute-obligations/#AICO-R009",
+      "claim_id": "AICO-R009",
+      "pinpoint_locator": "Risk Factors—compute forecast and commitment risk, printed pp.39–40",
+      "source_id": "AICO-S001",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026074944/anthropicpbc-424b4.htm"
+    },
+    {
+      "claim_canonical_url": "https://structurevidence.org/cases/anthropic-compute-obligations/#AICO-R010",
+      "claim_id": "AICO-R010",
+      "pinpoint_locator": "Compute Investments, printed p.143",
+      "source_id": "AICO-S001",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026074944/anthropicpbc-424b4.htm"
+    },
+    {
+      "claim_canonical_url": "https://structurevidence.org/cases/anthropic-compute-obligations/#AICO-R011",
+      "claim_id": "AICO-R011",
+      "pinpoint_locator": "Contractual Obligations, printed pp.177–178; compare consolidated balance sheet and lease notes",
+      "source_id": "AICO-S001",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026074944/anthropicpbc-424b4.htm"
+    },
+    {
+      "claim_canonical_url": "https://structurevidence.org/cases/anthropic-compute-obligations/#AICO-R012",
+      "claim_id": "AICO-R012",
+      "pinpoint_locator": "Contractual Obligations, printed p.177",
+      "source_id": "AICO-S001",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026074944/anthropicpbc-424b4.htm"
+    },
+    {
+      "claim_canonical_url": "https://structurevidence.org/cases/anthropic-compute-obligations/#AICO-R013",
+      "claim_id": "AICO-R013",
+      "pinpoint_locator": "Contractual Obligations, printed p.177",
+      "source_id": "AICO-S001",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026074944/anthropicpbc-424b4.htm"
+    },
+    {
+      "claim_canonical_url": "https://structurevidence.org/cases/anthropic-compute-obligations/#AICO-R014",
+      "claim_id": "AICO-R014",
+      "pinpoint_locator": "Use of Proceeds, printed p.20; Compute Investments, printed p.143",
+      "source_id": "AICO-S001",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026074944/anthropicpbc-424b4.htm"
+    },
+    {
+      "claim_canonical_url": "https://structurevidence.org/cases/anthropic-compute-obligations/#AICO-R015",
+      "claim_id": "AICO-R015",
+      "pinpoint_locator": "Risk Factors and Liquidity and Capital Resources, printed pp.39–40 and 168–177",
+      "source_id": "AICO-S001",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026074944/anthropicpbc-424b4.htm"
+    }
+  ],
+  "independence_accounting": {
+    "analysis_record_count": 15,
+    "original_source_count": 1,
+    "rule": "A StructEvidence claim URL and its SEC source URL are two citation targets, not two independent original sources."
+  },
+  "public_safe": true,
+  "schema_version": "SE-AICO-FINAL-RELEASE-SOURCE-REGISTRY-v0.2",
+  "sources": [
+    {
+      "access_state": "CAPTURED_DIRECT_FROM_SEC_HTTP_200",
+      "accession": "0001628280-26-074944",
+      "assurance": "ISSUER_ATTRIBUTED_UNAUDITED_FINANCIAL_DISCLOSURE",
+      "canonical_url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026074944/anthropicpbc-424b4.htm",
+      "capture_utc": "2026-11-21T13:49:42Z",
+      "cik": "2130357",
+      "confirmed_sec_public_filing_date": "2026-11-19",
+      "datePublished": "2026-11-19",
+      "filing_date": "2026-11-19",
+      "financial_amount_boundaries": [
+        {
+          "amount_usd_billions": "319.993",
+          "classification": "SOURCE_TABLE_CONTEXT_NOT_A_NEW_V02_CLAIM",
+          "locator": "Contractual Obligations table, printed p.178",
+          "source_native_amount": "$319,993 million"
+        },
+        {
+          "amount_usd_billions": "900.9",
+          "claim_id": "AICO-R001",
+          "classification": "ISSUER_ATTRIBUTED_AGGREGATE"
+        },
+        {
+          "amount_usd_billions": "451.6",
+          "claim_id": "AICO-R002",
+          "classification": "INCLUDED_TIMING_SUBTOTAL"
+        },
+        {
+          "amount_usd_billions": "70.7",
+          "claim_id": "AICO-R003",
+          "classification": "INCLUDED_NEAR_TERM_SUBSET"
+        }
+      ],
+      "first_observed_at": "2026-11-21T13:49:42Z",
+      "form": "424B4",
+      "issuer": "Anthropic, PBC",
+      "known_at": "2026-11-21T13:49:42Z",
+      "legacy_source_publication_date_v01": "2026-11-18",
+      "legacy_source_publication_date_v01_semantics": "PROSPECTUS_DATED_AT_NOT_CONFIRMED_PUBLIC_AVAILABILITY",
+      "normalized_sha256": "e901e76706b3a8aceaa01e67213b7b01d1e9fff72704b70c6cac0e0b71d922d8",
+      "pinpoints": [
+        {
+          "claim_ids": [
+            "AICO-R001"
+          ],
+          "locator": "Compute Investments, printed p.143; Liquidity and Capital Resources—Contractual Obligations, printed pp.177–178"
+        },
+        {
+          "claim_ids": [
+            "AICO-R002"
+          ],
+          "locator": "Compute Investments, printed p.143; Risk Factors, printed pp.39–40"
+        },
+        {
+          "claim_ids": [
+            "AICO-R003",
+            "AICO-R004"
+          ],
+          "locator": "Liquidity and Capital Resources—Contractual Obligations, printed p.178"
+        },
+        {
+          "claim_ids": [
+            "AICO-R005"
+          ],
+          "locator": "Liquidity and Capital Resources—Contractual Obligations, printed p.177"
+        },
+        {
+          "claim_ids": [
+            "AICO-R006"
+          ],
+          "locator": "Liquidity and Capital Resources—Contractual Obligations, printed p.177; Infrastructure Service Arrangements, printed p.179"
+        },
+        {
+          "claim_ids": [
+            "AICO-R007"
+          ],
+          "locator": "Compute Investments, printed p.143; Liquidity and Capital Resources, printed p.168"
+        },
+        {
+          "claim_ids": [
+            "AICO-R008"
+          ],
+          "locator": "Prospectus Summary—Use of Proceeds, printed p.20; Compute Investments, printed p.143"
+        },
+        {
+          "claim_ids": [
+            "AICO-R009"
+          ],
+          "locator": "Risk Factors—compute forecast and commitment risk, printed pp.39–40"
+        },
+        {
+          "claim_ids": [
+            "AICO-R010"
+          ],
+          "locator": "Compute Investments, printed p.143"
+        },
+        {
+          "claim_ids": [
+            "AICO-R011"
+          ],
+          "locator": "Contractual Obligations, printed pp.177–178; compare consolidated balance sheet and lease notes"
+        },
+        {
+          "claim_ids": [
+            "AICO-R012",
+            "AICO-R013"
+          ],
+          "locator": "Contractual Obligations, printed p.177"
+        },
+        {
+          "claim_ids": [
+            "AICO-R014"
+          ],
+          "locator": "Use of Proceeds, printed p.20; Compute Investments, printed p.143"
+        },
+        {
+          "claim_ids": [
+            "AICO-R015"
+          ],
+          "locator": "Risk Factors and Liquidity and Capital Resources, printed pp.39–40 and 168–177"
+        }
+      ],
+      "prospectus_dated_at": "2026-11-18",
+      "raw_sha256": "0c3a6faad0e1bddc30b108054ec318a0ed5ea509b0ff1d6c8f16a8bdf234424b",
+      "sec_accepted_at": "2026-11-19T06:05:50-05:00",
+      "sec_filed_at": "2026-11-19",
+      "sec_filing_metadata_url": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026074944/0001628280-26-074944-index.html",
+      "sec_public_archive_date": "2026-11-19",
+      "source_authority": "ISSUER_STATEMENT_SEC_HOSTED_NOT_INDEPENDENTLY_VALIDATED",
+      "source_id": "AICO-S001",
+      "source_publication_date": "2026-11-19",
+      "source_publication_date_basis": "SEC_FILED_PUBLIC_ARCHIVE_DATE",
+      "source_speaker": "Anthropic, PBC",
+      "source_speaker_scope": "ISSUER_AUTHORED_FILED_DISCLOSURE",
+      "title": "Anthropic, PBC Form 424B4 prospectus dated November 18, 2026"
+    }
+  ],
+  "temporal_semantics_correction": {
+    "history_rewritten": false,
+    "legacy_projection_value": "2026-11-18 previously labelled source publication date",
+    "prospectus_dated_at": "2026-11-18",
+    "public_archive_date_basis": "SEC_FILED_AT",
+    "recorded_at": "2026-11-22",
+    "sec_accepted_at": "2026-11-19T06:05:50-05:00",
+    "sec_filed_at": "2026-11-19"
+  }
+}

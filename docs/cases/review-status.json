@@ -8,6 +8,35 @@
   },
   "cases": [
     {
+      "case_id": "SE-AI-COMPUTE-OBLIGATIONS-001",
+      "title": "Anthropic compute obligations",
+      "canonical_path": "/cases/anthropic-compute-obligations/",
+      "question": "What do Anthropic's issuer-authored, unaudited SEC disclosures establish about compute commitments, timing, liquidity and the limits of debt or cash-burn inference?",
+      "current_public_state": "ISSUER_ATTRIBUTED_DISCLOSURES_WITH_OPEN_BOUNDARIES",
+      "evidence_state_as_of": "2026-11-18",
+      "last_material_change": "2026-11-19",
+      "featured": true,
+      "management_status": "ACTIVE",
+      "last_reviewed_at": null,
+      "review_result": null,
+      "latest_review_id": null,
+      "latest_review_file": null,
+      "period": {
+        "id": "OWNER_REVIEW_OF_EXACT_MINIMAL_PR_DIFF",
+        "start": "2026-11-22",
+        "end": "2026-11-22",
+        "status": "NOT_YET_REVIEWED",
+        "scope": "Exact minimal public-release integration diff; publication remains unauthorized."
+      },
+      "period_review_id": null,
+      "monitoring": {
+        "cadence": "NOT_CONFIGURED",
+        "enabled": false
+      },
+      "new_qualifying_evidence_count": null,
+      "new_counter_evidence_count": null
+    },
+    {
       "case_id": "SE-BINANCE-SECURITY-001",
       "title": "Binance October 29–30, 2026 security incident",
       "canonical_path": "/cases/binance-security-2026/",

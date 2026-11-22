@@ -104,6 +104,68 @@ class ReviewStatusTest(unittest.TestCase):
         self.assertIn('FOLDED FROM HOMEPAGE', page)
         self.assertIn('SE-IREN-AI-CLOUD-001', page)
         self.assertIn('PUBLICATION AUTHORIZED', page)
+        self.assertIn('SE-AI-COMPUTE-OBLIGATIONS-001', page)
+        aico = next(row for row in export(self.root)['cases'] if row['case_id'] == 'SE-AI-COMPUTE-OBLIGATIONS-001')
+        self.assertIsNone(aico['last_reviewed_at'])
+        self.assertEqual(aico['period']['status'], 'NOT_YET_REVIEWED')
+        self.assertEqual(aico['evidence_state_as_of'], '2026-11-18')
+
+    def test_verified_activation_replaces_obsolete_pending_gate_without_changing_evidence_clock(self):
+        index_path = self.root / 'cases/anthropic-compute-obligations/index.json'
+        record = json.loads(index_path.read_text())
+        record.update(
+            deployment_state='APPLIED_AND_LIVE_VERIFIED',
+            publication_authorized=True,
+            structevidence_publication_date='2099-01-02',
+        )
+        index_path.write_text(json.dumps(record))
+        current = {
+            'case_id': 'SE-AI-COMPUTE-OBLIGATIONS-001',
+            'status': 'PUBLISHED_AND_LIVE_VERIFIED',
+            'publication_event_at': '2099-01-02T03:04:05Z',
+            'live_verified_at': '2099-01-02T03:05:00Z',
+            'event_id': 'SE-AICO-001-PUBLICATION-20990102T030405Z',
+            'historical_prepublication_rows_rewritten': False,
+            'source_sha256': '0c3a6faad0e1bddc30b108054ec318a0ed5ea509b0ff1d6c8f16a8bdf234424b',
+        }
+        (self.root / 'cases/anthropic-compute-obligations/publication-current-state-v0.2.json').write_text(json.dumps(current))
+        aico = next(row for row in build(self.root)['cases'] if row['case_id'] == 'SE-AI-COMPUTE-OBLIGATIONS-001')
+        self.assertEqual(aico['period']['id'], 'OWNER_REVIEW_OF_ATOMIC_PUBLICATION_ACTIVATION')
+        self.assertEqual(aico['period']['status'], 'PUBLICATION_ACTIVATION_APPROVED')
+        self.assertEqual(aico['evidence_state_as_of'], '2026-11-18')
+        self.assertEqual(aico['last_material_change'], '2026-11-19')
+
+    def test_two_phase_pending_state_does_not_claim_published_or_advance_evidence_clock(self):
+        index_path = self.root / 'cases/anthropic-compute-obligations/index.json'
+        record = json.loads(index_path.read_text())
+        record.update(
+            deployment_state='DEPLOYED_PENDING_LIVE_VERIFICATION',
+            publication_authorized=True,
+            structevidence_publication_date=None,
+        )
+        index_path.write_text(json.dumps(record))
+        current = {
+            'case_id': 'SE-AI-COMPUTE-OBLIGATIONS-001',
+            'status': 'DEPLOYED_PENDING_LIVE_VERIFICATION',
+            'publication_event_at': None,
+            'date_published': None,
+            'external_promotion_authorized': False,
+            'initial_pages_deployment': {
+                'live_verified_at': '2099-01-02T03:05:00Z',
+                'owner_authorization': {'authorized_at': '2099-01-02T03:00:00Z'},
+                'github': {'deployment_id': 1002},
+            },
+            'activation_overlay_deployment': None,
+            'final_live_verification': None,
+            'historical_prepublication_rows_rewritten': False,
+            'source_sha256': '0c3a6faad0e1bddc30b108054ec318a0ed5ea509b0ff1d6c8f16a8bdf234424b',
+        }
+        (self.root / 'cases/anthropic-compute-obligations/publication-current-state-v0.3.json').write_text(json.dumps(current))
+        aico = next(row for row in build(self.root)['cases'] if row['case_id'] == 'SE-AI-COMPUTE-OBLIGATIONS-001')
+        self.assertEqual(aico['period']['status'], 'DEPLOYED_PENDING_LIVE_VERIFICATION')
+        self.assertEqual(aico['review_result'], 'TWO_PHASE_RELEASE_DEPLOYED_FINAL_VERIFICATION_PENDING')
+        self.assertEqual(aico['evidence_state_as_of'], '2026-11-18')
+        self.assertEqual(aico['last_material_change'], '2026-11-19')
 
 
 if __name__ == '__main__':

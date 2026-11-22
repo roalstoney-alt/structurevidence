@@ -1,0 +1,54 @@
+{
+  "analysis_recorded_at": "2026-11-22",
+  "case_id": "SE-AI-COMPUTE-OBLIGATIONS-001",
+  "gap_role": "RESEARCH_UNKNOWN",
+  "gaps": [
+    {
+      "closure_evidence": "Contracts, amendments, or legal review for the relevant arrangements.",
+      "gap_id": "AICO-GAP-FIN-001",
+      "question": "Arrangement-specific termination rights, conditions, remedies, and cancellation consequences.",
+      "status": "OPEN"
+    },
+    {
+      "closure_evidence": "Subsequent filed cash-flow, payment, default, or cure records.",
+      "gap_id": "AICO-GAP-FIN-002",
+      "question": "Actual payment performance against disclosed commitment schedules.",
+      "status": "OPEN"
+    },
+    {
+      "closure_evidence": "Closing and settlement records or subsequent filed cash balances.",
+      "gap_id": "AICO-GAP-FIN-003",
+      "question": "Whether the expected IPO and concurrent-placement proceeds settled, and at what net amount.",
+      "status": "OPEN"
+    },
+    {
+      "closure_evidence": "Subsequent financial statements with cash, investments, facilities, and restrictions.",
+      "gap_id": "AICO-GAP-FIN-004",
+      "question": "Post-quarter liquidity composition and restrictions.",
+      "status": "OPEN"
+    },
+    {
+      "closure_evidence": "Counterparty filings, contracts, confirmations, or payment records.",
+      "gap_id": "AICO-GAP-FIN-005",
+      "question": "Independent counterparty confirmation of capacity, performance, and enforceable minimums.",
+      "status": "OPEN"
+    },
+    {
+      "closure_evidence": "Audited recognition schedule under a common reporting date and accounting policy.",
+      "gap_id": "AICO-GAP-FIN-006",
+      "question": "Accounting bridge from contractual commitments to recognized debt, leases, and current liabilities.",
+      "status": "OPEN"
+    },
+    {
+      "closure_evidence": "Million-denominated or unrounded filed component values.",
+      "gap_id": "AICO-GAP-FIN-007",
+      "question": "Unrounded inputs underlying the issuer's $146.6bn liquidity total.",
+      "status": "OPEN"
+    }
+  ],
+  "not_included": [
+    "INVALID_INFERENCE_GUARDS",
+    "PLATFORM_MAINTENANCE"
+  ],
+  "schema_version": "SE-AICO-RESEARCH-GAPS-v0.2"
+}

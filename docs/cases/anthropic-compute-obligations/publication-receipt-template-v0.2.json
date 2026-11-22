@@ -1,0 +1,17 @@
+{
+  "activated_commit_sha": null,
+  "append_only": true,
+  "canonical_verified": false,
+  "case_id": "SE-AI-COMPUTE-OBLIGATIONS-001",
+  "claim_anchor_count_verified": null,
+  "deployment_id": null,
+  "live_case_url": "https://structurevidence.org/cases/anthropic-compute-obligations/",
+  "live_url_verified_at": null,
+  "population_rule": "POPULATE_ONLY_AFTER_SEPARATELY_AUTHORIZED_DEPLOYMENT_AND_LIVE_URL_VERIFICATION",
+  "prepublication_history_rewritten": false,
+  "publication_event_at": null,
+  "receipt_id": null,
+  "root_docs_hashes_verified": false,
+  "schema_version": "SE-AICO-PUBLICATION-RECEIPT-TEMPLATE-v0.2",
+  "status": "TEMPLATE_NOT_A_PUBLICATION_RECEIPT"
+}

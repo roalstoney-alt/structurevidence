@@ -1,0 +1,12 @@
+{
+  "activation_authorized": false,
+  "canonical_url": "https://structurevidence.org/cases/anthropic-compute-obligations/",
+  "case_id": "SE-AI-COMPUTE-OBLIGATIONS-001",
+  "description": "Auditable, issuer-attributed review of Anthropic compute commitments, timing, liquidity, and inference boundaries.",
+  "prospectus_dated_at": "2026-11-18",
+  "robots_after_authorized_activation": "index,follow,max-image-preview:large",
+  "schema_version": "SE-AICO-CASE-SEO-v0.2",
+  "sec_filed_at": "2026-11-19",
+  "structevidence_date_published": null,
+  "title": "Anthropic compute obligations — StructEvidence"
+}
