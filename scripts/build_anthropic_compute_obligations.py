@@ -43,6 +43,7 @@ AUTHORIZED_CORRECTION_HASHES = {
 ACTIVATION_FILES = (
     "cases/anthropic-compute-obligations/activation-projection-v0.2.json",
     "cases/anthropic-compute-obligations/publication-receipt-template-v0.2.json",
+    "cases/anthropic-compute-obligations/publication-activation-event-template-v0.2.json",
 )
 
 SITEMAP_URLS = [
@@ -193,6 +194,39 @@ def publication_receipt_template() -> dict:
     }
 
 
+def publication_activation_event_template() -> dict:
+    return {
+        "schema_version": "SE-AICO-PUBLICATION-ACTIVATION-EVENT-v0.2",
+        "case_id": CASE_ID,
+        "event_id": None,
+        "event_type": "PUBLICATION_ACTIVATION_VERIFIED",
+        "owner_decision": None,
+        "owner_authorized_at": None,
+        "candidate_head_sha": None,
+        "merge_commit_sha": None,
+        "publication_event_at": None,
+        "pages_workflow_run_id": None,
+        "pages_deployment_id": None,
+        "pages_deployment_status_id": None,
+        "pages_deployment_succeeded_at": None,
+        "pages_source_branch": "main",
+        "pages_source_path": "/",
+        "pages_trigger": "PUSH_TO_MAIN_AUTOMATIC_PAGES_BUILD",
+        "deployment_environment": "github-pages",
+        "deployment_status": None,
+        "live_case_url": "https://structurevidence.org/cases/anthropic-compute-obligations/",
+        "live_case_http_status": None,
+        "live_case_sha256": None,
+        "live_index_sha256": None,
+        "live_claims_sha256": None,
+        "live_verified_at": None,
+        "source_sha256": "0c3a6faad0e1bddc30b108054ec318a0ed5ea509b0ff1d6c8f16a8bdf234424b",
+        "owner_review_gate": "OWNER_REVIEW_OF_ATOMIC_PUBLICATION_ACTIVATION",
+        "test_fixture": False,
+        "template_status": "UNPOPULATED_NOT_AN_ACTIVATION_EVENT",
+    }
+
+
 def write_release_blockers() -> None:
     case = ROOT / "cases/anthropic-compute-obligations"
     snapshot = json.loads((case / "index.json").read_text(encoding="utf-8"))
@@ -234,6 +268,7 @@ def write_release_blockers() -> None:
         "agent-discovery/temporal-semantics-se-ai-compute-obligations-001-v0.2.json": json_bytes(temporal),
         ACTIVATION_FILES[0]: json_bytes(activation_projection()),
         ACTIVATION_FILES[1]: json_bytes(publication_receipt_template()),
+        ACTIVATION_FILES[2]: json_bytes(publication_activation_event_template()),
     }
     for relative, content in outputs.items():
         (ROOT / relative).parent.mkdir(parents=True, exist_ok=True)
@@ -262,10 +297,20 @@ def verify_release_blockers() -> None:
         raise AssertionError("structured metadata no longer represents a draft")
     activation = json.loads((ROOT / ACTIVATION_FILES[0]).read_text(encoding="utf-8"))
     receipt = json.loads((ROOT / ACTIVATION_FILES[1]).read_text(encoding="utf-8"))
+    event_template = json.loads((ROOT / ACTIVATION_FILES[2]).read_text(encoding="utf-8"))
     if activation["proposed_append_only_event"]["publication_event_at"] is not None or activation["merge_authorized"]:
         raise AssertionError("activation projection invents an event or authorization")
     if receipt["status"] != "TEMPLATE_NOT_A_PUBLICATION_RECEIPT" or receipt["publication_event_at"] is not None:
         raise AssertionError("receipt template masquerades as a publication receipt")
+    if event_template["template_status"] != "UNPOPULATED_NOT_AN_ACTIVATION_EVENT":
+        raise AssertionError("activation event template masquerades as an actual event")
+    if any(event_template[field] is not None for field in (
+        "event_id", "owner_decision", "owner_authorized_at", "candidate_head_sha", "merge_commit_sha",
+        "publication_event_at", "pages_workflow_run_id", "pages_deployment_id", "pages_deployment_status_id",
+        "pages_deployment_succeeded_at", "deployment_status", "live_case_http_status", "live_case_sha256",
+        "live_index_sha256", "live_claims_sha256", "live_verified_at",
+    )):
+        raise AssertionError("activation event template contains invented event or deployment data")
     for relative in ACTIVATION_FILES:
         if (ROOT / relative).read_bytes() != (ROOT / "docs" / relative).read_bytes():
             raise AssertionError(f"activation root/docs mirror mismatch: {relative}")

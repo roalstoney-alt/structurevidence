@@ -161,6 +161,7 @@ class AnthropicPublicReleaseTest(unittest.TestCase):
     def test_14_activation_projection_and_receipt_are_unpopulated(self):
         activation = load("cases/anthropic-compute-obligations/activation-projection-v0.2.json")
         receipt = load("cases/anthropic-compute-obligations/publication-receipt-template-v0.2.json")
+        event = load("cases/anthropic-compute-obligations/publication-activation-event-template-v0.2.json")
         self.assertEqual(activation["status"], "GATED_ACTIVATION_PROJECTION_NOT_APPLIED")
         self.assertIsNone(activation["proposed_append_only_event"]["publication_event_at"])
         self.assertFalse(activation["merge_authorized"])
@@ -169,6 +170,10 @@ class AnthropicPublicReleaseTest(unittest.TestCase):
         self.assertIsNone(receipt["publication_event_at"])
         self.assertTrue(receipt["append_only"])
         self.assertFalse(receipt["prepublication_history_rewritten"])
+        self.assertEqual(event["template_status"], "UNPOPULATED_NOT_AN_ACTIVATION_EVENT")
+        self.assertIsNone(event["publication_event_at"])
+        self.assertIsNone(event["pages_deployment_id"])
+        self.assertIsNone(event["owner_decision"])
 
 
 if __name__ == "__main__":
