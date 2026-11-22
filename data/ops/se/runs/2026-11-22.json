@@ -1,0 +1,50 @@
+{
+  "schema_version": "se-unified-run-v1",
+  "run_id": "SE-OPS-20261122-2200-CLOUD-01",
+  "date_sgt": "2026-11-22",
+  "started_at": "2026-11-22T13:59:55Z",
+  "ended_at": "2026-11-22T14:12:00Z",
+  "repo_baseline_sha": "0c65ba830e28db694bb627ca6602648f64d4a491",
+  "dual_public_sha": "acc203395d46e6a6c74a6bca5ec77404ab0c3e68",
+  "phases": {
+    "scheduled": "OBSERVED",
+    "enabled": "OBSERVED",
+    "started": "VERIFIED",
+    "search_completed": "VERIFIED",
+    "artifact_created": "VERIFIED",
+    "delivered": "PENDING_DRAFT_PR",
+    "verified": "PRODUCTION_AND_ARTIFACT_CHECKS_COMPLETE"
+  },
+  "publication": {
+    "website_mutation": false,
+    "merge": false,
+    "deployment": false,
+    "x_sent": 0,
+    "linkedin_sent": 0,
+    "metricool_called": false,
+    "outreach": false
+  },
+  "rdl": "NOT_RUN",
+  "fde": "HOLD",
+  "weekly_sunday": {
+    "completed": true,
+    "nsclc_folded_review": true,
+    "public_question": true
+  },
+  "private_access": {
+    "cloudflare_d1_admin": "SOURCE_NOT_ACCESSIBLE",
+    "customer_intake": "SOURCE_NOT_ACCESSIBLE",
+    "direct_messages": "SOURCE_NOT_ACCESSIBLE"
+  },
+  "external_metrics": {
+    "challenges": "UNKNOWN",
+    "citations": "UNKNOWN",
+    "decision_requests": "UNKNOWN"
+  },
+  "cross_project": {
+    "cml": "BREADCRUMB_ONLY_NOT_EXECUTION_RECEIPT",
+    "lovetimeline": "NOT_DUE",
+    "pinterest": "NOT_DUE"
+  },
+  "draft_pr": null
+}
