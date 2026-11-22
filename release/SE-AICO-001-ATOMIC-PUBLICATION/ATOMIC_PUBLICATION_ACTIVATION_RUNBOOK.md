@@ -13,7 +13,7 @@ The verifier does not accept a caller-supplied decision string, IDs, timestamps 
 - an immutable GitHub comment authored by repository owner `roalstoney-alt`, bound by GitHub `issue_url` to PR #97 and by exact comment-body SHA256;
 - PR #97 head/base/merged state and GitHub-recorded merge result;
 - current `main` HEAD and merge or squash topology;
-- the exact native Pages run (`event=dynamic`, `path=dynamic/pages/pages-build-deployment`, `name=pages-build-deployment`), Pages deployment and deployment-status objects;
+- the exact native Pages run (`event=dynamic`, `path=dynamic/pages/pages-build-deployment`, `name=pages build and deployment`), Pages deployment and deployment-status objects;
 - successful `github-pages` production status and its timestamp;
 - HTTP 200 responses, final canonical URLs and SHA256 of raw bytes for canonical HTML, `index.json` and `claims-v0.2.jsonl`;
 - the same three repository files fetched from GitHub Contents at the exact authenticated deployed SHA, with byte-for-byte live-to-tree equality and case/schema identity checks.

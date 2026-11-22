@@ -81,7 +81,7 @@ class FakeClient:
             f"{repo}/pulls/{A.PR_NUMBER}": {"head": {"sha": CANDIDATE}, "base": {"sha": A.BASE_SHA},
                                               "merged": True, "merge_commit_sha": DEPLOYED,
                                               "merged_at": "2026-11-22T10:03:00Z"},
-            f"{repo}/actions/runs/1001": {"name": A.PAGES_WORKFLOW_NAME, "head_sha": deployed, "head_branch": "main",
+            f"{repo}/actions/runs/1001": {"name": "pages build and deployment", "head_sha": deployed, "head_branch": "main",
                                            "event": A.PAGES_WORKFLOW_EVENT, "path": A.PAGES_WORKFLOW_PATH,
                                            "status": "completed", "conclusion": "success",
                                            "created_at": "2026-11-22T10:05:00Z"},
@@ -226,6 +226,31 @@ class AnthropicPublicationActivationTest(unittest.TestCase):
         receipt = verified_receipt()
         self.assertEqual(receipt["github"]["workflow_event"], "dynamic")
         self.assertEqual(receipt["github"]["workflow_path"], "dynamic/pages/pages-build-deployment")
+
+    def test_21_observed_native_pages_identity_is_literal_not_self_referential(self):
+        self.assertEqual(A.PAGES_WORKFLOW_NAME, "pages build and deployment")
+        receipt = verified_receipt()
+        self.assertEqual(receipt["github"]["workflow_name"], "pages build and deployment")
+
+    def test_22_arbitrary_pages_name_fails_closed(self):
+        auth, body = authorization(); client = FakeClient(body)
+        client.data[f"/repos/{A.REPOSITORY}/actions/runs/1001"]["name"] = "other workflow"
+        with self.assertRaisesRegex(ValueError, "pinned successful native Pages workflow"):
+            A.verify_deployment_observation(request(), auth, client, live_fetch,
+                                            now=NOW, allow_test_fixture=True)
+
+    def test_23_frozen_claim_tampering_with_same_line_count_fails_closed(self):
+        with tempfile.TemporaryDirectory() as directory:
+            case = Path(directory) / A.CASE_SLUG
+            case.mkdir(parents=True)
+            for name in ("claims-v0.2.jsonl", "source-registry-public-v0.2.json", "events-v0.2.jsonl"):
+                (case / name).write_bytes((ROOT / A.CASE_SLUG / name).read_bytes())
+            hashes = A.verify_frozen_inputs(Path(directory))
+            self.assertEqual(hashes["claims_v0_2_sha256"], A.FROZEN_CLAIMS_SHA256)
+            original = (case / "claims-v0.2.jsonl").read_bytes()
+            (case / "claims-v0.2.jsonl").write_bytes(b"X" + original[1:])
+            with self.assertRaisesRegex(ValueError, "hash mismatch"):
+                A.verify_frozen_inputs(Path(directory))
 
     def test_14_arbitrary_workflow_event_or_path_fails_closed(self):
         auth, body = authorization(); client = FakeClient(body)

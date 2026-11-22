@@ -36,9 +36,12 @@ OWNER_LOGIN = "roalstoney-alt"
 GITHUB_API_ORIGIN = "https://api.github.com"
 PAGES_WORKFLOW_EVENT = "dynamic"
 PAGES_WORKFLOW_PATH = "dynamic/pages/pages-build-deployment"
-PAGES_WORKFLOW_NAME = "pages-build-deployment"
+PAGES_WORKFLOW_NAME = "pages build and deployment"
 INITIAL_DECISION = "APPROVE_VERIFIABLE_TWO_PHASE_RELEASE_AND_AUTO_DEPLOY"
 OVERLAY_DECISION = "APPROVE_ACTIVATION_OVERLAY_AND_AUTO_DEPLOY"
+FROZEN_CLAIMS_SHA256 = "8952849a7841a443daee63052649e61aa1d556919205afa3ad5905edb9f5c2b6"
+FROZEN_SOURCE_REGISTRY_SHA256 = "8683e29fe0ceb0b93973db24ba5739fd07af2166fba4b7f00a02a7aac49f41e1"
+FROZEN_PREPUBLICATION_EVENTS_SHA256 = "f40f00bbe2e0c5ebd193e3d8e0f351d6b449251ea71e83a79fc2e57d83cf0616"
 SHA_RE = re.compile(r"^[0-9a-f]{40}$")
 SHA256_RE = re.compile(r"^[0-9a-f]{64}$")
 AUTH_RE = re.compile(r"^([A-Z0-9_]+)=([^\r\n]+)$", re.MULTILINE)
@@ -394,9 +397,15 @@ def verify_deployment_observation(request: dict, authorization: dict, client,
 def verify_frozen_inputs(root: Path) -> dict[str, str]:
     claims = (root / CASE_SLUG / "claims-v0.2.jsonl").read_bytes()
     registry = (root / CASE_SLUG / "source-registry-public-v0.2.json").read_bytes()
+    events = (root / CASE_SLUG / "events-v0.2.jsonl").read_bytes()
+    if (digest_bytes(claims) != FROZEN_CLAIMS_SHA256
+            or digest_bytes(registry) != FROZEN_SOURCE_REGISTRY_SHA256
+            or digest_bytes(events) != FROZEN_PREPUBLICATION_EVENTS_SHA256):
+        raise ValueError("frozen v0.2 claims, source registry, or prepublication events hash mismatch")
     if json.loads(registry)["sources"][0]["raw_sha256"] != SOURCE_SHA256 or len([x for x in claims.splitlines() if x]) != 15:
         raise ValueError("frozen claims or reviewed source digest changed")
     return {"claims_v0_2_sha256": digest_bytes(claims), "source_registry_sha256": digest_bytes(registry),
+            "prepublication_events_sha256": digest_bytes(events),
             "source_capture_sha256_carried_forward": SOURCE_SHA256}
 
 
