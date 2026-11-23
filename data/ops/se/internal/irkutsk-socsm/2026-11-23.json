@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-23",
+  "case_id": "SE-IRK-LAB-001",
+  "classification": "INTERNAL_PRIVACY_SAFE_METADATA_ONLY",
+  "scope": "Public-source economic/response-cost boundary check; no private finance, contract, patent, personal, pathogen-operation or customer material accessed.",
+  "queries_used": 1,
+  "page_opens_used": 1,
+  "result": "COST_NOT_ESTABLISHED",
+  "reason": "The reviewed WHO/IHR public record describes verification and precautionary measures but does not provide a complete attributable resource, unit-cost, duration, procurement, labor, or counterfactual baseline sufficient for a defensible response-cost estimate.",
+  "prohibited_inferences_preserved": [
+    "cause of death",
+    "infection",
+    "illegality"
+  ],
+  "next_observable": "public procurement award, budget line, audited response-cost statement, or attributable resource-and-duration record"
+}
