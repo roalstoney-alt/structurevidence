@@ -1,0 +1,31 @@
+{
+  "date": "2026-11-23",
+  "timezone": "Asia/Singapore",
+  "task_id": "6aba2674e6448191867d0890ad2cc1ed",
+  "phases": {
+    "scheduled": "OBSERVED_EXISTING_TASK",
+    "enabled": "OBSERVED_EXISTING_TASK",
+    "started": "YES",
+    "search_completed": "YES_PUBLIC_BOUNDARY_PRIVATE_CHANNELS_BLOCKED",
+    "artifact_created": "YES_DRAFT_BRANCH",
+    "delivered": "PENDING_DRAFT_PR_RECEIPT",
+    "verified": "PARTIAL_PRODUCTION_BODY_VERIFIED_DRAFT_NOT_MERGED"
+  },
+  "publication": {
+    "website_change": "NONE",
+    "merge": "NOT_PERFORMED",
+    "deploy": "NOT_PERFORMED",
+    "x_post_sent": 0,
+    "linkedin_post_sent": 0,
+    "x_status": "X_AUTO_PUBLISH_PAUSED_HUMAN_REVIEW",
+    "social_candidate": "NO_VERIFIABLE_POST_CANDIDATE",
+    "outreach": "FDE_SE_GTM_005_HOLD",
+    "rdl": "NOT_RUN"
+  },
+  "cross_project_receipts": {
+    "CML": "RUN_TIMESTAMP_OBSERVED_OUTPUT_NOT_READ",
+    "FDE": "HOLD_NO_OUTREACH",
+    "LoveTimeline": "RUN_TIMESTAMP_OBSERVED_OUTPUT_NOT_READ",
+    "Pinterest": "OUTPUT_NOT_OBSERVED"
+  }
+}
