@@ -1,0 +1,208 @@
+{
+  "date": "2026-11-23",
+  "observed_at": "2026-11-23T22:00:00+08:00",
+  "knowledge_cutoff": "2026-11-23T22:00:00+08:00",
+  "repository_baselines": {
+    "structurevidence_main": "0c65ba830e28db694bb627ca6602648f64d4a491",
+    "dual_case_public_main": "acc203395d46e6a6c74a6bca5ec77404ab0c3e68",
+    "review_status_sha": "24b8d0643d5deffac90fdbb3b36109b408984a27",
+    "monitoring_status_sha": "b13addd5e3a9da8479ce13f8beb52a022e7777d0"
+  },
+  "cases": [
+    {
+      "case_id": "CML-PDRE-001",
+      "source_url": "https://vantage-dc.com/news/vantage-and-heron-power-electronics-announce-gigawatt-scale-800-vdc-agreement-to-accelerate-ai-infrastructure-delivery/",
+      "source_id": "VANTAGE-HERON-2026-10-21",
+      "source_speaker": "Vantage and Heron",
+      "claimed_subject": "manufacturing capacity reservation and intended deployment",
+      "claim_ids": [
+        "CML-PDRE-001.capacity"
+      ],
+      "event_at": "2026-10-21",
+      "published_at": "2026-10-21",
+      "source_access": "FULL_PUBLIC_TEXT",
+      "raw_hash_or_UNAVAILABLE": "UNAVAILABLE",
+      "search_query": "800VDC SST official updates through 2026-11-23",
+      "search_boundary": "official issuer sources; bounded daily check",
+      "old_stop_point": "single attributable commercial deployment; no independent validation or replication",
+      "proposed_stop_point": "UNCHANGED",
+      "new_sources": [],
+      "new_attributed_statements": [],
+      "new_independent_evidence": [],
+      "new_events": [],
+      "newly_discovered_old_evidence": [],
+      "state_changing_evidence": [],
+      "contradictions": [],
+      "decision_relevant_unknown": [
+        "named commissioned Vantage site",
+        "third-party acceptance",
+        "operating data",
+        "repeat deployment"
+      ],
+      "next_observable": "named commissioning or independent operating record",
+      "review_status": "NO_STATE_CHANGE"
+    },
+    {
+      "case_id": "SE-BESS-SODIUM-001",
+      "source_url": "https://www.catl.com/en/news/6861.html",
+      "source_id": "CATL-TENER-SODIUM-2026-06-22",
+      "source_speaker": "CATL",
+      "claimed_subject": "vendor product, production and delivery claims",
+      "claim_ids": [
+        "SE-BESS-SODIUM-001.commissioned_site"
+      ],
+      "event_at": "2026-06-22",
+      "published_at": "2026-06-22",
+      "source_access": "FULL_PUBLIC_TEXT",
+      "raw_hash_or_UNAVAILABLE": "UNAVAILABLE",
+      "search_query": "sodium-ion BESS named commissioned operational site official updates",
+      "search_boundary": "official and attributable public sources",
+      "old_stop_point": "named commissioned customer site not established",
+      "proposed_stop_point": "UNCHANGED",
+      "new_sources": [],
+      "new_attributed_statements": [],
+      "new_independent_evidence": [],
+      "new_events": [],
+      "newly_discovered_old_evidence": [],
+      "state_changing_evidence": [],
+      "contradictions": [],
+      "decision_relevant_unknown": [
+        "independent acceptance",
+        "grid interconnection",
+        "operating history"
+      ],
+      "next_observable": "named customer/site commissioning plus operating record",
+      "review_status": "NO_STATE_CHANGE"
+    },
+    {
+      "case_id": "SE-IRK-LAB-001",
+      "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON620/",
+      "source_id": "WHO-DON620",
+      "source_speaker": "WHO reporting Russian Federation NFP information",
+      "claimed_subject": "death and public-health verification timeline",
+      "claim_ids": [
+        "SE-IRK-LAB-001.cause"
+      ],
+      "event_at": "2026-10-02",
+      "published_at": "2026-10-10",
+      "source_access": "FULL_PUBLIC_TEXT",
+      "raw_hash_or_UNAVAILABLE": "UNAVAILABLE",
+      "search_query": "Irkutsk WHO IHR regulator official update and public economic response cost",
+      "search_boundary": "public whitelist; 1 grouped query and 1 source open in this run",
+      "old_stop_point": "death reported; cause not established; review incomplete",
+      "proposed_stop_point": "UNCHANGED",
+      "new_sources": [],
+      "new_attributed_statements": [],
+      "new_independent_evidence": [],
+      "new_events": [],
+      "newly_discovered_old_evidence": [],
+      "state_changing_evidence": [],
+      "contradictions": [],
+      "decision_relevant_unknown": [
+        "cause",
+        "complete original documents",
+        "publicly attributable response-cost baseline"
+      ],
+      "next_observable": "official amended original, regulator record, or WHO update",
+      "review_status": "REVIEW_INCOMPLETE"
+    },
+    {
+      "case_id": "SE-ONC-NSQNSCLC-CN-001",
+      "source_url": "https://www.nmpa.gov.cn/zhuanti/cxylqx/cxypxx/20260831155256126.html",
+      "source_id": "NMPA-2026-08-31",
+      "source_speaker": "NMPA",
+      "claimed_subject": "conditional approval within NSCLC scope",
+      "claim_ids": [
+        "SE-ONC-NSQNSCLC-CN-001.source_availability"
+      ],
+      "event_at": "2026-08-31",
+      "published_at": "2026-08-31",
+      "source_access": "PUBLIC_SEARCH_RESULT_AND_PRODUCTION_BODY",
+      "raw_hash_or_UNAVAILABLE": "UNAVAILABLE",
+      "search_query": "site:nmpa.gov.cn NSCLC China official update",
+      "search_boundary": "light daily availability check; Sunday deep review not run",
+      "old_stop_point": "FOLDED public research preview; no patient-specific probability",
+      "proposed_stop_point": "UNCHANGED",
+      "new_sources": [],
+      "new_attributed_statements": [],
+      "new_independent_evidence": [],
+      "new_events": [],
+      "newly_discovered_old_evidence": [],
+      "state_changing_evidence": [],
+      "contradictions": [],
+      "decision_relevant_unknown": [
+        "hospital-level outcomes",
+        "full deep-review scope"
+      ],
+      "next_observable": "Sunday human medical review or material official amendment",
+      "review_status": "REVIEW_INCOMPLETE"
+    },
+    {
+      "case_id": "SE-PHYSICAL-AI-001",
+      "source_url": "https://www.figure.ai/news",
+      "source_id": "FIGURE-NEWS-INDEX-2026-11-23",
+      "source_speaker": "Figure AI",
+      "claimed_subject": "Figure 02/03 deployment and retirement claims",
+      "claim_ids": [
+        "SE-PHYSICAL-AI-001.generation_scope"
+      ],
+      "event_at": null,
+      "published_at": null,
+      "source_access": "FULL_PUBLIC_TEXT",
+      "raw_hash_or_UNAVAILABLE": "UNAVAILABLE",
+      "search_query": "Figure BMW Figure 02 Figure 03 official updates",
+      "search_boundary": "official issuer news index",
+      "old_stop_point": "PUBLIC PROJECTION; LOCAL_PROVISIONAL_v0.1",
+      "proposed_stop_point": "UNCHANGED",
+      "new_sources": [],
+      "new_attributed_statements": [],
+      "new_independent_evidence": [],
+      "new_events": [],
+      "newly_discovered_old_evidence": [],
+      "state_changing_evidence": [],
+      "contradictions": [],
+      "decision_relevant_unknown": [
+        "BMW acceptance criteria",
+        "Figure 03 runtime/reliability",
+        "intervention and downtime data"
+      ],
+      "next_observable": "BMW-attributed acceptance or bounded operating record",
+      "review_status": "NO_STATE_CHANGE"
+    },
+    {
+      "case_id": "SE-NEW-BUSINESS-001",
+      "source_url": "https://www.iren.com/investors/news",
+      "source_id": "IREN-IR-INDEX-2026-11-23",
+      "source_speaker": "IREN",
+      "claimed_subject": "AI cloud contracts, Horizon delivery, capacity and financial claims",
+      "claim_ids": [
+        "SE-NEW-BUSINESS-001.external_confirmation"
+      ],
+      "event_at": null,
+      "published_at": null,
+      "source_access": "FULL_PUBLIC_TEXT",
+      "raw_hash_or_UNAVAILABLE": "UNAVAILABLE",
+      "search_query": "IREN Microsoft Horizon official updates",
+      "search_boundary": "issuer IR plus public counterparty search",
+      "old_stop_point": "LOCAL_PROVISIONAL_v0.1; Canonical RDL NOT_RUN",
+      "proposed_stop_point": "UNCHANGED",
+      "new_sources": [],
+      "new_attributed_statements": [],
+      "new_independent_evidence": [],
+      "new_events": [],
+      "newly_discovered_old_evidence": [],
+      "state_changing_evidence": [],
+      "contradictions": [],
+      "decision_relevant_unknown": [
+        "Microsoft reverse confirmation",
+        "Horizon 2-4 delivery",
+        "GAAP revenue",
+        "contract versus operating ARR",
+        "MW basis",
+        "cost and financing"
+      ],
+      "next_observable": "counterparty confirmation, filing, or realized financial evidence",
+      "review_status": "NO_STATE_CHANGE"
+    }
+  ]
+}
