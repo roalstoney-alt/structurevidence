@@ -1,0 +1,230 @@
+{
+  "date": "2026-11-24",
+  "observed_at": "2026-11-24T22:00:00+08:00",
+  "knowledge_cutoff": "2026-11-24T22:00:00+08:00",
+  "baselines": {
+    "structurevidence_main": "0c65ba830e28db694bb627ca6602648f64d4a491",
+    "dual_case_public_main": "acc203395d46e6a6c74a6bca5ec77404ab0c3e68",
+    "review_status_sha": "24b8d0643d5deffac90fdbb3b36109b408984a27",
+    "monitoring_status_sha": "b13addd5e3a9da8479ce13f8beb52a022e7777d0",
+    "prior_draft_pr": 99
+  },
+  "cases": [
+    {
+      "case_id": "CML-PDRE-001",
+      "source_url": "https://www.chindatagroup.com/media/news/533.html",
+      "source_id": "CHINDATA-2026-07-02",
+      "source_speaker": "Chindata",
+      "claimed_subject": "SST 10kV AC to 800VDC commercial operation",
+      "claim_ids": [
+        "CML-PDRE-001.field_deployment"
+      ],
+      "event_at": "2026-07-02",
+      "published_at": "2026-07-02",
+      "source_access": "FULL_PUBLIC_TEXT",
+      "raw_hash_or_UNAVAILABLE": "UNAVAILABLE",
+      "search_query": "800VDC SST named commissioning official updates through 2026-11-24",
+      "search_boundary": "official issuer/operator sources",
+      "old_stop_point": "single attributable commercial deployment; no independent validation or replication",
+      "proposed_stop_point": "UNCHANGED",
+      "new_sources": [],
+      "new_attributed_statements": [],
+      "new_independent_evidence": [],
+      "new_events": [],
+      "newly_discovered_old_evidence": [],
+      "state_changing_evidence": [],
+      "contradictions": [],
+      "decision_relevant_unknown": [
+        "independent acceptance",
+        "operating history",
+        "replication",
+        "repeat procurement"
+      ],
+      "next_observable": "independent operating record or second attributable deployment",
+      "review_status": "NO_STATE_CHANGE"
+    },
+    {
+      "case_id": "SE-BESS-SODIUM-001",
+      "source_url": "https://www.benanenergy.com/site/news-detail/191",
+      "source_id": "BENAN-HEZE-2026-10-23",
+      "source_speaker": "BENAN ENERGY",
+      "claimed_subject": "2.5MW/5MWh sodium-ion subsystem grid-connection commissioning within 200MW/400MWh Heze station",
+      "claim_ids": [
+        "SE-BESS-SODIUM-001.named_site",
+        "SE-BESS-SODIUM-001.grid_commissioning"
+      ],
+      "event_at": "2026-10-21",
+      "published_at": "2026-10-23",
+      "source_access": "FULL_PUBLIC_TEXT_VENDOR_AUTHORED",
+      "raw_hash_or_UNAVAILABLE": "UNAVAILABLE",
+      "search_query": "sodium-ion BESS named commissioned grid operational site official updates",
+      "search_boundary": "public official/attributable sources; repository dedupe search for BENAN and Heze returned no match",
+      "old_stop_point": "named commissioned customer system not established at 2026-09-24 cutoff",
+      "proposed_stop_point": "HUMAN_REVIEW_REQUIRED_POSSIBLE_NAMED_GRID_COMMISSIONED_SUBSYSTEM",
+      "new_sources": [
+        "BENAN-HEZE-2026-10-23"
+      ],
+      "new_attributed_statements": [
+        "Vendor says Heze project and its 2.5MW/5MWh sodium-ion subsystem completed grid-connection commissioning."
+      ],
+      "new_independent_evidence": [],
+      "new_events": [],
+      "newly_discovered_old_evidence": [
+        "2026-10-21 commissioning, first observed 2026-11-24"
+      ],
+      "state_changing_evidence": [
+        "POSSIBLE: named location plus stated grid commissioning"
+      ],
+      "contradictions": [
+        "Current public page says named commissioned site not established at an earlier cutoff."
+      ],
+      "decision_relevant_unknown": [
+        "commissioning party/owner confirmation",
+        "independent acceptance",
+        "commercial dispatch data",
+        "operating duration"
+      ],
+      "next_observable": "owner/operator or grid-company acceptance record and operating data",
+      "review_status": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "case_id": "SE-IRK-LAB-001",
+      "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON620/",
+      "source_id": "WHO-DON620",
+      "source_speaker": "WHO reporting Russian Federation NFP information",
+      "claimed_subject": "death and IHR verification timeline",
+      "claim_ids": [
+        "SE-IRK-LAB-001.cause"
+      ],
+      "event_at": "2026-10-02",
+      "published_at": "2026-10-10",
+      "source_access": "FULL_PUBLIC_TEXT",
+      "raw_hash_or_UNAVAILABLE": "UNAVAILABLE",
+      "search_query": "Irkutsk WHO IHR regulator official update 2026-11-24",
+      "search_boundary": "1 targeted query group; 1 relevant page result; public whitelist only",
+      "old_stop_point": "death reported; cause not established; review incomplete",
+      "proposed_stop_point": "UNCHANGED",
+      "new_sources": [],
+      "new_attributed_statements": [],
+      "new_independent_evidence": [],
+      "new_events": [],
+      "newly_discovered_old_evidence": [],
+      "state_changing_evidence": [],
+      "contradictions": [],
+      "decision_relevant_unknown": [
+        "cause",
+        "complete original documents"
+      ],
+      "next_observable": "official amended original, regulator record, or WHO update",
+      "review_status": "REVIEW_INCOMPLETE"
+    },
+    {
+      "case_id": "SE-ONC-NSQNSCLC-CN-001",
+      "source_url": "https://www.nmpa.gov.cn/zhuanti/cxylqx/cxypxx/20260831155256126.html",
+      "source_id": "NMPA-2026-08-31",
+      "source_speaker": "NMPA",
+      "claimed_subject": "official NSCLC approval source availability",
+      "claim_ids": [
+        "SE-ONC-NSQNSCLC-CN-001.source_availability"
+      ],
+      "event_at": "2026-08-31",
+      "published_at": "2026-08-31",
+      "source_access": "PUBLIC_SEARCH_RESULT_AND_PRODUCTION_BODY",
+      "raw_hash_or_UNAVAILABLE": "UNAVAILABLE",
+      "search_query": "site:nmpa.gov.cn NSCLC 2026-11-24",
+      "search_boundary": "light daily availability check; no Sunday deep review",
+      "old_stop_point": "FOLDED public research preview",
+      "proposed_stop_point": "UNCHANGED",
+      "new_sources": [],
+      "new_attributed_statements": [],
+      "new_independent_evidence": [],
+      "new_events": [],
+      "newly_discovered_old_evidence": [],
+      "state_changing_evidence": [],
+      "contradictions": [],
+      "decision_relevant_unknown": [
+        "hospital-level outcomes",
+        "full deep-review scope"
+      ],
+      "next_observable": "Sunday human medical review or material official amendment",
+      "review_status": "REVIEW_INCOMPLETE"
+    },
+    {
+      "case_id": "SE-PHYSICAL-AI-001",
+      "source_url": "https://www.press.bmwgroup.com/global/article/detail/T0458778EN/bmw-group-advances-the-use-of-physical-ai-in-production-with-figure-03-project-in-spartanburg",
+      "source_id": "BMW-F03-2026-06-25",
+      "source_speaker": "BMW Group",
+      "claimed_subject": "Figure 03 project at Spartanburg",
+      "claim_ids": [
+        "SE-PHYSICAL-AI-001.generation_scope"
+      ],
+      "event_at": "2026-06-25",
+      "published_at": "2026-06-25",
+      "source_access": "FULL_PUBLIC_TEXT",
+      "raw_hash_or_UNAVAILABLE": "UNAVAILABLE",
+      "search_query": "Figure AI BMW Figure 03 official operational update",
+      "search_boundary": "official BMW and Figure sources",
+      "old_stop_point": "PUBLIC PROJECTION; LOCAL_PROVISIONAL_v0.1",
+      "proposed_stop_point": "UNCHANGED",
+      "new_sources": [],
+      "new_attributed_statements": [],
+      "new_independent_evidence": [],
+      "new_events": [],
+      "newly_discovered_old_evidence": [],
+      "state_changing_evidence": [],
+      "contradictions": [],
+      "decision_relevant_unknown": [
+        "acceptance criteria",
+        "runtime/reliability",
+        "interventions/downtime"
+      ],
+      "next_observable": "BMW acceptance or bounded operating record",
+      "review_status": "NO_STATE_CHANGE"
+    },
+    {
+      "case_id": "SE-NEW-BUSINESS-001",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/1878848/000187884826000066/iren-20260930.htm",
+      "source_id": "SEC-IREN-10Q-2026-11-05",
+      "source_speaker": "IREN SEC filing",
+      "claimed_subject": "Horizon 1 acceptance, revenue recognition and Horizon 2-4 construction",
+      "claim_ids": [
+        "SE-NEW-BUSINESS-001.horizon1_acceptance",
+        "SE-NEW-BUSINESS-001.gaap_revenue",
+        "SE-NEW-BUSINESS-001.horizon2_4"
+      ],
+      "event_at": "2026-09-30",
+      "published_at": "2026-11-05",
+      "source_access": "FULL_PUBLIC_SEC_FILING",
+      "raw_hash_or_UNAVAILABLE": "UNAVAILABLE",
+      "search_query": "SEC IREN Q1 FY27 Horizon 1 Microsoft revenue",
+      "search_boundary": "SEC filing and issuer results; repository dedupe search returned no match",
+      "old_stop_point": "LOCAL_PROVISIONAL_v0.1 with Horizon/GAAP/reverse-confirmation gaps",
+      "proposed_stop_point": "HUMAN_REVIEW_REQUIRED_EVIDENCE_CHAIN_UPDATE",
+      "new_sources": [
+        "SEC-IREN-10Q-2026-11-05",
+        "SEC-IREN-8K-2026-11-05"
+      ],
+      "new_attributed_statements": [
+        "IREN says Microsoft accepted Horizon 1 in August 2026 and lease revenue recognition commenced; Horizon 2-4 remained in late-stage construction."
+      ],
+      "new_independent_evidence": [],
+      "new_events": [],
+      "newly_discovered_old_evidence": [
+        "2026-11-05 SEC filings first observed 2026-11-24"
+      ],
+      "state_changing_evidence": [
+        "Issuer-filed evidence strengthens Horizon 1 delivery/acceptance and realized-revenue chain."
+      ],
+      "contradictions": [],
+      "decision_relevant_unknown": [
+        "Microsoft public reverse confirmation",
+        "Horizon 2-4 acceptance",
+        "contract-to-operating ARR reconciliation",
+        "MW basis",
+        "cost/financing economics"
+      ],
+      "next_observable": "Microsoft confirmation, Horizon 2-4 acceptance, later filed realized results",
+      "review_status": "HUMAN_REVIEW_REQUIRED"
+    }
+  ]
+}
