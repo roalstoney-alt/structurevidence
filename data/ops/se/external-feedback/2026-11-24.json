@@ -1,0 +1,42 @@
+{
+  "date": "2026-11-24",
+  "privacy_safe": true,
+  "internal_synthetic_excluded": true,
+  "metrics": {
+    "VERIFIED_EXTERNAL_CHALLENGES": {
+      "today": "UNKNOWN",
+      "cumulative": "UNKNOWN",
+      "unknown_access_blocked": "PUBLIC_EXACT_SEARCH_COMPLETED; PRIVATE_INTAKE_ADMIN_NOT_ACCESSIBLE"
+    },
+    "VERIFIED_DECISION_CITATIONS": {
+      "today": "UNKNOWN",
+      "cumulative": "UNKNOWN",
+      "unknown_access_blocked": "NO_VERIFIABLE_PUBLIC_DECISION_CITATION_FOUND; PRIVATE_MATERIALS_NOT_ACCESSIBLE"
+    },
+    "VERIFIED_INBOUND_DECISION_REQUESTS": {
+      "today": "UNKNOWN",
+      "cumulative": "UNKNOWN",
+      "unknown_access_blocked": "PUBLIC_SEARCH_COMPLETED; PRIVATE_MESSAGES_INTAKE_NOT_ACCESSIBLE"
+    }
+  },
+  "events": [],
+  "ledger_fields": [
+    "feedback_event_id",
+    "first_observed_at",
+    "channel",
+    "case_id",
+    "feedback_type",
+    "external_actor_verification",
+    "evidence_reference_or_RESTRICTED",
+    "public_safe_source_url_or_PRIVATE",
+    "linked_claim_id",
+    "source_cutoff",
+    "private_access_boundary",
+    "review_status",
+    "decision_dependency",
+    "action_needed",
+    "outcome",
+    "next_followup_at",
+    "duplicate_of"
+  ]
+}
