@@ -1,0 +1,11 @@
+{
+  "date": "2026-11-24",
+  "x_status": "WEBSITE_PUBLICATION_BLOCKED",
+  "linkedin_status": "WEBSITE_PUBLICATION_BLOCKED",
+  "reason": "Two historical evidence candidates require human review and approved website/public-projection publication before any social candidate can be release-ready.",
+  "x_post_sent": 0,
+  "linkedin_post_sent": 0,
+  "human_gate_required": true,
+  "x_auto_publish_paused_human_review": true,
+  "candidates": []
+}
