@@ -6,9 +6,17 @@
     "enabled": "OBSERVED_EXISTING_TASK",
     "started": "YES",
     "search_completed": "YES_PUBLIC_BOUNDARY_PRIVATE_CHANNELS_BLOCKED",
-    "artifact_created": "YES_DRAFT_BRANCH",
-    "delivered": "PENDING_DRAFT_PR_RECEIPT",
-    "verified": "PARTIAL_PRODUCTION_BODY_VERIFIED_CANDIDATES_HUMAN_REVIEW_REQUIRED"
+    "artifact_created": "YES_DRAFT_PR_100",
+    "delivered": "YES_DRAFT_PR_RECEIPT",
+    "verified": "PARTIAL_PRODUCTION_BODY_VERIFIED_PR_OPEN_DRAFT_UNMERGED_HUMAN_REVIEW_REQUIRED"
+  },
+  "draft_pr": {
+    "number": 100,
+    "url": "https://github.com/roalstoney-alt/structurevidence/pull/100",
+    "state": "OPEN",
+    "draft": true,
+    "merged": false,
+    "head_sha_at_creation": "fb3ebf4ac3569396a834ecb55dab0779fdcd113c"
   },
   "publication": {
     "website_change": "NONE",
