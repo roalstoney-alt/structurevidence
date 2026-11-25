@@ -1,0 +1,118 @@
+{
+  "date": "2026-11-25",
+  "review_status": "REVIEW_INCOMPLETE",
+  "owner_decision": {
+    "case_id": "SE-NEW-BUSINESS-001",
+    "source": "Owner message in this conversation on 2026-11-25",
+    "research_record": "UPDATED_ISSUER_SEC_DISCLOSURE",
+    "attribution_status": "SUPPORTED_AS_IREN_DISCLOSURE",
+    "underlying_fact_acceptance": "HOLD_PENDING_REVIEW",
+    "microsoft_reverse_confirmation": "NOT_ESTABLISHED_NOT_A_PREREQUISITE_FOR_ATTRIBUTED_RECORDING",
+    "public_projection": "LOCAL_PROVISIONAL_v0.1_UNCHANGED",
+    "canonical_rdl": "NOT_RUN",
+    "publication_authorized": false
+  },
+  "external_metrics": {
+    "VERIFIED_EXTERNAL_CHALLENGES": {
+      "today": "UNKNOWN",
+      "cumulative": "UNKNOWN"
+    },
+    "VERIFIED_DECISION_CITATIONS": {
+      "today": "UNKNOWN",
+      "cumulative": "UNKNOWN"
+    },
+    "VERIFIED_INBOUND_DECISION_REQUESTS": {
+      "today": "UNKNOWN",
+      "cumulative": "UNKNOWN"
+    },
+    "boundary": "Private intake/Admin/messages SOURCE_NOT_ACCESSIBLE; limited public search completed",
+    "privacy_safe": true,
+    "internal_synthetic_excluded": true
+  },
+  "cases": [
+    {
+      "case_id": "CML-PDRE-001",
+      "review_status": "REVIEW_INCOMPLETE",
+      "new_event": "UNKNOWN",
+      "state_changed": "NOT_AUTHORIZED",
+      "last_verified_review": "NOT_ADVANCED",
+      "website_status": "NOT_VERIFIED_TODAY",
+      "post_status": "WEBSITE_PUBLICATION_BLOCKED",
+      "raw_hash_or_UNAVAILABLE": "UNAVAILABLE"
+    },
+    {
+      "case_id": "SE-BESS-SODIUM-001",
+      "review_status": "REVIEW_INCOMPLETE",
+      "new_event": "UNKNOWN",
+      "state_changed": "NOT_AUTHORIZED",
+      "last_verified_review": "NOT_ADVANCED",
+      "website_status": "NOT_VERIFIED_TODAY",
+      "post_status": "WEBSITE_PUBLICATION_BLOCKED",
+      "raw_hash_or_UNAVAILABLE": "UNAVAILABLE"
+    },
+    {
+      "case_id": "SE-IRK-LAB-001",
+      "review_status": "REVIEW_INCOMPLETE",
+      "new_event": "UNKNOWN",
+      "state_changed": "NOT_AUTHORIZED",
+      "last_verified_review": "NOT_ADVANCED",
+      "website_status": "NOT_VERIFIED_TODAY",
+      "post_status": "WEBSITE_PUBLICATION_BLOCKED",
+      "raw_hash_or_UNAVAILABLE": "UNAVAILABLE"
+    },
+    {
+      "case_id": "SE-ONC-NSQNSCLC-CN-001",
+      "review_status": "REVIEW_INCOMPLETE",
+      "new_event": "UNKNOWN",
+      "state_changed": "NOT_AUTHORIZED",
+      "last_verified_review": "NOT_ADVANCED",
+      "website_status": "NOT_VERIFIED_TODAY",
+      "post_status": "WEBSITE_PUBLICATION_BLOCKED",
+      "raw_hash_or_UNAVAILABLE": "UNAVAILABLE"
+    },
+    {
+      "case_id": "SE-PHYSICAL-AI-001",
+      "review_status": "REVIEW_INCOMPLETE",
+      "new_event": "UNKNOWN",
+      "state_changed": "NOT_AUTHORIZED",
+      "last_verified_review": "NOT_ADVANCED",
+      "website_status": "NOT_VERIFIED_TODAY",
+      "post_status": "WEBSITE_PUBLICATION_BLOCKED",
+      "raw_hash_or_UNAVAILABLE": "UNAVAILABLE"
+    },
+    {
+      "case_id": "SE-NEW-BUSINESS-001",
+      "review_status": "REVIEW_INCOMPLETE",
+      "new_event": "UNKNOWN",
+      "state_changed": "NOT_AUTHORIZED",
+      "last_verified_review": "NOT_ADVANCED",
+      "website_status": "NOT_VERIFIED_TODAY",
+      "post_status": "WEBSITE_PUBLICATION_BLOCKED",
+      "raw_hash_or_UNAVAILABLE": "UNAVAILABLE"
+    }
+  ],
+  "limitations": [
+    "Production bodies not independently verified today",
+    "Dual public repository and PR status not fully rechecked",
+    "Complete per-case source checks not completed; no NO_STATE_CHANGE conclusion or new review_id assigned"
+  ],
+  "phases": {
+    "scheduled": "OBSERVED",
+    "enabled": "OBSERVED",
+    "started": "YES",
+    "search_completed": "PARTIAL",
+    "artifact_created": "YES",
+    "delivered": "CHAT_AND_GITHUB_BRANCH_RECORD",
+    "verified": "PARTIAL"
+  },
+  "x_post_sent": 0,
+  "linkedin_post_sent": 0,
+  "outreach": "HOLD",
+  "metrics_since_20261008": "UNKNOWN; original targets remain hypotheses; no measured cost reduction claimed",
+  "cross_project": {
+    "CML": "Run timestamp provided; output not read",
+    "LoveTimeline": "Latest timestamp provided; output not read",
+    "Pinterest": "UNKNOWN",
+    "FDE": "HOLD"
+  }
+}
