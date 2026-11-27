@@ -1,0 +1,109 @@
+{
+  "schema_version": "OWNER_EXTERNAL_FEEDBACK_LEDGER_20261028",
+  "date": "2026-11-27",
+  "privacy": "PRIVACY_SAFE",
+  "exclusion": "INTERNAL_SYNTHETIC_EXCLUDED",
+  "channel_boundaries": [
+    {
+      "channel": "PUBLIC_GAP_CHANGE_LOG",
+      "access": "READ_HTTP_200",
+      "scope": "Six OEG-CML/BESS/ONC public logs each contained its initial GAP_OPENED only; this is not a list of received/private challenges.",
+      "ids": [
+        "OEG-CML-001",
+        "OEG-CML-002",
+        "OEG-BESS-001",
+        "OEG-BESS-002",
+        "OEG-ONC-001",
+        "OEG-ONC-002"
+      ]
+    },
+    {
+      "channel": "PRIVATE_INTAKE_CLOUDFLARE_D1_ADMIN_RECEIVED_MESSAGES",
+      "access": "SOURCE_NOT_ACCESSIBLE",
+      "reason": "No authorized Admin/D1/private-message read tool configured in this run. No credential extraction, sign-in workaround, or synthetic POST attempted."
+    },
+    {
+      "channel": "PUBLIC_EXTERNAL_CITATIONS",
+      "access": "BOUNDED_SEARCH_AND_PAGE_READ",
+      "scope": "Exact StructEvidence search excluding structurevidence.org and owner GitHub; one external-domain citation candidate observed. Search coverage and all prior draft ledgers are incomplete."
+    },
+    {
+      "channel": "MAIN_FEEDBACK_LEDGER",
+      "access": "READ_EMPTY",
+      "url": "https://github.com/roalstoney-alt/structurevidence/blob/main/growth/external-challenge/feedback-ledger/ledger.jsonl",
+      "blob_sha": "8b137891791fe96927ad78e64b0aad7bded08bdc",
+      "boundary": "Empty approved main ledger is not proof that no feedback exists in drafts/private channels."
+    }
+  ],
+  "metrics": {
+    "VERIFIED_EXTERNAL_CHALLENGES": {
+      "TODAY": "UNKNOWN",
+      "CUMULATIVE": "UNKNOWN",
+      "status": "UNKNOWN/ACCESS_BLOCKED",
+      "verified_qualifying_events_established_this_read_scope": 0,
+      "unverified_candidate_events": 0,
+      "reason": "No complete independently verified channel coverage; no inference of zero from unread data."
+    },
+    "VERIFIED_DECISION_CITATIONS": {
+      "TODAY": "UNKNOWN",
+      "CUMULATIVE": "UNKNOWN",
+      "status": "UNKNOWN/ACCESS_BLOCKED",
+      "verified_qualifying_events_established_this_read_scope": 0,
+      "unverified_candidate_events": 1,
+      "reason": "No complete independently verified channel coverage; no inference of zero from unread data."
+    },
+    "VERIFIED_INBOUND_DECISION_REQUESTS": {
+      "TODAY": "UNKNOWN",
+      "CUMULATIVE": "UNKNOWN",
+      "status": "UNKNOWN/ACCESS_BLOCKED",
+      "verified_qualifying_events_established_this_read_scope": 0,
+      "unverified_candidate_events": 0,
+      "reason": "No complete independently verified channel coverage; no inference of zero from unread data."
+    }
+  },
+  "events": [
+    {
+      "feedback_event_id": "SE-EFL-20261127-CITATION-001",
+      "first_observed_at": "2026-11-27",
+      "first_observed_precision": "DAY_THIS_RUN_NOT_PROVEN_GLOBAL_FIRST",
+      "channel": "PUBLIC_EXTERNAL_ARTICLE",
+      "case_id": "SE-AI-COMPUTE-OBLIGATIONS-001",
+      "feedback_type": "CITATION",
+      "external_actor_verification": "UNVERIFIED",
+      "evidence_reference_or_RESTRICTED": "Public article references the StructEvidence Anthropic case in its source list and says a liquidity/commitments graphic uses it alongside another source. This establishes observable source use only, not accuracy or actual decision adoption.",
+      "public_safe_source_url_or_PRIVATE": "https://thuthuatai.net/anthropic-900-ty-junk-bond/",
+      "linked_claim_id": null,
+      "source_cutoff": "2026-11-26T18:20:00+07:00",
+      "private_access_boundary": "PUBLIC_HTML_ONLY; no personal identifiers/intake data collected",
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "decision_dependency": "Actor independence/human provenance, actual decision-material use and exact case version not established.",
+      "action_needed": "Owner review and read-only provenance/version/decision-context check; no outreach authorized.",
+      "outcome": "UNVERIFIED_PUBLIC_CITATION_LEAD_NOT_COUNTED",
+      "next_followup_at": "2026-11-28T22:00:00+08:00",
+      "duplicate_of": null,
+      "duplicate_boundary": "No item in current empty approved main ledger; earlier draft/private ledger search incomplete. Do not count globally unique until deduped.",
+      "raw_hash_or_UNAVAILABLE": "177708cddb64318fca03c19b4bf2ec0cae9908d507dc16009d0ec3cbcf9e42d8",
+      "source_published_at": "2026-11-26T18:20:00+07:00",
+      "linked_case_version": "NOT_IDENTIFIED_BY_EXTERNAL_ARTICLE",
+      "verified_decision_citation_increment": 0,
+      "linked_production_page": {
+        "url": "https://structurevidence.org/cases/anthropic-compute-obligations/",
+        "http_status": 200,
+        "body_sha256": "54cb99f1cca85b8702a816360992f28fc9dbbfd7ea9c50a1b948a036f3fa2400",
+        "boundary": "Live page reachable. External article did not name a snapshot/version; matching precise cited version remains pending."
+      }
+    }
+  ],
+  "excluded_observations": [
+    {
+      "kind": "OWNER_AUTHORED_DISTRIBUTION_NOT_EXTERNAL_VALIDATION",
+      "url": "https://medium.com/@roalstoney/why-does-an-ai-agent-find-business-opportunities-only-after-they-have-expired-6acffebba4c1",
+      "classification": "OWNER_AUTHORED_NOT_INDEPENDENT; not asserted synthetic",
+      "basis": "Public author/account matches owner handle; search page read. No audience/reach/decision-use receipt.",
+      "increment": 0,
+      "source_access": "SEARCH_INDEX_TEXT; DIRECT_HTTP_403_INTERSTITIAL",
+      "raw_hash_or_UNAVAILABLE": "UNAVAILABLE"
+    }
+  ],
+  "traction_assessment": "One externally hosted source-use lead observed, but real independent decision traction not established. A public article and an owner-authored distribution surface are observable; actual impressions, readership and qualified reach remain UNKNOWN. Cannot distinguish insufficient reach from insufficient demand with current access."
+}
