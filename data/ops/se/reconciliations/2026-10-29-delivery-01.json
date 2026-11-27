@@ -1,0 +1,31 @@
+{
+  "schema_version": "se-ops-reconciliation-v1",
+  "date_sgt": "2026-10-29",
+  "recorded_at": "2026-10-29T14:51:56Z",
+  "type": "DELIVERY_RECEIPT",
+  "authoritative_main_sha": "7919857805c35bbbc186b3e2b2b9f634159b95ff",
+  "branch": "codex/se-unified-ops-20261029",
+  "report_content_commit": "832625c796a16d25d3c5295579acd78fdbc4cd3e",
+  "pull_request": {
+    "number": 64,
+    "url": "https://github.com/roalstoney-alt/structurevidence/pull/64",
+    "created_at": "2026-10-29T14:51:56Z",
+    "state": "OPEN"
+  },
+  "delivery_state": "PR_CREATED_HUMAN_MERGE_REQUIRED",
+  "report_delivered_at": "2026-10-29T14:51:56Z",
+  "merge_executed": false,
+  "blocker": "EXPLICIT_HUMAN_MERGE_APPROVAL_REQUIRED",
+  "test_comparison": {
+    "branch": {"tests": 46, "failures": 14},
+    "authoritative_main": {"tests": 44, "failures": 14},
+    "new_regression_count": 0
+  },
+  "x_post_sent": 0,
+  "notes": [
+    "No qualifying new evidence or case-state change was recorded.",
+    "One English X candidate remains HUMAN_GATE_REQUIRED.",
+    "No X write interface, outreach, deployment, or case-state mutation occurred.",
+    "The original dirty checkout was not modified."
+  ]
+}

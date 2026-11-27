@@ -1,0 +1,41 @@
+{
+  "schema_version": "se-case-review-v2",
+  "case_id": "CML-PDRE-001",
+  "review_id": "SE-800V-REVIEW-20261029-01",
+  "reviewed_at": "2026-10-29T14:50:00Z",
+  "result": "NO_STATE_CHANGE",
+  "review_complete": true,
+  "classifications": ["NO_STATE_CHANGE"],
+  "search_boundary": "One targeted official-source search group and two primary-source reads covering named commissioning, accepted delivery, replicated field operation, independent performance and component maturity; not an exhaustive market census.",
+  "sources_checked": [
+    {
+      "url": "https://vantage-dc.com/company/news-events/",
+      "publisher": "Vantage Data Centers",
+      "status": "READ_NO_NEW_800V_RECORD_AFTER_2026-10-21",
+      "retrieved_at": "2026-10-29T14:50:00Z",
+      "finding": "The current news index still identifies the 21 October Vantage-Heron capacity agreement as the latest relevant 800 VDC item; it adds no shipped unit, commissioned campus, acceptance test or operating dataset."
+    },
+    {
+      "url": "https://investors.power.com/news/news-details/2026/Power-Integrations-and-Ideal-Power-Collaborate-on-Efficient-Always-On-Solid-State-Circuit-Breakers-for-800-VDC-AI-Data-Centers/default.aspx",
+      "publisher": "Power Integrations",
+      "status": "READ_EXISTING_SOURCE_NOTE_REVERIFIED",
+      "published_at": "2026-10-12",
+      "event_at": "2026-10-12",
+      "retrieved_at": "2026-10-29T14:50:00Z",
+      "finding": "The collaboration and working prototype remain supplier-level evidence; no named customer field deployment, replicated installation or long-duration reliability record is supplied."
+    }
+  ],
+  "new_sources": 0,
+  "new_attributed_statements": 0,
+  "new_independent_evidence": 0,
+  "new_events": 0,
+  "newly_discovered_old_evidence": 0,
+  "state_changing_evidence": 0,
+  "old_state": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+  "new_state": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+  "new_qualifying_evidence_count": 0,
+  "new_counter_evidence_count": 0,
+  "evidence_state_as_of": "2026-09-20T10:46:47Z",
+  "last_material_change": "2026-09-20",
+  "historical_backfill": false
+}
