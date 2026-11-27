@@ -1,0 +1,30 @@
+{
+  "schema_version": "se-ops-reconciliation-v1",
+  "date_sgt": "2026-10-28",
+  "recorded_at": "2026-10-28T14:07:18Z",
+  "type": "DELIVERY_ATTEMPT",
+  "authoritative_main_sha": "7919857805c35bbbc186b3e2b2b9f634159b95ff",
+  "branch": "codex/se-unified-ops-20261028",
+  "branch_head_sha": "7c6cd7f496b0ce2ea2a7659d031500ccd5becf4f",
+  "pull_request": {
+    "number": 62,
+    "url": "https://github.com/roalstoney-alt/structurevidence/pull/62",
+    "created_at": "2026-10-28T14:06:37Z",
+    "state": "OPEN"
+  },
+  "delivery_state": "BLOCKED",
+  "delivered_at": null,
+  "merge_executed": false,
+  "blocker": "PR_CREATED_AWAITING_EXPLICIT_HUMAN_MERGE_APPROVAL",
+  "test_comparison": {
+    "branch": {"tests": 46, "failures": 14},
+    "authoritative_main": {"tests": 44, "failures": 14},
+    "new_regression_count": 0
+  },
+  "x_post_sent": 0,
+  "notes": [
+    "The bounded daily run and candidate are recorded in PR #62.",
+    "No production deployment, case-state mutation, outreach, or X write occurred.",
+    "The original dirty checkout was not modified."
+  ]
+}
