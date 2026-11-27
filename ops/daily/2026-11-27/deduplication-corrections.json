@@ -1,0 +1,45 @@
+{
+  "date": "2026-11-27",
+  "append_only": true,
+  "mutates_prior_records": false,
+  "corrections": [
+    {
+      "id": "SE-DEDUPE-20261127-HEZE",
+      "event_id": "BENAN-191-HEZE-20261021",
+      "event_at": "2026-10-21",
+      "existing_registration": "https://github.com/roalstoney-alt/structurevidence/pull/91",
+      "existing_registration_date": "2026-11-11",
+      "later_record": "https://github.com/roalstoney-alt/structurevidence/pull/100",
+      "correction": "The same Heze commissioning event was already registered Nov11. Nov24 re-observation/source capture must not count as a first-discovery or new unique event. No accepted state is changed."
+    },
+    {
+      "id": "SE-DEDUPE-20261127-IREN",
+      "event_id": "IREN-Q1FY27-20261105",
+      "published_at": "2026-11-05",
+      "existing_registration": "https://github.com/roalstoney-alt/structurevidence/pull/86",
+      "existing_registration_date": "2026-11-06",
+      "sec_followup": "https://github.com/roalstoney-alt/structurevidence/pull/93",
+      "later_record": "https://github.com/roalstoney-alt/structurevidence/pull/100",
+      "correction": "Q1 results and subsequent SEC candidate were registered before Nov24. Re-read/capture is not a new unique event, independent confirmation or reset of review gate."
+    }
+  ],
+  "pr_receipts": {
+    "38": "MERGED",
+    "39": "MERGED",
+    "40": "MERGED",
+    "86": "OPEN_DRAFT",
+    "91": "OPEN_DRAFT",
+    "93": "OPEN_DRAFT",
+    "100": "OPEN_DRAFT",
+    "101": "OPEN_DRAFT"
+  },
+  "pr101_head_sha": "dd52ede9a8704501bf4c14e85f2e1442e1da27f6",
+  "public_statistics": {
+    "feed_url": "https://structurevidence.org/changes.json",
+    "http": 200,
+    "body_sha256": "cfbcffb4f9e55f0900abb8d488364781552c34d417c22a7452e04504231468d3",
+    "generated_at": "2026-09-29",
+    "entry_count": 2,
+    "boundary": "Historical feed is incomplete/stale and includes later-dated entries. It cannot establish complete recent-30-day totals or external feedback. PR101 statistics fix remains unmerged; no production success claimed."
+  }
+}

@@ -1,0 +1,165 @@
+{
+  "schema_version": "SE_DAILY_RUN_RECEIPT_APPEND_ONLY_V1",
+  "date": "2026-11-27",
+  "timezone": "Asia/Singapore",
+  "task_id": "6aba2674e6448191867d0890ad2cc1ed",
+  "run_id": "71748bfc-6374-832c-bde8-e3dbea92fec6",
+  "recorded_at": "2026-11-27T22:10:40+08:00",
+  "runtime_phases": {
+    "scheduled": {
+      "status": "VERIFIED_CONFIGURATION",
+      "schedule": "DAILY_22:00_Asia/Singapore",
+      "scheduled_for": "2026-11-27T14:00:00Z"
+    },
+    "enabled": {
+      "status": "VERIFIED_TRUE",
+      "duplicate_enabled_structurevidence_tasks_observed": 0,
+      "task_inventory_count": 14,
+      "created_or_changed_tasks": 0
+    },
+    "started": {
+      "status": "VERIFIED_SCHEDULER_RECEIPT",
+      "at": "2026-11-27T14:00:24.808963Z",
+      "scheduler_recorded_status": "in_progress"
+    },
+    "search_completed": {
+      "status": "BOUNDED_SEARCH_COMPLETED_NOT_FULL_EVIDENCE_REVIEW",
+      "case_count": 6,
+      "complete_case_reviews": 0,
+      "new_review_ids": 0,
+      "knowledge_cutoff": "2026-11-27T22:06:03+08:00"
+    },
+    "artifact_created": {
+      "status": "VERIFIED_GITHUB_COMMIT_AND_EXACT_READBACK",
+      "commit_sha": "06130bcea51f6ffe160b7cd85f87e7febca3b15a",
+      "files": [
+        {
+          "path": "ops/daily/2026-11-27/case-observations.json",
+          "matches": true,
+          "blob_sha": "5a4fc8f9ece32ccece8b7b78447440934723ed4a",
+          "readback_access": "READ"
+        },
+        {
+          "path": "ops/daily/2026-11-27/external-feedback-ledger.json",
+          "matches": true,
+          "blob_sha": "15483956e9695cf1af3c24e089d8816b1641d8a2",
+          "readback_access": "READ"
+        },
+        {
+          "path": "ops/daily/2026-11-27/deduplication-corrections.json",
+          "matches": true,
+          "blob_sha": "ba4ebcbb6e578145a51af4a9160710c594528eda",
+          "readback_access": "READ"
+        },
+        {
+          "path": "ops/daily/2026-11-27/report.md",
+          "matches": true,
+          "blob_sha": "eca9549d34495c9955dc2d41494438bcdc417e86",
+          "readback_access": "READ"
+        }
+      ],
+      "draft_pr": "https://github.com/roalstoney-alt/structurevidence/pull/102"
+    },
+    "delivered": {
+      "status": "UNKNOWN_PLATFORM_DELIVERY_RECEIPT",
+      "boundary": "Draft artifacts exist. Dated chat report will be emitted after receipt creation; platform delivery and scheduler completion are not inferred from saving."
+    },
+    "verified": {
+      "status": "PARTIAL_SOURCE_ACCESS_AND_ARTIFACT_BYTES_VERIFIED",
+      "boundary": "Production body hashes and GitHub SHAs checked separately; no evidence PASS, full review, production deployment, social publication or customer-traction validation claimed."
+    }
+  },
+  "safety": {
+    "append_only": true,
+    "existing_prs_rewritten": false,
+    "merge_performed": false,
+    "production_deploy_performed": false,
+    "private_preview_deploy_this_run": false,
+    "social_endpoints_called": false,
+    "posting_credentials_read": false,
+    "X_POST_SENT": 0,
+    "LINKEDIN_POST_SENT": 0,
+    "synthetic_customer_POSTs": 0,
+    "outreach_sent": 0,
+    "canonical_rdl": "NOT_RUN",
+    "research_freeze": "RETAINED",
+    "private_intake_admin": "SOURCE_NOT_ACCESSIBLE",
+    "privacy": "PRIVACY_SAFE",
+    "internal_synthetic": "EXCLUDED"
+  },
+  "time_and_cost": {
+    "observed_elapsed_seconds_to_this_receipt": 615,
+    "scope": "Scheduler started_at to recorded_at, approximately; not active labor time and not time saved.",
+    "cost": "UNKNOWN",
+    "comparison_baseline": "UNKNOWN",
+    "cost_reduction": "NOT_ESTABLISHED",
+    "external_material_reuse_rate": "UNKNOWN",
+    "correction_latency": "UNKNOWN"
+  },
+  "cross_project": {
+    "CML": {
+      "enabled": true,
+      "last_run_time_metadata": "2026-11-27T01:18:47.802907Z",
+      "artifact_execution_receipt": "NOT_READ_UNKNOWN"
+    },
+    "FDE": {
+      "outreach": "HOLD_DISABLED",
+      "internal_research_receipt": "NOT_READ_UNKNOWN"
+    },
+    "LoveTimeline": {
+      "enabled": true,
+      "last_run_time_metadata": "2026-11-27T00:39:18.898848Z",
+      "artifact_execution_receipt": "NOT_READ_UNKNOWN"
+    },
+    "Pinterest": {
+      "task_enabled_metadata": true,
+      "run_or_artifact_receipt": "NOT_READ_UNKNOWN"
+    }
+  },
+  "weekly": {
+    "weekday": "FRIDAY",
+    "sunday_original_three_case_report": "NOT_DUE",
+    "sunday_NSCLC_folded_deep_review": "NOT_DUE",
+    "sunday_public_question": "NOT_DUE",
+    "monday_SOCSM": "NOT_DUE",
+    "SOCSM_cost": "NOT_RUN_NOT_DUE"
+  },
+  "prior_preview": {
+    "pr": 101,
+    "head": "dd52ede9a8704501bf4c14e85f2e1442e1da27f6",
+    "status": "OPEN_DRAFT_HUMAN_GATE_REQUIRED",
+    "prior_url": "https://se-observation-review-20261126.rolastone.chatgpt.site",
+    "verified_this_run": false
+  },
+  "post_candidates": {
+    "X": {
+      "status": "WEBSITE_PUBLICATION_BLOCKED_NO_VERIFIABLE_POST_CANDIDATE",
+      "unicode_characters": null,
+      "utf8_sha256": null
+    },
+    "LinkedIn": {
+      "status": "WEBSITE_PUBLICATION_BLOCKED_NO_VERIFIABLE_POST_CANDIDATE",
+      "unicode_characters": null,
+      "utf8_sha256": null
+    },
+    "gate": "HUMAN_GATE_REQUIRED"
+  },
+  "gtm": {
+    "window": "2026-10-08/2026-11-06",
+    "cepe_end": "2026-11-10",
+    "historical_day30_decision_source": "https://github.com/roalstoney-alt/structurevidence/pull/86",
+    "decision": "PAUSE_GTM_EXPANSION_CONTINUE_BOUNDED_MONITORING",
+    "targets": {
+      "artifact_opens": 20,
+      "qualified_dialogues": 8,
+      "written_scopes": 2,
+      "paid_verifications": 1
+    },
+    "actuals_since_2026_10_08": {
+      "artifact_opens": "UNKNOWN",
+      "qualified_dialogues": "UNKNOWN",
+      "written_scopes": "UNKNOWN",
+      "paid_verifications": "UNKNOWN"
+    }
+  }
+}
