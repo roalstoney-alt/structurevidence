@@ -118,15 +118,25 @@ document.querySelectorAll("[data-copy-citation]").forEach((button) => {
 
 const activitySummary = document.querySelector("[data-activity-summary]");
 if (activitySummary) {
-  fetch(activitySummary.dataset.source)
+  const status = document.querySelector("[data-activity-status]");
+  fetch(activitySummary.dataset.source, { cache: "no-cache" })
     .then((response) => response.ok ? response.json() : Promise.reject(new Error("change feed unavailable")))
     .then((feed) => {
-      const end = new Date(feed.generated_at + "T23:59:59Z");
-      const start = new Date(end);
-      start.setUTCDate(start.getUTCDate() - 29);
-      const recent = feed.changes.filter((item) => {
-        const date = new Date(item.date + "T00:00:00Z");
-        return date >= start && date <= end;
+      // All recorded totals: do not manufacture a current window from an old generated_at.
+      const validDate = value => typeof value === "string" && /^\d{4}-\d{2}-\d{2}$/.test(value) &&
+        Number.isFinite(Date.parse(value)) && new Date(value).toISOString().slice(0, 10) === value;
+      if (!Array.isArray(feed.changes) || !validDate(feed.generated_at)) throw new Error("invalid feed");
+      const seen = new Set();
+      const recent = feed.changes;
+      const today = new Date().toISOString().slice(0, 10);
+      recent.forEach(item => {
+        if (!item || typeof item.id !== "string" || !item.id || seen.has(item.id) ||
+            typeof item.case_id !== "string" || !item.case_id || !validDate(item.date) || item.date > today ||
+            !["STATE_CHANGE", "VERIFIED_EVENT"].includes(item.type) ||
+            !Number.isSafeInteger(item.qualifying_evidence_added) || item.qualifying_evidence_added < 0 ||
+            !Number.isSafeInteger(item.unknowns_resolved) || item.unknowns_resolved < 0 ||
+            typeof item.state_changed !== "boolean") throw new Error("invalid change record");
+        seen.add(item.id);
       });
       const values = {
         cases: new Set(recent.map((item) => item.case_id)).size,
@@ -137,8 +147,15 @@ if (activitySummary) {
       Object.entries(values).forEach(([key, value]) => {
         activitySummary.querySelector(`[data-activity="${key}"]`).textContent = String(value);
       });
+      const dates = recent.map(item => item.date).sort();
+      const range = dates.length ? `${dates[0]} to ${dates[dates.length - 1]}` : "no dated entries";
+      activitySummary.dataset.coverage = "INCOMPLETE";
+      if (status) status.textContent = `INCOMPLETE COVERAGE · ${recent.length} recorded entries · Event dates: ${range}. Feed generation metadata: ${feed.generated_at}. These are historical recorded totals, not current operational metrics or a complete case audit.`;
+      if (dates.length && dates[dates.length - 1] > feed.generated_at && status)
+        status.textContent += " Metadata predates the latest entry; freshness cannot be established.";
     })
     .catch(() => {
       activitySummary.querySelectorAll("[data-activity]").forEach((node) => { node.textContent = "Unavailable"; });
+      if (status) status.textContent = "SOURCE_UNAVAILABLE · Public change data could not be loaded or validated. Counts are unknown, not zero.";
     });
 }
