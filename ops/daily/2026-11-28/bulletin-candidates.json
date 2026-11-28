@@ -1,0 +1,25 @@
+{
+  "publication_status": "PENDING_HUMAN_REVIEW",
+  "candidates": [
+    {
+      "observation_id": "SE-OBS-20261128-BESS-001",
+      "case_id": "SE-BESS-SODIUM-001",
+      "observed_on": "2026-11-28",
+      "type": "HUMAN_REVIEW_PENDING",
+      "summary": "A Sichuan Daily report dated 27 November names two Liangshan sodium-ion microgrid sites and their storage capacities. The source is queued for review.",
+      "boundary": "REVIEW_INCOMPLETE. Earlier company-origin reporting exists. Publication date is not commissioning date; this is not independent acceptance or an accepted evidence-state upgrade.",
+      "case_url": "/cases/sodium-ion-bess/",
+      "event_on": null,
+      "source_urls": [
+        "https://epaper.scdaily.cn/shtml/scrb/20261127/1095526.html"
+      ],
+      "knowledge_cutoff": "2026-11-28T14:06:47Z",
+      "publication_status": "PENDING_HUMAN_REVIEW",
+      "approval_reference": null,
+      "approved_at": null,
+      "content_sha256": "5dc982b09833e503aa2f9c16350285787a5e8a5b0c154c14bbd7192ac6183ea0",
+      "hash_contract": "SHA256 of UTF-8 JSON.stringify(candidate excluding content_sha256/hash_contract/unicode_characters_of_hashed_record).",
+      "unicode_characters_of_hashed_record": 748
+    }
+  ]
+}

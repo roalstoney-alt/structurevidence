@@ -1,0 +1,150 @@
+{
+  "date": "2026-11-28",
+  "privacy": "PRIVACY_SAFE",
+  "internal_synthetic": "INTERNAL_SYNTHETIC_EXCLUDED",
+  "metrics": {
+    "VERIFIED_EXTERNAL_CHALLENGES": {
+      "TODAY": "UNKNOWN",
+      "CUMULATIVE": "UNKNOWN",
+      "access_boundary": "PRIVATE_INTAKE_ADMIN_MESSAGES_SOURCE_NOT_ACCESSIBLE",
+      "new_verified_events_established_in_read_scope": 0
+    },
+    "VERIFIED_DECISION_CITATIONS": {
+      "TODAY": "UNKNOWN",
+      "CUMULATIVE": "UNKNOWN",
+      "access_boundary": "PRIVATE_INTAKE_ADMIN_MESSAGES_SOURCE_NOT_ACCESSIBLE",
+      "new_verified_events_established_in_read_scope": 0
+    },
+    "VERIFIED_INBOUND_DECISION_REQUESTS": {
+      "TODAY": "UNKNOWN",
+      "CUMULATIVE": "UNKNOWN",
+      "access_boundary": "PRIVATE_INTAKE_ADMIN_MESSAGES_SOURCE_NOT_ACCESSIBLE",
+      "new_verified_events_established_in_read_scope": 0
+    }
+  },
+  "events": [
+    {
+      "feedback_event_id": "SE-EFL-20261128-CITATION-FOLLOWUP-001",
+      "first_observed_at": "2026-11-27",
+      "first_observed_precision": "DAY_THIS_RUN_NOT_PROVEN_GLOBAL_FIRST",
+      "channel": "PUBLIC_EXTERNAL_ARTICLE",
+      "case_id": "SE-AI-COMPUTE-OBLIGATIONS-001",
+      "feedback_type": "CITATION",
+      "external_actor_verification": "UNVERIFIED",
+      "evidence_reference_or_RESTRICTED": "Public article references the StructEvidence Anthropic case in its source list and says a liquidity/commitments graphic uses it alongside another source. This establishes observable source use only, not accuracy or actual decision adoption.",
+      "public_safe_source_url_or_PRIVATE": "https://thuthuatai.net/anthropic-900-ty-junk-bond/",
+      "linked_claim_id": null,
+      "source_cutoff": "2026-11-26T18:20:00+07:00",
+      "private_access_boundary": "PUBLIC_HTML_ONLY; no personal identifiers/intake data collected",
+      "review_status": "PENDING_HUMAN_REVIEW",
+      "decision_dependency": "Actor independence/human provenance, actual decision-material use and exact case version not established.",
+      "action_needed": "Human provenance/version/actual decision-use review; no outreach authorized.",
+      "outcome": "FOLLOWUP_STILL_UNVERIFIED_NO_NEW_UNIQUE_COUNT",
+      "next_followup_at": "2026-11-29T22:00:00+08:00",
+      "duplicate_of": "SE-EFL-20261127-CITATION-001",
+      "duplicate_boundary": "No item in current empty approved main ledger; earlier draft/private ledger search incomplete. Do not count globally unique until deduped.",
+      "raw_hash_or_UNAVAILABLE": "d36ac04fd03766004bd641baa3a8ced0fea5fb9dbaa20a2fd7ebb4a372d5306e",
+      "source_published_at": "2026-11-26T18:20:00+07:00",
+      "linked_case_version": "NOT_IDENTIFIED_BY_EXTERNAL_ARTICLE",
+      "verified_decision_citation_increment": 0,
+      "linked_production_page": {
+        "url": "https://structurevidence.org/cases/anthropic-compute-obligations/",
+        "http_status": 200,
+        "body_sha256": "54cb99f1cca85b8702a816360992f28fc9dbbfd7ea9c50a1b948a036f3fa2400",
+        "boundary": "Live page reachable. External article did not name a snapshot/version; matching precise cited version remains pending."
+      },
+      "observed_at": "2026-11-28T14:04:04Z"
+    }
+  ],
+  "public_log_checks": [
+    {
+      "url": "https://structevidence.com/api/gaps/OEG-BESS-001",
+      "http": "200",
+      "sha256": "3ac2bd40436a56cedb4485ef900763f8f42924e92373c036e1665215efa6531b",
+      "bytes": 1715,
+      "observed_at": "2026-11-28T14:03:55.889Z",
+      "changes": [
+        {
+          "id": "OEG-CHANGE-003",
+          "type": "GAP_OPENED",
+          "at": "2026-10-05"
+        }
+      ]
+    },
+    {
+      "url": "https://structevidence.com/api/gaps/OEG-ONC-002",
+      "http": "200",
+      "sha256": "c8615f815d396f3847a3951cc1d433d5cad0f461b4c7e1cce37b10364add3ab5",
+      "bytes": 2220,
+      "observed_at": "2026-11-28T14:03:55.890Z",
+      "changes": [
+        {
+          "id": "OEG-CHANGE-006",
+          "type": "GAP_OPENED",
+          "at": "2026-10-05"
+        }
+      ]
+    },
+    {
+      "url": "https://structevidence.com/api/gaps/OEG-CML-001",
+      "http": "200",
+      "sha256": "575e02f4dd1eb55fd9c27e899edec4c856408241129deb494975ec6b350b3205",
+      "bytes": 1749,
+      "observed_at": "2026-11-28T14:03:55.892Z",
+      "changes": [
+        {
+          "id": "OEG-CHANGE-001",
+          "type": "GAP_OPENED",
+          "at": "2026-10-05"
+        }
+      ]
+    },
+    {
+      "url": "https://structevidence.com/api/gaps/OEG-BESS-002",
+      "http": "200",
+      "sha256": "50ea1be59240d5131977c9d01b41591d2084d48da074ea35ab92565ed172faf4",
+      "bytes": 2375,
+      "observed_at": "2026-11-28T14:03:55.894Z",
+      "changes": [
+        {
+          "id": "OEG-CHANGE-004",
+          "type": "GAP_OPENED",
+          "at": "2026-10-05"
+        }
+      ]
+    },
+    {
+      "url": "https://structevidence.com/api/gaps/OEG-ONC-001",
+      "http": "200",
+      "sha256": "aa9a8fb647ce9d5b581384ba12359f52b5caa10863135197db5a5d7b1eb485db",
+      "bytes": 2008,
+      "observed_at": "2026-11-28T14:03:55.895Z",
+      "changes": [
+        {
+          "id": "OEG-CHANGE-005",
+          "type": "GAP_OPENED",
+          "at": "2026-10-05"
+        }
+      ]
+    },
+    {
+      "url": "https://structevidence.com/api/gaps/OEG-CML-002",
+      "http": "200",
+      "sha256": "a8f84e449012a27fd23e3387bed2f70dfb9e4ff98bd18e6441690db4ab4d77a5",
+      "bytes": 1759,
+      "observed_at": "2026-11-28T14:03:55.935Z",
+      "changes": [
+        {
+          "id": "OEG-CHANGE-002",
+          "type": "GAP_OPENED",
+          "at": "2026-10-05"
+        }
+      ]
+    }
+  ],
+  "private_channels": {
+    "status": "SOURCE_NOT_ACCESSIBLE",
+    "boundary": "No authorized private Admin/D1/message read tools configured. No credentials or synthetic POST used."
+  },
+  "traction": "Existing external public source-use lead re-observed; independence and actual decision use remain unverified. No new verified external traction established. Public distribution surfaces exist, but real reach/readership and demand cannot be distinguished from this access boundary."
+}
