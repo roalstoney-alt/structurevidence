@@ -1,0 +1,124 @@
+{
+  "date": "2026-11-28",
+  "knowledge_cutoff": "2026-11-28T14:06:47Z",
+  "stages": {
+    "scheduled": "CONFIGURATION_READ",
+    "enabled": "VERIFIED_TRUE",
+    "started": "SCHEDULER_START_RECEIPT_READ",
+    "search_completed": "BOUNDED_SEARCH_COMPLETE_EVIDENCE_REVIEW_INCOMPLETE",
+    "artifact_created": "VERIFIED_COMMIT_AND_EXACT_READBACK",
+    "delivered": "UNKNOWN_PLATFORM_DELIVERY_RECEIPT",
+    "verified": "ARTIFACT_BYTES_AND_LISTED_PRODUCTION_BODIES_ONLY_NOT_EVIDENCE_PASS"
+  },
+  "artifact_receipt": {
+    "commit": "4fd70811f930b8a2f8a93f4b749aaa877ddd1718",
+    "pr": "https://github.com/roalstoney-alt/structurevidence/pull/103",
+    "files": [
+      {
+        "path": "ops/daily/2026-11-28/case-observations.json",
+        "matches": true,
+        "blob_sha": "778025224442a1e10a28e6803d6c317a02266f62"
+      },
+      {
+        "path": "ops/daily/2026-11-28/external-feedback-ledger.json",
+        "matches": true,
+        "blob_sha": "ea08aeef858045c1bfe49b0aab572ad4a69bed3c"
+      },
+      {
+        "path": "ops/daily/2026-11-28/bulletin-candidates.json",
+        "matches": true,
+        "blob_sha": "4288cb8f535b36667e6ba7ca94340b3c446dce25"
+      },
+      {
+        "path": "ops/daily/2026-11-28/source-receipts.json",
+        "matches": true,
+        "blob_sha": "e3468429bb35ff1f98628a2ea37dd3f69c22f185"
+      },
+      {
+        "path": "ops/daily/2026-11-28/report.md",
+        "matches": true,
+        "blob_sha": "661b8a16617ed6bd4fc916ce435f2e5cd558054b"
+      }
+    ]
+  },
+  "cross_project": [
+    {
+      "project": "CML 每日时间感知商业情报与技术雷达",
+      "metadata_read": true,
+      "execution_artifacts_read": false,
+      "result": "UNKNOWN"
+    },
+    {
+      "project": "LoveTimeline 统一增长工作流",
+      "metadata_read": true,
+      "execution_artifacts_read": false,
+      "result": "UNKNOWN"
+    },
+    {
+      "project": "MyKidsNest Pinterest 数据复盘",
+      "metadata_read": true,
+      "execution_artifacts_read": false,
+      "result": "UNKNOWN"
+    },
+    {
+      "project": "LoveTimeline Pinterest 30天实验",
+      "metadata_read": true,
+      "execution_artifacts_read": false,
+      "result": "UNKNOWN"
+    },
+    {
+      "project": "CML FDE Precision Lead Search",
+      "metadata_read": true,
+      "execution_artifacts_read": false,
+      "result": "UNKNOWN"
+    }
+  ],
+  "safety": {
+    "public_state_mutation": false,
+    "old_artifact_mutation": false,
+    "merge": false,
+    "deploy": false,
+    "live_bulletin_feed_mutation": false,
+    "source_post_or_synthetic_intake": false,
+    "X_POST_SENT": 0,
+    "LINKEDIN_POST_SENT": 0,
+    "social_write_endpoint_calls": 0,
+    "posting_credential_reads": 0,
+    "external_outreach": 0,
+    "research_freeze": "RETAINED",
+    "underlying_IREN_fact_acceptance": "HOLD_PENDING_REVIEW",
+    "canonical_rdl": "NOT_RUN",
+    "privacy": "PRIVACY_SAFE",
+    "internal_synthetic": "EXCLUDED"
+  },
+  "cadence_duties": {
+    "day": "SATURDAY",
+    "sunday_deep_review": "NOT_DUE",
+    "sunday_public_question": "NOT_DUE",
+    "monday_SOCSM": "NOT_DUE"
+  },
+  "operating_metrics_since_2026_10_08": {
+    "artifact_opens": "UNKNOWN",
+    "qualified_dialogues": "UNKNOWN",
+    "written_scopes": "UNKNOWN",
+    "paid_verifications": "UNKNOWN",
+    "verification_cost_time_baseline": "UNKNOWN",
+    "external_material_reuse": "UNKNOWN",
+    "correction_latency": "UNKNOWN",
+    "actual_decision_material_citations": "UNKNOWN",
+    "lower_cost_proven": false
+  },
+  "original_targets": {
+    "artifact_opens": 20,
+    "qualified_dialogues": 8,
+    "written_scopes": 2,
+    "paid_verifications": 1
+  },
+  "social_candidates": {
+    "X": "NO_VERIFIABLE_POST_CANDIDATE_WEBSITE_PUBLICATION_BLOCKED",
+    "LinkedIn": "NO_VERIFIABLE_POST_CANDIDATE_WEBSITE_PUBLICATION_BLOCKED",
+    "unicode_counts": "NOT_APPLICABLE_NO_CANDIDATE",
+    "utf8_sha256": "NOT_APPLICABLE_NO_CANDIDATE"
+  },
+  "boundary": "This is a dated bounded run receipt. In-progress/completed scheduler states and document saving do not establish successful delivery, case verification or publishing. Recurring monitoring remains ongoing; no automation was created/updated/disabled."
+}
