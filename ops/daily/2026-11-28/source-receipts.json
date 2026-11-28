@@ -1,0 +1,182 @@
+{
+  "date": "2026-11-28",
+  "receipts": [
+    {
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON620",
+      "http": "200",
+      "sha256": "e93f2b50c58c7746b3b0240f6608187cc0d9de58aed04ca186bc3d5d7712a7e7",
+      "bytes": 116495,
+      "title": "\r\n\tPneumonia of undetermined etiology - the Russian Federation\r\n",
+      "observed_at": "2026-11-28T14:03:20.901Z"
+    },
+    {
+      "url": "https://iren.gcs-web.com/news-releases/news-release-details/iren-reports-q1-fy27-results",
+      "http": "200",
+      "sha256": "deb9a9e686816cdba1a5b37e239d9a21b1e1335e3716b52a2b74b739a9a9744f",
+      "bytes": 171598,
+      "title": "IREN Reports Q1 FY27 Results | IREN",
+      "observed_at": "2026-11-28T14:03:21.032Z"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42307937/",
+      "http": "203",
+      "sha256": "bd157b8bf64d55f88db30bc378ce50cf8d0d738810f4ddc65b3940ada0530ef5",
+      "bytes": 5590,
+      "title": "pubmed.ncbi.nlm.nih.gov",
+      "observed_at": "2026-11-28T14:03:21.266Z"
+    },
+    {
+      "url": "https://www.figure.ai/news/production-at-bmw",
+      "http": "200",
+      "sha256": "dc9a76ccb4835509e20fb2814e3cb0021eb1a9a7abef1b4686a160c110cf8bd5",
+      "bytes": 42412,
+      "title": "F.02 Contributed to the Production of 30,000 Cars at BMW",
+      "observed_at": "2026-11-28T14:03:21.860Z"
+    },
+    {
+      "url": "https://newsroom.bmwgroup.com/global/bmw-group-advances-the-use-of-physical-ai-in-production-with-figure-03-project-in-spartanburg/",
+      "http": "200",
+      "sha256": "3f6f6ff1645783df5e16651c7ec00eabbefd0a7748a250359c263338d2c21c40",
+      "bytes": 72324,
+      "title": "BMW GROUP ADVANCES THE USE OF PHYSICAL AI IN PRODUCTION WITH FIGURE 03 PROJECT IN SPARTANBURG",
+      "observed_at": "2026-11-28T14:03:22.009Z"
+    },
+    {
+      "url": "https://thuthuatai.net/anthropic-900-ty-junk-bond/",
+      "http": "200",
+      "sha256": "d36ac04fd03766004bd641baa3a8ced0fea5fb9dbaa20a2fd7ebb4a372d5306e",
+      "bytes": 113589,
+      "title": "Anthropic công bố cam kết chi 900,9 tỷ USD mua compute trong prospectus SEC ngày 19/11/2026, quản lý quỹ qua WSJ kỳ vọng nợ của hãng bị xếp hạng đầu cơ BB (junk) | Thủ Thuật AI",
+      "observed_at": "2026-11-28T14:03:22.744Z"
+    },
+    {
+      "url": "https://www.nmpa.gov.cn/zhuanti/cxylqx/cxypxx/20240524110617125.html",
+      "http": "412",
+      "sha256": "958ad102b51cd56be92c6041d010896c6df1771f35de70a83adac9e2514a83cc",
+      "bytes": 2611,
+      "observed_at": "2026-11-28T14:03:22.849Z"
+    },
+    {
+      "url": "https://www.benanenergy.com/site/news-detail/191",
+      "http": "200",
+      "sha256": "fbd63fe8032fc5e202c99cf1c53e231b95df8dd06b47f4a234702903a7de4bb9",
+      "bytes": 28436,
+      "title": "benancs-news-detail",
+      "observed_at": "2026-11-28T14:03:24.236Z"
+    },
+    {
+      "url": "https://www.prnewswire.com/news-releases/envision-achieves-worlds-first-commercial-deployment-of-integrated-800v-dc-sst-based-power-system-in-large-scale-ai-data-center-302926109.html",
+      "http": "200",
+      "sha256": "64d195bba9e3405f06a345d06850ebe55be4e6b6bd8bdb4d0f3930f1d18c13df",
+      "bytes": 181150,
+      "observed_at": "2026-11-28T14:03:54.563Z"
+    },
+    {
+      "url": "https://www.figure.ai/news/f-02-decommission",
+      "http": "200",
+      "sha256": "9938864c81c43aecf52ebfff34194efe5588547910cb0173abb2e6634efc52c2",
+      "bytes": 39233,
+      "observed_at": "2026-11-28T14:03:54.757Z"
+    },
+    {
+      "url": "https://structevidence.com/api/gaps/OEG-BESS-001",
+      "http": "200",
+      "sha256": "3ac2bd40436a56cedb4485ef900763f8f42924e92373c036e1665215efa6531b",
+      "bytes": 1715,
+      "observed_at": "2026-11-28T14:03:55.889Z",
+      "changes": [
+        {
+          "id": "OEG-CHANGE-003",
+          "type": "GAP_OPENED",
+          "at": "2026-10-05"
+        }
+      ]
+    },
+    {
+      "url": "https://structevidence.com/api/gaps/OEG-ONC-002",
+      "http": "200",
+      "sha256": "c8615f815d396f3847a3951cc1d433d5cad0f461b4c7e1cce37b10364add3ab5",
+      "bytes": 2220,
+      "observed_at": "2026-11-28T14:03:55.890Z",
+      "changes": [
+        {
+          "id": "OEG-CHANGE-006",
+          "type": "GAP_OPENED",
+          "at": "2026-10-05"
+        }
+      ]
+    },
+    {
+      "url": "https://structevidence.com/api/gaps/OEG-CML-001",
+      "http": "200",
+      "sha256": "575e02f4dd1eb55fd9c27e899edec4c856408241129deb494975ec6b350b3205",
+      "bytes": 1749,
+      "observed_at": "2026-11-28T14:03:55.892Z",
+      "changes": [
+        {
+          "id": "OEG-CHANGE-001",
+          "type": "GAP_OPENED",
+          "at": "2026-10-05"
+        }
+      ]
+    },
+    {
+      "url": "https://structevidence.com/api/gaps/OEG-BESS-002",
+      "http": "200",
+      "sha256": "50ea1be59240d5131977c9d01b41591d2084d48da074ea35ab92565ed172faf4",
+      "bytes": 2375,
+      "observed_at": "2026-11-28T14:03:55.894Z",
+      "changes": [
+        {
+          "id": "OEG-CHANGE-004",
+          "type": "GAP_OPENED",
+          "at": "2026-10-05"
+        }
+      ]
+    },
+    {
+      "url": "https://structevidence.com/api/gaps/OEG-ONC-001",
+      "http": "200",
+      "sha256": "aa9a8fb647ce9d5b581384ba12359f52b5caa10863135197db5a5d7b1eb485db",
+      "bytes": 2008,
+      "observed_at": "2026-11-28T14:03:55.895Z",
+      "changes": [
+        {
+          "id": "OEG-CHANGE-005",
+          "type": "GAP_OPENED",
+          "at": "2026-10-05"
+        }
+      ]
+    },
+    {
+      "url": "https://structevidence.com/api/gaps/OEG-CML-002",
+      "http": "200",
+      "sha256": "a8f84e449012a27fd23e3387bed2f70dfb9e4ff98bd18e6441690db4ab4d77a5",
+      "bytes": 1759,
+      "observed_at": "2026-11-28T14:03:55.935Z",
+      "changes": [
+        {
+          "id": "OEG-CHANGE-002",
+          "type": "GAP_OPENED",
+          "at": "2026-10-05"
+        }
+      ]
+    },
+    {
+      "url": "https://epaper.scdaily.cn/shtml/scrb/20261127/1095526.html",
+      "http": "200",
+      "sha256": "65a6e3a0b929b21c2e56b4d84c50826285fda27e1e981ad5d43fec5e23b4f1c1",
+      "bytes": 12067,
+      "observed_at": "2026-11-28T14:04:01.183Z"
+    }
+  ],
+  "raw_byte_capture_boundary": "Digests over returned HTML/JSON bytes. Hashes of HTTP412/203 interstitials authenticate response only, not original source. No private data.",
+  "production": {
+    "homepage_sha256": "ccc27c77d29434fa19477d0be3500122396c2576c9523e1905ca70927555612f",
+    "observation_feed_sha256": "21f311803318582e4ac6e20f764c8fa5e1f8d9299100fc74449deea6cf336e3f",
+    "change_feed_sha256": "cfbcffb4f9e55f0900abb8d488364781552c34d417c22a7452e04504231468d3",
+    "approved_observation_items": 0,
+    "historical_material_entries": 2,
+    "complete_recent_30_day_coverage": false
+  }
+}

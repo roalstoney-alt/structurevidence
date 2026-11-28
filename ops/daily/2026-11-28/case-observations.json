@@ -1,0 +1,407 @@
+{
+  "date": "2026-11-28",
+  "schema_version": "OWNER_DAILY_FIELDS_APPEND_ONLY",
+  "knowledge_cutoff": "2026-11-28T14:06:47Z",
+  "main_sha": "58de405bd7889e88725b01311ee919c4b196df16",
+  "dual_main_sha": "acc203395d46e6a6c74a6bca5ec77404ab0c3e68",
+  "cases": [
+    {
+      "case_id": "CML-PDRE-001",
+      "public_alias": null,
+      "source_url": "https://www.prnewswire.com/news-releases/envision-achieves-worlds-first-commercial-deployment-of-integrated-800v-dc-sst-based-power-system-in-large-scale-ai-data-center-302926109.html",
+      "source_id": "ENVISION-20261102-800V",
+      "source_speaker": "Envision (issuer release); Vantage/Heron existing PR #39",
+      "claimed_subject": "Galaxy AI campus Ulanqab; Vantage/Heron manufacturing capacity reservation",
+      "claim_ids": [],
+      "claim_id_resolution": "CANONICAL_MAPPING_NOT_COMPLETED_NO_ID_INVENTED",
+      "event_at": "2026-11-02",
+      "published_at": "2026-11-02",
+      "observed_at": "2026-11-28T14:04:04Z",
+      "knowledge_cutoff": "2026-11-28T14:06:47Z",
+      "source_access": "PUBLIC_HTML_HTTP_200",
+      "raw_hash_or_UNAVAILABLE": "64d195bba9e3405f06a345d06850ebe55be4e6b6bd8bdb4d0f3930f1d18c13df",
+      "search_query": "800V DC SST Envision Vantage Heron commissioning acceptance operations November 2026",
+      "search_boundary": "Fresh bounded public search and listed-source availability checks on Nov28. Historical branch/event dedupe and canonical claim mapping incomplete. Not NO_STATE_CHANGE. ",
+      "old_stop_point": "HUMAN-REVIEWED SINGLE-INSTANCE EVIDENCE",
+      "proposed_stop_point": "RETAIN_ACCEPTED_STOP_NO_STATE_UPGRADE",
+      "new_sources": [],
+      "new_attributed_statements": [],
+      "new_independent_evidence": [],
+      "new_events": [],
+      "newly_discovered_old_evidence": [],
+      "state_changing_evidence": [],
+      "contradictions": "No accepted contradiction established in this limited run; not an assertion of absence.",
+      "decision_relevant_unknown": "Independent acceptance/operating reliability and replication remain unestablished in the checked packet.",
+      "next_observable": "Named third-party acceptance, operating series and repeat accepted deployment.",
+      "review_status": "REVIEW_INCOMPLETE",
+      "review_id": null,
+      "last_verified_review": "2026-10-15T15:28:53Z",
+      "last_verified_review_semantics": "Value retained from public status file; not asserted complete by this run.",
+      "public_state_changed": false,
+      "new_event_status": "NOT_ESTABLISHED_IN_BOUNDED_CHECK",
+      "observation_summary": "Existing historical source rechecked; no accepted state advancement. Search is incomplete.",
+      "sources": [
+        {
+          "url": "https://www.prnewswire.com/news-releases/envision-achieves-worlds-first-commercial-deployment-of-integrated-800v-dc-sst-based-power-system-in-large-scale-ai-data-center-302926109.html",
+          "access": "PUBLIC_HTML_HTTP_200",
+          "raw_hash_or_UNAVAILABLE": "64d195bba9e3405f06a345d06850ebe55be4e6b6bd8bdb4d0f3930f1d18c13df",
+          "response_body_sha256": "64d195bba9e3405f06a345d06850ebe55be4e6b6bd8bdb4d0f3930f1d18c13df",
+          "observed_at": "2026-11-28T14:03:54.563Z"
+        }
+      ],
+      "website": {
+        "url": "https://structurevidence.org/cases/800vdc/",
+        "http_status": 200,
+        "body_sha256": "06c69bfdbca2ccb5bce25c487319d04ecd5067eea7ff54d2c9228f5f42222cfa",
+        "github_blob_sha": null,
+        "publication": "UNCHANGED_HUMAN_GATE_REQUIRED"
+      }
+    },
+    {
+      "case_id": "SE-BESS-SODIUM-001",
+      "public_alias": null,
+      "source_url": "https://epaper.scdaily.cn/shtml/scrb/20261127/1095526.html",
+      "source_id": "SCDaily-20261127-1095526",
+      "source_speaker": "Sichuan Daily original report quoting company engineering representative; operating company attribution, not independent acceptance auditor",
+      "claimed_subject": "BoWo township Muli and WaLi township Yanyuan, Liangshan; 1070kWh and 856kWh sodium microgrids, off-grid use distinct from grid-scale BESS",
+      "claim_ids": [],
+      "claim_id_resolution": "CANONICAL_MAPPING_NOT_COMPLETED_NO_ID_INVENTED",
+      "event_at": null,
+      "published_at": "2026-11-27",
+      "observed_at": "2026-11-28T14:04:04Z",
+      "knowledge_cutoff": "2026-11-28T14:06:47Z",
+      "source_access": "PUBLIC_HTML_HTTP_200",
+      "raw_hash_or_UNAVAILABLE": "65a6e3a0b929b21c2e56b4d84c50826285fda27e1e981ad5d43fec5e23b4f1c1",
+      "search_query": "sodium ion BESS named commissioned site grid connection Heze BENAN operating evidence November 2026",
+      "search_boundary": "Fresh bounded public search and listed-source availability checks on Nov28. Historical branch/event dedupe and canonical claim mapping incomplete. Not NO_STATE_CHANGE. ",
+      "old_stop_point": "NAMED_COMMISSIONED_SITE_NOT_ESTABLISHED",
+      "proposed_stop_point": "RETAIN_ACCEPTED_STOP_NO_STATE_UPGRADE",
+      "new_sources": [
+        {
+          "source_url": "https://epaper.scdaily.cn/shtml/scrb/20261127/1095526.html",
+          "classification": "SOURCE_CANDIDATE_DEDUPE_PENDING",
+          "published_at": "2026-11-27",
+          "unique_event_increment": null
+        }
+      ],
+      "new_attributed_statements": [
+        {
+          "subject": "BoWo township Muli and WaLi township Yanyuan, Liangshan; 1070kWh and 856kWh sodium microgrids, off-grid use distinct from grid-scale BESS",
+          "status": "HUMAN_REVIEW_PENDING_NOT_ACCEPTED_EVIDENCE",
+          "boundary": "Newspaper publication date is not commissioning date. Earlier company-attributed Nov16/17 and press Nov19 reporting exists. Independent acceptance and operating series unverified."
+        }
+      ],
+      "new_independent_evidence": [],
+      "new_events": [],
+      "newly_discovered_old_evidence": [],
+      "state_changing_evidence": [],
+      "contradictions": "No accepted contradiction established in this limited run; not an assertion of absence.",
+      "decision_relevant_unknown": "Exact commissioning dates; client/operator acceptance original; site identity, telemetry and prior branch registration. Newspaper and vendor-chain copies do not create independent corroboration.",
+      "next_observable": "Client/operator acceptance original and winter operating data with exact site/date/model, then human review.",
+      "review_status": "REVIEW_INCOMPLETE",
+      "review_id": null,
+      "last_verified_review": "2026-10-14T17:59:24+08:00",
+      "last_verified_review_semantics": "Value retained from public status file; not asserted complete by this run.",
+      "public_state_changed": false,
+      "new_event_status": "NOT_ESTABLISHED_IN_BOUNDED_CHECK",
+      "observation_summary": "Nov27 named-site newspaper source candidate captured. Must reconcile earlier reports, exact site identity, independent acceptance and off-grid applicability before accepted-state change. Heze remains already registered PR91.",
+      "sources": [
+        {
+          "url": "https://epaper.scdaily.cn/shtml/scrb/20261127/1095526.html",
+          "access": "PUBLIC_NEWS_ORIGINAL_HTML_HTTP_200",
+          "raw_hash_or_UNAVAILABLE": "65a6e3a0b929b21c2e56b4d84c50826285fda27e1e981ad5d43fec5e23b4f1c1"
+        },
+        {
+          "url": "https://www.benanenergy.com/site/news-detail/191",
+          "access": "PUBLIC_HTML_HTTP_200",
+          "raw_hash_or_UNAVAILABLE": "fbd63fe8032fc5e202c99cf1c53e231b95df8dd06b47f4a234702903a7de4bb9",
+          "response_body_sha256": "fbd63fe8032fc5e202c99cf1c53e231b95df8dd06b47f4a234702903a7de4bb9",
+          "observed_at": "2026-11-28T14:03:24.236Z"
+        }
+      ],
+      "website": {
+        "url": "https://structurevidence.org/cases/sodium-ion-bess/",
+        "http_status": 200,
+        "body_sha256": "23c6496694b933888aceafecf1cc25eaf9b65651a6404873accdb8bc065956ea",
+        "github_blob_sha": null,
+        "publication": "UNCHANGED_HUMAN_GATE_REQUIRED"
+      }
+    },
+    {
+      "case_id": "SE-IRK-LAB-001",
+      "public_alias": null,
+      "source_url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON620",
+      "source_id": "WHO-DON620",
+      "source_speaker": "WHO / Russian IHR NFP as attributed by WHO",
+      "claimed_subject": "Public WHO/IHR confirmation and bounded public chronology only",
+      "claim_ids": [],
+      "claim_id_resolution": "CANONICAL_MAPPING_NOT_COMPLETED_NO_ID_INVENTED",
+      "event_at": "2026-10-02",
+      "published_at": "2026-10-10",
+      "observed_at": "2026-11-28T14:04:04Z",
+      "knowledge_cutoff": "2026-11-28T14:06:47Z",
+      "source_access": "PUBLIC_HTML_HTTP_200",
+      "raw_hash_or_UNAVAILABLE": "e93f2b50c58c7746b3b0240f6608187cc0d9de58aed04ca186bc3d5d7712a7e7",
+      "search_query": "Irkutsk WHO IHR DON620 regulator public original revision November 2026",
+      "search_boundary": "Fresh bounded public search and listed-source availability checks on Nov28. Historical branch/event dedupe and canonical claim mapping incomplete. Not NO_STATE_CHANGE. Only public whitelist; one Irkutsk query group and two WHO source retrieval attempts, within 4-group/8-open limit. No restricted records or cause inference.",
+      "old_stop_point": "DEATH_REPORTED_CAUSE_NOT_ESTABLISHED_REVIEW_INCOMPLETE",
+      "proposed_stop_point": "RETAIN_ACCEPTED_STOP_NO_STATE_UPGRADE",
+      "new_sources": [],
+      "new_attributed_statements": [],
+      "new_independent_evidence": [],
+      "new_events": [],
+      "newly_discovered_old_evidence": [],
+      "state_changing_evidence": [],
+      "contradictions": "No accepted contradiction established in this limited run; not an assertion of absence.",
+      "decision_relevant_unknown": "Cause and completeness of public original/revision chain remain not established.",
+      "next_observable": "Dated WHO/IHR or regulator public original/update that directly resolves a specific open claim.",
+      "review_status": "REVIEW_INCOMPLETE",
+      "review_id": null,
+      "last_verified_review": "2026-10-14T17:59:24+08:00",
+      "last_verified_review_semantics": "Value retained from public status file; not asserted complete by this run.",
+      "public_state_changed": false,
+      "new_event_status": "NOT_ESTABLISHED_IN_BOUNDED_CHECK",
+      "observation_summary": "WHO Oct10 public original re-read. Diagnosis remains unestablished. Raw HTML hash differs from yesterday; no verified substantive revision inferred from raw-byte variation.",
+      "sources": [
+        {
+          "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON620",
+          "access": "PUBLIC_HTML_HTTP_200",
+          "raw_hash_or_UNAVAILABLE": "e93f2b50c58c7746b3b0240f6608187cc0d9de58aed04ca186bc3d5d7712a7e7",
+          "response_body_sha256": "e93f2b50c58c7746b3b0240f6608187cc0d9de58aed04ca186bc3d5d7712a7e7",
+          "observed_at": "2026-11-28T14:03:20.901Z"
+        }
+      ],
+      "website": {
+        "url": "https://structurevidence.org/cases/irkutsk-lab-worker-death/",
+        "http_status": 200,
+        "body_sha256": "9f3183aaea8ff49c4a69bc43093442e5abc840a7a67b49cc10234c9bb97eb022",
+        "github_blob_sha": null,
+        "publication": "UNCHANGED_HUMAN_GATE_REQUIRED"
+      }
+    },
+    {
+      "case_id": "SE-ONC-NSQNSCLC-CN-001",
+      "public_alias": null,
+      "source_url": "https://www.nmpa.gov.cn/zhuanti/cxylqx/cxypxx/20240524110617125.html",
+      "source_id": "NSCLC-SOURCE-AVAILABILITY-20261127",
+      "source_speaker": "NMPA / PubMed-indexed publication authors",
+      "claimed_subject": "Public source availability only; existing folded clinical research preview",
+      "claim_ids": [],
+      "claim_id_resolution": "CANONICAL_MAPPING_NOT_COMPLETED_NO_ID_INVENTED",
+      "event_at": null,
+      "published_at": null,
+      "observed_at": "2026-11-28T14:04:04Z",
+      "knowledge_cutoff": "2026-11-28T14:06:47Z",
+      "source_access": "HTTP_412_ORIGINAL_UNAVAILABLE; HTTP_203_ORIGINAL_UNAVAILABLE",
+      "raw_hash_or_UNAVAILABLE": "UNAVAILABLE",
+      "search_query": "NSCLC China NMPA approval public source update HARMONi-A PMID 42307937",
+      "search_boundary": "Fresh bounded public search and listed-source availability checks on Nov28. Historical branch/event dedupe and canonical claim mapping incomplete. Not NO_STATE_CHANGE. ",
+      "old_stop_point": "PUBLIC_RESEARCH_PREVIEW",
+      "proposed_stop_point": "RETAIN_ACCEPTED_STOP_NO_STATE_UPGRADE",
+      "new_sources": [],
+      "new_attributed_statements": [],
+      "new_independent_evidence": [],
+      "new_events": [],
+      "newly_discovered_old_evidence": [],
+      "state_changing_evidence": [],
+      "contradictions": "No accepted contradiction established in this limited run; not an assertion of absence.",
+      "decision_relevant_unknown": "Full original availability and medically material revisions not established.",
+      "next_observable": "Accessible original source/correction plus human clinical review on Sunday or when material correction is observed.",
+      "review_status": "REVIEW_INCOMPLETE",
+      "review_id": null,
+      "last_verified_review": null,
+      "last_verified_review_semantics": "Value retained from public status file; not asserted complete by this run.",
+      "public_state_changed": false,
+      "new_event_status": "NOT_ESTABLISHED_IN_BOUNDED_CHECK",
+      "observation_summary": "FOLDED retained. NMPA HTTP412, PubMed HTTP203/interstitial and search reader partial; no clinical inference; Sunday deep review not advanced.",
+      "sources": [
+        {
+          "url": "https://www.nmpa.gov.cn/zhuanti/cxylqx/cxypxx/20240524110617125.html",
+          "access": "HTTP_412_ORIGINAL_UNAVAILABLE",
+          "raw_hash_or_UNAVAILABLE": "UNAVAILABLE",
+          "response_body_sha256": "958ad102b51cd56be92c6041d010896c6df1771f35de70a83adac9e2514a83cc",
+          "observed_at": "2026-11-28T14:03:22.849Z"
+        },
+        {
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42307937/",
+          "access": "HTTP_203_ORIGINAL_UNAVAILABLE",
+          "raw_hash_or_UNAVAILABLE": "UNAVAILABLE",
+          "response_body_sha256": "bd157b8bf64d55f88db30bc378ce50cf8d0d738810f4ddc65b3940ada0530ef5",
+          "observed_at": "2026-11-28T14:03:21.266Z"
+        }
+      ],
+      "website": {
+        "url": "https://structurevidence.org/cases/nsq-nsclc-china/",
+        "http_status": 200,
+        "body_sha256": "091e80d9ccb3e0582367cd0002fc7745f6e81a5d9c2a59eb60aabebcb2f0f706",
+        "github_blob_sha": null,
+        "publication": "UNCHANGED_HUMAN_GATE_REQUIRED"
+      },
+      "presentation": "FOLDED",
+      "home_upgrade": false
+    },
+    {
+      "case_id": "SE-PHYSICAL-AI-001",
+      "public_alias": null,
+      "source_url": "https://newsroom.bmwgroup.com/global/bmw-group-advances-the-use-of-physical-ai-in-production-with-figure-03-project-in-spartanburg/",
+      "source_id": "BMW-F03-SPARTANBURG-20260625",
+      "source_speaker": "Figure AI / BMW separately attributed source parties",
+      "claimed_subject": "Figure 02 sheet-metal task vs Figure 03 logistics/sequencing at Spartanburg",
+      "claim_ids": [],
+      "claim_id_resolution": "CANONICAL_MAPPING_NOT_COMPLETED_NO_ID_INVENTED",
+      "event_at": "2026-06-25",
+      "published_at": "2026-06-25",
+      "observed_at": "2026-11-28T14:04:04Z",
+      "knowledge_cutoff": "2026-11-28T14:06:47Z",
+      "source_access": "PUBLIC_HTML_HTTP_200; PUBLIC_HTML_HTTP_200",
+      "raw_hash_or_UNAVAILABLE": "3f6f6ff1645783df5e16651c7ec00eabbefd0a7748a250359c263338d2c21c40",
+      "search_query": "site.figure.ai BMW Figure 02 Figure 03 decommission reliability acceptance November 2026",
+      "search_boundary": "Fresh bounded public search and listed-source availability checks on Nov28. Historical branch/event dedupe and canonical claim mapping incomplete. Not NO_STATE_CHANGE. ",
+      "old_stop_point": "PUBLIC_PROJECTION_LOCAL_PROVISIONAL_v0.1",
+      "proposed_stop_point": "RETAIN_ACCEPTED_STOP_NO_STATE_UPGRADE",
+      "new_sources": [
+        {
+          "source_url": "https://www.figure.ai/news/f-02-decommission",
+          "classification": "NEWLY_CAPTURED_PREVIOUSLY_KNOWN_HISTORICAL_SOURCE",
+          "unique_event_increment": 0
+        }
+      ],
+      "new_attributed_statements": [],
+      "new_independent_evidence": [],
+      "new_events": [],
+      "newly_discovered_old_evidence": [],
+      "state_changing_evidence": [],
+      "contradictions": "No accepted contradiction established in this limited run; not an assertion of absence.",
+      "decision_relevant_unknown": "Figure03 accepted sustained operation, MTBF/MTTR, achieved target rates and economics remain unresolved.",
+      "next_observable": "Model/task/site-specific acceptance original and achieved reliability/intervention distributions.",
+      "review_status": "REVIEW_INCOMPLETE",
+      "review_id": null,
+      "last_verified_review": null,
+      "last_verified_review_semantics": "Value retained from public status file; not asserted complete by this run.",
+      "public_state_changed": false,
+      "new_event_status": "NOT_ESTABLISHED_IN_BOUNDED_CHECK",
+      "observation_summary": "Sep30 2026 decommission original now directly captured. This historical event was already named in owner instructions and earlier run context: not a Nov28 event, and global first-discovery NOT_ESTABLISHED. Figure02 lifecycle remains separate from Figure03 acceptance/reliability.",
+      "sources": [
+        {
+          "url": "https://newsroom.bmwgroup.com/global/bmw-group-advances-the-use-of-physical-ai-in-production-with-figure-03-project-in-spartanburg/",
+          "access": "PUBLIC_HTML_HTTP_200",
+          "raw_hash_or_UNAVAILABLE": "3f6f6ff1645783df5e16651c7ec00eabbefd0a7748a250359c263338d2c21c40",
+          "response_body_sha256": "3f6f6ff1645783df5e16651c7ec00eabbefd0a7748a250359c263338d2c21c40",
+          "observed_at": "2026-11-28T14:03:22.009Z"
+        },
+        {
+          "url": "https://www.figure.ai/news/production-at-bmw",
+          "access": "PUBLIC_HTML_HTTP_200",
+          "raw_hash_or_UNAVAILABLE": "dc9a76ccb4835509e20fb2814e3cb0021eb1a9a7abef1b4686a160c110cf8bd5",
+          "response_body_sha256": "dc9a76ccb4835509e20fb2814e3cb0021eb1a9a7abef1b4686a160c110cf8bd5",
+          "observed_at": "2026-11-28T14:03:21.860Z"
+        },
+        {
+          "url": "https://www.figure.ai/news/f-02-decommission",
+          "access": "PUBLIC_HTML_HTTP_200",
+          "raw_hash_or_UNAVAILABLE": "9938864c81c43aecf52ebfff34194efe5588547910cb0173abb2e6634efc52c2",
+          "published_at": "2026-09-30"
+        }
+      ],
+      "website": {
+        "url": "https://github.com/roalstoney-alt/se-dual-case-public/blob/main/SE-PHYSICAL-AI-001.md",
+        "http_status": null,
+        "body_sha256": "UNAVAILABLE",
+        "github_blob_sha": "e58f052c0f76fd476604afc44d4100b7ce57a817",
+        "publication": "UNCHANGED_HUMAN_GATE_REQUIRED"
+      }
+    },
+    {
+      "case_id": "SE-NEW-BUSINESS-001",
+      "public_alias": "SE-IREN-AI-CLOUD-001",
+      "source_url": "https://iren.gcs-web.com/news-releases/news-release-details/iren-reports-q1-fy27-results",
+      "source_id": "IREN-Q1FY27-20261105",
+      "source_speaker": "IREN issuer; SEC host not independent economic auditor",
+      "claimed_subject": "Quarter ended Sep30 2026; revenue components, ARR and Horizon1 vs Horizons2-4",
+      "claim_ids": [
+        "IREN-R001",
+        "IREN-R002",
+        "IREN-R003",
+        "IREN-R004",
+        "IREN-R005",
+        "IREN-R006",
+        "IREN-R007",
+        "IREN-R008",
+        "IREN-R009",
+        "IREN-R010",
+        "IREN-R011"
+      ],
+      "claim_id_resolution": "IREN-R001_TO_R011_OBSERVED_ON_PRODUCTION; SOURCE_TO_EACH_CLAIM_RECONCILIATION_INCOMPLETE",
+      "event_at": "2026-09-30",
+      "published_at": "2026-11-05T16:02:39-05:00",
+      "observed_at": "2026-11-28T14:04:04Z",
+      "knowledge_cutoff": "2026-11-28T14:06:47Z",
+      "source_access": "PUBLIC_HTML_HTTP_200; NOT_RECAPTURED_THIS_RUN",
+      "raw_hash_or_UNAVAILABLE": "deb9a9e686816cdba1a5b37e239d9a21b1e1335e3716b52a2b74b739a9a9744f",
+      "search_query": "IREN SEC Q1 FY27 Microsoft reverse confirmation Horizon2 Horizon3 Horizon4 GAAP revenue operating ARR November 2026",
+      "search_boundary": "Fresh bounded public search and listed-source availability checks on Nov28. Historical branch/event dedupe and canonical claim mapping incomplete. Not NO_STATE_CHANGE. ",
+      "old_stop_point": "SUPPORTED_AS_ATTRIBUTED_WITH_OPEN_BOUNDARIES",
+      "proposed_stop_point": "RETAIN_ACCEPTED_STOP_NO_STATE_UPGRADE",
+      "new_sources": [],
+      "new_attributed_statements": [],
+      "new_independent_evidence": [],
+      "new_events": [],
+      "newly_discovered_old_evidence": [],
+      "state_changing_evidence": [],
+      "contradictions": "No accepted contradiction established in this limited run; not an assertion of absence.",
+      "decision_relevant_unknown": "Independent acceptance, Horizon2-4 delivery/acceptance, sustainable economics, historical raw-byte/Bridge authenticity gaps remain open.",
+      "next_observable": "Human-reviewed attributed update, SEC original reconciliation, model/site-specific customer acceptance including Microsoft where available, and measured cost/funding outcomes.",
+      "review_status": "REVIEW_INCOMPLETE",
+      "review_id": null,
+      "last_verified_review": "2026-10-27T20:06:55Z",
+      "last_verified_review_semantics": "Value retained from public status file; not asserted complete by this run.",
+      "public_state_changed": false,
+      "new_event_status": "NOT_ESTABLISHED_IN_BOUNDED_CHECK",
+      "observation_summary": "Issuer Nov5 release remains existing PR86/93 event. Current issuer index lists Badajoz as Planned. SEC search extraction is partial; direct original reader failed and XBRL viewer returned help shell. Microsoft reverse confirmation NOT_ESTABLISHED in this bounded check, not proof no document exists. Underlying fact acceptance HOLD_PENDING_REVIEW.",
+      "sources": [
+        {
+          "url": "https://iren.gcs-web.com/news-releases/news-release-details/iren-reports-q1-fy27-results",
+          "access": "PUBLIC_HTML_HTTP_200",
+          "raw_hash_or_UNAVAILABLE": "deb9a9e686816cdba1a5b37e239d9a21b1e1335e3716b52a2b74b739a9a9744f",
+          "response_body_sha256": "deb9a9e686816cdba1a5b37e239d9a21b1e1335e3716b52a2b74b739a9a9744f",
+          "observed_at": "2026-11-28T14:03:21.032Z"
+        },
+        {
+          "url": "https://www.iren.com/investors/news",
+          "access": "NOT_RECAPTURED_THIS_RUN",
+          "raw_hash_or_UNAVAILABLE": "UNAVAILABLE",
+          "response_body_sha256": null,
+          "observed_at": null
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1878848/000187884826000066/iren-20260930.htm",
+          "access": "SEARCH_EXTRACTION_PARTIAL_DIRECT_READER_UNAVAILABLE_VIEWER_HELP_SHELL",
+          "raw_hash_or_UNAVAILABLE": "UNAVAILABLE"
+        }
+      ],
+      "website": {
+        "url": "https://structurevidence.org/cases/iren-ai-cloud-transition/",
+        "http_status": 200,
+        "body_sha256": "f8067bb92b3b98ba4d4a95ab6ff38ca25b23eda222179abe19b49cb373c61a37",
+        "github_blob_sha": null,
+        "publication": "UNCHANGED_HUMAN_GATE_REQUIRED"
+      },
+      "public_projection": "LOCAL_PROVISIONAL_v0.1",
+      "canonical_rdl": "NOT_RUN",
+      "underlying_fact_acceptance": "HOLD_PENDING_REVIEW",
+      "microsoft_reverse_confirmation": "NOT_ESTABLISHED",
+      "original_bridge_authenticity": "NOT_ESTABLISHED",
+      "dual_public_blob_sha": "4e1f11c4a1c89ec3321e0a1041c7b57871fa51a3"
+    }
+  ],
+  "notes": [
+    "No accepted state, historical timestamp, Gold record or review_id overwritten.",
+    "All six remain REVIEW_INCOMPLETE; empty new-events arrays are not exhaustive no-event findings.",
+    "Different raw HTML digests alone do not establish substantive source revisions."
+  ],
+  "dedupe": {
+    "query": "repo:roalstoney-alt/structurevidence is:pr Liangshan",
+    "count": 0,
+    "boundary": "PR metadata/text search only, not all historical branch file contents; global dedupe remains incomplete."
+  }
+}
